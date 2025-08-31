@@ -1,5 +1,23 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Calculator,
+  Check,
+  X,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Cpu,
+=======
+import React, { useState              } from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Calculator, 
   Check, 
   X, 
@@ -25,9 +43,25 @@ import { Calculator,
   Globe,
   Atom,
   Satellite
+<<<<<<< HEAD
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 export default function PricingGuide(...args[]):  {
+=======
+<<<<<<< HEAD
+import { SEO              } from '../components/SEO';
+=======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO               } from '../components/SEO';
+=======
+} from 'lucide-react';
+import { SEO              } from '../components/SEO';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function PricingGuide(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
   const currencyRates = {
@@ -148,6 +182,25 @@ export default function PricingGuide(...args[]):  {
       ];
     };
   ];
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const calculatePrice = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const rate = currencyRates[selectedCurrency as keyof typeof currencyRates].rate;
+    const symbol = currencyRates[selectedCurrency as keyof typeof currencyRates].symbol;
+    const adjustedPrice = selectedPeriod === 'yearly' ? price * 0.9 : price;
+    return `${symbol}${Math.round(adjustedPrice * rate)}`};
+
+  const savings = selectedPeriod === 'yearly' ? 10 : 0;
+
+  return (
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Pricing Guide - Zion Tech Group"
@@ -225,8 +278,20 @@ export default function PricingGuide(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
+=======
+          
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                 plan.popular
                   ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
@@ -264,8 +329,8 @@ export default function PricingGuide(...args[]):  {
                   </Link>
                 </div>
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: any</h4>
-                  {plan.features.map((feature, featureIndex)  => (
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                  {plan.features.map((feature, featureIndex)               => (
                     <div key={featureIndex} className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
@@ -273,8 +338,8 @@ export default function PricingGuide(...args[]):  {
                   ))}
                   {plan.notIncluded.length > 0 && (
                     <>
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: any</h4>
-                      {plan.notIncluded.map((feature, featureIndex)  => (
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                      {plan.notIncluded.map((feature, featureIndex)               => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
@@ -295,8 +360,20 @@ export default function PricingGuide(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">Service-Specific Pricing</h2>
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {servicePricing.map((category, index)  => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {servicePricing.map((category, index)              => (
+=======
+          
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {servicePricing.map((category, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
@@ -78,6 +79,39 @@ const AdvancedServicesShowcase2025: React.FC = () => {
     { id: 'AI & Real Estate', name: 'AI & Real Estate', count: allServices.filter(s => s.category === 'AI & Real Estate').length, icon: '🏠', color: 'from-zion-blue to-zion-green' },
     { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s => s.category === 'AI & Transportation').length, icon: '🚚', color: 'from-zion-blue to-zion-cyan' },
     { id: 'AI & Energy', name: 'AI & Energy', count: allServices.filter(s => s.category === 'AI & Energy').length, icon: '⚡', color: 'from-zion-yellow to-zion-green' }
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { SEO               } from '../components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025               } from '../data/advancedMicroSaasServices2025';
+import { SPECIALIZED_IT_SERVICES_2025               } from '../data/specializedITServices2025';
+import { ADVANCED_AI_SERVICES_2025               } from '../data/advancedAIServices2025';
+
+const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+
+  const allServices = [
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),
+    ...SPECIALIZED_IT_SERVICES_2025.map(service               => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services' })),
+    ...ADVANCED_AI_SERVICES_2025.map(service               => ({ ...service, source: 'AI Solutions' }));
+=======;
+import React, { useState } from 'react.ts';
+import { SEO              } from '../components/SEO';
+import { ADVANCED_MICRO_SAAS_SERVICES_2025              } from '../data/advancedMicroSaasServices2025';
+import { SPECIALIZED_IT_SERVICES_2025              } from '../data/specializedITServices2025';
+import { ADVANCED_AI_SERVICES_2025              } from '../data/advancedAIServices2025';
+
+const AdvancedServicesShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+
+  const allServices = [;
+    ...ADVANCED_MICRO_SAAS_SERVICES_2025.map(service => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),;
+    ...SPECIALIZED_IT_SERVICES_2025.map(service              => ({ ...service, source: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services' })),;
+    ...ADVANCED_AI_SERVICES_2025.map(service              => ({ ...service, source: 'AI Solutions' }));
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const filteredServices = allServices.filter(service => {
@@ -359,6 +393,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Services Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -388,6 +423,25 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                       </div>
                     </div>
                   </div>
+=======
+      {/* Services Grid */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service)               => (
+            <div key={service.id} className="bg-slate-800 rounded-xl p-6 hover:bg-slate-700 transition-colors duration-200">
+              <div className="flex items-start justify-between mb-4">
+                <span className={`px-3 py-1 rounded-full text-xs font-medium ${
+                  service.source === 'Micro SaaS' ? 'bg-blue-100 text-blue-800' :
+                  service.source === 'IT Services' ? 'bg-green-100 text-green-800' :
+                  'bg-purple-100 text-purple-800'
+                }`}>
+                  {service.source}
+                </span>
+                <span className="text-2xl font-bold text-white">
+                  {service.currency}{service.price.toLocaleString()}
+                </span>
+              </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
                   {/* Service Content */}
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Brain,
   Shield,
   Cloud,
   Rocket,
@@ -31,10 +30,15 @@ import {
   Banknote,
   Building,
   Phone
+<<<<<<< HEAD
 } from 'lucide-react';
 
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
+=======
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027              } from '../data/innovativeMicroSaasServices2027';
+import SEO from '../components/SEO';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
   'AI & Customer Success': Brain,
@@ -62,10 +66,10 @@ const categoryColors: { [key: string]: string } = {
   'IoT & Smart Cities': 'from-blue-500 to-cyan-600'
 };
 
-export default function InnovativeServices2027() {
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+export default function InnovativeServices2027(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState<'price' | 'innovation' | 'roi'>('innovation');
+  const [sortBy, setSortBy] = useState<any>('innovation');
 
   const categories = ['all', ...Array.from(new Set(INNOVATIVE_MICRO_SAAS_SERVICES_2027.map(service => service.category)))];
 
@@ -193,9 +197,15 @@ export default function InnovativeServices2027() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
+<<<<<<< HEAD
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {sortedServices.map((service, index) => (
+=======
+              className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
+
+              {sortedServices.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}

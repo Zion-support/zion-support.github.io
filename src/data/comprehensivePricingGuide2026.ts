@@ -1,6 +1,23 @@
 // Comprehensive Pricing Guide 2026 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
 export interface PricingTier {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: number;
   currency: string;
@@ -12,8 +29,34 @@ export interface PricingTier {
   setupTime: string;
   supportLevel: string;
   innovationLevel: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 export interface ServicePricing {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -24,12 +67,25 @@ export interface ServicePricing {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
     address: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
-import App from './App.tsx'
+import App from './App'
 import './index.css'
 
 // Service worker registration function
@@ -22,7 +22,7 @@ const registerServiceWorker = async () => {
       }
       
       // Handle updates
-      registration.addEventListener('updatefound', () => {
+      registration.addEventListener('updatefound', ()              => {
         const newWorker = registration.installing;
         if (newWorker) {
           newWorker.addEventListener('statechange', () => {
@@ -47,7 +47,7 @@ const registerServiceWorker = async () => {
 
 // Performance monitoring
 const reportWebVitals = (metric: any) => {
-  if (process.env.NODE_ENV === 'development') {
+  if (process.env['NODE_ENV'] === 'development') {
     console.log('Web Vitals:', metric);
   }
   // In production, you could send this to analytics
@@ -67,11 +67,11 @@ class RootErrorBoundary extends React.Component<
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Root error boundary caught an error:', error, errorInfo);
   }
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       return (
         <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">

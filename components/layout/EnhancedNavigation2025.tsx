@@ -1,8 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React, { useState, useEffect } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight export default function EnhancedNavigation2025(...args: any[]): any {
+=======
+import React, { useState, useEffect              } from 'react.ts';
 import Link from 'next/link.ts';
-import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight  } from 'lucide-react';
+import { Menu, X, Phone, Mail, Sparkles, Zap, ChevronDown, ChevronRight               } from 'lucide-react.ts';
 
+<<<<<<< HEAD
 export default function EnhancedNavigation2025(...args[]):  {
+=======
+export default function EnhancedNavigation2025(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 	const [isOpen, setIsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [activeDropdown, setActiveDropdown] = useState<any>(null);
@@ -48,7 +61,15 @@ export default function EnhancedNavigation2025(...args[]):  {
 		{ name: 'Pricing', href: '/pricing' },;
 	];
 
+<<<<<<< HEAD
 	const toggleDropdown = (name: string) => {;
+=======
+<<<<<<< HEAD
+	const toggleDropdown = (name: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+		setActiveDropdown(activeDropdown === name ? null : name)};
+=======
+	const toggleDropdown = (name: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 		setActiveDropdown(activeDropdown === name ? null : name);
 	};
 
@@ -100,8 +121,8 @@ export default function EnhancedNavigation2025(...args[]):  {
 					</Link>
 
 					{/* Desktop Navigation */}
-					<div className="hidden lg: flex lg:items-center lg:space-x-8">
-						{navigation.map((item)  => (
+					<div className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex lg:items-center lg:space-x-8">
+						{navigation.map((item)               => (
 							<div key={item.name} className="relative group">
 								{item.children ? (
 									<button

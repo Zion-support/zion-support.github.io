@@ -1,8 +1,209 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
   Search,
+=======
+<<<<<<< HEAD
+import React, { useState, useMemo } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield, Cloud, Rocket, Heart, Globe, Cpu, Lock, Users, DollarSign, Clock, Target, Award, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, ChevronRight, Sparkles, Flame, Lightning, Sun, Moon, Planet, Galaxy, Universe, Infinity, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Pi, Rho, Sigma, Tau, Upsilon, Phi, Chi, Psi, Omega               } from 'lucide-react.ts';
+import { SEO               } from '@/components/SEO';
+
+const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const serviceCategories = [
+    {
+      id: 'ai-services',
+      title: 'AI & Machine Learning',
+      description: 'Cutting-edge artificial intelligence solutions for business transformation',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      services[
+        'AI Business Intelligence Platform',
+        'AI Sales Copilot',
+        'AI Compliance Assistant',
+        'AI Auto Email Responder',
+        'AI Compliance Copilot',
+        'LLM Content Studio'
+      ],
+      href: '/ai-services',
+      featured: true
+    },
+    {
+      id: 'quantum-services',
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum solutions for complex problem solving',
+      icon: Zap,
+      color: 'from-cyan-500 to-blue-500',
+      services[
+        'Quantum AI Hybrid Platform',
+        'Quantum Financial Trading',
+        'Quantum Internet Security',
+        'Quantum Neural Networks',
+        'Quantum Edge Computing',
+        'Quantum Cloud Infrastructure'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: true
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      description: 'Advanced security solutions for the digital age',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      services[
+        'AI-Powered Cybersecurity Platform',
+        'Zero Trust Architecture',
+        'Threat Intelligence',
+        'Incident Response',
+        'Compliance Automation',
+        'Security Analytics'
+      ],
+      href: '/services',
+      featured: true
+    },
+    {
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automation solutions',
+      icon: Cloud,
+      color: 'from-blue-500 to-indigo-500',
+      services[
+        'Cloud Infrastructure Management',
+        'DevOps Automation',
+        'Container Orchestration',
+        'Serverless Architecture',
+        'Cloud Migration',
+        'Performance Optimization'
+      ],
+      href: '/services/cloud-devops',
+      featured: false
+    },
+    {
+      id: 'it-infrastructure',
+      title: 'IT Infrastructure',
+      description: 'Enterprise-grade infrastructure and support services',
+      icon: Cpu,
+      color: 'from-green-500 to-emerald-500',
+      services[
+        'Network Infrastructure',
+        'Data Center Management',
+        'Onsite IT Support',
+        'Green IT Solutions',
+        '5G Network Solutions',
+        'IoT Edge Computing'
+      ],
+      href: '/services/it-infrastructure',
+      featured: false
+    },
+    {
+      id: 'micro-saas',
+      title: 'Micro SaaS Solutions',
+      description: 'Productized software solutions for specific business needs',
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500',
+      services[
+        'Customer Feedback Surveys',
+        'FinOps Advisor',
+        'Business Intelligence Tools',
+        'Process Automation',
+        'Analytics Dashboards',
+        'Integration Platforms'
+      ],
+      href: '/micro-saas',
+      featured: true
+    },
+    {
+      id: 'healthcare-tech',
+      title: 'Healthcare Technology',
+      description: 'AI-powered healthcare solutions and diagnostics',
+      icon: Heart,
+      color: 'from-pink-500 to-rose-500',
+      services[
+        'AI Healthcare Diagnostics',
+        'Medical Imaging Analysis',
+        'Patient Care Optimization',
+        'Telemedicine Platforms',
+        'Clinical Decision Support',
+        'Healthcare Analytics'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false
+    },
+    {
+      id: 'smart-cities',
+      title: 'Smart Cities & IoT',
+      description: 'Sustainable urban infrastructure and IoT solutions',
+      icon: Globe,
+      color: 'from-teal-500 to-cyan-500',
+      services[
+        'Sustainable Smart City Platform',
+        'IoT Infrastructure Management',
+        'Energy Grid Optimization',
+        'Traffic Management',
+        'Environmental Monitoring',
+        'Public Safety Systems'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false
+    },
+    {
+      id: 'education-tech',
+      title: 'Education Technology',
+      description: 'AI-powered learning and educational platforms',
+      icon: Users,
+      color: 'from-indigo-500 to-purple-500',
+      services[
+        'AI Education Platform',
+        'Personalized Learning',
+        'Intelligent Tutoring',
+        'Student Analytics',
+        'Content Management',
+        'Assessment Tools'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false
+    },
+    {
+      id: 'manufacturing',
+      title: 'Manufacturing & Industry 4.0',
+      description: 'Smart manufacturing and industrial automation',
+      icon: Cpu,
+      color: 'from-slate-500 to-gray-500',
+      services[
+        'AI Manufacturing Platform',
+        'Predictive Maintenance',
+        'Quality Control Automation',
+        'Supply Chain Optimization',
+        'Industrial IoT',
+        'Smart Factory Solutions'
+      ],
+      href: '/revolutionary-services-2030',
+      featured: false;
+    };
+  };
+
+  const filteredCategories = useMemo(() => {;
+    if (!searchQuery.trim()) return serviceCategories;
+    
+    const query = searchQuery.toLowerCase();
+    return serviceCategories.filter(category = >
+      category.title.toLowerCase().includes(query) ||
+      category.description.toLowerCase().includes(query) ||;
+      category.services.some(service => service.toLowerCase().includes(query));
+    )}, [searchQuery]);
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Search,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Filter,
   Star,
   TrendingUp,
@@ -38,11 +239,24 @@ import {
   MapPin,
   Globe as GlobeIcon,
   ExternalLink
+<<<<<<< HEAD
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
 const ComprehensiveServicesLanding2025: React.FC = () => {;
   const getCategoryIcon = (category: string) => {;
+=======
+<<<<<<< HEAD
+import { SEO              } from '../components/SEO';
+=======
+} from 'lucide-react';
+import SEO from '../components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { INNOVATIVE_SERVICES_2025              } from '../data/innovativeServices2025';
+
+const ComprehensiveServicesLanding2025: React.FC = (): JSX.Element => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {;
       case 'AI & Automation':;
         return <Brain className="w-8 h-8" />;
@@ -67,7 +281,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
       default:
         return <Sparkles className="w-8 h-8" />;
   };
+<<<<<<< HEAD
   const getCategoryColor = (category: string) => {;
+=======
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {;
       case 'AI & Automation':;
         return 'from-purple-500 to-pink-500';
@@ -95,7 +314,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
   const categories = Array.from(new Set(INNOVATIVE_SERVICES_2025.map(service => service.category)));
   const servicesByCategory = categories.map(category => ({;
     category,;
-    services: INNOVATIVE_SERVICES_2025.filter(service => service.category === category),;
+    services: anyanyanyanyanyanyanyanyanyanyanyanyanyINNOVATIVE_SERVICES_2025.filter(service              => service.category === category),;
     icon: getCategoryIcon(category),;
     color: getCategoryColor(category);
   }));
@@ -179,8 +398,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Browse our services by category to find the perfect solution for your business needs
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid gap-8 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
             {featuredCategories.map((category, index)  => (
+=======
+
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {featuredCategories.map((category, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={categoryData.category}
                 initial = {
@@ -233,8 +458,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Browse our comprehensive range of technology services across all categories
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid gap-6 grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
             {filteredCategories.map((category, index)  => (
+=======
+
+          <div className="grid gap-6 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {filteredCategories.map((category, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={category.id}
                 initial = {
@@ -297,8 +528,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               Our most popular and innovative solutions that are transforming businesses worldwide
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {INNOVATIVE_SERVICES_2025.slice(0, 6).map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 initial = {
@@ -406,9 +643,14 @@ const ComprehensiveServicesLanding2025: React.FC = () => {;
               },
               {
                 icon: <Shield className="w-8 h-8" />,
-                title: 'Enterprise Security',
+                title: anyanyanyanyanyanyanyanyanyanyanyanyany'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
+<<<<<<< HEAD
             ].map((feature, index) => (
+=======
+
+            ].map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

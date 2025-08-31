@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
+=======
+import React, { useEffect, useCallback } from 'react.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+
+interface EnhancedSEOProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   description: string;
   keywords?: string[];
@@ -10,9 +18,25 @@ interface SEOData {
   ogImage?: string;
   ogType?: 'website' | 'article' | 'product' | 'service';
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
+<<<<<<< HEAD
   structuredData?: object;
   noIndex?: boolean;
   noFollow?: boolean;
+=======
+  twitterCreator?: string;
+  twitterSite?: string;
+  robots?: string;
+  viewport?: string;
+  charset?: string;
+  themeColor?: string;
+  manifest?: string;
+  appleTouchIcon?: string;
+  favicon?: string;
+  msTileColor?: string;
+  msConfig?: string;
+=======
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 interface EnhancedSEOProps {
@@ -55,6 +79,7 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
       "contactType": "customer service",
       "email": "info@ziontechgroup.com"
     },
+<<<<<<< HEAD
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Innovation Drive",
@@ -63,6 +88,23 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
       "postalCode": "90210",
       "addressCountry": "US"
     },
+=======
+<<<<<<< HEAD
+    "sameAs"[
+      "https://linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ]
+=======
+    "sameAs": [
+      "https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https://facebook.com/ziontechgroup"
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "100+",
+    "serviceArea": "Worldwide",
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "Technology Services",
@@ -95,6 +137,7 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
     }
   };
 
+<<<<<<< HEAD
   // Merge custom structured data with default
   const finalStructuredData = structuredData 
     ? { ...defaultStructuredData, ...structuredData }
@@ -125,6 +168,14 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
   useEffect(() => {
     // Update page title for better UX
     document.title = optimizedTitle;
+=======
+  // Preload critical resources
+  useEffect(()               => {
+    // Preload critical fonts
+    const fontLinks = [
+      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
+    ];
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
     // Add structured data to page
     if (finalStructuredData) {
@@ -137,7 +188,26 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
         document.head.removeChild(script);
       };
     }
+<<<<<<< HEAD
   }, [optimizedTitle, finalStructuredData]);
+=======
+
+    // DNS prefetch for external domains
+    const dnsPrefetchDomains = [
+      'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//fonts.googleapis.com',
+      'https://fonts.gstatic.com',
+      'https://www.google-analytics.com'
+    ];
+
+    dnsPrefetchDomains.forEach(domain               => {
+      const link = document.createElement('link');
+      link.rel = 'dns-prefetch';
+      link.href = domain;
+      document.head.appendChild(link);
+    });
+  }, [ogImage]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>

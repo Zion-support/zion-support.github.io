@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Brain,
   Shield,
   Cloud,
   Zap,
@@ -91,10 +90,23 @@ import {
   MicOff,
   Volume2,
   VolumeX
+<<<<<<< HEAD
 } from 'lucide-react';
 const QuickAccess: React.FC = () => {;
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+=======
+<<<<<<< HEAD
+const QuickAccess: React.FC = (): JSX.Element => {
+=======
+              } from 'lucide-react.ts';
+
+const QuickAccess: React.FC = (): JSX.Element => {;
+  const [hoveredCategory, setHoveredCategory] = useState<any>(null);
+  const [selectedCategory, setSelectedCategory] = useState<any>(null);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const QuickAccess: React.FC = (): JSX.Element => {
   const quickLinks = [
     {
@@ -276,8 +288,8 @@ const QuickAccess: React.FC = (): JSX.Element => {
           </motion.p>
         </div>
         {/* Quick Links Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {quickLinks.map((link, index)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {quickLinks.map((link, index)                => (
             <motion.div
               key={index}
               initial = {
@@ -402,8 +414,14 @@ const QuickAccess: React.FC = (): JSX.Element => {
             <h3 className="text-2xl font-bold text-white mb-2">Service Categories</h3>
             <p className="text-gray-300">Explore our comprehensive range of technology solutions</p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {categories.map((category, index) => (
+=======
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-4">
+            {categories.map((category, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

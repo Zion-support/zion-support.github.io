@@ -1,10 +1,7 @@
-@import './styles/enhanced-futuristic.css';
-@import './styles/accessibility.css';
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+<<<<<<< HEAD
 
 /* Custom CSS Variables */
 :root {
@@ -1206,3 +1203,5 @@
   outline: 3px solid rgb(var(--zion-cyan));
   outline-offset: 2px;
 }
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

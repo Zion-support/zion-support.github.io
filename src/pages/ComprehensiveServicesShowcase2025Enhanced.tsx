@@ -1,8 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-    Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+import { Search, 
     Filter, 
     TrendingUp, 
     Shield, 
@@ -23,24 +22,24 @@ import {
     Mail,
     MapPin,
     ExternalLink
-} from 'lucide-react';
-import { comprehensiveServices2025Enhanced, EnhancedService } from '../data/comprehensive-services-2025-enhanced';
+             } from 'lucide-react.ts';
+import { comprehensiveServices2025Enhanced, EnhancedService              } from '../data/comprehensive-services-2025-enhanced';
 
-const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
+const ComprehensiveServicesShowcase2025Enhanced: React.FC = (): JSX.Element => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState<string>('all');
-    const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('name');
+    const [selectedCategory, setSelectedCategory] = useState<any>('all');
+    const [sortBy, setSortBy] = useState<any>('name');
 
     const categories = [
-        { id: 'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length },
-        { id: 'fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'fintech').length },
-        { id: 'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'healthtech').length },
-        { id: 'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'edutech').length },
-        { id: 'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'martech').length },
-        { id: 'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'micro-saas').length },
-        { id: 'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'ai-services').length },
-        { id: 'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'it-services').length },
-        { id: 'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s => s.category === 'emerging-tech').length }
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', icon: Globe, count: comprehensiveServices2025Enhanced.length },
+        { id: 'fintech', name: 'Financial Tech', icon: DollarSign, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'fintech').length },
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'healthtech', name: 'Healthcare Tech', icon: Heart, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'healthtech').length },
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'edutech', name: 'Education Tech', icon: GraduationCap, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'edutech').length },
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'martech', name: 'Marketing Tech', icon: Target, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'martech').length },
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'micro-saas', name: 'Micro SaaS', icon: Settings, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'micro-saas').length },
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'ai-services', name: 'AI Services', icon: Zap, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'ai-services').length },
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'it-services', name: 'IT Services', icon: Shield, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'it-services').length },
+        { id: anyanyanyanyanyanyanyanyanyanyanyanyany'emerging-tech', name: 'Emerging Tech', icon: TrendingUp, count: comprehensiveServices2025Enhanced.filter(s              => s.category === 'emerging-tech').length }
     ];
 
     const filteredServices = useMemo(() => {
@@ -75,7 +74,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
         return filtered;
     }, [searchTerm, selectedCategory, sortBy]);
 
-    const getCategoryColor = (category: string) => {
+    const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
         const colors: { [key: string]: string } = {
             'fintech': 'from-green-500 to-emerald-600',
             'healthtech': 'from-red-500 to-pink-600',
@@ -89,7 +88,7 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: string) => {
+    const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
         const icons: { [key: string]: React.ReactNode } = {
             'fintech': <DollarSign className="w-5 h-5" />,
             'healthtech': <Heart className="w-5 h-5" />,
@@ -199,9 +198,9 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
                             <select
                                 value={selectedCategory}
                                 onChange={(e) => setSelectedCategory(e.target.value)}
-                                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                className="px-4 py-3 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-blue-500 focus:border-transparent"
                             >
-                                {categories.map(category => (
+                                {categories.map(category              => (
                                     <option key={category.id} value={category.id}>
                                         {category.name} ({category.count})
                                     </option>
@@ -235,8 +234,8 @@ const ComprehensiveServicesShowcase2025Enhanced: React.FC = () => {
                             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
                         </div>
                     ) : (
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {filteredServices.map((service, index) => (
+                        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+                            {filteredServices.map((service, index)              => (
                                 <motion.div
                                     key={service.id}
                                     initial={{ opacity: 0, y: 20 }}

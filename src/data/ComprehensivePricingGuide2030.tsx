@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { SEO } from "../components/SEO";
 import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
@@ -6,6 +7,32 @@ import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030
 const ComprehensivePricingGuide2030: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 5000]);
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { SEO                } from '../components/SEO';
+import { innovativeMicroSaasServices2030                } from '../data/innovativeMicroSaasServices2030';
+import { comprehensiveITServices2030                } from '../data/comprehensiveITServices2030';
+import { comprehensiveAIServices2030                } from '../data/comprehensiveAIServices2030';
+
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
+  const [activeTab, setActiveTab] = useState<any>('microsaas');
+  const [priceRange, setPriceRange] = useState<any>([0, 5000]);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const getFilteredServices = () => {;
+    let services[] = [];
+=======
+import React, { useState } from 'react.ts';
+import { SEO               } from '../components/SEO';
+import { innovativeMicroSaasServices2030               } from '../data/innovativeMicroSaasServices2030';
+import { comprehensiveITServices2030               } from '../data/comprehensiveITServices2030';
+import { comprehensiveAIServices2030               } from '../data/comprehensiveAIServices2030';
+
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
+  const [activeTab, setActiveTab] = useState<any>('microsaas');
+  const [priceRange, setPriceRange] = useState<any>([0, 5000]);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const getFilteredServices = () => {;
     let services: any[] = [];
@@ -86,7 +113,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -163,7 +190,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -240,7 +267,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                     {benefit}

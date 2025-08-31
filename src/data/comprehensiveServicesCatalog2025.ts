@@ -1,7 +1,35 @@
+<<<<<<< HEAD
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "./innovativeMicroSaasServices2025";
 import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025 } from "./expandedInnovativeServices2025";
 import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025 } from "./emergingTechServices2025";
 export interface ComprehensiveService2025 {
+=======
+<<<<<<< HEAD
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES               } from './innovativeMicroSaasServices2025';
+import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025               } from './expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025               } from './emergingTechServices2025';
+=======
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES              } from './innovativeMicroSaasServices2025';
+import { EXPANDED_INNOVATIVE_SERVICES_2025, SPECIALIZED_INDUSTRY_SOLUTIONS_2025              } from './expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025, EMERGING_TECH_SOLUTIONS_2025              } from './emergingTechServices2025';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export interface ComprehensiveService2025 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -20,10 +48,23 @@ export interface ComprehensiveService2025 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
-    website: string};
+website: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -102,14 +143,31 @@ export const SUPPORT_LEVELS = [;
 // Calculate counts for each category
 export const calculateServiceStats = () => {
   const stats = {
-  totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
+  totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.length,
     categories: SERVICE_CATEGORIES.length,
+<<<<<<< HEAD
     pricingTiers: PRICING_TIERS.map(tier => ({;
+=======
+<<<<<<< HEAD
+    pricingTiers: PRICING_TIERS.map(tier               => ({
+      ...tier,;
+  count: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service               => {;
+        if (tier.id === 'budget') return service.price <= 1000;
+        if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
+        if (tier.id === 'enterprise') return service.price > 5000;
+        return false
+
+}).length
+    })),
+    innovationLevels: INNOVATION_LEVELS.map(level = > ({
+=======;
+    pricingTiers: anyanyanyanyanyanyanyanyanyanyanyanyanyPRICING_TIERS.map(tier              => ({;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       ...tier,;
   ;
   ;
   ;
-  count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => {;
+  count: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service              => {;
         if (tier.id === 'budget') return service.price <= 1000;
         if (tier.id === 'mid-range') return service.price > 1000 && service.price <= 5000;
         if (tier.id === 'enterprise') return service.price > 5000;
@@ -118,13 +176,25 @@ export const calculateServiceStats = () => {
     })),
     innovationLevels: INNOVATION_LEVELS.map(level = > ({
       ...level,
-      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
+      count: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service              =>
         service.innovationLevel.toLowerCase() === level.id
       ).length
     })),
+<<<<<<< HEAD
     supportLevels: SUPPORT_LEVELS.map(level => ({;
+=======
+<<<<<<< HEAD
+    supportLevels: anyanyanyanyanyanyanyanyanyanyanyanyanySUPPORT_LEVELS.map(level               => ({
+      ...level,
+      count: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service              =>
+        service.supportLevel.toLowerCase() === level.id
+      ).length
+    }))
+=======;
+    supportLevels: anyanyanyanyanyanyanyanyanyanyanyanyanySUPPORT_LEVELS.map(level              => ({;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       ...level,;
-      count: COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service => ;
+      count: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_SERVICES_CATALOG_2025.filter(service              => ;
         service.supportLevel.toLowerCase() === level.id;
       ).length;
     }));
@@ -132,31 +202,31 @@ export const calculateServiceStats = () => {
   return stats;
 };
 // Get services by category
-export const getServicesByCategory = (category: string) => {
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase().replace('-', ' '))
   );
 };
 // Get services by price range
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
 // Get services by innovation level
-export const getServicesByInnovationLevel = (level: string) => {
+export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.innovationLevel.toLowerCase() === level.toLowerCase()
   );
 };
 // Get services by support level
-export const getServicesBySupportLevel = (level: string) => {
+export const getServicesBySupportLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.supportLevel.toLowerCase() === level.toLowerCase()
   );
 };
 // Search services
-export const searchServices = (query: string) => {
+export const searchServices = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
   const searchTerm = query.toLowerCase();
   return COMPREHENSIVE_SERVICES_CATALOG_2025.filter(service =>
     service.title.toLowerCase().includes(searchTerm) ||
@@ -182,7 +252,7 @@ export const getTrendingServices = (limit: number = 10) => {;
     .slice(0, limit);
 };
 // Get services by industry
-export const getServicesByIndustry = (industry: string)  => {
+export const getServicesByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
   const industryMap: { [key: string]: string[] } = {
     'healthcare': ['AI & Healthcare', 'Medical Diagnostics', 'Healthcare AI'],
     'finance': ['AI & FinTech', 'Quantum Finance', 'Financial Planning'],
@@ -207,11 +277,11 @@ export const getServicesByIndustry = (industry: string)  => {
   );
 };
 // Get service recommendations based on user preferences
-export const getServiceRecommendations = (preferences: {;
+export const getServiceRecommendations = (preferences: anyanyanyanyanyanyanyanyanyanyanyanyany{;
   industry?: string;
   budget?: number;
   innovationLevel?: string;
-  supportLevel?: string})  => {
+  supportLevel?: string})               => {
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
   if (preferences.industry) {
     recommendations = getServicesByIndustry(preferences.industry);

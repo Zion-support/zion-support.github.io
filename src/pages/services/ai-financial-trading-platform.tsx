@@ -1,11 +1,44 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '@/components/SEO';
+import { TrendingUp,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Brain,
   TrendingUp,
   BarChart3,
   Shield,
+<<<<<<< HEAD
+=======
+  Zap,
+  CheckCircle,
+=======
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
+import { TrendingUp, 
+  Brain, 
+  DollarSign, 
+  BarChart3, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  ArrowRight,
+  Clock,
+  Target,
+  Activity,
+  Globe,
+  Smartphone,
+  Cloud,
+  Database,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Cpu,
   Activity,
   CheckCircle,
@@ -37,6 +70,7 @@ import {
   Cloud,
   Lock,
   Eye,
+<<<<<<< HEAD
   EyeOff,
   RefreshCw,
   Save,
@@ -361,6 +395,13 @@ import {
   SynchronizedRL9,
   SynchronizedRL10
 } from 'lucide-react';
+=======
+  PieChart
+<<<<<<< HEAD
+export default function AIFinancialTradingPlatform(...args: any[]): any {
+=======
+              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export default function AIFinancialTradingPlatform() {
   const features = [
@@ -541,11 +582,19 @@ export default function AIFinancialTradingPlatform() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
+=======
+      {/* Performance Metrics */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {performanceMetrics.map((item, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -583,8 +632,13 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -630,8 +684,13 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {tradingStrategies.map((strategy, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={strategy.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -643,6 +702,7 @@ export default function AIFinancialTradingPlatform() {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <strategy.icon className="w-8 h-8 text-white" />
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-4">{strategy.title}</h3>
                 <p className="text-gray-400 mb-6">{strategy.description}</p>
                 <ul className="space-y-2 text-left">
@@ -653,6 +713,94 @@ export default function AIFinancialTradingPlatform() {
                     </li>
                   ))}
                 </ul>
+=======
+                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trading Markets Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Trade Across All Markets
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI platform excels in analyzing and trading across multiple asset classes
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {tradingMarkets.map((market, index)               => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+
+                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                  <market.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{market.title}</h3>
+                <p className="text-gray-300 text-lg">{market.description}</p>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </motion.div>
             ))}
           </div>
@@ -677,8 +825,13 @@ export default function AIFinancialTradingPlatform() {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

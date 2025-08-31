@@ -1,8 +1,29 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Cpu, 
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Cpu,
+  Zap,
+  CheckCircle,
+  BarChart3,
+  Sparkles,
+  ArrowRight,
+  Brain,
+  Wifi,
+  Database,
+  Globe,
+  Rocket,
+  Target,
+=======
+import { Link              } from 'react-router-dom.ts';
+import { Cpu, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Network, 
   Zap, 
   Globe, 
@@ -22,9 +43,17 @@ import {
   Server,
   Router,
   Satellite
+<<<<<<< HEAD
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 export default function IoTEdgeComputing() {
+=======
+             } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { SEO              } from '@/components/SEO';
+
+export default function IoTEdgeComputing(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Cpu,
@@ -101,6 +130,103 @@ export default function IoTEdgeComputing() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry <span className="text-cyan-400">IoT Applications</span>
+            </h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Transform your industry with intelligent IoT solutions that process data at the edge
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {iotApplications.map((app, index)              => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+                    <app.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{app.name}</h3>
+                    <p className="text-cyan-400 text-sm font-medium">IoT Solution</p>
+                  </div>
+                </div>
+                <p className="text-slate-300 mb-6 leading-relaxed">{app.description}</p>
+                <ul className="space-y-2">
+                  {app.useCases.map((useCase, idx) => (
+                    <li key={idx} className="flex items-center text-slate-300">
+                      <CheckCircle className="h-4 w-4 text-cyan-400 mr-3 flex-shrink-0" />
+                      {useCase}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Edge Capabilities Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Advanced <span className="text-cyan-400">Edge Capabilities</span>
+            </h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Powerful features that make edge computing intelligent and efficient
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {edgeCapabilities.map((capability, index)              => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+
+                <div className="flex items-center mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+                    <capability.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">{capability.name}</h3>
+                    <p className="text-cyan-400 text-sm font-medium">Edge Feature</p>
+                  </div>
+                </div>
+                <p className="text-slate-300 mb-6 leading-relaxed">{capability.description}</p>
+                <ul className="space-y-2">
+                  {capability.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-slate-300">
+                      <CheckCircle className="h-4 w-4 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             className="text-center max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6">
@@ -152,8 +278,19 @@ export default function IoTEdgeComputing() {
               to deliver real-time processing and insights.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -188,13 +325,134 @@ export default function IoTEdgeComputing() {
               of your connected ecosystem needs.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, index) => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">
+                    <Zap className="h-6 w-6 text-white" />
+                  </div>
+                  <h3 className="ml-3 text-lg font-semibold text-white">Benefit {index + 1}</h3>
+                </div>
+                <p className="text-slate-300">{benefit}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Device Support Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Supported <span className="text-cyan-400">Devices</span>
+            </h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Our platform works with a wide range of IoT devices and platforms
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {deviceSupport.map((device, index)              => (
+              <motion.div
+                key={index}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+
+                <div className="flex items-center mb-4">
+                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3" />
+                  <h3 className="text-lg font-semibold text-white">{device}</h3>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              IoT Platform <span className="text-cyan-400">Pricing</span>
+            </h2>
+            <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+              Choose the plan that fits your IoT deployment needs
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+              <motion.div
+                key={index}
+                className={`relative bg-slate-800/50 border rounded-xl p-8 ${
+                  plan.recommended
+                    ? 'border-cyan-500/50 bg-slate-800/70'
+                    : 'border-slate-700/50'
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+
+                {plan.recommended && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
+                    <span className="text-slate-400 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-slate-300">
+                      <CheckCircle className="h-5 w-5 text-cyan-400 mr-3 flex-shrink-0" />
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
@@ -231,8 +489,33 @@ export default function IoTEdgeComputing() {
               Our platform leverages cutting-edge technologies to provide the most advanced IoT and edge computing solutions available.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {technologies.map((tech, index) => (
+=======
+<<<<<<< HEAD
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-4">
+            {techStack.map((tech, index)              => (
+              <motion.a
+                key={index}
+                href={tech.url}
+                target="_blank"
+                rel="noreferrer"
+                className="bg-slate-800/60 border border-slate-700/60 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+
+                <div className="text-sm text-cyan-400 mb-1">{tech.category}</div>
+                <div className="text-white font-semibold">{tech.name}</div>
+              </motion.a>
+=======
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}

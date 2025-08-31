@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  FileText,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { FileText,
   Shield,
   Users,
   Globe,
@@ -15,7 +14,25 @@ import {
   Lock,
   Eye,
   Database
+<<<<<<< HEAD
  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+const TermsOfService: React.FC = (): JSX.Element => {
+=======
+              } from 'lucide-react.ts';
+
+<<<<<<< HEAD
+const TermsOfService: React.FC = (): JSX.Element => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const lastUpdated = 'January 15, 2024';
+  const compName = 'Zion Tech Group';
+  const website = 'https://ziontechgroup.com';
+  const email = 'legal@ziontechgroup.com';
+  const phone = '+1 (555) 123-4567';
+  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const TermsOfService = () => {;
   const lastUpdated = '2025-01-15';
   const sections = [
@@ -635,8 +652,14 @@ const TermsOfService = () => {;
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Table of Contents
               </h2>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {sections.map((section, index) => (
+=======
+              
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
+                {sections.map((section, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -685,8 +708,14 @@ const TermsOfService = () => {;
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Key Provisions
               </h2>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {keyProvisions.map((provision, index) => (
+=======
+              
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                {keyProvisions.map((provision, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={provision.title}
                     initial = {
@@ -727,11 +756,11 @@ const TermsOfService = () => {;
   y: 0 
 }}
               transition = {
-  { duration: 0.6,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.6 
 }}
             >
-              {sections.map((section, index) => (
+              {sections.map((section, index)              => (
                 <div key={section.id} id={section.id} className="mb-16">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
@@ -767,8 +796,14 @@ const TermsOfService = () => {;
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Dispute Resolution Process
               </h2>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {disputeResolution.map((step, index) => (
+=======
+              
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+                {disputeResolution.map((step, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={step.step}
                     initial = {

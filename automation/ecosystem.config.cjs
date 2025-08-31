@@ -23,7 +23,7 @@ module.exports = {
     // Netlify Build Monitor - Core monitoring and auto-fixing
     {
       name: 'netlify-build-monitor',
-      script: './automation/netlify-build-monitor.js',
+      script: './netlify-build-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -42,7 +42,7 @@ module.exports = {
     // Netlify Build Automation - API integration and deployment
     {
       name: 'netlify-build-automation',
-      script: './automation/netlify-build-automation.js',
+      script: './netlify-build-automation.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -61,7 +61,7 @@ module.exports = {
     // Build Health Monitor - Prevents build issues
     {
       name: 'build-health-monitor',
-      script: './automation/build-health-monitor.js',
+      script: './build-health-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -78,7 +78,7 @@ module.exports = {
     // Code Quality Monitor - Prevents code issues
     {
       name: 'code-quality-monitor',
-      script: './automation/code-quality-monitor.js',
+      script: './code-quality-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -95,7 +95,7 @@ module.exports = {
     // Dependency Health Monitor - Prevents dependency issues
     {
       name: 'dependency-monitor',
-      script: './automation/dependency-monitor.js',
+      script: './dependency-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -112,7 +112,7 @@ module.exports = {
     // Build Automation - Automatically fixes common issues
     {
       name: 'build-automation',
-      script: './automation/build-automation.js',
+      script: './build-automation.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -122,14 +122,13 @@ module.exports = {
       },
       cron_restart: '0 9 * * *', // Restart daily at 9 AM
       log_file: './logs/build-automation.log',
-      error_file: './logs/build-automation-error.log',
-      out_file: './logs/build-automation-out.log'
+      error_file: './logs/build-automation-out.log'
     },
 
     // File Integrity Monitor - Prevents file corruption
     {
       name: 'file-integrity-monitor',
-      script: './automation/file-integrity-monitor.js',
+      script: './file-integrity-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -146,7 +145,7 @@ module.exports = {
     // Performance Optimizer - Continuous performance monitoring
     {
       name: 'performance-optimizer',
-      script: './automation/performance-optimizer.js',
+      script: './performance-optimizer.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -163,7 +162,7 @@ module.exports = {
     // Lint Monitor - Continuous code quality enforcement
     {
       name: 'lint-monitor',
-      script: './automation/lint-monitor.js',
+      script: './lint-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -180,7 +179,7 @@ module.exports = {
     // Intelligent Orchestrator - Coordinates all automation
     {
       name: 'intelligent-orchestrator',
-      script: './automation/intelligent-orchestrator.js',
+      script: './intelligent-orchestrator.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -197,7 +196,7 @@ module.exports = {
     // Automation Dashboard - Monitoring and control interface
     {
       name: 'automation-dashboard',
-      script: './automation/automation-dashboard.js',
+      script: './automation-dashboard.js',
       instances: 1,
       autorestart: true,
       watch: false,

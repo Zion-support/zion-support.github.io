@@ -1,7 +1,15 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link              } from 'react-router-dom.ts';
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import React from 'react.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function DigitalTwin(...args: []):  {
   return (
@@ -56,7 +64,12 @@ export default function DigitalTwin(...args: []):  {
                 real-time monitoring, simulation, and optimization.
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Cpu,
@@ -87,6 +100,13 @@ export default function DigitalTwin(...args: []):  {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              ].map((feature, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -112,7 +132,12 @@ export default function DigitalTwin(...args: []):  {
                 Discover how digital twin technology can revolutionize different industries and operations.
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Manufacturing",
@@ -149,6 +174,13 @@ export default function DigitalTwin(...args: []):  {
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              ].map((application, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((application, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -204,11 +236,11 @@ export default function DigitalTwin(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>
                 <div className="space-y-4">
                   {[
-                    { component: "Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
+                    { component: anyanyanyanyanyanyanyanyanyanyanyanyany"Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
                     { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },
                     { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },
                     { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />

@@ -1,14 +1,81 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Globe,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Globe,
   MapPin,
   Users,
   Clock,
   Star,
   Award,
   CheckCircle
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+<<<<<<< HEAD
+export const GlobalPresenceSection: React.FC = (): JSX.Element => {
+=======
+              } from 'lucide-react.ts';
+
+<<<<<<< HEAD
+export const GlobalPresenceSection: React.FC = (): JSX.Element => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const locations = [
+    {
+      city: 'New York',
+      country: 'United States',
+      flag: '🇺🇸',
+      timezone: 'EST (UTC-5)',
+      services['AI Development', 'Cloud Solutions', 'Cybersecurity'],
+      teamSize: '25+',
+      established: '2018'
+    },
+    {
+      city: 'London',
+      country: 'United Kingdom',
+      flag: '🇬🇧',
+      timezone: 'GMT (UTC+0)',
+      services['Digital Transformation', 'FinTech Solutions', 'Compliance'],
+      teamSize: '20+',
+      established: '2019'
+    },
+    {
+      city: 'Singapore',
+      country: 'Singapore',
+      flag: '🇸🇬',
+      timezone: 'SGT (UTC+8)',
+      services['APAC Operations', 'Supply Chain Tech', 'Smart Cities'],
+      teamSize: '15+',
+      established: '2020'
+    },
+    {
+      city: 'Toronto',
+      country: 'Canada',
+      flag: '🇨🇦',
+      timezone: 'EST (UTC-5)',
+      services['Healthcare Tech', 'AI Research', 'Startup Incubation'],
+      teamSize: '18+',
+      established: '2021'
+    },
+    {
+      city: 'Berlin',
+      country: 'Germ',
+      flag: '🇩🇪',
+      timezone: 'CET (UTC+1)',
+      services['IoT Solutions', 'Manufacturing Tech', 'Green Tech'],
+      teamSize: '12+',
+      established: '2022'
+    },
+    {
+      city: 'Sydney',
+      country: 'Australia',
+      flag: '🇦🇺',
+      timezone: 'AEST (UTC+10)',
+      services['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
+      teamSize: '10+',
+<<<<<<< HEAD
+      established: '2022'
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       established: '2022';
     };
   ];
@@ -48,7 +115,12 @@ const globalStats = [;
   { label: "Languages Supported", value: "15+", icon: "🗣️" },;
   { label: "24/7 Support", value: "Global", icon: "⏰" };
 ];
+<<<<<<< HEAD
 export function GlobalPresenceSection() {
+=======
+
+export function GlobalPresenceSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -73,6 +145,20 @@ export function GlobalPresenceSection() {
             Our distributed team ensures 24/7 support and cultural understanding.
           </p>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        {/* Global Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 mb-16"
+
+          {globalStats.map((stat, index)               => {
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Global Statistics */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
@@ -86,11 +172,16 @@ export function GlobalPresenceSection() {
 }}
           viewport={{ once: true }}
           transition = {
-  { duration: 0.6,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.2 
 }}
         >;
+<<<<<<< HEAD
           {globalStats.map((stat, index)  => {;
+=======
+          {globalStats.map((stat, index)                => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = stat.icon;
             return (
               <div key = {stat.label} className="text-center">
@@ -106,6 +197,41 @@ export function GlobalPresenceSection() {
               </div>
             )})}
         </motion.div>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+        {/* Locations Grid */}
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {locations.map((location, index)                => (
+            <motion.div
+              key={location.city}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+
+              <div className="flex items-center mb-4">
+                <span className="text-3xl mr-3">{location.flag}</span>
+                <div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {location.city}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{location.country}</p>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Global Offices */}
         <motion.div 
           className="mb-16"
@@ -126,8 +252,14 @@ export function GlobalPresenceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
           </h3>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {globalOffices.map((office, index) => (
+=======
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {globalOffices.map((office, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"

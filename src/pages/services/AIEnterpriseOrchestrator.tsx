@@ -1,6 +1,21 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '@/components/SEO';
+import { Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
 import { Brain, 
   Zap, 
   Shield, 
@@ -23,8 +38,18 @@ import { Brain,
   Target,
   Rocket,
   Sparkles
+<<<<<<< HEAD
  } from 'lucide-react';
 export default function AIEnterpriseOrchestrator(...args[]):  {
+=======
+<<<<<<< HEAD
+export default function AIEnterpriseOrchestrator(...args: any[]): any {
+=======
+              } from 'lucide-react.ts';
+
+export default function AIEnterpriseOrchestrator(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "Intelligent Process Orchestration",
@@ -234,8 +259,14 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
               unprecedented business transformation and operational excellence.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-2 gap-8">
             {features.map((feature, index)  => (
+=======
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -293,8 +324,14 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
               our core AI orchestration capabilities with scalable features.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
+=======
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -374,8 +411,14 @@ export default function AIEnterpriseOrchestrator(...args[]):  {
               delivering measurable results and competitive advantages.
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)  => (
+=======
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

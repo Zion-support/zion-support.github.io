@@ -1,4 +1,21 @@
 export interface IoTEdgeService {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -9,11 +26,24 @@ export interface IoTEdgeService {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
+pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+custom: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -368,7 +398,19 @@ export const IOT_EDGE_COMPUTING_SERVICES_2025: IoTEdgeService[] = [
     scalability: 'Unlimited data processing',
     deployment: 'Cloud-based analytics platform'
 ];
+<<<<<<< HEAD
 export const getIoTEdgeServicesByCategory = (category: string): IoTEdgeService[] => {;
+=======
+<<<<<<< HEAD
+export const getIoTEdgeServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IoTEdgeService[]               => {
+  if (category === 'All') {;
+    return IOT_EDGE_COMPUTING_SERVICES_2025};
+  return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category)};
+export const getAllIoTEdgeServices = (): IoTEdgeService[] => {;
+  return IOT_EDGE_COMPUTING_SERVICES_2025};
+=======
+export const getIoTEdgeServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IoTEdgeService[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return IOT_EDGE_COMPUTING_SERVICES_2025;
   return IOT_EDGE_COMPUTING_SERVICES_2025.filter(service => service.category === category);

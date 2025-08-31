@@ -1,14 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
   Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
   ArrowRight, Search, Filter, Grid, List, ChevronDown
+<<<<<<< HEAD
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
 export default function InnovativeServicesShowcase2027(...args[]):  {
+=======
+<<<<<<< HEAD
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027              } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027              } from '@/data/emergingTechServices2027';
+export default function InnovativeServicesShowcase2027(...args: any[]): any {
+=======
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027               } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027               } from '@/data/emergingTechServices2027';
+export default function InnovativeServicesShowcase2027(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -146,16 +158,16 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   y: 0 
 }}
             transition = {
-  { duration: 0.8,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.8,
   delay: 0.6 
 }}
           >
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
-              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
-              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)  => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: Star, color: 'from-yellow-500 to-orange-600' },
+              { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)               => acc + s.aiScore, 0) / allServices.length)}%`, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyBrain, color: 'from-purple-500 to-pink-600' },
+              { label: 'Rating Avg', value: `${(allServices.reduce((acc, s)               => acc + s.rating, 0) / allServices.length).toFixed(1)}`, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyStar, color: 'from-yellow-500 to-orange-600' },
               { label: 'Categories', value: categories.length - 1, icon: Grid, color: 'from-green-500 to-teal-600' }
-            ].map((stat, index)  => (
+            ].map((stat, index)               => (
               <div key={index} className="text-center group">
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${stat.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-8 h-8 text-white" />
@@ -204,9 +216,21 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
+=======
+<<<<<<< HEAD
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+
+                  {categories.map(category              => (
+=======
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                >
+                  {categories.map(category               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -265,7 +289,15 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
   { opacity: 0,
   y: -20 
 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.3 }}
+=======
+                transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.3 }}
+<<<<<<< HEAD
+
+                {filteredServices.map((service, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               >
                 {filteredServices.map((service, index)  => (
                   <motion.div

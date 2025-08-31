@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { LinkChecker, LinkInfo, PageInfo } from '../utils/linkChecker';
-import { 
-  CheckCircle, 
+import React, { useState, useEffect } from 'react.ts';
+import { LinkChecker, LinkInfo, PageInfo               } from '../utils/linkChecker';
+import { CheckCircle, 
   XCircle, 
   AlertTriangle, 
   ExternalLink, 
@@ -10,23 +9,51 @@ import {
   Link as LinkIcon,
   Download,
   RefreshCw
-} from 'lucide-react';
+              } from 'lucide-react.ts';
 
 interface AnalysisResult {
-  summary: {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+summary: {;
     totalLinks: number;
     brokenLinks: number;
     missingPages: number;
     externalLinks: number;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
   pages: PageInfo[];
   brokenLinks: LinkInfo[];
   missingPages: string[];
 }
 
-export const WebsiteAnalyzer: React.FC = () => {
+export const WebsiteAnalyzer: React.FC = (): JSX.Element => {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResult, setAnalysisResult] = useState<AnalysisResult | null>(null);
+  const [analysisResult, setAnalysisResult] = useState<any>(null);
   const [currentPage, setCurrentPage] = useState('');
   const [progress, setProgress] = useState(0);
 
@@ -150,7 +177,7 @@ export const WebsiteAnalyzer: React.FC = () => {
     URL.revokeObjectURL(url);
   };
 
-  const getStatusIcon = (status: string) => {
+  const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (status) {
       case 'working':
         return <CheckCircle className="w-4 h-4 text-green-500" />;
@@ -165,7 +192,7 @@ export const WebsiteAnalyzer: React.FC = () => {
     }
   };
 
-  const getStatusColor = (status: string) => {
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (status) {
       case 'working':
         return 'text-green-600 bg-green-100';
@@ -342,8 +369,8 @@ export const WebsiteAnalyzer: React.FC = () => {
                     </div>
                     <p className="text-sm text-gray-600 mb-3 font-mono">{page.path}</p>
                     {page.links.length > 0 && (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                        {page.links.slice(0, 6).map((link, linkIndex) => (
+                      <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-2">
+                        {page.links.slice(0, 6).map((link, linkIndex)               => (
                           <div key={linkIndex} className="flex items-center space-x-2 text-sm">
                             {getStatusIcon(link.status)}
                             <span className="font-mono text-xs truncate">{link.url}</span>

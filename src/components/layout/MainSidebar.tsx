@@ -1,5 +1,32 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+=======
+import React, { useState } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+<<<<<<< HEAD
+import { cn               } from '@/lib/utils';
+import { Home,
+  Briefcase,
+  Users,
+  Settings,
+  BarChart3,
+  FileText,
+  MessageSquare,
+  HelpCircle,
+  Code,
+  Smartphone,
+  Globe,
+  Building,
+  Mail,
+  Phone,
+  MapPin,
+  Brain,
+  Cpu,
+  Shield,
+  Rocket,
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Menu, 
   X, 
@@ -30,6 +57,71 @@ import {
   Network,
   Palette,
   Video,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Audio,
+  Document,
+  Folder,
+  File,
+  Archive,
+  Backup,
+  Restore,
+  Sync,
+  Share,
+  Export,
+  Import,
+  Download,
+  Upload,
+  Copy,
+  Paste,
+  Cut,
+  Delete,
+  Undo,
+  Redo,
+  Save,
+  Load,
+  Open,
+  Close,
+  Minimize,
+  Maximize,
+  Restore as RestoreIcon,
+  Move,
+  Resize,
+  Rotate,
+  Scale,
+  Transform,
+  Animate,
+  Transition,
+  Effect,
+  Filter,
+  Blend,
+  Mask,
+  Clip,
+  Crop,
+  Resize as ResizeIcon,
+  Rotate as RotateIcon,
+  Scale as ScaleIcon,
+  Transform as TransformIcon,
+  Animate as AnimateIcon,
+  Transition as TransitionIcon,
+  Effect as EffectIcon,
+  Filter as FilterIcon,
+  Blend as BlendIcon,
+  Mask as MaskIcon,
+  Clip as ClipIcon,
+  Crop as CropIcon,
+  Clock,
+  Handshake,
+  Leaf,
+  HardDrive,
+  RefreshCw
+interface MainSidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()               => void;
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   PenTool,
   Atom,
   Server,
@@ -44,20 +136,65 @@ import {
   Mail,
   MapPin,
   Users
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+ 
+} from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface SidebarItem {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   name: string;
   href: string;
   icon: React.ComponentType<any>;
   children?: SidebarItem[];
   featured?: boolean;
   description?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+<<<<<<< HEAD
 export function MainSidebar() {
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export function MainSidebar(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
+  const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
+<<<<<<< HEAD
   const toggleSection = (section: string) => {
+=======
+
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSections(prev => 
       prev.includes(section) 
         ? prev.filter(s => s !== section)
@@ -206,7 +343,7 @@ export function MainSidebar() {
       ]
     },
     {
-      name: 'Company',
+      name: 'Comp',
       href: '#',
       icon: Info,
       children: [

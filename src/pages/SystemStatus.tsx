@@ -1,8 +1,38 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp } from 'lucide-react';
 import { SEO } from "../components/SEO";
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp import { SEO              } from '../components/SEO';
+=======
+<<<<<<< HEAD
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Globe, Shield, Zap, BarChart3, TrendingUp              } from 'lucide-react.ts';
+import SEO from '../components/SEO';
+=======
+import { CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Cloud, Shield, Brain, Zap, Globe, BarChart3, RefreshCw, ExternalLink, TrendingUp              } from 'lucide-react.ts';
+import { SEO              } from '../components/SEO';
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ServiceStatus {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   status: 'operational' | 'degraded' | 'outage' | 'maintenance';
@@ -20,17 +50,35 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
+<<<<<<< HEAD
 const services: ServiceStatus[] = [
+=======
+
+const services: ServiceStatus[] = [;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
-    id: 'api',
-    name: 'API Services',
-    status: 'operational',
-    uptime: 99.99,
-    responseTime: 45,
-    lastUpdated: '2025-08-27T16:48:00Z',
-    description: 'Core API endpoints and microservices',
-    icon: Server
-  },
+id: 'api',;
+name: 'API Services',;
+status: 'operational',;
+uptime: 99.99,;
+responseTime: 45,;
+lastUpdated: '2025-08-27T16:48:00Z',;
+description: 'Core API endpoints and microservices',;
+icon: Server;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+},
   {
     id: 'database',
     name: 'Database Systems',
@@ -92,7 +140,12 @@ const incidents: Incident[] = [
     affectedServices: ['database', 'analytics'],
     endTime: '2025-08-27T16:00:00Z'
 ];
+<<<<<<< HEAD
 const getStatusColor = (status: ServiceStatus['status']) => {
+=======
+
+const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceStatus['status'])              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   switch (status) {
     case 'operational':
       return 'text-green-400 bg-green-400/10 border-green-400/20';
@@ -105,7 +158,12 @@ const getStatusColor = (status: ServiceStatus['status']) => {
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
 };
+<<<<<<< HEAD
 const getStatusIcon = (status: ServiceStatus['status']) => {
+=======
+
+const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyServiceStatus['status'])              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   switch (status) {
     case 'operational':
       return CheckCircle;
@@ -118,7 +176,12 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
     default:
       return Clock;
 };
+<<<<<<< HEAD
 const getSeverityColor = (severity: Incident['severity']) => {
+=======
+
+const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanyIncident['severity'])              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   switch (severity) {
     case 'low':
       return 'text-blue-400 bg-blue-400/10 border-blue-400/20';
@@ -131,7 +194,12 @@ const getSeverityColor = (severity: Incident['severity']) => {
     default:
       return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
 };
+<<<<<<< HEAD
 export default function SystemStatus() {
+=======
+
+export default function SystemStatus(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
   const overallStatus = services.every(s => s.status === 'operational')
@@ -224,8 +292,14 @@ export default function SystemStatus() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
+<<<<<<< HEAD
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           {services.map((service, index) => (
+=======
+          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6"
+
+          {services.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}

@@ -1,8 +1,40 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Twitter, Mail, Award, Users, TrendingUp, Globe, Lightbulb } from 'lucide-react';
 
 const Leadership = () => {
+=======
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Users,
+  Award,
+  Star,
+  Target,
+  TrendingUp,
+  Globe,
+  Zap,
+  Shield,
+  Brain,
+  Rocket,
+  Building,
+  Heart,
+  Crown,
+  Sparkles,
+  ArrowRight,
+  Linkedin,
+  Mail,
+  Phone,
+  MapPin
+<<<<<<< HEAD
+import { SEO              } from '../components/SEO';
+=======
+} from 'lucide-react';
+import SEO from '../components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function Leadership(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const leadershipTeam = [
     {
       name: "Dr. Sarah Chen",
@@ -141,6 +173,7 @@ const Leadership = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Company Stats */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -155,6 +188,76 @@ const Leadership = () => {
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-white" />
+=======
+      {/* Leadership Team */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Executive Leadership
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Meet the experienced professionals who are driving innovation and growth at Zion Tech Group.
+            </p>
+          </div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-12">
+            {leadershipTeam.map((leader, index)              => (
+              <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+                <div className="flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-6">
+                  <div className="flex-shrink-0">
+                    <img
+                      src={leader.image}
+                      alt={leader.name}
+                      className="w-32 h-32 rounded-2xl object-cover border-4 border-cyan-400/20"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-bold text-white mb-2">{leader.name}</h3>
+                    <p className="text-cyan-400 text-lg font-semibold mb-4">{leader.title}</p>
+                    <p className="text-slate-300 mb-6 leading-relaxed">{leader.bio}</p>
+
+                    <div className="mb-6">
+                      <h4 className="text-white font-semibold mb-3">Areas of Expertise:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {leader.expertise.map((skill, skillIndex) => (
+                          <span
+                            key={skillIndex}
+                            className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
+
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="flex items-center space-x-4">
+                      <a
+                        href={leader.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
+
+                        <Linkedin className="w-5 h-5" />
+                        <span>LinkedIn</span>
+                      </a>
+                      <a
+                        href={`mailto:${leader.email}`}
+                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
+
+                        <Mail className="w-5 h-5" />
+                        <span>Email</span>
+                      </a>
+                      <a
+                        href={`tel:${leader.phone}`}
+                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
+
+                        <Phone className="w-5 h-5" />
+                        <span>Call</span>
+                      </a>
+                    </div>
+                  </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
                 <div className="text-lg font-semibold text-white mb-1">{stat.label}</div>
@@ -191,6 +294,7 @@ const Leadership = () => {
                   <div className="text-cyan-400 text-2xl font-bold">{member.name.charAt(0)}</div>
                 </div>
 
+<<<<<<< HEAD
                 {/* Name and Position */}
                 <div className="text-center mb-4">
                   <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
@@ -268,6 +372,13 @@ const Leadership = () => {
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <value.icon className="w-8 h-8 text-white" />
+=======
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)              => (
+              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <value.icon className="w-8 h-8 text-cyan-400" />
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
                 <p className="text-gray-300 text-sm">{value.description}</p>
@@ -277,6 +388,7 @@ const Leadership = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Join Our Team CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -316,6 +428,29 @@ const Leadership = () => {
               Get in Touch
             </a>
           </motion.div>
+=======
+      {/* Achievements */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Achievements
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Milestones that demonstrate our commitment to excellence and innovation.
+            </p>
+          </div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {achievements.map((achievement, index)              => (
+              <div key={index} className="text-center p-6 rounded-xl bg-slate-800/50 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">{achievement.metric}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{achievement.label}</h3>
+                <p className="text-slate-300 text-sm">{achievement.description}</p>
+              </div>
+            ))}
+          </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
     </div>

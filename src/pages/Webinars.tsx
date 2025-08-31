@@ -1,7 +1,43 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+
+export default function Webinars(...args: any[]): any {
+	return (
+		<div className="min-h-screen bg-slate-900 text-white py-16">
+			<SEO title="Webinars - Zion Tech Group" description="Upcoming and past webinars." />
+			<div className="container mx-auto px-4 max-w-4xl">
+				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
+				<p className="text-zinc-300">Explore our upcoming and recorded sessions.</p>
+			</div>
+		</div>
+	);
+
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars(...args: any[]): any {
+=======
+
+import React, { useState              } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { BookOpen, 
+  Brain, 
+  Shield, 
+  Cloud, 
+  Rocket, 
+  Heart, 
+  Zap, 
+  Globe,
+  Video,
+  Database,
+  Target,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Calendar,
   Clock,
   User,
@@ -15,6 +51,7 @@ import {
   Heart,
   Share2,
   ArrowRight,
+<<<<<<< HEAD
   CheckCircle,
   Zap,
   Brain,
@@ -78,6 +115,17 @@ import {
 } from 'lucide-react';
 
 export default function Webinars() {
+=======
+  CheckCircle
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+
+const Webinars: React.FC = (): JSX.Element => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
@@ -320,7 +368,90 @@ export default function Webinars() {
     }
   ];
 
+<<<<<<< HEAD
   const filteredWebinars = webinars.filter(webinar => {
+=======
+  const allWebinars = [...upcomingWebinars, ...pastWebinars];
+
+<<<<<<< HEAD
+  const filteredWebinars = (showPast ? pastWebinars: anyanyanyanyanyanyanyanyanyanyanyanyanyupcomingWebinars).filter(webinar               => {;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    
+    return matchesCategory && matchesSearch});
+
+  const stats = [
+    { label: 'Webinars Delivered', value: '100+', icon: Video },
+    { label: 'Attendees Served', value: '25K+', icon: Users },
+    { label: 'Expert Speakers', value: '15+', icon: Star },;
+    { label: 'Topics Covered', value: '20+', icon: BookOpen };
+  ];
+
+  const contactInfo = {
+  email: 'webinars@ziontechgroup.com',
+    phone: '+1 302 464 0950',
+    address: '364 E Main St STE 1008,
+  Middletown DE 19709';
+  ;
+
+};
+
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Webinars - Zion Tech Group"
+        description="Join our educational webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry experts."
+      />
+      
+=======
+      currentAttendees: anyanyanyanyanyanyanyanyanyanyanyanyany189,;
+      featured: false,;
+      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
+      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
+      registrationRequired: true,;
+      recordingAvailable: false;
+    };
+  ];
+
+  // Update counts
+  React.useEffect(()              => {
+    categories.forEach(cat = > {;
+      cat.count = webinars.filter(w => w.category === cat.id).length;
+    });
+
+    filterTypes.forEach(type = > {;
+      if (type.id === 'all') {;
+        type.count = webinars.length;
+      } else {
+        type.count = webinars.filter(w => w.type === type.id).length;
+
+    });
+  }, []);
+
+  const filteredWebinars = webinars.filter(webinar => {;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+
+    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
+    const matchesType = filterType === 'all' || webinar.type === filterType;
+
+    return matchesSearch && matchesCategory && matchesType;
+=======
+  // Update category counts
+  categories.forEach(category => {
+    if (category.id === 'all') {
+      category.count = allWebinars.length;
+    } else {
+      category.count = allWebinars.filter(webinar => webinar.category === category.id).length;
+    }
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+  });
+
+  const filteredWebinars = allWebinars.filter(webinar => {
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
@@ -329,6 +460,7 @@ export default function Webinars() {
     return matchesSearch && matchesCategory && matchesType;
   });
 
+<<<<<<< HEAD
   const upcomingWebinars = filteredWebinars.filter(w => w.type === 'upcoming');
   const liveWebinars = filteredWebinars.filter(w => w.type === 'live');
   const recordedWebinars = filteredWebinars.filter(w => w.type === 'recorded');
@@ -362,6 +494,55 @@ export default function Webinars() {
     // Simulate watching
     console.log(`Watching: ${title}`);
     // In a real app, this would open the recorded webinar
+=======
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.icon : BookOpen;
+  };
+
+  const getCategoryName = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.name : 'General';
+  };
+
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      weekday: 'long', 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
+<<<<<<< HEAD
+  const formatTimeUntil = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    const now = new Date();
+    const webinarDate = new Date(dateString);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays < 0) return 'Past';
+    if (diffDays === 0) return 'Today';
+    if (diffDays < 7) return `${diffDays} days`;
+    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
+    return `${Math.ceil(diffDays / 30)} months`;
+  };
+
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
+=======
+  const getRegistrationStatus = (webinar: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {
+    if (webinar.isLive) {
+      return { status: 'Live Now', color: 'from-red-500 to-pink-500', icon: Play };
+    } else if (webinar.attendees >= webinar.maxAttendees) {
+      return { status: 'Full', color: 'from-gray-500 to-slate-500', icon: Users };
+    } else if (webinar.watchUrl) {
+      return { status: 'Watch Now', color: 'from-blue-500 to-cyan-500', icon: Play };
+    } else {
+      return { status: 'Register Now', color: 'from-green-500 to-emerald-500', icon: CheckCircle };
+    }
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   };
 
   return (
@@ -621,6 +802,7 @@ export default function Webinars() {
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >
+<<<<<<< HEAD
                 {viewMode === 'grid' ? (
                   // Grid View
                   <div className="p-6">
@@ -638,6 +820,31 @@ export default function Webinars() {
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-sm text-zinc-300">{webinar.rating}</span>
+=======
+                <Video className="w-16 h-16 text-zion-cyan-light mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">No webinars found</h3>
+                <p className="text-zion-cyan-light">
+                  Try adjusting your search terms or category filter.
+                </p>
+              </motion.div>
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+            ) : (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+<<<<<<< HEAD
+                {filteredWebinars.map((webinar)              => (
+                  <motion.div
+                    key={webinar.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
+
+                    {/* Thumbnail */}
+                    <div className="relative h-48 bg-gradient-to-br from-zion-slate to-zion-slate-light">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Play className="w-16 h-16 text-zion-cyan" />
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                       </div>
                     </div>
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -8,12 +9,54 @@ import {
   Cloud, 
   Atom, 
   Globe, 
+=======
+import React, { useState } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import Link from 'next/link.ts';
+import { FlaskConical,
+  Brain,
+  Shield,
+  Cloud,
+  TrendingUp,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Code,
+  Rocket,
+  Users,
+  BarChart3,
+  FileImage,
+  MessageCircle,
+  Video,
+  FileText,
+  Heart,
+  Award,
+  Clock,
+  DollarSign,
+  Search,
+  Filter,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Target,
+  BookOpen,
+  GraduationCap,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lightbulb,
   Microscope,
   TestTube,
   Satellite,
   Telescope
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+<<<<<<< HEAD
+=======
+              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const researchAreas = [
   {
@@ -227,9 +270,117 @@ const ResearchDevelopment = () => {
     ? researchAreas 
     : researchAreas.filter(area => area.id === selectedArea);
 
+<<<<<<< HEAD
   const filteredProjects = selectedArea === 'all' 
     ? researchProjects 
     : researchProjects.filter(project => project.area.toLowerCase().includes(selectedArea));
+=======
+const patents = [
+  {
+    id: 1,
+    title: 'Adaptive Threat Detection System Using Machine Learning',
+    inventors['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],
+    filingDate: '2026-08-15',
+    status: 'Granted',
+    patentNumber: 'US 11,234,567',
+    area: 'AI & ML',
+    description: 'A system for detecting cybersecurity threats using adaptive machine learning algorithms.'
+  },
+  {
+    id: 2,
+    title: 'Quantum-Resistant Digital Signature Algorithm',
+    inventors['Dr. Michael Rodriguez'],
+    filingDate: '2026-06-20',
+    status: 'Pending',
+    patentNumber: 'US 2026/0123456',
+    area: 'Quantum Computing',
+    description: 'A digital signature algorithm resistant to quantum computing attacks.'
+  },
+  {
+    id: 3,
+    title: 'Edge Computing Resource Optimization Method',
+    inventors['Dr. Emily Wang', 'Dr. James Brown'],
+    filingDate: '2026-05-10',
+    status: 'Granted',
+    patentNumber: 'US 11,123,456',
+    area: 'Edge Computing',
+    description: 'A method for optimizing resource allocation in edge computing environments.'
+  },
+  {
+    id: 4,
+    title: 'Privacy-Preserving Data Analytics Framework',
+    inventors['Dr. James Brown'],
+    filingDate: '2026-03-25',
+    status: 'Granted',
+    patentNumber: 'US 11,012,345',
+    area: 'Data Science',
+    description: 'A framework for analyzing data while preserving individual privacy.'
+  },
+  {
+    id: 5,
+    title: 'Cloud Security Architecture Pattern',
+<<<<<<< HEAD
+    inventors: ['Dr. Lisa Garcia'],
+    filingDate: '2026-02-15',
+    status: 'Pending',
+    patentNumber: 'US 2026/0098765',
+    area: 'Cloud-Native',
+    description: 'A security architecture pattern for cloud-native applications.'
+
+=======
+    inventors['Dr. Lisa Garcia'],;
+    filingDate: '2026-02-15',;
+    status: 'Pending',;
+    patentNumber: 'US 2026/0098765',;
+    area: 'Cloud-Native',;
+    description: 'A security architecture pattern for cloud-native applications.';
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+];
+
+export default function ResearchDevelopment(...args[]: any):  {
+  const [selectedArea, setSelectedArea] = useState('All');
+  const [selectedStatus, setSelectedStatus] = useState('All');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const areas = ['All', ...researchAreas.map(area => area.name)];
+  const statuses = ['All', 'Active', 'Completed', 'Planning'];
+
+  const filteredProjects = researchProjects.filter(project => {;
+    const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         project.description.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesArea && matchesStatus && matchesSearch;
+  });
+
+<<<<<<< HEAD
+  const getAreaIcon = (areaName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const area = researchAreas.find(a => a.name === areaName);
+    return area ? area.icon : FlaskConical};
+
+<<<<<<< HEAD
+  const getAreaColor = (areaName: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const area = researchAreas.find(a => a.name === areaName);
+    return area ? area.color : 'from-gray-500 to-slate-600'};
+
+<<<<<<< HEAD
+  const getStatusBadge = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    if (status === 'Active') {;
+      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
+    } else if (status = == 'Completed') {;
+      return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>;
+    } else {
+      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
+<<<<<<< HEAD
+
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  };
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -244,6 +395,7 @@ const ResearchDevelopment = () => {
           >
             <Lightbulb className="w-10 h-10 text-white" />
           </motion.div>
+<<<<<<< HEAD
           
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
@@ -264,6 +416,69 @@ const ResearchDevelopment = () => {
             Pushing the boundaries of technology through cutting-edge research, 
             innovative solutions, and breakthrough discoveries that shape the future.
           </motion.p>
+=======
+        </div>
+      </section>
+
+      {/* Search & Filters */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              {/* Search */}
+              <div className="md:col-span-1">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-4 h-4" />
+                  <input
+                    type="text"
+                    placeholder="Search research..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                  />
+                </div>
+              </div>
+
+              {/* Research Area Filter */}
+              <div>
+                <select
+                  value={selectedArea}
+                  onChange={(e) => setSelectedArea(e.target.value)}
+<<<<<<< HEAD
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+
+                  {areas.map(area              => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {areas.map(area               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                    <option key={area} value={area}>{area}</option>
+                  ))}
+                </select>
+              </div>
+
+              {/* Status Filter */}
+              <div>
+                <select
+                  value={selectedStatus}
+                  onChange={(e) => setSelectedStatus(e.target.value)}
+<<<<<<< HEAD
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+
+                  {statuses.map(status              => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {statuses.map(status               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                    <option key={status} value={status}>{status}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 
@@ -274,6 +489,7 @@ const ResearchDevelopment = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
             className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
           >
             Research Focus Areas
@@ -281,6 +497,314 @@ const ResearchDevelopment = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredAreas.map((area, index) => (
+=======
+            viewport={{ once: true }}
+            className="mb-12 text-center"
+
+            <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
+<<<<<<< HEAD
+            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {researchAreas.map((area, index)               => {;
+=======;
+            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
+            {researchAreas.map((area, index)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+              const IconComponent = area.icon;
+              return (
+                <motion.div
+                  key = {area.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                  viewport={{ once: true }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+
+                  <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{area.name}</h3>
+                  <p className="text-zion-slate-light mb-4">{area.description}</p>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-white mb-2">Research Focus</h4>
+                    <div className="space-y-1">
+                      {area.focus.slice(0, 4).map((focus, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                          <CheckCircle className="w-3 h-3 text-green-400" />
+                          <span>{focus}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4 text-center">
+                    <div>
+                      <div className="text-2xl font-bold text-zion-cyan">{area.publications}</div>
+                      <div className="text-xs text-zion-slate-light">Publications</div>
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-zion-cyan">{area.patents}</div>
+                      <div className="text-xs text-zion-slate-light">Patents</div>
+                    </div>
+                    <div>
+<<<<<<< HEAD
+                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>
+                      <div className="text-xs text-zion-slate-light">Projects</div>
+                    </div>
+                  </div>
+                </motion.div>
+              )})};
+=======;
+                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;
+                      <div className="text-xs text-zion-slate-light">Projects</div>;
+                    </div>;
+                  </div>;
+                </motion.div>;
+              );
+            })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          </div>
+        </div>
+      </section>
+
+      {/* Active Research Projects */}
+      <section id = "active-projects" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12 text-center"
+
+            <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
+<<<<<<< HEAD
+            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredProjects.map((project, index)               => {;
+=======;
+            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
+          </motion.div>;
+;
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+            {filteredProjects.map((project, index)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+              const IconComponent = getAreaIcon(project.area);
+              const areaColor = getAreaColor(project.area);
+              return (
+                <motion.div
+                  key = {project.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                  viewport={{ once: true }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${areaColor} rounded-2xl flex items-center justify-center`}>
+                        <IconComponent className="w-8 h-8 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white mb-1">{project.title}</h3>
+                        <div className="flex items-center gap-2">
+                          {getStatusBadge(project.status)}
+                          <span className="text-sm text-zion-cyan">{project.area}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-zion-slate-light mb-4">{project.description}</p>
+
+                  {/* Project Details */}
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="text-sm text-zion-slate-light">
+                      <span className="flex items-center gap-1">
+                        <Clock className="w-4 h-4" />
+                        Duration: {project.duration}
+                      </span>
+                    </div>
+                    <div className="text-sm text-zion-slate-light">
+                      <span className="flex items-center gap-1">
+                        <DollarSign className="w-4 h-4" />
+                        Funding: {project.funding}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Team */}
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-white mb-2">Research Team</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.team.map((member, idx) => (
+                        <span key={idx} className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded-full">
+                          {member}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Outcomes */}
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-white mb-2">Expected Outcomes</h4>
+                    <div className="space-y-1">
+                      {project.outcomes.map((outcome, idx) => (
+                        <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                          <Star className="w-3 h-3 text-yellow-400" />
+                          <span>{outcome}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to={`/research-development/projects/${project.id}`}
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+
+                      Learn More
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                    <div className="text-right">
+<<<<<<< HEAD
+                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>
+                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
+                    </div>
+                  </div>
+                </motion.div>
+              )})};
+=======;
+                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;
+                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
+                    </div>;
+                  </div>;
+                </motion.div>;
+              );
+            })}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          </div>
+        </div>
+      </section>
+
+      {/* Publications */}
+      <section id = "publications" className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12 text-center"
+
+            <h2 className="text-3xl font-bold text-white mb-4">Research Publications</h2>
+            <p className="text-zion-slate-light text-lg">Our latest research contributions to the scientific community</p>
+          </motion.div>
+
+          <div className="space-y-6">
+            {publications.map((pub, index) => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={area.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -335,6 +859,7 @@ const ResearchDevelopment = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+<<<<<<< HEAD
             className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
           >
             Active Research Projects
@@ -342,6 +867,17 @@ const ResearchDevelopment = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
+=======
+            viewport={{ once: true }}
+            className="mb-12 text-center"
+
+            <h2 className="text-3xl font-bold text-white mb-4">Patents & Intellectual Property</h2>
+            <p className="text-zion-slate-light text-lg">Our innovative technologies protected by intellectual property rights</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {patents.map((patent, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -24,6 +25,12 @@ import {
   BarChart3,
   Atom,
   Network,
+=======
+import React, { useState } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Mail,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lock,
   Cpu,
   Wifi,
@@ -41,10 +48,23 @@ import {
   Eye,
   EyeOff,
   ArrowRight,
+<<<<<<< HEAD
   User
 } from 'lucide-react';
 
 export default function Signup() {
+=======
+  Shield,
+  Zap,
+  Users,
+  CheckCircle
+<<<<<<< HEAD
+export default function Signup(...args: any[]): any {
+=======
+              } from 'lucide-react.ts';
+export default function Signup(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -62,6 +82,7 @@ export default function Signup() {
 
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+<<<<<<< HEAD
   const [currentStep, setCurrentStep] = useState(1);
   const [errors, setErrors] = useState<{[key: string]: string}>({});
 
@@ -152,6 +173,24 @@ export default function Signup() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
+=======
+  const [isLoading, setIsLoading] = useState(false);
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
+<<<<<<< HEAD
+  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)               => {
+    setFormData({
+      ...formData,;
+      [e.target.name]: e.target.value;
+    })};
+  const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement>)              => {;
+    setFormData({;
+      ...formData,;
+      [e.target.name]: e.target.value;
+    });
+  };
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     if (validateStep(currentStep)) {
       // Handle form submission

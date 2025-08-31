@@ -1,9 +1,26 @@
+<<<<<<< HEAD
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 export default function AISupportHelpdesk(...args[]):  {
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone import { SEO              } from '@/components/SEO';
+=======
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { MessageCircle, Brain, Zap, Shield, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen, Users, Clock, CheckCircle, Mail, Phone               } from 'lucide-react.ts';
+import { SEO               } from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function AISupportHelpdesk(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -230,8 +247,20 @@ export default function AISupportHelpdesk(...args[]):  {
                 Everything you need to deliver exceptional customer support with AI assistance
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
+=======
+<<<<<<< HEAD
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
+=======
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -268,8 +297,20 @@ export default function AISupportHelpdesk(...args[]):  {
                 Intelligent automation that understands and helps your customers
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {aiCapabilities.map((capability, index)  => (
+=======
+<<<<<<< HEAD
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiCapabilities.map((capability, index)              => (
+=======
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiCapabilities.map((capability, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -306,8 +347,20 @@ export default function AISupportHelpdesk(...args[]):  {
                 Meet your customers where they are with comprehensive support channels
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {supportChannels.map((channel, index)  => (
+=======
+<<<<<<< HEAD
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)              => (
+=======
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {supportChannels.map((channel, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -344,8 +397,20 @@ export default function AISupportHelpdesk(...args[]):  {
                 Professional support tools that transform customer service with AI
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
+=======
+<<<<<<< HEAD
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)              => (
+=======
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -384,8 +449,20 @@ export default function AISupportHelpdesk(...args[]):  {
                 Choose the support plan that fits your team size and requirements
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
+=======
+<<<<<<< HEAD
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)              => (
+=======
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

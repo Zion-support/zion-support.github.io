@@ -1,5 +1,20 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { BarChart3,
+  TrendingUp,
+  Users,
+  Eye,
+  MousePointer,
+  Clock,
+  Globe,
+  X,
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   BarChart3, 
   TrendingUp, 
@@ -24,16 +39,67 @@ import {
   Filter,
   Calendar,
   RefreshCw
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+              } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AnalyticsData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   pageViews: number;
   uniqueVisitors: number;
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
+<<<<<<< HEAD
   topPages: Array<{ path: string; views: number }>;
   userAgents: Array<{ device: string; count: number }>;
   locations: Array<{ country: string; count: number }>;
+=======
+  topPages: Array<any>;
+  userAgents: Array<any>;
+<<<<<<< HEAD
+  referrers: Array<any>;
+  timeOnPage: number;
+  scrollDepth: number;
+  clickEvents: number;
+  formSubmissions: number;
+
+interface Props extends React.PropsWithChildren<{
+
+
+
+
+
+
+
+
+
+
+
+
+}> {
+
+  enabled?: boolean;
+  showMetrics?: boolean;
+=======
+  locations: Array<any>;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   performance: {
     loadTime: number;
     firstPaint: number;
@@ -47,13 +113,21 @@ interface AnalyticsData {
     errors: number;
   };
 }
+<<<<<<< HEAD
 interface AdvancedAnalyticsProps {
+=======
+
+interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled: boolean;
   trackingId?: string;
   enableHeatmap?: boolean;
   enableSessionRecording?: boolean;
   enableAITesting?: boolean;
+
 }
+<<<<<<< HEAD
 export function AdvancedAnalytics({ 
   enabled, 
   trackingId,
@@ -61,8 +135,13 @@ export function AdvancedAnalytics({
   enableSessionRecording = false,
   enableAITesting = false
 }: AdvancedAnalyticsProps) {
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export function AdvancedAnalytics(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isOpen, setIsOpen] = useState(false);
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+  const [analyticsData, setAnalyticsData] = useState<any>({
     pageViews: 0,
     uniqueVisitors: 0,
     sessionDuration: 0,
@@ -85,12 +164,20 @@ export function AdvancedAnalytics({
     }
   });
   const [isTracking, setIsTracking] = useState(false);
+<<<<<<< HEAD
   const [sessionStart, setSessionStart] = useState<number>(Date.now());
   const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
   const [userSession, setUserSession] = useState<string>('');
   const [heatmapData, setHeatmapData] = useState<Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>>([]);
+=======
+  const [sessionStart, setSessionStart] = useState<any>(Date.now());
+  const [currentPage, setCurrentPage] = useState<any>(window.location.pathname);
+  const [userSession, setUserSession] = useState<any>('');
+  const [heatmapData, setHeatmapData] = useState<Array<any>>([]);
+  
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const trackingRef = useRef<{
-    pageViews: number;
+    pageViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber;
     clicks: number;
     scrolls: number;
     formSubmissions: number;
@@ -105,18 +192,18 @@ export function AdvancedAnalytics({
     startTime: Date.now()
   });
   // Generate unique session ID
-  useEffect(() => {
+  useEffect(()               => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     setUserSession(sessionId);
     localStorage.setItem('analytics_session_id', sessionId);
   }, []);
   // Track page views
-  const trackPageView = useCallback((path: string) => {
+  const trackPageView = useCallback((path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     if (!enabled) return;
     setCurrentPage(path);
     trackingRef.current.pageViews++;
     const pageViewData = {
-      sessionId: userSession,
+      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
       path,
       timestamp: new Date().toISOString(),
       referrer: document.referrer,
@@ -129,16 +216,16 @@ export function AdvancedAnalytics({
     // Send to analytics service
     this.sendAnalyticsData('pageview', pageViewData);
     // Update local state
-    setAnalyticsData(prev => ({
+    setAnalyticsData(prev               => ({
       ...prev,
       pageViews: prev.pageViews + 1
     }));
   }, [enabled, userSession]);
   // Track user interactions
-  const trackInteraction = useCallback((type: 'click' | 'scroll' | 'form' | 'error', data?: any) => {
+  const trackInteraction = useCallback((type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'click' | 'scroll' | 'form' | 'error', data?: )               => {
     if (!enabled) return;
     const interactionData = {
-      sessionId: userSession,
+      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
       type,
       timestamp: new Date().toISOString(),
       page: currentPage,
@@ -164,7 +251,7 @@ export function AdvancedAnalytics({
     // Send to analytics service
     this.sendAnalyticsData('interaction', interactionData);
     // Update local state
-    setAnalyticsData(prev => ({
+    setAnalyticsData(prev               => ({
       ...prev,
       interactions: {
         ...prev.interactions,
@@ -181,17 +268,17 @@ export function AdvancedAnalytics({
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint');
       const performanceData = {
-        sessionId: userSession,
+        sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        largestContentfulPaint: 0, // Will be updated by observer
+        firstPaint: paint.find(entry               => entry.name === 'first-paint')?.startTime || 0,
+        firstContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyanyanyanypaint.find(entry               => entry.name === 'first-contentful-paint')?.startTime || 0,
+        largestContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyanyanyany0, // Will be updated by observer
         timestamp: new Date().toISOString()
       };
       // Update local state
-      setAnalyticsData(prev => ({
+      setAnalyticsData(prev               => ({
         ...prev,
-        performance: {
+        performance: anyanyanyanyanyanyanyanyanyanyanyanyanyany{
           loadTime: performanceData.loadTime,
           firstPaint: performanceData.firstPaint,
           firstContentfulPaint: performanceData.firstContentfulPaint,
@@ -203,21 +290,106 @@ export function AdvancedAnalytics({
     }
   }, [enabled, userSession]);
   // Setup event listeners
-  useEffect(() => {
+  useEffect(()               => {
     if (!enabled) return;
     setIsTracking(true);
     // Track initial page view
     trackPageView(window.location.pathname);
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+    // Track scroll depth
+    const trackScrollDepth = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+      setAnalyticsData(prev => ({
+        ...prev,
+        scrollDepth: Math.max(prev.scrollDepth, scrollPercent)
+      }));
+    };
+
+    // Track time on page
+    const trackTimeOnPage = () => {
+      const timeSpent = Math.round((Date.now() - sessionStart) / 1000);
+      setAnalyticsData(prev => ({
+        ...prev,
+        timeOnPage: timeSpent
+      }));
+    };
+
+    // Track click events
+    const trackClickEvents = () => {
+      setAnalyticsData(prev => ({
+        ...prev,
+        clickEvents: prev.clickEvents + 1
+      }));
+    };
+
+    // Track form submissions
+    const trackFormSubmissions = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyEvent)               => {
+      if (e.target instanceof HTMLFormElement) {
+        setAnalyticsData(prev => ({
+          ...prev,
+          formSubmissions: prev.formSubmissions + 1
+        }));
+
+    };
+
+    // Track user agent
+    const trackUserAgent = () => {
+      const userAgent = navigator.userAgent;
+      let device = 'Desktop';
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+        device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
+
+      setAnalyticsData(prev => {
+        const existingDevice = prev.userAgents.find(d => d.device === device);
+        if (existingDevice) {
+          existingDevice.count++;
+        } else {
+          prev.userAgents.push({ device, count: 1 });
+
+        return { ...prev };
+      });
+    };
+
+    // Track referrer
+    const trackReferrer = () => {
+      if (document.referrer) {
+        const referrer = new URL(document.referrer);
+        const source = referrer.hostname;
+
+        setAnalyticsData(prev => {
+          const existingSource = prev.referrers.find(r => r.source === source);
+          if (existingSource) {
+            existingSource.count++;
+          } else {
+            prev.referrers.push({ source, count: 1 });
+
+          return { ...prev };
+        });
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Track performance metrics
     trackPerformance();
     // Setup click tracking
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)               => {
       const target = e.target as HTMLElement;
+<<<<<<< HEAD
       const position = { x: e.clientX, y: e.clientY };
+=======
+      const position = { x: anyanyanyanyanyanyanyanyanyanyanyanyanyanye.clientX, y: e.clientY };
+      
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       trackInteraction('click', { target, position });
       // Add to heatmap data
       if (enableHeatmap) {
-        setHeatmapData(prev => [...prev, { x: position.x, y: position.y, type: 'click' }]);
+        setHeatmapData(prev               => [...prev, { x: position.x, y: position.y, type: 'click' }]);
       }
     };
     // Setup scroll tracking
@@ -232,7 +404,7 @@ export function AdvancedAnalytics({
       }, 100);
     };
     // Setup form submission tracking
-    const handleFormSubmit = (e: Event) => {
+    const handleFormSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyEvent)               => {
       const form = e.target as HTMLFormElement;
       trackInteraction('form', { 
         formId: form.id || form.className,
@@ -241,7 +413,7 @@ export function AdvancedAnalytics({
       });
     };
     // Setup error tracking
-    const handleError = (e: ErrorEvent) => {
+    const handleError = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyErrorEvent)               => {
       trackInteraction('error', {
         message: e.message,
         filename: e.filename,
@@ -251,7 +423,7 @@ export function AdvancedAnalytics({
       });
     };
     // Setup unhandled promise rejection tracking
-    const handleUnhandledRejection = (e: PromiseRejectionEvent) => {
+    const handleUnhandledRejection = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyPromiseRejectionEvent)               => {
       trackInteraction('error', {
         message: e.reason?.message || 'Unhandled Promise Rejection',
         reason: e.reason
@@ -299,28 +471,58 @@ export function AdvancedAnalytics({
         if (lastEntry) {
           setAnalyticsData(prev => ({
             ...prev,
-            performance: {
+            performance: anyanyanyanyanyanyanyanyanyanyanyanyanyany{
               ...prev.performance,
               largestContentfulPaint: lastEntry.startTime
             }
           }));
         }
       });
+<<<<<<< HEAD
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
       return () => lcpObserver.disconnect();
+=======
+
+<<<<<<< HEAD
+      return ()               => clearInterval(interval);
+
+  }, [isTracking, sessionStart]);
+
+  // Simulate some analytics data for demonstration
+  useEffect(() => {
+    if (enabled) {
+      // Simulate top pages
+      setAnalyticsData(prev => ({
+        ...prev,
+        topPages: [
+          { path: '/', views: 1250 },
+          { path: '/services', views: 890 },
+          { path: '/about', views: 456 },
+          { path: '/contact', views: 234 },
+          { path: '/blog', views: 189 }
+        ],
+        bounceRate: 35.2,
+        conversionRate: 8.7
+      }));
+
+=======
+      lcpObserver.observe({ entryTypes: anyanyanyanyanyanyanyanyanyanyanyanyanyany['largest-contentful-paint'] });
+
+      return ()               => lcpObserver.disconnect();
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     } catch (error) {
       console.warn('PerformanceObserver not supported:', error);
     }
   }, [enabled]);
   // Send analytics data to service
-  const sendAnalyticsData = useCallback(async (eventType: string, data: any) => {
+  const sendAnalyticsData = useCallback(async (eventType: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, data: )               => {
     if (!trackingId) return;
     try {
       const analyticsPayload = {
         trackingId,
         eventType,
         data,
-        timestamp: new Date().toISOString(),
+        timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date().toISOString(),
         sessionId: userSession
       };
       // Send to analytics endpoint
@@ -336,7 +538,7 @@ export function AdvancedAnalytics({
     }
   }, [trackingId, userSession]);
   // Generate mock data for demonstration
-  useEffect(() => {
+  useEffect(()               => {
     if (!enabled) return;
     // Simulate data collection
     const mockData: AnalyticsData = {
@@ -360,7 +562,7 @@ export function AdvancedAnalytics({
         { country: 'United States', count: Math.floor(Math.random() * 300) + 150 },
         { country: 'United Kingdom', count: Math.floor(Math.random() * 150) + 80 },
         { country: 'Canada', count: Math.floor(Math.random() * 100) + 50 },
-        { country: 'Germany', count: Math.floor(Math.random() * 80) + 40 }
+        { country: 'Germ', count: Math.floor(Math.random() * 80) + 40 }
       ],
       performance: {
         loadTime: Math.random() * 2000 + 500,

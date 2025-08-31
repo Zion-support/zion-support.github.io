@@ -1,4 +1,17 @@
 export interface NewInnovativeService {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -17,11 +30,24 @@ export interface NewInnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

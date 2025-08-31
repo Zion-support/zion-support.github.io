@@ -1,5 +1,18 @@
 export interface InnovativeMicroSaasService2027 {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -12,6 +25,44 @@ export interface InnovativeMicroSaasService2027 {
   benefits: string[];
   targetAudience: string[];
   marketPrice: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  roi: string;
+  innovationLevel: string;
+contactInfo: {;
+    phone: string;
+    email: string;
+    website: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+  aiCapabilities?: string[];
+  complianceFeatures?: string[];
+  scalabilityFeatures?: string[];
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   website: string;
   contactEmail: string;
   tags: string[];

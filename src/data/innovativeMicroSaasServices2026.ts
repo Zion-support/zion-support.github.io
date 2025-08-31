@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 export interface InnovativeMicroSaasService {
+=======
+export interface InnovativeMicroSaasService2026 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -21,9 +38,40 @@ export interface InnovativeMicroSaasService {
   integrations: string[];
   targetAudience: string[];
   roi: string;
+<<<<<<< HEAD
   implementationTime: string;
   support: string;
 }
+=======
+  innovationLevel: string;
+contactInfo: {;
+    phone: string;
+    email: string;
+    website: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService[] = [
   {

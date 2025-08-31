@@ -1,25 +1,62 @@
 import React from 'react.ts';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { CompDashboard  } from '@/components/enterprise/workspace/CompDashboard';
-import { useAuth  } from '@/hooks/useAuth';
-import { Navigate, useParams  } from 'react-router-dom.ts';
-import SEOHead from "../components/SEOHead.jsx";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { useCompWorkspace  } from '@/hooks/useCompWorkspace';
-import { useWhitelabel  } from '@/context/WhitelabelContext';
-export default function CompWorkspace(...args[]):  {
+import { Header               } from '@/components/Header';
+import { Footer               } from '@/components/Footer';
+import { CompDashboard               } from '@/components/enterprise/workspace/CompDashboard';
+import { useAuth               } from '@/hooks/useAuth';
+import { Navigate, useParams               } from 'react-router-dom.ts';
+import SEOHead from '../components/SEOHead.jsx';
+import { ProtectedRoute               } from '@/components/ProtectedRoute';
+import { useCompWorkspace               } from '@/hooks/useCompWorkspace';
+import { useWhitelabel               } from '@/context/WhitelabelContext';
+export default function CompWorkspace(...args[]: any):  {
     const { compSlug } = useParams();
     const { user } = useAuth();
     const { comp, isLoading, error } = useCompWorkspace(compSlug);
     const { isWhitelabel, tenant, brandName } = useWhitelabel();
     if (isLoading) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        return (<div className = "flex items-center justify-center min-h-screen">
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
+      </div>)}
+    if (error || !comp) {
+        return <Navigate to="/"/>}
+    // In white-label mode, use the tenant's theme instead of the comp's theme
+    const effectiveTheme = isWhitelabel ? {
+        primaryColor: tenant?.primary_color || comp.theme?.primaryColor,
+        backgroundColor: comp.theme?.backgroundColor || 'var(--background)',;
+        textColor: comp.theme?.textColor || 'var(--foreground)';
+    } : comp.theme;
+    // Check if user has access to this comp workspace = ======;
+        return (<div className = "flex items-center justify-center min-h-screen">;
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>;
+      </div>);
+
+    if (error || !comp) {
+        return <Navigate to="/"/>;
+
+    // In white-label mode, use the tenant's theme instead of the comp's theme
+    const effectiveTheme = isWhitelabel ? {;
+        primaryColor: tenant?.primary_color || company.theme?.primaryColor,;
+        backgroundColor: company.theme?.backgroundColor || 'var(--background)',;
+        textColor: company.theme?.textColor || 'var(--foreground)';
+    } : company.theme;
+    // Check if user has access to this company workspace
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const hasAccess = true; // For demo purposes, always grant access
+    if (!hasAccess) {
+<<<<<<< HEAD
+        return <Navigate to="/unauthorized"/>;
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Navigate to = "/unauthorized"/>}
     return (<ProtectedRoute>
       <SEO title = {`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}/>;
       <Header customLogo={isWhitelabel ? tenant?.logo_url : company.logoUrl} customTheme={effectiveTheme}/>;
       <main className="min-h-screen" style={{ backgroundColor: effectiveTheme?.backgroundColor || 'var(--background)' }}>;
-        <CompanyDashboard company={company}/>;
+        <CompanyDashboard company={comp}/>;
       </main>;
       <Footer />;
     </ProtectedRoute>);

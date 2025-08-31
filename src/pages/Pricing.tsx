@@ -1,8 +1,31 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Check, 
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { SEO              } from '@/components/SEO';
+import { Check,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  Globe,
+  Clock,
+  TrendingUp,
+  Rocket,
+  Crown,
+  Sparkles
+=======
+import { SEO              } from '../components/SEO';
+import { Link              } from 'react-router-dom.ts';
+import { Check, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star, 
   Zap, 
   Shield, 
@@ -10,6 +33,7 @@ import {
   Globe,
   CreditCard,
   Clock,
+<<<<<<< HEAD
   Headphones,
   Rocket,
   Award,
@@ -18,6 +42,20 @@ import {
 
 const Pricing = () => {
   const pricingTiers = [
+=======
+  MessageSquare,
+  Phone,
+  Mail,
+  Calendar
+             } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Pricing(...args: any[]): any {
+  const [billingCycle, setBillingCycle] = useState<any>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<any>(null);
+
+  const pricingPlans = [
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       name: "Starter",
       price: "$99",
@@ -171,7 +209,113 @@ const Pricing = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+<<<<<<< HEAD
+    <>
+      <SEO
+        title="Pricing - Zion Tech Group AI Services"
+        description="Transparent pricing for our comprehensive suite of AI-powered services. Choose the plan that fits your business needs and scale as you grow."
+        canonical="/pricing"
+      />
+
+      <div className="min-h-screen bg-futuristic">
+        {/* Hero Section */}
+        <section className="relative py-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-600/10 to-purple-600/10"></div>
+          <div className="container-responsive relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                Transparent Pricing
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8">
+                Choose the perfect plan for your business. All plans include a 14-day free trial
+                and no hidden fees.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                  Start Free Trial
+                </button>
+                <button className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                  Contact Sales
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Services Pricing */}
+        <section className="py-20">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                AI Services Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our comprehensive suite of AI-powered services designed to transform
+                your business operations and drive growth.
+              </p>
+            </motion.div>
+
+            <div className="space-y-16">
+              {services.map((service, serviceIndex) => (
+                <motion.div
+                  key={serviceIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
+                  className="bg-glass-dark rounded-2xl p-8 border border-slate-700/50"
+
+                  <div className="text-center mb-8">
+                    <div className="text-5xl mb-4">{service.icon}</div>
+                    <h3 className="text-3xl font-bold text-white mb-3">{service.name}</h3>
+                    <p className="text-xl text-gray-300">{service.description}</p>
+                  </div>
+
+                  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+                    {service.pricing.map((plan, planIndex)              => (
+                      <div
+                        key={planIndex}
+                        className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 ${
+                          plan.name === 'Professional'
+                            ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20'
+                            : 'border-slate-700/50'
+                        }`}
+
+                        {plan.name === 'Professional' && (
+                          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                              Most Popular
+                            </span>
+                          </div>
+                        )}
+
+                        <div className="text-center mb-6">
+                          <h4 className="text-xl font-bold text-white mb-2">{plan.name}</h4>
+                          <div className="flex items-baseline justify-center mb-2">
+                            <span className="text-3xl font-bold text-cyan-400">{plan.price}</span>
+                            <span className="text-gray-400 ml-1">{plan.period}</span>
+                          </div>
+                        </div>
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Pricing - Zion Tech Group"
+        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."
+      />
+      
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -198,11 +342,59 @@ const Pricing = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Pricing Tiers */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {pricingTiers.map((tier, index) => (
+=======
+      {/* Billing Toggle */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center"
+          >
+            <div className="bg-slate-800/50 rounded-xl p-1 border border-slate-600/50">
+              <button
+                onClick={() => setBillingCycle('monthly')}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  billingCycle === 'monthly'
+                    ? 'bg-cyan-400 text-white'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setBillingCycle('annual')}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  billingCycle === 'annual'
+                    ? 'bg-cyan-400 text-white'
+                    : 'text-white'
+                }`}
+              >
+                Annual
+                {billingCycle === 'annual' && (
+                  <span className="ml-2 px-2 py-1 bg-green-500 text-white text-xs rounded-full">
+                    Save {savings}%
+                  </span>
+                )}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -232,6 +424,7 @@ const Pricing = () => {
                   </div>
                 )}
 
+<<<<<<< HEAD
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <div className="mb-4">
@@ -239,6 +432,95 @@ const Pricing = () => {
                     <span className="text-gray-400">{tier.period}</span>
                   </div>
                   <p className="text-gray-300 text-sm">{tier.description}</p>
+=======
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button
+                    onClick={() => setSelectedPlan(plan.name)}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                        : 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600'
+                    } hover:scale-105`}
+                  >
+                    Get Started
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+<<<<<<< HEAD
+        {/* Enterprise Features */}
+        <section className="py-20 bg-slate-900/50">
+          <div className="container-responsive">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                Enterprise Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Unlock advanced capabilities with our enterprise plans designed for large organizations
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-6">
+              {enterpriseFeatures.map((feature, index)              => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center"
+
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Check className="w-6 h-6 text-white" />
+                  </div>
+                  <p className="text-gray-300">{feature}</p>
+                </motion.div>
+              ))}
+            </div>
+=======
+      {/* Service Packages */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Custom Service Packages</h2>
+            <p className="text-xl text-gray-300">
+              Need something specific? We offer custom solutions tailored to your business requirements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {servicePackages.map((pkg, index)              => (
+              <motion.div
+                key={pkg.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-lg mb-4">
+                  <pkg.icon className="w-6 h-6 text-cyan-400" />
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
 
                 <ul className="space-y-3 mb-8">
@@ -282,8 +564,13 @@ const Pricing = () => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addon, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
+            {addOns.map((addon, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={addon.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -357,7 +644,11 @@ const Pricing = () => {
             </p>
           </motion.div>
 
+<<<<<<< HEAD
           <div className="space-y-6">
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-4xl mx-auto">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 question: "Can I change my plan at any time?",
@@ -379,7 +670,7 @@ const Pricing = () => {
                 question: "Is there a setup fee or hidden costs?",
                 answer: "No setup fees or hidden costs. What you see is what you pay. The only additional charges are for add-on services you choose to purchase."
               }
-            ].map((faq, index) => (
+            ].map((faq, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

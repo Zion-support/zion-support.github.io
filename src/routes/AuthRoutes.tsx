@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import { Route, Routes  } from 'react-router-dom.ts';
+=======
+
+import { Route, Routes               } from 'react-router-dom.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import UpdatePassword from "@/pages/UpdatePassword";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { ProtectedRoute               } from '@/components/ProtectedRoute';
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";

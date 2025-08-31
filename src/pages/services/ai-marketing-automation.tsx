@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  TrendingUp, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../../components/SEO';
+import { TrendingUp, 
   Brain, 
   Target, 
   Users, 
@@ -27,9 +26,9 @@ import {
   Monitor,
   Filter,
   PieChart
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-export default function AIMarketingAutomation() {
+export default function AIMarketingAutomation(...args: any[]): any {
   const features = [
     {
       icon: Brain,
@@ -202,8 +201,8 @@ export default function AIMarketingAutomation() {
               </p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -240,8 +239,8 @@ export default function AIMarketingAutomation() {
               </p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {marketingChannels.map((channel, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {marketingChannels.map((channel, index)              => (
                 <motion.div
                   key={channel.title}
                   initial={{ opacity: 0, y: 20 }}
@@ -278,8 +277,8 @@ export default function AIMarketingAutomation() {
               </p>
             </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index)              => (
                 <motion.div
                   key={useCase.title}
                   initial={{ opacity: 0, y: 20 }}

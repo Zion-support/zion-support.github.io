@@ -1,6 +1,23 @@
 // Specialized Healthcare AI Services 2025 - Zion Tech Group
 // Advanced AI-powered healthcare technology solutions
 export interface HealthcareAIService {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -21,10 +38,30 @@ export interface HealthcareAIService {
   clinicalValidation: string[];
   useCases: string[];
   technologies: string[];
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    address: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     address: string}}
 // Zion Tech Group Contact Information
 const zionContact = {

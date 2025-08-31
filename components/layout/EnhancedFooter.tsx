@@ -21,7 +21,13 @@ import { Twitter,
   HelpCircle,
   Lock,
   Award
+<<<<<<< HEAD
  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+=======
+              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const footerNavigation = {
   services: {
@@ -96,7 +102,16 @@ const quickLinks = [;
 	{ name: 'Status', href: '/status', icon: Cloud },;
 ];
 
+<<<<<<< HEAD
 const EnhancedFooter: React.FC = () => {;
+=======
+<<<<<<< HEAD
+const EnhancedFooter: React.FC = (): JSX.Element => {;
+	const scrollToTop = () => {;
+		window.scrollTo({ top: 0, behavior: 'smooth' })};
+=======
+const EnhancedFooter: React.FC = (): JSX.Element => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
@@ -151,7 +166,7 @@ const EnhancedFooter: React.FC = () => {;
 
 						{/* Social media */}
 						<div className="flex space-x-4">
-							{socialLinks.map(({ name, href, icon: Icon })  => (
+							{socialLinks.map(({ name, href, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyIcon })               => (
 								<a
 									key={name}
 									href={href}
@@ -189,8 +204,8 @@ const EnhancedFooter: React.FC = () => {;
 
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
-					<div className="grid grid-cols-2 md: grid-cols-4 gap-6">
-						{quickLinks.map((link)  => (
+					<div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+						{quickLinks.map((link)               => (
 							<Link
 								key={link.name}
 								href={link.href}

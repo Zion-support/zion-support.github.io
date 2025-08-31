@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+=======
+import React, { useEffect, useState, useCallback } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Type,
+  Contrast,
+  Keyboard,
+  Accessibility,
+  X
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Eye, 
   EyeOff, 
@@ -12,27 +28,86 @@ import {
   X,
   CheckCircle,
   AlertTriangle
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+              } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AccessibilitySettings {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+  focusIndicator: boolean;
+
+interface AccessibilityEnhancerProps extends React.PropsWithChildren<{
+
+
+
+
+
+
+
+
+
+
+
+
+}> {
+  enabled?: boolean;
+  showControls?: boolean;
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   highSaturation: boolean;
   fontSize: number;
   lineHeight: number;
   letterSpacing: number;
+
 }
+<<<<<<< HEAD
 interface AccessibilityEnhancerProps {
+=======
+
+interface AccessibilityEnhancerProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
   showSettings?: boolean;
+
 }
+<<<<<<< HEAD
 export function AccessibilityEnhancer({ 
   enabled = true, 
   showSettings = false 
 }: AccessibilityEnhancerProps) {
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export function AccessibilityEnhancer(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(showSettings);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState<any>({
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -41,9 +116,15 @@ export function AccessibilityEnhancer({
     lineHeight: 1.5,
     letterSpacing: 0
   });
-  const [issues, setIssues] = useState<AccessibilityIssue[]>([]);
+  const [issues, setIssues] = useState<any>([]);
   const [isScanning, setIsScanning] = useState(false);
+<<<<<<< HEAD
   const [notifications, setNotifications] = useState<string[]>([]);
+=======
+
+  const [notifications, setNotifications] = useState<any>([]);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Load saved settings from localStorage
   useEffect(() => {
     const savedSettings = localStorage.getItem('accessibility-settings');
@@ -59,7 +140,7 @@ export function AccessibilityEnhancer({
   }, [applySettings]);
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {;
+    const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
       // Skip if not in keyboard navigation mode;
       if (!settings.keyboardNavigation) return;
       const target = event.target as HTMLElement;
@@ -98,7 +179,7 @@ export function AccessibilityEnhancer({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.keyboardNavigation]);
   // Arrow key navigation helper
-  const navigateWithArrows = (container: Element, direction: string) => {
+  const navigateWithArrows = (container: anyanyanyanyanyanyanyanyanyanyanyanyanyanyElement, direction: string)               => {
     const focusableElements = Array.from(container.querySelectorAll(;
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
     )).filter(el => !(el as HTMLElement).hidden);
@@ -156,7 +237,7 @@ export function AccessibilityEnhancer({
     style.textContent = `
       /* High contrast mode */;
       .high-contrast {;
-        --text-primary: #ffffff !important;
+        --text-primary: anyanyanyanyanyanyanyanyanyanyanyanyanyany#ffffff !important;
         --text-secondary: #e5e7eb !important;
         --bg-primary: #000000 !important;
         --bg-secondary: #1f2937 !important;
@@ -221,12 +302,17 @@ export function AccessibilityEnhancer({
       }
     `;
     document.head.appendChild(style);
+<<<<<<< HEAD
     return () => {
+=======
+
+    return ()               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       document.head.removeChild(style);
     };
   }, []);
   // Apply accessibility settings to the document
-  const applySettings = (newSettings: AccessibilitySettings) => {
+  const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {
     const root = document.documentElement;
     // High contrast
     if (newSettings.highContrast) {
@@ -257,6 +343,120 @@ export function AccessibilityEnhancer({
     if (newSettings.highSaturation) {
       root.style.setProperty('--saturation-filter', 'saturate(1.5)');
     } else {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      root.classList.remove('enhanced-focus');
+
+    // Screen reader announcements
+    if (settings.screenReader) {
+      const announce = (message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+        const announcement = document.createElement('div');
+        announcement.setAttribute('aria-live', 'polite');
+        announcement.setAttribute('aria-atomic', 'true');
+        announcement.className = 'sr-only';
+        announcement.textContent = message;
+        document.body.appendChild(announcement);
+
+        setTimeout(() => {
+          document.body.removeChild(announcement);
+        }, 1000);
+      };
+
+      // Announce page changes
+      announce('Accessibility settings updated');
+
+  }, [settings, enabled]);
+
+  // Keyboard navigation support
+  useEffect(() => {
+    if (!enabled || !settings.keyboardNavigation) return;
+
+    const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {
+      // Skip if user is typing in an input
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return;
+
+      switch (e.key) {
+        case 'Tab':
+          // Enhanced tab navigation
+          const focusableElements = document.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          const firstElement = focusableElements[0] as HTMLElement;
+          const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+          if (e.shiftKey && document.activeElement === firstElement) {
+            e.preventDefault();
+            lastElement.focus();
+          } else if (!e.shiftKey && document.activeElement === lastElement) {
+            e.preventDefault();
+            firstElement.focus();
+
+          break;
+
+        case 'Escape':
+          // Close modals or return to main content
+          const modals = document.querySelectorAll('[role="dialog"]');
+          if (modals.length > 0) {
+            const lastModal = modals[modals.length - 1] as HTMLElement;
+            lastModal.focus();
+
+          break;
+
+        case 'h':
+        case 'H':
+          // Navigate to home
+          if (e.ctrlKey) {
+            e.preventDefault();
+            const homeLink = document.querySelector('a[href="/"]') as HTMLAnchorElement;
+            if (homeLink) homeLink.click();
+
+          break;
+
+        case 's':
+        case 'S':
+          // Navigate to services
+          if (e.ctrlKey) {
+            e.preventDefault();
+            const servicesLink = document.querySelector('a[href="/services"]') as HTMLAnchorElement;
+            if (servicesLink) servicesLink.click();
+
+          break;
+
+        case 'c':
+        case 'C':
+          // Navigate to contact
+          if (e.ctrlKey) {
+            e.preventDefault();
+            const contactLink = document.querySelector('a[href="/contact"]') as HTMLAnchorElement;
+            if (contactLink) contactLink.click();
+
+          break;
+
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [enabled, settings.keyboardNavigation]);
+
+  // Skip to main content functionality
+  useEffect(() => {
+    if (!enabled) return;
+
+    const skipLink = document.createElement('a');
+    skipLink.href = '#main-content';
+    skipLink.textContent = 'Skip to main content';
+    skipLink.className = 'skip-link sr-only focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanynot-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded z-50';
+
+    document.body.insertBefore(skipLink, document.body.firstChild);
+
+    return ()               => {
+      if (document.body.contains(skipLink)) {
+        document.body.removeChild(skipLink);
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.removeProperty('--saturation-filter');
     }
     // Font size
@@ -265,16 +465,16 @@ export function AccessibilityEnhancer({
     root.style.setProperty('--letter-spacing', `${newSettings.letterSpacing}px`);
   };
   // Save settings to localStorage
-  const saveSettings = (newSettings: AccessibilitySettings) => {
+  const saveSettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {
     localStorage.setItem('zion-accessibility-settings', JSON.stringify(newSettings));
     setSettings(newSettings);
     applySettings(newSettings);
   };
   // Update individual setting
   const updateSetting = <K extends keyof AccessibilitySettings>(
-    key: K, 
+    key: anyanyanyanyanyanyanyanyanyanyanyanyanyanyK, 
     value: AccessibilitySettings[K]
-  ) => {
+  )               => {
     const newSettings = { ...settings, [key]: value };
     saveSettings(newSettings);
     // Show notification
@@ -287,7 +487,7 @@ export function AccessibilityEnhancer({
   // Reset to default settings
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
+      highContrast: anyanyanyanyanyanyanyanyanyanyanyanyanyanyfalse,
       largeText: false,
       reducedMotion: false,
       highSaturation: false,
@@ -296,7 +496,7 @@ export function AccessibilityEnhancer({
       letterSpacing: 0
     };
     saveSettings(defaultSettings);
-    setNotifications(prev => [...prev, 'Settings reset to default']);
+    setNotifications(prev               => [...prev, 'Settings reset to default']);
     setTimeout(() => {
       setNotifications(prev => prev.filter(n => n !== 'Settings reset to default'));
     }, 3000);
@@ -304,30 +504,30 @@ export function AccessibilityEnhancer({
   // Quick accessibility actions
   const quickActions = [
     {
-      name: 'High Contrast',
+      name: anyanyanyanyanyanyanyanyanyanyanyanyanyany'High Contrast',
       icon: Contrast,
-      action: () => updateSetting('highContrast', !settings.highContrast),
-      active: settings.highContrast,
+      action: ()               => updateSetting('highContrast', !settings.highContrast),
+      active: anyanyanyanyanyanyanyanyanyanyanyanyanyanysettings.highContrast,
       description: 'Increase contrast for better readability'
     },
     {
       name: 'Large Text',
       icon: Type,
-      action: () => updateSetting('largeText', !settings.largeText),
-      active: settings.largeText,
+      action: ()               => updateSetting('largeText', !settings.largeText),
+      active: anyanyanyanyanyanyanyanyanyanyanyanyanyanysettings.largeText,
       description: 'Increase text size for better readability'
     },
     {
       name: 'Reduced Motion',
       icon: EyeOff,
-      action: () => updateSetting('reducedMotion', !settings.reducedMotion),
-      active: settings.reducedMotion,
+      action: ()               => updateSetting('reducedMotion', !settings.reducedMotion),
+      active: anyanyanyanyanyanyanyanyanyanyanyanyanyanysettings.reducedMotion,
       description: 'Reduce animations for motion sensitivity'
     },
     {
       name: 'High Saturation',
       icon: Eye,
-      action: () => updateSetting('highSaturation', !settings.highSaturation),
+      action: ()               => updateSetting('highSaturation', !settings.highSaturation),
       active: settings.highSaturation,
       description: 'Increase color saturation'
     }
