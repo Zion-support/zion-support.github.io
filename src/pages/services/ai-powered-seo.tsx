@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone } from 'lucide-react';
+import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, BarChart, Monitor, Smartphone, Laptop, Phone } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
 export default function AIPoweredSEO() {
@@ -11,7 +11,7 @@ export default function AIPoweredSEO() {
       description: "Advanced machine learning algorithms identify high-impact keywords and search opportunities"
     },
     {
-      icon: Analytics,
+      icon: BarChart,
       title: "Predictive Analytics",
       description: "Forecast search trends and optimize content before competitors"
     },
