@@ -3,6 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Layout Components
+import { Header } from './components/Header';
+import Footer from './components/Footer';
+
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
@@ -17,10 +21,8 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
-
-// Layout Components
-import Header from './components/Header';
-import Footer from './components/Footer';
+import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
+import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -107,8 +109,7 @@ function App() {
               Skip to main content
             </a>
             
-            {/* Main Content */}
-            <main id="main-content" className="flex-1 pt-32">
+            <main id="main-content" className="flex-1 pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
