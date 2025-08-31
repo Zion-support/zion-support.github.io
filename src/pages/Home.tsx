@@ -60,7 +60,12 @@ import {
   CheckCircle2,
   Clock3,
   Target2,
-  Building2
+  Building2,
+  Scale,
+  Factory,
+  Truck,
+  Heart,
+  Home
 } from 'lucide-react';
 
 // Optimized futuristic animated background component
@@ -347,52 +352,88 @@ const ServicesSection = () => {
       link: "/services/ai-cybersecurity-threat-intelligence"
     },
     {
-      icon: Chip,
       title: "Edge Computing",
       description: "Ultra-low latency IoT and edge solutions",
-      href: "/services/edge-computing-platform",
+      icon: Chip,
       color: "from-green-500 to-emerald-500",
-      features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
+      link: "/services/edge-computing-platform"
     },
     {
-      icon: TrendingUp,
       title: "Micro SaaS",
       description: "Innovative software-as-a-service solutions for modern businesses",
-      href: "/micro-saas",
+      icon: TrendingUp,
       color: "from-indigo-500 to-purple-500",
-      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
+      link: "/micro-saas"
     },
     {
-      icon: Database,
       title: "AI Enterprise Solutions",
       description: "Comprehensive AI-powered enterprise resource planning and management",
-      href: "/services/ai-enterprise-resource-planning",
+      icon: Database,
       color: "from-emerald-500 to-teal-500",
-      features: ["Resource Planning", "Process Automation", "Business Intelligence", "Supply Chain Optimization"]
+      link: "/services/ai-enterprise-resource-planning"
     },
     {
-      icon: Users,
+      title: "AI Autonomous Legal Research",
+      description: "Revolutionary AI-powered legal research platform that autonomously analyzes case law and legal documents.",
+      icon: Scale,
+      color: "from-emerald-500 to-teal-500",
+      link: "/services/ai-autonomous-legal-research-platform"
+    },
+    {
+      title: "AI Autonomous Manufacturing",
+      description: "Transform manufacturing operations with autonomous AI that optimizes production, quality control, and supply chain.",
+      icon: Factory,
+      color: "from-orange-500 to-red-500",
+      link: "/services/ai-autonomous-manufacturing-platform"
+    },
+    {
+      title: "AI Carbon Footprint Management",
+      description: "Achieve sustainability goals with AI-powered carbon tracking, analysis, and optimization across your organization.",
+      icon: Leaf,
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-carbon-footprint-management-platform"
+    },
+    {
+      title: "AI Autonomous Logistics",
+      description: "Revolutionize logistics with AI that autonomously optimizes routes, inventory, and supply chain operations.",
+      icon: Truck,
+      color: "from-blue-500 to-indigo-500",
+      link: "/services/ai-autonomous-logistics-platform"
+    },
+    {
+      title: "AI Mental Health Support",
+      description: "Provide accessible mental health support with AI-powered platforms that offer personalized care and resources.",
+      icon: Heart,
+      color: "from-pink-500 to-rose-500",
+      link: "/services/ai-mental-health-support-platform"
+    },
+    {
+      title: "AI Smart Home Energy Management",
+      description: "Optimize home energy consumption with AI that learns your patterns and automatically adjusts for maximum efficiency.",
+      icon: Home,
+      color: "from-yellow-500 to-orange-500",
+      link: "/services/ai-smart-home-energy-management-platform"
+    },
+    {
       title: "Customer Success AI",
       description: "AI-driven customer success and relationship management platforms",
-      href: "/services/ai-customer-success-platform",
+      icon: Users,
       color: "from-pink-500 to-rose-500",
-      features: ["Customer Insights", "Success Automation", "Churn Prevention", "Growth Analytics"]
+      link: "/services/ai-customer-success-platform"
     },
     {
-      icon: Truck,
       title: "Supply Chain AI",
       description: "Intelligent supply chain optimization and logistics management",
-      href: "/services/ai-supply-chain-intelligence",
+      icon: Truck,
       color: "from-orange-500 to-amber-500",
-      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Management"]
+      link: "/services/ai-supply-chain-intelligence"
     },
     {
-      icon: Zap,
       title: "Quantum AI",
       description: "Next-generation quantum computing and AI integration",
-      href: "/services/ai-quantum-neural-network-platform",
+      icon: Zap,
       color: "from-cyan-500 to-blue-500",
-      features: ["Quantum Neural Networks", "AI Algorithms", "Quantum Simulation"]
+      link: "/services/ai-quantum-neural-network-platform"
     }
   ];
 

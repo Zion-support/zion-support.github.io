@@ -92,6 +92,22 @@ export function AppFooter() {
         { name: "AI Quantum Computing Enterprise", href: "/services/ai-quantum-computing-solutions-enterprise" },
         { name: "AI Blockchain Web3 Enterprise", href: "/services/ai-blockchain-web3-solutions-enterprise" }
       ]
+    },
+    {
+      title: "New Innovative Services",
+      icon: Zap,
+      color: "text-zion-green",
+      bgColor: "bg-zion-green/20",
+      services: [
+        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform" },
+        { name: "AI Manufacturing Platform", href: "/services/ai-autonomous-manufacturing-platform" },
+        { name: "Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform" },
+        { name: "AI Logistics Platform", href: "/services/ai-autonomous-logistics-platform" },
+        { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform" },
+        { name: "Smart Home Energy Management", href: "/services/ai-smart-home-energy-management-platform" },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform" },
+        { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform" }
+      ]
     }
   ];
 

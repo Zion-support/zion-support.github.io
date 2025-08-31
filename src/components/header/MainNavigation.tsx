@@ -67,7 +67,11 @@ import {
   HeartHandshake,
   Briefcase,
   PenTool,
-  Layout
+  Layout,
+  Scale,
+  Truck,
+  Heart,
+  Home
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -293,6 +297,51 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-blockchain-web3-solutions-enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Network className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Blockchain Web3 Enterprise</span>
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
+                      <Rocket className="w-5 h-5 mr-3"/>
+                      New Innovative Services
+                    </h4>
+                    <ul className="space-y-3 text-sm">
+                      <li>
+                        <Link to="/services/ai-autonomous-legal-research-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Scale className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Legal Research Platform</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Factory className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Manufacturing Platform</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-carbon-footprint-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Leaf className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Carbon Footprint Management</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Logistics Platform</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-mental-health-support-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Heart className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Mental Health Support</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-smart-home-energy-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Home className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Smart Home Energy Management</span>
                         </Link>
                       </li>
                     </ul>
