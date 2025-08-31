@@ -2,22 +2,20 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Brain,
-  BarChart3,
-  TrendingUp,
   Shield,
+  Atom,
+  Brain,
+  Lock,
+  Eye,
   Zap,
-  Users,
   CheckCircle,
   ArrowRight,
-  Star,
-  Globe,
+  AlertTriangle,
+  Network,
   Cpu,
   Database,
-  Network,
-  Lock,
   Activity,
-  Eye,
+  Users,
   Target,
   Rocket,
   Award,
@@ -25,67 +23,74 @@ import {
   Mail,
   MapPin,
   Clock,
-  DollarSign
+  DollarSign,
+  Globe,
+  Server,
+  Key,
+  Fingerprint
 } from 'lucide-react';
 
-export default function AIEnterpriseIntelligencePlatform() {
+export default function QuantumAICybersecurityPlatform() {
   const features = [
-    "Real-time Business Intelligence Dashboard",
-    "Predictive Analytics & Forecasting",
-    "AI-Powered Decision Support",
-    "Advanced Data Visualization",
-    "Custom KPI Tracking",
-    "Multi-Source Data Integration",
-    "Automated Report Generation",
-    "Natural Language Query Interface",
-    "Mobile-First Responsive Design",
-    "Enterprise-Grade Security",
-    "24/7 Technical Support",
-    "Custom Integration APIs"
+    "Quantum-Resistant Encryption",
+    "AI-Powered Threat Detection",
+    "Real-time Security Monitoring",
+    "Advanced Behavioral Analytics",
+    "Zero-Trust Architecture",
+    "Quantum Key Distribution",
+    "Automated Incident Response",
+    "Compliance Management",
+    "Penetration Testing",
+    "Security Training Platform",
+    "24/7 SOC Monitoring",
+    "Custom Security Policies"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Essential",
+      price: "$499",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "For small to medium businesses",
       features: [
-        "Up to 5 users",
-        "Basic analytics dashboard",
+        "Up to 100 endpoints",
+        "Basic threat detection",
+        "Email security",
         "Standard reporting",
         "Email support",
-        "Basic integrations"
+        "Basic compliance"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$1,299",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "For growing enterprises",
       features: [
-        "Up to 25 users",
-        "Advanced analytics",
-        "Custom dashboards",
+        "Up to 1000 endpoints",
+        "Advanced AI detection",
+        "Quantum encryption",
+        "Real-time monitoring",
         "Priority support",
-        "API access",
-        "Advanced integrations"
+        "Advanced compliance",
+        "Custom policies"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited users",
+        "Unlimited endpoints",
+        "Full quantum security",
         "Custom AI models",
+        "Dedicated SOC team",
         "White-label solution",
-        "Dedicated support",
         "Custom development",
         "On-premise option"
       ],
@@ -96,25 +101,32 @@ export default function AIEnterpriseIntelligencePlatform() {
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "Increased Revenue",
-      description: "Data-driven insights lead to 25% average revenue growth"
+      icon: Shield,
+      title: "Quantum-Safe Security",
+      description: "Future-proof protection against quantum computing threats"
+    },
+    {
+      icon: Brain,
+      title: "AI-Powered Defense",
+      description: "Machine learning detects and prevents 99.9% of threats"
     },
     {
       icon: Zap,
-      title: "Faster Decisions",
-      description: "Reduce decision-making time by 60% with real-time analytics"
-    },
-    {
-      icon: Shield,
-      title: "Risk Mitigation",
-      description: "Identify and prevent potential issues before they impact business"
+      title: "Real-time Protection",
+      description: "Instant threat response with zero-day attack prevention"
     },
     {
       icon: Users,
-      title: "Team Productivity",
-      description: "Empower teams with actionable insights and automated workflows"
+      title: "Compliance Ready",
+      description: "Meet SOC2, GDPR, HIPAA, and other compliance requirements"
     }
+  ];
+
+  const securityMetrics = [
+    { metric: "99.9%", label: "Threat Detection Rate" },
+    { metric: "< 1ms", label: "Response Time" },
+    { metric: "24/7", label: "Monitoring Coverage" },
+    { metric: "Zero", label: "False Positives" }
   ];
 
   return (
@@ -128,34 +140,55 @@ export default function AIEnterpriseIntelligencePlatform() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Enterprise Intelligence
+            <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-6">
+              <Atom className="w-4 h-4 mr-2" />
+              Quantum AI Cybersecurity
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Enterprise Intelligence Platform
+              Quantum AI Cybersecurity Platform
             </h1>
             
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with the most advanced AI-powered intelligence platform. 
-              Get real-time insights, predictive analytics, and automated decision support.
+              The world's first quantum-resistant cybersecurity platform powered by AI. 
+              Protect your organization from current and future threats with quantum encryption.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-purple-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
-                Get Started Today
+                Get Protected Today
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-              <button className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300">
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+              <button className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-300">
+                <Eye className="w-5 h-5 mr-2" />
+                Security Assessment
               </button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Security Metrics */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {securityMetrics.map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="text-3xl md:text-4xl font-bold text-red-400 mb-2">{item.metric}</div>
+                <div className="text-gray-400 text-sm">{item.label}</div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -170,10 +203,10 @@ export default function AIEnterpriseIntelligencePlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Powerful Features for Modern Enterprises
+              Advanced Security Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Everything you need to transform data into actionable business intelligence
+              Comprehensive protection for the quantum computing era
             </p>
           </motion.div>
 
@@ -185,9 +218,9 @@ export default function AIEnterpriseIntelligencePlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 hover:bg-slate-700/50 transition-all duration-300"
               >
-                <CheckCircle className="w-8 h-8 text-cyan-400 mb-4" />
+                <CheckCircle className="w-8 h-8 text-red-400 mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>
             ))}
@@ -206,10 +239,10 @@ export default function AIEnterpriseIntelligencePlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose Our Platform?
+              Why Choose Quantum AI Security?
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Proven results and measurable business impact
+              Stay ahead of evolving cyber threats with cutting-edge technology
             </p>
           </motion.div>
 
@@ -223,7 +256,7 @@ export default function AIEnterpriseIntelligencePlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
@@ -245,10 +278,10 @@ export default function AIEnterpriseIntelligencePlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transparent Pricing
+              Secure Your Business Today
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs
+              Choose the security plan that fits your organization's needs
             </p>
           </motion.div>
 
@@ -262,13 +295,13 @@ export default function AIEnterpriseIntelligencePlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-cyan-500/50 bg-slate-700/50' 
+                    ? 'border-red-500/50 bg-slate-700/50' 
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-red-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -286,7 +319,7 @@ export default function AIEnterpriseIntelligencePlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -294,7 +327,7 @@ export default function AIEnterpriseIntelligencePlatform() {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                    ? 'bg-gradient-to-r from-red-500 to-purple-600 text-white hover:from-red-600 hover:to-purple-700'
                     : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
                   {plan.cta}
@@ -306,7 +339,7 @@ export default function AIEnterpriseIntelligencePlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-600/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-red-500/10 to-purple-600/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -315,24 +348,24 @@ export default function AIEnterpriseIntelligencePlatform() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Secure Your Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of companies already using our AI Enterprise Intelligence Platform
+              Join leading organizations already protected by our Quantum AI Cybersecurity Platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-purple-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-300"
               >
-                Schedule Demo
+                Security Assessment
               </Link>
             </div>
           </motion.div>
@@ -344,17 +377,17 @@ export default function AIEnterpriseIntelligencePlatform() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-cyan-400 mb-4" />
+              <Phone className="w-8 h-8 text-red-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
               <p className="text-gray-400">+1 302 464 0950</p>
             </div>
             <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-cyan-400 mb-4" />
+              <Mail className="w-8 h-8 text-red-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
               <p className="text-gray-400">kleber@ziontechgroup.com</p>
             </div>
             <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
+              <MapPin className="w-8 h-8 text-red-400 mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
               <p className="text-gray-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
