@@ -45,6 +45,13 @@ const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/servic
 const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/AI-Digital-Twin-Platform'));
 const AICustomerExperienceAnalytics = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics'));
 
+// New Innovative AI Services 2025 - Additional
+const AIAutonomousLegalResearchPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-legal-research-platform'));
+const AIAutonomousManufacturingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-manufacturing-platform'));
+const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/ai-carbon-footprint-management-platform'));
+const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/services/ai-mental-health-support-platform'));
+const AISmartHomeEnergyManagementPlatform = createLazyComponent(() => import('./pages/services/ai-smart-home-energy-management-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -181,6 +188,13 @@ function App() {
                     <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
                     <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                     <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperienceAnalytics />} />
+                    
+                    {/* New Innovative AI Services 2025 - Additional */}
+                    <Route path="/services/ai-autonomous-legal-research-platform" element={<AIAutonomousLegalResearchPlatform />} />
+                    <Route path="/services/ai-autonomous-manufacturing-platform" element={<AIAutonomousManufacturingPlatform />} />
+                    <Route path="/services/ai-carbon-footprint-management-platform" element={<AICarbonFootprintManagementPlatform />} />
+                    <Route path="/services/ai-mental-health-support-platform" element={<AIMentalHealthSupportPlatform />} />
+                    <Route path="/services/ai-smart-home-energy-management-platform" element={<AISmartHomeEnergyManagementPlatform />} />
                     
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
