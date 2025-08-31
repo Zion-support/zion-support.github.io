@@ -111,6 +111,11 @@ const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/se
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
+// New Innovative Services 2025 - Additional
+const AIIntelligentDocumentProcessing = createLazyComponent(() => import('./pages/services/ai-intelligent-document-processing'));
+const AISupplyChainOptimization2025 = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-2025'));
+const AICybersecurityPlatform2025 = createLazyComponent(() => import('./pages/services/ai-cybersecurity-platform-2025'));
+
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations-platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
@@ -278,6 +283,11 @@ function App() {
                     <Route path="/services/ai-quantum-computing-solutions" element={<AIQuantumComputingSolutions />} />
                     <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
                     <Route path="/services/edge-computing-solutions" element={<EdgeComputingSolutions />} />
+
+                    {/* New Innovative Services 2025 - Additional */}
+                    <Route path="/services/ai-intelligent-document-processing" element={<AIIntelligentDocumentProcessing />} />
+                    <Route path="/services/ai-supply-chain-optimization-2025" element={<AISupplyChainOptimization2025 />} />
+                    <Route path="/services/ai-cybersecurity-platform-2025" element={<AICybersecurityPlatform2025 />} />
 
                     {/* New Innovative AI Services 2025 - From remote version */}
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />

@@ -206,6 +206,16 @@ const HeroSection = React.memo(() => {
           </button>
           
           <Link
+            to="/comprehensive-services-showcase-2025"
+            className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+          >
+            <span className="flex items-center gap-2">
+              View All Services
+              <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </span>
+          </Link>
+          
+          <Link
             to="/contact"
             className="group px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105"
           >

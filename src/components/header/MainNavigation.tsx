@@ -236,6 +236,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-intelligent-document-processing" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <FileText className="w-3 h-3 mr-2" />
+                        AI Document Processing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-optimization-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Network className="w-3 h-3 mr-2" />
+                        AI Supply Chain 2025
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-cybersecurity-platform-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Cybersecurity 2025
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Atom className="w-3 h-3 mr-2" />
                         Quantum Edge Computing
