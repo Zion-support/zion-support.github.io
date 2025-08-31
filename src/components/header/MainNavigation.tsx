@@ -619,6 +619,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                    <HelpCircle className="w-3 h-3 mr-2" />
+                    Help Center
+                  </Link>
+                </li>
+                <li>
                   <Link to="/white-papers" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                     <FileText className="w-3 h-3 mr-2" />
                     White Papers
@@ -648,6 +654,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     Case Studies
                   </Link>
                 </li>
+                <li>
+                  <Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                    <ShoppingCart className="w-3 h-3 mr-2" />
+                    Marketplace
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                    <DollarSign className="w-3 h-3 mr-2" />
+                    Request Quote
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -655,7 +673,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
       </div>
 
       {/* Support */}
-      <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
+      <Link to="/support" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <HelpCircle className="w-4 h-4 mr-1" />
         Support
       </Link>

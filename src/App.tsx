@@ -60,6 +60,7 @@ const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Training = createLazyComponent(() => import('./pages/Training'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const Support = createLazyComponent(() => import('./pages/Support'));
 
 // Missing pages referenced in navigation
 const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
@@ -209,6 +210,7 @@ function App() {
                     <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
                     <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
                     <Route path="/help" element={<ModernLayout><Help /></ModernLayout>} />
+                    <Route path="/support" element={<ModernLayout><Support /></ModernLayout>} />
                     <Route path="/pricing" element={<ModernLayout><Pricing /></ModernLayout>} />
                     <Route path="/blog" element={<ModernLayout><Blog /></ModernLayout>} />
                     <Route path="/docs" element={<ModernLayout><Docs /></ModernLayout>} />
