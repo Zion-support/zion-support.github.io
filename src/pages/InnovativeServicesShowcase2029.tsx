@@ -52,7 +52,7 @@ import {
   Satellite,
   Telescope,
   Microscope,
-  Beaker,
+  FlaskConical as Flask,
   Pill,
   Stethoscope,
   Calculator,
