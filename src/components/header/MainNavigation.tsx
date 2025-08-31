@@ -275,7 +275,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
         )}
       </div>
 
-      {/* Direct Links */}
+      {/* Support */}
+      <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
+        <HelpCircle className="w-4 h-4 mr-1" />
+        Support
+      </Link>
+
+      {/* Pricing */}
       <NavLink 
         to="/pricing" 
         className={({ isActive }) => 
@@ -288,6 +294,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
         Pricing
       </NavLink>
 
+      {/* Contact */}
       <NavLink 
         to="/contact" 
         className={({ isActive }) => 
@@ -302,5 +309,3 @@ export function MainNavigation({ className }: MainNavigationProps) {
     </nav>
   );
 }
-
-

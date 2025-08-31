@@ -36,6 +36,7 @@ export function EnhancedHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
     { name: 'Pricing', href: '/pricing', current: false },
     { name: 'Contact', href: '/contact', current: false },
@@ -48,6 +49,7 @@ export function EnhancedHeader() {
       icon: Brain,
       color: 'from-blue-500 to-indigo-500',
       services: [
+        { name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' },
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
@@ -85,6 +87,7 @@ export function EnhancedHeader() {
       icon: Atom,
       color: 'from-purple-500 to-pink-500',
       services: [
+        { name: 'Quantum AI Hybrid Platform', href: '/services/quantum-ai-hybrid-platform', description: 'Revolutionary quantum-AI computing' },
         { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-generation computing power' },
         { name: 'AI Quantum Financial Trading', href: '/services/ai-quantum-financial-trading-platform', description: 'Quantum-powered trading platform' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'Connected device intelligence' },
