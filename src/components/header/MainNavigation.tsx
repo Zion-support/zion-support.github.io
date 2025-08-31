@@ -299,23 +299,23 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-supply-chain-optimization-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
                           <Truck className="w-3 h-3 text-zion-cyan" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Supply Chain</span>
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Supply Chain AI</span>
                         </div>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/ai-hr-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                      <Link to="/services/ai-space-technology-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
-                          <Users className="w-3 h-3 text-zion-cyan" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI HR Platform</span>
+                          <Satellite className="w-3 h-3 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Space Technology AI</span>
                         </div>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/ai-autonomous-research-assistant" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                      <Link to="/services/ai-cybersecurity-threat-intelligence" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
-                          <Search className="w-3 h-3 text-zion-cyan" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Research Assistant</span>
+                          <Shield className="w-3 h-3 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Cybersecurity</span>
                         </div>
                       </Link>
                     </li>
@@ -332,26 +332,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </div>
                   <ul className="space-y-2">
                     <li>
-                      <Link to="/services/ai-space-technology-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-2">
-                          <Satellite className="w-3 h-3 text-zion-purple" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Space Technology</span>
-                        </div>
-                      </Link>
-                    </li>
-                    <li>
                       <Link to="/services/ai-quantum-computing-solutions" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
                           <Atom className="w-3 h-3 text-zion-purple" />
                           <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Quantum Computing</span>
-                        </div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/ai-autonomous-logistics-platform" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-2">
-                          <Truck className="w-3 h-3 text-zion-purple" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Autonomous Logistics</span>
                         </div>
                       </Link>
                     </li>
@@ -364,22 +348,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/ai-cybersecurity-threat-intelligence" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-2">
-                          <Shield className="w-3 h-3 text-zion-purple" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Cybersecurity</span>
-                        </div>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/quantum-edge-computing-solutions" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
-                        <div className="flex items-center space-x-2">
-                          <Atom className="w-3 h-3 text-zion-purple" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Quantum Edge Computing</span>
-                        </div>
-                      </Link>
-                    </li>
-                    <li>
                       <Link to="/services/micro-saas-solutions-comprehensive" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
                           <Layers className="w-3 h-3 text-zion-purple" />
@@ -388,10 +356,26 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/innovative-services-showcase-2026" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                      <Link to="/services/digital-transformation" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
-                          <Star className="w-3 h-3 text-zion-purple" />
-                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">2026 Innovation Showcase</span>
+                          <Sparkles className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Digital Transformation</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/emerging-tech" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Rocket className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Emerging Technologies</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/research" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Lightbulb className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Research & Development</span>
                         </div>
                       </Link>
                     </li>
@@ -486,6 +470,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
           </div>
         )}
       </div>
+
+      {/* Research Link - NEW */}
+      <NavLink 
+        to="/research" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-all duration-300 hover:text-zion-cyan hover:scale-105", 
+            isActive ? "text-zion-cyan font-semibold" : "text-zion-slate-light"
+          )
+        }
+      >
+        Research
+      </NavLink>
 
       {/* Company Dropdown */}
       <div className="relative navigation-dropdown">

@@ -158,7 +158,9 @@ export function Footer() {
     { name: "Pricing Guide", href: "/pricing", icon: BarChart3 },
     { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
     { name: "All Services", href: "/services", icon: Zap },
-    { name: "Support Center", href: "/help", icon: HelpCircle }
+    { name: "Support Center", href: "/help", icon: HelpCircle },
+    { name: "Research Hub", href: "/research", icon: Lightbulb },
+    { name: "Innovation Showcase", href: "/comprehensive-services-showcase-2025", icon: Star }
   ];
 
   const socialLinks = [
@@ -288,7 +290,7 @@ export function Footer() {
             <Zap className="w-5 h-5 text-zion-cyan" />
             <h4 className="text-white font-semibold">Quick Access</h4>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
             {quickLinks.map((link) => (
               <Link
                 key={link.name}

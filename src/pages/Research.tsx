@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon  } from 'lucide-react';
+
 export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
   const [activeType, setActiveType] = useState('all');
+
   const categories = [
     { id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
@@ -17,6 +19,7 @@ export default function Research() {
     { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
   ];
+
   const statuses = [
     { id: 'all', name: 'All Statuses', count: 0 },
     { id: 'active', name: 'Active', count: 0 },
@@ -24,6 +27,7 @@ export default function Research() {
     { id: 'planning', name: 'Planning', count: 0 },
     { id: 'published', name: 'Published', count: 0 }
   ];
+
   const types = [
     { id: 'all', name: 'All Types', count: 0 },
     { id: 'research', name: 'Research Papers', count: 0 },
@@ -31,12 +35,12 @@ export default function Research() {
     { id: 'prototypes', name: 'Prototypes', count: 0 },
     { id: 'collaborations', name: 'Collaborations', count: 0 }
   ];
+
   const researchProjects = [
     {
       id: 1,
       title: 'Quantum-Classical Hybrid Computing: A New Paradigm for Enterprise Applications',
-      authors: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez', 'Dr. Emily Watson'],
-      abstract: 'This groundbreaking research explores the integration of quantum and classical computing systems to solve complex enterprise problems previously thought intractable.',
+      description: 'This groundbreaking research explores the integration of quantum and classical computing systems to solve complex enterprise problems previously thought intractable.',
       category: 'quantum',
       status: 'active',
       type: 'research',
@@ -99,132 +103,20 @@ export default function Research() {
       featured: true,
       progress: 100,
       impact: 'very-high'
-    },
-    {
-      id: 3,
-      title: 'Zero-Trust Architecture for Industrial IoT',
-      description: 'Researching and implementing zero-trust security frameworks specifically designed for industrial IoT environments.',
-      category: 'security',
-      status: 'active',
-      type: 'prototypes',
-      startDate: '2024-03-01',
-      endDate: '2025-08-31',
-      leadResearcher: 'Michael Rodriguez',
-      team: ['Michael Rodriguez', 'Dr. Jennifer Park', 'Robert Kim', 'Emily Watson'],
-      funding: 1200000,
-      institution: 'Carnegie Mellon University',
-      abstract: 'This project develops and validates zero-trust security architectures for critical infrastructure and industrial IoT systems.',
-      methodology: 'Threat modeling, security architecture design, prototype development, penetration testing',
-      expectedOutcomes: ['Zero-trust framework', 'Security prototypes', 'Best practices guide'],
-      publications: [
-        {
-          title: 'Zero-Trust Security for Industrial IoT',
-          journal: 'IEEE Security & Privacy',
-          year: 2024,
-          doi: '10.1109/MSEC.2024.001234',
-          citations: 12
-        }
-      ],
-      tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
-      featured: false,
-      progress: 40,
-      impact: 'high'
-    },
-    {
-      id: 4,
-      title: 'Machine Learning in Healthcare: Predictive Analytics for Patient Outcomes',
-      authors: ['Dr. Jennifer Lee', 'Dr. Carlos Mendez'],
-      abstract: 'Exploring the application of ML algorithms to predict patient outcomes and improve treatment planning in clinical settings.',
-      category: 'healthcare',
-      year: '2024',
-      readTime: '14 min',
-      views: '1.6k',
-      downloads: '612',
-      journal: 'Healthcare Technology Review',
-      doi: '10.1007/HTR.2024.003456',
-      tags: ['Healthcare ML', 'Predictive Analytics', 'Patient Care']
-    },
-    {
-      id: 5,
-      title: 'Blockchain for Supply Chain Transparency',
-      description: 'Investigating blockchain technology applications for enhancing supply chain transparency and traceability.',
-      category: 'emerging',
-      status: 'completed',
-      type: 'collaborations',
-      startDate: '2023-01-01',
-      endDate: '2024-06-30',
-      leadResearcher: 'Dr. Robert Kim',
-      team: ['Dr. Robert Kim', 'Sarah Johnson', 'Alex Thompson', 'Emily Chen'],
-      funding: 900000,
-      institution: 'Columbia University',
-      abstract: 'This project explores how blockchain technology can improve supply chain transparency and enable better tracking of products from source to consumer.',
-      methodology: 'Blockchain design, smart contracts, supply chain modeling, pilot implementation',
-      expectedOutcomes: ['Blockchain framework', 'Supply chain pilots', 'Industry partnerships'],
-      publications: [
-        {
-          title: 'Blockchain-Enabled Supply Chain Transparency',
-          journal: 'Journal of Supply Chain Management',
-          year: 2024,
-          doi: '10.1111/jscm.12345',
-          citations: 28
-        }
-      ],
-      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
-      featured: false,
-      progress: 100,
-      impact: 'medium'
-    },
-    {
-      id: 6,
-      title: 'Natural Language Processing: Advances in Multilingual Understanding',
-      authors: ['Dr. Rachel Green', 'Dr. Kevin O\'Brien'],
-      abstract: 'Recent developments in NLP techniques for understanding and processing multiple languages simultaneously.',
-      category: 'ai-ml',
-      status: 'active',
-      type: 'research',
-      startDate: '2024-09-01',
-      endDate: '2026-08-31',
-      leadResearcher: 'Dr. Jennifer Park',
-      team: ['Dr. Jennifer Park', 'Dr. Michael Chen', 'Robert Wilson', 'Lisa Rodriguez'],
-      funding: 2200000,
-      institution: 'Georgia Tech',
-      abstract: 'This project investigates neuromorphic computing approaches to create energy-efficient AI systems for edge computing applications.',
-      methodology: 'Neuromorphic architecture design, spiking neural networks, hardware-software co-design',
-      expectedOutcomes: ['Neuromorphic framework', 'Energy-efficient models', 'Hardware prototypes'],
-      publications: [
-        {
-          title: 'Neuromorphic Computing for Edge AI Applications',
-          journal: 'Nature Electronics',
-          year: 2024,
-          doi: '10.1038/s41928-024-01123-4',
-          citations: 19
-        }
-      ],
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
-      featured: true,
-      progress: 55,
-      impact: 'high'
     }
   ];
-  // Update counts
-  categories.forEach(cat => {
-    cat.count = researchProjects.filter(p => p.category === cat.id).length;
-  });
-  statuses.forEach(status => {
-    status.count = researchProjects.filter(p => p.status === status.id).length;
-  });
-  types.forEach(type => {
-    type.count = researchProjects.filter(p => p.type === type.id).length;
-  });
+
   const filteredProjects = researchProjects.filter(project => {
     const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+                         project.leadResearcher.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
     const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
+    
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
+
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'ai-ml': return 'text-blue-400';
@@ -234,6 +126,7 @@ export default function Research() {
       default: return 'text-zion-slate-light';
     }
   };
+
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -243,12 +136,15 @@ export default function Research() {
       default: return 'text-zion-slate-light';
     }
   };
+
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
-      month: 'short'
+      month: 'short',
+      day: 'numeric'
     });
   };
+
   const formatFunding = (amount: number) => {
     if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`;
@@ -280,6 +176,7 @@ export default function Research() {
       default: return 'text-zion-slate-light';
     }
   };
+
   return (
     <motion.div 
       initial={{ opacity: 0 }}
@@ -319,6 +216,7 @@ export default function Research() {
           </p>
         </div>
       </motion.div>
+
       {/* Search and Filters */}
       <div className="py-12">
         <div className="container mx-auto px-4">
@@ -334,6 +232,7 @@ export default function Research() {
                 className="w-full pl-12 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
             </div>
+            
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               {/* Categories */}
@@ -356,6 +255,7 @@ export default function Research() {
                   ))}
                 </div>
               </div>
+              
               {/* Status */}
               <div className="space-y-3">
                 <label className="text-white font-medium">Status</label>
@@ -375,6 +275,7 @@ export default function Research() {
                   ))}
                 </div>
               </div>
+              
               {/* Types */}
               <div className="space-y-3">
                 <label className="text-white font-medium">Type</label>
@@ -398,26 +299,29 @@ export default function Research() {
           </div>
         </div>
       </div>
+
       {/* Featured Research */}
       {researchProjects.filter(p => p.featured).length > 0 && (
-        <div className="py-12 bg-zion-slate-dark">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="py-12 bg-zion-slate-dark"
+        >
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Research Projects
             </h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
               {researchProjects.filter(p => p.featured).map((project) => (
-                <div
+                <motion.div
                   key={project.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: 0.8 }}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
                 >
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured
-                      </span>
-                    </div>
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
@@ -436,8 +340,6 @@ export default function Research() {
                         {statuses.find(s => s.id === project.status)?.name}
                       </span>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{project.description}</p>
                     <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
                       <div className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
@@ -452,23 +354,32 @@ export default function Research() {
                       Learn More
                     </button>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
-        </div>
+        </motion.div>
       )}
+
       {/* All Research Projects */}
-      <div className="py-16">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.9 }}
+        className="py-16"
+      >
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-white mb-12">
             All Research Projects
           </h2>
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project)  => (
-                <div
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredProjects.map((project) => (
+                <motion.div
                   key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 1.0 }}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex items-start justify-between mb-4">
@@ -557,82 +468,19 @@ export default function Research() {
                       )}
                     </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      {/* All Research */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.9 }}
-        className="px-4 sm:px-6 lg:px-8 mb-16"
-      >
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">All Research Papers</h2>
-          <div className="text-center mb-6">
-            <p className="text-gray-400">Showing {filteredProjects.length} of {researchProjects.length} papers</p>
-          </div>
-          
-          {filteredProjects.length === 0 ? (
-            <div className="text-center py-12">
-              <BookOpen className="w-16 h-16 text-gray-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-400 mb-2">No research papers found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or filters</p>
-            </div>
-          ) : (
-            <div className="space-y-4">
-              {filteredProjects.map((project, index) => (
-                <motion.div
-                  key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.0 + index * 0.05 }}
-                  className="p-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl hover:bg-white/10 transition-all duration-300"
-                >
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <span className="text-gray-400 text-sm">{formatDate(project.startDate)}</span>
-                        <span className="text-gray-400 text-sm">•</span>
-                        <span className="text-gray-400 text-sm">{project.category}</span>
-                        {project.featured && (
-                          <>
-                            <span className="text-gray-400 text-sm">•</span>
-                            <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded-full">Featured</span>
-                          </>
-                        )}
-                      </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{project.title}</h3>
-                      <p className="text-gray-300 text-sm mb-3">{project.description}</p>
-                      <div className="flex items-center space-x-4 text-sm text-gray-400">
-                        <div className="flex items-center space-x-1">
-                          <Users className="w-4 h-4" />
-                          <span>{project.team.length} researchers</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <FileText className="w-4 h-4" />
-                          <span>{project.publications.length} publications</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="ml-6 text-right">
-                      <div className="text-sm text-gray-400 mb-2">{project.institution}</div>
-                      <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                        <FileText className="w-4 h-4 mr-2" />
-                        Details
-                      </button>
-                    </div>
-                  </div>
                 </motion.div>
               ))}
             </div>
+          ) : (
+            <div className="text-center py-12">
+              <BookOpen className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No research projects found</h3>
+              <p className="text-gray-500">Try adjusting your search criteria or filters</p>
+            </div>
           )}
         </div>
-      </div>
+      </motion.div>
+
       {/* CTA Section */}
       <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
         <div className="container mx-auto px-4 text-center">

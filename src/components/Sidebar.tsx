@@ -31,7 +31,8 @@ import {
   ChevronRight,
   ChevronDown,
   Plus,
-  Minus
+  Minus,
+  Lightbulb
 } from 'lucide-react';
 
 interface SidebarProps {
@@ -57,6 +58,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Home', href: '/', icon: Home, badge: null },
     { name: 'Services', href: '/services', icon: Zap, badge: 'New', hasDropdown: true },
     { name: 'Solutions', href: '/solutions', icon: Target, badge: null },
+    { name: 'Research', href: '/research', icon: Lightbulb, badge: 'Hot' },
     { name: 'About', href: '/about', icon: Users, badge: null },
     { name: 'Contact', href: '/contact', icon: MessageCircle, badge: null },
     { name: 'Blog', href: '/blog', icon: BookOpen, badge: null },
@@ -151,9 +153,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, color: 'bg-blue-500' },
+    { name: 'Research Hub', href: '/research', icon: Lightbulb, color: 'bg-purple-500' },
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Users, color: 'bg-green-500' },
-    { name: 'Support Chat', href: '/support', icon: HelpCircle, color: 'bg-purple-500' },
-    { name: 'Documentation', href: '/documentation', icon: BookOpen, color: 'bg-orange-500' }
+    { name: 'Support Chat', href: '/support', icon: HelpCircle, color: 'bg-orange-500' },
+    { name: 'Innovation Showcase', href: '/comprehensive-services-showcase-2025', icon: Star, color: 'bg-cyan-500' },
+    { name: 'Documentation', href: '/docs', icon: BookOpen, color: 'bg-indigo-500' }
   ];
 
   const contactInfo = [
