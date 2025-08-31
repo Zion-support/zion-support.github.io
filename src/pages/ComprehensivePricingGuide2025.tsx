@@ -38,8 +38,8 @@ import {
   BarChart,
   PieChart,
   Activity,
-  List,
-  Grid,
+  Calculator,
+  Scale,
   BookOpen,
   ShoppingCart,
   Home,
@@ -47,11 +47,11 @@ import {
 } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '../data/advancedInnovativeServices2025';
 
-const AdvancedServicesShowcase2025: React.FC = () => {
+const ComprehensivePricingGuide2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [priceRange, setPriceRange] = useState('all');
+  const [sortBy, setSortBy] = useState('price');
 
   const allServices = ADVANCED_INNOVATIVE_SERVICES_2025;
 
@@ -80,23 +80,38 @@ const AdvancedServicesShowcase2025: React.FC = () => {
     { id: 'AI & Energy', name: 'AI & Energy', count: allServices.filter(s => s.category === 'AI & Energy').length, icon: '⚡', color: 'from-zion-yellow to-zion-green' }
   ];
 
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget ($1K - $5K)', range: '1K-5K' },
+    { id: 'mid-range', name: 'Mid-Range ($5K - $10K)', range: '5K-10K' },
+    { id: 'premium', name: 'Premium ($10K - $20K)', range: '10K-20K' },
+    { id: 'enterprise', name: 'Enterprise ($20K+)', range: '20K+' }
+  ];
+
   const filteredServices = allServices.filter(service => {
     const matchesCategory = activeCategory === 'all' || service.category === activeCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch;
+    
+    let matchesPrice = true;
+    if (priceRange === 'budget') matchesPrice = service.price >= 1000 && service.price < 5000;
+    else if (priceRange === 'mid-range') matchesPrice = service.price >= 5000 && service.price < 10000;
+    else if (priceRange === 'premium') matchesPrice = service.price >= 10000 && service.price < 20000;
+    else if (priceRange === 'enterprise') matchesPrice = service.price >= 20000;
+    
+    return matchesCategory && matchesSearch && matchesPrice;
   });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
-      case 'rating':
-        return b.rating - a.rating;
       case 'price':
         return a.price - b.price;
-      case 'reviewCount':
-        return b.reviewCount - a.reviewCount;
+      case 'rating':
+        return b.rating - a.rating;
+      case 'roi':
+        return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       case 'name':
         return a.title.localeCompare(b.title);
       default:
@@ -153,19 +168,37 @@ const AdvancedServicesShowcase2025: React.FC = () => {
     return iconMap[category] || <Rocket className="w-6 h-6" />;
   };
 
+  const getPriceRangeColor = (price: number) => {
+    if (price < 5000) return 'text-green-400';
+    if (price < 10000) return 'text-yellow-400';
+    if (price < 20000) return 'text-orange-400';
+    return 'text-red-400';
+  };
+
+  const getPriceRangeBadge = (price: number) => {
+    if (price < 5000) return { text: 'Budget', color: 'bg-green-500' };
+    if (price < 10000) return { text: 'Mid-Range', color: 'bg-yellow-500' };
+    if (price < 20000) return { text: 'Premium', color: 'bg-orange-500' };
+    return { text: 'Enterprise', color: 'bg-red-500' };
+  };
+
+  const totalValue = allServices.reduce((sum, service) => sum + service.price, 0);
+  const averagePrice = totalValue / allServices.length;
+  const averageROI = allServices.reduce((sum, service) => sum + parseInt(service.roi.split('%')[0]), 0) / allServices.length;
+
   return (
     <>
       <Helmet>
-        <title>Advanced Innovative Services 2025 - Zion Tech Group</title>
-        <meta name="description" content="Discover cutting-edge AI, IT, and Micro SaaS services from Zion Tech Group. Advanced solutions for business transformation, cybersecurity, healthcare, finance, and more." />
-        <meta name="keywords" content="AI services, IT solutions, Micro SaaS, cybersecurity, healthcare AI, financial technology, quantum computing, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/advanced-services-showcase-2025" />
+        <title>Comprehensive Pricing Guide 2025 - Zion Tech Group</title>
+        <meta name="description" content="Complete pricing guide for Zion Tech Group's advanced AI, IT, and Micro SaaS services. Compare prices, ROI, and market positioning across all service categories." />
+        <meta name="keywords" content="pricing guide, service costs, ROI comparison, market prices, Zion Tech Group services, AI pricing, IT services pricing" />
+        <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-guide-2025" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -173,26 +206,26 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                Advanced Innovative Services
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-blue">
+                Comprehensive Pricing Guide
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-green to-zion-blue">
                   2025
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Cutting-edge AI, IT, and Micro SaaS solutions that transform businesses and drive innovation across industries
+                Transparent pricing for all our advanced AI, IT, and Micro SaaS services with detailed ROI analysis and market comparisons
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                  <Brain className="w-5 h-5 text-zion-cyan" />
-                  <span>AI-Powered Solutions</span>
+                  <Calculator className="w-5 h-5 text-zion-green" />
+                  <span>Transparent Pricing</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                  <Shield className="w-5 h-5 text-zion-green" />
-                  <span>Enterprise Security</span>
+                  <TrendingUp className="w-5 h-5 text-zion-blue" />
+                  <span>ROI Analysis</span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white">
-                  <Rocket className="w-5 h-5 text-zion-purple" />
-                  <span>Innovation First</span>
+                  <Scale className="w-5 h-5 text-zion-purple" />
+                  <span>Market Comparison</span>
                 </div>
               </div>
             </motion.div>
@@ -200,7 +233,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
         </section>
 
         {/* Contact Information Banner */}
-        <section className="bg-gradient-to-r from-zion-cyan to-zion-blue py-8 px-4">
+        <section className="bg-gradient-to-r from-zion-green to-zion-blue py-8 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center text-white">
               <div className="flex flex-col items-center gap-2">
@@ -222,7 +255,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Overview */}
+        {/* Pricing Overview */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -232,14 +265,14 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Comprehensive Service Portfolio
+                Pricing Overview & Market Analysis
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From AI-powered business intelligence to quantum computing solutions, our services cover every aspect of modern technology needs
+                Understand the value proposition of each service with detailed pricing, ROI expectations, and competitive market positioning
               </p>
             </motion.div>
 
-            {/* Statistics */}
+            {/* Pricing Statistics */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -247,8 +280,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
-                <div className="text-gray-300">Advanced Services</div>
+                <div className="text-3xl font-bold text-zion-green mb-2">${(totalValue / 1000).toFixed(0)}K+</div>
+                <div className="text-gray-300">Total Service Value</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -256,8 +289,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="text-3xl font-bold text-zion-green mb-2">20+</div>
-                <div className="text-gray-300">Categories</div>
+                <div className="text-3xl font-bold text-zion-blue mb-2">${averagePrice.toFixed(0)}</div>
+                <div className="text-gray-300">Average Price</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -265,8 +298,8 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="text-3xl font-bold text-zion-purple mb-2">95%+</div>
-                <div className="text-gray-300">AI Score</div>
+                <div className="text-3xl font-bold text-zion-purple mb-2">{averageROI.toFixed(0)}%</div>
+                <div className="text-gray-300">Average ROI</div>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -274,9 +307,44 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="text-3xl font-bold text-zion-blue mb-2">600%+</div>
-                <div className="text-gray-300">Average ROI</div>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{allServices.length}+</div>
+                <div className="text-gray-300">Services Available</div>
               </motion.div>
+            </div>
+
+            {/* Price Range Distribution */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 mb-12">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">Price Range Distribution</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">
+                    {allServices.filter(s => s.price < 5000).length}
+                  </div>
+                  <div className="text-gray-300">Budget Services</div>
+                  <div className="text-sm text-gray-400">$1K - $5K</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-yellow-400 mb-2">
+                    {allServices.filter(s => s.price >= 5000 && s.price < 10000).length}
+                  </div>
+                  <div className="text-gray-300">Mid-Range Services</div>
+                  <div className="text-sm text-gray-400">$5K - $10K</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-orange-400 mb-2">
+                    {allServices.filter(s => s.price >= 10000 && s.price < 20000).length}
+                  </div>
+                  <div className="text-gray-300">Premium Services</div>
+                  <div className="text-sm text-gray-400">$10K - $20K</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-red-400 mb-2">
+                    {allServices.filter(s => s.price >= 20000).length}
+                  </div>
+                  <div className="text-gray-300">Enterprise Services</div>
+                  <div className="text-sm text-gray-400">$20K+</div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -293,42 +361,34 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                   placeholder="Search services..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-zion-green focus:border-transparent"
                 />
               </div>
 
-              {/* Sort */}
+              {/* Filters */}
               <div className="flex items-center gap-4">
+                {/* Price Range Filter */}
+                <select
+                  value={priceRange}
+                  onChange={(e) => setPriceRange(e.target.value)}
+                  className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-green focus:border-transparent"
+                >
+                  {priceRanges.map(range => (
+                    <option key={range.id} value={range.id}>{range.name}</option>
+                  ))}
+                </select>
+
+                {/* Sort */}
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-green focus:border-transparent"
                 >
-                  <option value="rating">Sort by Rating</option>
                   <option value="price">Sort by Price</option>
-                  <option value="reviewCount">Sort by Reviews</option>
+                  <option value="rating">Sort by Rating</option>
+                  <option value="roi">Sort by ROI</option>
                   <option value="name">Sort by Name</option>
                 </select>
-
-                {/* View Mode Toggle */}
-                <div className="flex bg-white/10 backdrop-blur-sm rounded-lg p-1">
-                  <button
-                    onClick={() => setViewMode('grid')}
-                    className={`p-2 rounded-md transition-colors ${
-                      viewMode === 'grid' ? 'bg-zion-cyan text-white' : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
-                  </button>
-                  <button
-                    onClick={() => setViewMode('list')}
-                    className={`p-2 rounded-md transition-colors ${
-                      viewMode === 'list' ? 'bg-zion-cyan text-white' : 'text-gray-400 hover:text-white'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
-                  </button>
-                </div>
               </div>
             </div>
           </div>
@@ -359,61 +419,58 @@ const AdvancedServicesShowcase2025: React.FC = () => {
           </div>
         </section>
 
-        {/* Services Grid */}
+        {/* Services Pricing Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8"
             >
               {sortedServices.map((service) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className={`bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                    viewMode === 'list' ? 'flex' : ''
-                  }`}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden hover:border-zion-green/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
-                  {/* Service Image */}
-                  <div className={`relative ${viewMode === 'list' ? 'w-48 h-32' : 'h-48'}`}>
-                    <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20"></div>
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      {getCategoryIcon(service.category)}
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="bg-zion-cyan text-white px-2 py-1 rounded-full text-xs font-semibold">
-                        {service.aiScore}% AI
+                  {/* Service Header */}
+                  <div className="p-6 border-b border-white/20">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-white/10 rounded-lg">
+                          {getCategoryIcon(service.category)}
+                        </div>
+                        <div>
+                          <span className="text-xs font-semibold text-zion-green uppercase tracking-wide">
+                            {service.category}
+                          </span>
+                          {service.featured && (
+                            <Star className="w-4 h-4 text-yellow-400 fill-current ml-2" />
+                          )}
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className={`text-2xl font-bold ${getPriceRangeColor(service.price)}`}>
+                          ${service.price.toLocaleString()}
+                        </div>
+                        <div className={`inline-block px-2 py-1 rounded-full text-xs font-semibold text-white ${getPriceRangeBadge(service.price).color}`}>
+                          {getPriceRangeBadge(service.price).text}
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  {/* Service Content */}
-                  <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
-                    {/* Category Badge */}
-                    <div className="flex items-center gap-2 mb-3">
-                      <span className="text-xs font-semibold text-zion-cyan uppercase tracking-wide">
-                        {service.category}
-                      </span>
-                      {service.featured && (
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      )}
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-white mb-3 line-clamp-2">
+                    <h3 className="text-xl font-bold text-white mb-3">
                       {service.title}
                     </h3>
 
-                    {/* Description */}
-                    <p className="text-gray-300 mb-4 line-clamp-3">
+                    <p className="text-gray-300 mb-4 line-clamp-2">
                       {service.description}
                     </p>
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2 mb-4">
-                      {service.tags.slice(0, 3).map((tag, index) => (
+                      {service.tags.slice(0, 4).map((tag, index) => (
                         <span
                           key={index}
                           className="px-2 py-1 bg-white/10 rounded-full text-xs text-gray-300"
@@ -422,39 +479,60 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                         </span>
                       ))}
                     </div>
+                  </div>
 
-                    {/* Stats Row */}
-                    <div className="flex items-center justify-between mb-4">
+                  {/* Pricing Details */}
+                  <div className="p-6">
+                    {/* Key Metrics */}
+                    <div className="grid grid-cols-2 gap-4 mb-6">
+                      <div className="text-center p-3 bg-white/5 rounded-lg">
+                        <div className="text-sm text-gray-400 mb-1">Market Price</div>
+                        <div className="text-lg font-semibold text-white">{service.marketPrice}</div>
+                      </div>
+                      <div className="text-center p-3 bg-white/5 rounded-lg">
+                        <div className="text-sm text-gray-400 mb-1">ROI</div>
+                        <div className="text-lg font-semibold text-green-400">{service.roi}</div>
+                      </div>
+                      <div className="text-center p-3 bg-white/5 rounded-lg">
+                        <div className="text-sm text-gray-400 mb-1">Setup Time</div>
+                        <div className="text-lg font-semibold text-white">{service.setupTime}</div>
+                      </div>
+                      <div className="text-center p-3 bg-white/5 rounded-lg">
+                        <div className="text-sm text-gray-400 mb-1">AI Score</div>
+                        <div className="text-lg font-semibold text-zion-cyan">{service.aiScore}%</div>
+                      </div>
+                    </div>
+
+                    {/* Rating and Reviews */}
+                    <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-2">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <Star className="w-5 h-5 text-yellow-400 fill-current" />
                         <span className="text-white font-semibold">{service.rating}</span>
-                        <span className="text-gray-400 text-sm">({service.reviewCount})</span>
+                        <span className="text-gray-400 text-sm">({service.reviewCount} reviews)</span>
                       </div>
                       <div className="text-right">
-                        <div className="text-2xl font-bold text-zion-cyan">
-                          ${service.price.toLocaleString()}
-                        </div>
-                        <div className="text-sm text-gray-400">
-                          Market: {service.marketPrice}
+                        <div className="text-sm text-gray-400">Competitors</div>
+                        <div className="text-xs text-gray-300">
+                          {service.competitors.slice(0, 2).join(', ')}
                         </div>
                       </div>
                     </div>
 
-                    {/* Key Benefits */}
-                    <div className="mb-4">
-                      <div className="text-sm text-gray-400 mb-2">Key Benefits:</div>
-                      <div className="space-y-1">
+                    {/* Value Proposition */}
+                    <div className="mb-6">
+                      <div className="text-sm text-gray-400 mb-2">Value Proposition:</div>
+                      <div className="space-y-2">
                         <div className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-zion-green" />
-                          <span>ROI: {service.roi}</span>
+                          <span>Competitive pricing vs. market</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-300">
-                          <Clock className="w-4 h-4 text-zion-blue" />
-                          <span>Setup: {service.setupTime}</span>
+                          <TrendingUp className="w-4 h-4 text-zion-blue" />
+                          <span>High ROI potential</span>
                         </div>
                         <div className="flex items-center gap-2 text-sm text-gray-300">
-                          <Target className="w-4 h-4 text-zion-purple" />
-                          <span>Availability: {service.availability}</span>
+                          <Zap className="w-4 h-4 text-zion-purple" />
+                          <span>Fast setup and deployment</span>
                         </div>
                       </div>
                     </div>
@@ -465,14 +543,14 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                         href={service.contactInfo.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-3 rounded-lg font-semibold text-center hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
+                        className="flex-1 bg-gradient-to-r from-zion-green to-zion-blue text-white px-4 py-3 rounded-lg font-semibold text-center hover:from-zion-blue hover:to-zion-green transition-all duration-300 flex items-center justify-center gap-2"
                       >
-                        <span>Learn More</span>
-                        <ExternalLink className="w-4 h-4" />
+                        <span>Get Quote</span>
+                        <ArrowRight className="w-4 h-4" />
                       </a>
                       <a
-                        href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
-                        className="px-4 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
+                        href={`mailto:${service.contactInfo.email}?subject=Pricing Inquiry - ${service.title}`}
+                        className="px-4 py-3 border border-zion-green text-zion-green rounded-lg font-semibold hover:bg-zion-green hover:text-white transition-all duration-300 flex items-center justify-center"
                       >
                         <Mail className="w-4 h-4" />
                       </a>
@@ -480,23 +558,19 @@ const AdvancedServicesShowcase2025: React.FC = () => {
 
                     {/* Contact Info */}
                     <div className="mt-4 pt-4 border-t border-white/20">
-                      <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
+                      <div className="text-xs text-gray-400 mb-2">Contact for Custom Pricing:</div>
                       <div className="space-y-1 text-xs">
                         <div className="flex items-center gap-2 text-gray-300">
                           <Phone className="w-3 h-3" />
-                          <a href={`tel:${service.contactInfo.phone}`} className="hover:text-zion-cyan">
+                          <a href={`tel:${service.contactInfo.phone}`} className="hover:text-zion-green">
                             {service.contactInfo.phone}
                           </a>
                         </div>
                         <div className="flex items-center gap-2 text-gray-300">
                           <Mail className="w-3 h-3" />
-                          <a href={`mailto:${service.contactInfo.email}`} className="hover:text-zion-cyan">
+                          <a href={`mailto:${service.contactInfo.email}`} className="hover:text-zion-green">
                             {service.contactInfo.email}
                           </a>
-                        </div>
-                        <div className="flex items-center gap-2 text-gray-300">
-                          <MapPin className="w-3 h-3" />
-                          <span>{service.contactInfo.address}</span>
                         </div>
                       </div>
                     </div>
@@ -515,24 +589,25 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
                 <p className="text-gray-400 mb-6">
-                  Try adjusting your search terms or category filters
+                  Try adjusting your search terms, category filters, or price range
                 </p>
                 <button
                   onClick={() => {
                     setSearchTerm('');
                     setActiveCategory('all');
+                    setPriceRange('all');
                   }}
-                  className="bg-zion-cyan text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-blue transition-colors"
+                  className="bg-zion-green text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-blue transition-colors"
                 >
-                  Clear Filters
+                  Clear All Filters
                 </button>
               </motion.div>
             )}
           </div>
         </section>
 
-        {/* Call to Action Section */}
-        <section className="py-20 px-4 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20">
+        {/* Pricing Strategy Section */}
+        <section className="py-20 px-4 bg-gradient-to-r from-zion-green/20 to-zion-blue/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -540,25 +615,66 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
+                Our Pricing Strategy
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Let our team of experts help you implement the perfect solution for your needs
+                We believe in transparent, value-based pricing that delivers exceptional ROI for our clients
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="text-3xl mb-4">💎</div>
+                  <h3 className="text-xl font-bold text-white mb-3">Value-Based Pricing</h3>
+                  <p className="text-gray-300">
+                    Our prices reflect the actual value and ROI our services deliver, not just market positioning.
+                  </p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="text-3xl mb-4">🔍</div>
+                  <h3 className="text-xl font-bold text-white mb-3">Transparent Costs</h3>
+                  <p className="text-gray-300">
+                    No hidden fees or surprise charges. What you see is what you pay, with clear deliverables.
+                  </p>
+                </div>
+                <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                  <div className="text-3xl mb-4">📈</div>
+                  <h3 className="text-xl font-bold text-white mb-3">ROI Focused</h3>
+                  <p className="text-gray-300">
+                    Every service is designed to deliver measurable returns that justify the investment.
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Call to Action Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact us today for a personalized consultation and custom pricing for your specific needs
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="https://ziontechgroup.com/contact"
-                  className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
+                  className="bg-gradient-to-r from-zion-green to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-zion-blue hover:to-zion-green transition-all duration-300 flex items-center justify-center gap-2"
                 >
-                  <span>Get Started Today</span>
+                  <span>Request Custom Quote</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
                 <a
                   href={`tel:+13024640950`}
-                  className="border-2 border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                  className="border-2 border-zion-green text-zion-green px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-green hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
-                  <span>Call Now</span>
+                  <span>Call for Pricing</span>
                 </a>
               </div>
             </motion.div>
@@ -572,10 +688,10 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               <div>
                 <h3 className="text-xl font-bold text-white mb-4">Zion Tech Group</h3>
                 <p className="text-gray-400 mb-4">
-                  Leading provider of innovative AI, IT, and Micro SaaS solutions for modern businesses.
+                  Leading provider of innovative AI, IT, and Micro SaaS solutions with transparent, value-based pricing.
                 </p>
                 <div className="flex space-x-4">
-                  <a href="https://ziontechgroup.com" className="text-zion-cyan hover:text-white transition-colors">
+                  <a href="https://ziontechgroup.com" className="text-zion-green hover:text-white transition-colors">
                     <Globe className="w-5 h-5" />
                   </a>
                 </div>
@@ -586,11 +702,11 @@ const AdvancedServicesShowcase2025: React.FC = () => {
                 <div className="space-y-2 text-gray-400">
                   <div className="flex items-center gap-2">
                     <Phone className="w-4 h-4" />
-                    <a href="tel:+13024640950" className="hover:text-zion-cyan">+1 302 464 0950</a>
+                    <a href="tel:+13024640950" className="hover:text-zion-green">+1 302 464 0950</a>
                   </div>
                   <div className="flex items-center gap-2">
                     <Mail className="w-4 h-4" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan">kleber@ziontechgroup.com</a>
+                    <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-green">kleber@ziontechgroup.com</a>
                   </div>
                   <div className="flex items-center gap-2">
                     <MapPin className="w-4 h-4" />
@@ -600,29 +716,28 @@ const AdvancedServicesShowcase2025: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">Pricing</h4>
                 <div className="space-y-2 text-gray-400">
-                  <div>AI & Business Intelligence</div>
-                  <div>Cybersecurity Solutions</div>
-                  <div>Quantum Computing</div>
-                  <div>Healthcare Technology</div>
-                  <div>Financial Technology</div>
+                  <div>Budget Services ($1K-$5K)</div>
+                  <div>Mid-Range ($5K-$10K)</div>
+                  <div>Premium ($10K-$20K)</div>
+                  <div>Enterprise ($20K+)</div>
                 </div>
               </div>
 
               <div>
                 <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
                 <div className="space-y-2">
-                  <a href="https://ziontechgroup.com" className="block text-gray-400 hover:text-zion-cyan transition-colors">
+                  <a href="https://ziontechgroup.com" className="block text-gray-400 hover:text-zion-green transition-colors">
                     Home
                   </a>
-                  <a href="https://ziontechgroup.com/services" className="block text-gray-400 hover:text-zion-cyan transition-colors">
+                  <a href="https://ziontechgroup.com/services" className="block text-gray-400 hover:text-zion-green transition-colors">
                     Services
                   </a>
-                  <a href="https://ziontechgroup.com/contact" className="block text-gray-400 hover:text-zion-cyan transition-colors">
+                  <a href="https://ziontechgroup.com/contact" className="block text-gray-400 hover:text-zion-green transition-colors">
                     Contact
                   </a>
-                  <a href="https://ziontechgroup.com/about" className="block text-gray-400 hover:text-zion-cyan transition-colors">
+                  <a href="https://ziontechgroup.com/about" className="block text-gray-400 hover:text-zion-green transition-colors">
                     About
                   </a>
                 </div>
@@ -630,7 +745,7 @@ const AdvancedServicesShowcase2025: React.FC = () => {
             </div>
             
             <div className="border-t border-white/20 mt-8 pt-8 text-center text-gray-400">
-              <p>&copy; 2025 Zion Tech Group. All rights reserved. | Advanced Innovative Services Showcase</p>
+              <p>&copy; 2025 Zion Tech Group. All rights reserved. | Comprehensive Pricing Guide</p>
             </div>
           </div>
         </footer>
@@ -639,4 +754,4 @@ const AdvancedServicesShowcase2025: React.FC = () => {
   );
 };
 
-export default AdvancedServicesShowcase2025;
+export default ComprehensivePricingGuide2025;
