@@ -21,6 +21,12 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
+import { EnhancedFooter } from './components/ui/EnhancedFooter';
+
+// Layout Components
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
