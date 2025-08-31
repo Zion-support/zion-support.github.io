@@ -83,6 +83,8 @@ export function Header() {
               <Search className="block h-6 w-6" aria-hidden="true" />
             </button>
 
+            {/* Right Side Actions */}
+            <div className="flex items-center space-x-2">
               {/* Notifications */}
               <button
                 type="button"
