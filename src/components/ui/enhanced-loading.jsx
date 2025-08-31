@@ -1,13 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Sparkles, Zap, Shield, Rocket const sizeClasses = {
-    sm: 'w-8 h-8',
-=======
 import { Sparkles, Zap, Shield, Rocket } from 'lucide-react';
 const sizeClasses = {
   sm: 'w-8 h-8',
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     md: 'w-12 h-12',
     lg: 'w-16 h-16',
   xl: 'w-24 h-24'
@@ -75,19 +70,12 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         pulse: {
             scale[1, 1.1, 1],
             opacity[1, 0.7, 1],
-=======
   pulse: {
             scale: [1, 1.1, 1],
             opacity: [1, 0.7, 1],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 2,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: "easeInOut"
-
-
-=======
   ease: "easeInOut"
             
 
@@ -98,24 +86,16 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 }
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const bounceVariants = {
   <<<<<<< HEAD
         bounce: {
             y[0, -20, 0],
-=======
   bounce: {
             y: [0, -20, 0],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 1.5,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: "easeInOut"
-
-
-=======
   ease: "easeInOut"
             
 
@@ -126,24 +106,16 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 }
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const waveVariants = {
   <<<<<<< HEAD
         wave: {
             y[0, -15, 0],
-=======
   wave: {
             y: [0, -15, 0],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 1,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: "easeInOut"
-
-
-=======
   ease: "easeInOut"
             
 
@@ -154,7 +126,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 }
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const icons = [Sparkles, Zap, Shield, Rocket];
     if (variant === 'pulse') {
@@ -165,12 +136,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         {text && (<motion.p variants={iconVariants} className="mt-4 text-zion-slate-light text-center font-medium">
             {text}
           </motion.p>)}
-<<<<<<< HEAD
-      </motion.div>);
-
-=======
       </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (variant === 'bounce') {
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <motion.div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-purple to-zion-cyan rounded-full flex items-center justify-center shadow-lg`} variants={bounceVariants} animate="bounce">
@@ -179,12 +145,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         {text && (<motion.p variants={iconVariants} className="mt-4 text-zion-slate-light text-center font-medium">
             {text}
           </motion.p>)}
-<<<<<<< HEAD
-      </motion.div>);
-
-=======
       </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (variant === 'wave') {
         return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
         <div className="flex space-x-2">
@@ -193,12 +154,7 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
         {text && (<motion.p variants={iconVariants} className="mt-4 text-zion-slate-light text-center font-medium">
             {text}
           </motion.p>)}
-<<<<<<< HEAD
-      </motion.div>);
-
-=======
       </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Default variant with rotating icons
     return (<motion.div className={`flex flex-col items-center justify-center ${className}`} variants={containerVariants} initial="hidden" animate="visible">
       <div className="relative">
@@ -235,7 +191,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
                 
 
 }} transition={{
-=======
   height: sizeClasses[size]
                 
 
@@ -256,7 +211,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut",
@@ -277,26 +231,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
       </div>
 
       {text && (<motion.div variants={iconVariants} className="mt-6 text-center">
-<<<<<<< HEAD
-          <motion.p className="text-zion-slate-light font-medium text-lg" animate = {
-  { opacity[0.5, 1,
-  0.5] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}>
-            {text}
-          </motion.p>
-          <motion.div className="mt-2 flex justify-center space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
-            {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-cyan rounded-full" animate = {
-  { scale[1, 1.5,
-  1] 
-
-}} transition = {
-  {
-=======
           <motion.p className="text-zion-slate-light font-medium text-lg" animate = {
   { opacity: [0.5, 1,
   0.5] 
@@ -330,7 +264,6 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: 1.5,
                     repeat: Infinity,
   delay: i * 0.2
@@ -344,9 +277,4 @@ export function EnhancedLoading({ size = 'md', variant = 'default', text = 'Load
 }}/>))}
           </motion.div>
         </motion.div>)}
-<<<<<<< HEAD
-    </motion.div>);
-}}}}}}}}}}}}}}}</motion.div></motion.div>}
-=======
     </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

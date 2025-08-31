@@ -1,17 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
-=======
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Input } from "./ui/input";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const AdvancedServiceInnovationHub = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedImpact, setSelectedImpact] = useState('all');
@@ -99,89 +92,6 @@ const AdvancedServiceInnovationHub = () => {
             status: 'Emerging'
 
     ];
-<<<<<<< HEAD
-    const futureRoadmap = [
-        {
-            id: 'quantum-internet',
-            title: 'Quantum Internet Infrastructure',
-            description: 'Global quantum internet enabling ultra-secure, instant communication worldwide.',
-            timeline: '2030-2040',
-            milestones[
-                'Quantum network prototypes',
-                'Inter-city quantum links',
-                'Global quantum backbone',
-                'Consumer quantum internet'
-            ],
-            challenges[
-                'Quantum entanglement over long distances',
-                'Infrastructure costs',
-                'Technical complexity',
-                'Regulatory frameworks'
-            ],
-            opportunities[
-                'Unbreakable security',
-                'Instant global communication',
-                'Quantum computing access',
-                'New business models'
-            ],
-            investment: '$200B+',
-            category: 'quantum'
-        },
-        {
-            id: 'space-colonization',
-            title: 'Space Colonization & Settlement',
-            description: 'Establishment of permanent human settlements on Mars and other celestial bodies.',
-            timeline: '2040-2060',
-            milestones[
-                'Mars mission planning',
-                'Habitat construction',
-                'Sustainable life support',
-                'Self-sufficient colonies'
-            ],
-            challenges[
-                'Life support systems',
-                'Radiation protection',
-                'Resource sustainability',
-                'Human psychology'
-            ],
-            opportunities[
-                'New human civilization',
-                'Resource expansion',
-                'Scientific research',
-                'Economic growth'
-            ],
-            investment: '$1T+',
-            category: 'space-tech'
-        },
-        {
-            id: 'ai-governance',
-            title: 'AI Governance & Regulation',
-            description: 'Comprehensive frameworks for responsible AI development and deployment.',
-            timeline: '2025-2035',
-            milestones[
-                'Ethical AI frameworks',
-                'Regulatory standards',
-                'Global AI governance',
-                'AI safety protocols'
-            ],
-            challenges[
-                'International coordination',
-                'Technology evolution',
-                'Balancing innovation and safety',
-                'Stakeholder alignment'
-            ],
-            opportunities[
-                'Responsible AI development',
-                'Public trust building',
-                'Innovation guidance',
-                'Global cooperation'
-            ],
-            investment: '$50B+',
-            category: 'ai'
-
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const filteredTrends = useMemo(() => {
         return innovationTrends.filter(trend => {
             const matchesSearch = trend.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -192,12 +102,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -205,12 +110,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Disruptive': return 'bg-purple-100 text-purple-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -219,12 +119,7 @@ const AdvancedServiceInnovationHub = () => {
             case 'space-tech': return <Satellite className="w-5 h-5"/>;
             case 'green-tech': return <Leaf className="w-5 h-5"/>;
             case 'biotech-ai': return <Dna className="w-5 h-5"/>;
-<<<<<<< HEAD
-            default: return <Cpu className="w-5 h-5"/>;
-
-=======
             default: return <Cpu className="w-5 h-5"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const categories = [
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },
@@ -780,11 +675,6 @@ const AdvancedServiceInnovationHub = () => {
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AdvancedServiceInnovationHub;
 }}}}}}

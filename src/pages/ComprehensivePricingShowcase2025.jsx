@@ -43,19 +43,6 @@ const ComprehensivePricingShowcase2025 = () => {
         if (service.price) {
             const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
             if (range.min && range.max) {
-<<<<<<< HEAD
-                return price >= range.min && price <= range.max;
-
-            else if (range.max) {
-                return price <= range.max;
-
-            else if (range.min) {
-                return price >= range.min;
-
-
-        return true;
-    });
-=======
                 return price >= range.min && price <= range.max}
             else if (range.max) {
                 return price <= range.max}
@@ -63,7 +50,6 @@ const ComprehensivePricingShowcase2025 = () => {
                 return price >= range.min}
         }
         return true});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getServiceTypeColor = (type) => {
         switch (type) {
             case 'Micro SAAS':
@@ -73,12 +59,7 @@ const ComprehensivePricingShowcase2025 = () => {
             case 'AI Service':
                 return 'bg-purple-100 text-purple-800 border-purple-200';
             default:
-<<<<<<< HEAD
-                return 'bg-gray-100 text-gray-800 border-gray-200';
-
-=======
                 return 'bg-gray-100 text-gray-800 border-gray-200'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIcon = (category) => {
         const icons = {
@@ -101,7 +82,6 @@ const ComprehensivePricingShowcase2025 = () => {
 
 };
         return icons[category] || '🚀'};
-=======
   'AI & Customer Experience': '💬'
         
 
@@ -111,40 +91,22 @@ const ComprehensivePricingShowcase2025 = () => {
 };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getPriceDisplay = (service) => {
         if (service.price) {
             return (<div className="text-3xl font-bold text-blue-400">
           {service.price}
           {service.period && (<span className="text-sm text-gray-400 font-normal"> {service.period}</span>)}
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         else if (service.hourlyRate) {
             return (<div className="text-3xl font-bold text-green-400">
           ${service.hourlyRate}
           <span className="text-sm text-gray-400 font-normal">/hour</span>
-<<<<<<< HEAD
-        </div>);
-
-        else if (service.pricing) {
-            return (<div className="text-3xl font-bold text-purple-400">
-          {service.pricing}
-        </div>);
-
-        return null;
-    };
-=======
         </div>)}
         else if (service.pricing) {
             return (<div className="text-3xl font-bold text-purple-400">
           {service.pricing}
         </div>)}
         return null};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

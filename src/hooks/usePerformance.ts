@@ -9,25 +9,6 @@ interface PerformanceMetrics {
   ttfb: number | null; // Time to First Byte
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
-<<<<<<< HEAD
-  navigationStart: number | null;
-
-interface PerformanceObserverEntry {
-  name: string;
-  value: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-
-// Extended interfaces for specific performance entry types
-interface FirstInputEntry extends PerformanceEntry {
-  processingStart: number;
-  startTime: number;
-
-interface LayoutShiftEntry extends PerformanceEntry {
-  hadRecentInput: boolean;
-  value: number;
-
-export function usePerformance() {
-=======
 }
 
 interface PerformanceOptions {
@@ -49,7 +30,6 @@ export function usePerformance(options: PerformanceOptions = {}) {
     sendToAnalytics = false
   } = options;
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
@@ -63,15 +43,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
 
   const [isMonitoring, setIsMonitoring] = useState(false);
   const observerRef = useRef<PerformanceObserver | null>(null);
-<<<<<<< HEAD
-  useEffect(() => {
-    // Check if PerformanceObserver is supported
-    if (!('PerformanceObserver' in window)) {
-<<<<<<< HEAD
-      // // // console.warn('PerformanceObserver not supported');
-=======
       // // // // // // // console.warn('PerformanceObserver not supported');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       return;
 
     // First Contentful Paint (FCP)
@@ -116,15 +88,9 @@ export function usePerformance(options: PerformanceOptions = {}) {
       fidObserver.observe({ entryTypes: ['first-input'] });
       clsObserver.observe({ entryTypes: ['layout-shift'] });
     } catch (error) {
-<<<<<<< HEAD
-      // // // console.warn('Error setting up performance observers:', error);
-
-=======
       // // // // // // // console.warn('Error setting up performance observers:', error);
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     // Navigation timing metrics
-=======
   const lcpObserverRef = useRef<PerformanceObserver | null>(null);
   const clsObserverRef = useRef<PerformanceObserver | null>(null);
 
@@ -132,7 +98,6 @@ export function usePerformance(options: PerformanceOptions = {}) {
   const getNavigationTiming = useCallback(() => {
     if (!enableNavigationTiming || !performance.getEntriesByType) return;
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (navigationEntry) {
       const ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
@@ -146,78 +111,7 @@ export function usePerformance(options: PerformanceOptions = {}) {
         windowLoad
       }));
 
-<<<<<<< HEAD
-    // Cleanup
-    return () => {
-      fcpObserver.disconnect();
-      lcpObserver.disconnect();
-      fidObserver.disconnect();
-      clsObserver.disconnect();
-    };
-  }, []);
-  // Get performance rating
-  const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor' => {
-    const thresholds = {
-      fcp: { good: 1800, poor: 3000 },
-      lcp: { good: 2500, poor: 4000 },
-      fid: { good: 100, poor: 300 },
-      cls: { good: 0.1, poor: 0.25 },
-      ttfb: { good: 800, poor: 1800 },
-    };
-    const threshold = thresholds[metric];
-    if (!threshold) return 'good';
-    if (value <= threshold.good) return 'good';
-    if (value <= threshold.poor) return 'needs-improvement';
-    return 'poor';
-  };
-  // Get all metrics with ratings
-  const getMetricsWithRatings = () => {
-    const result: PerformanceObserverEntry[] = [];
-    Object.entries(metrics).forEach(([key, value]) => {
-      if (value !== null) {
-        result.push({
-          name: key.toUpperCase(),
-          value,
-          rating: getRating(key as keyof PerformanceMetrics, value)
-        });
-
-    });
-    return result;
-  };
-  // Log performance metrics
-  const logMetrics = () => {
-    const metricsWithRatings = getMetricsWithRatings();
-    console.group('🚀 Performance Metrics');
-    // Measure basic timing
-    measureNavigationTiming();
-    console.groupEnd();
-  };
-  // Get performance score (0-100)
-  const getPerformanceScore = () => {
-    const metricsWithRatings = getMetricsWithRatings();
-    if (metricsWithRatings.length === 0) return 0;
-    const scores = metricsWithRatings.map(({ rating }) => {
-      switch (rating) {
-        case 'good': return 100;
-        case 'needs-improvement': return 50;
-        case 'poor': return 0;
-        default: return 100;
-
-    });
-    return Math.round(scores.reduce((sum, score) => sum + score, 0) / scores.length);
-  };
-  // Monitor long tasks
-  useEffect(() => {
-    if (!('PerformanceObserver' in window)) return;
-    const longTaskObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.duration > 50) {
-<<<<<<< HEAD
-          // // console.warn('Long task detected:', {
-=======
           // // // // // // // console.warn('Long task detected:', {
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             duration: entry.duration,
             startTime: entry.startTime,
             name: entry.name
@@ -228,15 +122,9 @@ export function usePerformance(options: PerformanceOptions = {}) {
     try {
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch (error) {
-<<<<<<< HEAD
-      // // console.warn('Error setting up long task observer:', error);
-
-=======
       // // // // // // // console.warn('Error setting up long task observer:', error);
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return () => longTaskObserver.disconnect();
-=======
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }
@@ -390,7 +278,6 @@ export function usePerformance(options: PerformanceOptions = {}) {
       clsObserverRef.current.disconnect();
       clsObserverRef.current = null;
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // Get performance score
@@ -481,25 +368,8 @@ export function usePerformance(options: PerformanceOptions = {}) {
     getResourceTiming,
     sendMetricsToAnalytics
   };
-<<<<<<< HEAD
-
-// Hook for monitoring specific performance events
-export function usePerformanceEvent(eventName: string, callback: (entry: PerformanceEntry) => void) {
-  useEffect(() => {
-    if (!('PerformanceObserver' in window)) return;
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach(callback);
-    });
-    try {
-      observer.observe({ entryTypes: [eventName] });
-    } catch (error) {
-<<<<<<< HEAD
-      // // // console.warn(`Error observing ${eventName}:`, error);
-
-=======
       // // // // // // // console.warn(`Error observing ${eventName}:`, error);
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     return () => observer.disconnect();
   }, [eventName, callback]);
 
@@ -515,7 +385,6 @@ export function useRenderTime() {
   });
   return renderTime;
 }}}}}}}}}}}}}}}}}}}}
-=======
 }
 
 // Hook for monitoring specific component performance
@@ -580,4 +449,3 @@ export function useAPIPerformance() {
     getSlowAPIs
   };
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

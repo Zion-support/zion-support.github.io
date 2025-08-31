@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Brain, Shield, Database, TrendingUp const AIServices = () => {
-    const features = [
-=======
 import SEO from "@/components/SEO";
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
     const aiServices = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         {
             id: "ai-strategy",
             title: "AI Strategy & Consulting",
@@ -94,12 +88,6 @@ const AIServices = () => {
             reviewCount: 189
         },
         {
-<<<<<<< HEAD
-            icon: Shield,
-            title: "AI Ethics",
-            description: "Responsible AI development and governance"
-
-=======
             id: "computer-vision",
             title: "Computer Vision & Image AI",
             description: "Visual AI solutions for image recognition, object detection, and video analysis.",
@@ -295,34 +283,9 @@ const AIServices = () => {
             rating: 4.8,
             reviewCount: 223
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-            AI Services for
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400">
-              {" "}Innovation
-            </span>
-          </motion.h1>
-          <motion.p className="text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Harness the power of artificial intelligence to transform your business operations,
-            enhance customer experiences, and drive innovation across all departments.
-          </motion.p>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }}>
-            <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105">
-              Start Your AI Journey
-            </button>
-          </motion.div>
-        </div>
-      </section>
-=======
     const categories = ["All Services", "Strategy", "ML", "NLP", "Vision", "Analytics", "Automation", "Ethics", "Infrastructure", "Integration", "Training"];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return (
         <div className="min-h-screen bg-background">

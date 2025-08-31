@@ -13,12 +13,7 @@ export const AppScreenshots = () => {
             scrollContainerRef.current.scrollBy({
                 left: direction === "left" ? -scrollAmount : scrollAmount,
                 behavior: "smooth",
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -33,10 +28,6 @@ export const AppScreenshots = () => {
           <Button variant="ghost" size="icon" className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" onClick={() => scroll("left")} aria-label="Scroll left">
             <ChevronLeft className="h-6 w-6"/>
           </Button>
-<<<<<<< HEAD
-
-          <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
-=======
           
           <div ref={scrollContainerRef} className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory" style = {
   { scrollbarWidth: "none",
@@ -48,7 +39,6 @@ export const AppScreenshots = () => {
 
 
 }}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {mockScreenshots.map((screenshot) => (<div key={screenshot.id} className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">
                 <img loading="lazy" src={screenshot.src} alt={screenshot.alt} className="w-full h-full object-cover"/>
               </div>))}
@@ -59,10 +49,4 @@ export const AppScreenshots = () => {
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-};
-}}
-=======
     </section>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

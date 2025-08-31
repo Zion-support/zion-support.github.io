@@ -29,12 +29,7 @@ export default function TenantOnboarding() {
     // Check if user has admin role
     const isAdmin = user?.role === "admin";
     if (!isAdmin) {
-<<<<<<< HEAD
-        return <Navigate to="/unauthorized"/>;
-
-=======
         return <Navigate to="/unauthorized"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }))};
@@ -51,7 +46,6 @@ export default function TenantOnboarding() {
   subtitle: `Find the best talent for your ${formData.industry || "comp"
 
 }`,
-=======
   headline: "AI Hiring Assistant",
   subtitle: `Find the best talent for your ${formData.industry || "company"
 
@@ -59,7 +53,6 @@ export default function TenantOnboarding() {
 
 
 }`,
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 cta: "Get Started"
             };
             // Submit to Supabase
@@ -96,31 +89,14 @@ export default function TenantOnboarding() {
                 industry: "",
                 custom_domain: "",
                 is_co_branded: true
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error creating tenant:", error);
-=======
             // // // // // // // console.error("Error creating tenant:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Failed to create tenant", {
                 description: error.message
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsSubmitting(false);
-
-=======
             })}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <SEO title="Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform."/>
@@ -149,13 +125,8 @@ export default function TenantOnboarding() {
                     <TabsTrigger value="branding">Branding</TabsTrigger>
                     <TabsTrigger value="domain">Domain Setup</TabsTrigger>
                   </TabsList>
-<<<<<<< HEAD
-
-                  <TabsContent value="company" className="space-y-4">
-=======
                   
                   <TabsContent value="comp" className="space-y-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <div className="space-y-2">
                       <Label htmlFor="brand_name">Comp Name</Label>
                       <Input id="brand_name" name="brand_name" value={formData.brand_name} onChange={handleInputChange} placeholder="Acme Corporation" required/>
@@ -190,14 +161,6 @@ export default function TenantOnboarding() {
                     </div>
 
                     <div className="space-y-2">
-<<<<<<< HEAD
-                      <Label htmlFor="comp_size">Comp Size</Label>
-                      <Select name="comp_size" value={formData.comp_size} onValueChange = {
-  (value) => handleSelectChange("comp_size",
-  value)
-
-}>
-=======
                       <Label htmlFor="company_size">Company Size</Label>
                       <Select name="company_size" value={formData.company_size} onValueChange = {
   (value) => handleSelectChange("company_size",
@@ -209,7 +172,6 @@ export default function TenantOnboarding() {
 
 
 }>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                         <SelectTrigger>
                           <SelectValue placeholder="Select comp size"/>
                         </SelectTrigger>
@@ -291,13 +253,6 @@ export default function TenantOnboarding() {
                     <div className="space-y-2">
                       <Label htmlFor="subdomain">Subdomain</Label>
                       <div className="flex items-center">
-<<<<<<< HEAD
-                        <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
-  formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
-  '') : "comp"
-
-} className="rounded-r-none"/>
-=======
                         <Input id="subdomain" name="subdomain" value={formData.subdomain} onChange={handleInputChange} placeholder = {
   formData.brand_name ? formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g,
   '') : "company"
@@ -308,7 +263,6 @@ export default function TenantOnboarding() {
 
 
 } className="rounded-r-none"/>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                         <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground">
                           .ziontechmarketplace.com
                         </div>
@@ -341,11 +295,5 @@ export default function TenantOnboarding() {
           </Card>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </>);
-</Card></Card></Card></Card>}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

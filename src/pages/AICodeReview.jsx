@@ -81,20 +81,6 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
               AI Code Review
             </div>
           </motion.div>
-<<<<<<< HEAD
-
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI-Powered
-            <span className="bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"> Code Review</span>
-          </motion.h1>
-
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Transform your code review process with AI-powered analysis. Detect bugs, security issues,
-            and performance problems automatically while maintaining high code quality standards.
-          </motion.p>
-
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center">
-=======
           
           <motion.h1 initial = {
   { opacity: 0,
@@ -188,7 +174,6 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
 
 
 }} className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <button className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/30 transition-all duration-300">
               Start Free Trial
             </button>
@@ -441,9 +426,4 @@ import { Code, Shield, Zap, Users, BarChart3, Target, CheckCircle export default
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

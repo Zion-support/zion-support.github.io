@@ -2,42 +2,10 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server import { Link } from "react-router-dom";
-export default function CybersecurityServices() {
-    const services = [
-        {
-            title: "Penetration Testing",
-            description: "Comprehensive security assessments to identify vulnerabilities in your systems",
-            icon: <Target className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $2,500"
-        },
-        {
-            title: "Security Audits",
-            description: "Thorough review of your security policies, procedures, and infrastructure",
-            icon: <Eye className="h-6 w-6 text-zion-purple"/>,
-            price: "From $1,800"
-        },
-        {
-            title: "Incident Response",
-            description: "24/7 emergency response team for security breaches and cyber attacks",
-            icon: <AlertTriangle className="h-6 w-6 text-zion-blue"/>,
-            price: "From $5,000"
-        },
-        {
-            title: "Security Training",
-            description: "Employee cybersecurity awareness and best practices training",
-            icon: <Users className="h-6 w-6 text-zion-cyan"/>,
-            price: "From $500"
-
-    ];
-=======
 import SEO from "@/components/SEO";
 import { Shield, Eye, Target, Users, ArrowRight, CheckCircle, Star, AlertTriangle, Network, Database, Cloud, Smartphone, Server } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function CybersecurityServices() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const securitySolutions = [
         {
             title: "Network Security",
@@ -330,9 +298,4 @@ export default function CybersecurityServices() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

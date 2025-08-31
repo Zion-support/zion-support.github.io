@@ -484,12 +484,6 @@ const SERVICE_LISTINGS = [
         reviewCount: 85,
     },
 ];
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-function getRandomItem(arr) {
-    return arr[Math.floor(Math.random() * arr.length)];
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
 function generateRandomService(idNum) {
     const templates = [
         {
@@ -566,12 +560,7 @@ function generateRandomService(idNum) {
         aiScore: Math.floor(90 + Math.random() * 10),
         rating: parseFloat((4 + Math.random()).toFixed(1)),
         reviewCount: Math.floor(50 + Math.random() * 150),
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    };
-
-=======
     }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx
 // Enhanced filter options for all service categories
 const SERVICE_FILTERS = [
     { label: 'AI & ML', value: 'ai-ml' },
@@ -655,9 +644,4 @@ export default function ServicesPage() {
             </div>))}
         </div>
       </div>
-<<<<<<< HEAD:src/pages/ServicesPage.jsx
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3:src/pages/ServicesPage.js.jsx

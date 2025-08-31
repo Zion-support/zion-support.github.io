@@ -671,13 +671,8 @@ const businessPlatformSolutions = [
     price: "From $300,000",
     timeline: "32-44 weeks",
     category: "Financial",
-<<<<<<< HEAD
-    technologies: ["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
-
-=======
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const platformTechnologies = [
@@ -741,40 +736,6 @@ const successStories = [
 
 ];
 
-<<<<<<< HEAD
-const processSteps = [
-  {
-    step: 1,
-    title: "Platform Assessment",
-    description: "Evaluate current business platforms and identify AI opportunities",
-    icon: FileText,
-    duration: "2-4 weeks"
-  },
-  {
-    step: 2,
-    title: "AI Platform Strategy",
-    description: "Develop AI platform strategy and implementation roadmap",
-    icon: Code,
-    duration: "4-8 weeks"
-  },
-  {
-    step: 3,
-    title: "Platform Implementation",
-    description: "Build and deploy AI business platform systems",
-    icon: Wrench,
-    duration: "20-44 weeks"
-  },
-  {
-    step: 4,
-    title: "Platform Optimization",
-    description: "Optimize platforms and train business teams",
-    icon: Gauge,
-    duration: "4-8 weeks"
-
-];
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const platformBenefits = [
   {
     title: "Intelligent Decision Making",
@@ -798,13 +759,8 @@ const platformBenefits = [
     title: "Competitive Advantage",
     description: "AI platform capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
-<<<<<<< HEAD
-    examples: ["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
-
-=======
     examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function AIAutonomousBusinessPlatform() {
@@ -1479,9 +1435,4 @@ export default function AIAutonomousBusinessPlatform() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

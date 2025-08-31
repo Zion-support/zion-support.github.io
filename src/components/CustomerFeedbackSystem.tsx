@@ -16,64 +16,25 @@ import {
   Download,
   Filter,
   Search
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-interface Feedback {
-
-  id: string;
-  customerName: string;
-  rating: number;
-  comment: string;
-  category: 'service' | 'product' | 'support' | 'overall';
-  sentiment: 'positive' | 'neutral' | 'negative';
-  date: string;
-  helpful: number;
-  unhelpful: number;
-  tags: string[];
-<<<<<<< HEAD
-  verified: boolean;
-=======
   verified: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface FeedbackStats {
 
   totalFeedback: number;
   averageRating: number;
   positivePercentage: number;
   responseRate: number;
-<<<<<<< HEAD
-  topCategories: Array<{ category: string; count: number; percentage: number }>;
-=======
   topCategories: Array<any>}
 
 interface CustomerFeedbackSystemProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   showStats?: boolean;
   showFilters?: boolean;
-<<<<<<< HEAD
-  maxFeedback?: number;
-=======
   maxFeedback?: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
-<<<<<<< HEAD
-  showStats = true,
-  showFilters = true,
-  maxFeedback = 10;
-}) => {;
-  const [feedback, setFeedback] = useState<any>([]);
-  const [filteredFeedback, setFilteredFeedback] = useState<any>([]);
-  const [stats, setStats] = useState<any>({
-=======
   showStats = true,;
   showFilters = true,;
   maxFeedback = 10;
@@ -81,7 +42,6 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   const [feedback, setFeedback] = useState<Feedback[]>([]);
   const [filteredFeedback, setFilteredFeedback] = useState<Feedback[]>([]);
   const [stats, setStats] = useState<FeedbackStats>({
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     totalFeedback: 0,
     averageRating: 0,
     positivePercentage: 0,
@@ -181,28 +141,15 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
       const categoryCounts = feedback.reduce((acc, f) => {;
         acc[f.category] = (acc[f.category] || 0) + 1;
-<<<<<<< HEAD
-        return acc;
-      }, { /* empty */ } as Record<string, number>);
-=======
         return acc}, {} as Record<string, any>);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       const topCategories = Object.entries(categoryCounts)
         .map(([category, count]) => ({
-<<<<<<< HEAD
-          category: category.charAt(0).toUpperCase() + category.slice(1),
-          count,
-          percentage: (count / totalFeedback) * 100
-        }))
-        .sort((a, b)  => b.count - a.count);
-=======;
           category: category.charAt(0).toUpperCase() + category.slice(1),;
           count,;
           percentage: (count / totalFeedback) * 100;
         }));
         .sort((a, b) => b.count - a.count);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         .slice(0, 4);
 
       setStats({
@@ -211,12 +158,7 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         positivePercentage,
         responseRate,
         topCategories
-<<<<<<< HEAD
-      });
-
-=======
       })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [feedback]);
 
   // Filter feedback
@@ -224,17 +166,10 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     let filtered = feedback;
 
     if (selectedCategory !== 'all') {
-<<<<<<< HEAD
-      filtered = filtered.filter(f => f.category === selectedCategory);
-
-    if (selectedRating > 0) {
-      filtered = filtered.filter(f => f.rating === selectedRating);
-=======
       filtered = filtered.filter(f => f.category === selectedCategory)}
 
     if (selectedRating > 0) {
       filtered = filtered.filter(f => f.rating === selectedRating)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     if (searchQuery) {
       filtered = filtered.filter(f =>
@@ -242,17 +177,12 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )};
-=======;
       filtered = filtered.filter(f => ;
         f.comment.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         f.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
-<<<<<<< HEAD
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     setFilteredFeedback(filtered.slice(0, maxFeedback))}, [feedback, selectedCategory, selectedRating, searchQuery, maxFeedback]);
 
@@ -270,13 +200,6 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
       date: new Date().toISOString().split('T')[0],
       helpful: 0,
       unhelpful: 0,
-<<<<<<< HEAD
-      tags[],
-  verified: false;
-    ;
-
-};
-=======
       tags: [],;
   ;
   ;
@@ -287,7 +210,6 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     setFeedback(prev  => [feedback, ...prev]);
     setNewFeedback({ rating: 0, comment: '', category: 'overall' });
@@ -296,19 +218,6 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   // Handle helpful/unhelpful votes
   const handleVote = (feedbackId: string, type: 'helpful' | 'unhelpful')  => {
     setFeedback(prev => prev.map(f => {
-<<<<<<< HEAD
-      if (f.id === feedbackId) {
-        return {
-          ...f,
-          helpful: type === 'helpful' ? f.helpful + 1 : f.helpful,
-          unhelpful: type === 'unhelpful' ? f.unhelpful + 1 : f.unhelpful;
-        }};
-      return f}))};
-
-  // Get sentiment color
-  const getSentimentColor = (sentiment: string)  => {
-    switch (sentiment) {;
-=======;
       if (f.id === feedbackId) {;
         return {;
           ...f,;
@@ -323,15 +232,9 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
   // Get sentiment color
   const getSentimentColor = (sentiment: string) => {;
     switch (sentiment) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       case 'positive': return 'text-green-400 bg-green-400/20';
       case 'negative': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-yellow-400 bg-yellow-400/20';
-
-=======
       default: return 'text-yellow-400 bg-yellow-400/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   // Get category color
@@ -339,14 +242,6 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
     const colors = {
   'service': 'text-blue-400 bg-blue-400/20',
       'product': 'text-green-400 bg-green-400/20',
-<<<<<<< HEAD
-      'support': 'text-purple-400 bg-purple-400/20',
-  'overall': 'text-zion-cyan bg-zion-cyan/20';
-    ;
-
-};
-    return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20'};
-=======
       'support': 'text-purple-400 bg-purple-400/20',;
   ;
   ;
@@ -359,7 +254,6 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
 };
     return colors[category as keyof typeof colors] || 'text-zinc-400 bg-zinc-400/20';
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "w-full max-w-6xl mx-auto p-6">
@@ -880,28 +774,11 @@ export const CustomerFeedbackSystem: React.FC<CustomerFeedbackSystemProps> = ({
           <button
             onClick={() => setShowFeedbackForm(true)}
             className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
-<<<<<<< HEAD
-
-=======
           >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            Add Feedback
-          </button>
-        </motion.div>
-      )};
-    </div>;
-  )};
-=======
             Add Feedback;
           </button>;
         </motion.div>;
       )};
     </div>;
   );
-<<<<<<< HEAD
-};}}}}}}}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

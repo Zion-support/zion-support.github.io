@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Eye,
@@ -96,14 +96,23 @@ export function EnhancedAccessibilityEnhancer({
   const [activeFeatures, setActiveFeatures] = useState<string[]>([]);
 
   // Apply accessibility settings to the document
-  const applySettings = useCallback((newSettings: AccessibilitySettings) => {
+  const applyAccessibilitySettings = useCallback((newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     const body = document.body;
 
-    // High contrast modes
-    root.classList.remove('high-contrast', 'dark', 'light');
-    if (newSettings.highContrastMode !== 'default') {
-      root.classList.add(newSettings.highContrastMode);
+    // High contrast mode
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+      body.style.setProperty('--zion-bg', '#000000');
+      body.style.setProperty('--zion-text', '#ffffff');
+      body.style.setProperty('--zion-primary', '#ffff00');
+      body.style.setProperty('--zion-secondary', '#00ffff');
+    } else {
+      root.classList.remove('high-contrast');
+      body.style.removeProperty('--zion-bg');
+      body.style.removeProperty('--zion-text');
+      body.style.removeProperty('--zion-primary');
+      body.style.removeProperty('--zion-secondary');
     }
 
     // Font size
@@ -222,40 +231,85 @@ export function EnhancedAccessibilityEnhancer({
     if (newSettings.keyboardNavigation) features.push('Keyboard Navigation');
     setActiveFeatures(features);
 
-    // Calculate accessibility score
-    calculateAccessibilityScore(newSettings);
-
-    // Notify parent component
-    if (onSettingsChange) {
-      onSettingsChange(newSettings);
+    // Apply feature-specific settings
+    const feature = features.find(f => f.id === featureId);
+    if (feature) {
+      const newSettings = { ...settings };
+      
+      switch (featureId) {
+        case 'high-contrast':
+          newSettings.highContrast = !newSettings.highContrast;
+          break;
+        case 'large-text':
+          newSettings.largeText = !newSettings.largeText;
+          break;
+        case 'reduced-motion':
+          newSettings.reducedMotion = !newSettings.reducedMotion;
+          break;
+        case 'screen-reader':
+          newSettings.screenReader = !newSettings.screenReader;
+          break;
+        case 'keyboard-navigation':
+          newSettings.keyboardNavigation = !newSettings.keyboardNavigation;
+          break;
+        case 'focus-indicators':
+          newSettings.focusIndicators = !newSettings.focusIndicators;
+          break;
+        case 'color-blind-support':
+          newSettings.colorBlindSupport = !newSettings.colorBlindSupport;
+          break;
+        case 'dyslexia-friendly':
+          newSettings.dyslexiaFriendly = !newSettings.dyslexiaFriendly;
+          break;
+      }
+      
+      applyAccessibilitySettings(newSettings);
     }
-  }, [onSettingsChange]);
+  }, [features, settings, applyAccessibilitySettings]);
 
-  // Keyboard navigation handler
-  const handleKeyboardNavigation = useCallback((event: KeyboardEvent) => {
-    const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
-    const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
+  // Calculate WCAG compliance score
+  useEffect(() => {
+    const scores = { A: 0, AA: 0, AAA: 0 };
+    const totalFeatures = features.length;
+    
+    features.forEach(feature => {
+      if (feature.enabled) {
+        scores[feature.wcagLevel]++;
+      }
+    });
 
-    switch (event.key) {
-      case 'Tab':
-        // Normal tab behavior
-        break;
-      case 'ArrowUp':
-      case 'ArrowDown':
+    setWcagScore({
+      A: Math.round((scores.A / totalFeatures) * 100),
+      AA: Math.round((scores.AA / totalFeatures) * 100),
+      AAA: Math.round((scores.AAA / totalFeatures) * 100)
+    });
+  }, [features]);
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Alt + A to open accessibility panel
+      if (event.altKey && event.key === 'a') {
         event.preventDefault();
-        const direction = event.key === 'ArrowUp' ? -1 : 1;
-        const nextIndex = (currentIndex + direction + focusableElements.length) % focusableElements.length;
-        (focusableElements[nextIndex] as HTMLElement)?.focus();
-        break;
-      case 'Enter':
-      case ' ':
-        if (document.activeElement instanceof HTMLElement) {
-          document.activeElement.click();
-        }
-        break;
-    }
+        setIsOpen(true);
+      }
+      
+      // Escape to close
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+      
+      // Tab navigation enhancement
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+        setTimeout(() => {
+          document.body.classList.remove('keyboard-navigation');
+        }, 1000);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   // Enhance images and elements with alt text and ARIA labels
@@ -338,44 +392,18 @@ export function EnhancedAccessibilityEnhancer({
     applySettings(defaultSettings);
   }, [applySettings]);
 
-  // Apply settings on mount
-  useEffect(() => {
-    if (enabled) {
-      applySettings(settings);
+  // Toggle voice recognition
+  const toggleVoiceRecognition = useCallback(() => {
+    if (!voiceRecognition) return;
+    
+    if (isListening) {
+      voiceRecognition.stop();
+      setIsListening(false);
+    } else {
+      voiceRecognition.start();
+      setIsListening(true);
     }
-  }, [enabled, applySettings, settings]);
-
-  // Keyboard shortcuts
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      // Ctrl/Cmd + Shift + A to toggle accessibility panel
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
-        event.preventDefault();
-        setIsOpen(!isOpen);
-      }
-      
-      // Ctrl/Cmd + Shift + H to toggle high contrast
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-        event.preventDefault();
-        handleSettingChange('highContrast', !settings.highContrast);
-      }
-      
-      // Ctrl/Cmd + Shift + L to toggle large text
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'L') {
-        event.preventDefault();
-        handleSettingChange('largeText', !settings.largeText);
-      }
-      
-      // Ctrl/Cmd + Shift + R to toggle reduced motion
-      if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'R') {
-        event.preventDefault();
-        handleSettingChange('reducedMotion', !settings.reducedMotion);
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, settings, handleSettingChange]);
+  }, [voiceRecognition, isListening]);
 
   if (!enabled) return null;
 

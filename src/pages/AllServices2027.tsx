@@ -24,19 +24,10 @@ import {
   Lock,
   Cloud,
   Rocket
-<<<<<<< HEAD
-const AllServices2027: React.FC = () => {
-=======
  } from 'lucide-react';
 
-<<<<<<< HEAD
-const AllServices2027: React.FC = (): JSX.Element => {;
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
-=======
 const AllServices2027: React.FC = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const categories = [;
     { id: 'All', name: 'All Services', icon: Globe, color: 'from-cyan-500 to-blue-600' },;
@@ -64,7 +55,6 @@ const AllServices2027: React.FC = () => {;
         avgPrice: Math.round(services.reduce((sum, s)  => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s)  => sum + s.rating, 0) / services.length) * 10) / 10
       }};
-=======
   const filteredServices = INNOVATIVE_SERVICES_2027.filter(service => ;
     selectedCategory === 'All' || service.category === selectedCategory;
   );
@@ -84,29 +74,8 @@ const AllServices2027: React.FC = () => {;
       avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
     };
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -133,7 +102,6 @@ const AllServices2027: React.FC = () => {;
         duration: 0.5;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -231,13 +199,11 @@ const AllServices2027: React.FC = () => {;
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category)  => {;
-=======;
               specific business challenges and drive innovation.;
             </p>;
           </div>;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const stats = getCategoryStats(category.id);
               const IconComponent = category.icon;
 
@@ -264,14 +230,6 @@ const AllServices2027: React.FC = () => {;
                       <span className="text-cyan-400 font-semibold">${stats.avgPrice}/mo</span>
                     </div>
                     <div className="flex justify-between">
-<<<<<<< HEAD
-                      <span>Avg. Rating:</span>
-                      <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <span>Avg. Rating:</span>;
                       <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>;
                     </div>;
@@ -279,7 +237,6 @@ const AllServices2027: React.FC = () => {;
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -300,15 +257,9 @@ const AllServices2027: React.FC = () => {;
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-<<<<<<< HEAD
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
-            {filteredServices.map((service) => (
-=======
             className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {filteredServices.map((service)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <ServiceCard key={service.id} service={service} />
             ))}
           </motion.div>
@@ -348,14 +299,9 @@ const AllServices2027: React.FC = () => {;
                 <h3 className="text-2xl font-bold text-white">AI Services</h3>
               </div>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Leverage the power of artificial intelligence to automate processes,
-                gain insights from data, and create intelligent solutions.
-=======
                 Transform your business with cutting-edge artificial intelligence solutions.
                 From predictive analytics to autonomous systems, our AI services drive innovation
                 and efficiency across all business operations.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -385,14 +331,9 @@ const AllServices2027: React.FC = () => {;
                 <h3 className="text-2xl font-bold text-white">Cybersecurity</h3>
               </div>
               <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-                Protect your digital assets with comprehensive security solutions
-                that detect, prevent, and respond to cyber threats.
-=======
                 Protect your digital assets with enterprise-grade security solutions.
                 Our cybersecurity services provide comprehensive protection against evolving threats
                 while ensuring compliance with industry standards.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
@@ -479,32 +420,6 @@ const AllServices2027: React.FC = () => {;
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
-<<<<<<< HEAD
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-cyan-100 mb-8">
-            Let's discuss how our innovative services can drive your success and
-            create a competitive advantage in your industry.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-
-              <span>Get Started Today</span>
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
-
-              <Phone className="w-5 h-5 mr-2" />
-              Call Now
-            </a>
-          </div>
-=======
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -534,7 +449,6 @@ const AllServices2027: React.FC = () => {;
               </Link>
             </div>
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
       </section>;
     </>;
@@ -545,7 +459,6 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
   const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI Services':;
-=======;
             </a>;
           </div>;
         </div>;
@@ -559,7 +472,6 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
   const getCategoryIcon = (category: string) => {;
     switch (category) {;
       case 'AI Services':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         return <Brain className="w-5 h-5" />;
       case 'Cybersecurity':
         return <Shield className="w-5 h-5" />;
@@ -570,12 +482,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
       case 'Telecommunications':
         return <Signal className="w-5 h-5" />;
       default:
-<<<<<<< HEAD
-        return <Users className="w-5 h-5" />;
-
-=======
         return <Users className = "w-5 h-5" />};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -647,19 +554,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
           <Link
             to="/contact"
             className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
-<<<<<<< HEAD
-
-=======
           >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            Contact
-          </Link>
-        </div>
-      </div>;
-    </motion.div>;
-  )};
-=======
             Contact;
           </Link>;
         </div>;
@@ -667,9 +562,4 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     </motion.div>;
   );
 };
-<<<<<<< HEAD
-export default AllServices2027;}}}}}}}
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 export default AllServices2027;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

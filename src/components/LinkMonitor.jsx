@@ -20,17 +20,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 if (result.status === 'broken') {
                     results.push(result);
                     if (autoFix) {
-<<<<<<< HEAD
-                        await fixBrokenLink(href, result);
-
-
-                // Update progress
-                setScanProgress(((i + 1) / links.length) * 100);
-                // Small delay to prevent overwhelming the browser
-                await new Promise(resolve => setTimeout(resolve, 10));
-
-
-=======
                         await fixBrokenLink(href, result)}
                 }
                 // Update progress
@@ -38,22 +27,14 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
                 // Small delay to prevent overwhelming the browser
                 await new Promise(resolve => setTimeout(resolve, 10))}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setBrokenLinks(results);
         setLastScanTime(new Date());
         setIsScanning(false);
         // Notify parent component of issues
         results.forEach(result => {
             if (onLinkIssue) {
-<<<<<<< HEAD
-                onLinkIssue(result);
-
-        });
-    };
-=======
                 onLinkIssue(result)}
         })};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Fix a broken link
     const fixBrokenLink = async (originalUrl, validationResult) => {
         if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith('Redirect to:')) {
@@ -75,7 +56,6 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 
 };
             setFixedLinks(prev => [...prev, fix])}
-=======
   reason: 'Automatically fixed broken internal link'
             
 
@@ -84,25 +64,13 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
 
 };
             setFixedLinks(prev => [...prev, fix]);
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Fix all broken links
     const fixAllBrokenLinks = async () => {
         for (const brokenLink of brokenLinks) {
-<<<<<<< HEAD
-            await fixBrokenLink(brokenLink.url, brokenLink);
-
-        setBrokenLinks([]);
-    };
-=======
             await fixBrokenLink(brokenLink.url, brokenLink)}
         setBrokenLinks([])};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Generate redirect rules for server configuration
     const generateRedirectRules = () => {
         const rules = LinkValidator.generateRedirectRules();
@@ -138,12 +106,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
     // Auto-scan on component mount
     useEffect(() => {
         if (autoFix) {
-<<<<<<< HEAD
-            scanPageLinks();
-
-=======
             scanPageLinks()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoFix]);
     return (<div className="link-monitor bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto">
       <div className="flex items-center justify-between mb-6">

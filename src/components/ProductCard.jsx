@@ -1,23 +1,19 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Heart import { useWishlist } from '@/hooks/useWishlist';
-=======
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { Button } from '@/components/ui/button';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger, } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import { addItem } from '@/store/cartSlice';
-<<<<<<< HEAD
-// // // import Image from 'next/image'; // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component // TODO: Replace with regular img or custom Image component
-=======
 import Image from 'next/image';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import React, { useState } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useRouter } from 'next/router';
+// import Image from 'next/image'; // TODO: Replace with regular img or custom Image component
+import React, { useState } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'usehooks-ts';
 import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';
@@ -25,7 +21,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
     const { isAuthenticated } = useAuth();
     const { isWishlisted, toggle } = useWishlist();
     const [imageError, setImageError] = useState(false);
-    const router = useRouter();
+    const router = useNavigate();
     const enqueueSnackbar = useEnqueueSnackbar();
     if (!product || typeof product.id !== 'string' || typeof product.title !== 'string' || product.title.trim() === '') {
         captureException(new Error('Invalid product data received by ProductCard'), {
@@ -35,12 +31,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         <p className="text-destructive text-sm">Product information unavailable.</p>
         {/* Optionally, provide more details if product ID is known */}
         {/* {product && product.id && <p className="text-xs text-muted-foreground">ID: {product.id}</p>} */}
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const active = isWishlisted(product.id);
     const dispatch = useDispatch();
     // Title is now guaranteed to be a non-empty string by the check above.
@@ -50,15 +41,9 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             id: product.id,
             title: productTitle,
             price: product.price ?? 0,
-<<<<<<< HEAD
-            image: imageUrl || null,
-        }))};
-    const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
-=======
             image: imageUrl || null,
         }));
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const imageAltText = productTitle;
     const handleImageError = (error) => {
         if (!imageError) {
@@ -66,12 +51,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             captureException(error, {
                 product: product.id,
                 imageUrl,
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
     return (<div className="relative border rounded-lg bg-card p-4" data-testid="product-card">
@@ -80,7 +60,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
       </button>
 
     <div className="w-full h-40 relative mb-2">
-      {imageUrl && !imageError ? (<Image src={imageUrl} alt={imageAltText} fill style={{ objectFit: 'cover' }} onError={(e) => handleImageError(e)} priority={false} sizes={imageSizes}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center">
+      {imageUrl && !imageError ? (<img src={imageUrl} alt={imageAltText} fill style={{ objectFit: 'cover' }} onError={(e) => handleImageError(e)}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center">
           <span className="text-gray-500">No Image</span>
         </div>)}
       {active && (<div className="absolute top-2 left-2 p-1 rounded-full bg-background/70">
@@ -111,9 +91,4 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
             </Tooltip>
           </TooltipProvider>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

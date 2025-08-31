@@ -16,18 +16,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$799/mo',
       details: ['Up to 5 applications', 'Basic AI features', 'Standard testing', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Business',
-      price: '$1,999/mo',
-      details: ['Up to 20 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$4,999/mo',
-      details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Business', 
       price: '$1,999/mo', 
@@ -38,7 +26,6 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       price: '$4,999/mo', ;
       details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

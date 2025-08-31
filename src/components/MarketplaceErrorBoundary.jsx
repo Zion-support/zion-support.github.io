@@ -8,29 +8,15 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
     const handleRetry = async () => {
         try {
             // Re-call SWR mutate('*') to refresh all cached data
-<<<<<<< HEAD
-            await mutate(() => true, null, { revalidate: true });
-            resetErrorBoundary()}
-=======
             await mutate(() => true, null, { revalidate: true });
             resetErrorBoundary();
-<<<<<<< HEAD
-
-        catch (retryError) {
-<<<<<<< HEAD
-            // // // console.error('Error during retry:', retryError);
-=======
             // // // // // // // console.error('Error during retry:', retryError);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             Sentry.captureException(retryError);
 
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         catch (retryError) {
             console.error('Error during retry:', retryError);
             Sentry.captureException(retryError)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
@@ -60,20 +46,11 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
           </a>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function MarketplaceErrorBoundary({ children }) {
     const handleError = (error, errorInfo) => {
         // Log boundary errors to Sentry
-<<<<<<< HEAD
-        // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
-=======
         // // // // // // // console.error('MarketplaceErrorBoundary caught an error:', error, errorInfo);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         Sentry.withScope((scope) => {
             scope.setTag('errorBoundary', 'marketplace');
             scope.setContext('errorInfo', {
@@ -83,9 +60,4 @@ export function MarketplaceErrorBoundary({ children }) {
             Sentry.captureException(error)})};
     return (<ErrorBoundary FallbackComponent={MarketplaceErrorFallback} onError={handleError}>
       {children}
-<<<<<<< HEAD
-    </ErrorBoundary>);
-}}}}}
-=======
     </ErrorBoundary>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader const mockBusinessProcesses = [
+import { GitFork, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle, BarChart3, TrendingUp, Target, Activity, Users, FileText, AlertTriangle, Lightbulb, DollarSign, PieChart, MoreVertical, Edit3, Server, Play, Loader } from 'lucide-react';
+const mockBusinessProcesses = [
     {
         id: 'bp-001',
         name: 'Invoice Processing & Approval',
@@ -136,13 +137,8 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 triggerCount: 8
 
         ],
-<<<<<<< HEAD
-        dependencies: ['ticket_classification', 'agent_availability']
-
-=======
         dependencies['ticket_classification', 'agent_availability']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -165,12 +161,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20';
             case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
             case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-<<<<<<< HEAD
-            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-
-=======
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -178,24 +169,14 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getAutomationLevelColor = (level) => {
         switch (level) {
             case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -205,20 +186,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'sales': return <TrendingUp className="w-4 h-4"/>;
             case 'marketing': return <Target className="w-4 h-4"/>;
             case 'it': return <Server className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <FileText className="w-4 h-4"/>;
-
-    };
-    const formatCurrency = (amount) => {
-        return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        }).format(amount);
-=======
             default: return <FileText className="w-4 h-4"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const formatPercentage = (value) => {
         return `${value}%`};
@@ -244,12 +212,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         <div className="absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold">
           NEW
         </div>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center gap-3 p-3">
@@ -259,12 +222,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">
@@ -731,9 +689,4 @@ export function AdvancedAIBusinessProcessAutomation() {
             </div>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -76,12 +76,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':
                 return <ExternalLink className="w-4 h-4 text-blue-400"/>;
             default:
-<<<<<<< HEAD
-                return <RefreshCw className="w-4 h-4 text-yellow-400"/>;
-
-=======
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -92,12 +87,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             case 'external':
                 return 'text-blue-400';
             default:
-<<<<<<< HEAD
-                return 'text-yellow-400';
-
-=======
                 return 'text-yellow-400'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all')

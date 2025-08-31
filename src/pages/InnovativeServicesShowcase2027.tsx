@@ -5,16 +5,10 @@ import {
   Brain, Cpu, Database, Network, Shield, Zap, Rocket, Atom,
   Globe, Cloud, Lock, Eye, Target, TrendingUp, Star, CheckCircle,
   ArrowRight, Search, Filter, Grid, List, ChevronDown
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
-export default function InnovativeServicesShowcase2027() {
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
 export default function InnovativeServicesShowcase2027(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<any>('grid');
@@ -31,15 +25,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
     )
     .sort((a, b) => b[sortBy] - a[sortBy]);
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -47,7 +32,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         staggerChildren: 0.1;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
   const itemVariants = {
   hidden: { y: 20,
@@ -60,15 +44,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -76,7 +51,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
   const cardVariants = {
   hidden: { scale: 0.8,
@@ -97,15 +71,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
     },
     hover: {
-<<<<<<< HEAD
-      scale: 1.05,
-      y: -10,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-
-
-=======
       scale: 1.05,;
       y: -10,;
       transition: {;
@@ -113,7 +78,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -163,12 +127,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-<<<<<<< HEAD
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
             initial = {
   { opacity: 0,
   scale: 0.8 
@@ -200,17 +158,10 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Innovative Services 2027
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -242,19 +193,12 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Discover the future of technology with our cutting-edge micro SAAS services,
             featuring quantum computing, AI, blockchain, and emerging technologies
           </motion.p>
           {/* Stats */}
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -286,7 +230,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
               { label: 'AI Score Avg', value: `${Math.round(allServices.reduce((acc, s)  => acc + s.aiScore, 0) / allServices.length)}%`, icon: Brain, color: 'from-purple-500 to-pink-600' },
@@ -307,12 +250,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       {/* Search and Filters */}
       <motion.section
         className="relative z-10 px-6 pb-12"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 20 
@@ -344,7 +281,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 }}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="max-w-7xl mx-auto">
           <div className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20">
             <div className="flex flex-col lg:flex-row gap-6 items-center">
@@ -366,15 +302,9 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
-                  {categories.map(category => (
-=======
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -456,13 +386,8 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 }}
                 transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-
-                {filteredServices.map((service, index) => (
-=======
               >
                 {filteredServices.map((service, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
@@ -473,10 +398,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
-<<<<<<< HEAD
-                        onClick={() => window.open(service.website, '_blank')}
-
-=======
                         onClick = {
   () => window.open(service.website,
   '_blank')
@@ -488,7 +409,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 }
                       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         {/* Service Image */}
                         <div className="relative mb-6 overflow-hidden rounded-lg">
                           <img
@@ -629,12 +549,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
       {/* CTA Section */}
       <motion.section
         className="relative z-10 px-6 pb-20"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 30 
@@ -666,7 +580,6 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
 }}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -688,23 +601,10 @@ export default function InnovativeServicesShowcase2027(...args[]):  {
 
                 Call +1 302 464 0950
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </motion.section>;
     </div>;
   );
-<<<<<<< HEAD
-</div>}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

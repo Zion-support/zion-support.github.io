@@ -2,111 +2,6 @@ import React, { useState } from 'react';
 import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {
   const [expandedService, setExpandedService] = useState(null);
 
-<<<<<<< HEAD
-  const defaultServices = [
-    {
-      id: 1,
-      name: 'IT Infrastructure Setup',
-      description: 'Complete IT infrastructure design, implementation, and optimization',
-      duration: '2-4 weeks',
-      teamSize: '3-5 engineers',
-      features[
-        'Network architecture design',
-        'Server configuration and setup',
-        'Security implementation',
-        'Backup and disaster recovery',
-        'Monitoring and alerting',
-        'Documentation and training'
-      ],
-      benefits[
-        'Scalable and reliable infrastructure',
-        'Enhanced security posture',
-        'Improved performance and uptime',
-        'Reduced operational costs',
-        'Compliance-ready systems'
-      ],
-      requirements[
-        'Site survey and assessment',
-        'Hardware specifications',
-        'Network requirements',
-        'Security policies',
-        'Budget approval'
-      ],
-      icon: '🏗️',
-      category: 'Infrastructure',
-      complexity: 'High',
-      estimatedCost: '$15,000 - $50,000'
-    },
-    {
-      id: 2,
-      name: 'Network Security Implementation',
-      description: 'Comprehensive network security setup and monitoring',
-      duration: '1-2 weeks',
-      teamSize: '2-3 engineers',
-      features[
-        'Firewall configuration',
-        'Intrusion detection systems',
-        'VPN setup and management',
-        'Network segmentation',
-        'Security monitoring',
-        'Incident response planning'
-      ],
-      benefits[
-        'Protection against cyber threats',
-        'Compliance with security standards',
-        'Real-time threat detection',
-        'Secure remote access',
-        'Audit trail and reporting'
-      ],
-      requirements[
-        'Network topology review',
-        'Security policy definition',
-        'Compliance requirements',
-        'User access management',
-        'Security training needs'
-      ],
-      icon: '🛡️',
-      category: 'Security',
-      complexity: 'Medium',
-      estimatedCost: '$8,000 - $25,000'
-    },
-    {
-      id: 3,
-      name: 'Cloud Migration Services',
-      description: 'Seamless migration to cloud infrastructure',
-      duration: '4-8 weeks',
-      teamSize: '4-6 engineers',
-      features[
-        'Cloud platform assessment',
-        'Migration strategy planning',
-        'Data migration and testing',
-        'Application deployment',
-        'Performance optimization',
-        'Cost optimization analysis'
-      ],
-      benefits[
-        'Reduced infrastructure costs',
-        'Improved scalability',
-        'Enhanced disaster recovery',
-        'Better performance',
-        'Simplified management'
-      ],
-      requirements[
-        'Current infrastructure audit',
-        'Cloud platform selection',
-        'Data classification',
-        'Compliance requirements',
-        'Migration timeline'
-      ],
-      icon: '☁️',
-      category: 'Cloud',
-      complexity: 'High',
-      estimatedCost: '$20,000 - $75,000'
-
-  ];
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const displayServices = services.length > 0 ? services : defaultServices;
 
   const toggleService = (serviceId) => {
@@ -121,12 +16,7 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
       case 'high':
         return 'text-red-600 bg-red-100';
       default:
-<<<<<<< HEAD
-        return 'text-gray-600 bg-gray-100';
-
-=======
         return 'text-gray-600 bg-gray-100'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -301,9 +191,4 @@ import { Check, Clock, Users, Shield, Star, ArrowRight, ChevronDown, ChevronUp e
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

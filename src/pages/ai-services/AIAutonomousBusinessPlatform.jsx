@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu import { SEO } from '@/components/SEO';
-=======
 import { Brain, Cloud, Zap, Shield, Users, BarChart3, CheckCircle, ArrowRight, Play, Star, Globe, Cpu } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const features = [
     {
         title: "Cloud-Native Architecture",
@@ -457,9 +453,4 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

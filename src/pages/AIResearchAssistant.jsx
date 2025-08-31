@@ -24,13 +24,8 @@ export default function AIResearchAssistant() {
             title: 'Research Collaboration',
             description: 'Real-time collaboration tools for research teams',
             icon: '👥',
-<<<<<<< HEAD
-            benefits: ['Shared workspaces', 'Version control', 'Communication tools']
-
-=======
             benefits['Shared workspaces', 'Version control', 'Communication tools']
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -47,13 +42,8 @@ export default function AIResearchAssistant() {
         },
         {
             industry: 'Business Intelligence',
-<<<<<<< HEAD
-            applications: ['Market analysis', 'Risk assessment', 'Strategic planning', 'Performance metrics']
-
-=======
             applications['Market analysis', 'Risk assessment', 'Strategic planning', 'Performance metrics']
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const tools = [
         { name: 'Semantic Scholar', url: 'https://www.semanticscholar.org/', description: 'AI-powered academic search engine' },
@@ -148,9 +138,4 @@ export default function AIResearchAssistant() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,13 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play export default function NextGenServicesShowcase2025() {
-=======
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, Cpu, Shield, Zap, Rocket, Star, ChevronRight, CheckCircle, TrendingUp, Globe, Settings, Users, Play } from 'lucide-react';
 export default function NextGenServicesShowcase2025() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const featuredServices = [
         {
             id: 'ai-consciousness-simulator',
@@ -544,9 +540,4 @@ export default function NextGenServicesShowcase2025() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

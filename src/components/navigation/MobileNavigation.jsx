@@ -13,17 +13,9 @@ export function MobileNavigation() {
         setIsOpen(!isOpen);
         // Prevent body scroll when menu is open
         if (!isOpen) {
-<<<<<<< HEAD
-            document.body.style.overflow = 'hidden';
-
-        else {
-            document.body.style.overflow = 'unset';
-
-=======
             document.body.style.overflow = 'hidden'}
         else {
             document.body.style.overflow = 'unset'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const closeMenu = () => {
         setIsOpen(false);
@@ -91,9 +83,4 @@ export function MobileNavigation() {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

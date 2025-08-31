@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Search, ChevronDown, ChevronUp, HelpCircle, Brain, Cloud, Shield, Rocket, Heart, Globe, ShoppingCart, Star, Building, BookOpen, Settings } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ChevronDown, Search, HelpCircle, MessageCircle, Phone, Mail, Globe } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function FAQ() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -186,27 +188,33 @@ export default function FAQ() {
     setExpandedItems(newExpanded);
   };
 
-  const filteredCategories = faqCategories.map(category => ({
-    ...category,
-    items: category.items.filter(item =>
-      item.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.answer.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-  })).filter(category => category.items.length > 0);
-
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      {/* Header */}
-      <div className="bg-slate-800/50 border-b border-slate-700">
-        <div className="container mx-auto px-4 py-12">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Header Section */}
+      <div className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
-            <p className="text-xl text-slate-300 mb-8">
-              Find answers to common questions about our services, solutions, and processes
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Find answers to common questions about our AI-powered technology solutions, 
+              cloud services, and digital transformation offerings.
             </p>
-            
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Search and Filter Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 mb-8">
+          <div className="flex flex-col lg:flex-row gap-6">
             {/* Search Bar */}
             <div className="max-w-2xl mx-auto">
               <div className="relative">
@@ -236,73 +244,76 @@ export default function FAQ() {
                 <h2 className="text-2xl font-bold">{category.title}</h2>
               </div>
               
-              <div className="space-y-4">
-                {category.items.map((item) => (
-                  <div key={item.id} className="bg-slate-800 rounded-lg border border-slate-700">
-                    <button
-                      onClick={() => toggleItem(item.id)}
-                      className="w-full p-6 text-left flex items-center justify-between hover:bg-slate-700/50 transition-colors"
-                    >
-                      <span className="font-medium text-lg pr-4">{item.question}</span>
-                      {expandedItems.has(item.id) ? (
-                        <ChevronUp className="w-5 h-5 text-slate-400 flex-shrink-0" />
-                      ) : (
-                        <ChevronDown className="w-5 h-5 text-slate-400 flex-shrink-0" />
-                      )}
-                    </button>
-                    
-                    {expandedItems.has(item.id) && (
-                      <div className="px-6 pb-6">
-                        <div className="text-slate-300 leading-relaxed">
-                          {item.answer}
-                        </div>
-                      </div>
-                    )}
+              {expandedItems.has(index) && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="px-6 pb-4"
+                >
+                  <div className="pl-10">
+                    <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   </div>
-                ))}
-              </div>
-            </div>
+                </motion.div>
+              )}
+            </motion.div>
           ))}
+        </div>
 
-          {/* No Results */}
-          {filteredCategories.length === 0 && (
-            <div className="text-center py-12">
-              <HelpCircle className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-2">No FAQ items found</h3>
-              <p className="text-slate-400 mb-6">
-                Try adjusting your search terms or browse our help categories
-              </p>
-              <button
-                onClick={() => setSearchQuery('')}
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors"
-              >
-                Clear Search
-              </button>
+        {/* No Results */}
+        {filteredFAQ.length === 0 && (
+          <div className="text-center py-12">
+            <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-white mb-2">No questions found</h3>
+            <p className="text-gray-400">Try adjusting your search terms or category filter.</p>
+          </div>
+        )}
+      </div>
+
+      {/* Contact Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Still have questions?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Our team of experts is here to help. Get in touch with us for personalized 
+            assistance and detailed information about our services.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
+            >
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Contact Us
+            </Link>
+            <Link
+              to="/schedule-demo"
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Schedule Demo
+            </Link>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center">
+              <Mail className="w-8 h-8 text-blue-400 mb-2" />
+              <p className="text-white font-semibold">Email Support</p>
+              <p className="text-gray-300 text-sm">support@ziontechgroup.com</p>
             </div>
-          )}
-
-          {/* Contact Section */}
-          <div className="mt-16 text-center">
-            <div className="bg-slate-800/50 rounded-lg p-8 border border-slate-700">
-              <h3 className="text-2xl font-bold mb-4">Still Have Questions?</h3>
-              <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
-                Can't find the answer you're looking for? Our support team is here to help.
-                Get in touch with us for personalized assistance.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition-colors font-medium"
-                >
-                  Contact Support
-                </a>
-                <a
-                  href="/help"
-                  className="px-6 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white rounded-lg transition-colors font-medium"
-                >
-                  Browse Help Center
-                </a>
-              </div>
+            <div className="flex flex-col items-center">
+              <Phone className="w-8 h-8 text-purple-400 mb-2" />
+              <p className="text-white font-semibold">Phone Support</p>
+              <p className="text-gray-300 text-sm">+1 (555) 123-4567</p>
+            </div>
+            <div className="flex flex-col items-center">
+              <Globe className="w-8 h-8 text-green-400 mb-2" />
+              <p className="text-white font-semibold">Live Chat</p>
+              <p className="text-gray-300 text-sm">Available 24/7</p>
             </div>
           </div>
         </div>

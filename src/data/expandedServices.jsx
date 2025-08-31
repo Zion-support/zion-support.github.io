@@ -509,7 +509,6 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
     'hardware'['Prototyping', 'PCB Design', 'Firmware', 'Testing', 'Manufacturing Support'],
     'business-automation'['RPA', 'Workflow Automation', 'Process Optimization', 'Integration', 'Analytics'],
     'business-solutions'['ERP', 'CRM', 'HR Systems', 'Financial Systems', 'Project Management']
-=======
   'ai-development': ['Chatbots', 'Analytics', 'Document Processing', 'Computer Vision', 'NLP'],
     'cloud-services': ['Migration', 'Optimization', 'Security', 'Monitoring', 'Cost Management'],
     'devops': ['Automation', 'Kubernetes', 'CI/CD', 'Infrastructure as Code', 'Monitoring'],
@@ -528,7 +527,6 @@ export const EXPANDED_SERVICE_SUBCATEGORIES = {
 
 
 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 
 };

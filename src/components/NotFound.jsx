@@ -37,17 +37,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
 
 }} transition={{ duration: 0.5 }}>
         {/* 404 Icon */}
-<<<<<<< HEAD
-        <motion.div className="mb-8" animate = {
-  { scale[1, 1.1,
-  1] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}>
-=======
         <motion.div className="mb-8" animate = {
   { scale: [1, 1.1,
   1] 
@@ -67,7 +56,6 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">
             <AlertTriangle className="w-16 h-16 text-white"/>
           </div>

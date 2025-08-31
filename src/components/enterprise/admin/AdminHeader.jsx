@@ -1,11 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { Download, Settings import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
-=======
 import { Download, Settings } from "lucide-react";
 import { useCompWorkspace } from "@/hooks/useCompWorkspace";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AdminHeader() {
     // const { user } = useAuth(); // Unused but available
     const { comp } = useCompWorkspace();
@@ -58,9 +54,4 @@ export function AdminHeader() {
         </div>
         <Button>Customize Workspace</Button>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

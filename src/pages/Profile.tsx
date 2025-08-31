@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  User,
-  Mail,
-  Phone,
-  Building,
-  Globe,
-  MapPin,
-  Camera,
-  Save,
-  Edit,
-=======
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { User, 
@@ -23,7 +9,6 @@ import { User,
   Camera, 
   Save, 
   Edit, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   X,
   Shield,
   Bell,
@@ -48,11 +33,8 @@ import { User,
   Brain,
   Cloud,
   Rocket
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface UserProfile {
 
   firstName: string;
@@ -65,11 +47,7 @@ interface UserProfile {
   location: string;
   website: string;
   bio: string;
-<<<<<<< HEAD
-  avatar: string;
-=======
   avatar: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface NotificationSettings {
 
@@ -78,11 +56,7 @@ interface NotificationSettings {
   marketingEmails: boolean;
   securityAlerts: boolean;
   projectUpdates: boolean;
-<<<<<<< HEAD
-  weeklyReports: boolean;
-=======
   weeklyReports: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SecuritySettings {
 
@@ -90,24 +64,10 @@ interface SecuritySettings {
   sessionTimeout: number;
   passwordLastChanged: string;
   lastLogin: string;
-<<<<<<< HEAD
-  loginHistory: Array<{
-    date: string;
-    location: string;
-    device: string;
-    status: 'success' | 'failed';
-  }>;
-=======
 loginHistory: Array<any>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-const Profile: React.FC = (): JSX.Element => {;
-  const [activeTab, setActiveTab] = useState<any>('profile');
-=======
 const Profile: React.FC = () => {;
   const [activeTab, setActiveTab] = useState<'profile' | 'security' | 'notifications' | 'preferences'>('profile');
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [isEditing, setIsEditing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [success, setSuccess] = useState('');
@@ -180,34 +140,14 @@ const Profile: React.FC = () => {;
       await new Promise(resolve => setTimeout(resolve, 2000));
 
       setSuccess('Profile updated successfully!');
-<<<<<<< HEAD
-      setIsEditing(false);
-    } catch (err) {
-      setError('Failed to update profile. Please try again.');
-    } finally {
-      setIsLoading(false);
-
-=======
       setIsEditing(false)} catch (err) {
       setError('Failed to update profile. Please try again.')} finally {
       setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const handlePasswordChange = async () => {;
     if (!currentPassword || !newPassword || !confirmPassword) {;
       setError('Please fill in all password fields');
-<<<<<<< HEAD
-      return;
-
-    if (newPassword.length < 8) {
-      setError('New password must be at least 8 characters long');
-      return;
-
-    if (newPassword !== confirmPassword) {
-      setError('New passwords do not match');
-      return;
-=======
       return}
     if (newPassword.length < 8) {
       setError('New password must be at least 8 characters long');
@@ -215,7 +155,6 @@ const Profile: React.FC = () => {;
     if (newPassword !== confirmPassword) {
       setError('New passwords do not match');
       return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     setIsLoading(true);
     setError('');
@@ -228,29 +167,11 @@ const Profile: React.FC = () => {;
       setSuccess('Password changed successfully!');
       setCurrentPassword('');
       setNewPassword('');
-<<<<<<< HEAD
-      setConfirmPassword('');
-    } catch (err) {
-      setError('Failed to change password. Please try again.');
-    } finally {
-      setIsLoading(false);
-
-=======
       setConfirmPassword('')} catch (err) {
       setError('Failed to change password. Please try again.')} finally {
       setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const handleNotificationToggle = (key: keyof NotificationSettings)  => {
-    setNotifications(prev => ({
-      ...prev,;
-      [key]: !prev[key];
-    }))};
-
-  const getPasswordStrength = (password: string)  => {;
-=======;
   const handleNotificationToggle = (key: keyof NotificationSettings) => {;
     setNotifications(prev => ({;
       ...prev,;
@@ -259,7 +180,6 @@ const Profile: React.FC = () => {;
   };
 
   const getPasswordStrength = (password: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (password.length === 0) return { score: 0, label: '', color: '' };
     if (password.length < 8) return { score: 1, label: 'Weak', color: 'text-red-400' };
     if (password.length < 12) return { score: 2, label: 'Fair', color: 'text-yellow-400' };
@@ -491,14 +411,6 @@ const Profile: React.FC = () => {;
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-<<<<<<< HEAD
-                value={profile.comp}
-                onChange = {
-  (e) => setProfile(prev => ({ ...prev,
-  comp: e.target.value 
-
-}))}
-=======
                 value={profile.company}
                 onChange = {
   (e) => setProfile(prev => ({ ...prev,
@@ -510,7 +422,6 @@ const Profile: React.FC = () => {;
 
 
 }))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -556,15 +467,9 @@ const Profile: React.FC = () => {;
 
 }))}
                 disabled={!isEditing}
-<<<<<<< HEAD
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
-
-                {industries.map((industry) => (
-=======
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {industries.map((industry)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
               </select>
@@ -1261,25 +1166,12 @@ const Profile: React.FC = () => {;
 
         {/* Tab Content */}
         {activeTab === 'profile' && renderProfileTab()}
-<<<<<<< HEAD
-        {activeTab === 'security' && renderSecurityTab()}
-        {activeTab === 'notifications' && renderNotificationsTab()}
-        {activeTab === 'preferences' && renderPreferencesTab()}
-      </div>;
-    </div>;
-  )};
-=======
         {activeTab === 'security' && renderSecurityTab()};
         {activeTab === 'notifications' && renderNotificationsTab()};
         {activeTab === 'preferences' && renderPreferencesTab()};
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div>};
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default Profile;}}}}}}}}}

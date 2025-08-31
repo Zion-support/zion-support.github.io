@@ -39,24 +39,14 @@ export default function TokenManager() {
                 title: 'Success',
                 description: 'Transaction processed'
             });
-<<<<<<< HEAD
-            fetchTransactions();
-
-=======
             fetchTransactions()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         else {
             const err = await res.json();
             toast({
                 title: 'Error',
                 description: err.error || 'Failed',
                 variant: 'destructive'
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<ProtectedRoute adminOnly>
       <div>
@@ -95,9 +85,4 @@ export default function TokenManager() {
         </div>
 
       </div>
-<<<<<<< HEAD
-    </ProtectedRoute>);
-</Card></Card></Card>}}}
-=======
     </ProtectedRoute>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Search, User, Bell import ThemeToggle from './ThemeToggle';
-=======
 import { Menu, X, ChevronDown, Search, User, Bell } from 'lucide-react';
 import ThemeToggle from "./ThemeToggle";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function MainNavigation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -199,9 +195,4 @@ export function MainNavigation() {
             </div>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </nav>);
-}}}
-=======
     </nav>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

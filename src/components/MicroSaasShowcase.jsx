@@ -208,9 +208,4 @@ import { Sparkles, ArrowRight, Star, TrendingUp, Users, Zap, Shield, BarChart3, 
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

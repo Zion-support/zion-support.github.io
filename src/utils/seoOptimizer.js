@@ -104,10 +104,6 @@ export class SEOOptimizer {
                 "@type": "Organization",
                 "name": "Zion Tech Group",
                 "url": "https://ziontechgroup.com",
-<<<<<<< HEAD
-                "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
-
-=======
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
             
 
@@ -117,7 +113,6 @@ export class SEOOptimizer {
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         // Add specific structured data based on page type
         if (path === '/') {

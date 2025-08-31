@@ -7,18 +7,10 @@ const EnhancedZionTechServices2025: React.FC = () => {;
   const [sortBy, setSortBy] = useState<string>('name');
 
   const categories = ['All', ...getEnhancedServiceCategories()];
-<<<<<<< HEAD
-
-  const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {
-    const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-=======
   
   const filteredServices = ENHANCED_ZION_TECH_SERVICES_2025.filter(service => {;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                          service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });

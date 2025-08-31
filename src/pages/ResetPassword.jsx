@@ -24,57 +24,29 @@ export default function ResetPasswordPage() {
         setError('');
         if (password !== confirmPassword) {
             setError('Passwords do not match.');
-<<<<<<< HEAD
-            return;
-
-        // Basic password strength check (can be enhanced)
-        if (password.length < 8) {
-            setError('Password must be at least 8 characters long.');
-            return;
-
-=======
             return}
         // Basic password strength check (can be enhanced)
         if (password.length < 8) {
             setError('Password must be at least 8 characters long.');
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsLoading(true);
         try {
             await resetPassword(token, password);
             toast.success('Password has been reset successfully!');
-<<<<<<< HEAD
-            navigate('/login'); // Redirect to login page on success
-
-=======
             router('/login'); // Redirect to login page on success
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (err) {
             // Ensure err.message is a string.
             const errorMessage = err instanceof Error ? err.message : 'Failed to reset password. Please try again.';
             setError(errorMessage);
-<<<<<<< HEAD
-            toast.error(errorMessage);
-
-        finally {
-            setIsLoading(false);
-
-=======
             toast.error(errorMessage)}
         finally {
             setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (error && !token) { // If token was invalid from the start
         return (<div className="flex min-h-screen items-center justify-center p-4 text-red-500">
         <p>{error}</p>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="flex min-h-screen items-center justify-center p-4">
       <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4">
         <h2 className="text-2xl font-bold text-center">Reset Your Password</h2>
@@ -89,9 +61,4 @@ export default function ResetPasswordPage() {
           {isLoading ? 'Resetting Password...' : 'Reset Password'}
         </Button>
       </form>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

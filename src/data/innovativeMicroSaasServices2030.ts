@@ -6,11 +6,7 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
   address: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface MicroSaasService {
 
@@ -39,11 +35,7 @@ export interface MicroSaasService {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-<<<<<<< HEAD
-  compliance: string[];
-=======
   compliance: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -624,13 +616,8 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
       "Real-time processing",
       "Cloud integration"
     ],
-<<<<<<< HEAD
-    compliance: ["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
-
-=======
     compliance["ISO 27001", "SOC 2", "Industry 4.0", "Cybersecurity standards"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default innovativeMicroSaasServices2030;}}}

@@ -70,19 +70,10 @@ export default function ComprehensiveServicesOverview() {
             const lowerQuery = searchQuery.toLowerCase();
             filtered = filtered.filter(service => service.title.toLowerCase().includes(lowerQuery) ||
                 service.description.toLowerCase().includes(lowerQuery) ||
-<<<<<<< HEAD
-                (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))));
-
-        // Category filter
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-
-=======
                 (service.tags && service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))))}
         // Category filter
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Price range filter
         if (priceRange !== 'all') {
             switch (priceRange) {
@@ -99,18 +90,6 @@ export default function ComprehensiveServicesOverview() {
                 case 'high':
                     filtered = filtered.filter(service => {
                         const price = typeof service.price === 'number' ? service.price : service.price?.monthly || 0;
-<<<<<<< HEAD
-                        return price > 3000;
-                    });
-                    break;
-
-
-    });
-    const getServicePrice = (service) => {
-        if (typeof service.price === 'number') {
-            return service.price;
-
-=======
                         return price > 3000});
                     break}
         }
@@ -118,7 +97,6 @@ export default function ComprehensiveServicesOverview() {
     const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
             return service.price}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https://ziontechgroup.com/comprehensive-services-overview"/>
@@ -399,9 +377,4 @@ export default function ComprehensiveServicesOverview() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-</Card></Card></Card></Card></Card>}}}}}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

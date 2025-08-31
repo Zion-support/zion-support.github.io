@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { cn } from "../../lib/utils";
+import { cn } from '../../utils/cn';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: string;
   text?: string;
-<<<<<<< HEAD
+}
 
 export default function LoadingSpinner({
   size = 'md',
@@ -14,7 +14,6 @@ export default function LoadingSpinner({
   className = '',
   showText = false,
   text = 'Loading...'
-=======
   className?: string;
 }
 
@@ -23,7 +22,6 @@ export function LoadingSpinner({
   color = 'text-cyan-400',
   text,
   className = '' 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 }: LoadingSpinnerProps) {
   const sizeClasses = {
     sm: 'w-8 h-8',
@@ -55,21 +53,12 @@ export function LoadingSpinner({
       
       {text && (
         <motion.p
-<<<<<<< HEAD
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-2 text-sm text-gray-500"
-
-          {text}
-=======
           className={`mt-4 text-gray-400 ${textSizes[size]} font-medium`}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
           <span className="text-slate-300 font-medium">{text}</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </motion.p>
       )}
       
@@ -77,17 +66,6 @@ export function LoadingSpinner({
     </div>
   );
 
-<<<<<<< HEAD
-// Optimized skeleton loader
-export function SkeletonLoader({
-  className = '',
-  lines = 3,
-  height = 'h-4'
-}: {
-  className?: string;
-  lines?: number;
-  height?: string;
-=======
 // Enhanced loading spinner with dots
 export function LoadingDots({ 
   size = 'md',
@@ -153,7 +131,6 @@ export function LoadingSkeleton({
 }: { 
   lines?: number;
   className?: string;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 }) {
   return (
     <div className={`space-y-3 ${className}`}>
@@ -188,30 +165,6 @@ export function ButtonLoader({
   );
 
 // Page loading overlay
-<<<<<<< HEAD
-export function PageLoaderOverlay({
-  text = 'Loading page...',
-  showSpinner = true
-}: {
-  text?: string;
-  showSpinner?: boolean;
-}) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center"
-
-      <div className="text-center">
-        {showSpinner && <LoadingSpinner size="xl" color="primary" />}
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3, duration: 0.3 }}
-          className="mt-4 text-lg text-gray-300 font-medium"
-
-=======
 export function PageLoaderOverlay({ 
   text = "Loading...",
   className = '' 
@@ -254,7 +207,6 @@ export function FullPageLoader({
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           {text}
         </motion.h2>
         <motion.p
@@ -423,8 +375,4 @@ export function AppLoadingSpinner() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-</div></div></div></div></div></div></div></div>}}}}}}</motion.div></motion.div></motion.div>}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

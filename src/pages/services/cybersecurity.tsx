@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
@@ -17,7 +14,6 @@ import {
   Database,
   Cloud,
   BarChart3,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   AlertTriangle,
   ArrowRight,
   CheckCircle,
@@ -81,15 +77,6 @@ export default function CybersecurityServices() {
       icon: Lock,
       features: [
         "Data encryption at rest and in transit",
-<<<<<<< HEAD
-        "Data loss prevention",
-        "Backup and recovery",
-        "Compliance frameworks (GDPR, HIPAA, SOC2)"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-
-=======
         "Data loss prevention",;
         "Backup and recovery",;
         "Compliance frameworks (GDPR, HIPAA, SOC2)";
@@ -97,7 +84,6 @@ export default function CybersecurityServices() {
       price: "From $6,000",;
       duration: "4-10 weeks";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const securityTechnologies = [;
     { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },;
@@ -139,32 +125,18 @@ export default function CybersecurityServices() {
       color: "from-orange-500 to-amber-600"
     },
     {
-<<<<<<< HEAD
-      name: "NIST",
-      description: "National Institute of Standards and Technology",
-      icon: Target,
-      color: "from-cyan-500 to-blue-600"
-<<<<<<< HEAD
-
-=======
     };
-=======;
       name: "NIST",;
       description: "National Institute of Standards and Technology",;
       icon: Award,;
       color: "from-cyan-500 to-blue-600";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <motion.div className="text-center">
-=======
           <motion.div 
             className="text-center"
             initial = {
@@ -189,7 +161,6 @@ export default function CybersecurityServices() {
 }}
             transition={{ duration: 0.6 }}
           >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -348,16 +319,6 @@ export default function CybersecurityServices() {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -366,6 +327,5 @@ export default function CybersecurityServices() {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 </div></div></div>}}}}

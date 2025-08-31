@@ -1,16 +1,9 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Button } from '../ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../ui/card';
-import { Badge } from '../ui/badge';
-import { MessageCircle, Calendar, Star export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount, }) => {
-=======
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { MessageCircle, Calendar, Star } from 'lucide-react';
 export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount, }) => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<Card className="sticky top-4">
       <CardHeader>
         <CardTitle className="text-xl">Hire This Talent</CardTitle>
@@ -58,10 +51,4 @@ export const HireNowCTA = ({ hourlyRate, availability, rating, reviewCount, }) =
           <p>Available for new projects</p>
         </div>
       </CardContent>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card>};
-}
-=======
     </Card>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

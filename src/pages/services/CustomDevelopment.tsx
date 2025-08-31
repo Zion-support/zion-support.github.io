@@ -24,13 +24,9 @@ import {
   Building2,
   Cpu,
   Network
-<<<<<<< HEAD
-export default function CustomDevelopment() {
-=======
  } from 'lucide-react';
 
 export default function CustomDevelopment(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const services = [
     {
       title: 'Web Applications',
@@ -51,24 +47,13 @@ export default function CustomDevelopment(...args[]):  {
       features['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
     },
     {
-<<<<<<< HEAD
-      title: 'System Integration',
-      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-      icon: Workflow,
-<<<<<<< HEAD
-      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
-
-=======
       features['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
     };
-=======;
       title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
               icon: GitFork,;
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technologies = [
@@ -91,24 +76,13 @@ export default function CustomDevelopment(...args[]):  {
       stack['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
     {
-<<<<<<< HEAD
-      title: 'Database',
-      description: 'Modern database solutions for data storage and management.',
-      icon: Database,
-<<<<<<< HEAD
-      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
-
-=======
       stack['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
     };
-=======;
       title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
       icon: Database,;
       stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -125,15 +99,6 @@ export default function CustomDevelopment(...args[]):  {
     {
       title: 'Security',
       description: 'Enterprise-grade security measures built into every application.',
-<<<<<<< HEAD
-      icon: Shield
-    },
-    {
-      title: 'Support & Maintenance',
-      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
-      icon: Settings
-
-=======
       icon: Shield;
     },;
     {;
@@ -141,7 +106,6 @@ export default function CustomDevelopment(...args[]):  {
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [;
@@ -244,12 +208,6 @@ export default function CustomDevelopment(...args[]):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -281,7 +239,6 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
@@ -350,12 +307,6 @@ export default function CustomDevelopment(...args[]):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -387,7 +338,6 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
@@ -446,12 +396,6 @@ export default function CustomDevelopment(...args[]):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -483,7 +427,6 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -536,12 +479,6 @@ export default function CustomDevelopment(...args[]):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -573,7 +510,6 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="text-zion-cyan font-semibold">{industry}</div>
               </motion.div>
             ))}
@@ -626,12 +562,6 @@ export default function CustomDevelopment(...args[]):  {
               <motion.div
                 key={index}
                 className="text-center"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -663,7 +593,6 @@ export default function CustomDevelopment(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -722,23 +651,10 @@ export default function CustomDevelopment(...args[]):  {
 
                 Explore Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

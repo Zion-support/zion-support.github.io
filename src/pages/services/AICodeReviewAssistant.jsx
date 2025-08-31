@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star, ArrowRight const AICodeReviewAssistant = () => {
+import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
+const AICodeReviewAssistant = () => {
     const features = [
         {
             title: "Automated Security Vulnerability Detection",
@@ -22,8 +23,8 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
         {
             title: "Git Integration & Automation",
             description: "Seamless integration with GitHub, GitLab, and Bitbucket with automated PR comments and reviews",
-            icon: <GitBranch className="w-6 h-6"/>
-
+            icon: <GitFork className="w-6 h-6"/>
+        }
     ];
     const benefits = [
         {
@@ -172,10 +173,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
                 {" "}Code Review Assistant
               </span>
             </motion.h1>
-<<<<<<< HEAD
-            <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-              Intelligent code review system that analyzes pull requests, identifies security vulnerabilities,
-=======
             <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
@@ -205,7 +202,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
 
 }}>
               Intelligent code review system that analyzes pull requests, identifies security vulnerabilities, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               suggests improvements, and maintains code quality standards across your development team.
             </motion.p>
 
@@ -561,10 +557,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
 }}>
               Join hundreds of development teams already using our AI-powered code review assistant
             </motion.p>
-<<<<<<< HEAD
-
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-=======
             
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
   { opacity: 0,
@@ -594,7 +586,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, GitBranch, BarChart3, Clock, Star
 
 
 }}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5"/>

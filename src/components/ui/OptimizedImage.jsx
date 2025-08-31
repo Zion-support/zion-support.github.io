@@ -14,12 +14,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         observerRef.current = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) {
                 setIsInView(true);
-<<<<<<< HEAD
-                observerRef.current?.disconnect();
-
-=======
                 observerRef.current?.disconnect()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }, {
             rootMargin: '50px',
             threshold: 0.1
@@ -27,15 +22,8 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         observerRef.current.observe(imgRef.current);
         return () => {
             if (observerRef.current) {
-<<<<<<< HEAD
-                observerRef.current.disconnect();
-
-        };
-    }, [priority]);
-=======
                 observerRef.current.disconnect()}
         }}, [priority]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleLoad = () => {
         setIsLoaded(true);
         onLoad?.()};
@@ -44,24 +32,14 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
         onError?.()};
     const getAspectRatioClass = () => {
         if (typeof aspectRatio === 'number') {
-<<<<<<< HEAD
-            return `aspect-[${aspectRatio}]`;
-
-=======
             return `aspect-[${aspectRatio}]`}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         switch (aspectRatio) {
             case 'square':
                 return 'aspect-square';
             case 'video':
                 return 'aspect-video';
             default:
-<<<<<<< HEAD
-                return '';
-
-=======
                 return ''}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getObjectFitClass = () => {
         switch (objectFit) {
@@ -76,12 +54,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             case 'scale-down':
                 return 'object-scale-down';
             default:
-<<<<<<< HEAD
-                return 'object-cover';
-
-=======
                 return 'object-cover'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Generate responsive image sources
     const generateSrcSet = (imageSrc) => {
@@ -144,12 +117,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             <p className="text-sm">Image failed to load</p>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Avatar image component
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
     const sizeClasses = {
@@ -158,15 +126,6 @@ export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
         lg: 'w-12 h-12',
   <<<<<<< HEAD
         xl: 'w-16 h-16'
-<<<<<<< HEAD
-    };
-    return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className={cn(sizeClasses[size], 'rounded-full', className)} {...props}/>);
-
-// Hero image component
-export function HeroImage({ src, alt, className, ...props }) {
-    return (<OptimizedImage src={src} alt={alt} aspectRatio="video" objectFit="cover" className={cn('w-full', className)} priority {...props}/>);
-</div>}}}}}}}</motion.div>}
-=======
     
 
 };
@@ -182,7 +141,6 @@ export function HeroImage({ src, alt, className, ...props }) {
   className)
 
 } priority {...props}/>)}
-=======
   xl: 'w-16 h-16'
     
 
@@ -214,5 +172,3 @@ export function HeroImage({ src, alt, className, ...props }) {
 
 } priority {...props}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -54,13 +54,8 @@ import { Brain, Zap, Shield, Globe, Rocket, Star, ArrowRight, CheckCircle const 
         icon: <Star className="w-8 h-8"/>,
         color: 'from-yellow-500 to-orange-500',
         price: '$249/month',
-<<<<<<< HEAD
-        features: ['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance']
-
-=======
         features['Smart Contracts', 'DeFi Platforms', 'NFT Marketplaces', 'DAO Governance']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export default function FuturisticServicesShowcase() {
     const [hoveredService, setHoveredService] = useState(null);
@@ -357,9 +352,4 @@ export default function FuturisticServicesShowcase() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-</div></div></div></div>}}</motion.div></motion.div>}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

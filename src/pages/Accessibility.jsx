@@ -1,11 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Accessibility, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart export default function Accessibility() {
-=======
 import { Accessibility as AccessibilityIcon, Eye, Ear, Hand, Brain, CheckCircle, Info, Download, Mail, Phone, Globe, Users, Shield, Heart } from 'lucide-react';
 
 export default function Accessibility() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const accessibilityFeatures = [
     {
       icon: <Eye className="w-8 h-8" />,
@@ -87,32 +83,6 @@ export default function Accessibility() {
 
   ];
 
-<<<<<<< HEAD
-  const assistiveTechnologies = [
-    {
-      name: 'Screen Readers',
-      description: 'NVDA, JAWS, VoiceOver, TalkBack, and other screen reading software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Voice Control',
-      description: 'Dragon NaturallySpeaking, Voice Control, and other voice recognition software',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Switch Devices',
-      description: 'Single switch, multiple switch, and scanning software support',
-      compatibility: 'Full'
-    },
-    {
-      name: 'Magnification',
-      description: 'ZoomText, Windows Magnifier, and other magnification software',
-      compatibility: 'Full'
-
-  ];
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const accessibilityTools = [
     {
       title: 'Accessibility Checker',

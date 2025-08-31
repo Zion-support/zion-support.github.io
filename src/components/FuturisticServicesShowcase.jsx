@@ -3,9 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ADVANCED_MICRO_SERVICES } from "../data/advancedMicroServices";
 const ServiceCard = ({ service, index, isVisible }) => {
     const [isHovered, setIsHovered] = useState(false);
-<<<<<<< HEAD
-    return (<motion.div initial={{ opacity: 0, y: 50, scale: 0.9 }} animate={isVisible ? { opacity: 1, y: 0, scale: 1 } : { /* empty */ }} transition={{ duration: 0.6, delay: index * 0.1 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
-=======
     return (<motion.div initial = {
   { opacity: 0, y: 50,
   scale: 0.9 
@@ -34,7 +31,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
 
 
 }} className="relative group" onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
 
@@ -45,17 +41,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
         <div className="relative bg-black/90 backdrop-blur-xl rounded-2xl p-6 h-full">
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
-<<<<<<< HEAD
-            {[...Array(8)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60" animate = {
-  {
-                x[0, Math.random() * 100 - 50],
-                y[0, Math.random() * 100 - 50],
-                opacity[0.6, 0.2, 0.6],
-  
-
-}} transition = {
-  {
-=======
             {[...Array(8)].map((_,
   i) => (<motion.div key={i
 
@@ -68,7 +53,6 @@ const ServiceCard = ({ service, index, isVisible }) => {
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 duration: 3 + Math.random() * 2,
                 repeat: Infinity,
                 ease: "easeInOut",
@@ -313,9 +297,4 @@ export const FuturisticServicesShowcase = () => {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div></motion.div></motion.div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

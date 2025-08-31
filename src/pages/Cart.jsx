@@ -1,3 +1,5 @@
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -12,45 +14,9 @@ export default function CartPage() {
         // Simulate loading cart data
         const timer = setTimeout(() => {
             setCartLoading(false);
-<<<<<<< HEAD
-
-        else {
-            const stored = safeStorage.getItem('zion_cart');
-            if (stored) {
-                try {
-                    dispatch(setItemsAction(JSON.parse(stored)));
-
-                catch {
-                    dispatch(setItemsAction([]));
-
-
-            else {
-                dispatch(setItemsAction([]));
-
-
-        ;
-        load();
-    }, [user, dispatch]);
-    const updateQuantity = async (id, qty) => {
-        dispatch(updateQuantityAction({ id, quantity: qty }));
-        if (user) {
-            try {
-                await fetch('/api/cart', {
-                    method: 'PATCH',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ id, quantity: qty }),
-                });
-
-            catch (err) {
-<<<<<<< HEAD
-                // // // console.error('Failed to update cart', err);
-
-
-=======
                 // // // // // // // console.error('Failed to update cart', err);
             }
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         setCartLoading(false);
     }, [reduxItems];
     useEffect(() => {
@@ -129,7 +95,6 @@ export default function CartPage() {
       </Button>
     </div>);
 }}}}}}}}}}}}}}}
-=======
             setShowEmpty(true);
         }, 1000);
         
@@ -177,4 +142,3 @@ export default function CartPage() {
         </div>
     );
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

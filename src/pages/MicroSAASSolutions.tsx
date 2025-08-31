@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from "../components/SEO";
-import { Code, 
-=======
 import React from 'react';
 import { SEO } from '../components/SEO';
 import {
@@ -27,13 +22,9 @@ import {
   Star,
   ArrowRight,
   Brain
-<<<<<<< HEAD
-export default function MicroSAASSolutions() {
-=======
  } from 'lucide-react';
 
 export default function MicroSAASSolutions(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const services = [
     {
       title: "Custom SAAS Development",
@@ -60,24 +51,13 @@ export default function MicroSAASSolutions(...args[]):  {
       features["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
     {
-<<<<<<< HEAD
-      title: "Analytics & Reporting",
-      description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
-      icon: TrendingUp,
-<<<<<<< HEAD
-      features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
-
-=======
       features["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
     };
-=======;
       title: "Analytics & Reporting",;
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",;
       icon: TrendingUp,;
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -94,15 +74,6 @@ export default function MicroSAASSolutions(...args[]):  {
     {
       title: "Cost Efficiency",
       description: "Reduced infrastructure costs with cloud-native solutions",
-<<<<<<< HEAD
-      icon: BarChart3
-    },
-    {
-      title: "Security",
-      description: "Enterprise-grade security and compliance standards",
-      icon: Shield
-
-=======
       icon: BarChart3;
     },;
     {;
@@ -110,7 +81,6 @@ export default function MicroSAASSolutions(...args[]):  {
       description: "Enterprise-grade security and compliance standards",;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [
@@ -137,15 +107,6 @@ export default function MicroSAASSolutions(...args[]):  {
     {
       name: "Retail",
       description: "E-commerce and point-of-sale solutions",
-<<<<<<< HEAD
-      icon: Building
-    },
-    {
-      name: "Real Estate",
-      description: "Property management and client portals",
-      icon: Building
-
-=======
       icon: Building;
     },;
     {;
@@ -153,7 +114,6 @@ export default function MicroSAASSolutions(...args[]):  {
       description: "Property management and client portals",;
       icon: Building;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const processSteps = [
@@ -178,15 +138,6 @@ export default function MicroSAASSolutions(...args[]):  {
       icon: Cpu,
       duration: "8-16 weeks"
     },
-<<<<<<< HEAD
-    {
-      step: 4,
-      title: "Testing & Deployment",
-      description: "Comprehensive testing and production deployment",
-      icon: Rocket,
-      duration: "2-4 weeks"
-
-=======
     {;
       step: 4,;
       title: "Testing & Deployment",;
@@ -194,7 +145,6 @@ export default function MicroSAASSolutions(...args[]):  {
       icon: Rocket,;
       duration: "2-4 weeks";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -398,23 +348,10 @@ export default function MicroSAASSolutions(...args[]):  {
                   Get Consultation
                 </a>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

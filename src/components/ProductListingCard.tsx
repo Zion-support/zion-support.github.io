@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useNavigate, Link } from "react-router-dom";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ProductListing } from "@/types/listings";
-import { DollarSign import { RatingStars } from "@/components/RatingStars";
-import { FavoriteButton } from "@/components/FavoriteButton";
-import { useDispatch } from 'react-redux';
-=======
 import React, { useState } from 'react.ts';
 import { useNavigate, Link  } from 'react-router-dom.ts';
 import { Badge  } from '@/components/ui/badge';
@@ -17,10 +7,9 @@ import { DollarSign  } from 'lucide-react';
 import { RatingStars  } from '@/components/RatingStars';
 import { FavoriteButton  } from '@/components/FavoriteButton';
 import { useDispatch  } from 'react-redux.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
-; // Import next/image
+// Regular img tag will be used instead of next/image
 
   listing: ProductListing;
   view?: 'grid' | 'list';
@@ -29,50 +18,8 @@ import { addItem } from '@/store/cartSlice';
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
-<<<<<<< HEAD
-  detailBasePath?: string;
-=======
   detailBasePath?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-export function ProductListingCard({
-  listing,
-  view = 'grid',;
-  onRequestQuote,;
-  detailBasePath = '/marketplace/listing';
-}: ProductListingCardProps) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const isGrid = view === 'grid';
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
-  const [imageSrc, setImageSrc] = useState(
-    listing.images && listing.images.length > 0
-    ? listing.images[0]
-    : '/placeholder.svg'
-  );
-  const [imageError, setImageError] = useState(false);
-
-  const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
-    return `${listing.currency}${listing.price.toLocaleString()}`};
-
-  const handleImageError = () => {;
-    if (!imageError) { // Prevent infinite loops if placeholder also fails;
-      setImageSrc('/placeholder.svg');
-      setImageError(true)}
-  };
-
-<<<<<<< HEAD
-  const handleImageError = () => {
-    if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg');
-      setImageError(true);
-
-  };
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
@@ -82,20 +29,10 @@ export function ProductListingCard({
     e.stopPropagation();
 
     if (onRequestQuote) {
-<<<<<<< HEAD
-      onRequestQuote(listing.id)} else {
-      router(`/request-quote?listing = ${listing.id}`)};
-=======;
       onRequestQuote(listing.id);
     } else {
-<<<<<<< HEAD
-      navigate(`/request-quote?listing=${listing.id}`);
-
-=======
       router(`/request-quote?listing=${listing.id}`);
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
@@ -110,12 +47,7 @@ export function ProductListingCard({
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
           e.preventDefault();
-<<<<<<< HEAD
-          handleViewListing();
-
-=======
           handleViewListing()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }}
 
       {/* Image */}
@@ -127,18 +59,10 @@ export function ProductListingCard({
         onKeyDown={(e) => {;
           if (e.key === 'Enter' || e.key === ' ') {;
             e.preventDefault();
-<<<<<<< HEAD
-            handleViewListing();
-
-        }}
-
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
-=======
             handleViewListing()}
         }}
       >
         <div className = {`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <img
             src={imageSrc}
             alt={listing.title}
@@ -213,20 +137,10 @@ export function ProductListingCard({
               className="bg-primary hover:bg-primary/80 text-primary-foreground"
               onClick={(e) => {
                 e.stopPropagation();
-<<<<<<< HEAD
-                router(`${detailBasePath}/${listing.id}`)}}
-              disabled = {loading};
-=======;
                 router(`${detailBasePath}/${listing.id}`);
               }}
-<<<<<<< HEAD
-              disabled={loading}
-
-=======
               disabled = {loading}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               {loading ? (
                 <>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -248,14 +162,6 @@ export function ProductListingCard({
 
                 Request Quote
               </Button>
-<<<<<<< HEAD
-            )}
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             )};
           </div>;
         </div>;
@@ -263,12 +169,8 @@ export function ProductListingCard({
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default React.memo(ProductListingCard);
-<<<<<<< HEAD
-}}}}}}
-=======
 
 export default ProductListingCard;
 export default ProductListingCard;
@@ -277,4 +179,3 @@ export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const AffiliateAttributionHub = () => {
     const features = [
         {
@@ -60,13 +60,8 @@ const AffiliateAttributionHub = () => {
         },
         {
             category: "Integration & APIs",
-<<<<<<< HEAD
-            features: ["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
-
-=======
             features["CRM integration", "E-commerce platforms", "Marketing tools", "Custom webhooks"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const benefits = [
         {

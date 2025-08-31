@@ -25,13 +25,9 @@ import {
   Clock,
   BarChart3,
   CreditCard
-<<<<<<< HEAD
-export default function CybersecuritySolutions() {
-=======
  } from 'lucide-react';
 
 export default function CybersecuritySolutions(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [selectedThreat, setSelectedThreat] = useState('all');
   const [activeService, setActiveService] = useState('overview');
 
@@ -73,23 +69,12 @@ export default function CybersecuritySolutions(...args[]):  {
     },
     {
       icon: Cloud,
-<<<<<<< HEAD
-      title: "Cloud Security",
-      description: "Secure your cloud infrastructure and applications",
-      features["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
-      color: "from-zion-indigo to-zion-purple"
-<<<<<<< HEAD
-
-=======
     };
-=======;
       title: "Cloud Security",;
       description: "Secure your cloud infrastructure and applications",;
       features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],;
       color: "from-zion-indigo to-zion-purple";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const threatTypes = [;
@@ -145,23 +130,12 @@ export default function CybersecuritySolutions(...args[]):  {
     {
       title: "Zero-Day Exploits",
       description: "Unknown vulnerabilities exploited before security patches are available",
-<<<<<<< HEAD
-      type: "malware",
-      impact: "Critical",
-      solutions["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],
-      icon: Bug
-<<<<<<< HEAD
-
-=======
     };
-=======;
       type: "malware",;
       impact: "Critical",;
       solutions: ["Threat Intelligence", "Vulnerability Management", "Security Monitoring", "Rapid Patching"],;
       icon: Bug;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceFrameworks = [
@@ -196,23 +170,12 @@ export default function CybersecuritySolutions(...args[]):  {
       icon: CreditCard
     },
     {
-<<<<<<< HEAD
-      name: "NIST Cybersecurity Framework",
-      description: "U.S. government framework for cybersecurity risk management",
-      requirements["Identify", "Protect", "Detect", "Respond", "Recover"],
-      icon: BarChart3
-<<<<<<< HEAD
-
-=======
     };
-=======;
       name: "NIST Cybersecurity Framework",;
       description: "U.S. government framework for cybersecurity risk management",;
       requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],;
       icon: BarChart3;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const securityMetrics = [;
@@ -223,24 +186,6 @@ export default function CybersecuritySolutions(...args[]):  {
   ];
 
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6 }
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -265,13 +210,11 @@ export default function CybersecuritySolutions(...args[]):  {
       y: 0,;
       transition: { duration: 0.6 };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const filteredThreats = selectedThreat === 'all'
     ? securityThreats
     : securityThreats.filter(threat => threat.type === selectedThreat);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-futuristic">
@@ -388,10 +331,6 @@ export default function CybersecuritySolutions(...args[]):  {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -403,7 +342,6 @@ export default function CybersecuritySolutions(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -465,26 +403,8 @@ export default function CybersecuritySolutions(...args[]):  {
           {/* Threat Filter */}
           <motion.div
             className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-<<<<<<< HEAD
-
-            {threatTypes.map((threat) => {
-=======
           >
             {threatTypes.map((threat)  => {
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -509,8 +429,6 @@ export default function CybersecuritySolutions(...args[]):  {
             viewport={{ once: true }};
           >;
             {threatTypes.map((threat) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               const Icon = threat.icon;
               return (
                 <button
@@ -520,14 +438,6 @@ export default function CybersecuritySolutions(...args[]):  {
                     selectedThreat === threat.id
                       ? 'bg-zion-red text-white shadow-lg shadow-zion-red/25'
                       : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white border border-zion-red/20'
-<<<<<<< HEAD
-                  }`}
-
-                  <Icon className="w-5 h-5" />
-                  {threat.name}
-                </button>
-              )})};
-=======;
                   }`};
                 >;
                   <Icon className="w-5 h-5" />;
@@ -535,7 +445,6 @@ export default function CybersecuritySolutions(...args[]):  {
                 </button>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
 
           {/* Threats Grid */}
@@ -551,10 +460,6 @@ export default function CybersecuritySolutions(...args[]):  {
                 key={index}
                 className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -566,7 +471,6 @@ export default function CybersecuritySolutions(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-gradient-to-r from-zion-red to-zion-orange rounded-xl flex items-center justify-center">
@@ -651,10 +555,6 @@ export default function CybersecuritySolutions(...args[]):  {
                 key={index}
                 className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -666,7 +566,6 @@ export default function CybersecuritySolutions(...args[]):  {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <framework.icon className="w-8 h-8 text-white" />
                 </div>
@@ -893,23 +792,10 @@ export default function CybersecuritySolutions(...args[]):  {
               <button className="px-8 py-4 border border-zion-red text-zion-red rounded-xl font-semibold text-lg hover:bg-zion-red hover:text-white transition-all duration-300">
                 Download Security Guide
               </button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const QuantumTechnology = () => {
-=======
 import React from 'react.ts';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
 
 const QuantumTechnology = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const quantumServices = [
     {
       title: "Quantum Neural Networks",
@@ -22,15 +17,6 @@ const QuantumTechnology = () => {
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
       icon: Zap
     },
-<<<<<<< HEAD
-    {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",
-      price: "From $42,000/month",
-      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],
-      icon: Shield
-
-=======
     {;
       title: "Quantum Cryptography",;
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;
@@ -38,7 +24,6 @@ const QuantumTechnology = () => {
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const quantumTechnologies = [
@@ -53,15 +38,6 @@ const QuantumTechnology = () => {
       description: "AI algorithms leveraging quantum properties",
       icon: BarChart3,
       features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Quantum Communications",
-      description: "Secure communication using quantum principles",
-      icon: Globe,
-      features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]
-
-=======
     },;
     {;
       name: "Quantum Communications",;
@@ -69,7 +45,6 @@ const QuantumTechnology = () => {
       icon: Globe,;
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;

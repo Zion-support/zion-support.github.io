@@ -38,12 +38,8 @@ import {
   Wifi as WifiIcon,
   Battery as BatteryIcon,
   Signal
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const MobileLaunch: React.FC = () => {
   const features = [
@@ -64,15 +60,6 @@ const MobileLaunch: React.FC = () => {
       description: "Enterprise-grade security with end-to-end encryption and privacy controls",
       icon: Shield,
       color: "from-green-400 to-emerald-500"
-<<<<<<< HEAD
-    },
-    {
-      title: "Smart Notifications",
-      description: "Intelligent alerts that adapt to your preferences and schedule",
-      icon: Bell,
-      color: "from-orange-400 to-red-500"
-
-=======
     },;
     {;
       title: "Smart Notifications",;
@@ -80,7 +67,6 @@ const MobileLaunch: React.FC = () => {
       icon: Bell,;
       color: "from-orange-400 to-red-500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const appScreens = [
@@ -101,15 +87,6 @@ const MobileLaunch: React.FC = () => {
       description: "Comprehensive data visualization and business intelligence tools",
       icon: BarChart3,
       features: ["Interactive charts", "Custom reports", "Data export"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Services",
-      description: "Access to all Zion Tech Group services and solutions",
-      icon: Settings,
-      features: ["Service catalog", "Quick setup", "Support access"]
-
-=======
     },;
     {;
       name: "Services",;
@@ -117,7 +94,6 @@ const MobileLaunch: React.FC = () => {
       icon: Settings,;
       features: ["Service catalog", "Quick setup", "Support access"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const downloadOptions = [
@@ -135,15 +111,6 @@ const MobileLaunch: React.FC = () => {
       link: "#",
       featured: true
     },
-<<<<<<< HEAD
-    {
-      platform: "Web App",
-      icon: "🌐",
-      description: "Access via browser",
-      link: "/",
-      featured: false
-
-=======
     {;
       platform: "Web App",;
       icon: "🌐",;
@@ -151,7 +118,6 @@ const MobileLaunch: React.FC = () => {
       link: "/",;
       featured: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const systemRequirements = [;
@@ -163,13 +129,8 @@ const MobileLaunch: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Mobile App - Zion Tech Group"
         description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
         keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"

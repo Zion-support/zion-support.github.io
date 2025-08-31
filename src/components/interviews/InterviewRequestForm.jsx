@@ -46,12 +46,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 description: "Please log in to schedule an interview",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // Combine date and time
@@ -74,35 +69,17 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                 title: "Interview requested",
                 description: `Your interview request with ${talent.full_name} has been sent.`,
             });
-<<<<<<< HEAD
-            onClose();
-
-=======
             onClose()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Failed to schedule interview:", error);
-=======
             // // // // // // // console.error("Failed to schedule interview:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Failed to schedule interview",
                 description: "An error occurred while scheduling the interview. Please try again.",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsSubmitting(false);
-
-
-=======
             })}
         finally {
             setIsSubmitting(false)}
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const timeSlots = [
         "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
         "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
@@ -247,9 +224,4 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
           </Button>
         </div>
       </form>
-<<<<<<< HEAD
-    </Form>);
-}}}}}}}
-=======
     </Form>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

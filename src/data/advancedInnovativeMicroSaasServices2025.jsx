@@ -543,18 +543,10 @@ export const ADVANCED_INNOVATIVE_MICRO_SAAS_SERVICES_2025 = [
             website: "https://ziontechgroup.com"
         },
         websiteUrl: "https://ziontechgroup.com/ai-customer-experience",
-<<<<<<< HEAD
-        technologyStack: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "Kafka"],
-        integrationCapabilities: ["CRM Systems", "E-commerce Platforms", "Communication Tools", "Analytics Platforms", "Marketing Tools"],
-        complianceStandards: ["GDPR", "CCPA", "Data Privacy", "Accessibility", "Security Standards"],
-        scalabilityFeatures: ["Cloud-native", "Auto-scaling", "Multi-tenant", "Global distribution"]
-
-=======
         technologyStack["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis", "Kafka"],
         integrationCapabilities["CRM Systems", "E-commerce Platforms", "Communication Tools", "Analytics Platforms", "Marketing Tools"],
         complianceStandards["GDPR", "CCPA", "Data Privacy", "Accessibility", "Security Standards"],
         scalabilityFeatures["Cloud-native", "Auto-scaling", "Multi-tenant", "Global distribution"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 }

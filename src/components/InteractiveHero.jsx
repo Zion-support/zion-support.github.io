@@ -53,18 +53,11 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
   <<<<<<< HEAD
         animate: {
             y[0, -10, 0],
-=======
   animate: {
             y: [0, -10, 0],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transition: {
                 duration: 3,
                 repeat: Infinity,
-<<<<<<< HEAD
-                ease: "easeInOut"
-
-
-=======
   ease: "easeInOut"
             
 
@@ -75,56 +68,11 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 }
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Gradient Orbs */}
-<<<<<<< HEAD
-        <motion.div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" animate = {
-  {
-            x[0, 100, 0],
-            y[0, -50, 0],
-            scale[1, 1.2,
-  1]
-        
-
-}} transition = {
-  {
-            duration: 20,
-            repeat: Infinity,
-  ease: "linear"
-        
-
-}}/>
-        <motion.div className="absolute top-40 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl" animate = {
-  {
-            x[0, -80, 0],
-            y[0, 60, 0],
-            scale[1, 0.8,
-  1]
-        
-
-}} transition = {
-  {
-            duration: 25,
-            repeat: Infinity,
-  ease: "linear"
-        
-
-}}/>
-        <motion.div className="absolute bottom-20 left-1/2 w-80 h-80 bg-purple-500/20 rounded-full blur-3xl" animate = {
-  {
-            x[0, 60, 0],
-            y[0, -40, 0],
-            scale[1, 1.1,
-  1]
-        
-
-}} transition = {
-  {
-=======
         <motion.div className="absolute top-20 left-20 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl" animate = {
   {
             x: [0, 100, 0],
@@ -192,7 +140,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             duration: 18,
             repeat: Infinity,
   ease: "linear"
@@ -303,17 +250,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
       </div>
 
       {/* Floating Elements */}
-<<<<<<< HEAD
-      <motion.div className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm" animate = {
-  {
-            y[0, -20, 0],
-            rotate[0, 180,
-  360]
-        
-
-}} transition = {
-  {
-=======
       <motion.div className="absolute top-1/2 left-10 w-20 h-20 bg-blue-500/10 rounded-full border border-blue-400/20 backdrop-blur-sm" animate = {
   {
             y: [0, -20, 0],
@@ -328,21 +264,11 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             duration: 8,
             repeat: Infinity,
   ease: "easeInOut"
         
 
-<<<<<<< HEAD
-      <motion.div className="absolute top-1/3 right-16 w-16 h-16 bg-cyan-500/10 rounded-full border border-cyan-400/20 backdrop-blur-sm" animate={{
-            y[0, 30, 0],
-            x[0, 20,
-  0]
-        
-
-}} transition={{
-=======
 
 
 
@@ -362,7 +288,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             duration: 12,
             repeat: Infinity,
   ease: "easeInOut"
@@ -398,7 +323,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 }}/>
     </section>)};
-=======
   damping: 30
         
 
@@ -407,11 +331,6 @@ export const InteractiveHero = ({ title, subtitle, description, primaryAction, s
 
 }}/>
     </section>);
-<<<<<<< HEAD
-</div>};
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default InteractiveHero;
 }}}}}</motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div>}

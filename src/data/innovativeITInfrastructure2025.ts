@@ -29,11 +29,7 @@ contactInfo: {
     uptime: string;
     security: string[]};
   competitors?: string[];
-<<<<<<< HEAD
-  marketSize?: string;
-=======
   marketSize?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
   // Next-Generation Cloud Infrastructure

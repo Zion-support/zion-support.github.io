@@ -148,11 +148,8 @@ import {
   Space,
   Handshake,
   Calendar
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const microSAASServices2028 = [
   // AI-Powered Content Creation
   {
@@ -490,15 +487,6 @@ const microSAASServices2028 = [
     integrations['Data sources', 'Business tools', 'CRM systems', 'Marketing platforms', 'Cloud services'],
     useCases['Business intelligence', 'Performance monitoring', 'Predictive insights', 'Data visualization', 'Automated reporting'],
     roi: 'Businesses achieve 400% ROI through improved decision-making and operational efficiency.',
-<<<<<<< HEAD
-    competitors: ['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],
-    marketSize: '$7.2B AI analytics market',
-    growthRate: '260% annual growth',
-    rating: 4.6,
-    reviews: 234,
-    customers: 123
-
-=======
     competitors['Traditional BI tools', 'Basic analytics platforms', 'Manual reporting tools'],;
     marketSize: '$7.2B AI analytics market',;
     growthRate: '260% annual growth',;
@@ -506,50 +494,9 @@ const microSAASServices2028 = [
     reviews: 234,;
     customers: 123;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-<<<<<<< HEAD
-const MicroSAASServices2028: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('popularity');
-
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-zion-cyan to-zion-purple' },
-    { id: 'ai-content', name: 'AI Content', icon: FileText, color: 'from-zion-blue to-zion-cyan' },;
-    { id: 'ai-design', name: 'AI Design', icon: Palette, color: 'from-zion-purple to-zion-pink' },;
-    { id: 'ai-video', name: 'AI Video', icon: Video, color: 'from-zion-red to-zion-orange' },;
-    { id: 'ai-development', name: 'AI Development', icon: Code, color: 'from-zion-green to-zion-emerald' },;
-    { id: 'ai-ecommerce', name: 'AI E-commerce', icon: ShoppingCart, color: 'from-zion-orange to-zion-red' },;
-    { id: 'ai-customer-service', name: 'AI Customer Service', icon: MessageSquare, color: 'from-zion-blue to-zion-indigo' },;
-    { id: 'ai-analytics', name: 'AI Analytics', icon: BarChart3, color: 'from-zion-emerald to-zion-teal' };
-  ];
-
-  const filteredServices = microSAASServices2028
-    .filter(service => {
-      const matchesCategory = selectedCategory === 'all' ||
-        service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-      const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-        service.description.toLowerCase().includes(searchQuery.toLowerCase());
-      return matchesCategory && matchesSearch})
-    .sort((a, b) => {
-      switch (sortBy) {
-        case 'price-low':
-          return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
-        case 'price-high':
-          return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
-        case 'rating':
-          return b.rating - a.rating;
-        case 'popularity':
-        default:
-<<<<<<< HEAD
-          return b.popular ? 1 : -1;
-
-=======
           return b.popular ? 1 : -1}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
 
   return (
@@ -802,14 +749,6 @@ const MicroSAASServices2028: React.FC = () => {;
 
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </motion.div>;
         </div>;
@@ -817,6 +756,5 @@ const MicroSAASServices2028: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default MicroSAASServices2028;}}}

@@ -18,22 +18,12 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
 
     try {
       await login(email, password);
-<<<<<<< HEAD
-      router('/dashboard')} catch (err) {
-      setError('Login failed. Please try again.')} finally {
-      setIsLoading(false)}
-=======
       router('/dashboard');
     } catch (err) {
       setError('Login failed. Please try again.');
     } finally {
       setIsLoading(false);
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -223,9 +213,4 @@ import { Eye, EyeOff, Lock, Mail, Sparkles export function LoginContent() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

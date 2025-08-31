@@ -17,12 +17,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
     useEffect(() => {
         if (!formData.serviceType) {
             setListings([]);
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const fetchServices = async () => {
             setLoading(true);
             setError(null);
@@ -40,19 +35,8 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                     setListings(parsed.data);
                     setError(null);
                     setLoading(false);
-<<<<<<< HEAD
-                    return;
-
-                catch (err) {
-                    if (attempt === maxRetries - 1) {
-                        if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-                            // // // console.error('Failed to load services:', err);
-
-=======
                             // // // // // // // console.error('Failed to load services:', err);
                         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                         else {
                             captureException(err);
 
@@ -65,7 +49,6 @@ export function ServiceTypeStep({ formData, updateFormData }) {
 
 
 
-=======
                     return}
                 catch (err) {
                     if (attempt === maxRetries - 1) {
@@ -80,7 +63,6 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500))}
                 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         fetchServices()}, [formData.serviceType, debouncedQuery]);
     const handleItemSelect = (item) => {
@@ -95,12 +77,7 @@ export function ServiceTypeStep({ formData, updateFormData }) {
         if (formData.serviceType !== "") {
             const categoryMatch = item.category.toLowerCase() === formData.serviceType.toLowerCase();
             if (!categoryMatch)
-<<<<<<< HEAD
-                return false;
-
-=======
                 return false}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (searchQuery.trim() === "")
             return true;
         return item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -154,9 +131,4 @@ export function ServiceTypeStep({ formData, updateFormData }) {
               </div>)}
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

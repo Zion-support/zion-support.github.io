@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  TrendingUp,
-  Brain,
-  DollarSign,
-  BarChart3,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -21,7 +8,6 @@ import { TrendingUp,
   Shield, 
   Zap, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Clock,
   Target,
@@ -35,13 +21,9 @@ import { TrendingUp,
   Lock,
   Eye,
   PieChart
-<<<<<<< HEAD
-export default function AIFinancialTradingPlatform() {
-=======
  } from 'lucide-react';
 
 export default function AIFinancialTradingPlatform(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -66,15 +48,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       icon: Zap,
       title: 'High-Frequency Trading',
-<<<<<<< HEAD
-      description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies'
-    },
-    {
-      icon: Eye,
-      title: 'Market Sentiment Analysis',
-      description: 'AI analyzes news, social media, and market data to gauge investor sentiment'
-
-=======
       description: 'Ultra-fast execution for arbitrage opportunities and market inefficiencies';
     },;
     {;
@@ -82,7 +55,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       title: 'Market Sentiment Analysis',;
       description: 'AI analyzes news, social media, and market data to gauge investor sentiment';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -129,15 +101,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
         'Custom AI models',
         'White-label solutions',
         'Dedicated support',
-<<<<<<< HEAD
-        'Advanced compliance',
-        'Unlimited portfolio size',
-        'On-premise options',
-        'SLA guarantees'
-      ],
-      popular: false
-
-=======
         'Advanced compliance',;
         'Unlimited portfolio size',;
         'On-premise options',;
@@ -145,7 +108,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -162,15 +124,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       icon: Target,
       title: 'Risk-Adjusted Returns',
-<<<<<<< HEAD
-      description: 'AI optimizes for the best risk-reward ratio in any market condition'
-    },
-    {
-      icon: BarChart3,
-      title: 'Emotion-Free Trading',
-      description: 'Eliminate human bias and emotional decision-making from your trades'
-
-=======
       description: 'AI optimizes for the best risk-reward ratio in  market condition';
     },;
     {;
@@ -178,7 +131,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       title: 'Emotion-Free Trading',;
       description: 'Eliminate human bias and emotional decision-making from your trades';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const tradingMarkets = [
@@ -195,15 +147,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
     {
       title: 'Forex Trading',
       description: 'Real-time currency pair analysis and automated forex strategies',
-<<<<<<< HEAD
-      icon: Globe
-    },
-    {
-      title: 'Commodities',
-      description: 'AI-driven insights for gold, oil, and other commodity markets',
-      icon: BarChart3
-
-=======
       icon: Globe;
     },;
     {;
@@ -211,7 +154,6 @@ export default function AIFinancialTradingPlatform(...args: []):  {
       description: 'AI-driven insights for gold, oil, and other commodity markets',;
       icon: BarChart3;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const performanceMetrics = [;
@@ -222,13 +164,8 @@ export default function AIFinancialTradingPlatform(...args: []):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Financial Trading Platform - Zion Tech Group"
         description="Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month."
       />
@@ -746,20 +683,11 @@ export default function AIFinancialTradingPlatform(...args: []):  {
             </div>
 
             <p className="text-gray-400 mt-6">
-<<<<<<< HEAD
-              No credit card required • 14-day free trial • Cancel time
-            </p>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======;
               No credit card required • 14-day free trial • Cancel anytime;
             </p>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
 }}}}}}

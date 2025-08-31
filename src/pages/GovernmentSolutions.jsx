@@ -118,13 +118,8 @@ const governmentSolutions = [
     price: "From $45,000",
     timeline: "12-20 weeks",
     category: "Compliance",
-<<<<<<< HEAD
-    compliance: ["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
-
-=======
     compliance["FISMA", "FedRAMP", "Regulatory Standards", "Audit Requirements"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const complianceStandards = [
@@ -150,13 +145,8 @@ const complianceStandards = [
     name: "NIST",
     description: "National Institute of Standards and Technology Cybersecurity Framework",
     icon: Brain,
-<<<<<<< HEAD
-    requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"]
-
-=======
     requirements["Identify", "Protect", "Detect", "Respond", "Recover"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -799,9 +789,4 @@ export default function GovernmentSolutions() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

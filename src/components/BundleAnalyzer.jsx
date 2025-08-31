@@ -90,27 +90,16 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
                 score: 78,
                 lastUpdated: new Date()
             };
-<<<<<<< HEAD
-            setAnalysis(mockAnalysis);
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Bundle analysis failed:', error);
-
-=======
             // // // // // // // console.error('Bundle analysis failed:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
             setIsAnalyzing(false);
 
-=======
             setAnalysis(mockAnalysis)}
         catch (error) {
             console.error('Bundle analysis failed:', error)}
         finally {
             setIsAnalyzing(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     useEffect(() => {
         analyzeBundle()}, [analyzeBundle]);
@@ -138,24 +127,14 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
             case 'good': return 'text-green-500 bg-green-100 dark:bg-green-900/20';
             case 'warning': return 'text-yellow-500 bg-yellow-100 dark:bg-yellow-900/20';
             case 'critical': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
-<<<<<<< HEAD
-            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-
-=======
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getOptimizationIcon = (optimization) => {
         switch (optimization) {
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertTriangle className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <Info className="w-4 h-4"/>;
-
-=======
             default: return <Info className="w-4 h-4"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (!analysis)
         return null;
@@ -358,10 +337,4 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
             </div>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </>);
-};
-}}}}}}}
-=======
     </>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

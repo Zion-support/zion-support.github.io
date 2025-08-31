@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-;
+import { useNavigate } from 'react-router-dom';
 import { Logo } from '@/components/header/Logo';
 import { PointsBadge } from '@/components/loyalty/PointsBadge';
 import { UserMenu } from '@/components/header/UserMenu';
@@ -23,18 +23,13 @@ export function PrimaryNav() {
     const { user } = useAuth();
     const isMobile = useIsMobile();
     const { t } = useTranslation();
-    const router = useRouter();
+    const router = useNavigate();
     const [query, setQuery] = useState('');
     const suggestions = generateSearchSuggestions();
     let unreadCount = 0;
     try {
         const messaging = useMessaging();
-<<<<<<< HEAD
-        unreadCount = messaging.unreadCount;
-
-=======
         unreadCount = messaging.unreadCount}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     catch {
         // context not available
 
@@ -42,26 +37,16 @@ export function PrimaryNav() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (query.trim()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // // // console.log('PrimaryNav search submit:', query);
-=======
             // // // // // // // console.log('PrimaryNav search submit:', query);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             navigate(`/search/${slugify(query)}`);
             setQuery('');
 
-=======
             console.log('PrimaryNav search submit:', query);
-<<<<<<< HEAD
-            router.push(`/search/${slugify(query)}`);
-            setQuery('')}
-=======
             router(`/search/${slugify(query)}`);
+            console.log('PrimaryNav search submit:', query);
+            navigate(`/search/${slugify(query)}`);
             setQuery('');
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header">
@@ -76,14 +61,7 @@ export function PrimaryNav() {
           {/* Actions container with responsive layout */}
           <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
             {/* Search form with clamped width */}
-<<<<<<< HEAD
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style={{ width: 'clamp(12rem, 20vw, 16rem)' }}>
-              <EnhancedSearchInput value={query} onChange={setQuery} onSelectSuggestion={(sugg) => {
-<<<<<<< HEAD
-            // // // console.log('PrimaryNav search suggestion selected:', sugg);
-=======
             // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
@@ -100,8 +78,6 @@ export function PrimaryNav() {
             else {
                 // Default: search results page with slug
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
-
-=======
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
   { width: 'clamp(12rem, 20vw,
   16rem)' 
@@ -119,20 +95,6 @@ export function PrimaryNav() {
             // Handle different suggestion types with proper navigation
             if (sugg.id) {
                 // Product listings with IDs go to product detail page
-<<<<<<< HEAD
-                router.push(`/marketplace/listing/${sugg.id
-
-}`)}
-            else if (sugg.type === 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
-                // Documentation suggestions navigate directly to their path
-                router.push(sugg.slug)}
-            else if (sugg.type === 'blog' && sugg.slug) {
-                // Blog posts navigate to blog detail page
-                router.push(`/blog/${sugg.slug}`)}
-            else {
-                // Default: search results page with slug
-                router.push(`/search/${sugg.slug || slugify(sugg.text)}`)}
-=======
                 router(`/marketplace/listing/${sugg.id
 
 
@@ -152,8 +114,6 @@ export function PrimaryNav() {
                 // Default: search results page with slug
                 router(`/search/${sugg.slug || slugify(sugg.text)}`);
             }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setQuery('');
             // Track analytics event
             if (typeof window !== 'null' && window.gtag) {
@@ -161,12 +121,7 @@ export function PrimaryNav() {
                     search_term: sugg.text,
                     suggestion_type: sugg.type,
                     suggestion_id: sugg.id || sugg.slug
-<<<<<<< HEAD
-                });
-
-=======
                 })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }} searchSuggestions={suggestions}/>
             </form>
 
@@ -213,20 +168,9 @@ export function PrimaryNav() {
                     {t('auth.signup')}
                   </Link>
                 </>)}
-            </Link>
-            <LanguageSelector />
-            <ModeToggle />
-            {!isLoggedIn && (<>
-                <Link href="/login" className="text-sm hover:text-primary" data-testid="login-link">
-                  {t('login', 'Login')}
-                </Link>
-                <Link href="/signup" className="ml-2 text-sm hover:text-primary">
-                  {t('signup', 'Sign up')}
-                </Link>
-              </>)}
-            {isLoggedIn && <UserMenu />}
-          </div>
-
+              {isLoggedIn && <UserMenu />}
+            </div>
+          
           {/* Mobile menu button */}
           <button className="md:hidden p-2 rounded focus:outline-none flex-shrink-0" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} aria-expanded={mobileMenuOpen} aria-label={t('general.toggle_mobile_menu')}>
             {mobileMenuOpen ? (<X className="h-6 w-6"/>) : (<Menu className="h-6 w-6"/>)}
@@ -240,9 +184,4 @@ export function PrimaryNav() {
           </div>
         </div>)}
       {isMobile && <MobileBottomNav unreadCount={unreadCount}/>}
-<<<<<<< HEAD
-    </>);
-</div></div>}}}}}}}}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { AlertTriangle, RefreshCw interface LoginErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
-
-export default function LoginErrorFallback({ error, resetErrorBoundary }: LoginErrorFallbackProps) {
-=======
 import React from 'react.ts';
 import { AlertTriangle, RefreshCw  } from 'lucide-react';
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
@@ -13,7 +5,6 @@ interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
   error: Error;
   resetErrorBoundary: ()  => void}
 export default function LoginErrorFallback(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className = "min-h-screen flex items-center justify-center bg-futuristic p-4">
       <div className="max-w-md w-full bg-zion-slate-dark rounded-xl border border-zion-cyan/20 p-8 text-center">
@@ -39,28 +30,11 @@ export default function LoginErrorFallback(...args[]):  {
         <button
           onClick={resetErrorBoundary}
           className="inline-flex items-center gap-2 bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
-<<<<<<< HEAD
-
-=======
         >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-          <RefreshCw className="w-4 h-4" />
-          Try Again
-        </button>
-      </div>
-    </div>
-  )};
-=======;
           <RefreshCw className="w-4 h-4" />;
           Try Again;
         </button>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

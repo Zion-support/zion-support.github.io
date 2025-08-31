@@ -1,52 +1,12 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Check,
-  X,
-  Star,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Users,
-  Building,
-  Smartphone,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Truck,
-  Mail,
-  Phone,
-  MapPin,
-  ExternalLink,
-  DollarSign,
-  Clock
-<<<<<<< HEAD
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
-=======
  } from 'lucide-react';
 import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS  } from '@/data/expandedServices';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+} from "lucide-react";
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
 // Group services by category for better organization
-<<<<<<< HEAD
-const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {;
-  if (!acc[service.category]) {;
-    acc[service.category] = [];
-<<<<<<< HEAD
-
-  acc[service.category].push(service);
-  return acc;
-}, { /* empty */ } as { [key: string]: typeof EXPANDED_SERVICES });
-=======
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   acc[service.category].push(service);
   return acc}, {} as { [key: string]: typeof EXPANDED_SERVICES });
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Pricing comparison features
 const pricingFeatures = [
   "AI-Powered Solutions",
@@ -88,7 +48,6 @@ export default function ServicesPricingPage() {
       'Supply Chain': <Truck className="h-5 w-5" />;
     };
     return categoryIcons[category] || <Zap className="h-5 w-5" />};
-=======
 import { motion } from 'framer-motion';
 import { 
   Check, 
@@ -286,7 +245,6 @@ const ServicesPricingPage: React.FC = () => {
     return 0;
   };
 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   return (
     <>
       <SEO 
@@ -401,15 +359,6 @@ const ServicesPricingPage: React.FC = () => {
                       }`}>
                         <plan.icon className="w-8 h-8" />
                       </div>
-<<<<<<< HEAD
-                    ))}
-                  </div>
-                  <Button
-                    className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
-<<<<<<< HEAD
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
-
-=======
                     onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry',
   '_blank')
@@ -421,7 +370,6 @@ const ServicesPricingPage: React.FC = () => {
 
 }
                   >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     Get Custom Quote
                   </Button>
                 </CardContent>
@@ -463,7 +411,6 @@ const ServicesPricingPage: React.FC = () => {
                       <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
                       <CardDescription className="text-zion-cyan-light line-clamp-3">
                         {service.description}
-=======
                       
                       <CardTitle className="text-2xl font-bold text-white">
                         {plan.name}
@@ -471,7 +418,6 @@ const ServicesPricingPage: React.FC = () => {
                       
                       <CardDescription className="text-zion-cyan-light">
                         {plan.description}
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
                       </CardDescription>
                       
                       <div className="mt-6">
@@ -490,75 +436,9 @@ const ServicesPricingPage: React.FC = () => {
                     </CardHeader>
                     
                     <CardContent>
-<<<<<<< HEAD
-                      <div className="space-y-4">
-                        {/* Pricing and Details */}
-                        <div className="space-y-2">
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Price:</span>
-                            <span className="font-semibold text-zion-cyan text-lg">
-                              ${service.price?.toLocaleString()}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Availability:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Clock className="h-3 w-3" />
-                              {service.availability}
-                            </span>
-                          </div>
-                          <div className="flex items-center justify-between">
-                            <span className="text-zion-cyan-light">Location:</span>
-                            <span className="flex items-center gap-1 text-sm">
-                              <Globe className="h-3 w-3" />
-                              {service.location}
-                            </span>
-                          </div>
-                        </div>
-                        {/* Tags */}
-                        <div className="flex flex-wrap gap-2">
-                          {service.tags.slice(0, 3).map((tag, index) => (
-                            <Badge key={index} variant="secondary" className="bg-white/10 text-zion-cyan-light border-white/20 text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
-                        </div>
-                        {/* Rating and AI Score */}
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center gap-1">
-                            <Star className="h-4 w-4 text-yellow-400 fill-current" />
-                            <span className="text-sm">{service.rating}</span>
-                            <span className="text-xs text-zion-cyan-light">({service.reviewCount} reviews)</span>
-                          </div>
-                          {service.aiScore && (
-                            <Badge className="bg-zion-purple/20 text-zion-purple border-zion-purple/30">
-                              AI Score: {service.aiScore}
-                            </Badge>
-                          )}
-                        </div>
-                        {/* Action Buttons */}
-                        <div className="flex gap-2">
-                          <Button
-                            className="flex-1 bg-zion-purple hover:bg-zion-purple-dark text-white"
-                            onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Quote for ${service.title}`, '_blank')}
-
-                            <Mail className="h-4 w-4 mr-2" />
-                            Get Quote
-                          </Button>
-                          <Button
-                            variant="outline"
-                            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-<<<<<<< HEAD
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-
-                            <ExternalLink className="h-4 w-4" />
-                          </Button>
-                        </div>
-=======
                             onClick = {
   () => window.open('https://ziontechgroup.com',
   '_blank')
-=======
                       <ul className="space-y-3 mb-8">
                         {plan.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center space-x-3">
@@ -586,7 +466,6 @@ const ServicesPricingPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 
         {/* Service Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -768,7 +647,6 @@ const ServicesPricingPage: React.FC = () => {
                         <div className="font-semibold text-white">{testimonial.name}</div>
                         <div className="text-sm text-zion-cyan-light">{testimonial.role}</div>
                         <div className="text-xs text-zion-cyan-light">{testimonial.company}</div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       </div>
                     </CardContent>
                   </Card>
@@ -843,62 +721,8 @@ const ServicesPricingPage: React.FC = () => {
               </Card>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
-        {/* Pricing FAQ Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What's included in the pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  All our services include implementation, training, documentation, and 24/7 support.
-                  Custom integrations and additional features can be added based on your requirements.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Do you offer custom pricing?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  Yes, we provide custom pricing for enterprise solutions and specialized requirements.
-                  Contact us for a personalized quote tailored to your business needs.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">What payment terms do you offer?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer flexible payment terms including upfront payment, milestone-based payments,
-                  and monthly/annual subscription options for ongoing services.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-white/5 backdrop-blur-sm border-white/20 text-white">
-              <CardHeader>
-                <CardTitle className="text-zion-cyan">Is there a money-back guarantee?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-zion-cyan-light">
-                  We offer a satisfaction guarantee. If you're not completely satisfied with our services
-                  within the first 30 days, we'll work to make it right or provide a refund.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-=======
         </section>
 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
         {/* Contact CTA Section */}
         <div className="bg-gradient-to-r from-zion-purple to-zion-blue rounded-xl p-8 text-center text-white mx-4 sm:mx-6 lg:mx-8 mb-20">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
@@ -928,10 +752,6 @@ const ServicesPricingPage: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-</div></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
 };
 
 export default ServicesPricingPage;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

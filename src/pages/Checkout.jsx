@@ -16,19 +16,6 @@ export default function CheckoutPage() {
     useEffect(() => {
         if (sku) {
             setItems([{ id: sku, name: sku, price: 25, quantity: 1 }]);
-<<<<<<< HEAD
-            return;
-
-        const stored = safeStorage.getItem(getCartKey(user?.id));
-        if (stored) {
-            try {
-                setItems(JSON.parse(stored));
-
-            catch {
-                setItems([]);
-
-
-=======
             return}
         const stored = safeStorage.getItem(getCartKey(user?.id));
         if (stored) {
@@ -37,7 +24,6 @@ export default function CheckoutPage() {
             catch {
                 setItems([])}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [sku]);
     const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0);
     const onSubmit = async (data) => {
@@ -61,48 +47,20 @@ export default function CheckoutPage() {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({ userId: user.id, amount: subtotal, orderId: result.id }),
-<<<<<<< HEAD
-                        });
-
-                    catch (e) {
-<<<<<<< HEAD
-                        // // // console.error('Failed to add points', e);
-
-
-=======
                         // // // // // // // console.error('Failed to add points', e);
                     }
-=======
                         })}
                     catch (e) {
                         console.error('Failed to add points', e)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 safeStorage.removeItem(getCartKey(user?.id));
-<<<<<<< HEAD
-                navigate(`/orders/${result.id}`);
-
-
-        catch (err) {
-<<<<<<< HEAD
-            // // // console.error('Payment failed', err);
-
-=======
             // // // // // // // console.error('Payment failed', err);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-<<<<<<< HEAD
-                router(`/orders/${result.id}`)}
-=======
                 router(`/orders/${result.id}`);
             }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         }
         catch (err) {
             console.error('Payment failed', err)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="max-w-2xl mx-auto p-6">
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
@@ -134,9 +92,4 @@ export default function CheckoutPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

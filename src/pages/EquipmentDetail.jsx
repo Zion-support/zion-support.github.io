@@ -29,12 +29,7 @@ export default function EquipmentDetail() {
           </div>
         </div>
         <Footer />
-<<<<<<< HEAD
-      </>);
-
-=======
       </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleAddToCart = () => {
         setIsAdding(true);
         // Simulate API call
@@ -46,18 +41,9 @@ export default function EquipmentDetail() {
             })}, 800)};
     const handleBuyNow = async () => {
         if (!isAuthenticated) {
-<<<<<<< HEAD
-            router(`/login?next=/equipment/${equipmentId}`);
-            return}
-=======
             router(`/login?next=/equipment/${equipmentId}`);
             return;
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsAdding(true);
         try {
             const response = await fetch('/checkout/create-session', {
@@ -67,24 +53,12 @@ export default function EquipmentDetail() {
             });
             const { url } = await response.json();
             if (url) {
-<<<<<<< HEAD
-                window.location.href = url;
-
-
-        catch (err) {
-            toast({ title: 'Payment error', description: 'Could not start checkout.' });
-
-        finally {
-            setIsAdding(false);
-
-=======
                 window.location.href = url}
         }
         catch (err) {
             toast({ title: 'Payment error', description: 'Could not start checkout.' })}
         finally {
             setIsAdding(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <Header />
@@ -259,9 +233,4 @@ export default function EquipmentDetail() {
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}}}}}}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -226,24 +226,6 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
     const filteredProducts = marketplaceProducts.filter(product => {
         const matchesPrice = true;
         if (selectedPriceRange === 'free') {
-<<<<<<< HEAD
-            matchesPrice = product.price === 0;
-
-        else if (selectedPriceRange === 'under-100') {
-            matchesPrice = product.price < 100;
-
-        else if (selectedPriceRange === '100-500') {
-            matchesPrice = product.price >= 100 && product.price <= 500;
-
-        else if (selectedPriceRange === '500-1000') {
-            matchesPrice = product.price >= 500 && product.price <= 1000;
-
-        else if (selectedPriceRange === 'over-1000') {
-            matchesPrice = product.price > 1000;
-
-        return matchesSearch && matchesCategory && matchesPrice;
-    });
-=======
             matchesPrice = product.price === 0}
         else if (selectedPriceRange === 'under-100') {
             matchesPrice = product.price < 100}
@@ -254,7 +236,6 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
         else if (selectedPriceRange === 'over-1000') {
             matchesPrice = product.price > 1000}
         return matchesSearch && matchesCategory && matchesPrice});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const sortedProducts = [...filteredProducts].sort((a, b) => {
         switch (sortBy) {
             case 'price-low':
@@ -268,12 +249,7 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
             case 'rating':
                 return b.rating - a.rating;
             default:
-<<<<<<< HEAD
-                return b.featured ? 1 : -1;
-
-=======
                 return b.featured ? 1 : -1}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const formatPrice = (price, currency) => {
         if (price === 0)
@@ -521,9 +497,4 @@ import { Search, Star, ShoppingCart, Heart, Eye, Users, Brain, Shield, Globe, Ne
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,11 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({
         enableTracking: enableAnalytics,
@@ -19,12 +15,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const [progress, setProgress] = useState(0);
     // Initialize form data and validation
     useEffect(() => {
-<<<<<<< HEAD
-        const initialData = { /* empty */ };
-        const initialValidation = { /* empty */ };
-=======
         const initialValidation = {};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         fields.forEach(field => {
             initialData[field.name] = field.type === 'checkbox' ? false : '';
             initialValidation[field.name] = {
@@ -47,18 +38,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         // Required field validation
         if (field.required) {
             if (typeof value === 'boolean' && !value) {
-<<<<<<< HEAD
-                return 'This field is required';
-
-            if (typeof value === 'string' && value.trim() === '') {
-                return 'This field is required';
-
-
-        // Skip validation for empty non-required fields
-        if (!field.required && (typeof value === 'string' && value.trim() === '')) {
-            return null;
-
-=======
                 return 'This field is required'}
             if (typeof value === 'string' && value.trim() === '') {
                 return 'This field is required'}
@@ -66,7 +45,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         // Skip validation for empty non-required fields
         if (!field.required && (typeof value === 'string' && value.trim() === '')) {
             return null}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Type-specific validation
         if (typeof value === 'string') {
             const stringValue = value.trim();
@@ -74,34 +52,12 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             if (field.type === 'email' && stringValue) {
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailPattern.test(stringValue)) {
-<<<<<<< HEAD
-                    return 'Please enter a valid email address';
-
-
-=======
                     return 'Please enter a valid email address'}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Phone validation
             if (field.type === 'tel' && stringValue) {
                 const phonePattern = /^[\+]?[1-9][\d]{0,15}$/;
                 if (!phonePattern.test(stringValue.replace(/[\s\-\(\)]/g, ''))) {
-<<<<<<< HEAD
-                    return 'Please enter a valid phone number';
-
-
-            // Length validation
-            if (field.validation?.minLength && stringValue.length < field.validation.minLength) {
-                return `Minimum length is ${field.validation.minLength} characters`;
-
-            if (field.validation?.maxLength && stringValue.length > field.validation.maxLength) {
-                return `Maximum length is ${field.validation.maxLength} characters`;
-
-            // Pattern validation
-            if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {
-                return 'Please enter a valid value';
-
-=======
                     return 'Please enter a valid phone number'}
             }
             // Length validation
@@ -112,22 +68,13 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             // Pattern validation
             if (field.validation?.pattern && !field.validation.pattern.test(stringValue)) {
                 return 'Please enter a valid value'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Custom validation
             if (field.validation?.custom) {
                 const customError = field.validation.custom(stringValue);
                 if (customError)
-<<<<<<< HEAD
-                    return customError;
-
-
-        return null;
-    }, [fields]);
-=======
                     return customError}
         }
         return null}, [fields]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Handle field change
     const handleFieldChange = useCallback((name, value) => {
         setFormData(prev => ({ ...prev, [name]: value }));
@@ -143,17 +90,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         }));
         // Track form interaction
         if (enableAnalytics) {
-<<<<<<< HEAD
-            trackEvent('form', 'field_changed', name, undefined, { fieldName: name, value: String(value) });
-
-=======
-<<<<<<< HEAD
-            trackEvent('form', 'field_changed', name, null, { fieldName: name, value: String(value) })}
-=======
             trackEvent('form', 'field_changed', name, null, { fieldName: name, value: String(value) });
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [validateField, enableAnalytics, trackEvent]);
     // Handle field blur
     const handleFieldBlur = useCallback((name) => {
@@ -166,14 +104,8 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 isValid: !error,
                 message: error || '',
                 isTouched: true
-<<<<<<< HEAD
-
-        }));
-    }, [formData, validateField]);
-=======
             }
         }))}, [formData, validateField]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Check if form is valid
     const isFormValid = useCallback(() => {
         return Object.values(validation).every(v => v.isValid)}, [validation]);
@@ -185,75 +117,40 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             if (enableAnalytics) {
                 trackEvent('form', 'validation_error', 'form_submission_failed', null, {
                     errors: Object.values(validation).filter(v => !v.isValid).length
-<<<<<<< HEAD
-                });
-
-            return;
-
-=======
                 })}
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // Track form submission start
             if (enableAnalytics) {
-<<<<<<< HEAD
-                trackEvent('form', 'submission_started', 'form_submitted');
-
-=======
                 trackEvent('form', 'submission_started', 'form_submitted')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             await onSubmit(formData);
             // Track successful submission
             if (enableAnalytics) {
                 trackEvent('form', 'submission_success', 'form_completed');
-<<<<<<< HEAD
-                trackConversion('form_submission', 1, { formType: title });
-
-=======
                 trackConversion('form_submission', 1, { formType: title })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setIsSubmitted(true);
             // Reset form after successful submission
             setTimeout(() => {
                 setIsSubmitted(false);
-<<<<<<< HEAD
-                setFormData({ /* empty */ });
-                setValidation({ /* empty */ });
-                setProgress(0);
-            }, 5000);
-
-=======
                 setFormData({});
                 setValidation({});
                 setProgress(0)}, 5000)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             // Track submission error
             if (enableAnalytics) {
                 trackEvent('form', 'submission_error', 'form_failed', null, {
                     error: error instanceof Error ? error.message : 'Unknown error'
-<<<<<<< HEAD
-                });
-<<<<<<< HEAD
-
-            // // // console.error('Form submission failed:', error);
-
-=======
             }
             // // // // // // // console.error('Form submission failed:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
             setIsSubmitting(false);
 
-=======
                 })}
             console.error('Form submission failed:', error)}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [formData, validation, isFormValid, onSubmit, enableAnalytics, trackEvent, trackConversion, title]);
     // Toggle password visibility
     const togglePasswordVisibility = useCallback((fieldName) => {
@@ -265,12 +162,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             case 'tel': return <Phone className="w-4 h-4"/>;
             case 'textarea': return <MessageSquare className="w-4 h-4"/>;
             case 'select': return <Building className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <User className="w-4 h-4"/>;
-
-=======
             default: return <User className="w-4 h-4"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     // Render field
     const renderField = useCallback((field) => {
@@ -428,23 +320,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <p className="text-green-600 dark:text-green-300">
           Your message has been sent successfully. We'll get back to you soon!
         </p>
-<<<<<<< HEAD
-      </motion.div>)}
-    return (<motion.div initial = {
-  { opacity: 0,
-  y: 20 
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-}} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
-=======
       </motion.div>);
-<<<<<<< HEAD
-
-    return (<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
-=======
     }
     return (<motion.div initial = {
   { opacity: 0,
@@ -465,8 +341,6 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Header */}
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">
         <h2 className="text-2xl font-bold mb-2">{title}</h2>
@@ -539,10 +413,4 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </motion.div>)}
         </AnimatePresence>
       </form>
-<<<<<<< HEAD
-    </motion.div>);
-};
-}}}}}}}}}}}}}}}}}}}}}}}}}}</motion.div>}
-=======
     </motion.div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

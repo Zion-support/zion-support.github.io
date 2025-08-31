@@ -1,17 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield import AdvancedServiceInnovationHub from '../components/AdvancedServiceInnovationHub';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-=======
 import { Lightbulb, Rocket, Brain, ArrowRight, Atom, Satellite, Dna, Leaf, Cpu, Shield } from 'lucide-react';
 import AdvancedServiceInnovationHub from "../components/AdvancedServiceInnovationHub";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const ServiceInnovationHub = () => {
     const innovationAreas = [
         {
@@ -421,11 +414,6 @@ const ServiceInnovationHub = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ServiceInnovationHub;
 }}}

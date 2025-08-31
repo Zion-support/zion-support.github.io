@@ -124,15 +124,9 @@ import { Lightbulb, TestTube, Brain, Atom, Target, Award, ArrowRight, TrendingUp
             "Renewable Energy Integration",
             "Carbon Footprint Reduction"
         ],
-<<<<<<< HEAD
-        technologies: ["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
-        partners: ["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
-
-=======
         technologies["Energy Monitoring", "Green Computing", "Renewable Systems", "Sustainability Tools"],
         partners["DOE", "EPA", "Academic Institutions", "Green Tech Companies"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 const innovationStats = [
     { icon: <Lightbulb className="w-6 h-6"/>, value: "120+", label: "Research Projects" },
@@ -603,9 +597,4 @@ export function InnovationResearchSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

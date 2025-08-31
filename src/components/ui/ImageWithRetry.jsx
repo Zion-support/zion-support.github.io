@@ -11,14 +11,6 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
         setCurrentSrc(fallbackSrc)};
     const handleRetry = () => {
         setFailed(false);
-<<<<<<< HEAD
-        setCurrentSrc(src)};
-    return (<div className = {
-  cn('relative inline-block',
-  className)
-
-}>
-=======
         setCurrentSrc(src);
     };
     return (<div className = {
@@ -31,7 +23,6 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
 
 
 }>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img loading="lazy" {...props} src={currentSrc} onError={handleError}/>
       {failed && (<button type="button" onClick={handleRetry} className = {
@@ -46,12 +37,6 @@ export function ImageWithRetry({ src, fallbackSrc = '/images/image-placeholder.s
 }>
           Retry
         </button>)}
-<<<<<<< HEAD
-    </div>);
-
-export default ImageWithRetry;
-}
-=======
     </div>)}
 export default ImageWithRetry;
 
@@ -62,4 +47,3 @@ export default ImageWithRetry;
 export default ImageWithRetry;
 export default ImageWithRetry;
 export default ImageWithRetry;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

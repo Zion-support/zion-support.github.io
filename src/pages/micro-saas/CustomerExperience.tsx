@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap export default function CustomerExperience() {
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react';
 
 export default function CustomerExperience(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Heart,
@@ -23,15 +17,6 @@ export default function CustomerExperience(...args[]):  {
     {
       icon: Users,
       title: 'Personalization',
-<<<<<<< HEAD
-      description: 'Tailored experiences for every customer'
-    },
-    {
-      icon: Star,
-      title: 'Loyalty Programs',
-      description: 'Reward and retain your best customers'
-
-=======
       description: 'Tailored experiences for every customer';
     },;
     {;
@@ -39,7 +24,6 @@ export default function CustomerExperience(...args[]):  {
       title: 'Loyalty Programs',;
       description: 'Reward and retain your best customers';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const capabilities = [
@@ -56,15 +40,6 @@ export default function CustomerExperience(...args[]):  {
     {
       title: 'Automated Engagement',
       description: 'Smart workflows for customer interactions',
-<<<<<<< HEAD
-      icon: Zap
-    },
-    {
-      title: 'Performance Analytics',
-      description: 'Track and improve customer experience metrics',
-      icon: TrendingUp
-
-=======
       icon: Zap;
     },;
     {;
@@ -72,7 +47,6 @@ export default function CustomerExperience(...args[]):  {
       description: 'Track and improve customer experience metrics',;
       icon: TrendingUp;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -349,23 +323,10 @@ export default function CustomerExperience(...args[]):  {
                   Schedule Demo
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

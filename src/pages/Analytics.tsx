@@ -39,12 +39,8 @@ import {
   LineChart,
   AreaChart,
   ScatterPlot
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const Analytics: React.FC = () => {
   const analyticsFeatures = [
@@ -65,15 +61,6 @@ const Analytics: React.FC = () => {
       description: "AI-powered forecasting and trend analysis for strategic planning",
       icon: TrendingUp,
       color: "from-purple-400 to-pink-500"
-<<<<<<< HEAD
-    },
-    {
-      title: "Custom Dashboards",
-      description: "Build personalized dashboards tailored to your business needs",
-      icon: Target,
-      color: "from-orange-400 to-red-500"
-
-=======
     },;
     {;
       title: "Custom Dashboards",;
@@ -81,7 +68,6 @@ const Analytics: React.FC = () => {
       icon: Target,;
       color: "from-orange-400 to-red-500";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const analyticsTypes = [
@@ -106,15 +92,6 @@ const Analytics: React.FC = () => {
       features: ["Machine learning", "Pattern recognition", "Predictive modeling", "Automated insights"],
       path: "/services/ai-data-analytics"
     },
-<<<<<<< HEAD
-    {
-      name: "Financial Analytics",
-      description: "Financial performance tracking and optimization",
-      icon: DollarSign,
-      features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],
-      path: "/services/ai-financial-analytics"
-
-=======
     {;
       name: "Financial Analytics",;
       description: "Financial performance tracking and optimization",;
@@ -122,7 +99,6 @@ const Analytics: React.FC = () => {
       features: ["Revenue analysis", "Cost optimization", "Profit margins", "Financial forecasting"],;
       path: "/services/ai-financial-analytics";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const metrics = [;
@@ -142,13 +118,8 @@ const Analytics: React.FC = () => {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Analytics - Zion Tech Group"
         description="Transform your data into actionable insights with our comprehensive analytics solutions. Real-time monitoring, AI-powered analysis, and custom dashboards."
         keywords="analytics, business intelligence, data analysis, AI analytics, Zion Tech Group"
@@ -582,16 +553,6 @@ const Analytics: React.FC = () => {
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Get Custom Quote
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Get Custom Quote;
               </Link>;
@@ -600,7 +561,6 @@ const Analytics: React.FC = () => {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 

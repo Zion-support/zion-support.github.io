@@ -20,21 +20,12 @@ import {
   Phone,
   Mail,
   MapPin
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import the new services
-<<<<<<< HEAD
-import { ultimateInnovativeServices2025  } from "../../data/2025-ultimate-innovative-services-expansion";
-import { enterpriseITInfrastructureServices2025  } from "../../data/2025-enterprise-it-infrastructure-services";
-import { innovativeMicroSaasSolutions2025  } from "../../data/2025-innovative-micro-saas-solutions";
-=======
 import { ultimateInnovativeServices2025 } from "../../data/2025-ultimate-innovative-services-expansion";
 import { enterpriseITInfrastructureServices2025 } from "../../data/2025-enterprise-it-infrastructure-services";
 import { innovativeMicroSaasSolutions2025 } from "../../data/2025-innovative-micro-saas-solutions";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface Service {
 
@@ -77,11 +68,7 @@ contactInfo: {
   innovationLevel: 'Revolutionary' | 'Breakthrough' | 'Advanced' | 'Emerging';
   patentStatus: 'Patented' | 'Patent Pending' | 'Trade Secret' | 'Open Source';
   aiCapabilities: string[];
-<<<<<<< HEAD
-  marketDisruption: string;
-=======
   marketDisruption: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -119,15 +106,6 @@ const categories = [
     services: enterpriseITInfrastructureServices2025
   },
   {
-<<<<<<< HEAD
-    id: 'micro-saas',
-    name: 'Micro SAAS Solutions',
-    description: 'Innovative software solutions for small businesses',
-    icon: <Code className="w-8 h-8" />,
-    color: 'from-green-600 to-emerald-700',
-    services: innovativeMicroSaasSolutions2025
-
-=======
     id: 'micro-saas',;
     name: 'Micro SAAS Solutions',;
     description: 'Innovative software solutions for small businesses',;
@@ -135,7 +113,6 @@ const categories = [
     color: 'from-green-600 to-emerald-700',;
     services: innovativeMicroSaasSolutions2025;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const innovationLevelColors = {
@@ -187,19 +164,9 @@ export function UltimateServicesShowcase(...args[]):  {
   const filteredServices = selectedCategory === 'all'
     ? allServices
     : categories.find(cat => cat.id === selectedCategory)?.services || [];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const containerVariants = {
     hidden: { opacity: 0 },
-<<<<<<< HEAD
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2
-
-
-=======
     visible: {;
       opacity: 1,;
       transition: {;
@@ -207,7 +174,6 @@ export function UltimateServicesShowcase(...args[]):  {
         delayChildren: 0.2;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
@@ -221,15 +187,6 @@ export function UltimateServicesShowcase(...args[]):  {
 
 },
     visible: {
-<<<<<<< HEAD
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-
-
-=======
       opacity: 1,;
       y: 0,;
       transition: {;
@@ -237,7 +194,6 @@ export function UltimateServicesShowcase(...args[]):  {
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -300,12 +256,6 @@ export function UltimateServicesShowcase(...args[]):  {
         {/* Category Navigation */}
         <motion.div
           className="flex flex-wrap justify-center gap-4 mb-12"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -337,7 +287,6 @@ export function UltimateServicesShowcase(...args[]):  {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <button
             onClick={() => setSelectedCategory('all')}
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
@@ -480,12 +429,6 @@ export function UltimateServicesShowcase(...args[]):  {
         {/* Call to Action */}
         <motion.div
           className="text-center mt-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -517,7 +460,6 @@ export function UltimateServicesShowcase(...args[]):  {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light rounded-2xl p-8 border border-zion-cyan">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -660,26 +602,13 @@ export function UltimateServicesShowcase(...args[]):  {
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      )}
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       )};
     </section>;
   );
-<<<<<<< HEAD
-
-export default UltimateServicesShowcase;}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
@@ -689,4 +618,3 @@ export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
 export default UltimateServicesShowcase;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

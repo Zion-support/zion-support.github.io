@@ -14,21 +14,8 @@ import {
   AlertTriangle,
   Info,
   Share
-<<<<<<< HEAD
-const PrivacyPolicy: React.FC = () => {
-=======
  } from 'lucide-react';
 
-<<<<<<< HEAD
-const PrivacyPolicy: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const lastUpdated = 'January 15, 2024';
-  const compName = 'Zion Tech Group';
-  const website = 'https://ziontechgroup.com';
-  const email = 'privacy@ziontechgroup.com';
-  const phone = '+1 (555) 123-4567';
-  const address = '123 Technology Drive, Innovation City, IC 12345, United States';
-=======
 const PrivacyPolicy = () => {;
   const lastUpdated = '2025-01-15';
   
@@ -166,65 +153,20 @@ const PrivacyPolicy = () => {;
       icon: AlertTriangle;
     };
   ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-
-            <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-zion-cyan/20 rounded-2xl flex items-center justify-center">
-                <Shield className="w-10 h-10 text-zion-cyan" />
-              </div>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Privacy <span className="text-zion-cyan">Policy</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
-              Your privacy is important to us. Learn how we collect, use, and protect your personal information.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-zion-slate-light">
-              <span className="flex items-center gap-2">
-                <Calendar className="w-4 h-4" />
-                Last updated: {lastUpdated}
-              </span>
-              <span className="flex items-center gap-2">
-                <Globe className="w-4 h-4" />
-                {website}
-              </span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-=======
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | Data Protection & Privacy</title>
         <meta name = "description" content="Learn about Zion Tech Group's privacy practices, data protection measures, and how we handle your personal information." />
         <meta name="keywords" content="privacy policy, data protection, GDPR, CCPA, Zion Tech Group, privacy practices" />
       </Helmet>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="max-w-7xl mx-auto">
             <motion.div
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="mb-12"
-
-=======
               initial = {
   { opacity: 0,
   y: 20 
@@ -248,7 +190,6 @@ const PrivacyPolicy = () => {;
               transition={{ duration: 0.6 }}
               className="text-center"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Info className="w-8 h-8 text-zion-cyan" />
                 Introduction
@@ -419,8 +360,6 @@ const PrivacyPolicy = () => {;
                 Information Sharing and Disclosure
               </h2>
 
-<<<<<<< HEAD
-=======
               <p className="text-zion-slate-light mb-4">
                 We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
               </p>
@@ -672,25 +611,6 @@ const PrivacyPolicy = () => {;
 
             {/* How We Use Your Information */}
             <motion.div
-<<<<<<< HEAD
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.8,
-  delay: 0.2 
-
-}}
-              viewport={{ once: true }}
-              className="mb-12"
-=======
               initial = {
   { opacity: 0,
   y: 20 
@@ -721,17 +641,12 @@ const PrivacyPolicy = () => {;
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             >
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 How We Use Your Information
               </h2>
               
-<<<<<<< HEAD
-              <p className="text-zion-slate-light mb-4">
-                We use the information we collect for various purposes, including:
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {sections.map((section, index) => (
                   <motion.a
@@ -1065,7 +980,6 @@ const PrivacyPolicy = () => {;
               </h2>
               <p className="text-xl text-green-100 mb-8">
                 Our privacy team is here to help. Contact us with any questions about your data or our privacy practices.
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </p>
               
               <ul className="space-y-3 text-zion-slate-light ml-6">
@@ -1125,7 +1039,6 @@ const PrivacyPolicy = () => {;
                 Information Sharing and Disclosure
               </h2>
               
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <p className="text-zion-slate-light mb-4">
                 We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except in the following circumstances:
               </p>
@@ -1439,22 +1352,7 @@ const PrivacyPolicy = () => {;
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-
-=======
               
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-              <p className="text-zion-slate-light mt-6">
-                We will respond to your inquiry within 30 days of receipt.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
               <div className = "mt-8">
                 <button className="px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors">
                   Contact Privacy Team
@@ -1467,6 +1365,5 @@ const PrivacyPolicy = () => {;
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default PrivacyPolicy;}

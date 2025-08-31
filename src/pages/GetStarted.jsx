@@ -2,39 +2,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, Clock const GetStarted = () => {
     const [currentStep, setCurrentStep] = useState(1);
-<<<<<<< HEAD
-    const steps = [
-        {
-            number: 1,
-            title: "Discovery Call",
-            description: "Schedule a free consultation to discuss your needs",
-            icon: Phone,
-            color: "from-blue-500 to-cyan-500"
-        },
-        {
-            number: 2,
-            title: "Solution Design",
-            description: "We'll design a customized solution for your business",
-            icon: Brain,
-            color: "from-purple-500 to-pink-500"
-        },
-        {
-            number: 3,
-            title: "Implementation",
-            description: "Our team implements the solution with your team",
-            icon: Star,
-            color: "from-green-500 to-teal-500"
-        },
-        {
-            number: 4,
-            title: "Launch & Support",
-            description: "Go live with ongoing support and optimization",
-            icon: CheckCircle,
-            color: "from-orange-500 to-red-500"
-
-    ];
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const services = [
         {
             title: "AI & Autonomous Systems",
@@ -62,13 +29,8 @@ import { Star, CheckCircle, ArrowRight, Users, Phone, Mail, Brain, Shield, Zap, 
             description: "Modernize your technology foundation",
             icon: Zap,
             color: "from-green-500 to-teal-600",
-<<<<<<< HEAD
-            features: ["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]
-
-=======
             features["Cloud Migration", "DevOps Automation", "Edge Computing", "Data Center Optimization"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const benefits = [
         "Free initial consultation",

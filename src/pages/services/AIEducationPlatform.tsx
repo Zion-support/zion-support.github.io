@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  Brain,
-  GraduationCap,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -19,7 +7,6 @@ import { Brain,
   Target, 
   Users, 
   BarChart3, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -45,13 +32,9 @@ import { Brain,
   Users as UsersIcon,
   Award,
   Lightbulb
-<<<<<<< HEAD
-export default function AIEducationPlatform() {
-=======
  } from 'lucide-react';
 
 export default function AIEducationPlatform(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered personalized learning paths",
     "Intelligent content recommendation",
@@ -130,20 +113,6 @@ export default function AIEducationPlatform(...args[]):  {
         "White-label solutions",
         "Advanced integrations",
         "Custom content creation",
-<<<<<<< HEAD
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Unlimited users"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
         "Dedicated account manager",;
         "24/7 phone support",;
         "Unlimited users";
@@ -156,7 +125,6 @@ export default function AIEducationPlatform(...args[]):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Education Platform - Zion Tech Group"
         description="Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student."
       />
@@ -646,23 +614,10 @@ export default function AIEducationPlatform(...args[]):  {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-<<<<<<< HEAD
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -2,14 +2,6 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 export function LoadingSkeleton({ className, count = 1, height = "h-4", width = "w-full", rounded = true }) {
     return (<>
-<<<<<<< HEAD
-      {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
-  cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
-  className)
-
-} animate={{
-                background[
-=======
       {Array.from({ length: count }).map((_, index) => (<motion.div key={index} className = {
   cn("bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark", height, width, rounded && "rounded",
   className)
@@ -22,7 +14,6 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
 } animate = {
   {
                 background: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%, hsl(var(--zion-slate-dark)) 100%)",
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 100%, hsl(var(--zion-slate-dark)) 0%)",
                     "linear-gradient(90deg, hsl(var(--zion-slate-dark)) 0%, hsl(var(--zion-blue-dark)) 50%,
@@ -50,12 +41,7 @@ export function LoadingSkeleton({ className, count = 1, height = "h-4", width = 
 }} style={{
                 backgroundSize: "200% 100%"
             }}/>))}
-<<<<<<< HEAD
-    </>);
-
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function CardSkeleton({ className }) {
     return (<div className = {
   cn("p-6 border border-zion-blue-light/20 rounded-xl bg-zion-blue-dark/50",
@@ -79,12 +65,7 @@ export function CardSkeleton({ className }) {
         <LoadingSkeleton height="h-3" width="w-5/6"/>
         <LoadingSkeleton height="h-3" width="w-4/6"/>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function GridSkeleton({ columns = 3, className }) {
     return (<div className = {
   cn("grid gap-6", columns === 1 && "grid-cols-1", columns === 2 && "grid-cols-1 sm:grid-cols-2", columns === 3 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3", columns === 4 && "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4",
@@ -97,12 +78,7 @@ export function GridSkeleton({ columns = 3, className }) {
 
 }>
       {Array.from({ length: columns }).map((_, index) => (<CardSkeleton key={index}/>))}
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function HeroSkeleton({ className }) {
     return (<div className = {
   cn("py-20 md:py-32 min-h-screen flex items-center",
@@ -122,9 +98,4 @@ export function HeroSkeleton({ className }) {
           <LoadingSkeleton height="h-14" width="w-40" className="rounded-md"/>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card>}}}</motion.div>}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

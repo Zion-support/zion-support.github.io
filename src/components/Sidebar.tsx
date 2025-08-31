@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
+  Menu, 
+  X, 
   Home, 
   Settings, 
   Brain, 
@@ -10,6 +12,13 @@ import {
   Heart, 
   Globe, 
   ShoppingCart, 
+  BookOpen, 
+  MessageCircle, 
+  HelpCircle, 
+  DollarSign, 
+  Gauge, 
+  Workflow, 
+  Atom, 
   Star, 
   Building, 
   BookOpen, 
@@ -53,15 +62,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['main', 'services']);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
-
-  const navigationSections = [
+  const navigation: SidebarItem[] = [
     {
       id: 'main',
       title: 'Main Navigation',
@@ -91,14 +92,14 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       id: 'ai-solutions',
       title: 'AI Solutions',
       icon: Brain,
-      links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', icon: BarChart3, description: 'AI-powered analytics' },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', icon: Target, description: 'Sales automation' },
-        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation', icon: FileText, description: 'Content generation' },
-        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', icon: TrendingUp, description: 'Supply chain optimization' },
-        { name: 'AI HR Platform', href: '/services/ai-hr-platform', icon: Users, description: 'Human resources automation' },
-        { name: 'AI Legal Research', href: '/services/ai-legal-research-platform', icon: Scale, description: 'Legal document analysis' },
-        { name: 'AI Education Platform', href: '/services/ai-education-platform', icon: GraduationCap, description: 'Educational technology' }
+      items: [
+        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+        { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
+        { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield, description: 'Data Protection & Compliance' },
+        { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Users, description: 'Customer Insights & Analytics' },
+        { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Brain, description: 'Medical AI & Diagnostics' },
+        { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: TrendingUp, description: 'FinTech AI Solutions' },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Workflow, description: 'Supply Chain AI' }
       ]
     },
     {

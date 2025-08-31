@@ -35,118 +35,12 @@ import {
   Building,
   Car,
   Plane
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const blockchainSolutions = [
-  {
-    id: 1,
-    title: "Smart Contract Development",
-    description: "Custom smart contracts for automated business logic and decentralized applications.",
-    icon: Code,
-    features[
-      "Custom contract development",
-      "Security auditing",
-      "Gas optimization",
-      "Testing & deployment"
-    ],
-    price: "From $25,000",
-    timeline: "8-16 weeks",
-    category: "Development",
-    technologies["Solidity", "Rust", "Vyper", "Move"]
-  },
-  {
-    id: 2,
-    title: "DeFi Platform Development",
-    description: "Decentralized finance platforms for lending, trading, and yield farming.",
-    icon: TrendingUp,
-    features[
-      "Lending protocols",
-      "DEX development",
-      "Yield farming",
-      "Liquidity management"
-    ],
-    price: "From $80,000",
-    timeline: "20-32 weeks",
-    category: "DeFi",
-    technologies["Ethereum", "Polygon", "BSC", "Layer 2"]
-  },
-  {
-    id: 3,
-    title: "NFT Marketplace",
-    description: "Non-fungible token marketplaces for digital art, collectibles, and gaming assets.",
-    icon: Building,
-    features[
-      "Marketplace infrastructure",
-      "NFT minting",
-      "Trading mechanisms",
-      "Royalty systems"
-    ],
-    price: "From $60,000",
-    timeline: "16-24 weeks",
-    category: "NFT",
-    technologies["ERC-721", "ERC-1155", "IPFS", "MetaMask"]
-  },
-  {
-    id: 4,
-    title: "Supply Chain Tracking",
-    description: "Blockchain-based supply chain solutions for transparency and traceability.",
-    icon: Truck,
-    features[
-      "Product tracking",
-      "Authenticity verification",
-      "Compliance reporting",
-      "Real-time monitoring"
-    ],
-    price: "From $100,000",
-    timeline: "24-36 weeks",
-    category: "Supply Chain",
-    technologies["Hyperledger", "Ethereum", "IoT Integration", "QR Codes"]
-  },
-  {
-    id: 5,
-    title: "Identity Management",
-    description: "Decentralized identity solutions for secure and privacy-preserving authentication.",
-    icon: Key,
-    features[
-      "Self-sovereign identity",
-      "Zero-knowledge proofs",
-      "Credential verification",
-      "Privacy protection"
-    ],
-    price: "From $70,000",
-    timeline: "20-28 weeks",
-    category: "Identity",
-    technologies["DID", "Verifiable Credentials", "ZK-SNARKs", "IPFS"]
-  },
-  {
-    id: 6,
-    title: "Cross-Chain Solutions",
-    description: "Interoperability solutions for seamless communication between different blockchains.",
-    icon: Network,
-    features[
-      "Cross-chain bridges",
-      "Asset transfers",
-      "Data sharing",
-      "Protocol integration"
-    ],
-    price: "From $120,000",
-    timeline: "28-40 weeks",
-    category: "Interoperability",
-<<<<<<< HEAD
-    technologies: ["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
-
-=======
     technologies["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const blockchainTechnologies = [
   {
     name: "Ethereum",
@@ -262,13 +156,8 @@ const blockchainBenefits = [
     title: "Automation",
     description: "Smart contracts execute automatically based on predefined conditions",
     icon: Zap,
-<<<<<<< HEAD
-    examples: ["Automated payments", "Conditional logic", "Business process automation"]
-
-=======
     examples["Automated payments", "Conditional logic", "Business process automation"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function Blockchain() {
@@ -943,9 +832,4 @@ export default function Blockchain() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -576,144 +576,8 @@ import {
   Shield,
   Zap,
   Brain
-<<<<<<< HEAD
-const soc2Solutions = [
-  {
-    id: 1,
-    title: "SOC2 Compliance Monitoring",
-    description: "Automated monitoring and tracking of SOC2 compliance requirements.",
-    icon: Shield,
-    features: [
-      "Real-time monitoring",
-      "Compliance tracking",
-      "Automated alerts",
-      "Audit trails"
-    ],
-    price: "From $150,000",
-    timeline: "20-32 weeks",
-    category: "Monitoring",
-    technologies: ["AI Monitoring", "Compliance", "Automation", "Audit Trails"]
-  },
-  {
-    id: 2,
-    title: "Automated Policy Management",
-    description: "AI-powered system for managing and enforcing SOC2 policies.",
-    icon: FileText,
-    features: [
-      "Policy automation",
-      "Compliance checking",
-      "Policy updates",
-      "Enforcement tracking"
-    ],
-    price: "From $120,000",
-    timeline: "18-30 weeks",
-    category: "Policy Management",
-    technologies: ["AI", "Policy Automation", "Compliance", "Enforcement"]
-  },
-  {
-    id: 3,
-    title: "Risk Assessment Automation",
-    description: "Intelligent system for automated risk assessment and management.",
-    icon: AlertTriangle,
-    features: [
-      "Risk identification",
-      "Assessment automation",
-      "Mitigation tracking",
-      "Risk reporting"
-    ],
-    price: "From $180,000",
-    timeline: "22-34 weeks",
-    category: "Risk Management",
-    technologies: ["AI Risk Assessment", "Automation", "Risk Analysis", "Reporting"]
-  },
-  {
-    id: 4,
-    title: "Audit Preparation System",
-    description: "AI-driven system for preparing and managing SOC2 audits.",
-    icon: CheckCircle,
-    features: [
-      "Audit preparation",
-      "Documentation automation",
-      "Evidence collection",
-      "Compliance reporting"
-    ],
-    price: "From $200,000",
-    timeline: "24-36 weeks",
-    category: "Audit Preparation",
-    technologies: ["AI", "Audit Automation", "Documentation", "Compliance"]
-  },
-  {
-    id: 5,
-    title: "Security Control Automation",
-    description: "Automated implementation and monitoring of security controls.",
-    icon: Lock,
-    features: [
-      "Control automation",
-      "Security monitoring",
-      "Compliance validation",
-      "Control reporting"
-    ],
-    price: "From $250,000",
-    timeline: "28-40 weeks",
-    category: "Security Controls",
-    technologies: ["AI Security", "Automation", "Monitoring", "Compliance"]
-  },
-  {
-    id: 6,
-    title: "Compliance Reporting Platform",
-    description: "Comprehensive platform for SOC2 compliance reporting and analytics.",
-    icon: BarChart3,
-    features: [
-      "Automated reporting",
-      "Compliance analytics",
-      "Dashboard views",
-      "Executive summaries"
-    ],
-    price: "From $160,000",
-    timeline: "20-32 weeks",
-    category: "Reporting",
-    technologies: ["AI Reporting", "Analytics", "Dashboards", "Automation"]
-
-];
-
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const soc2Technologies = [
-  {
-    name: "AI Compliance Monitoring",
-    description: "Intelligent monitoring of compliance requirements",
-    icon: Shield,
-    useCase: "Compliance Monitoring",
-    reliability: "Critical"
-  },
-  {
-    name: "Policy Automation",
-    description: "Automated policy management and enforcement",
-    icon: FileText,
-    useCase: "Policy Management",
-    reliability: "Critical"
-  },
-  {
-    name: "Risk Assessment AI",
-    description: "AI-powered risk assessment and management",
-    icon: AlertTriangle,
-    useCase: "Risk Management",
-    reliability: "High"
-  },
-  {
-    name: "Security Automation",
-    description: "Automated security control implementation",
-    icon: Lock,
-    useCase: "Security Controls",
-    reliability: "High"
-
-];
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const successStories = [
   {
     id: 1,
@@ -798,13 +662,8 @@ const soc2Benefits = [
     title: "Audit Success",
     description: "Automated systems improve audit preparation and success rates",
     icon: CheckCircle,
-<<<<<<< HEAD
-    examples: ["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]
-
-=======
     examples["Better preparation", "Automated evidence", "Compliance reporting", "Audit success"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function SOC2ComplianceAutomation() {
@@ -1479,9 +1338,4 @@ export default function SOC2ComplianceAutomation() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

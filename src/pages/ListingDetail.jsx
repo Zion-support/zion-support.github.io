@@ -1,18 +1,13 @@
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
 import { ChatWidget } from "@/components/ChatWidget";
-import { useRouter } from "next/router";
+import { useNavigate } from 'react-router-dom';
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import ImageWithRetry from '@/components/ui/ImageWithRetry';
-<<<<<<< HEAD
-import { Star, MessageSquare, Brain, Shield import { cn } from "@/lib/utils";
-import { Link } from 'react-router-dom';
-=======
 import { Star, MessageSquare, Brain, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
-import Link from 'next/link';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { Link } from 'react-router-dom';
 import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
 import { toast } from "@/hooks/use-toast";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
@@ -21,7 +16,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 export default function ListingDetail() {
     // useParams may be untyped in this environment, so avoid passing a
     // type argument and cast the result instead to prevent TS2347 errors.
-    const router = useRouter();
+    const router = useNavigate();
     const id = router.query.id;
     const [selectedImageIndex, setSelectedImageIndex] = useState(0);
     const [isLoading, setIsLoading] = useState(false);
@@ -41,24 +36,12 @@ export default function ListingDetail() {
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>);
-
-    const handleContact = () => {
-        if (user) {
-            setIsChatOpen(true);
-
-        else {
-            setIsContactDialogOpen(true);
-
-=======
         </div>)}
     const handleContact = () => {
         if (user) {
             setIsChatOpen(true)}
         else {
             setIsContactDialogOpen(true)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -182,7 +165,6 @@ export default function ListingDetail() {
                 
 
 })}}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
-=======
   description: "Redirecting to secure checkout..."
                 
 
@@ -191,7 +173,6 @@ export default function ListingDetail() {
 
 });
             }}/>) : (<Button onClick={handleContact} disabled={isLoading} className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>)}
 
@@ -245,9 +226,4 @@ export default function ListingDetail() {
      profileName={listing.author.name} profileType="service"/>
         </DialogContent>
       </Dialog>;
-<<<<<<< HEAD
-    ;
-}}}}}
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

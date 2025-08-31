@@ -36,12 +36,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'seo'
                 });
                 seoScore -= 10;
-<<<<<<< HEAD
-                engagementScore -= 10;
-
-=======
                 engagementScore -= 10}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for very short content
             if (words.length > 0 && words.length < 10) {
                 issues.push({
@@ -56,12 +51,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'engagement'
                 });
                 engagementScore -= 5;
-<<<<<<< HEAD
-                seoScore -= 3;
-
-=======
                 seoScore -= 3}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for very long paragraphs (hard to read)
             if (words.length > 100) {
                 issues.push({
@@ -76,12 +66,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     impact: 'readability'
                 });
                 readabilityScore -= 5;
-<<<<<<< HEAD
-                engagementScore -= 3;
-
-=======
                 engagementScore -= 3}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for proper heading structure
             if (element.tagName.match(/^H[1-6]$/)) {
                 const level = parseInt(element.tagName.charAt(1));
@@ -100,16 +85,9 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             suggestion: 'Ensure heading levels follow logical sequence',
                             impact: 'accessibility'
                         });
-<<<<<<< HEAD
-                        seoScore -= 3;
-
-
-
-=======
                         seoScore -= 3}
                 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for keyword stuffing
             const commonWords = text.toLowerCase().match(/\b\w+\b/g) || [];
             const wordFrequency = { /* empty */ };
@@ -130,14 +108,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                             suggestion: 'Reduce keyword density for more natural content',
                             impact: 'seo'
                         });
-<<<<<<< HEAD
-                        seoScore -= 5;
-
-
-=======
                         seoScore -= 5}
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             });
             // Check for proper meta descriptions
             if (element.tagName === 'META' && element.getAttribute('name') === 'description') {
@@ -154,12 +126,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
-<<<<<<< HEAD
-                    seoScore -= 5;
-
-=======
                     seoScore -= 5}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 else if (content.length > 160) {
                     issues.push({
                         id: `long-meta-${index}`,
@@ -172,14 +139,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Meta descriptions should be 150-160 characters for optimal display',
                         impact: 'seo'
                     });
-<<<<<<< HEAD
-                    seoScore -= 2;
-
-
-=======
                     seoScore -= 2}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for broken links
             if (element.tagName === 'A') {
                 const href = element.getAttribute('href');
@@ -195,14 +156,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         suggestion: 'Ensure link points to valid URL or page section',
                         impact: 'engagement'
                     });
-<<<<<<< HEAD
-                    engagementScore -= 3;
-
-
-=======
                     engagementScore -= 3}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Check for images without alt text
             if (element.tagName === 'IMG') {
                 const alt = element.getAttribute('alt');
@@ -219,14 +174,8 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         impact: 'accessibility'
                     });
                     seoScore -= 8;
-<<<<<<< HEAD
-                    engagementScore -= 5;
-
-
-=======
                     engagementScore -= 5}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         });
         // Generate suggestions based on analysis
         if (wordCount < 300) {
@@ -238,12 +187,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'high',
                 implementation: 'Add relevant sections, expand existing content, include more examples',
                 expectedImpact: 15
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (readabilityScore < 80) {
             suggestions.push({
                 id: 'improve-readability',
@@ -253,12 +197,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'medium',
                 implementation: 'Use shorter sentences, break up long paragraphs, simplify complex language',
                 expectedImpact: 12
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (seoScore < 80) {
             suggestions.push({
                 id: 'seo-optimization',
@@ -268,12 +207,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'high',
                 implementation: 'Fix meta descriptions, add alt text, improve heading structure',
                 expectedImpact: 20
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (engagementScore < 80) {
             suggestions.push({
                 id: 'engagement-improvement',
@@ -283,12 +217,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                 priority: 'medium',
                 implementation: 'Add interactive elements, improve content structure, include calls-to-action',
                 expectedImpact: 10
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Calculate overall score
         const overallScore = Math.round((readabilityScore + seoScore + engagementScore) / 3);
         const analysisResult = {
@@ -314,10 +243,6 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     const autoFixIssues = useCallback(() => {
         if (!analysis)
             return;
-<<<<<<< HEAD
-        const fixableIssues = analysis.issues.filter(issue => issue.fixable);
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const fixedCount = 0;
         fixableIssues.forEach(issue => {
             if (issue.element) {
@@ -325,26 +250,15 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                     case 'empty-content':
                         if (issue.element.textContent?.trim() === '') {
                             issue.element.innerHTML = '<em>Content placeholder - please add relevant information</em>';
-<<<<<<< HEAD
-                            fixedCount++;
-
-=======
                             fixedCount++}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         break;
                     case 'missing-alt':
                         if (issue.element.tagName === 'IMG') {
                             const img = issue.element;
                             if (!img.alt) {
                                 img.alt = 'Image';
-<<<<<<< HEAD
-                                fixedCount++;
-
-
-=======
                                 fixedCount++}
                         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         break;
                     case 'short-meta':
                     case 'long-meta':
@@ -352,18 +266,6 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
                         break;
                     case 'broken-link':
                         // These would require more complex logic to fix
-<<<<<<< HEAD
-                        break;
-
-
-        });
-        if (fixedCount > 0) {
-            // Re-analyze content after fixes
-            setTimeout(analyzeContent, 500);
-
-        return fixedCount;
-    }, [analysis, analyzeContent]);
-=======
                         break}
             }
         });
@@ -371,7 +273,6 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             // Re-analyze content after fixes
             setTimeout(analyzeContent, 500)}
         return fixedCount}, [analysis, analyzeContent]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Highlight element in page
     const highlightElement = useCallback((element) => {
         // Remove previous highlights
@@ -390,12 +291,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
     useEffect(() => {
         if (autoAnalyze) {
             const timer = setTimeout(analyzeContent, 3000);
-<<<<<<< HEAD
-            return () => clearTimeout(timer);
-
-=======
             return () => clearTimeout(timer)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoAnalyze, analyzeContent]);
     // Get score color
     const getScoreColor = (score) => {
@@ -417,12 +313,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get priority color
     const getPriorityColor = (priority) => {
@@ -430,12 +321,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
             case 'high': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
             case 'low': return 'text-blue-600 bg-blue-100 dark:bg-blue-900/30';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       {/* Content Quality Toggle Button */}
@@ -705,12 +591,7 @@ export const ContentQualityEnhancer = ({ className = '', showAnalysis = true, au
           outline: 3px solid #8b5cf6 !important;
           outline-offset: 2px !important;
           background-color: rgba(139, 92, 246, 0.1) !important;
-<<<<<<< HEAD
-          transition: all 0.3s ease !important;
-
-=======
           transition: all 0.3s ease !important}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       `}</style>
     </>)};
 export default ContentQualityEnhancer;

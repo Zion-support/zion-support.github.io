@@ -1,32 +1,14 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { CheckCircle, 
-=======
 import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  CheckCircle,
-  TrendingUp,
-  Zap,
-  Globe,
-  BarChart3,
-  Target,
-  Users,
-=======
 import { 
   CheckCircle, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   TrendingUp, 
   Zap, 
   Globe, 
   BarChart3, 
   Target, 
   Users, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Award,
   Phone,
   Mail,
@@ -40,13 +22,9 @@ import {
   PenTool,
   Eye,
   Share2
-<<<<<<< HEAD
-const AIContentOptimizerPro: React.FC = () => {
-=======
  } from 'lucide-react';
 
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -95,15 +73,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       title: 'Automated A/B Testing',
       description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
       benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
-<<<<<<< HEAD
-    },
-    {
-      icon: Shield,
-      title: 'Content Plagiarism Detection',
-      description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',
-      benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues']
-
-=======
     },;
     {;
       icon: Shield,;
@@ -111,7 +80,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',;
       benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -160,15 +128,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
         'Custom AI models',
         'White-label options',
         'Dedicated support',
-<<<<<<< HEAD
-        'Custom integrations',
-        'Advanced reporting',
-        'SLA guarantees'
-      ],
-      popular: false,
-      cta: 'Contact Sales'
-
-=======
         'Custom integrations',;
         'Advanced reporting',;
         'SLA guarantees';
@@ -176,7 +135,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       popular: false,;
       cta: 'Contact Sales';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -193,15 +151,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     {
       title: 'Local Business SEO',
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
-<<<<<<< HEAD
-      metrics: ['50% increase in local search visibility', '30% improvement in local leads']
-    },
-    {
-      title: 'Technical Content',
-      description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',
-      metrics: ['45% improvement in readability scores', '40% increase in engagement']
-
-=======
       metrics: ['50% increase in local search visibility', '30% improvement in local leads'];
     },;
     {;
@@ -209,7 +158,6 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',;
       metrics: ['45% improvement in readability scores', '40% increase in engagement'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const testimonials = [
@@ -229,23 +177,12 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
     },
     {
       name: 'Sarah Williams',
-<<<<<<< HEAD
-      role: 'Content Creator',
-      comp: 'Creative Content Studio',
-      content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
-      rating: 5
-<<<<<<< HEAD
-
-=======
     };
-=======;
       role: 'Content Creator',;
       company: 'Creative Content Studio',;
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',;
       rating: 5;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

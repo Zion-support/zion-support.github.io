@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Search, MapPin, Briefcase, Star const TalentDirectory = () => {
-=======
 import SEO from "@/components/SEO";
 import { Search, MapPin, Briefcase, Star } from 'lucide-react';
 const TalentDirectory = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const talents = [
         {
             id: 1,
@@ -116,10 +111,6 @@ const TalentDirectory = () => {
               {" "}Talent
             </span>
           </motion.h1>
-<<<<<<< HEAD
-          <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Connect with world-class technology professionals and experts in AI, cloud computing,
-=======
           <motion.p className="text-xl md:text-2xl text-violet-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
   { opacity: 0,
   y: 20 
@@ -149,7 +140,6 @@ const TalentDirectory = () => {
 
 }}>
             Connect with world-class technology professionals and experts in AI, cloud computing, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             cybersecurity, and more. Find the perfect talent for your next project.
           </motion.p>
           <motion.div initial = {

@@ -13,19 +13,10 @@ export default function ServiceDescriptionGenerator() {
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>
-<<<<<<< HEAD
-      </div>);
-
-    // Redirect to login if not authenticated
-    if (!isAuthenticated) {
-        return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace/>;
-
-=======
       </div>)}
     // Redirect to login if not authenticated
     if (!isAuthenticated) {
         return <Navigate to="/login" state={{ from: '/service-description-generator' }} replace/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleDescriptionSave = (editedDescription) => {
         setGeneratedDescription(editedDescription);
         // Here you could also save to database if needed
@@ -47,11 +38,5 @@ export default function ServiceDescriptionGenerator() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </div>);
-}}}
-=======
       
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

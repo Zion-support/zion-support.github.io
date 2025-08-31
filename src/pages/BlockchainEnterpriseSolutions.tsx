@@ -265,11 +265,8 @@ import {
   AVLTree,
   SplayTree,
   Treap,
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const blockchainSolutions = [
   {
     id: 1,
@@ -362,24 +359,13 @@ const blockchainSolutions = [
       "Data migration",
       "Legacy support"
     ],
-<<<<<<< HEAD
-    price: "From $200,000",
-    timeline: "18-30 weeks",
-    category: "Integration",
-<<<<<<< HEAD
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]
-
-=======
     technologies["Integration", "APIs", "Migration", "Legacy Systems"]
   };
-=======;
     price: "From $200,000",;
     timeline: "18-30 weeks",;
     category: "Integration",;
     technologies: ["Integration", "APIs", "Migration", "Legacy Systems"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const blockchainTechnologies = [
@@ -404,15 +390,6 @@ const blockchainTechnologies = [
     useCase: "Network Security",
     reliability: "High"
   },
-<<<<<<< HEAD
-  {
-    name: "Cryptography",
-    description: "Advanced cryptographic security solutions",
-    icon: Lock,
-    useCase: "Security & Privacy",
-    reliability: "High"
-
-=======
   {;
     name: "Cryptography",;
     description: "Advanced cryptographic security solutions",;
@@ -420,7 +397,6 @@ const blockchainTechnologies = [
     useCase: "Security & Privacy",;
     reliability: "High";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -444,15 +420,6 @@ const successStories = [
   },
   {
     id: 3,
-<<<<<<< HEAD
-    company: "Healthcare Identity Solutions",
-    industry: "Healthcare",
-    challenge: "Needed secure patient identity management system",
-    solution: "Built blockchain-based identity management platform",
-    results: "100% data security, 90% faster verification, better privacy, improved compliance",
-    logo: "HIS"
-
-=======
     comp: "Healthcare Identity Solutions",;
     industry: "Healthcare",;
     challenge: "Needed secure patient identity management system",;
@@ -460,7 +427,6 @@ const successStories = [
     results: "100% data security, 90% faster verification, better privacy, improved compliance",;
     logo: "HIS";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const processSteps = [
@@ -485,15 +451,6 @@ const processSteps = [
     icon: Wrench,
     duration: "16-48 weeks"
   },
-<<<<<<< HEAD
-  {
-    step: 4,
-    title: "Testing & Deployment",
-    description: "Test blockchain systems and deploy to production",
-    icon: Gauge,
-    duration: "4-8 weeks"
-
-=======
   {;
     step: 4,;
     title: "Testing & Deployment",;
@@ -501,7 +458,6 @@ const processSteps = [
     icon: Gauge,;
     duration: "4-8 weeks";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const blockchainBenefits = [
@@ -524,24 +480,13 @@ const blockchainBenefits = [
     examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]
   },
   {
-<<<<<<< HEAD
-    title: "Cost Reduction",
-    description: "Blockchain eliminates intermediaries and reduces operational costs",
-    icon: TrendingUp,
-<<<<<<< HEAD
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
-
-=======
     examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
   };
-=======;
     title: "Cost Reduction",;
     description: "Blockchain eliminates intermediaries and reduces operational costs",;
     icon: TrendingUp,;
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {
@@ -553,7 +498,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
   const filteredSolutions = selectedCategory === 'All'
     ? blockchainSolutions
     : blockchainSolutions.filter(solution => solution.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-futuristic">
@@ -1212,23 +1156,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
                 Blockchain Consultation
               </a>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

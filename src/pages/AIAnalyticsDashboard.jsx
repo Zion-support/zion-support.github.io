@@ -2,14 +2,9 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star import { Link } from "react-router-dom";
-=======
 import SEO from "@/components/SEO";
 import { BarChart3, TrendingUp, Brain, Zap, ArrowRight, CheckCircle, Star } from "lucide-react";
 import { Link } from "react-router-dom";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function AIAnalyticsDashboard() {
     const features = [
         {
@@ -260,9 +255,4 @@ export default function AIAnalyticsDashboard() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -6,17 +6,9 @@ const EnhancedScrollToTop = () => {
     useEffect(() => {
         const toggleVisibility = () => {
             if (window.pageYOffset > 300) {
-<<<<<<< HEAD
-                setIsVisible(true);
-
-            else {
-                setIsVisible(false);
-
-=======
                 setIsVisible(true)}
             else {
                 setIsVisible(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         window.addEventListener('scroll', toggleVisibility);
         return () => window.removeEventListener('scroll', toggleVisibility)}, []);

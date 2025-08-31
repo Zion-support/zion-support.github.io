@@ -47,24 +47,14 @@ export default function EditPostPage() {
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!post) {
         return (<div className="container py-8">
           <h1>Post not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Check if the user is the author or an admin
     const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
     if (!isAuthor && !isAdmin) {
@@ -74,12 +64,7 @@ export default function EditPostPage() {
           <Button asChild>
             <Link to={`/community/post/${postId}`}>Back to Post</Link>
           </Button>
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const initialValues = {
   title: post.title,
         content: post.content,
@@ -103,28 +88,14 @@ export default function EditPostPage() {
                 description: "Your post has been updated successfully"
             });
             // Redirect back to the post
-<<<<<<< HEAD
-            navigate(`/community/post/${postId}`);
-
-=======
-<<<<<<< HEAD
-            router(`/community/post/${postId}`)}
-=======
             router(`/community/post/${postId}`);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             toast({
                 title: "Error",
                 description: "There was a problem updating your post",
                 variant: "destructive"
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<SEO title="Edit Post | Community Forum | Zion AI Marketplace" description="Edit your discussion post in the Zion AI Marketplace community forum." keywords="community, forum, discussion, edit post"/>
         ,
@@ -144,9 +115,4 @@ export default function EditPostPage() {
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
 
         <PostForm initialValues={initialValues} onSubmit={handleSubmit} isEditing={true}/>
-<<<<<<< HEAD
-      </div>);
-}}}}}}
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

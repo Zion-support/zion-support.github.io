@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import {
-  Shield,
-  Brain,
-  BarChart3,
-  AlertTriangle,
-  Zap,
-  Lock,
-  Target,
-=======
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
@@ -21,7 +8,6 @@ import { Shield,
   Zap, 
   Lock, 
   Target, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   ArrowRight,
   Star,
@@ -30,13 +16,9 @@ import { Shield,
   TrendingUp,
   Eye,
   Cpu
-<<<<<<< HEAD
-const AIFinancialFraudDetection: React.FC = () => {
-=======
  } from 'lucide-react';
 
 const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -51,15 +33,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     {
       icon: Shield,
       title: "Multi-Layer Security",
-<<<<<<< HEAD
-      description: "Comprehensive fraud prevention combining AI detection, rule-based systems, and human expertise for maximum protection."
-    },
-    {
-      icon: Target,
-      title: "Adaptive Learning",
-      description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."
-
-=======
       description: "Comprehensive fraud prevention combining AI detection, rule-based systems, and human expertise for maximum protection.";
     },;
     {;
@@ -67,7 +40,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
       title: "Adaptive Learning",;
       description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -112,33 +84,17 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     },
     {
       plan: "Enterprise",
-<<<<<<< HEAD
-      price: "Custom",
-      period: "",
-      features["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
-      popular: false
-<<<<<<< HEAD
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO
-=======
     };
-=======;
       price: "Custom",;
       period: "",;
       features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],;
       popular: false;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Financial Fraud Detection Platform - Zion Tech Group"
         description="Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance."
         keywords="fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics"
@@ -236,15 +192,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Cutting-edge AI technology designed to protect your business from sophisticated financial fraud
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-=======
           
           <div className="grid md: grid-cols-2 gap-8">
             {features.map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={feature.title}
                 initial = {
@@ -326,15 +276,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Our AI platform delivers measurable security improvements that directly protect your bottom line
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-=======
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={benefit}
                 initial = {
@@ -415,15 +359,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Comprehensive fraud protection solutions for various financial and business sectors
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {useCases.map((useCase, index) => (
-=======
           
           <div className="grid grid-cols-2 md: grid-cols-3 gap-6">
             {useCases.map((useCase, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={useCase}
                 initial = {
@@ -504,15 +442,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Connect with your existing payment processors, banking systems, and business tools
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
-=======
           
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
             {integrations.map((integration, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={integration}
                 initial = {
@@ -590,15 +522,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               Choose the plan that fits your transaction volume and security requirements
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
-=======
           
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={plan.plan}
                 initial = {
@@ -757,14 +683,6 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
               <p className="text-slate-300">
                 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
               </p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -772,6 +690,5 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AIFinancialFraudDetection;}}}

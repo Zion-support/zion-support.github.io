@@ -84,12 +84,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'low':
                 return <Info className="w-4 h-4 text-blue-400"/>;
             default:
-<<<<<<< HEAD
-                return <Info className="w-4 h-4 text-gray-400"/>;
-
-=======
                 return <Info className="w-4 h-4 text-gray-400"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
@@ -100,12 +95,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'low':
                 return 'text-blue-400';
             default:
-<<<<<<< HEAD
-                return 'text-gray-400';
-
-=======
                 return 'text-gray-400'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
@@ -116,12 +106,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'open':
                 return 'text-red-400';
             default:
-<<<<<<< HEAD
-                return 'text-gray-400';
-
-=======
                 return 'text-gray-400'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const filteredIssues = contentIssues.filter(issue => {
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -140,12 +125,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
             case 'no_images':
                 return 'No Images';
             default:
-<<<<<<< HEAD
-                return type;
-
-=======
                 return type}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       {/* Floating Action Button */}

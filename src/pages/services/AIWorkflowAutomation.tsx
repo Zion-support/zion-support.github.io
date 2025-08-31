@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 export default function AIWorkflowAutomation() {
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -44,7 +41,6 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIWorkflowAutomation(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -68,23 +64,6 @@ export default function AIWorkflowAutomation(...args[]):  {
     }
   ];
 
-<<<<<<< HEAD
-  const tiers = [
-    {
-      name: 'Starter',
-      price: '$199/mo',
-      details: ['Up to 10 workflows', '5 team members', 'Basic integrations', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$499/mo',
-      details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299/mo',
-      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support']
-=======
   const capabilities = [
     {
       title: 'Workflow Orchestration',
@@ -103,7 +82,6 @@ export default function AIWorkflowAutomation(...args[]):  {
       description: 'Live visibility into workflow execution and performance metrics',
       icon: Monitor,
       benefits: ['Live dashboards', 'Alert system', 'Performance tracking']
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     {
       title: 'Integration Hub',
@@ -568,7 +546,6 @@ export default function AIWorkflowAutomation(...args[]):  {
       </section>
     </div>
   )}
-=======;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
@@ -576,9 +553,4 @@ export default function AIWorkflowAutomation(...args[]):  {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

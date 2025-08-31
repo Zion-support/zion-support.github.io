@@ -36,19 +36,10 @@ export default function QuoteManager() {
         setStatusFilter('all');
         setArchiveFilter('all');
         setSearchQuery('');
-<<<<<<< HEAD
-        setDateRange({ from: null, to: null })};
-=======
         setDateRange({ from: null, to: null });
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!isAdmin) {
-<<<<<<< HEAD
-        return <Navigate to="/unauthorized" replace/>;
-
-=======
         return <Navigate to="/unauthorized" replace/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<ProtectedRoute adminOnly>
       <div>
 
@@ -94,17 +85,8 @@ export default function QuoteManager() {
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
             setShowDetails(false);
-<<<<<<< HEAD
-            setSelectedQuote(null);
-        }}/>
-
-      </div>
-    </ProtectedRoute>);
-}}
-=======
             setSelectedQuote(null)}}/>
         
         
       </div>
     </ProtectedRoute>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

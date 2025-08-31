@@ -43,49 +43,14 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                         link.status = 'broken';
                         link.error = 'Target element not found';
                         link.fixable = true;
-<<<<<<< HEAD
-                        link.suggestedFix = 'Add missing element or fix anchor reference';
-
-                    else {
-                        link.status = 'healthy';
-
-
-=======
                         link.suggestedFix = 'Add missing element or fix anchor reference'}
                     else {
                         link.status = 'healthy'}
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 else if (href.startsWith('javascript:')) {
                     // JavaScript links
                     link.status = 'unknown';
                     link.error = 'JavaScript link - cannot verify';
-<<<<<<< HEAD
-                    link.fixable = false;
-
-                else if (href.startsWith('mailto:') || href.startsWith('tel:')) {
-                    // Protocol links
-                    link.status = 'healthy';
-                    link.fixable = false;
-
-                else if (href.startsWith('http')) {
-                    // External links - will be checked
-                    link.status = 'unknown';
-                    link.fixable = true;
-
-                else if (href.startsWith('/')) {
-                    // Internal relative links
-                    link.status = 'unknown';
-                    link.fixable = true;
-
-                else {
-                    // Other relative links
-                    link.status = 'unknown';
-                    link.fixable = true;
-
-                links.push(link);
-
-=======
                     link.fixable = false}
                 else if (href.startsWith('mailto:') || href.startsWith('tel:')) {
                     // Protocol links
@@ -104,7 +69,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     link.status = 'unknown';
                     link.fixable = true}
                 links.push(link)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         });
         return links}, []);
     // Check if a link is working
@@ -113,24 +77,12 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             // Internal anchor links
             const targetElement = document.querySelector(link.url);
             if (targetElement) {
-<<<<<<< HEAD
-                return { ...link, status: 'healthy', lastChecked: new Date() };
-
-            else {
-                return { ...link, status: 'broken', error: 'Target element not found', lastChecked: new Date() };
-
-
-        if (link.url.startsWith('javascript:') || link.url.startsWith('mailto:') || link.url.startsWith('tel:')) {
-            return { ...link, status: 'healthy', lastChecked: new Date() };
-
-=======
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
             else {
                 return { ...link, status: 'broken', error: 'Target element not found', lastChecked: new Date() }}
         }
         if (link.url.startsWith('javascript:') || link.url.startsWith('mailto:') || link.url.startsWith('tel:')) {
             return { ...link, status: 'healthy', lastChecked: new Date() }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
             // For external and internal links, we'll simulate checking
             // In a real implementation, you'd make actual HTTP requests
@@ -138,45 +90,25 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             if (isInternal) {
                 // Simulate internal link check
                 await new Promise(resolve => setTimeout(resolve, 100));
-<<<<<<< HEAD
-                return { ...link, status: 'healthy', lastChecked: new Date() };
-
-=======
                 return { ...link, status: 'healthy', lastChecked: new Date() }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             else {
                 // Simulate external link check
                 await new Promise(resolve => setTimeout(resolve, 200));
                 // Simulate some broken external links
                 const random = Math.random();
                 if (random < 0.1) { // 10% chance of broken external link
-<<<<<<< HEAD
-                    return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() };
-
-                else {
-                    return { ...link, status: 'healthy', lastChecked: new Date() };
-
-
-
-=======
                     return { ...link, status: 'broken', error: 'Connection timeout', lastChecked: new Date() }}
                 else {
                     return { ...link, status: 'healthy', lastChecked: new Date() }}
             }
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             return {
                 ...link,
                 status: 'broken',
                 error: error instanceof Error ? error.message : 'Unknown error',
                 lastChecked: new Date()
-<<<<<<< HEAD
-            };
-
-=======
             }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     // Check all links
     const checkAllLinks = useCallback(async () => {
@@ -218,17 +150,9 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 return newStats});
             // Small delay between batches
             if (i + batchSize < allLinks.length) {
-<<<<<<< HEAD
-                await new Promise(resolve => setTimeout(resolve, 100));
-
-
-        setIsChecking(false);
-    }, [findAllLinks, checkLink]);
-=======
                 await new Promise(resolve => setTimeout(resolve, 100))}
         }
         setIsChecking(false)}, [findAllLinks, checkLink]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Auto-fix broken links
     const autoFixBrokenLinks = useCallback(() => {
         const brokenLinks = links.filter(link => link.status === 'broken' && link.fixable);
@@ -246,14 +170,8 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                     placeholder.style.cssText = 'padding: 2rem; margin: 1rem 0; background: #f3f4f6; border: 2px dashed #d1d5db; border-radius: 0.5rem; color: #6b7280;';
                     // Insert before the link
                     link.element.parentNode?.insertBefore(placeholder, link.element);
-<<<<<<< HEAD
-                    fixedCount++;
-
-
-=======
                     fixedCount++}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             else if (link.element && link.url.startsWith('/')) {
                 // Fix broken internal links by updating to a working page
                 const workingPages = ['/', '/about', '/services', '/contact', '/home'];
@@ -261,18 +179,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
                 if (randomPage !== link.url) {
                     link.element.setAttribute('href', randomPage);
                     link.element.setAttribute('title', `Redirected from ${link.url} to working page`);
-<<<<<<< HEAD
-                    fixedCount++;
-
-
-        });
-        if (fixedCount > 0) {
-            // Re-check links after fixes
-            setTimeout(checkAllLinks, 1000);
-
-        return fixedCount;
-    }, [links, checkAllLinks]);
-=======
                     fixedCount++}
             }
         });
@@ -280,7 +186,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             // Re-check links after fixes
             setTimeout(checkAllLinks, 1000)}
         return fixedCount}, [links, checkAllLinks]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Highlight broken link in page
     const highlightBrokenLink = useCallback((link) => {
         if (!link.element)
@@ -299,12 +204,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
     useEffect(() => {
         if (autoCheck) {
             const timer = setTimeout(checkAllLinks, 2000);
-<<<<<<< HEAD
-            return () => clearTimeout(timer);
-
-=======
             return () => clearTimeout(timer)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [autoCheck, checkAllLinks]);
     // Get status color
     const getStatusColor = (status) => {
@@ -312,12 +212,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             case 'healthy': return 'text-green-600 bg-green-100 dark:bg-green-900/30';
             case 'broken': return 'text-red-600 bg-red-100 dark:bg-red-900/30';
             case 'checking': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/30'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get status icon
     const getStatusIcon = (status) => {
@@ -325,12 +220,7 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
             case 'healthy': return <CheckCircleIcon className="w-4 h-4 text-green-600"/>;
             case 'broken': return <ExclamationTriangleIcon className="w-4 h-4 text-red-600"/>;
             case 'checking': return <ArrowPathIcon className="w-4 h-4 text-yellow-600 animate-spin"/>;
-<<<<<<< HEAD
-            default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>;
-
-=======
             default: return <InformationCircleIcon className="w-4 h-4 text-gray-600"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       {/* Broken Link Fixer Toggle Button */}
@@ -573,17 +463,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
           outline: 3px solid #f97316 !important;
           outline-offset: 2px !important;
           background-color: rgba(249, 115, 22, 0.1) !important;
-<<<<<<< HEAD
-          transition: all 0.3s ease !important;
-
-        .link-target-placeholder {
-          animation: pulse 2s infinite;
-
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.7; }
-
-=======
           transition: all 0.3s ease !important}
         
         .link-target-placeholder {
@@ -593,7 +472,6 @@ export const BrokenLinkFixer = ({ className = '', autoCheck = true, showDetails 
           0%, 100% { opacity: 1}
           50% { opacity: 0.7}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       `}</style>
     </>)};
 export default BrokenLinkFixer;

@@ -1,31 +1,13 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from "../../components/SEO";
-import { PenTool, 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-import {
-  PenTool,
-  FileText,
-  Brain,
-  Zap,
-  Shield,
-  Users,
-=======
 import { SEO } from "../../components/SEO";
 import { 
   PenTool, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   FileText, 
   Brain, 
   Zap, 
   Shield, 
   Users, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Globe,
   Star,
   CheckCircle,
@@ -40,13 +22,9 @@ import {
   DollarSign,
   Target,
   Award
-<<<<<<< HEAD
-export default function AIContentGenerationPlatform() {
-=======
  } from 'lucide-react';
 
 export default function AIContentGenerationPlatform(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -79,24 +57,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
       benefits['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking']
     },
     {
-<<<<<<< HEAD
-      icon: Users,
-      title: 'Team Collaboration',
-      description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',
-<<<<<<< HEAD
-      benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
-
-=======
       benefits['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
     };
-=======;
       icon: Users,;
       title: 'Team Collaboration',;
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;
       benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -119,24 +86,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
       metrics['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement']
     },
     {
-<<<<<<< HEAD
-      industry: 'Corporate Communications',
-      title: 'Business Content',
-      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',
-<<<<<<< HEAD
-      metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
-
-=======
       metrics['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
     };
-=======;
       industry: 'Corporate Communications',;
       title: 'Business Content',;
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;
       metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -157,15 +113,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
       title: 'Quality Improvement',
       description: 'Consistent, high-quality content that resonates with your target audience.',
       value: '95%+'
-<<<<<<< HEAD
-    },
-    {
-      icon: TrendingUp,
-      title: 'Scalability',
-      description: 'Scale content production without proportional increases in resources.',
-      value: '10x'
-
-=======
     },;
     {;
       icon: TrendingUp,;
@@ -173,7 +120,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
       description: 'Scale content production without proportional increases in resources.',;
       value: '10x';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const technologies = [
@@ -238,20 +184,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
         'Custom templates',
         'Dedicated support',
         'Highest quality output',
-<<<<<<< HEAD
-        'Advanced analytics',
-        'Custom integrations',
-        'SLA guarantees'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
         'Advanced analytics',;
         'Custom integrations',;
         'SLA guarantees';
@@ -264,7 +196,6 @@ export default function AIContentGenerationPlatform(...args[]):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Content Generation Platform - Zion Tech Group"
         description="Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology."
       />
@@ -914,23 +845,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
             <div className="mt-6 text-slate-400">
               <p>Questions? Email us at <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">kleber@ziontechgroup.com</a></p>
               <p>Visit us at <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">ziontechgroup.com</a></p>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

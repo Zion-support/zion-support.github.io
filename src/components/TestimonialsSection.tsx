@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe const testimonials = [
-=======
 import { 
   Star, 
   Quote, 
@@ -28,7 +25,6 @@ interface Testimonial {
 }
 
 const testimonials: Testimonial[] = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   {
     id: 1,
     name: "Dr. Sarah Chen",
@@ -84,25 +80,17 @@ const testimonials: Testimonial[] = [
     company: "E-commerce Dynamics",
     avatar: "/images/testimonials/lisa-park.jpg",
     rating: 5,
-<<<<<<< HEAD
-    industry: "Healthcare",
-    project: "Cloud Migration & Optimization"
-
-=======
     content: "Zion's AI marketing automation tools have revolutionized our customer acquisition. We've seen a 150% increase in conversion rates and 80% reduction in marketing costs.",
     industry: "E-commerce",
     results: ["150% conversion increase", "80% cost reduction", "Personalized campaigns"],
     verified: true
   }
-=======;
     company: "Healthcare Innovations",;
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",;
     rating: 5,;
     industry: "Healthcare",;
     project: "Cloud Migration & Optimization";
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const stats = [
@@ -211,13 +199,6 @@ export const TestimonialsSection: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-<<<<<<< HEAD
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">98%</div>
-            <div className="text-zion-slate-light">Client Satisfaction</div>
-=======
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -347,7 +328,6 @@ export const TestimonialsSection: React.FC = () => {
             >
               <ChevronRight className="w-5 h-5" />
             </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
 
           {/* Auto-play Toggle */}
@@ -385,15 +365,10 @@ export const TestimonialsSection: React.FC = () => {
       </div>
     </section>
   )};
-=======;
             <div className="text-zion-slate-light">Support Available</div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}}}
-=======
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
+import { Link } from 'react-router-dom';
 export function ListingCard({ id, title, description, images, category, tags, author, className, profileType = 'service' }) {
     // Generate a profile ID based on the listing data
     // In a real app, this would be a proper ID from the database
@@ -39,9 +39,4 @@ export function ListingCard({ id, title, description, images, category, tags, au
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </Link>);
-</div>}
-=======
     </Link>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

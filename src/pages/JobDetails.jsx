@@ -22,12 +22,7 @@ export default function JobDetails() {
     if (isLoading) {
         return (<div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (error || !job) {
         return (<>
 
@@ -36,39 +31,18 @@ export default function JobDetails() {
           <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
           <Button onClick={() => router('/jobs')}>View All Jobs</Button>
         </div>
-<<<<<<< HEAD
-
-      </>);
-
-=======
         
       </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleApply = () => {
         if (!isAuthenticated) {
             toast.error("Please log in to apply for this job");
-<<<<<<< HEAD
-            router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
-            return}
-=======
             router('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
             return;
-<<<<<<< HEAD
-
-        if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-            toast.error("Only job seekers can apply for jobs");
-            return;
-
-        setIsApplyModalOpen(true);
-    };
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
             toast.error("Only job seekers can apply for jobs");
             return}
         setIsApplyModalOpen(true)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleApplySuccess = async (appliedJobId) => {
         toast.success("Application submitted successfully!");
         setIsApplyModalOpen(false)};
@@ -78,10 +52,6 @@ export default function JobDetails() {
         return `$${budget.min} - $${budget.max}`};
     const isOwnJob = user?.id === job.client_id;
     return (<>
-<<<<<<< HEAD
-      <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description={job.description.substring(0, 160)}/>
-
-=======
       <SEO title={`${job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`} description = {
   job.description.substring(0,
   160)
@@ -93,7 +63,6 @@ export default function JobDetails() {
 
 }/>
       
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <main className="container mx-auto px-4 py-8">
         <div className="mb-6">
           <Button variant="outline" size="sm" onClick={() => router('/jobs')}>
@@ -192,7 +161,6 @@ export default function JobDetails() {
 
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>)}
-=======
   client_id: job.client_id
             
 
@@ -201,9 +169,4 @@ export default function JobDetails() {
 
 }} isOpen={isApplyModalOpen} onClose={() => setIsApplyModalOpen(false)}/>)}
     </>);
-<<<<<<< HEAD
-</Card></Card></Card></Card>}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

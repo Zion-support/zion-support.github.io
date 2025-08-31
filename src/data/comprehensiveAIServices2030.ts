@@ -6,11 +6,7 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
   address: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
 
@@ -41,11 +37,7 @@ export interface AIService {
   setupTime: string;
   integrations: string[];
   freeTier: boolean;
-<<<<<<< HEAD
-  trialPeriod: string;
-=======
   trialPeriod: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {

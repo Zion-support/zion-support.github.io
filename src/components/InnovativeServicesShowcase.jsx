@@ -19,12 +19,7 @@ const InnovativeServicesShowcase = () => {
             case 'ai':
                 return innovativeAIServices2025;
             default:
-<<<<<<< HEAD
-                return [];
-
-=======
                 return []}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleServiceClick = (service) => {
         setSelectedService(service)};

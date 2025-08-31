@@ -10,11 +10,8 @@ import {
   Shield,
   Award,
   Rocket
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Stat {
 
   id: string;
@@ -23,11 +20,7 @@ interface Stat {
   label: string;
   description: string;
   color: string;
-<<<<<<< HEAD
-  gradient: string;
-=======
   gradient: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const stats: Stat[] = [
   {
@@ -86,13 +79,8 @@ const stats: Stat[] = [
 
 ];
 
-<<<<<<< HEAD
-export default function EnhancedStatsSection() {
-  const [countedValues, setCountedValues] = useState<{ [key: string]: number }>({ /* empty */ });
-=======
 export default function EnhancedStatsSection(...args[]):  {
   const [countedValues, setCountedValues] = useState<any>({});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const controls = useAnimation();
   const [ref, inView] = useInView({
     threshold: 0.3,
@@ -101,12 +89,7 @@ export default function EnhancedStatsSection(...args[]):  {
 
   useEffect(()  => {
     if (inView) {
-<<<<<<< HEAD
-      controls.start('visible');
-
-=======
       controls.start('visible')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [controls, inView]);
 
   const animateCount = (target: string, duration: number = 2000) => {;
@@ -119,50 +102,25 @@ export default function EnhancedStatsSection(...args[]):  {
       current += increment;
       if (current >= numericValue) {
         current = numericValue;
-<<<<<<< HEAD
-        clearInterval(timer)}
-      setCountedValues(prev = > ({
-        ...prev,;
-        [target]: Math.floor(current);
-      }))}, 16);
-=======
         clearInterval(timer);
-<<<<<<< HEAD
-
-      setCountedValues(prev => ({
-        ...prev,
-        [target]: Math.floor(current)
-=======
       }
       setCountedValues(prev = > ({;
         ...prev,;
         [target]: Math.floor(current);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }));
     }, 16);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
     return timer};
 
   useEffect(() => {
     if (inView) {
       stats.forEach((stat) => {
-<<<<<<< HEAD
-        const timer = setTimeout(() => {;
-          animateCount(stat.value)}, stats.indexOf(stat) * 200);
-        return () => clearTimeout(timer)})}
-=======
         const timer = setTimeout(() => {;
           animateCount(stat.value);
         }, stats.indexOf(stat) * 200);
         return () => clearTimeout(timer);
       });
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [inView]);
 
   return (
@@ -196,10 +154,6 @@ export default function EnhancedStatsSection(...args[]):  {
               y: 0,
   transition: {
                 duration: 0.6
-<<<<<<< HEAD
-
-
-=======
               
 
 
@@ -209,7 +163,6 @@ export default function EnhancedStatsSection(...args[]):  {
 
 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           }}
           className="text-center mb-16"
 
@@ -244,11 +197,6 @@ export default function EnhancedStatsSection(...args[]):  {
                   y: 0,
                   transition: {
                     duration: 0.6,
-<<<<<<< HEAD
-                    delay: index * 0.1
-
-
-=======
   delay: index * 0.1
                   
 
@@ -259,7 +207,6 @@ export default function EnhancedStatsSection(...args[]):  {
 
 }
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               }}
               className="group relative"
 
@@ -307,10 +254,6 @@ export default function EnhancedStatsSection(...args[]):  {
                   className="mb-4 relative z-10"
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-
-=======
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
@@ -322,7 +265,6 @@ export default function EnhancedStatsSection(...args[]):  {
 
 }}
                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
                     {countedValues[stat.value] || 0}
                     {stat.value.includes('%') && '%'}
@@ -370,11 +312,6 @@ export default function EnhancedStatsSection(...args[]):  {
               y: 0,
               transition: {
                 duration: 0.6,
-<<<<<<< HEAD
-                delay: 0.6
-
-
-=======
   delay: 0.6
               
 
@@ -385,7 +322,6 @@ export default function EnhancedStatsSection(...args[]):  {
 
 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           }}
           className="mt-16"
 
@@ -418,23 +354,10 @@ export default function EnhancedStatsSection(...args[]):  {
                 <div className="text-3xl font-bold text-zion-blue mb-2">100%</div>
                 <div className="text-gray-300">Client Retention</div>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

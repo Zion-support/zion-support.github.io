@@ -29,21 +29,10 @@ function ApplicationStatusTrackerContent() {
           </Card>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function ApplicationStatusTracker() {
     return (<ProtectedRoute>
 
         <ApplicationStatusTrackerContent />
-<<<<<<< HEAD
-
-    </ProtectedRoute>);
-</Card></Card></Card>}}}
-=======
       
     </ProtectedRoute>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -16,18 +16,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
       price: '$149/mo',
       details: ['Up to 1,000 pages/month', '5 user accounts', 'Basic OCR & extraction', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$399/mo',
-      details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$999/mo',
-      details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$399/mo', 
@@ -38,7 +26,6 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
       price: '$999/mo', ;
       details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { ChevronDown interface AccordionProps {
-  children: React.ReactNode;
-  className?: string;
-  type?: 'single' | 'multiple';
-  defaultValue?: string | string[];
-=======
 import React, { useState } from 'react.ts';
 import { ChevronDown  } from 'lucide-react';
 
@@ -15,7 +7,6 @@ interface AccordionProps extends React.PropsWithChildren<{}> {
   className?: string;
   type?: 'single' | 'multiple';
   defaultValue?: string | string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function Accordion({
   children,
@@ -47,7 +38,6 @@ export function Accordion({
             onToggle: ()  => handleToggle(child.props.value)
           })}
         return child})}
-=======
 export function Accordion({ 
   children, ;
   className = '', ;
@@ -81,25 +71,16 @@ export function Accordion({
 
         return child;
       })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </div>
-<<<<<<< HEAD
-  );
-=======
   )}
 
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: React.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: () => void;
-=======
   onToggle?: ()  => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AccordionItem({
   children,
@@ -115,24 +96,15 @@ export function AccordionItem({
 
         return child;
       })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     </div>
-<<<<<<< HEAD
-  );
-=======
   )}
 
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: () => void;
-=======
   onToggle?: ()  => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AccordionTrigger({
   children,
@@ -155,26 +127,17 @@ export function AccordionTrigger({
   )}
 
 interface AccordionContentProps extends React.PropsWithChildren<{}> {;
-=======;
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${;
           isOpen ? 'rotate-180' : '';
         }`} ;
       />;
     </button>;
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: React.ReactNode;
   className?: string;
-<<<<<<< HEAD
-  isOpen?: boolean;
-=======
   isOpen?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AccordionContent({
   children,
@@ -188,7 +151,6 @@ export function AccordionContent({
       {children}
     </div>
   )}
-=======
 export function AccordionContent({ ;
   children, ;
   className = '',;
@@ -201,9 +163,4 @@ export function AccordionContent({ ;
       {children};
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

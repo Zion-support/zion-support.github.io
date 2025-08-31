@@ -42,29 +42,16 @@ export default function UpdatePassword() {
         const hashParams = new URLSearchParams(location.hash.substring(1));
         const token = hashParams.get("access_token");
         if (token) {
-<<<<<<< HEAD
-            setAccessToken(token);
-
-        else {
-            setError("No access token found. Please request a new password reset link.");
-
-=======
             setAccessToken(token)}
         else {
             setError("No access token found. Please request a new password reset link.")}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Clean up auth state to prevent issues
         cleanupAuthState()}, [location]);
     // Form submission handler
     const onSubmit = async (data) => {
         if (!accessToken) {
             setError("No access token found. Please request a new password reset link.");
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsLoading(true);
         try {
             // Set the session with the access token
@@ -83,12 +70,7 @@ export default function UpdatePassword() {
                     variant: "destructive",
                 });
                 setError(error.message);
-<<<<<<< HEAD
-                return;
-
-=======
                 return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Show success message and clean up auth state
             setSuccess(true);
             toast({
@@ -98,49 +80,24 @@ export default function UpdatePassword() {
             // Clean auth state and redirect after a delay
             cleanupAuthState();
             setTimeout(() => {
-<<<<<<< HEAD
-                router("/login")}, 3000)}
-=======
                 router("/login");
             }, 3000);
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Password update error:", error);
-=======
             // // // // // // // console.error("Password update error:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Password update failed",
                 description: error.message || "An unexpected error occurred",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            setError(error.message || "An unexpected error occurred");
-
-        finally {
-            setIsLoading(false);
-
-=======
             setError(error.message || "An unexpected error occurred")}
         finally {
             setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const onInvalid = (errors) => {
         const firstError = Object.keys(errors)[0];
         if (firstError) {
-<<<<<<< HEAD
-            form.setFocus(firstError);
-
-=======
             form.setFocus(firstError)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
 
@@ -229,11 +186,5 @@ export default function UpdatePassword() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

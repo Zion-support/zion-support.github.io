@@ -3,15 +3,10 @@ import { SEO } from '@/components/SEO';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive const ITServices = [
-=======
 import { Cloud, Shield, Server, Zap, Database, Globe, Code, Monitor, Smartphone, Settings, Users, BarChart3, MessageSquare, FileText, CheckCircle, Search, HardDrive, Brain, Cpu, Lock, Wifi, Database as DatabaseIcon, Shield as ShieldIcon, Zap as ZapIcon, Globe as GlobeIcon, Code as CodeIcon, Monitor as MonitorIcon, Smartphone as SmartphoneIcon, Settings as SettingsIcon, Users as UsersIcon, BarChart3 as BarChart3Icon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, CheckCircle as CheckCircleIcon, Search as SearchIcon, HardDrive as HardDriveIcon, Brain as BrainIcon, Cpu as CpuIcon, Lock as LockIcon, Wifi as WifiIcon } from 'lucide-react';
 
 const ITServicesPage = () => {
   const itServices = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     {
       title: "Cloud Infrastructure Management",
       description: "Comprehensive cloud services including AWS, Azure, and Google Cloud with 24/7 monitoring and optimization.",
@@ -158,71 +153,6 @@ const ITServicesPage = () => {
       details: "Comprehensive data analytics and business intelligence solutions transforming raw data into actionable business insights."
     },
     {
-<<<<<<< HEAD
-        title: "IT Project Management",
-        description: "Professional project management for IT initiatives",
-        price: "$100 - $200/hour",
-        features: ["Project planning", "Resource management", "Risk mitigation", "Delivery assurance"],
-        icon: <BarChart3 className="h-8 w-8 text-zion-blue"/>,
-        category: "Project Management",
-        link: "/request-quote?service=it-project-management"
-    },
-    {
-        title: "24/7 IT Support",
-        description: "Round-the-clock technical support and monitoring",
-        price: "$2,000 - $8,000/month",
-        features: ["Help desk", "Remote support", "On-site visits", "SLA guarantees"],
-        icon: <Monitor className="h-8 w-8 text-zion-cyan"/>,
-        category: "Support",
-        badge: "Featured",
-        link: "/request-quote?service=24-7-support"
-
-];
-const categories = [
-    { name: "All", value: "all", icon: <Globe className="h-4 w-4"/> },
-    { name: "Cloud", value: "cloud", icon: <Cloud className="h-4 w-4"/> },
-    { name: "Security", value: "security", icon: <Shield className="h-4 w-4"/> },
-    { name: "DevOps", value: "devops", icon: <Zap className="h-4 w-4"/> },
-    { name: "Database", value: "database", icon: <Database className="h-4 w-4"/> },
-    { name: "Networking", value: "networking", icon: <Globe className="h-4 w-4"/> },
-    { name: "Consulting", value: "consulting", icon: <CheckCircle className="h-4 w-4"/> },
-    { name: "Managed Services", value: "managed services", icon: <Settings className="h-4 w-4"/> },
-    { name: "Data Center", value: "data center", icon: <Server className="h-4 w-4"/> },
-    { name: "Development", value: "development", icon: <Code className="h-4 w-4"/> },
-    { name: "Training", value: "training", icon: <Users className="h-4 w-4"/> },
-    { name: "Recovery", value: "recovery", icon: <HardDrive className="h-4 w-4"/> },
-    { name: "Compliance", value: "compliance", icon: <FileText className="h-4 w-4"/> },
-    { name: "Hardware", value: "hardware", icon: <Server className="h-4 w-4"/> },
-    { name: "Project Management", value: "project management", icon: <BarChart3 className="h-4 w-4"/> },
-    { name: "Support", value: "support", icon: <Monitor className="h-4 w-4"/> }
-];
-export default function ITServicesPage() {
-    const [selectedCategory, setSelectedCategory] = React.useState("all");
-    const filteredServices = selectedCategory === "all"
-        ? ITServices
-        : ITServices.filter(service => service.category.toLowerCase() === selectedCategory);
-    return (<div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-blue-dark to-zion-slate">
-      {/* Hero Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-zion-blue-dark via-zion-blue to-zion-cyan py-20">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            IT Services & Solutions
-          </h1>
-          <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto mb-8">
-            Comprehensive IT services to modernize, secure, and optimize your technology infrastructure.
-            From cloud migration to cybersecurity, we've got you covered.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button size="lg" className="bg-zion-cyan hover:bg-zion-cyan-light text-zion-slate font-semibold">
-              <Search className="h-5 w-5 mr-2"/>
-              Explore Services
-            </Button>
-            <Button size="lg" variant="outline" className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10">
-              <MessageSquare className="h-5 w-5 mr-2"/>
-              Get Consultation
-            </Button>
-=======
       title: "Disaster Recovery",
       description: "Comprehensive disaster recovery and business continuity solutions for critical business operations.",
       price: "$2,000 - $15,000",
@@ -253,7 +183,6 @@ export default function ITServicesPage() {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive information technology solutions for modern businesses
             </p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -301,13 +230,8 @@ export default function ITServicesPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}}
-=======
     </>
   );
 };
 
 export default ITServicesPage;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

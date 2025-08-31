@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { motion } from 'framer-motion';
-import {
-  TrendingDown,
-  Brain,
-  BarChart3,
-  Shield,
-  Zap,
-  Users,
-  Target,
-=======
 import React from 'react.ts';
 import { SEO  } from '@/components/SEO';
 import { motion  } from 'framer-motion.ts';
@@ -21,19 +8,14 @@ import { TrendingDown,
   Zap, 
   Users, 
   Target, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   ArrowRight,
   Star,
   Clock,
   DollarSign
-<<<<<<< HEAD
-const AICustomerChurnPrediction: React.FC = () => {
-=======
  } from 'lucide-react';
 
 const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -48,15 +30,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     {
       icon: Target,
       title: "Proactive Interventions",
-<<<<<<< HEAD
-      description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking."
-    },
-    {
-      icon: Users,
-      title: "Customer Segmentation",
-      description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies."
-
-=======
       description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking.";
     },;
     {;
@@ -64,7 +37,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
       title: "Customer Segmentation",;
       description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -100,33 +72,17 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     },
     {
       plan: "Enterprise",
-<<<<<<< HEAD
-      price: "Custom",
-      period: "",
-      features["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
-      popular: false
-<<<<<<< HEAD
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <SEO
-=======
     };
-=======;
       price: "Custom",;
       period: "",;
       features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],;
       popular: false;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Customer Churn Prediction Platform - Zion Tech Group"
         description="Predict and prevent customer churn with AI-powered analytics. Reduce churn by 40-60% and increase customer lifetime value with our advanced machine learning platform."
         keywords="customer churn prediction, AI analytics, customer retention, machine learning, predictive analytics, customer success"
@@ -224,15 +180,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Advanced AI capabilities designed to predict, prevent, and manage customer churn effectively
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-=======
           
           <div className="grid md: grid-cols-2 gap-8">
             {features.map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={feature.title}
                 initial = {
@@ -314,15 +264,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Our platform delivers measurable business outcomes that directly impact your bottom line
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-=======
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={benefit}
                 initial = {
@@ -403,15 +347,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Connect with your existing tools and workflows without disruption
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
-=======
           
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6">
             {integrations.map((integration, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={integration}
                 initial = {
@@ -489,15 +427,9 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               Choose the plan that fits your business needs with no hidden fees
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
-=======
           
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricing.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={plan.plan}
                 initial = {
@@ -656,14 +588,6 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
               <p className="text-slate-300">
                 <strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709
               </p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -671,6 +595,5 @@ const AICustomerChurnPrediction: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AICustomerChurnPrediction;}}}

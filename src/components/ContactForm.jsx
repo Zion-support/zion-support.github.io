@@ -36,24 +36,12 @@ const ContactForm = () => {
                 message: ''
             });
             setSubmitStatus('success');
-<<<<<<< HEAD
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-
-        catch (error) {
-            setSubmitStatus('error');
-            setTimeout(() => setSubmitStatus('idle'), 5000);
-
-        finally {
-            setIsSubmitting(false);
-
-=======
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         catch (error) {
             setSubmitStatus('error');
             setTimeout(() => setSubmitStatus('idle'), 5000)}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.message;
     return (<div className="max-w-2xl mx-auto">

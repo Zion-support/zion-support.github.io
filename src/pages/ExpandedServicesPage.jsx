@@ -16,19 +16,10 @@ export default function ExpandedServicesPage() {
         if (searchQuery) {
             filtered = filtered.filter(service => service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-<<<<<<< HEAD
-                service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
-
-        // Filter by category
-        if (selectedCategory !== 'all') {
-            filtered = filtered.filter(service => service.category === selectedCategory);
-
-=======
                 service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))}
         // Filter by category
         if (selectedCategory !== 'all') {
             filtered = filtered.filter(service => service.category === selectedCategory)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Sort services
         filtered.sort((a, b) => {
             if (sortBy === 'rating')
@@ -45,12 +36,7 @@ export default function ExpandedServicesPage() {
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
-<<<<<<< HEAD
-            default: return '⚡';
-
-=======
             default: return '⚡'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPricingModelColor = (model) => {
         switch (model) {
@@ -58,12 +44,7 @@ export default function ExpandedServicesPage() {
             case 'project-based': return 'bg-purple-100 text-purple-800';
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -324,9 +305,4 @@ export default function ExpandedServicesPage() {
       </section>
 
       <TrustedBySection />
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { TrendingUp, Award, Users, Clock interface Stat {
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, useInView  } from 'framer-motion.ts';
 import { useRef  } from 'react.ts';
@@ -11,34 +5,21 @@ import { TrendingUp, Award, Users, Clock  } from 'lucide-react';
 
 interface Stat {
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   number: string;
   label: string;
   description: string;
   avatar: string;
-<<<<<<< HEAD
-  icon: React.ComponentType<{ className?: string }>;
-  color: string;
-
-interface StatsSectionProps {
-  stats: Stat[];
-=======
 icon: React.ComponentType<{ className?: string}>;
   color: string}
 
 interface StatsSectionProps extends React.PropsWithChildren<{}> {
 
   stats: Stat[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-<<<<<<< HEAD
-  const [counts, setCounts] = useState<{ [key: string]: number }>({ /* empty */ });
-=======
   const [counts, setCounts] = useState<any>({});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   useEffect(()  => {
     if (isInView) {
@@ -53,10 +34,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             if (current >= targetNumber) {
               current = targetNumber;
               clearInterval(countTimer);
-<<<<<<< HEAD
-=======
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
             setCounts(prev => ({
               ...prev,
@@ -65,14 +43,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           }, 50);
         });
       }, 500);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-<<<<<<< HEAD
-      return () => clearTimeout(timer);
-
-=======
       return () => clearTimeout(timer)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [isInView, stats]);
 
   return (
@@ -200,25 +172,12 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
 
               {/* Hover indicator */}
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full group-hover:w-1/2 transition-all duration-500" />
-<<<<<<< HEAD
-            </motion.div>
-          ))}
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </motion.div>;
           ))};
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-</div></div></div>};
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default StatsSection;}}}}}

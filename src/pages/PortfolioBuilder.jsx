@@ -27,20 +27,9 @@ function PortfolioBuilderContent() {
           </TabsContent>
         </Tabs>
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function PortfolioBuilder() {
-    return (<ProtectedRoute>
-      <PortfolioBuilderContent />
-    </ProtectedRoute>);
-}}
-=======
       
     </>)}
 export default function PortfolioBuilder() {
     return (<ProtectedRoute>
       <PortfolioBuilderContent />
     </ProtectedRoute>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

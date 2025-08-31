@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function Webinars() {
-	return (
-		<div className="min-h-screen bg-slate-900 text-white py-16">
-			<SEO title="Webinars - Zion Tech Group" description="Upcoming and past webinars." />
-			<div className="container mx-auto px-4 max-w-4xl">
-				<h1 className="text-4xl font-bold mb-4">Webinars</h1>
-				<p className="text-zinc-300">Explore our upcoming and recorded sessions.</p>
-			</div>
-		</div>
-	);
-
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle export default function Webinars() {
-=======
 
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -52,7 +33,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 const Webinars: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [searchQuery, setSearchQuery] = useState('');
   const [showPast, setShowPast] = useState(false);
 
@@ -65,13 +45,35 @@ const Webinars: React.FC = () => {
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart, count: 0 },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 0 },
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 0 }
+import { Video, Calendar, Clock, Users, Play, Download, Search, Filter, Star, ExternalLink, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle } from 'lucide-react';
+
+export default function Webinars() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [filterType, setFilterType] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: <Video className="w-5 h-5" />, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 6 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 4 },
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 3 },
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 5 },
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 2 },
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 4 }
+  ];
+
+  const filterTypes = [
+    { id: 'all', name: 'All Webinars', count: 0 },
+    { id: 'upcoming', name: 'Upcoming', count: 0 },
+    { id: 'on-demand', name: 'On-Demand', count: 0 },
+    { id: 'live', name: 'Live Now', count: 0 }
   ];
 
   const upcomingWebinars = [
     {
       id: 1,
-      title: 'AI Autonomous Research Assistant: Revolutionizing Business Intelligence',
-      description: 'Discover how our revolutionary AI Autonomous Research Assistant is transforming how businesses gather, analyze, and synthesize information across multiple sources.',
+      title: 'AI-Powered Business Transformation: Real-World Success Stories',
+      description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
       category: 'ai-ml',
       type: 'upcoming',
       date: '2025-02-10T14:00:00Z',
@@ -101,43 +103,6 @@ const Webinars: React.FC = () => {
       thumbnail: '/images/webinars/ai-supply-chain-2025.jpg',
       registrationRequired: true,
       recordingAvailable: false
-    },
-    {
-      id: 3,
-      title: 'AI-Powered Business Transformation: Real-World Success Stories',
-      description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
-      category: 'ai-ml',
-      speaker: 'Dr. Sarah Chen, Chief AI Scientist',
-      date: '2024-02-15',
-      time: '14:00 EST',
-      duration: '60 minutes',
-      attendees: 450,
-      maxAttendees: 500,
-      summary: 'Learn how to implement AI-powered compliance automation to reduce manual work and improve accuracy.',
-      tags: ['AI', 'Compliance', 'Automation', 'Best Practices'],
-      registrationUrl: '/webinars/ai-compliance-automation-2024/register',
-      watchUrl: null,
-      isLive: false
-    },
-    {
-      id: 5,
-      title: 'Zero-Trust Security: Implementation Strategies for 2025',
-      description: 'Learn practical strategies for implementing zero-trust security architecture in your organization.',
-      category: 'security',
-      type: 'upcoming',
-      date: '2025-02-20T15:00:00Z',
-      duration: '45 min',
-      speakers: ['Alex Thompson', 'Dr. James Wilson'],
-      maxAttendees: 300,
-<<<<<<< HEAD
-      currentAttendees: 189,
-      featured: false,
-      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],
-      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',
-      registrationRequired: true,
-      recordingAvailable: false
-
-=======
       summary: 'Explore practical applications of digital twin technology and how to measure return on investment.',
       tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
       registrationUrl: '/webinars/digital-twin-technology-roi/register',
@@ -176,7 +141,6 @@ const Webinars: React.FC = () => {
       watchUrl: null,
       isLive: false
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pastWebinars = [
@@ -216,20 +180,60 @@ const Webinars: React.FC = () => {
 
   const allWebinars = [...upcomingWebinars, ...pastWebinars];
 
-<<<<<<< HEAD
-  const filteredWebinars = (showPast ? pastWebinars: upcomingWebinars).filter(webinar  => {;
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         webinar.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+    }
+  ];
+
+  // Update counts
+  React.useEffect(() => {
+    categories.forEach(cat => {
+      cat.count = webinars.filter(w => w.category === cat.id).length;
+    });
+
+    filterTypes.forEach(type => {
+      if (type.id === 'all') {
+        type.count = webinars.length;
+      } else {
+        type.count = webinars.filter(w => w.type === type.id).length;
+      }
+    });
+  }, []);
+
+  const filteredWebinars = webinars.filter(webinar => {
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
-    return matchesCategory && matchesSearch});
+    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
+    const matchesType = filterType === 'all' || webinar.type === filterType;
+    
+    return matchesSearch && matchesCategory && matchesType;
+  });
 
-  const stats = [
-    { label: 'Webinars Delivered', value: '100+', icon: Video },
-    { label: 'Attendees Served', value: '25K+', icon: Users },
-    { label: 'Expert Speakers', value: '15+', icon: Star },;
-    { label: 'Topics Covered', value: '20+', icon: BookOpen };
-  ];
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  };
+
+  const formatTimeUntil = (dateString: string) => {
+    const now = new Date();
+    const webinarDate = new Date(dateString);
+    const diffTime = webinarDate.getTime() - now.getTime();
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays < 0) return 'Past';
+    if (diffDays === 0) return 'Today';
+    if (diffDays < 7) return `${diffDays} days`;
+    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
+    return `${Math.ceil(diffDays / 30)} months`;
+  };
+
+  const getCategoryIcon = (categoryId: string) => {
+    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
+  };
 
   const contactInfo = {
   email: 'webinars@ziontechgroup.com',
@@ -241,13 +245,6 @@ const Webinars: React.FC = () => {
 };
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Webinars - Zion Tech Group"
-        description="Join our educational webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry experts."
-      />
-      
-=======
       currentAttendees: 189,;
       featured: false,;
       tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
@@ -281,7 +278,6 @@ const Webinars: React.FC = () => {
     const matchesType = filterType === 'all' || webinar.type === filterType;
 
     return matchesSearch && matchesCategory && matchesType;
-=======
   // Update category counts
   categories.forEach(category => {
     if (category.id === 'all') {
@@ -289,7 +285,6 @@ const Webinars: React.FC = () => {
     } else {
       category.count = allWebinars.filter(webinar => webinar.category === category.id).length;
     }
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   });
 
   const filteredWebinars = allWebinars.filter(webinar => {
@@ -323,22 +318,6 @@ const Webinars: React.FC = () => {
     });
   };
 
-<<<<<<< HEAD
-  const formatTimeUntil = (dateString: string) => {;
-    const now = new Date();
-    const webinarDate = new Date(dateString);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-    if (diffDays < 0) return 'Past';
-    if (diffDays === 0) return 'Today';
-    if (diffDays < 7) return `${diffDays} days`;
-    if (diffDays < 30) return `${Math.ceil(diffDays / 7)} weeks`;
-    return `${Math.ceil(diffDays / 30)} months`;
-  };
-
-  const getCategoryIcon = (categoryId: string) => {;
-    return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
-=======
   const getRegistrationStatus = (webinar: any) => {
     if (webinar.isLive) {
       return { status: 'Live Now', color: 'from-red-500 to-pink-500', icon: Play };
@@ -349,7 +328,6 @@ const Webinars: React.FC = () => {
     } else {
       return { status: 'Register Now', color: 'from-green-500 to-emerald-500', icon: CheckCircle };
     }
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   };
 
   return (
@@ -384,16 +362,6 @@ const Webinars: React.FC = () => {
                 Learn from industry leaders and gain practical insights to transform your business.
               </p>
 
-<<<<<<< HEAD
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-2xl mb-8"
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -414,14 +382,16 @@ const Webinars: React.FC = () => {
 
 
 }}
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Informed and Inspired
             </h1>
@@ -436,14 +406,7 @@ const Webinars: React.FC = () => {
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
-
-                Subscribe to Webinars
-              </motion.button>
-              <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-=======
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Contact Us
               </a>
               <a 
@@ -452,6 +415,8 @@ const Webinars: React.FC = () => {
               >
                 Read Our Research
               </a>
+                Contact Us
+              </button>
             </div>
           </motion.div>
         </div>
@@ -486,7 +451,6 @@ const Webinars: React.FC = () => {
                   }`}
 
                   {category.icon}
-=======
               {/* Search Bar */}
               <div className="max-w-2xl mx-auto mb-8">
                 <div className="relative">
@@ -519,60 +483,16 @@ const Webinars: React.FC = () => {
                   }`}
                 >
                   <category.icon className="w-5 h-5" />
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
                   <span>{category.name}</span>
                   <span className="text-sm opacity-75">({category.count})</span>
                 </button>
               ))}
             </div>
-<<<<<<< HEAD
-
-            {/* Type Filters */}
-            <div className="flex flex-wrap gap-3">
-              {filterTypes.map((type) => (
-                <button
-                  key={type.id}
-                  onClick={() => setFilterType(type.id)}
-                  className={`px-4 py-2 rounded-lg border transition-all duration-300 ${
-                    filterType === type.id
-                      ? 'bg-zion-purple border-zion-purple text-white'
-                      : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-purple/50'
-                  }`}
-
-                  {type.name} ({type.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Webinars Grid */}
-      <section className="py-16 bg-zion-slate-light">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            {filteredWebinars.length === 0 ? (;
-              <div className="text-center py-20">;
-                <Video className="w-24 h-24 text-zion-slate-light mx-auto mb-6" />;
-                <h3 className="text-2xl font-semibold text-zion-slate mb-4">No webinars found</h3>;
-                <p className="text-zion-slate-light mb-8">Try adjusting your search criteria or check back later for new webinars.</p>;
-                <button;
-                  onClick={() => {;
-                    setSearchQuery('');
-                    setActiveCategory('all');
-                    setFilterType('all');
-                  }}
-<<<<<<< HEAD
-                  className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
-
-=======
                   className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   Clear Filters
                 </button>
               </div>
-=======
           </div>
         </section>
 
@@ -626,95 +546,8 @@ const Webinars: React.FC = () => {
                   Try adjusting your search terms or category filter.
                 </p>
               </motion.div>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
-                {filteredWebinars.map((webinar) => (
-                  <motion.div
-                    key={webinar.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
-
-                    {/* Thumbnail */}
-                    <div className="relative h-48 bg-gradient-to-br from-zion-slate to-zion-slate-light">
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <Play className="w-16 h-16 text-zion-cyan" />
-                      </div>
-                      {webinar.featured && (
-                        <div className="absolute top-4 right-4 bg-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          Featured
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Content */}
-                    <div className="p-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        {getCategoryIcon(webinar.category)}
-                        <span className="text-sm text-zion-slate-light">
-                          {categories.find(c => c.id === webinar.category)?.name}
-                        </span>
-                      </div>
-
-                      <h3 className="text-xl font-semibold text-white mb-3 line-clamp-2">
-                        {webinar.title}
-                      </h3>
-
-                      <p className="text-zion-slate-light mb-4 line-clamp-3">
-                        {webinar.description}
-                      </p>
-
-                      {/* Meta Info */}
-                      <div className="space-y-2 mb-4">
-                        <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <Calendar className="w-4 h-4" />
-                          <span>{formatDate(webinar.date)}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <Clock className="w-4 h-4" />
-                          <span>{webinar.duration}</span>
-                        </div>
-                        <div className="flex items-center gap-2 text-sm text-zion-slate-light">
-                          <Users className="w-4 h-4" />
-                          <span>{webinar.currentAttendees}/{webinar.maxAttendees} attendees</span>
-                        </div>
-                      </div>
-
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {webinar.tags.slice(0, 3).map((tag, index) => (
-                          <span
-                            key={index}
-                            className="px-2 py-1 bg-zion-slate text-zion-slate-light text-xs rounded"
-
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* Actions */}
-                      <div className="flex gap-3">
-                        {webinar.registrationRequired ? (
-                          <button className="flex-1 bg-zion-cyan text-white py-2 px-4 rounded-lg hover:bg-zion-cyan/90 transition-colors font-semibold">
-                            Register Now
-                          </button>
-                        ) : (
-                          <button className="flex-1 bg-zion-purple text-white py-2 px-4 rounded-lg hover:bg-zion-purple/90 transition-colors font-semibold">
-                            Join Now
-                          </button>
-                        )}
-                        <button className="p-2 border border-zion-slate-light/20 text-zion-slate-light rounded-lg hover:border-zion-cyan hover:text-zion-cyan transition-colors">
-                          <ExternalLink className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-=======
                 {filteredWebinars.map((webinar, index) => {
                   const registrationStatus = getRegistrationStatus(webinar);
                   
@@ -826,7 +659,6 @@ const Webinars: React.FC = () => {
                     </motion.div>
                   );
                 })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             )}
           </div>
@@ -869,10 +701,6 @@ const Webinars: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-}}}}}
-=======
 };
 
 export default Webinars;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

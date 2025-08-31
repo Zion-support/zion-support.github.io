@@ -103,7 +103,6 @@ const ComprehensiveServicesShowcase = () => {
         animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }
     };
-=======
   'ai-legal-compliance': ['Legal', 'Compliance'],
                 'quantum-security-communication': ['Quantum', 'Security', 'Communication'],
                 'ai-healthcare-diagnostics': ['Healthcare', 'Diagnostics'],
@@ -137,7 +136,6 @@ const ComprehensiveServicesShowcase = () => {
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')));
         });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const filteredServices = selectedCategory === 'all'
         ? COMPREHENSIVE_SERVICES
         : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory);
@@ -221,102 +219,6 @@ import {Brain,
             Awardexport const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
   const [activeCategory, setActiveCategory] = useState('all');
 
-<<<<<<< HEAD
-  const services = [
-    {id}: 'ai-solutions',
-      title: 'AI Solutions',
-      category: 'ai',
-      description: 'Comprehensive artificial intelligence and machine learning solutions for business transformation.',
-      icon: Brain,
-      features['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'],
-      benefits['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'],
-      color: 'from-purple-500 to-pink-500',
-      href: '/services/ai-solutions'
-    },
-    {id}: 'quantum-computing',
-      title: 'Quantum Computing',
-      category: 'quantum',
-      description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.',
-      icon: Atom,
-      features['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'],
-      benefits['Exponential speedup', 'Complex problem solving', 'Future-proof technology'],
-      color: 'from-indigo-500 to-purple-500',
-      href: '/services/quantum-computing'
-    },
-    {id}: 'cybersecurity',
-      title: 'Cybersecurity',
-      category: 'security',
-      description: 'Advanced security solutions with AI-powered threat detection and prevention.',
-      icon: Shield,
-      features['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'],
-      benefits['Real-time protection', 'Proactive defense', 'Compliance assurance'],
-      color: 'from-red-500 to-orange-500',
-      href: '/services/cybersecurity'
-    },
-    {id}: 'cloud-devops',
-      title: 'Cloud & DevOps',
-      category: 'cloud',
-      description: 'Scalable cloud infrastructure and DevOps automation for modern applications.',
-      icon: Cloud,
-      features['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'],
-      benefits['Scalable infrastructure', 'Faster deployment', 'Cost optimization'],
-      color: 'from-blue-500 to-cyan-500',
-      href: '/services/cloud-devops'
-    },
-    {id}: 'blockchain-web3',
-      title: 'Blockchain & Web3',
-      category: 'blockchain',
-      description: 'Decentralized technology solutions for the next generation of digital applications.',
-      icon: LinkIcon,
-      features['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'],
-      benefits['Transparency', 'Security', 'Innovation'],
-      color: 'from-green-500 to-emerald-500',
-      href: '/services/blockchain-web3'
-    },
-    {id}: 'enterprise-it',
-      title: 'Enterprise IT',
-      category: 'enterprise',
-      description: 'Comprehensive IT solutions for large organizations and enterprises.',
-      icon: Users,
-      features['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'],
-      benefits['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'],
-      color: 'from-slate-500 to-gray-500',
-      href: '/services/enterprise-it'
-    },
-    {id}: 'green-it',
-      title: 'Green IT',
-      category: 'green',
-      description: 'Sustainable technology solutions for environmentally conscious businesses.',
-      icon: Leaf,
-      features['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'],
-      benefits['Environmental impact', 'Cost savings', 'Sustainability compliance'],
-      color: 'from-green-500 to-teal-500',
-      href: '/services/green-it'
-    },
-    {id}: 'space-tech',
-      title: 'Space Technology',
-      category: 'space',
-      description: 'Advanced space technology solutions for satellite systems and space exploration.',
-      icon: Rocket,
-      features['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'],
-      benefits['Innovation leadership', 'Advanced technology', 'Space expertise'],
-      color: 'from-violet-500 to-purple-500',
-      href: '/services/space-tech'
-    },
-    {id}: 'microsaas',
-      title: 'MicroSAAS Development',
-      category: 'saas',
-      description: 'Custom software-as-a-service solutions for niche markets and specific business needs.',
-      icon: Package,
-      features['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'],
-      benefits['Custom solutions', 'Scalable business model', 'Recurring revenue'],
-      color: 'from-orange-500 to-red-500',
-      href: '/services/microsaas'
-
-  ];
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const solutions = [
     {id}: 'ai-autonomous-business',
       title: 'AI Autonomous Business',
@@ -376,17 +278,8 @@ import {Brain,
 
   ];
 
-<<<<<<< HEAD
-  const filteredServices = activeCategory === 'all'
-    ? services
-    : services.filter(service => service.category === activeCategory);
-
-  const filteredSolutions = activeCategory === 'all'
-    ? solutions
-=======
   const filteredSolutions = activeCategory === 'all' 
     ? solutions 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     : solutions.filter(solution => solution.category === activeCategory);
 
   return (
@@ -688,16 +581,9 @@ import {Brain,
           </div>
         </div>
       </></div>
-<<<<<<< HEAD
-    </div>))};
-
-interface ServiceCardProps {service}: any;
-  getCategoryIcon: (category: string) => React.ReactNode;
-=======
     </div>))}}
 
 interface ServiceCardProps {service};getCategoryIcon: (category: string) => React.ReactNode}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 function ServiceCard({service, getCategoryIcon}: ServiceCardProps) { /* empty */ }
   return (
@@ -777,12 +663,7 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) { /* empty */
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-  );
-
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
 
                 <div className="mb-4">
@@ -832,21 +713,13 @@ import {Search,
             Network,
             Smartphone,
             Monitor,
-<<<<<<< HEAD
-            Serverimport {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices';
-=======
             Server} from 'lucide-react';
 import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from "../data/innovativeMicroSaasServices";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ServiceCardProps {service}: InnovativeMicroSaasService;
   index: number;
   viewMode: 'grid' | 'list';
-<<<<<<< HEAD
-  onServiceClick: (service: InnovativeMicroSaasService) => void;
-=======
   onServiceClick: (service: InnovativeMicroSaasService) => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onServiceClick}) => { /* empty */ }
   const [isHovered, setIsHovered] = useState(false);
@@ -892,13 +765,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
             title: service.title,
             text: service.description,
             url: service.websiteUrl
-<<<<<<< HEAD
-        })};
-    } else {navigator.clipboard.writeText(service.websiteUrl)};
-
-=======
         })}} else {navigator.clipboard.writeText(service.websiteUrl)}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [service]);
 
   if (viewMode === 'grid') { /* empty */ }
@@ -1020,11 +887,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
           {isHovered && (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-purple-600/10 rounded-2xl"/>)}
         </AnimatePresence>
       </motion.div>
-<<<<<<< HEAD
-    );
-=======
     )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // List View
   return (
@@ -1164,17 +1027,10 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
         service.description.toLowerCase().includes(searchLower) ||
         service.tags.some(tag => tag.toLowerCase().includes(searchLower)) ||
         service.category.toLowerCase().includes(searchLower)
-<<<<<<< HEAD
-      );
-
-    // Filter by category
-    if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
-=======
       )}
 
     // Filter by category
     if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort services
     filtered.sort((a, b) => { /* empty */ }
@@ -1188,44 +1044,25 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
         case 'name':
           return a.title.localeCompare(b.title);
         default:
-<<<<<<< HEAD
-          return 0;
-
-=======
           return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
 
     return filtered}, [searchTerm, selectedCategory, sortBy]);
 
   const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
     // You can add navigation logic here
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // // // console.log('Service clicked:', service);
-=======
     // // // // // // // console.log('Service clicked:', service);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   }, []);
-=======
     console.log('Service clicked:', service)}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const clearFilters = useCallback(() => {setSearchTerm('')};
     setSelectedCategory('all');
     setSortBy('rating')}, []);
 
   // Keyboard navigation support
-<<<<<<< HEAD
-  useEffect(() => { /* empty */ }
-    const handleKeyDown = (e: KeyboardEvent) => { /* empty */ }
-      if (e.key === 'Escape') {setSelectedService(null)};
-
-=======
   useEffect(() => {}
     const handleKeyDown = (e: KeyboardEvent) => {}
       if (e.key === 'Escape') {setSelectedService(null)}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     document.addEventListener('keydown', handleKeyDown);
@@ -1353,10 +1190,6 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
             </div>)
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Services Grid/List */
-        <motion.div initial={{ opacity: 0, y: 20  animate={{ opacity: 1, y: 0  transition={{ duration: 0.8, delay: 0.4 >
-=======
         {/* Services Grid/List */}
         <motion.div initial = {
   { opacity: 0,
@@ -1386,7 +1219,6 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
 
 
 }}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           {filteredServices.length > 0 ? (viewMode === 'grid' ? (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (<ServiceCard key={service.id service={service index={index viewMode={viewMode onServiceClick={handleServiceClick/>))
               </div>) : (<div className="space-y-6">
@@ -1401,10 +1233,6 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
             </motion.div>)
         </motion.div>
 
-<<<<<<< HEAD
-        {/* CTA Section */
-        <motion.div initial={{ opacity: 0, y: 20  animate={{ opacity: 1, y: 0  transition={{ duration: 0.8, delay: 0.8  className="text-center mt-20">
-=======
         {/* CTA Section */}
         <motion.div initial = {
   { opacity: 0,
@@ -1434,7 +1262,6 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
 
 
 }} className="text-center mt-20">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-blue-500/30">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -1455,22 +1282,10 @@ const ComprehensiveServicesShowcase: React.FC = () => { /* empty */ }
         </motion.div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-;
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default ComprehensiveServicesShowcase;
-<<<<<<< HEAD
-    </></></></></></></></>)};
-=======
     </></></></></></></></>);
-<<<<<<< HEAD
-</div></div></div></div></div></Card></Card></Card></Card></section></section></section></motion.div>;
-)
-=======
 };
 
 export default ServiceCard;
@@ -1478,8 +1293,6 @@ export default ServiceCard;
 export default ServiceCard;
 export default ServiceCard;
 export default ServiceCard;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ServiceCard;
 export default ServiceCard;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

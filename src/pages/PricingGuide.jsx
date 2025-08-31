@@ -3,12 +3,8 @@ import { EXPANDED_SERVICES, EXPANDED_SERVICE_CATEGORIES } from '@/data/expandedS
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-<<<<<<< HEAD
-import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock import { SEO } from '@/components/SEO';
-=======
 import { Check, Star, TrendingUp, Shield, Zap, Database, Cloud, Brain, Lock, Globe, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function PricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -29,7 +25,6 @@ export default function PricingGuide() {
 
 };
         return icons[category] || <Star className="w-6 h-6"/>};
-=======
   'Managed Services': <Lock className="w-6 h-6"/>
         
 
@@ -39,18 +34,10 @@ export default function PricingGuide() {
 };
         return icons[category] || <Star className="w-6 h-6"/>;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const formatPrice = (price) => {
         if (price >= 1000) {
-<<<<<<< HEAD
-            return `$${(price / 1000).toFixed(0)}K`;
-
-        return `$${price}`;
-    };
-=======
             return `$${(price / 1000).toFixed(0)}K`}
         return `$${price}`};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getMarketComparison = (price, category) => {
         const comparisons = {
   'AI Development': { avg: price * 1.3,
@@ -360,9 +347,4 @@ export default function PricingGuide() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

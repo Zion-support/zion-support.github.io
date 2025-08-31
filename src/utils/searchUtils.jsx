@@ -20,12 +20,7 @@ export const matchesSearchTerm = (text, searchTerm) => {
  * Calculate relevance score for search results
  */
 export const calculateRelevanceScore = (result, searchTerm) => {
-<<<<<<< HEAD
-    const score = 0;
-    const term = searchTerm.toLowerCase();
-=======
     let score = 0;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const title = result.title.toLowerCase();
     const description = result.description.toLowerCase();
     // Exact title match gets highest score
@@ -273,9 +268,6 @@ export default {
     getActiveFilterCount,
     getDefaultFilters
 };
-<<<<<<< HEAD
-}}}}}}}}}}}
-=======
 
 export default for;
 export default for;
@@ -284,4 +276,3 @@ export default for;
 export default for;
 export default for;
 export default for;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

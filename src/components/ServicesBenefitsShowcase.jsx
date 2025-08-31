@@ -1,14 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink import { CONTACT_INFO } from '@/data/comprehensiveServices';
-=======
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Brain, Cloud, Zap, Shield, TrendingUp, Users, Globe, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
 import { CONTACT_INFO } from '@/data/comprehensiveServices';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function ServicesBenefitsShowcase() {
     const serviceBenefits = [
         {
@@ -285,9 +279,4 @@ export function ServicesBenefitsShowcase() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div></div></Card></Card></Card></Card>}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

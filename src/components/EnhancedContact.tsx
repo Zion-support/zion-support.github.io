@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-=======
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -10,23 +6,13 @@ import {
   MapPin,
   Send,
   CheckCircle,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   AlertCircle,
   CheckCircle,
   Clock,
-<<<<<<< HEAD
-  Mail,
-  MapPin,
-  Phone,
-  Send
-} from 'lucide-react';
-import React, { useState } from 'react';
-=======
   MessageSquare,
   Building,
   Globe
  } from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ContactFormData {
 
@@ -70,23 +56,6 @@ export function EnhancedContact(...args[]):  {
     const newErrors: ContactFormErrors = {};
 
     if (!formData.name.trim()) {
-<<<<<<< HEAD
-      newErrors['name'] = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors['email'] = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors['email'] = 'Please enter a valid email address';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors['message'] = 'Message is required';
-    } else if (formData.message.length < 10) {
-      newErrors['message'] = 'Message must be at least 10 characters long';
-    }
-
-=======
       newErrors.name = 'Name is required'}
 
     if (!formData.email.trim()) {
@@ -97,68 +66,16 @@ export function EnhancedContact(...args[]):  {
       newErrors.message = 'Message is required'} else if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters long'};
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0};
 
-<<<<<<< HEAD
-  const handleInputChange = (field: keyof ContactFormData, value: string) => {
-    setFormData((prev: ContactFormData) => ({ ...prev, [field]: value }));
-
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors((prev: ContactFormErrors) => ({ ...prev, [field]: '' }));
-    }
-=======
-<<<<<<< HEAD
-  const handleInputChange = (field: keyof ContactFormData, value: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setFormData(prev => ({ ...prev, [field]: value }));
-
-    // Clear error when user starts typing
-    if (errors[field]) {
-      setErrors(prev = > ({ ...prev, [field]: '' }))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  };
-
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-
-    if (!validateForm()) {
-      return}
-
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        comp: '',
-        service: 'general',
-        message: ''
-<<<<<<< HEAD
-      });
-    } catch (error) {
-<<<<<<< HEAD
-      console.error('Error submitting form:', error);
-=======
       // // // // // // // console.error('Error submitting form:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false);
     }
-=======
       })} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const contactInfo = [
@@ -310,14 +227,6 @@ export function EnhancedContact(...args[]):  {
             transition={{ delay: 0.5 }}
             onClick={() => setIsSubmitted(false)}
             className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-<<<<<<< HEAD
-          >
-            Send Another Message
-          </motion.button>
-        </div>
-      </motion.div>
-    )};
-=======;
           >;
             Send Another Message;
           </motion.button>;
@@ -325,7 +234,6 @@ export function EnhancedContact(...args[]):  {
       </motion.div>;
     );
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light py-20">
@@ -428,8 +336,6 @@ export function EnhancedContact(...args[]):  {
                 </motion.div>
               ))}
             </div>
-<<<<<<< HEAD
-=======
 
             {/* Comp Stats */}
             <motion.div
@@ -476,7 +382,6 @@ export function EnhancedContact(...args[]):  {
                 </div>
               </div>
             </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </motion.div>
 
           {/* Contact Form */}
@@ -527,11 +432,7 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-<<<<<<< HEAD
-                    errors['name']
-=======
                     errors.name
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
@@ -599,11 +500,7 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
-<<<<<<< HEAD
-                    errors['email']
-=======
                     errors.email
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
@@ -680,15 +577,6 @@ export function EnhancedContact(...args[]):  {
                     Comp </label>
                   <input
                     type="text"
-<<<<<<< HEAD
-                    id="comp"
-                    value={formData.comp}
-                    onChange = {
-  (e) => handleInputChange('comp',
-  e.target.value)
-
-}
-=======
                     id="company"
                     value={formData.company}
                     onChange = {
@@ -701,7 +589,6 @@ export function EnhancedContact(...args[]):  {
 
 
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
                     placeholder="Enter your comp name"
                   />
@@ -716,14 +603,6 @@ export function EnhancedContact(...args[]):  {
                 <select
                   id="service"
                   value={formData.service}
-<<<<<<< HEAD
-                  onChange = {
-  (e) => handleInputChange('service',
-  e.target.value)
-
-}
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
-=======
                   onChange = {
   (e) => handleInputChange('service',
   e.target.value)
@@ -735,7 +614,6 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 >
                   {services.map(service  => (
                     <option key={service.value} value={service.value}>
@@ -765,11 +643,7 @@ export function EnhancedContact(...args[]):  {
 
 }
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
-<<<<<<< HEAD
-                    errors['message']
-=======
                     errors.message
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'
                   } text-white placeholder-zion-slate-light`}
@@ -837,14 +711,6 @@ export function EnhancedContact(...args[]):  {
                   </>
                 )}
               </motion.button>
-<<<<<<< HEAD
-            </form>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </form>;
           </motion.div>;
         </div>;
@@ -852,4 +718,3 @@ export function EnhancedContact(...args[]):  {
     </div>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

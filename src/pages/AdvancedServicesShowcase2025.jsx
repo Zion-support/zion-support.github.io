@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink import { advancedRealServices2025 } from '../data/2025-advanced-real-services-expansion';
-import { specializedITServices2025 } from '../data/2025-specialized-it-ai-services';
-import SEOHead from '../components/SEOHead';
-=======
 import { Star, CheckCircle, Clock, Users, TrendingUp, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import { advancedRealServices2025 } from "../data/2025-advanced-real-services-expansion";
 import { specializedITServices2025 } from "../data/2025-specialized-it-ai-services";
 import SEOHead from "../components/SEOHead";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const AdvancedServicesShowcase2025 = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchTerm, setSearchTerm] = useState('');
@@ -52,12 +46,7 @@ const AdvancedServicesShowcase2025 = () => {
                 return a.category.localeCompare(b.category);
             case 'name':
             default:
-<<<<<<< HEAD
-                return a.name.localeCompare(b.name);
-
-=======
                 return a.name.localeCompare(b.name)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const getCategoryIcon = (category) => {
         const icons = {
@@ -84,7 +73,6 @@ const AdvancedServicesShowcase2025 = () => {
 
 };
         return icons[category] || '🚀'};
-=======
   'Network Security': '🛡️'
         
 
@@ -94,7 +82,6 @@ const AdvancedServicesShowcase2025 = () => {
 };
         return icons[category] || '🚀';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -165,10 +152,6 @@ const AdvancedServicesShowcase2025 = () => {
               {" "}Showcase 2025
             </span>
           </motion.h1>
-<<<<<<< HEAD
-          <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Discover our comprehensive collection of {allServices.length}+ advanced real micro SAAS, IT, and AI services.
-=======
           <motion.p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8" initial = {
   { opacity: 0,
   y: 20 
@@ -198,7 +181,6 @@ const AdvancedServicesShowcase2025 = () => {
 
 }}>
             Discover our comprehensive collection of {allServices.length}+ advanced real micro SAAS, IT, and AI services. 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Each solution is market-ready with proven ROI, competitive pricing, and enterprise-grade support.
           </motion.p>
 

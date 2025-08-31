@@ -1,13 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square import { useSecurityCompliance } from '../hooks/useSecurityCompliance';
-import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
 import { useSecurityCompliance } from "../hooks/useSecurityCompliance";
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const SecurityComplianceDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -48,13 +43,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             category: 'custom',
             description: 'Custom compliance requirement',
             status: 'pending_review',
-<<<<<<< HEAD
-            requirements['Requirement 1', 'Requirement 2'],
-  violations[]
-        
-
-};
-=======
             requirements: ['Requirement 1', 'Requirement 2'],
   violations: []
         
@@ -63,7 +51,6 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         addComplianceRule(newRule);
         trackEvent('security', 'dashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]);
     const getSeverityColor = (severity) => {
@@ -72,24 +59,14 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'high': return 'text-orange-600 bg-orange-100';
             case 'medium': return 'text-yellow-600 bg-yellow-100';
             case 'low': return 'text-green-600 bg-green-100';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100';
-
-=======
             default: return 'text-gray-600 bg-gray-100'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusColor = (status) => {
         switch (status) {
             case 'compliant': return 'text-green-600 bg-green-100';
             case 'non_compliant': return 'text-red-600 bg-red-100';
             case 'pending_review': return 'text-yellow-600 bg-yellow-100';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100';
-
-=======
             default: return 'text-gray-600 bg-gray-100'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getThreatLevelColor = (level) => {
         switch (level) {
@@ -97,12 +74,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'high': return 'text-orange-600 bg-orange-100 border-orange-200';
             case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200';
             case 'low': return 'text-green-600 bg-green-100 border-green-200';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 border-gray-200';
-
-=======
             default: return 'text-gray-600 bg-gray-100 border-gray-200'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
@@ -637,10 +609,4 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             </div>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </div>);
-</div>};
-}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

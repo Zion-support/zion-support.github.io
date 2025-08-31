@@ -43,6 +43,8 @@ import {
   Box,
   Ship,
   Train,
+  Plane,
+  Car,
   Truck,
   Cloud,
   Settings,
@@ -50,6 +52,24 @@ import {
   Smartphone,
   Tablet,
   Monitor,
+  Smartphone,
+  Globe,
+  Shield,
+  Zap,
+  Users,
+  Settings,
+  Palette,
+  Database,
+  Server,
+  Network,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Signal,
+  Wifi,
+  Bluetooth,
+  Battery,
+  Signal,
   Wifi,
   Bluetooth,
   Battery,
@@ -159,6 +179,7 @@ import {
   Colocation,
   Edge,
   Fog,
+  Cloud,
   Hybrid,
   Multi,
   Public,
@@ -222,6 +243,7 @@ import {
   Application,
   Data,
   Security,
+  Network,
   Storage,
   Compute,
   Memory,
@@ -234,6 +256,8 @@ import {
   NearRealTime,
   Offline,
   Online,
+  Hybrid,
+  Multi,
   Single,
   Distributed,
   Centralized,
@@ -242,6 +266,7 @@ import {
   Hierarchical,
   Flat,
   Mesh,
+  Star,
   Ring,
   Bus,
   Tree,
@@ -253,9 +278,12 @@ import {
   Array,
   List,
   Stack,
+  Queue,
   Deque,
   PriorityQueue,
   Heap,
+  Tree,
+  Graph,
   HashTable,
   BloomFilter,
   SkipList,
@@ -264,7 +292,6 @@ import {
   RedBlackTree,
   AVLTree,
   SplayTree,
-<<<<<<< HEAD
   Treap,
   SplayTree,
   RedBlackTree,
@@ -549,118 +576,13 @@ import {
   Shield,
   Zap,
   Server
-=======
   Treap
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const infrastructureSolutions = [
-  {
-    id: 1,
-    title: "Data Center Infrastructure",
-    description: "Enterprise-grade data center design and implementation with high availability and scalability.",
-    icon: Server,
-    features[
-      "Server infrastructure",
-      "Storage systems",
-      "Network architecture",
-      "Power and cooling"
-    ],
-    price: "From $500,000",
-    timeline: "24-48 weeks",
-    category: "Data Center",
-    technologies["Enterprise Servers", "SAN/NAS Storage", "Network Switches", "UPS Systems"]
-  },
-  {
-    id: 2,
-    title: "Cloud Infrastructure",
-    description: "Multi-cloud and hybrid cloud infrastructure design and management.",
-    icon: Cloud,
-    features[
-      "Cloud architecture",
-      "Multi-cloud strategy",
-      "Hybrid cloud setup",
-      "Cloud migration"
-    ],
-    price: "From $200,000",
-    timeline: "16-32 weeks",
-    category: "Cloud",
-    technologies["AWS", "Azure", "GCP", "Kubernetes"]
-  },
-  {
-    id: 3,
-    title: "Network Infrastructure",
-    description: "Enterprise networking solutions with security and performance optimization.",
-    icon: Network,
-    features[
-      "Network design",
-      "Security implementation",
-      "Performance optimization",
-      "Monitoring systems"
-    ],
-    price: "From $150,000",
-    timeline: "12-24 weeks",
-    category: "Networking",
-    technologies["Cisco", "Juniper", "Fortinet", "Network Monitoring"]
-  },
-  {
-    id: 4,
-    title: "Security Infrastructure",
-    description: "Comprehensive security infrastructure with threat detection and prevention.",
-    icon: Shield,
-    features[
-      "Firewall systems",
-      "Intrusion detection",
-      "Access control",
-      "Security monitoring"
-    ],
-    price: "From $300,000",
-    timeline: "20-36 weeks",
-    category: "Security",
-    technologies["Next-Gen Firewalls", "SIEM", "EDR", "Zero Trust"]
-  },
-  {
-    id: 5,
-    title: "Storage Infrastructure",
-    description: "High-performance storage solutions with data protection and backup.",
-    icon: HardDrive,
-    features[
-      "Storage architecture",
-      "Data protection",
-      "Backup systems",
-      "Disaster recovery"
-    ],
-    price: "From $250,000",
-    timeline: "16-28 weeks",
-    category: "Storage",
-    technologies["SAN", "NAS", "Backup Software", "DR Systems"]
-  },
-  {
-    id: 6,
-    title: "Monitoring & Observability",
-    description: "Comprehensive monitoring and observability platform for infrastructure management.",
-    icon: Activity,
-    features[
-      "Infrastructure monitoring",
-      "Application performance",
-      "Log management",
-      "Alerting systems"
-    ],
-    price: "From $100,000",
-    timeline: "12-20 weeks",
-    category: "Monitoring",
-<<<<<<< HEAD
-    technologies: ["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
-
-=======
     technologies["Prometheus", "Grafana", "ELK Stack", "APM Tools"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const infrastructureTechnologies = [
   {
     name: "Server Technologies",
@@ -776,13 +698,8 @@ const infrastructureBenefits = [
     title: "Performance",
     description: "Optimized infrastructure for maximum performance and efficiency",
     icon: Zap,
-<<<<<<< HEAD
-    examples: ["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
-
-=======
     examples["Performance tuning", "Resource optimization", "Monitoring", "Proactive maintenance"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function Infrastructure() {
@@ -1457,9 +1374,4 @@ export default function Infrastructure() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

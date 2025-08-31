@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTServices = () => {
-=======
 import React from 'react.ts';
 import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
 
 const IoTServices = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const iotServices = [
     {
       title: "IoT Device Development",
@@ -22,15 +17,6 @@ const IoTServices = () => {
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
       icon: Wifi
     },
-<<<<<<< HEAD
-    {
-      title: "IoT Data Management",
-      description: "Comprehensive data collection, processing, and analytics for IoT devices.",
-      price: "From $6,500/month",
-      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],
-      icon: Database
-
-=======
     {;
       title: "IoT Data Management",;
       description: "Comprehensive data collection, processing, and analytics for IoT devices.",;
@@ -38,7 +24,6 @@ const IoTServices = () => {
       features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
       icon: Database;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const iotTechnologies = [
@@ -53,15 +38,6 @@ const IoTServices = () => {
       description: "AI-powered IoT intelligence and automation",
       icon: BarChart3,
       features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Security & Privacy",
-      description: "Enterprise-grade IoT security solutions",
-      icon: Shield,
-      features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]
-
-=======
     },;
     {;
       name: "Security & Privacy",;
@@ -69,7 +45,6 @@ const IoTServices = () => {
       icon: Shield,;
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;

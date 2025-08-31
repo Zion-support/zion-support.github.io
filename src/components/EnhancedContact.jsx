@@ -162,12 +162,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             Send Another Message
           </Button>
         </div>
-<<<<<<< HEAD
-      </motion.div>);
-
-=======
       </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -320,10 +315,4 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

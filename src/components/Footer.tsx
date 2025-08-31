@@ -1,6 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
+  Twitter, 
+  Linkedin, 
+  Facebook, 
+  Instagram, 
+  Github, 
   Mail, 
   Phone, 
   MapPin, 
@@ -20,6 +25,9 @@ import {
   Building2,
   FileText,
   HelpCircle,
+  Activity,
+  Cpu,
+  GraduationCap,
   BarChart3,
   ArrowUp,
   Heart,
@@ -61,9 +69,38 @@ import {
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Handle scroll to show/hide scroll to top button
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Toggle section expansion (for mobile)
+  const toggleSection = (title: string) => {
+    setExpandedSections(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(title)) {
+        newSet.delete(title);
+      } else {
+        newSet.add(title);
+      }
+      return newSet;
+    });
   };
+
+  // Scroll to top function
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+
 
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">

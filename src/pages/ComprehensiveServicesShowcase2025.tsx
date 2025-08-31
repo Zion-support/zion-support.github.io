@@ -531,14 +531,94 @@ export default function ComprehensiveServicesShowcase2025() {
                       : 'bg-zion-blue-darker text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
                   }`}
                 >
-                  <category.icon className="w-5 h-5" />
-                  <span>{category.name}</span>
-                  <span className="bg-white/20 px-2 py-1 rounded-full text-sm">
-                    {category.count}
-                  </span>
+                  Grid
                 </button>
-              ))}
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`flex-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    viewMode === 'list' 
+                      ? 'bg-zion-cyan text-white' 
+                      : 'text-zion-slate-light hover:text-white'
+                  }`}
+                >
+                  List
+                </button>
+              </div>
             </div>
+          </div>
+
+          {/* Advanced Filters */}
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Price Range */}
+            <div>
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                Price Range: ${priceRange[0]} - ${priceRange[1]}
+              </label>
+              <div className="flex gap-2">
+                <input
+                  type="range"
+                  min="0"
+                  max="10000"
+                  value={priceRange[0]}
+                  onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])}
+                  className="flex-1"
+                />
+                <input
+                  type="range"
+                  min="0"
+                  max="10000"
+                  value={priceRange[1]}
+                  onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])}
+                  className="flex-1"
+                />
+              </div>
+            </div>
+
+            {/* Innovation Level */}
+            <div>
+              <label className="block text-sm font-medium text-zion-slate-light mb-2">
+                Innovation Level
+              </label>
+              <select
+                value={innovationLevel}
+                onChange={(e) => setInnovationLevel(e.target.value)}
+                className="w-full px-3 py-2 bg-zion-slate-dark border border-zion-slate-light/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+              >
+                <option value="all">All Levels</option>
+                <option value="Breakthrough">Breakthrough</option>
+                <option value="Revolutionary">Revolutionary</option>
+                <option value="Advanced">Advanced</option>
+              </select>
+            </div>
+
+            {/* Results Count */}
+            <div className="flex items-center justify-end">
+              <span className="text-zion-slate-light">
+                Showing {filteredServices.length} of {allServices.length} services
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Categories */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap gap-3">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
+                    : 'bg-zion-slate-dark text-zion-slate-light hover:bg-zion-slate hover:text-white border border-zion-slate-light/20'
+                }`}
+              >
+                <span className="mr-2">{category.icon}</span>
+                {category.name} ({category.count})
+              </button>
+            ))}
           </div>
         </div>
       </section>

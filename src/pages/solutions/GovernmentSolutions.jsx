@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp export default function GovernmentSolutions() {
+import { Building2, Shield, Users, BarChart3, Lock, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+export default function GovernmentSolutions() {
     const solutions = [
         {
             icon: Building2,

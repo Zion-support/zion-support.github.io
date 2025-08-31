@@ -116,13 +116,8 @@ const healthcareSolutions = [
     price: "From $45,000",
     timeline: "8-16 weeks",
     category: "Security",
-<<<<<<< HEAD
-    compliance: ["NIST", "ISO 27001", "HITRUST"]
-
-=======
     compliance["NIST", "ISO 27001", "HITRUST"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const complianceStandards = [
@@ -148,13 +143,8 @@ const complianceStandards = [
     name: "SOC 2",
     description: "System and Organization Controls",
     icon: CheckCircle,
-<<<<<<< HEAD
-    requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality"]
-
-=======
     requirements["Security", "Availability", "Processing Integrity", "Confidentiality"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -798,9 +788,4 @@ export default function HealthcareSolutions() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

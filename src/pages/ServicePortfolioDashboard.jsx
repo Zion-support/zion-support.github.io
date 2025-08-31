@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain import AdvancedServicePortfolioDashboard from '../components/AdvancedServicePortfolioDashboard';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-=======
 import { BarChart3, PieChart, TrendingUp, Globe, ArrowRight, CheckCircle, Rocket, Shield, Target, DollarSign, Brain } from 'lucide-react';
 import AdvancedServicePortfolioDashboard from "../components/AdvancedServicePortfolioDashboard";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const ServicePortfolioDashboard = () => {
     const features = [
         {
@@ -450,11 +444,6 @@ const ServicePortfolioDashboard = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ServicePortfolioDashboard;
 }}}

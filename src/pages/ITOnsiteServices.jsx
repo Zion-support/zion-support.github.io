@@ -121,37 +121,8 @@ const onsiteServices = [
     price: "From $200/hour",
     timeline: "2-8 hours",
     category: "Emergency Support",
-<<<<<<< HEAD
-    coverage: ["Local", "Regional", "National"]
-
-];
-
-const serviceAreas = [
-  {
-    region: "Local (0-50 miles)",
-    response: "2-4 hours",
-    coverage: "Full coverage",
-    icon: Clock,
-    color: "text-green-400"
-  },
-  {
-    region: "Regional (50-200 miles)",
-    response: "4-8 hours",
-    coverage: "Standard coverage",
-    icon: Truck,
-    color: "text-yellow-400"
-  },
-  {
-    region: "National (200+ miles)",
-    response: "8-24 hours",
-    coverage: "Extended coverage",
-    icon: Globe,
-    color: "text-blue-400"
-
-=======
     coverage["Local", "Regional", "National"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -794,9 +765,4 @@ export default function ITOnsiteServices() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

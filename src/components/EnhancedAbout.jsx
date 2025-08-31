@@ -1,14 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target export const EnhancedAbout = () => {
-    const companyValues = [
-=======
 import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } from 'lucide-react';
 export const EnhancedAbout = () => {
     const compValues = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         {
             icon: Brain,
             title: 'Innovation First',
@@ -360,10 +355,4 @@ export const EnhancedAbout = () => {
           </div>
         </motion.div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}}}}}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

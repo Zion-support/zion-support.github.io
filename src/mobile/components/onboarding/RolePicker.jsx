@@ -46,9 +46,4 @@ import { Briefcase, Users, Check export function RolePicker({ onSelect }) {
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card>}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

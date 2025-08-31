@@ -1,16 +1,5 @@
 import React, { useState, useEffect, createContext, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button';
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {
-    const context = useContext(AccessibilityContext);
-    if (!context) {
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
-
-    return context;
-};
-=======
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 import { Button } from "../ui/button";
 const AccessibilityContext = createContext(null);
@@ -19,7 +8,6 @@ export const useAccessibility = () => {
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Accessibility Provider Component
 export const AccessibilityProvider = ({ children }) => {
     const [highContrast, setHighContrast] = useState(false);
@@ -34,12 +22,7 @@ export const AccessibilityProvider = ({ children }) => {
             setHighContrast(settings.highContrast || false);
             setReducedMotion(settings.reducedMotion || false);
             setFontSize(settings.fontSize || 'medium');
-<<<<<<< HEAD
-            setColorBlindMode(settings.colorBlindMode || 'none');
-
-=======
             setColorBlindMode(settings.colorBlindMode || 'none')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     // Save settings to localStorage
     useEffect(() => {
@@ -53,7 +36,6 @@ export const AccessibilityProvider = ({ children }) => {
 
 };
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-=======
   colorBlindMode
         
 
@@ -63,26 +45,11 @@ export const AccessibilityProvider = ({ children }) => {
 };
         localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings));
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Apply accessibility settings to document
     useEffect(() => {
         const root = document.documentElement;
         // High contrast mode
         if (highContrast) {
-<<<<<<< HEAD
-            root.classList.add('high-contrast');
-
-        else {
-            root.classList.remove('high-contrast');
-
-        // Reduced motion
-        if (reducedMotion) {
-            root.classList.add('reduced-motion');
-
-        else {
-            root.classList.remove('reduced-motion');
-
-=======
             root.classList.add('high-contrast')}
         else {
             root.classList.remove('high-contrast')}
@@ -91,20 +58,14 @@ export const AccessibilityProvider = ({ children }) => {
             root.classList.add('reduced-motion')}
         else {
             root.classList.remove('reduced-motion')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Font size
         root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
         // Color blind mode
         root.style.filter = colorBlindMode === 'none' ? 'none' :
             colorBlindMode === 'protanopia' ? 'url(#protanopia)' :
                 colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :
-<<<<<<< HEAD
-                    'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
-    const toggleHighContrast = () => setHighContrast(!highContrast);
-=======
                     'url(#tritanopia)';
     }, [highContrast, reducedMotion, fontSize, colorBlindMode]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
     const value = {
   highContrast,
@@ -136,20 +97,6 @@ export const AccessibilityPanel = () => {
             // Ctrl/Cmd + Shift + A to open accessibility panel
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {
                 event.preventDefault();
-<<<<<<< HEAD
-                setIsOpen(!isOpen);
-
-            // Ctrl/Cmd + Shift + H to toggle high contrast
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
-                event.preventDefault();
-                toggleHighContrast();
-
-            // Ctrl/Cmd + Shift + M to toggle reduced motion
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
-                event.preventDefault();
-                toggleReducedMotion();
-
-=======
                 setIsOpen(!isOpen)}
             // Ctrl/Cmd + Shift + H to toggle high contrast
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {
@@ -159,7 +106,6 @@ export const AccessibilityPanel = () => {
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {
                 event.preventDefault();
                 toggleReducedMotion()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);
@@ -308,18 +254,6 @@ export const useFocusTrap = (isActive) => {
                 if (e.shiftKey) {
                     if (document.activeElement === firstFocusableElement) {
                         e.preventDefault();
-<<<<<<< HEAD
-                        lastFocusableElement.focus();
-
-
-                else {
-                    if (document.activeElement === lastFocusableElement) {
-                        e.preventDefault();
-                        firstFocusableElement.focus();
-
-
-
-=======
                         lastFocusableElement.focus()}
                 }
                 else {
@@ -328,7 +262,6 @@ export const useFocusTrap = (isActive) => {
                         firstFocusableElement.focus()}
                 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('keydown', handleTabKey);
         return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};

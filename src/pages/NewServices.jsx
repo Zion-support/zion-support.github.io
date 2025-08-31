@@ -569,12 +569,6 @@ export function NewServices() {
             </div>
           </motion.div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-
-export default NewServices;
-}}}}}
-=======
     </div>)}
 export default NewServices;
 
@@ -585,4 +579,3 @@ export default NewServices;
 export default NewServices;
 export default NewServices;
 export default NewServices;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

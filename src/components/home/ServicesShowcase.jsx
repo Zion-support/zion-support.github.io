@@ -4,54 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { COMPREHENSIVE_SERVICES } from '@/data/comprehensiveServices';
-<<<<<<< HEAD
-import { ArrowRight, Star // Temporary placeholder components until the real ones are available
-const NeonText = ({ children, color, glowIntensity }) => (
-  <span style={{ color, textShadow: `0 0 10px ${color}` }}>{children}</span>
-);
-
-const FuturisticCard = ({ children, glowColor, intensity, className }) => (
-  <Card className={className}>{children}</Card>
-);
-
-export function ServicesShowcase() {
-    const featuredServices = COMPREHENSIVE_SERVICES.slice(0, 6);
-
-    // Temporary emerging services data
-    const emergingServices = [
-        {
-            title: "AI & Machine Learning",
-            description: "Cutting-edge AI solutions for business automation",
-            category: "AI/ML",
-            price: "$2,500/month",
-            icon: "🤖",
-            link: "/services/ai-ml"
-        },
-        {
-            title: "Quantum Computing",
-            description: "Next-generation quantum solutions",
-            category: "Quantum",
-            price: "$5,000/month",
-            icon: "⚛️",
-            link: "/services/quantum"
-        },
-        {
-            title: "Edge Computing",
-            description: "Distributed computing at the edge",
-            category: "Edge",
-            price: "$1,800/month",
-            icon: "🌐",
-            link: "/services/edge"
-        },
-        {
-            title: "Blockchain Solutions",
-            description: "Secure decentralized applications",
-            category: "Blockchain",
-            price: "$3,200/month",
-            icon: "🔗",
-            link: "/services/blockchain"
-
-=======
 import { ArrowRight, Star } from "lucide-react";
 import { FuturisticCard } from '@/components/ui/futuristic-card';
 import { NeonText } from '@/components/ui/neon-text';
@@ -91,7 +43,6 @@ export function ServicesShowcase() {
             icon: "☁️",
             link: "/services/cloud-devops"
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<section className="py-20 relative">
       {/* Background accent */}
@@ -169,12 +120,9 @@ export function ServicesShowcase() {
                   </Link>
                 </div>
               </CardContent>
-<<<<<<< HEAD
             </FuturisticCard>))}
-=======
             </FuturisticCard>
           ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         </div>
 
         {/* Emerging Technologies */}
@@ -248,9 +196,4 @@ export function ServicesShowcase() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-</div></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -13,21 +13,11 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
-<<<<<<< HEAD
-                onToggle();
-
-        };
-        if (isOpen) {
-            document.addEventListener('mousedown', handleClickOutside);
-            document.body.style.overflow = 'hidden';
-
-=======
                 onToggle()}
         };
         if (isOpen) {
             document.addEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'hidden'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
@@ -82,26 +72,15 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     const handleSearch = (e) => {
         e.preventDefault();
         // Implement search functionality
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Search query:', searchQuery);
-=======
         // // // // // // // console.log('Search query:', searchQuery);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
-=======
         console.log('Search query:', searchQuery)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const menuVariants = {
   closed: {
             x: '100%',
             opacity: 0,
             transition: {
                 duration: 0.3,
-<<<<<<< HEAD
-                ease: 'easeInOut'
-
-=======
   ease: 'easeInOut'
             
 
@@ -111,7 +90,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         },
         open: {
             x: 0,
@@ -128,10 +106,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
             opacity: 0,
             transition: {
                 duration: 0.2,
-<<<<<<< HEAD
-                ease: 'easeInOut'
-
-=======
   ease: 'easeInOut'
             
 
@@ -141,7 +115,6 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         },
         open: {
             height: 'auto',

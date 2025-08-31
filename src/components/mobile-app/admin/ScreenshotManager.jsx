@@ -8,35 +8,20 @@ export const ScreenshotManager = ({ platform }) => {
     const fileInputRef = useRef(null);
     const handleFileSelect = (e) => {
         if (e.target.files) {
-<<<<<<< HEAD
-            addScreenshots(Array.from(e.target.files));
-
-=======
             addScreenshots(Array.from(e.target.files))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const addScreenshots = (files) => {
         // Filter for image files only
         const imageFiles = files.filter(file => file.type.startsWith('image/'));
         if (imageFiles.length === 0) {
             toast.error("Please select valid image files");
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Limit the number of screenshots
         const maxScreenshots = platform === "ios" ? 10 : 8;
         const availableSlots = maxScreenshots - screenshots.length;
         if (availableSlots <= 0) {
             toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const filesToAdd = imageFiles.slice(0, availableSlots);
         const newScreenshots = filesToAdd.map(file => ({
             id: Math.random().toString(36).substring(2, 9),
@@ -45,12 +30,7 @@ export const ScreenshotManager = ({ platform }) => {
         }));
         setScreenshots(prev => [...prev, ...newScreenshots]);
         if (filesToAdd.length < imageFiles.length) {
-<<<<<<< HEAD
-            toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-
-=======
             toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const removeScreenshot = (id) => {
         setScreenshots(prev => {
@@ -58,16 +38,8 @@ export const ScreenshotManager = ({ platform }) => {
             // Revoke object URL to avoid memory leaks
             const removed = prev.find(screenshot => screenshot.id === id);
             if (removed) {
-<<<<<<< HEAD
-                URL.revokeObjectURL(removed.url);
-
-            return filtered;
-        });
-    };
-=======
                 URL.revokeObjectURL(removed.url)}
             return filtered})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleDragOver = (e) => {
         e.preventDefault();
         setIsDragging(true)};
@@ -75,12 +47,7 @@ export const ScreenshotManager = ({ platform }) => {
         e.preventDefault();
         setIsDragging(false);
         if (e.dataTransfer.files) {
-<<<<<<< HEAD
-            addScreenshots(Array.from(e.dataTransfer.files));
-
-=======
             addScreenshots(Array.from(e.dataTransfer.files))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -114,10 +81,4 @@ export const ScreenshotManager = ({ platform }) => {
             </div>))}
         </div>
       </CardContent>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card>};
-}}}}}}}
-=======
     </Card>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -22,9 +22,4 @@ export function CartItem({ item, onRemove, onUpdateQuantity }) {
       <Button variant="outline" size="sm" onClick={() => onRemove?.(item.id)}>
         Remove
       </Button>
-<<<<<<< HEAD
-    </li>);
-}
-=======
     </li>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

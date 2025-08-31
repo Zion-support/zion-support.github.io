@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { SEO } from "@/components/SEO";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox import { ProtectedRoute } from "@/components/ProtectedRoute";
-=======
 import Link from "next/link";
 import SEO from "@/components/SEO";
 import { BriefcaseIcon, UserIcon, MessageSquare, Star, Inbox } from "lucide-react";
 import { ProtectedRoute } from "@/components/ProtectedRoute";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { SuggestedJobs } from "@/components/jobs/SuggestedJobs";
 import { useAuth } from "@/hooks/useAuth";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -182,20 +179,9 @@ function TalentDashboardContent() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function TalentDashboard() {
-    return (<ProtectedRoute>
-      <TalentDashboardContent />
-    </ProtectedRoute>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
       
     </>)}
 export default function TalentDashboard() {
     return (<ProtectedRoute>
       <TalentDashboardContent />
     </ProtectedRoute>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

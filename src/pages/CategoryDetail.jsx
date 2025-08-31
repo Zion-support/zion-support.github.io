@@ -39,12 +39,7 @@ function generateInnovationListing(index) {
         location: "Global",
         availability: "Immediate",
         aiScore: Math.floor(Math.random() * 20) + 80
-<<<<<<< HEAD
-    };
-
-=======
     }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function CategoryDetail() {
     // Cast to specify the expected route param type since useParams may be untyped
     const { slug } = useParams();
@@ -189,16 +184,9 @@ export default function CategoryDetail() {
                         title: listing.title,
                         category: listing.category,
                         image: listing.images?.[0]
-<<<<<<< HEAD
-
-
-            });
-
-=======
                     }
                 }
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
 
@@ -231,11 +219,5 @@ export default function CategoryDetail() {
             </div>)}
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

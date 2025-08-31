@@ -1,12 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 import SEOHead from '../components/SEOHead';
-=======
 import { Monitor, Shield, TrendingUp, Database, Network, ArrowRight, Cpu, HardDrive, Zap, Target, Rocket, CheckCircle, Star, Lightbulb, Cloud, Settings, Brain, Server, Printer, Clock, Globe, BarChart3 } from 'lucide-react';
 import SEOHead from "../components/SEOHead";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AIPoweredITAssetManagement = () => {
   const features = [
@@ -76,11 +72,6 @@ const AIPoweredITAssetManagement = () => {
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-=======
           <motion.div 
             initial = {
   { opacity: 0,
@@ -102,7 +93,6 @@ const AIPoweredITAssetManagement = () => {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.6 }}
             className="flex justify-center mb-6"
 
@@ -110,13 +100,6 @@ const AIPoweredITAssetManagement = () => {
               <Server className="h-12 w-12 text-blue-400"/>
             </div>
           </motion.div>
-<<<<<<< HEAD
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-=======
           
           <motion.h1 
             initial = {
@@ -149,18 +132,10 @@ const AIPoweredITAssetManagement = () => {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"
 
             AI-Powered IT Asset Management
           </motion.h1>
-<<<<<<< HEAD
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-=======
           
           <motion.p 
             initial = {
@@ -193,19 +168,11 @@ const AIPoweredITAssetManagement = () => {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
 
             Intelligent monitoring, security, and optimization of your entire IT infrastructure
             with AI-driven insights and predictive maintenance.
           </motion.p>
-<<<<<<< HEAD
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-=======
           
           <motion.div 
             initial = {
@@ -238,7 +205,6 @@ const AIPoweredITAssetManagement = () => {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             className="flex flex-col sm:flex-row gap-4 justify-center"
 
             <Link
@@ -260,11 +226,6 @@ const AIPoweredITAssetManagement = () => {
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-=======
           <motion.h2 
             initial = {
   { opacity: 0,
@@ -286,7 +247,6 @@ const AIPoweredITAssetManagement = () => {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-3xl font-bold text-center mb-12"
@@ -347,11 +307,6 @@ const AIPoweredITAssetManagement = () => {
       {/* Capabilities Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-=======
           <motion.h2 
             initial = {
   { opacity: 0,
@@ -373,7 +328,6 @@ const AIPoweredITAssetManagement = () => {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-3xl font-bold text-center mb-12"
@@ -434,11 +388,6 @@ const AIPoweredITAssetManagement = () => {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-=======
           <motion.div 
             initial = {
   { opacity: 0,
@@ -460,7 +409,6 @@ const AIPoweredITAssetManagement = () => {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20"

@@ -18,7 +18,6 @@ export function ServiceDetails({ country }) {
 
 };
         return dataCenters[country] || dataCenters["default"]};
-=======
   "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
             "United Kingdom": ["London", "Manchester", "Birmingham"],
             "Germany": ["Frankfurt", "Berlin", "Munich"],
@@ -36,7 +35,6 @@ export function ServiceDetails({ country }) {
 };
         return dataCenters[country] || dataCenters["default"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Get region-specific image
     const getRegionalImage = (country) => {
         // In a real app, you'd have specific images for each region
@@ -49,26 +47,6 @@ export function ServiceDetails({ country }) {
             "Singapore": "https://source.unsplash.com/featured/900x700/?datacenter,singapore",
   // Default placeholder
             "default": "https://source.unsplash.com/featured/900x700/?datacenter"
-<<<<<<< HEAD
-        
-
-};
-        return regions[country] || regions["default"]};
-    // Get region-specific instructions
-    const getRegionalInstructions = (country) => {
-        // In a real implementation, this would be much more detailed and specific
-        const timeZones = {
-  "United States": "EST/CST/PST depending on location",
-            "United Kingdom": "GMT/BST",
-            "Germ": "CET/CEST",
-            "Japan": "JST",
-            "Australia": "AEST/ACDT/AWST depending on location",
-            "Singapore": "SGT",
-  "default": "Local timezone"
-        
-
-};
-=======
         
 
 
@@ -80,7 +58,6 @@ export function ServiceDetails({ country }) {
     // Get region-specific instructions
     const getRegionalInstructions = (country) => {
         // In a real implementation, this would be much more detailed and specific
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         const timezone = timeZones[country] || timeZones["default"];
         return `Our technicians in ${country} operate during business hours (8AM-6PM ${timezone}). ` +
             `Response times are typically within 4 hours for metropolitan areas. ` +
@@ -142,9 +119,4 @@ export function ServiceDetails({ country }) {
           For custom enterprise needs or multi-site services in {country}, please contact our enterprise team for tailored pricing.
         </p>
       </CardFooter>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card></Card></Card>}}
-=======
     </Card>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

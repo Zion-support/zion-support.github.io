@@ -14,12 +14,7 @@ export function ConversationDetailView() {
     const messagesEndRef = useRef(null);
     useEffect(() => {
         if (activeConversation) {
-<<<<<<< HEAD
-            loadMessages(activeConversation.id);
-
-=======
             loadMessages(activeConversation.id)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [activeConversation?.id, loadMessages]);
     useEffect(() => {
         scrollToBottom()}, [activeMessages]);
@@ -38,35 +33,19 @@ export function ConversationDetailView() {
         <p className="text-zion-slate text-center max-w-md">
           Select a conversation from the list to view and send messages.
         </p>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Group messages by date
     const groupedMessages = [];
     activeMessages.forEach(message => {
         const messageDate = format(new Date(message.created_at), 'yyyy-MM-dd');
         const existingGroup = groupedMessages.find(group => group.date === messageDate);
         if (existingGroup) {
-<<<<<<< HEAD
-            existingGroup.messages.push(message);
-
-        else {
-            groupedMessages.push({
-                date: messageDate,
-                messages: [message]
-            });
-
-=======
             existingGroup.messages.push(message)}
         else {
             groupedMessages.push({
                 date: messageDate,
                 messages[message]
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     const hasContextData = activeConversation.context_data &&
         (activeConversation.context_data.title || activeConversation.context_data.description);
@@ -139,9 +118,4 @@ export function ConversationDetailView() {
           </Button>
         </form>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

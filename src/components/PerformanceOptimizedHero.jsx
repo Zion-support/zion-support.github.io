@@ -35,12 +35,7 @@ const PerformanceOptimizedHero = memo(() => {
           <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
         </div>
-<<<<<<< HEAD
-      </section>);
-
-=======
       </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<section className="relative py-20 px-4 overflow-hidden" role="banner" aria-label="Zion Tech Group Hero Section">
       {/* Optimized Background Elements */}
       <div className="absolute inset-0 futuristic-bg">

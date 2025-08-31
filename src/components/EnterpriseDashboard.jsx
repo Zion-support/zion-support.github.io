@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -154,23 +150,14 @@ export const EnterpriseDashboard = () => {
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
             const now = new Date();
-<<<<<<< HEAD
-<<<<<<< HEAD
-            // // // console.log('Data refreshed at:', now.toLocaleTimeString());
-=======
             // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', undefined, {
                 tab: activeTab,
                 dateRange
             });
 
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Failed to refresh data:', error);
-=======
             // // // // // // // console.error('Failed to refresh data:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             trackEvent('enterprise_dashboard', 'refresh_failed', 'error', undefined, {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
@@ -178,7 +165,6 @@ export const EnterpriseDashboard = () => {
         finally {
             setIsRefreshing(false);
 
-=======
             console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', null, {
                 tab: activeTab,
@@ -191,7 +177,6 @@ export const EnterpriseDashboard = () => {
             })}
         finally {
             setIsRefreshing(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [activeTab, dateRange, trackEvent]);
     // Auto-refresh effect
     useEffect(() => {
@@ -200,38 +185,20 @@ export const EnterpriseDashboard = () => {
     // Filtered data
     const filtered = securityAlerts;
         if (filterStatus !== 'all') {
-<<<<<<< HEAD
-            filtered = filtered.filter(alert => alert.status === filterStatus);
-
-=======
             filtered = filtered.filter(alert => alert.status === filterStatus)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (searchQuery) {
             filtered = filtered.filter(alert => alert.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 alert.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-<<<<<<< HEAD
-                alert.type.toLowerCase().includes(searchQuery.toLowerCase()))}
-        return filtered}, [securityAlerts, filterStatus, searchQuery]);
-    const filtered = userActivities;
-=======
                 alert.type.toLowerCase().includes(searchQuery.toLowerCase()));
 
         return filtered;
     }, [securityAlerts, filterStatus, searchQuery]);
     const filtered = userActivities;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         if (searchQuery) {
             filtered = filtered.filter(activity => activity.userName.toLowerCase().includes(searchQuery.toLowerCase()) ||
                 activity.action.toLowerCase().includes(searchQuery.toLowerCase()) ||
-<<<<<<< HEAD
-                activity.resource.toLowerCase().includes(searchQuery.toLowerCase()));
-
-        return filtered;
-    }, [userActivities, searchQuery]);
-=======
                 activity.resource.toLowerCase().includes(searchQuery.toLowerCase()))}
         return filtered}, [userActivities, searchQuery]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Get status color
     const getStatusColor = (status) => {
         switch (status) {
@@ -250,12 +217,7 @@ export const EnterpriseDashboard = () => {
             case 'maintenance':
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
-<<<<<<< HEAD
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-
-=======
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get severity color
     const getSeverityColor = (severity) => {
@@ -269,12 +231,7 @@ export const EnterpriseDashboard = () => {
             case 'low':
                 return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:
-<<<<<<< HEAD
-                return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30';
-
-=======
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
       {/* Header */}
@@ -910,10 +867,4 @@ export const EnterpriseDashboard = () => {
             </motion.div>)}
         </AnimatePresence>
       </div>
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}}}}}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

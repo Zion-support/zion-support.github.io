@@ -94,9 +94,9 @@ export function FeatureCTAs() {
     },
     {
       title: "Learn More",
-      description: "Discover our capabilities",
-      href: "/about",
-      icon: Globe,
+      description: "Explore our resources",
+      href: "/resources",
+      icon: TrendingUp,
       color: "from-orange-500 to-orange-600",
       hoverColor: "from-orange-600 to-orange-700"
     }

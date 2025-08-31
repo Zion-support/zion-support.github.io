@@ -35,12 +35,7 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setIsOpen(false);
-<<<<<<< HEAD
-        setActiveIndex(-1);
-
-=======
         setActiveIndex(-1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     document.addEventListener('mousedown', handleClickOutside);
@@ -51,18 +46,9 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       const filtered = allSuggestions.filter(suggestion =>
         suggestion.text.toLowerCase().includes(searchQuery.toLowerCase())
       );
-<<<<<<< HEAD
-      setSuggestions(filtered);
-    } else {
-      setSuggestions([]);
-
-    setActiveIndex(-1);
-  }, [searchQuery]);
-=======
       setSuggestions(filtered)} else {
       setSuggestions([])}
     setActiveIndex(-1)}, [searchQuery]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
@@ -78,22 +64,11 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       setActiveIndex(prev => prev > 0 ? prev - 1 : -1)} else if (e.key === 'Enter') {
       e.preventDefault();
       if (activeIndex >= 0 && suggestions[activeIndex]) {
-<<<<<<< HEAD
-        handleSuggestionClick(suggestions[activeIndex]);
-      } else if (searchQuery.trim()) {
-        handleSearch(searchQuery);
-
-    } else if (e.key === 'Escape') {
-      setIsOpen(false);
-      setActiveIndex(-1);
-
-=======
         handleSuggestionClick(suggestions[activeIndex])} else if (searchQuery.trim()) {
         handleSearch(searchQuery)}
     } else if (e.key === 'Escape') {
       setIsOpen(false);
       setActiveIndex(-1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const handleSuggestionClick = (suggestion) => {
@@ -112,20 +87,11 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
       localStorage.setItem('recentSearches', JSON.stringify(newRecent));
 
       // Perform search (in a real app, this would navigate to search results)
-<<<<<<< HEAD
-      // // // console.log('Searching for:', query);
-=======
       // // // // // // // console.log('Searching for:', query);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       // Close search
       setIsOpen(false);
-<<<<<<< HEAD
-      setActiveIndex(-1);
-
-=======
       setActiveIndex(-1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const handleRecentSearchClick = (search) => {
@@ -268,9 +234,4 @@ import { Search, X, ArrowDown, Clock, TrendingUp, Building, Users, Globe export 
         </div>
       )}
     </div>
-<<<<<<< HEAD
-  );
-};}}}}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

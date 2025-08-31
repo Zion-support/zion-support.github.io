@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Zap, Server, ArrowRight, Star, Users const QuantumEdgeComputingPlatform = () => {
-=======
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Zap, Server, ArrowRight, Star, Users } from 'lucide-react';
 const QuantumEdgeComputingPlatform = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const features = [
         "Quantum-accelerated edge processing",
         "Real-time data analysis and insights",

@@ -46,118 +46,12 @@ import {
   Antenna,
   Router,
   Tower
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const fiveGSolutions = [
-  {
-    id: 1,
-    title: "5G Network Infrastructure",
-    description: "Complete 5G network deployment including core network, radio access network, and edge computing.",
-    icon: Tower,
-    features[
-      "Core network deployment",
-      "Radio access network",
-      "Edge computing nodes",
-      "Network slicing"
-    ],
-    price: "From $500,000",
-    timeline: "48-72 weeks",
-    category: "Infrastructure",
-    technologies["5G Core", "RAN", "Edge Computing", "Network Slicing"]
-  },
-  {
-    id: 2,
-    title: "5G Enterprise Solutions",
-    description: "Private 5G networks and enterprise-grade connectivity solutions for businesses.",
-    icon: Building,
-    features[
-      "Private 5G networks",
-      "Enterprise connectivity",
-      "Network management",
-      "Security features"
-    ],
-    price: "From $200,000",
-    timeline: "24-36 weeks",
-    category: "Enterprise",
-    technologies["Private 5G", "Network Management", "Security", "IoT Integration"]
-  },
-  {
-    id: 3,
-    title: "5G IoT Applications",
-    description: "Internet of Things solutions leveraging 5G's high-speed, low-latency capabilities.",
-    icon: Signal,
-    features[
-      "IoT device connectivity",
-      "Real-time data processing",
-      "Edge analytics",
-      "Device management"
-    ],
-    price: "From $150,000",
-    timeline: "20-32 weeks",
-    category: "IoT",
-    technologies["5G IoT", "Edge Computing", "Real-time Analytics", "Device Management"]
-  },
-  {
-    id: 4,
-    title: "5G Smart City Solutions",
-    description: "Urban infrastructure and services powered by 5G technology for smart city applications.",
-    icon: Globe,
-    features[
-      "Smart traffic management",
-      "Public safety systems",
-      "Environmental monitoring",
-      "Urban services"
-    ],
-    price: "From $300,000",
-    timeline: "36-52 weeks",
-    category: "Smart Cities",
-    technologies["5G Networks", "IoT Sensors", "AI Analytics", "Smart Infrastructure"]
-  },
-  {
-    id: 5,
-    title: "5G Healthcare Solutions",
-    description: "Telemedicine, remote monitoring, and healthcare applications enabled by 5G technology.",
-    icon: Users,
-    features[
-      "Telemedicine platforms",
-      "Remote patient monitoring",
-      "Medical IoT devices",
-      "Healthcare analytics"
-    ],
-    price: "From $180,000",
-    timeline: "24-36 weeks",
-    category: "Healthcare",
-    technologies["5G Networks", "Telemedicine", "IoT Devices", "Healthcare Analytics"]
-  },
-  {
-    id: 6,
-    title: "5G Manufacturing Solutions",
-    description: "Industry 4.0 and smart manufacturing solutions powered by 5G connectivity.",
-    icon: Factory,
-    features[
-      "Industrial IoT",
-      "Predictive maintenance",
-      "Quality control",
-      "Supply chain optimization"
-    ],
-    price: "From $250,000",
-    timeline: "28-40 weeks",
-    category: "Manufacturing",
-<<<<<<< HEAD
-    technologies: ["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
-
-=======
     technologies["5G Networks", "Industrial IoT", "AI Analytics", "Predictive Maintenance"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const fiveGTechnologies = [
   {
     name: "5G Core Network",
@@ -273,13 +167,8 @@ const fiveGBenefits = [
     title: "Network Slicing",
     description: "Virtual network segmentation for different service requirements",
     icon: Layers,
-<<<<<<< HEAD
-    examples: ["Customized services", "Service isolation", "Quality guarantees"]
-
-=======
     examples["Customized services", "Service isolation", "Quality guarantees"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function FiveGSolutions() {
@@ -954,9 +843,4 @@ export default function FiveGSolutions() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

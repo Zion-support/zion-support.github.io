@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket  } from 'lucide-react';
-import { SEO  } from "../components/SEO";
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO } from '../components/SEO';
-=======
 import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
 import { SEO } from "../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface DemoFormData {
 
@@ -25,11 +14,7 @@ interface DemoFormData {
   preferredTime: string;
   attendees: string;
   services: string[];
-<<<<<<< HEAD
-  message: string;
-=======
   message: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const ScheduleDemo: React.FC = (): JSX.Element => {
   const [formData, setFormData] = useState<any>({
@@ -38,19 +23,11 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     email: '',
     comp: '',
     phone: '',
-<<<<<<< HEAD
-    preferredDate: '',
-    preferredTime: '',
-    attendees: '1-5',
-    services[],
-    message: '';
-=======;
     preferredDate: '',;
     preferredTime: '',;
     attendees: '1-5',;
     services: [],;
     message: '';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,48 +49,13 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
 
-<<<<<<< HEAD
-  const handleServiceToggle = (serviceId: string)  => {
-    setFormData(prev => ({
-      ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(id  => id !== serviceId);
-        [...prev.services, serviceId];
-    }))};
-
-  const handleServiceToggle = (serviceId: string) => {;
-    setFormData(prev => ({;
-      ...prev,;
-      services: prev.services.includes(serviceId);
-        ? prev.services.filter(id => id !== serviceId);
-        : [...prev.services, serviceId];
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-<<<<<<< HEAD
-      setIsSubmitted(true);
-    } catch (error) {
-<<<<<<< HEAD
-      // // // console.error('Error submitting form:', error);
-=======
       // // // // // // // console.error('Error submitting form:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } finally {
       setIsSubmitting(false);
 
-=======
       setIsSubmitted(true)} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   if (isSubmitted) {
@@ -186,30 +128,14 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
             <a
               href="/contact"
               className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-lg transition-colors"
-<<<<<<< HEAD
-
-=======
             >
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-              Contact Us
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    )};
-=======;
               Contact Us;
             </a>;
           </div>;
         </motion.div>;
       </div>;
     );
-<<<<<<< HEAD
-=======
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -392,14 +318,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       <input
                         type="text"
                         required
-<<<<<<< HEAD
-                        value={formData.comp}
-                        onChange = {
-  (e) => setFormData(prev => ({ ...prev,
-  comp: e.target.value 
-
-}))}
-=======
                         value={formData.company}
                         onChange = {
   (e) => setFormData(prev => ({ ...prev,
@@ -411,7 +329,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
 
 
 }))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                         className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Enter comp name"
                       />
@@ -687,14 +604,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                   </ul>
                 </div>
               </motion.div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -702,6 +611,5 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ScheduleDemo;}}}}

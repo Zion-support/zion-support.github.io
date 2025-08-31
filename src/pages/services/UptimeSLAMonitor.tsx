@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target import { SEO } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
 import { Activity, AlertTriangle, Clock, CheckCircle, Shield, Zap, BarChart3, Globe, Smartphone, Monitor, Server, Wifi, Database, Cloud, Bell, TrendingUp, Users, Target  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function UptimeSLAMonitor(...args: []):  {
   const features = [
@@ -36,15 +29,6 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       icon: Globe,
       title: "Global Monitoring",
-<<<<<<< HEAD
-      description: "Monitor from multiple locations worldwide to ensure consistent user experience."
-    },
-    {
-      icon: Shield,
-      title: "Security Monitoring",
-      description: "SSL certificate monitoring, security headers, and vulnerability scanning included."
-
-=======
       description: "Monitor from multiple locations worldwide to ensure consistent user experience.";
     },;
     {;
@@ -52,7 +36,6 @@ export default function UptimeSLAMonitor(...args: []):  {
       title: "Security Monitoring",;
       description: "SSL certificate monitoring, security headers, and vulnerability scanning included.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const monitoringTypes = [
@@ -79,15 +62,6 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       icon: Cloud,
       title: "Cloud Services",
-<<<<<<< HEAD
-      description: "AWS, Azure, GCP service monitoring and cost tracking"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile App Monitoring",
-      description: "API endpoints, push notifications, and mobile performance"
-
-=======
       description: "AWS, Azure, GCP service monitoring and cost tracking";
     },;
     {;
@@ -95,7 +69,6 @@ export default function UptimeSLAMonitor(...args: []):  {
       title: "Mobile App Monitoring",;
       description: "API endpoints, push notifications, and mobile performance";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -139,15 +112,6 @@ export default function UptimeSLAMonitor(...args: []):  {
         "Unlimited monitors",
         "10-second check intervals",
         "Priority support",
-<<<<<<< HEAD
-        "Advanced SLA reporting",
-        "All global locations",
-        "White-label options",
-        "Custom integrations"
-      ],
-      popular: false
-
-=======
         "Advanced SLA reporting",;
         "All global locations",;
         "White-label options",;
@@ -155,7 +119,6 @@ export default function UptimeSLAMonitor(...args: []):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -172,15 +135,6 @@ export default function UptimeSLAMonitor(...args: []):  {
     {
       title: "Improve Performance",
       description: "Identify performance bottlenecks and optimize your infrastructure based on real data.",
-<<<<<<< HEAD
-      icon: TrendingUp
-    },
-    {
-      title: "Reduce MTTR",
-      description: "Faster incident response with detailed error information and automated escalation.",
-      icon: Zap
-
-=======
       icon: TrendingUp;
     },;
     {;
@@ -188,18 +142,12 @@ export default function UptimeSLAMonitor(...args: []):  {
       description: "Faster incident response with detailed error information and automated escalation.",;
       icon: Zap;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="Uptime SLA Monitor - Zion Tech Group"
-=======
       <SEO 
         title = "Uptime SLA Monitor - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting."
         canonical="/services/uptime-sla-monitor"
       />
@@ -272,15 +220,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Everything you need to ensure your services are always available and performing optimally
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -337,15 +279,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 From simple website checks to complex infrastructure monitoring
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {monitoringTypes.map((type, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {monitoringTypes.map((type, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -402,15 +338,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Professional monitoring that helps you maintain high availability and meet your SLA commitments
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
-=======
             
             <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -469,15 +399,9 @@ export default function UptimeSLAMonitor(...args: []):  {
                 Choose the monitoring plan that fits your needs and scale as you grow
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-=======
             
             <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {

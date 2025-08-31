@@ -94,12 +94,7 @@ export const SEOEnhancer = ({ title = 'Zion Tech Group - Leading AI & Technology
         // Remove existing structured data
         const existingScript = document.querySelector('script[type="application/ld+json"]');
         if (existingScript) {
-<<<<<<< HEAD
-            existingScript.remove();
-
-=======
             existingScript.remove()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Add new structured data
         const script = document.createElement('script');
         script.type = 'application/ld+json';

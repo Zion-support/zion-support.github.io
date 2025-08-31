@@ -149,9 +149,4 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             </DialogFooter>
           </>)}
       </DialogContent>
-<<<<<<< HEAD
-    </Dialog>);
-}
-=======
     </Dialog>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

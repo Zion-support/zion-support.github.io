@@ -38,118 +38,12 @@ import {
   Layers,
   RefreshCw,
   AlertTriangle
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const digitalTwinSolutions = [
-  {
-    id: 1,
-    title: "Manufacturing Digital Twin",
-    description: "Real-time digital representation of manufacturing processes and equipment for optimization.",
-    icon: Factory,
-    features[
-      "Equipment monitoring",
-      "Process optimization",
-      "Predictive maintenance",
-      "Quality control"
-    ],
-    price: "From $150,000",
-    timeline: "24-36 weeks",
-    category: "Manufacturing",
-    technologies["IoT Sensors", "3D Modeling", "Real-time Analytics", "ML Algorithms"]
-  },
-  {
-    id: 2,
-    title: "Smart City Digital Twin",
-    description: "Comprehensive digital representation of urban infrastructure and systems.",
-    icon: Building,
-    features[
-      "Infrastructure monitoring",
-      "Traffic optimization",
-      "Energy management",
-      "Public safety"
-    ],
-    price: "From $300,000",
-    timeline: "36-52 weeks",
-    category: "Smart Cities",
-    technologies["GIS Mapping", "IoT Networks", "AI Analytics", "Real-time Data"]
-  },
-  {
-    id: 3,
-    title: "Healthcare Digital Twin",
-    description: "Patient-specific digital models for personalized medicine and treatment planning.",
-    icon: Users,
-    features[
-      "Patient modeling",
-      "Treatment simulation",
-      "Drug response prediction",
-      "Surgical planning"
-    ],
-    price: "From $200,000",
-    timeline: "28-40 weeks",
-    category: "Healthcare",
-    technologies["Medical Imaging", "AI Models", "3D Visualization", "Predictive Analytics"]
-  },
-  {
-    id: 4,
-    title: "Energy Infrastructure Twin",
-    description: "Digital representation of power plants, grids, and renewable energy systems.",
-    icon: Zap,
-    features[
-      "Grid monitoring",
-      "Load balancing",
-      "Predictive maintenance",
-      "Energy optimization"
-    ],
-    price: "From $250,000",
-    timeline: "32-44 weeks",
-    category: "Energy",
-    technologies["SCADA Systems", "IoT Sensors", "AI Analytics", "Real-time Control"]
-  },
-  {
-    id: 5,
-    title: "Transportation Digital Twin",
-    description: "Digital models of transportation networks, vehicles, and logistics systems.",
-    icon: Truck,
-    features[
-      "Fleet monitoring",
-      "Route optimization",
-      "Traffic simulation",
-      "Predictive analytics"
-    ],
-    price: "From $180,000",
-    timeline: "24-36 weeks",
-    category: "Transportation",
-    technologies["GPS Tracking", "IoT Sensors", "AI Routing", "Real-time Data"]
-  },
-  {
-    id: 6,
-    title: "Building Digital Twin",
-    description: "Digital representation of buildings for facility management and optimization.",
-    icon: Building,
-    features[
-      "Building monitoring",
-      "Energy optimization",
-      "Occupancy tracking",
-      "Maintenance planning"
-    ],
-    price: "From $120,000",
-    timeline: "20-28 weeks",
-    category: "Buildings",
-<<<<<<< HEAD
-    technologies: ["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
-
-=======
     technologies["BMS Integration", "IoT Sensors", "3D Modeling", "AI Analytics"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const digitalTwinTechnologies = [
   {
     name: "IoT Sensors",
@@ -265,13 +159,8 @@ const digitalTwinBenefits = [
     title: "Cost Optimization",
     description: "Reduced operational costs through better resource management",
     icon: Gauge,
-<<<<<<< HEAD
-    examples: ["Energy optimization", "Maintenance planning", "Resource allocation"]
-
-=======
     examples["Energy optimization", "Maintenance planning", "Resource allocation"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function DigitalTwin() {
@@ -946,9 +835,4 @@ export default function DigitalTwin() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

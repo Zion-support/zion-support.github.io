@@ -123,12 +123,7 @@ import { Shield, Lock, CheckCircle, AlertTriangle export function SecurityHeader
           </p>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Compact version for smaller spaces
 export function SecurityHeadersCompact({ className }) {
     return (<div className={`flex flex-wrap justify-center gap-6 ${className || ''}`}>
@@ -148,9 +143,4 @@ export function SecurityHeadersCompact({ className }) {
         <Shield className="w-4 h-4"/>
         <span>Zero-Knowledge</span>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

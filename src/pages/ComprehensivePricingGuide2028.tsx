@@ -13,11 +13,8 @@ import {
   Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins, PiggyBank,
   Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode, Barcode,
   Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX, TrendingUp
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const pricingData2028 = {
   aiServices[
     {
@@ -30,14 +27,6 @@ const pricingData2028 = {
       roi: '800%',
       setupTime: '4-6 weeks',
       trialDays: 30,
-<<<<<<< HEAD
-      features['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
-      targetAudience: 'AI research institutions, Government agencies,
-  Ethics committees'
-    
-
-},
-=======
       features: ['Quantum consciousness mapping', 'Ethical boundary testing', 'Real-time monitoring'],
       targetAudience: 'AI research institutions, Government agencies,
   Ethics committees'
@@ -47,7 +36,6 @@ const pricingData2028 = {
 
 
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     {
       name: 'Quantum Financial Trading AI',
       price: '$35,999',
@@ -152,21 +140,11 @@ const pricingData2028 = {
       growthRate: '300%',
       roi: '600%',
       setupTime: '4-5 weeks',
-<<<<<<< HEAD
-      trialDays: 21,
-      features['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],
-      targetAudience: 'Development teams, DevOps engineers, Technology companies'
-<<<<<<< HEAD
-
-  ]
-=======
     };
   ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
 
 const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
-=======;
       trialDays: 21,;
       features: ['AI-powered CI/CD', 'Automated testing', 'Performance monitoring'],;
       targetAudience: 'Development teams, DevOps engineers, Technology companies';
@@ -175,7 +153,6 @@ const ComprehensivePricingGuide2028: React.FC = (): JSX.Element => {;
 };
 
 const ComprehensivePricingGuide2028: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
 
@@ -193,14 +170,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     { id: 'high', name: 'Over $10K', range: 'Over $10K' };
   ];
 
-<<<<<<< HEAD
-  const getAllServices = () => {
-    return [
-      ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),
-      ...pricingData2028.microSAAS.map(service  => ({ ...service, type: 'Micro SAAS' })),;
-      ...pricingData2028.itServices.map(service  => ({ ...service, type: 'IT Services' }));
-    ]};
-=======
   const getAllServices = () => {;
     return [;
       ...pricingData2028.aiServices.map(service => ({ ...service, type: 'AI Services' })),;
@@ -208,7 +177,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
       ...pricingData2028.itServices.map(service => ({ ...service, type: 'IT Services' }));
     ];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const filteredServices = getAllServices().filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
@@ -223,14 +191,9 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     return matchesCategory && matchesPrice;
   });
 
-<<<<<<< HEAD
-  const calculateROI = (roi: string)  => {;
-    return parseInt(roi.replace('%', ''))};
-=======
   const calculateROI = (roi: string) => {;
     return parseInt(roi.replace('%', ''));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const sortedServices = filteredServices.sort((a, b) => calculateROI(b.roi) - calculateROI(a.roi));
 
@@ -596,14 +559,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
 
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </motion.div>;
         </div>;
@@ -611,10 +566,6 @@ const ComprehensivePricingGuide2028: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-<<<<<<< HEAD
-export default ComprehensivePricingGuide2028;}}}}
-=======
 export default ComprehensivePricingGuide2028;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default ComprehensivePricingGuide2028;

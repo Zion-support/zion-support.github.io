@@ -6,12 +6,8 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-<<<<<<< HEAD
-import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle import { SEO } from '@/components/SEO';
-=======
 import { Search, Star, Globe, Phone, Mail, MapPin, ExternalLink, TrendingUp, Shield, Cloud, Brain, Database, Code, Zap, Heart, DollarSign, Link, Users, CheckCircle } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function EnhancedServicesPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -52,12 +48,7 @@ export default function EnhancedServicesPage() {
             case 'quantum computing':
                 return <Zap className="w-5 h-5"/>;
             default:
-<<<<<<< HEAD
-                return <Code className="w-5 h-5"/>;
-
-=======
                 return <Code className="w-5 h-5"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPriceRange = (price) => {
         if (price <= 2000)
@@ -383,9 +374,4 @@ export default function EnhancedServicesPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

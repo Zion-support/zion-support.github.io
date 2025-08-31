@@ -11,11 +11,7 @@ export interface PricingTier {
   features: string[];
   bestFor: string;
   setupTime: string;
-<<<<<<< HEAD
-  support: string;
-=======
   support: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ServicePricing {
 
@@ -30,11 +26,7 @@ export interface ServicePricing {
   setupTime: string;
   paymentOptions: string[];
   volumeDiscounts: string[];
-<<<<<<< HEAD
-  enterpriseFeatures: string[];
-=======
   enterpriseFeatures: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
@@ -331,62 +323,19 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
     competitors["Bloomberg Risk", "Reuters Risk", "S&P Global"],
     roi: "900% within 18 months",
     setupTime: "8-10 weeks",
-<<<<<<< HEAD
-    paymentOptions: ["One-time payment", "Annual subscription", "Per-portfolio pricing"],
-    volumeDiscounts: ["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
-    enterpriseFeatures: ["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
-
-=======
     paymentOptions["One-time payment", "Annual subscription", "Per-portfolio pricing"],
     volumeDiscounts["20% off for 10+ licenses", "35% off for 50+ licenses", "Custom enterprise pricing"],
     enterpriseFeatures["Custom risk models", "White-label solutions", "Enterprise support", "Custom integrations"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 // Pricing Analysis and Insights
 export const PRICING_ANALYSIS_2030 = {
   averagePrice: Math.round(
-<<<<<<< HEAD
-    COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) /
-    COMPREHENSIVE_PRICING_GUIDE_2030.length
-  ),
-  priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
-    max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
-  },
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {
-    if (!acc[service.category]) {
-      acc[service.category] = [];
-
-    acc[service.category].push(service.basePrice);
-    return acc;
-  }, { /* empty */ } as Record<string, number[]>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
-=======
     COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service)  => sum + service.basePrice, 0) / 
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
   priceRange: {
-<<<<<<< HEAD
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice)),
-  max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s  => s.basePrice))
-  
-
-},
-  categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service)  => {
-    if (!acc[service.category]) {;
-      acc[service.category] = []};
-    acc[service.category].push(service.basePrice);
-    return acc}, {} as Record<string, any>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service = > ({
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    serviceName: service.serviceName,
-    roi: service.roi,
-    setupTime: service.setupTime,
-    price: service.basePrice
-  }))
-=======
     min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
   max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   ;
@@ -408,7 +357,6 @@ export const PRICING_ANALYSIS_2030 = {
     setupTime: service.setupTime,;
     price: service.basePrice;
   }));
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 };
 
 // Payment and Discount Information
@@ -447,11 +395,6 @@ export const PRICING_CONTACT_2030 = {
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-<<<<<<< HEAD
-  businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",
-  responseTime: "Within 24 hours for pricing inquiries"
-};}}}}}}}}}
-=======
   businessHours: "Monday - Friday: 9:00 AM - 6:00 PM EST",;
   ;
   ;
@@ -466,4 +409,3 @@ export const PRICING_CONTACT_2030 = {
 
 
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

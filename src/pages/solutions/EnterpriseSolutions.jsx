@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp export default function EnterpriseSolutions() {
+import { Building2, Users, Shield, BarChart3, Cloud, Zap, ArrowRight, CheckCircle, Star, TrendingUp } from 'lucide-react';
+export default function EnterpriseSolutions() {
     const solutions = [
         {
             icon: Building2,

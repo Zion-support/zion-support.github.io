@@ -1,8 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Home, ArrowLeft, Search, Mail, Phone export default function NotFound() {
-=======
 import { motion } from 'framer-motion';
 import { 
   Home, 
@@ -89,7 +86,6 @@ export default function NotFound() {
     }
   ];
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className = "min-h-screen bg-white flex items-center justify-center">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -298,23 +294,10 @@ export default function NotFound() {
             <Link to="/contact" className="text-zion-cyan hover:underline">
               contact our support team
             </Link>
-<<<<<<< HEAD
-            .
-          </p>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             .;
           </p>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,13 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X import { Button } from './button';
-import { Badge } from './badge';
-=======
 import { Activity, Cpu, HardDrive, Wifi, Settings, RefreshCw, Maximize2, Minimize2, X } from 'lucide-react';
 import { Button } from "./button";
 import { Badge } from "./badge";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function PerformanceMonitor({ enabled = true, showDetails: _showDetails = false, autoRefresh = true, refreshInterval = 1000, onAlert, className = "" }) {
     const [isExpanded, setIsExpanded] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -48,19 +43,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                         timestamp: Date.now()
                     };
                     setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                    onAlert?.('fps', fps, thresholds.fps);
-
-=======
                     onAlert?.('fps', fps, thresholds.fps)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 frameCount = 0;
-<<<<<<< HEAD
-                lastTime = currentTime}
-            requestAnimationFrame(countFrame)};
-        requestAnimationFrame(countFrame)}, [thresholds.fps, onAlert]);
-    const memoryInfo = performance.memory;
-=======
                 lastTime = currentTime;
 
             requestAnimationFrame(countFrame);
@@ -68,7 +52,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
         requestAnimationFrame(countFrame);
     }, [thresholds.fps, onAlert]);
     const memoryInfo = performance.memory;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const used = Math.round(memoryInfo.usedJSHeapSize / 1024 / 1024);
             const total = Math.round(memoryInfo.totalJSHeapSize / 1024 / 1024);
             const percentage = Math.round((used / total) * 100);
@@ -85,14 +68,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                onAlert?.('memory', percentage, thresholds.memory);
-
-
-=======
                 onAlert?.('memory', percentage, thresholds.memory)}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [thresholds.memory, onAlert]);
     const measureRenderTime = useCallback(() => {
         const start = performance.now();
@@ -110,15 +87,8 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                onAlert?.('renderTime', renderTime, thresholds.renderTime);
-
-        });
-    }, [thresholds.renderTime, onAlert]);
-=======
                 onAlert?.('renderTime', renderTime, thresholds.renderTime)}
         })}, [thresholds.renderTime, onAlert]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const measureNetworkLatency = useCallback(async () => {
         const start = performance.now();
         try {
@@ -138,21 +108,11 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                     timestamp: Date.now()
                 };
                 setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-                onAlert?.('networkLatency', latency, thresholds.networkLatency);
-
-
-        catch {
-            // Network error, set high latency
-            setMetrics(prev => ({ ...prev, networkLatency: 999 }));
-
-=======
                 onAlert?.('networkLatency', latency, thresholds.networkLatency)}
         }
         catch {
             // Network error, set high latency
             setMetrics(prev => ({ ...prev, networkLatency: 999 }))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [thresholds.networkLatency, onAlert]);
     const simulateMetrics = useCallback(() => {
         // Simulate CPU and disk usage for demo purposes
@@ -173,12 +133,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 timestamp: Date.now()
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-            onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage);
-
-=======
             onAlert?.('cpuUsage', cpuUsage, thresholds.cpuUsage)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         if (diskUsage > thresholds.diskUsage) {
             const alert = {
                 id: `disk-${Date.now()}`,
@@ -188,12 +143,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
                 timestamp: Date.now()
             };
             setAlerts(prev => [alert, ...prev.slice(0, 9)]);
-<<<<<<< HEAD
-            onAlert?.('diskUsage', diskUsage, thresholds.diskUsage);
-
-=======
             onAlert?.('diskUsage', diskUsage, thresholds.diskUsage)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [thresholds.cpuUsage, thresholds.diskUsage, onAlert]);
     // Auto-refresh metrics
     useEffect(() => {
@@ -216,18 +166,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             const now = Date.now();
             setAlerts(prev => prev.filter(alert => now - alert.timestamp < 30000)); // Keep alerts for 30 seconds
         }, 5000);
-<<<<<<< HEAD
-        return () => clearInterval(interval);
-    }, []);
-    const getMetricColor = (metric, value, threshold) => {
-        if (metric === 'FPS') {
-            return value >= threshold ? 'text-green-400' : 'text-red-400';
-
-        return value <= threshold ? 'text-green-400' : 'text-red-400';
-    };
-=======
         return () => clearInterval(interval)}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getMetricIcon = (metric) => {
         switch (metric) {
             case 'FPS': return Activity;
@@ -236,24 +175,14 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
             case 'Network': return Wifi;
             case 'CPU': return Cpu;
             case 'Disk': return HardDrive;
-<<<<<<< HEAD
-            default: return Activity;
-
-=======
             default: return Activity}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'error': return 'border-red-500/50 bg-red-500/10 text-red-400';
             case 'warning': return 'border-yellow-500/50 bg-yellow-500/10 text-yellow-400';
             case 'info': return 'border-blue-500/50 bg-blue-500/10 text-blue-400';
-<<<<<<< HEAD
-            default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-
-=======
             default: return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (!enabled)
         return null;
@@ -283,23 +212,7 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
               {alerts.length}
             </Badge>)}
         </Button>
-<<<<<<< HEAD
-      </motion.div>)}
-    return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
-  { scale: 0.8,
-  opacity: 0 
-
-}} animate = {
-  { scale: 1,
-  opacity: 1 
-
-}}>
-=======
       </motion.div>);
-<<<<<<< HEAD
-
-    return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}>
-=======
     }
     return (<motion.div className={`fixed bottom-4 right-4 z-50 ${className}`} initial = {
   { scale: 0.8,
@@ -320,8 +233,6 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <div className="bg-zion-blue-dark/95 backdrop-blur-md border border-zion-blue-light/30 rounded-xl shadow-2xl overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-zion-blue-light/30">
@@ -641,9 +552,4 @@ export function PerformanceMonitor({ enabled = true, showDetails: _showDetails =
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </motion.div>);
-</div></div>}}}}}}}}}}}}}}}}
-=======
     </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

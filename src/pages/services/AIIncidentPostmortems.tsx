@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  AlertTriangle,
-  Clock,
-  TrendingUp,
-  Shield,
-  Users,
-  Database,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { AlertTriangle, 
@@ -19,7 +7,6 @@ import { AlertTriangle,
   Users, 
   Database, 
   BarChart3, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Zap,
   CheckCircle,
   ArrowRight,
@@ -37,17 +24,8 @@ import { AlertTriangle,
   Mail,
   MapPin,
   Server
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO  } from "../../components/SEO";
-=======
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIIncidentPostmortems(...args[]):  {
   const contactInfo = {
@@ -92,15 +70,6 @@ export default function AIIncidentPostmortems(...args[]):  {
     {
       icon: Users,
       title: 'Team Collaboration Tools',
-<<<<<<< HEAD
-      description: 'Built-in communication and collaboration features for incident response teams'
-    },
-    {
-      icon: Database,
-      title: 'Centralized Knowledge Base',
-      description: 'Maintain a searchable repository of all incidents and resolutions'
-
-=======
       description: 'Built-in communication and collaboration features for incident response teams';
     },;
     {;
@@ -108,7 +77,6 @@ export default function AIIncidentPostmortems(...args[]):  {
       title: 'Centralized Knowledge Base',;
       description: 'Maintain a searchable repository of all incidents and resolutions';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -168,15 +136,6 @@ export default function AIIncidentPostmortems(...args[]):  {
         'Unlimited team members',
         'Enterprise integrations',
         'Advanced analytics',
-<<<<<<< HEAD
-        'Custom AI models',
-        'On-premise deployment option',
-        'Dedicated account manager'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-=======
         'Custom AI models',;
         'On-premise deployment option',;
         'Dedicated account manager';
@@ -184,7 +143,6 @@ export default function AIIncidentPostmortems(...args[]):  {
       cta: 'Contact Sales',;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -201,20 +159,6 @@ export default function AIIncidentPostmortems(...args[]):  {
     {
       title: 'Security Teams',
       description: 'Enhance security incident response with AI-powered threat analysis',
-<<<<<<< HEAD
-      icon: Shield
-    },
-    {
-      title: 'Customer Support',
-      description: 'Improve customer experience with faster incident resolution and communication',
-      icon: MessageSquare
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <SEO
-=======
       icon: Shield;
     },;
     {;
@@ -227,7 +171,6 @@ export default function AIIncidentPostmortems(...args[]):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Incident Postmortems Platform | Zion Tech Group"
         description="Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity."
         keywords="AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response"
@@ -323,15 +266,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Everything you need to manage incidents effectively and build a culture of continuous improvement
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-=======
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -413,15 +350,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Transform your incident management process and unlock new levels of efficiency
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-=======
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -500,15 +431,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Choose the plan that fits your team size and incident volume
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-=======
           
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
             {pricingPlans.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -622,15 +547,9 @@ export default function AIIncidentPostmortems(...args[]):  {
               Whether you're in IT, DevOps, Security, or Customer Support, our platform adapts to your needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-=======
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={index}
                 initial = {
@@ -785,24 +704,11 @@ export default function AIIncidentPostmortems(...args[]):  {
 
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
-<<<<<<< HEAD
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </a>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

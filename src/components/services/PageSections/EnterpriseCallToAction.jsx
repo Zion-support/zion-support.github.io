@@ -1,39 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle export const EnterpriseCallToAction = () => {
-  const enterpriseFeatures = [
-    {
-      icon: Building2,
-      title: 'Enterprise-Grade Infrastructure',
-      description: 'Scalable solutions designed for large organizations with complex requirements'
-    },
-    {
-      icon: Users,
-      title: 'Dedicated Team',
-      description: 'Assigned IT professionals who understand your business and infrastructure'
-    },
-    {
-      icon: Globe,
-      title: 'Global Support',
-      description: '24/7 support across all time zones with local expertise in multiple regions'
-    },
-    {
-      icon: Shield,
-      title: 'Advanced Security',
-      description: 'Enterprise-level security measures and compliance management'
-    },
-    {
-      icon: Award,
-      title: 'Proven Track Record',
-      description: 'Successfully serving Fortune 500 companies and government agencies'
-
-  ];
-
-=======
 import { Building2, Users, Globe, Shield, Award, ArrowRight, Phone, Mail, Calendar, CheckCircle } from 'lucide-react';
 
 export const EnterpriseCallToAction = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const enterpriseBenefits = [
     'Customized solutions tailored to your business needs',
     'Dedicated account manager and support team',
@@ -248,9 +216,4 @@ export const EnterpriseCallToAction = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

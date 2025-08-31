@@ -194,12 +194,7 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
             case "Emerging Technology":
                 return "text-purple-400 bg-purple-400/20";
             default:
-<<<<<<< HEAD
-                return "text-gray-400 bg-gray-400/20";
-
-=======
                 return "text-gray-400 bg-gray-400/20"}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -416,11 +411,6 @@ import { Atom, Satellite, Brain, Cpu, Network, CircuitBoard const EmergingTech =
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default EmergingTech;
 }}}}}}}}}}}}}}

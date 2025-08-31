@@ -50,25 +50,13 @@ export function AdvancedDataVisualization() {
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30000); // Refresh every 30 seconds
-<<<<<<< HEAD
-            return () => clearInterval(interval);
-
-    }, [autoRefresh]);
-    const downloadChart = (format) => {
-        // Simulate chart download
-<<<<<<< HEAD
-        // // // console.log(`Downloading chart as ${format}`);
-=======
         // // // // // // // console.log(`Downloading chart as ${format}`);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
-=======
             return () => clearInterval(interval)}
     }, [autoRefresh]);
     const downloadChart = (format) => {
         // Simulate chart download
         console.log(`Downloading chart as ${format}`)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const renderChart = () => {
         switch (selectedChartType) {
             case 'bar':
@@ -82,12 +70,7 @@ export function AdvancedDataVisualization() {
             case 'scatter':
                 return renderScatterChart();
             default:
-<<<<<<< HEAD
-                return renderBarChart();
-
-=======
                 return renderBarChart()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const renderBarChart = () => {
         const maxValue = Math.max(...filteredData.map(item => item.value));
@@ -191,12 +174,7 @@ export function AdvancedDataVisualization() {
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-68 p-3 bg-zion-cyan hover:bg-zion-cyan-light text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Advanced Data Visualization">
         <BarChart3 className="w-5 h-5"/>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-68 z-50">
         <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-lg p-3">
@@ -208,12 +186,7 @@ export function AdvancedDataVisualization() {
             </button>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1000px] h-[700px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-zion-slate-light bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
@@ -398,9 +371,4 @@ export function AdvancedDataVisualization() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div></div></div>}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

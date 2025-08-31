@@ -1,26 +1,15 @@
 import React, { useState, createContext, useContext, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell import { Button } from './button';
-=======
 import { X, CheckCircle, AlertTriangle, Info, AlertCircle, Bell } from 'lucide-react';
 import { Button } from "./button";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Context
 const NotificationContext = createContext(null);
 // Hook
 export function useNotifications() {
     const context = useContext(NotificationContext);
     if (!context) {
-<<<<<<< HEAD
-        throw new Error('useNotifications must be used within a NotificationProvider');
-
-    return context;
-
-=======
         throw new Error('useNotifications must be used within a NotificationProvider')}
     return context}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function NotificationProvider({ children, maxNotifications = 5, position = 'top-right' }) {
     const [notifications, setNotifications] = useState([]);
     const removeNotification = useCallback((id) => {
@@ -46,13 +35,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
         // Auto-dismiss after duration
         if (newNotification.duration && newNotification.duration > 0) {
             setTimeout(() => {
-<<<<<<< HEAD
-                removeNotification(newNotification.id);
-            }, newNotification.duration);
-
-=======
                 removeNotification(newNotification.id)}, newNotification.duration)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [maxNotifications, removeNotification]);
     const clearAll = useCallback(() => {
         setNotifications([])}, []);
@@ -72,12 +55,7 @@ export function NotificationProvider({ children, maxNotifications = 5, position 
     return (<NotificationContext.Provider value={value}>
       {children}
       <NotificationContainer position={position}/>
-<<<<<<< HEAD
-    </NotificationContext.Provider>);
-
-=======
     </NotificationContext.Provider>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 function NotificationContainer({ position }) {
     const { notifications, clearAll } = useNotifications();
     const getPositionClasses = (pos) => {
@@ -95,12 +73,7 @@ function NotificationContainer({ position }) {
             case 'bottom-center':
                 return 'bottom-4 left-1/2 transform -translate-x-1/2';
             default:
-<<<<<<< HEAD
-                return 'top-4 right-4';
-
-=======
                 return 'top-4 right-4'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (notifications.length === 0)
         return null;
@@ -124,12 +97,7 @@ function NotificationContainer({ position }) {
           {notifications.map((notification) => (<NotificationItem key={notification.id} notification={notification}/>))}
         </AnimatePresence>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 function NotificationItem({ notification }) {
     const { removeNotification } = useNotifications();
     const getIcon = (type) => {
@@ -143,12 +111,7 @@ function NotificationItem({ notification }) {
             case 'info':
                 return <Info className="w-5 h-5 text-blue-400"/>;
             default:
-<<<<<<< HEAD
-                return <Info className="w-5 h-5 text-blue-400"/>;
-
-=======
                 return <Info className="w-5 h-5 text-blue-400"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getTypeClasses = (type) => {
         switch (type) {
@@ -161,12 +124,7 @@ function NotificationItem({ notification }) {
             case 'info':
                 return 'border-blue-500/30 bg-blue-500/10';
             default:
-<<<<<<< HEAD
-                return 'border-zion-blue-light/30 bg-zion-blue/10';
-
-=======
                 return 'border-zion-blue-light/30 bg-zion-blue/10'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getProgressColor = (type) => {
         switch (type) {
@@ -179,12 +137,7 @@ function NotificationItem({ notification }) {
             case 'info':
                 return 'bg-blue-400';
             default:
-<<<<<<< HEAD
-                return 'bg-zion-cyan';
-
-=======
                 return 'bg-zion-cyan'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<motion.div layout initial = {
   { opacity: 0, x: 300,
@@ -272,26 +225,7 @@ function NotificationItem({ notification }) {
       <div className="mt-2 text-xs text-zinc-400">
         {notification.timestamp.toLocaleTimeString()}
       </div>
-<<<<<<< HEAD
-    </motion.div>);
-
-// Convenience functions for quick notifications
-export function showSuccess(title, message, options) {
-    // This would be called from the context
-    return { type: 'success', title, message, ...options };
-
-export function showError(title, message, options) {
-    return { type: 'error', title, message, ...options };
-
-export function showWarning(title, message, options) {
-    return { type: 'warning', title, message, ...options };
-
-export function showInfo(title, message, options) {
-    return { type: 'info', title, message, ...options };
-}}}}}}}}}}}}}}</motion.div>}
-=======
     </motion.div>)}
 // Convenience functions for quick notifications
 export function showInfo(title, message, options) {
     return { type: 'info', title, message, ...options }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

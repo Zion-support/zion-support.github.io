@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Wrench,
-  Zap,
-  Shield,
-  CheckCircle,
-  ArrowRight,
+import { 
+  Wrench, 
+  Zap, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
   Star,
   Users,
   Award,
@@ -36,14 +35,12 @@ import {
   MapPin,
   Layers,
   RefreshCw,
-=======
 import { 
   Wrench, 
   Clock, 
   Shield, 
   Users, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   AlertTriangle,
   Phone,
   Mail,
@@ -52,27 +49,11 @@ import {
   Server,
   Network,
   Database,
-<<<<<<< HEAD
-  Eye,
-  Clock,
-  Activity,
-  Lock,
-  Globe,
-  Award,
-  Users,
-  Star,
-  ArrowRight,
-  CheckCircle,
-  Shield,
-  Zap,
-  Wrench
-=======
   Monitor,
   HardDrive,
   Router
 } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const onsiteSupportSolutions = [
   {
     id: 1,
@@ -168,44 +149,8 @@ const onsiteSupportSolutions = [
     price: "From $400/hour",
     timeline: "2-8 hours",
     category: "Emergency",
-<<<<<<< HEAD
-    technologies: ["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
-
-];
-
-const supportTechnologies = [
-  {
-    name: "Hardware Support",
-    description: "Comprehensive hardware troubleshooting and repair",
-    icon: Cpu,
-    useCase: "Hardware Issues",
-    reliability: "Critical"
-  },
-  {
-    name: "Network Support",
-    description: "Network infrastructure and connectivity solutions",
-    icon: Network,
-    useCase: "Network Issues",
-    reliability: "Critical"
-  },
-  {
-    name: "Software Support",
-    description: "Software installation and configuration support",
-    icon: Code,
-    useCase: "Software Issues",
-    reliability: "High"
-  },
-  {
-    name: "Security Support",
-    description: "Security system implementation and maintenance",
-    icon: Shield,
-    useCase: "Security Issues",
-    reliability: "Critical"
-
-=======
     technologies["Emergency Tools", "Spare Parts", "Mobile Support", "Remote Access"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -292,13 +237,8 @@ const supportBenefits = [
     title: "Preventive Maintenance",
     description: "Proactive maintenance prevents future issues and improves reliability",
     icon: Shield,
-<<<<<<< HEAD
-    examples: ["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
-
-=======
     examples["Regular maintenance", "System monitoring", "Preventive measures", "Performance optimization"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function OnsiteSupport() {
@@ -973,9 +913,4 @@ export default function OnsiteSupport() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

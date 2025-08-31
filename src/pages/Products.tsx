@@ -24,14 +24,6 @@ const Products: React.FC = (): JSX.Element => {
         </div>
         <div className="mt-16">
           <a href="tel:+13024640950" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-<<<<<<< HEAD
-            📞 Call +1 (302) 464-0950
-          </a>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             📞 Call +1 (302) 464-0950;
           </a>;
         </div>;
@@ -39,6 +31,5 @@ const Products: React.FC = (): JSX.Element => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Products;

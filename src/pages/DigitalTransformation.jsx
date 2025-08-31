@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database import { SEO } from '../components/SEO';
-=======
 import { Rocket, Zap, Shield, Users, TrendingUp, CheckCircle, Star, ArrowRight, Cpu, Database } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const transformationServices = [
     {
         title: "Strategy & Planning",
@@ -77,9 +73,7 @@ const transformationPhases = [
         duration: "6-18 months"
 
 ];
-=======
 import { SEO } from "../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const testimonials = [
     {
         content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
@@ -557,9 +551,4 @@ export default function DigitalTransformation() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

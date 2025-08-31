@@ -42,15 +42,9 @@ import { Shield, Lock, Eye, CheckCircle, Users, Database, Network, ArrowRight, A
         status: "Compliant",
         validUntil: "Ongoing",
         scope: "Healthcare Solutions",
-<<<<<<< HEAD
-        features: ["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
-        benefits: ["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
-
-=======
         features["PHI Protection", "Access Controls", "Audit Logging", "Encryption Standards"],
         benefits["Healthcare Market Access", "Patient Privacy", "Regulatory Compliance", "Trust Building"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 const complianceFrameworks = [
     {
@@ -86,69 +80,14 @@ const complianceFrameworks = [
         description: "Federal Risk and Authorization Management Program compliance",
         implementation: "In Progress",
         maturity: "Authorization Phase",
-<<<<<<< HEAD
-        controls: ["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
-        benefits: ["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
-
-=======
         controls["Access Control", "Audit & Accountability", "Configuration Management", "Incident Response"],
         benefits["Federal Contracts", "Cloud Security", "Government Trust", "Market Expansion"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-<<<<<<< HEAD
-const securityFeatures = [
-    {
-        icon: <Shield className="w-8 h-8"/>,
-        title: "End-to-End Encryption",
-        description: "256-bit AES encryption for data in transit and at rest",
-        features["TLS 1.3", "Database Encryption", "File-level Security", "API Security"],
-        benefits["Data Protection", "Regulatory Compliance", "Customer Trust", "Risk Mitigation"]
-    },
-    {
-        icon: <Lock className="w-8 h-8"/>,
-        title: "Multi-Factor Authentication",
-        description: "Advanced authentication with biometric, hardware, and software tokens",
-        features["Biometric Auth", "Hardware Tokens", "SMS/Email Codes", "SSO Integration"],
-        benefits["Account Security", "Unauthorized Access Prevention", "Compliance", "User Experience"]
-    },
-    {
-        icon: <Eye className="w-8 h-8"/>,
-        title: "Continuous Monitoring",
-        description: "24/7 security monitoring with AI-powered threat detection",
-        features["Real-time Alerts", "Threat Intelligence", "Behavioral Analysis", "Incident Response"],
-        benefits["Proactive Security", "Quick Response", "Risk Reduction", "Compliance"]
-    },
-    {
-        icon: <Users className="w-8 h-8"/>,
-        title: "Role-Based Access Control",
-        description: "Granular access control based on user roles and responsibilities",
-        features["Permission Management", "Access Reviews", "Privilege Escalation", "Audit Logging"],
-        benefits["Data Security", "Compliance", "Operational Efficiency", "Risk Management"]
-    },
-    {
-        icon: <Database className="w-8 h-8"/>,
-        title: "Data Loss Prevention",
-        description: "Advanced DLP with content analysis and policy enforcement",
-        features["Content Analysis", "Policy Enforcement", "Data Classification", "Incident Response"],
-        benefits["Data Protection", "Compliance", "Risk Mitigation", "Customer Trust"]
-    },
-    {
-        icon: <Network className="w-8 h-8"/>,
-        title: "Network Security",
-        description: "Comprehensive network protection with firewalls and intrusion detection",
-<<<<<<< HEAD
-        features: ["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
-        benefits: ["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
-
-=======
         features["Next-gen Firewalls", "IDS/IPS", "VPN Access", "DDoS Protection"],
         benefits["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const securityStats = [
     { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },
     { icon: <Lock className="w-6 h-6"/>, value: "256-bit", label: "Encryption" },
@@ -821,9 +760,4 @@ export function SecurityComplianceSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -5,11 +5,7 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
-<<<<<<< HEAD
-  fps: number;
-=======
   fps: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface UsePerformanceOptimizationOptions {
 
@@ -17,17 +13,6 @@ interface UsePerformanceOptimizationOptions {
   enableIntersectionObserver?: boolean;
   enableMemoryManagement?: boolean;
   enableFPSMonitoring?: boolean;
-<<<<<<< HEAD
-  threshold?: number;
-
-export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = { /* empty */ }) => {
-  const {
-    enableLazyLoading = true,
-    enableIntersectionObserver = true,
-    enableMemoryManagement = true,
-    enableFPSMonitoring = true,
-    threshold = 0.1
-=======
   threshold?: number}
 
 export const usePerformanceOptimization = (options: UsePerformanceOptimizationOptions = {}) => {;
@@ -37,7 +22,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     enableMemoryManagement = true,;
     enableFPSMonitoring = true,;
     threshold = 0.1;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   } = options;
 
   const metricsRef = useRef<PerformanceMetrics>({;
@@ -63,14 +47,8 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           event_category: 'performance',
           event_label: 'load_time',
           value: Math.round(loadTime)
-<<<<<<< HEAD
-        });
-
-
-=======
         })}
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // FPS monitoring
@@ -92,18 +70,10 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
         // Log low FPS for debugging
         if (fps < 30) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          // // // console.warn(`Low FPS detected: ${fps}`);
-
-=======
           // // // // // // // console.warn(`Low FPS detected: ${fps}`);
         }
-=======
           console.warn(`Low FPS detected: ${fps}`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
       animationFrameId = requestAnimationFrame(measureFPS)};
 
@@ -111,128 +81,52 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
     return () => {
       if (animationFrameId) {
-<<<<<<< HEAD
-        cancelAnimationFrame(animationFrameId);
-
-    };
-  }, [enableFPSMonitoring]);
-=======
         cancelAnimationFrame(animationFrameId)}
     }}, [enableFPSMonitoring]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Memory management
   useEffect(() => {
     if (!enableMemoryManagement) return;
 
-<<<<<<< HEAD
-    const checkMemoryUsage = () => {;
-      if ('memory' in performance) {;
-        const memory = (performance as ).memory;
-=======
     const checkMemoryUsage = () => {;
       if ('memory' in performance) {;
         const memory = (performance as any).memory;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         // Warn if memory usage is high
         if (memory.usedJSHeapSize > 100 * 1024 * 1024) { // 100MB
-<<<<<<< HEAD
-<<<<<<< HEAD
-          // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
-
-
-=======
           // // // // // // // console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB');
         }
-=======
           console.warn('High memory usage detected:', metricsRef.current.memoryUsage.toFixed(2), 'MB')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
 
     const intervalId = setInterval(checkMemoryUsage, 5000);
     return () => clearInterval(intervalId)}, [enableMemoryManagement]);
 
   // Intersection Observer for lazy loading
-<<<<<<< HEAD
-  const createIntersectionObserver = useCallback((callback: IntersectionObserverCallback) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (!enableIntersectionObserver) return null;
-
-    return new IntersectionObserver(callback, {
-      threshold,
-      rootMargin: '50px'
-    })}, [enableIntersectionObserver, threshold]);
-
-  // Lazy loading utility
-<<<<<<< HEAD
-  const lazyLoad = useCallback((element: HTMLElement, callback: () => void) => {;
-    if (!enableLazyLoading) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      callback();
-<<<<<<< HEAD
-      return;
-
-    if (observerRef.current) {
-      observerRef.current.disconnect();
-=======
       return}
 
     if (observerRef.current) {
       observerRef.current.disconnect()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     observerRef.current = createIntersectionObserver((entries) => {;
       entries.forEach((entry) => {;
         if (entry.isIntersecting) {;
           callback();
           if (observerRef.current) {
-<<<<<<< HEAD
-            observerRef.current.unobserve(entry.target);
-
-
-      });
-    });
-
-    if (observerRef.current) {
-      observerRef.current.observe(element);
-
-=======
             observerRef.current.unobserve(entry.target)}
         }
       })});
 
     if (observerRef.current) {
       observerRef.current.observe(element)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [enableLazyLoading, createIntersectionObserver]);
 
   // Performance monitoring
-<<<<<<< HEAD
-  const measureRenderTime = useCallback((componentName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const startTime = performance.now();
-
-    return () => {
-      const endTime = performance.now();
-      const renderTime = endTime - startTime;
-      metricsRef.current.renderTime = renderTime;
-
-      // Log slow renders
-      if (renderTime > 16) { // 60fps threshold
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
-=======
         // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
         console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Report to analytics if available
       if (window.gtag) {
@@ -240,53 +134,16 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
           event_category: 'performance',
           event_label: 'render_time',
           value: Math.round(renderTime)
-<<<<<<< HEAD
-        });
-
-    };
-  }, []);
-=======
         })}
     }}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Debounced function utility
-<<<<<<< HEAD
-  const debounce = useCallback(<T extends (...args: any[]) => any>(;
-    func: T,;
-    delay: number;
-  ): ((...args: Parameters<T>) => void) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    let timeoutId: NodeJS.Timeout;
-<<<<<<< HEAD
-
-    return (...args: Parameters<T>) => {
-=======
     
     return (...args: Parameters<T>)  => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func(...args), delay)}}, []);
 
   // Throttled function utility
-<<<<<<< HEAD
-  const throttle = useCallback(<T extends (...args: any[]) => any>(;
-    func: T,;
-    delay: number;
-  ): ((...args: Parameters<T>) => void) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    let lastCall = 0;
-<<<<<<< HEAD
-
-    return (...args: Parameters<T>) => {
-      const now = Date.now();
-      if (now - lastCall >= delay) {
-        lastCall = now;
-        func(...args);
-
-    };
-  }, []);
-=======
     
     return (...args: Parameters<T>)  => {
       const now = Date.now();
@@ -294,19 +151,9 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
         lastCall = now;
         func(...args)}
     }}, []);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Cleanup function
-<<<<<<< HEAD
-  const cleanup = useCallback(() => {;
-    if (observerRef.current) {;
-      observerRef.current.disconnect();
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, []);
 
   // Get current metrics
@@ -338,11 +185,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 // Type declaration for gtag
 declare global {
   interface Window {
-<<<<<<< HEAD
-    gtag?: (...args: any[]) => void;
-}}}}}}}}}}}}}}}}}}}}
-=======
 
     gtag?: (...args[])  => void}
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,17 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
-=======
 import { Check, X, Star, TrendingUp, Zap, Shield, Clock, DollarSign, BarChart3, Target, Users, Globe, Mail, Phone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Input } from "./ui/input";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const COMPLEXITY_LEVELS = ['Basic', 'Intermediate', 'Advanced', 'Enterprise'];
 const PRICE_RANGES = ['Under $10K', '$10K-$50K', '$50K-$100K', '$100K+'];
 export const AdvancedServiceComparison = () => {
@@ -109,12 +102,7 @@ export const AdvancedServiceComparison = () => {
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPopularityIcon = (popularity) => {
         switch (popularity) {
@@ -122,12 +110,7 @@ export const AdvancedServiceComparison = () => {
             case 'High': return <Star className="w-4 h-4 text-yellow-500"/>;
             case 'Medium': return <Zap className="w-4 h-4 text-blue-500"/>;
             case 'Low': return <Target className="w-4 h-4 text-gray-500"/>;
-<<<<<<< HEAD
-            default: return <Users className="w-4 h-4 text-gray-500"/>;
-
-=======
             default: return <Users className="w-4 h-4 text-gray-500"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -514,11 +497,6 @@ export const AdvancedServiceComparison = () => {
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AdvancedServiceComparison;
 }}}}

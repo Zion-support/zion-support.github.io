@@ -1,13 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 import { useAICodeGeneration } from '../hooks/useAICodeGeneration';
-import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration";
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -58,14 +53,8 @@ export const AICodeGenerator = () => {
         if (generatedCode) {
             // Update generated code
             // Note: In a real implementation, you'd want to update the state properly
-<<<<<<< HEAD
-
-        trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length);
-    }, [generatedCode, customCode, optimizeCode, trackEvent]);
-=======
         }
         trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Handle test generation
     const handleGenerateTests = useCallback(async () => {
         if (!generatedCode && !customCode)
@@ -73,18 +62,11 @@ export const AICodeGenerator = () => {
         const codeToTest = generatedCode || customCode;
         const testCode = await generateTests(codeToTest, form.language);
         // In a real implementation, you'd want to display the test code
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Generated tests:', testCode);
-=======
         // // // // // // // console.log('Generated tests:', testCode);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length);
     }, [generatedCode, customCode, generateTests, form.language, trackEvent]);
-=======
         console.log('Generated tests:', testCode);
         trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Handle documentation generation
     const handleGenerateDocs = useCallback(async () => {
         if (!generatedCode && !customCode)
@@ -92,40 +74,22 @@ export const AICodeGenerator = () => {
         const codeToDoc = generatedCode || customCode;
         const docs = await generateDocs(codeToDoc, form.language);
         // In a real implementation, you'd want to display the documentation
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Generated docs:', docs);
-=======
         // // // // // // // console.log('Generated docs:', docs);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length);
     }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
-=======
         console.log('Generated docs:', docs);
         trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Copy code to clipboard
     const copyToClipboard = useCallback(async (code) => {
         try {
             await navigator.clipboard.writeText(code);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
-<<<<<<< HEAD
-            trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length);
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Failed to copy code:', error);
-
-=======
             // // // // // // // console.error('Failed to copy code:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length)}
         catch (error) {
             console.error('Failed to copy code:', error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [trackEvent]);
     // Apply suggestion
     const handleApplySuggestion = useCallback((suggestion) => {
@@ -516,15 +480,8 @@ export const AICodeGenerator = () => {
                               {value}/10
                             </div>
                             <div className="text-sm text-gray-600 dark:text-gray-400">{label}</div>
-<<<<<<< HEAD
-                          </div>);
-
-                    return null;
-                })}
-=======
                           </div>)}
                     return null})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
 
                   {/* Code Metrics */}
@@ -849,10 +806,4 @@ export const AICodeGenerator = () => {
             </div>
           </motion.div>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

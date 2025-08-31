@@ -11,19 +11,10 @@ export default function PublishProduct() {
         <div className="animate-pulse text-zion-purple text-lg">
           Loading...
         </div>
-<<<<<<< HEAD
-      </div>);
-
-    // Redirect to login if not authenticated
-    if (!isAuthenticated) {
-        return <Navigate to="/login" state={{ from: '/publish' }} replace/>;
-
-=======
       </div>)}
     // Redirect to login if not authenticated
     if (!isAuthenticated) {
         return <Navigate to="/login" state={{ from: '/publish' }} replace/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO title="Publish Your Product" description="Create and publish your product, service or digital asset on Zion marketplace. Reach our community of tech and AI professionals." keywords="publish product, sell online, digital marketplace, AI tools, tech services"/>
 
@@ -39,11 +30,5 @@ export default function PublishProduct() {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </div>);
-}}}
-=======
       
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

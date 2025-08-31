@@ -66,10 +66,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   <<<<<<< HEAD
             score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues[
-=======
   score: Math.floor(Math.random() * 40) + 60, // 60-100
             issues: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 'Missing meta description on some pages',
                 'Some images lack alt text',
                 'Heading structure could be improved'
@@ -85,10 +83,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
                 keywords: Math.random() > 0.5,
                 canonical: true,
                 ogTags: Math.random() > 0.2,
-<<<<<<< HEAD
-                twitterTags: Math.random() > 0.4
-
-=======
   twitterTags: Math.random() > 0.4
             
 
@@ -98,7 +92,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         setSeoAnalysis(mockSEO);
         setIsAnalyzing(false)}, []);
@@ -111,10 +104,8 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
   <<<<<<< HEAD
             score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues[
-=======
   score: Math.floor(Math.random() * 30) + 70, // 70-100
             issues: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 'Some form controls lack proper labels',
                 'Color contrast could be improved',
                 'Keyboard navigation needs enhancement'
@@ -155,12 +146,7 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
         return { icon: MinusIcon, color: 'text-gray-600', text: 'Stable' }};
     useEffect(() => {
         if (showOnLoad) {
-<<<<<<< HEAD
-            runFullAnalysis();
-
-=======
             runFullAnalysis()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [showOnLoad, runFullAnalysis]);
     return (<>
       {/* Dashboard Toggle Button */}
@@ -527,11 +513,6 @@ const WebsiteImprovementDashboard = ({ className = '', showOnLoad = false }) => 
             </div>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </>);
-</div>};
-=======
     </>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default WebsiteImprovementDashboard;
 }}}}}

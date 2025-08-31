@@ -15,10 +15,7 @@ import {
 	Star,
 	Play,
 	Pause
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
 
 	id: string;
@@ -28,12 +25,7 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-<<<<<<< HEAD
-	status: 'active' | 'beta' | 'new';
-
-=======
 	status: 'active' | 'beta' | 'new'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',
@@ -101,13 +93,6 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
-<<<<<<< HEAD
-		const interval = setInterval(() => {;
-			setCurrentService((prev) => (prev + 1) % futuristicServices.length)}, 5000);
-		return () => clearInterval(interval)}, [isPlaying]);
-	const getStatusColor = (status: string)  => {
-		switch (status) {;
-=======;
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
@@ -115,30 +100,12 @@ export default function FuturisticServicesShowcase(...args[]):  {
 	}, [isPlaying]);
 	const getStatusColor = (status: string) => {;
 		switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
-<<<<<<< HEAD
-			default: return 'bg-gray-500';
-
-=======
 			default: return 'bg-gray-500'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
-<<<<<<< HEAD
-	const getStatusText = (status: string) => {;
-		switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-			case 'new': return 'NEW';
-			case 'beta': return 'BETA';
-			case 'active': return 'ACTIVE';
-<<<<<<< HEAD
-			default: return 'UNKNOWN';
-
-=======
 			default: return 'UNKNOWN'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	};
 	return (
 		<div className = "py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -382,23 +349,10 @@ export default function FuturisticServicesShowcase(...args[]):  {
 									{service.price}
 								</div>
 							</motion.div>
-<<<<<<< HEAD
-						))}
-					</div>
-				</div>
-			</div>
-		</div>
-	)};
-=======;
 						))};
 					</div>;
 				</div>;
 			</div>;
 		</div>;
 	);
-<<<<<<< HEAD
-}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  Linkedin, 
+  Twitter, 
+  Facebook, 
   Instagram,
   Youtube,
   Github,
@@ -26,62 +26,76 @@ import {
   Sun,
   Moon,
   Globe2,
-  Infinity,
-  Alpha,
-  Beta,
-  Gamma,
-  Delta,
-  Epsilon,
-  Zeta,
-  Eta,
-  Theta,
-  Iota,
-  Kappa,
-  Lambda,
-  Mu,
-  Nu,
-  Xi,
-  Omicron,
-  Pi,
-  Rho,
-  Sigma,
-  Tau,
-  Upsilon,
-  Phi,
-  Chi,
-  Psi,
-  Omega,
-  Clock,
-  Users,
-  Award,
-  CheckCircle,
-  TrendingUp,
-  Target,
-  Lightbulb,
-  Cpu,
-  Cloud,
-  Database,
-  Network,
-  Lock,
-  Eye,
-  FileText,
-  Settings,
-  Key,
   ShieldCheck,
-  Smartphone,
-  Monitor,
-  Server,
-  DollarSign,
-  Scale,
   Leaf,
+  Scale,
+  Building2,
+  Car,
+  Home,
   Factory,
-  Building,
-  Car
+  City,
+  CheckCircle,
+  ArrowUpRight,
+  Play,
+  MailIcon,
+  Calendar,
+  User,
+  Handshake,
+  Briefcase,
+  FileText as FileTextIcon,
+  Users as UsersIcon,
+  Code as CodeIcon,
+  HelpCircle as HelpCircleIcon,
+  DollarSign as DollarSignIcon,
+  Users as UsersIcon2,
+  Calendar as CalendarIcon,
+  Shield as ShieldIcon,
+  BookOpen as BookOpenIcon,
+  Factory as FactoryIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Heart as HeartIcon,
+  TrendingUp as TrendingUpIcon,
+  Building as BuildingIcon,
+  Rocket as RocketIcon,
+  Atom as AtomIcon,
+  Cloud as CloudIcon,
+  Shield as ShieldIcon2,
+  ShoppingCart as ShoppingCartIcon2,
+  Users as UsersIcon3,
+  BookOpen as BookOpenIcon2,
+  FileText as FileTextIcon2,
+  Users as UsersIcon4,
+  Code as CodeIcon2,
+  HelpCircle as HelpCircleIcon2,
+  DollarSign as DollarSignIcon2,
+  Users as UsersIcon5,
+  Calendar as CalendarIcon2,
+  Shield as ShieldIcon3,
+  BookOpen as BookOpenIcon3,
+  Factory as FactoryIcon2,
+  ShoppingCart as ShoppingCartIcon3,
+  Heart as HeartIcon2,
+  TrendingUp as TrendingUpIcon2,
+  Building as BuildingIcon2,
+  Rocket as RocketIcon2,
+  Atom as AtomIcon2,
+  Cloud as CloudIcon2,
+  Shield as ShieldIcon4,
+  ShoppingCart as ShoppingCartIcon4,
+  Users as UsersIcon6,
+  BookOpen as BookOpenIcon4,
+  FileText as FileTextIcon3,
+  Users as UsersIcon7,
+  Code as CodeIcon3,
+  HelpCircle as HelpCircleIcon3,
+  DollarSign as DollarSignIcon3,
+  Users as UsersIcon8,
+  Calendar as CalendarIcon3,
+  Shield as ShieldIcon5,
+  BookOpen as BookOpenIcon5
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-=======
   Search,
   BookOpen,
   MessageCircle,
@@ -102,28 +116,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
->>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
-<<<<<<< HEAD
-      title: 'Explore',
-      links: [
-        { name: 'Services', href: '/services' },
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' }
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { name: 'About', href: '/about' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' },
-        { name: 'Blog', href: '/blog' }
-=======
       title: 'Services',
       icon: Rocket,
       color: 'from-blue-600 to-cyan-600',
@@ -138,15 +134,25 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     },
     {
       title: 'Core Technologies',
+      title: 'AI & Machine Learning Services',
+      featured: true,
       icon: Brain,
       color: 'from-indigo-600 to-purple-600',
       links: [
-        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
-        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
-        { name: 'Digital Twin', href: '/services/digital-twin' },
-        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
-        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot' },
-        { name: 'Data Analytics', href: '/services/data-analytics' }
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', featured: true },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', featured: true },
+        { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
+        { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },
+        { name: 'AI HR Platform', href: '/services/ai-hr-platform', featured: true },
+        { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', featured: true },
+        { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
+        { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
+        { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true }
       ]
     },
     {
@@ -160,41 +166,14 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Emerging Tech 2030', href: '/emerging-tech-2030' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
         { name: 'AI Content Marketing', href: '/services/ai-content-marketing-automation' }
->>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391
       ]
-<<<<<<< HEAD
-
-=======
     },
     {
-<<<<<<< HEAD
-      title: 'Company & Contact',
-      featured: false,
-      icon: Users,
-      color: 'from-slate-500 to-gray-500',
-      links: [
-        { name: 'About Zion Tech Group', href: '/about', featured: false },
-        { name: 'Our Team', href: '/about#team', featured: false },
-        { name: 'Careers', href: '/careers', featured: false },
-        { name: 'Contact Us', href: '/contact', featured: true },
-        { name: 'Request Quote', href: '/request-quote', featured: true },
-        { name: 'Schedule Demo', href: '/schedule-demo', featured: true },
-        { name: 'Partnerships', href: '/partners', featured: false },
-<<<<<<< HEAD
-        { name: 'Investor Relations', href: '/investors', featured: false },
-        { name: 'Press & Media', href: '/press', featured: false },
-        { name: 'Legal & Privacy', href: '/legal', featured: false },
-        { name: 'Terms of Service', href: '/terms', featured: false },
-        { name: 'Privacy Policy', href: '/privacy', featured: false }
-      ]
-    };
-=======;
         { name: 'Investor Relations', href: '/investors', featured: false },;
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
       ];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const quickLinks = [
@@ -209,7 +188,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Marketplace', href: '/marketplace' }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const socialLinks = [
@@ -219,6 +197,29 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-300' }
+    }
+  ];
+
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+  };
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-400' },
+    { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github, color: 'hover:text-gray-400' }
+  ];
+
+  const quickActions = [
+    { name: 'Get Started', href: '/contact', icon: Rocket, color: 'from-cyan-500 to-blue-500' },
+    { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'from-green-500 to-emerald-500' },
+    { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'from-purple-500 to-pink-500' },
+    { name: 'View Pricing', href: '/pricing', icon: TrendingUp, color: 'from-orange-500 to-red-500' }
   ];
 
   const stats = [
@@ -269,7 +270,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
   };
 
   return (
-          <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+          <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800/20 to-slate-900/20"></div>
@@ -327,16 +328,9 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   <p className="text-slate-400 text-sm">Future Technology Solutions</p>
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <p className="text-slate-300 mb-6 leading-relaxed">
-                Revolutionizing the future with cutting-edge AI, Quantum Computing, and Micro SaaS solutions.
-                Transform your business with our innovative technology platforms.
-=======
               <p className="text-slate-300 mb-6 leading-relaxed">
                 Leading provider of cutting-edge AI solutions, cloud services, cybersecurity, and digital transformation expertise. 
                 We help businesses innovate and thrive in the digital age.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-slate-300">
@@ -351,79 +345,13 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     kleber@ziontechgroup.com
                   </a>
                 </div>
-<<<<<<< HEAD
-                <div className="flex items-start space-x-3 text-slate-300">
-                  <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                  <span>Delaware, United States</span>
-                </div>
-              </div>
-
-              {/* Quick Actions */}
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-white mb-3">Quick Actions</h4>
-                <div className="space-y-2">
-                  {quickActions.map((action) => (
-                    <Link
-                      key={action.name}
-                      to={action.href}
-                      className="flex items-center text-sm text-slate-300 hover:text-cyan-300 transition-colors group"
-
-                      <action.icon className="w-4 h-4 mr-2 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
-                      {action.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div>
-                <h4 className="text-sm font-semibold text-white mb-3">Follow Us</h4>
-                <div className="flex space-x-3">
-                  {socialLinks.map((social) => (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-10 h-10 bg-slate-800/50 rounded-lg flex items-center justify-center text-slate-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50 hover:scale-110`}
-                      aria-label={social.name}
-
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-=======
                 <div className="flex items-center space-x-3 text-slate-300">
                   <MapPin className="w-4 h-4 text-cyan-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
             </div>
 
-<<<<<<< HEAD
-            {/* Footer Sections */}
-            {footerSections.map((section) => (
-              <div key={section.title} className="space-y-4">
-                <h3 className={`text-sm font-semibold ${section.featured ? 'text-cyan-300' : 'text-white'} flex items-center gap-2`}>
-                  {section.featured && <Star className="w-4 h-4" />}
-                  {section.title}
-                </h3>
-                <div className="space-y-2">
-                  {section.links.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      className={`text-sm text-slate-300 hover:text-cyan-300 transition-colors flex items-center gap-2 group ${
-                        link.featured ? 'font-medium text-cyan-200' : ''
-                      }`}
-
-                      {link.featured && <Sparkles className="w-3 h-3 text-yellow-400" />}
-                      {link.name}
-                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
-                    </Link>
-                  ))}
-                </div>
-=======
               {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
@@ -438,7 +366,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                     <social.icon className="w-5 h-5" />
                   </a>
                 ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </div>
             
@@ -576,7 +503,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
                   <Award className="w-4 h-4 text-yellow-400 mr-2" />
                   AWS Partner
                 </span>
-=======
       title: 'Pricing & Plans',
       icon: DollarSign,
       color: 'from-emerald-600 to-teal-600',
@@ -713,159 +639,58 @@ export const EnhancedFuturisticFooter: React.FC = () => {
               </div>
             </div>
 
-            {/* Footer Sections */}
-            {footerSections.map((section, index) => (
-              <motion.div
-                key={section.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="space-y-4"
-              >
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${section.color} flex items-center justify-center`}>
-                    <section.icon className="w-4 h-4 text-white" />
-                  </div>
-                  <h4 className="font-semibold text-white">{section.title}</h4>
-                </div>
-                <div className="space-y-2">
-                  {section.links.map((link) => (
-                    <Link
-                      key={link.name}
-                      to={link.href}
-                      className="block text-slate-400 hover:text-cyan-400 transition-colors text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Quick Actions */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 mb-12"
-          >
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-              <p className="text-slate-300 max-w-2xl mx-auto">
-                Transform your business with our cutting-edge technology solutions. Get in touch today for a personalized consultation.
+            {/* Newsletter Signup */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <MailIcon className="w-5 h-5 text-cyan-400" />
+                <span>Stay Updated</span>
+              </h3>
+              <p className="text-slate-300 text-sm">
+                Get the latest insights on AI, quantum computing, and technology trends.
               </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {quickLinks.map((link, index) => (
-                <motion.div
-                  key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Link
-                    to={link.href}
-                    className="flex flex-col items-center p-4 rounded-lg bg-slate-800/50 hover:bg-slate-700/50 transition-colors group"
-                  >
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
-                      <link.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <span className="text-white font-medium text-center">{link.name}</span>
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Contact & Newsletter */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-white mb-4">Get In Touch</h4>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-cyan-400" />
-                  <span className="text-slate-300">{contactInfo.phone}</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-cyan-400" />
-                  <span className="text-slate-300">{contactInfo.email}</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-cyan-400 mt-0.5" />
-                  <span className="text-slate-300">{contactInfo.address}</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Newsletter */}
-            <div className="space-y-6">
-              <h4 className="text-xl font-semibold text-white mb-4">Stay Updated</h4>
-              <p className="text-slate-300 mb-4">
-                Subscribe to our newsletter for the latest insights, updates, and technology trends.
-              </p>
-              <div className="flex space-x-2">
+              <form className="space-y-3">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white placeholder-slate-400"
+                  className="w-full px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
                 />
-                <button className="px-6 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-colors">
+                <button
+                  type="submit"
+                  className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
+                >
                   Subscribe
                 </button>
-              </div>
+              </form>
             </div>
-          </div>
-        </div>
+          </motion.div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-800">
-          <div className="container mx-auto px-4 py-6">
+          {/* Bottom Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="border-t border-slate-700/50 pt-8"
+          >
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-              <div className="flex items-center space-x-6 text-sm text-slate-400">
+              <div className="flex items-center space-x-4 text-sm text-slate-400">
                 <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>
+                <span>•</span>
                 <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
+                <span>•</span>
                 <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
+                <span>•</span>
+                <Link to="/sitemap" className="hover:text-cyan-400 transition-colors">Sitemap</Link>
               </div>
-              <div className="flex items-center space-x-2 text-slate-400">
-                <span className="text-sm">Made with</span>
-                <Heart className="w-4 h-4 text-red-400 fill-current" />
-                <span className="text-sm">by Zion Tech Group</span>
->>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391
+              <div className="flex items-center space-x-2 text-sm text-slate-400">
+                <span>Made with</span>
+                <Heart className="w-4 h-4 text-red-400" />
+                <span>by Zion Tech Group</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
-
-        {/* Bottom Footer */}
-        <div className="border-t border-slate-800/50">
-          <div className="container mx-auto px-4 py-8">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="text-slate-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-                Revolutionizing technology, one innovation at a time.
-              </div>
-
-              <div className="flex items-center space-x-6 text-sm text-slate-400">
-                <Link to="/privacy" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link to="/terms" className="hover:text-white transition-colors">
-                  Terms of Service
-                </Link>
-                <Link to="/cookies" className="hover:text-white transition-colors">
-                  Cookie Policy
-                </Link>
-                <Link to="/sitemap" className="hover:text-white transition-colors">
-                  Sitemap
-                </Link>
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </footer>
-=======
             
             {/* Additional Contact Methods */}
             <div className="mt-12 pt-8 border-t border-slate-700">
@@ -916,10 +741,5 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         </div>;
       </div>;
     </footer>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-<<<<<<< HEAD
-}}}
-=======
 };
->>>>>>> cursor/migrate-github-actions-to-pm2-automations-f391

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  TrendingUp,
-  Shield,
-  Clock,
-  Zap,
-  Search,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -17,7 +6,6 @@ import { TrendingUp,
   Clock, 
   Zap, 
   Search, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Eye,
   CheckCircle,
   ArrowRight,
@@ -31,13 +19,9 @@ import { TrendingUp,
   Activity,
   AlertTriangle,
   Target
-<<<<<<< HEAD
-export default function AIFinancialTradingRiskManagement() {
-=======
  } from 'lucide-react';
 
 export default function AIFinancialTradingRiskManagement(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: TrendingUp,
@@ -62,15 +46,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     {
       icon: Search,
       title: "Security & Compliance",
-<<<<<<< HEAD
-      description: "Enterprise-grade security with regulatory compliance and audit trails"
-    },
-    {
-      icon: Eye,
-      title: "Data Integration",
-      description: "Seamless integration with major data providers and trading platforms"
-
-=======
       description: "Enterprise-grade security with regulatory compliance and audit trails";
     },;
     {;
@@ -78,7 +53,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
       title: "Data Integration",;
       description: "Seamless integration with major data providers and trading platforms";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const servicePackages = [
@@ -123,15 +97,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
       price: "From $5,999/month",
       features[
         "Custom strategy development",
-<<<<<<< HEAD
-        "Advanced modeling",
-        "Performance analytics",
-        "Research reports",
-        "Expert consultation",
-        "Strategy optimization"
-      ]
-
-=======
         "Advanced modeling",;
         "Performance analytics",;
         "Research reports",;
@@ -139,7 +104,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Strategy optimization";
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const supportedAssets = [
@@ -173,13 +137,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="AI Financial Trading & Risk Management - Zion Tech Group"
-=======
       <SEO 
         title = "AI Financial Trading & Risk Management - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
         canonical="/services/ai-financial-trading-risk-management"
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"
@@ -957,23 +916,10 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -9,61 +9,11 @@ import {
   ArrowRight,
   Star,
   CheckCircle
-<<<<<<< HEAD
-export const CaseStudiesSection: React.FC = () => {
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
-export const CaseStudiesSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const caseStudies = [
-    {
-      comp: 'TechCorp Solutions',
-      industry: 'Financial Services',
-      challenge: 'Legacy system modernization and digital transformation',
-      solution: 'Implemented AI-powered automation and cloud migration',
-      results[
-        '40% reduction in operational costs',
-        '60% improvement in customer satisfaction',
-        '3x faster transaction processing'
-      ],
-      logo: '🏦',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      comp: 'Global Manufacturing Inc.',
-      industry: 'Manufacturing',
-      challenge: 'Supply chain optimization and predictive maintenance',
-      solution: 'IoT sensors and AI-powered analytics platform',
-      results[
-        '25% reduction in downtime',
-        '30% improvement in supply chain efficiency',
-        '$2M annual cost savings'
-      ],
-      logo: '🏭',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      comp: 'HealthTech Innovations',
-      industry: 'Healthcare',
-      challenge: 'Patient data security and compliance management',
-      solution: 'Zero-trust security framework and automated compliance',
-      results[
-        '99.9% security compliance rate',
-        '50% reduction in audit preparation time',
-        'Enhanced patient data protection'
-      ],
-      logo: '🏥',
-<<<<<<< HEAD
-      color: 'from-purple-500 to-pink-500'
-
-=======
       color: 'from-purple-500 to-pink-500';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-=======
 const caseStudies = [
   {
     id: 1,
@@ -111,7 +61,6 @@ const caseStudies = [
     color: "from-green-500 to-emerald-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export function CaseStudiesSection() {
   return (
@@ -119,10 +68,6 @@ export function CaseStudiesSection() {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -147,7 +92,6 @@ export function CaseStudiesSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -156,30 +100,9 @@ export function CaseStudiesSection() {
           </p>
         </motion.div>
 
-        <div className="grid lg: grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index)  => (
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study, index) => (
             <motion.div
-<<<<<<< HEAD
-              key={study.company}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all duration-300"
-
-=======
-<<<<<<< HEAD
-              key={study.comp}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-=======
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial = {
@@ -202,7 +125,6 @@ export function CaseStudiesSection() {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
@@ -215,7 +137,6 @@ export function CaseStudiesSection() {
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <div className="flex items-center mb-6">
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${study.color} mr-4`}>
                   <span className="text-2xl">{study.logo}</span>
@@ -255,29 +176,11 @@ export function CaseStudiesSection() {
                   <span className="mx-2">•</span>
                   <span>Verified Results</span>
                 </div>
-<<<<<<< HEAD
-                <Link
-                  to="/case-studies"
-                  className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors duration-200"
-
-                  Read Full Case Study
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </div>
             </motion.div>
           ))}
         </div>
 
-<<<<<<< HEAD
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-center"
-
-=======
         <motion.div 
           className="mt-16 text-center"
           initial = {
@@ -312,7 +215,6 @@ export function CaseStudiesSection() {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Write Your Success Story?
@@ -344,10 +246,6 @@ export function CaseStudiesSection() {
   )};
 
 export default CaseStudiesSection;
-<<<<<<< HEAD
-}}
-=======
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -355,8 +253,6 @@ export default CaseStudiesSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default CaseStudiesSection;
 export default CaseStudiesSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

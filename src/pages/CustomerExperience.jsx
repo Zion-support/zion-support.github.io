@@ -70,118 +70,12 @@ import {
   Users,
   Settings,
   Palette
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const customerExperienceSolutions = [
-  {
-    id: 1,
-    title: "User Experience Design",
-    description: "Comprehensive UX design services for web, mobile, and desktop applications.",
-    icon: Palette,
-    features[
-      "User research & personas",
-      "Information architecture",
-      "Wireframing & prototyping",
-      "Usability testing"
-    ],
-    price: "From $30,000",
-    timeline: "8-16 weeks",
-    category: "UX Design",
-    technologies["Figma", "Adobe XD", "Sketch", "InVision"]
-  },
-  {
-    id: 2,
-    title: "Customer Journey Mapping",
-    description: "Visual representation of customer interactions and touchpoints across all channels.",
-    icon: MapPin,
-    features[
-      "Journey mapping",
-      "Touchpoint analysis",
-      "Pain point identification",
-      "Optimization strategies"
-    ],
-    price: "From $25,000",
-    timeline: "6-12 weeks",
-    category: "Journey Mapping",
-    technologies["Customer Journey Tools", "Analytics", "User Research", "Data Visualization"]
-  },
-  {
-    id: 3,
-    title: "Customer Feedback Systems",
-    description: "Comprehensive feedback collection and analysis systems for continuous improvement.",
-    icon: MessageCircle,
-    features[
-      "Feedback collection",
-      "Sentiment analysis",
-      "Real-time monitoring",
-      "Actionable insights"
-    ],
-    price: "From $20,000",
-    timeline: "4-10 weeks",
-    category: "Feedback Systems",
-    technologies["Feedback Tools", "NLP", "Analytics", "Integration APIs"]
-  },
-  {
-    id: 4,
-    title: "Personalization Engines",
-    description: "AI-powered personalization systems for tailored customer experiences.",
-    icon: Brain,
-    features[
-      "User behavior analysis",
-      "Content personalization",
-      "Recommendation engines",
-      "A/B testing"
-    ],
-    price: "From $40,000",
-    timeline: "12-20 weeks",
-    category: "Personalization",
-    technologies["Machine Learning", "AI Algorithms", "Data Analytics", "A/B Testing"]
-  },
-  {
-    id: 5,
-    title: "Customer Support Platforms",
-    description: "Integrated customer support and helpdesk solutions for seamless service delivery.",
-    icon: Headphones,
-    features[
-      "Multi-channel support",
-      "Ticket management",
-      "Knowledge base",
-      "Live chat integration"
-    ],
-    price: "From $35,000",
-    timeline: "10-18 weeks",
-    category: "Support Platforms",
-    technologies["Helpdesk Software", "Chat Systems", "Knowledge Management", "CRM Integration"]
-  },
-  {
-    id: 6,
-    title: "Customer Analytics & Insights",
-    description: "Advanced analytics and reporting systems for customer behavior and satisfaction metrics.",
-    icon: BarChart3,
-    features[
-      "Customer analytics",
-      "Satisfaction metrics",
-      "Behavior tracking",
-      "Predictive insights"
-    ],
-    price: "From $30,000",
-    timeline: "8-16 weeks",
-    category: "Analytics",
-<<<<<<< HEAD
-    technologies: ["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
-
-=======
     technologies["Analytics Platforms", "Data Visualization", "Machine Learning", "Reporting Tools"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const customerExperienceTechnologies = [
   {
     name: "User Research Tools",
@@ -297,13 +191,8 @@ const customerExperienceBenefits = [
     title: "Competitive Advantage",
     description: "Superior customer experiences differentiate your brand",
     icon: Award,
-<<<<<<< HEAD
-    examples: ["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
-
-=======
     examples["Brand differentiation", "Market leadership", "Customer preference", "Sustainable advantage"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function CustomerExperience() {
@@ -978,9 +867,4 @@ export default function CustomerExperience() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

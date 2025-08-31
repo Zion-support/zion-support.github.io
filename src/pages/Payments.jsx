@@ -89,14 +89,8 @@ export default function Payments() {
           </Tabs>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import UI components for Payment Settings tab
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";

@@ -576,118 +576,12 @@ import {
   Shield,
   Zap,
   Brain
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const businessManagerSolutions = [
-  {
-    id: 1,
-    title: "AI Business Intelligence",
-    description: "Intelligent business analytics and insights powered by artificial intelligence.",
-    icon: BarChart3,
-    features[
-      "Predictive analytics",
-      "Data visualization",
-      "Real-time insights",
-      "Automated reporting"
-    ],
-    price: "From $100,000",
-    timeline: "16-24 weeks",
-    category: "Analytics",
-    technologies["Machine Learning", "Data Analytics", "Business Intelligence", "AI Models"]
-  },
-  {
-    id: 2,
-    title: "Autonomous Process Automation",
-    description: "AI-powered automation of business processes and workflows.",
-    icon: Cog,
-    features[
-      "Process optimization",
-      "Workflow automation",
-      "Decision automation",
-      "Performance monitoring"
-    ],
-    price: "From $150,000",
-    timeline: "20-32 weeks",
-    category: "Automation",
-    technologies["RPA", "AI", "Workflow Engines", "Process Mining"]
-  },
-  {
-    id: 3,
-    title: "Smart Resource Management",
-    description: "Intelligent allocation and optimization of business resources.",
-    icon: Users,
-    features[
-      "Resource optimization",
-      "Capacity planning",
-      "Cost optimization",
-      "Performance tracking"
-    ],
-    price: "From $120,000",
-    timeline: "18-28 weeks",
-    category: "Resource Management",
-    technologies["AI Optimization", "Resource Planning", "Analytics", "Machine Learning"]
-  },
-  {
-    id: 4,
-    title: "Predictive Business Planning",
-    description: "AI-driven forecasting and strategic business planning.",
-    icon: Target,
-    features[
-      "Market forecasting",
-      "Trend analysis",
-      "Risk assessment",
-      "Strategic planning"
-    ],
-    price: "From $200,000",
-    timeline: "24-36 weeks",
-    category: "Planning",
-    technologies["Predictive Analytics", "Machine Learning", "Data Science", "AI Models"]
-  },
-  {
-    id: 5,
-    title: "Intelligent Customer Management",
-    description: "AI-powered customer relationship and experience management.",
-    icon: Users,
-    features[
-      "Customer insights",
-      "Personalization",
-      "Predictive marketing",
-      "Customer service"
-    ],
-    price: "From $180,000",
-    timeline: "22-34 weeks",
-    category: "Customer Management",
-    technologies["AI", "CRM", "Machine Learning", "Customer Analytics"]
-  },
-  {
-    id: 6,
-    title: "Autonomous Financial Management",
-    description: "AI-driven financial planning, analysis, and decision making.",
-    icon: TrendingUp,
-    features[
-      "Financial forecasting",
-      "Risk management",
-      "Investment analysis",
-      "Budget optimization"
-    ],
-    price: "From $250,000",
-    timeline: "28-40 weeks",
-    category: "Financial",
-<<<<<<< HEAD
-    technologies: ["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
-
-=======
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const businessTechnologies = [
   {
     name: "AI & Machine Learning",
@@ -803,13 +697,8 @@ const businessBenefits = [
     title: "Competitive Advantage",
     description: "AI capabilities provide strategic advantages in the marketplace",
     icon: Rocket,
-<<<<<<< HEAD
-    examples: ["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
-
-=======
     examples["Market insights", "Customer intelligence", "Innovation acceleration", "Strategic positioning"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function AIAutonomousBusinessManager() {
@@ -1484,9 +1373,4 @@ export default function AIAutonomousBusinessManager() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

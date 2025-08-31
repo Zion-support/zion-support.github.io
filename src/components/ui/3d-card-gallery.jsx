@@ -1,13 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion';
-<<<<<<< HEAD
-import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X import { Button } from './button';
-import { Badge } from './badge';
-=======
 import { Eye, Heart, Share2, Play, Pause, RotateCcw, Grid, List, Search, Star, Zap, Shield, Globe, Rocket, Brain, Settings, TrendingUp, X } from 'lucide-react';
 import { Button } from "./button";
 import { Badge } from "./badge";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = false, showFilters = true, onCardClick, onAction, className = "" }) {
     const [selectedItem, setSelectedItem] = useState(null);
     const [viewMode, setViewMode] = useState('grid');
@@ -49,22 +44,11 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 bValue = b.title.toLowerCase();
                 break;
             default:
-<<<<<<< HEAD
-                return 0;
-
-        if (sortOrder === 'asc') {
-            return aValue > bValue ? 1 : -1;
-
-        else {
-            return aValue < bValue ? 1 : -1;
-
-=======
                 return 0}
         if (sortOrder === 'asc') {
             return aValue > bValue ? 1 : -1}
         else {
             return aValue < bValue ? 1 : -1}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     // Auto-play carousel
     useEffect(() => {
@@ -92,12 +76,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             case 'deprecated':
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:
-<<<<<<< HEAD
-                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-
-=======
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get complexity color
     const getComplexityColor = (complexity) => {
@@ -111,12 +90,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             case 'expert':
                 return 'border-red-500/50 bg-red-500/10 text-red-400';
             default:
-<<<<<<< HEAD
-                return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400';
-
-=======
                 return 'border-zinc-500/50 bg-zinc-500/10 text-zinc-400'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get category icon
     const getCategoryIcon = (category) => {
@@ -133,7 +107,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 };
         return iconMap[category] || Globe};
-=======
   'Research': TrendingUp
         
 
@@ -143,7 +116,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 };
         return iconMap[category] || Globe;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (!enabled || filteredAndSortedItems.length === 0)
         return null;
     return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={galleryRef}>
@@ -216,10 +188,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               <Shield className="w-4 h-4 mr-1"/>
               Verified Only
             </Button>
-<<<<<<< HEAD
-
-            <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick={() => setFilters(prev => ({ ...prev, featured: !prev.featured }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
-=======
             
             <Button size="sm" variant={filters.featured ? "default" : "outline"} onClick = {
   () => setFilters(prev => ({ ...prev,
@@ -231,7 +199,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 }))} className={filters.featured ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <Star className="w-4 h-4 mr-1"/>
               Featured Only
             </Button>
@@ -242,13 +209,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                     ...prev,
                     category: prev.category.includes(category)
                         ? prev.category.filter(c => c !== category)
-<<<<<<< HEAD
-                        [...prev.category,
-  category]
-                
-
-}))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
-=======
                         : [...prev.category,
   category]
                 
@@ -257,7 +217,6 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
 
 
 }))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-300 hover:text-white'}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 {category}
               </Button>))}
           </div>
@@ -476,12 +435,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, getComplexityColor, getCategoryIcon, isCarousel = false }) {
     const [isHovered, setIsHovered] = useState(false);
     const [isLiked, setIsLiked] = useState(false);
@@ -502,23 +456,6 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
         setIsHovered(false)}, [x, y]);
     const handleLike = useCallback((e) => {
         e.stopPropagation();
-<<<<<<< HEAD
-        setIsLiked(!isLiked)}, [isLiked]);
-    return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {
-  { opacity: 0,
-  y: 50 
-
-}} whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}} transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}} whileHover={{ scale: 1.02 }}>
-      <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style={{
-=======
         setIsLiked(!isLiked);
     }, [isLiked]);
     return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial = {
@@ -551,7 +488,6 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
 }} whileHover={{ scale: 1.02 }}>
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             transformStyle: 'preserve-3d',
             rotateX,
             rotateY,
@@ -633,9 +569,4 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
         {/* Hover Overlay */}
         <motion.div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" initial={{ opacity: 0 }} whileHover={{ opacity: 1 }}/>
       </motion.div>
-<<<<<<< HEAD
-    </motion.div>);
-</div></div></div></Card></Card>}}}}}}}</motion.div>}
-=======
     </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

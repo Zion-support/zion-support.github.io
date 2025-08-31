@@ -42,40 +42,81 @@ import {
   DollarSign,
   Leaf,
   Building,
-  User
-<<<<<<< HEAD
-export const EnhancedSidebar: React.FC = () => {
-=======
  } from 'lucide-react';
+  User,
+  Factory,
+  Heart,
+  PenTool,
+  Eye,
+  Smartphone,
+  Truck,
+  Car,
+  City,
+  CheckCircle,
+  ArrowUpRight,
+  Play,
+  MailIcon,
+  User as UserIcon,
+  Handshake as HandshakeIcon,
+  Briefcase as BriefcaseIcon,
+  FileText as FileTextIcon,
+  HelpCircle as HelpCircleIcon,
+  MessageCircle as MessageCircleIcon,
+  Settings as SettingsIcon,
+  BarChart3 as BarChart3Icon,
+  Shield as ShieldIcon,
+  Zap as ZapIcon,
+  Globe as GlobeIcon,
+  Cpu as CpuIcon,
+  Database as DatabaseIcon,
+  Network as NetworkIcon,
+  Lock as LockIcon,
+  Code as CodeIcon,
+  ShoppingCart as ShoppingCartIcon,
+  Target as TargetIcon,
+  Lightbulb as LightbulbIcon,
+  Award as AwardIcon,
+  TrendingUp as TrendingUpIcon,
+  BookOpen as BookOpenIcon,
+  Calendar as CalendarIcon,
+  MapPin as MapPinIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  ChevronRight as ChevronRightIcon,
+  ChevronDown as ChevronDownIcon,
+  Handshake as HandshakeIcon2,
+  Atom as AtomIcon,
+  Link as LinkIcon2,
+  Wifi as WifiIcon,
+  HeartPulse as HeartPulseIcon,
+  DollarSign as DollarSignIcon,
+  Leaf as LeafIcon,
+  Building as BuildingIcon,
+  User as UserIcon2,
+  Factory as FactoryIcon,
+  Heart as HeartIcon,
+  PenTool as PenToolIcon,
+  Eye as EyeIcon,
+  Smartphone as SmartphoneIcon,
+  Truck as TruckIcon,
+  Car as CarIcon,
+  City as CityIcon,
+  CheckCircle as CheckCircleIcon,
+  ArrowUpRight as ArrowUpRightIcon,
+  Play as PlayIcon,
+  MailIcon as MailIcon2
+} from 'lucide-react';
 
-<<<<<<< HEAD
-export const EnhancedSidebar: React.FC = (): JSX.Element => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
-  const location = useLocation();
-
-  const toggleSection = (section: string)  => {;
-=======;
 export const EnhancedSidebar: React.FC = () => {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
   const toggleSection = (section: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-<<<<<<< HEAD
-      newExpanded.delete(section);
-    } else {
-      newExpanded.add(section);
-
-    setExpandedSections(newExpanded);
-  };
-=======
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const isActive = (path: string)  => location.pathname === path;
 
@@ -102,12 +143,14 @@ export const EnhancedSidebar: React.FC = () => {;
       items[
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
         { name: "IT Infrastructure", href: "/services/it-infrastructure", icon: Server },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
-        { name: "AI Email Responder", href: "/services/ai-email-responder", icon: Brain },
-        { name: "Mobile Surveys", href: "/services/mobile-first-surveys", icon: Users },
-        { name: "Meeting Summarizer", href: "/services/meeting-summarizer", icon: Calendar },
-        { name: "AI SEO Optimizer", href: "/services/ai-seo-optimizer", icon: TrendingUp },
-        { name: "Developer API Tester", href: "/services/developer-api-tester", icon: Code }
+        { name: "Digital Twin Platform", href: "/services/digital-twin", icon: Cpu },
+        { name: "IoT Edge Computing", href: "/services/iot-edge-computing", icon: Wifi },
+        { name: "Data Analytics", href: "/services/data-analytics", icon: BarChart3 },
+        { name: "Micro SaaS Products", href: "/services/micro-saas", icon: ShoppingCart },
+        { name: "Micro CRM", href: "/services/micro-crm", icon: Users },
+        { name: "Helpdesk Platform", href: "/services/helpdesk", icon: HelpCircle },
+        { name: "Website Analytics", href: "/services/website-analytics", icon: Eye },
+        { name: "IT Helpdesk", href: "/services/it-helpdesk", icon: Settings }
       ]
     },
     {
@@ -138,7 +181,6 @@ export const EnhancedSidebar: React.FC = () => {;
       <div className="p-6">
         {/* Logo */}
         <div className="mb-8">;
-=======;
         { name: "Sitemap", href: "/sitemap", icon: Globe },;
         { name: "Dashboard", href: "/dashboard", icon: BarChart3 },;
         { name: "Login", href: "/login", icon: User };
@@ -179,12 +221,7 @@ export const EnhancedSidebar: React.FC = () => {;
 
 }}
           transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-
-=======
         >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <Zap className="w-6 h-6 text-white" />
@@ -195,21 +232,9 @@ export const EnhancedSidebar: React.FC = () => {;
           </Link>
         </div>
 
-<<<<<<< HEAD
-        {/* Navigation */}
-        <nav className="space-y-6">
-          {navigationSections.map((section) => (
-            <div key={section.title} className="space-y-2">
-=======
         {/* Quick Actions */}
         <motion.div
           className="mb-8"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-
-=======
           initial = {
   { opacity: 0,
   y: -20 
@@ -241,18 +266,11 @@ export const EnhancedSidebar: React.FC = () => {;
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
           <div className="space-y-2">
             {quickActions.map((action, index) => (
               <motion.div
                 key={action.name}
-<<<<<<< HEAD
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   x: -20 
@@ -284,7 +302,6 @@ export const EnhancedSidebar: React.FC = () => {;
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <Link
                   to={action.href}
                   className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
@@ -306,16 +323,6 @@ export const EnhancedSidebar: React.FC = () => {;
           {navigationSections.map((section, sectionIndex) => (
             <motion.div
               key={section.title}
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-
-              <button
-                onClick={() => toggleSection(section.title)}
-                className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
-
-=======
               initial = {
   { opacity: 0,
   y: -20 
@@ -347,12 +354,10 @@ export const EnhancedSidebar: React.FC = () => {;
 
 }}
             >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <button
                 onClick={() => toggleSection(section.title)}
                 className="flex items-center justify-between w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className="flex items-center space-x-3">
                   <section.icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
                   <span className="font-medium text-slate-300 group-hover:text-white transition-colors">
@@ -369,25 +374,6 @@ export const EnhancedSidebar: React.FC = () => {;
               <AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
-<<<<<<< HEAD
-                    initial = {
-  { opacity: 0,
-  height: 0 
-
-}}
-                    animate = {
-  { opacity: 1,
-  height: 'auto' 
-
-}}
-                    exit = {
-  { opacity: 0,
-  height: 0 
-
-}}
-                    transition={{ duration: 0.2 }}
-                    className="ml-8 space-y-1"
-=======
                     initial = {
   { opacity: 0,
   height: 0 
@@ -420,41 +406,10 @@ export const EnhancedSidebar: React.FC = () => {;
 }}
                     transition={{ duration: 0.3 }}
                     className="ml-7 mt-2 space-y-1"
-<<<<<<< HEAD
-
-                    {section.items.map((item, itemIndex) => (
-                      <motion.div
-                        key={item.name}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.2, delay: itemIndex * 0.05 }}
-
-                        <Link
-                          to={item.href}
-                          className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
-                            isActive(item.href)
-                              ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'
-                              : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'
-                          }`}
-
-                          <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />
-                          <span className="text-sm">{item.name}</span>
-                        </Link>
-                      </motion.div>
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   >
                     {section.items.map((item) => (
                       <Link
                         key={item.name}
-<<<<<<< HEAD
-                        to={item.href}
-                        className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm transition-colors duration-200 group ${
-                          isActive(item.href)
-                            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-400/30'
-                            : 'text-slate-400 hover:text-white hover:bg-slate-800/50'
-                        }`}
-=======
                         initial = {
   { opacity: 0,
   x: -20 
@@ -485,7 +440,6 @@ export const EnhancedSidebar: React.FC = () => {;
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       >
                         <item.icon className="w-4 h-4" />
                         <span>{item.name}</span>
@@ -493,7 +447,6 @@ export const EnhancedSidebar: React.FC = () => {;
                           <div className="w-2 h-2 bg-cyan-400 rounded-full ml-auto"></div>
                         )}
                       </Link>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     ))}
                   </motion.div>
                 )}
@@ -505,12 +458,6 @@ export const EnhancedSidebar: React.FC = () => {;
         {/* Contact Info */}
         <motion.div
           className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
@@ -542,25 +489,16 @@ export const EnhancedSidebar: React.FC = () => {;
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
           <div className="space-y-2 text-xs text-zion-slate-light">
             <div className="flex items-center space-x-2">
               <Phone className="w-3 h-3" />
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <span>+1 302 464 0950</span>
             </div>
             <div className="flex items-center space-x-3 text-sm text-slate-400">
               <Mail className="w-4 h-4" />
               <span>kleber@ziontechgroup.com</span>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>;
-    </aside>;
-  )};
-=======
             <div className = "flex items-center space-x-2">
               <MapPin className="w-3 h-3" />;
               <span>Middletown, DE</span>;
@@ -570,9 +508,4 @@ export const EnhancedSidebar: React.FC = () => {;
       </div>;
     </aside>;
   );
-<<<<<<< HEAD
-};}}</section>}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

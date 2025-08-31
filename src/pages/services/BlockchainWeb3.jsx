@@ -35,13 +35,8 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             icon: Lock,
             title: "Enterprise Blockchain",
             description: "Private and consortium blockchain solutions for enterprise applications",
-<<<<<<< HEAD
-            features: ["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
-
-=======
             features["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const web3Technologies = [
         {

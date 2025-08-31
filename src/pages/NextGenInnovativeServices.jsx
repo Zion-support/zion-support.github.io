@@ -1,11 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award import { NEXT_GEN_INNOVATIVE_SERVICES } from '../data/nextGenInnovativeServices';
-=======
 import { Search, Filter, Grid, List, ExternalLink, Phone, Mail, Globe, Clock, Users, CheckCircle, TrendingUp, Award } from 'lucide-react';
 import { NEXT_GEN_INNOVATIVE_SERVICES } from "../data/nextGenInnovativeServices";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function NextGenInnovativeServices() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('all');
@@ -27,12 +23,7 @@ export default function NextGenInnovativeServices() {
             case 'enterprise': return 'bg-purple-600';
             case 'premium': return 'bg-blue-600';
             case 'standard': return 'bg-green-600';
-<<<<<<< HEAD
-            default: return 'bg-gray-600';
-
-=======
             default: return 'bg-gray-600'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -482,9 +473,4 @@ export default function NextGenInnovativeServices() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

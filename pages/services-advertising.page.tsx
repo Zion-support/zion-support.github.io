@@ -1,14 +1,9 @@
 import React from 'react.ts';
 import Head from 'next/head.ts';
 
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin import { Link } from 'react-router-dom';
-export default function ServicesAdvertisingPage() {
-=======
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';
 import Link from 'next/link.ts';
 export default function ServicesAdvertisingPage(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const contact = {
   mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -28,22 +23,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
 };
   const benefits = [
     '1000% ROI target with measurable KPIs',
-<<<<<<< HEAD
-    'Transparent pricing with market references',
-    'Fast onboarding with templates and playbooks',
-    'Enterprise-grade security and compliance',
-    '24/7 support with SLAs',;
-    'Proven architectures and reference implementations',;
-    'No long-term lock-in; cancel time',
-    'SOC 2-aligned processes and data handling',
-    'Flexible deployment: SaaS or self-hosted options'
-  ];
-  const newHighlights = [
-    { title: 'Privacy Request Portal (DSAR)', price: 'From $99/mo + usage', refs['https://transcend.io/pricing/', 'https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },
-    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },
-    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },
-    { title: 'Status & Incident Hub', price: 'From $59/mo', refs['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
-=======;
     'Transparent pricing with market references',;
     'Fast onboarding with templates and playbooks',;
     'Enterprise-grade security and compliance',;
@@ -58,7 +37,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
     { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },;
     { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },;
     { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
   const anchors = [;
     { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },;
@@ -148,15 +126,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
     },
     {
       title: 'Observability & APM',
-<<<<<<< HEAD
-      links: [
-        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
-        { name: 'New Relic', href: 'https://newrelic.com/pricing' },
-        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
-      ],
-      note: 'SMB budgets: $50–$2,000/mo.'
-
-=======
       links[;
         { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },;
         { name: 'New Relic', href: 'https://newrelic.com/pricing' },;
@@ -164,7 +133,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
       ],;
       note: 'SMB budgets: $50–$2,000/mo.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const external = {
   <<<<<<< HEAD
@@ -173,7 +141,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   href: 'https://www.onetrust.com/pricing/' 
 
 },
-=======
   privacy: [
       { name: 'OneTrust',
   href: 'https://www.onetrust.com/pricing/' 
@@ -182,7 +149,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
 
 
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       { name: 'Transcend', href: 'https://transcend.io/pricing/' }
     ],
     finops[
@@ -191,34 +157,17 @@ export default function ServicesAdvertisingPage(...args[]):  {
     ],
     devex[
       { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
-<<<<<<< HEAD
-    ],
-    seo[
-      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
-      { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
-    ];
-=======;
     ],;
     seo: [;
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },;
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' };
     ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   } as const;
   function ext(...args[]):  {
     return (
-<<<<<<< HEAD
-      <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>
-    )};
-=======;
       <a className = "text-cyan-400 underline" href={url} target="_blank" rel="noopener noreferrer">{new URL(url).host}/pricing</a>;
     );
-<<<<<<< HEAD
-
-=======
   }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className = "min-h-screen bg-black">
       <Helmet>
@@ -613,23 +562,10 @@ export default function ServicesAdvertisingPage(...args[]):  {
             <div className="flex flex-wrap gap-3 pt-2">
               <a href="/contact" className="px-6 py-3 bg-cyan-600 text-white rounded-lg inline-flex">Contact Sales</a>
               <a href="/services" className="px-6 py-3 border border-gray-600 text-gray-200 rounded-lg inline-flex">Browse Services</a>
-<<<<<<< HEAD
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </section>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

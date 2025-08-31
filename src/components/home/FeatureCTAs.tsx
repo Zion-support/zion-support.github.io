@@ -33,13 +33,9 @@ import {
   PenTool,
   Shield,
   Cloud
-<<<<<<< HEAD
-export function FeatureCTAs() {
-=======
  } from 'lucide-react';
 
 export function FeatureCTAs(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       title: "AI Services & Solutions",
@@ -153,15 +149,6 @@ export function FeatureCTAs(...args[]):  {
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
     {
-<<<<<<< HEAD
-      title: "Micro SAAS Hub",
-      description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
-      link: "/micro-saas",
-      badge: "New",
-      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
-
-=======
       title: "Micro SAAS Hub",;
       description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",;
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,;
@@ -169,7 +156,6 @@ export function FeatureCTAs(...args[]):  {
       badge: "New",;
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -240,23 +226,10 @@ export function FeatureCTAs(...args[]):  {
                   View All Services
                 </Button>
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-</Card></Card></Card></Card></Card>}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

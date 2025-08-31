@@ -1,27 +1,17 @@
-import Link from "next/link";
-import { useRouter } from "next/router";
+import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CASE_STUDIES } from "@/data/case-studies";
 import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
-<<<<<<< HEAD
-import { ArrowLeft export default function CaseStudy() {
-    const router = useNavigate();
-=======
 import { ArrowLeft } from "lucide-react";
 export default function CaseStudy() {
-    const router = useRouter();
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    const router = useNavigate();
     const { slug } = router.query;
     const study = CASE_STUDIES.find((s) => s.slug === slug);
     if (!study) {
         return (<div className="min-h-screen bg-zion-blue flex items-center justify-center text-white">
         Case study not found.
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title={study.title} description={study.excerpt}/>
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -38,9 +28,4 @@ export default function CaseStudy() {
           <p className="mt-8 text-white font-semibold">— {study.author}, {study.role}</p>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-</div>}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -10,79 +10,40 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         const detectDevice = () => {
             const width = window.innerWidth;
             if (width < 768) {
-<<<<<<< HEAD
-                setDeviceType('mobile');
-
-            else if (width < 1024) {
-                setDeviceType('tablet');
-
-            else {
-                setDeviceType('desktop');
-
-=======
                 setDeviceType('mobile')}
             else if (width < 1024) {
                 setDeviceType('tablet')}
             else {
                 setDeviceType('desktop')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         detectDevice();
         window.addEventListener('resize', detectDevice);
         // Load saved theme
         const savedTheme = localStorage.getItem('ui-theme');
         if (savedTheme) {
-<<<<<<< HEAD
-            setTheme(savedTheme);
-
-=======
             setTheme(savedTheme)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Apply theme
         applyTheme(savedTheme || 'dark');
         // Scroll to top visibility
         const handleScroll = () => {
             setShowScrollToTop(window.scrollY > 300)};
         if (enableScrollEffects) {
-<<<<<<< HEAD
-            window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('resize', detectDevice);
-            if (enableScrollEffects) {
-                window.removeEventListener('scroll', handleScroll);
-
-        };
-    }, [enableScrollEffects]);
-=======
             window.addEventListener('scroll', handleScroll)}
         return () => {
             window.removeEventListener('resize', detectDevice);
             if (enableScrollEffects) {
                 window.removeEventListener('scroll', handleScroll)}
         }}, [enableScrollEffects]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const applyTheme = (newTheme) => {
         const root = document.documentElement;
         if (newTheme === 'auto') {
             const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             root.classList.toggle('dark', prefersDark);
-<<<<<<< HEAD
-            root.classList.toggle('light', !prefersDark);
-
-        else {
-            root.classList.remove('light', 'dark');
-            root.classList.add(newTheme);
-
-        localStorage.setItem('ui-theme', newTheme);
-    };
-=======
             root.classList.toggle('light', !prefersDark)}
         else {
             root.classList.remove('light', 'dark');
             root.classList.add(newTheme)}
         localStorage.setItem('ui-theme', newTheme)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleThemeChange = (newTheme) => {
         setTheme(newTheme);
         applyTheme(newTheme)};
@@ -193,14 +154,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
   {
                     x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight,
-<<<<<<< HEAD
-                    scale[0, 1,
-  0]
-                
-
-}} transition = {
-  {
-=======
                     scale: [0, 1,
   0]
                 
@@ -212,7 +165,6 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     duration: Math.random() * 10 + 10,
                     repeat: Infinity,
   ease: "linear"

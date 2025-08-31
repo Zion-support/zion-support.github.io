@@ -246,12 +246,6 @@ export function ValuePropositionShowcase() {
         {/* Competitive Advantages */}
         <motion.div
           className="mb-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -283,7 +277,6 @@ export function ValuePropositionShowcase() {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Why Choose Zion Tech Group?
           </h3>
@@ -293,10 +286,6 @@ export function ValuePropositionShowcase() {
                 key={index}
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-2xl p-6 border border-zion-cyan/20"
                 variants={cardVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)" }}
-
-=======
                 whileHover = {
   { y: -5, boxShadow: "0 20px 40px rgba(0, 0, 0,
   0.3)" 
@@ -308,7 +297,6 @@ export function ValuePropositionShowcase() {
 
 }}
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div className={`w-16 h-16 bg-gradient-to-r ${advantage.color} rounded-xl flex items-center justify-center mb-4 text-white`}>
                   {advantage.icon}
                 </div>
@@ -322,12 +310,6 @@ export function ValuePropositionShowcase() {
         {/* Market Comparison */}
         <motion.div
           className="mb-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -359,7 +341,6 @@ export function ValuePropositionShowcase() {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Competitive Pricing Analysis
           </h3>
@@ -413,12 +394,6 @@ export function ValuePropositionShowcase() {
         {/* Success Stories */}
         <motion.div
           className="mb-16"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -450,7 +425,6 @@ export function ValuePropositionShowcase() {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Real Success Stories
           </h3>
@@ -492,12 +466,6 @@ export function ValuePropositionShowcase() {
         {/* Call to Action */}
         <motion.div
           className="text-center"
-<<<<<<< HEAD
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.9 }}
-
-=======
           initial = {
   { opacity: 0,
   y: 30 
@@ -529,7 +497,6 @@ export function ValuePropositionShowcase() {
 
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 p-8 rounded-2xl border border-zion-cyan/30">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Experience Unmatched Value?
@@ -560,9 +527,4 @@ export function ValuePropositionShowcase() {
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}}}}}}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

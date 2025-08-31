@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-<<<<<<< HEAD
-import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X import ContentQualityAnalyzer from '../utils/contentQualityAnalyzer';
-=======
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const ContentQualityDashboard = ({ className = '' }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -56,29 +52,11 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     title: 'Contact Us - Get in Touch',
                     content: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs. Our team is ready to help you transform your business.',
-<<<<<<< HEAD
-                    images: ['/images/contact-office.jpg'],
-                    links: ['/services', '/about', '/team']
-
-            ];
-            for (const page of samplePages) {
-                contentAnalyzer.analyzePageContent(page.url, page.title, page.content, page.metaDescription, page.images, page.links);
-
-            const newReport = contentAnalyzer.generateReport();
-            setReport(newReport);
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Error analyzing pages:', error);
-
-=======
             // // // // // // // console.error('Error analyzing pages:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         finally {
             setIsLoading(false);
 
-=======
                     images['/images/contact-office.jpg'],
                     links['/services', '/about', '/team']
                 }
@@ -91,7 +69,6 @@ const ContentQualityDashboard = ({ className = '' }) => {
             console.error('Error analyzing pages:', error)}
         finally {
             setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [contentAnalyzer]);
     useEffect(() => {
         // Auto-analyze pages when component mounts
@@ -103,12 +80,7 @@ const ContentQualityDashboard = ({ className = '' }) => {
         // Apply search filter
         if (searchTerm) {
             filtered = filtered.filter(page => page.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-<<<<<<< HEAD
-                page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase()));
-
-=======
                 page.pageUrl.toLowerCase().includes(searchTerm.toLowerCase()))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Apply status filter
         if (filterStatus !== 'all') {
             filtered = filtered.filter(page => {
@@ -120,18 +92,9 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     case 'poor':
                         return page.overallScore < 40;
                     default:
-<<<<<<< HEAD
-                        return true;
-
-            });
-
-        return filtered;
-    };
-=======
                         return true}
             })}
         return filtered};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getStatusColor = (score) => {
         if (score >= 80)
             return 'text-green-600 bg-green-50 border-green-200';

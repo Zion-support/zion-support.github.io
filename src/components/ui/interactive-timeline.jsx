@@ -1,13 +1,8 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence, useScroll } from 'framer-motion';
-<<<<<<< HEAD
-import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X import { Button } from './button';
-import { Badge } from './badge';
-=======
 import { Calendar, Clock, CheckCircle, Circle, ArrowRight, Play, Pause, RotateCcw, ZoomIn, ZoomOut, Share2, Download, Star, Award, Users, TrendingUp, Zap, Shield, Globe, Rocket, Filter, X } from 'lucide-react';
 import { Button } from "./button";
 import { Badge } from "./badge";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function InteractiveTimeline({ enabled = true, events, autoPlay = false, showProgress = true, onEventClick, onStatusChange, className = "" }) {
     const [currentEventIndex, setCurrentEventIndex] = useState(0);
     const [isPlaying, setIsPlaying] = useState(autoPlay);
@@ -40,18 +35,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 const next = (prev + 1) % filteredEvents.length;
                 if (next === 0) {
                     setIsPlaying(false); // Stop when reaching the end
-<<<<<<< HEAD
-
-                return next;
-            });
-        }, 3000 / playbackSpeed);
-        return () => clearInterval(interval);
-    }, [isPlaying, filteredEvents.length, playbackSpeed]);
-=======
                 }
                 return next})}, 3000 / playbackSpeed);
         return () => clearInterval(interval)}, [isPlaying, filteredEvents.length, playbackSpeed]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Handle event selection
     const handleEventClick = useCallback((event) => {
         setSelectedEvent(event);
@@ -71,12 +57,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             case 'milestone':
                 return { icon: Star, color: 'text-purple-400', bgColor: 'bg-purple-400/20' };
             default:
-<<<<<<< HEAD
-                return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' };
-
-=======
                 return { icon: Circle, color: 'text-zinc-400', bgColor: 'bg-zinc-400/20' }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get priority color
     const getPriorityColor = (priority) => {
@@ -90,12 +71,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             case 'low':
                 return 'border-green-500/50 bg-green-500/10';
             default:
-<<<<<<< HEAD
-                return 'border-zinc-500/50 bg-zinc-500/10';
-
-=======
                 return 'border-zinc-500/50 bg-zinc-500/10'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Get category icon
     const getCategoryIcon = (category) => {
@@ -112,7 +88,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 };
         return iconMap[category] || Calendar};
-=======
   'Launch': Award
         
 
@@ -122,7 +97,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 };
         return iconMap[category] || Calendar;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Toggle play/pause
     const togglePlayback = useCallback(() => {
         setIsPlaying(!isPlaying)}, [isPlaying]);
@@ -146,17 +120,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 title: 'Project Timeline',
                 text: 'Check out our project timeline',
                 url: window.location.href
-<<<<<<< HEAD
-            });
-
-        else {
-            navigator.clipboard.writeText(window.location.href);
-
-=======
             })}
         else {
             navigator.clipboard.writeText(window.location.href)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     if (!enabled || filteredEvents.length === 0)
         return null;
@@ -279,12 +245,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <select multiple value={filters.status} onChange = {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-<<<<<<< HEAD
-                setFilters(prev => ({ ...prev,
-  status: selected 
-
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
-=======
                 setFilters(prev => ({ ...prev,
   status: selected 
 
@@ -293,7 +253,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <option value="completed">Completed</option>
                   <option value="in-progress">In Progress</option>
                   <option value="upcoming">Upcoming</option>
@@ -306,12 +265,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <select multiple value={filters.category} onChange = {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-<<<<<<< HEAD
-                setFilters(prev => ({ ...prev,
-  category: selected 
-
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
-=======
                 setFilters(prev => ({ ...prev,
   category: selected 
 
@@ -320,7 +273,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <option value="AI & ML">AI & ML</option>
                   <option value="Cybersecurity">Cybersecurity</option>
                   <option value="Cloud">Cloud</option>
@@ -336,12 +288,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 <select multiple value={filters.priority} onChange = {
   (e) => {
                 const selected = Array.from(e.target.selectedOptions, option => option.value);
-<<<<<<< HEAD
-                setFilters(prev => ({ ...prev,
-  priority: selected 
-
-}))}} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
-=======
                 setFilters(prev => ({ ...prev,
   priority: selected 
 
@@ -350,7 +296,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 }));
             }} className="mt-1 w-full px-3 py-2 bg-zion-blue/20 border border-zion-blue-light/30 rounded text-zinc-300 text-sm focus:border-zion-cyan focus:outline-none">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   <option value="critical">Critical</option>
                   <option value="high">High</option>
                   <option value="medium">Medium</option>
@@ -443,20 +388,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                   <div className="relative z-10">
                     <motion.div className={`w-16 h-16 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${isCurrent
                         ? 'border-zion-cyan bg-zion-cyan/20 scale-110'
-<<<<<<< HEAD
-                        : 'border-zion-blue-light/30'}`} animate={isCurrent ? { scale: [1, 1.1, 1] } : { /* empty */ }} transition={{ duration: 2, repeat: Infinity }}>
-=======
-<<<<<<< HEAD
-                        : 'border-zion-blue-light/30'}`} animate = {
-  isCurrent ? { scale[1, 1.1,
-  1] 
-
-} : {}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}>
-=======
                         : 'border-zion-blue-light/30'}`} animate = {
   isCurrent ? { scale: [1, 1.1,
   1] 
@@ -476,8 +407,6 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 
 
 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <statusInfo.icon className={`w-8 h-8 ${statusInfo.color}`}/>
                     </motion.div>
 
@@ -765,9 +694,4 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </div>);
-</div></div></div>}}}}}}</motion.div>}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle  } from 'lucide-react';
-=======
 import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle export default function BlockchainEnterpriseSolutions() {
-=======
 import { Lock, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Bitcoin, Ethereum, Link, FileText, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function BlockchainEnterpriseSolutions(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Lock,
@@ -45,15 +34,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       title: 'Compliance Ready',
       description: 'Built-in regulatory compliance and governance frameworks',
       color: 'from-purple-500 to-pink-500'
-<<<<<<< HEAD
-    },
-    {
-      icon: TrendingUp,
-      title: 'Cost Efficiency',
-      description: 'Reduce intermediaries and streamline business processes',
-      color: 'from-indigo-500 to-purple-500'
-
-=======
     },;
     {;
       icon: TrendingUp,;
@@ -61,7 +41,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       description: 'Reduce intermediaries and streamline business processes',;
       color: 'from-indigo-500 to-purple-500';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -84,24 +63,13 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
       features['Network setup', 'Node configuration', 'Security implementation', 'Monitoring']
     },
     {
-<<<<<<< HEAD
-      title: 'DeFi Solutions',
-      description: 'Decentralized finance applications and protocols',
-      price: 'From $20,000',
-<<<<<<< HEAD
-      features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
-
-=======
       features['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration']
     };
-=======;
       title: 'DeFi Solutions',;
       description: 'Decentralized finance applications and protocols',;
       price: 'From $20,000',;
       features: ['Protocol development', 'Liquidity management', 'Risk assessment', 'Integration'];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;
@@ -114,13 +82,8 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Blockchain Enterprise Solutions - Zion Tech Group"
         description="Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology."
       />
@@ -497,23 +460,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 
                 View Case Studies
               </motion.button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,13 +1,8 @@
 import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown import { useVirtualScroll } from '../hooks/useVirtualScroll';
-import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from "../hooks/useVirtualScroll";
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -27,13 +22,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         if (searchQuery.trim()) {
             result = result.filter(item => columns.some(col => {
                 const value = String(item[col.key]).toLowerCase();
-<<<<<<< HEAD
-                return value.includes(searchQuery.toLowerCase());
-            }));
-
-=======
                 return value.includes(searchQuery.toLowerCase())}))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Apply filters
         filters.forEach(filter => {
             result = result.filter(item => {
@@ -50,25 +39,12 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         return value.endsWith(filterValue);
                     case 'regex':
                         try {
-<<<<<<< HEAD
-                            return new RegExp(filterValue, 'i').test(value);
-
-                        catch {
-                            return false;
-
-                    default:
-                        return true;
-
-            });
-        });
-=======
                             return new RegExp(filterValue, 'i').test(value)}
                         catch {
                             return false}
                     default:
                         return true}
             })});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Apply sorting
         if (sortConfig) {
             result.sort((a, b) => {
@@ -78,16 +54,8 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     return sortConfig.direction === 'asc' ? -1 : 1;
                 if (aVal > bVal)
                     return sortConfig.direction === 'asc' ? 1 : -1;
-<<<<<<< HEAD
-                return 0;
-            });
-
-        return result;
-    }, [data, searchQuery, filters, sortConfig, columns]);
-=======
                 return 0})}
         return result}, [data, searchQuery, filters, sortConfig, columns]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Pagination
     const totalPages = Math.ceil(processedData.length / pageSize);
     const paginatedData = enablePagination
@@ -107,51 +75,28 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             if (prev?.key === key) {
                 return prev.direction === 'asc'
                     ? { key, direction: 'desc' }
-<<<<<<< HEAD
-                    : null;
-
-            return { key, direction: 'asc' };
-        });
-        trackEvent('table', 'column_sorted', String(key));
-    }, [enableSorting, trackEvent]);
-=======
                     : null}
             return { key, direction: 'asc' }});
         trackEvent('table', 'column_sorted', String(key))}, [enableSorting, trackEvent]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Handle filter change
     const handleFilterChange = useCallback((key, value, operator) => {
         setFilters(prev => {
             const newFilters = prev.filter(f => f.key !== key);
             if (value.trim()) {
-<<<<<<< HEAD
-                newFilters.push({ key, value, operator })}
-            return newFilters});
-        trackEvent('table', 'filter_applied', String(key), null, { operator, value })}, [trackEvent]);
-=======
                 newFilters.push({ key, value, operator });
 
             return newFilters;
         });
         trackEvent('table', 'filter_applied', String(key), null, { operator, value });
     }, [trackEvent]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Handle selection
     const handleSelectionChange = useCallback((item, checked) => {
         const itemKey = String(item.id || JSON.stringify(item));
         const newSelection = new Set(selectedItems);
         if (checked) {
-<<<<<<< HEAD
-            newSelection.add(itemKey);
-
-        else {
-            newSelection.delete(itemKey);
-
-=======
             newSelection.add(itemKey)}
         else {
             newSelection.delete(itemKey)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setSelectedItems(newSelection);
         onSelectionChange?.(Array.from(newSelection).map(key => data.find(item => String(item.id || JSON.stringify(item)) === key)))}, [selectedItems, onSelectionChange, data]);
     // Handle select all
@@ -159,41 +104,20 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         if (checked) {
             const allKeys = new Set(paginatedData.map(item => String(item.id || JSON.stringify(item))));
             setSelectedItems(allKeys);
-<<<<<<< HEAD
-            onSelectionChange?.(paginatedData);
-
-        else {
-            setSelectedItems(new Set());
-            onSelectionChange?.([]);
-
-=======
             onSelectionChange?.(paginatedData)}
         else {
             setSelectedItems(new Set());
             onSelectionChange?.([])}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [paginatedData, onSelectionChange]);
     // Export data
     const handleExport = useCallback(() => {
         if (onExport) {
-<<<<<<< HEAD
-            onExport(processedData);
-
-        else {
-            // Default CSV export
-            const csvContent = generateCSV(processedData, columns);
-            downloadCSV(csvContent, 'table-export.csv');
-
-        trackEvent('table', 'data_exported', 'export_completed', processedData.length);
-    }, [processedData, columns, onExport, trackEvent]);
-=======
             onExport(processedData)}
         else {
             // Default CSV export
             const csvContent = generateCSV(processedData, columns);
             downloadCSV(csvContent, 'table-export.csv')}
         trackEvent('table', 'data_exported', 'export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Generate CSV content
     const generateCSV = (data, columns) => {
         const headers = columns.map(col => col.header).join(',');
@@ -213,12 +137,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Get sort icon
     const getSortIcon = (key) => {
         if (!enableSorting || sortConfig?.key !== key) {
-<<<<<<< HEAD
-            return <ArrowUpDown className="w-4 h-4 text-gray-400"/>;
-
-=======
             return <ArrowUpDown className="w-4 h-4 text-gray-400"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return sortConfig.direction === 'asc'
             ? <ChevronUp className="w-4 h-4 text-blue-500"/>
             : <ChevronDown className="w-4 h-4 text-blue-500"/>};
@@ -226,12 +145,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const renderCell = (column, item, index) => {
         const value = item[column.key];
         if (column.render) {
-<<<<<<< HEAD
-            return column.render(value, item, index);
-
-=======
             return column.render(value, item, index)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
         {value}
       </span>)};
@@ -437,12 +351,6 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                         ? 'bg-blue-500 text-white'
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
                     {page}
-<<<<<<< HEAD
-                  </button>);
-            })}
-
-              <button onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))} disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
-=======
                   </button>)})}
               
               <button onClick = {
@@ -455,16 +363,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 
 } disabled={currentPage === totalPages} className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Next
               </button>
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}}}}}}}}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

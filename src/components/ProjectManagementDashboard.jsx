@@ -100,12 +100,7 @@ export function ProjectManagementDashboard() {
             case 'review': return <Eye className="w-4 h-4"/>;
             case 'completed': return <CheckCircle className="w-4 h-4"/>;
             case 'on-hold': return <AlertTriangle className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <Clock className="w-4 h-4"/>;
-
-=======
             default: return <Clock className="w-4 h-4"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getProgressColor = (progress) => {
         if (progress >= 80)
@@ -129,12 +124,7 @@ export function ProjectManagementDashboard() {
     if (!isVisible) {
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover:bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50" title="Show Project Management Dashboard">
         <BarChart3 className="w-5 h-5"/>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="fixed inset-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden">
       {/* Header */}
       <div className="flex items-center justify-between p-6 border-b border-zion-slate-light bg-gradient-to-r from-zion-gold/10 to-zion-orange/10">
@@ -415,9 +405,4 @@ export function ProjectManagementDashboard() {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

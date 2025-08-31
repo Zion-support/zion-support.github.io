@@ -1,11 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart import { useAuth } from '../../hooks/useAuth';
-=======
 import { User, Settings, LogOut, ChevronDown, Bell, ShoppingCart } from 'lucide-react';
 import { useAuth } from "../../hooks/useAuth";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const UserMenu = () => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
@@ -13,41 +9,25 @@ export const UserMenu = () => {
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (menuRef.current && !menuRef.current.contains(event.target)) {
-<<<<<<< HEAD
-                setIsOpen(false);
-
-=======
                 setIsOpen(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('mousedown', handleClickOutside);
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
     const handleLogout = async () => {
         try {
             await logout();
-<<<<<<< HEAD
-            setIsOpen(false);
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Logout failed:', error);
-
-=======
             // // // // // // // console.error('Logout failed:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
     if (!user) {
         return null;
 
-=======
             setIsOpen(false)}
         catch (error) {
             console.error('Logout failed:', error)}
     };
     if (!user) {
         return null}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="relative" ref={menuRef}>
       <button onClick={() => setIsOpen(!isOpen)} className="flex items-center gap-2 px-3 py-2 text-white hover:text-zion-cyan transition-colors cursor-pointer">
         <div className="w-8 h-8 bg-zion-cyan rounded-full flex items-center justify-center">
@@ -97,10 +77,4 @@ export const UserMenu = () => {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -16,12 +16,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
 
 } ref={ref} {...props}>
         {props.children}
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMobile) {
         return (<Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}>
         <SheetContent data-sidebar="sidebar" data-mobile="true" className="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden" style = {
@@ -32,12 +27,7 @@ export const Sidebar = React.forwardRef((props, ref) => {
 }} side={props.side}>
           <div className="flex h-full w-full flex-col">{props.children}</div>
         </SheetContent>
-<<<<<<< HEAD
-      </Sheet>);
-
-=======
       </Sheet>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div ref={ref} className="group peer hidden md:block text-sidebar-foreground" data-state={state} data-collapsible={state === "collapsed" ? props.collapsible : ""} data-variant={props.variant} data-side={props.side}>
       {/* This is what handles the sidebar gap on desktop */}
       <div className = {
@@ -76,20 +66,6 @@ export const Sidebar = React.forwardRef((props, ref) => {
 Sidebar.displayName = "Sidebar";
 export const SidebarRail = React.forwardRef((props, ref) => {
     const { toggleSidebar } = useSidebar();
-<<<<<<< HEAD
-    return (<button ref={ref} data-sidebar="rail" aria-label="Toggle Sidebar" tabIndex={-1} onClick={toggleSidebar} title="Toggle Sidebar" className = {
-  cn("absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex", "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize", "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize", "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar", "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2", "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
-  props.className)
-
-} {...props}/>)});
-SidebarRail.displayName = "SidebarRail";
-export const SidebarInset = React.forwardRef((props, ref) => {
-    return (<main ref={ref} className = {
-  cn("relative flex min-h-svh flex-1 flex-col bg-background", "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
-  props.className)
-
-} {...props}/>)});
-=======
     return (<button ref={ref} data-sidebar="rail" aria-label="Toggle Sidebar" tabIndex={-1} onClick={toggleSidebar} title="Toggle Sidebar" className = {
   cn("absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex", "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize", "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize", "group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar", "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2", "[[data-side=right][data-collapsible=offcanvas]_&]:-left-2",
   props.className)
@@ -103,10 +79,6 @@ export const SidebarInset = React.forwardRef((props, ref) => {
 });
 SidebarRail.displayName = "SidebarRail";
 export const SidebarInset = React.forwardRef((props, ref) => {
-<<<<<<< HEAD
-    return (<main ref={ref} className={cn("relative flex min-h-svh flex-1 flex-col bg-background", "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow", props.className)} {...props}/>);
-</div></main>});
-=======
     return (<main ref={ref} className = {
   cn("relative flex min-h-svh flex-1 flex-col bg-background", "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
   props.className)
@@ -118,7 +90,5 @@ export const SidebarInset = React.forwardRef((props, ref) => {
 
 } {...props}/>);
 });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 SidebarInset.displayName = "SidebarInset";
 }}

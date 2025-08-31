@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield import AdvancedServiceRecommendation from '../components/AdvancedServiceRecommendation';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-=======
 import { Brain, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Rocket, Shield } from 'lucide-react';
 import AdvancedServiceRecommendation from "../components/AdvancedServiceRecommendation";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const ServiceRecommendations = () => {
     const features = [
         {
@@ -446,11 +440,6 @@ const ServiceRecommendations = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ServiceRecommendations;
 }}}

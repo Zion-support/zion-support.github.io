@@ -1,13 +1,8 @@
 import React, { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 import { useMachineLearning } from '../hooks/useMachineLearning';
-import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
 import { useMachineLearning } from "../hooks/useMachineLearning";
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -35,12 +30,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             });
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
             setShowCreateModel(false);
-<<<<<<< HEAD
-            trackEvent('ml', 'dashboard', 'model_created');
-
-=======
             trackEvent('ml', 'dashboard', 'model_created')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [newModelForm, createModel, trackEvent]);
     const hyperparameters = {
   learningRate: 0.001,
@@ -57,22 +47,11 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 };
         try {
             await startTraining(modelId, hyperparameters);
-<<<<<<< HEAD
-            trackEvent('ml', 'dashboard', 'training_started');
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Training failed:', error);
-
-=======
             // // // // // // // console.error('Training failed:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
             trackEvent('ml', 'dashboard', 'training_started')}
         catch (error) {
             console.error('Training failed:', error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [startTraining, trackEvent]);
     const handleStopTraining = useCallback((jobId) => {
         stopTraining(jobId);
@@ -88,51 +67,24 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             try {
                 const input = JSON.parse(predictionForm.input);
                 const result = await makePrediction(predictionForm.modelId, input);
-<<<<<<< HEAD
-                // // // console.log('Prediction result:', result);
-=======
                 // // // // // // // console.log('Prediction result:', result);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 setPredictionForm({ modelId: '', input: '' });
-<<<<<<< HEAD
-                trackEvent('ml', 'dashboard', 'prediction_made');
-
-            catch (error) {
-<<<<<<< HEAD
-                // // // console.error('Prediction failed:', error);
-
-
-=======
                 // // // // // // // console.error('Prediction failed:', error);
             }
-=======
                 trackEvent('ml', 'dashboard', 'prediction_made')}
             catch (error) {
                 console.error('Prediction failed:', error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, [predictionForm, makePrediction, trackEvent]);
     const handleExportModel = useCallback((modelId) => {
         try {
             const modelData = exportModel(modelId);
             navigator.clipboard.writeText(modelData);
-<<<<<<< HEAD
-            trackEvent('ml', 'dashboard', 'model_exported');
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error('Export failed:', error);
-
-=======
             // // // // // // // console.error('Export failed:', error);
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
             trackEvent('ml', 'dashboard', 'model_exported')}
         catch (error) {
             console.error('Export failed:', error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [exportModel, trackEvent]);
     const handleImportModel = useCallback((event) => {
         const file = event.target.files?.[0];
@@ -143,27 +95,16 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     const modelData = e.target?.result;
                     importModel(modelData);
                     setShowImportModel(false);
-<<<<<<< HEAD
-                    trackEvent('ml', 'dashboard', 'model_imported');
-
-                catch (error) {
-<<<<<<< HEAD
-                    // // // console.error('Import failed:', error);
-
-=======
                     // // // // // // // console.error('Import failed:', error);
                 }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             };
             reader.readAsText(file);
 
-=======
                     trackEvent('ml', 'dashboard', 'model_imported')}
                 catch (error) {
                     console.error('Import failed:', error)}
             };
             reader.readAsText(file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [importModel, trackEvent]);
     const getStatusColor = (status) => {
         switch (status) {
@@ -171,12 +112,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             case 'ready': return 'text-blue-600 bg-blue-100';
             case 'training': return 'text-yellow-600 bg-yellow-100';
             case 'archived': return 'text-gray-600 bg-gray-100';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100';
-
-=======
             default: return 'text-gray-600 bg-gray-100'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getJobStatusColor = (status) => {
         switch (status) {
@@ -184,12 +120,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             case 'completed': return 'text-green-600 bg-green-100';
             case 'failed': return 'text-red-600 bg-red-100';
             case 'pending': return 'text-yellow-600 bg-yellow-100';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100';
-
-=======
             default: return 'text-gray-600 bg-gray-100'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getModelTypeIcon = (type) => {
         switch (type) {
@@ -199,12 +130,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             case 'nlp': return <Brain className="w-4 h-4"/>;
             case 'computer_vision': return <Eye className="w-4 h-4"/>;
             case 'recommendation': return <Zap className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <Brain className="w-4 h-4"/>;
-
-=======
             default: return <Brain className="w-4 h-4"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>
       {/* Header */}
@@ -698,14 +624,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             Training failed
                           </div>)}
                       </div>
-<<<<<<< HEAD
-                    </div>);
-            })}
-
-=======
                     </div>)})}
                 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 {trainingJobs.length === 0 && (<div className="text-center py-8 text-gray-500 dark:text-gray-400">
                     <Activity className="w-12 h-12 mx-auto mb-4 text-gray-400"/>
                     <p>No training jobs found</p>
@@ -811,14 +731,8 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         {prediction.status === 'failed' && prediction.error && (<div className="text-sm text-red-600 dark:text-red-400">
                             <strong>Error:</strong> {prediction.error}
                           </div>)}
-<<<<<<< HEAD
-                      </div>);
-            })}
-
-=======
                       </div>)})}
                   
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   {predictions.length === 0 && (<div className="text-center py-4 text-gray-500 dark:text-gray-400">
                       <Target className="w-8 h-8 mx-auto mb-2 text-gray-400"/>
                       <p>No predictions yet</p>
@@ -904,10 +818,4 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             </motion.div>)}
         </AnimatePresence>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div></div>};
-}}}}}}}}}}}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

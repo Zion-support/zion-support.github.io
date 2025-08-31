@@ -27,12 +27,8 @@ import {
   Star,
   CheckCircle,
   Clock
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from '@/data/innovativeMicroSaasServices2025';
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function ServicesOverview(...args[]):  {
   const serviceCategories = [
@@ -127,24 +123,13 @@ export function ServicesOverview(...args[]):  {
     {
       id: 'healthcare-ai',
       name: 'Healthcare AI',
-<<<<<<< HEAD
-      icon: Heart,
-      color: 'from-zion-pink to-zion-purple',
-      description: 'Healthcare artificial intelligence solutions',
-<<<<<<< HEAD
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'))
-
-=======
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Healthcare'))
     };
-=======;
       icon: Heart,;
       color: 'from-zion-pink to-zion-purple',;
       description: 'Healthcare artificial intelligence solutions',;
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s => s.category.includes('Healthcare'));
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -471,23 +456,10 @@ export function ServicesOverview(...args[]):  {
                   ziontechgroup.com
                 </a>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

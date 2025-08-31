@@ -48,38 +48,20 @@ export default function FraudDetection() {
 
 };
             setStats(newStats)}
-=======
   
 
 };
             setStats(newStats);
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error fetching fraud flags:", error);
-=======
             // // // // // // // console.error("Error fetching fraud flags:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error",
                 description: "Failed to load fraud detection data",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsLoading(false);
-
-=======
             })}
         finally {
             setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     useEffect(() => {
         fetchFraudFlags()}, []);
@@ -91,24 +73,6 @@ export default function FraudDetection() {
             const query = searchQuery.toLowerCase();
             result = result.filter((flag) => flag.user_email?.toLowerCase().includes(query) ||
                 flag.content_excerpt.toLowerCase().includes(query) ||
-<<<<<<< HEAD
-                flag.reason.toLowerCase().includes(query));
-
-        // Apply status filter
-        if (statusFilter) {
-            result = result.filter((flag) => flag.status === statusFilter);
-
-        // Apply severity filter
-        if (severityFilter) {
-            result = result.filter((flag) => flag.severity === severityFilter);
-
-        // Apply content type filter
-        if (contentTypeFilter) {
-            result = result.filter((flag) => flag.content_type === contentTypeFilter);
-
-        setFilteredFlags(result);
-    }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
-=======
                 flag.reason.toLowerCase().includes(query))}
         // Apply status filter
         if (statusFilter) {
@@ -120,7 +84,6 @@ export default function FraudDetection() {
         if (contentTypeFilter) {
             result = result.filter((flag) => flag.content_type === contentTypeFilter)}
         setFilteredFlags(result)}, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleAction = async (flagId, action) => {
         try {
             const status = action === 'ignore' ? 'ignored' : 'actioned';
@@ -142,28 +105,14 @@ export default function FraudDetection() {
                 description: `Action '${action}' was applied successfully.`,
             });
             // Refresh the data
-<<<<<<< HEAD
-            fetchFraudFlags();
-
-=======
             fetchFraudFlags()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error updating fraud flag:", error);
-=======
             // // // // // // // console.error("Error updating fraud flag:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast({
                 title: "Error",
                 description: "Failed to update flag",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const resetFilters = () => {
         setSearchQuery("");
@@ -226,9 +175,4 @@ export default function FraudDetection() {
             <FraudTabContent tabValue="actioned"/>
           </TabsContent>
         </Tabs>
-<<<<<<< HEAD
-      </div>);
-</Card>}}}}}}}}}}
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

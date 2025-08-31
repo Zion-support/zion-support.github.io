@@ -23,118 +23,12 @@ import {
   FileText,
   PieChart,
   LineChart
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const aiAnalyticsSolutions = [
-  {
-    id: 1,
-    title: "Predictive Analytics Platform",
-    description: "AI-powered platform that predicts future trends and outcomes based on historical data.",
-    icon: TrendingUp,
-    features[
-      "Machine learning algorithms",
-      "Real-time predictions",
-      "Custom forecasting models",
-      "Performance monitoring"
-    ],
-    price: "From $25,000",
-    timeline: "12-20 weeks",
-    category: "Predictive Analytics",
-    integrations["Python", "TensorFlow", "PyTorch", "Cloud Platforms"]
-  },
-  {
-    id: 2,
-    title: "Business Intelligence Dashboard",
-    description: "Intelligent dashboards that provide actionable insights from complex data sets.",
-    icon: BarChart3,
-    features[
-      "Interactive visualizations",
-      "Real-time data updates",
-      "Custom reporting",
-      "Mobile responsiveness"
-    ],
-    price: "From $20,000",
-    timeline: "10-16 weeks",
-    category: "Business Intelligence",
-    integrations["Tableau", "Power BI", "D3.js", "React"]
-  },
-  {
-    id: 3,
-    title: "Customer Behavior Analytics",
-    description: "AI-driven analysis of customer behavior patterns and preferences.",
-    icon: Users,
-    features[
-      "Behavioral segmentation",
-      "Predictive modeling",
-      "Personalization engines",
-      "ROI optimization"
-    ],
-    price: "From $30,000",
-    timeline: "14-22 weeks",
-    category: "Customer Analytics",
-    integrations["Google Analytics", "Facebook Pixel", "CRM Systems", "Marketing Tools"]
-  },
-  {
-    id: 4,
-    title: "Real-Time Data Processing",
-    description: "Streaming analytics platform for processing and analyzing data in real-time.",
-    icon: Activity,
-    features[
-      "Stream processing",
-      "Real-time alerts",
-      "Scalable architecture",
-      "Low latency"
-    ],
-    price: "From $35,000",
-    timeline: "16-24 weeks",
-    category: "Real-Time Analytics",
-    integrations["Apache Kafka", "Apache Spark", "Redis", "Elasticsearch"]
-  },
-  {
-    id: 5,
-    title: "Natural Language Processing",
-    description: "AI-powered text and speech analysis for extracting insights from unstructured data.",
-    icon: Brain,
-    features[
-      "Text analysis",
-      "Sentiment analysis",
-      "Entity extraction",
-      "Language translation"
-    ],
-    price: "From $40,000",
-    timeline: "18-26 weeks",
-    category: "NLP Analytics",
-    integrations["OpenAI", "Hugging Face", "SpaCy", "NLTK"]
-  },
-  {
-    id: 6,
-    title: "Anomaly Detection System",
-    description: "Intelligent system that identifies unusual patterns and potential issues in data.",
-    icon: Target,
-    features[
-      "Pattern recognition",
-      "Alert systems",
-      "False positive reduction",
-      "Learning algorithms"
-    ],
-    price: "From $28,000",
-    timeline: "12-18 weeks",
-    category: "Anomaly Detection",
-<<<<<<< HEAD
-    integrations: ["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
-
-=======
     integrations["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const aiCapabilities = [
   {
     title: "Machine Learning",
@@ -803,9 +697,4 @@ export default function AIAnalytics() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

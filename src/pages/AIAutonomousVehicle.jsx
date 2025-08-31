@@ -671,13 +671,8 @@ const autonomousVehicleSolutions = [
     price: "From $220,000",
     timeline: "26-38 weeks",
     category: "Fleet Management",
-<<<<<<< HEAD
-    technologies: ["AI Platform", "Fleet Management", "Analytics", "Optimization"]
-
-=======
     technologies["AI Platform", "Fleet Management", "Analytics", "Optimization"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const vehicleTechnologies = [
@@ -795,13 +790,8 @@ const vehicleBenefits = [
     title: "24/7 Operation",
     description: "Autonomous vehicles enable continuous operation without human limitations",
     icon: Clock,
-<<<<<<< HEAD
-    examples: ["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"]
-
-=======
     examples["Continuous operation", "No rest requirements", "Increased productivity", "Better utilization"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function AIAutonomousVehicle() {
@@ -1476,9 +1466,4 @@ export default function AIAutonomousVehicle() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

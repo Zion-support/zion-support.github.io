@@ -17,16 +17,9 @@ export default function ComprehensiveContact() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission
-<<<<<<< HEAD
-<<<<<<< HEAD
-        // // // console.log('Form submitted:', formData);
-=======
         // // // // // // // console.log('Form submitted:', formData);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     };
-=======
         console.log('Form submitted:', formData)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -357,9 +350,4 @@ export default function ComprehensiveContact() {
           </div>
         </div>
       </footer>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

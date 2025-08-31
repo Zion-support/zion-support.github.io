@@ -1,105 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock const globalOffices = [
-=======
 import { Globe, MapPin, Users, Award, Star, TrendingUp, Building, ArrowRight, CheckCircle, Clock } from 'lucide-react';
-<<<<<<< HEAD
-const globalOffices = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    {
-        id: 1,
-        city: "San Francisco",
-        country: "United States",
-        region: "North America",
-        flag: "🇺🇸",
-        established: "2018",
-        teamSize: "45+",
-        specialties["AI/ML", "Cloud Infrastructure", "Startup Innovation"],
-        projects: 120,
-        clients: 85,
-        rating: 4.9,
-        timezone: "PST (UTC-8)",
-        address: "123 Innovation Drive, San Francisco, CA 94105"
-    },
-    {
-        id: 2,
-        city: "London",
-        country: "United Kingdom",
-        region: "Europe",
-        flag: "🇬🇧",
-        established: "2019",
-        teamSize: "32+",
-        specialties["FinTech", "Digital Banking", "RegTech"],
-        projects: 95,
-        clients: 67,
-        rating: 4.8,
-        timezone: "GMT (UTC+0)",
-        address: "456 Tech Square, London, EC2A 4BX"
-    },
-    {
-        id: 3,
-        city: "Singapore",
-        country: "Singapore",
-        region: "Asia Pacific",
-        flag: "🇸🇬",
-        established: "2020",
-        teamSize: "28+",
-        specialties["E-commerce", "Digital Transformation", "Smart Cities"],
-        projects: 78,
-        clients: 54,
-        rating: 4.9,
-        timezone: "SGT (UTC+8)",
-        address: "789 Digital Hub, Singapore 018956"
-    },
-    {
-        id: 4,
-        city: "Toronto",
-        country: "Canada",
-        region: "North America",
-        flag: "🇨🇦",
-        established: "2021",
-        teamSize: "25+",
-        specialties["Healthcare Tech", "AI Research", "Enterprise Solutions"],
-        projects: 65,
-        clients: 42,
-        rating: 4.8,
-        timezone: "EST (UTC-5)",
-        address: "321 Innovation Center, Toronto, ON M5V 3A8"
-    },
-    {
-        id: 5,
-        city: "Berlin",
-        country: "Germ",
-        region: "Europe",
-        flag: "🇩🇪",
-        established: "2021",
-        teamSize: "22+",
-        specialties["IoT", "Manufacturing Tech", "Sustainability"],
-        projects: 58,
-        clients: 38,
-        rating: 4.7,
-        timezone: "CET (UTC+1)",
-        address: "654 Tech District, Berlin, 10115"
-    },
-    {
-        id: 6,
-        city: "Sydney",
-        country: "Australia",
-        region: "Asia Pacific",
-        flag: "🇦🇺",
-        established: "2022",
-        teamSize: "18+",
-        specialties["EdTech", "Green Tech", "Digital Marketing"],
-        projects: 42,
-        clients: 29,
-        rating: 4.8,
-        timezone: "AEST (UTC+10)",
-        address: "987 Innovation Bay, Sydney, NSW 2000"
-
-];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const globalStats = [
     { icon: <Globe className="w-6 h-6"/>, value: "25+", label: "Countries Served" },
     { icon: <Building className="w-6 h-6"/>, value: "6", label: "Global Offices" },
@@ -710,9 +611,4 @@ export function GlobalPresenceSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

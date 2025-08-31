@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  Brain,
-  Shield,
-  Activity,
-  TrendingUp,
-  Zap,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -17,7 +6,6 @@ import { Brain,
   Activity, 
   TrendingUp, 
   Zap, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   ArrowRight,
   Phone,
@@ -31,12 +19,8 @@ import { Brain,
   DollarSign,
   Truck,
   Target
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
   const aiServices = [
@@ -89,23 +73,12 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       icon: BarChart3,
       title: "AI Business Intelligence Platform",
       description: "Transform data into actionable insights with AI-powered business intelligence",
-<<<<<<< HEAD
-      price: "From $1,499/month",
-      features["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],
-      link: "/services/ai-business-intelligence-platform",
-      category: "Analytics"
-<<<<<<< HEAD
-
-=======
     };
-=======;
       price: "From $1,499/month",;
       features: ["Data Analytics", "Predictive Insights", "Custom Dashboards", "Real-time Reporting"],;
       link: "/services/ai-business-intelligence-platform",;
       category: "Analytics";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industrySolutions = [
@@ -132,15 +105,6 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
     {
       title: "Retail & E-commerce",
       description: "Customer analytics, inventory optimization, and personalized marketing",
-<<<<<<< HEAD
-      icon: Users
-    },
-    {
-      title: "Energy & Utilities",
-      description: "Predictive maintenance, energy optimization, and grid management",
-      icon: Zap
-
-=======
       icon: Users;
     },;
     {;
@@ -148,7 +112,6 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
       description: "Predictive maintenance, energy optimization, and grid management",;
       icon: Zap;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const advancedTechnologies = [
@@ -164,13 +127,8 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="Comprehensive AI Services Showcase 2025 - Zion Tech Group"
-=======
       <SEO 
         title = "Comprehensive AI Services Showcase 2025 - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Discover our comprehensive portfolio of AI-powered micro SAAS services, IT solutions, and innovative technology services. Transform your business with cutting-edge AI solutions."
         canonical="/comprehensive-ai-services-showcase-2025"
         url="https://ziontechgroup.com/comprehensive-ai-services-showcase-2025"
@@ -803,23 +761,10 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

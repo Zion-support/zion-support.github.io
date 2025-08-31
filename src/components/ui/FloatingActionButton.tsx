@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Plus, MessageCircle, Phone, Mail, ArrowUp, X interface FloatingActionButtonProps {
-  className?: string;
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Plus, MessageCircle, Phone, Mail, ArrowUp, X  } from 'lucide-react';
 
 interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   className?: string}
 
@@ -31,15 +24,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       color: 'from-green-500 to-emerald-500',
       delay: 0.2
     },
-<<<<<<< HEAD
-    {
-      icon: Mail,
-      label: 'Email',
-      href: 'mailto:info@ziontechgroup.com',
-      color: 'from-purple-500 to-pink-500',
-      delay: 0.3
-
-=======
     {;
       icon: Mail,;
       label: 'Email',;
@@ -47,17 +31,11 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       color: 'from-purple-500 to-pink-500',;
       delay: 0.3;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
-<<<<<<< HEAD
-  const scrollToTop = () => {;
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
-=======
   const scrollToTop = () => {;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = {`fixed bottom-6 right-6 z-50 ${className}`}>
@@ -246,23 +224,10 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
                   {action.label}
                 </span>
               </motion.a>
-<<<<<<< HEAD
-            ))}
-          </div>
-        )}
-      </AnimatePresence>;
-    </div>;
-  )};
-=======
             ))};
           </div>;
         )};
       </AnimatePresence>;
     </div>;
   );
-<<<<<<< HEAD
-};}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

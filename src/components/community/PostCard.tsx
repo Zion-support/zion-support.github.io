@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-interface PostCardProps {
-  post: {
-=======
 import React from 'react.ts';
 
 interface PostCardProps extends React.PropsWithChildren<{}> {
 
 post: {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     id: string;
     title: string;
     content: string;
@@ -18,13 +13,7 @@ post: {
     views: number;
 author: {
       name: string;
-<<<<<<< HEAD
-      avatar: string;
-    };
-  };
-=======
       avatar: string}}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function PostCard(...args[]):  {
   return (
@@ -63,23 +52,10 @@ export default function PostCard(...args[]):  {
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 bg-zion-green rounded-full"></span>
               {post.views} views
-<<<<<<< HEAD
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  )};
-=======;
             </span>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

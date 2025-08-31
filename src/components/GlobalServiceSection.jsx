@@ -35,13 +35,8 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
       icon: CheckCircle,
       title: "Quality Assurance",
       description: "Rigorous testing and validation of all services",
-<<<<<<< HEAD
-      features: ["Performance testing", "Security audits", "Compliance verification"]
-
-=======
       features["Performance testing", "Security audits", "Compliance verification"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -96,9 +91,4 @@ import { Globe, Clock, Users, Shield, Zap, CheckCircle export const GlobalServic
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

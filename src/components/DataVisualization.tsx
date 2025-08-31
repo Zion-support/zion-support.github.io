@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-import { AnimatePresence, motion } from 'framer-motion';
-import {
-    Activity,
-    ArrowDown,
-    ArrowUp,
-    BarChart3,
-    DollarSign,
-    Download,
-    Eye,
-    Minus,
-    PieChart,
-    RefreshCw,
-    Share2,
-    Target,
-    TrendingUp,
-    Users
-import React, { useState } from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -36,7 +17,6 @@ import {
   Share2,
   RefreshCw
  } from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ChartData {
 
@@ -46,12 +26,7 @@ datasets: {
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
-<<<<<<< HEAD
-    borderWidth: number;
-  }[];
-=======
     borderWidth: number}[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface MetricCard {
 
@@ -60,22 +35,14 @@ interface MetricCard {
   change: number;
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
-<<<<<<< HEAD
-  color: string;
-=======
   color: string}
 
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   title?: string;
   showMetrics?: boolean;
   showCharts?: boolean;
-<<<<<<< HEAD
-  showActions?: boolean;
-=======
   showActions?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const DataVisualization: React.FC<DataVisualizationProps> = ({
   title = "Data Analytics Dashboard",;
@@ -125,15 +92,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       color: 'text-yellow-400'
     },
     {
-<<<<<<< HEAD
-      title: 'Avg Session',
-      value: '2m 47s',
-      change: 0.0,
-      changeType: 'neutral',
-      icon: <Activity className="w-5 h-5" />,
-      color: 'text-purple-400'
-
-=======
       title: 'Avg Session',;
       value: '2m 47s',;
       change: 0.0,;
@@ -141,7 +99,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
       icon: <Activity className="w-5 h-5" />,;
       color: 'text-purple-400';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ]);
 
   // Simulate data refresh
@@ -151,21 +108,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     // Update chart data with new random values
-<<<<<<< HEAD
-    setChartData(prev = > ({
-      ...prev,
-      datasets[{
-        ...prev.datasets[0],
-        data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
-      }]
-=======;
     setChartData(prev = > ({;
       ...prev,;
       datasets: [{;
         ...prev.datasets[0],;
         data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20);
       }];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     }));
 
     // Update metrics with new random values
@@ -181,33 +129,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     setIsLoading(false)};
 
   // Get change icon and color
-<<<<<<< HEAD
-  const getChangeDisplay = (change: number, changeType: string) => {;
-    const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :;
-                 changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-                 <Minus className="w-4 h-4" />;
-
-    const color = changeType === 'increase' ? 'text-green-400' :
-                  changeType === 'decrease' ? 'text-red-400' :
-                  'text-zinc-400';
-
-    return { icon, color };
-  };
-
-  // Generate pie chart data
-  const pieChartData = {
-  <<<<<<< HEAD
-    labels['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
-    datasets[{
-      data[35, 25, 20, 15, 5],
-      backgroundColor[
-=======
   labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
     datasets: [{
       data: [35, 25, 20, 15, 5],
       backgroundColor: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         'rgba(34, 221, 210, 0.8)',
         'rgba(140, 21, 233, 0.8)',
         'rgba(239, 68, 68, 0.8)',
@@ -239,10 +164,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   <<<<<<< HEAD
     labels['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets[{
-=======
   labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [{
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       label: 'Weekly Performance',
       data[65, 59, 80, 81, 56, 55, 70],
       backgroundColor: 'rgba(34, 221, 210, 0.1)',
@@ -310,19 +233,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
           </div>
         )}
       </div>
-<<<<<<< HEAD
-
-      {/* Metrics Cards */}
-      {showMetrics && (
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {metrics.map((metric, index)  => {;
-=======;
 ;
       {/* Metrics Cards */};
       {showMetrics && (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
           {metrics.map((metric, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div
@@ -358,14 +273,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                     {icon}
                     <span>{Math.abs(metric.change).toFixed(1)}%</span>
                   </div>
-<<<<<<< HEAD
-                </div>
-
-                <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>
-                <p className="text-zinc-400 text-sm">{metric.title}</p>
-              </motion.div>
-            )})};
-=======;
                 </div>;
                 ;
                 <h3 className="text-2xl font-bold text-white mb-1">{metric.value}</h3>;
@@ -373,7 +280,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
               </motion.div>;
             );
           })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
       )}
 
@@ -505,15 +411,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
                           return (
                             <path
-<<<<<<< HEAD
-                              key = {index}
-                              d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`}
-                              fill={pieChartData.datasets[0].backgroundColor[index]}
-                              stroke={pieChartData.datasets[0].borderColor[index]}
-                              strokeWidth="2"
-                            />
-                          )})}
-=======;
                               key = {index};
                               d={`M 128 128 L ${x1} ${y1} A 100 100 0 ${largeArcFlag} 1 ${x2} ${y2} Z`};
                               fill={pieChartData.datasets[0].backgroundColor[index]};
@@ -522,7 +419,6 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                             />;
                           );
                         })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                       </svg>
 
                       {/* Legend */}
@@ -640,23 +536,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             <h4 className="font-medium text-white mb-2">Market Trends</h4>
             <p className="text-zinc-400 text-sm">
               Cloud solutions show strong growth potential with increasing enterprise adoption.
-<<<<<<< HEAD
-            </p>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </p>;
           </div>;
         </div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-};</div></motion.div>}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

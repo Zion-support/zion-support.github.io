@@ -18,43 +18,13 @@ import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store';
 
-<<<<<<< HEAD
-export function PrimaryNav(...args[]):  {
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const { user } = useAuth();
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const router = useLocation();
-  const [query, setQuery] = React.useState('');
-  const suggestions = generateSearchSuggestions();
-
-  let unreadCount = 0;
-  try {
-    const messaging = useMessaging();
-    unreadCount = messaging.unreadCount} catch {
-    // context not available
-
-  const cartCount = useSelector((s: RootState)  =>;
-    s.cart.items.reduce((sum, i) => sum + i.quantity, 0),;
-  );
-
-  const handleSubmit = (e: React.FormEvent)  => {;
-    e.preventDefault();
-    if (query.trim()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log('PrimaryNav search submit:', query);
-=======
       // // // // // // // console.log('PrimaryNav search submit:', query);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
       router.push(`/search/${slugify(query)}`);
       setQuery('');
 
-=======
       // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
-=======
 // Theme toggle component
 const ModeToggle = () => {;
   const [isDark, setIsDark] = useState(false);
@@ -62,8 +32,6 @@ const ModeToggle = () => {;
   const toggleTheme = () => {;
     setIsDark(!isDark);
     // Add theme switching logic here
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -82,31 +50,12 @@ const ModeToggle = () => {;
             <ResponsiveNavigation />
           </div>
 
-          {/* Actions container with responsive layout */}
-          <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
-            {/* Search form with clamped width */}
-            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
-  { width: 'clamp(12rem, 20vw,
-  16rem)' 
-
-}}>
-              <EnhancedSearchInput
-                value={query}
-                onChange={setQuery}
-<<<<<<< HEAD
-                onSelectSuggestion={(sugg) => {
-<<<<<<< HEAD
-                  // // // console.log('PrimaryNav search suggestion selected:', sugg);
-=======
                   // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
                 onSelectSuggestion = {
   (sugg) => {
                   // // // // console.log('PrimaryNav search suggestion selected:',;
   ;
   sugg);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   // Handle different suggestion types with proper navigation
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
@@ -116,17 +65,9 @@ const ModeToggle = () => {;
                     // Documentation suggestions navigate directly to their path
                     router.push(sugg.slug)} else if (sugg.type === 'blog' && sugg.slug) {
                     // Blog posts navigate to blog detail page
-<<<<<<< HEAD
-                    router.push(`/blog/${sugg.slug}`);
-                  } else {
-                    // Default: search results page with slug
-                    router.push(`/search/${sugg.slug || slugify(sugg.text)}`);
-
-=======
                     router.push(`/blog/${sugg.slug}`)} else {
                     // Default: search results page with slug;
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   setQuery('');
 
                   // Track analytics event
@@ -135,12 +76,7 @@ const ModeToggle = () => {;
                       search_term: sugg.text,
                       suggestion_type: sugg.type,
                       suggestion_id: sugg.id || sugg.slug
-<<<<<<< HEAD
-                    });
-
-=======
                     })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 }}
                 searchSuggestions = {suggestions}
               />
@@ -154,17 +90,12 @@ const ModeToggle = () => {;
                   <Link
                     href="/cart"
                     className="relative p-1"
-<<<<<<< HEAD
-                    aria-label={t('nav.cart', 'Cart')}
-
-=======
                     aria-label = {
   t('nav.cart',
   'Cart')
 
 }
                   >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
                     {cartCount > 0 && (
                       <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
@@ -212,46 +143,12 @@ const ModeToggle = () => {;
 
           {/* Mobile menu button */}
           <button
-<<<<<<< HEAD
-            className="md:hidden p-2 rounded focus:outline-none flex-shrink-0"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
-
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-=======
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </button>
         </div>
-<<<<<<< HEAD
-      </header>
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-60 pt-16">
-          <div
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-            aria-hidden="true"
-          />
-          <div className="relative bg-card border-t border-primary/20 max-h-[calc(100vh-4rem)] overflow-y-auto">
-            <MobileMenu
-              unreadCount={unreadCount}
-              onClose={() => setMobileMenuOpen(false)}
-            />
-          </div>
-        </div>
-      )}
-      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
-    </>
-  )}
-=======
 
         {/* Mobile Navigation */}
         <AnimatePresence>
@@ -348,9 +245,4 @@ const ModeToggle = () => {;
       </nav>;
     </header>;
   );
-<<<<<<< HEAD
-</div>}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

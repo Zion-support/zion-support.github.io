@@ -36,13 +36,8 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
             icon: Zap,
             title: "Process Automation",
             description: "Streamlined financial operations and workflow automation",
-<<<<<<< HEAD
-            features: ["Workflow automation", "Document processing", "Approval systems"]
-
-=======
             features["Workflow automation", "Document processing", "Approval systems"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -213,9 +208,4 @@ import { DollarSign, Shield, BarChart3, ArrowRight, CheckCircle, Brain, Database
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

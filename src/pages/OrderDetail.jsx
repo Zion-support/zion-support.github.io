@@ -33,27 +33,14 @@ export default function OrderDetailPage() {
                     html: `<p>Thank you for your purchase. Total ${order.total}.</p>`
 
             });
-<<<<<<< HEAD
-            toast({ title: 'Receipt sent!' });
-
-        catch (err) {
-            toast({ title: 'Failed to send receipt', variant: 'destructive' });
-
-=======
             toast({ title: 'Receipt sent!' })}
         catch (err) {
             toast({ title: 'Failed to send receipt', variant: 'destructive' })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     if (isLoading || !order) {
         return (<div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full"/>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="container max-w-3xl py-10 space-y-6">
       <h1 className="text-3xl font-bold">Order #{order.orderId}</h1>
 
@@ -82,9 +69,4 @@ export default function OrderDetailPage() {
       <Link to="/orders" className="text-zion-purple underline">
         Back to orders
       </Link>
-<<<<<<< HEAD
-    </div>);
-}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

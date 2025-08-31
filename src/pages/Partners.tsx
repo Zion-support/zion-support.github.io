@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Users,
-  Handshake,
-  Globe,
-  Award,
+import { 
+  Users, 
+  Building, 
+  Globe, 
+  Star, 
+  ArrowRight, 
+  Award, 
   TrendingUp,
   Shield,
   Zap,
@@ -15,116 +16,10 @@ import {
   Rocket,
   Star
 import { SEO } from '../components/SEO';
-=======
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
 import { 
   Handshake, 
   Users, 
   Globe, 
-<<<<<<< HEAD
-  Award, 
-  TrendingUp, 
-  Search, 
-  Filter,
-  ArrowRight,
-  ExternalLink,
-  Star,
-  Building2,
-  Zap,
-  Shield,
-  BookOpen,
-  ChevronDown,
-  ChevronUp,
-  Mail,
-  Phone
-} from 'lucide-react';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-export default function Partners() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedPartner, setExpandedPartner] = useState<string | null>(null);
-
-  const partnerCategories = [
-    { id: 'all', name: 'All Partners', count: 24 },
-    { id: 'technology', name: 'Technology', count: 8 },
-    { id: 'consulting', name: 'Consulting', count: 6 },
-    { id: 'enterprise', name: 'Enterprise', count: 5 },
-    { id: 'startup', name: 'Startups', count: 3 },
-    { id: 'academic', name: 'Academic', count: 2 }
-  ];
-
-  const featuredPartners = [
-    {
-      id: 'partner-001',
-      name: 'Microsoft',
-      logo: '/images/partners/microsoft-logo.png',
-      description: 'Global technology leader providing cloud computing, AI, and enterprise solutions.',
-      longDescription: 'Microsoft is a global technology leader that has been at the forefront of innovation for decades. Our partnership focuses on cloud computing solutions, AI integration, and enterprise software development. Together, we deliver cutting-edge solutions that transform businesses and drive digital transformation.',
-      category: 'technology',
-      partnershipType: 'Strategic Alliance',
-      partnershipDuration: '5+ years',
-      jointProjects: 12,
-      successStories: 8,
-      website: 'https://microsoft.com',
-      contact: 'partnerships@microsoft.com',
-      featured: true,
-      benefits: [
-        'Joint go-to-market strategies',
-        'Co-development of AI solutions',
-        'Shared technology roadmaps',
-        'Collaborative customer success'
-      ],
-      testimonials: [
-        {
-          quote: 'Our partnership with Zion Tech Group has been instrumental in delivering innovative AI solutions to our enterprise customers.',
-          author: 'Sarah Williams',
-          role: 'VP of Strategic Partnerships',
-          company: 'Microsoft'
-        }
-      ]
-    },
-    {
-<<<<<<< HEAD
-      name: 'AWS',
-      logo: '🟠',
-      category: 'Cloud Services',
-      description: 'Leading cloud provider for scalable and reliable infrastructure.',
-      benefits: ['AWS credits', 'Architecture guidance', 'Marketplace integration']
-    },
-    {
-      name: 'Google Cloud',
-      logo: '🔴',
-      category: 'AI & ML Platform',
-      description: 'Advanced AI and machine learning capabilities for enterprise solutions.',
-      benefits: ['GCP credits', 'AI/ML expertise', 'Innovation labs access']
-    },
-    {
-      name: 'Cisco',
-      logo: '🔵',
-      category: 'Networking',
-      description: 'Enterprise networking and security solutions for modern businesses.',
-      benefits: ['Certification programs', 'Technical training', 'Partner support']
-    },
-    {
-      name: 'Dell Technologies',
-      logo: '🔵',
-      category: 'Hardware & Infrastructure',
-      description: 'End-to-end technology solutions for enterprise transformation.',
-      benefits: ['Hardware discounts', 'Technical expertise', 'Joint solutions']
-    },
-    {
-      name: 'Intel',
-      logo: '🔵',
-      category: 'Processor Technology',
-      description: 'Leading processor technology for AI and high-performance computing.',
-      benefits: ['Early access programs', 'Technical resources', 'Innovation support']
-
-=======
       id: 'partner-002',
       name: 'Amazon Web Services',
       logo: '/images/partners/aws-logo.png',
@@ -153,7 +48,6 @@ export default function Partners() {
         }
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const regularPartners = [
@@ -351,28 +245,9 @@ export default function Partners() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
-<<<<<<< HEAD
-
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Strategic
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"> Partnerships</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join our network of technology leaders and unlock new opportunities for growth,
-              innovation, and market expansion in the digital transformation landscape.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 hover:scale-105">
-                Become a Partner
-              </button>
-              <button className="px-8 py-3 border border-cyan-400 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300">
-                View Partnership Tiers
-              </button>
-=======
           >
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl mb-6">
               <Handshake className="w-10 h-10 text-blue-400" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Strategic <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">Partnerships</span>
@@ -393,51 +268,6 @@ export default function Partners() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Why Partner With Zion Tech Group?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We offer comprehensive support, resources, and opportunities to help our partners
-              succeed in the rapidly evolving technology landscape.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Users,
-                title: 'Expanded Market Reach',
-                description: 'Access our extensive customer base and market presence across multiple industries.'
-              },
-              {
-                icon: Handshake,
-                title: 'Joint Go-to-Market',
-                description: 'Collaborate on marketing campaigns, events, and customer acquisition strategies.'
-              },
-              {
-                icon: Globe,
-                title: 'Global Presence',
-                description: 'Leverage our international network and local market expertise.'
-              },
-              {
-                icon: Award,
-                title: 'Recognition & Rewards',
-                description: 'Earn rewards, certifications, and recognition for your partnership achievements.'
-              },
-              {
-                icon: TrendingUp,
-                title: 'Revenue Growth',
-                description: 'Increase your revenue through joint solutions and referral programs.'
-              },
-              {
-                icon: Shield,
-                title: 'Technical Support',
-                description: 'Access our technical expertise and resources to enhance your solutions.'
-
-            ].map((benefit, index) => (
-=======
           >
             <h2 className="text-4xl font-bold text-white mb-4">Why Partner With Us?</h2>
             <p className="text-xl text-gray-300">
@@ -447,18 +277,10 @@ export default function Partners() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partnershipBenefits.map((benefit, index) => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-cyan-400" />
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
@@ -480,7 +302,6 @@ export default function Partners() {
                       </li>
                     ))}
                   </ul>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </motion.div>
             ))}
@@ -496,19 +317,10 @@ export default function Partners() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Partnership Tiers
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the partnership level that best fits your business goals and growth objectives.
-=======
           >
             <h2 className="text-4xl font-bold text-white mb-4">Partnership Types</h2>
             <p className="text-xl text-gray-300">
               Different ways we collaborate with our partners
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </motion.div>
 
@@ -518,22 +330,6 @@ export default function Partners() {
                 key={type.type}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                  index === 0
-                    ? 'border-cyan-400/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
-                    : 'border-slate-700/50 hover:border-cyan-400/50'
-                }`}
-
-                <div className="text-center mb-6">
-                  <div className={`w-20 h-20 mx-auto mb-4 rounded-full flex items-center justify-center ${
-                    index === 0
-                      ? 'bg-gradient-to-br from-cyan-400 to-blue-500'
-                      : 'bg-gradient-to-br from-slate-600 to-slate-700'
-                  }`}>
-                    <tier.icon className="w-10 h-10 text-white" />
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
@@ -556,7 +352,6 @@ export default function Partners() {
                         </span>
                       ))}
                     </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   </div>
                 </div>
               </motion.div>
@@ -573,20 +368,10 @@ export default function Partners() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Our Trusted Partners
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're proud to work with industry leaders who share our vision for
-              innovation and digital transformation.
-=======
           >
             <h2 className="text-4xl font-bold text-white mb-4">Featured Partners</h2>
             <p className="text-xl text-gray-300">
               Our strategic alliances with industry leaders
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </motion.div>
 
@@ -596,24 +381,6 @@ export default function Partners() {
                 key={partner.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
-
-                <div className="text-center mb-4">
-                  <div className="text-4xl mb-3">{partner.logo}</div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
-                  <span className="inline-block px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">
-                    {partner.category}
-                  </span>
-                </div>
-                <p className="text-gray-300 text-center mb-4">{partner.description}</p>
-                <div className="space-y-2">
-                  {partner.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <Rocket className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
-                      {benefit}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
@@ -624,7 +391,6 @@ export default function Partners() {
                         <Building2 className="w-8 h-8 text-blue-400" />
                       </div>
                       <p className="text-gray-400 text-sm">Partner Logo</p>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </div>
                   </div>
                   
@@ -882,25 +648,14 @@ export default function Partners() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6 }}
-
-=======
             transition={{ duration: 0.8 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <h2 className="text-4xl font-bold text-white mb-6">
               Become a Partner
             </h2>
-<<<<<<< HEAD
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Let's explore how we can work together to drive innovation,
-              expand market reach, and deliver exceptional value to customers.
-=======
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Interested in partnering with Zion Tech Group? Let's explore how we can 
               create value together and drive innovation in the technology industry.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -922,7 +677,6 @@ export default function Partners() {
         </div>
       </section>
     </div>
-=======
   Zap, 
   Shield, 
   Cloud, 
@@ -1037,6 +791,36 @@ const Partners: React.FC = () => {
       icon: Users,
       title: 'Global Reach',
       description: 'Expand your business globally with our international presence'
+  const partnerCategories = [
+    {
+      title: 'Technology Partners',
+      description: 'Leading technology companies that enhance our solutions',
+      icon: Brain,
+      partners: [
+        { name: 'Microsoft', logo: 'M', tier: 'Platinum', category: 'Cloud & AI' },
+        { name: 'AWS', logo: 'AWS', tier: 'Platinum', category: 'Cloud Infrastructure' },
+        { name: 'Google Cloud', logo: 'GC', tier: 'Gold', category: 'AI & ML' },
+        { name: 'IBM', logo: 'IBM', tier: 'Gold', category: 'Enterprise Solutions' }
+      ]
+    },
+    {
+      title: 'System Integrators',
+      description: 'Partners who help implement our solutions worldwide',
+      icon: Building,
+      partners: [
+        { name: 'Accenture', logo: 'A', tier: 'Platinum', category: 'Global SI' },
+        { name: 'Deloitte', logo: 'D', tier: 'Platinum', category: 'Consulting' },
+        { name: 'PwC', logo: 'P', tier: 'Gold', category: 'Advisory' }
+      ]
+    },
+    {
+      title: 'Channel Partners',
+      description: 'Resellers and distributors expanding our reach',
+      icon: Globe,
+      partners: [
+        { name: 'TechCorp', logo: 'TC', tier: 'Silver', category: 'Reseller' },
+        { name: 'InnovateTech', logo: 'IT', tier: 'Silver', category: 'Distributor' }
+      ]
     }
   ];
 
@@ -1134,9 +918,8 @@ const Partners: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 mb-6">
-                <Handshake className="w-5 h-5 text-zion-purple mr-2" />
-                <span className="text-zion-purple font-medium">Partnership Opportunities</span>
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
+                <Users className="h-10 w-10 text-white" />
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -1472,12 +1255,7 @@ const Partners: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   );
-<<<<<<< HEAD
-}}}}}
-=======
 };
 
 export default Partners;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

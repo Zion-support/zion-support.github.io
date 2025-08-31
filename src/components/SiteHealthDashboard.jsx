@@ -222,12 +222,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             case 'good': return 'text-blue-500 bg-blue-50 border-blue-200';
             case 'warning': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
             case 'critical': return 'text-red-500 bg-red-50 border-red-200';
-<<<<<<< HEAD
-            default: return 'text-gray-500 bg-gray-50 border-gray-200';
-
-=======
             default: return 'text-gray-500 bg-gray-50 border-gray-200'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getStatusIcon = (status) => {
         switch (status) {
@@ -235,12 +230,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
             case 'good': return <CheckCircle className="w-4 h-4"/>;
             case 'warning': return <AlertTriangle className="w-4 h-4"/>;
             case 'critical': return <AlertCircle className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <Clock className="w-4 h-4"/>;
-
-=======
             default: return <Clock className="w-4 h-4"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getScoreColor = (score) => {
         if (score >= 90)
@@ -257,12 +247,7 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           <h2 className="text-2xl font-bold mb-2">Analyzing Site Health</h2>
           <p className="text-gray-600">Performing comprehensive health check...</p>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="max-w-7xl mx-auto p-6 space-y-8">
       {/* Header */}
       <div className="text-center">
@@ -397,9 +382,4 @@ import { Activity, AlertCircle, CheckCircle, Clock, Globe, Search, Shield, Zap, 
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

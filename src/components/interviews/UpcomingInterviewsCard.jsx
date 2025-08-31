@@ -3,14 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { useInterviews } from "@/hooks/useInterviews";
 import { format, isPast, parseISO } from "date-fns";
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, Video import { Avatar } from "@/components/ui/avatar";
-=======
 import Link from "next/link";
+import { Link } from 'react-router-dom';
 import { Calendar, Clock, Video } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function UpcomingInterviewsCard() {
     const { fetchInterviews } = useInterviews();
     const [upcomingInterviews, setUpcomingInterviews] = useState([]);
@@ -26,27 +22,16 @@ export function UpcomingInterviewsCard() {
                     !isPast(parseISO(interview.scheduled_date)))
                     .sort((a, b) => parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime())
                     .slice(0, 3); // Take only the next 3 interviews
-<<<<<<< HEAD
-                setUpcomingInterviews(upcoming);
-
-            catch (error) {
-<<<<<<< HEAD
-                // // // console.error("Error loading upcoming interviews:", error);
-
-=======
                 // // // // // // // console.error("Error loading upcoming interviews:", error);
             }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             finally {
                 setIsLoading(false);
 
-=======
                 setUpcomingInterviews(upcoming)}
             catch (error) {
                 console.error("Error loading upcoming interviews:", error)}
             finally {
                 setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         loadInterviews()}, []);
     if (isLoading) {
@@ -68,12 +53,7 @@ export function UpcomingInterviewsCard() {
               </div>))}
           </div>
         </CardContent>
-<<<<<<< HEAD
-      </Card>);
-
-=======
       </Card>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (upcomingInterviews.length === 0) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
         <CardHeader>
@@ -91,12 +71,7 @@ export function UpcomingInterviewsCard() {
             </Button>
           </div>
         </CardContent>
-<<<<<<< HEAD
-      </Card>);
-
-=======
       </Card>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -144,9 +119,4 @@ export function UpcomingInterviewsCard() {
           </Button>
         </div>
       </CardContent>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}
-=======
     </Card>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -55,35 +55,18 @@ export function ProductSubmissionForm() {
             form.setValue("image", file);
             const reader = new FileReader();
             reader.onloadend = () => {
-<<<<<<< HEAD
-                setImagePreview(reader.result);
-            };
-            reader.readAsDataURL(file);
-
-=======
                 setImagePreview(reader.result)};
             reader.readAsDataURL(file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleVideoChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
-<<<<<<< HEAD
-            form.setValue("video", file);
-
-=======
             form.setValue("video", file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleModelChange = (e) => {
         const file = e.target.files?.[0];
         if (file) {
-<<<<<<< HEAD
-            form.setValue("model", file);
-
-=======
             form.setValue("model", file)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Apply AI-generated content to the form
     const handleApplyGenerated = (content) => {
@@ -102,12 +85,7 @@ export function ProductSubmissionForm() {
                 description: "You must be logged in to publish products",
                 variant: "destructive",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             // Create the product listing
@@ -132,12 +110,7 @@ export function ProductSubmissionForm() {
                 .select('id')
                 .single();
             if (productError) {
-<<<<<<< HEAD
-                throw new Error(productError.message);
-
-=======
                 throw new Error(productError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // If we have an image, upload it
             if (values.image) {
                 const imagePath = `product_images/${productRecord.id}/${values.image.name}`;
@@ -145,12 +118,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(imagePath, values.image);
                 if (uploadError) {
-<<<<<<< HEAD
-                    throw new Error(uploadError.message);
-
-=======
                     throw new Error(uploadError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 // Get the public URL for the image
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
@@ -163,14 +131,8 @@ export function ProductSubmissionForm() {
                 })
                     .eq('id', productRecord.id);
                 if (updateError) {
-<<<<<<< HEAD
-                    throw new Error(updateError.message);
-
-
-=======
                     throw new Error(updateError.message)}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Upload video if provided
             if (values.video) {
                 const videoPath = `product_videos/${productRecord.id}/${values.video.name}`;
@@ -178,12 +140,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(videoPath, values.video);
                 if (uploadError) {
-<<<<<<< HEAD
-                    throw new Error(uploadError.message);
-
-=======
                     throw new Error(uploadError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(videoPath);
@@ -192,14 +149,8 @@ export function ProductSubmissionForm() {
                     .update({ video_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
-<<<<<<< HEAD
-                    throw new Error(updateError.message);
-
-
-=======
                     throw new Error(updateError.message)}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Upload model if provided
             if (values.model) {
                 const modelPath = `product_models/${productRecord.id}/${values.model.name}`;
@@ -207,12 +158,7 @@ export function ProductSubmissionForm() {
                     .from('products')
                     .upload(modelPath, values.model);
                 if (uploadError) {
-<<<<<<< HEAD
-                    throw new Error(uploadError.message);
-
-=======
                     throw new Error(uploadError.message)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data: publicUrlData } = supabase.storage
                     .from('products')
                     .getPublicUrl(modelPath);
@@ -221,47 +167,24 @@ export function ProductSubmissionForm() {
                     .update({ model_url: publicUrlData.publicUrl })
                     .eq('id', productRecord.id);
                 if (updateError) {
-<<<<<<< HEAD
-                    throw new Error(updateError.message);
-
-
-=======
                     throw new Error(updateError.message)}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Show success message
             toast({
                 title: "Product Published!",
                 description: "Your product has been successfully published on Zion.",
             });
             // Redirect to product page
-<<<<<<< HEAD
-            navigate(`/marketplace/listing/${productRecord.id}`);
-
-=======
-<<<<<<< HEAD
-            router(`/marketplace/listing/${productRecord.id}`)}
-=======
             router(`/marketplace/listing/${productRecord.id}`);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             toast({
                 title: "Publication Failed",
                 description: error instanceof Error ? error.message : "An unknown error occurred",
                 variant: "destructive",
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsSubmitting(false);
-
-=======
             })}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
       <TabsList className="grid grid-cols-2 mb-6">
@@ -410,9 +333,4 @@ export function ProductSubmissionForm() {
 
 }}/>
       </TabsContent>
-<<<<<<< HEAD
-    </Tabs>);
-}}}}}}}}}}}}}}}}}}}
-=======
     </Tabs>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

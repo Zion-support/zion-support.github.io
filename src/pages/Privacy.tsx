@@ -1,23 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Users,
-  Globe,
-<<<<<<< HEAD
-=======
   CheckCircle,
   AlertTriangle,
   FileText,
   Mail,
-=======
 import { SEO } from '@/components/SEO';
 import { 
   Shield, 
@@ -25,34 +11,11 @@ import {
   Eye, 
   Database, 
   Globe, 
-  Users, 
-  Mail, 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
-  Phone,
-  MapPin,
-  Calendar,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
-<<<<<<< HEAD
-  AlertTriangle
-} from 'lucide-react';
-import SEO from '../components/SEO';
-
-const Privacy: React.FC = () => {
-  const currentYear = new Date().getFullYear();
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
   AlertTriangle,
   FileText,
-<<<<<<< HEAD
-  Mail,
-  Phone,
-  MapPin
+} from 'lucide-react';
 import { SEO } from '../components/SEO';
-=======
   Settings,
   Trash2,
   Download
@@ -60,59 +23,43 @@ import { SEO } from '../components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
-const Privacy: React.FC = () => {
-  const lastUpdated = 'December 15, 2024';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
+export default function Privacy() {
   const privacyPrinciples = [
     {
       icon: Shield,
       title: 'Data Protection',
-      description: 'We implement enterprise-grade security measures to protect your personal information.'
+      description: 'We implement industry-standard security measures to protect your personal information.'
     },
     {
       icon: Lock,
-      title: 'Secure Processing',
-      description: 'All data processing follows strict security protocols and industry best practices.'
+      title: 'Privacy by Design',
+      description: 'Privacy considerations are built into every aspect of our services and systems.'
     },
     {
       icon: Eye,
       title: 'Transparency',
-      description: 'We are transparent about how we collect, use, and protect your information.'
+      description: 'We are clear about what data we collect, how we use it, and your rights.'
     },
     {
       icon: Users,
       title: 'User Control',
-<<<<<<< HEAD
-      description: 'You have full control over your personal data and can manage it at any time.'
-
-=======
       description: 'You have full control over your personal data and can request changes or deletion.'
+      description: 'You have full control over your personal data and can manage it at any time.'
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const dataCategories = [
     {
       title: 'Personal Information',
-      items: [
-        'Name and contact information (email, phone, address)',
-        'Company and job title information',
-        'Professional credentials and certifications',
-        'Communication preferences and history'
-      ]
+      description: 'Name, email address, phone number, and company information',
+      examples: ['Contact details', 'Account information', 'Business details']
     },
     {
-      title: 'Technical Information',
-      items: [
-        'IP address and device information',
-        'Browser type and version',
-        'Operating system and platform',
-        'Usage data and analytics'
-      ]
+      title: 'Usage Data',
+      description: 'Information about how you use our services and website',
+      examples: ['Login times', 'Feature usage', 'Performance metrics']
     },
     {
-<<<<<<< HEAD
       title: 'Technical Data',
       description: 'Device information and technical specifications',
       examples: ['IP address', 'Browser type', 'Device information']
@@ -121,8 +68,6 @@ const Privacy: React.FC = () => {
       title: 'Communication Data',
       description: 'Records of our interactions and communications',
       examples: ['Support tickets', 'Email correspondence', 'Chat logs']
-
-=======
       title: 'Business Information',
       items: [
         'Project requirements and specifications',
@@ -131,14 +76,12 @@ const Privacy: React.FC = () => {
         'Support and communication records'
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const dataUses = [
     {
-      icon: Settings,
-      title: 'Service Delivery',
-      description: 'To provide and improve our technology services and solutions.'
+      purpose: 'Service Delivery',
+      description: 'To provide and maintain our services, process transactions, and deliver support.'
     },
     {
       icon: Users,
@@ -154,21 +97,12 @@ const Privacy: React.FC = () => {
       icon: Database,
       title: 'Analytics',
       description: 'To analyze usage patterns and improve our services and user experience.'
-<<<<<<< HEAD
-    },
-    {
-      purpose: 'Security',
-      description: 'To protect against fraud, abuse, and ensure the security of our services.'
-
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const dataRights = [
     {
-      icon: Eye,
-      title: 'Right to Access',
+      right: 'Access',
       description: 'Request a copy of your personal data that we hold.'
     },
     {
@@ -200,16 +134,6 @@ const Privacy: React.FC = () => {
       description: 'Strict access controls and authentication mechanisms protect your data.'
     },
     {
-<<<<<<< HEAD
-      right: 'Restriction',
-      description: 'Request limitation of processing your personal data.'
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
       icon: Database,
       title: 'Secure Storage',
       description: 'Data is stored in secure, certified data centers with redundant security measures.'
@@ -257,58 +181,17 @@ const Privacy: React.FC = () => {
   ];
 
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Privacy Policy - Zion Tech Group"
         description="Learn about how Zion Tech Group collects, uses, and protects your personal information. Read our comprehensive privacy policy and understand your data rights."
         keywords="privacy policy, data protection, GDPR, data rights, personal information, Zion Tech Group, privacy"
       />
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            className="text-center"
-
-            <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              Privacy & Data Protection
-=======
           >
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
                 <Shield className="w-8 h-8 text-white" />
               </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </div>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Privacy Policy
@@ -317,16 +200,14 @@ const Privacy: React.FC = () => {
               Your privacy is important to us. This policy explains how we collect, use,
               and protect your personal information.
             </p>
+            <div className="text-sm text-gray-400">
+              Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Privacy Principles */}
-<<<<<<< HEAD
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-=======
       <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
@@ -351,12 +232,7 @@ const Privacy: React.FC = () => {
 
 }}
             transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -371,7 +247,6 @@ const Privacy: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Our Privacy Principles
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -383,26 +258,6 @@ const Privacy: React.FC = () => {
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {privacyPrinciples.map((principle, index)  => (
               <motion.div
-<<<<<<< HEAD
-                key={principle.title}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                className="text-center group"
-=======
                 key={index}
                 initial = {
   { opacity: 0,
@@ -435,19 +290,43 @@ const Privacy: React.FC = () => {
 
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-<<<<<<< HEAD
-
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <principle.icon className="w-8 h-8 text-blue-400" />
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                   <principle.icon className="w-10 h-10 text-white" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{principle.title}</h3>
                 <p className="text-slate-300 leading-relaxed">{principle.description}</p>
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Our Privacy Principles
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We are committed to protecting your privacy and ensuring transparency 
+              in how we handle your personal information.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {privacyPrinciples.map((principle, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <principle.icon className="w-8 h-8 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">{principle.title}</h3>
+                <p className="text-gray-300">{principle.description}</p>
               </motion.div>
             ))}
           </div>
@@ -455,11 +334,6 @@ const Privacy: React.FC = () => {
       </section>
 
       {/* Information We Collect */}
-<<<<<<< HEAD
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <motion.div 
-=======
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
@@ -484,12 +358,7 @@ const Privacy: React.FC = () => {
 
 }}
             transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -504,7 +373,6 @@ const Privacy: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Information We Collect
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -516,26 +384,6 @@ const Privacy: React.FC = () => {
           <div className="grid lg: grid-cols-3 gap-8">
             {dataCategories.map((category, index)  => (
               <motion.div
-<<<<<<< HEAD
-                key={category.title}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                className="group"
-=======
                 key={index}
                 initial = {
   { opacity: 0,
@@ -568,19 +416,6 @@ const Privacy: React.FC = () => {
 
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-<<<<<<< HEAD
-
-                <h3 className="text-2xl font-semibold text-white mb-4">{category.title}</h3>
-                <p className="text-gray-300 mb-6">{category.description}</p>
-                <div className="space-y-2">
-                  {category.examples.map((example, exampleIndex) => (
-                    <div key={exampleIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                      {example}
-                    </div>
-                  ))}
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
                   <h3 className="text-2xl font-bold text-white mb-6">{category.title}</h3>
@@ -592,7 +427,7 @@ const Privacy: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                </div>
                 </div>
               </motion.div>
             ))}
@@ -600,12 +435,41 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* How We Use Your Information */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-=======
+      {/* How We Use Your Data */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-6">
+              How We Use Your Information
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We use your information only for legitimate business purposes 
+              and with your consent where required.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {dataUses.map((use, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <h3 className="text-xl font-semibold text-white mb-4">{use.purpose}</h3>
+                <p className="text-gray-300">{use.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* How We Use Your Data */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -631,12 +495,7 @@ const Privacy: React.FC = () => {
 
 }}
             transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -651,7 +510,6 @@ const Privacy: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               How We Use Your Information
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -663,26 +521,6 @@ const Privacy: React.FC = () => {
           <div className="max-w-4xl mx-auto space-y-6">
             {dataUses.map((use, index) => (
               <motion.div
-<<<<<<< HEAD
-                key={use.purpose}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-}}
-                viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700"
-=======
                 key={index}
                 initial = {
   { opacity: 0,
@@ -715,12 +553,6 @@ const Privacy: React.FC = () => {
 
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-<<<<<<< HEAD
-
-                <h3 className="text-xl font-semibold text-white mb-4">{use.purpose}</h3>
-                <p className="text-gray-300">{use.description}</p>
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -731,32 +563,22 @@ const Privacy: React.FC = () => {
                     <p className="text-slate-300">{use.description}</p>
                   </div>
                 </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Data Sharing and Security */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-=======
       
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-blue/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto text-center">
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-=======
       {/* Your Rights */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -845,18 +667,12 @@ const Privacy: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Data Security
-=======
               viewport={{ once: true }}
               className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 mb-8"
             >
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center space-x-2">
                 <Calendar className="w-6 h-6 text-cyan-400" />
                 <span>Last Updated</span>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               </h2>
               <p className="text-lg text-gray-300 mb-6">
                 We implement comprehensive security measures to protect your personal information
@@ -866,33 +682,28 @@ const Privacy: React.FC = () => {
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">We Never Sell Your Data</h3>
-                    <p className="text-slate-300">Your personal information is never sold, rented, or shared with third parties for marketing purposes.</p>
+                    <h3 className="text-white font-semibold">Encryption</h3>
+                    <p className="text-gray-300 text-sm">All data is encrypted in transit and at rest</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Lock className="w-6 h-6 text-white" />
-                  </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Enterprise-Grade Security</h3>
-                    <p className="text-slate-300">We implement ISO 27001 certified security measures including encryption, access controls, and regular security audits.</p>
+                    <h3 className="text-white font-semibold">Access Controls</h3>
+                    <p className="text-gray-300 text-sm">Strict access controls and authentication</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
+                <div className="flex items-start space-x-3">
+                  <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">Limited Third-Party Access</h3>
-                    <p className="text-slate-300">We only share data with trusted service providers who help us deliver our services and maintain security standards.</p>
+                    <h3 className="text-white font-semibold">Regular Audits</h3>
+                    <p className="text-gray-300 text-sm">Security assessments and compliance monitoring</p>
                   </div>
                 </div>
               </div>
             </motion.div>
 
             <motion.div
-<<<<<<< HEAD
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
@@ -902,7 +713,6 @@ const Privacy: React.FC = () => {
                 <div className="text-center mb-6">
                   <Shield className="w-16 h-16 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white">Security Standards</h3>
-=======
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
@@ -920,7 +730,6 @@ const Privacy: React.FC = () => {
                     <h3 className="font-semibold text-white">Personal Information</h3>
                     <p>Name, email address, phone number, company information, and other contact details you provide.</p>
                   </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
                 <div className="flex items-start space-x-3">
                   <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
@@ -1122,6 +931,19 @@ const Privacy: React.FC = () => {
                   <div className="flex items-center space-x-3">
                     <MapPin className="w-5 h-5 text-cyan-400" />
                     <span>Address: 364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">SOC 2 Compliance</span>
+                    <span className="text-green-400">✓</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">GDPR Compliant</span>
+                    <span className="text-green-400">✓</span>
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-slate-700/30 rounded-lg">
+                    <span className="text-gray-300">ISO 27001</span>
+                    <span className="text-green-400">✓</span>
                   </div>
                 </div>
               </div>
@@ -1130,107 +952,19 @@ const Privacy: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Your Rights */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div 
-=======
       {/* Contact Information */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             className="text-center mb-16"
-            initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Your Privacy Rights
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about this privacy policy or want to exercise your rights,
-              please contact our privacy team.
-            </p>
-          </motion.div>
-          
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {userRights.map((right, index)  => (
-              <motion.div
-                key={right.right}
-                initial = {
-  { opacity: 0,
-  y: 30 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                viewport={{ once: true }}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 h-full">
-                  <h3 className="text-xl font-bold text-white mb-4">{right.right}</h3>
-                  <p className="text-slate-300 leading-relaxed">{right.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-<<<<<<< HEAD
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Contact Us
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              If you have questions about this privacy policy or want to exercise your rights,
-              please contact our privacy team.
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -1249,7 +983,6 @@ const Privacy: React.FC = () => {
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Have questions about your privacy or want to exercise your rights? We're here to help.
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             </p>
           </motion.div>
           
@@ -1289,13 +1022,11 @@ const Privacy: React.FC = () => {
                   </div>
                 </div>
               </motion.div>
-=======
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 mb-6">
                 <Shield className="w-5 h-5 text-zion-purple mr-2" />
                 <span className="text-zion-purple font-medium">Privacy Policy</span>
               </div>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Privacy Policy
@@ -1359,289 +1090,38 @@ const Privacy: React.FC = () => {
                   </Card>
                 </motion.div>
               ))}
+              If you have questions about this privacy policy or want to exercise your rights, 
+              please contact our privacy team.
+            </p>
+          </motion.div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <Mail className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">privacy@ziontechgroup.com</p>
+              </div>
+              <div className="text-center">
+                <Phone className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div className="text-center">
+                <MapPin className="w-12 h-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* Data Categories */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Information We Collect
-              </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                We collect various types of information to provide and improve our services. 
-                Here's what we collect and why it's necessary.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {dataCategories.map((category, index) => (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20">
-                    <CardHeader>
-                      <CardTitle className="text-xl font-bold text-white mb-4">
-                        {category.title}
-                      </CardTitle>
-                    </CardHeader>
-                    
-                    <CardContent>
-                      <ul className="space-y-3">
-                        {category.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-start space-x-3">
-                            <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5 flex-shrink-0" />
-                            <span className="text-zion-cyan-light text-sm leading-relaxed">
-                              {item}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* How We Use Data */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                How We Use Your Information
-              </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                We use your information responsibly and only for purposes that benefit you and our services. 
-                Here's how we use the data we collect.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {dataUses.map((use, index) => (
-                <motion.div
-                  key={use.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="p-3 rounded-xl bg-zion-purple/20 border border-zion-purple/30">
-                          <use.icon className="w-6 h-6 text-zion-purple" />
-                        </div>
-                        
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-2">
-                            {use.title}
-                          </h3>
-                          
-                          <p className="text-zion-cyan-light text-sm leading-relaxed">
-                            {use.description}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Your Rights */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Your Data Rights
-              </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                You have important rights regarding your personal data. We're committed to helping you 
-                exercise these rights and maintain control over your information.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {dataRights.map((right, index) => (
-                <motion.div
-                  key={right.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20 hover:border-zion-cyan/50 transition-all duration-300 text-center">
-                    <CardContent className="p-6">
-                      <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-zion-cyan/20 border border-zion-cyan/30 mb-4">
-                        <right.icon className="w-8 h-8 text-zion-cyan" />
-                      </div>
-                      
-                      <h3 className="text-lg font-semibold text-white mb-3">
-                        {right.title}
-                      </h3>
-                      
-                      <p className="text-zion-cyan-light text-sm leading-relaxed">
-                        {right.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Security Measures */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                How We Protect Your Data
-              </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                We implement comprehensive security measures to protect your personal information 
-                from unauthorized access, alteration, disclosure, or destruction.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {securityMeasures.map((measure, index) => (
-                <motion.div
-                  key={measure.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="p-3 rounded-xl bg-zion-blue/20 border border-zion-blue/30">
-                          <measure.icon className="w-6 h-6 text-zion-blue" />
-                        </div>
-                        
-                        <div>
-                          <h3 className="text-lg font-semibold text-white mb-2">
-                            {measure.title}
-                          </h3>
-                          
-                          <p className="text-zion-cyan-light text-sm leading-relaxed">
-                            {measure.description}
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Contact Our Privacy Team
-              </h2>
-              <p className="text-xl text-zion-cyan-light max-w-3xl mx-auto">
-                Have questions about your privacy or want to exercise your data rights? 
-                Our dedicated privacy team is here to help.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {contactInfo.map((info, index) => (
-                <motion.div
-                  key={info.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20 hover:border-zion-purple/50 transition-all duration-300 text-center">
-                    <CardContent className="p-6">
-                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${info.color} mb-4`}>
-                        <info.icon className="w-8 h-8 text-white" />
-                      </div>
-                      
-                      <h3 className="text-lg font-semibold text-white mb-2">
-                        {info.title}
-                      </h3>
-                      
-                      <p className="text-zion-cyan font-medium mb-2">
-                        {info.value}
-                      </p>
-                      
-                      <p className="text-zion-cyan-light text-sm mb-4">
-                        {info.description}
-                      </p>
-                      
-                      {info.action && (
-                        <Button
-                          asChild
-                          className="w-full bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white"
-                        >
-                          <a href={info.action}>
-                            {info.title}
-                          </a>
-                        </Button>
-                      )}
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-<<<<<<< HEAD
-
-
-
-
-}}
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-purple-500/10">
+        <div className="container mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -1661,18 +1141,6 @@ const Privacy: React.FC = () => {
               <a
                 href="/contact"
                 className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-<<<<<<< HEAD
-
-                General Contact
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-}}}}}}
-=======
               >
                 General Contact;
               </a>;
@@ -1681,7 +1149,6 @@ const Privacy: React.FC = () => {
         </div>;
       </section>;
     </div>;
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1718,9 +1185,7 @@ const Privacy: React.FC = () => {
         </section>
       </div>
     </>
->>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
   );
 };
 
 export default Privacy;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

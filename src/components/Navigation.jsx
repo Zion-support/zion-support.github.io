@@ -38,15 +38,8 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
     ];
     const isActive = (href) => {
         if (href === '/') {
-<<<<<<< HEAD
-            return location.pathname === '/';
-
-        return location.pathname.startsWith(href);
-    };
-=======
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<nav className="bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">

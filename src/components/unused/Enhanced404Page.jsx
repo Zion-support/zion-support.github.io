@@ -115,10 +115,6 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
             The page <code className="bg-gray-800 px-2 py-1 rounded text-red-300">{requestedPath}</code> could not be found.
           </motion.p>)}
 
-<<<<<<< HEAD
-        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-          Don't worry! This might be a temporary issue or the page might have been moved.
-=======
         <motion.p initial = {
   { opacity: 0,
   y: 20 
@@ -139,7 +135,6 @@ export const Enhanced404Page = ({ requestedPath, suggestedRoutes = [] }) => {
 
 }} transition={{ delay: 0.6 }} className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
           Don't worry! This might be a temporary issue or the page might have been moved. 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           Let us help you find what you're looking for.
         </motion.p>
 

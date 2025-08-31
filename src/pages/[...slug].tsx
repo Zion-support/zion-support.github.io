@@ -55,14 +55,6 @@ export default function GenericPage(...args[]):  {
         <ul style={{paddingLeft:18}}>
           <li>Micro SaaS solutions tailored to your workflow</li>
           <li>Applied AI: assistants, RAG, and automation</li>
-<<<<<<< HEAD
-          <li>Cloud, DevOps, data, and cybersecurity services</li>
-        </ul>
-        <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>
-      </section>
-    </main>
-  )};
-=======;
           <li>Cloud, DevOps, data, and cybersecurity services</li>;
         </ul>;
         <p style={{marginTop:8}}>Have questions about {title.toLowerCase()}? <Link to="/contact" style={{color:'#2563eb'}}>Contact us</Link>.</p>;
@@ -70,4 +62,3 @@ export default function GenericPage(...args[]):  {
     </main>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

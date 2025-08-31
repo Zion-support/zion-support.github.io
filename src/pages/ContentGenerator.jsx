@@ -11,10 +11,10 @@ import { toast } from "sonner";
 import { Loader2 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { useRouter } from "next/router";
+import { useNavigate } from 'react-router-dom';
 export default function ContentGenerator() {
     const { user, isLoading } = useAuth();
-    const router = useRouter();
+    const router = useNavigate();
     const [contentType, setContentType] = useState('blog');
     const [customPrompt, setCustomPrompt] = useState('');
     const [topic, setTopic] = useState('');
@@ -27,17 +27,9 @@ export default function ContentGenerator() {
     React.useEffect(() => {
         if (!isLoading && !user) {
             toast.error("You must be logged in to access this page");
-<<<<<<< HEAD
-            navigate("/login?redirect=/content-generator");
-
-=======
-<<<<<<< HEAD
-            router.push("/login?redirect=/content-generator")}
-=======
             router("/login?redirect=/content-generator");
+            navigate("/login?redirect=/content-generator");
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [user, isLoading, router]);
     const generateContent = async () => {
         setIsGenerating(true);
@@ -55,45 +47,26 @@ export default function ContentGenerator() {
             if (error)
                 throw error;
             setPreviewContent(data);
-<<<<<<< HEAD
-            toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`);
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error generating content:", error);
-=======
             // // // // // // // console.error("Error generating content:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Failed to generate content. Please try again.");
 
         finally {
             setIsGenerating(false);
 
-=======
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
         catch (error) {
             console.error("Error generating content:", error);
             toast.error("Failed to generate content. Please try again.")}
         finally {
             setIsGenerating(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const sendTestNewsletter = async () => {
         if (!testEmail) {
             toast.error("Please enter a test email address");
-<<<<<<< HEAD
-            return;
-
-        if (!previewContent) {
-            toast.error("Generate newsletter content first");
-            return;
-
-=======
             return}
         if (!previewContent) {
             toast.error("Generate newsletter content first");
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         try {
             const { data, error } = await supabase.functions.invoke('send-newsletter', {
                 body: {
@@ -106,23 +79,13 @@ export default function ContentGenerator() {
             });
             if (error)
                 throw error;
-<<<<<<< HEAD
-            toast.success(`Test newsletter sent to ${testEmail}!`);
-
-        catch (error) {
-<<<<<<< HEAD
-            // // // console.error("Error sending test newsletter:", error);
-=======
             // // // // // // // console.error("Error sending test newsletter:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Failed to send test newsletter. Please try again.");
 
-=======
             toast.success(`Test newsletter sent to ${testEmail}!`)}
         catch (error) {
             console.error("Error sending test newsletter:", error);
             toast.error("Failed to send test newsletter. Please try again.")}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Check if user is still loading
     if (isLoading) {
@@ -131,14 +94,8 @@ export default function ContentGenerator() {
         <div className="min-h-screen bg-zion-blue flex items-center justify-center">
           <div className="animate-pulse text-white">Loading...</div>
         </div>
-<<<<<<< HEAD
-
-      </>);
-
-=======
         
       </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
 
       <div className="min-h-screen bg-zion-blue py-12">
@@ -357,11 +314,5 @@ export default function ContentGenerator() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-</div></div></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

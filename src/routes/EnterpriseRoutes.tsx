@@ -11,12 +11,3 @@ export default function EnterpriseRoutes() {
       {/* Enterprise Routes */}
       <Route path = "/enterprise" element={<EnterprisePlans />} />
       <Route path="/plans/enterprise" element={<EnterprisePlans />} />
-<<<<<<< HEAD
-      <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />
-      <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
-      <Route path="/company/:compSlug" element={<CompWorkspace />} />
-      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
-
-    </Routes>
-  );
-}

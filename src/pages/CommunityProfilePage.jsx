@@ -121,31 +121,14 @@ export default function CommunityProfilePage() {
           <div className="flex justify-center items-center h-64">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>
           </div>
-<<<<<<< HEAD
-        </div>);
-
-=======
         </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!user) {
         return (<div className="container py-8">
           <h1>User not found</h1>
           <Button asChild className="mt-4">
             <Link to="/community">Back to Community</Link>
           </Button>
-<<<<<<< HEAD
-        </div>)}
-    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
-  `community, forum, profile, user profile,
-  ${user.name
-
-}`}/>
-=======
         </div>);
-<<<<<<< HEAD
-
-    return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords={`community, forum, profile, user profile, ${user.name}`}/>
-=======
     }
     return (<SEO title={`${user.name}'s Profile | Community Forum | Zion AI Marketplace`} description={`View ${user.name}'s profile, posts, and contributions in the Zion AI Marketplace community.`} keywords = {
   `community, forum, profile, user profile,
@@ -157,8 +140,6 @@ export default function CommunityProfilePage() {
 
 
 }`}/>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ,
             <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
@@ -300,9 +281,4 @@ export default function CommunityProfilePage() {
             </Tabs>
           </div>
         </div>
-<<<<<<< HEAD
-      </div>);
-</Card></Card></Card></Card></Card></Card></Card>}}}}}
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

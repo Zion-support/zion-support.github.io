@@ -3,35 +3,6 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, BarChart3, MessageSquare, Phone, Mail, Lock, Cpu, HardDrive, Wifi, TrendingUp, DollarSign export default function CloudInfrastructure() {
     const [selectedProvider, setSelectedProvider] = useState('aws');
-<<<<<<< HEAD
-    const cloudProviders = [
-        {
-            id: 'aws',
-            name: 'Amazon Web Services',
-            logo: 'AWS',
-            description: 'Leading cloud platform with comprehensive services',
-            features['EC2, S3, Lambda', 'RDS, DynamoDB', 'CloudFront, Route 53'],
-            icon: Cloud
-        },
-        {
-            id: 'azure',
-            name: 'Microsoft Azure',
-            logo: 'Azure',
-            description: 'Enterprise-grade cloud solutions',
-            features['Virtual Machines', 'Azure SQL', 'App Service, Functions'],
-            icon: Server
-        },
-        {
-            id: 'gcp',
-            name: 'Google Cloud Platform',
-            logo: 'GCP',
-            description: 'Innovative cloud technologies',
-            features['Compute Engine', 'Cloud Storage', 'BigQuery, AI Platform'],
-            icon: Globe
-
-    ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const cloudServices = [
         {
             title: 'Infrastructure as Code',
@@ -67,13 +38,8 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
             title: 'Monitoring & Analytics',
             description: 'Comprehensive monitoring and observability',
             icon: BarChart3,
-<<<<<<< HEAD
-            features: ['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management']
-
-=======
             features['CloudWatch', 'Azure Monitor', 'Stackdriver', 'Log Management']
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const benefits = [
         { title: 'Scalability', description: 'Scale resources up or down based on demand', icon: TrendingUp },
@@ -486,9 +452,4 @@ import { Cloud, Server, Shield, Zap, Database, Globe, ArrowRight, Play, Code, Ba
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

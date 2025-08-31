@@ -174,10 +174,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
                 {" "}Incident Response Platform
               </span>
             </motion.h1>
-<<<<<<< HEAD
-            <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-              Comprehensive incident management platform that uses AI to detect, respond to, and analyze
-=======
             <motion.p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" initial = {
   { opacity: 0,
   y: 20 
@@ -207,7 +203,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 }}>
               Comprehensive incident management platform that uses AI to detect, respond to, and analyze 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               security incidents in real-time, reducing response time and improving resolution quality.
             </motion.p>
 
@@ -563,10 +558,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 }}>
               Join organizations already using our intelligent incident response platform
             </motion.p>
-<<<<<<< HEAD
-
-            <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.4 }}>
-=======
             
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" initial = {
   { opacity: 0,
@@ -596,7 +587,6 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
 
 
 }}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5"/>

@@ -18,11 +18,8 @@ import {
   Target,
   Award,
   CheckCircle
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Service {
 
   id: string;
@@ -36,11 +33,7 @@ icon: React.ComponentType<{ className?: string}>;
   reviews: number;
   color: string;
   popular?: boolean;
-<<<<<<< HEAD
-  link: string;
-=======
   link: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const services: Service[] = [
   {
@@ -163,43 +156,20 @@ const categories = [
   'Healthcare AI';
 ];
 
-<<<<<<< HEAD
-export const EnhancedServiceShowcase: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible(true);
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       },
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('service-showcase');
     if (element) {
-<<<<<<< HEAD
-      observer.observe(element);
-=======
       observer.observe(element)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return () => observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All Services'
     ? services
     : services.filter(service => service.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const renderStars = (rating: number)  => {
     return Array.from({ length: 5 }, (_, i)  => (
@@ -212,7 +182,6 @@ export const EnhancedServiceShowcase: React.FC = () => {;
         }`};
       />;
     ))};
-=======
           i < Math.floor(rating) ;
             ? 'text-yellow-400 fill-current' ;
             : 'text-gray-400';
@@ -220,7 +189,6 @@ export const EnhancedServiceShowcase: React.FC = () => {;
       />;
     ));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -475,23 +443,10 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-};}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

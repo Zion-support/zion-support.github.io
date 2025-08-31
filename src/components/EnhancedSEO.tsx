@@ -1,46 +1,28 @@
-import React, { useEffect, useCallback } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface EnhancedSEOProps {
-  title: string;
-  description: string;
-  keywords?: string[];
+interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
   image?: string;
   url?: string;
-  author?: string;
+  type?: 'website' | 'article' | 'product' | 'service';
   publishedTime?: string;
   modifiedTime?: string;
   author?: string;
   section?: string;
   tags?: string[];
-  structuredData?: object;
-<<<<<<< HEAD
-  canonicalUrl?: string;
   noindex?: boolean;
-  nofollow?: boolean;
-  ogType?: string;
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-  twitterCreator?: string;
-  twitterSite?: string;
-  robots?: string;
-  viewport?: string;
-  charset?: string;
-  themeColor?: string;
-  manifest?: string;
-  appleTouchIcon?: string;
-  favicon?: string;
-  msTileColor?: string;
-  msConfig?: string;
-=======
+  canonical?: string;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const EnhancedSEO: React.FC<SEOProps> = ({
-  title,
-  description,
-  keywords = [],
+  title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
+  description = 'Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
+  keywords = 'AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services',
   image = '/images/zion-tech-group-og.jpg',
-  url = window.location.href,
+  url = 'https://ziontechgroup.com',
   type = 'website',
   image,
   url,
@@ -50,56 +32,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   author = 'Zion Tech Group',
   section,
   tags = [],
-  canonical,
-  noindex = false,
-  nofollow = false,
-  structuredData
-}) => {
-<<<<<<< HEAD
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url || window.location.href;
-  const fullCanonicalUrl = canonicalUrl || fullUrl;
-
-  // Default structured data for Zion Tech Group
-  const defaultStructuredData = useMemo(() => ({
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
-    description: 'AI-Powered Business Solutions and Technology Services',
-    address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'US'
-    },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      email: 'contact@ziontechgroup.com'
-    },
-    sameAs: [
-      'https://twitter.com/ziontechgroup',
-      'https://linkedin.com/company/zion-tech-group',
-      'https://github.com/zion-tech-group'
-    ],
-    offers: {
-      '@type': 'Offer',
-      description: 'AI-Powered Business Solutions',
-      category: 'Technology Services'
-
-  }), []);
-
-  // Merge custom structured data with defaults
-  const finalStructuredData = useMemo(() => {
-    if (structuredData) {
-      return {
-        ...defaultStructuredData,
-        ...structuredData
-      };
-
-    return defaultStructuredData;
-  }, [structuredData, defaultStructuredData]);
-=======
   const defaultKeywords = [
     'AI solutions',
     'cloud computing',
@@ -143,6 +75,21 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/images/zion-logo.png",
     "description": "Leading provider of AI-powered technology solutions, cloud computing, and cybersecurity services.",
+  noindex = false,
+  canonical,
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullUrl = canonical || `${url}${window.location.pathname}`;
+  
+  // Structured data for better SEO
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": type === 'website' ? "Organization" : "Article",
+    "name": "Zion Tech Group",
+    "url": url,
+    "logo": `${url}/images/zion-tech-group-logo.png`,
+    "description": description,
+    "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "123 Tech Street",
@@ -155,15 +102,20 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-555-123-4567",
       "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
+      "url": `${url}/contact`
     },
-<<<<<<< HEAD
-    "sameAs"[
+    "sameAs": [
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
+      "https://github.com/ziontechgroup"
+    ],
+    "serviceType": [
+      "AI Solutions",
+      "Quantum Computing",
+      "Micro SAAS Services",
+      "Digital Transformation",
+      "Technology Consulting"
     ]
-=======
     "sameAs": [
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
@@ -203,34 +155,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       ]
     }
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  // Preload critical resources
-  useEffect(() => {
-    // Preload critical fonts
-    const fontLinks = [
-      'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap'
-    ];
-
-    fontLinks.forEach(href => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'style';
-      link.href = href;
-      document.head.appendChild(link);
-    });
-
-<<<<<<< HEAD
-    return () => {
-      preloadLinks.forEach(link => {
-        const existingLink = document.querySelector(`link[href="${link.href}"]`);
-        if (existingLink) {
-          existingLink.remove();
-
-      });
-    };
-  }, [image]);
-=======
     // Preload critical images
     if (ogImage) {
       const imageLink = document.createElement('link');
@@ -254,33 +179,34 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       document.head.appendChild(link);
     });
   }, [ogImage]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  if (type === 'article') {
+    Object.assign(structuredData, {
+      "@type": "Article",
+      "headline": title,
+      "author": {
+        "@type": "Person",
+        "name": author
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Zion Tech Group",
+        "logo": {
+          "@type": "ImageObject",
+          "url": `${url}/images/zion-tech-group-logo.png`
+        }
+      },
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": fullUrl
+      }
+    });
+  }
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title} | Zion Tech Group</title>
-      <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
-<<<<<<< HEAD
-      <meta name="author" content={author} />
-
-      {/* Canonical URL */}
-      <link rel="canonical" href={fullCanonicalUrl} />
-
-      {/* Robots */}
-      <meta name="robots" content={robots || `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`} />
-
-      {/* Viewport and Charset */}
-      <meta name="viewport" content={viewport} />
-      <meta charSet={charset} />
-
-      {/* Theme Color */}
-      <meta name="theme-color" content={themeColor} />
-
-      {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
-=======
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
 
@@ -289,7 +215,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
 
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <meta property="og:description" content={description} />
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
@@ -297,42 +222,43 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
 
-<<<<<<< HEAD
-      {/* Twitter Cards */}
-=======
       {/* Twitter Card Meta Tags */}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-<<<<<<< HEAD
-      <meta name="twitter:image" content={image} />
-
-      {/* Article specific meta tags */}
-      {type === 'article' && (
-        <>
-          {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-          {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-          {section && <meta property="article:section" content={section} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
-          ))}
-        </>
-      )}
-
-      {/* Icons and Manifest */}
-      <link rel="icon" href={favicon} />
-      <link rel="apple-touch-icon" href={appleTouchIcon} />
-      <link rel="manifest" href={manifest} />
-
-      {/* Microsoft Tiles */}
-      <meta name="msapplication-TileColor" content={msTileColor} />
-      <meta name="msapplication-config" content={msConfig} />
-=======
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
 
       {/* Additional SEO Meta Tags */}
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      <meta name="author" content={author} />
+      
+      {/* Robots */}
+      {noindex && <meta name="robots" content="noindex, nofollow" />}
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={fullUrl} />
+      
+      {/* Open Graph */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={fullUrl} />
+      <meta property="og:image" content={image.startsWith('http') ? image : `${url}${image}`} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content="en_US" />
+      
+      {/* Twitter Card */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image.startsWith('http') ? image : `${url}${image}`} />
+      
+      {/* Additional Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="theme-color" content="#22ddd2" />
       <meta name="msapplication-TileColor" content="#22ddd2" />
@@ -340,31 +266,6 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredDataScript)}
-      </script>
-<<<<<<< HEAD
-
-      {/* Additional SEO optimizations */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
-      {/* Performance hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://cdn.jsdelivr.net" />
-=======
-<<<<<<< HEAD;
-    </Helmet>;
-  )};
-=======
       
       {/* Additional SEO Meta Tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
@@ -374,7 +275,38 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
       ))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     </Helmet>
   );
 };}}}}
+      
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      
+      {/* Manifest */}
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+      
+      {/* Additional SEO Meta Tags */}
+      <meta name="application-name" content="Zion Tech Group" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+      
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      
+      {/* Performance Optimizations */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+    </Helmet>
+  );
+};

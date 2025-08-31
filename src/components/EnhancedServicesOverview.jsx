@@ -26,13 +26,11 @@ const ServiceCategory = ({ category, services }) => {
 
 };
         return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>};
-=======
   
 
 };
         return iconMap[categoryName] || <Briefcase className="w-6 h-6"/>;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getCategoryColor = (categoryName) => {
         const colorMap = {
   'AI & Machine Learning': 'from-purple-500 to-indigo-600',
@@ -51,13 +49,11 @@ const ServiceCategory = ({ category, services }) => {
 
 };
         return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'};
-=======
   
 
 };
         return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     return (<div className="space-y-6">
       <div className="flex items-center space-x-3 mb-6">
         <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(category)}`}>
@@ -343,9 +339,4 @@ export default function EnhancedServicesOverview() {
 
       {/* Contact Section */}
       <ContactSection />
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

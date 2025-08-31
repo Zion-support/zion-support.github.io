@@ -38,13 +38,8 @@ const AIAutonomousBusinessOperations = () => {
         },
         {
             category: "Customer Operations",
-<<<<<<< HEAD
-            capabilities: ["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
-
-=======
             capabilities["Customer service automation", "Support ticket routing", "Feedback analysis", "Customer journey optimization"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {

@@ -96,13 +96,8 @@ const addons = [
         period: "month",
         description: "Comprehensive analytics and reporting suite",
         icon: <Users className="w-6 h-6"/>,
-<<<<<<< HEAD
-        features: ["Custom dashboards", "Advanced reporting", "Data export options"]
-
-=======
         features["Custom dashboards", "Advanced reporting", "Data export options"]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export function PricingSection() {
     const [billingPeriod, setBillingPeriod] = useState('month');
@@ -380,9 +375,4 @@ export function PricingSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

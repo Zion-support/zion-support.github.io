@@ -24,13 +24,8 @@ import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight,
             icon: Shield,
             title: 'Secure & Compliant',
             description: 'Enterprise-grade security with compliance features',
-<<<<<<< HEAD
-            benefits: ['Data encryption', 'Access controls', 'Audit trails']
-
-=======
             benefits['Data encryption', 'Access controls', 'Audit trails']
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const useCases = [
         {
@@ -55,13 +50,8 @@ import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight,
             title: 'Technical Documentation',
             description: 'Provide technical support and documentation assistance',
             icon: Globe,
-<<<<<<< HEAD
-            benefits: ['Reduced support tickets', 'Faster issue resolution', 'Improved user experience']
-
-=======
             benefits['Reduced support tickets', 'Faster issue resolution', 'Improved user experience']
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
       {/* Hero Section */}
@@ -272,9 +262,4 @@ import { Brain, MessageCircle, Zap, Users, Shield, BarChart3, Globe, ArrowRight,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

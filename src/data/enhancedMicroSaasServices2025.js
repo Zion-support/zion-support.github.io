@@ -645,13 +645,6 @@ export const ENHANCED_MICRO_SAAS_SERVICES_2025 = [
 export const SERVICE_PRICING_TIERS = {
   basic: {
     name: "Basic",
-<<<<<<< HEAD
-    features["Core functionality", "Basic support", "Standard integrations", "Community forum"],
-  priceRange: "$19 - $99/month"
-  
-
-},
-=======
     features: ["Core functionality", "Basic support", "Standard integrations", "Community forum"],
   priceRange: "$19 - $99/month"
   
@@ -660,7 +653,6 @@ export const SERVICE_PRICING_TIERS = {
 
 
 },
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   professional: {
     name: "Professional",
     features["Advanced features", "Priority support", "Custom integrations", "API access", "Analytics dashboard"],

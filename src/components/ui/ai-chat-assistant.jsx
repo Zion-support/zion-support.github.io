@@ -1,11 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile import { Button } from './button';
-=======
 import { MessageSquare, Send, Bot, User, X, Minimize2, Maximize2, Mic, MicOff, Settings, Brain, Paperclip, Smile } from 'lucide-react';
 import { Button } from "./button";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AIChatAssistant({ enabled = true, className = "", onMessageSend, onAssistantResponse }) {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
@@ -20,15 +16,9 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             status: 'sent',
             metadata: {
                 confidence: 0.95,
-<<<<<<< HEAD
-                suggestions: ['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
-
-
-=======
                 suggestions['Tell me about your AI services', 'What cloud solutions do you offer?', 'How can I get started?']
             }
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ]);
     const [inputValue, setInputValue] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -42,26 +32,14 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     // Focus input when opened
     useEffect(() => {
         if (isOpen && !isMinimized) {
-<<<<<<< HEAD
-            inputRef.current?.focus();
-
-=======
             inputRef.current?.focus()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isOpen, isMinimized]);
     // Simulate AI typing
     useEffect(() => {
         if (isTyping) {
             const timer = setTimeout(() => {
-<<<<<<< HEAD
-                setIsTyping(false);
-            }, 2000);
-            return () => clearTimeout(timer);
-
-=======
                 setIsTyping(false)}, 2000);
             return () => clearTimeout(timer)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isTyping]);
     // Generate AI response
     const generateAIResponse = (_userMessage) => {
@@ -69,32 +47,9 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
         // Simulate API call delay
         const timer = setTimeout(() => {
             // Mock AI responses based on user input
-<<<<<<< HEAD
-            const responses = [
-                {
-                    content: "That's a great question! Zion Tech Group specializes in cutting-edge AI solutions that can transform your business operations. Our AI services include machine learning models, natural language processing, and predictive analytics.",
-                    suggestions['Tell me more about AI pricing', 'What industries do you serve?', 'Can you provide a demo?']
-                },
-                {
-                    content: "Our cloud solutions are designed for scalability and security. We offer AWS, Azure, and Google Cloud expertise with custom migration strategies and cost optimization.",
-                    suggestions['What about security?', 'How long does migration take?', 'Do you provide 24/7 support?']
-                },
-                {
-                    content: "Cybersecurity is our top priority. We implement enterprise-grade security measures including threat detection, data encryption, and compliance management.",
-                    suggestions['What compliance standards?', 'How do you handle breaches?', 'Security audit process?']
-                },
-                {
-                    content: "Getting started is easy! We begin with a free consultation to understand your needs, then create a customized roadmap for your digital transformation journey.",
-<<<<<<< HEAD
-                    suggestions: ['Schedule consultation', 'View case studies', 'Meet the team']
-
-=======
                     suggestions['Schedule consultation', 'View case studies', 'Meet the team']
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ];
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const randomResponse = responses[Math.floor(Math.random() * responses.length)];
             const aiMessage = {
   id: Date.now().toString(),
@@ -104,10 +59,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                 status: 'sent',
                 metadata: {
                     confidence: 0.85 + Math.random() * 0.1,
-<<<<<<< HEAD
-                    suggestions: randomResponse.suggestions
-
-=======
   suggestions: randomResponse.suggestions
                 
 
@@ -117,7 +68,6 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             };
             setMessages(prev => [...prev, aiMessage]);
             setIsTyping(false);
@@ -149,12 +99,7 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
     const handleKeyPress = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             e.preventDefault();
-<<<<<<< HEAD
-            sendMessage();
-
-=======
             sendMessage()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Toggle voice input
     const toggleVoiceInput = () => {
@@ -403,13 +348,8 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     </Button>
 
                     <div className="flex-1 relative">
-<<<<<<< HEAD
-                        <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me anything..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
-
-=======
                         <input ref={inputRef} value={inputValue} onChange={(e) => setInputValue(e.target.value)} onKeyPress={handleKeyPress} placeholder="Ask me thing..." className="w-full px-4 py-3 bg-zion-blue/20 border border-zion-blue-light/30 text-white placeholder-zinc-400 pr-20 rounded-lg focus:outline-none focus:border-zion-cyan/50 transition-colors duration-200" disabled={isTyping}/>
                         
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         {/* Voice input indicator */}
                         {isRecording && (<div className="absolute right-3 top-1/2 transform -translate-y-1/2">
                             <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"/>
@@ -435,9 +375,4 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
             </motion.div>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </div>);
-</div></div></div></div></div></div></div>}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

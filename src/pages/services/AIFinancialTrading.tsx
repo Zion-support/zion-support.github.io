@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, DollarSign, BarChart3 export default function AIFinancialTrading() {
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -39,7 +36,6 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIFinancialTrading() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -63,23 +59,6 @@ export default function AIFinancialTrading() {
     }
   ];
 
-<<<<<<< HEAD
-  const tiers = [
-    {
-      name: 'Individual Trader',
-      price: '$299/mo',
-      details: ['Up to $100k portfolio', 'Basic AI analysis', 'Standard reports', 'Email support']
-    },
-    {
-      name: 'Professional Trader',
-      price: '$799/mo',
-      details: ['Up to $1M portfolio', 'Advanced AI features', 'Custom strategies', 'Priority support']
-    },
-    {
-      name: 'Institutional',
-      price: '$2,499/mo',
-      details: ['Unlimited portfolio size', 'Custom AI models', 'Full platform integration', '24/7 dedicated support']
-=======
   const tradingStrategies = [
     {
       name: "Momentum Trading",
@@ -101,7 +80,6 @@ export default function AIFinancialTrading() {
       successRate: "82.7%",
       avgReturn: "15.8%",
       icon: BarChart
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     },
     {
       name: "Sentiment Analysis",

@@ -1,18 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
-import { Badge } from './ui/badge';
-import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Check, X, Star, Clock, Phone, Mail import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
-=======
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import { COMPREHENSIVE_SERVICES, CONTACT_INFO } from '@/data/comprehensiveServices';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function ServicesComparisonTable() {
     const serviceCategories = ['AI Services', 'IT Services', 'Micro SAAS'];
     const getFeatureIcon = (hasFeature) => {
@@ -194,9 +186,4 @@ export function ServicesComparisonTable() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

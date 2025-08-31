@@ -23,13 +23,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "AI Workflow Automation",
                     description: "Streamline business processes with intelligent automation",
                     href: "/services/ai-workflow-automation",
-<<<<<<< HEAD
-                    features: ["Process Optimization", "Error Reduction", "Efficiency Gains"]
-
-=======
                     features["Process Optimization", "Error Reduction", "Efficiency Gains"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -52,13 +47,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "Digital Transformation",
                     description: "End-to-end digital transformation consulting and implementation",
                     href: "/services/transformation",
-<<<<<<< HEAD
-                    features: ["Strategy Development", "Technology Selection", "Change Management"]
-
-=======
                     features["Strategy Development", "Technology Selection", "Change Management"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -81,13 +71,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "Zero Trust Architecture",
                     description: "Modern zero trust security implementation",
                     href: "/zero-trust-network-architecture",
-<<<<<<< HEAD
-                    features: ["Identity Verification", "Access Control", "Continuous Monitoring"]
-
-=======
                     features["Identity Verification", "Access Control", "Continuous Monitoring"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -110,13 +95,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise-grade 5G network optimization",
                     href: "/5g-enterprise-solutions",
-<<<<<<< HEAD
-                    features: ["Network Optimization", "Edge Computing", "IoT Integration"]
-
-=======
                     features["Network Optimization", "Edge Computing", "IoT Integration"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -139,13 +119,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "Micro SAAS Services",
                     description: "Specialized software-as-a-service solutions",
                     href: "/micro-saas-services",
-<<<<<<< HEAD
-                    features: ["Custom Development", "Scalable Architecture", "API Integration"]
-
-=======
                     features["Custom Development", "Scalable Architecture", "API Integration"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
 
     ];
@@ -307,11 +282,6 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ServicesShowcase;
 }}}}}}}}}}}

@@ -20,13 +20,8 @@ const ResearchDevelopment = () => {
         {
             title: "Cloud & Edge Computing",
             description: "Innovating distributed computing architectures and edge intelligence solutions.",
-<<<<<<< HEAD
-            focus: ["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
-
-=======
             focus["Edge AI", "Distributed Systems", "5G Networks", "IoT Integration"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">

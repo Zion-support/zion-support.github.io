@@ -22,13 +22,9 @@ import {
   DollarSign,
   Factory,
   ShoppingCart
-<<<<<<< HEAD
-export default function AIServices() {
-=======
  } from 'lucide-react';
 
 export default function AIServices(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
@@ -75,15 +71,6 @@ export default function AIServices(...args[]):  {
       icon: Cloud,
       features[
         "ML pipeline automation",
-<<<<<<< HEAD
-        "Model versioning and deployment",
-        "Scalable training infrastructure",
-        "Monitoring and alerting systems"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-
-=======
         "Model versioning and deployment",;
         "Scalable training infrastructure",;
         "Monitoring and alerting systems";
@@ -91,7 +78,6 @@ export default function AIServices(...args[]):  {
       price: "From $6,000",;
       duration: "4-10 weeks";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const aiTechnologies = [;
@@ -119,23 +105,12 @@ export default function AIServices(...args[]):  {
       applications["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
-<<<<<<< HEAD
-    {
-      industry: "Retail",
-      applications["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
-      icon: ShoppingCart
-<<<<<<< HEAD
-
-=======
     };
-=======;
     {;
       industry: "Retail",;
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
       icon: ShoppingCart;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -322,23 +297,10 @@ export default function AIServices(...args[]):  {
 
                 Explore All Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div></div></div>}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

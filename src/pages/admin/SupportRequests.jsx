@@ -6,12 +6,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { Search, Filter import { SEO } from "@/components/SEO";
-=======
 import { Search, Filter } from "lucide-react";
 import SEO from "@/components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
     {
@@ -104,24 +100,6 @@ export default function SupportRequests() {
             !request.issue.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
             !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
-<<<<<<< HEAD
-            return false;
-
-        // Apply status filter
-        if (statusFilter && request.status !== statusFilter) {
-            return false;
-
-        // Apply priority filter
-        if (priorityFilter && request.priority !== priorityFilter) {
-            return false;
-
-        // Apply category filter
-        if (categoryFilter && request.category !== categoryFilter) {
-            return false;
-
-        return true;
-    });
-=======
             return false}
         // Apply status filter
         if (statusFilter && request.status !== statusFilter) {
@@ -133,7 +111,6 @@ export default function SupportRequests() {
         if (categoryFilter && request.category !== categoryFilter) {
             return false}
         return true});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Count by status for the summary dashboard
     const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
     const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
@@ -336,9 +313,4 @@ export default function SupportRequests() {
             </div>
           </TabsContent>
         </Tabs>
-<<<<<<< HEAD
-      </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

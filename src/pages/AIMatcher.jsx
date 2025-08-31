@@ -121,27 +121,9 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
             icon: Users
 
     ];
-<<<<<<< HEAD
-    const handleAnswer = (questionId, answer) => {
-        setAnswers(prev => ({ ...prev, [questionId]: answer }));
-    };
-    const handleNext = () => {
-        if (currentStep < questions.length) {
-            setCurrentStep(currentStep + 1);
-
-        else {
-            generateRecommendations();
-
-    };
-    const handlePrevious = () => {
-        if (currentStep > 1) {
-            setCurrentStep(currentStep - 1);
-
-=======
     const handlePrevious = () => {
         if (currentStep > 1) {
             setCurrentStep(currentStep - 1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const generateRecommendations = () => {
         // Simple recommendation logic based on answers
@@ -151,24 +133,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
         let filteredSolutions = aiSolutions;
         // Filter based on industry
         if (industry === 'Healthcare & Life Sciences') {
-<<<<<<< HEAD
-            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights');
-
-        else if (industry === 'Financial Services') {
-            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights');
-
-        // Filter based on company size
-        if (companySize === 'Startup (1-50 employees)') {
-            filteredSolutions = filteredSolutions.filter(s => s.name.includes('Micro') || s.name.includes('Workflow'));
-
-        // Filter based on goals
-        if (goals === 'Automate repetitive tasks') {
-            filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation');
-
-        else if (goals === 'Improve customer experience') {
-            filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience');
-
-=======
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Healthcare') || s.category === 'Analytics & Insights')}
         else if (industry === 'Financial Services') {
             filteredSolutions = filteredSolutions.filter(s => s.name.includes('Financial') || s.category === 'Analytics & Insights')}
@@ -180,19 +144,12 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Process Automation')}
         else if (goals === 'Improve customer experience') {
             filteredSolutions = filteredSolutions.filter(s => s.category === 'Customer Experience')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setRecommendations(filteredSolutions.slice(0, 3));
         setCurrentStep(questions.length + 1)};
     const resetQuiz = () => {
         setCurrentStep(1);
-<<<<<<< HEAD
-        setAnswers({ /* empty */ });
-        setRecommendations([]);
-    };
-=======
         setAnswers({});
         setRecommendations([])};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const progressPercentage = (currentStep / questions.length) * 100;
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -454,11 +411,6 @@ import { Brain, Target, Zap, TrendingUp, Users, Cloud, CheckCircle, ArrowRight c
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AIMatcher;
 }}}}}}}}}}}

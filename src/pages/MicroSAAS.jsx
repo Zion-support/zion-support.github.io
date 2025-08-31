@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const MicroSAAS = () => {
     const microSaasServices = [
         {
@@ -20,13 +20,8 @@ const MicroSAAS = () => {
         {
             title: "SOC2 Compliance Automation",
             description: "Streamlined SOC2 compliance process with automated documentation and monitoring.",
-<<<<<<< HEAD
-            features: ["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
-
-=======
             features["Automated Audits", "Documentation Management", "Risk Assessment", "Compliance Reporting"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">

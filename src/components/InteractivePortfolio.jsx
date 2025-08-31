@@ -88,13 +88,8 @@ import { ExternalLink, Github, Eye, X, ChevronLeft, ChevronRight, Star, Users, C
         users: 2800,
         completionDate: '2024-06',
         featured: true,
-<<<<<<< HEAD
-        tags: ['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
-
-=======
         tags['Cybersecurity', 'Threat Detection', 'Machine Learning', 'Real-time']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 const categories = ['All', 'AI & ML', 'Web3', 'Data Science', 'Mobile', 'IoT', 'Security'];
 export function InteractivePortfolio() {
@@ -119,23 +114,6 @@ export function InteractivePortfolio() {
     };
     const prevImage = () => {
         if (selectedProject) {
-<<<<<<< HEAD
-            setCurrentImageIndex((prev) => (prev - 1 + 1) % 1);
-
-    };
-    const handleKeyPress = (e) => {
-        if (e.key === 'Escape') {
-            closeModal();
-
-    };
-    useEffect(() => {
-        if (isModalOpen) {
-            document.body.style.overflow = 'hidden';
-
-        else {
-            document.body.style.overflow = 'unset';
-
-=======
             setCurrentImageIndex((prev) => (prev - 1 + 1) % 1)}
     };
     const handleKeyPress = (e) => {
@@ -147,7 +125,6 @@ export function InteractivePortfolio() {
             document.body.style.overflow = 'hidden'}
         else {
             document.body.style.overflow = 'unset'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return () => {
             document.body.style.overflow = 'unset'}}, [isModalOpen]);
     return (<section className="py-16 bg-gradient-to-br from-zion-slate-light/5 to-zion-blue-light/5">
@@ -364,9 +341,4 @@ export function InteractivePortfolio() {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </section>);
-</div></div></div>}}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

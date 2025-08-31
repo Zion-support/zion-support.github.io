@@ -16,18 +16,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
       price: '$299/mo',
       details: ['Up to 5 predictive models', '10GB data processing', 'Basic ML algorithms', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Professional',
-      price: '$799/mo',
-      details: ['Up to 20 predictive models', '100GB data processing', 'Advanced ML algorithms', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,999/mo',
-      details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support']
-    },
-=======
     { 
       name: 'Professional', 
       price: '$799/mo', 
@@ -38,7 +26,6 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
       price: '$1,999/mo', ;
       details: ['Unlimited models', 'Unlimited data', 'Custom ML algorithms', '24/7 dedicated support'] ;
     },;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;

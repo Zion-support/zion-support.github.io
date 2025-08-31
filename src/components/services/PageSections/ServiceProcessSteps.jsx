@@ -112,7 +112,6 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
 
 };
     return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200'};
-=======
   indigo: 'bg-indigo-100 text-indigo-600 border-indigo-200'
     
 
@@ -122,7 +121,6 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
 };
     return colorMap[color] || 'bg-gray-100 text-gray-600 border-gray-200';
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const gradientMap = {
   blue: 'from-blue-500 to-blue-600',
@@ -136,7 +134,6 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
 
 };
     return gradientMap[color] || 'from-gray-500 to-gray-600'};
-=======
   indigo: 'from-indigo-500 to-indigo-600'
     
 
@@ -146,7 +143,6 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
 };
     return gradientMap[color] || 'from-gray-500 to-gray-600';
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -323,9 +319,4 @@ import { ClipboardList, Search, Settings, CheckCircle, Users, Headphones, FileTe
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

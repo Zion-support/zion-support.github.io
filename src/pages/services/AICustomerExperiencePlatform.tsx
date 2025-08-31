@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, MessageCircle, Users, Zap, Star, Shield export default function AICustomerExperiencePlatform() {
-=======
 import React from 'react.ts';
 import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
@@ -32,7 +29,6 @@ import { Users,
  } from 'lucide-react';
 
 export default function AICustomerExperiencePlatform(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',;
@@ -44,23 +40,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Integration with major CRM and marketing platforms';
   ];
 
-<<<<<<< HEAD
-  const tiers = [
-    {
-      name: 'Growth',
-      price: '$399/mo',
-      details: ['Up to 10,000 interactions/month', '5 team members', 'Basic AI features', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$899/mo',
-      details: ['Up to 100,000 interactions/month', '25 team members', 'Advanced AI features', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$2,499/mo',
-      details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support']
-=======
   const services = [
     {
       title: 'Customer Experience Assessment',
@@ -74,53 +53,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       price: 'From $12,000',
       features['Platform setup', 'AI model training', 'Integration configuration', 'Team training']
     },
-<<<<<<< HEAD
-    {
-      title: 'Ongoing Optimization',
-      description: 'Continuous improvement and optimization of customer experience',
-      price: 'From $3,500/month',
-      features['Performance monitoring', 'AI model updates', 'Journey optimization', 'Analytics reports']
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    },
-    {
-      title: 'Enterprise CX Suite',
-      description: 'Complete enterprise customer experience management with advanced AI capabilities',
-      price: 'From $20,000',
-      features['Multi-brand management', 'Advanced AI models', 'Custom integrations', '24/7 support'];
-    };
-  ];
-
-  const useCases = [
-    {
-      title: 'E-commerce Personalization',
-      description: 'Personalized product recommendations and shopping experiences',
-      benefits['Increase conversion rates by 35%', 'Improve customer retention', 'Boost average order value']
-    },
-    {
-      title: 'Customer Support Enhancement',
-      description: 'AI-powered support with intelligent routing and automated responses',
-      benefits['Reduce response time by 60%', 'Improve first-call resolution', 'Enhance customer satisfaction']
-    },
-    {
-      title: 'Marketing Campaign Optimization',
-      description: 'Data-driven marketing with personalized messaging and targeting',
-      benefits['Increase campaign ROI by 45%', 'Improve engagement rates', 'Reduce customer churn']
-    },
-    {
-      title: 'Product Development Insights',
-      description: 'Customer feedback analysis and product improvement recommendations',
-      benefits['Faster product iteration', 'Better feature prioritization', 'Improved market fit'];
-    };
-  ];
-
-  const technologies = [
-    { name: 'Machine Learning', description: 'Advanced ML algorithms for customer behavior analysis' },
-    { name: 'Natural Language Processing', description: 'Intelligent text and voice interaction processing' },
-    { name: 'Predictive Analytics', description: 'Forecast customer needs and behavior patterns' },
-    { name: 'Real-time Processing', description: 'Instant customer interaction analysis and response' },
-    { name: 'API Integration', description: 'Seamless integration with existing business systems' },
-    { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud-based platform' };
-=======;
     { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
@@ -135,7 +67,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
     'Healthcare patient experience improvement',;
     'Retail customer satisfaction enhancement',;
     'B2B customer relationship management';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const benefits = [;
@@ -485,139 +416,6 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
-        </div>
-      </section>
-
-      {/* Technologies Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced AI Technologies
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built on cutting-edge AI and machine learning technologies for exceptional customer experiences
-            </p>
-          </motion.div>
-
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
-              >
-                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
-                <p className="text-gray-300">{tech.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12 text-center"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Experience?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
-              Join hundreds of businesses that have revolutionized their customer experience with AI-powered personalization and insights
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="https://ziontechgroup.com/contact" 
-                className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                Start CX Transformation
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a 
-                href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call +1 302 464 0950
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-16 bg-gradient-to-r from-slate-800 to-slate-700">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-purple-400 hover:text-purple-300">
-                +1 302 464 0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-400 hover:text-purple-300">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Globe className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Website</h3>
-              <a href="https://ziontechgroup.com" className="text-purple-400 hover:text-purple-300 flex items-center gap-2">
-                ziontechgroup.com
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )}
-=======;
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
@@ -625,9 +423,4 @@ export default function AICustomerExperiencePlatform(...args[]):  {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

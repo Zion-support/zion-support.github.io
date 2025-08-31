@@ -19,72 +19,28 @@ const EnhancedAccessibility = () => {
             try {
                 const parsed = JSON.parse(savedSettings);
                 setSettings(prev => ({ ...prev, ...parsed }));
-<<<<<<< HEAD
-                applySettings({ ...settings, ...parsed });
-
-            catch (error) {
-<<<<<<< HEAD
-                // // // console.warn('Failed to load accessibility settings:', error);
-
-
-=======
                 // // // // // // // console.warn('Failed to load accessibility settings:', error);
             }
-=======
                 applySettings({ ...settings, ...parsed })}
             catch (error) {
                 console.warn('Failed to load accessibility settings:', error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
         // Check for user preferences
         const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
         if (prefersReducedMotion) {
-<<<<<<< HEAD
-            setSettings(prev => ({ ...prev, reducedMotion: true }));
-
-=======
             setSettings(prev => ({ ...prev, reducedMotion: true }))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, []);
     const applySettings = (newSettings) => {
         const root = document.documentElement;
         // High contrast mode
         if (newSettings.highContrast) {
-<<<<<<< HEAD
-            root.classList.add('high-contrast');
-
-        else {
-            root.classList.remove('high-contrast');
-
-=======
             root.classList.add('high-contrast')}
         else {
             root.classList.remove('high-contrast')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Font size
         root.style.setProperty('--font-size-multiplier', (newSettings.fontSize / 16).toString());
         // Reduced motion
         if (newSettings.reducedMotion) {
-<<<<<<< HEAD
-            root.classList.add('reduced-motion');
-
-        else {
-            root.classList.remove('reduced-motion');
-
-        // Color blindness filters
-        root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
-        if (newSettings.colorBlindness !== 'none') {
-            root.classList.add(newSettings.colorBlindness);
-
-        // Focus indicators
-        if (newSettings.focusIndicator) {
-            root.classList.add('show-focus-indicator');
-
-        else {
-            root.classList.remove('show-focus-indicator');
-
-=======
             root.classList.add('reduced-motion')}
         else {
             root.classList.remove('reduced-motion')}
@@ -97,7 +53,6 @@ const EnhancedAccessibility = () => {
             root.classList.add('show-focus-indicator')}
         else {
             root.classList.remove('show-focus-indicator')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Save to localStorage
         localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
     const updateSetting = (key, value) => {
@@ -145,12 +100,7 @@ const EnhancedAccessibility = () => {
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.rate = 0.9;
             utterance.pitch = 1;
-<<<<<<< HEAD
-            speechSynthesis.speak(utterance);
-
-=======
             speechSynthesis.speak(utterance)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const announcePageChange = (pageName) => {
         speakText(`Navigated to ${pageName}`)};
@@ -381,11 +331,6 @@ const EnhancedAccessibility = () => {
 
       {/* Backdrop */}
       {isOpen && (<div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} aria-hidden="true"/>)}
-<<<<<<< HEAD
-    </>);
-</div></div>};
-=======
     </>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default EnhancedAccessibility;
 }}}}}}}}}}}}

@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from '@/components/SEO';
-import { motion  } from 'framer-motion.ts';
-import { TrendingUp, Users, Target, BarChart3, Shield, Zap, Globe, Clock, CheckCircle, Star, ArrowRight, Phone, Mail, ExternalLink  } from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -37,13 +31,8 @@ import {
   Calendar,
   AlertTriangle,
   Star
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-=======
 } from 'lucide-react';
 import { SEO } from "../../components/SEO";
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   const features = [
@@ -60,15 +49,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     {
       icon: Users,
       title: 'Behavioral Analytics',
-<<<<<<< HEAD
-      description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.'
-    },
-    {
-      icon: Zap,
-      title: 'Automated Alerts',
-      description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.'
-
-=======
       description: 'Deep analysis of customer behavior patterns, usage trends, and interaction history to predict future actions.';
     },;
     {;
@@ -76,7 +56,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       title: 'Automated Alerts',;
       description: 'Intelligent notification system that alerts your team to at-risk customers and opportunities before they become critical.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const capabilities = [
@@ -97,15 +76,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       description: 'AI-driven recommendations for customer success actions',
       icon: Zap,
       benefits: ['Actionable insights', 'Timing optimization', 'Resource allocation', 'Success probability']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Integration Hub',
-      description: 'Seamless integration with your existing CRM, support, and analytics tools',
-      icon: Database,
-      benefits: ['API-first design', 'Real-time sync', 'Custom connectors', 'Data validation']
-
-=======
     },;
     {;
       title: 'Integration Hub',;
@@ -113,7 +83,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       icon: Database,;
       benefits: ['API-first design', 'Real-time sync', 'Custom connectors', 'Data validation'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -134,15 +103,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       description: 'Predict loan defaults, identify high-value customers, and optimize product recommendations',
       icon: DollarSign,
       metrics: ['Default Risk Score', 'Customer Value', 'Product Adoption', 'Risk Mitigation']
-<<<<<<< HEAD
-    },
-    {
-      industry: 'Healthcare',
-      description: 'Predict patient outcomes, optimize care plans, and improve treatment adherence',
-      icon: Heart,
-      metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization']
-
-=======
     },;
     {;
       industry: 'Healthcare',;
@@ -150,7 +110,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       icon: Heart,;
       metrics: ['Patient Outcomes', 'Treatment Adherence', 'Care Plan Success', 'Resource Optimization'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -167,15 +126,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
     {
       icon: Users,
       title: 'Improve Customer Satisfaction',
-<<<<<<< HEAD
-      description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.'
-    },
-    {
-      icon: Zap,
-      title: 'Optimize Resource Allocation',
-      description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'
-
-=======
       description: 'Proactive customer success management leads to 30% higher satisfaction scores and NPS ratings.';
     },;
     {;
@@ -183,7 +133,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
       title: 'Optimize Resource Allocation',;
       description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricing = [
@@ -227,20 +176,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
         'Unlimited customers',
         'Custom AI models',
         'White-label solution',
-<<<<<<< HEAD
-        'Dedicated support',
-        'Custom development',
-        'Advanced security'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
-=======
         'Dedicated support',;
         'Custom development',;
         'Advanced security';
@@ -276,7 +211,6 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Customer Success Prediction Platform | Zion Tech Group"
         description="Predict customer churn, identify upsell opportunities, and optimize customer success with our AI-powered prediction platform. 95%+ accuracy in customer behavior forecasting."
         keywords="AI customer success, churn prediction, customer analytics, predictive analytics, customer retention, upsell optimization"
@@ -1009,25 +943,10 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {
                 Middletown DE 19709
               </p>
               <p className="text-sm text-slate-400 mt-2">Global remote support available</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-
-export default AICustomerSuccessPrediction;
-=======
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -30,25 +30,14 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
                 setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided
 
             else {
-<<<<<<< HEAD
-                setDisplayGuestMessages(storedGuestMessages);
-
-
-=======
                 setDisplayGuestMessages(storedGuestMessages)}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isGuest, initialMessages, storedGuestMessages, setStoredGuestMessages, recipient.id]);
     // Effect for logged-in user messages
     useEffect(() => {
         if (!isGuest) {
             // Update state if initialMessages prop changes (e.g. new conversation loaded)
-<<<<<<< HEAD
-            setLoggedInMessages(initialMessages);
-
-=======
             setLoggedInMessages(initialMessages)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isGuest, initialMessages, recipient.id]);
     // Determine currentMessages and setCurrentMessages based on isGuest
     const currentMessages = isGuest ? displayGuestMessages : loggedInMessages;
@@ -60,22 +49,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
 
         else {
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
-<<<<<<< HEAD
-            setLoggedInMessages(newMessages);
-
-=======
             setLoggedInMessages(newMessages)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 3000);
     useEffect(() => {
         if (debouncedApiCallParams) {
-<<<<<<< HEAD
-            onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId);
-
-=======
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [debouncedApiCallParams, onSendMessage]);
     useEffect(() => {
         scrollToBottom()}, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state
@@ -99,19 +78,10 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
 
 };
             setCurrentMessages((prev) => [...prev, newMessage]);
-<<<<<<< HEAD
-            setPendingApiCallParams({ message: messageContent, conversationId });
-
-        else { // Guest user
-            setGuestMessage(messageContent);
-            setShowGuestModal(true);
-
-=======
             setPendingApiCallParams({ message: messageContent, conversationId })}
         else { // Guest user
             setGuestMessage(messageContent);
             setShowGuestModal(true)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const handleModalSendConfirm = () => {
         if (!guestMessage)
@@ -142,12 +112,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         const handleKey = (e) => {
             if (e.key === 'Escape') {
                 e.preventDefault();
-<<<<<<< HEAD
-                handleModalCancel();
-
-=======
                 handleModalCancel()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;
         document.addEventListener('keydown', handleKey);
@@ -160,12 +125,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') {
                 e.preventDefault();
-<<<<<<< HEAD
-                onClose();
-
-=======
                 onClose()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('keydown', handleKeyDown);
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]);
@@ -229,9 +189,4 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-</div>}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

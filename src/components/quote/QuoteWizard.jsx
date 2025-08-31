@@ -17,12 +17,7 @@ function StepIndicator({ step }) {
       <div className="h-1 bg-zion-blue-light rounded">
         <div className="h-1 bg-zion-purple rounded" style={{ width: `${progress}%` }}/>
       </div>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function QuoteWizard({ category }) {
     const [step, setStep] = useState(1);
     const [selectedItemId, setSelectedItemId] = useState(null);
@@ -36,12 +31,7 @@ export function QuoteWizard({ category }) {
             toast({
                 title: 'Unable to load services',
                 variant: 'destructive'
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [delayedError, toast]);
     // Use isLoading from SWR for a more direct loading state
     const loading = isLoading;
@@ -59,12 +49,7 @@ export function QuoteWizard({ category }) {
                 : category === 'talent'
                     ? 'talent'
                     : 'item'} to continue.`);
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setSelectionError('');
         setStep(2)};
     const handleSubmit = async () => {
@@ -87,12 +72,7 @@ export function QuoteWizard({ category }) {
                 break;
             default:
                 payload.item_id = selectedItemId;
-<<<<<<< HEAD
-                payload.category = category;
-
-=======
                 payload.category = category}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -126,12 +106,7 @@ export function QuoteWizard({ category }) {
             {data.map((item) => (<Card data-testid={`item-card-${item.id}`} key={item.id} className={`p-4 space-y-2 cursor-pointer border-2 transition-colors rounded-lg shadow-sm ${selectedItemId === item.id ? 'border-zion-purple ring-2 ring-zion-purple' : 'hover:border-zion-purple/70'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple`} onClick={() => setSelectedItemId(item.id)} tabIndex={0} onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault();
-<<<<<<< HEAD
-                            setSelectedItemId(item.id);
-
-=======
                             setSelectedItemId(item.id)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     }}>
                 <div className="font-semibold text-lg">{item.name}</div>
                 {/* Display other relevant info like price if available */}
@@ -151,12 +126,7 @@ export function QuoteWizard({ category }) {
         <Button onClick={handleContinue} disabled={loading || !!delayedError || !selectedItemId} className="mt-6">
           Continue
         </Button>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (step === 2) {
         return (<div data-testid="details-step" className="space-y-4">
         <StepIndicator step={step}/>
@@ -171,12 +141,7 @@ export function QuoteWizard({ category }) {
           <Button variant="outline" onClick={() => setStep(1)}>Back</Button>
           <Button onClick={handleSubmit} disabled={!selectedItemId}>Submit Quote</Button>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (step === 3) {
         return (<div data-testid="success-step" className="space-y-4 text-center py-12">
         <StepIndicator step={step}/>
@@ -190,12 +155,5 @@ export function QuoteWizard({ category }) {
                 setMessage('')}}>
           Request Another Quote
         </Button>
-<<<<<<< HEAD
-      </div>);
-
-    return null;
-</div>}}}}}}}}}
-=======
       </div>)}
     return null}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

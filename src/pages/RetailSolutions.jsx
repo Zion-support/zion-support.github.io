@@ -25,118 +25,12 @@ import {
   Tag,
   Brain,
   Code
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const retailSolutions = [
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description: "Complete online shopping experience with advanced features and seamless user experience.",
-    icon: ShoppingCart,
-    features[
-      "Multi-channel sales",
-      "Inventory management",
-      "Payment processing",
-      "Order fulfillment"
-    ],
-    price: "From $30,000",
-    timeline: "12-20 weeks",
-    category: "E-commerce",
-    integrations["Shopify", "WooCommerce", "Magento", "Payment Gateways"]
-  },
-  {
-    id: 2,
-    title: "Mobile Shopping App",
-    description: "Native mobile applications that provide seamless shopping experience on iOS and Android.",
-    icon: Smartphone,
-    features[
-      "Native app development",
-      "Push notifications",
-      "Offline functionality",
-      "App store optimization"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Mobile Development",
-    integrations["iOS", "Android", "Cross-platform", "React Native"]
-  },
-  {
-    id: 3,
-    title: "Point of Sale (POS) System",
-    description: "Modern POS solutions that streamline in-store operations and customer service.",
-    icon: CreditCard,
-    features[
-      "Payment processing",
-      "Inventory tracking",
-      "Customer management",
-      "Sales reporting"
-    ],
-    price: "From $20,000",
-    timeline: "8-14 weeks",
-    category: "POS Systems",
-    integrations["Payment Processors", "Accounting Software", "CRM Systems"]
-  },
-  {
-    id: 4,
-    title: "Customer Analytics Platform",
-    description: "Data-driven insights to understand customer behavior and optimize retail strategies.",
-    icon: BarChart3,
-    features[
-      "Customer segmentation",
-      "Purchase patterns",
-      "Predictive analytics",
-      "Real-time reporting"
-    ],
-    price: "From $35,000",
-    timeline: "12-18 weeks",
-    category: "Analytics",
-    integrations["Google Analytics", "Facebook Pixel", "CRM Systems", "Marketing Tools"]
-  },
-  {
-    id: 5,
-    title: "Inventory Management System",
-    description: "Comprehensive inventory tracking and management across all sales channels.",
-    icon: Package,
-    features[
-      "Real-time tracking",
-      "Automated reordering",
-      "Multi-location support",
-      "Supplier management"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Inventory",
-    integrations["ERP Systems", "Accounting Software", "Shipping Providers"]
-  },
-  {
-    id: 6,
-    title: "Omnichannel Retail Platform",
-    description: "Unified platform that connects online and offline retail experiences seamlessly.",
-    icon: Store,
-    features[
-      "Channel integration",
-      "Unified inventory",
-      "Customer experience",
-      "Data synchronization"
-    ],
-    price: "From $50,000",
-    timeline: "16-24 weeks",
-    category: "Platform Solutions",
-<<<<<<< HEAD
-    integrations: ["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
-
-=======
     integrations["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const retailTrends = [
   {
     title: "AI-Powered Personalization",
@@ -806,9 +700,4 @@ export default function RetailSolutions() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

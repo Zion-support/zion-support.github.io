@@ -330,9 +330,4 @@ import { Check, X, Star, Shield, Clock, Users, FileText, Award, Zap, Globe expor
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

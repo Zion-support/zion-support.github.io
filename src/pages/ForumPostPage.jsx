@@ -135,24 +135,14 @@ export default function ForumPostPage() {
         <Button asChild className="mt-4">
           <Link to="/community">Back to Community</Link>
         </Button>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const handleUpvote = () => {
         if (!user) {
             toast({
                 title: "Authentication required",
                 description: "Please sign in to vote on posts",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setPost({ ...post, upvotes: post.upvotes + 1 });
         toast({
             title: "Vote recorded",
@@ -164,12 +154,7 @@ export default function ForumPostPage() {
                 title: "Authentication required",
                 description: "Please sign in to vote on posts",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setPost({ ...post, downvotes: post.downvotes + 1 });
         toast({
             title: "Vote recorded",
@@ -181,12 +166,7 @@ export default function ForumPostPage() {
                 title: "Authentication required",
                 description: "Please sign in to reply",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Create a new reply
         const newReply = {
             id: `reply${Date.now()}`,
@@ -218,12 +198,7 @@ export default function ForumPostPage() {
                 description: "Only the original poster or moderators can mark answers",
                 variant: "destructive"
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Update the replies
         const updatedReplies = replies.map(reply => ({
             ...reply,
@@ -241,12 +216,7 @@ export default function ForumPostPage() {
                 title: "Authentication required",
                 description: "Please sign in to report content",
             });
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         toast({
             title: "Report submitted",
             description: "A moderator will review this content",
@@ -270,10 +240,6 @@ export default function ForumPostPage() {
     const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
     const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h:mm a");
     return (<>
-<<<<<<< HEAD
-      <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description={post.content.substring(0, 160)} keywords={`community, forum, discussion, ${post.tags.join(', ')}`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
-
-=======
       <SEO title={`${post.title} | Community Forum | Zion AI Marketplace`} description = {
   post.content.substring(0,
   160)
@@ -294,7 +260,6 @@ export default function ForumPostPage() {
 
 }`} canonical={`https://ziontechgroup.com/community/post/${post.id}`}/>
       
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <div className="container py-8">
         <div className="flex items-center gap-3 mb-6">
           <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
@@ -418,9 +383,4 @@ export default function ForumPostPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </>);
-</Card>}}}}}}}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

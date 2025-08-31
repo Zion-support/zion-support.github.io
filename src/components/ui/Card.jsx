@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+import React from 'react';
 const Card = ({ children, className = '' }) => {
     return (<div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>
       {children}
@@ -30,7 +30,6 @@ const CardFooter = ({ children, className = '' }) => {
     </div>);
 };
 export { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter };
-=======
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -68,4 +67,3 @@ const CardFooter = React.forwardRef((_a, ref) => {
     return (_jsx("div", Object.assign({ ref: ref, className: cn('flex items-center p-6 pt-0', className) }, props)))});
 CardFooter.displayName = 'CardFooter';
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

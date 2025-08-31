@@ -18,13 +18,8 @@ const CloudServices = () => {
             title: "Cloud Security & Compliance",
             description: "Enterprise-grade security solutions with compliance frameworks and threat protection.",
             price: "From $6,500/month",
-<<<<<<< HEAD
-            features: ["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
-
-=======
             features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100">
       <section className="pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white">

@@ -24,23 +24,11 @@ import {
   HelpCircle,
   MessageCircle,
   Zap as ZapIcon
-<<<<<<< HEAD
-export const FuturisticFooter: React.FC = () => {
-  const scrollToTop = () => {
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-export const FuturisticFooter: React.FC = (): JSX.Element => {;
-  const scrollToTop = () => {;
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
-=======
 } from 'lucide-react';
 export const FuturisticFooter: React.FC = () => {;
   const scrollToTop = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const currentYear = new Date().getFullYear();
   const footerSections = [
     {
@@ -88,15 +76,6 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "Documentation", href: "/docs" },
         { name: "API Reference", href: "/api" },
         { name: "Developer Portal", href: "/developer" },
-<<<<<<< HEAD
-        { name: "Support Center", href: "/support" },
-        { name: "FAQ", href: "/faq" },
-        { name: "Contact Us", href: "/contact" },
-        { name: "Case Studies", href: "/case-studies" },
-        { name: "Marketplace", href: "/marketplace" }
-      ]
-
-=======
         { name: "Support Center", href: "/support" },;
         { name: "FAQ", href: "/faq" },;
         { name: "Contact Us", href: "/contact" },;
@@ -104,7 +83,6 @@ export const FuturisticFooter: React.FC = () => {;
         { name: "Marketplace", href: "/marketplace" };
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
   const socialLinks = [;
     { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },;
@@ -205,10 +183,6 @@ export const FuturisticFooter: React.FC = () => {;
 
 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
@@ -220,7 +194,6 @@ export const FuturisticFooter: React.FC = () => {;
 
 }}
                 >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
@@ -402,23 +375,10 @@ export const FuturisticFooter: React.FC = () => {;
           whileTap={{ scale: 0.9 }}
 
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
-<<<<<<< HEAD
-        </motion.button>
-      </div>
-      {/* Bottom Border Glow */}
-      <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
-    </footer>;
-  )};
-=======
         </motion.button>;
       </div>;
       {/* Bottom Border Glow */};
       <div className="h-px bg-gradient-to-r from-transparent via-zion-cyan to-transparent opacity-50" />;
     </footer>;
   );
-<<<<<<< HEAD
-</div></div>};}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

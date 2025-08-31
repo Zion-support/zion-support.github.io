@@ -116,118 +116,12 @@ import {
   Bluetooth,
   Battery,
   Signal
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const contentCreationSolutions = [
-  {
-    id: 1,
-    title: "Content Management System",
-    description: "Comprehensive platform for creating, managing, and publishing digital content across multiple channels.",
-    icon: FileText,
-    features[
-      "Content creation tools",
-      "Multi-channel publishing",
-      "Version control",
-      "Workflow management"
-    ],
-    price: "From $50,000",
-    timeline: "12-20 weeks",
-    category: "CMS",
-    technologies["React", "Node.js", "MongoDB", "AWS"]
-  },
-  {
-    id: 2,
-    title: "Video Production Platform",
-    description: "Professional video creation and editing tools for marketing and educational content.",
-    icon: Video,
-    features[
-      "Video editing",
-      "Motion graphics",
-      "Audio processing",
-      "Export options"
-    ],
-    price: "From $80,000",
-    timeline: "16-24 weeks",
-    category: "Video",
-    technologies["WebRTC", "Canvas API", "Web Audio API", "FFmpeg"]
-  },
-  {
-    id: 3,
-    title: "Graphic Design Suite",
-    description: "Web-based graphic design tools for creating marketing materials and visual content.",
-    icon: Palette,
-    features[
-      "Design templates",
-      "Asset library",
-      "Collaboration tools",
-      "Export formats"
-    ],
-    price: "From $60,000",
-    timeline: "14-22 weeks",
-    category: "Design",
-    technologies["Canvas API", "SVG", "WebGL", "Three.js"]
-  },
-  {
-    id: 4,
-    title: "Audio Production Tools",
-    description: "Professional audio recording, editing, and processing applications.",
-    icon: Music,
-    features[
-      "Audio recording",
-      "Sound editing",
-      "Effects processing",
-      "Mixing tools"
-    ],
-    price: "From $70,000",
-    timeline: "16-24 weeks",
-    category: "Audio",
-    technologies["Web Audio API", "MediaRecorder", "AudioWorklet", "WebAssembly"]
-  },
-  {
-    id: 5,
-    title: "Content Analytics Platform",
-    description: "Advanced analytics and insights for content performance and audience engagement.",
-    icon: BarChart3,
-    features[
-      "Performance metrics",
-      "Audience insights",
-      "A/B testing",
-      "ROI tracking"
-    ],
-    price: "From $40,000",
-    timeline: "12-18 weeks",
-    category: "Analytics",
-    technologies["Google Analytics", "Mixpanel", "Amplitude", "Custom APIs"]
-  },
-  {
-    id: 6,
-    title: "Content Distribution Network",
-    description: "Global content delivery and distribution platform for maximum reach and performance.",
-    icon: Globe,
-    features[
-      "Global CDN",
-      "Load balancing",
-      "Performance optimization",
-      "Analytics tracking"
-    ],
-    price: "From $100,000",
-    timeline: "20-32 weeks",
-    category: "Distribution",
-<<<<<<< HEAD
-    technologies: ["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
-
-=======
     technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const contentTechnologies = [
   {
     name: "Content Creation Tools",
@@ -343,13 +237,8 @@ const contentBenefits = [
     title: "Data-driven Insights",
     description: "Analytics and performance tracking optimize content strategy",
     icon: BarChart3,
-<<<<<<< HEAD
-    examples: ["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]
-
-=======
     examples["Performance metrics", "Audience insights", "A/B testing", "ROI tracking"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function ContentCreation() {
@@ -1024,9 +913,4 @@ export default function ContentCreation() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

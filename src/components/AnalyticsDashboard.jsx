@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { BarChart3, TrendingUp, Activity, Eye, Clock, Target, RefreshCw } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AnalyticsDashboard = ({ className = '', showRealTime = true, refreshInterval = 5000 }) => {
     const { isTracking, currentSession, performanceMetrics, events, getAnalyticsSummary, trackEvent, trackConversion } = useAnalytics({
         enableTracking: true,
@@ -26,24 +22,15 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     const updateAnalyticsSummary = () => {
         const summary = getAnalyticsSummary();
         if (summary) {
-<<<<<<< HEAD
-            setAnalyticsSummary(summary);
-
-=======
             setAnalyticsSummary(summary)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Update summary when events change
     useEffect(() => {
         updateAnalyticsSummary()}, [events, currentSession]);
     // Track dashboard interactions
     const handleDashboardInteraction = (action, metadata) => {
-<<<<<<< HEAD
-        trackEvent('dashboard', action, 'dashboard_interaction', null, metadata)};
-=======
         trackEvent('dashboard', action, 'dashboard_interaction', null, metadata);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Track conversion goal
     const handleTrackConversion = () => {
         trackConversion('dashboard_engagement', 1, { timeRange: selectedTimeRange })};
@@ -107,12 +94,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <select value={selectedTimeRange} onChange = {
   (e) => {
             setSelectedTimeRange(e.target.value);
-<<<<<<< HEAD
-            handleDashboardInteraction('time_range_changed',
-  { timeRange: e.target.value 
-
-})}} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
-=======
             handleDashboardInteraction('time_range_changed',
   { timeRange: e.target.value 
 
@@ -121,7 +102,6 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 
 });
         }} className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               <option value="1h">1 Hour</option>
               <option value="24h">24 Hours</option>
               <option value="7d">7 Days</option>
@@ -304,10 +284,4 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           </button>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-};
-}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 export default function InstantMessaging() {
     const schema = {
   "@context": "https://schema.org",
@@ -57,9 +57,4 @@ export default function InstantMessaging() {
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

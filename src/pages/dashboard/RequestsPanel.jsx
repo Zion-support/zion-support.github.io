@@ -16,12 +16,7 @@ export default function RequestsPanel() {
         setShowDetails(true);
         // If status is new, mark as viewed
         if (quote.status === 'new') {
-<<<<<<< HEAD
-            markAsViewed(quote.id);
-
-=======
             markAsViewed(quote.id)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     // Filter quotes by archive status
     const archivedQuotes = quotes.filter(q => q.is_archived);
@@ -53,17 +48,8 @@ export default function RequestsPanel() {
         {/* Quote Details Modal */}
         <QuoteDetails quote={selectedQuote} isOpen={showDetails} onClose={() => {
             setShowDetails(false);
-<<<<<<< HEAD
-            setSelectedQuote(null);
-        }}/>
-
-      </div>
-    </ProtectedRoute>);
-}}
-=======
             setSelectedQuote(null)}}/>
         
         
       </div>
     </ProtectedRoute>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

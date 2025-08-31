@@ -48,7 +48,6 @@ const InnovativeServicesOverview = () => {
             
 
 };
-=======
   'ai-services': ['AI', 'Machine Learning', 'Content', 'Marketing', 'Customer Service', 'Sales', 'CRM', 'Social Media', 'Supply Chain', 'HR', 'Recruitment', 'Finance', 'Accounting'],
                 'quantum-computing': ['Quantum'],
                 'blockchain': ['Blockchain', 'Web3'],
@@ -65,7 +64,6 @@ const InnovativeServicesOverview = () => {
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             const targetKeywords = categoryMappings[selectedCategory] || [category.name];
             return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase()))});
     const fadeInUp = {

@@ -72,7 +72,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 };
         return sizeStyles[size]};
     const styles = getVariantStyles();
-=======
   xl: 'px-8 py-4 text-xl'
         
 
@@ -82,7 +81,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 };
         return sizeStyles[size];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const sizeStyles = getSizeStyles();
     return (<motion.button type={type} onClick={onClick} disabled={disabled || loading} className={`
         relative overflow-hidden rounded-lg font-semibold transition-all duration-300
@@ -90,9 +88,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
         ${styles.hoverGlow} ${sizeStyles} ${fullWidth ? 'w-full' : ''}
         ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:scale-105'}
         ${className}
-<<<<<<< HEAD
-      `} whileHover={!disabled ? { scale: 1.05 } : { /* empty */ }} whileTap={!disabled ? { scale: 0.95 } : { /* empty */ }} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}>
-=======
       `} whileHover={!disabled ? { scale: 1.05 } : {}} whileTap={!disabled ? { scale: 0.95 } : {}} initial = {
   { opacity: 0,
   y: 20 
@@ -112,7 +107,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
 
 
 }} transition={{ duration: 0.3 }}>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       {/* Animated background */}
       <motion.div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" initial={{ x: '-100%' }} animate={{ x: '100%' }} transition = {
   {
@@ -148,11 +142,6 @@ export const FuturisticNeonButton = ({ children, onClick, type = 'button', varia
       <div className="absolute inset-0 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-300">
         <div className={`absolute inset-0 rounded-lg ${styles.glow}`}/>
       </div>
-<<<<<<< HEAD
-    </motion.button>);
-</div>};
-=======
     </motion.button>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default FuturisticNeonButton;
 </motion.div></motion.div>}

@@ -22,9 +22,6 @@ export const Grid = {
         localStorage.setItem('marketplaceView',
   'grid');
         return <Marketplace />;
-<<<<<<< HEAD
-
-=======
     
 
 
@@ -33,16 +30,12 @@ export const Grid = {
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
 export const List = {
   render: () => {
         localStorage.setItem('marketplaceView',
   'list');
         return <Marketplace />;
-<<<<<<< HEAD
-
-=======
     
 
 
@@ -51,6 +44,5 @@ export const List = {
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
 }}

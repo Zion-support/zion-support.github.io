@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star import SEO from '../SEO';
-=======
 import { Brain, TrendingUp, Zap, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Star } from 'lucide-react';
 import SEO from "../SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const features = [
     {
         title: "Intelligent Decision Making",
@@ -457,9 +453,4 @@ export default function AIAutonomousBusinessManager() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

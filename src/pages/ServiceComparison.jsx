@@ -1,15 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap import { AdvancedServiceComparison } from '../components/AdvancedServiceComparison';
-import { Button } from '../components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
-=======
 import { BarChart3, Target, TrendingUp, Award, Users, ArrowRight, CheckCircle, Zap } from 'lucide-react';
 import { AdvancedServiceComparison } from "../components/AdvancedServiceComparison";
 import { Button } from "../components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "../components/ui/card";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const ServiceComparison = () => {
     const features = [
         {
@@ -338,11 +332,6 @@ const ServiceComparison = () => {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ServiceComparison;
 }}

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  Cloud,
-  Server,
-  GitBranch,
-  Zap,
-  Shield,
-  CheckCircle,
-  ArrowRight,
+import { 
+  Cloud, 
+  Server, 
+  GitFork, 
+  Zap, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
   Star,
   Users,
   Award,
@@ -23,35 +23,10 @@ import {
   FileText,
   Truck,
   Wrench
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const cloudDevOpsSolutions = [
-  {
-    id: 1,
-    title: "Cloud Infrastructure Setup",
-    description: "Complete cloud infrastructure design and implementation for scalable applications.",
-    icon: Cloud,
-    features[
-      "Multi-cloud strategy",
-      "Auto-scaling setup",
-      "Load balancing",
-      "High availability"
-    ],
-    price: "From $15,000",
-    timeline: "8-16 weeks",
-    category: "Cloud Infrastructure",
-    platforms["AWS", "Azure", "Google Cloud", "Kubernetes"]
-  },
-  {
-    id: 2,
-    title: "CI/CD Pipeline Development",
-    description: "Automated continuous integration and deployment pipelines for rapid software delivery.",
-    icon: GitBranch,
-    features[
+    icon: GitFork,
+    features: [
       "Automated testing",
       "Build automation",
       "Deployment automation",
@@ -124,17 +99,10 @@ const cloudDevOpsSolutions = [
     price: "From $25,000",
     timeline: "12-20 weeks",
     category: "Security",
-<<<<<<< HEAD
-    platforms: ["IAM", "VPC", "Security Groups", "WAF"]
-
-=======
     platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const cloudPlatforms = [
   {
     name: "Amazon Web Services",
@@ -157,14 +125,11 @@ const cloudPlatforms = [
   {
     name: "Kubernetes",
     description: "Open-source container orchestration platform",
-    icon: GitBranch,
-<<<<<<< HEAD
+          icon: GitFork,
     features: ["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
 
-=======
     features["Auto-scaling", "Load Balancing", "Service Discovery", "Rolling Updates"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -325,7 +290,7 @@ export default function CloudDevOps() {
                 <span>Cloud Native</span>
               </div>
               <div className="flex items-center gap-2 text-zion-purple">
-                <GitBranch className="w-4 h-4" />
+                <GitFork className="w-4 h-4" />
                 <span>DevOps Automation</span>
               </div>
               <div className="flex items-center gap-2 text-zion-blue">
@@ -807,9 +772,4 @@ export default function CloudDevOps() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

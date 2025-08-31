@@ -402,12 +402,8 @@ import {
   Psi,
   Omega,
   Crown
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-=======
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ServiceContact {
   mobile: string;
@@ -465,10 +461,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       case 'name':
         return a.title.localeCompare(b.title);
       case 'innovation':
-<<<<<<< HEAD
-        const innovationOrder = { 'Advanced': 1, 'Cutting-edge': 2, 'Revolutionary': 3 };
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) -
-=======
         const innovationOrder = {
   'Advanced': 1, 'Cutting-edge': 2,;
   ;
@@ -485,7 +477,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 };
         return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
       case 'category':
         return a.category.localeCompare(b.category);
@@ -494,26 +485,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   });
 
-<<<<<<< HEAD
-  const handleServiceClick = (service: any) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
-
-  const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -521,7 +492,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         staggerChildren: 0.1;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
@@ -535,15 +505,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -551,7 +512,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const getCategoryIcon = (category: string) => {;
@@ -966,11 +926,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   setPriceRange([0,
   10000]);
                   setInnovationLevel('all');
-<<<<<<< HEAD
-                }}
-                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
-
-=======
                 
 
 
@@ -981,7 +936,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 }}
                 className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 Clear All Filters
               </button>
             </motion.div>

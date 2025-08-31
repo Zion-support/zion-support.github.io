@@ -11,15 +11,10 @@ export interface PricingTier {
   benefits: string[];
   targetAudience: string[];
   roi: string;
-<<<<<<< HEAD
-  setupCost: number;
-  contractLength: string;
-=======
   setupTime: string;
   supportLevel: string;
   innovationLevel: string;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ServicePricing {
   id: string;
@@ -45,13 +40,10 @@ export interface ServicePricing {
     uptime: string;
     security: string[];
   };
-<<<<<<< HEAD
-=======
   aiCapabilities: string[];
   complianceFeatures: string[];
   scalabilityFeatures: string[];
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
   {
@@ -62,369 +54,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     subcategory: "Business Intelligence",
     pricingTiers: [
       {
-<<<<<<< HEAD
-        name: "Starter",
-        price: 2999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic autonomous decision-making",
-          "Process optimization for up to 5 workflows",
-          "Standard reporting and analytics",
-          "Email support",
-          "Basic integrations (5 systems)"
-        ],
-        limitations: [
-          "Limited to 3 business units",
-          "Basic AI models only",
-          "Standard uptime (99.5%)"
-        ],
-        bestFor: ["Small businesses", "Startups", "Single-location operations"],
-        roi: "200-300%",
-        setupCost: 5000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Professional",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced autonomous decision-making",
-          "Process optimization for up to 20 workflows",
-          "Advanced AI models and learning",
-          "Priority support",
-          "Advanced integrations (15 systems)",
-          "Custom dashboards",
-          "API access"
-        ],
-        limitations: [
-          "Limited to 10 business units",
-          "Advanced uptime (99.9%)"
-        ],
-        bestFor: ["Medium businesses", "Growing companies", "Multi-location operations"],
-        roi: "300-500%",
-        setupCost: 10000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Enterprise",
-        price: 9999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full autonomous business management",
-          "Unlimited workflows and processes",
-          "Custom AI model development",
-          "24/7 dedicated support",
-          "Unlimited integrations",
-          "Custom development",
-          "White-label options",
-          "On-premise deployment available"
-        ],
-        limitations: [
-          "None - fully customizable"
-        ],
-        bestFor: ["Large enterprises", "Multi-national companies", "Complex operations"],
-        roi: "400-800%",
-        setupCost: 25000,
-        contractLength: "24 months"
-
-    ],
-    marketComparison: {
-      competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
-      averageMarketPrice: "$8,000 - $25,000/month",
-      ourAdvantage: [
-        "True AI autonomy vs. rule-based automation",
-        "Lower total cost of ownership",
-        "Faster implementation",
-        "Better ROI and business impact"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "40-60% operational cost reduction within 6 months",
-      longTerm: "300-800% ROI over 3 years",
-      paybackPeriod: "8-12 months",
-      totalValue: "$500K - $5M+ in operational savings over 3 years"
-    },
-    implementation: {
-      timeline: "8-12 weeks",
-      requirements: [
-        "Data access and API connections",
-        "Business process documentation",
-        "Stakeholder buy-in and training",
-        "Change management plan"
-      ],
-      support: [
-        "Dedicated implementation team",
-        "24/7 technical support",
-        "Regular optimization reviews",
-        "Continuous improvement updates"
-      ],
-      training: [
-        "Admin user training",
-        "End-user orientation",
-        "Advanced feature workshops",
-        "Ongoing best practices"
-      ]
-
-  },
-
-  {
-    serviceId: "quantum-ai-analytics-platform",
-    serviceName: "Quantum-Enhanced AI Analytics Platform",
-    category: "Quantum Computing",
-    description: "Next-generation analytics platform that combines quantum computing algorithms with AI to solve complex optimization problems.",
-    pricingTiers: [
-      {
-        name: "Research",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic quantum algorithms",
-          "Standard AI models",
-          "Research-grade simulations",
-          "Academic pricing",
-          "Community support"
-        ],
-        limitations: [
-          "Limited quantum processing time",
-          "Basic support only",
-          "Standard uptime"
-        ],
-        bestFor: ["Research institutions", "Universities", "Small research teams"],
-        roi: "200-400%",
-        setupCost: 8000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Commercial",
-        price: 8999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced quantum algorithms",
-          "Custom AI model training",
-          "Production simulations",
-          "Priority support",
-          "API access",
-          "Custom integrations"
-        ],
-        limitations: [
-          "Quantum processing quotas",
-          "Business hours support"
-        ],
-        bestFor: ["Pharmaceutical companies", "Financial services", "Technology companies"],
-        roi: "400-700%",
-        setupCost: 15000,
-        contractLength: "24 months"
-      },
-      {
-        name: "Enterprise",
-        price: 19999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full quantum computing access",
-          "Custom algorithm development",
-          "Unlimited processing time",
-          "24/7 dedicated support",
-          "Custom deployment options",
-          "White-label solutions"
-        ],
-        limitations: [
-          "None - fully customizable"
-        ],
-        bestFor: ["Large enterprises", "Government agencies", "Defense contractors"],
-        roi: "600-1000%",
-        setupCost: 50000,
-        contractLength: "36 months"
-
-    ],
-    marketComparison: {
-      competitors: ["IBM Quantum", "Google Quantum AI", "D-Wave Systems"],
-      averageMarketPrice: "$15,000 - $50,000/month",
-      ourAdvantage: [
-        "Hybrid quantum-classical approach",
-        "Lower barrier to entry",
-        "Better integration with existing systems",
-        "More practical business applications"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "10-20x speedup for optimization problems",
-      longTerm: "400-1000% ROI through breakthrough solutions",
-      paybackPeriod: "12-18 months",
-      totalValue: "$1M - $10M+ in research and development savings"
-    },
-    implementation: {
-      timeline: "12-16 weeks",
-      requirements: [
-        "Quantum computing infrastructure",
-        "Data scientists and researchers",
-        "Clear use case definition",
-        "Performance benchmarks"
-      ],
-      support: [
-        "Quantum computing experts",
-        "AI/ML specialists",
-        "Research collaboration",
-        "Performance optimization"
-      ],
-      training: [
-        "Quantum computing fundamentals",
-        "Algorithm optimization",
-        "Best practices",
-        "Advanced applications"
-      ]
-
-  },
-
-  {
-    serviceId: "blockchain-supply-chain-transparency",
-    serviceName: "Blockchain Supply Chain Transparency Platform",
-    category: "Blockchain",
-    description: "End-to-end supply chain visibility platform using blockchain technology for real-time tracking and authentication.",
-    pricingTiers: [
-      {
-        name: "Basic",
-        price: 1499,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic supply chain tracking",
-          "Up to 100 products",
-          "Standard blockchain features",
-          "Email support",
-          "Basic reporting"
-        ],
-        limitations: [
-          "Limited product volume",
-          "Basic integrations only",
-          "Standard uptime"
-        ],
-        bestFor: ["Small manufacturers", "Local businesses", "Startups"],
-        roi: "150-250%",
-        setupCost: 3000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Professional",
-        price: 2999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced supply chain tracking",
-          "Up to 1000 products",
-          "Smart contract automation",
-          "Priority support",
-          "Advanced analytics",
-          "API access"
-        ],
-        limitations: [
-          "Product volume limits",
-          "Business hours support"
-        ],
-        bestFor: ["Medium manufacturers", "Retail chains", "Food companies"],
-        roi: "250-400%",
-        setupCost: 6000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Enterprise",
-        price: 5999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Unlimited supply chain tracking",
-          "Custom smart contracts",
-          "Advanced IoT integration",
-          "24/7 dedicated support",
-          "Custom development",
-          "White-label options"
-        ],
-        limitations: [
-          "None - fully customizable"
-        ],
-        bestFor: ["Large manufacturers", "Global companies", "Complex supply chains"],
-        roi: "400-600%",
-        setupCost: 15000,
-        contractLength: "24 months"
-
-    ],
-    marketComparison: {
-      competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
-      averageMarketPrice: "$3,000 - $12,000/month",
-      ourAdvantage: [
-        "More comprehensive tracking",
-        "Better IoT integration",
-        "Lower implementation costs",
-        "Faster time to value"
-      ]
-    },
-    roiAnalysis: {
-      shortTerm: "20-30% reduction in supply chain costs",
-      longTerm: "250-600% ROI through transparency and efficiency",
-      paybackPeriod: "6-12 months",
-      totalValue: "$200K - $2M+ in supply chain optimization"
-    },
-    implementation: {
-      timeline: "6-10 weeks",
-      requirements: [
-        "IoT sensors and devices",
-        "Supply chain data access",
-        "Stakeholder coordination",
-        "Compliance requirements"
-      ],
-      support: [
-        "Blockchain experts",
-        "Supply chain specialists",
-        "IoT integration support",
-        "Compliance assistance"
-      ],
-      training: [
-        "Platform administration",
-        "Supply chain optimization",
-        "IoT device management",
-        "Compliance reporting"
-      ]
-
-  },
-
-  {
-    serviceId: "ai-cybersecurity-threat-intelligence",
-    serviceName: "AI-Powered Cybersecurity Threat Intelligence Platform",
-    category: "Cybersecurity",
-    description: "Advanced cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time.",
-    pricingTiers: [
-      {
-        name: "Standard",
-        price: 2499,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic threat detection",
-          "Standard AI models",
-          "Email support",
-          "Basic reporting",
-          "Up to 100 endpoints"
-        ],
-        limitations: [
-          "Limited endpoint coverage",
-          "Basic AI capabilities",
-          "Standard uptime"
-        ],
-        bestFor: ["Small businesses", "Startups", "Basic security needs"],
-        roi: "200-350%",
-        setupCost: 5000,
-        contractLength: "12 months"
-      },
-      {
-        name: "Advanced",
-=======
         name: "Business",
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         price: 3999,
         currency: "$",
         billing: "monthly",
@@ -517,13 +147,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
           "White-label solutions for resale",
           "Strategic consulting and partnership"
         ],
-<<<<<<< HEAD
-        bestFor: ["Large enterprises", "Government agencies", "Critical infrastructure"],
-        roi: "400-800%",
-        setupCost: 20000,
-        contractLength: "24 months"
-
-=======
         targetAudience: [
           "Technology companies",
           "Consulting firms",
@@ -535,7 +158,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         supportLevel: "enterprise",
         innovationLevel: "Revolutionary"
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ],
     marketPrice: "$3,999 - $12,999/month",
     competitors: ["Tableau", "Power BI", "Looker", "Qlik", "Domo"],
@@ -554,33 +176,9 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
       uptime: "99.9%",
       security: ["SOC 2 Type II", "GDPR", "HIPAA", "End-to-end encryption", "Multi-factor authentication"]
     },
-<<<<<<< HEAD
-    implementation: {
-      timeline: "8-12 weeks",
-      requirements: [
-        "Network access and monitoring",
-        "Security team coordination",
-        "Compliance requirements",
-        "Change management plan"
-      ],
-      support: [
-        "Cybersecurity experts",
-        "AI/ML specialists",
-        "24/7 monitoring",
-        "Incident response"
-      ],
-      training: [
-        "Security operations",
-        "Threat hunting",
-        "Incident response",
-        "Compliance reporting"
-      ]
-
-=======
     aiCapabilities: ["Natural Language Processing", "Predictive Analytics", "Machine Learning", "Computer Vision", "Sentiment Analysis"],
     complianceFeatures: ["GDPR", "CCPA", "SOC 2", "ISO 27001", "HIPAA"],
     scalabilityFeatures: ["Auto-scaling", "Multi-tenant architecture", "Load balancing", "CDN integration", "Database sharding"]
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   },
 
   {
@@ -649,13 +247,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
           "Comprehensive compliance reporting",
           "Custom security policies and procedures"
         ],
-<<<<<<< HEAD
-        bestFor: ["Large IoT deployments", "Smart cities", "Industrial IoT"],
-        roi: "400-600%",
-        setupCost: 15000,
-        contractLength: "24 months"
-
-=======
         targetAudience: [
           "Large enterprises",
           "Government agencies",
@@ -702,7 +293,6 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         supportLevel: "enterprise",
         innovationLevel: "Revolutionary"
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ],
     marketPrice: "$8,999 - $25,000/month",
     competitors: ["Palo Alto Networks", "CrowdStrike", "SentinelOne", "Darktrace", "Cylance"],
@@ -721,29 +311,107 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
       uptime: "99.99%",
       security: ["SOC 2 Type II", "ISO 27001", "NIST", "FIPS 140-2", "Common Criteria"]
     },
-<<<<<<< HEAD
-    implementation: {
-      timeline: "6-10 weeks",
-      requirements: [
-        "IoT devices and sensors",
-        "Network infrastructure",
-        "Data access permissions",
-        "Performance requirements"
-      ],
-      support: [
-        "IoT specialists",
-        "Edge computing experts",
-        "24/7 monitoring",
-        "Performance optimization"
-      ],
-      training: [
-        "Platform administration",
-        "Device management",
-        "Analytics interpretation",
-        "Performance monitoring"
-      ]
+    }
+  }
+};
 
+// BlockchainForge Pricing
+export const blockchainForgePricing: ServicePricing = {
+  serviceId: 3,
+  serviceName: "BlockchainForge",
+  category: "Blockchain Development",
+  pricingTiers: [
+    {
+      name: "Creator",
+      price: 999,
+      billingCycle: "monthly",
+      features: [
+        "Basic smart contract generator",
+        "Up to 5 contracts/month",
+        "Standard templates",
+        "Community support",
+        "Basic security audit"
+      ],
+      limitations: [
+        "Limited contract count",
+        "Basic templates only",
+        "Community support"
+      ],
+      targetAudience: ["Small projects", "Individual developers", "Startups"],
+      roi: "200% within 3 months",
+      setupTime: "1 week",
+      support: "Community support",
+      marketComparison: "50% below market average",
+      volumeDiscounts: ["20% off annual billing"]
+    },
+    {
+      name: "Professional",
+      price: 2499,
+      billingCycle: "monthly",
+      features: [
+        "Advanced contract generator",
+        "Unlimited contracts",
+        "Advanced templates",
+        "Priority support",
+        "Advanced security audit",
+        "Multi-chain support",
+        "API access"
+      ],
+      limitations: [
+        "Advanced features require approval",
+        "Custom features limited"
+      ],
+      targetAudience: ["Fintech companies", "Medium enterprises", "DeFi projects"],
+      roi: "400% within 6 months",
+      setupTime: "2-3 weeks",
+      support: "Priority support (6h response)",
+      marketComparison: "30% below market average",
+      volumeDiscounts: ["25% off annual billing", "Volume discounts available"]
+    },
+    {
+      name: "Enterprise",
+      price: 7999,
+      billingCycle: "monthly",
+      features: [
+        "Full blockchain platform",
+        "Custom everything",
+        "Advanced security",
+        "Dedicated support",
+        "Custom integrations",
+        "White-label options",
+        "Regulatory compliance",
+        "SLA guarantees"
+      ],
+      limitations: [
+        "None - fully customizable"
+      ],
+      targetAudience: ["Large enterprises", "Banks", "Insurance companies"],
+      roi: "600% within 8 months",
+      setupTime: "3-5 weeks",
+      support: "Dedicated support (1h response)",
+      marketComparison: "Market leading pricing",
+      volumeDiscounts: ["30% off annual billing", "Custom enterprise pricing"]
+    }
+  ],
+  marketAnalysis: {
+    averagePrice: "$4,800/month",
+    priceRange: "$1,500 - $12,000/month",
+    competitors: ["OpenZeppelin Enterprise: $8,000/month", "Truffle Enterprise: $6,500/month", "Hardhat Enterprise: $7,000/month"],
+    valueProposition: "90% faster blockchain development with automated security and compliance"
+  },
+  specialOffers: {
+    annualDiscount: "30% off annual billing",
+    enterpriseDiscount: "Up to 45% off for enterprise contracts",
+    startupProgram: "70% off for qualified startups (first year)",
+    referralProgram: "25% commission for successful referrals"
+  }
+};
 
+// Export all pricing guides
+export const ALL_PRICING_GUIDES_2026 = [
+  quantumFlowProPricing,
+  neuroSyncAIPricing,
+  blockchainForgePricing
 ];
 
 export const PRICING_SUMMARY_2026 = {
@@ -768,7 +436,6 @@ export const PRICING_SUMMARY_2026 = {
     address: "364 E Main St STE 1008 Middletown DE 19709"
 
 };}}}}}}}}}}}}}}
-=======
     aiCapabilities: ["Threat Detection", "Behavioral Analytics", "Anomaly Detection", "Predictive Security", "Automated Response"],
     complianceFeatures: ["SOC 2", "ISO 27001", "NIST", "GDPR", "CCPA", "HIPAA"],
     scalabilityFeatures: ["Auto-scaling", "Multi-cloud", "Microservices", "Container security", "Serverless security"]
@@ -1178,7 +845,4 @@ export const PRICING_SUMMARY_2026 = {
     complianceFeatures: ["HIPAA", "FDA", "SOC 2", "ISO 27001", "GDPR"],
     scalabilityFeatures: ["Cloud-native", "Multi-tenant", "Auto-scaling", "Global deployment", "High availability"]
   }
-];
-
-export default COMPREHENSIVE_PRICING_GUIDE_2026;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+};

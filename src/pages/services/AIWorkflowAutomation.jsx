@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 const AIWorkflowAutomation = () => {
+import { Zap, GitFork, Brain, Clock, TrendingUp, Users, Database, Globe, Target, CheckCircle, BarChart3 } from 'lucide-react';
+const AIWorkflowAutomation = () => {
     const features = [
         {
             icon: Brain,
@@ -10,7 +11,7 @@ import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target
             benefits["Process mapping", "Bottleneck identification", "Efficiency scoring", "Automation recommendations"]
         },
         {
-            icon: Workflow,
+            icon: GitFork,
             title: "Intelligent Workflow Design",
             description: "AI-driven workflow design that adapts to business needs and automatically optimizes for performance",
             benefits["Dynamic workflows", "Conditional logic", "Exception handling", "Performance optimization"]
@@ -25,13 +26,8 @@ import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target
             icon: Clock,
             title: "Real-time Monitoring",
             description: "Continuous monitoring of workflow performance with instant alerts and proactive optimization",
-<<<<<<< HEAD
-            benefits: ["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
-
-=======
             benefits["Performance tracking", "Real-time alerts", "Predictive maintenance", "KPI monitoring"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const solutions = [
         {
@@ -88,7 +84,7 @@ import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target
         {
             name: "Robotic Process Automation",
             description: "RPA tools for repetitive task automation",
-            icon: Workflow
+            icon: GitFork
         },
         {
             name: "Natural Language Processing",
@@ -492,11 +488,6 @@ import { Zap, Workflow, Brain, Clock, TrendingUp, Users, Database, Globe, Target
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AIWorkflowAutomation;
 }}}}}}}}}

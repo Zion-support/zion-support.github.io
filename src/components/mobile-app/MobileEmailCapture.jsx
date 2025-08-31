@@ -16,15 +16,8 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
         setEmail('');
         setTimeout(() => setStatus('idle'), 3000)} else {
         setStatus('error');
-<<<<<<< HEAD
-        setTimeout(() => setStatus('idle'), 3000);
-
-    }, 1000);
-  };
-=======
         setTimeout(() => setStatus('idle'), 3000)}
     }, 1000)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const getStatusIcon = () => {
     switch (status) {
@@ -33,12 +26,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
       case 'error':
         return <AlertCircle className="h-5 w-5 text-red-400" />;
       default:
-<<<<<<< HEAD
-        return <Mail className="h-5 w-5 text-blue-400" />;
-
-=======
         return <Mail className="h-5 w-5 text-blue-400" />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const getStatusText = () => {
@@ -48,12 +36,7 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
       case 'error':
         return 'Please enter a valid email address.';
       default:
-<<<<<<< HEAD
-        return 'Get early access and exclusive updates';
-
-=======
         return 'Get early access and exclusive updates'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -160,10 +143,4 @@ import { Mail, CheckCircle, AlertCircle export const MobileEmailCapture = () => 
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};
-}}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

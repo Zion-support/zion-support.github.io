@@ -5,12 +5,8 @@ import {
   Zap, Sparkles, TrendingUp, Route, Users, PenTool,
   CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
   BarChart3, Shield, Briefcase, Package, Target
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function InnovativeAIServicesShowcase() {
   const services = [
@@ -87,20 +83,6 @@ export default function InnovativeAIServicesShowcase() {
       features: [
         'AI-powered demand forecasting and inventory optimization',
         'Real-time supply chain visibility and tracking',
-<<<<<<< HEAD
-        'Automated route optimization and logistics planning',
-        'Supplier performance analytics and risk assessment'
-      ],
-      benefits: ['20-30% reduced inventory costs', '25% improved delivery times', '40% fewer disruptions'],
-      pricing: { starter: '$299/mo', professional: '$799/mo', enterprise: '$1,999/mo' },
-      route: '/services/ai-supply-chain-optimization'
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
-      <SEO
-=======
         'Automated route optimization and logistics planning',;
         'Supplier performance analytics and risk assessment';
       ],;
@@ -113,7 +95,6 @@ export default function InnovativeAIServicesShowcase() {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Innovative AI Services Showcase - Zion Tech Group"
         description="Discover our comprehensive suite of AI-powered business solutions including project management, content marketing, financial analytics, HR talent management, and supply chain optimization."
       />
@@ -121,11 +102,6 @@ export default function InnovativeAIServicesShowcase() {
       {/* Hero Section */}
       <section className="relative py-20 sm:py-24">
         <div className="container mx-auto px-4 text-center">
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-=======
           <motion.div 
             initial = {
   { opacity: 0,
@@ -147,20 +123,12 @@ export default function InnovativeAIServicesShowcase() {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6"
 
             <Sparkles className="w-4 h-4 mr-2" />
             Innovative AI-Powered Solutions
           </motion.div>
-<<<<<<< HEAD
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-=======
           
           <motion.h1 
             initial = {
@@ -193,7 +161,6 @@ export default function InnovativeAIServicesShowcase() {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6"
 
             AI Services That
@@ -201,13 +168,6 @@ export default function InnovativeAIServicesShowcase() {
               Transform Business
             </span>
           </motion.h1>
-<<<<<<< HEAD
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-=======
           
           <motion.p 
             initial = {
@@ -240,7 +200,6 @@ export default function InnovativeAIServicesShowcase() {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
 
             Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize
@@ -420,15 +379,6 @@ export default function InnovativeAIServicesShowcase() {
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
-<<<<<<< HEAD
-
-              Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-            </a>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
             >;
               Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />;
             </a>;
@@ -436,6 +386,5 @@ export default function InnovativeAIServicesShowcase() {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

@@ -45,24 +45,11 @@ export default function CustomerFeedbackSurveys(...args[]):  {
 
         <div className="mt-10 rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
           <h3 className="font-semibold mb-2">Integrations</h3>
-<<<<<<< HEAD
-          <p className="text-sm text-zion-slate-light">HubSpot, Salesforce, Segment, Zapier, Twilio, Mailchimp.</p>
-          <p className="text-sm text-zion-slate-light mt-4">Contact: +1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
           <p className="text-sm text-zion-slate-light">HubSpot, Salesforce, Segment, Zapier, Twilio, Mailchimp.</p>;
           <p className="text-sm text-zion-slate-light mt-4">Contact: +1 302 464 0950 — <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -10,15 +10,6 @@ export function BlogSection(...args[]):  {
       date: '2024-01-15',
       readTime: '8 min read'
     },
-<<<<<<< HEAD
-    {
-      id: '2',
-      title: 'Building Scalable Web Applications',
-      excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
-      date: '2024-01-10',
-      readTime: '12 min read'
-
-=======
     {;
       id: '2',;
       title: 'Building Scalable Web Applications',;
@@ -26,7 +17,6 @@ export function BlogSection(...args[]):  {
       date: '2024-01-10',;
       readTime: '12 min read';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -51,23 +41,10 @@ export function BlogSection(...args[]):  {
                 <span>{post.date}</span>
                 <span>{post.readTime}</span>
               </div>
-<<<<<<< HEAD
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </article>;
           ))};
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

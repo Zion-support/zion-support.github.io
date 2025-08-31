@@ -11,12 +11,6 @@ import {
   Database,
   Network,
   Shield
-<<<<<<< HEAD
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  fullScreen?: boolean;
-=======
  } from 'lucide-react';
 
 interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
@@ -24,7 +18,6 @@ interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
   fullScreen?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function LoadingSpinner({
   size = 'md',
@@ -63,15 +56,9 @@ export function LoadingSpinner({
           <div className={`${sizeClasses[size]} bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center relative overflow-hidden`}>
             <motion.div
               className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue"
-<<<<<<< HEAD
-              animate = {
-  {
-                background[
-=======
               animate = {
   {
                 background: [
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6, #0ea5e9)',
                   'linear-gradient(45deg, #8b5cf6, #0ea5e9, #8b5cf6)',
                   'linear-gradient(45deg, #0ea5e9, #8b5cf6,
@@ -102,18 +89,6 @@ export function LoadingSpinner({
           {/* Glow Effect */}
           <motion.div
             className="absolute inset-0 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl blur-lg opacity-50"
-<<<<<<< HEAD
-            animate = {
-  { opacity[0.3, 0.6,
-  0.3] 
-
-}}
-            transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}
-=======
             animate = {
   { opacity: [0.3, 0.6,
   0.3] 
@@ -134,30 +109,12 @@ export function LoadingSpinner({
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           />
         </motion.div>
 
         {/* Loading Text */}
         <motion.div
           className="text-zion-cyan font-medium"
-<<<<<<< HEAD
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-
-=======
-<<<<<<< HEAD
-          animate = {
-  { opacity[0.5, 1,
-  0.5] 
-
-}}
-          transition = {
-  { duration: 1.5,
-  repeat: Infinity 
-
-}}
-=======
           animate = {
   { opacity: [0.5, 1,
   0.5] 
@@ -178,9 +135,7 @@ export function LoadingSpinner({
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           {text}
         </motion.div>
 
@@ -190,30 +145,6 @@ export function LoadingSpinner({
             <motion.div
               key={index}
               className="w-2 h-2 bg-zion-cyan rounded-full"
-<<<<<<< HEAD
-              animate = {
-  {
-                scale[1, 1.5, 1],
-                opacity[0.5, 1,
-  0.5]
-              
-
-}}
-              transition = {
-  {
-                duration: 1.5,
-                repeat: Infinity,
-  delay: index * 0.2
-              
-
-}}
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  )}
-=======
               animate = {
   {
                 scale: [1, 1.5, 1],
@@ -246,16 +177,9 @@ export function LoadingSpinner({
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-
-interface PageLoaderProps {
-  pageName?: string;
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 interface PageLoaderProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   pageName?: string}
 
@@ -267,37 +191,6 @@ export function PageLoader(...args[]):  {
         <div className="absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute top-1/4 left-1/4 w-32 h-32 border border-zion-cyan/20 rounded-full"
-<<<<<<< HEAD
-            animate = {
-  {
-              scale[1, 1.5, 1],
-              opacity[0.3, 0.6,
-  0.3]
-            
-
-}}
-            transition = {
-  { duration: 4,
-  repeat: Infinity 
-
-}}
-          />
-          <motion.div
-            className="absolute bottom-1/4 right-1/4 w-24 h-24 border border-zion-purple/20 rounded-full"
-            animate = {
-  {
-              scale[1.5, 1, 1.5],
-              opacity[0.6, 0.3,
-  0.6]
-            
-
-}}
-            transition = {
-  { duration: 4, repeat: Infinity,
-  delay: 1 
-
-}}
-=======
             animate = {
   {
               scale: [1, 1.5, 1],
@@ -347,7 +240,6 @@ export function PageLoader(...args[]):  {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           />
         </div>
 
@@ -399,23 +291,6 @@ export function PageLoader(...args[]):  {
 
           <motion.h2
             className="text-2xl font-bold text-white mb-2"
-<<<<<<< HEAD
-            animate={{ opacity: [0.7, 1, 0.7] }}
-            transition={{ duration: 2, repeat: Infinity }}
-
-=======
-<<<<<<< HEAD
-            animate = {
-  { opacity[0.7, 1,
-  0.7] 
-
-}}
-            transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}}
-=======
             animate = {
   { opacity: [0.7, 1,
   0.7] 
@@ -436,31 +311,12 @@ export function PageLoader(...args[]):  {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Loading {pageName}
           </motion.h2>
 
           <motion.p
             className="text-zion-slate-light"
-<<<<<<< HEAD
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-
-=======
-<<<<<<< HEAD
-            animate = {
-  { opacity[0.5, 1,
-  0.5] 
-
-}}
-            transition = {
-  { duration: 2, repeat: Infinity,
-  delay: 0.5 
-
-}}
-=======
             animate = {
   { opacity: [0.5, 1,
   0.5] 
@@ -481,9 +337,7 @@ export function PageLoader(...args[]):  {
 
 
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Please wait while we prepare everything for you...
           </motion.p>
 
@@ -505,34 +359,16 @@ export function PageLoader(...args[]):  {
 
 }}
               />
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>
-    </div>
-  )}
-
-interface SkeletonLoaderProps extends React.PropsWithChildren<{}> {;
-=======;
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   lines?: number;
-<<<<<<< HEAD
-  className?: string;
-=======
   className?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function SkeletonLoader(...args[]):  {
   return (
@@ -541,18 +377,6 @@ export function SkeletonLoader(...args[]):  {
         <motion.div
           key={index}
           className="h-4 bg-zion-slate-light/20 rounded"
-<<<<<<< HEAD
-          animate = {
-  {
-            opacity[0.5, 1, 0.5],
-            backgroundPosition['200% 0',
-  '-200% 0']
-          
-
-}}
-          transition = {
-  {
-=======
           animate = {
   {
             opacity: [0.5, 1, 0.5],
@@ -568,7 +392,6 @@ export function SkeletonLoader(...args[]):  {
 }}
           transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             duration: 1.5,
             repeat: Infinity,
   delay: index * 0.1
@@ -592,7 +415,6 @@ export function SkeletonLoader(...args[]):  {
       ))}
     </div>
   )}
-=======
   backgroundSize: '200% 100%'
           
 
@@ -604,9 +426,4 @@ export function SkeletonLoader(...args[]):  {
       ))};
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}</motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div></motion.div>}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -28,118 +28,12 @@ import {
   Gauge,
   Network,
   Server
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const quantumSolutions = [
-  {
-    id: 1,
-    title: "Quantum Algorithm Development",
-    description: "Custom quantum algorithms for specific computational problems and optimization challenges.",
-    icon: Brain,
-    features[
-      "Custom algorithm design",
-      "Quantum circuit optimization",
-      "Performance benchmarking",
-      "Algorithm validation"
-    ],
-    price: "From $150,000",
-    timeline: "24-48 weeks",
-    category: "Algorithm Development",
-    technologies["Qiskit", "Cirq", "PennyLane", "Q#"]
-  },
-  {
-    id: 2,
-    title: "Quantum Cryptography",
-    description: "Quantum-safe encryption solutions using quantum key distribution and post-quantum cryptography.",
-    icon: Shield,
-    features[
-      "Quantum key distribution",
-      "Post-quantum algorithms",
-      "Security auditing",
-      "Implementation support"
-    ],
-    price: "From $200,000",
-    timeline: "32-56 weeks",
-    category: "Cryptography",
-    technologies["BB84", "E91", "Lattice-based", "Hash-based"]
-  },
-  {
-    id: 3,
-    title: "Quantum Machine Learning",
-    description: "Quantum-enhanced machine learning algorithms for pattern recognition and optimization.",
-    icon: Brain,
-    features[
-      "Quantum neural networks",
-      "Quantum feature maps",
-      "Hybrid classical-quantum",
-      "Model training"
-    ],
-    price: "From $180,000",
-    timeline: "28-44 weeks",
-    category: "Machine Learning",
-    technologies["TensorFlow Quantum", "PennyLane", "Qiskit ML", "Variational circuits"]
-  },
-  {
-    id: 4,
-    title: "Quantum Simulation",
-    description: "Quantum simulation platforms for modeling complex quantum systems and materials.",
-    icon: Atom,
-    features[
-      "Molecular modeling",
-      "Material properties",
-      "Chemical reactions",
-      "Physical systems"
-    ],
-    price: "From $120,000",
-    timeline: "20-36 weeks",
-    category: "Simulation",
-    technologies["VQE", "QAOA", "QPE", "Quantum chemistry"]
-  },
-  {
-    id: 5,
-    title: "Quantum Optimization",
-    description: "Quantum optimization solutions for complex combinatorial and constraint satisfaction problems.",
-    icon: Target,
-    features[
-      "Combinatorial optimization",
-      "Constraint satisfaction",
-      "Resource allocation",
-      "Scheduling problems"
-    ],
-    price: "From $100,000",
-    timeline: "16-32 weeks",
-    category: "Optimization",
-    technologies["QAOA", "VQE", "Quantum annealing", "Hybrid algorithms"]
-  },
-  {
-    id: 6,
-    title: "Quantum Computing Infrastructure",
-    description: "Quantum computing infrastructure and cloud access solutions for research and development.",
-    icon: Server,
-    features[
-      "Cloud quantum access",
-      "Quantum hardware integration",
-      "Development environment",
-      "Performance monitoring"
-    ],
-    price: "From $80,000",
-    timeline: "12-24 weeks",
-    category: "Infrastructure",
-<<<<<<< HEAD
-    technologies: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
-
-=======
     technologies["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const quantumTechnologies = [
   {
     name: "Superconducting Qubits",
@@ -255,13 +149,8 @@ const quantumAdvantages = [
     title: "Quantum Tunneling",
     description: "Quantum effects enable optimization through energy landscape exploration",
     icon: Rocket,
-<<<<<<< HEAD
-    examples: ["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
-
-=======
     examples["Quantum annealing", "Adiabatic quantum computing", "Quantum optimization"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function QuantumComputing() {
@@ -936,9 +825,4 @@ export default function QuantumComputing() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

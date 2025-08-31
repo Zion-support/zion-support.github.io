@@ -43,16 +43,7 @@ import { Clock, Briefcase function ProjectsContent() {
               </Card>))}
           </div>)}
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function Projects() {
-    return <ProjectsContent />;
-</Card></Card></Card></Card></Card>}}}
-=======
       
     </>)}
 export default function Projects() {
     return <ProjectsContent />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

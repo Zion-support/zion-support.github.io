@@ -1,27 +1,11 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from "../../components/SEO";
-import { Shield, 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-import {
-  Shield,
-  Search,
-  AlertTriangle,
-  CheckCircle,
-=======
 import { SEO } from "../../components/SEO";
 import { 
   Shield, 
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   Search, 
   AlertTriangle, 
   CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ArrowRight,
   Lock,
   Database,
@@ -46,13 +30,9 @@ import {
   Settings,
   Users,
   TrendingUp
-<<<<<<< HEAD
-export default function SmartContractRiskScanner() {
-=======
  } from 'lucide-react';
 
 export default function SmartContractRiskScanner(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Search,
@@ -71,15 +51,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       title: 'Risk Assessment Engine',
       description: 'Advanced risk scoring and prioritization for identified vulnerabilities',
       benefits: ['Risk-based prioritization', 'Impact assessment', 'Remediation guidance', 'Compliance tracking']
-<<<<<<< HEAD
-    },
-    {
-      icon: Code,
-      title: 'Smart Contract Analysis',
-      description: 'Deep code analysis and optimization recommendations for smart contracts',
-      benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis']
-
-=======
     },;
     {;
       icon: Code,;
@@ -87,7 +58,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       description: 'Deep code analysis and optimization recommendations for smart contracts',;
       benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const scanningCapabilities = [
@@ -108,15 +78,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       description: 'Detect improper access control and permission vulnerabilities',
       icon: Lock,
       features: ['Role-based analysis', 'Permission validation', 'Admin function review', 'Access pattern analysis']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Logic Vulnerabilities',
-      description: 'Identify logical flaws and business logic vulnerabilities',
-      icon: Lightbulb,
-      features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing']
-
-=======
     },;
     {;
       title: 'Logic Vulnerabilities',;
@@ -124,7 +85,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       icon: Lightbulb,;
       features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricing = [
@@ -173,15 +133,6 @@ export default function SmartContractRiskScanner(...args: []):  {
         'White-label solutions',
         'Dedicated infrastructure',
         '24/7 dedicated support',
-<<<<<<< HEAD
-        'Custom integrations',
-        'On-premise deployment',
-        'Compliance certifications'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-
-=======
         'Custom integrations',;
         'On-premise deployment',;
         'Compliance certifications';
@@ -189,7 +140,6 @@ export default function SmartContractRiskScanner(...args: []):  {
       cta: 'Contact Sales',;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const marketInfo = {
@@ -232,13 +182,8 @@ export default function SmartContractRiskScanner(...args: []):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Smart Contract Risk Scanner - Zion Tech Group"
         description="AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats."
       />
@@ -871,16 +816,6 @@ export default function SmartContractRiskScanner(...args: []):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
-<<<<<<< HEAD
-
-                Contact Security Team
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Contact Security Team;
               </motion.button>;
@@ -889,6 +824,5 @@ export default function SmartContractRiskScanner(...args: []):  {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}

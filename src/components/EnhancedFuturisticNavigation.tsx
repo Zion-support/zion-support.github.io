@@ -218,30 +218,11 @@ import {
   Chi,
   Psi,
   Omega
-<<<<<<< HEAD
-export const EnhancedFuturisticNavigation: React.FC = () => {
-=======
  } from 'lucide-react';
 
-<<<<<<< HEAD
-export const EnhancedFuturisticNavigation: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
-  const [scrolled, setScrolled] = useState(false);
-  const location = useLocation();
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const handleScroll = () => {;
-      setScrolled(window.scrollY > 20)};
-=======
     const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll)}, []);
 
@@ -249,27 +230,12 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
     setMobileMenuOpen(false);
     setActiveDropdown(null)}, [location.pathname]);
 
-<<<<<<< HEAD
-  const handleSearch = (e: React.FormEvent) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    if (searchQuery.trim()) {
-<<<<<<< HEAD
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-
-=======
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const toggleDropdown = (dropdown: string)  => {;
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
-=======
   const toggleDropdown = (dropdown: string) => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const navigationItems = [
     {
@@ -370,15 +336,6 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
       color: 'from-zion-blue to-zion-cyan',
       isMain: true
     },
-<<<<<<< HEAD
-    {
-      name: 'Contact',
-      href: '/contact',
-      icon: Phone,
-      color: 'from-zion-cyan to-zion-purple',
-      isMain: true
-
-=======
     {;
       name: 'Contact',;
       href: '/contact',;
@@ -386,7 +343,6 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
       color: 'from-zion-cyan to-zion-purple',;
       isMain: true;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -736,23 +692,10 @@ export const EnhancedFuturisticNavigation: React.FC = () => {;
             </motion.div>
           )}
         </AnimatePresence>
-<<<<<<< HEAD
-      </nav>
-
-      {/* Spacer for fixed navigation */}
-      <div className="h-20"></div>;
-    </>;
-  )};
-=======
       </nav>;
 ;
       {/* Spacer for fixed navigation */};
       <div className="h-20"></div>;
     </>;
   );
-<<<<<<< HEAD
-};}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

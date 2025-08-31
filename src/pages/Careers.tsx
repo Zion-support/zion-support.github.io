@@ -1,30 +1,22 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Helmet } from 'react-helmet-async';
 import { 
   Briefcase, 
   Users, 
   Heart, 
   Zap, 
-  Brain, 
-  Shield, 
-  Rocket, 
-  Globe, 
-  Award,
-  CheckCircle,
-  ArrowRight,
-  MapPin,
-  Clock,
-  DollarSign,
-  GraduationCap,
-  Lightbulb,
-  Target,
-  Star,
+  Brain,
+  Shield,
+  Cloud,
   Code,
-  Settings,
-  Palette,
-  BarChart3,
-  Atom,
-  TrendingUp
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Award,
+  Lightbulb
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -178,9 +170,9 @@ export default function Careers() {
 
   const companyValues = [
     {
-      icon: Innovation,
-      title: 'Innovation First',
-      description: 'We push the boundaries of what\'s possible in technology.'
+      icon: Brain,
+      title: "Innovation First",
+      description: "We push the boundaries of what's possible in technology"
     },
     {
       icon: Collaboration,
@@ -193,364 +185,247 @@ export default function Careers() {
       description: 'We solve real problems that make a difference.'
     },
     {
-      icon: Growth,
-      title: 'Continuous Growth',
-      description: 'We invest in our people\'s development and success.'
+      icon: Code,
+      title: "Quality Code",
+      description: "Writing clean, maintainable, and efficient code"
     }
   ];
 
+  const benefits = [
+    "Competitive salary and equity packages",
+    "Comprehensive health, dental, and vision insurance",
+    "Flexible work arrangements and remote options",
+    "Professional development and learning opportunities",
+    "Modern equipment and tools",
+    "Regular team events and activities",
+    "Generous vacation and time-off policies",
+    "401(k) matching and financial planning"
+  ];
+
   return (
-    <div className="min-h-screen bg-zion-blue">
-      <SEO 
-        title="Careers - Zion Tech Group"
-        description="Join our team of technology experts and help shape the future of AI-powered business solutions. Explore exciting career opportunities in AI, engineering, sales, and more."
-        keywords="careers, job opportunities, AI jobs, cybersecurity jobs, cloud jobs, Zion Tech Group, technology careers"
-      />
-      
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Join the Future of
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                {' '}Technology
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light max-w-3xl mx-auto">
-              Be part of a team that's revolutionizing AI, quantum computing, and enterprise solutions. 
-              Shape the future with us at Zion Tech Group.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-zion-cyan text-white px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/90 transition-colors">
-                View Open Positions
-              </Button>
-              <Button
-                variant="outline"
-                className="border-2 border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Learn About Culture
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <Helmet>
+        <title>Careers - Zion Tech Group | Join Our Innovation Team</title>
+        <meta name="description" content="Join Zion Tech Group's talented team of innovators, engineers, and technology experts. Explore exciting career opportunities in AI, cybersecurity, cloud computing, and more." />
+        <meta name="keywords" content="careers, jobs, employment, Zion Tech Group, technology jobs, AI engineer, cybersecurity specialist, cloud engineer" />
+      </Helmet>
 
-      {/* Company Values */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Our Values
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              These core principles guide everything we do and shape our company culture.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyValues.map((value, index) => (
-              <motion.div
-                key={value.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center p-6 rounded-lg bg-zion-blue-darker border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-zion-slate-light">{value.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Job Listings */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Open Positions
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Find your perfect role in our growing team of innovators and problem-solvers.
-            </p>
-          </motion.div>
-
-          {/* Filters */}
-          <div className="flex flex-wrap gap-4 mb-8 justify-center">
-            <select
-              value={selectedDepartment}
-              onChange={(e) => setSelectedDepartment(e.target.value)}
-              className="px-4 py-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white focus:border-zion-cyan focus:outline-none"
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center"
             >
-              {departments.map(dept => (
-                <option key={dept.id} value={dept.id}>{dept.name}</option>
-              ))}
-            </select>
-            <select
-              value={selectedLocation}
-              onChange={(e) => setSelectedLocation(e.target.value)}
-              className="px-4 py-2 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white focus:border-zion-cyan focus:outline-none"
-            >
-              {locations.map(loc => (
-                <option key={loc.id} value={loc.id}>{loc.name}</option>
-              ))}
-            </select>
+              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
+                Join Our Innovation Team
+              </h1>
+              <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
+                Help us build the future of technology. Join a team of passionate innovators, engineers, and problem-solvers who are shaping the digital landscape.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
+                  View Open Positions
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+                <button className="px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+                  Learn About Culture
+                </button>
+              </div>
+            </motion.div>
           </div>
+        </section>
 
-          {/* Job Cards */}
-          <div className="space-y-6">
-            {filteredJobs.map((job, index) => (
-              <motion.div
-                key={job.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
-                        <Briefcase className="w-6 h-6 text-white" />
+        {/* Company Values Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Our Values & Culture
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {companyValues.map((value, index) => (
+                  <motion.div
+                    key={value.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="text-center"
+                  >
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <value.icon className="w-8 h-8 text-blue-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900 mb-2">{value.title}</h3>
+                    <p className="text-slate-600">{value.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Why Work at Zion Tech?
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {benefits.map((benefit, index) => (
+                  <motion.div
+                    key={benefit}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.05 * index }}
+                    className="flex items-center gap-3"
+                  >
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                    <span className="text-slate-700">{benefit}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Job Listings Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+            >
+              <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
+                Open Positions
+              </h2>
+              
+              {/* Category Filter */}
+              <div className="flex flex-wrap justify-center gap-3 mb-12">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                      selectedCategory === category.id
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+              
+              {/* Job Cards */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {filteredJobs.map((job, index) => (
+                  <motion.div
+                    key={job.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                    className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 p-6"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl font-bold text-slate-900 mb-2">{job.title}</h3>
+                        <p className="text-blue-600 font-medium">{job.department}</p>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-white mb-2">{job.title}</h3>
-                        <div className="flex flex-wrap gap-4 text-sm text-zion-slate-light mb-3">
-                          <span className="flex items-center gap-1">
-                            <MapPin className="w-4 h-4" />
-                            {locations.find(l => l.id === job.location)?.name}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="w-4 h-4" />
-                            {job.type}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Users className="w-4 h-4" />
-                            {job.experience}
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <DollarSign className="w-4 h-4" />
-                            {job.salary}
-                          </span>
-                        </div>
-                        <p className="text-zion-slate-light mb-4">{job.description}</p>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                          <div>
-                            <h4 className="text-zion-cyan font-semibold mb-2">Requirements</h4>
-                            <ul className="space-y-1">
-                              {job.requirements.map((req, idx) => (
-                                <li key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                                  <CheckCircle className="w-4 h-4 text-zion-cyan" />
-                                  {req}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <h4 className="text-zion-cyan font-semibold mb-2">Benefits</h4>
-                            <ul className="space-y-1">
-                              {job.benefits.map((benefit, idx) => (
-                                <li key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
-                                  <Star className="w-4 h-4 text-zion-cyan" />
-                                  {benefit}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
+                      <div className="text-right">
+                        <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-medium rounded-full">
+                          {job.type}
+                        </span>
                       </div>
                     </div>
-                  </div>
-                  <div className="lg:text-right">
-                    <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1 flex items-center gap-2">
+                    
+                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-slate-600">
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4" />
+                        {job.location}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Clock className="w-4 h-4" />
+                        {job.experience}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4" />
+                        {job.salary}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4" />
+                        {job.department}
+                      </div>
+                    </div>
+                    
+                    <p className="text-slate-600 mb-4">{job.description}</p>
+                    
+                    <div className="mb-4">
+                      <h4 className="font-semibold text-slate-900 mb-2">Key Requirements:</h4>
+                      <ul className="space-y-1">
+                        {job.requirements.slice(0, 3).map((req, idx) => (
+                          <li key={idx} className="text-sm text-slate-600 flex items-center gap-2">
+                            <CheckCircle className="w-3 h-3 text-green-500" />
+                            {req}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    
+                    <button className="w-full py-3 px-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
                       Apply Now
                       <ArrowRight className="w-4 h-4" />
-                    </Button>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {filteredJobs.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-zion-slate-light text-lg">No positions match your current filters.</p>
-              <button 
-                onClick={() => {
-                  setSelectedDepartment('all');
-                  setSelectedLocation('all');
-                }}
-                className="text-zion-cyan hover:text-zion-cyan-light transition-colors mt-2"
-              >
-                Clear filters
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Culture Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Life at Zion Tech Group
-            </h2>
-            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Discover what makes our workplace unique and why our team members love being part of our mission.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Why Choose Zion Tech Group?
-              </h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Cutting-Edge Technology</h4>
-                    <p className="text-zion-slate-light text-sm">Work with the latest AI, quantum computing, and emerging technologies.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Remote-First Culture</h4>
-                    <p className="text-zion-slate-light text-sm">Work from anywhere with flexible schedules and remote-friendly policies.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Professional Growth</h4>
-                    <p className="text-zion-slate-light text-sm">Continuous learning opportunities, conferences, and skill development.</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 bg-zion-cyan rounded-full flex items-center justify-center mt-1">
-                    <CheckCircle className="w-4 h-4 text-white" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold">Impactful Work</h4>
-                    <p className="text-zion-slate-light text-sm">Solve real-world problems that make a difference in people's lives.</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="bg-zion-blue-darker p-8 rounded-lg border border-zion-purple/20"
-            >
-              <h4 className="text-xl font-semibold text-white mb-4">Perks & Benefits</h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-center gap-2 text-zion-slate-light">
-                  <Heart className="w-5 h-5 text-zion-cyan" />
-                  <span>Health Insurance</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate-light">
-                  <GraduationCap className="w-5 h-5 text-zion-cyan" />
-                  <span>Learning Budget</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate-light">
-                  <Globe className="w-5 h-5 text-zion-cyan" />
-                  <span>Remote Work</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate-light">
-                  <Award className="w-5 h-5 text-zion-cyan" />
-                  <span>Performance Bonuses</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate-light">
-                  <Users className="w-5 h-5 text-zion-cyan" />
-                  <span>Team Events</span>
-                </div>
-                <div className="flex items-center gap-2 text-zion-slate-light">
-                  <Zap className="w-5 h-5 text-zion-cyan" />
-                  <span>Flexible Hours</span>
-                </div>
+                    </button>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Join Our Team?
-            </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Don't see a position that fits? We're always looking for talented individuals. 
-              Send us your resume and let's explore opportunities together.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
-                Submit General Application
-              </Button>
-              <Button
-                variant="outline"
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Contact Recruiting
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-700">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Join Our Team?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8">
+                Don't see a position that fits? Send us your resume and we'll keep you in mind for future opportunities.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
+                  Submit Resume
+                </button>
+                <button className="px-8 py-4 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors">
+                  Contact Recruiting
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
 

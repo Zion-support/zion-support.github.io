@@ -2,79 +2,14 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
-import { 
-  ChevronDown, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Users, 
-  HardDrive, 
-  TrendingUp, 
-  Building2, 
-  FileText, 
-  HelpCircle, 
-  BarChart3,
-  Globe,
-  Cpu,
-  Database,
-  Lock,
-  Cloud,
-  Rocket,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Target,
-  Handshake,
-  Lightbulb,
-  Network,
-  Smartphone,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  ChevronLeft,
-  ChevronRight
-} from 'lucide-react';
-
-interface MainNavigationProps {
-  className?: string;
-}
-
-export function MainNavigation({ className }: MainNavigationProps) {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const [isCompanyOpen, setIsCompanyOpen] = useState(false);
-  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-
-  return (
-    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
-      <NavLink 
-        to="/" 
-        className={({ isActive }) => 
-          cn(
-            "text-sm font-medium transition-colors hover:text-primary", 
-            isActive ? "text-zion-cyan" : "text-muted-foreground"
-          )
-        }
-      >
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp, Building2, FileText, HelpCircle, BarChart3 } from "lucide-react";
+export function MainNavigation({ className }) {
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+    return (<nav className={cn("hidden md:flex items-center space-x-6", className)}>
+      <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
         Home
       </NavLink>
       
@@ -214,21 +149,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
       
       {/* Company Dropdown */}
       <div className="relative group">
-        <button
-          onMouseEnter={() => setIsCompanyOpen(true)}
-          onMouseLeave={() => setIsCompanyOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
+        <button onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
           <Building2 className="w-4 h-4" />
           <span>Company</span>
           <ChevronDown className="w-3 h-3" />
         </button>
         {isCompanyOpen && (
-          <div
-            onMouseEnter={() => setIsCompanyOpen(true)}
-            onMouseLeave={() => setIsCompanyOpen(false)}
-            className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
-          >
+          <div onMouseEnter={() => setIsCompanyOpen(true)} onMouseLeave={() => setIsCompanyOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
             <div className="p-4">
               <ul className="space-y-2 text-sm">
                 <li><Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors">About Us</Link></li>
@@ -246,21 +173,13 @@ export function MainNavigation({ className }: MainNavigationProps) {
       
       {/* Resources Dropdown */}
       <div className="relative group">
-        <button
-          onMouseEnter={() => setIsResourcesOpen(true)}
-          onMouseLeave={() => setIsResourcesOpen(false)}
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
-        >
+        <button onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
           <FileText className="w-4 h-4" />
           <span>Resources</span>
           <ChevronDown className="w-3 h-3" />
         </button>
         {isResourcesOpen && (
-          <div
-            onMouseEnter={() => setIsResourcesOpen(true)}
-            onMouseLeave={() => setIsResourcesOpen(false)}
-            className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
-          >
+          <div onMouseEnter={() => setIsResourcesOpen(true)} onMouseLeave={() => setIsResourcesOpen(false)} className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
             <div className="p-4">
               <ul className="space-y-2 text-sm">
                 <li><Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blog</Link></li>

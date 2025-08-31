@@ -117,12 +117,6 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
               Solutions
             </span>
           </motion.h1>
-<<<<<<< HEAD
-
-          <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our comprehensive suite of cutting-edge micro SaaS services,
-            AI solutions, and emerging technologies. From quantum computing to
-=======
           
           <motion.p initial = {
   { opacity: 0,
@@ -154,7 +148,6 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
 }} className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Discover our comprehensive suite of cutting-edge micro SaaS services, 
             AI solutions, and emerging technologies. From quantum computing to 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             space technology, we're building the future today.
           </motion.p>
         </motion.div>
@@ -279,31 +272,6 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
         </motion.div>
 
         {/* Scroll Indicator */}
-<<<<<<< HEAD
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
-  { duration: 1,
-  delay: 1.5 
-
-}} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <motion.div animate = {
-  { y[0, 10,
-  0] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}} className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">
-            <motion.div animate = {
-  { y[0, 12,
-  0] 
-
-}} transition = {
-  { duration: 2,
-  repeat: Infinity 
-
-}} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
-=======
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { duration: 1,
   delay: 1.5 
@@ -352,7 +320,6 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
 
 
 }} className="w-1 h-3 bg-cyan-400 rounded-full mt-2"/>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </motion.div>
         </motion.div>
       </div>
@@ -374,7 +341,6 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
   
 
 }} transition={{
-=======
   
 
 }} animate = {
@@ -385,7 +351,6 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
 
 }} transition = {
   {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 duration: Math.random() * 3 + 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
@@ -393,9 +358,4 @@ import { ArrowRight, Rocket, Star, Zap, Brain, Shield, Globe export default func
 
 }}/>))}
       </div>
-<<<<<<< HEAD
-    </section>);
-</div></div></div></div></div></div>}</motion.div></motion.div>}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

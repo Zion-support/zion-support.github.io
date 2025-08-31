@@ -44,118 +44,12 @@ import {
   Cloud,
   Settings,
   Palette
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const mobileDevelopmentSolutions = [
-  {
-    id: 1,
-    title: "Native iOS Development",
-    description: "Custom iOS applications built with Swift and SwiftUI for optimal performance and user experience.",
-    icon: Smartphone,
-    features[
-      "Swift/SwiftUI development",
-      "iOS app store optimization",
-      "Device-specific features",
-      "Performance optimization"
-    ],
-    price: "From $25,000",
-    timeline: "12-24 weeks",
-    category: "iOS",
-    technologies["Swift", "SwiftUI", "Core Data", "iOS SDK"]
-  },
-  {
-    id: 2,
-    title: "Native Android Development",
-    description: "Custom Android applications built with Kotlin and Jetpack Compose for modern Android development.",
-    icon: Smartphone,
-    features[
-      "Kotlin/Jetpack Compose",
-      "Material Design 3",
-      "Android-specific features",
-      "Performance optimization"
-    ],
-    price: "From $25,000",
-    timeline: "12-24 weeks",
-    category: "Android",
-    technologies["Kotlin", "Jetpack Compose", "Room Database", "Android SDK"]
-  },
-  {
-    id: 3,
-    title: "Cross-Platform Development",
-    description: "Multi-platform applications using React Native, Flutter, or Xamarin for cost-effective development.",
-    icon: AppWindow,
-    features[
-      "Single codebase",
-      "Multiple platforms",
-      "Native performance",
-      "Rapid development"
-    ],
-    price: "From $35,000",
-    timeline: "16-28 weeks",
-    category: "Cross-Platform",
-    technologies["React Native", "Flutter", "Xamarin", "Native Modules"]
-  },
-  {
-    id: 4,
-    title: "Progressive Web Apps (PWA)",
-    description: "Web applications that provide native app-like experience across all devices and platforms.",
-    icon: Globe,
-    features[
-      "Offline functionality",
-      "Push notifications",
-      "App-like experience",
-      "Cross-platform compatibility"
-    ],
-    price: "From $20,000",
-    timeline: "10-18 weeks",
-    category: "PWA",
-    technologies["Service Workers", "Web App Manifest", "PWA APIs", "Responsive Design"]
-  },
-  {
-    id: 5,
-    title: "Enterprise Mobile Solutions",
-    description: "Business-focused mobile applications with enterprise-grade security and integration capabilities.",
-    icon: Building,
-    features[
-      "Enterprise security",
-      "Backend integration",
-      "User management",
-      "Analytics & reporting"
-    ],
-    price: "From $50,000",
-    timeline: "20-36 weeks",
-    category: "Enterprise",
-    technologies["Enterprise Security", "API Integration", "User Management", "Analytics"]
-  },
-  {
-    id: 6,
-    title: "Mobile App Maintenance",
-    description: "Ongoing support, updates, and maintenance services for existing mobile applications.",
-    icon: Settings,
-    features[
-      "Bug fixes & updates",
-      "Performance optimization",
-      "Feature enhancements",
-      "Platform updates"
-    ],
-    price: "From $5,000/month",
-    timeline: "Ongoing",
-    category: "Maintenance",
-<<<<<<< HEAD
-    technologies: ["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
-
-=======
     technologies["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const mobileTechnologies = [
   {
     name: "iOS Development",
@@ -271,13 +165,8 @@ const mobileBenefits = [
     title: "App Store Presence",
     description: "Visibility in app stores and potential for monetization",
     icon: Award,
-<<<<<<< HEAD
-    examples: ["App store visibility", "In-app purchases", "Subscription models", "Premium features"]
-
-=======
     examples["App store visibility", "In-app purchases", "Subscription models", "Premium features"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function MobileDevelopment() {
@@ -952,9 +841,4 @@ export default function MobileDevelopment() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Star, Quote interface Testimonial {
-=======
 import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react';
 
 interface Testimonial {
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   id: number;
   name: string;
   role: string;
@@ -17,70 +11,8 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-<<<<<<< HEAD
-  industry: string;
-=======
   industry: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-const Testimonials: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const testimonials: Testimonial[] = [
-    {
-      id: 1,
-      name: "Sarah Chen",
-      role: "CTO",
-      comp: "TechFlow Solutions",
-      content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",
-      rating: 5,
-      avatar: "/images/testimonials/sarah-chen.jpg",
-      industry: "Technology"
-    },
-    {
-      id: 2,
-      name: "Marcus Rodriguez",
-      role: "VP of Operations",
-      comp: "Global Manufacturing Co.",
-      content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.",
-      rating: 5,
-      avatar: "/images/testimonials/marcus-rodriguez.jpg",
-      industry: "Manufacturing"
-    },
-    {
-      id: 3,
-      name: "Dr. Emily Watson",
-      role: "Research Director",
-      comp: "Quantum Research Institute",
-      content: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.",
-      rating: 5,
-      avatar: "/images/testimonials/emily-watson.jpg",
-      industry: "Research"
-    },
-    {
-      id: 4,
-      name: "David Kim",
-      role: "CEO",
-      comp: "FinTech Innovations",
-      content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",
-      rating: 5,
-      avatar: "/images/testimonials/david-kim.jpg",
-      industry: "Financial Services"
-
-  ];
-
-<<<<<<< HEAD
-  const nextTestimonial = () => {;
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length)};
-
-  const prevTestimonial = () => {;
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)};
-
-  const goToTestimonial = (index: number)  => {;
-    setCurrentIndex(index)};
-=======
   const nextTestimonial = () => {;
     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
@@ -92,7 +24,6 @@ const Testimonials: React.FC = () => {;
   const goToTestimonial = (index: number) => {;
     setCurrentIndex(index);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section className = "py-20 bg-gradient-to-b from-zion-slate to-zion-slate-dark" role="region" aria-labelledby="testimonials-heading">
@@ -297,25 +228,12 @@ const Testimonials: React.FC = () => {;
             <div className="text-center">
               <div className="text-3xl font-bold text-zion-cyan mb-2">50+</div>
               <div className="text-zion-slate-light text-sm">Expert Engineers</div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-</div></div>};
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default Testimonials;}}}

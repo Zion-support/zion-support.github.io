@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Cpu, Wifi, Zap, Database, Globe, BarChart3, ArrowRight, Shield, Cloud, Smartphone export default function IoTEdge() {
-=======
 import React from 'react.ts';
 import { SEO  } from "../../components/SEO";
 import { motion  } from 'framer-motion.ts';
 import { Cpu, Wifi, Database, Shield, Zap, Globe, Server, BarChart3, Settings, Monitor, Activity, Network, Smartphone, Tablet, Laptop, Cloud, Lock, RefreshCw, TrendingUp, AlertTriangle  } from 'lucide-react';
 
 export default function IoTEdge(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Cpu,
@@ -24,15 +18,6 @@ export default function IoTEdge(...args: []):  {
     {
       icon: Zap,
       title: 'Real-time Processing',
-<<<<<<< HEAD
-      description: 'Instant data analysis and decision making'
-    },
-    {
-      icon: Database,
-      title: 'Data Management',
-      description: 'Efficient storage and processing of IoT data streams'
-
-=======
       description: 'Instant data analysis and decision making';
     },;
     {;
@@ -40,7 +25,6 @@ export default function IoTEdge(...args: []):  {
       title: 'Data Management',;
       description: 'Efficient storage and processing of IoT data streams';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -57,15 +41,6 @@ export default function IoTEdge(...args: []):  {
     {
       title: '5G Integration',
       description: 'High-speed connectivity for IoT applications',
-<<<<<<< HEAD
-      icon: Wifi
-    },
-    {
-      title: 'Security & Compliance',
-      description: 'End-to-end security for IoT ecosystems',
-      icon: Shield
-
-=======
       icon: Wifi;
     },;
     {;
@@ -73,7 +48,6 @@ export default function IoTEdge(...args: []):  {
       description: 'End-to-end security for IoT ecosystems',;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -290,17 +264,6 @@ export default function IoTEdge(...args: []):  {
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-<<<<<<< HEAD
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
-                    <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
-                  </div>
-=======
               >
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
@@ -375,7 +338,6 @@ export default function IoTEdge(...args: []):  {
               >
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
                   <industry.icon className="w-8 h-8 text-emerald-400" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </motion.div>
             ))}

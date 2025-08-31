@@ -1,12 +1,12 @@
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/router";
+import { useNavigate } from 'react-router-dom';
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchResultCard } from "@/components/search/SearchResultCard";
 import { SearchBar } from "@/components/SearchBar";
 const LIMIT = 20;
 export default function SearchResultsPage() {
-    const router = useRouter();
+    const router = useNavigate();
     const initialQuery = router.query.q || "";
     const [query, setQuery] = useState(initialQuery);
     const { data, fetchNextPage, hasNextPage, isFetchingNextPage, isLoading, refetch } = useInfiniteQuery({
@@ -24,12 +24,7 @@ export default function SearchResultsPage() {
     useEffect(() => {
         if (initialQuery !== query) {
             setQuery(initialQuery);
-<<<<<<< HEAD
-            refetch();
-
-=======
             refetch()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [initialQuery]);
     const allResults = data?.pages.flat() ?? [];
     const loader = useRef(null);
@@ -39,12 +34,7 @@ export default function SearchResultsPage() {
             return;
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasNextPage && !isFetchingNextPage) {
-<<<<<<< HEAD
-                fetchNextPage();
-
-=======
                 fetchNextPage()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         });
         observer.observe(el);
         return () => observer.disconnect()}, [loader.current, hasNextPage, isFetchingNextPage]);
@@ -68,9 +58,4 @@ export default function SearchResultsPage() {
         </div>)}
       <div ref={loader} className="h-1"/>
       {isFetchingNextPage && <p className="text-center mt-4">Loading more...</p>}
-<<<<<<< HEAD
-    </main>);
-</div>}}}
-=======
     </main>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

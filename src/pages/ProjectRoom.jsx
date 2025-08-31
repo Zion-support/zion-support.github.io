@@ -26,12 +26,7 @@ export default function ProjectRoom() {
         });
         // Switch to video tab if not already there
         if (activeTab !== 'video') {
-<<<<<<< HEAD
-            setActiveTab('video');
-
-=======
             setActiveTab('video')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const endVideoCall = () => {
         setIsInCall(false);
@@ -48,12 +43,7 @@ export default function ProjectRoom() {
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!callParticipants.find(p => p.id === randomUser.id)) {
             setCallParticipants(prev => [...prev, randomUser]);
-<<<<<<< HEAD
-            toast(`${randomUser.name} joined the call`);
-
-=======
             toast(`${randomUser.name} joined the call`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project"/>
@@ -206,11 +196,5 @@ export default function ProjectRoom() {
           </TabsContent>
         </Tabs>
       </main>
-<<<<<<< HEAD
-
-    </>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

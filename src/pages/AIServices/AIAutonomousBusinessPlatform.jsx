@@ -1,12 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database import SEO from '../SEO';
-=======
 import { Brain, TrendingUp, Users, BarChart3, Target, CheckCircle, ArrowRight, Play, Cpu, Database } from 'lucide-react';
 import SEO from "../SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const features = [
     {
         title: "Unified Business Platform",
@@ -369,9 +365,4 @@ export default function AIAutonomousBusinessPlatform() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

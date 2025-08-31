@@ -5,14 +5,9 @@ import {
   Check, Star, Brain, Cpu, Database, Network, Shield, Zap,
   Rocket, Atom, Globe, Cloud, Lock, Eye, Target, TrendingUp,
   ChevronDown, ChevronUp, Search, Filter, Grid, List, DollarSign
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '@/data/innovativeMicroSaasServices2027';
-import { EMERGING_TECH_SERVICES_2027 } from '@/data/emergingTechServices2027';
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027  } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027  } from '@/data/emergingTechServices2027';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function ComprehensivePricing2027(...args[]):  {
   const [searchQuery, setSearchQuery] = useState('');
@@ -39,15 +34,6 @@ export default function ComprehensivePricing2027(...args[]):  {
       return b.rating - a.rating});
 
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -55,7 +41,6 @@ export default function ComprehensivePricing2027(...args[]):  {
         staggerChildren: 0.1;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
@@ -69,15 +54,6 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -85,7 +61,6 @@ export default function ComprehensivePricing2027(...args[]):  {
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const cardVariants = {
@@ -107,15 +82,6 @@ export default function ComprehensivePricing2027(...args[]):  {
 
     },
     hover: {
-<<<<<<< HEAD
-      scale: 1.02,
-      y: -5,
-      transition: {
-        duration: 0.2,
-        ease: "easeOut"
-
-
-=======
       scale: 1.02,;
       y: -5,;
       transition: {;
@@ -123,78 +89,8 @@ export default function ComprehensivePricing2027(...args[]):  {
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const getPriceColor = (price: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'text-green-400';
-    if (price < 2500) return 'text-yellow-400';
-    return 'text-red-400'};
-
-<<<<<<< HEAD
-  const getPriceTier = (price: number) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (price < 1000) return 'Starter';
-    if (price < 2500) return 'Professional';
-    return 'Enterprise'};
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Animated Background */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Header Section */}
-      <motion.section
-        className="relative z-10 pt-20 pb-16 px-6"
-        initial = {
-  { opacity: 0,
-  y: -50 
-
-
-
-
-
-
-}}
-        animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-        transition={{ duration: 0.8 }}
-
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.h1
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-<<<<<<< HEAD
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
             initial = {
   { opacity: 0,
   scale: 0.8 
@@ -226,17 +122,10 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Comprehensive Pricing 2027
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -268,7 +157,6 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Transparent pricing for our cutting-edge technology services.
             Choose the perfect solution for your business needs and budget.
           </motion.p>
@@ -276,12 +164,6 @@ export default function ComprehensivePricing2027(...args[]):  {
           {/* Pricing Stats */}
           <motion.div
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-<<<<<<< HEAD
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-
-=======
             initial = {
   { opacity: 0,
   y: 30 
@@ -313,7 +195,6 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             {[
               { label: 'Total Services', value: allServices.length, icon: Rocket, color: 'from-cyan-500 to-blue-600' },
               { label: 'Starting Price', value: `$${Math.min(...allServices.map(s  => s.price))}`, icon: DollarSign, color: 'from-green-500 to-emerald-600' },
@@ -335,12 +216,6 @@ export default function ComprehensivePricing2027(...args[]):  {
       {/* Search and Filters */}
       <motion.section
         className="relative z-10 px-6 pb-12"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 20 
@@ -372,7 +247,6 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="max-w-7xl mx-auto">
           <div className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20">
             <div className="flex flex-col lg:flex-row gap-6 items-center">
@@ -395,15 +269,9 @@ export default function ComprehensivePricing2027(...args[]):  {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-
-                  {categories.map(category => (
-=======
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -488,13 +356,8 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
                 transition={{ duration: 0.3 }}
-<<<<<<< HEAD
-
-                {filteredServices.map((service, index) => (
-=======
               >
                 {filteredServices.map((service, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <motion.div
                     key={service.id}
                     variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
@@ -735,12 +598,6 @@ export default function ComprehensivePricing2027(...args[]):  {
       {/* CTA Section */}
       <motion.section
         className="relative z-10 px-6 pb-20"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 30 
@@ -772,7 +629,6 @@ export default function ComprehensivePricing2027(...args[]):  {
 
 }}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -794,23 +650,10 @@ export default function ComprehensivePricing2027(...args[]):  {
 
                 Call +1 302 464 0950
               </a>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.section>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </motion.section>;
     </div>;
   );
-<<<<<<< HEAD
-</div>}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

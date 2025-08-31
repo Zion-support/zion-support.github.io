@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu  } from 'lucide-react';
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -28,12 +24,8 @@ import {
   Target,
   Award,
   BarChart3
-<<<<<<< HEAD
-import { SEO } from '../../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function GreenIT() {
   const features = [
@@ -50,15 +42,6 @@ export default function GreenIT() {
     {
       icon: Cloud,
       title: 'Green Cloud Solutions',
-<<<<<<< HEAD
-      description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.'
-    },
-    {
-      icon: Recycle,
-      title: 'Circular IT Economy',
-      description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'
-
-=======
       description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.';
     },;
     {;
@@ -66,7 +49,6 @@ export default function GreenIT() {
       title: 'Circular IT Economy',;
       description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const solutions = [
@@ -87,15 +69,6 @@ export default function GreenIT() {
       description: 'Implement intelligent power management systems for optimal energy usage',
       icon: Gauge,
       benefits: ['Automated power optimization', 'Real-time monitoring', 'Predictive maintenance']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Green Software Development',
-      description: 'Develop energy-efficient software applications and optimize existing systems',
-      icon: Code,
-      benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance']
-
-=======
     },;
     {;
       title: 'Green Software Development',;
@@ -103,7 +76,6 @@ export default function GreenIT() {
       icon: Code,;
       benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -124,15 +96,6 @@ export default function GreenIT() {
       description: 'Green campus technology and sustainable educational IT infrastructure',
       icon: GraduationCap,
       metrics: ['Student Experience', 'Operational Costs', 'Sustainability Goals']
-<<<<<<< HEAD
-    },
-    {
-      industry: 'Manufacturing',
-      description: 'Smart manufacturing with energy-efficient automation and monitoring',
-      icon: Factory,
-      metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance']
-
-=======
     },;
     {;
       industry: 'Manufacturing',;
@@ -140,7 +103,6 @@ export default function GreenIT() {
       icon: Factory,;
       metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -157,15 +119,6 @@ export default function GreenIT() {
     {
       icon: Globe,
       title: 'Environmental Impact',
-<<<<<<< HEAD
-      description: 'Reduce carbon footprint and contribute to environmental conservation'
-    },
-    {
-      icon: Award,
-      title: 'Brand Reputation',
-      description: 'Enhance brand image through commitment to sustainability'
-
-=======
       description: 'Reduce carbon footprint and contribute to environmental conservation';
     },;
     {;
@@ -173,7 +126,6 @@ export default function GreenIT() {
       title: 'Brand Reputation',;
       description: 'Enhance brand image through commitment to sustainability';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (

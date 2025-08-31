@@ -220,14 +220,8 @@ export function WebhooksManager() {
                 setTestEventType('new_application');
                 if (showTestResult) {
                     setShowTestResult(false);
-<<<<<<< HEAD
-                    clearTestResult();
-
-
-=======
                     clearTestResult()}
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }}>
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <DialogHeader>
@@ -325,9 +319,4 @@ export function WebhooksManager() {
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
-<<<<<<< HEAD
-    </Card>);
-</Card></Card></Card></Card></Card>}}}}
-=======
     </Card>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

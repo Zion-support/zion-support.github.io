@@ -165,18 +165,8 @@ export const enhancedServices2025 = [
       professional: "$19,000",
       enterprise: "Custom"
     },
-<<<<<<< HEAD
-    technologies: ["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
-
-];
-
-export const ENHANCED_SERVICES_2025 = enhancedServices2025;
-
-export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility}
-=======
     technologies["IoT Sensors", "Machine Learning", "Cloud Computing", "Data Analytics"]
   }
 ];
 
 export const EnhancedService2025 = enhancedServices2025[0]; // Default export for compatibility
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

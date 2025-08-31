@@ -6,11 +6,7 @@ export interface ServiceContact {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
   address: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface MicroSaasService {
 
@@ -36,11 +32,7 @@ export interface MicroSaasService {
   trialPeriod: string;
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  growthRate: string;
-=======
   growthRate: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface ITService {
 
@@ -63,11 +55,7 @@ export interface ITService {
   support: string;
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  compliance: string[];
-=======
   compliance: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export interface AIService {
 
@@ -92,11 +80,7 @@ export interface AIService {
   useCases: string[];
   innovationLevel: string;
   marketSize: string;
-<<<<<<< HEAD
-  ethicalAI: string[];
-=======
   ethicalAI: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // Revolutionary Micro SAAS Services 2026
 export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
@@ -258,13 +242,6 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     setupTime: "6-8 weeks",
     integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "Custom APIs"],
     freeTier: false,
-<<<<<<< HEAD
-    trialPeriod: "21 days",
-    innovationLevel: "Advanced",
-    marketSize: "$2.1 billion by 2026",
-    growthRate: "180% annual growth"
-
-=======
     trialPeriod: "30 days",
     innovationLevel: "Revolutionary",
     marketSize: "$376.3 billion by 2026",
@@ -654,7 +631,6 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     marketSize: "$45.2 billion by 2026",
     growthRate: "35% annually"
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 // Revolutionary IT Infrastructure Services 2026
@@ -743,13 +719,8 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     support: "16/7 support",
     innovationLevel: "Advanced",
     marketSize: "$2.8 billion by 2026",
-<<<<<<< HEAD
-    compliance: ["GDPR", "HIPAA", "Industry 4.0"]
-
-=======
     compliance["GDPR", "HIPAA", "Industry 4.0"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 // Revolutionary AI Services 2026
@@ -840,18 +811,6 @@ export const revolutionaryAIServices2026: AIService[] = [
     useCases["Drug discovery", "Financial modeling", "Climate prediction", "Materials science"],
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 billion by 2026",
-<<<<<<< HEAD
-    ethicalAI: ["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]
-
-];
-
-// Export all services
-export const ALL_REVOLUTIONARY_SERVICES_2026 = [
-  ...revolutionaryMicroSaasServices2026,
-  ...revolutionaryITInfrastructureServices2026,
-  ...revolutionaryAIServices2026
-];}}}}}}}
-=======
     ethicalAI["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]
   }
 ];
@@ -862,4 +821,3 @@ export const ALL_REVOLUTIONARY_SERVICES_2026 = [;
   ...revolutionaryITInfrastructureServices2026,;
   ...revolutionaryAIServices2026;
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -13,12 +13,7 @@ export default function AllServicesLandingPage() {
             case 'Micro SAAS': return '☁️';
             case 'IT Services': return '💻';
             case 'Digital Services': return '🚀';
-<<<<<<< HEAD
-            default: return '⚡';
-
-=======
             default: return '⚡'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIconComponent = (category) => {
         switch (category) {
@@ -26,12 +21,7 @@ export default function AllServicesLandingPage() {
             case 'Micro SAAS': return <Cloud className="h-6 w-6"/>;
             case 'IT Services': return <Code className="h-6 w-6"/>;
             case 'Digital Services': return <ArrowUpRight className="h-6 w-6"/>;
-<<<<<<< HEAD
-            default: return <Settings className="h-6 w-6"/>;
-
-=======
             default: return <Settings className="h-6 w-6"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPricingModelColor = (model) => {
         switch (model) {
@@ -39,12 +29,7 @@ export default function AllServicesLandingPage() {
             case 'project-based': return 'bg-purple-100 text-purple-800';
             case 'one-time': return 'bg-green-100 text-green-800';
             case 'usage-based': return 'bg-orange-100 text-orange-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getServiceIcon = (subcategory) => {
         switch (subcategory) {
@@ -59,12 +44,7 @@ export default function AllServicesLandingPage() {
             case 'DevOps': return <Code className="h-5 w-5"/>;
             case 'Transformation': return <ArrowUpRight className="h-5 w-5"/>;
             case 'E-commerce': return <ShoppingCart className="h-5 w-5"/>;
-<<<<<<< HEAD
-            default: return <Settings className="h-5 w-5"/>;
-
-=======
             default: return <Settings className="h-5 w-5"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-background">
       <SEO title="Complete Tech Solutions - AI, Micro SAAS, IT & Digital Services | Zion Tech Group" description="Discover our comprehensive ecosystem of AI services, micro SAAS solutions, IT infrastructure, and digital transformation services. Expert solutions for modern businesses." keywords="AI services, micro SAAS, IT services, digital transformation, cloud migration, cybersecurity, DevOps, business automation, Zion Tech Group" canonical="https://ziontechgroup.com/services"/>
@@ -334,9 +314,4 @@ export default function AllServicesLandingPage() {
       </section>
 
       <TrustedBySection />
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

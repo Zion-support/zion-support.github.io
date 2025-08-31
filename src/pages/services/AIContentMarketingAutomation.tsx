@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  Brain,
-  PenTool,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { SEO  } from '@/components/SEO';
@@ -19,7 +7,6 @@ import { Brain,
   Target, 
   Users, 
   BarChart3, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Calendar,
   Zap,
   CheckCircle,
@@ -38,13 +25,9 @@ import { Brain,
   Shield,
   Headphones,
   Rocket
-<<<<<<< HEAD
-export default function AIContentMarketingAutomation() {
-=======
  } from 'lucide-react';
 
 export default function AIContentMarketingAutomation(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     "AI-powered content generation for multiple formats",
     "Multi-channel content distribution automation",
@@ -121,20 +104,6 @@ export default function AIContentMarketingAutomation(...args[]):  {
         "Custom AI model training",
         "Advanced audience targeting",
         "White-label solutions",
-<<<<<<< HEAD
-        "API access",
-        "Dedicated account manager",
-        "24/7 phone support"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
         "API access",;
         "Dedicated account manager",;
         "24/7 phone support";
@@ -147,7 +116,6 @@ export default function AIContentMarketingAutomation(...args[]):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Content Marketing Automation Platform - Zion Tech Group"
         description="Transform your content marketing with AI-powered automation. Generate, distribute, and optimize content across all channels automatically."
       />
@@ -637,23 +605,10 @@ export default function AIContentMarketingAutomation(...args[]):  {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-<<<<<<< HEAD
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
-  TrendingUp,
-  BarChart3,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Brain, 
@@ -19,7 +7,6 @@ import { Brain,
   Shield, 
   Users, 
   Globe, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   CheckCircle,
   ArrowRight,
   Phone,
@@ -33,16 +20,10 @@ import { Brain,
   PieChart,
   LineChart,
   Activity
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-=======
  } from 'lucide-react';
 import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIBusinessIntelligencePlatform(...args[]):  {
   const features = [
@@ -69,15 +50,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
     {
       icon: Shield,
       title: "Data Security",
-<<<<<<< HEAD
-      description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit."
-    },
-    {
-      icon: Users,
-      title: "Collaborative Insights",
-      description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."
-
-=======
       description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit.";
     },;
     {;
@@ -85,7 +57,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       title: "Collaborative Insights",;
       description: "Share dashboards and reports with team members, enabling better collaboration and decision-making.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -140,15 +111,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
         "Custom AI models",
         "White-label dashboards",
         "24/7 dedicated support",
-<<<<<<< HEAD
-        "Unlimited data sources",
-        "Advanced security features",
-        "Custom integrations",
-        "SLA guarantees"
-      ],
-      popular: false
-
-=======
         "Unlimited data sources",;
         "Advanced security features",;
         "Custom integrations",;
@@ -156,7 +118,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [
@@ -173,20 +134,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
       description: "Risk assessment, fraud detection, and portfolio optimization"
     },
     {
-<<<<<<< HEAD
-      industry: "Manufacturing",
-      description: "Predictive maintenance, quality control, and supply chain optimization"
-    },
-    {
-      industry: "Retail",
-      description: "Demand forecasting, customer segmentation, and store performance analysis"
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
       industry: "Manufacturing",;
       description: "Predictive maintenance, quality control, and supply chain optimization";
     },;
@@ -199,7 +146,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Business Intelligence Platform - Zion Tech Group"
         description="Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making."
       />
@@ -724,23 +670,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               <Button size="lg" variant="outline" className="border-gray-600 text-white hover:bg-gray-800">
                 Send Message
               </Button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

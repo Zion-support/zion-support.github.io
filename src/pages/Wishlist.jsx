@@ -1,6 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useFavorites } from '@/hooks/useFavorites';
+import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
+import { TALENT_PROFILES } from '@/data/talentData';
+import { ProductListingCard } from '@/components/ProductListingCard';
+import { TalentCard } from '@/components/talent/TalentCard';
+import { Button } from '@/components/ui/button';
+import { useCart } from '@/context/CartContext';
+import { useAuth } from '@/hooks/useAuth';
+import { getCartKey } from '@/utils/cartUtils';
 import { useNavigate } from 'react-router-dom';
-import { Heart, ShoppingCart, MessageCircle, Star, MapPin, Clock } from 'lucide-react';
+import { safeStorage } from '@/utils/safeStorage';
 
 export default function WishlistPage() {
     const [favorites, setFavorites] = useState([]);
@@ -17,13 +26,17 @@ export default function WishlistPage() {
             console.error('Error parsing favorites:', error);
             setFavorites([]);
         }
-        setLoading(false);
-    }, []);
-
-    const removeFromWishlist = (itemId) => {
-        const updatedFavorites = favorites.filter(fav => fav.id !== itemId);
-        setFavorites(updatedFavorites);
-        localStorage.setItem('wishlist', JSON.stringify(updatedFavorites));
+    }, [user, isAuthLoading, navigate]);
+    
+    if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
+        return null; // Or a loading spinner
+    }
+    const addToCart = (item) => {
+        const stored = safeStorage.getItem(getCartKey(user?.id));
+        const cart = stored ? JSON.parse(stored) : [];
+        cart.push({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });
+        safeStorage.setItem(getCartKey(user?.id), JSON.stringify(cart));
+        dispatch({ type: 'SET_ITEMS', payload: cart });
     };
 
     const addToCart = (item) => {

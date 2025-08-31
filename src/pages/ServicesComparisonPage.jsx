@@ -3,12 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-<<<<<<< HEAD
-import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp import { SEO } from '@/components/SEO';
-=======
 import { CheckCircle, Brain, Shield, Users, Phone, Mail, MapPin, ExternalLink, TrendingUp } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 import { PRICING_TIERS } from '@/data/advancedServices';
 // Service comparison data
 const SERVICE_COMPARISONS = [
@@ -23,17 +19,10 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "AI Customer Intelligence",
-<<<<<<< HEAD
-                starter: { price: "$3,999", features: ["Basic customer analytics", "Churn prediction", "Email support"] },
-                professional: { price: "$5,999", features: ["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
-                enterprise: { price: "$8,999+", features: ["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
-
-=======
                 starter: { price: "$3,999", features["Basic customer analytics", "Churn prediction", "Email support"] },
                 professional: { price: "$5,999", features["Advanced analytics", "Personalization engine", "Priority support", "Custom dashboards", "API access"] },
                 enterprise: { price: "$8,999+", features["Full customer intelligence suite", "Custom algorithms", "Dedicated support", "Advanced integrations", "Compliance features"] }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
     },
     {
@@ -47,17 +36,10 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "Compliance Management Platform",
-<<<<<<< HEAD
-                starter: { price: "$2,999", features: ["Basic compliance monitoring", "GDPR support", "Email support"] },
-                professional: { price: "$4,999", features: ["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
-                enterprise: { price: "$6,999+", features: ["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
-
-=======
                 starter: { price: "$2,999", features["Basic compliance monitoring", "GDPR support", "Email support"] },
                 professional: { price: "$4,999", features["Multi-framework support", "Automated reporting", "Priority support", "Custom workflows", "Training"] },
                 enterprise: { price: "$6,999+", features["Full compliance suite", "Custom frameworks", "Dedicated support", "Advanced integrations", "Audit preparation"] }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
     },
     {
@@ -71,17 +53,10 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "DevOps Automation Platform",
-<<<<<<< HEAD
-                starter: { price: "$2,999", features: ["Basic CI/CD", "Automated testing", "Email support"] },
-                professional: { price: "$4,999", features: ["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
-                enterprise: { price: "$7,999+", features: ["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
-
-=======
                 starter: { price: "$2,999", features["Basic CI/CD", "Automated testing", "Email support"] },
                 professional: { price: "$4,999", features["Advanced automation", "Custom pipelines", "Priority support", "Advanced testing", "Training"] },
                 enterprise: { price: "$7,999+", features["Full DevOps suite", "Custom development", "Dedicated support", "Advanced monitoring", "Multi-environment support"] }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
     },
     {
@@ -95,17 +70,10 @@ const SERVICE_COMPARISONS = [
             },
             {
                 name: "Real-Time Analytics Dashboard",
-<<<<<<< HEAD
-                starter: { price: "$1,999", features: ["Basic dashboard", "Real-time data", "Email support"] },
-                professional: { price: "$3,999", features: ["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
-                enterprise: { price: "$5,999+", features: ["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
-
-=======
                 starter: { price: "$1,999", features["Basic dashboard", "Real-time data", "Email support"] },
                 professional: { price: "$3,999", features["Advanced dashboards", "Custom visualizations", "Priority support", "Advanced analytics", "Training"] },
                 enterprise: { price: "$5,999+", features["Full analytics suite", "Custom development", "Dedicated support", "Advanced integrations", "White-label options"] }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         ]
 
 ];
@@ -335,9 +303,4 @@ export default function ServicesComparisonPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

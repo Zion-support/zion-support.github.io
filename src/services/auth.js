@@ -17,10 +17,7 @@ class AuthService {
       // Mock validation
       if (!credentials.email || !credentials.password) {
         throw new Error('Email and password are required');
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock successful login
       const mockUser = {
@@ -57,10 +54,7 @@ class AuthService {
       // Mock validation
       if (!userData.email || !userData.password || !userData.name) {
         throw new Error('Name, email, and password are required');
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock successful registration
       const mockUser = {
@@ -129,10 +123,7 @@ class AuthService {
 
       if (!this.token) {
         throw new Error('No token to refresh');
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock token refresh
       const newToken = 'mock-jwt-token-refreshed-' + Date.now();
@@ -152,10 +143,7 @@ class AuthService {
 
       if (!email) {
         throw new Error('Email is required');
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock successful password reset request
       return {
@@ -174,10 +162,7 @@ class AuthService {
 
       if (!token || !newPassword) {
         throw new Error('Token and new password are required');
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock successful password reset
       return {
@@ -195,10 +180,7 @@ class AuthService {
 
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock profile update
       const updatedUser = {
@@ -223,17 +205,11 @@ class AuthService {
 
       if (!this.isAuthenticated()) {
         throw new Error('User not authenticated');
-<<<<<<< HEAD
-
-      if (!currentPassword || !newPassword) {
-        throw new Error('Current and new passwords are required');
-=======
       }
 
       if (!currentPassword || !newPassword) {
         throw new Error('Current and new passwords are required');
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock password change
       return {
@@ -251,20 +227,14 @@ class AuthService {
 
       if (!token) {
         throw new Error('Verification token is required');
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       // Mock email verification
       if (this.user) {
         this.user.emailVerified = true;
         this.user.verifiedAt = new Date().toISOString();
         localStorage.setItem('user', JSON.stringify(this.user));
-<<<<<<< HEAD
-=======
       }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
       return {
         message: 'Email verified successfully'

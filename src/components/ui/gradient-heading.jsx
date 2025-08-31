@@ -62,9 +62,4 @@ export function GradientHeading({ children, className = '', size = '4xl', gradie
 
 }}>
       {children}
-<<<<<<< HEAD
-    </motion.h1>);
-}
-=======
     </motion.h1>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

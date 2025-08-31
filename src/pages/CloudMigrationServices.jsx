@@ -2,14 +2,9 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 import { Link } from "react-router-dom";
-=======
 import SEO from "@/components/SEO";
 import { Cloud, Server, Database, Zap, Target, DollarSign, ArrowRight, CheckCircle, Star, Shield, Network, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function CloudMigrationServices() {
     const services = [
         {
@@ -60,13 +55,8 @@ export default function CloudMigrationServices() {
             name: "Multi-Cloud",
             description: "Hybrid and multi-cloud migration strategies",
             icon: <Network className="h-8 w-8 text-zion-cyan"/>,
-<<<<<<< HEAD
-            features: ["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
-
-=======
             features["Hybrid Cloud", "Multi-Cloud", "Cloud Bursting", "Disaster Recovery"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const pricingPlans = [
         {
@@ -391,9 +381,4 @@ export default function CloudMigrationServices() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

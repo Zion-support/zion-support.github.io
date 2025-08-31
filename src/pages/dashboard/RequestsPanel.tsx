@@ -33,21 +33,6 @@ export default function RequestsPanel(...args[]):  {
     toggleArchive
   } = useTalentQuotes();
 
-<<<<<<< HEAD
-  const handleViewDetails = (quote: QuoteRequest) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedQuote(quote);
-    setShowDetails(true);
-
-    // If status is new, mark as viewed
-<<<<<<< HEAD
-    if (quote.status = == 'new') {;
-      markAsViewed(quote.id)};
-  };
-
-  // Filter quotes by archive status
-  const archivedQuotes = quotes.filter((q: QuoteRequest)  => q.is_archived);
-=======
     if (quote.status = == 'new') {;
       markAsViewed(quote.id);
 
@@ -55,7 +40,6 @@ export default function RequestsPanel(...args[]):  {
 
   // Filter quotes by archive status
   const archivedQuotes = quotes.filter((q: QuoteRequest) => q.is_archived);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <ProtectedRoute>
@@ -112,14 +96,7 @@ export default function RequestsPanel(...args[]):  {
             setSelectedQuote(null)}}
         />
 
-<<<<<<< HEAD
-      </div>
-    </ProtectedRoute>
-  );
-}}
-=======
 
       </div>
     </ProtectedRoute>
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

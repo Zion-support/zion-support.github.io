@@ -18,12 +18,7 @@ export function EnhancedNewsletterForm() {
         const trimmed = email.trim();
         if (!EMAIL_REGEX.test(trimmed)) {
             toast.error("Invalid email");
-<<<<<<< HEAD
-            return;
-
-=======
             return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setIsSubmitting(true);
         try {
             const res = await fetch("/api/newsletter", {
@@ -35,37 +30,17 @@ export function EnhancedNewsletterForm() {
             if (res.ok) {
                 // Handle different success statuses
                 if (data.status === 'already_subscribed') {
-<<<<<<< HEAD
-                    toast.success(data.message || "You're already subscribed!");
-
-                else {
-                    toast.success(data.message || "Thanks for subscribing!");
-
-                setIsSubmitted(true);
-                setEmail("");
-
-            else {
-                // Handle error responses
-<<<<<<< HEAD
-                // // // console.error('Newsletter subscription failed:', data);
-=======
                 // // // // // // // console.error('Newsletter subscription failed:', data);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 toast.error(data.error || "Subscription failed. Please try again.");
 
 
         catch (err) {
-<<<<<<< HEAD
-            // // // console.error('Newsletter subscription error:', err);
-=======
             // // // // // // // console.error('Newsletter subscription error:', err);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
             toast.error("Unable to subscribe right now. Please try again later.");
 
         finally {
             setIsSubmitting(false);
 
-=======
                     toast.success(data.message || "You're already subscribed!")}
                 else {
                     toast.success(data.message || "Thanks for subscribing!")}
@@ -81,7 +56,6 @@ export function EnhancedNewsletterForm() {
             toast.error("Unable to subscribe right now. Please try again later.")}
         finally {
             setIsSubmitting(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6">
       <div className="flex items-center mb-4">
@@ -112,9 +86,4 @@ export function EnhancedNewsletterForm() {
         </div>
         <span>Join 10,000+ tech professionals who already subscribe</span>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

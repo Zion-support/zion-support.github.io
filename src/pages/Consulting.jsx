@@ -35,13 +35,8 @@ import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database
             icon: Zap,
             title: "Digital Innovation",
             description: "Emerging technology consulting and innovation acceleration",
-<<<<<<< HEAD
-            features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
-
-=======
             features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const industries = [
         {

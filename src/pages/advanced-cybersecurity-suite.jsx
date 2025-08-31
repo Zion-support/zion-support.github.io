@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 const AdvancedCybersecuritySuite = () => {
     const features = [
         {
@@ -42,13 +42,8 @@ const AdvancedCybersecuritySuite = () => {
         {
             title: "Data Protection",
             description: "Data encryption, backup, and recovery solutions",
-<<<<<<< HEAD
-            features: ["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
-
-=======
             features["Encryption at rest", "Backup automation", "DR planning", "Data classification"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const complianceFrameworks = [
         "SOC 2 Type II",

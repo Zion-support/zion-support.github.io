@@ -24,12 +24,7 @@ export default function ITOnsiteServicesPage() {
             toast({
                 title: "Payment Successful",
                 description: "Your IT onsite service request has been received. Our team will contact you shortly.",
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [success]);
     // Popular countries for the featured cards
     const popularCountries = ["United States", "United Kingdom", "Canada", "Germ", "Japan", "Singapore"];
@@ -91,9 +86,4 @@ export default function ITOnsiteServicesPage() {
                 ,
                     <TrustedBySection />
                         ,
-<<<<<<< HEAD
-                            <QuoteFormSection />);
-}}
-=======
                             <QuoteFormSection />)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

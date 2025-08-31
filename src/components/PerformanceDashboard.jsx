@@ -43,7 +43,6 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
 
 };
         return icons[metricName] || <Activity className="w-4 h-4"/>};
-=======
   WINDOWLOAD: <Activity className="w-4 h-4"/>
         
 
@@ -53,7 +52,6 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
 };
         return icons[metricName] || <Activity className="w-4 h-4"/>;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const getMetricDescription = (metricName) => {
         const descriptions = {
   FCP: 'First Contentful Paint - Time to first content',
@@ -68,7 +66,6 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
 
 };
         return descriptions[metricName] || 'Performance metric'};
-=======
   WINDOWLOAD: 'Window Load - Full page load time'
         
 
@@ -78,28 +75,11 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
 };
         return descriptions[metricName] || 'Performance metric';
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const formatMetricValue = (metricName, value) => {
         if (metricName === 'CLS')
             return value.toFixed(3);
         if (metricName === 'FID')
             return `${value.toFixed(0)}ms`;
-<<<<<<< HEAD
-        return `${value.toFixed(0)}ms`};
-    return (<motion.div className = {
-  cn('fixed bottom-4 right-4 z-50 max-w-sm',
-  className)
-
-} initial = {
-  { opacity: 0,
-  y: 20 
-
-}} animate = {
-  { opacity: 1,
-  y: 0 
-
-}} transition={{ duration: 0.3 }}>
-=======
         return `${value.toFixed(0)}ms`;
     };
     return (<motion.div className = {
@@ -130,7 +110,6 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
 
 
 }} transition={{ duration: 0.3 }}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       <Card className="bg-zion-blue-dark/95 backdrop-blur-md border-zion-purple/20 text-white shadow-2xl">
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
@@ -255,12 +234,7 @@ export function PerformanceDashboard({ className, showDetails = false, onClose }
             </motion.div>)}
         </AnimatePresence>
       </Card>
-<<<<<<< HEAD
-    </motion.div>);
-
-=======
     </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Compact performance indicator
 export function PerformanceIndicator({ className }) {
     const { performanceScore } = usePerformance();
@@ -288,9 +262,4 @@ export function PerformanceIndicator({ className }) {
       <span className="text-xs text-zion-slate-light">
         {performanceScore}/100
       </span>
-<<<<<<< HEAD
-    </div>);
-</div></Card></Card></Card>}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

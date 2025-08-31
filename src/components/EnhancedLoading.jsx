@@ -26,7 +26,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
 
 }}/>))}
     </div>);
-=======
   xl: 'w-16 h-16'
     
 
@@ -34,7 +33,6 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const renderVariant = () => {
         switch (variant) {
             case 'dots':
@@ -44,12 +42,7 @@ const EnhancedLoading = ({ variant = 'spinner', size = 'md', text, className = '
             case 'bars':
                 return renderBars();
             default:
-<<<<<<< HEAD
-                return renderSpinner();
-
-=======
                 return renderSpinner()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className={`flex flex-col items-center justify-center space-y-3 ${className}`}>
       {renderVariant()}

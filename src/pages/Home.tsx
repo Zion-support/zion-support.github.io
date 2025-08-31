@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -42,15 +43,57 @@ import {
   Cloud
 } from 'lucide-react';
 
-export default function Home() {
-  const heroStats = [
-    { label: 'AI Solutions', value: '50+', icon: Brain },
-    { label: 'Enterprise Clients', value: '200+', icon: Building },
-    { label: 'Success Rate', value: '98%', icon: CheckCircle },
-    { label: 'Years Experience', value: '15+', icon: Star }
-  ];
+// Optimized futuristic animated background component
+const FuturisticBackground = React.memo(() => {
+  const particles = useMemo(() => 
+    [...Array(20)].map((_, i) => ({
+      id: i,
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      delay: i * 0.1,
+      duration: 5 + i * 0.3
+    })), []
+  );
 
-  const featuredServices = [
+  return (
+    <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+      {/* Animated grid with neon effect */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.15)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+      
+      {/* Optimized floating particles */}
+      {particles.map((particle) => (
+        <motion.div
+          key={particle.id}
+          className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
+          animate={{
+            x: [0, 200, 0],
+            y: [0, -200, 0],
+            opacity: [0.4, 1, 0.4],
+            scale: [0.5, 1.2, 0.5],
+          }}
+          transition={{
+            duration: particle.duration,
+            repeat: Infinity,
+            delay: particle.delay,
+            ease: "easeInOut"
+          }}
+          style={{
+            left: particle.left,
+            top: particle.top,
+          }}
+        />
+      ))}
+    </div>
+  );
+});
+
+FuturisticBackground.displayName = 'FuturisticBackground';
+
+// Enhanced hero section component
+const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const heroSlides = useMemo(() => [
     {
       name: 'AI Enterprise Orchestrator',
       description: 'Multi-agent AI coordination & workflow automation for enterprise-scale operations',
@@ -258,208 +301,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Featured Services */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Featured Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover our most innovative AI solutions that are transforming industries and driving business growth.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredServices.map((service, index) => (
-              <motion.div
-                key={service.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
-                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${service.color} mb-4`}>
-                  <service.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
-                <p className="text-gray-400 mb-4">{service.description}</p>
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to={service.href}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200"
-                >
-                  Learn More
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Service Categories */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Service Categories</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive solutions across all major technology domains, from AI to emerging technologies.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {serviceCategories.map((category, index) => (
-              <motion.div
-                key={category.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/30 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300"
-              >
-                <div className={`inline-flex p-3 rounded-lg bg-gradient-to-r ${category.color} mb-4`}>
-                  <category.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{category.name}</h3>
-                <ul className="space-y-2">
-                  {category.services.map((service, idx) => (
-                    <li key={idx}>
-                      <Link
-                        to={service.href}
-                        className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-sm"
-                      >
-                        {service.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  to={category.services[0].href}
-                  className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-200 mt-4"
-                >
-                  View All
-                  <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Micro SaaS Products */}
-      <section className="py-20 bg-gray-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Micro SaaS Solutions</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-deploy AI-powered software solutions with transparent pricing and instant value.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {microSaaSProducts.map((product, index) => (
-              <motion.div
-                key={product.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
-              >
-                <div className="inline-flex p-3 rounded-lg bg-gradient-to-r from-green-600 to-emerald-600 mb-4">
-                  <product.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{product.name}</h3>
-                <p className="text-gray-400 mb-4">{product.description}</p>
-                <div className="text-2xl font-bold text-green-400 mb-4">{product.price}</div>
-                <Link
-                  to={product.href}
-                  className="inline-flex items-center justify-center w-full px-4 py-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-medium rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200"
-                >
-                  Get Started
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real results from real businesses that have transformed with Zion Tech Group.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/30 rounded-xl p-6 border border-gray-700"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-gray-400 text-sm">{testimonial.role}</div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join hundreds of companies that have already accelerated their growth with our AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
-              >
-                Explore All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-      </div>
-    </>
+    </div>
   );
 }

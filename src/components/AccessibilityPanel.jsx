@@ -19,24 +19,12 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         if (savedSettings) {
             try {
                 const parsed = JSON.parse(savedSettings);
-<<<<<<< HEAD
-                setSettings(prev => ({ ...prev, ...parsed }));
-
-            catch (error) {
-<<<<<<< HEAD
-                // // // console.error('Failed to parse accessibility settings:', error);
-
-
-=======
                 // // // // // // // console.error('Failed to parse accessibility settings:', error);
             }
-=======
                 setSettings(prev => ({ ...prev, ...parsed }))}
             catch (error) {
                 console.error('Failed to parse accessibility settings:', error)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     }, []);
     useEffect(() => {
         // Apply settings to document
@@ -48,49 +36,14 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         // High contrast
         if (newSettings.highContrast) {
             root.style.setProperty('--high-contrast', '1');
-<<<<<<< HEAD
-            root.classList.add('high-contrast');
-
-        else {
-            root.style.setProperty('--high-contrast', '0');
-            root.classList.remove('high-contrast');
-
-=======
             root.classList.add('high-contrast')}
         else {
             root.style.setProperty('--high-contrast', '0');
             root.classList.remove('high-contrast')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Font size
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`);
         // Reduced motion
         if (newSettings.reducedMotion) {
-<<<<<<< HEAD
-            root.classList.add('reduced-motion');
-
-        else {
-            root.style.setProperty('--reduced-motion', 'no-preference');
-
-        // Apply focus indicator
-        if (settings.focusIndicator) {
-            root.style.setProperty('--focus-visible', 'auto');
-
-        else {
-            root.style.setProperty('--focus-visible', 'none');
-
-        // Color blindness
-        root.classList.remove('protanopia', 'deuteranopia', 'tritanopia');
-        if (newSettings.colorBlindness !== 'none') {
-            root.classList.add(newSettings.colorBlindness);
-
-        // Focus indicator
-        if (newSettings.focusIndicator) {
-            root.classList.add('focus-visible');
-
-        else {
-            root.classList.remove('focus-visible');
-
-=======
             root.classList.add('reduced-motion')}
         else {
             root.style.setProperty('--reduced-motion', 'no-preference')}
@@ -108,7 +61,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             root.classList.add('focus-visible')}
         else {
             root.classList.remove('focus-visible')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const updateSetting = (key, value) => {
         setSettings(prev => ({ ...prev, [key]: value }))};
@@ -126,7 +78,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 
 };
         setSettings(defaultSettings)};
-=======
   colorBlindness: 'none'
         
 
@@ -136,7 +87,6 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
 };
         setSettings(defaultSettings);
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const tabs = [
         { id: 'general', label: 'General', icon: '⚙️' },
         { id: 'visual', label: 'Visual', icon: '👁️' },

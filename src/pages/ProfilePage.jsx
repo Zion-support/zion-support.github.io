@@ -24,63 +24,30 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
                     .eq("id", profileId)
                     .single();
                 if (error) {
-<<<<<<< HEAD
-                    throw error;
-
-                setProfileData(data);
-
-=======
                     throw error}
                 setProfileData(data)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch (error) {
-<<<<<<< HEAD
-                // // // console.error("Error fetching profile:", error);
-=======
                 // // // // // // // console.error("Error fetching profile:", error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
                 setIsError(true);
                 toast({
                     title: "Error",
                     description: "Failed to load profile. Please try again later.",
                     variant: "destructive",
-<<<<<<< HEAD
-                });
-
-            finally {
-                setIsLoading(false);
-
-        };
-        if (profileId) {
-            fetchProfile();
-
-=======
                 })}
             finally {
                 setIsLoading(false)}
         };
         if (profileId) {
             fetchProfile()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <span className="loading loading-ring loading-lg"></span>
-<<<<<<< HEAD
-      </div>);
-
-    if (isError || !profileData) {
-        return (<div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">Failed to load profile.</p>
-      </div>);
-
-=======
       </div>)}
     if (isError || !profileData) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p className="text-red-500">Failed to load profile.</p>
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title={`${profileData.full_name} | Talent Profile`} description={profileData.bio || "View the profile of this talented individual."}/>
 
@@ -194,11 +161,5 @@ import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

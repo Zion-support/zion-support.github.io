@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Monitor const CloudDevOpsServices = () => {
+import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
+const CloudDevOpsServices = () => {
     const cloudServices = [
         {
             title: "Cloud Migration & Strategy",
@@ -17,8 +18,8 @@ import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Mo
         {
             title: "DevOps Implementation",
             description: "Streamline development and operations with modern DevOps practices and tools.",
-            icon: GitBranch,
-            features[
+            icon: GitFork,
+            features: [
                 "CI/CD Pipeline Setup",
                 "Infrastructure as Code",
                 "Automated Testing",
@@ -105,13 +106,8 @@ import { Cloud, Server, Database, Shield, GitBranch, ArrowRight, CheckCircle, Mo
         {
             name: "Google Cloud Platform",
             description: "Innovative cloud services with AI and ML capabilities",
-<<<<<<< HEAD
-            features: ["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
-
-=======
             features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}

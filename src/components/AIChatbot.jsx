@@ -1,11 +1,7 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles import { useAnalytics } from '../hooks/useAnalytics';
-=======
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';
 import { useAnalytics } from "../hooks/useAnalytics";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => {
     const { trackEvent } = useAnalytics({
         enableTracking: true,
@@ -30,24 +26,15 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
                     "What technologies do you use?",
                     "Contact information"
                 ]
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isOpen, messages.length, welcomeMessage]);
     // Auto-scroll to bottom
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]);
     // Track chatbot interactions
     const trackChatbotInteraction = useCallback((action, metadata) => {
-<<<<<<< HEAD
-        trackEvent('chatbot', action, 'chatbot_interaction', null, metadata)}, [trackEvent]);
-=======
         trackEvent('chatbot', action, 'chatbot_interaction', null, metadata);
     }, [trackEvent]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     // Add message to chat
     const addMessage = useCallback((message) => {
         const newMessage = {
@@ -69,14 +56,8 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         // Update conversation context
         if (enableContext && message.content.length > 10) {
             // setConversationContext(prev => [...prev.slice(-4), message.content]); // This line was removed
-<<<<<<< HEAD
-
-        return newMessage;
-    }, [maxMessages, enableContext]);
-=======
         }
         return newMessage}, [maxMessages, enableContext]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Add bot message with typing effect
     const addBotMessage = useCallback((content, metadata) => {
         const message = addMessage({
@@ -99,22 +80,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         const input = userInput.toLowerCase();
         // Intent recognition
         if (input.includes('service') || input.includes('offer')) {
-<<<<<<< HEAD
-            return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?";
-
-        if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
-            return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate.";
-
-        if (input.includes('contact') || input.includes('phone') || input.includes('email')) {
-            return "You can reach us at:\n📧 kleber@ziontechgroup.com\n📞 +1 (302) 464-0950\n🌐 https://ziontechgroup.com\n\nWhen would be the best time to call you?";
-
-        if (input.includes('technology') || input.includes('tech') || input.includes('stack')) {
-            return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?";
-
-        if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
-            return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?";
-
-=======
             return "We offer a comprehensive range of services including AI & Machine Learning, Cybersecurity, Cloud Infrastructure, and Digital Transformation. What specific area are you interested in?"}
         if (input.includes('quote') || input.includes('price') || input.includes('cost')) {
             return "I'd be happy to help you get a quote! Could you tell me more about your project requirements? This will help me provide a more accurate estimate."}
@@ -124,7 +89,6 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             return "We work with cutting-edge technologies including React, Node.js, Python, AWS, Azure, AI/ML frameworks, and more. What technology stack are you currently using?"}
         if (input.includes('experience') || input.includes('portfolio') || input.includes('work')) {
             return "We have extensive experience across various industries including healthcare, finance, e-commerce, and enterprise solutions. Would you like me to share some case studies?"}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Default response with suggestions
         return "I understand you're asking about '" + userInput + "'. Let me help you better. Could you provide more details about what you're looking for?"}, [responseDelay]);
     // Handle user input
@@ -162,12 +126,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             trackChatbotInteraction('conversation_success', {
                 userInput: input,
                 responseLength: response.length
-<<<<<<< HEAD
-            });
-
-=======
             })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         catch (error) {
             // Handle error
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
@@ -176,17 +135,9 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             });
             trackChatbotInteraction('conversation_error', {
                 error: error instanceof Error ? error.message : 'Unknown error'
-<<<<<<< HEAD
-            });
-
-        finally {
-            setIsTyping(false);
-
-=======
             })}
         finally {
             setIsTyping(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [addMessage, addBotMessage, simulateAIProcessing, trackChatbotInteraction]);
     // Handle form submission
     const handleSubmit = useCallback((e) => {
@@ -378,10 +329,4 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
               </>)}
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </>);
-</div>};
-}}}}}}}}}}}
-=======
     </>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -3,12 +3,8 @@ import { EXPANDED_SERVICES, SERVICE_CATEGORIES } from '@/data/expandedServices';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-<<<<<<< HEAD
-import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award import { SEO } from '@/components/SEO';
-=======
 import { Star, Mail, Phone, MapPin, TrendingUp, Shield, Zap, Globe, Clock, DollarSign, Users, Award } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function PricingGuidePage() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -20,15 +16,8 @@ export default function PricingGuidePage() {
         return { count: services.length, avgPrice, avgRating }};
     const formatPrice = (price) => {
         if (price >= 1000) {
-<<<<<<< HEAD
-            return `$${(price / 1000).toFixed(1)}K`;
-
-        return `$${price}`;
-    };
-=======
             return `$${(price / 1000).toFixed(1)}K`}
         return `$${price}`};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const getServiceTier = (price) => {
         if (price < 2000)
             return { tier: "Starter", color: "bg-green-100 text-green-800" };
@@ -336,9 +325,4 @@ export default function PricingGuidePage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card>}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

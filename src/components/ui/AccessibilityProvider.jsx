@@ -3,15 +3,8 @@ const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {
     const context = useContext(AccessibilityContext);
     if (!context) {
-<<<<<<< HEAD
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
-
-    return context;
-};
-=======
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
     return context};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const AccessibilityProvider = ({ children }) => {
     const [isHighContrast, setIsHighContrast] = useState(false);
     const [isReducedMotion, setIsReducedMotion] = useState(false);
@@ -40,25 +33,6 @@ export const AccessibilityProvider = ({ children }) => {
     useEffect(() => {
         const body = document.body;
         if (isHighContrast) {
-<<<<<<< HEAD
-            body.classList.add('high-contrast');
-
-        else {
-            body.classList.remove('high-contrast');
-
-        if (isReducedMotion) {
-            body.classList.add('reduced-motion');
-
-        else {
-            body.classList.remove('reduced-motion');
-
-        if (isLargeText) {
-            body.classList.add('large-text');
-
-        else {
-            body.classList.remove('large-text');
-
-=======
             body.classList.add('high-contrast')}
         else {
             body.classList.remove('high-contrast')}
@@ -70,7 +44,6 @@ export const AccessibilityProvider = ({ children }) => {
             body.classList.add('large-text')}
         else {
             body.classList.remove('large-text')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     }, [isHighContrast, isReducedMotion, isLargeText]);
     // Focus trap functionality
     const focusableElements = element.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
@@ -83,18 +56,6 @@ export const AccessibilityProvider = ({ children }) => {
                 if (e.shiftKey) {
                     if (document.activeElement === firstElement) {
                         e.preventDefault();
-<<<<<<< HEAD
-                        lastElement.focus();
-
-
-                else {
-                    if (document.activeElement === lastElement) {
-                        e.preventDefault();
-                        firstElement.focus();
-
-
-
-=======
                         lastElement.focus()}
                 }
                 else {
@@ -103,7 +64,6 @@ export const AccessibilityProvider = ({ children }) => {
                         firstElement.focus()}
                 }
             }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         element.addEventListener('keydown', handleKeyDown);
         firstElement.focus();
@@ -126,41 +86,21 @@ export const AccessibilityProvider = ({ children }) => {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 toggleHighContrast();
-<<<<<<< HEAD
-                announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`);
-
-=======
                 announceToScreenReader(`High contrast ${isHighContrast ? 'disabled' : 'enabled'}`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Ctrl/Cmd + M for reduced motion toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'm') {
                 e.preventDefault();
                 toggleReducedMotion();
-<<<<<<< HEAD
-                announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`);
-
-=======
                 announceToScreenReader(`Reduced motion ${isReducedMotion ? 'disabled' : 'enabled'}`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Ctrl/Cmd + L for large text toggle
             if ((e.ctrlKey || e.metaKey) && e.key === 'l') {
                 e.preventDefault();
                 toggleLargeText();
-<<<<<<< HEAD
-                announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`);
-
-=======
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         document.addEventListener('keydown', handleKeyDown);
-<<<<<<< HEAD
-        return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]);
-    const toggleReducedMotion = () => setIsReducedMotion(prev => !prev);
-=======
         return () => document.removeEventListener('keydown', handleKeyDown);
     }, [isHighContrast, isReducedMotion, isLargeText]);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const toggleLargeText = () => setIsLargeText(prev => !prev);
     const value = {
   isHighContrast,
@@ -214,10 +154,4 @@ export const AccessibilityToolbar = () => {
 export const SkipToMainContent = () => {
     return (<a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">
       Skip to main content
-<<<<<<< HEAD
-    </a>);
-};
-}}}}}}}}}}}}}}}
-=======
     </a>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

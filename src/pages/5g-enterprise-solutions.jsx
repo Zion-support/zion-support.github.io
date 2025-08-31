@@ -1,7 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, Rocket, Lock, Cpu, Settings const FiveGEnterpriseSolutions = () => {
+import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, GitFork, Target, Rocket, Lock, Cpu, Settings } from 'lucide-react';
+const FiveGEnterpriseSolutions = () => {
     const features = [
         {
             icon: Wifi,
@@ -53,13 +54,8 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
         {
             title: "Smart Cities",
             description: "Build intelligent urban infrastructure and services",
-<<<<<<< HEAD
-            applications: ["Traffic Management", "Energy Grids", "Public Safety"]
-
-=======
             applications["Traffic Management", "Energy Grids", "Public Safety"]
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     ];
     const benefits = [
         {
@@ -113,10 +109,6 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
               Solutions
             </span>
           </motion.h1>
-<<<<<<< HEAD
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your enterprise with next-generation 5G connectivity.
-=======
           <motion.p initial = {
   { opacity: 0,
   y: 20 
@@ -146,7 +138,6 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
 
 }} className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Transform your enterprise with next-generation 5G connectivity. 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Experience ultra-fast speeds, ultra-low latency, and massive IoT support.
           </motion.p>
           <motion.div initial = {
@@ -432,22 +423,6 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
             { icon: Network, name: "Core Network", description: "5G core infrastructure" },
             { icon: Cpu, name: "Edge Computing", description: "Distributed edge nodes" },
             { icon: Lock, name: "Security Layer", description: "Enterprise-grade security" },
-<<<<<<< HEAD
-            { icon: Workflow, name: "Management", description: "Network orchestration" }
-        ].map((tech, index) => (<motion.div key={index} initial = {
-  { opacity: 0,
-  scale: 0.8 
-
-}} whileInView = {
-  { opacity: 1,
-  scale: 1 
-
-}} transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}} className="text-center">
-=======
             { icon: GitFork, name: "Management", description: "Network orchestration" }
         ].map((tech, index) => (<motion.div key={index} initial = {
   { opacity: 0,
@@ -477,7 +452,8 @@ import { Wifi, Zap, Shield, BarChart3, Network, Users, Globe, Workflow, Target, 
 
 
 }} className="text-center">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+            { icon: GitFork, name: "Management", description: "Network orchestration" }
+        ].map((tech, index) => (<motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: index * 0.1 }} className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-teal-500/30">
                   <tech.icon className="w-10 h-10 text-teal-400"/>
                 </div>

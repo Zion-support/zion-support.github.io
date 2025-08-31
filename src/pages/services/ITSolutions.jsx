@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO";
-import { Shield, Database, Monitor const ITSolutions = () => {
-=======
 import SEO from "@/components/SEO";
 import { Shield, Database, Monitor } from 'lucide-react';
 const ITSolutions = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const features = [
         {
             icon: Settings,
@@ -67,10 +62,6 @@ const ITSolutions = () => {
               {" "}Modern Business
             </span>
           </motion.h1>
-<<<<<<< HEAD
-          <motion.p className="text-xl md:text-2xl text-teal-100 max-w-4xl mx-auto leading-relaxed mb-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            Optimize your IT infrastructure with our comprehensive solutions designed to improve
-=======
           <motion.p className="text-xl md:text-2xl text-teal-100 max-w-4xl mx-auto leading-relaxed mb-8" initial = {
   { opacity: 0,
   y: 20 
@@ -100,7 +91,6 @@ const ITSolutions = () => {
 
 }}>
             Optimize your IT infrastructure with our comprehensive solutions designed to improve 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             efficiency, security, and performance across your organization.
           </motion.p>
           <motion.div initial = {

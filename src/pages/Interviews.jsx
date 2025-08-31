@@ -27,19 +27,6 @@ function InterviewsContent() {
         return !isAfter(interviewDate, now) ||
             ['completed', 'declined', 'cancelled'].includes(interview.status)});
     // Group interviews by date
-<<<<<<< HEAD
-    const groupInterviewsByDate = (interviews) => {
-        const grouped = { /* empty */ };
-        interviews.forEach((interview) => {
-            const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
-            if (!grouped[dateKey]) {
-                grouped[dateKey] = [];
-
-            grouped[dateKey].push(interview);
-        });
-        return grouped;
-    };
-=======
     const grouped = {};
         interviews.forEach((interview) => {
             const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
@@ -47,7 +34,6 @@ function InterviewsContent() {
                 grouped[dateKey] = []}
             grouped[dateKey].push(interview)});
         return grouped};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
     const pastGrouped = groupInterviewsByDate(pastInterviews);
     const renderInterviewGroups = (groupedInterviews) => {
@@ -123,20 +109,9 @@ function InterviewsContent() {
           </TabsContent>
         </Tabs>
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function Interviews() {
-    return (<ProtectedRoute>
-      <InterviewsContent />
-    </ProtectedRoute>);
-}}}}
-=======
       
     </>)}
 export default function Interviews() {
     return (<ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

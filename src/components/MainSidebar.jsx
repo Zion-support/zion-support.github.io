@@ -44,15 +44,8 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
     ];
     const isActive = (href) => {
         if (href === '/') {
-<<<<<<< HEAD
-            return location.pathname === '/';
-
-        return location.pathname.startsWith(href);
-    };
-=======
             return location.pathname === '/'}
         return location.pathname.startsWith(href)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<aside className="w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4">
       <div className="mb-8">
         <Link to="/" className="flex items-center space-x-2">
@@ -100,9 +93,4 @@ import { Home, ShoppingCart, Users, Settings, FileText, HelpCircle, Code, BarCha
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
-    </aside>);
-}}}}
-=======
     </aside>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

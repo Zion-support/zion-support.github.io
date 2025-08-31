@@ -22,63 +22,32 @@ import {
   Mail,
   MapPin,
   ExternalLink
-<<<<<<< HEAD
-import { ADVANCED_INNOVATIVE_SERVICES_2026 } from '../data/advancedInnovativeServices2026';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { ADVANCED_INNOVATIVE_SERVICES_2026  } from "../data/advancedInnovativeServices2026";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-const AdvancedInnovativeServicesShowcase2026: React.FC = (): JSX.Element => {;
-=======;
 } from 'lucide-react';
 import { ADVANCED_INNOVATIVE_SERVICES_2026 } from "../data/advancedInnovativeServices2026";
 
 const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('innovation');
 
-<<<<<<< HEAD
-  const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
-    return ['all', ...Array.from(cats)]}, []);
-=======
   const cats = new Set(ADVANCED_INNOVATIVE_SERVICES_2026.map(service => service.category));
     return ['all', ...Array.from(cats)];
   }, []);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   const filtered = ADVANCED_INNOVATIVE_SERVICES_2026;
 
     // Filter by category
     if (selectedCategory !== 'all') {
-<<<<<<< HEAD
-      filtered = filtered.filter(service => service.category === selectedCategory);
-=======
       filtered = filtered.filter(service => service.category === selectedCategory)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Filter by search term
     if (searchTerm) {
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
-<<<<<<< HEAD
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Sort services
     filtered.sort((a, b) => {
@@ -92,37 +61,12 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         case 'delivery':
           return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
         default:
-<<<<<<< HEAD
-          return 0;
-
-=======
           return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
 
     return filtered}, [searchTerm, selectedCategory, sortBy]);
 
   const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -149,7 +93,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         duration: 0.5;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -165,12 +108,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold text-white mb-6"
-<<<<<<< HEAD
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
             initial = {
   { y: -50,
   opacity: 0 
@@ -202,17 +139,10 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Advanced Innovative Services 2026
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-8"
-<<<<<<< HEAD
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
             initial = {
   { y: 50,
   opacity: 0 
@@ -244,17 +174,10 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Revolutionary AI, Quantum Computing, and Futuristic Technology Solutions
           </motion.p>
           <motion.div
             className="flex flex-wrap justify-center gap-4 text-sm"
-<<<<<<< HEAD
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-
-=======
             initial = {
   { scale: 0.8,
   opacity: 0 
@@ -286,7 +209,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 }}
           >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <span className="px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-200">
               🚀 Quantum AI
             </span>
@@ -306,12 +228,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
       {/* Filter and Search Section */}
       <motion.div
         className="container mx-auto px-4 py-8"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 20 
@@ -343,7 +259,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 }}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
           <div className="flex flex-col lg:flex-row gap-4 items-center">
             {/* Search */}
@@ -364,15 +279,9 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-
-                {categories.map(category => (
-=======
                 className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus: outline-none focus:ring-2 focus:ring-blue-500/50"
               >
                 {categories.map(category  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category.charAt(0).toUpperCase() + category.slice(1)}
                   </option>
@@ -404,23 +313,13 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-<<<<<<< HEAD
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredServices.map((service) => (
-=======
       >
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredServices.map((service)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             <motion.div
               key={service.id}
               className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
               variants={itemVariants}
-<<<<<<< HEAD
-              whileHover={{ y: -5, scale: 1.02 }}
-
-=======
               whileHover = {
   { y: -5,
   scale: 1.02 
@@ -432,7 +331,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 }}
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
@@ -536,12 +434,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
       {/* Contact Section */}
       <motion.div
         className="bg-gradient-to-r from-blue-900/20 via-purple-900/20 to-indigo-900/20 border-t border-slate-700/50"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 50 
@@ -573,7 +465,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
 }}
       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         <div className="container mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -624,14 +515,6 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
 
               Visit Our Website
               <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </motion.div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -639,6 +522,5 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default AdvancedInnovativeServicesShowcase2026;}}}}}}}}

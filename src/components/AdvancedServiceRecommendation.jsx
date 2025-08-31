@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-=======
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
         industry: '',
@@ -104,12 +98,7 @@ const AdvancedServiceRecommendation = () => {
         const score = 0;
         // Industry match
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {
-<<<<<<< HEAD
-            score += 25;
-
-=======
             score += 25}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Budget compatibility
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (profile.budget === 'Under $50K' && servicePrice < 50)
@@ -194,24 +183,14 @@ const AdvancedServiceRecommendation = () => {
             case 'High': return 'bg-red-100 text-red-800';
             case 'Medium': return 'bg-yellow-100 text-yellow-800';
             case 'Low': return 'bg-green-100 text-green-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Complex': return 'bg-red-100 text-red-800';
             case 'Moderate': return 'bg-yellow-100 text-yellow-800';
             case 'Simple': return 'bg-green-100 text-green-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const isFormComplete = () => {
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
@@ -291,16 +270,6 @@ const AdvancedServiceRecommendation = () => {
           </div>
 
           <div>
-<<<<<<< HEAD
-            <label className="block text-sm font-medium text-zion-slate-dark mb-2">Comp Size</label>
-            <select value={clientProfile.compSize} onChange = {
-  (e) => setClientProfile(prev => ({ ...prev,
-  compSize: e.target.value 
-
-}))} className="w-full p-3 border border-zion-slate-light rounded-md">
-              <option value="">Select Comp Size</option>
-              {compSizes.map(size => (<option key={size} value={size}>{size}</option>))}
-=======
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange = {
   (e) => setClientProfile(prev => ({ ...prev,
@@ -314,7 +283,6 @@ const AdvancedServiceRecommendation = () => {
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">
               <option value="">Select Company Size</option>
               {companySizes.map(size => (<option key={size} value={size}>{size}</option>))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </select>
           </div>
 
@@ -377,19 +345,6 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.primaryGoals.includes(goal)} onChange = {
   (e) => {
                 if (e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals, goal] }));
-
-                else {
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }));
-
-=======
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
-  goal] 
-
-}))}
-=======
                     setClientProfile(prev => ({ ...prev, primaryGoals: [...prev.primaryGoals,
   goal] 
 
@@ -398,10 +353,8 @@ const AdvancedServiceRecommendation = () => {
 
 }));
                 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 else {
                     setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{goal}</span>
               </label>))}
@@ -415,19 +368,6 @@ const AdvancedServiceRecommendation = () => {
                 <input type="checkbox" checked={clientProfile.challenges.includes(challenge)} onChange = {
   (e) => {
                 if (e.target.checked) {
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges, challenge] }));
-
-                else {
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }));
-
-=======
-<<<<<<< HEAD
-                    setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
-  challenge] 
-
-}))}
-=======
                     setClientProfile(prev => ({ ...prev, challenges: [...prev.challenges,
   challenge] 
 
@@ -436,10 +376,8 @@ const AdvancedServiceRecommendation = () => {
 
 }));
                 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 else {
                     setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             }} className="rounded text-zion-cyan"/>
                 <span className="text-sm text-zion-slate-light">{challenge}</span>
               </label>))}
@@ -654,11 +592,6 @@ const AdvancedServiceRecommendation = () => {
             </div>
           </motion.div>
         </motion.div>)}
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AdvancedServiceRecommendation;
 }}}}}}}}}

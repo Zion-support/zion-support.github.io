@@ -75,11 +75,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-    );
-=======
     )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -276,9 +272,4 @@ import { Mail, Phone, MapPin, Send, CheckCircle export const QuoteFormSection = 
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

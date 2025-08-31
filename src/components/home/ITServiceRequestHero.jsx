@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Zap, Clock, Globe, Shield, MapPin, Search, ArrowRight } from 'lucide-react';
-import { GradientHeading } from '@/components/GradientHeading';
-
+import React, { useState } from "react";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { Clock, Globe, Shield, Zap, MapPin, ArrowRight } from "lucide-react";
 export function ITServiceRequestHero() {
   const [location, setLocation] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);

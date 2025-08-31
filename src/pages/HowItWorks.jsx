@@ -247,9 +247,4 @@ import { Search, UserPlus, Handshake, CheckCircle, MessageSquare, FileText, User
           </div>
         </div>
       </main>
-<<<<<<< HEAD
-    </>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}</section>}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

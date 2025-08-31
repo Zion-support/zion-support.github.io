@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { SEO } from '@/components/SEO';
-
-export default function Training() {
-	return (
-		<div className="min-h-screen bg-slate-900 text-white py-16">
-			<SEO title="Training - Zion Tech Group" description="Workshops and training programs to upskill your team." />
-			<div className="container mx-auto px-4 max-w-4xl">
-				<h1 className="text-4xl font-bold mb-4">Training</h1>
-				<p className="text-zinc-300">Hands-on workshops and certification-aligned programs.</p>
-			</div>
-		</div>
-	);
-
-import React, { useState } from 'react';
-import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Training() {
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -61,7 +43,11 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Training: React.FC = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import React, { useState } from 'react';
+import { SEO } from '@/components/SEO';
+import { GraduationCap, BookOpen, Users, Clock, Star, Search, Filter, Play, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon } from 'lucide-react';
+
+export default function Training() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeLevel, setActiveLevel] = useState('all');
@@ -144,28 +130,6 @@ const Training: React.FC = () => {
       category: 'security',
       level: 'intermediate',
       format: 'in-person',
-<<<<<<< HEAD
-      duration: '4 weeks',
-      hours: 32,
-      price: 3999,
-      location: 'Boston, MA',
-      startDate: '2025-06-01',
-      instructor: 'Jennifer Park',
-      rating: 4.8,
-      students: 45,
-      featured: false,
-      certification: 'Digital Transformation Leader',
-      tags: ['Leadership', 'Digital Transformation', 'Change Management', 'Strategy'],
-      modules: [
-        'Digital Strategy Development',
-        'Change Management and Culture',
-        'Technology Selection and Implementation',
-        'Stakeholder Management',
-        'Success Measurement'
-      ],
-      skills: ['Strategic Planning', 'Change Management', 'Stakeholder Management', 'Technology Strategy']
-
-=======
       duration: '6 weeks',
       instructor: 'Lisa Thompson',
       rating: 4.7,
@@ -180,7 +144,6 @@ const Training: React.FC = () => {
         'Career guidance'
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const filteredPrograms = trainingPrograms.filter(program => {
@@ -195,41 +158,6 @@ const Training: React.FC = () => {
     return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: string) => {
-    return categories.find(c => c.id === categoryId)?.icon || <GraduationCap className="w-5 h-5" />;
-  };
-
-  const getLevelColor = (level: string) => {
-    switch (level) {
-      case 'beginner': return 'text-green-400';
-      case 'intermediate': return 'text-yellow-400';
-      case 'advanced': return 'text-orange-400';
-      case 'expert': return 'text-red-400';
-      default: return 'text-zion-slate-light';
-
-  };
-
-  const getFormatIcon = (format: string) => {
-    switch (format) {
-      case 'online': return <Globe className="w-4 h-4" />;
-      case 'in-person': return <MapPin className="w-4 h-4" />;
-      case 'hybrid': return <Users className="w-4 h-4" />;
-      case 'self-paced': return <Clock className="w-4 h-5" />;
-      default: return <BookOpen className="w-4 h-4" />;
-
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <>
       <SEO 
@@ -311,42 +239,17 @@ const Training: React.FC = () => {
                           ? 'bg-blue-600 text-white'
                           : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
                       }`}
-<<<<<<< HEAD
-
-                      {category.icon}
-                      {category.name}
-=======
                     >
                       <div className="flex items-center gap-2">
                         <category.icon className="w-4 h-4" />
                         {category.name}
                         <span className="text-xs opacity-75">({category.count})</span>
                       </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     </button>
                   ))}
                 </div>
               </div>
 
-<<<<<<< HEAD
-              {/* Levels */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Level</label>
-                <div className="flex flex-wrap gap-2">
-                  {levels.map((level) => (
-                    <button
-                      key={level.id}
-                      onClick={() => setActiveLevel(level.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeLevel === level.id
-                          ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {level.name} ({level.count})
-                    </button>
-                  ))}
-=======
               {/* Levels and Formats */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -366,28 +269,8 @@ const Training: React.FC = () => {
                       </button>
                     ))}
                   </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
 
-<<<<<<< HEAD
-              {/* Formats */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Format</label>
-                <div className="flex flex-wrap gap-2">
-                  {formats.map((format) => (
-                    <button
-                      key={format.id}
-                      onClick={() => setActiveFormat(format.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeFormat === format.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {format.name} ({format.count})
-                    </button>
-                  ))}
-=======
                 <div>
                   <h3 className="text-sm font-medium text-zion-slate-light mb-3">Format</h3>
                   <div className="flex flex-wrap gap-2">
@@ -405,37 +288,12 @@ const Training: React.FC = () => {
                       </button>
                     ))}
                   </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
               </div>
             </div>
           </motion.div>
         </div>
 
-<<<<<<< HEAD
-      {/* Featured Programs */}
-      {trainingPrograms.filter(p => p.featured).length > 0 && (
-        <div className="py-12 bg-zion-slate-dark">
-          <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Featured Training Programs
-            </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {trainingPrograms.filter(p => p.featured).map((program) => (
-                <div
-                  key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-
-                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1 text-white">
-=======
         {/* Training Programs Grid */}
         <div className="container mx-auto px-4 pb-20">
           <motion.div
@@ -463,43 +321,10 @@ const Training: React.FC = () => {
                         </span>
                       </div>
                       <div className="flex items-center gap-1">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-sm font-medium text-white">{program.rating}</span>
                       </div>
                     </div>
-<<<<<<< HEAD
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center justify-between text-white">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{formatDate(program.startDate)}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4" />
-                          <span className="text-sm">{program.duration}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      {getCategoryIcon(program.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === program.category)?.name}
-                      </span>
-                      <span className={`text-sm font-medium ${getLevelColor(program.level)}`}>
-                        {levels.find(l => l.id === program.level)?.name}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-white mb-2">{program.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{program.description}</p>
-
-                    <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-=======
                     <CardTitle className="text-xl text-white mb-2 line-clamp-2">
                       {program.title}
                     </CardTitle>
@@ -516,7 +341,6 @@ const Training: React.FC = () => {
                         <span>{program.duration}</span>
                       </div>
                       <div className="flex items-center gap-2 text-zion-slate-light">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         <Users className="w-4 h-4" />
                         <span>{program.students} students</span>
                       </div>
@@ -529,43 +353,6 @@ const Training: React.FC = () => {
                         <span>{program.price}</span>
                       </div>
                     </div>
-<<<<<<< HEAD
-
-                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* All Training Programs */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Training Programs
-          </h2>
-
-          {filteredPrograms.length > 0 ? (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPrograms.map((program) => (
-                <div
-                  key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      {getCategoryIcon(program.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === program.category)?.name}
-                      </span>
-                      {program.featured && (
-                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured
-=======
 
                     {/* Tags */}
                     <div className="flex flex-wrap gap-2">
@@ -580,7 +367,6 @@ const Training: React.FC = () => {
                       {program.tags.length > 3 && (
                         <span className="px-2 py-1 bg-zion-slate-dark/50 text-zion-slate-light text-xs rounded-md">
                           +{program.tags.length - 3} more
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                         </span>
                       )}
                     </div>
@@ -595,18 +381,6 @@ const Training: React.FC = () => {
                       ))}
                     </div>
 
-<<<<<<< HEAD
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {program.tags.slice(0, 4).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-=======
                     {/* Action Buttons */}
                     <div className="flex gap-2 pt-2">
                       <Button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
@@ -622,7 +396,6 @@ const Training: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
           {/* No Results */}
           {filteredPrograms.length === 0 && (
@@ -645,10 +418,6 @@ const Training: React.FC = () => {
       </div>
     </>
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 };
 
 export default Training;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

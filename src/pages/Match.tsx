@@ -38,12 +38,8 @@ import {
   Server,
   Network,
   Settings as SettingsIcon
-<<<<<<< HEAD
-import { SEO } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const Match: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -130,15 +126,6 @@ const Match: React.FC = () => {;
       category: "ai",
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
       rating: 4.9,
-<<<<<<< HEAD
-      reviews: 112,
-      price: "$2,799/mo",
-      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],
-      matchScore: 87,
-      icon: Zap,
-      featured: true
-
-=======
       reviews: 112,;
       price: "$2,799/mo",;
       features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
@@ -146,7 +133,6 @@ const Match: React.FC = () => {;
       icon: Zap,;
       featured: true;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const filteredServices = matchedServices.filter(service => {;
@@ -156,13 +142,8 @@ const Match: React.FC = () => {;
   });
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Service Matcher - Zion Tech Group"
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
         keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
@@ -599,16 +580,6 @@ const Match: React.FC = () => {;
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Browse All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Browse All Services;
               </Link>;
@@ -617,7 +588,6 @@ const Match: React.FC = () => {;
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 

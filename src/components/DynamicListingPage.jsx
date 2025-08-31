@@ -100,19 +100,11 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <label className="text-sm font-medium text-zion-slate-light block mb-2">
                   Category
                 </label>
-<<<<<<< HEAD
-                <Select value={selectedCategory} onValueChange={(value) => {
-<<<<<<< HEAD
-            // // // console.log("Category selected:", value);
-=======
             // // // // // // // console.log("Category selected:", value);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
                 <Select value={selectedCategory} onValueChange = {
   (value) => {
             console.log("Category selected:",
   value);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setSelectedCategory(value);
         
 
@@ -161,19 +153,11 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
-<<<<<<< HEAD
-                  {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick={() => {
-<<<<<<< HEAD
-                // // // console.log("Rating selected:", rating);
-=======
                 // // // // // // // console.log("Rating selected:", rating);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
                   {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick = {
   () => {
                 console.log("Rating selected:",
   rating);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 setSelectedRating(rating);
             
 
@@ -192,20 +176,11 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                     </Button>))}
                 </div>
               </div>
-<<<<<<< HEAD
-
-              <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={() => {
-<<<<<<< HEAD
-            // // // console.log("Resetting filters");
-=======
             // // // // // // // console.log("Resetting filters");
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
               
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick = {
   () => {
             console.log("Resetting filters");
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setSearchQuery("");
             setSelectedCategory("all");
             setCurrentPriceFilter([0,
@@ -229,19 +204,11 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
-<<<<<<< HEAD
-                  <Input type="text" placeholder="Search listings..." value={searchQuery} onChange={(e) => {
-<<<<<<< HEAD
-            // // // console.log("Search query:", e.target.value);
-=======
             // // // // // // // console.log("Search query:", e.target.value);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
                   <Input type="text" placeholder="Search listings..." value={searchQuery} onChange = {
   (e) => {
             console.log("Search query:",
   e.target.value);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             setSearchQuery(e.target.value);
         
 

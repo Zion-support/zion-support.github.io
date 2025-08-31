@@ -24,118 +24,12 @@ import {
   Monitor,
   Brain,
   Code
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const educationSolutions = [
-  {
-    id: 1,
-    title: "Learning Management System (LMS)",
-    description: "Comprehensive platform for managing courses, content, and student progress tracking.",
-    icon: BookOpen,
-    features[
-      "Course management",
-      "Content delivery",
-      "Student tracking",
-      "Assessment tools"
-    ],
-    price: "From $40,000",
-    timeline: "16-24 weeks",
-    category: "LMS Platforms",
-    integrations["Canvas", "Blackboard", "Moodle", "Google Classroom"]
-  },
-  {
-    id: 2,
-    title: "Mobile Learning Apps",
-    description: "Native mobile applications that enable learning on-the-go across all devices.",
-    icon: Smartphone,
-    features[
-      "Cross-platform development",
-      "Offline content access",
-      "Push notifications",
-      "Progress synchronization"
-    ],
-    price: "From $30,000",
-    timeline: "12-20 weeks",
-    category: "Mobile Development",
-    integrations["iOS", "Android", "React Native", "Flutter"]
-  },
-  {
-    id: 3,
-    title: "Virtual Reality (VR) Learning",
-    description: "Immersive educational experiences using virtual reality technology.",
-    icon: Monitor,
-    features[
-      "3D learning environments",
-      "Interactive simulations",
-      "Multi-user collaboration",
-      "Progress tracking"
-    ],
-    price: "From $60,000",
-    timeline: "20-32 weeks",
-    category: "VR/AR",
-    integrations["Oculus", "HTC Vive", "WebXR", "Unity"]
-  },
-  {
-    id: 4,
-    title: "AI-Powered Tutoring",
-    description: "Intelligent tutoring systems that adapt to individual learning styles and needs.",
-    icon: Brain,
-    features[
-      "Personalized learning paths",
-      "Adaptive assessments",
-      "Natural language processing",
-      "Learning analytics"
-    ],
-    price: "From $50,000",
-    timeline: "16-24 weeks",
-    category: "AI & Analytics",
-    integrations["Machine Learning", "NLP", "Data Analytics", "Cloud AI"]
-  },
-  {
-    id: 5,
-    title: "Video Conferencing Platform",
-    description: "Secure and scalable video conferencing solution for remote learning and collaboration.",
-    icon: Video,
-    features[
-      "HD video streaming",
-      "Screen sharing",
-      "Recording capabilities",
-      "Breakout rooms"
-    ],
-    price: "From $35,000",
-    timeline: "12-18 weeks",
-    category: "Communication",
-    integrations["Zoom API", "Microsoft Teams", "Google Meet", "WebRTC"]
-  },
-  {
-    id: 6,
-    title: "Student Analytics Dashboard",
-    description: "Comprehensive analytics platform for tracking student performance and engagement.",
-    icon: BarChart3,
-    features[
-      "Performance metrics",
-      "Engagement tracking",
-      "Predictive analytics",
-      "Custom reporting"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Analytics",
-<<<<<<< HEAD
-    integrations: ["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
-
-=======
     integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const edTechTrends = [
   {
     title: "Personalized Learning",
@@ -805,9 +699,4 @@ export default function EducationSolutions() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

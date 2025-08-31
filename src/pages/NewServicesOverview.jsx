@@ -1,12 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles export default function NewServicesOverview() {
-=======
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Brain, Shield, Cloud, Rocket, Users, BarChart3, Building, ArrowRight, CheckCircle, Phone, Mail, MapPin, Award, Users as UsersIcon, Globe as GlobeIcon, TrendingUp as TrendingUpIcon, Sparkles } from 'lucide-react';
 export default function NewServicesOverview() {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const serviceCategories = [
         {
             id: 'ai-services',
@@ -375,9 +371,4 @@ export default function NewServicesOverview() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

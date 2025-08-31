@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target import { Button } from './button';
-=======
 import { TrendingUp, Users, Download, RefreshCw, BarChart3, Eye, EyeOff, Target } from 'lucide-react';
 import { Button } from "./button";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetricClick, className = '' }) {
     const [showTargets, setShowTargets] = useState(true);
     const [isLoading, setIsLoading] = useState(false);
@@ -261,9 +257,4 @@ export function AnalyticsDashboard({ enabled = true, isExpanded = false, onMetri
             </p>
           </motion.div>)}
       </AnimatePresence>
-<<<<<<< HEAD
-    </motion.div>);
-</div></div></div></div>}}
-=======
     </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

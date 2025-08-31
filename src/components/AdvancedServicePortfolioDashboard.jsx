@@ -1,17 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
-=======
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Input } from "./ui/input";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const AdvancedServicePortfolioDashboard = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedStatus, setSelectedStatus] = useState('all');
@@ -138,12 +131,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Development': return 'bg-blue-100 text-blue-800';
             case 'Planning': return 'bg-yellow-100 text-yellow-800';
             case 'Discontinued': return 'bg-red-100 text-red-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
@@ -151,12 +139,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getMarketDemandColor = (demand) => {
         switch (demand) {
@@ -164,12 +147,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Medium': return 'bg-blue-100 text-blue-800';
             case 'High': return 'bg-orange-100 text-orange-800';
             case 'Exploding': return 'bg-red-100 text-red-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getTechnologyMaturityColor = (maturity) => {
         switch (maturity) {
@@ -177,12 +155,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Leading': return 'bg-purple-100 text-purple-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const categories = [
         { id: 'all', name: 'All Categories', count: portfolioData.length },
@@ -710,11 +683,6 @@ const AdvancedServicePortfolioDashboard = () => {
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AdvancedServicePortfolioDashboard;
 }}}}}}

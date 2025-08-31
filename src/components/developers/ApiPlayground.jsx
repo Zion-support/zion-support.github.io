@@ -23,12 +23,7 @@ export function ApiPlayground({ method, path, params = [] }) {
                     searchParams.append(p.name, val)});
             const query = searchParams.toString();
             if (query)
-<<<<<<< HEAD
-                url += `?${query}`;
-
-=======
                 url += `?${query}`}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         const options = {
   method,
   headers: {
@@ -45,40 +40,20 @@ export function ApiPlayground({ method, path, params = [] }) {
         };
         if (method !== "GET" && method !== "DELETE") {
             try {
-<<<<<<< HEAD
-                options.body = JSON.stringify(JSON.parse(body));
-
-            catch {
-                options.body = body;
-
-
-=======
                 options.body = JSON.stringify(JSON.parse(body))}
             catch {
                 options.body = body}
         }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         setLoading(true);
         setResponse(null);
         try {
             const res = await fetch(url, options);
             const text = await res.text();
-<<<<<<< HEAD
-            setResponse(text);
-
-        catch (err) {
-            setResponse(err.message);
-
-        finally {
-            setLoading(false);
-
-=======
             setResponse(text)}
         catch (err) {
             setResponse(err.message)}
         finally {
             setLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="space-y-4">
       <Input value={apiKey} onChange={(e) => setApiKey(e.target.value)} placeholder="API Key"/>
@@ -97,12 +72,6 @@ export function ApiPlayground({ method, path, params = [] }) {
         {loading ? "Sending..." : "Send Request"}
       </Button>
       {response && <CodeBlock code={response} language="json"/>}
-<<<<<<< HEAD
-    </div>);
-
-export default ApiPlayground;
-}}}}}}}}
-=======
     </div>)}
 export default ApiPlayground;
 
@@ -113,4 +82,3 @@ export default ApiPlayground;
 export default ApiPlayground;
 export default ApiPlayground;
 export default ApiPlayground;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

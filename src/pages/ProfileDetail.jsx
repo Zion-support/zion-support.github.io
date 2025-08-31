@@ -21,70 +21,32 @@ export default function ProfileDetail() {
             try {
                 if (!profileId) {
                     setError("Profile ID is missing.");
-<<<<<<< HEAD
-                    return;
-
-=======
                     return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 const { data, error } = await supabase
                     .from("talent_profiles")
                     .select("*")
                     .eq("id", profileId)
                     .single();
                 if (error) {
-<<<<<<< HEAD
-                    throw new Error(error.message);
-
-                if (!data) {
-                    setError("Profile not found.");
-                    return;
-
-                setProfileData(data);
-
-=======
                     throw new Error(error.message)}
                 if (!data) {
                     setError("Profile not found.");
                     return}
                 setProfileData(data)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             catch (err) {
                 setError(err.message || "Failed to fetch profile.");
                 toast({
                     title: "Error",
                     description: err.message || "Failed to fetch profile.",
                     variant: "destructive",
-<<<<<<< HEAD
-                });
-
-            finally {
-                setIsLoading(false);
-
-=======
                 })}
             finally {
                 setIsLoading(false)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         };
         fetchProfile()}, [profileId]);
     if (isLoading) {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Loading profile...</p>
-<<<<<<< HEAD
-      </div>);
-
-    if (error) {
-        return (<div className="min-h-screen flex items-center justify-center">
-        <p>Error: {error}</p>
-      </div>);
-
-    if (!profileData) {
-        return (<div className="min-h-screen flex items-center justify-center">
-        <p>Profile not found.</p>
-      </div>);
-
-=======
       </div>)}
     if (error) {
         return (<div className="min-h-screen flex items-center justify-center">
@@ -94,7 +56,6 @@ export default function ProfileDetail() {
         return (<div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<>
       <SEO title={`${profileData.full_name} | Zion AI Marketplace`} description={profileData.bio || "Check out this talent's profile on Zion!"}/>
 
@@ -247,11 +208,5 @@ export default function ProfileDetail() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-
-    </>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

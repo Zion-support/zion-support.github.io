@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { useFeatureUsage } from "@/hooks/useFeatureUsage";
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function AIPoweredContent() {
@@ -63,9 +63,4 @@ export default function AIPoweredContent() {
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

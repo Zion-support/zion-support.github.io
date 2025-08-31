@@ -140,118 +140,12 @@ import {
   Bluetooth,
   Battery,
   Signal
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
 
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const hrPlatformSolutions = [
-  {
-    id: 1,
-    title: "Employee Management System",
-    description: "Comprehensive platform for managing employee information, performance, and development.",
-    icon: Users,
-    features[
-      "Employee profiles",
-      "Performance tracking",
-      "Goal setting",
-      "Development plans"
-    ],
-    price: "From $60,000",
-    timeline: "16-24 weeks",
-    category: "Employee Management",
-    technologies["React", "Node.js", "PostgreSQL", "AWS"]
-  },
-  {
-    id: 2,
-    title: "Recruitment & Onboarding",
-    description: "Streamlined hiring process with automated onboarding workflows and candidate management.",
-    icon: UserPlus,
-    features[
-      "Job posting",
-      "Candidate tracking",
-      "Interview scheduling",
-      "Onboarding automation"
-    ],
-    price: "From $80,000",
-    timeline: "20-28 weeks",
-    category: "Recruitment",
-    technologies["AI/ML", "Workflow Automation", "Calendar Integration", "Email Systems"]
-  },
-  {
-    id: 3,
-    title: "Performance Management",
-    description: "360-degree performance evaluation and feedback system with goal tracking.",
-    icon: Target,
-    features[
-      "Performance reviews",
-      "Goal tracking",
-      "Feedback systems",
-      "Analytics dashboard"
-    ],
-    price: "From $70,000",
-    timeline: "18-26 weeks",
-    category: "Performance",
-    technologies["Real-time Analytics", "Dashboard Tools", "Reporting Engine", "Data Visualization"]
-  },
-  {
-    id: 4,
-    title: "Learning Management System",
-    description: "Corporate training and development platform with course management and progress tracking.",
-    icon: GraduationCap,
-    features[
-      "Course creation",
-      "Progress tracking",
-      "Certification",
-      "Learning paths"
-    ],
-    price: "From $90,000",
-    timeline: "24-32 weeks",
-    category: "Learning",
-    technologies["Video Streaming", "Interactive Content", "Progress Tracking", "Assessment Tools"]
-  },
-  {
-    id: 5,
-    title: "Payroll & Benefits",
-    description: "Automated payroll processing and benefits management system with compliance features.",
-    icon: Briefcase,
-    features[
-      "Payroll processing",
-      "Benefits administration",
-      "Tax compliance",
-      "Reporting tools"
-    ],
-    price: "From $100,000",
-    timeline: "20-30 weeks",
-    category: "Payroll",
-    technologies["Financial APIs", "Tax Calculation", "Compliance Tools", "Reporting Systems"]
-  },
-  {
-    id: 6,
-    title: "HR Analytics Platform",
-    description: "Data-driven insights for workforce planning and HR decision making.",
-    icon: BarChart3,
-    features[
-      "Workforce analytics",
-      "Predictive insights",
-      "Custom reports",
-      "Data visualization"
-    ],
-    price: "From $50,000",
-    timeline: "14-22 weeks",
-    category: "Analytics",
-<<<<<<< HEAD
-    technologies: ["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
-
-=======
     technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const hrTechnologies = [
   {
     name: "Employee Management",
@@ -367,13 +261,8 @@ const hrBenefits = [
     title: "Compliance & Security",
     description: "Built-in compliance features and enterprise-grade security protect sensitive HR data",
     icon: Shield,
-<<<<<<< HEAD
-    examples: ["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"]
-
-=======
     examples["Regulatory compliance", "Data encryption", "Access controls", "Audit trails"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function HRPlatform() {
@@ -1048,9 +937,4 @@ export default function HRPlatform() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -47,11 +47,7 @@ pricingTiers: {
   rating: number;
   reviews: number;
   launchDate: string;
-<<<<<<< HEAD
-  status: 'active' | 'beta' | 'coming-soon';
-=======
   status: 'active' | 'beta' | 'coming-soon'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
 export const advancedCybersecurityServices: ExpandedService2027[] = [
@@ -1071,27 +1067,6 @@ export const EXPANDED_SERVICE_CATEGORIES = [
 ];
 
 // Helper function to get services by category
-<<<<<<< HEAD
-export const getExpandedServicesByCategory = (category: string): ExpandedService2027[]  => {
-  if (category === 'All') {;
-    return ALL_EXPANDED_SERVICES_2027};
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.category === category)};
-
-// Helper function to get services by subcategory
-export const getExpandedServicesBySubcategory = (subcategory: string): ExpandedService2027[]  => {;
-  return ALL_EXPANDED_SERVICES_2027.filter(service => service.subcategory === subcategory)};
-
-// Helper function to search services
-export const searchExpandedServices = (query: string): ExpandedService2027[]  => {;
-  const lowercaseQuery = query.toLowerCase();
-  return ALL_EXPANDED_SERVICES_2027.filter(service = > 
-    service.name.toLowerCase().includes(lowercaseQuery) ||
-    service.description.toLowerCase().includes(lowercaseQuery) ||
-    service.category.toLowerCase().includes(lowercaseQuery) ||
-    service.subcategory.toLowerCase().includes(lowercaseQuery) ||;
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
-  )};
-=======
 export const getExpandedServicesByCategory = (category: string): ExpandedService2027[] => {;
   if (category === 'All') {;
     return ALL_EXPANDED_SERVICES_2027;
@@ -1114,9 +1089,4 @@ export const searchExpandedServices = (query: string): ExpandedService2027[] => 
     service.subcategory.toLowerCase().includes(lowercaseQuery) ||
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   );
-<<<<<<< HEAD
-};}}}}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -8,19 +8,10 @@ export const showApiError = (error: , fallbackMessage?: string) => {;
     description: message,
   });
   // Log error for debugging
-<<<<<<< HEAD
-  if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-    // // // console.error('API Error:', error);
-
-=======
     // // // // // // // console.error('API Error:', error);
-=======
   if (process.env.NODE_ENV = == 'development') {;
     // // // // console.error('API Error:', error);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 };
 
 export const handleApiError = (error: , fallbackMessage?: string) => {;

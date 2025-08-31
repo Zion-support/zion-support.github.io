@@ -31,20 +31,10 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
     try {
       await navigator.clipboard.writeText(url);
       setCopied(true);
-<<<<<<< HEAD
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-<<<<<<< HEAD
-      // // // console.error('Failed to copy: ', err);
-
-=======
       // // // // // // // console.error('Failed to copy: ', err);
     }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
       setTimeout(() => setCopied(false), 2000)} catch (err) {
       console.error('Failed to copy: ', err)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const handleShare = async (platform) => {
@@ -57,27 +47,17 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
           title: 'Zion Mobile App',
           text: text,
           url: url
-<<<<<<< HEAD
-        });
-      } catch (err) {
-<<<<<<< HEAD
-        // // // console.error('Error sharing:', err);
-
-=======
         // // // // // // // console.error('Error sharing:', err);
       }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
     } else {
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url);
 
-=======
         })} catch (err) {
         console.error('Error sharing:', err)}
     } else {
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const currentPlatform = downloadLinks[activeTab];
@@ -267,10 +247,4 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};
-}}}}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -90,21 +90,10 @@ export function InteractiveTestimonials() {
         setLikedTestimonials(prev => {
             const newSet = new Set(prev);
             if (newSet.has(testimonialId)) {
-<<<<<<< HEAD
-                newSet.delete(testimonialId);
-
-            else {
-                newSet.add(testimonialId);
-
-            return newSet;
-        });
-    };
-=======
                 newSet.delete(testimonialId)}
             else {
                 newSet.add(testimonialId)}
             return newSet})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     const renderStars = (rating) => {
         return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}/>))};
     const containerVariants = {
@@ -464,9 +453,4 @@ export function InteractiveTestimonials() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

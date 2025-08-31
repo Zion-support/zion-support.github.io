@@ -42,12 +42,7 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
             return;
         const interval = setInterval(() => {
             if (isPlaying) {
-<<<<<<< HEAD
-                setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-
-=======
                 setCurrentSlide((prev) => (prev + 1) % heroSlides.length)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }, 5000);
         return () => clearInterval(interval)}, [isPlaying, isAutoPlaying, heroSlides.length]);
     const nextSlide = () => {
@@ -59,12 +54,7 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
     const toggleAutoPlay = () => {
         setIsAutoPlaying(!isAutoPlaying);
         if (!isAutoPlaying) {
-<<<<<<< HEAD
-            setIsPlaying(true);
-
-=======
             setIsPlaying(true)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="relative w-full h-screen overflow-hidden">
       {/* Background Video/Image Placeholder */}
@@ -263,17 +253,6 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
 }} className="pt-6">
                 <a href={heroSlides[currentSlide].ctaLink} className="inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-full hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25">
                   {heroSlides[currentSlide].ctaText}
-<<<<<<< HEAD
-                  <motion.div animate = {
-  { x[0, 5,
-  0] 
-
-}} transition = {
-  { duration: 1.5,
-  repeat: Infinity 
-
-}} className="ml-2">
-=======
                   <motion.div animate = {
   { x: [0, 5,
   0] 
@@ -293,7 +272,6 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
 
 
 }} className="ml-2">
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                     →
                   </motion.div>
                 </a>
@@ -349,11 +327,6 @@ import { ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX const Enhanced
           <p>Use ← → keys or click to navigate</p>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default EnhancedHero;
 }}}}

@@ -9,15 +9,6 @@ import {
   Users,
   Globe,
   ArrowRight,
-<<<<<<< HEAD
-  Accessibility,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
-const AccessibilityAuditor: React.FC = () => {
-  const features = [
-=======
   Star,
   Heart,
   Users,
@@ -33,7 +24,6 @@ export default function AccessibilityPage() {
   const currentYear = new Date().getFullYear();
 
   const accessibilityFeatures = [
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     {
       category: 'Visual Accessibility',
       icon: Eye,
@@ -69,12 +59,6 @@ export default function AccessibilityPage() {
       ]
     },
     {
-<<<<<<< HEAD
-      title: "Compliance Reporting",
-      description: "Detailed reports with actionable recommendations",
-      icon: "📋"
-
-=======
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: [
@@ -85,7 +69,6 @@ export default function AccessibilityPage() {
         'Step-by-step instructions'
       ]
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceStandards = [
@@ -117,14 +100,12 @@ export default function AccessibilityPage() {
       description: 'European accessibility requirements for ICT products and services',
       color: 'text-green-500'
     }
-=======;
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"];
     },;
     {;
       category: "Technical Accessibility",;
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   ];
 
   const accessibilityTools = [
@@ -139,11 +120,6 @@ export default function AccessibilityPage() {
       icon: Smartphone
     },
     {
-<<<<<<< HEAD
-      category: "Technical Accessibility",
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-
-=======
       name: 'Voice Navigation',
       description: 'Voice control support for hands-free navigation and interaction',
       icon: Globe
@@ -153,7 +129,6 @@ export default function AccessibilityPage() {
       description: 'Personalizable themes, fonts, and layout options to meet individual needs',
       icon: Zap
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const containerVariants = {
@@ -353,24 +328,10 @@ export default function AccessibilityPage() {
                   View All Services
                 </Link>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-};
-
-export default AccessibilityAuditor;}}}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

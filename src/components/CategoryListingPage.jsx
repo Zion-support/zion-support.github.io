@@ -60,12 +60,7 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
             case 'z-a':
                 return b.title.localeCompare(a.title);
             default:
-<<<<<<< HEAD
-                return 0;
-
-=======
                 return 0}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     return (<>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -144,9 +139,4 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 export function Categor
         </div>
       </div>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}}}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -5,12 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-<<<<<<< HEAD
-import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign import { SEO } from '@/components/SEO';
-=======
 import { CheckCircle, Star, Clock, Globe, Mail, Phone, MapPin, ExternalLink, TrendingUp, Shield, Zap, DollarSign } from 'lucide-react';
 import SEO from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function ServicesPricingGuide() {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const filteredServices = selectedCategory === 'all'
@@ -27,12 +23,7 @@ export default function ServicesPricingGuide() {
             case 'Starter': return 'bg-green-500';
             case 'Professional': return 'bg-blue-500';
             case 'Enterprise': return 'bg-purple-500';
-<<<<<<< HEAD
-            default: return 'bg-gray-500';
-
-=======
             default: return 'bg-gray-500'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getServiceIcon = (category) => {
         switch (category) {
@@ -44,12 +35,7 @@ export default function ServicesPricingGuide() {
             case 'IoT & Edge Computing': return <Globe className="w-5 h-5 text-indigo-500"/>;
             case 'Blockchain & Web3': return <TrendingUp className="w-5 h-5 text-orange-500"/>;
             case 'AR/VR & Metaverse': return <Globe className="w-5 h-5 text-pink-500"/>;
-<<<<<<< HEAD
-            default: return <TrendingUp className="w-5 h-5 text-gray-500"/>;
-
-=======
             default: return <TrendingUp className="w-5 h-5 text-gray-500"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light">
       <SEO title="Services Pricing Guide - Zion Tech Group" description="Comprehensive pricing guide for all our IT and AI services. Compare features, pricing, and benefits across our service portfolio." keywords="pricing guide, IT services pricing, AI development cost, cloud migration pricing, cybersecurity pricing" canonical="https://ziontechgroup.com/services-pricing-guide"/>
@@ -374,9 +360,4 @@ export default function ServicesPricingGuide() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

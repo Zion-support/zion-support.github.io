@@ -77,17 +77,6 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 }/>;
         default:
-<<<<<<< HEAD
-            return <Bell className={cn(className, "text-gray-500")}/>;
-
-=======
-<<<<<<< HEAD
-            return <Bell className = {
-  cn(className,
-  "text-gray-500")
-
-}/>}
-=======
             return <Bell className = {
   cn(className,
   "text-gray-500")
@@ -99,8 +88,6 @@ const getNotificationIcon = (type, className = "h-5 w-5") => {
 
 }/>;
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
 const getNotificationTypeBadge = (type) => {
     switch (type) {
@@ -117,33 +104,16 @@ const getNotificationTypeBadge = (type) => {
         case 'system':
             return <Badge className="bg-yellow-500">System</Badge>;
         default:
-<<<<<<< HEAD
-            return <Badge variant="outline">Notification</Badge>;
-
-=======
             return <Badge variant="outline">Notification</Badge>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 };
 const NotificationCard = ({ notification, onMarkAsRead, onDismiss }) => {
     const navigate = useNavigate();
     const handleAction = () => {
         if (!notification.read) {
-<<<<<<< HEAD
-            onMarkAsRead(notification.id);
-
-        if (notification.action_url) {
-            navigate(notification.action_url);
-
-=======
             onMarkAsRead(notification.id)}
         if (notification.action_url) {
-<<<<<<< HEAD
-            router(notification.action_url)}
-=======
             router(notification.action_url);
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     return (<div className = {
   cn("border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
@@ -241,11 +211,5 @@ export default function NotificationsPage() {
           </Tabs>
         </div>
       </main>
-<<<<<<< HEAD
-
-    </>);
-}}}}}}
-=======
       
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

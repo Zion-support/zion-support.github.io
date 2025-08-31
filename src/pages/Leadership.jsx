@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Users, Award, Target, Zap, Linkedin, Mail const Leadership = () => {
+import { Users, Award, Target, Zap, Linkedin, Mail } from 'lucide-react';
+const Leadership = () => {
     const leadershipTeam = [
         {
             name: "Dr. Sarah Chen",
@@ -159,11 +160,7 @@ import { Users, Award, Target, Zap, Linkedin, Mail const Leadership = () => {
             Leadership Team
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-<<<<<<< HEAD
-            Meet the visionary leaders who guide our company's mission and drive
-=======
             Meet the visionary leaders who guide our comp's mission and drive 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             innovation in technology and business transformation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
