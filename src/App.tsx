@@ -22,7 +22,6 @@ const Services = createLazyComponent(() => import('./pages/Services'));
 const InnovativeServicesShowcase2029 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2029'));
 const ComprehensivePricingGuide2029 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2029'));
 const ComprehensiveServices2029 = createLazyComponent(() => import('./pages/ComprehensiveServices2029'));
-const InnovativeAIServices2029 = createLazyComponent(() => import('./pages/InnovativeAIServices2029'));
 const MicroSAASInnovationHub2029 = createLazyComponent(() => import('./pages/MicroSAASInnovationHub2029'));
 const ITInfrastructureInnovation2029 = createLazyComponent(() => import('./pages/ITInfrastructureInnovation2029'));
 const AIServicesInnovation2029 = createLazyComponent(() => import('./pages/AIServicesInnovation2029'));
@@ -88,7 +87,6 @@ function App() {
                   <div className="absolute top-full left-0 mt-2 w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="p-4 space-y-3">
                       <a href="/comprehensive-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Comprehensive Services</a>
-                      <a href="/innovative-ai-services-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">AI Services</a>
                       <a href="/ai-services-innovation-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">AI Innovation Hub</a>
                       <a href="/micro-saas-innovation-hub-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Micro SAAS Hub</a>
                       <a href="/it-infrastructure-innovation-2029" className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">IT Infrastructure</a>
@@ -121,7 +119,6 @@ function App() {
                   <div className="font-medium text-gray-900 dark:text-white">Services</div>
                   <div className="ml-4 space-y-2">
                     <a href="/comprehensive-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Comprehensive Services</a>
-                    <a href="/innovative-ai-services-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">AI Services</a>
                     <a href="/ai-services-innovation-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">AI Innovation Hub</a>
                     <a href="/micro-saas-innovation-hub-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">Micro SAAS Hub</a>
                     <a href="/it-infrastructure-innovation-2029" className="block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-1">IT Infrastructure</a>
@@ -153,7 +150,6 @@ function App() {
             <Route path="/innovative-services-showcase-2029" element={<InnovativeServicesShowcase2029 />} />
             <Route path="/comprehensive-pricing-guide-2029" element={<ComprehensivePricingGuide2029 />} />
             <Route path="/comprehensive-services-2029" element={<ComprehensiveServices2029 />} />
-            <Route path="/innovative-ai-services-2029" element={<InnovativeAIServices2029 />} />
             <Route path="/micro-saas-innovation-hub-2029" element={<MicroSAASInnovationHub2029 />} />
             <Route path="/it-infrastructure-innovation-2029" element={<ITInfrastructureInnovation2029 />} />
             <Route path="/ai-services-innovation-2029" element={<AIServicesInnovation2029 />} />
@@ -218,7 +214,6 @@ function App() {
                 <h4 className="text-lg font-semibold mb-4">Services</h4>
                 <ul className="space-y-3 text-sm text-gray-400">
                   <li><a href="/comprehensive-services-2029" className="hover:text-white transition-colors">Comprehensive Services</a></li>
-                  <li><a href="/innovative-ai-services-2029" className="hover:text-white transition-colors">AI Services</a></li>
                   <li><a href="/ai-services-innovation-2029" className="hover:text-white transition-colors">AI Innovation Hub</a></li>
                   <li><a href="/micro-saas-innovation-hub-2029" className="hover:text-white transition-colors">Micro SAAS Hub</a></li>
                   <li><a href="/it-infrastructure-innovation-2029" className="hover:text-white transition-colors">IT Infrastructure</a></li>
