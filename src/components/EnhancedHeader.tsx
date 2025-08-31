@@ -37,7 +37,7 @@ export function EnhancedHeader() {
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Pricing', href: '/services-pricing', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
@@ -455,7 +455,7 @@ export function EnhancedHeader() {
 
             {/* Direct Links */}
             <Link 
-              to="/pricing" 
+              to="/services-pricing" 
               className={`text-sm font-medium transition-colors ${
                 scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'
               }`}
