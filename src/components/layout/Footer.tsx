@@ -60,7 +60,10 @@ export function Footer() {
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
         { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
+        { name: "AI Document Processing", href: "/services/ai-intelligent-document-processing" },
+        { name: "AI Video Analytics", href: "/services/ai-video-analytics-platform" },
+        { name: "Advanced Supply Chain AI", href: "/services/ai-supply-chain-optimization-advanced" }
       ]
     },
     {

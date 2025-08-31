@@ -218,6 +218,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-intelligent-document-processing" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <FileText className="w-3 h-3 mr-2" />
+                        AI Document Processing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-video-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Video className="w-3 h-3 mr-2" />
+                        AI Video Analytics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-optimization-advanced" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        Advanced Supply Chain AI
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <TrendingUp className="w-3 h-3 mr-2" />
                         AI Sales Copilot

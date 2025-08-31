@@ -107,6 +107,11 @@ const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/se
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
+// New Innovative AI Services 2025 - Additional
+const AIIntelligentDocumentProcessing = createLazyComponent(() => import('./pages/services/ai-intelligent-document-processing'));
+const AIVideoAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-video-analytics-platform'));
+const AISupplyChainOptimizationAdvanced = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-advanced'));
+
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations-platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
@@ -241,6 +246,11 @@ function App() {
                     <Route path="/services/ai-autonomous-research-assistant" element={<ModernLayout><AIAutonomousResearchAssistant /></ModernLayout>} />
                     <Route path="/services/ai-financial-trading-platform" element={<ModernLayout><AIFinancialTradingPlatform /></ModernLayout>} />
                     <Route path="/services/blockchain-enterprise-solutions" element={<ModernLayout><BlockchainEnterpriseSolutions /></ModernLayout>} />
+
+                    {/* New Innovative AI Services 2025 - Additional */}
+                    <Route path="/services/ai-intelligent-document-processing" element={<ModernLayout><AIIntelligentDocumentProcessing /></ModernLayout>} />
+                    <Route path="/services/ai-video-analytics-platform" element={<ModernLayout><AIVideoAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-advanced" element={<ModernLayout><AISupplyChainOptimizationAdvanced /></ModernLayout>} />
 
                     {/* New Innovative Micro SAAS Services 2025 */}
                     <Route path="/services/ai-business-intelligence-dashboard" element={<ModernLayout><AIBusinessIntelligenceDashboard /></ModernLayout>} />
