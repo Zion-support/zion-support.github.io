@@ -12,6 +12,7 @@ import { EnhancedSidebar } from './components/EnhancedSidebar';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import { SecurityEnhancer } from './components/SecurityEnhancer';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
@@ -64,6 +65,10 @@ const Login = createLazyComponent(() => import('./pages/Login'));
 const AIAutonomousVehicleManagementPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-vehicle-management-platform'));
 const AISmartCityInfrastructureManagement = createLazyComponent(() => import('./pages/services/ai-smart-city-infrastructure-management'));
 const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-financial-trading-platform'));
+
+// New Innovative Services 2028
+const AIAutonomousBusinessManager = createLazyComponent(() => import('./pages/services/ai-autonomous-business-manager'));
+const QuantumAIHybridPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-hybrid-platform'));
 
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
@@ -210,6 +215,9 @@ function App() {
             {/* Enhanced Accessibility */}
             <EnhancedAccessibilityEnhancer enabled={true} />
 
+            {/* Security Enhancer */}
+            <SecurityEnhancer enabled={true} />
+
             {/* Mobile Experience Enhancer */}
             <MobileExperienceEnhancer enabled={true} />
 
@@ -265,10 +273,13 @@ function App() {
                     <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
                     <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
 
-<<<<<<< HEAD
+                    {/* New Innovative Services 2028 */}
+                    <Route path="/services/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                    <Route path="/services/quantum-ai-hybrid-platform" element={<QuantumAIHybridPlatform />} />
+
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
-=======
+
                     {/* Enhanced Services Showcase 2025 */}
                     <Route path="/enhanced-services-showcase-2025" element={
                       <Suspense fallback={<div className="loading-spinner mx-auto mt-20"></div>}>
