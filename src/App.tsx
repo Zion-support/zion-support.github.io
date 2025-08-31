@@ -63,6 +63,9 @@ const Documentation = createLazyComponent(() => import('./pages/Documentation'))
 const Developers = createLazyComponent(() => import('./pages/Developers'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Status = createLazyComponent(() => import('./pages/Status'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 
 // Enhanced Services Showcase 2025
 const EnhancedServicesShowcase2025 = lazy(() => import('./pages/EnhancedServicesShowcase2025'));
@@ -430,7 +433,16 @@ function App() {
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
 
-                  {/* 404 Page */}
+                  {/* Additional Core Routes */}
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/leadership" element={<Leadership />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/press" element={<Press />} />
+                  <Route path="/webinars" element={<Webinars />} />
+                  <Route path="/white-papers" element={<WhitePapers />} />
+                  <Route path="/faq" element={<FAQ />} />
+
+                  {/* 404 Page */
                   <Route
                     path="*"
                     element={
