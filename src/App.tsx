@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 
 // Layout Components
 import { Header } from './components/Header';
-import Footer from './components/Footer';
+import { Footer } from './components/Footer';
 
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
