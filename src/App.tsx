@@ -157,6 +157,12 @@ const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/
 const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
 
+// New Innovative Services 2025 - Enhanced
+const AILegalResearchCompliancePlatform = createLazyComponent(() => import('./pages/services/ai-legal-research-compliance-platform'));
+const AIHealthcarePredictiveAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-predictive-analytics-platform'));
+const AIFinancialRiskManagementTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-trading-platform'));
+const AISupplyChainIntelligenceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-intelligence-optimization-platform'));
+
 // New Innovative Services 2026 - Additional
 const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/ai-carbon-footprint-management-platform'));
 const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/services/ai-mental-health-support-platform'));
@@ -445,6 +451,12 @@ function App() {
                     <Route path="/services/ai-carbon-footprint-management-platform" element={<ModernLayout><AICarbonFootprintManagementPlatform /></ModernLayout>} />
                     <Route path="/services/ai-mental-health-support-platform" element={<ModernLayout><AIMentalHealthSupportPlatform /></ModernLayout>} />
                     <Route path="/services/ai-smart-home-energy-management-platform" element={<ModernLayout><AISmartHomeEnergyManagementPlatform /></ModernLayout>} />
+
+                    {/* New Innovative Services 2025 - Enhanced */}
+                    <Route path="/services/ai-legal-research-compliance-platform" element={<ModernLayout><AILegalResearchCompliancePlatform /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-predictive-analytics-platform" element={<ModernLayout><AIHealthcarePredictiveAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-financial-risk-management-trading-platform" element={<ModernLayout><AIFinancialRiskManagementTradingPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-intelligence-optimization-platform" element={<ModernLayout><AISupplyChainIntelligenceOptimizationPlatform /></ModernLayout>} />
                     
                     {/* New Innovative Services 2026 - Legal & Education */}
                     <Route path="/services/ai-autonomous-legal-research-platform" element={<ModernLayout><AIAutonomousLegalResearchPlatform /></ModernLayout>} />
