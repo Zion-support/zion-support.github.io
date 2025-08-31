@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '../components/SEO';
-import { CheckCircle, 
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  CheckCircle, 
   AlertTriangle, 
   XCircle, 
   Clock, 
@@ -17,9 +18,9 @@ import { CheckCircle,
   AlertCircle,
   Info,
   ExternalLink
-             } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function Status(...args: any[]): any {
+export default function Status() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 
@@ -74,7 +75,7 @@ export default function Status(...args: any[]): any {
       responseTime: '89ms',
       lastUpdated: '2 minutes ago'
     }
-  ]);
+  ];
 
   const recentIncidents = [
     {
@@ -97,29 +98,6 @@ export default function Status(...args: any[]): any {
         {
           time: new Date('2024-01-15T04:00:00Z'),
           message: 'All services restored and operating normally'
-        }
-      ]
-    },
-    {
-      id: 'INC-2024-002',
-      title: 'Increased API Response Times',
-      status: 'resolved',
-      severity: 'medium',
-      startTime: new Date('2024-01-10T14:30:00Z'),
-      endTime: new Date('2024-01-10T16:45:00Z'),
-      description: 'Some users experienced increased API response times due to high traffic load.',
-      updates: [
-        {
-          time: new Date('2024-01-10T14:30:00Z'),
-          message: 'Investigating increased response times'
-        },
-        {
-          time: new Date('2024-01-10T15:15:00Z'),
-          message: 'Identified high traffic load, implementing scaling measures'
-        },
-        {
-          time: new Date('2024-01-10T16:45:00Z'),
-          message: 'Performance restored to normal levels'
         }
       ]
     }
@@ -156,7 +134,7 @@ export default function Status(...args: any[]): any {
     }
   ];
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getStatusColor = (status: any) => {
     switch (status) {
       case 'operational':
         return 'text-green-400 bg-green-500/20';
@@ -171,7 +149,7 @@ export default function Status(...args: any[]): any {
     }
   };
 
-  const getStatusIcon = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getStatusIcon = (status: any) => {
     switch (status) {
       case 'operational':
         return <CheckCircle className="w-6 h-6 text-green-500" />;
@@ -186,7 +164,7 @@ export default function Status(...args: any[]): any {
     }
   };
 
-  const getSeverityColor = (severity: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const getSeverityColor = (severity: any) => {
     switch (severity) {
       case 'low':
         return 'bg-blue-500/20 text-blue-400';
@@ -242,9 +220,9 @@ export default function Status(...args: any[]): any {
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-3xl font-bold text-white">Overall System Status</h2>
               <div className="flex items-center space-x-3">
-                {getStatusIcon(overallStatus)}
-                <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>
-                  {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
+                {getStatusIcon(systemStatus.overall)}
+                <span className={`text-2xl font-bold ${getStatusColor(systemStatus.overall)}`}>
+                  {systemStatus.overall.charAt(0).toUpperCase() + systemStatus.overall.slice(1)}
                 </span>
               </div>
             </div>
@@ -280,8 +258,8 @@ export default function Status(...args: any[]): any {
             <p className="text-xl text-gray-300">Key performance indicators and trends</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {performanceMetrics.map((metric, index)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {performanceMetrics.map((metric, index) => (
               <motion.div
                 key={metric.metric}
                 initial={{ opacity: 0, y: 20 }}
@@ -322,8 +300,8 @@ export default function Status(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, index) => (
               <motion.div
                 key={service.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -356,57 +334,9 @@ export default function Status(...args: any[]): any {
                     <span className="text-gray-300 text-sm">{service.lastUpdated}</span>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-
-      {/* Regional Status */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">Regional Performance</h2>
-            <p className="text-xl text-gray-300">
-              Performance metrics across our global infrastructure
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
-            {regions.map((region, index)              => (
-              <motion.div
-                key={region.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center">
-                    <Globe className="w-5 h-5 text-cyan-400 mr-3" />
-                    <h3 className="text-lg font-bold text-white">{region.name}</h3>
-                  </div>
-                  {getStatusIcon(region.status)}
-                </div>
-                
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <div className="text-gray-400 text-sm">Latency</div>
-                    <div className="text-white font-medium">{region.latency}</div>
-                  </div>
-                  <div>
-                    <div className="text-gray-400 text-sm">Uptime</div>
-                    <div className="text-white font-medium">{region.uptime}</div>
-                  </div>
-                </div>
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
 
       {/* Recent Incidents */}
       <section className="py-20">

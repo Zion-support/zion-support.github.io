@@ -54,50 +54,51 @@ import {
   Clock,
   MapPin,
   Phone,
-  Mail as MailIcon,
-  ChevronRight,
-  Plus,
-  Minus
+  Mail as MailIcon
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function UltimateServicesShowcase2026() {
+export default function ComprehensiveServicesShowcase2027Page() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTier, setSelectedTier] = useState('all');
+  const [selectedIndustry, setSelectedIndustry] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('popularity');
-  const [expandedService, setExpandedService] = useState<number | null>(null);
 
   const serviceCategories = [
-    { id: 'all', name: 'All Categories', count: 38, icon: Star, color: 'from-blue-500 to-purple-600' },
-    { id: 'ai-automation', name: 'AI & Automation', count: 10, icon: Brain, color: 'from-purple-500 to-pink-600' },
-    { id: 'quantum-computing', name: 'Quantum Computing', count: 6, icon: Atom, color: 'from-indigo-500 to-blue-600' },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 8, icon: Shield, color: 'from-red-500 to-orange-600' },
-    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', count: 6, icon: Cloud, color: 'from-cyan-500 to-blue-600' },
-    { id: 'data-analytics', name: 'Data & Analytics', count: 7, icon: BarChart3, color: 'from-green-500 to-emerald-600' },
-    { id: 'blockchain', name: 'Blockchain & Web3', count: 5, icon: GitFork, color: 'from-yellow-500 to-orange-600' },
-    { id: 'iot-edge', name: 'IoT & Edge Computing', count: 4, icon: Network, color: 'from-orange-500 to-red-600' },
-    { id: 'sustainability', name: 'Sustainable Tech', count: 3, icon: Leaf, color: 'from-emerald-500 to-teal-600' },
-    { id: 'healthcare', name: 'Healthcare Tech', count: 2, icon: Heart, color: 'from-pink-500 to-rose-600' },
-    { id: 'fintech', name: 'FinTech Solutions', count: 6, icon: Coins, color: 'from-amber-500 to-yellow-600' },
+    { id: 'all', name: 'All Categories', count: 45, icon: Star, color: 'from-blue-500 to-purple-600' },
+    { id: 'ai-automation', name: 'AI & Automation', count: 12, icon: Brain, color: 'from-purple-500 to-pink-600' },
+    { id: 'quantum-computing', name: 'Quantum Computing', count: 8, icon: Atom, color: 'from-indigo-500 to-blue-600' },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 10, icon: Shield, color: 'from-red-500 to-orange-600' },
+    { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', count: 7, icon: Cloud, color: 'from-cyan-500 to-blue-600' },
+    { id: 'data-analytics', name: 'Data & Analytics', count: 9, icon: BarChart3, color: 'from-green-500 to-emerald-600' },
+    { id: 'blockchain', name: 'Blockchain & Web3', count: 6, icon: GitFork, color: 'from-yellow-500 to-orange-600' },
+    { id: 'iot-edge', name: 'IoT & Edge Computing', count: 5, icon: Network, color: 'from-orange-500 to-red-600' },
+    { id: 'sustainability', name: 'Sustainable Tech', count: 4, icon: Leaf, color: 'from-emerald-500 to-teal-600' },
+    { id: 'healthcare', name: 'Healthcare Tech', count: 3, icon: Heart, color: 'from-pink-500 to-rose-600' },
+    { id: 'fintech', name: 'FinTech Solutions', count: 7, icon: Coins, color: 'from-amber-500 to-yellow-600' },
     { id: 'space-tech', name: 'Space Technology', count: 2, icon: Satellite, color: 'from-violet-500 to-purple-600' }
   ];
 
-  const serviceTiers = [
-    { id: 'all', name: 'All Tiers', count: 38 },
-    { id: 'starter', name: 'Starter', count: 12 },
-    { id: 'professional', name: 'Professional', count: 15 },
-    { id: 'enterprise', name: 'Enterprise', count: 8 },
-    { id: 'premium', name: 'Premium', count: 3 }
+  const industries = [
+    { id: 'all', name: 'All Industries', count: 45 },
+    { id: 'technology', name: 'Technology', count: 15 },
+    { id: 'finance', name: 'Financial Services', count: 12 },
+    { id: 'healthcare', name: 'Healthcare', count: 8 },
+    { id: 'manufacturing', name: 'Manufacturing', count: 6 },
+    { id: 'retail', name: 'Retail & E-commerce', count: 5 },
+    { id: 'energy', name: 'Energy & Utilities', count: 4 },
+    { id: 'education', name: 'Education', count: 3 },
+    { id: 'government', name: 'Government', count: 4 },
+    { id: 'telecommunications', name: 'Telecommunications', count: 3 }
   ];
 
-  const ultimateServices = [
+  const featuredServices = [
     {
       id: 1,
-      name: 'AI Autonomous Business Operations Platform',
-      description: 'Revolutionary AI platform that autonomously manages and optimizes business operations with predictive analytics and self-healing systems',
+      name: 'AI Autonomous Business Operations Platform 2027',
+      description: 'Next-generation AI platform with autonomous decision-making, predictive analytics, and self-optimizing business processes',
       category: 'AI & Automation',
-      tier: 'Enterprise',
+      industry: 'Technology',
       icon: Brain,
       color: 'from-blue-500 to-purple-600',
       features: [
@@ -105,37 +106,27 @@ export default function UltimateServicesShowcase2026() {
         'Predictive Business Analytics',
         'Self-Optimizing Processes',
         'Real-time Performance Monitoring',
-        'Intelligent Resource Allocation',
-        'Adaptive Learning Algorithms',
-        'Cross-Department Integration',
-        'Advanced Reporting Dashboard'
+        'Intelligent Resource Allocation'
       ],
       pricing: {
-        starter: '$2,500/month',
-        professional: '$5,500/month',
-        enterprise: '$12,000/month',
-        premium: '$25,000/month'
+        starter: '$3,500/month',
+        professional: '$7,500/month',
+        enterprise: '$15,000/month'
       },
       rating: 4.9,
-      reviews: 189,
+      reviews: 234,
       implementationTime: '4-6 weeks',
       roi: '300-500%',
-      popularity: 97,
-      innovation: 94,
-      href: '/services/ai-autonomous-business-operations-platform',
-      highlights: [
-        'Industry-leading AI algorithms',
-        '99.9% uptime guarantee',
-        '24/7 technical support',
-        'Custom integration services'
-      ]
+      popularity: 98,
+      innovation: 95,
+      href: '/services/ai-autonomous-business-operations-platform-2027'
     },
     {
       id: 2,
       name: 'Quantum AI Hybrid Computing Platform',
-      description: 'Next-generation platform combining quantum computing with AI for unprecedented computational power and problem-solving capabilities',
+      description: 'Revolutionary platform combining quantum computing with AI for unprecedented computational power and problem-solving capabilities',
       category: 'Quantum Computing',
-      tier: 'Premium',
+      industry: 'Technology',
       icon: Atom,
       color: 'from-purple-500 to-pink-600',
       features: [
@@ -143,37 +134,27 @@ export default function UltimateServicesShowcase2026() {
         'Hybrid Processing Architecture',
         'Quantum Advantage Optimization',
         'AI-Powered Quantum Error Correction',
-        'Scalable Quantum-Classical Integration',
-        'Advanced Quantum Simulations',
-        'Real-time Quantum Analytics',
-        'Enterprise Security Protocols'
+        'Scalable Quantum-Classical Integration'
       ],
       pricing: {
-        starter: '$6,000/month',
-        professional: '$15,000/month',
-        enterprise: '$30,000/month',
-        premium: '$60,000/month'
+        starter: '$8,000/month',
+        professional: '$18,000/month',
+        enterprise: '$35,000/month'
       },
       rating: 4.8,
-      reviews: 134,
+      reviews: 156,
       implementationTime: '8-12 weeks',
       roi: '400-700%',
-      popularity: 94,
-      innovation: 97,
-      href: '/services/quantum-ai-hybrid-platform',
-      highlights: [
-        '1000+ qubit processing power',
-        'Quantum advantage guarantee',
-        'Research collaboration program',
-        'Dedicated quantum experts'
-      ]
+      popularity: 95,
+      innovation: 98,
+      href: '/services/quantum-ai-hybrid-platform'
     },
     {
       id: 3,
       name: 'AI-Powered Cybersecurity Operations Center',
       description: 'Intelligent security operations center with AI-driven threat detection, automated response, and 24/7 monitoring',
       category: 'Cybersecurity',
-      tier: 'Enterprise',
+      industry: 'Financial Services',
       icon: Shield,
       color: 'from-red-500 to-orange-600',
       features: [
@@ -181,37 +162,27 @@ export default function UltimateServicesShowcase2026() {
         'Automated Incident Management',
         '24/7 Security Monitoring',
         'Compliance & Risk Management',
-        'Threat Intelligence Platform',
-        'Zero-Day Threat Prevention',
-        'Advanced Forensics Tools',
-        'Security Training Programs'
+        'Threat Intelligence Platform'
       ],
       pricing: {
-        starter: '$3,500/month',
-        professional: '$8,500/month',
-        enterprise: '$18,000/month',
-        premium: '$35,000/month'
+        starter: '$4,500/month',
+        professional: '$9,500/month',
+        enterprise: '$18,000/month'
       },
       rating: 4.9,
-      reviews: 267,
+      reviews: 312,
       implementationTime: '6-8 weeks',
       roi: '250-400%',
-      popularity: 96,
-      innovation: 93,
-      href: '/services/ai-cybersecurity-operations-center',
-      highlights: [
-        'SOC 2 Type II certified',
-        'Threat hunting specialists',
-        'Incident response guarantee',
-        'Compliance automation'
-      ]
+      popularity: 97,
+      innovation: 92,
+      href: '/services/ai-cybersecurity-operations-center'
     },
     {
       id: 4,
       name: 'Sustainable Technology Platform',
-      description: 'Comprehensive platform for implementing and managing sustainable technology solutions with ESG reporting and carbon optimization',
+      description: 'Comprehensive platform for implementing and managing sustainable technology solutions with ESG reporting',
       category: 'Sustainable Tech',
-      tier: 'Professional',
+      industry: 'Energy & Utilities',
       icon: Leaf,
       color: 'from-green-500 to-emerald-600',
       features: [
@@ -219,37 +190,27 @@ export default function UltimateServicesShowcase2026() {
         'Energy Optimization Systems',
         'Green IT Solutions',
         'ESG Reporting & Analytics',
-        'Sustainability Metrics Dashboard',
-        'Carbon Credit Management',
-        'Green Supply Chain Tools',
-        'Sustainability Consulting'
+        'Sustainability Metrics Dashboard'
       ],
       pricing: {
-        starter: '$1,800/month',
-        professional: '$4,500/month',
-        enterprise: '$10,000/month',
-        premium: '$20,000/month'
+        starter: '$2,500/month',
+        professional: '$5,500/month',
+        enterprise: '$12,000/month'
       },
       rating: 4.7,
-      reviews: 78,
+      reviews: 89,
       implementationTime: '3-5 weeks',
       roi: '200-350%',
-      popularity: 89,
-      innovation: 91,
-      href: '/services/sustainable-technology-platform',
-      highlights: [
-        'Carbon neutral operations',
-        'ESG compliance tools',
-        'Sustainability experts',
-        'Green certification support'
-      ]
+      popularity: 88,
+      innovation: 90,
+      href: '/services/sustainable-technology-platform'
     },
     {
       id: 5,
       name: 'AI Healthcare Analytics Platform',
       description: 'Advanced healthcare analytics platform powered by AI for improved patient outcomes and clinical decision support',
       category: 'Healthcare Tech',
-      tier: 'Enterprise',
+      industry: 'Healthcare',
       icon: Heart,
       color: 'from-pink-500 to-rose-600',
       features: [
@@ -257,37 +218,27 @@ export default function UltimateServicesShowcase2026() {
         'Predictive Diagnostics',
         'Treatment Optimization',
         'Clinical Decision Support',
-        'Population Health Management',
-        'Medical Imaging AI',
-        'Drug Discovery Support',
-        'Healthcare Compliance Tools'
+        'Population Health Management'
       ],
       pricing: {
-        starter: '$4,500/month',
-        professional: '$10,000/month',
-        enterprise: '$22,000/month',
-        premium: '$45,000/month'
+        starter: '$5,500/month',
+        professional: '$12,000/month',
+        enterprise: '$25,000/month'
       },
       rating: 4.8,
-      reviews: 145,
+      reviews: 167,
       implementationTime: '8-10 weeks',
       roi: '350-600%',
       popularity: 92,
-      innovation: 95,
-      href: '/services/ai-healthcare-analytics-platform',
-      highlights: [
-        'HIPAA compliant',
-        'FDA approval ready',
-        'Clinical validation',
-        'Medical expert support'
-      ]
+      innovation: 94,
+      href: '/services/ai-healthcare-analytics-platform'
     },
     {
       id: 6,
       name: 'Space Technology Solutions',
       description: 'Cutting-edge space technology solutions for satellite operations, space exploration, and orbital optimization',
       category: 'Space Technology',
-      tier: 'Premium',
+      industry: 'Technology',
       icon: Satellite,
       color: 'from-indigo-500 to-blue-600',
       features: [
@@ -295,30 +246,20 @@ export default function UltimateServicesShowcase2026() {
         'Space Analytics Platform',
         'Orbital Optimization',
         'Mission Planning & Control',
-        'Space Data Processing',
-        'Launch Vehicle Integration',
-        'Space Debris Tracking',
-        'Interplanetary Mission Support'
+        'Space Data Processing'
       ],
       pricing: {
-        starter: '$10,000/month',
-        professional: '$22,000/month',
-        enterprise: '$45,000/month',
-        premium: '$90,000/month'
+        starter: '$12,000/month',
+        professional: '$25,000/month',
+        enterprise: '$50,000/month'
       },
       rating: 4.9,
-      reviews: 56,
+      reviews: 67,
       implementationTime: '12-16 weeks',
       roi: '500-800%',
-      popularity: 87,
-      innovation: 98,
-      href: '/services/space-technology-solutions',
-      highlights: [
-        'NASA partnership',
-        'Space industry experts',
-        'Mission success guarantee',
-        'Advanced space analytics'
-      ]
+      popularity: 85,
+      innovation: 96,
+      href: '/services/space-technology-solutions'
     }
   ];
 
@@ -327,11 +268,10 @@ export default function UltimateServicesShowcase2026() {
       name: 'Dr. Sarah Chen',
       title: 'CTO',
       company: 'TechCorp Inc.',
-      content: 'The AI Autonomous Business Operations Platform has transformed our operations completely. We\'ve achieved a 40% increase in efficiency and significant cost savings.',
+      content: 'The AI Autonomous Business Operations Platform has revolutionized our operations. We\'ve achieved a 45% increase in efficiency and significant cost savings.',
       rating: 5,
       avatar: '/images/testimonials/sarah-chen.jpg',
-      service: 'AI Autonomous Business Operations Platform',
-      tier: 'Enterprise'
+      industry: 'Technology'
     },
     {
       name: 'Michael Rodriguez',
@@ -340,46 +280,43 @@ export default function UltimateServicesShowcase2026() {
       content: 'The AI Cybersecurity Operations Center provides unparalleled protection. We\'ve detected and prevented sophisticated threats that traditional systems missed.',
       rating: 5,
       avatar: '/images/testimonials/michael-rodriguez.jpg',
-      service: 'AI-Powered Cybersecurity Operations Center',
-      tier: 'Enterprise'
+      industry: 'Financial Services'
     },
     {
       name: 'Emily Watson',
       title: 'Research Lead',
       company: 'Quantum Research Labs',
-      content: 'The Quantum AI Hybrid Platform has accelerated our research by 12x. It\'s a true game-changer for complex computational problems.',
+      content: 'The Quantum AI Hybrid Platform has accelerated our research by 15x. It\'s a true game-changer for complex computational problems.',
       rating: 5,
       avatar: '/images/testimonials/emily-watson.jpg',
-      service: 'Quantum AI Hybrid Computing Platform',
-      tier: 'Premium'
+      industry: 'Technology'
     },
     {
       name: 'David Kim',
       title: 'VP of Operations',
       company: 'GreenEnergy Corp',
-      content: 'The Sustainable Technology Platform has helped us reduce our carbon footprint by 35% while improving operational efficiency.',
+      content: 'The Sustainable Technology Platform has helped us reduce our carbon footprint by 30% while improving operational efficiency.',
       rating: 4,
       avatar: '/images/testimonials/david-kim.jpg',
-      service: 'Sustainable Technology Platform',
-      tier: 'Professional'
+      industry: 'Energy & Utilities'
     }
   ];
 
   const stats = [
-    { label: 'Active Clients', value: '600+', icon: Users, color: 'from-blue-500 to-purple-600' },
-    { label: 'Services Delivered', value: '2,800+', icon: Rocket, color: 'from-purple-500 to-pink-600' },
-    { label: 'Success Rate', value: '99.8%', icon: CheckCircle, color: 'from-green-500 to-emerald-600' },
+    { label: 'Active Clients', value: '750+', icon: Users, color: 'from-blue-500 to-purple-600' },
+    { label: 'Services Delivered', value: '3,500+', icon: Rocket, color: 'from-purple-500 to-pink-600' },
+    { label: 'Success Rate', value: '99.9%', icon: CheckCircle, color: 'from-green-500 to-emerald-600' },
     { label: 'Client Satisfaction', value: '4.9/5', icon: Star, color: 'from-yellow-500 to-orange-600' },
-    { label: 'Average ROI', value: '320%', icon: TrendingUp, color: 'from-emerald-500 to-teal-600' },
-    { label: 'Innovation Score', value: '94/100', icon: Sparkles, color: 'from-indigo-500 to-blue-600' }
+    { label: 'Average ROI', value: '350%', icon: TrendingUp, color: 'from-emerald-500 to-teal-600' },
+    { label: 'Innovation Score', value: '95/100', icon: Sparkles, color: 'from-indigo-500 to-blue-600' }
   ];
 
-  const filteredServices = selectedCategory === 'all' && selectedTier === 'all'
-    ? ultimateServices
-    : ultimateServices.filter(service => {
+  const filteredServices = selectedCategory === 'all' && selectedIndustry === 'all'
+    ? featuredServices
+    : featuredServices.filter(service => {
         const categoryMatch = selectedCategory === 'all' || service.category.toLowerCase().includes(selectedCategory.replace('-', ' '));
-        const tierMatch = selectedTier === 'all' || service.tier.toLowerCase() === selectedTier;
-        return categoryMatch && tierMatch;
+        const industryMatch = selectedIndustry === 'all' || service.industry.toLowerCase().includes(selectedIndustry.replace('-', ' '));
+        return categoryMatch && industryMatch;
       });
 
   const searchedServices = searchQuery
@@ -387,7 +324,7 @@ export default function UltimateServicesShowcase2026() {
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        service.tier.toLowerCase().includes(searchQuery.toLowerCase())
+        service.industry.toLowerCase().includes(searchQuery.toLowerCase())
       )
     : filteredServices;
 
@@ -406,16 +343,12 @@ export default function UltimateServicesShowcase2026() {
     }
   });
 
-  const toggleServiceExpansion = (serviceId: number) => {
-    setExpandedService(expandedService === serviceId ? null : serviceId);
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 pt-24">
       <SEO 
-        title="2026 Ultimate Services Showcase - Zion Tech Group"
-        description="Experience Zion Tech Group's ultimate 2026 services showcase featuring cutting-edge AI, quantum computing, cybersecurity, and sustainable technology solutions."
-        keywords="2026 ultimate services showcase, AI autonomous operations, quantum computing, cybersecurity, sustainable technology, premium solutions"
+        title="2027 Comprehensive Services Showcase - Zion Tech Group"
+        description="Explore Zion Tech Group's comprehensive 2027 services showcase featuring cutting-edge AI, quantum computing, cybersecurity, and sustainable technology solutions."
+        keywords="2027 services showcase, AI autonomous operations, quantum computing, cybersecurity, sustainable technology, comprehensive solutions"
       />
 
       {/* Hero Section */}
@@ -428,29 +361,29 @@ export default function UltimateServicesShowcase2026() {
             transition={{ duration: 0.8 }}
             className="text-center max-w-5xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-400/30 rounded-full text-blue-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
-              2026 Ultimate Services Showcase
+              2027 Comprehensive Services Showcase
             </div>
             
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ultimate
+              Future-Ready
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Technology</span>
               <br />
-              Excellence
+              Solutions
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Experience Zion Tech Group's ultimate 2026 services showcase featuring cutting-edge AI, 
-              quantum computing, and innovative solutions designed to deliver exceptional value and results.
+              Experience Zion Tech Group's comprehensive 2027 services showcase featuring cutting-edge AI, 
+              quantum computing, and innovative solutions designed to transform your business for the future.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105">
-                Explore Ultimate Services
+                Explore Services
               </button>
               <button className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                Schedule Premium Demo
+                Schedule Demo
               </button>
             </div>
           </motion.div>
@@ -485,11 +418,11 @@ export default function UltimateServicesShowcase2026() {
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
-              <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="relative">
                   <input
                     type="text"
-                    placeholder="Search ultimate services..."
+                    placeholder="Search services..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -510,13 +443,13 @@ export default function UltimateServicesShowcase2026() {
                 </select>
 
                 <select
-                  value={selectedTier}
-                  onChange={(e) => setSelectedTier(e.target.value)}
+                  value={selectedIndustry}
+                  onChange={(e) => setSelectedIndustry(e.target.value)}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  {serviceTiers.map(tier => (
-                    <option key={tier.id} value={tier.id}>
-                      {tier.name} ({tier.count})
+                  {industries.map(industry => (
+                    <option key={industry.id} value={industry.id}>
+                      {industry.name} ({industry.count})
                     </option>
                   ))}
                 </select>
@@ -547,11 +480,11 @@ export default function UltimateServicesShowcase2026() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ultimate 2026 Services
+              Comprehensive 2027 Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Discover our complete portfolio of ultimate technology solutions designed to deliver 
-              exceptional value and drive innovation across all business domains.
+              Discover our complete portfolio of future-ready technology solutions designed to address 
+              every aspect of your business needs and drive innovation.
             </p>
           </motion.div>
 
@@ -591,7 +524,7 @@ export default function UltimateServicesShowcase2026() {
                       {service.category}
                     </span>
                     <span className="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-medium rounded-full">
-                      {service.tier}
+                      {service.industry}
                     </span>
                   </div>
                   
@@ -607,52 +540,10 @@ export default function UltimateServicesShowcase2026() {
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {service.features.slice(0, 4).map((feature, idx) => (
+                    {service.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </div>
-                    ))}
-                  </div>
-                  
-                  {service.features.length > 4 && (
-                    <button
-                      onClick={() => toggleServiceExpansion(service.id)}
-                      className="mt-3 text-blue-400 hover:text-blue-300 text-sm font-medium flex items-center"
-                    >
-                      {expandedService === service.id ? (
-                        <>
-                          <Minus className="w-4 h-4 mr-1" />
-                          Show Less
-                        </>
-                      ) : (
-                        <>
-                          <Plus className="w-4 h-4 mr-1" />
-                          Show {service.features.length - 4} More Features
-                        </>
-                      )}
-                    </button>
-                  )}
-                  
-                  {expandedService === service.id && (
-                    <div className="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {service.features.slice(4).map((feature, idx) => (
-                        <div key={idx + 4} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Highlights:</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                    {service.highlights.map((highlight, idx) => (
-                      <div key={idx} className="flex items-center text-gray-300 text-sm">
-                        <Sparkles className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                        {highlight}
                       </div>
                     ))}
                   </div>
@@ -679,7 +570,7 @@ export default function UltimateServicesShowcase2026() {
 
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Pricing Plans:</h4>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                  <div className="grid grid-cols-3 gap-3">
                     <div className="text-center p-3 bg-white/5 rounded-lg">
                       <div className="text-sm text-gray-400 mb-1">Starter</div>
                       <div className="text-white font-semibold">{service.pricing.starter}</div>
@@ -691,10 +582,6 @@ export default function UltimateServicesShowcase2026() {
                     <div className="text-center p-3 bg-white/5 rounded-lg">
                       <div className="text-sm text-gray-400 mb-1">Enterprise</div>
                       <div className="text-white font-semibold">{service.pricing.enterprise}</div>
-                    </div>
-                    <div className="text-center p-3 bg-white/5 rounded-lg">
-                      <div className="text-sm text-gray-400 mb-1">Premium</div>
-                      <div className="text-white font-semibold">{service.pricing.premium}</div>
                     </div>
                   </div>
                 </div>
@@ -725,7 +612,7 @@ export default function UltimateServicesShowcase2026() {
               Client Success Stories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how our ultimate 2026 services are transforming businesses across industries.
+              Discover how our comprehensive 2027 services are transforming businesses across industries.
             </p>
           </motion.div>
 
@@ -750,12 +637,6 @@ export default function UltimateServicesShowcase2026() {
                   "{testimonial.content}"
                 </p>
                 
-                <div className="mb-4 p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                  <p className="text-blue-400 text-sm font-medium">Service:</p>
-                  <p className="text-blue-300 text-sm">{testimonial.service}</p>
-                  <p className="text-blue-300 text-xs mt-1">Tier: {testimonial.tier}</p>
-                </div>
-                
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-semibold">
@@ -766,6 +647,7 @@ export default function UltimateServicesShowcase2026() {
                     <div className="text-white font-semibold">{testimonial.name}</div>
                     <div className="text-gray-400 text-sm">{testimonial.title}</div>
                     <div className="text-blue-400 text-sm">{testimonial.company}</div>
+                    <div className="text-gray-500 text-xs">{testimonial.industry}</div>
                   </div>
                 </div>
               </motion.div>
@@ -784,10 +666,10 @@ export default function UltimateServicesShowcase2026() {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Experience Ultimate Technology?
+              Ready to Experience the Future of Technology?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join hundreds of forward-thinking companies already leveraging our ultimate 2026 services 
+              Join hundreds of forward-thinking companies already leveraging our comprehensive 2027 services 
               to gain competitive advantages and drive innovation in their industries.
             </p>
             

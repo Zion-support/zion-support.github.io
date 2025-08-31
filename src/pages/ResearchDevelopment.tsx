@@ -1,20 +1,26 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
   BookOpen,
   Users,
   Award,
   ArrowRight
+} from 'lucide-react';
+
 const ResearchDevelopment: React.FC = (): JSX.Element => {
   const [selectedArea, setSelectedArea] = useState('all');
   const [selectedStatus, setSelectedStatus] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   const researchAreas = [
-    { id: 'all', name: 'All Areas', icon: Microscope, count: 67 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 18 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },
-    { id: 'biotech', name: 'Biotechnology', icon: TestTube, count: 15 },
-    { id: 'nanotech', name: 'Nanotechnology', icon: Microscope, count: 10 },
-    { id: 'energy', name: 'Clean Energy', icon: Zap, count: 8 },
-    { id: 'materials', name: 'Advanced Materials', icon: Atom, count: 4 }
+    { id: 'all', name: 'All Areas', icon: BookOpen, count: 67 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: BookOpen, count: 18 },
+    { id: 'quantum', name: 'Quantum Computing', icon: BookOpen, count: 12 },
+    { id: 'biotech', name: 'Biotechnology', icon: BookOpen, count: 15 },
+    { id: 'nanotech', name: 'Nanotechnology', icon: BookOpen, count: 10 },
+    { id: 'energy', name: 'Clean Energy', icon: BookOpen, count: 8 },
+    { id: 'materials', name: 'Advanced Materials', icon: BookOpen, count: 4 }
   ];
 
   const projectStatuses = [
@@ -98,189 +104,29 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       status: 'active',
       lead: 'Dr. Emily Watson',
       startDate: '2024-01-15',
-      endDate: '2025-12-31',
-      funding: 1200000,
-      teamSize: 6,
-      rating: 4.7,
-      featured: false,
-      tags: ['Quantum Cryptography', 'Security', 'Communications', 'Encryption'],
-      thumbnail: '/images/research/quantum-cryptography.jpg',
-      abstract: 'Research focused on quantum cryptographic protocols that provide theoretically unbreakable security through quantum mechanical principles.',
-      objectives: [
-        'Design quantum key distribution',
-        'Implement quantum protocols',
-        'Test security properties',
-        'Develop practical systems'
-      ],
-      outcomes: [
-        'Quantum cryptographic protocols',
-        'Security analysis reports',
-        'Prototype implementations',
-        'Industry standards'
-      ],
-      publications: 6,
-      patents: 4,
-      collaborations: ['NIST', 'University of Toronto', 'ID Quantique']
-    },
-    {
-      id: 4,
-      title: 'CRISPR Gene Editing Optimization',
-      description: 'Optimizing CRISPR-Cas9 gene editing techniques for improved precision, efficiency, and safety in therapeutic applications.',
-      area: 'biotech',
-      status: 'active',
-      lead: 'Dr. Alex Johnson',
-      startDate: '2024-08-01',
-      endDate: '2026-07-31',
-      funding: 2200000,
+      endDate: '2026-12-31',
+      funding: 3200000,
       teamSize: 15,
       rating: 4.9,
-      featured: false,
-      tags: ['CRISPR', 'Gene Editing', 'Biotechnology', 'Therapeutics'],
-      thumbnail: '/images/research/crispr-gene-editing.jpg',
-      abstract: 'Advanced research in CRISPR gene editing technology, focusing on improving precision and reducing off-target effects for therapeutic applications.',
+      featured: true,
+      tags: ['Quantum Cryptography', 'Security', 'Communications', 'Encryption'],
+      thumbnail: '/images/research/quantum-cryptography.jpg',
+      abstract: 'This project focuses on developing quantum-resistant cryptographic protocols and quantum key distribution systems for future-proof security solutions.',
       objectives: [
-        'Improve CRISPR precision',
-        'Reduce off-target effects',
-        'Develop delivery systems',
-        'Validate therapeutic potential'
+        'Design quantum-resistant algorithms',
+        'Implement quantum key distribution',
+        'Develop post-quantum cryptography',
+        'Create security frameworks'
       ],
       outcomes: [
-        'Optimized CRISPR protocols',
-        'Novel delivery systems',
-        'Safety assessments',
-        'Therapeutic candidates'
+        'Quantum-resistant protocols',
+        'QKD implementation',
+        'Security standards',
+        'Industry partnerships'
       ],
       publications: 15,
-      patents: 6,
-      collaborations: ['Broad Institute', 'UC Berkeley', 'Novartis']
-    },
-    {
-      id: 5,
-      title: 'Graphene-Based Energy Storage',
-      description: 'Developing advanced energy storage systems using graphene-based materials for high-capacity, fast-charging batteries.',
-      area: 'materials',
-      status: 'planning',
-      lead: 'Dr. David Thompson',
-      startDate: '2025-01-01',
-      endDate: '2027-12-31',
-      funding: 3000000,
-      teamSize: 10,
-      rating: 4.6,
-      featured: false,
-      tags: ['Graphene', 'Energy Storage', 'Batteries', 'Materials Science'],
-      thumbnail: '/images/research/graphene-energy-storage.jpg',
-      abstract: 'Research focused on leveraging graphene\'s unique properties to create next-generation energy storage solutions with superior performance characteristics.',
-      objectives: [
-        'Synthesize graphene materials',
-        'Design electrode architectures',
-        'Optimize battery performance',
-        'Scale manufacturing processes'
-      ],
-      outcomes: [
-        'Graphene synthesis methods',
-        'Battery prototypes',
-        'Performance data',
-        'Manufacturing processes'
-      ],
-      publications: 0,
-      patents: 0,
-      collaborations: ['MIT', 'Stanford', 'Tesla Energy']
-    },
-    {
-      id: 6,
-      title: 'Nanoscale Drug Delivery Systems',
-      description: 'Developing nanoscale drug delivery systems for targeted therapy with improved efficacy and reduced side effects.',
-      area: 'nanotech',
-      status: 'active',
-      lead: 'Dr. Rachel Green',
-      startDate: '2024-04-01',
-      endDate: '2026-03-31',
-      funding: 1600000,
-      teamSize: 9,
-      rating: 4.8,
-      featured: false,
-      tags: ['Nanotechnology', 'Drug Delivery', 'Targeted Therapy', 'Nanomedicine'],
-      thumbnail: '/images/research/nanoscale-drug-delivery.jpg',
-      abstract: 'Advanced research in nanoscale drug delivery systems that can target specific cells or tissues, improving therapeutic outcomes while minimizing side effects.',
-      objectives: [
-        'Design nanocarriers',
-        'Develop targeting mechanisms',
-        'Optimize drug loading',
-        'Validate therapeutic efficacy'
-      ],
-      outcomes: [
-        'Nanocarrier designs',
-        'Targeting systems',
-        'Drug loading methods',
-        'Efficacy studies'
-      ],
-      publications: 10,
-      patents: 3,
-      collaborations: ['Johns Hopkins', 'Rice University', 'Pfizer']
-    },
-    {
-      id: 7,
-      title: 'Fusion Energy Reactor Design',
-      description: 'Designing next-generation fusion energy reactors using advanced plasma confinement and magnetic field technologies.',
-      area: 'energy',
-      status: 'active',
-      lead: 'Dr. Marcus Chen',
-      startDate: '2024-02-01',
-      endDate: '2028-01-31',
-      funding: 5000000,
-      teamSize: 20,
-      rating: 4.7,
-      featured: false,
-      tags: ['Fusion Energy', 'Plasma Physics', 'Magnetic Confinement', 'Clean Energy'],
-      thumbnail: '/images/research/fusion-energy-reactor.jpg',
-      abstract: 'Large-scale research project focused on developing practical fusion energy technology for clean, sustainable power generation.',
-      objectives: [
-        'Design reactor architecture',
-        'Optimize plasma confinement',
-        'Develop magnetic systems',
-        'Validate energy output'
-      ],
-      outcomes: [
-        'Reactor designs',
-        'Plasma confinement data',
-        'Magnetic system specs',
-        'Energy output projections'
-      ],
-      publications: 18,
-      patents: 8,
-      collaborations: ['ITER', 'Princeton Plasma Physics Lab', 'General Fusion']
-    },
-    {
-      id: 8,
-      title: 'Quantum Internet Infrastructure',
-      description: 'Building the foundation for a quantum internet with quantum repeaters, entanglement distribution, and quantum networking protocols.',
-      area: 'quantum',
-      status: 'planning',
-      lead: 'Dr. Lisa Park',
-      startDate: '2025-03-01',
-      endDate: '2029-02-28',
-      funding: 4000000,
-      teamSize: 16,
-      rating: 4.5,
-      featured: false,
-      tags: ['Quantum Internet', 'Quantum Networks', 'Entanglement', 'Communications'],
-      thumbnail: '/images/research/quantum-internet.jpg',
-      abstract: 'Long-term research project focused on developing the infrastructure and protocols needed for a global quantum internet.',
-      objectives: [
-        'Design quantum repeaters',
-        'Develop entanglement protocols',
-        'Build network infrastructure',
-        'Establish security standards'
-      ],
-      outcomes: [
-        'Quantum repeater designs',
-        'Network protocols',
-        'Infrastructure blueprints',
-        'Security frameworks'
-      ],
-      publications: 0,
-      patents: 0,
-      collaborations: ['Caltech', 'University of Vienna', 'Google Quantum AI']
+      patents: 5,
+      collaborations: ['NIST', 'NSA', 'European Quantum Initiative']
     }
   ];
 
@@ -612,7 +458,7 @@ export default function ResearchDevelopment(...args: any[]): any {
             <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
           </motion.div>
 
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {filteredProjects.map((project, index)              => (
               <motion.div
                 key={project.id}

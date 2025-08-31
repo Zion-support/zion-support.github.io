@@ -1,6 +1,6 @@
-import React from 'react.ts';
+import React from 'react';
 import SEO from '../components/SEO';
-import { motion              } from 'framer-motion.ts';
+import { motion } from 'framer-motion';
 import {
   Code,
   BookOpen,
@@ -32,10 +32,11 @@ import {
   Target,
   Award,
   Lightbulb
-             } from 'lucide-react.ts';
+} from 'lucide-react';
 
-const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
+const DeveloperPortal: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  
   const apiFeatures = [
     {
       icon: Code,
@@ -54,14 +55,15 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       title: 'Documentation',
       description: 'Comprehensive guides and tutorials',
       category: 'Learning'
-    },;
-    {;
-      icon: Download,;
-      title: 'SDKs & Libraries',;
-      description: 'Official client libraries for all platforms',;
-      category: 'Integration';
-    };
+    },
+    {
+      icon: Download,
+      title: 'SDKs & Libraries',
+      description: 'Official client libraries for all platforms',
+      category: 'Integration'
+    }
   ];
+
   const resources = [
     {
       title: 'Getting Started Guide',
@@ -80,45 +82,26 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       description: 'Development guidelines and patterns',
       icon: '⭐',
       difficulty: 'Intermediate'
-    },;
-    {;
-      title: 'Code Samples',;
-      description: 'Real-world implementation examples',;
-      icon: '💻',;
-      difficulty: 'All Levels';
-    };
+    },
+    {
+      title: 'Code Samples',
+      description: 'Real-world implementation examples',
+      icon: '💻',
+      difficulty: 'All Levels'
+    }
   ];
+
   const community = [
     {
       language: 'JavaScript',
       code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEY',
-    'Content-Type': 'application/json';
-  };
+    'Content-Type': 'application/json'
+  }
 });
-const data = await response.json();
-// // // // console.log(data);`,
-      icon: Code
-    },
-    {
-      name: 'GitHub Discussions',
-      description: 'Open source collaboration',
-      members: '1.8K+',
-      icon: '🐙'
-    },
-    {
-      name: 'Discord Server',
-      description: 'Real-time developer chat',
-      members: '3.2K+',
-      icon: '🎮'
-    },
-    {
-      name: 'Stack Overflow',;
-      description: 'Q&A platform integration',;
-      members: '5K+',;
-      icon: '📝';
-    };
+const data = await response.json();`
+    }
   ];
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -180,7 +163,7 @@ const data = await response.json();
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {quickStartSteps.map((step, index)               => (
               <motion.div
                 key={tool.title}
@@ -479,4 +462,3 @@ const data = await response.json();
   );
 };
 export default DeveloperPortal;
-}}}}

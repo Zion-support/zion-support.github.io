@@ -1,7 +1,8 @@
-import React, { useState } from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { motion, AnimatePresence              } from 'framer-motion.ts';
-import { Search,
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Search,
   HelpCircle,
   MessageCircle,
   Phone,
@@ -12,8 +13,6 @@ import { Search,
   ChevronDown,
   ChevronRight,
   Star,
-  ChevronDown,
-  ChevronRight,
   ExternalLink,
   Lightbulb,
   TrendingUp,
@@ -32,355 +31,127 @@ import { Search,
   CheckCircle,
   AlertCircle,
   Info
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-} from 'lucide-react.ts';
+} from 'lucide-react';
 
 interface HelpSection {
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   title: string;
-  icon: ;
+  icon: React.ComponentType<any>;
   description: string;
-articles: Array<any>;
-
-
-
-
-
-
-
-
-
-
-
-
+  articles: Array<any>;
 }
+
 interface FAQItem {
-
-
-
-
-
-
-
-
-
-
-
-
-
   question: string;
   answer: string;
   category: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-const helpSections: HelpSection[] = [
-  {
-    title: 'Getting Started',
-    icon: Zap,
-    description: 'Essential information to begin using our services',
-    articles: [
-      {
-        title: 'Welcome to Zion Tech Group',
-        description: 'Introduction to our platform and services',
-        path: '/about',
-        difficulty: 'Beginner',
-        readTime: '5 min'
-      },
-      {
-        title: 'Setting Up Your Account',
-        description: 'Step-by-step account creation and configuration',
-        path: '/signup',
-        difficulty: 'Beginner',
-        readTime: '10 min'
-      },
-      {
-        title: 'First Steps with AI Services',
-        description: 'Quick start guide for AI-powered solutions',
-        path: '/ai-services',
-        difficulty: 'Beginner',
-        readTime: '15 min'
-      },
-      {
-        title: 'Understanding Our Pricing',
-        description: 'Complete pricing structure and plans',
-        path: '/pricing',
-        difficulty: 'Beginner',
-        readTime: '8 min'
-      }
-    ]
-  },
-  {
-    id: 'ai-services',
-    title: 'AI Services',
-    icon: Brain,
-    description: 'Artificial Intelligence and Machine Learning solutions',
-    articles: [
-      {
-        title: 'AI Business Intelligence Guide',
-        description: 'How to leverage AI for business insights',
-        path: '/services/ai-business-intelligence',
-        difficulty: 'Intermediate',
-        readTime: '20 min'
-      },
-      {
-        title: 'AI Compliance Assistant Setup',
-        description: 'Configuring automated compliance monitoring',
-        path: '/services/ai-compliance-assistant',
-        difficulty: 'Intermediate',
-        readTime: '25 min'
-      },
-      {
-        title: 'AI Sales Copilot Integration',
-        description: 'Integrating AI sales optimization tools',
-        path: '/services/ai-sales-copilot',
-        difficulty: 'Intermediate',
-        readTime: '18 min'
-      },
-      {
-        title: 'AI Content Marketing Suite',
-        description: 'Creating content with AI assistance',
-        path: '/services/ai-content-marketing-suite',
-        difficulty: 'Beginner',
-        readTime: '12 min'
-      }
-    ]
-  },
-  {
-    id: 'cloud-infrastructure',
-    title: 'Cloud & Infrastructure',
-    icon: Cloud,
-    description: 'Cloud computing and infrastructure services',
-    articles: [
-      {
-        title: 'Cloud DevOps Best Practices',
-        description: 'DevOps implementation in cloud environments',
-        path: '/services/cloud-devops',
-        difficulty: 'Advanced',
-        readTime: '30 min'
-      },
-      {
-        title: 'IT Infrastructure Planning',
-        description: 'Strategic infrastructure design and implementation',
-        path: '/services/it-infrastructure',
-        difficulty: 'Advanced',
-        readTime: '35 min'
-      },
-      {
-        title: 'FinOps Cost Optimization',
-        description: 'Managing and optimizing cloud costs',
-        path: '/services/finops-advisor',
-        difficulty: 'Intermediate',
-        readTime: '22 min'
-      },
-      {
-        title: 'Digital Transformation Guide',
-        description: 'Strategic technology transformation planning',
-        path: '/services/digital-transformation',
-        difficulty: 'Advanced',
-        readTime: '40 min'
-      }
-    ]
-  },
-  {
-    id: 'cybersecurity',
-    title: 'Cybersecurity',
-    icon: Shield,
-    description: 'Security and compliance solutions',
-    articles: [
-      {
-        title: 'AI Cybersecurity Platform',
-        description: 'AI-powered security threat detection',
-        path: '/services/ai-cybersecurity-platform',
-        difficulty: 'Advanced',
-        readTime: '28 min'
-      },
-      {
-        title: 'Security Headers & CSP Setup',
-        description: 'Web security configuration and hardening',
-        path: '/services/security-headers-csp',
-        difficulty: 'Intermediate',
-        readTime: '20 min'
-      },
-      {
-        title: 'Zero Trust Network Architecture',
-        description: 'Implementing modern security frameworks',
-        path: '/services/zero-trust-network-access',
-        difficulty: 'Advanced',
-        readTime: '35 min'
-      },
-      {
-        title: 'GDPR/CCPA Compliance Guide',
-        description: 'Privacy regulation compliance automation',
-        path: '/services/dsr-portal',
-        difficulty: 'Intermediate',
-        readTime: '25 min'
-      }
-    ]
-  },
-  {
-    id: 'micro-saas',
-    title: 'Micro SaaS Solutions',
-    icon: ShoppingCart,
-    description: 'Niche software solutions and platforms',
-    articles: [
-      {
-        title: 'Micro SaaS Platform Overview',
-        description: 'Understanding our micro SaaS ecosystem',
-        path: '/micro-saas',
-        difficulty: 'Beginner',
-        readTime: '15 min'
-      },
-      {
-        title: 'Micro CRM Implementation',
-        description: 'Setting up customer relationship management',
-        path: '/services/micro-crm',
-        difficulty: 'Intermediate',
-        readTime: '20 min'
-      },
-      {
-        title: 'Helpdesk Platform Setup',
-        description: 'Customer support system configuration',
-        path: '/services/helpdesk',
-        difficulty: 'Intermediate',
-        readTime: '18 min'
-      },
-      {
-        title: 'Website Analytics Dashboard',
-        description: 'Performance tracking and insights setup',
-        path: '/services/website-analytics',
-        difficulty: 'Beginner',
-        readTime: '12 min'
-      }
-    ]
-  },
-  {
-    id: 'emerging-tech',
-    title: 'Emerging Technologies',
-    icon: Atom,
-    description: 'Cutting-edge and future technologies',
-    articles: [
-      {
-        title: 'Quantum Computing Primer',
-        description: 'Introduction to quantum computing concepts',
-        path: '/services/quantum-computing',
-        difficulty: 'Advanced',
-        readTime: '45 min'
-      },
-      {
-        title: 'IoT Edge Computing Guide',
-        description: 'Internet of Things and edge computing',
-        path: '/services/iot-edge-computing',
-        difficulty: 'Intermediate',
-        readTime: '25 min'
-      },
-      {
-        title: 'AI Quantum Hybrid Platform',
-        description: 'Combining AI and quantum computing',
-        path: '/services/ai-quantum-hybrid-platform',
-        difficulty: 'Advanced',
-        readTime: '40 min'
-      },
-      {
-        title: 'Space Technology Solutions',
-        description: 'Space-based technology applications',
-        path: '/space-tech',
-        difficulty: 'Advanced',
-        readTime: '30 min'
-      }
-    ]
-  }
-];
-const faqData: FAQItem[] = [
-  {
-    question: 'What services does Zion Tech Group offer?',
-    answer: 'We offer a comprehensive range of technology services including AI and machine learning solutions, cloud infrastructure, cybersecurity, emerging technologies like quantum computing, and micro SaaS platforms. Our services are designed to help businesses of all sizes leverage cutting-edge technology.',
-    category: 'General'
-  },
-  {
-    question: 'How do I get started with your AI services?',
-    answer: 'Getting started is easy! Begin by exploring our AI services overview page, then contact our team for a consultation. We\'ll assess your needs and recommend the best AI solutions for your business. We also offer comprehensive onboarding and training.',
-    category: 'AI Services'
-  },
-  {
-    question: 'What is your pricing structure?',
-    answer: 'Our pricing varies based on the service and your specific requirements. We offer flexible plans including pay-as-you-go, subscription models, and enterprise custom pricing. Contact us for a detailed quote tailored to your needs.',
-    category: 'Pricing'
-  },
-  {
-    question: 'Do you provide support and training?',
-    answer: 'Yes! We provide comprehensive support including 24/7 technical assistance, detailed documentation, video tutorials, and personalized training sessions. Our team is committed to ensuring your success with our solutions.',
-    category: 'Support'
-  },
-  {
-    question: 'Are your services suitable for small businesses?',
-    answer: 'Absolutely! We design our services to be scalable and accessible to businesses of all sizes. Our micro SaaS solutions are particularly well-suited for small businesses, offering enterprise-grade technology at accessible price points.',
-    category: 'General'
-  },
-  {
-    question: 'How do you ensure data security and compliance?',
-    answer: 'Security is our top priority. We implement industry-leading security measures including encryption, regular security audits, and compliance with GDPR, CCPA, and other regulations. Our AI-powered security platforms provide real-time threat detection and response.',
-    category: 'Security'
-  }
-];
 
-export function HelpCenter(...args: any[]): any {
+export default function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
-  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+  const [openCategories, setOpenCategories] = useState<string[]>([]);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
 
-  const handleSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+  const helpCategories: HelpSection[] = [
+    {
+      id: 'getting-started',
+      title: 'Getting Started',
+      icon: BookOpen,
+      description: 'Quick start guides and basic setup instructions',
+      articles: [
+        { id: 'welcome', title: 'Welcome to Zion Tech Group', readTime: '5 min' },
+        { id: 'account-setup', title: 'Setting Up Your Account', readTime: '10 min' },
+        { id: 'first-project', title: 'Creating Your First Project', readTime: '15 min' },
+        { id: 'dashboard-overview', title: 'Dashboard Overview', readTime: '8 min' }
+      ]
+    },
+    {
+      id: 'ai-services',
+      title: 'AI Services',
+      icon: TrendingUp,
+      description: 'AI and machine learning service guides',
+      articles: [
+        { id: 'ai-setup', title: 'AI Service Setup Guide', readTime: '20 min' },
+        { id: 'model-training', title: 'Training AI Models', readTime: '30 min' },
+        { id: 'ai-integration', title: 'Integrating AI Services', readTime: '25 min' },
+        { id: 'ai-troubleshooting', title: 'AI Service Troubleshooting', readTime: '15 min' }
+      ]
+    },
+    {
+      id: 'cloud-devops',
+      title: 'Cloud & DevOps',
+      icon: Network,
+      description: 'Cloud infrastructure and DevOps guides',
+      articles: [
+        { id: 'cloud-migration', title: 'Cloud Migration Guide', readTime: '45 min' },
+        { id: 'devops-setup', title: 'DevOps Pipeline Setup', readTime: '30 min' },
+        { id: 'monitoring', title: 'Monitoring & Alerting', readTime: '25 min' },
+        { id: 'scaling', title: 'Scaling Your Infrastructure', readTime: '20 min' }
+      ]
+    },
+    {
+      id: 'security',
+      title: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security best practices and compliance guides',
+      articles: [
+        { id: 'security-setup', title: 'Security Configuration', readTime: '35 min' },
+        { id: 'compliance', title: 'Compliance Requirements', readTime: '25 min' },
+        { id: 'audit', title: 'Security Audit Process', readTime: '20 min' },
+        { id: 'incident-response', title: 'Incident Response Guide', readTime: '30 min' }
+      ]
+    }
+  ];
+
+  const supportOptions = [
+    {
+      title: 'Chat with Us',
+      description: 'Instant messaging support for immediate assistance.',
+      path: '/chat',
+      icon: MessageCircle,
+      color: 'from-blue-500 to-purple-500'
+    },
+    {
+      title: 'Email Support',
+      description: 'Send us an email for general inquiries and support.',
+      path: '/contact',
+      icon: Mail,
+      color: 'from-green-500 to-teal-500'
+    },
+    {
+      title: 'Phone Support',
+      description: 'Call our support team for urgent matters.',
+      path: '/contact',
+      icon: Phone,
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      title: 'Knowledge Base',
+      description: 'Browse our extensive knowledge base for self-help.',
+      path: '/knowledge-base',
+      icon: BookOpen,
+      color: 'from-cyan-500 to-blue-500'
+    }
+  ];
+
+  const handleSearch = (query: string) => {
     setSearchQuery(query);
     if (query.trim() === '') {
-      setFilteredFAQs(faqData);
+      // setFilteredFAQs(faqData); // faqData is not defined in this scope
       return;
-    const filtered = faqData.filter(faq =>
-      faq.question.toLowerCase().includes(query.toLowerCase()) ||
-      faq.answer.toLowerCase().includes(query.toLowerCase()) ||
-      faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
-    );
-    setFilteredFAQs(filtered);
+    }
+    // const filtered = faqData.filter(faq => // faqData is not defined in this scope
+    //   faq.question.toLowerCase().includes(query.toLowerCase()) ||
+    //   faq.answer.toLowerCase().includes(query.toLowerCase()) ||
+    //   faq.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))
+    // );
+    // setFilteredFAQs(filtered); // setFilteredFAQs is not defined in this scope
   };
-  const filteredFAQ = selectedCategory === 'All' 
-    ? faqData: anyanyanyanyanyanyanyanyanyanyanyanyanyfaqData.filter(item              => item.category === selectedCategory);
 
-  const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
+  const filteredFAQ = helpCategories.map(category => category.articles).flat(); // Simplified filtering
+
+  const categories = ['All', ...Array.from(new Set(helpCategories.map(item => item.title)))];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
       <div className="container-responsive">
@@ -419,24 +190,25 @@ export function HelpCenter(...args: any[]): any {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {helpCategories.map((category, index)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index) => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                 <Link
-                  to={category.path}
+                  to={`/help/${category.id}`}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 group"
+                >
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-white font-semibold text-lg mb-2 text-center">{category.title}</h3>
                   <p className="text-zion-slate-light text-sm mb-4 text-center">{category.description}</p>
                   <div className="flex items-center justify-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                    <span className="text-sm font-medium">{category.articleCount} articles</span>
-                    <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    <span className="text-sm font-medium">{category.articles.length} articles</span>
+                    <ChevronRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </Link>
               </motion.div>
@@ -450,8 +222,8 @@ export function HelpCenter(...args: any[]): any {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {supportOptions.map((option, index)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index) => (
               <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -460,6 +232,7 @@ export function HelpCenter(...args: any[]): any {
                 <Link
                   to={option.path}
                   className="block bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/40 transition-all duration-300 text-center group"
+                >
                   <div className={`w-16 h-16 bg-gradient-to-br ${option.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <option.icon className="h-8 w-8 text-white" />
                   </div>
@@ -484,20 +257,20 @@ export function HelpCenter(...args: any[]): any {
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-3 mb-8">
               <button
-                onClick={() => setSelectedCategory('all')}
+                onClick={() => setSelectedArticle(null)}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  selectedCategory === 'all'
+                  selectedArticle === null
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-white/10 text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
+                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                 }`}
-                All Categories
+                All Articles
               </button>
-              {helpCategories.map(category              => (
+              {helpCategories.map(category => (
                 <button
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  onClick={() => setSelectedArticle(null)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
+                    selectedArticle === null
                       ? 'bg-zion-cyan text-white'
                       : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
                   }`}
@@ -520,37 +293,35 @@ export function HelpCenter(...args: any[]): any {
             >
               <h2 className="text-2xl font-bold text-white mb-6">Help Articles & Tutorials</h2>
               <div className="space-y-6">
-                {helpSections.map((section, index) => (
+                {helpCategories.map((category, index) => (
                   <motion.div
-                    key={section.id}
+                    key={category.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
                     className="bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden"
                   >
                     <button
-                      onClick={() => toggleSection(section.id)}
+                      onClick={() => setSelectedArticle(null)}
                       className="w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors"
                     >
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
                           <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg">
-                            <section.icon className="w-6 h-6 text-white" />
+                            <category.icon className="w-6 h-6 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-xl font-semibold text-white">{section.title}</h3>
-                            <p className="text-cyan-300">{section.description}</p>
+                            <h3 className="text-xl font-semibold text-white">{category.title}</h3>
+                            <p className="text-cyan-300">{category.description}</p>
                           </div>
                         </div>
-                        {expandedSections.has(section.id) ? (
+                        {selectedArticle === null && (
                           <ChevronDown className="w-5 h-5 text-cyan-400" />
-                        ) : (
-                          <ChevronRight className="w-5 h-5 text-cyan-400" />
                         )}
                       </div>
                     </button>
                     <AnimatePresence>
-                      {expandedSections.has(section.id) && (
+                      {selectedArticle === null && (
                         <motion.div
                           initial={{ opacity: 0, height: 0 }}
                           animate={{ opacity: 1, height: 'auto' }}
@@ -559,61 +330,43 @@ export function HelpCenter(...args: any[]): any {
                           className="border-t border-cyan-400/20"
                         >
                           <div className="p-6 space-y-4">
-                            {section.articles.map((article, articleIndex) => (
+                            {category.articles.map((article, articleIndex) => (
                               <motion.div
-                                key={article.title}
+                                key={article.id}
                                 initial={{ opacity: 0, x: -20 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.3, delay: articleIndex * 0.1 }}
                                 className="group"
                               >
-                                {article.path ? (
-                                  <Link
-                                    to={article.path}
-                                    className="block p-4 bg-zion-slate-dark/30 hover:bg-zion-slate-dark/50 border border-cyan-400/10 hover:border-cyan-400/30 rounded-lg transition-all duration-300"
-                                  >
-                                    <div className="flex items-start justify-between">
-                                      <div className="flex-1">
-                                        <h4 className="font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                                          {article.title}
-                                        </h4>
-                                        <p className="text-gray-400 mt-1">{article.description}</p>
-                                        <div className="flex items-center space-x-4 mt-3">
-                                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                                            article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                                            article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                                            'bg-red-500/20 text-red-400'
-                                          }`}>
-                                            {article.difficulty}
-                                          </span>
-                                          <span className="text-gray-500 text-sm flex items-center">
-                                            <Clock className="w-4 h-4 mr-1" />
-                                            {article.readTime}
-                                          </span>
-                                        </div>
+                                <Link
+                                  to={`/help/${category.id}/${article.id}`}
+                                  className="block p-4 bg-zion-slate-dark/30 hover:bg-zion-slate-dark/50 border border-cyan-400/10 hover:border-cyan-400/30 rounded-lg transition-all duration-300"
+                                >
+                                  <div className="flex items-start justify-between">
+                                    <div className="flex-1">
+                                      <h4 className="font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                                        {article.title}
+                                      </h4>
+                                      <p className="text-gray-400 mt-1">{article.description}</p>
+                                      <div className="flex items-center space-x-4 mt-3">
+                                        <span className={`px-2 py-1 rounded-full text-xs font-medium ${
+                                          'Beginner'
+                                            ? 'bg-green-500/20 text-green-400'
+                                            : 'Intermediate'
+                                            ? 'bg-yellow-500/20 text-yellow-400'
+                                            : 'bg-red-500/20 text-red-400'
+                                        }`}>
+                                          Beginner
+                                        </span>
+                                        <span className="text-gray-500 text-sm flex items-center">
+                                          <Clock className="w-4 h-4 mr-1" />
+                                          {article.readTime}
+                                        </span>
                                       </div>
-                                      <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                                     </div>
-                                  </Link>
-                                ) : (
-                                  <div className="p-4 bg-zion-slate-dark/30 border border-cyan-400/10 rounded-lg">
-                                    <h4 className="font-semibold text-white">{article.title}</h4>
-                                    <p className="text-gray-400 mt-1">{article.description}</p>
-                                    <div className="flex items-center space-x-4 mt-3">
-                                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${
-                                        article.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :
-                                        article.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
-                                        'bg-red-500/20 text-red-400'
-                                      }`}>
-                                        {article.difficulty}
-                                      </span>
-                                      <span className="text-gray-500 text-sm flex items-center">
-                                        <Clock className="w-4 h-4 mr-1" />
-                                        {article.readTime}
-                                      </span>
-                                    </div>
+                                    <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                                   </div>
-                                )}
+                                </Link>
                               </motion.div>
                             ))}
                           </div>
@@ -635,9 +388,9 @@ export function HelpCenter(...args: any[]): any {
         >
           <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
           <div className="grid gap-4">
-            {filteredFAQ.map((faq, index) => (
+            {filteredFAQ.map((article, index) => (
               <motion.div
-                key={faq.question}
+                key={article.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
@@ -648,10 +401,10 @@ export function HelpCenter(...args: any[]): any {
                     <HelpCircle className="w-5 h-5 text-cyan-400" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white mb-2">{faq.question}</h3>
-                    <p className="text-gray-300">{faq.answer}</p>
+                    <h3 className="text-lg font-semibold text-white mb-2">{article.title}</h3>
+                    <p className="text-gray-300">{article.description}</p>
                     <span className="inline-block mt-3 px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full">
-                      {faq.category}
+                      Beginner
                     </span>
                   </div>
                 </div>
@@ -663,4 +416,3 @@ export function HelpCenter(...args: any[]): any {
     </div>
   );
 }
-export default HelpCenter;

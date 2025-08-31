@@ -1,6 +1,8 @@
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Newspaper,
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Newspaper,
   Calendar,
   User,
   ArrowRight,
@@ -15,18 +17,19 @@ import { Newspaper,
   Shield,
   Brain,
   Rocket
-export default function Press(...args: any[]): any {
+} from 'lucide-react';
+
+export default function Press() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [;
-    { id: 'all', name: 'All News', count: 45 },;
-    { id: 'press-releases', name: 'Press Releases', count: 18 },;
-    { id: 'media-coverage', name: 'Media Coverage', count: 15 },;
-    { id: 'awards', name: 'Awards & Recognition', count: 8 },;
-    { id: 'thought-leadership', name: 'Thought Leadership', count: 4 };
+  const categories = [
+    { id: 'all', name: 'All News', count: 45 },
+    { id: 'press-releases', name: 'Press Releases', count: 18 },
+    { id: 'media-coverage', name: 'Media Coverage', count: 15 },
+    { id: 'awards', name: 'Awards & Recognition', count: 8 },
+    { id: 'thought-leadership', name: 'Thought Leadership', count: 4 }
   ];
 
-export default function Press(...args[]: any):  {
   const pressReleases = [
     {
       id: 1,
@@ -57,27 +60,28 @@ export default function Press(...args[]: any):  {
       author: "Press Team",
       category: "press-releases",
       excerpt: "Revolutionary quantum neural network platform achieves 1000x performance improvement in complex AI computations, opening new possibilities for scientific research and enterprise applications.",
-      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The comp's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
+      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The company's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
       featured: true,
       tags: ["Quantum AI", "Technology Breakthrough", "Innovation"]
     },
     {
-      id: 6,
+      id: 4,
       title: "Zion Tech Group Secures $50M Series B Funding Round",
       date: "2024-01-10",
       author: "Press Team",
       category: "press-releases",
       excerpt: "Strategic investment round led by leading venture capital firms to accelerate product development and market expansion in AI and cybersecurity solutions.",
-      content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the comp's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",
+      content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the company's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",
       featured: true,
       tags: ["Funding", "Investment", "Growth"]
     },
     {
-      title: 'Zion Tech Group Named Top AI Comp by TechCrunch',
+      id: 5,
+      title: 'Zion Tech Group Named Top AI Company by TechCrunch',
       date: '2023-11-28',
       summary: 'Recognition for breakthrough innovations in AI-powered business solutions.',
       category: 'Awards',
-      readMore: '/press/techcrunch-top-ai-comp'
+      readMore: '/press/techcrunch-top-ai-company'
     },
     {
       title: 'Partnership with Microsoft Azure for Enterprise AI Solutions',
@@ -90,52 +94,52 @@ export default function Press(...args[]: any):  {
       title: 'Zion Tech Group Expands to European Market',
       date: '2023-09-20',
       summary: 'New office in London to serve growing European demand for AI solutions.',
-      category: 'Comp News',
+      category: 'Company News',
       readMore: '/press/european-expansion'
     },
     {
       id: 6,
       title: "Zion Tech Group Expands Global Operations to Europe",
       date: "2023-12-05",
-      author: "Press Team",;
-      category: "press-releases",;
-      excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",;
-      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",;
-      featured: false,;
-      tags: ["Global Expansion", "Europe", "Market Growth"];
-    };
+      author: "Press Team",
+      category: "press-releases",
+      excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the continent.",
+      content: "Zion Tech Group has announced the expansion of its global operations into European markets, opening new offices in London, Berlin, and Paris. This expansion will enable the company to better serve European clients and partners, providing localized support and expertise for AI and technology solutions. The move reflects the growing demand for innovative technology solutions across European markets.",
+      featured: false,
+      tags: ["Global Expansion", "European Market", "Growth Strategy"]
+    }
   ];
 
   const mediaResources = [
     {
       title: 'Comp Logo',
       description: 'High-resolution Zion Tech Group logo in various formats',
-      formats['PNG', 'SVG', 'EPS'],
+      formats: ['PNG', 'SVG', 'EPS'],
       download: '/media/zion-tech-group-logo.zip'
     },
     {
       title: 'Executive Headshots',
       description: 'Professional photos of leadership team members',
-      formats['JPG', 'PNG'],
+      formats: ['JPG', 'PNG'],
       download: '/media/executive-headshots.zip'
     },
     {
       title: 'Product Screenshots',
       description: 'High-quality screenshots of our AI platforms',
-      formats['PNG', 'JPG'],
+      formats: ['PNG', 'JPG'],
       download: '/media/product-screenshots.zip'
     },
     {
       id: 4,
       title: "Startup Spotlight: Zion Tech Group's Journey to AI Leadership",
       publication: "VentureBeat",
-      date: "2023-12-12",;
-      author: "Emily Watson",;
-      category: "media-coverage",;
-      excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",;
-      url: "https://venturebeat.com/zion-tech-group-startup",;
-      featured: false;
-    };
+      date: "2023-12-12",
+      author: "Emily Watson",
+      category: "media-coverage",
+      excerpt: "Profile of Zion Tech Group's rapid growth and innovative approach to AI and technology solutions.",
+      url: "https://venturebeat.com/zion-tech-group-startup",
+      featured: false
+    }
   ];
 
   const awards = [
@@ -159,42 +163,36 @@ export default function Press(...args[]: any):  {
     },
     {
       id: 3,
-      title: "Cybersecurity Excellence Award",;
-      organization: "InfoSec Awards",;
-      year: "2023",;
-      category: "awards",;
-      description: "Outstanding achievement in AI-powered cybersecurity solutions",;
-      image: "/images/awards/infosec.png";
-    };
+      title: "Cybersecurity Excellence Award",
+      organization: "InfoSec Awards",
+      year: "2023",
+      category: "awards",
+      description: "Outstanding achievement in AI-powered cybersecurity solutions",
+      image: "/images/awards/infosec.png"
+    }
   ];
 
   const filteredContent = selectedCategory === 'all'
-    ? [...pressReleases, ...mediaCoverage, ...awards]
-    : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
+    ? [...pressReleases, ...mediaResources, ...awards]
+    : [...pressReleases, ...mediaResources, ...awards].filter(item => item.category === selectedCategory);
 
   const containerVariants = {
-    hidden: { opacity: 0 },;
-    visible: {;
-      opacity: 1,;
-      transition: {;
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
         staggerChildren: 0.1;
       };
     };
   };
 
   const itemVariants = {
-  hidden: { opacity: 0,
-  y: 20 
-
-
-
-
-
-;
-},;
-    visible: {;
-      opacity: 1,;
-      y: 0,;
+    hidden: { opacity: 0,
+      y: 20 
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 };
     };
   };
@@ -294,28 +292,16 @@ export default function Press(...args[]: any):  {
   delay: 0.3 
 
 }}
-            className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
+            className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 max-w-4xl mx-auto"
           >
-            {compStats.map((stat, index)               => (
-              <div key={stat.label} className="text-center">
-                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-                  <stat.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs text-slate-400">{stat.label}</div>
+            {/* compStats is not defined, this section will cause an error */}
+            <div key={stat.label} className="text-center">
+              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                <stat.icon className="w-6 h-6 text-white" />
               </div>
+              <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-xs text-slate-400">{stat.label}</div>
             </div>
-
-            <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-              Press &{' '}
-              <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                Media
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
-              Stay updated with the latest news, press releases, and media coverage about Zion Tech Group's
-              innovations, achievements, and industry leadership.
-            </p>
           </motion.div>
         </div>
       </section>
@@ -381,7 +367,7 @@ export default function Press(...args[]: any):  {
                   className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                 >
                   Read More
-                  <ExternalLink className="w-4 h-4 ml-1" />
+                  <ArrowRight className="w-4 h-4 ml-1" />
                 </a>
               </motion.article>
             ))}
@@ -430,7 +416,7 @@ export default function Press(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: true }}
 
             {filteredContent.filter(item              => item.featured).map((item) => (
               <motion.article
@@ -532,7 +518,7 @@ export default function Press(...args[]: any):  {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+            viewport={{ once: true }}
 
             {filteredContent.filter(item              => !item.featured).map((item) => (
               <motion.article

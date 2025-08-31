@@ -1,7 +1,8 @@
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '../components/SEO';
-import { Linkedin, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { 
+  Linkedin, 
   Twitter, 
   Mail, 
   Globe, 
@@ -34,11 +35,10 @@ import { Linkedin,
   Workflow,
   Eye,
   Sparkles,
-  Heart,
-  ArrowRight
-             } from 'lucide-react.ts';
+  Heart
+} from 'lucide-react';
 
-export default function Team(...args: any[]): any {
+export default function Team() {
   const teamMembers = [
     {
       id: 1,
@@ -101,119 +101,9 @@ export default function Team(...args: any[]): any {
       featured: true,
       achievements: [
         'Former DoD Cybersecurity Advisor',
-        'CISSP, CISM, CEH certified',
-        'Led security for 50+ enterprise clients',
-        'Speaker at Black Hat and DEF CON'
-      ]
-    },
-    {
-      id: 4,
-      name: 'Dr. Emily Watson',
-      title: 'Head of Quantum Computing',
-      department: 'quantum',
-      location: 'london',
-      bio: 'Quantum computing researcher and physicist specializing in quantum algorithms and quantum machine learning. Former researcher at CERN and IBM Quantum.',
-      expertise: ['Quantum Computing', 'Quantum Algorithms', 'Quantum Machine Learning', 'Physics Research'],
-      education: 'PhD in Physics, University of Oxford',
-      experience: '12+ years',
-      linkedin: 'https://linkedin.com/in/emilywatson',
-      twitter: 'https://twitter.com/emilywatson',
-      email: 'emily@ziontechgroup.com',
-      avatar: '/team/emily-watson.jpg',
-      featured: false,
-      achievements: [
-        'Former IBM Quantum Research Scientist',
-        'Published 30+ quantum computing papers',
-        'Developed 5 quantum algorithms',
-        'Advisor to European Quantum Initiative'
-      ]
-    },
-    {
-      id: 5,
-      name: 'Alex Thompson',
-      title: 'VP of Engineering',
-      department: 'engineering',
-      location: 'san-francisco',
-      bio: 'Seasoned engineering leader with expertise in building scalable systems and leading high-performing engineering teams. Former engineering director at Netflix and Uber.',
-      expertise: ['Software Engineering', 'System Architecture', 'Team Leadership', 'Scalability'],
-      education: 'MS in Computer Science, UC Berkeley',
-      experience: '16+ years',
-      linkedin: 'https://linkedin.com/in/alexthompson',
-      twitter: 'https://twitter.com/alexthompson',
-      email: 'alex@ziontechgroup.com',
-      avatar: '/team/alex-thompson.jpg',
-      featured: false,
-      achievements: [
-        'Former Engineering Director at Netflix',
-        'Led teams of 100+ engineers',
-        'Built systems serving 100M+ users',
-        'Expert in microservices architecture'
-      ]
-    },
-    {
-      id: 6,
-      name: 'Lisa Park',
-      title: 'Chief Data Scientist',
-      department: 'data-science',
-      location: 'new-york',
-      bio: 'Data science leader specializing in predictive analytics and AI-driven insights. Former head of data science at Spotify and McKinsey & Company.',
-      expertise: ['Data Science', 'Predictive Analytics', 'Machine Learning', 'Business Intelligence'],
-      education: 'PhD in Statistics, Harvard University',
-      experience: '14+ years',
-      linkedin: 'https://linkedin.com/in/lisapark',
-      twitter: 'https://twitter.com/lisapark',
-      email: 'lisa@ziontechgroup.com',
-      avatar: '/team/lisa-park.jpg',
-      featured: false,
-      achievements: [
-        'Former Head of Data Science at Spotify',
-        'Led analytics for 200M+ users',
-        'Published 20+ data science papers',
-        'Advisor to 10+ Fortune 500 companies'
-      ]
-    },
-    {
-      id: 7,
-      name: 'David Kim',
-      title: 'VP of Cloud Architecture',
-      department: 'cloud-devops',
-      location: 'remote',
-      bio: 'Cloud architecture expert with deep experience in AWS, Azure, and Google Cloud. Specializes in building resilient, scalable cloud infrastructure.',
-      expertise: ['Cloud Architecture', 'DevOps', 'Infrastructure as Code', 'Multi-Cloud'],
-      education: 'BS in Computer Science, Georgia Tech',
-      experience: '13+ years',
-      linkedin: 'https://linkedin.com/in/davidkim',
-      twitter: 'https://twitter.com/davidkim',
-      email: 'david@ziontechgroup.com',
-      avatar: '/team/david-kim.jpg',
-      featured: false,
-      achievements: [
-        'AWS Solutions Architect Professional',
-        'Led cloud migration for 50+ companies',
-        'Expert in serverless architecture',
-        'Speaker at AWS re:Invent'
-      ]
-    },
-    {
-      id: 8,
-      name: 'Maria Garcia',
-      title: 'VP of Sales & Business Development',
-      department: 'sales',
-      location: 'middletown',
-      bio: 'Sales leader with proven track record in B2B technology sales and strategic partnerships. Former VP of Sales at Salesforce and Oracle.',
-      expertise: ['B2B Sales', 'Strategic Partnerships', 'Business Development', 'Customer Success'],
-      education: 'MBA, Wharton School of Business',
-      experience: '17+ years',
-      linkedin: 'https://linkedin.com/in/mariagarcia',
-      twitter: 'https://twitter.com/mariagarcia',
-      email: 'maria@ziontechgroup.com',
-      avatar: '/team/maria-garcia.jpg',
-      featured: false,
-      achievements: [
-        'Former VP of Sales at Salesforce',
-        'Exceeded sales targets for 8 consecutive years',
-        'Built partnerships with 100+ companies',
-        'Led $500M+ in annual sales'
+        'Led security for Fortune 50 companies',
+        'Published 15+ security research papers',
+        'Certified CISSP, CISM, CEH'
       ]
     }
   ];
@@ -315,7 +205,7 @@ export default function Team(...args: any[]): any {
       {/* Stats Section */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {stats.map((stat, index)              => (
               <motion.div
                 key={stat.label}

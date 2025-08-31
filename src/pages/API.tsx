@@ -1,8 +1,9 @@
-import React from 'react.ts';
+import React from 'react';
 import SEO from '../components/SEO';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Code,
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Code,
   Search,
   Filter,
   ArrowRight,
@@ -19,11 +20,9 @@ import { Code,
   Clock,
   User,
   Star,
-  Terminal,
   Key,
-  Database,
   Lock
-             } from 'lucide-react.ts';
+} from 'lucide-react';
 
 const API: React.FC = (): JSX.Element => {
   const endpoints = [
@@ -98,11 +97,7 @@ const API: React.FC = (): JSX.Element => {
     "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
     "refresh_token": "refresh_token_here",
     "expires_in": 3600,
-    "user": {
-      "id": "user_123",
-      "email": "user@example.com",
-      "name": "John Doe"
-    }
+    "token_type": "Bearer"
   }
 }`,
     users: `{
@@ -110,10 +105,10 @@ const API: React.FC = (): JSX.Element => {
   "data": {
     "users": [
       {
-        "id": "user_123",
+        "id": 1,
         "name": "John Doe",
         "email": "john@example.com",
-        "role": "admin"
+        "role": "user"
       }
     ],
     "pagination": {
@@ -126,21 +121,20 @@ const API: React.FC = (): JSX.Element => {
     projects: `{
   "success": true,
   "data": {
-    "id": "proj_456",
+    "id": 123,
     "name": "My Project",
     "description": "Project description",
     "type": "web_application",
-    "created_at": "2024-01-15T10:30:00Z",
-    "status": "active"
+    "created_at": "2024-01-15T10:30:00Z"
   }
 }`,
     analytics: `{
   "success": true,
   "data": {
     "metrics": {
-      "total_users": 1250,
-      "active_projects": 89,
-      "api_calls": 45678
+      "total_requests": 15420,
+      "success_rate": 99.8,
+      "average_response_time": 45
     },
     "period": {
       "start_date": "2024-01-01",
@@ -241,7 +235,7 @@ export default function API(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {apiCategories.map((category, index)               => (
               <motion.div
                 key={stat.label}

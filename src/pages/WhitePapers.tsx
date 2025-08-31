@@ -1,13 +1,12 @@
 
 
-import React, { useState } from 'react.ts';
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award              } from 'lucide-react.ts';
-import SEO from '@/components/SEO';
+import React, { useState } from 'react';
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, BarChart3, Rocket, Building2 } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
-export default function WhitePapers(...args: any[]): any {
+export default function WhitePapers() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
@@ -23,7 +22,7 @@ export default function WhitePapers(...args: any[]): any {
 
   const whitePapers = [
     {
-      id: anyanyanyanyanyanyanyanyanyanyanyanyany1,
+      id: 1,
       title: 'AI Autonomous Research: Revolutionizing Business Intelligence',
       description: 'Comprehensive guide on implementing AI Autonomous Research Assistant systems that discover, analyze, and synthesize information across multiple sources autonomously.',
       category: 'ai-ml',
@@ -98,147 +97,29 @@ export default function WhitePapers(...args: any[]): any {
       keyInsights: [
         'Data governance and quality management',
         'Analytics tool selection and implementation',
-        'Change management and cultural transformation',
-        'Performance measurement and optimization'
+        'Change management strategies',
+        'ROI measurement and success metrics'
       ]
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation in Healthcare: Technology Trends',
-      description: 'Explore the latest technology trends transforming healthcare delivery and patient care in the digital age.',
-      category: 'industry',
-      author: 'Dr. Emily Watson',
-      publishDate: '2024-12-28',
-      readTime: '55 min',
-      downloads: 987,
-      rating: 4.8,
-      featured: false,
-      tags: ['Healthcare', 'Digital Health', 'Technology', 'Innovation'],
-      abstract: 'This paper examines the digital transformation of healthcare, covering emerging technologies, implementation challenges, and future trends in patient care and healthcare delivery.',
-      keyInsights: [
-        'Emerging healthcare technologies',
-        'Implementation challenges and solutions',
-        'Patient experience and engagement',
-        'Regulatory compliance considerations'
-      ]
-    },
-    {
-      id: 6,
-      title: 'Machine Learning Operations (MLOps): Enterprise Guide',
-      description: 'Learn how to implement MLOps practices to streamline machine learning model development, deployment, and monitoring in enterprise environments.',
-      category: 'ai-ml',
-      author: 'Alex Johnson',
-      publishDate: '2024-12-20',
-      readTime: '60 min',
-      downloads: 1123,
-      rating: 4.7,
-      featured: false,
-      tags: ['MLOps', 'Machine Learning', 'DevOps', 'AI Operations'],
-      abstract: 'This comprehensive guide covers MLOps implementation strategies, tools, and best practices for organizations looking to scale their machine learning operations.',
-      keyInsights: [
-        'MLOps principles and methodologies',
-        'Tool selection and integration',
-        'Model lifecycle management',
-        'Performance monitoring and optimization'
-      ]
-    },
-    {
-      id: 7,
-      title: 'Edge Computing: Transforming IoT and Mobile Applications',
-      description: 'Discover how edge computing is revolutionizing IoT deployments and mobile applications through distributed computing architectures.',
-      category: 'cloud',
-      author: 'Rachel Green',
-      publishDate: '2024-12-15',
-      readTime: '42 min',
-      downloads: 876,
-      rating: 4.5,
-      featured: false,
-      tags: ['Edge Computing', 'IoT', 'Mobile', 'Distributed Systems'],
-      abstract: 'This white paper explores edge computing technologies and their applications in IoT and mobile computing, providing implementation guidance for modern applications.',
-      keyInsights: [
-        'Edge computing architectures and models',
-        'IoT integration strategies',
-        'Performance optimization techniques',
-        'Security and privacy considerations'
-      ]
-    },
-    {
-      id: 8,
-      title: 'Edge Computing and IoT: Building the Connected Future',
-      category: 'digital-transformation',
-      author: 'Alex Thompson, Director of Cloud Operations',
-      publishDate: '2023-06-18',
-      downloads: 1567,
-      views: 7100,
-      summary: 'Comprehensive guide to edge computing and IoT implementation strategies for enterprise environments.',
-      tags: ['Edge Computing', 'IoT', 'Enterprise', 'Digital Transformation'],
-      fileSize: '3.3 MB',
-      format: 'PDF',
-      downloadUrl: '/white-papers/edge-computing-iot-enterprise-2023.pdf',
-      readMore: '/white-papers/edge-computing-iot-enterprise-2023';
-    };
+    }
   ];
 
   // Calculate category counts
-  React.useEffect(()               => {
+  React.useEffect(() => {
     const categoryCounts = categories.map(cat => ({
-      ...cat,;
-      count: cat.id === 'all' ? whitePapers.length: anyanyanyanyanyanyanyanyanyanyanyanyanywhitePapers.filter(wp               => wp.category === cat.id).length;
-    }))}, []);
+      ...cat,
+      count: cat.id === 'all' ? whitePapers.length : whitePapers.filter(wp => wp.category === cat.id).length
+    }));
+  }, []);
 
-  const filteredWhitePapers = whitePapers.filter(paper => {;
+  const filteredWhitePapers = whitePapers.filter(paper => {
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         paper.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-=======
-      title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
-      description: 'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
-      category: 'strategy',
-      author: 'David Thompson, Digital Strategy Director',
-      publishDate: '2025-01-08',
-      readTime: '22 min',
-      downloads: 8930,
-  const featuredInsights = [
-    {
-      title: 'AI Adoption Trends 2025',
-      description: 'Key insights from our latest research on enterprise AI adoption',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/insights/ai-adoption-2025'
-    },
-    {
-      title: 'Cybersecurity Landscape Report',
-      description: 'Current threats and emerging security challenges',
-      icon: <Shield className="w-6 h-6" />,
-      link: '/insights/cybersecurity-2025'
-    },;
-    {;
-      title: 'Cloud Migration Success Stories',;
-      description: 'Real-world examples of successful cloud transformations',;
-      icon: <Cloud className="w-6 h-6" />,;
-      link: '/insights/cloud-success-stories';
-    };
-  ];
-
-  const getCategoryCount = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    if (categoryId === 'all') {;
-      return whitePapers.length;
-
-    return whitePapers.filter(paper => paper.category === categoryId).length;
-  };
-
-  // Update counts
-  categories.forEach(cat = > {;
-    cat.count = getCategoryCount(cat.id);
-  });
-
-  const filteredPapers = whitePapers.filter(paper => {;
-    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     const matchesCategory = selectedCategory === 'all' || paper.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
 
-  const sortedPapers = [...filteredPapers].sort((a, b) => {
+  const sortedPapers = [...filteredWhitePapers].sort((a, b) => {
     switch (sortBy) {
       case 'latest':
         return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
@@ -253,45 +134,73 @@ export default function WhitePapers(...args: any[]): any {
     }
   });
 
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="White Papers - Zion Tech Group"
-        description="Download our comprehensive white papers and research on AI, cybersecurity, cloud computing, and emerging technologies."
-      />
-      ;
-=======;
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'long',;
+  const featuredInsights = [
+    {
+      title: 'AI Adoption Trends 2025',
+      description: 'Key insights from our latest research on enterprise AI adoption',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/insights/ai-adoption-2025'
+    },
+    {
+      title: 'Cybersecurity Landscape Report',
+      description: 'Current threats and emerging security challenges',
+      icon: <Shield className="w-6 h-6" />,
+      link: '/insights/cybersecurity-2025'
+    },
+    {
+      title: 'Cloud Migration Success Stories',
+      description: 'Real-world examples of successful cloud transformations',
+      icon: <Cloud className="w-6 h-6" />,
+      link: '/insights/cloud-success-stories';
+    };
+  ];
+
+  const getCategoryCount = (categoryId: string) => {
+    if (categoryId === 'all') {
+      return whitePapers.length;
+    }
+    return whitePapers.filter(paper => paper.category === categoryId).length;
+  };
+
+  // Update counts
+  categories.forEach(cat => {
+    cat.count = getCategoryCount(cat.id);
+  });
+
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
       day: 'numeric';
     });
   };
 
-  const formatDownloads = (downloads: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
-    if (downloads >= 1000000) {;
+  const formatDownloads = (downloads: number) => {
+    if (downloads >= 1000000) {
       return (downloads / 1000000).toFixed(1) + 'M';
     } else if (downloads >= 1000) {
       return (downloads / 1000).toFixed(1) + 'K';
-
+    }
     return downloads.toString();
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Header Section */}
+      <SEO 
+        title="White Papers - Zion Tech Group"
+        description="Download our comprehensive white papers and research on AI, cybersecurity, cloud computing, and emerging technologies."
+      />
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
             <FileText className="w-10 h-10 text-white" />
-          </motion.div>
+          </div>
           
           <motion.h1 
             initial = {
@@ -354,7 +263,7 @@ export default function WhitePapers(...args: any[]): any {
 }}
             className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto"
           >
-            {stats.map((stat, index)               => (
+            {categories.map((stat, index) => (
               <div key={stat.label} className="text-center">
                 <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
                   <stat.icon className="w-6 h-6 text-white" />
@@ -362,15 +271,7 @@ export default function WhitePapers(...args: any[]): any {
                 <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                 <div className="text-xs text-slate-400">{stat.label}</div>
               </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Research-Based</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Free Downloads</span>
-              </div>
-            </div>
+            ))}
           </motion.div>
         </div>
       </div>
@@ -419,7 +320,7 @@ export default function WhitePapers(...args: any[]): any {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
 
-                  {sortOptions.map((option)              => (
+                  {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -438,7 +339,7 @@ export default function WhitePapers(...args: any[]): any {
             Featured Insights
           </h2>
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 max-w-4xl mx-auto">
-            {featuredInsights.map((insight, index)              => (
+            {featuredInsights.map((insight, index) => (
               <div
                 key={index}
                 className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
@@ -706,7 +607,7 @@ export default function WhitePapers(...args: any[]): any {
 
           {filteredPapers.length > 0 ? (
             <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredPapers.map((paper)              => (
+              {filteredPapers.map((paper) => (
                 <div
                   key={paper.id}
                   className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${

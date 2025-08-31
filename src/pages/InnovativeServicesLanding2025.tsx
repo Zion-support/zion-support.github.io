@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Star, 
   Rocket, 
@@ -45,9 +45,9 @@ import {
   Newspaper,
   BookOpen,
   ExternalLink
-             } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function InnovativeServicesLanding2025(...args: any[]): any {
+export default function InnovativeServicesLanding2025() {
   const featuredServices = [
     {
       name: 'AI Workflow Orchestrator',
@@ -98,10 +98,10 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
       name: 'FinOps Advisor',
       description: 'Cloud cost optimization and management',
       icon: DollarSign,
-      category: 'Cloud & Infrastructure',
-      features: ['Cost Analysis', 'Resource Optimization', 'Budget Management', 'ROI Tracking'],
+      category: 'Cloud & Finance',
+      features: ['Cost Optimization', 'Budget Management', 'Resource Planning', 'ROI Analysis'],
       href: '/services/finops-advisor',
-      color: 'from-emerald-500 to-teal-600'
+      color: 'from-yellow-500 to-orange-600'
     }
   ];
 
@@ -197,7 +197,7 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
                 Get Started
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -218,7 +218,7 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {featuredServices.map((service, index)              => (
               <motion.div
                 key={service.name}
@@ -320,7 +320,7 @@ export default function InnovativeServicesLanding2025(...args: any[]): any {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {serviceCategories.map((category, index)              => (
               <motion.div
                 key={category.name}
