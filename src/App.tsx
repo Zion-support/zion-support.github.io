@@ -21,6 +21,10 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
+import { ServiceWorkerRegistration } from './components/ServiceWorkerRegistration';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { SEOOptimizer } from './components/SEOOptimizer';
+import { ThemeToggle } from './components/ThemeToggle';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
@@ -170,6 +174,19 @@ function App() {
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col">
             {/* Header */}
             <Header />
+            
+            {/* SEO Optimization */}
+            <SEOOptimizer
+              data={{
+                title: "Zion Tech Group - AI-Powered Business Solutions",
+                description: "Leading provider of AI-powered business solutions, quantum computing, cybersecurity, and digital transformation services. Transform your business with cutting-edge technology.",
+                keywords: ["AI", "artificial intelligence", "quantum computing", "cybersecurity", "digital transformation", "business solutions", "technology consulting"],
+                type: "website",
+                author: "Zion Tech Group",
+                url: window.location.href
+              }}
+              enableAnalytics={true}
+            />
             
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
@@ -388,6 +405,17 @@ function App() {
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
+
+            {/* Service Worker Registration */}
+            <ServiceWorkerRegistration />
+
+            {/* Performance Monitor */}
+            <PerformanceMonitor enabled={true} showMetrics={true} />
+
+            {/* Theme Toggle */}
+            <div className="fixed top-4 left-4 z-50">
+              <ThemeToggle size="md" />
+            </div>
           </div>
         </Router>
       </ErrorBoundary>

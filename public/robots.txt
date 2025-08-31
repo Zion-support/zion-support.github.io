@@ -4,35 +4,117 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
-Disallow: /internal/
 Disallow: /api/
 Disallow: /_next/
+Disallow: /static/
+Disallow: /temp/
+Disallow: /logs/
 Disallow: /node_modules/
 Disallow: /.git/
-Disallow: /scripts/
-Disallow: /temp_working/
-Disallow: /error-reports/
-Disallow: /security-reports/
-Disallow: /test-reports/
-Disallow: /link-reports/
-Disallow: /reports/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /tsconfig.json
+Disallow: /vite.config.ts
+Disallow: /tailwind.config.js
+Disallow: /eslint.config.js
 
 # Allow important pages
+Allow: /
 Allow: /about
 Allow: /services
-Allow: /contact
 Allow: /ai-services
-Allow: /ai-solutions
-Allow: /it-services
-Allow: /micro-saas
-Allow: /enterprise
-Allow: /industry-solutions
-Allow: /digital-transformation
-Allow: /cloud-solutions
-Allow: /emerging-tech
+Allow: /solutions
+Allow: /contact
+Allow: /blog
+Allow: /news
+Allow: /careers
+Allow: /partners
+Allow: /case-studies
+Allow: /white-papers
+Allow: /webinars
+Allow: /training
+Allow: /research-development
+Allow: /help
+Allow: /pricing
+Allow: /marketplace
+Allow: /request-quote
+Allow: /signup
 
-# Crawl delay (optional)
-Crawl-delay: 1
+# Allow service pages
+Allow: /services/
+Allow: /solutions/
+
+# Allow legal pages
+Allow: /privacy
+Allow: /terms
+Allow: /cookies
+Allow: /accessibility
+Allow: /security
+Allow: /compliance
+
+# Allow assets
+Allow: /images/
+Allow: /icons/
+Allow: /favicon.ico
+Allow: /manifest.json
+Allow: /sw.js
+
+# Block common bot patterns
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+User-agent: BLEXBot
+Crawl-delay: 10
+
+# Block malicious bots
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /readme.html
+Disallow: /license.txt
+Disallow: /wp-config.php
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-includes/
+
+# Block common attack patterns
+Disallow: /*.php$
+Disallow: /*.asp$
+Disallow: /*.aspx$
+Disallow: /*.jsp$
+Disallow: /*.cgi$
+Disallow: /*.pl$
+Disallow: /*.py$
+Disallow: /*.sh$
+Disallow: /*.exe$
+Disallow: /*.dll$
+Disallow: /*.bat$
+Disallow: /*.cmd$
+
+# Allow search engines to access important files
+Allow: /sitemap.xml
+Allow: /robots.txt
+Allow: /manifest.json
+Allow: /sw.js
+Allow: /offline.html
+
+# Host
+Host: https://ziontechgroup.com

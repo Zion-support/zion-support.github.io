@@ -1,7 +1,7 @@
 {
-  "name": "Zion Tech Group - Innovation Group",
+  "name": "Zion Tech Group - AI-Powered Business Solutions",
   "short_name": "Zion Tech",
-  "description": "Leading technology innovation group specializing in AI, Quantum Computing, Cybersecurity, and Digital Transformation solutions.",
+  "description": "Leading provider of AI-powered business solutions, quantum computing, and digital transformation services",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
@@ -62,10 +62,10 @@
   ],
   "shortcuts": [
     {
-      "name": "Services",
-      "short_name": "Services",
-      "description": "View our comprehensive service offerings",
-      "url": "/services",
+      "name": "AI Services",
+      "short_name": "AI Services",
+      "description": "Explore our AI-powered solutions",
+      "url": "/ai-services",
       "icons": [
         {
           "src": "/icon-96x96.png",
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "name": "Contact",
+      "name": "Contact Us",
       "short_name": "Contact",
       "description": "Get in touch with our team",
       "url": "/contact",
@@ -86,10 +86,10 @@
       ]
     },
     {
-      "name": "AI Solutions",
-      "short_name": "AI Solutions",
-      "description": "Explore our AI and machine learning solutions",
-      "url": "/ai-solutions",
+      "name": "Request Quote",
+      "short_name": "Quote",
+      "description": "Get a custom quote for your project",
+      "url": "/request-quote",
       "icons": [
         {
           "src": "/icon-96x96.png",
@@ -125,42 +125,7 @@
   "protocol_handlers": [
     {
       "protocol": "web+zion",
-      "url": "/?protocol=%s"
+      "url": "/%s"
     }
-  ],
-  "file_handlers": [
-    {
-      "action": "/",
-      "accept": {
-        "text/*": [".txt", ".md", ".html"],
-        "application/pdf": [".pdf"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".svg"]
-      }
-    }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url"
-    }
-  },
-  "permissions": [
-    "notifications",
-    "background-sync",
-    "periodic-background-sync"
-  ],
-  "features": [
-    "Cross Platform",
-    "fast",
-    "simple",
-    "secure"
-  ],
-  "developer": {
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com"
-  }
+  ]
 }
