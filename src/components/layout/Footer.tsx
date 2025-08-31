@@ -88,7 +88,7 @@ export function Footer() {
         { name: "Government", href: "/solutions/government" },
         { name: "Retail", href: "/solutions/retail" },
         { name: "Enterprise", href: "/enterprise" },
-        { name: "Digital Transformation", href: "/digital-transformation" },
+        { name: "Digital Transformation", href: "/services/digital-transformation" },
         { name: "Cloud Solutions", href: "/cloud-solutions" },
         { name: "Emerging Tech", href: "/emerging-tech" }
       ]
@@ -155,10 +155,6 @@ export function Footer() {
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Phone className="w-4 h-4" />
                 <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-4 text-zinc-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />
