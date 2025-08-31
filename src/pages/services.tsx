@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=======
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Brain, 
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -35,8 +34,10 @@ import { Brain,
   MessageSquare,
   FileText,
   Search,
-  Clock
-             } from 'lucide-react.ts';
+  Clock,
+  Leaf,
+  Atom
+} from 'lucide-react';
 
 type Service = {
   title: string;
@@ -124,7 +125,6 @@ const microSaaS: Service[] = [
   },
 ];
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const Services: React.FC = (): JSX.Element => {
   const [activeCategory, setActiveCategory] = useState('all');
 
@@ -421,11 +421,87 @@ const Services: React.FC = (): JSX.Element => {
       ctaLink: "/services/ai-financial-risk-management",
       icon: Shield,
       color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "AI Data Governance Platform",
+      description: "Transform your data governance with AI-powered compliance monitoring and intelligent risk management.",
+      features: [
+        "AI-Powered Compliance",
+        "Intelligent Classification",
+        "Dynamic Access Control",
+        "Privacy Impact Assessment"
+      ],
+      pricing: "$299 - $1,999/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-data-governance-platform",
+      icon: Shield,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "AI ESG Compliance Platform",
+      description: "AI-powered ESG compliance with automated monitoring, reporting, and sustainability management.",
+      features: [
+        "Environmental Impact Tracking",
+        "Social Responsibility Monitoring",
+        "Governance & Ethics Management",
+        "Automated ESG Reporting"
+      ],
+      pricing: "$399 - $2,499/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-esg-compliance-platform",
+      icon: Leaf,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "AI Supply Chain Risk Management",
+      description: "AI-powered supply chain risk detection with predictive analytics and proactive monitoring.",
+      features: [
+        "AI-Powered Risk Detection",
+        "End-to-End Visibility",
+        "Proactive Risk Alerts",
+        "Predictive Analytics"
+      ],
+      pricing: "$499 - $3,499/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-supply-chain-risk-management",
+      icon: Network,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "AI Digital Twin Platform",
+      description: "Create intelligent digital twins with AI-powered monitoring and predictive analytics.",
+      features: [
+        "AI-Powered Digital Twin Creation",
+        "Real-Time Synchronization",
+        "Predictive Maintenance",
+        "Advanced Simulation"
+      ],
+      pricing: "$599 - $4,999/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-digital-twin-platform",
+      icon: Cpu,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "AI Edge Computing Platform",
+      description: "Deploy AI at the edge with real-time processing and intelligent optimization.",
+      features: [
+        "AI-Powered Edge Computing",
+        "Distributed Edge Intelligence",
+        "Real-Time Edge Analytics",
+        "Edge AI Model Management"
+      ],
+      pricing: "$699 - $5,999/month",
+      cta: "Learn More",
+      ctaLink: "/services/ai-edge-computing-platform",
+      icon: Cpu,
+      color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const filteredServices = activeCategory === 'all' 
-    ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory);
+    ? coreServices 
+    : coreServices.filter(service => service.category === activeCategory);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
@@ -439,46 +515,144 @@ const Services: React.FC = (): JSX.Element => {
           </p>
         </header>
 
+        {/* Category Filter */}
+        <div className="mt-12 flex flex-wrap justify-center gap-3">
+          {serviceCategories.map((category) => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all ${
+                activeCategory === category.id
+                  ? 'bg-cyan-500 text-white shadow-lg'
+                  : 'bg-white/5 text-slate-300 hover:bg-white/10 border border-white/10'
+              }`}
+            >
+              <category.icon className="w-4 h-4" />
+              {category.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Core Services */}
         <section className="mt-14">
           <h2 className="text-2xl font-semibold text-cyan-300 mb-6">Enterprise Services</h2>
-          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredServices.map((s)              => (
-              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors">
-                <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="text-slate-300 mb-4">{s.description}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredServices.map((service) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-cyan-400/40 transition-colors"
+              >
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-slate-300 mb-4">{service.description}</p>
+                <div className="space-y-3 mb-4">
+                  {service.features?.slice(0, 3).map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-cyan-300 font-semibold">{s.priceRange}</span>
-                  {s.learnMoreUrl && (
-                    <a className="text-sm text-cyan-400 hover:text-cyan-300 underline" href={s.learnMoreUrl} target="_blank" rel="noreferrer">
-                      Reference
+                  <span className="text-cyan-300 font-semibold">{service.pricing}</span>
+                  {service.href && (
+                    <a 
+                      href={service.href} 
+                      className="text-sm text-cyan-400 hover:text-cyan-300 underline"
+                    >
+                      Learn More
                     </a>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
+        {/* Micro SaaS Services */}
         <section className="mt-16">
           <h2 className="text-2xl font-semibold text-purple-300 mb-6">Micro SaaS Products</h2>
-          <div className="grid sm: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
-            {microSaaS.map((s)              => (
-              <div key={s.title} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors">
-                <h3 className="text-xl font-bold mb-2">{s.title}</h3>
-                <p className="text-slate-300 mb-4">{s.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-purple-300 font-semibold">{s.priceRange}</span>
-                  {s.learnMoreUrl && (
-                    <a className="text-sm text-purple-300 hover:text-purple-200 underline" href={s.learnMoreUrl} target="_blank" rel="noreferrer">
-                      Learn more
-                    </a>
-                  )}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {microSaasServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-purple-400/40 transition-colors"
+              >
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+                  <service.icon className="w-6 h-6 text-white" />
                 </div>
-              </div>
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-slate-300 mb-4">{service.description}</p>
+                <div className="space-y-2 mb-4">
+                  {service.features?.slice(0, 3).map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-purple-400" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-purple-300 font-semibold">{service.pricing}</span>
+                  <a 
+                    href={service.ctaLink} 
+                    className="text-sm text-purple-300 hover:text-purple-200 underline"
+                  >
+                    {service.cta}
+                  </a>
+                </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
+        {/* Innovative AI Services */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-semibold text-green-300 mb-6">2025 New Innovative Services</h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {innovativeAIServices.map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-green-400/40 transition-colors"
+              >
+                <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4`}>
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{service.title}</h3>
+                <p className="text-slate-300 mb-4">{service.description}</p>
+                <div className="space-y-2 mb-4">
+                  {service.features?.slice(0, 3).map((feature, idx) => (
+                    <div key={idx} className="flex items-center gap-2 text-sm text-slate-300">
+                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      {feature}
+                    </div>
+                  ))}
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-green-300 font-semibold">{service.pricing}</span>
+                  <a 
+                    href={service.ctaLink} 
+                    className="text-sm text-green-400 hover:text-green-300 underline"
+                  >
+                    {service.cta}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Section */}
         <section className="mt-16 text-center">
           <div className="inline-flex flex-col items-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-6">
             <p className="text-slate-300">Have a project in mind? Get a tailored proposal.</p>
@@ -492,5 +666,7 @@ const Services: React.FC = (): JSX.Element => {
       </div>
     </div>
   );
-}
+};
+
+export default Services;
 

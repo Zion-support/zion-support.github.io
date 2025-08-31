@@ -91,6 +91,13 @@ const AISupplyChainOptimization = createLazyComponent(() => import('./pages/serv
 const AIWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-workflow-automation'));
 const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/ai-workflow-orchestrator'));
 
+// New AI Services
+const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/ai-data-governance-platform'));
+const AIESGCompliancePlatform = createLazyComponent(() => import('./pages/services/ai-esg-compliance-platform'));
+const AISupplyChainRiskManagement = createLazyComponent(() => import('./pages/services/ai-supply-chain-risk-management'));
+const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/ai-digital-twin-platform'));
+const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/ai-edge-computing-platform'));
+
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
