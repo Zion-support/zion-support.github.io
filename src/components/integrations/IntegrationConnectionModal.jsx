@@ -43,69 +43,39 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             </DialogDescription>
           </div>
         </DialogHeader>
-
         {(integration.status === "connected" || integration.status === "warning") ? (<>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox id="autoCreateContacts" checked={syncSettings.autoCreateContacts} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   autoCreateContacts: checked 
-
-
-
-
-
-
 })}/>
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox id="pushNotes" checked={syncSettings.pushNotes} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   pushNotes: checked 
-
-
-
-
-
-
 })}/>
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox id="syncJobDetails" checked={syncSettings.syncJobDetails} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   syncJobDetails: checked 
-
-
-
-
-
-
 })}/>
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
-
                 <div className="flex items-center space-x-2">
                   <Checkbox id="syncApplicantData" checked={syncSettings.syncApplicantData} onCheckedChange = {
   (checked) => setSyncSettings({ ...syncSettings,
   syncApplicantData: checked 
-
-
-
-
-
-
 })}/>
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
-
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -115,7 +85,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 </p>
               </div>
             </div>
-
             <DialogFooter className="flex items-center justify-between">
               <Button variant="outline" onClick={handleDisconnect} type="button">
                 Disconnect
@@ -130,7 +99,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 Connect your {integration.name} account to sync job contacts, applicants, and more.
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
-
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -141,7 +109,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
                 </ul>
               </div>
             </div>
-
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
@@ -149,9 +116,4 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }) {
             </DialogFooter>
           </>)}
       </DialogContent>
-<<<<<<< HEAD
-    </Dialog>);
-}
-=======
     </Dialog>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -57,7 +57,13 @@ export function Header({ className }: HeaderProps) {
         { name: 'AI DevOps & Infrastructure', href: '/services#devops' },
         { name: 'AI IoT & Edge Computing', href: '/services#iot-edge' },
         { name: 'Space Technology', href: '/services#space-tech' },
-        { name: 'Micro SAAS Solutions', href: '/services#micro-saas' }
+        { name: 'Micro SAAS Solutions', href: '/services#micro-saas' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
+        { name: 'Data & Analytics', href: '/services/ai-business-intelligence' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Emerging Technologies', href: '/emerging-tech' }
       ]
     },
     {
@@ -66,16 +72,36 @@ export function Header({ className }: HeaderProps) {
       dropdown: true,
       items: [
         { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail & E-commerce', href: '/solutions/retail' },
-        { name: 'Transportation & Logistics', href: '/solutions/transportation' },
-        { name: 'Education', href: '/solutions/education' }
+        { name: 'Financial Services', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Enterprise', href: '/enterprise' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' }
       ]
     },
-    { name: 'About', href: '/about' },
-    { name: 'Resources', href: '/resources' },
-    { name: 'Contact', href: '/contact' }
+    {
+      title: 'Company',
+      items: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News', href: '/news' },
+        { name: 'Contact', href: '/contact' }
+      ]
+    },
+    {
+      title: 'Resources',
+      items: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' },
+        { name: 'Research & Development', href: '/research-development' }
+      ]
+    }
   ];
 
   return (

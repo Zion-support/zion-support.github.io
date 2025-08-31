@@ -1,17 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Button } from './ui/button';
-import { Badge } from './ui/badge';
-import { Input } from './ui/input';
-=======
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Input } from "./ui/input";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const AdvancedServicePortfolioDashboard = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [selectedStatus, setSelectedStatus] = useState('all');
@@ -109,7 +102,6 @@ const AdvancedServicePortfolioDashboard = () => {
             complexity: 'Enterprise',
             marketDemand: 'Exploding',
             technologyMaturity: 'Leading'
-
     ];
     const filteredPortfolio = useMemo(() => {
         return portfolioData.filter(service => {
@@ -138,12 +130,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Development': return 'bg-blue-100 text-blue-800';
             case 'Planning': return 'bg-yellow-100 text-yellow-800';
             case 'Discontinued': return 'bg-red-100 text-red-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getComplexityColor = (complexity) => {
         switch (complexity) {
@@ -151,12 +138,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Intermediate': return 'bg-blue-100 text-blue-800';
             case 'Advanced': return 'bg-orange-100 text-orange-800';
             case 'Enterprise': return 'bg-purple-100 text-purple-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getMarketDemandColor = (demand) => {
         switch (demand) {
@@ -164,12 +146,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Medium': return 'bg-blue-100 text-blue-800';
             case 'High': return 'bg-orange-100 text-orange-800';
             case 'Exploding': return 'bg-red-100 text-red-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getTechnologyMaturityColor = (maturity) => {
         switch (maturity) {
@@ -177,12 +154,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Growing': return 'bg-green-100 text-green-800';
             case 'Mature': return 'bg-orange-100 text-orange-800';
             case 'Leading': return 'bg-purple-100 text-purple-800';
-<<<<<<< HEAD
-            default: return 'bg-gray-100 text-gray-800';
-
-=======
             default: return 'bg-gray-100 text-gray-800'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const categories = [
         { id: 'all', name: 'All Categories', count: portfolioData.length },
@@ -197,21 +169,9 @@ const AdvancedServicePortfolioDashboard = () => {
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} className="mb-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
@@ -222,7 +182,6 @@ const AdvancedServicePortfolioDashboard = () => {
               Comprehensive insights into our cutting-edge service portfolio, performance metrics, and strategic analysis
             </p>
           </div>
-
           <div className="flex gap-2">
             {['overview', 'detailed', 'analytics'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>
                 {mode === 'overview' && <Eye className="w-4 h-4 mr-2"/>}
@@ -233,26 +192,13 @@ const AdvancedServicePortfolioDashboard = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Metrics */}
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
@@ -277,7 +223,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </p>
           </CardContent>
         </Card>
-
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -301,7 +246,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </p>
           </CardContent>
         </Card>
-
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -325,7 +269,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </p>
           </CardContent>
         </Card>
-
         <Card className="hover:shadow-lg transition-shadow">
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
@@ -350,26 +293,13 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Filters and Controls */}
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
           <div>
@@ -380,7 +310,6 @@ const AdvancedServicePortfolioDashboard = () => {
                 </option>))}
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Status</label>
             <select value={selectedStatus} onChange={(e) => setSelectedStatus(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -391,7 +320,6 @@ const AdvancedServicePortfolioDashboard = () => {
               <option value="Discontinued">Discontinued</option>
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Complexity</label>
             <select value={selectedComplexity} onChange={(e) => setSelectedComplexity(e.target.value)} className="w-full p-2 border border-zion-slate-light rounded-md">
@@ -402,12 +330,10 @@ const AdvancedServicePortfolioDashboard = () => {
               <option value="Enterprise">Enterprise</option>
             </select>
           </div>
-
           <div>
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Search</label>
             <Input placeholder="Search services..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full"/>
           </div>
-
           <div className="flex items-end">
             <Button variant="outline" className="w-full" onClick={() => {
             setSelectedCategory('all');
@@ -420,26 +346,13 @@ const AdvancedServicePortfolioDashboard = () => {
           </div>
         </div>
       </motion.div>
-
       {/* Portfolio Table */}
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.3 }} className="mb-8">
         <Card>
           <CardHeader>
@@ -473,21 +386,9 @@ const AdvancedServicePortfolioDashboard = () => {
                   {filteredPortfolio.map((service, index) => (<motion.tr key={service.id} initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">
                       <td className="py-3 px-4">
                         <div className="font-medium text-zion-blue-dark">{service.title}</div>
@@ -537,26 +438,13 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* Portfolio Insights */}
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
         <Card>
@@ -571,21 +459,9 @@ const AdvancedServicePortfolioDashboard = () => {
               {categories.filter(cat => cat.id !== 'all').map((category, index) => (<motion.div key={category.id} initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className={`w-4 h-4 rounded-full ${index === 0 ? 'bg-blue-500' :
@@ -609,7 +485,6 @@ const AdvancedServicePortfolioDashboard = () => {
             </div>
           </CardContent>
         </Card>
-
         {/* Portfolio Insights */}
         <Card>
           <CardHeader>
@@ -629,7 +504,6 @@ const AdvancedServicePortfolioDashboard = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg">
                 <Star className="w-5 h-5 text-zion-blue mt-1"/>
                 <div>
@@ -639,7 +513,6 @@ const AdvancedServicePortfolioDashboard = () => {
                   </p>
                 </div>
               </div>
-
               <div className="flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg">
                 <Award className="w-5 h-5 text-zion-purple mt-1"/>
                 <div>
@@ -653,26 +526,13 @@ const AdvancedServicePortfolioDashboard = () => {
           </CardContent>
         </Card>
       </motion.div>
-
       {/* CTA Section */}
       <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ delay: 0.5 }} className="text-center">
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">
           <h3 className="text-3xl font-bold mb-4">Ready to Expand Your Portfolio?</h3>
@@ -684,12 +544,6 @@ const AdvancedServicePortfolioDashboard = () => {
             <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick = {
   () => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation',
   '_blank')
-
-
-
-
-
-
 }>
               <Users className="w-5 h-5 mr-2"/>
               Get Portfolio Consultation
@@ -697,12 +551,6 @@ const AdvancedServicePortfolioDashboard = () => {
             <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick = {
   () => window.open('tel:+13024640950',
   '_blank')
-
-
-
-
-
-
 }>
               <Zap className="w-5 h-5 mr-2"/>
               Call Now
@@ -710,11 +558,6 @@ const AdvancedServicePortfolioDashboard = () => {
           </div>
         </div>
       </motion.div>
-<<<<<<< HEAD
-    </div>);
-</Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default AdvancedServicePortfolioDashboard;
 }}}}}}

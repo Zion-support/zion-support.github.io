@@ -32,9 +32,7 @@ import { Star, Quote export const AppTestimonials = () => {
       rating: 5,
       content: "Managing multiple AI projects used to be a nightmare. With Zion's mobile app, I can track progress, assign tasks, and communicate with teams effortlessly.",
       avatar: "/images/testimonials/david-kim.jpg"
-
   ];
-
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
@@ -44,7 +42,6 @@ import { Star, Quote export const AppTestimonials = () => {
         }`}
       />
     ))};
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 to-slate-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,13 +53,11 @@ import { Star, Quote export const AppTestimonials = () => {
             Join thousands of professionals who have transformed their AI workflows with the Zion mobile app.
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
                   <span className="text-white font-semibold text-lg">
@@ -77,7 +72,6 @@ import { Star, Quote export const AppTestimonials = () => {
                   {renderStars(testimonial.rating)}
                 </div>
               </div>
-
               <div className="relative">
                 <Quote className="absolute -top-2 -left-2 h-6 w-6 text-blue-400/30" />
                 <p className="text-gray-300 leading-relaxed pl-6">
@@ -87,7 +81,6 @@ import { Star, Quote export const AppTestimonials = () => {
             </div>
           ))}
         </div>
-
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-lg rounded-xl p-8 border border-blue-500/30 max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -103,10 +96,4 @@ import { Star, Quote export const AppTestimonials = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};
-}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

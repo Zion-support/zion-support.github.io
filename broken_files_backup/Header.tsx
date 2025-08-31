@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, X, ChevronDown const Header: React.FC = () => {
-=======
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Header: React.FC = () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -85,13 +81,8 @@ const Header: React.FC = () => {;
                     setIsCompanyDropdownOpen(false);
                     setIsResourcesDropdownOpen(false);
                   }}
-<<<<<<< HEAD
-
-                  {item.icon && <item.icon className="h-5 w-5" />}
-=======
                 >
                   {item.icon && <item.icon className = "h-5 w-5" />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                   <div>
                     <div className="font-medium">{item.name}</div>
                   </div>

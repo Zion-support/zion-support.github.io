@@ -34,7 +34,7 @@ const Pricing = () => {
         "5 Team Members"
       ],
       popular: false,
-      cta: "Start Free Trial",
+      cta: "Get Started",
       link: "/contact",
       savings: null
     },
@@ -59,7 +59,7 @@ const Pricing = () => {
         "Custom Branding"
       ],
       popular: true,
-      cta: "Start Free Trial",
+      cta: "Get Started",
       link: "/contact",
       savings: "Save 20% annually"
     },
@@ -409,24 +409,24 @@ const Pricing = () => {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free trial today and experience the power of AI-driven solutions
+              Contact us today to discuss your needs and get a custom quote for your business
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link
-                to="/contact"
+              <a
+                href="tel:+1 302 464 0950"
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 font-semibold text-lg"
               >
-                Start Free Trial
-              </Link>
-              <Link
-                to="/contact"
+                Call Now: +1 302 464 0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 font-semibold text-lg"
               >
-                Contact Sales
-              </Link>
+                Email Sales
+              </a>
             </div>
             <p className="text-gray-400 text-sm mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
+              Get personalized pricing • Custom solutions • Expert consultation
             </p>
           </motion.div>
         </div>

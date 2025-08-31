@@ -38,12 +38,9 @@ export interface RevolutionaryITInfrastructureService2029 {
   customers: number;
   rating: number;
   reviews: number;
-<<<<<<< HEAD
-=======
   isPopular?: boolean;
   isNew?: boolean;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] = [
   // Zero Trust Network Access
@@ -365,13 +362,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     launchDate: '2025-01-18',
     customers: 31,
     rating: 4.7,
-<<<<<<< HEAD
-    reviews: 220
-
-];
-
-export default revolutionaryITInfrastructureCybersecurityServices2029;}}
-=======
     reviews: 19
   },
 
@@ -608,4 +598,3 @@ export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPri
     return price >= minPrice && price <= maxPrice;
   });
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

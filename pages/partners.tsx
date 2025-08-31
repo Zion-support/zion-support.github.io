@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion'
-import {
-  Handshake,
-  Shield,
-  Cloud,
-  Brain,
-  Users,
-=======
 import Head from 'next/head.ts'
 import { motion  } from 'framer-motion.ts'
 import { Handshake, 
@@ -15,7 +5,6 @@ import { Handshake,
   Cloud, 
   Brain, 
   Users, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Globe,
   Award,
   Zap,
@@ -23,136 +12,12 @@ import { Handshake,
   Database,
   Lock,
   Rocket
-<<<<<<< HEAD
-export default function Partners() {
-  const title = 'Partners — Zion Tech Group'
-  const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
-
-  const partnerCategories = [
-    {
-      icon: Cloud,
-      title: 'Cloud & Infrastructure',
-      description: 'Strategic partnerships with leading cloud providers and infrastructure companies.',
-      partners: [
-        { name: 'AWS', description: 'Amazon Web Services', logo: '☁️', tier: 'Platinum' },
-        { name: 'Microsoft Azure', description: 'Cloud computing platform', logo: '🔷', tier: 'Platinum' },
-        { name: 'Google Cloud', description: 'Cloud infrastructure services', logo: '🔵', tier: 'Gold' },
-        { name: 'DigitalOcean', description: 'Cloud infrastructure provider', logo: '🌊', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      description: 'Partnerships with cutting-edge AI research and development organizations.',
-      partners: [
-        { name: 'OpenAI', description: 'Advanced AI research', logo: '🤖', tier: 'Gold' },
-        { name: 'Anthropic', description: 'AI safety and research', logo: '🧠', tier: 'Gold' },
-        { name: 'Hugging Face', description: 'Machine learning platform', logo: '🤗', tier: 'Silver' },
-        { name: 'Databricks', description: 'Data and AI platform', logo: '📊', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Collaborations with security experts and compliance organizations.',
-      partners: [
-        { name: 'CrowdStrike', description: 'Cybersecurity solutions', logo: '🦅', tier: 'Gold' },
-        { name: 'Palo Alto Networks', description: 'Network security', logo: '🌲', tier: 'Gold' },
-        { name: 'Rapid7', description: 'Security analytics', logo: '⚡', tier: 'Silver' },
-        { name: 'Qualys', description: 'Cloud security platform', logo: '🛡️', tier: 'Silver' }
-      ]
-    },
-    {
-      icon: Database,
-      title: 'Data & Analytics',
-      description: 'Partnerships with data management and analytics solution providers.',
-      partners: [
-        { name: 'Snowflake', description: 'Data cloud platform', logo: '❄️', tier: 'Gold' },
-        { name: 'Tableau', description: 'Data visualization', logo: '📈', tier: 'Silver' },
-        { name: 'MongoDB', description: 'Database platform', logo: '🍃', tier: 'Silver' },
-        { name: 'Elastic', description: 'Search and analytics', logo: '🔍', tier: 'Silver' }
-      ]
-
-  ]
-
-  const benefits = [
-    {
-      icon: Zap,
-      title: 'Enhanced Capabilities',
-      description: 'Access to cutting-edge technologies and expertise through our partner network.'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      description: 'Enterprise-grade security solutions backed by industry-leading partners.'
-    },
-    {
-      icon: Rocket,
-      title: 'Faster Implementation',
-      description: 'Accelerated delivery through proven partner integrations and best practices.'
-    },
-    {
-      icon: Award,
-      title: 'Quality Assurance',
-      description: 'Solutions validated by our trusted partner ecosystem.'
-
-  ]
-
-=======
  } from 'lucide-react'
 
 export default function Partners(...args[]):  {
   const title = 'Partners — Zion Tech Group'
   const description = 'Strategic partnerships with leading technology providers, cloud platforms, and cybersecurity experts to deliver comprehensive solutions.'
   
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const partnershipLevels = [
-    {
-      name: 'Platinum',
-      description: 'Strategic partnerships with deep integration and joint go-to-market initiatives.',
-      benefits['Priority support', 'Joint marketing', 'Custom integrations', 'Executive alignment'],
-      color: 'from-purple-600 to-pink-600'
-    },
-    {
-      name: 'Gold',
-      description: 'Preferred partnerships with significant collaboration and mutual benefits.',
-      benefits['Enhanced support', 'Co-marketing opportunities', 'Technical collaboration', 'Training access'],
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      name: 'Silver',
-      description: 'Standard partnerships with basic collaboration and referral programs.',
-      benefits['Standard support', 'Referral programs', 'Documentation access', 'Community access'],
-      color: 'from-gray-400 to-gray-600'
-
-  ]
-
-  return (
-    <>
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <link rel="canonical" href="https://ziontechgroup.com/partners/" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/partners/" />
-      </Helmet>
-
-      <main className="min-h-screen bg-white text-gray-900">
-        {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white py-20">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 w-32 h-32 border border-zion-cyan rounded-full"></div>
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-          </div>
-          <div className="relative max-w-7xl mx-auto px-6 text-center">
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-=======
             <motion.div 
               initial = {
   { opacity: 0,
@@ -174,18 +39,11 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               className="mb-6"
 
               <Handshake className="w-20 h-20 mx-auto text-zion-cyan mb-4" />
             </motion.div>
-<<<<<<< HEAD
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-=======
             <motion.h1 
               initial = {
   { opacity: 0,
@@ -217,7 +75,6 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="text-4xl md:text-6xl font-bold mb-6"
 
               Strategic
@@ -225,12 +82,6 @@ export default function Partners(...args[]):  {
                 Partnerships
               </span>
             </motion.h1>
-<<<<<<< HEAD
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-=======
             <motion.p 
               initial = {
   { opacity: 0,
@@ -262,7 +113,6 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8"
 
               We collaborate with industry leaders to deliver comprehensive, cutting-edge
@@ -273,11 +123,6 @@ export default function Partners(...args[]):  {
         {/* Partnership Benefits */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
             <motion.div 
               initial = {
   { opacity: 0,
@@ -299,7 +144,6 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -310,15 +154,9 @@ export default function Partners(...args[]):  {
                 that combine the best technologies and expertise in the industry.
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={benefit.title}
                   initial = {
@@ -367,11 +205,6 @@ export default function Partners(...args[]):  {
         {/* Partner Categories */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-6">
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
             <motion.div 
               initial = {
   { opacity: 0,
@@ -393,7 +226,6 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -451,15 +283,9 @@ export default function Partners(...args[]):  {
                       <p className="text-gray-600">{category.description}</p>
                     </div>
                   </div>
-<<<<<<< HEAD
-
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {category.partners.map((partner, partnerIndex) => (
-=======
                   
                   <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-6">
                     {category.partners.map((partner, partnerIndex)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                       <motion.div
                         key={partner.name}
                         initial = {
@@ -517,11 +343,6 @@ export default function Partners(...args[]):  {
         {/* Partnership Levels */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-6">
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
             <motion.div 
               initial = {
   { opacity: 0,
@@ -543,7 +364,6 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-center mb-16"
@@ -554,15 +374,9 @@ export default function Partners(...args[]):  {
                 collaboration needs and business objectives.
               </p>
             </motion.div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {partnershipLevels.map((level, index) => (
-=======
             
             <div className="grid md: grid-cols-3 gap-8">
               {partnershipLevels.map((level, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={level.name}
                   initial = {
@@ -623,11 +437,6 @@ export default function Partners(...args[]):  {
         {/* Become a Partner */}
         <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple-dark text-white">
           <div className="max-w-4xl mx-auto px-6 text-center">
-<<<<<<< HEAD
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-=======
             <motion.h2 
               initial = {
   { opacity: 0,
@@ -649,19 +458,12 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className="text-3xl md:text-4xl font-bold mb-6"
 
               Become a Partner
             </motion.h2>
-<<<<<<< HEAD
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-=======
             <motion.p 
               initial = {
   { opacity: 0,
@@ -693,19 +495,12 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               viewport={{ once: true }}
               className="text-xl text-zion-slate-light mb-8"
 
               Join our ecosystem of technology leaders and help us deliver
               innovative solutions to businesses worldwide.
             </motion.p>
-<<<<<<< HEAD
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-=======
             <motion.div 
               initial = {
   { opacity: 0,
@@ -737,7 +532,6 @@ export default function Partners(...args[]):  {
 
 
 }}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
 
@@ -753,15 +547,6 @@ export default function Partners(...args[]):  {
 
                 partnerships@ziontechgroup.com
               </a>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </main>
-    </>
-  )
-}}}}}
-=======
             </motion.div>;
           </div>;
         </section>;
@@ -769,4 +554,3 @@ export default function Partners(...args[]):  {
     </>;
   );
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

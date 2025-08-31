@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const About: React.FC = () => {
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -18,7 +15,6 @@ import {
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
-
 export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
@@ -26,7 +22,6 @@ export default function About() {
     { number: '25+', label: 'Countries Served', icon: Globe },
     { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
-
   const values = [
     {
       icon: Brain,
@@ -49,7 +44,6 @@ export default function About() {
       description: 'We build solutions that not only solve today\'s problems but prepare you for tomorrow\'s challenges.'
     }
   ];
-
   const team = [
     {
       name: 'Kleber Santos',
@@ -70,15 +64,12 @@ export default function About() {
       image: '/team/devops-team.jpg'
     }
   ];
-
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="About Us - Zion Tech Group"
         description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions."
       />
-      
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -99,7 +90,6 @@ export default function About() {
           </motion.div>
         </div>
       </section>
-
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -123,7 +113,6 @@ export default function About() {
                 and practical business applications.
               </p>
             </motion.div>
-
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -158,7 +147,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -171,7 +159,6 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
             <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
           </motion.div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -191,7 +178,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Values Section */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -204,7 +190,6 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
             <p className="text-xl text-gray-300">The principles that guide everything we do</p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -222,7 +207,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-6">
@@ -235,7 +219,6 @@ export default function About() {
             <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
             <p className="text-xl text-gray-300">The brilliant minds behind our innovative solutions</p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <motion.div
@@ -258,7 +241,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-6 text-center">
@@ -295,5 +277,4 @@ export default function About() {
     </div>
   );
 };
-
 export default About;

@@ -24,7 +24,6 @@ export type InnovativeService = {;
   enterprise?: boolean;
   startup?: boolean;
   smb?: boolean};
-
 export const innovativeServices2026: InnovativeService[] = [
   // MICRO SAAS SERVICES
   {
@@ -203,7 +202,6 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-
   // AI SOLUTIONS
   {
     id: 'autonomous-customer-service-agent',
@@ -337,7 +335,6 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-
   // IT SERVICES
   {
     id: 'cloud-migration-accelerator',
@@ -471,7 +468,6 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: false,
     smb: true
   },
-
   // EMERGING TECHNOLOGIES
   {
     id: 'quantum-computing-as-a-service',
@@ -604,9 +600,7 @@ export const innovativeServices2026: InnovativeService[] = [
     enterprise: true,
     startup: true,
     smb: true
-
 ];
-
 export const serviceCategories = [
   {
     name: 'Micro SaaS',
@@ -623,24 +617,12 @@ export const serviceCategories = [
     description: 'Comprehensive IT consulting and implementation services',
     services: innovativeServices2026.filter(s  => s.category === 'IT Services')
   },
-<<<<<<< HEAD
-  {
-    name: 'Emerging Technologies',
-    description: 'Cutting-edge technologies shaping the future',
-<<<<<<< HEAD
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-
-=======
     services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
   };
-=======;
   {;
     name: 'Emerging Technologies',;
     description: 'Cutting-edge technologies shaping the future',;
     services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default innovativeServices2026;}}

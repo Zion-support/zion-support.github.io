@@ -11,13 +11,7 @@ export interface EnterpriseIt2026ServiceV3 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const enterpriseIT2026ServicesV3: EnterpriseIt2026ServiceV3[] = [
   {
     id: "2026-enterprise-it-v3",
