@@ -392,6 +392,99 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {/* Products Showcase Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Ready-to-Deploy Solutions
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Explore our portfolio of micro SAAS applications, AI services, and enterprise solutions
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Rocket,
+                title: 'Micro SAAS Solutions',
+                description: 'Ready-to-deploy software solutions for immediate business value',
+                features: ['ZionTask Pro', 'ZionCRM Hub', 'ZionAnalytics'],
+                color: 'from-purple-500 to-pink-600',
+                href: '/products#micro-saas'
+              },
+              {
+                icon: Brain,
+                title: 'AI-Powered Services',
+                description: 'Intelligent automation and machine learning solutions',
+                features: ['ZionAI Assistant', 'ZionPredict', 'ZionVision'],
+                color: 'from-blue-500 to-cyan-600',
+                href: '/products#ai-services'
+              },
+              {
+                icon: Cloud,
+                title: 'Cloud Infrastructure',
+                description: 'Scalable cloud platforms and infrastructure services',
+                features: ['ZionCloud Platform', 'ZionKubernetes', 'ZionServerless'],
+                color: 'from-green-500 to-emerald-600',
+                href: '/products#cloud-solutions'
+              }
+            ].map((product, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <Link href={product.href}>
+                  <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border border-slate-700 p-8 hover:border-cyan-500/50 transition-all duration-300 transform hover:-translate-y-2">
+                    <div className={`w-20 h-20 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <product.icon className="w-10 h-10 text-white" />
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-white mb-4">{product.title}</h3>
+                    <p className="text-slate-300 mb-6 leading-relaxed">{product.description}</p>
+                    
+                    <div className="space-y-2 mb-6">
+                      {product.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-slate-400">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div className="flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">
+                      Explore Products
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link
+              href="/products"
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+            >
+              <Eye className="w-5 h-5 mr-2" />
+              View All Products
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">

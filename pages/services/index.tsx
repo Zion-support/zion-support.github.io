@@ -234,6 +234,96 @@ const Services: NextPage = () => {
           icon: Smartphone
         }
       ]
+    },
+    {
+      id: 'blockchain',
+      name: 'Blockchain & Web3',
+      icon: Coins,
+      color: 'from-yellow-500 to-orange-600',
+      description: 'Decentralized applications and blockchain infrastructure',
+      services: [
+        {
+          name: 'Smart Contract Development',
+          description: 'Ethereum and blockchain smart contract solutions',
+          price: '$15,000 - $50,000',
+          features: ['Contract design', 'Security auditing', 'Testing & deployment', 'Integration support'],
+          icon: Coins
+        },
+        {
+          name: 'DeFi Platform Development',
+          description: 'Decentralized finance applications and protocols',
+          price: '$30,000 - $100,000',
+          features: ['Protocol design', 'Security implementation', 'User interface', 'Audit & testing'],
+          icon: TrendingUp
+        },
+        {
+          name: 'NFT Marketplace',
+          description: 'Custom NFT creation and trading platforms',
+          price: '$20,000 - $60,000',
+          features: ['Marketplace design', 'Smart contracts', 'User authentication', 'Payment integration'],
+          icon: Palette
+        }
+      ]
+    },
+    {
+      id: 'mobile',
+      name: 'Mobile Development',
+      icon: Smartphone,
+      color: 'from-pink-500 to-rose-600',
+      description: 'Native and cross-platform mobile applications',
+      services: [
+        {
+          name: 'iOS App Development',
+          description: 'Native iOS applications with modern design',
+          price: '$25,000 - $80,000',
+          features: ['UI/UX design', 'Native development', 'App Store optimization', 'Maintenance support'],
+          icon: Smartphone
+        },
+        {
+          name: 'Android App Development',
+          description: 'Native Android applications for all devices',
+          price: '$20,000 - $70,000',
+          features: ['Material design', 'Device optimization', 'Google Play optimization', 'Performance tuning'],
+          icon: Smartphone
+        },
+        {
+          name: 'Cross-Platform Development',
+          description: 'React Native and Flutter applications',
+          price: '$15,000 - $60,000',
+          features: ['Single codebase', 'Native performance', 'Platform integration', 'Rapid development'],
+          icon: Smartphone
+        }
+      ]
+    },
+    {
+      id: 'consulting',
+      name: 'Technology Consulting',
+      icon: Lightbulb,
+      color: 'from-violet-500 to-purple-600',
+      description: 'Strategic technology advisory and planning',
+      services: [
+        {
+          name: 'Technology Strategy',
+          description: 'Long-term technology roadmap and planning',
+          price: '$5,000 - $25,000',
+          features: ['Technology assessment', 'Roadmap development', 'Vendor selection', 'Implementation planning'],
+          icon: Lightbulb
+        },
+        {
+          name: 'Digital Innovation',
+          description: 'Emerging technology evaluation and adoption',
+          price: '$8,000 - $30,000',
+          features: ['Technology research', 'Proof of concept', 'Pilot programs', 'Adoption strategies'],
+          icon: Sparkles
+        },
+        {
+          name: 'Performance Optimization',
+          description: 'System and application performance improvement',
+          price: '$10,000 - $40,000',
+          features: ['Performance analysis', 'Optimization strategies', 'Implementation support', 'Monitoring setup'],
+          icon: Zap
+        }
+      ]
     }
   ];
 

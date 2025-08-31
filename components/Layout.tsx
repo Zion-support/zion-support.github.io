@@ -39,6 +39,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
+    { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -46,9 +48,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     { name: 'AI & Machine Learning', href: '/services#ai-ml' },
     { name: 'Cloud Solutions', href: '/services#cloud' },
     { name: 'Cybersecurity', href: '/services#security' },
-    { name: 'Data Analytics', href: '/services#analytics' },
+    { name: 'Data Analytics', href: '/services#data' },
     { name: 'Digital Transformation', href: '/services#transformation' },
-    { name: 'Custom Development', href: '/services#development' }
+    { name: 'IoT Solutions', href: '/services#iot' },
+    { name: 'Blockchain & Web3', href: '/services#blockchain' },
+    { name: 'Mobile Development', href: '/services#mobile' },
+    { name: 'Technology Consulting', href: '/services#consulting' }
   ];
 
   const scrollToTop = () => {
@@ -190,7 +195,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       {/* Footer */}
       <footer className="bg-slate-800 border-t border-slate-700">
         <div className="container mx-auto px-4 py-16">
-          <div className="grid lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid lg:grid-cols-5 gap-8 mb-12">
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-2 mb-6">
@@ -245,7 +250,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div>
               <h3 className="text-white font-semibold mb-6">Services</h3>
               <ul className="space-y-3">
-                {serviceCategories.map((service) => (
+                {serviceCategories.slice(0, 6).map((service) => (
                   <li key={service.name}>
                     <Link
                       href={service.href}
@@ -257,6 +262,45 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 ))}
               </ul>
             </div>
+
+            {/* Products */}
+            <div>
+              <h3 className="text-white font-semibold mb-6">Products</h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/products#micro-saas"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    Micro SAAS Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products#ai-services"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    AI-Powered Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products#cloud-solutions"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    Cloud Infrastructure
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products#security-solutions"
+                    className="text-slate-300 hover:text-cyan-400 transition-colors duration-200"
+                  >
+                    Cybersecurity
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Contact Info */}
@@ -265,19 +309,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               {
                 icon: Phone,
                 title: 'Phone',
-                details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+                details: ['+1 302 464 0950'],
                 color: 'from-blue-500 to-cyan-600'
               },
               {
                 icon: Mail,
                 title: 'Email',
-                details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
+                details: ['kleber@ziontechgroup.com'],
                 color: 'from-purple-500 to-pink-600'
               },
               {
                 icon: MapPin,
                 title: 'Office',
-                details: ['123 Innovation Drive', 'Tech Valley, CA 94000'],
+                details: ['364 E Main St STE 1008', 'Middletown DE 19709'],
                 color: 'from-green-500 to-emerald-600'
               }
             ].map((contact, index) => (

@@ -21,19 +21,19 @@ const Contact: NextPage = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+      details: ['+1 302 464 0950'],
       color: 'from-blue-500 to-cyan-600'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@ziontechgroup.com', 'support@ziontechgroup.com'],
+      details: ['kleber@ziontechgroup.com'],
       color: 'from-purple-500 to-pink-600'
     },
     {
       icon: MapPin,
       title: 'Office',
-      details: ['123 Innovation Drive', 'Tech Valley, CA 94000'],
+      details: ['364 E Main St STE 1008', 'Middletown DE 19709'],
       color: 'from-green-500 to-emerald-600'
     },
     {
