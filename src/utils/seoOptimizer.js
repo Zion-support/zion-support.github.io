@@ -56,11 +56,8 @@ export class SEOOptimizer {
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
         }
-        const pathSegments = path.split('/').filter(Boolean);
         
-        if (path === '/') {
-            return `${this.siteName} - Revolutionary Micro SaaS & AI Solutions`;
-        }
+        const pathSegments = path.split('/').filter(Boolean);
         
         if (pathSegments.length === 0) {
             return this.siteName;

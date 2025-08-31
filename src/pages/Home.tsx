@@ -1,7 +1,10 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { EnhancedSEO, SEOConfigs } from '../components/EnhancedSEO';
+import { PageSEO } from '../components/SEOOptimizer';
+import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
+import { PerformanceDashboard } from '../components/PerformanceDashboard';
+import { EnhancedAnalytics } from '../components/EnhancedAnalytics';
 import {
   Users,
   TrendingUp,
@@ -277,32 +280,11 @@ const ServicesSection = () => {
       link: "/services/ai-customer-experience-analytics-platform"
     },
     {
-      title: "AI Customer Churn Predictor",
-      description: "Stop losing customers before they leave with AI that predicts churn with 95% accuracy and automatically triggers retention campaigns.",
-      icon: TrendingDown,
-      color: "from-blue-500 to-cyan-500",
-      link: "/services/ai-powered-customer-churn-predictor"
-    },
-    {
       title: "AI Project Management",
       description: "Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation.",
       icon: Workflow,
       color: "from-zion-cyan to-zion-purple",
       link: "/services/ai-project-management-platform"
-    },
-    {
-      title: "AI-Powered SEO Platform",
-      description: "Revolutionize your search engine optimization with AI that understands search intent, predicts trends, and automatically optimizes content.",
-      icon: Search,
-      color: "from-green-500 to-blue-500",
-      link: "/services/ai-powered-seo"
-    },
-    {
-      title: "AI Legal Document Automation",
-      description: "Transform your legal practice with AI that generates, reviews, and optimizes legal documents in seconds.",
-      icon: FileText,
-      color: "from-purple-500 to-indigo-500",
-      link: "/services/ai-legal-document-automation-platform"
     },
     {
       title: "AI Enterprise Workflow Automation",
@@ -416,6 +398,30 @@ const ServicesSection = () => {
       href: "/services/ai-real-estate-investment-analytics-platform",
       color: "from-orange-500 to-red-500",
       features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    },
+    {
+      icon: DollarSign,
+      title: "AI Financial Advisor",
+      description: "Autonomous AI-powered financial advice and portfolio optimization",
+      href: "/services/ai-autonomous-financial-advisor",
+      color: "from-green-500 to-cyan-500",
+      features: ["Investment Analysis", "Portfolio Optimization", "Risk Management", "Market Prediction"]
+    },
+    {
+      icon: Heart,
+      title: "AI Healthcare Diagnostics",
+      description: "Revolutionary AI-powered medical diagnostics and health analytics",
+      href: "/services/ai-autonomous-healthcare-diagnostics",
+      color: "from-red-500 to-blue-500",
+      features: ["Medical Imaging", "Disease Detection", "Predictive Analytics", "Clinical Support"]
+    },
+    {
+      icon: Shield,
+      title: "AI Cybersecurity Operations",
+      description: "Autonomous AI-powered cybersecurity and threat response",
+      href: "/services/ai-autonomous-cybersecurity-operations",
+      color: "from-orange-500 to-red-500",
+      features: ["Threat Detection", "Autonomous Response", "Zero Trust", "24/7 Monitoring"]
     }
   ];
 
@@ -494,15 +500,6 @@ const ServicesSection = () => {
                 Explore 2032 Services
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <div className="mt-4">
-                <Link
-                  to="/innovative-services-showcase-2026"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
-                >
-                  View 2026 Services
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -849,61 +846,19 @@ const FloatingActionButton = React.memo(() => {
 
   return (
     <>
-      {/* Floating Action Button */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: isVisible ? 1 : 0, 
-          scale: isVisible ? 1 : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="fixed bottom-6 right-6 z-50"
-      >
-        <div className="flex flex-col gap-3">
-          {/* Contact Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={openContact}
-            className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
-            aria-label="Contact Us"
-          >
-            <MessageCircle className="w-6 h-6" />
-          </motion.button>
-
-          {/* Scroll to Top Button */}
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={scrollToTop}
-            className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center text-white"
-            aria-label="Scroll to top"
-          >
-            <ArrowUpRight className="w-6 h-6" />
-          </motion.button>
-        </div>
-      </motion.div>
-
-      {/* Floating Action Button for Mobile */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ 
-          opacity: isVisible ? 1 : 0, 
-          scale: isVisible ? 1 : 0 
-        }}
-        transition={{ duration: 0.3 }}
-        className="fixed bottom-6 left-6 z-50 md:hidden"
-      >
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={openContact}
-          className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center text-white"
-          aria-label="Contact Us"
-        >
-          <MessageCircle className="w-6 h-6" />
-        </motion.button>
-      </motion.div>
+      <PageSEO pageType="home" />
+      <div className="min-h-screen bg-zion-blue-dark">
+        <HeroSection />
+        <FeaturesSection />
+        <ServicesSection />
+        <StatsSection />
+        <TestimonialsSection />
+        <CTASection />
+        
+        {/* Enhanced Performance & Analytics Components */}
+        <PerformanceDashboard enabled={true} showRealTime={true} />
+        <EnhancedAnalytics enabled={true} showRealTime={true} />
+      </div>
     </>
   );
 });

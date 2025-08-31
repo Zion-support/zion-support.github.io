@@ -1,394 +1,361 @@
+#!/usr/bin/env node
+
+const https = require('https');
+const http = require('http');
 const fs = require('fs');
 const path = require('path');
-const { exec } = require('child_process');
+const { URL } = require('url');
 
-// Function to extract all links from the App.tsx routing
-function extractRoutesFromApp() {
-  const appPath = path.join(__dirname, 'src', 'App.tsx');
-  const appContent = fs.readFileSync(appPath, 'utf8');
-  
-  // Extract route paths using regex
-  const routeRegex = /<Route\s+path="([^"]+)"/g;
-  const routes = [];
-  let match;
-  
-  while ((match = routeRegex.exec(appContent)) !== null) {
-    routes.push(match[1]);
+class LinkChecker {
+  constructor(baseUrl = 'https://ziontechgroup.com') {
+    this.baseUrl = baseUrl;
+    this.visitedUrls = new Set();
+    this.brokenLinks = [];
+    this.allLinks = [];
+    this.externalLinks = [];
+    this.internalLinks = [];
+    this.redirects = [];
+    this.results = {
+      broken: [],
+      working: [],
+      redirects: [],
+      external: [],
+      internal: []
+    };
   }
-  
-  return routes;
-}
 
-// Function to extract all links from navigation components
-function extractLinksFromNavigation() {
-  const navigationPaths = [
-    path.join(__dirname, 'src', 'components', 'header', 'MainNavigation.tsx'),
-    path.join(__dirname, 'src', 'components', 'layout', 'AppFooter.tsx')
-  ];
-  
-  const links = [];
-  
-  navigationPaths.forEach(navPath => {
-    if (fs.existsSync(navPath)) {
-      const navContent = fs.readFileSync(navPath, 'utf8');
-      
-      // Extract Link to="" and href="" attributes
-      const linkRegex = /(?:to|href)="([^"]+)"/g;
+  async checkUrl(url, timeout = 10000) {
+    return new Promise((resolve) => {
+      try {
+        const urlObj = new URL(url);
+        const isHttps = urlObj.protocol === 'https:';
+        const client = isHttps ? https : http;
+        
+        const options = {
+          hostname: urlObj.hostname,
+          port: urlObj.port || (isHttps ? 443 : 80),
+          path: urlObj.pathname + urlObj.search,
+          method: 'HEAD',
+          timeout: timeout,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0)',
+            'Accept': '*/*'
+          }
+        };
+
+        const req = client.request(options, (res) => {
+          const statusCode = res.statusCode;
+          
+          if (statusCode >= 200 && statusCode < 300) {
+            resolve({ 
+              url, 
+              status: statusCode, 
+              ok: true, 
+              redirect: false,
+              headers: res.headers 
+            });
+          } else if (statusCode >= 300 && statusCode < 400) {
+            const location = res.headers.location;
+            resolve({ 
+              url, 
+              status: statusCode, 
+              ok: true, 
+              redirect: true,
+              location: location,
+              headers: res.headers 
+            });
+          } else {
+            resolve({ 
+              url, 
+              status: statusCode, 
+              ok: false, 
+              error: `HTTP ${statusCode}`,
+              headers: res.headers 
+            });
+          }
+        });
+
+        req.on('error', (err) => {
+          resolve({ 
+            url, 
+            status: 0, 
+            ok: false, 
+            error: err.message 
+          });
+        });
+
+        req.on('timeout', () => {
+          req.destroy();
+          resolve({ 
+            url, 
+            status: 0, 
+            ok: false, 
+            error: 'Request timeout' 
+          });
+        });
+
+        req.end();
+      } catch (err) {
+        resolve({ 
+          url, 
+          status: 0, 
+          ok: false, 
+          error: `Invalid URL: ${err.message}` 
+        });
+      }
+    });
+  }
+
+  async getPageContent(url) {
+    return new Promise((resolve, reject) => {
+      try {
+        const urlObj = new URL(url);
+        const isHttps = urlObj.protocol === 'https:';
+        const client = isHttps ? https : http;
+        
+        const options = {
+          hostname: urlObj.hostname,
+          port: urlObj.port || (isHttps ? 443 : 80),
+          path: urlObj.pathname + urlObj.search,
+          method: 'GET',
+          timeout: 15000,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (compatible; LinkChecker/1.0)',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+          }
+        };
+
+        const req = client.request(options, (res) => {
+          let data = '';
+          
+          res.on('data', (chunk) => {
+            data += chunk;
+          });
+          
+          res.on('end', () => {
+            resolve({
+              content: data,
+              statusCode: res.statusCode,
+              headers: res.headers
+            });
+          });
+        });
+
+        req.on('error', (err) => {
+          reject(err);
+        });
+
+        req.on('timeout', () => {
+          req.destroy();
+          reject(new Error('Request timeout'));
+        });
+
+        req.end();
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  extractLinksFromHtml(html, baseUrl) {
+    const links = [];
+    
+    // Regular expressions to find different types of links
+    const patterns = [
+      /href=["']([^"']+)["']/gi,        // href attributes
+      /src=["']([^"']+)["']/gi,         // src attributes
+      /action=["']([^"']+)["']/gi,      // form actions
+      /url\(["']?([^"')]+)["']?\)/gi,   // CSS url()
+    ];
+
+    patterns.forEach(pattern => {
       let match;
-      
-      while ((match = linkRegex.exec(navContent)) !== null) {
+      while ((match = pattern.exec(html)) !== null) {
         const link = match[1];
-        if (link.startsWith('/') && !link.includes('http')) {
-          links.push(link);
+        if (link && !link.startsWith('#') && !link.startsWith('javascript:') && 
+            !link.startsWith('mailto:') && !link.startsWith('tel:')) {
+          try {
+            const fullUrl = new URL(link, baseUrl).href;
+            links.push(fullUrl);
+          } catch (err) {
+            // Invalid URL, skip
+          }
         }
       }
-    }
-  });
-  
-  return links;
-}
-
-// Function to check if page files exist
-function checkPageFiles() {
-  const routes = extractRoutesFromApp();
-  const navLinks = extractLinksFromNavigation();
-  const allLinks = [...new Set([...routes, ...navLinks])];
-  
-  const results = {
-    total: allLinks.length,
-    existing: [],
-    missing: [],
-    errors: []
-  };
-  
-  allLinks.forEach(route => {
-    try {
-      // Skip dynamic routes with parameters
-      if (route.includes(':')) {
-        return;
-      }
-      
-      // Convert route to potential file paths
-      const possiblePaths = [
-        path.join(__dirname, 'src', 'pages', route.slice(1) + '.tsx'),
-        path.join(__dirname, 'src', 'pages', route.slice(1) + '.jsx'),
-        path.join(__dirname, 'src', 'pages', route.slice(1), 'index.tsx'),
-        path.join(__dirname, 'src', 'pages', route.slice(1), 'index.jsx'),
-        path.join(__dirname, 'pages', route.slice(1) + '.tsx'),
-        path.join(__dirname, 'pages', route.slice(1) + '.jsx')
-      ];
-      
-      // Check for services subdirectory
-      if (route.startsWith('/services/')) {
-        const serviceName = route.replace('/services/', '');
-        possiblePaths.push(
-          path.join(__dirname, 'src', 'pages', 'services', serviceName + '.tsx'),
-          path.join(__dirname, 'src', 'pages', 'services', serviceName + '.jsx')
-        );
-      }
-      
-      // Check for solutions subdirectory
-      if (route.startsWith('/solutions/')) {
-        const solutionName = route.replace('/solutions/', '');
-        possiblePaths.push(
-          path.join(__dirname, 'src', 'pages', 'solutions', solutionName + '.tsx'),
-          path.join(__dirname, 'src', 'pages', 'solutions', solutionName + '.jsx')
-        );
-      }
-      
-      const exists = possiblePaths.some(filePath => fs.existsSync(filePath));
-      
-      if (exists) {
-        results.existing.push(route);
-      } else {
-        results.missing.push(route);
-      }
-      
-    } catch (error) {
-      results.errors.push({ route, error: error.message });
-    }
-  });
-  
-  return results;
-}
-
-// Function to generate missing pages
-function generateMissingPages(missingRoutes) {
-  missingRoutes.forEach(route => {
-    try {
-      let pageContent = '';
-      let fileName = '';
-      let directory = '';
-      
-      if (route.startsWith('/services/')) {
-        const serviceName = route.replace('/services/', '');
-        fileName = serviceName + '.tsx';
-        directory = path.join(__dirname, 'src', 'pages', 'services');
-        
-        pageContent = `import React from 'react';
-import { SEO } from '../../components/SEO';
-
-export default function ${toPascalCase(serviceName)}() {
-  return (
-    <>
-      <SEO 
-        title="${toTitleCase(serviceName)} | Zion Tech Group"
-        description="Advanced ${serviceName.replace(/-/g, ' ')} solutions by Zion Tech Group. Transform your business with cutting-edge technology."
-        keywords="${serviceName.replace(/-/g, ', ')}, technology, innovation, AI, automation"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            {/* Hero Section */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                ${toTitleCase(serviceName)}
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Transform your business with our cutting-edge ${serviceName.replace(/-/g, ' ')} solutions
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                  Get Started
-                </button>
-                <button className="px-8 py-4 border border-cyan-500 text-cyan-400 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-
-            {/* Features Section */}
-            <div className="grid md:grid-cols-3 gap-8 mb-16">
-              <div className="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Advanced Technology</h3>
-                <p className="text-gray-300">
-                  Leverage cutting-edge technology to drive innovation and efficiency in your business processes.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Scalable Solutions</h3>
-                <p className="text-gray-300">
-                  Our solutions grow with your business, ensuring long-term value and adaptability.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Expert Support</h3>
-                <p className="text-gray-300">
-                  Get dedicated support from our team of experts throughout your journey.
-                </p>
-              </div>
-            </div>
-
-            {/* Contact Section */}
-            <div className="text-center bg-slate-800/30 p-8 rounded-xl border border-purple-500/20">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-              <p className="text-gray-300 mb-6">
-                Contact us today to learn how our ${serviceName.replace(/-/g, ' ')} solutions can transform your business.
-              </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}`;
-      } else if (route.startsWith('/solutions/')) {
-        const solutionName = route.replace('/solutions/', '');
-        fileName = solutionName + '.tsx';
-        directory = path.join(__dirname, 'src', 'pages', 'solutions');
-        
-        pageContent = `import React from 'react';
-import { SEO } from '../../components/SEO';
-
-export default function ${toPascalCase(solutionName)}() {
-  return (
-    <>
-      <SEO 
-        title="${toTitleCase(solutionName)} Solutions | Zion Tech Group"
-        description="Comprehensive ${solutionName.replace(/-/g, ' ')} solutions by Zion Tech Group. Industry-specific technology solutions."
-        keywords="${solutionName.replace(/-/g, ', ')}, solutions, technology, innovation"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-6xl mx-auto">
-            {/* Hero Section */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                ${toTitleCase(solutionName)} Solutions
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Industry-specific technology solutions designed for ${solutionName.replace(/-/g, ' ')} excellence
-              </p>
-            </div>
-
-            {/* Solutions Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              <div className="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Custom Development</h3>
-                <p className="text-gray-300">
-                  Tailored solutions built specifically for your ${solutionName.replace(/-/g, ' ')} needs.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Integration Services</h3>
-                <p className="text-gray-300">
-                  Seamless integration with your existing systems and workflows.
-                </p>
-              </div>
-              <div className="bg-slate-800/50 p-6 rounded-xl border border-purple-500/20">
-                <h3 className="text-xl font-semibold text-white mb-4">Ongoing Support</h3>
-                <p className="text-gray-300">
-                  Continuous support and maintenance for optimal performance.
-                </p>
-              </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="text-center bg-slate-800/30 p-8 rounded-xl border border-purple-500/20">
-              <h2 className="text-3xl font-bold text-white mb-4">Transform Your ${toTitleCase(solutionName)}</h2>
-              <p className="text-gray-300 mb-6">
-                Discover how our solutions can revolutionize your ${solutionName.replace(/-/g, ' ')} operations.
-              </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}`;
-      } else {
-        // Regular pages
-        const pageName = route.slice(1) || 'home';
-        fileName = pageName + '.tsx';
-        directory = path.join(__dirname, 'src', 'pages');
-        
-        pageContent = `import React from 'react';
-import { SEO } from '../components/SEO';
-
-export default function ${toPascalCase(pageName)}() {
-  return (
-    <>
-      <SEO 
-        title="${toTitleCase(pageName)} | Zion Tech Group"
-        description="${toTitleCase(pageName)} page for Zion Tech Group. Innovation and technology solutions."
-        keywords="${pageName}, technology, innovation, Zion Tech Group"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                ${toTitleCase(pageName)}
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Welcome to our ${pageName} page. Discover innovation and technology solutions.
-              </p>
-            </div>
-
-            <div className="bg-slate-800/30 p-8 rounded-xl border border-purple-500/20">
-              <h2 className="text-3xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-gray-300 mb-6">
-                This page is under development. Check back soon for updates.
-              </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}`;
-      }
-      
-      // Create directory if it doesn't exist
-      if (!fs.existsSync(directory)) {
-        fs.mkdirSync(directory, { recursive: true });
-      }
-      
-      // Write the file
-      const filePath = path.join(directory, fileName);
-      if (!fs.existsSync(filePath)) {
-        fs.writeFileSync(filePath, pageContent);
-        console.log(`Created: ${filePath}`);
-      }
-      
-    } catch (error) {
-      console.error(`Error creating page for ${route}:`, error.message);
-    }
-  });
-}
-
-// Helper functions
-function toPascalCase(str) {
-  return str.split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join('');
-}
-
-function toTitleCase(str) {
-  return str.split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
-}
-
-// Main execution
-async function main() {
-  console.log('🔍 Analyzing website links and pages...\n');
-  
-  const results = checkPageFiles();
-  
-  console.log('📊 Analysis Results:');
-  console.log(`Total routes analyzed: ${results.total}`);
-  console.log(`Existing pages: ${results.existing.length}`);
-  console.log(`Missing pages: ${results.missing.length}`);
-  
-  if (results.missing.length > 0) {
-    console.log('\n❌ Missing pages:');
-    results.missing.forEach(route => {
-      console.log(`  - ${route}`);
     });
+
+    return [...new Set(links)]; // Remove duplicates
+  }
+
+  isInternalLink(url) {
+    try {
+      const urlObj = new URL(url);
+      const baseUrlObj = new URL(this.baseUrl);
+      return urlObj.hostname === baseUrlObj.hostname;
+    } catch (err) {
+      return false;
+    }
+  }
+
+  async crawlPage(url, depth = 0, maxDepth = 3) {
+    if (depth > maxDepth || this.visitedUrls.has(url)) {
+      return;
+    }
+
+    this.visitedUrls.add(url);
+    console.log(`Crawling: ${url} (depth: ${depth})`);
+
+    try {
+      const { content, statusCode } = await this.getPageContent(url);
+      
+      if (statusCode >= 200 && statusCode < 300) {
+        const links = this.extractLinksFromHtml(content, url);
+        
+        for (const link of links) {
+          this.allLinks.push({ source: url, target: link, depth });
+          
+          if (this.isInternalLink(link)) {
+            this.internalLinks.push({ source: url, target: link, depth });
+            
+            // Recursively crawl internal links
+            if (depth < maxDepth) {
+              await this.crawlPage(link, depth + 1, maxDepth);
+            }
+          } else {
+            this.externalLinks.push({ source: url, target: link, depth });
+          }
+        }
+      }
+    } catch (err) {
+      console.error(`Error crawling ${url}:`, err.message);
+    }
+  }
+
+  async checkAllLinks() {
+    console.log('Checking all discovered links...');
     
-    console.log('\n🛠️ Creating missing pages...');
-    generateMissingPages(results.missing);
-    console.log(`✅ Created ${results.missing.length} missing pages.`);
-  } else {
-    console.log('\n✅ All pages exist!');
+    const uniqueLinks = [...new Set(this.allLinks.map(l => l.target))];
+    const batchSize = 10; // Check links in batches to avoid overwhelming servers
+    
+    for (let i = 0; i < uniqueLinks.length; i += batchSize) {
+      const batch = uniqueLinks.slice(i, i + batchSize);
+      
+      const promises = batch.map(async (link) => {
+        const result = await this.checkUrl(link);
+        
+        if (result.ok) {
+          if (result.redirect) {
+            this.results.redirects.push({
+              url: link,
+              status: result.status,
+              location: result.location,
+              sources: this.allLinks.filter(l => l.target === link).map(l => l.source)
+            });
+          } else {
+            this.results.working.push({
+              url: link,
+              status: result.status,
+              sources: this.allLinks.filter(l => l.target === link).map(l => l.source)
+            });
+          }
+        } else {
+          this.results.broken.push({
+            url: link,
+            status: result.status,
+            error: result.error,
+            sources: this.allLinks.filter(l => l.target === link).map(l => l.source)
+          });
+        }
+        
+        return result;
+      });
+      
+      await Promise.all(promises);
+      console.log(`Checked ${Math.min(i + batchSize, uniqueLinks.length)}/${uniqueLinks.length} links`);
+    }
   }
-  
-  if (results.errors.length > 0) {
-    console.log('\n⚠️ Errors encountered:');
-    results.errors.forEach(error => {
-      console.log(`  - ${error.route}: ${error.error}`);
-    });
+
+  generateReport() {
+    const report = {
+      summary: {
+        totalLinks: this.allLinks.length,
+        uniqueLinks: [...new Set(this.allLinks.map(l => l.target))].length,
+        internalLinks: this.internalLinks.length,
+        externalLinks: this.externalLinks.length,
+        brokenLinks: this.results.broken.length,
+        workingLinks: this.results.working.length,
+        redirects: this.results.redirects.length
+      },
+      brokenLinks: this.results.broken,
+      workingLinks: this.results.working,
+      redirects: this.results.redirects,
+      internalLinks: this.internalLinks,
+      externalLinks: this.externalLinks,
+      timestamp: new Date().toISOString()
+    };
+
+    return report;
   }
-  
-  // Create a comprehensive report
-  const report = {
-    timestamp: new Date().toISOString(),
-    analysis: results,
-    recommendations: []
-  };
-  
-  if (results.missing.length > 0) {
-    report.recommendations.push('Review and update newly created pages with proper content');
-    report.recommendations.push('Add proper navigation links to new pages');
-    report.recommendations.push('Test all new pages for functionality');
+
+  async run() {
+    console.log(`Starting comprehensive link check for: ${this.baseUrl}`);
+    console.log('Phase 1: Crawling website and discovering links...');
+    
+    await this.crawlPage(this.baseUrl);
+    
+    console.log(`Phase 2: Checking ${[...new Set(this.allLinks.map(l => l.target))].length} unique links...`);
+    
+    await this.checkAllLinks();
+    
+    console.log('Phase 3: Generating report...');
+    
+    const report = this.generateReport();
+    
+    // Save detailed report
+    fs.writeFileSync('comprehensive-link-report.json', JSON.stringify(report, null, 2));
+    
+    // Save broken links summary
+    if (report.brokenLinks.length > 0) {
+      fs.writeFileSync('broken-links-summary.json', JSON.stringify({
+        count: report.brokenLinks.length,
+        links: report.brokenLinks
+      }, null, 2));
+    }
+    
+    console.log('\n=== LINK CHECK SUMMARY ===');
+    console.log(`Total links found: ${report.summary.totalLinks}`);
+    console.log(`Unique links: ${report.summary.uniqueLinks}`);
+    console.log(`Internal links: ${report.summary.internalLinks}`);
+    console.log(`External links: ${report.summary.externalLinks}`);
+    console.log(`Working links: ${report.summary.workingLinks}`);
+    console.log(`Broken links: ${report.summary.brokenLinks}`);
+    console.log(`Redirects: ${report.summary.redirects}`);
+    
+    if (report.brokenLinks.length > 0) {
+      console.log('\n=== BROKEN LINKS ===');
+      report.brokenLinks.forEach(link => {
+        console.log(`❌ ${link.url} (${link.error})`);
+        console.log(`   Found on: ${link.sources.slice(0, 3).join(', ')}${link.sources.length > 3 ? '...' : ''}`);
+      });
+    }
+    
+    if (report.redirects.length > 0) {
+      console.log('\n=== REDIRECTS ===');
+      report.redirects.forEach(link => {
+        console.log(`🔄 ${link.url} → ${link.location} (${link.status})`);
+      });
+    }
+    
+    console.log(`\nDetailed report saved to: comprehensive-link-report.json`);
+    
+    return report;
   }
-  
-  fs.writeFileSync('link-analysis-report.json', JSON.stringify(report, null, 2));
-  console.log('\n📋 Report saved to link-analysis-report.json');
 }
 
+// Run the link checker
 if (require.main === module) {
-  main().catch(console.error);
+  const checker = new LinkChecker('https://ziontechgroup.com');
+  checker.run().catch(console.error);
 }
 
-module.exports = { extractRoutesFromApp, extractLinksFromNavigation, checkPageFiles, generateMissingPages };
+module.exports = LinkChecker;
