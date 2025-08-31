@@ -223,6 +223,13 @@ const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/F
 const ManufacturingSolutions = createLazyComponent(() => import('./pages/solutions/ManufacturingSolutions'));
 const GovernmentSolutions = createLazyComponent(() => import('./pages/solutions/GovernmentSolutions'));
 const RetailSolutions = createLazyComponent(() => import('./pages/solutions/RetailSolutions'));
+const Enterprise = createLazyComponent(() => import('./pages/solutions/Enterprise'));
+const Energy = createLazyComponent(() => import('./pages/solutions/Energy'));
+const Education = createLazyComponent(() => import('./pages/solutions/Education'));
+const RealEstate = createLazyComponent(() => import('./pages/solutions/RealEstate'));
+const Media = createLazyComponent(() => import('./pages/solutions/Media'));
+const Telecommunications = createLazyComponent(() => import('./pages/solutions/Telecommunications'));
+const Aerospace = createLazyComponent(() => import('./pages/solutions/Aerospace'));
 const QuantumEdgeComputing = createLazyComponent(() => import('./pages/solutions/QuantumEdgeComputing'));
 const AIAutonomousBusiness = createLazyComponent(() => import('./pages/solutions/AIAutonomousBusiness'));
 const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/BlockchainWeb3'));
@@ -248,7 +255,6 @@ const Security = createLazyComponent(() => import('./pages/Security'));
 const Compliance = createLazyComponent(() => import('./pages/Compliance'));
 
 // Additional pages from main branch
-const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
 const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
@@ -482,6 +488,13 @@ function App() {
                     <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
                     <Route path="/solutions/government" element={<GovernmentSolutions />} />
                     <Route path="/solutions/retail" element={<RetailSolutions />} />
+                    <Route path="/solutions/enterprise" element={<Enterprise />} />
+                    <Route path="/solutions/energy" element={<Energy />} />
+                    <Route path="/solutions/education" element={<Education />} />
+                    <Route path="/solutions/real-estate" element={<RealEstate />} />
+                    <Route path="/solutions/media" element={<Media />} />
+                    <Route path="/solutions/telecommunications" element={<Telecommunications />} />
+                    <Route path="/solutions/aerospace" element={<Aerospace />} />
                     <Route path="/solutions/quantum-edge-computing" element={<QuantumEdgeComputing />} />
                     <Route path="/solutions/ai-autonomous-business" element={<AIAutonomousBusiness />} />
                     <Route path="/solutions/blockchain-web3" element={<BlockchainWeb3 />} />
@@ -527,6 +540,7 @@ function App() {
                     <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
                     <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
                     <Route path="/research" element={<ModernLayout><Research /></ModernLayout>} />
+                    <Route path="/training" element={<ModernLayout><Training /></ModernLayout>} />
 
                     {/* 404 Page */}
                     <Route
