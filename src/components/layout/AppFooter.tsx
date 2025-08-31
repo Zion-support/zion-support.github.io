@@ -40,8 +40,7 @@ import {
   GraduationCap,
   Lightbulb,
   Code,
-  Activity,
-  DollarSign
+  Activity
 } from 'lucide-react';
 
 export function AppFooter() {
@@ -54,15 +53,14 @@ export function AppFooter() {
       color: "text-zion-cyan",
       bgColor: "bg-zion-cyan/20",
       services: [
+        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
+        { name: "AI Autonomous Logistics Optimization", href: "/services/ai-autonomous-logistics-optimization" },
+        { name: "AI Autonomous Manufacturing Platform", href: "/services/ai-autonomous-manufacturing-platform" },
         { name: "AI Business Intelligence Dashboard", href: "/services/ai-business-intelligence-dashboard" },
         { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
         { name: "AI Project Management Platform", href: "/services/ai-project-management-platform" },
         { name: "AI Marketing Automation Platform", href: "/services/ai-marketing-automation-platform" },
-        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
-        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
-        { name: "AI Autonomous Financial Advisor", href: "/services/ai-autonomous-financial-advisor" }
+        { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" }
       ]
     },
     {
@@ -78,9 +76,7 @@ export function AppFooter() {
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
         { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
-        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
-        { name: "AI Autonomous Healthcare Diagnostics", href: "/services/ai-autonomous-healthcare-diagnostics" },
-        { name: "AI Autonomous Cybersecurity Operations", href: "/services/ai-autonomous-cybersecurity-operations" }
+        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" }
       ]
     },
     {
@@ -298,43 +294,33 @@ export function AppFooter() {
               Discover cutting-edge AI services, revolutionary IT solutions, and innovative Micro SaaS platforms designed for 2025 and beyond.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link 
-              to="/innovative-services-showcase-2032"
+              to="/innovative-services-showcase-2026"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
                 <Rocket className="w-6 h-6 text-zion-purple" />
-                <h4 className="text-lg font-semibold text-white">2032 Innovation Showcase</h4>
+                <h4 className="text-lg font-semibold text-white">2026 Innovation Showcase</h4>
               </div>
-              <p className="text-zion-slate-light text-sm">Explore our revolutionary services and solutions for the future.</p>
+              <p className="text-zion-slate-light text-sm">Explore our revolutionary AI autonomous platforms and services.</p>
             </Link>
             <Link 
-              to="/innovative-services-showcase-2027"
+              to="/comprehensive-services-showcase-2025"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
                 <Star className="w-6 h-6 text-zion-cyan" />
-                <h4 className="text-lg font-semibold text-white">2027 Innovation Showcase</h4>
-              </div>
-              <p className="text-zion-slate-light text-sm">Discover our latest AI services and autonomous operations platforms.</p>
-            </Link>
-            <Link 
-              to="/comprehensive-services-showcase-2025"
-              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              <div className="flex items-center space-x-3 mb-3">
-                <TrendingUp className="w-6 h-6 text-zion-purple" />
                 <h4 className="text-lg font-semibold text-white">2025 Services Showcase</h4>
               </div>
               <p className="text-zion-slate-light text-sm">Comprehensive overview of all our current services and capabilities.</p>
             </Link>
             <Link 
               to="/pricing"
-              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-cyan/30 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
-                <DollarSign className="w-6 h-6 text-zion-cyan" />
+                <TrendingUp className="w-6 h-6 text-zion-purple" />
                 <h4 className="text-lg font-semibold text-white">Pricing & Plans</h4>
               </div>
               <p className="text-zion-slate-light text-sm">Transparent pricing for all our services and solutions.</p>
@@ -414,36 +400,3 @@ export function AppFooter() {
     </footer>
   );
 }
-
-
-
-const Monitor = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-  </svg>
-);
-
-const GraduationCap = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-  </svg>
-);
-
-const Lightbulb = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-  </svg>
-);
-
-const Code = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-  </svg>
-);
-
-const Activity = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-  </svg>
-);
