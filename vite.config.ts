@@ -5,6 +5,7 @@ import { resolve } from 'path'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -43,13 +44,38 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          // Core React libraries
+          'react-core': ['react', 'react-dom'],
+          'react-router': ['react-router-dom'],
+          
+          // UI Libraries
+          'ui-core': ['framer-motion', 'lucide-react'],
+          'ui-components': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
+          
+          // Utility libraries
+          'utils': ['clsx', 'tailwind-merge', 'class-variance-authority', 'date-fns'],
+          
+          // Form and validation
+          'forms': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          
+          // State management
+          'state': ['@reduxjs/toolkit', 'react-redux'],
+          
+          // Data visualization
+          'charts': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+          
+          // AI and specialized libraries
+          'ai-tools': ['fuse.js', 'embla-carousel-react'],
+          
+          // External services
+          'external': ['@stripe/stripe-js', 'axios'],
+          
+          // Large showcase components (separate chunks)
+          // Removed showcase chunks due to build errors
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId
-            ? chunkInfo.facadeModuleId.split('/').pop()?.replace('.tsx', '').replace('.ts', '')
+            ? chunkInfo.facadeModuleId.split('/').pop()?.replace('.tsx', '').replace('.ts', '').replace('.jsx', '').replace('.js', '')
             : 'chunk'
           return `js/${facadeModuleId}-[hash].js`
         },
@@ -66,7 +92,7 @@ export default defineConfig({
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 500, // Reduced from 1000 for better optimization
   },
   optimizeDeps: {
     include: [
@@ -80,7 +106,29 @@ export default defineConfig({
       'class-variance-authority',
       'react-hook-form',
       '@hookform/resolvers',
-      'zod'
+      'zod',
+      'date-fns',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-alert-dialog',
+      '@radix-ui/react-aspect-ratio',
+      '@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox',
+      '@radix-ui/react-context-menu',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label',
+      '@radix-ui/react-popover',
+      '@radix-ui/react-progress',
+      '@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area',
+      '@radix-ui/react-select',
+      '@radix-ui/react-separator',
+      '@radix-ui/react-slider',
+      '@radix-ui/react-slot',
+      '@radix-ui/react-switch',
+      '@radix-ui/react-tabs',
+      '@radix-ui/react-toast',
+      '@radix-ui/react-tooltip'
     ],
     exclude: ['@vite/client', '@vite/env'],
   },
