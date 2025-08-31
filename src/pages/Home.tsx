@@ -332,14 +332,43 @@ const StatisticsSection = React.memo(() => {
 const ServicesPreviewSection = React.memo(() => {
   const services = [
     {
-      icon: Brain,
-      title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence and machine learning solutions",
-      href: "/ai-services",
-      color: "from-purple-500 to-pink-500",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision"]
+      title: "AI Enterprise Resource Planning",
+      description: "Transform your business operations with AI-powered ERP that autonomously manages, optimizes, and scales your entire business ecosystem.",
+      icon: Database,
+      color: "from-zion-purple to-zion-purple-dark",
+      link: "/services/ai-enterprise-resource-planning"
     },
     {
+      title: "AI Quantum Computing Solutions",
+      description: "Revolutionize your computational capabilities with AI-powered quantum computing that achieves 1000x faster processing.",
+      icon: Atom,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/ai-quantum-computing-solutions"
+    },
+    {
+      title: "AI Autonomous Manufacturing",
+      description: "Transform your manufacturing with AI-powered automation, quality control, and predictive maintenance.",
+      icon: Factory,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-autonomous-manufacturing-platform"
+    },
+    {
+      title: "AI Project Management",
+      description: "Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation.",
+      icon: Workflow,
+      color: "from-zion-cyan to-zion-purple",
+      link: "/services/ai-project-management-platform"
+    },
+    {
+      title: "AI Enterprise Workflow Automation",
+      description: "Streamline business processes with intelligent workflow automation that learns and optimizes over time.",
+      icon: Workflow,
+      color: "from-zion-purple to-zion-cyan",
+      link: "/services/ai-enterprise-workflow-automation"
+    },
+    {
+      title: "AI Cybersecurity Threat Intelligence",
+      description: "Protect your organization with AI-powered threat detection and automated response systems.",
       icon: Shield,
       title: "Cybersecurity",
       description: "Advanced security protocols and threat protection",
@@ -466,15 +495,22 @@ const ServicesPreviewSection = React.memo(() => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12"
         >
-          <Link
-            to="/services"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-          >
-            <span className="flex items-center gap-2">
-              View All Services
-              <ArrowRight className="w-5 h-5" />
-            </span>
-          </Link>
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/comprehensive-services-showcase-2025"
+                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-cyan border-2 border-zion-cyan hover:bg-zion-cyan hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                View All Services
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/comprehensive-pricing-guide-2026"
+                className="inline-flex items-center px-8 py-4 text-lg font-semibold text-zion-purple border-2 border-zion-purple hover:bg-zion-purple hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                View Pricing Guide
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
         </motion.div>
 
         {/* Latest Innovations Section */}

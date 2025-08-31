@@ -57,7 +57,9 @@ import {
   Video,
   GraduationCap,
   Handshake,
-  ShoppingCart
+  ShoppingCart,
+  Truck,
+  Factory
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -151,43 +153,142 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </li>
                     </ul>
                   </div>
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
-                      <Server className="w-5 h-5 mr-3"/>
-                      IT & Infrastructure
-                    </h4>
-                    <ul className="space-y-4 text-sm">
-                      <li>
-                        <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Quantum Edge Computing</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/it-infrastructure-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Server className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Infrastructure Management</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Cloud className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Cloud & DevOps</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Cybersecurity</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Rocket className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Digital Transformation</span>
-                        </Link>
-                      </li>
-                    </ul>
+                  
+                  {/* Additional AI Services */}
+                  <ul className="space-y-3">
+                    <li>
+                      <Link to="/services/ai-business-intelligence-dashboard" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <BarChart3 className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI BI Dashboard</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-support-automation" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <MessageCircle className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Support Automation</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-project-management-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Workflow className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Project Management</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-marketing-automation-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <TrendingUp className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Marketing Automation</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-automation-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Brain className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Enterprise Automation</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-logistics-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Truck className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Autonomous Logistics</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-space-technology-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Satellite className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Space Technology</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-resource-planning" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Database className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI ERP Platform</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-computing-solutions" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Atom className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Quantum Computing</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-manufacturing-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Factory className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Manufacturing</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* IT & Infrastructure Column */}
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
+                    <div className="p-2 bg-zion-purple/20 rounded-lg">
+                      <Server className="w-5 h-5 text-zion-purple"/>
+                    </div>
+                    <h4 className="text-zion-purple font-bold text-lg">IT & Infrastructure</h4>
+                  </div>
+                  <ul className="space-y-4 text-sm">
+                    <li>
+                      <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                        <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                        <span>Quantum Edge Computing</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/it-infrastructure-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                        <Server className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                        <span>Infrastructure Management</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                        <Cloud className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                        <span>Cloud & DevOps</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                        <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                        <span>Cybersecurity</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                        <Rocket className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                        <span>Digital Transformation</span>
+                      </Link>
+                    </li>
+                  </ul>
                   </div>
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
