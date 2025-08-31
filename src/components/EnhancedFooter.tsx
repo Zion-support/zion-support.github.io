@@ -57,7 +57,8 @@ import {
   Leaf,
   ChevronRight,
   ChevronDown,
-  DollarSign
+  DollarSign,
+  Newspaper
 } from 'lucide-react';
 
 export function EnhancedFooter() {
@@ -77,13 +78,13 @@ export function EnhancedFooter() {
     {
       title: 'Core Services',
       links: [
-        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
         { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Infrastructure', href: '/it-services', icon: Server },
+        { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Rocket },
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield },
-        { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Sparkles },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles }
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket }
       ]
     },
     {
@@ -94,29 +95,39 @@ export function EnhancedFooter() {
         { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp },
         { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Cpu },
         { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-        { name: 'Space Technology', href: '/solutions/space-tech', icon: Globe2 }
+        { name: 'Government Solutions', href: '/solutions/government', icon: Globe2 }
       ]
     },
     {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
-        { name: 'Our Team', href: '/team', icon: Award },
-        { name: 'Careers', href: '/careers', icon: Target },
-        { name: 'News & Press', href: '/press', icon: BookOpen },
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-        { name: 'Partners', href: '/partners', icon: Handshake }
+        { name: 'Leadership', href: '/leadership', icon: Award },
+        { name: 'Careers', href: '/careers', icon: GraduationCap },
+        { name: 'Partners', href: '/partners', icon: Handshake },
+        { name: 'News', href: '/news', icon: Newspaper },
+        { name: 'Blog', href: '/blog', icon: BookOpen }
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog', icon: BookOpen },
-        { name: 'Documentation', href: '/documentation', icon: FileText },
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
         { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Training', href: '/training', icon: GraduationCap }
+        { name: 'Webinars', href: '/webinars', icon: Video },
+        { name: 'Training', href: '/training', icon: GraduationCap },
+        { name: 'Documentation', href: '/documentation', icon: BookOpen },
+        { name: 'Support', href: '/support', icon: HelpCircle }
+      ]
+    },
+    {
+      title: 'Contact',
+      links: [
+        { name: 'Contact Us', href: '/contact', icon: MessageCircle },
+        { name: 'Request Quote', href: '/request-quote', icon: DollarSign },
+        { name: 'Phone: +1 (302) 464-0950', href: 'tel:+13024640950', icon: Phone },
+        { name: 'Email: kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', icon: Mail },
+        { name: 'Location: Delaware, USA', href: '#', icon: MapPin }
       ]
     }
   ];

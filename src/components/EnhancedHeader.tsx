@@ -178,11 +178,13 @@ export function EnhancedHeader() {
   const navigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Services', href: '/services', icon: Code, hasDropdown: true },
-    { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+    { name: 'AI Solutions', href: '/ai-services', icon: Brain },
     { name: 'IT Services', href: '/it-services', icon: Server },
     { name: 'Micro SAAS', href: '/micro-saas', icon: Rocket },
-    { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
+    { name: 'Solutions', href: '/solutions', icon: Target },
     { name: 'About', href: '/about', icon: Users },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
+    { name: 'News', href: '/news', icon: Newspaper },
     { name: 'Contact', href: '/contact', icon: MessageCircle }
   ];
 
@@ -240,11 +242,25 @@ export function EnhancedHeader() {
       color: 'from-orange-500 to-red-500'
     },
     {
-      name: 'Blockchain Solutions',
-      description: 'Secure blockchain and Web3 services',
-      href: '/services/blockchain-enterprise-solutions',
+      name: 'Cybersecurity',
+      description: 'Enterprise-grade security solutions',
+      href: '/services/cybersecurity',
       icon: Shield,
-      color: 'from-indigo-500 to-purple-500'
+      color: 'from-red-500 to-pink-500'
+    },
+    {
+      name: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automation',
+      href: '/services/cloud-devops',
+      icon: Cloud,
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      name: 'Digital Transformation',
+      description: 'End-to-end business transformation services',
+      href: '/services/digital-transformation',
+      icon: Rocket,
+      color: 'from-orange-500 to-red-500'
     },
     {
       name: '2025 Innovative Services',
