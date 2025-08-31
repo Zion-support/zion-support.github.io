@@ -166,10 +166,13 @@ const AIHRManagementPlatform = createLazyComponent(() => import('./pages/service
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
-// New Innovative Micro SAAS Services 2026
+// New Innovative AI Services 2025 - Combined from both versions
 const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
 const AICustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/ai-customer-success-platform'));
 const AISupplyChainIntelligence = createLazyComponent(() => import('./pages/services/ai-supply-chain-intelligence'));
+const AICustomerExperienceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-optimization-platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
 
 // Additional service pages from remote branch
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
@@ -385,7 +388,12 @@ function App() {
                     <Route path="/services/ai-customer-success-platform" element={<ModernLayout><AICustomerSuccessPlatform /></ModernLayout>} />
                     <Route path="/services/ai-supply-chain-intelligence" element={<ModernLayout><AISupplyChainIntelligence /></ModernLayout>} />
 
-                    {/* Additional service routes from remote branch */}
+                    {/* Additional service routes - Combined from both versions */}
+                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                    <Route path="/services/ai-customer-experience-optimization-platform" element={<AICustomerExperienceOptimizationPlatform />} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
                     <Route path="/services/cloud-devops" element={<ModernLayout><CloudDevOps /></ModernLayout>} />
                     <Route path="/services/cybersecurity" element={<ModernLayout><Cybersecurity /></ModernLayout>} />
                     <Route path="/services/digital-transformation" element={<ModernLayout><DigitalTransformation /></ModernLayout>} />
@@ -397,7 +405,6 @@ function App() {
                     <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
                     <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
                     <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
                     
                     {/* New Innovative Services 2026 */}
                     <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
