@@ -44,14 +44,15 @@ export function Footer() {
       title: "AI & Machine Learning",
       icon: Brain,
       services: [
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
-        { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
-        { name: "AI Project Management", href: "/services/ai-project-management" }
-      ]
-    },
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-platform" },
+        { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-platform" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
+        { name: "AI-Quantum Hybrid Platform", href: "/services/ai-quantum-hybrid-platform" },
+        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization" },
+                                { name: "AI Project Management", href: "/services/ai-project-management" },
+                        { name: "All Services Showcase", href: "/comprehensive-services-showcase-2025" }
+                      ]
+                    },
     {
       title: "Cybersecurity",
       icon: Shield,

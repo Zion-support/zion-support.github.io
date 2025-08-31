@@ -111,59 +111,73 @@ export default function Home() {
 
   const heroSlides = [
     {
-      title: "AI-Powered Innovation",
-      subtitle: "Transform your business with cutting-edge artificial intelligence",
-      description: "Leverage the power of AI to automate processes, gain insights, and drive growth across your organization.",
-      image: "/hero/ai-innovation.jpg",
-      cta: "Explore AI Solutions",
-      href: "/ai-services"
+      title: "AI Business Intelligence",
+      subtitle: "Transform data into actionable insights",
+      description: "Leverage the power of AI to analyze data, predict trends, and make informed business decisions with our advanced analytics platform.",
+      image: "/hero/ai-bi.jpg",
+      cta: "Explore AI BI Platform",
+      href: "/services/ai-business-intelligence-platform"
     },
     {
-      title: "Quantum Computing",
-      subtitle: "Next-generation computing solutions",
-      description: "Harness the power of quantum computing for complex problem-solving and unprecedented computational capabilities.",
-      image: "/hero/quantum-computing.jpg",
-      cta: "Discover Quantum",
-      href: "/quantum-computing"
-    },
-    {
-      title: "Cybersecurity Excellence",
-      subtitle: "Protect your digital assets",
-      description: "Advanced security solutions that safeguard your business from evolving cyber threats with AI-powered protection.",
-      image: "/hero/cybersecurity.jpg",
+      title: "AI Cybersecurity Platform",
+      subtitle: "Next-generation security with AI",
+      description: "Protect your business with AI-powered threat detection, real-time monitoring, and automated response systems.",
+      image: "/hero/ai-security.jpg",
       cta: "Secure Your Business",
-      href: "/cybersecurity"
+      href: "/services/ai-cybersecurity-platform"
+    },
+    {
+      title: "AI-Quantum Hybrid Computing",
+      subtitle: "Revolutionary computational power",
+      description: "Experience the future of computing with our AI-Quantum hybrid platform that combines artificial intelligence with quantum computing.",
+      image: "/hero/quantum-ai.jpg",
+      cta: "Discover Quantum AI",
+      href: "/services/ai-quantum-hybrid-platform"
     }
   ];
 
   const services = [
     {
       icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Cutting-edge artificial intelligence solutions for business transformation",
-      href: "/ai-services",
+      title: "AI Business Intelligence",
+      description: "Transform data into actionable insights with AI-powered analytics",
+      href: "/services/ai-business-intelligence-platform",
       color: "from-cyan-400 to-blue-500"
+    },
+    {
+      icon: Shield,
+      title: "AI Cybersecurity",
+      description: "Advanced AI-powered security with real-time threat detection",
+      href: "/services/ai-cybersecurity-platform",
+      color: "from-red-400 to-pink-500"
+    },
+    {
+      icon: Heart,
+      title: "AI Healthcare Analytics",
+      description: "Revolutionary healthcare insights with AI-powered diagnostics",
+      href: "/services/ai-healthcare-analytics-platform",
+      color: "from-green-400 to-blue-500"
+    },
+    {
+      icon: Atom,
+      title: "AI-Quantum Hybrid",
+      description: "Next-generation computing combining AI and quantum power",
+      href: "/services/ai-quantum-hybrid-platform",
+      color: "from-purple-400 to-pink-500"
+    },
+    {
+      icon: Truck,
+      title: "AI Supply Chain",
+      description: "Optimize operations with AI-powered supply chain management",
+      href: "/services/ai-supply-chain-optimization",
+      color: "from-blue-400 to-green-500"
     },
     {
       icon: Cloud,
       title: "Cloud & DevOps",
-      description: "Enterprise-grade cloud infrastructure and automated deployment solutions",
+      description: "Enterprise-grade cloud infrastructure and automation",
       href: "/cloud-devops",
       color: "from-blue-400 to-indigo-500"
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description: "Advanced security solutions to protect your digital assets and infrastructure",
-      href: "/cybersecurity",
-      color: "from-red-400 to-pink-500"
-    },
-    {
-      icon: Atom,
-      title: "Quantum Computing",
-      description: "Next-generation quantum solutions for complex problem solving",
-      href: "/quantum-computing",
-      color: "from-purple-400 to-pink-500"
     }
   ];
 

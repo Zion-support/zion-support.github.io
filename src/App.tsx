@@ -48,10 +48,10 @@ const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 
 // New AI Services 2025
-const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
-const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
-const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
-const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization'));
+const AICybersecurity = createLazyComponent(() => import('./pages/services/ai-cybersecurity-platform'));
+const AIHealthcare = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-hybrid-platform'));
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -155,7 +155,7 @@ function App() {
                     {/* New AI Services 2025 */}
                     <Route path="/services/ai-supply-chain-optimization" element={<ModernLayout><AISupplyChainOptimization /></ModernLayout>} />
                     <Route path="/services/ai-cybersecurity-platform" element={<ModernLayout><AICybersecurity /></ModernLayout>} />
-                    <Route path="/services/ai-healthcare-platform" element={<ModernLayout><AIHealthcare /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcare /></ModernLayout>} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<ModernLayout><AIQuantumHybridPlatform /></ModernLayout>} />
 
                     {/* Showcase Routes */}
