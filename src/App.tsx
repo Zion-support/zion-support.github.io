@@ -50,6 +50,11 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// Additional AI Services
+const AIContentIntelligence = createLazyComponent(() => import('./pages/services/AI-Content-Intelligence-Platform'));
+const AICustomerExperience = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics'));
+const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AI-Financial-Risk-Management'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
@@ -59,6 +64,7 @@ const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolu
 const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
 const CloudSolutions = createLazyComponent(() => import('./pages/CloudSolutions'));
 const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
+const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverview'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -135,6 +141,11 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
 
+                    {/* Additional AI Services */}
+                    <Route path="/services/ai-content-intelligence-platform" element={<AIContentIntelligence />} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<AICustomerExperience />} />
+                    <Route path="/services/ai-financial-risk-management" element={<AIFinancialRiskManagement />} />
+
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
 
@@ -144,6 +155,7 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+                    <Route path="/services-overview" element={<ServicesOverview />} />
 
                     {/* 404 Page */}
                     <Route

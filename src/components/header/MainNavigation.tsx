@@ -64,11 +64,11 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     AI & ML Services
                   </h4>
                   <ul className="space-y-2 text-sm">
-                    <li><Link to="/services/ai-autonomous-research-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Research Assistant</Link></li>
+                    <li><Link to="/services/ai-content-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Content Intelligence</Link></li>
+                    <li><Link to="/services/ai-customer-experience-analytics" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Customer Experience AI</Link></li>
+                    <li><Link to="/services/ai-financial-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Risk AI</Link></li>
                     <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
                     <li><Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
-                    <li><Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum AI Platform</Link></li>
-                    <li><Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Supply Chain AI</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -87,7 +87,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
               </div>
               <div className="mt-4 pt-4 border-t border-zion-purple/20">
                 <Link 
-                  to="/services" 
+                  to="/services-overview" 
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   View All Services

@@ -29,12 +29,12 @@ const Footer = () => {
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/services' },
-        { name: 'Cybersecurity', href: '/services' },
-        { name: 'Micro SAAS', href: '/micro-saas' },
-        { name: 'Digital Transformation', href: '/services' }
+        { name: 'AI Content Intelligence', href: '/services/ai-content-intelligence-platform' },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-analytics' },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform' },
+        { name: 'AI Healthcare', href: '/services/ai-healthcare-platform' },
+        { name: 'Micro SAAS Solutions', href: '/micro-saas' }
       ]
     },
     {
@@ -83,17 +83,17 @@ const Footer = () => {
   const contactInfo = [
     {
       icon: Phone,
-      text: '+1 (555) 123-4567',
-      href: 'tel:+15551234567'
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
     },
     {
       icon: Mail,
-      text: 'info@ziontechgroup.com',
-      href: 'mailto:info@ziontechgroup.com'
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
     },
     {
       icon: MapPin,
-      text: '123 Innovation Drive, Tech City, TC 12345',
+      text: '364 E Main St STE 1008, Middletown DE 19709',
       href: '#'
     },
     {
