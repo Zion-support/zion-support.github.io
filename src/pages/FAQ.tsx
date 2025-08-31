@@ -127,7 +127,7 @@ const FAQ: React.FC = () => {
             </p>
           </motion.div>
         </div>
-      </section>
+      </div>
 
       {/* Search and Filter Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

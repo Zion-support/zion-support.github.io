@@ -257,7 +257,7 @@ export function ChatAssistant({
         }
       };
     }
-  }, [theme]);
+  };
 
   // Voice recognition setup
   useEffect(() => {
@@ -338,7 +338,7 @@ export function ChatAssistant({
       const aiResponse: Message = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: generateAIResponse(content),
+        content: generateAIResponse(content).content,
         timestamp: new Date(),
         metadata: {
           confidence: 0.95,
@@ -363,19 +363,6 @@ export function ChatAssistant({
       setIsProcessing(false);
     }
   }, []);
-
-  // Generate AI response (replace with actual AI integration)
-  const generateAIResponse = (userInput: string): string => {
-    const responses = [
-      'I understand you\'re asking about that. Let me help you with some information.',
-      'That\'s a great question! Here\'s what I can tell you about that topic.',
-      'I\'d be happy to help you with that. Let me provide some details.',
-      'That\'s an interesting point. Here\'s what I know about that subject.',
-      'I can definitely assist you with that. Let me share some relevant information.',
-    ];
-    
-    return responses[Math.floor(Math.random() * responses.length)];
-  };
 
   // Handle suggestion click
   const handleSuggestionClick = (suggestion: string) => {
@@ -410,7 +397,7 @@ export function ChatAssistant({
       e.preventDefault();
       sendMessage(inputValue);
     }
-  }, [inputValue, sendMessage]);
+  };
 
   // Clear chat
   const clearChat = useCallback(() => {
@@ -446,37 +433,6 @@ export function ChatAssistant({
   const themeClasses = {
     light: 'bg-white text-gray-900 border-gray-200',
     dark: 'bg-gray-900 text-white border-gray-700',
-  };
-
-  // Clear chat
-  const clearChat = () => {
-    setMessages([]);
-    setChatHistory([]);
-    setSuggestions([]);
-  };
-
-  // Export chat
-  const exportChat = () => {
-    const chatText = chatHistory.map(msg => 
-      `${msg.type === 'user' ? 'You' : 'AI Assistant'}: ${msg.content}`
-    ).join('\n\n');
-    
-    const blob = new Blob([chatText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `zion-tech-chat-${new Date().toISOString().split('T')[0]}.txt`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  if (!enabled) return null;
-
-  const positionClasses = {
-    'bottom-right': 'bottom-4 right-4',
-    'bottom-left': 'bottom-4 left-4',
-    'top-right': 'top-4 right-4',
-    'top-left': 'top-4 left-4'
   };
 
   if (!isOpen) {

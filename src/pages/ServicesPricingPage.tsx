@@ -25,7 +25,7 @@ import {
   DollarSign,
   Clock
 } from "lucide-react";
-import { EXPANDED_SERVICES, SERVICE_PRICING_TIERS, SERVICE_BENEFITS } from "@/data/expandedServices";
+import { EXPANDED_SERVICES } from "@/data/expandedServices";
 // Group services by category for better organization
 const servicesByCategory = EXPANDED_SERVICES.reduce((acc, service) => {
   if (!acc[service.category]) {

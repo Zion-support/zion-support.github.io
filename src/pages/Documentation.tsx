@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Search, BookOpen, Code, Database, Api, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud, Lock } from 'lucide-react';
+import { Search, BookOpen, Code, Database, Download, ExternalLink, ChevronRight, FileText, Users, Globe, Shield, Zap, Brain, Cloud, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 interface DocSection {
@@ -214,7 +214,7 @@ const Documentation: React.FC = () => {
       id: 'api-reference',
       title: 'API Reference',
       description: 'Complete API documentation and reference',
-      icon: Api,
+      icon: Code, // Changed from Api to Code as Api was removed
       color: 'from-indigo-500 to-purple-500',
       items: [
         {
@@ -280,7 +280,7 @@ const Documentation: React.FC = () => {
 
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'api': return <Api className="w-4 h-4" />;
+      case 'api': return <Code className="w-4 h-4" />; // Changed from Api to Code
       case 'guide': return <BookOpen className="w-4 h-4" />;
       case 'tutorial': return <Code className="w-4 h-4" />;
       case 'reference': return <FileText className="w-4 h-4" />;
@@ -289,11 +289,11 @@ const Documentation: React.FC = () => {
   };
 
   const filteredCategories = selectedCategory === 'all' 
-    ? docCategories 
-    : docCategories.filter(category => category.id === selectedCategory);
+    ? categories 
+    : categories.filter(category => category.id === selectedCategory);
 
   const searchResults = searchQuery 
-    ? docCategories.flatMap(category => 
+    ? categories.flatMap(category => 
         category.articles.filter(article => 
           article.title.toLowerCase().includes(searchQuery.toLowerCase())
         ).map(article => ({ ...category, article }))
@@ -480,7 +480,7 @@ const Documentation: React.FC = () => {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Contact Support Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

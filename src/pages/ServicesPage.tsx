@@ -32,8 +32,8 @@ import {
   Globe as GlobeIcon
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES } from "@/data/innovativeMicroSaasServices2025";
-import { ADDITIONAL_MICRO_SAAS_SERVICES_2025, ADDITIONAL_SPECIALIZED_SERVICES } from "@/data/additionalServices2025";
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "@/data/innovativeMicroSaasServices2025";
+import { ADDITIONAL_INNOVATIVE_SERVICES_2025 } from "@/data/additionalInnovativeServices2025";
 
 export default function ServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -72,13 +72,12 @@ export default function ServicesPage() {
   // Filter and sort services
   const allServices = [
     ...INNOVATIVE_MICRO_SAAS_SERVICES_2025,
-    ...SPECIALIZED_SERVICES,
-    ...ADDITIONAL_MICRO_SAAS_SERVICES_2025,
-    ...ADDITIONAL_SPECIALIZED_SERVICES
+    ...ADDITIONAL_INNOVATIVE_SERVICES_2025
   ];
   
   const filteredServices = allServices.filter(service => {
-    const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    const title = service.title || service.name || '';
+    const matchesSearch = title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          (service.tags && service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
     
@@ -174,7 +173,7 @@ export default function ServicesPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + SPECIALIZED_SERVICES.length}+</div>
+                <div className="text-3xl font-bold text-zion-cyan mb-2">{INNOVATIVE_MICRO_SAAS_SERVICES_2025.length + ADDITIONAL_INNOVATIVE_SERVICES_2025.length}+</div>
                 <div className="text-zion-slate-light">Innovative Services</div>
               </motion.div>
               <motion.div 
@@ -421,7 +420,7 @@ export default function ServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {SPECIALIZED_SERVICES.map((service, index) => (
+            {ADDITIONAL_INNOVATIVE_SERVICES_2025.map((service, index) => (
               <motion.div
                 key={service.id}
                 className="card-futuristic text-center group"

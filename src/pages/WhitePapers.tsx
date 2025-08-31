@@ -257,10 +257,10 @@ export default function WhitePapers() {
                   ))}
                 </select>
               </div>
-            ))}
-          </motion.div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
       {/* Filters and Search */}
       <section className="py-12 px-4 bg-slate-800/30">
@@ -302,7 +302,7 @@ export default function WhitePapers() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Featured Insights */}
       <div className="py-12 bg-zion-slate-dark">
