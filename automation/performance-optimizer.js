@@ -1,184 +1,184 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-class PerformanceOptimizer {
-  constructor() {
+class PerformanceOptimizer {;
+  constructor() {;
     this.optimizations = [];
-<<<<<<< HEAD
+<<<<<<< HEAD;
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log');
-
-  log(message) {
+;
+  log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-<<<<<<< HEAD
+<<<<<<< HEAD;
     // // // // // console.log(message);
-=======
+=======;
     // // // // // // // // console.log(message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
     fs.appendFileSync(this.logFile, logMessage);
-
-=======
-    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')}
-  log(message) {
+;
+=======;
+    this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')};
+  log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
-    fs.appendFileSync(this.logFile, logMessage)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  async optimizePerformance() {
-    try {
+    fs.appendFileSync(this.logFile, logMessage)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  async optimizePerformance() {;
+    try {;
       this.log('Starting performance optimization...');
-
-      // Analyze bundle size
+;
+      // Analyze bundle size;
       const bundleAnalysis = this.analyzeBundleSize();
-
-      // Optimize images
+;
+      // Optimize images;
       const imageOptimization = this.optimizeImages();
-
-      // Check for unused dependencies
+;
+      // Check for unused dependencies;
       const dependencyAnalysis = this.analyzeDependencies();
-
-      // Generate optimization report
-      const report = {
-  timestamp: new Date().toISOString(),
-        bundleSize: bundleAnalysis,
-        imageOptimization: imageOptimization,
-        dependencies: dependencyAnalysis,
-<<<<<<< HEAD
-        recommendations: this.generateRecommendations()
+;
+      // Generate optimization report;
+      const report = {;
+  timestamp: new Date().toISOString(),;
+        bundleSize: bundleAnalysis,;
+        imageOptimization: imageOptimization,;
+        dependencies: dependencyAnalysis,;
+<<<<<<< HEAD;
+        recommendations: this.generateRecommendations();
       };
+;
+=======;
+  recommendations: this.generateRecommendations();
 
-=======
-  recommendations: this.generateRecommendations()
-      
+;
 
+;
 
-
-
-
+;
 
 };
-      
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
       this.saveReport(report);
       this.log('Performance optimization completed');
-      return report} catch (error) {
+      return report} catch (error) {;
       this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
-<<<<<<< HEAD
+<<<<<<< HEAD;
       return null;
+;
 
-
-=======
-      return null}
-  }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  analyzeBundleSize() {
-    try {
-      // Placeholder for bundle analysis
-      return {
-        totalSize: '2.1MB',
-        gzippedSize: '650KB',
-<<<<<<< HEAD
-        recommendations: ['Consider code splitting', 'Remove unused dependencies']
+=======;
+      return null};
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  analyzeBundleSize() {;
+    try {;
+      // Placeholder for bundle analysis;
+      return {;
+        totalSize: '2.1MB',;
+        gzippedSize: '650KB',;
+<<<<<<< HEAD;
+        recommendations: ['Consider code splitting', 'Remove unused dependencies'];
       };
-    } catch (error) {
+    } catch (error) {;
       return { error: error.message };
+;
 
-
-=======
-        recommendations['Consider code splitting', 'Remove unused dependencies']
-      }} catch (error) {
-      return { error: error.message }}
-  }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  optimizeImages() {
-    try {
-      // Placeholder for image optimization
-      return {
-        optimized: 0,
-        totalImages: 0,
-        savings: '0KB'
-<<<<<<< HEAD
+=======;
+        recommendations['Consider code splitting', 'Remove unused dependencies'];
+      }} catch (error) {;
+      return { error: error.message }};
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  optimizeImages() {;
+    try {;
+      // Placeholder for image optimization;
+      return {;
+        optimized: 0,;
+        totalImages: 0,;
+        savings: '0KB';
+<<<<<<< HEAD;
       };
-    } catch (error) {
+    } catch (error) {;
       return { error: error.message };
+;
 
-
-  analyzeDependencies() {
-    try {
+  analyzeDependencies() {;
+    try {;
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
-
-=======
-      }} catch (error) {
-      return { error: error.message }}
-  }
-  analyzeDependencies() {
-    try {
+;
+=======;
+      }} catch (error) {;
+      return { error: error.message }};
+  };
+  analyzeDependencies() {;
+    try {;
       const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
       const devDependencies = Object.keys(packageJson.devDependencies || {});
-      
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-      return {
-        totalDependencies: dependencies.length + devDependencies.length,
-        productionDependencies: dependencies.length,
-        devDependencies: devDependencies.length,
-        potentialUnused: this.findUnusedDependencies()
-<<<<<<< HEAD
+;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+      return {;
+        totalDependencies: dependencies.length + devDependencies.length,;
+        productionDependencies: dependencies.length,;
+        devDependencies: devDependencies.length,;
+        potentialUnused: this.findUnusedDependencies();
+<<<<<<< HEAD;
       };
-    } catch (error) {
+    } catch (error) {;
       return { error: error.message };
+;
 
-
-  findUnusedDependencies() {
-    // Placeholder for unused dependency detection
+  findUnusedDependencies() {;
+    // Placeholder for unused dependency detection;
     return ['example-unused-package'];
-
-=======
-      }} catch (error) {
-      return { error: error.message }}
-  }
-  findUnusedDependencies() {
-    // Placeholder for unused dependency detection
-    return ['example-unused-package']}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  generateRecommendations() {
-    return [
-      'Implement code splitting for better performance',
-      'Optimize images using WebP format',
-      'Remove unused dependencies',
-      'Enable gzip compression',
-      'Use React.memo for expensive components'
-<<<<<<< HEAD
+;
+=======;
+      }} catch (error) {;
+      return { error: error.message }};
+  };
+  findUnusedDependencies() {;
+    // Placeholder for unused dependency detection;
+    return ['example-unused-package']};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  generateRecommendations() {;
+    return [;
+      'Implement code splitting for better performance',;
+      'Optimize images using WebP format',;
+      'Remove unused dependencies',;
+      'Enable gzip compression',;
+      'Use React.memo for expensive components';
+<<<<<<< HEAD;
     ];
-
-  saveReport(report) {
+;
+  saveReport(report) {;
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
+;
 
 const optimizer = new PerformanceOptimizer();
-optimizer.optimizePerformance().then(report => {
-  if (report) {
-<<<<<<< HEAD
+optimizer.optimizePerformance().then(report => {;
+  if (report) {;
+<<<<<<< HEAD;
     // // // // // console.log('Performance report:', report);
-
-=======
+;
+=======;
     // // // // // // // // console.log('Performance report:', report);
-  }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
-    ]}
-  saveReport(report) {
+  };
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+=======;
+    ]};
+  saveReport(report) {;
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}
-}
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))};
+};
 const optimizer = new PerformanceOptimizer();
-optimizer.optimizePerformance().then(report => {
-  if (report) {
-    console.log('Performance report:', report)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+optimizer.optimizePerformance().then(report => {;
+  if (report) {;
+    console.log('Performance report:', report)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 });
 }}}}}}}}}}}}}}}

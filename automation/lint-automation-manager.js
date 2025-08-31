@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { execSync, spawn } from 'child_process';
@@ -6,223 +6,223 @@ import chokidar from 'chokidar';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 const __dirname = dirname(__filename);
-class LintAutomationManager {
-  constructor() {
+class LintAutomationManager {;
+  constructor() {;
     this.isRunning = false;
     this.watcher = null;
     this.logFile = path.join(__dirname, 'logs', 'lint-automation.log');
-<<<<<<< HEAD
+<<<<<<< HEAD;
     this.ensureLogDirectory();
-
-  ensureLogDirectory() {
+;
+  ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
+    if (!fs.existsSync(logDir)) {;
       fs.mkdirSync(logDir, { recursive: true });
+;
 
-
-  log(message) {
+  log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
-<<<<<<< HEAD
+<<<<<<< HEAD;
     // // // // // console.log(message);
-=======
+=======;
     // // // // // // // // console.log(message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
     fs.appendFileSync(this.logFile, logMessage);
-
-=======
-    this.ensureLogDirectory()}
-  ensureLogDirectory() {
+;
+=======;
+    this.ensureLogDirectory()};
+  ensureLogDirectory() {;
     const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {
-      fs.mkdirSync(logDir, { recursive: true })}
-  }
-  log(message) {
+    if (!fs.existsSync(logDir)) {;
+      fs.mkdirSync(logDir, { recursive: true })};
+  };
+  log(message) {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
-    fs.appendFileSync(this.logFile, logMessage)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  async runLint() {
-    try {
+    fs.appendFileSync(this.logFile, logMessage)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  async runLint() {;
+    try {;
       this.log('🔍 Running ESLint...');
-      const result = execSync('npm run lint', {
-        encoding: 'utf8',
-        stdio: 'pipe'
+      const result = execSync('npm run lint', {;
+        encoding: 'utf8',;
+        stdio: 'pipe';
       });
       this.log('✅ Lint completed successfully');
-      return { success: true, output: result }} catch (error) {
+      return { success: true, output: result }} catch (error) {;
       this.log(`❌ Lint errors found: ${error.message}`);
-<<<<<<< HEAD
+<<<<<<< HEAD;
       return { success: false, output: error.stdout || error.message };
+;
 
-
-=======
-      return { success: false, output: error.stdout || error.message }}
-  }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  async fixLintErrors() {
-    try {
+=======;
+      return { success: false, output: error.stdout || error.message }};
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  async fixLintErrors() {;
+    try {;
       this.log('🔧 Attempting to fix lint errors...');
-      const result = execSync('npm run lint -- --fix', {
-        encoding: 'utf8',
-        stdio: 'pipe'
+      const result = execSync('npm run lint -- --fix', {;
+        encoding: 'utf8',;
+        stdio: 'pipe';
       });
       this.log('✅ Lint errors fixed successfully');
-      return { success: true, output: result }} catch (error) {
+      return { success: true, output: result }} catch (error) {;
       this.log(`❌ Failed to fix lint errors: ${error.message}`);
-<<<<<<< HEAD
+<<<<<<< HEAD;
       return { success: false, output: error.stdout || error.message };
+;
 
-
-=======
-      return { success: false, output: error.stdout || error.message }}
-  }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  startFileWatcher() {
+=======;
+      return { success: false, output: error.stdout || error.message }};
+  };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  startFileWatcher() {;
     this.log('👀 Starting file watcher...');
-
-    const watcher = chokidar.watch([
-      'pages/**/*.{js,jsx,ts,tsx}',
-      'components/**/*.{js,jsx,ts,tsx}',
-      'utils/**/*.{js,jsx,ts,tsx}',
-      'hooks/**/*.{js,jsx,ts,tsx}'
-    ], {
-      ignored: /(node_modules|\.git|\.next)/,
-      persistent: true
+;
+    const watcher = chokidar.watch([;
+      'pages/**/*.{js,jsx,ts,tsx}',;
+      'components/**/*.{js,jsx,ts,tsx}',;
+      'utils/**/*.{js,jsx,ts,tsx}',;
+      'hooks/**/*.{js,jsx,ts,tsx}';
+    ], {;
+      ignored: /(node_modules|\.git|\.next)/,;
+      persistent: true;
     });
     let debounceTimer;
-    watcher.on('change', (filePath) => {
+    watcher.on('change', (filePath) => {;
       clearTimeout(debounceTimer);
-      debounceTimer = setTimeout(async () => {
+      debounceTimer = setTimeout(async () => {;
         this.log(`📝 File changed: ${filePath}`);
         await this.handleFileChange(filePath)}, 1000)});
     this.watcher = watcher;
-<<<<<<< HEAD
+<<<<<<< HEAD;
     this.log('✅ File watcher started');
-
-=======
-    this.log('✅ File watcher started')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  async handleFileChange(filePath) {
+;
+=======;
+    this.log('✅ File watcher started')};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  async handleFileChange(filePath) {;
     this.log(`🔍 Checking file: ${filePath}`);
-
-    // Run lint on the specific file
-    try {
-      const result = execSync(`npx eslint "${filePath}" --fix`, {
-        encoding: 'utf8',
-        stdio: 'pipe'
+;
+    // Run lint on the specific file;
+    try {;
+      const result = execSync(`npx eslint '${filePath}' --fix`, {;
+        encoding: 'utf8',;
+        stdio: 'pipe';
       });
-<<<<<<< HEAD
+<<<<<<< HEAD;
       this.log(`✅ Fixed issues in: ${filePath}`);
-    } catch (error) {
+    } catch (error) {;
       this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`);
+;
 
-
-  async start() {
-    if (this.isRunning) {
+  async start() {;
+    if (this.isRunning) {;
       this.log('⚠️ Automation is already running');
       return;
-
-=======
-      this.log(`✅ Fixed issues in: ${filePath}`)} catch (error) {
-      this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`)}
-  }
-  async start() {
-    if (this.isRunning) {
+;
+=======;
+      this.log(`✅ Fixed issues in: ${filePath}`)} catch (error) {;
+      this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`)};
+  };
+  async start() {;
+    if (this.isRunning) {;
       this.log('⚠️ Automation is already running');
-      return}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      return};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     this.isRunning = true;
     this.log('🚀 Starting Lint Automation Manager...');
-    // Initial lint check
+    // Initial lint check;
     const initialResult = await this.runLint();
-    if (!initialResult.success) {
-<<<<<<< HEAD
+    if (!initialResult.success) {;
+<<<<<<< HEAD;
       await this.fixLintErrors();
-
-=======
-      await this.fixLintErrors()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-    // Start file watcher
+;
+=======;
+      await this.fixLintErrors()};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+    // Start file watcher;
     this.startFileWatcher();
-    // Periodic full project lint
-    setInterval(async () => {
-      if (this.isRunning) {
+    // Periodic full project lint;
+    setInterval(async () => {;
+      if (this.isRunning) {;
         this.log('🔄 Running periodic lint check...');
-<<<<<<< HEAD
+<<<<<<< HEAD;
         await this.runLint();
-
-    }, 5 * 60 * 1000); // Every 5 minutes
+;
+    }, 5 * 60 * 1000); // Every 5 minutes;
     this.log('✅ Lint Automation Manager started successfully');
-
-=======
-        await this.runLint()}
-    }, 5 * 60 * 1000); // Every 5 minutes
-    this.log('✅ Lint Automation Manager started successfully')}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  stop() {
+;
+=======;
+        await this.runLint()};
+    }, 5 * 60 * 1000); // Every 5 minutes;
+    this.log('✅ Lint Automation Manager started successfully')};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+  stop() {;
     this.isRunning = false;
-    if (this.watcher) {
+    if (this.watcher) {;
       this.watcher.close();
-<<<<<<< HEAD
+<<<<<<< HEAD;
       this.watcher = null;
-
+;
     this.log('🛑 Lint Automation Manager stopped');
-
-  status() {
+;
+  status() {;
     const status = this.isRunning ? 'Running' : 'Stopped';
     this.log(`📊 Status: ${status}`);
     return { running: this.isRunning };
+;
 
-
-=======
-      this.watcher = null}
-    this.log('🛑 Lint Automation Manager stopped')}
-  status() {
+=======;
+      this.watcher = null};
+    this.log('🛑 Lint Automation Manager stopped')};
+  status() {;
     const status = this.isRunning ? 'Running' : 'Stopped';
     this.log(`📊 Status: ${status}`);
-    return { running: this.isRunning }}
-}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// CLI handling
+    return { running: this.isRunning }};
+};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+// CLI handling;
 const manager = new LintAutomationManager();
 const command = process.argv[2];
-switch (command) {
-  case 'start':
+switch (command) {;
+  case 'start':;
     manager.start();
     break;
-  case 'stop':
+  case 'stop':;
     manager.stop();
     process.exit(0);
     break;
-  case 'status':
+  case 'status':;
     manager.status();
     process.exit(0);
     break;
-  default:
-<<<<<<< HEAD
-<<<<<<< HEAD
+  default:;
+<<<<<<< HEAD;
+<<<<<<< HEAD;
     // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
-=======
+=======;
     // // // // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
     process.exit(1);
-
-=======
+;
+=======;
     console.log('Usage: node lint-automation-manager.js [start|stop|status]');
-    process.exit(1)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// Graceful shutdown
-process.on('SIGINT', () => {
+    process.exit(1)};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+// Graceful shutdown;
+process.on('SIGINT', () => {;
   manager.stop();
   process.exit(0)});
-process.on('SIGTERM', () => {
+process.on('SIGTERM', () => {;
   manager.stop();
-<<<<<<< HEAD
+<<<<<<< HEAD;
   process.exit(0);
 });
-}}}}}}}}}}}}}}}}}}}}
-=======
+}}}}}}}}}}}}}}}}}}}};
+=======;
   process.exit(0)});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;

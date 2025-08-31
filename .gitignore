@@ -78,3 +78,48 @@ temp/
 # Vite
 .vite/
 core
+
+# Automation and reports (exclude from build)
+automation/
+link-reports/
+maintenance-reports/
+deployment-reports/
+ai-optimization-reports/
+ai-analysis-reports/
+test-generation-reports/
+test-reports/
+security-reports/
+documentation-reports/
+orchestrator-reports/
+ci-cd-reports/
+dependency-backups/
+dependency-reports/
+ai-optimization-backups/
+
+# Additional sensitive directories and files
+logs/
+data/
+reports/
+security-reports/
+test-reports/
+temp_working/
+*.backup.*
+*.backup
+link-*.json
+link-*.md
+performance-report.json
+security-audit-report.json
+quality-report.json
+continuous-improvement-report.json
+console-error-fixer-report.json
+
+# PM2 automation files
+setup-pm2-cron.sh
+pm2-*.sh
+pm2-*.js
+ecosystem-pm2-*.config.cjs
+start-pm2-*.sh
+start-*-automation.sh
+monitor-*.sh
+manage-*.sh
+backups/sync-backups/

@@ -1,0 +1,53 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "pm2": {
+      "name": "pm2",
+      "severity": "low",
+      "isDirect": true,
+      "via": [
+        {
+          "source": 1106240,
+          "name": "pm2",
+          "dependency": "pm2",
+          "title": "pm2 Regular Expression Denial of Service vulnerability",
+          "url": "https://github.com/advisories/GHSA-x5gf-qvw8-r2rm",
+          "severity": "low",
+          "cwe": [
+            "CWE-400",
+            "CWE-1333"
+          ],
+          "cvss": {
+            "score": 4.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": "<=6.0.8"
+        }
+      ],
+      "effects": [],
+      "range": "*",
+      "nodes": [
+        "node_modules/pm2"
+      ],
+      "fixAvailable": false
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 1
+    },
+    "dependencies": {
+      "prod": 221,
+      "dev": 14,
+      "optional": 14,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 248
+    }
+  }
+}

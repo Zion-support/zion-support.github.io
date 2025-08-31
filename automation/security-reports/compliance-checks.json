@@ -1,0 +1,11 @@
+{
+  "checks": [
+    {
+      "type": "package-scripts",
+      "hasSecurityScript": false,
+      "hasAuditScript": false,
+      "hasLintScript": false
+    }
+  ],
+  "timestamp": "2025-08-31T03:00:06.806Z"
+}
