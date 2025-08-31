@@ -1,7 +1,8 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
+import { SEOOptimizer, defaultSEO } from '../components/SEOOptimizer';
+import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
 import {
   Users,
   TrendingUp,
@@ -673,18 +674,18 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen">
-      <SEO
-        title="AI-Powered Technology Solutions & Digital Transformation"
-        description="Transform your business with cutting-edge AI solutions, quantum computing, cybersecurity, and digital transformation services. Expert IT consulting and micro-SaaS solutions from Zion Tech Group."
-        keywords="AI solutions, artificial intelligence, quantum computing, cybersecurity, digital transformation, IT consulting, micro-SaaS, cloud solutions, machine learning, data analytics, blockchain, IoT, edge computing"
-        canonical="https://ziontechgroup.com"
-        structuredData={homePageStructuredData}
-      />
-      <HeroSection />
-      <ServicesSection />
-      <WhyChooseUsSection />
-      <CTASection />
-    </div>
+    <>
+      <SEOOptimizer {...defaultSEO} />
+      <PerformanceOptimizer>
+        <div className="min-h-screen bg-zion-blue-dark">
+          <HeroSection />
+          <ServicesSection />
+          <WhyChooseUsSection />
+          <CTASection />
+        </div>
+      </PerformanceOptimizer>
+    </>
   );
 }
+
+export default Home;
