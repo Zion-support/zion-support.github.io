@@ -78,7 +78,10 @@ export function AppFooter() {
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
         { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
         { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
-        { name: "AI HR Platform", href: "/services/ai-hr-platform" }
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" },
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
+        { name: "AI Predictive Maintenance", href: "/services/ai-predictive-maintenance" },
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-trading-risk-management" }
       ]
     }
   ];

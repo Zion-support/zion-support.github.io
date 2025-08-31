@@ -1,490 +1,457 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  TrendingUp, 
-  Shield, 
-  Brain, 
-  BarChart3, 
-  AlertTriangle, 
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Target, 
+import {
+  Shield,
+  Brain,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Clock,
   Users,
-  DollarSign,
-  Activity,
-  Lock,
+  BarChart3,
   Cloud,
-  Network,
+  Cpu,
   Database,
-  Workflow,
-  MessageCircle,
-  Calendar,
-  FileText,
-  Video,
-  BookOpen,
+  Network,
+  TrendingUp,
+  Target,
+  Rocket,
   Star,
   Award,
-  Lightbulb,
-  Rocket,
-  Building2,
-  Monitor,
-  Smartphone,
-  Wifi,
-  Satellite,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  MessageSquare,
-  PieChart,
-  LineChart,
-  BarChart,
-  Cpu,
-  Server,
   Globe,
-  Clock,
-  Eye,
-  Search,
-  Settings,
-  Palette,
   Phone,
   Mail,
   MapPin,
-  HelpCircle,
-  ChevronRight,
-  ChevronDown,
-  Plus,
-  Minus,
-  ExternalLink
+  AlertTriangle,
+  DollarSign,
+  Activity,
+  PieChart,
+  TrendingDown,
+  Lock
 } from 'lucide-react';
 
 export default function AIFinancialTradingRiskManagement() {
   const features = [
     {
-      icon: Brain,
+      icon: <Brain className="w-6 h-6" />,
       title: "AI-Powered Risk Assessment",
-      description: "Advanced machine learning algorithms continuously analyze market data to identify potential risks in real-time."
+      description: "Advanced machine learning algorithms that identify and quantify trading risks in real-time."
     },
     {
-      icon: Shield,
+      icon: <Shield className="w-6 h-6" />,
       title: "Real-time Risk Monitoring",
-      description: "24/7 monitoring of trading activities with instant alerts for any risk threshold breaches."
+      description: "Continuous monitoring of portfolio risk with instant alerts and automated safeguards."
     },
     {
-      icon: TrendingUp,
-      title: "Predictive Risk Modeling",
-      description: "Forecast potential market risks using historical data analysis and predictive analytics."
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Advanced Analytics Dashboard",
+      description: "Comprehensive insights into risk metrics, portfolio performance, and market trends."
     },
     {
-      icon: BarChart3,
-      title: "Comprehensive Risk Analytics",
-      description: "Deep insights into portfolio risk exposure, volatility analysis, and correlation assessments."
+      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Early Warning System",
+      description: "Proactive risk alerts before market conditions deteriorate or positions become vulnerable."
     },
     {
-      icon: Lock,
-      title: "Regulatory Compliance",
-      description: "Automated compliance monitoring ensuring adherence to financial regulations and reporting requirements."
+      icon: <Lock className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Bank-level security with role-based access control, audit trails, and compliance features."
     },
     {
-      icon: Cloud,
-      title: "Scalable Infrastructure",
-      description: "Cloud-native architecture that scales with your trading volume and risk management needs."
+      icon: <Cloud className="w-6 h-6" />,
+      title: "Cloud-Native Architecture",
+      description: "Scalable, resilient infrastructure that handles high-frequency trading and large portfolios."
     }
   ];
 
-  const riskTypes = [
+  const pricingPlans = [
     {
-      category: "Market Risk",
-      description: "Monitor and manage exposure to market fluctuations, volatility, and directional changes",
-      items: [
-        "Price volatility analysis",
-        "Market correlation monitoring",
-        "Sector-specific risk assessment",
-        "Global market exposure tracking"
-      ]
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Perfect for individual traders",
+      features: [
+        "Up to $1M portfolio value",
+        "Basic risk analytics",
+        "Standard monitoring",
+        "Email support",
+        "Real-time alerts"
+      ],
+      cta: "Start Free Trial",
+      popular: false
     },
     {
-      category: "Credit Risk",
-      description: "Assess and manage counterparty default risks and credit exposure",
-      items: [
-        "Counterparty credit scoring",
-        "Credit limit monitoring",
-        "Default probability modeling",
-        "Collateral management"
-      ]
+      name: "Institutional",
+      price: "$999",
+      period: "/month",
+      description: "Ideal for hedge funds and institutions",
+      features: [
+        "Up to $100M portfolio value",
+        "Advanced AI risk models",
+        "Custom dashboards",
+        "Priority support",
+        "API access",
+        "Custom integrations",
+        "Compliance reporting"
+      ],
+      cta: "Start Free Trial",
+      popular: true
     },
     {
-      category: "Operational Risk",
-      description: "Identify and mitigate risks from internal processes, systems, and human factors",
-      items: [
-        "System failure monitoring",
-        "Process automation risks",
-        "Human error prevention",
-        "Business continuity planning"
-      ]
-    },
-    {
-      category: "Liquidity Risk",
-      description: "Manage risks related to asset liquidity and funding availability",
-      items: [
-        "Liquidity stress testing",
-        "Funding gap analysis",
-        "Asset liquidity scoring",
-        "Emergency funding protocols"
-      ]
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "For large financial institutions",
+      features: [
+        "Unlimited portfolio value",
+        "Custom AI models",
+        "White-label solution",
+        "Dedicated support",
+        "On-premise option",
+        "Custom SLA",
+        "Training & consultation"
+      ],
+      cta: "Contact Sales",
+      popular: false
     }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "Reduced Risk Exposure",
-      description: "Minimize potential losses through proactive risk identification and management"
+      icon: <Shield className="w-8 h-8 text-green-500" />,
+      title: "Reduce Portfolio Risk",
+      description: "AI-powered risk management reduces portfolio volatility by 30-50%"
     },
     {
-      icon: Shield,
-      title: "Enhanced Compliance",
-      description: "Automated regulatory reporting and compliance monitoring"
+      icon: <Clock className="w-8 h-8 text-blue-500" />,
+      title: "Real-time Protection",
+      description: "Instant risk alerts and automated position adjustments protect capital 24/7"
     },
     {
-      icon: Users,
-      title: "Improved Decision Making",
-      description: "Data-driven insights for better trading and risk management decisions"
+      icon: <Target className="w-8 h-8 text-purple-500" />,
+      title: "Improve Returns",
+      description: "Better risk-adjusted returns through intelligent position sizing and diversification"
     },
     {
-      icon: Cog,
-      title: "Operational Efficiency",
-      description: "Streamlined risk management processes with automated workflows"
+      icon: <Users className="w-8 h-8 text-cyan-500" />,
+      title: "Compliance & Audit",
+      description: "Automated compliance monitoring and comprehensive audit trails for regulators"
     }
   ];
 
-  const technologies = [
-    { name: "Machine Learning", icon: Brain, description: "Advanced AI algorithms for risk prediction and analysis" },
-    { name: "Real-time Analytics", icon: Activity, description: "Instant processing of market data and risk metrics" },
-    { name: "Blockchain Security", icon: Network, description: "Secure and transparent transaction monitoring" },
-    { name: "Cloud Computing", icon: Cloud, description: "Scalable infrastructure for high-performance computing" },
-    { name: "Big Data Processing", icon: Database, description: "Handling massive datasets for comprehensive analysis" },
-    { name: "API Integration", icon: Workflow, description: "Seamless integration with existing trading systems" }
-  ];
-
-  const useCases = [
+  const riskTypes = [
     {
-      title: "Hedge Funds",
-      description: "Advanced risk management for complex trading strategies and portfolio optimization",
-      icon: TrendingUp
+      title: "Market Risk",
+      description: "Monitor exposure to market movements and volatility",
+      icon: <TrendingUp className="w-8 h-8 text-blue-500" />
     },
     {
-      title: "Investment Banks",
-      description: "Comprehensive risk monitoring for trading desks and investment portfolios",
-      icon: Building2
+      title: "Credit Risk",
+      description: "Assess counterparty risk and credit exposure",
+      icon: <Shield className="w-8 h-8 text-green-500" />
     },
     {
-      title: "Asset Managers",
-      description: "Portfolio risk assessment and optimization for institutional clients",
-      icon: Users
+      title: "Liquidity Risk",
+      description: "Track position liquidity and exit strategy viability",
+      icon: <Activity className="w-8 h-8 text-purple-500" />
     },
     {
-      title: "Trading Firms",
-      description: "Real-time risk monitoring for high-frequency and algorithmic trading",
-      icon: Zap
+      title: "Operational Risk",
+      description: "Monitor system performance and operational efficiency",
+      icon: <AlertTriangle className="w-8 h-8 text-yellow-500" />
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 text-zion-purple text-sm font-medium mb-6">
-              <Shield className="w-4 h-4 mr-2" />
-              AI-Powered Service
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Financial Trading
-              <span className="block text-zion-cyan">Risk Management</span>
-            </h1>
-            <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-              Protect your trading operations with intelligent risk management powered by advanced AI. 
-              Monitor, analyze, and mitigate risks in real-time across all your financial instruments.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
-              >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:border-zion-cyan hover:text-zion-cyan transition-all duration-300"
-              >
-                Contact Sales
-                <MessageSquare className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
+                <Shield className="w-4 h-4 mr-2" />
+                AI-Powered Financial Risk Management
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI Financial Trading Risk Management
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Protect your trading capital with intelligent risk management powered by artificial intelligence. 
+                Our platform provides real-time risk assessment, automated safeguards, and comprehensive 
+                analytics to maximize returns while minimizing losses.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/request-quote"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <button className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 transition-all duration-300">
+                  Watch Demo
+                </button>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced Risk Management Features
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive risk management capabilities designed 
-              specifically for modern financial trading operations.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Everything you need to protect your trading capital and optimize performance
             </p>
-          </div>
-          
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                  {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zinc-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Risk Types Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Risk Coverage
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform monitors and manages all types of financial risks, providing 
-              complete protection for your trading operations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {riskTypes.map((risk, index) => (
-              <div key={index} className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6">
-                <h3 className="text-2xl font-semibold text-zion-cyan mb-4 flex items-center">
-                  <AlertTriangle className="w-6 h-6 mr-2" />
-                  {risk.category}
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
                 </h3>
-                <p className="text-zinc-300 mb-4">{risk.description}</p>
-                <ul className="space-y-3">
-                  {risk.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-center text-zinc-300">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <p className="text-gray-300">
+                  {feature.description}
+                </p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Business Benefits
+              Why Choose AI Risk Management?
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Transform your risk management approach with AI-powered insights and automation, 
-              delivering measurable improvements across all key metrics.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience the transformative power of AI-driven financial risk protection
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="text-center bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
+                <div className="flex-shrink-0">
+                  {benefit.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-zinc-300 text-sm">{benefit.description}</p>
-              </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-300">
+                    {benefit.description}
+                  </p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+      {/* Risk Types Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Use Cases
+              Comprehensive Risk Coverage
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI risk management solutions are designed for various financial institutions 
-              and trading operations, from hedge funds to investment banks.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Monitor and manage all types of financial trading risks
             </p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <div
+            {riskTypes.map((riskType, index) => (
+              <motion.div
                 key={index}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-1"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-4">
-                  <useCase.icon className="w-6 h-6 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {riskType.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                <p className="text-zinc-300 text-sm">{useCase.description}</p>
-              </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{riskType.title}</h3>
+                <p className="text-gray-300 text-sm">{riskType.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
+      {/* Pricing Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Technologies
+              Simple, Transparent Pricing
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies to deliver robust, scalable, and 
-              intelligent risk management solutions for modern financial markets.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your portfolio size. All plans include a 14-day free trial.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {technologies.map((tech, index) => (
-              <div
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
                 key={index}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-1"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+                  plan.popular 
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
+                    : 'border-white/10'
+                }`}
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-lg flex items-center justify-center mb-4">
-                  <tech.icon className="w-6 h-6 text-white" />
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-300">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-300">{plan.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
-                <p className="text-zinc-300 text-sm">{tech.description}</p>
-              </div>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-cyan-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                    : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
+                }`}>
+                  {plan.cta}
+                </button>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="bg-gradient-to-r from-zion-purple/20 to-zion-cyan/20 border border-zion-purple/30 rounded-2xl p-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Risk Management?
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Protect Your Capital?
             </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Join leading financial institutions that have already enhanced their risk management 
-              capabilities with Zion Tech Group's AI-powered solutions.
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of traders and institutions that have already secured their portfolios 
+              with AI-powered risk management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
               >
-                Get Free Consultation
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
-                to="/case-studies"
-                className="inline-flex items-center px-8 py-4 border border-zinc-600 text-white font-semibold rounded-lg hover:border-zion-cyan hover:text-zion-cyan transition-all duration-300"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 transition-all duration-300"
               >
-                View Case Studies
-                <FileText className="w-5 h-5 ml-2" />
+                Schedule Demo
               </Link>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {/* Related Services */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Related AI Financial Services
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Explore our comprehensive suite of AI-powered financial services designed to 
-              transform your trading and investment operations.
+      {/* Contact Info */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center text-gray-400">
+            <p className="mb-2">
+              Need help? Contact our team at{' '}
+              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
+                kleber@ziontechgroup.com
+              </a>
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Link
-              to="/services/ai-financial-trading-platform"
-              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Financial Trading Platform
-              </h3>
-              <p className="text-zinc-300 mb-4">
-                Advanced algorithmic trading platform powered by artificial intelligence for optimal execution and performance.
-              </p>
-              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
-              to="/services/ai-business-intelligence"
-              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">
-                <BarChart3 className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Business Intelligence
-              </h3>
-              <p className="text-zinc-300 mb-4">
-                Comprehensive business intelligence platform with AI-powered analytics and insights for strategic decision making.
-              </p>
-              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
-
-            <Link
-              to="/services/ai-data-analytics-platform"
-              className="group bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:-translate-y-2"
-            >
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                <Database className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-zion-cyan transition-colors">
-                AI Data Analytics Platform
-              </h3>
-              <p className="text-zinc-300 mb-4">
-                Advanced data analytics platform leveraging AI and machine learning for comprehensive business insights.
-              </p>
-              <div className="flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors">
-                Learn More
-                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
-            </Link>
+            <p>
+              Call us at{' '}
+              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
+                +1 302 464 0950
+              </a>
+            </p>
           </div>
         </div>
       </section>

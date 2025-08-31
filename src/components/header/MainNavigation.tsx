@@ -265,6 +265,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Marketing Automation
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-workflow-orchestrator" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI Workflow Orchestrator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-predictive-maintenance" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Activity className="w-3 h-3 mr-2" />
+                        AI Predictive Maintenance
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-hr-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI HR Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-financial-trading-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Financial Risk Management
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
