@@ -46,6 +46,7 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 
 // New pages we created
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
@@ -128,6 +129,8 @@ function App() {
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/innovative-services-hub" element={<InnovativeServicesHub />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
 
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<Enterprise />} />
@@ -135,6 +138,59 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+
+                    {/* New Innovative Services Routes */}
+                    <Route path="/services/ai-neural-architecture-optimizer" element={<div>AI Neural Architecture Optimizer Service Page</div>} />
+                    <Route path="/services/ai-federated-learning-platform" element={<div>AI Federated Learning Platform Service Page</div>} />
+                    <Route path="/services/ai-explainable-ai-platform" element={<div>AI Explainable AI Platform Service Page</div>} />
+                    <Route path="/services/ai-powered-churn-predictor" element={<div>AI-Powered Churn Predictor Service Page</div>} />
+                    <Route path="/services/ai-interview-assessment-platform" element={<div>AI Interview Assessment Platform Service Page</div>} />
+                    <Route path="/services/ai-returns-management-saas" element={<div>AI Returns Management SaaS Service Page</div>} />
+                    <Route path="/services/ai-powered-seo-platform" element={<div>AI-Powered SEO Platform Service Page</div>} />
+                    <Route path="/services/ai-workflow-automation-platform" element={<div>AI Workflow Automation Platform Service Page</div>} />
+                    <Route path="/services/ai-quantum-hybrid-platform" element={<div>AI-Quantum Hybrid Platform Service Page</div>} />
+                    <Route path="/services/ai-space-technology-platform" element={<div>AI Space Technology Platform Service Page</div>} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<div>AI Healthcare Analytics Platform Service Page</div>} />
+                    <Route path="/services/ai-financial-trading-platform" element={<div>AI Financial Trading Platform Service Page</div>} />
+                    <Route path="/services/ai-marketing-automation-suite" element={<div>AI Marketing Automation Suite Service Page</div>} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<div>AI Supply Chain Optimization Service Page</div>} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<div>AI Customer Experience Analytics Service Page</div>} />
+                    <Route path="/services/ai-project-management-platform" element={<div>AI Project Management Platform Service Page</div>} />
+                    <Route path="/services/ai-devops-automation-platform" element={<div>AI DevOps Automation Platform Service Page</div>} />
+                    <Route path="/services/ai-iot-edge-computing-platform" element={<div>AI IoT Edge Computing Platform Service Page</div>} />
+                    <Route path="/services/smart-contract-risk-scanner" element={<div>Smart Contract Risk Scanner Service Page</div>} />
+                    <Route path="/services/vendor-risk-management" element={<div>Vendor Risk Management Platform Service Page</div>} />
+                    <Route path="/services/gdpr-cookie-compliance" element={<div>GDPR Cookie Compliance Manager Service Page</div>} />
+                    <Route path="/services/ai-cybersecurity-threat-detection" element={<div>AI Cybersecurity Threat Detection Service Page</div>} />
+                    <Route path="/services/ai-cybersecurity-suite" element={<div>AI Cybersecurity Suite Service Page</div>} />
+                    <Route path="/services/quantum-computing-as-a-service" element={<div>Quantum Computing as a Service Service Page</div>} />
+                    <Route path="/services/edge-computing-platform" element={<div>Edge Computing Platform Service Page</div>} />
+                    <Route path="/services/ai-healthcare-platform" element={<div>AI Healthcare Platform Service Page</div>} />
+                    <Route path="/services/ai-financial-analytics" element={<div>AI Financial Analytics Platform Service Page</div>} />
+                    <Route path="/services/ai-content-optimizer-pro" element={<div>AI Content Optimizer Pro Service Page</div>} />
+                    <Route path="/services/ai-supply-chain-platform" element={<div>AI Supply Chain Platform Service Page</div>} />
+                    <Route path="/services/ai-customer-support-automation" element={<div>AI Customer Support Automation Service Page</div>} />
+                    <Route path="/services/ai-project-management" element={<div>AI Project Management Service Page</div>} />
+                    <Route path="/services/ai-devops-automation" element={<div>AI DevOps Automation Service Page</div>} />
+                    <Route path="/services/ai-iot-edge-computing" element={<div>AI IoT Edge Computing Service Page</div>} />
+                    <Route path="/services/ai-business-intelligence-suite" element={<div>AI Business Intelligence Suite Service Page</div>} />
+                    <Route path="/services/ai-code-review-security" element={<div>AI Code Review & Security Scanner Service Page</div>} />
+                    <Route path="/services/ai-financial-trading-platform" element={<div>AI Financial Trading Platform Service Page</div>} />
+                    <Route path="/services/employee-scheduling-saas" element={<div>AI Employee Scheduling Platform Service Page</div>} />
+                    <Route path="/services/soc2-compliance-tracker" element={<div>SOC2 Compliance Tracker Service Page</div>} />
+                    <Route path="/services/uptime-sla-monitor" element={<div>Uptime SLA Monitor Service Page</div>} />
+                    <Route path="/services/ai-devops-automation" element={<div>AI DevOps Automation Platform Service Page</div>} />
+                    <Route path="/services/ai-iot-edge-computing" element={<div>AI IoT Edge Computing Platform Service Page</div>} />
+                    <Route path="/services/quantum-ai-platform" element={<div>Quantum AI Hybrid Platform Service Page</div>} />
+                    <Route path="/services/space-tech-solutions" element={<div>Space Technology Solutions Service Page</div>} />
+                    <Route path="/services/ai-healthcare-analytics" element={<div>AI Healthcare Analytics Platform Service Page</div>} />
+                    <Route path="/services/green-it-solutions" element={<div>Green IT Solutions Platform Service Page</div>} />
+                    <Route path="/services/digital-transformation-hub" element={<div>Digital Transformation Hub Service Page</div>} />
+                    <Route path="/services/incident-response-platform" element={<div>AI Incident Response Platform Service Page</div>} />
+                    <Route path="/services/finops-cloud-optimizer" element={<div>FinOps Cloud Cost Optimizer Service Page</div>} />
+                    <Route path="/services/ai-marketing-automation-suite" element={<div>AI Marketing Automation Suite Service Page</div>} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<div>AI Supply Chain Optimization Service Page</div>} />
+                    <Route path="/services/ai-customer-experience-analytics" element={<div>AI Customer Experience Analytics Service Page</div>} />
 
                     {/* 404 Page */}
                     <Route
