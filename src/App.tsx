@@ -178,6 +178,7 @@ function App() {
 
                     {/* Comprehensive Services Showcase 2026 */}
                     <Route path="/comprehensive-services-showcase-2026" element={<ModernLayout><ComprehensiveServicesShowcase2026 /></ModernLayout>} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2026 /></ModernLayout>} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-pricing-guide-2025" element={<ModernLayout><ComprehensivePricingGuide2025 /></ModernLayout>} />

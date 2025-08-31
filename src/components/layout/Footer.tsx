@@ -66,6 +66,9 @@ export function Footer() {
       title: "AI & Automation Services",
       icon: Brain,
       links: [
+        { name: "AI Autonomous Research Assistant", href: "/services/ai-autonomous-research-assistant", icon: Brain },
+        { name: "AI Cybersecurity Threat Intelligence", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
+        { name: "AI Healthcare Diagnostics Platform", href: "/services/ai-healthcare-diagnostics-platform", icon: Heart },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
@@ -85,7 +88,6 @@ export function Footer() {
         { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
         { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
         { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
-        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
         { name: "AI Customer Churn Predictor", href: "/services/ai-powered-customer-churn-predictor", icon: TrendingDown },
         { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-intelligence-platform", icon: Shield }
       ]
@@ -130,6 +132,7 @@ export function Footer() {
         { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
         { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
         { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
+        { name: "Comprehensive Services 2026", href: "/comprehensive-services-showcase-2026", icon: Rocket },
         { name: "Future Technologies", href: "/innovative-services-showcase-2032", icon: Rocket }
       ]
     },
@@ -174,11 +177,13 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Get Started", href: "/get-started", icon: Rocket },
-    { name: "Request Quote", href: "/request-quote", icon: TrendingUp },
+    { name: "Get Started", href: "/contact", icon: Rocket },
+    { name: "Request Quote", href: "/contact", icon: TrendingUp },
     { name: "Pricing Guide", href: "/pricing", icon: BarChart3 },
-    { name: "Comprehensive Pricing Guide 2032", href: "/comprehensive-pricing-guide-2032", icon: DollarSign },
-    { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
+    { name: "Comprehensive Services 2026", href: "/comprehensive-services-showcase-2026", icon: Star },
+    { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant", icon: Brain },
+    { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
+    { name: "AI Healthcare", href: "/services/ai-healthcare-diagnostics-platform", icon: Heart },
     { name: "All Services", href: "/services", icon: Zap },
     { name: "Support Center", href: "/help", icon: HelpCircle }
   ];
@@ -255,6 +260,12 @@ export function Footer() {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <div className="p-2 bg-zion-purple/20 rounded-lg">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <span>Mon-Fri: 9:00 AM - 6:00 PM EST</span>
               </div>
             </div>
 
