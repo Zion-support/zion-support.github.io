@@ -18,7 +18,7 @@ interface ApiClientOptions {
 export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {;
   const { method = 'GET', body, headers = {} } = options;
   const config: RequestInit = {
-  method,
+    method: options.method || 'GET',
     headers: {
       'Content-Type': 'application/json',
       ...headers,;

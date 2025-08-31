@@ -61,6 +61,7 @@ import {
   Target2,
   Building2
 } from 'lucide-react';
+import { SEO } from "@/components/SEO";
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -109,6 +110,9 @@ const FuturisticBackground = React.memo(() => {
   );
 });
 
+// Enhanced Hero Section
+const HeroSection = () => {
+=======
 // Enhanced Hero Section with better performance
 const HeroSection = React.memo(() => {
   const [currentFeature, setCurrentFeature] = useState(0);
@@ -134,6 +138,7 @@ const HeroSection = React.memo(() => {
       {/* Background */}
       <FuturisticBackground />
       
+=======
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -300,10 +305,16 @@ const ServicesSection = () => {
       link: "/services/ai-cybersecurity-threat-intelligence"
     },
     {
-      icon: Chip,
-      title: "Edge Computing",
-      description: "Ultra-low latency IoT and edge solutions",
-      href: "/services/edge-computing-platform",
+      title: "Cybersecurity",
+      description: "Advanced security solutions to protect your digital assets",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      link: "/services/cybersecurity"
+    },
+    {
+      title: "Cloud Services",
+      description: "Scalable cloud infrastructure and management solutions",
+      icon: Cloud,
       color: "from-green-500 to-emerald-500",
       features: ["IoT Platforms", "Real-time Analytics", "5G Integration"]
     },
@@ -577,6 +588,7 @@ const WhyChooseUsSection = () => {
   );
 };
 
+=======
 // Latest Innovations Section
 const LatestInnovationsSection = () => {
   const latestServices = [

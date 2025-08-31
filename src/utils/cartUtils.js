@@ -1,5 +1,6 @@
 // Cart utility functions for managing shopping cart state and operations
 // Local storage keys
+const CART_STORAGE_KEY = 'zion_cart';
 const CART_EXPIRY_KEY = 'zion_cart_expiry';
 // Cart expiry time (24 hours)
 const CART_EXPIRY_TIME = 24 * 60 * 60 * 1000;
@@ -129,6 +130,7 @@ export const calculateCartTotal = (cart) => {
     return sum + (price * quantity);
   }, 0);
   // Calculate tax (example: 8.5%)
+  const tax = subtotal * 0.085;
   const total = subtotal + tax;
   const itemCount = cart.reduce((sum, item) => sum + (parseInt(item.quantity) || 0), 0);
   return {
@@ -273,4 +275,4 @@ export const getCartKey = (userId = null) => {
  */
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);
-};}}}}}}}}}}}}}}}}
+};
