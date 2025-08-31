@@ -21,6 +21,7 @@ import { Brain,
   Smartphone,
   BarChart3,
   Code,
+  Workflow,
   Server,
   Chip,
   Wifi,
@@ -217,6 +218,50 @@ const Services: React.FC = (): JSX.Element => {
       features: ["Process Optimization", "Technology Stack", "Change Management", "ROI Analysis"],
       pricing: "$15,000 - $75,000",
       color: "from-yellow-500 to-orange-500"
+    },
+    {
+      category: 'ai',
+      icon: Code,
+      title: "AI Autonomous Code Generator",
+      description: "Generate production-ready code in 50+ programming languages with AI-powered automation and security.",
+      features: ["Multi-Language Support", "AI Code Generation", "Security Scanning", "Git Integration"],
+      pricing: "$299 - $2,499/month",
+      color: "from-blue-500 to-purple-500",
+      featured: true,
+      href: "/services/ai-autonomous-code-generator"
+    },
+    {
+      category: 'ai',
+      icon: Workflow,
+      title: "AI Business Process Automation",
+      description: "Transform business operations with intelligent workflow automation and RPA integration.",
+      features: ["Process Discovery", "Workflow Designer", "RPA Integration", "Real-time Monitoring"],
+      pricing: "$499 - $3,999/month",
+      color: "from-green-500 to-blue-500",
+      featured: true,
+      href: "/services/ai-business-process-automation"
+    },
+    {
+      category: 'ai',
+      icon: BarChart3,
+      title: "AI Predictive Analytics Platform",
+      description: "Forecast trends and optimize operations with advanced machine learning algorithms.",
+      features: ["Advanced ML Models", "Real-time Analytics", "AutoML Capabilities", "Multi-Data Sources"],
+      pricing: "$399 - $3,999/month",
+      color: "from-purple-500 to-blue-500",
+      featured: true,
+      href: "/services/ai-predictive-analytics-platform"
+    },
+    {
+      category: 'security',
+      icon: Shield,
+      title: "AI Cybersecurity Threat Intelligence",
+      description: "Real-time threat detection and automated response with enterprise-grade security.",
+      features: ["AI Threat Detection", "24/7 Monitoring", "Real-time Response", "Compliance Ready"],
+      pricing: "$599 - $4,999/month",
+      color: "from-red-500 to-orange-500",
+      featured: true,
+      href: "/services/ai-cybersecurity-threat-intelligence"
     },
     {
       category: 'ai',

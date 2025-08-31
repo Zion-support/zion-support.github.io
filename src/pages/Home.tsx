@@ -137,31 +137,31 @@ export default function Home() {
   const services = [
     {
       icon: Brain,
-      title: "AI Autonomous Business Operations",
-      description: "Automate complex business processes with intelligent AI agents",
-      color: "from-purple-500 to-pink-500",
-      link: "/services/ai-autonomous-business-operations"
+      title: "AI Autonomous Code Generator",
+      description: "Generate production-ready code in 50+ languages with AI-powered automation",
+      color: "from-blue-500 to-purple-500",
+      link: "/services/ai-autonomous-code-generator"
     },
     {
-      icon: Cloud,
-      title: "Cloud Infrastructure & DevOps",
-      description: "Scalable cloud solutions with automated deployment and management",
-      color: "from-blue-500 to-cyan-500",
-      link: "/services/cloud-infrastructure-devops"
+      icon: Workflow,
+      title: "AI Business Process Automation",
+      description: "Transform operations with intelligent workflow automation and RPA integration",
+      color: "from-green-500 to-blue-500",
+      link: "/services/ai-business-process-automation"
+    },
+    {
+      icon: BarChart3,
+      title: "AI Predictive Analytics Platform",
+      description: "Forecast trends and optimize operations with advanced ML algorithms",
+      color: "from-purple-500 to-blue-500",
+      link: "/services/ai-predictive-analytics-platform"
     },
     {
       icon: Shield,
-      title: "Cybersecurity & Zero Trust",
-      description: "Advanced security solutions for modern threat landscapes",
+      title: "AI Cybersecurity Threat Intelligence",
+      description: "Real-time threat detection and automated response with enterprise security",
       color: "from-red-500 to-orange-500",
-      link: "/services/cybersecurity-zero-trust"
-    },
-    {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation",
-      color: "from-green-500 to-emerald-500",
-      link: "/services/digital-transformation"
+      link: "/services/ai-cybersecurity-threat-intelligence"
     }
   ];
 

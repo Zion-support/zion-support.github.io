@@ -116,6 +116,11 @@ const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAna
 const API = createLazyComponent(() => import('./pages/API'));
 const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
 
+// New Innovative Services 2025
+const AIAutonomousCodeGenerator = createLazyComponent(() => import('./pages/services/AIAutonomousCodeGenerator'));
+const AIBusinessProcessAutomation = createLazyComponent(() => import('./pages/services/AIBusinessProcessAutomation'));
+const AIPredictiveAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AIPredictiveAnalyticsPlatform'));
+
 // AI Business Intelligence and Digital Transformation
 const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/AIBusinessIntelligence'));
 const DigitalTransformation = createLazyComponent(() => import('./pages/services/DigitalTransformation'));
@@ -375,6 +380,11 @@ function App() {
                     <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
                     <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
                     <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
+
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-autonomous-code-generator" element={<AIAutonomousCodeGenerator />} />
+                    <Route path="/services/ai-business-process-automation" element={<AIBusinessProcessAutomation />} />
+                    <Route path="/services/ai-predictive-analytics-platform" element={<AIPredictiveAnalyticsPlatform />} />
 
                     {/* Additional Pages */}
                     <Route path="/api" element={<API />} />
