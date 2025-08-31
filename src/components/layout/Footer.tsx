@@ -54,7 +54,8 @@ import {
   Headphones,
   Truck,
   Search,
-  Layers
+  Layers,
+  Database
 } from 'lucide-react';
 
 export function Footer() {
@@ -76,6 +77,10 @@ export function Footer() {
         { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
         { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
         { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", icon: Database },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
+        { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
       ]
     },

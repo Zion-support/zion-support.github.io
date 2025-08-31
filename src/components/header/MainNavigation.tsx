@@ -57,7 +57,8 @@ import {
   Video,
   GraduationCap,
   Handshake,
-  ShoppingCart
+  ShoppingCart,
+  Truck
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -147,6 +148,36 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <TrendingUp className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Business Intelligence</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-enterprise-resource-planning" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Database className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Enterprise Resource Planning</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Manufacturing</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Quantum Neural Network</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-space-technology-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Satellite className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Space Technology</span>
                         </Link>
                       </li>
                     </ul>
