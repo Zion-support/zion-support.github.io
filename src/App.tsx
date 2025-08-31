@@ -98,6 +98,11 @@ const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/
 const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
+
+// Revolutionary Services 2025
+const RevolutionaryServicesShowcase2025 = createLazyComponent(() => import('./pages/RevolutionaryServicesShowcase2025'));
+const RevolutionaryPricingGuide2025 = createLazyComponent(() => import('./pages/RevolutionaryPricingGuide2025'));
+const RevolutionaryServicesLanding2025 = createLazyComponent(() => import('./pages/RevolutionaryServicesLanding2025'));
 const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
 // New Innovative Micro SAAS Services 2026
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
@@ -398,6 +403,11 @@ function App() {
                     <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
                     <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
                     <Route path="/research" element={<ModernLayout><Research /></ModernLayout>} />
+
+                    {/* Revolutionary Services 2025 Routes */}
+                    <Route path="/revolutionary-services-showcase-2025" element={<ModernLayout><RevolutionaryServicesShowcase2025 /></ModernLayout>} />
+                    <Route path="/revolutionary-pricing-guide-2025" element={<ModernLayout><RevolutionaryPricingGuide2025 /></ModernLayout>} />
+                    <Route path="/revolutionary-services-landing-2025" element={<ModernLayout><RevolutionaryServicesLanding2025 /></ModernLayout>} />
 
                     {/* Pricing Route */}
                     <Route path="/pricing" element={<Pricing />} />
