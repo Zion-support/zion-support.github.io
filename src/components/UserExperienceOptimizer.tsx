@@ -392,43 +392,7 @@ export const UserExperienceOptimizer: React.FC<UserExperienceOptimizerProps> = (
         </motion.div>
       </div>
 
-      {/* Interactive Elements Enhancement */}
-      <style jsx global>{`
-        /* Enhanced hover effects */
-        .interactive-element {
-          transition: all 0.3s ease;
-        }
-        
-        .interactive-element:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 10px 25px rgba(6, 182, 212, 0.2);
-        }
-        
-        /* Smooth scrolling */
-        html {
-          scroll-behavior: smooth;
-        }
-        
-        /* Enhanced focus states */
-        *:focus {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-        
-        /* Loading animations */
-        .loading-pulse {
-          animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        
-        @keyframes pulse {
-          0%, 100% {
-            opacity: 1;
-          }
-          50% {
-            opacity: .5;
-          }
-        }
-      `}</style>
+
     </>
   );
 };
