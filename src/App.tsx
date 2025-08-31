@@ -9,10 +9,8 @@ import { SEO } from './components/SEO';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ThemeProvider } from './components/ThemeProvider';
-import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-import { InteractiveUserExperience } from './components/InteractiveUserExperience';
-import SecurityEnhancer from './components/SecurityEnhancer';
+import EnhancedAccessibilityPanel from './components/EnhancedAccessibilityPanel';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -234,8 +232,6 @@ function App() {
               {/* Enhanced Components */}
               <EnhancedAccessibilityPanel />
               <AdvancedPerformanceMonitor />
-              <InteractiveUserExperience />
-              <SecurityEnhancer />
               <ChatAssistant />
             </div>
           </Router>
