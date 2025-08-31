@@ -204,15 +204,16 @@ const HeroSection = React.memo(() => {
             </span>
           </button>
           
-          <Link
-            to="/contact"
+          <a
+            href="tel:+1 302 464 0950"
             className="group px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 transform hover:scale-105"
           >
             <span className="flex items-center gap-2">
-              Get Started
+              <Phone className="w-5 h-5" />
+              Call Now: +1 302 464 0950
               <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </span>
-          </Link>
+          </a>
         </motion.div>
 
         {/* Trust Indicators */}
@@ -643,16 +644,23 @@ const CTASection = React.memo(() => {
               transformation with Zion Tech Group. Let's discuss how we can help you.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact"
+<<<<<<< HEAD
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+              <a
+                href="tel:+1 302 464 0950"
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+              <a
+                href="tel:+1 302 464 0950"
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-17eb
                 className="group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
               >
                 <span className="flex items-center gap-2">
-                  Get Started Today
+                  <Phone className="w-5 h-5" />
+                  Call Now: +1 302 464 0950
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
-              </Link>
+              </a>
               
               <Link
                 to="/services"

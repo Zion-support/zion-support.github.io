@@ -243,55 +243,37 @@ export function AppFooter() {
               <span className="flex items-center">
                 Made with <Heart className="w-4 h-4 mx-1 text-red-400" /> in Delaware
               </span>
+              <div className="mt-2 text-xs">
+                <div className="flex items-center justify-center space-x-4">
+                  <span className="flex items-center">
+                    <Phone className="w-3 h-3 mr-1" />
+                    +1 302 464 0950
+                  </span>
+                  <span className="flex items-center">
+                    <Mail className="w-3 h-3 mr-1" />
+                    kleber@ziontechgroup.com
+                  </span>
+                </div>
+              </div>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center space-x-4">
               <a 
-                href="https://facebook.com/ziontechgroup" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://twitter.com/ziontechgroup" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a 
                 href="https://linkedin.com/company/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-cyan-400 transition-colors"
+                aria-label="LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://instagram.com/ziontechgroup" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://youtube.com/@ziontechgroup" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <Youtube className="w-5 h-5" />
               </a>
               <a 
                 href="https://github.com/ziontechgroup" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-cyan-400 transition-colors"
+                aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
