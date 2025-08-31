@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  AlertTriangle, 
+import { toast } from 'react-hot-toast';
+import {
+  Activity,
+  Zap,
+  Gauge,
+  TrendingUp,
+  AlertTriangle,
   CheckCircle,
   Clock,
   HardDrive,
@@ -54,14 +56,17 @@ interface OptimizationSuggestion {
   estimatedSavings: string;
   action: () => void;
 }
+
 interface PerformanceOptimizerProps {
   enabled: boolean;
+  monitoringInterval?: number;
   showMetrics?: boolean;
   autoOptimize?: boolean;
 }
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enabled = true,
+  monitoringInterval = 5000,
   showMetrics = false,
   autoOptimize = true
 }) => {
@@ -119,7 +124,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const newOptimizations: string[] = [];
     const newSuggestions: OptimizationSuggestion[] = [];
 
-        // Performance optimizations
+    // Performance optimizations
     if (currentMetrics.fcp > 2000) {
       newSuggestions.push({
         id: 'fcp-optimization',
@@ -238,218 +243,60 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   // Setup performance observer
   useEffect(() => {
     if (!enabled) return;
-    
-    setIsOptimizing(true);
-    const appliedOptimizations: string[] = [];
-    
-    try {
-      // Lazy load images
-      const images = document.querySelectorAll('img[data-src]');
-      if (images.length > 0) {
-        const imageObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const img = entry.target as HTMLImageElement;
-              img.src = img.dataset.src || '';
-              img.classList.remove('lazy');
-              imageObserver.unobserve(img);
-            }
-          });
-        });
-        
-        images.forEach(img => imageObserver.observe(img));
-        appliedOptimizations.push('Image lazy loading enabled');
-      }
-      
-      // Preload critical fonts
-      const fontLinks = document.querySelectorAll('link[rel="preload"][as="font"]');
-      if (fontLinks.length === 0) {
-        const criticalFonts = ['Orbitron', 'Rajdhani'];
-        criticalFonts.forEach(font => {
-          const link = document.createElement('link');
-          link.rel = 'preload';
-          link.as = 'font';
-          link.href = `https://fonts.googleapis.com/css2?family=${font}:wght@400;500;600;700&display=swap`;
-          link.crossOrigin = 'anonymous';
-          document.head.appendChild(link);
-        });
-        appliedOptimizations.push('Critical fonts preloaded');
-      }
-      
-      // Register service worker
-      if ('serviceWorker' in navigator) {
-        try {
-          await navigator.serviceWorker.register('/sw.js');
-          appliedOptimizations.push('Service worker registered');
-        } catch (error) {
-          console.log('Service worker registration failed:', error);
-        }
-      }
-      
-      // Add DNS prefetch and preconnect hints
-      const existingHints = document.querySelectorAll('link[rel="dns-prefetch"], link[rel="preconnect"]');
-      if (existingHints.length === 0) {
-        const domains = ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdn.jsdelivr.net'];
-        domains.forEach(domain => {
-          const dnsPrefetch = document.createElement('link');
-          dnsPrefetch.rel = 'dns-prefetch';
-          dnsPrefetch.href = `//${domain}`;
-          document.head.appendChild(dnsPrefetch);
-          
-          const preconnect = document.createElement('link');
-          preconnect.rel = 'preconnect';
-          preconnect.href = `//${domain}`;
-          preconnect.crossOrigin = 'anonymous';
-          document.head.appendChild(preconnect);
-        });
-        appliedOptimizations.push('DNS prefetch and preconnect hints added');
-      }
-      
-      if (appliedOptimizations.length > 0) {
-        setOptimizations(appliedOptimizations);
-        setShowOptimizationNotification(true);
-        setTimeout(() => setShowOptimizationNotification(false), 5000);
-      }
-      
-    } catch (error) {
-      console.error('Auto-optimization failed:', error);
-    } finally {
-      setIsOptimizing(false);
-    }
-  }, [enabled]);
 
-  // Setup performance observers
-  useEffect(() => {
-    if (!enabled || !window.PerformanceObserver) return;
-
-    // LCP observer
+    // Observe LCP
     if ('PerformanceObserver' in window) {
       try {
         observerRef.current = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           
-          if (lastEntry && 'startTime' in lastEntry) {
-            setMetrics(prev => prev ? {
-              ...prev,
-              lcp: lastEntry.startTime
-            } : null);
-          }
-        });
-        
-        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
-      } catch (error) {
-        console.log('LCP observer not supported');
-      }
-    }
-
-    // FID observer
-    if ('PerformanceObserver' in window) {
-      try {
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          
-          if (lastEntry && 'processingStart' in lastEntry) {
-            const fid = lastEntry.processingStart - lastEntry.startTime;
-            setMetrics(prev => prev ? {
-              ...prev,
-              fid
-            } : null);
-          }
-        });
-        
-        fidObserver.observe({ entryTypes: ['first-input'] });
-      } catch (error) {
-        console.log('FID observer not supported');
-      }
-    }
-
-    // CLS observer
-    if ('PerformanceObserver' in window) {
-      try {
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !entry.hadRecentInput) {
-              clsValue += (entry as any).value;
-            }
-          }
-          
           setMetrics(prev => prev ? {
             ...prev,
-            cls: clsValue
+            lcp: lastEntry.startTime
           } : null);
         });
         
-        clsObserver.observe({ entryTypes: ['layout-shift'] });
-      } catch (error) {
-        console.log('CLS observer not supported');
+        observerRef.current.observe({ entryTypes: ['largest-contentful-paint'] });
+      } catch (e) {
+        console.warn('PerformanceObserver not supported');
       }
     }
+
+    // Start monitoring
+    measurePerformance();
+    intervalRef.current = setInterval(measurePerformance, monitoringInterval);
 
     return () => {
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
     };
-  }, [enabled]);
+  }, [enabled, monitoringInterval, measurePerformance]);
 
-  // Initial performance measurement
+  // Preload critical resources
   useEffect(() => {
     if (!enabled) return;
-    
-    // Wait for page to load
-    if (document.readyState === 'complete') {
-      measurePerformance();
-    } else {
-      window.addEventListener('load', measurePerformance);
-      return () => window.removeEventListener('load', measurePerformance);
-    }
-  }, [enabled, measurePerformance]);
 
-  // Auto-optimize on mount
-  useEffect(() => {
-    if (enabled && autoOptimize) {
-      const timer = setTimeout(autoOptimize, 1000);
-      return () => clearTimeout(timer);
-    }
-  }, [enabled, autoOptimize, autoOptimize]);
+    // Preload critical fonts
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'preload';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap';
+    fontLink.as = 'style';
+    document.head.appendChild(fontLink);
+
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.href = '/css/index.css';
+    criticalCSS.as = 'style';
+    document.head.appendChild(criticalCSS);
+  }, [enabled]);
 
   if (!enabled) return null;
-
-  // Helper functions
-  const getPerformanceScore = (metrics: PerformanceMetrics): number => {
-    let score = 100;
-    
-    if (metrics.fcp > 2000) score -= 20;
-    if (metrics.lcp > 4000) score -= 25;
-    if (metrics.fid > 100) score -= 15;
-    if (metrics.cls > 0.1) score -= 20;
-    if (metrics.ttfb > 600) score -= 20;
-    
-    return Math.max(0, score);
-  };
-
-  const getPerformanceGrade = (score: number): string => {
-    if (score >= 90) return 'A';
-    if (score >= 80) return 'B';
-    if (score >= 70) return 'C';
-    if (score >= 60) return 'D';
-    return 'F';
-  };
-
-  const getPerformanceColor = (score: number): string => {
-    if (score >= 90) return 'text-green-400';
-    if (score >= 80) return 'text-yellow-400';
-    if (score >= 70) return 'text-orange-400';
-    return 'text-red-400';
-  };
-
-  const formatMetric = (value: number, unit: string = 'ms'): string => {
-    if (value === 0) return 'N/A';
-    return `${Math.round(value)}${unit}`;
-  };
 
   return (
     <>
@@ -522,18 +369,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                         {metrics.imageCount}
                       </div>
                     </div>
-                    <div className="bg-slate-800/50 p-3 rounded-lg">
-                      <div className="text-xs text-gray-400">Scripts</div>
-                      <div className="text-lg font-semibold text-white">
-                        {metrics.scriptCount}
-                      </div>
-                    </div>
-                    <div className="bg-slate-800/50 p-3 rounded-lg">
-                      <div className="text-xs text-gray-400">CSS Size</div>
-                      <div className="text-lg font-semibold text-white">
-                        {(metrics.cssSize / 1024).toFixed(1)}KB
-                      </div>
-                    </div>
                   </div>
                 </div>
               )}
@@ -545,49 +380,48 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                     Optimization Suggestions
                   </h4>
                   <div className="space-y-2">
-                    {suggestions.map((suggestion) => (
-                      <div
-                        key={suggestion.id}
-                        className={`p-3 rounded-lg border-l-4 ${
-                          suggestion.impact === 'high'
-                            ? 'border-red-400 bg-red-900/20'
-                            : suggestion.impact === 'medium'
-                            ? 'border-yellow-400 bg-yellow-900/20'
-                            : 'border-green-400 bg-green-900/20'
-                        }`}
-                      >
-                        <div className="flex items-start justify-between">
-                          <div className="flex-1">
-                            <h5 className="text-sm font-medium text-white mb-1">
-                              {suggestion.title}
-                            </h5>
-                            <p className="text-xs text-gray-300 mb-2">
-                              {suggestion.description}
-                            </p>
-                            <div className="flex items-center space-x-2 text-xs">
-                              <span className={`px-2 py-1 rounded ${
-                                suggestion.impact === 'high'
-                                  ? 'bg-red-500/20 text-red-300'
-                                  : suggestion.impact === 'medium'
-                                  ? 'bg-yellow-500/20 text-yellow-300'
-                                  : 'bg-green-500/20 text-green-300'
-                              }`}>
-                                {suggestion.impact} impact
-                              </span>
-                              <span className="text-gray-400">
-                                Est. savings: {suggestion.estimatedSavings}
-                              </span>
+                    {suggestions
+                      .sort((a, b) => a.priority - b.priority)
+                      .slice(0, 5)
+                      .map((suggestion) => (
+                        <motion.div
+                          key={suggestion.id}
+                          className="bg-slate-800/50 p-3 rounded-lg border-l-4 border-cyan-500"
+                          whileHover={{ scale: 1.02 }}
+                        >
+                          <div className="flex items-start justify-between">
+                            <div className="flex-1">
+                              <h5 className="text-sm font-semibold text-white mb-1">
+                                {suggestion.title}
+                              </h5>
+                              <p className="text-xs text-gray-400 mb-2">
+                                {suggestion.description}
+                              </p>
+                              <div className="flex items-center space-x-2">
+                                <span className={`px-2 py-1 text-xs rounded-full ${
+                                  suggestion.impact === 'high' 
+                                    ? 'bg-red-500/20 text-red-400' 
+                                    : suggestion.impact === 'medium'
+                                    ? 'bg-yellow-500/20 text-yellow-400'
+                                    : 'bg-green-500/20 text-green-400'
+                                }`}>
+                                  {suggestion.impact} impact
+                                </span>
+                                <span className="text-xs text-gray-500">
+                                  {suggestion.estimatedSavings}
+                                </span>
+                              </div>
                             </div>
+                            <button
+                              onClick={suggestion.action}
+                              className="ml-2 p-2 bg-cyan-500/20 text-cyan-400 rounded-lg hover:bg-cyan-500/30 transition-colors"
+                              title="Apply optimization"
+                            >
+                              <Zap className="w-4 h-4" />
+                            </button>
                           </div>
-                          <button
-                            onClick={suggestion.action}
-                            className="ml-2 px-3 py-1 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors"
-                          >
-                            Apply
-                          </button>
-                        </div>
-                      </div>
-                    ))}
+                        </motion.div>
+                      ))}
                   </div>
                 </div>
               )}
@@ -599,19 +433,18 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 </h4>
                 <div className="grid grid-cols-2 gap-2">
                   <button
-                    onClick={measurePerformance}
-                    className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 hover:bg-slate-700/50 text-white text-xs rounded transition-colors"
+                    onClick={() => window.location.reload()}
+                    className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 text-gray-300 hover:text-white rounded-lg transition-colors"
                   >
                     <RefreshCw className="w-4 h-4" />
-                    <span>Refresh</span>
+                    <span className="text-xs">Refresh</span>
                   </button>
                   <button
-                    onClick={() => analyzeAndOptimize(metrics!)}
-                    disabled={!metrics}
-                    className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 hover:bg-slate-700/50 text-white text-xs rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                    onClick={measurePerformance}
+                    className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 text-gray-300 hover:text-white rounded-lg transition-colors"
                   >
-                    <Target className="w-4 h-4" />
-                    <span>Measure</span>
+                    <BarChart3 className="w-4 h-4" />
+                    <span className="text-xs">Measure</span>
                   </button>
                 </div>
               </div>
