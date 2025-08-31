@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { SEOOptimizer, defaultSEO } from '../components/SEOOptimizer';
+import { SEOOptimizer, defaultSEO } from '../components/SEOOptimizer.tsx';
 import { PerformanceOptimizer } from '../components/PerformanceOptimizer';
 import {
   Users,
@@ -247,6 +247,38 @@ const HeroSection = () => {
               <span className="text-sm">Industry Leader 2025</span>
             </div>
           </motion.div>
+
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.3 }}
+            className="mt-8 p-6 bg-slate-800/30 border border-slate-700/50 rounded-2xl backdrop-blur-sm"
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="flex flex-col items-center">
+                <Phone className="w-6 h-6 text-zion-cyan mb-2" />
+                <span className="text-sm text-zinc-400 mb-1">Call Us</span>
+                <a href="tel:+13024640950" className="text-white font-semibold hover:text-zion-cyan transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <Mail className="w-6 h-6 text-zion-cyan mb-2" />
+                <span className="text-sm text-zinc-400 mb-1">Email Us</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-white font-semibold hover:text-zion-cyan transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="w-6 h-6 text-zion-cyan mb-2" />
+                <span className="text-sm text-zinc-400 mb-1">Visit Us</span>
+                <span className="text-white font-semibold">
+                  Middletown, DE 19709
+                </span>
+              </div>
+            </div>
+          </motion.div>
         </motion.div>
       </div>
 
@@ -345,6 +377,27 @@ const ServicesSection = () => {
       icon: Shield,
       color: "from-zion-purple to-zion-cyan",
       link: "/services/ai-cybersecurity-threat-intelligence"
+    },
+    {
+      title: "AI Autonomous Logistics",
+      description: "Revolutionize logistics with AI that autonomously optimizes routes, manages fleets, and reduces costs by 40%.",
+      icon: Truck,
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/ai-autonomous-logistics-platform"
+    },
+    {
+      title: "AI Autonomous Manufacturing",
+      description: "Transform manufacturing with AI that autonomously optimizes production, quality control, and reduces defects by 80%.",
+      icon: Factory,
+      color: "from-purple-500 to-pink-500",
+      link: "/services/ai-autonomous-manufacturing-platform"
+    },
+    {
+      title: "AI Autonomous Research",
+      description: "Accelerate research by 10x with AI that autonomously conducts research, analyzes data, and generates insights.",
+      icon: Search,
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-autonomous-research-assistant"
     },
     {
       icon: Chip,

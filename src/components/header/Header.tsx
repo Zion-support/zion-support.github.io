@@ -26,6 +26,9 @@ export function Header() {
               <div className="text-zion-slate-light hidden sm:block">
                 📞 <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">+1 (302) 464-0950</a>
               </div>
+              <div className="text-zion-slate-light hidden md:block">
+                📍 <span>Middletown, DE 19709</span>
+              </div>
             </div>
             <div className="flex items-center space-x-4">
               <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">

@@ -75,7 +75,10 @@ export function Footer() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Zap },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform", icon: Database },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: TrendingUp },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow }
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
+        { name: "AI Autonomous Research", href: "/services/ai-autonomous-research-assistant", icon: Search }
       ]
     },
     {
@@ -182,7 +185,9 @@ export function Footer() {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
-    website: 'https://ziontechgroup.com'
+    website: 'https://ziontechgroup.com',
+    hours: 'Mon-Fri: 9AM-6PM EST',
+    support: '24/7 Technical Support'
   };
 
   const socialLinks = [
@@ -313,6 +318,14 @@ export function Footer() {
                     <a href={contactInfo.website} className="hover:text-cyan-400 transition-colors">
                       {contactInfo.website}
                     </a>
+                  </div>
+                  <div className="flex items-center text-slate-300">
+                    <Clock className="w-4 h-4 mr-3 text-cyan-400" />
+                    <span>{contactInfo.hours}</span>
+                  </div>
+                  <div className="flex items-center text-slate-300">
+                    <Headphones className="w-4 h-4 mr-3 text-cyan-400" />
+                    <span>{contactInfo.support}</span>
                   </div>
                 </div>
               </div>

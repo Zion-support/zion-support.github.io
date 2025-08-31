@@ -171,6 +171,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Workflow Orchestrator</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Factory className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Manufacturing</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-research-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Search className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Research</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
