@@ -32,7 +32,6 @@ export function Header() {
                   AI-Powered Innovation
                 </span>
               </div>
-              </div>
             </Link>
           </div>
 
