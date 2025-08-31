@@ -92,7 +92,6 @@ export function Footer() {
         { name: 'Manufacturing', href: '/manufacturing-solutions' },
         { name: 'Industry Solutions', href: '/industry-solutions' },
         { name: 'Emerging Tech', href: '/emerging-tech' }
->>>>>>> 4cf84cee096ee4bad48102099687eb335d856d5c
       ]
     },
     {

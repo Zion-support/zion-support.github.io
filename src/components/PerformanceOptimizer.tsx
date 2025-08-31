@@ -465,7 +465,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
-=======
+      
       {/* Performance monitoring overlay for development */}
       {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && (
         <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs z-50">
@@ -473,7 +473,6 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           <div>Check console for metrics</div>
         </div>
       )}
->>>>>>> cursor/analyze-improve-and-deploy-application-1d8a
     </>
   );
 };
