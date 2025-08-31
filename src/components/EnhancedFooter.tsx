@@ -85,7 +85,6 @@ export function EnhancedFooter() {
         { name: 'Developer Portal', href: '/developer-portal' },
         { name: 'Community', href: '/community' },
         { name: 'Contact Support', href: '/contact' }
->>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4ef6
       ]
     }
   ];
@@ -114,13 +113,6 @@ export function EnhancedFooter() {
     { name: 'Request Quote', href: '/request-quote' }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
@@ -132,7 +124,6 @@ export function EnhancedFooter() {
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
-  ];
   ];
 
   return (
