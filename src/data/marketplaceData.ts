@@ -1,5 +1,4 @@
 export interface MarketplaceItem {
-
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -12,18 +11,16 @@ export interface MarketplaceItem {
   image: string;
   tags: string[];
   featured: boolean;
-seller: {
+  seller: {
     name: string;
     rating: number;
-    verified: boolean};
+    verified: boolean;
+  };
   location: string;
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
-<<<<<<< HEAD
   warranty: string;
-=======
-  warranty: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}
 
 export const marketplaceItems: MarketplaceItem[] = [
   {
@@ -36,13 +33,8 @@ export const marketplaceItems: MarketplaceItem[] = [
     reviews: 127,
     views: 2847,
     likes: 156,
-<<<<<<< HEAD
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-    tags['AI', 'High Performance', 'Scalable', 'GPU'],
-=======
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: ['AI', 'High Performance', 'Scalable', 'GPU'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     featured: true,
     seller: {
       name: 'TechCorp Solutions',
@@ -65,7 +57,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 1956,
     likes: 134,
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Security', 'Expert', 'Certified', 'Compliance'],
+    tags: ['Security', 'Expert', 'Certified', 'Compliance'],
     featured: true,
     seller: {
       name: 'SecureNet Professionals',
@@ -88,7 +80,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     views: 3241,
     likes: 189,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Quantum', 'Research', 'Advanced', 'Experimental'],
+    tags: ['Quantum', 'Research', 'Advanced', 'Experimental'],
     featured: false,
     seller: {
       name: 'QuantumTech Labs',
@@ -98,183 +90,15 @@ export const marketplaceItems: MarketplaceItem[] = [
     location: 'Boston, MA',
     availability: 'limited',
     deliveryTime: '4-6 weeks',
-    warranty: '1 year'
-  },
-  {
-    id: 'cloud-migration-service',
-    title: 'Cloud Migration Service',
-    category: 'services',
-    description: 'Complete cloud migration service including planning, execution, and optimization for enterprise applications.',
-    price: '$15,000',
-    rating: 4.9,
-    reviews: 203,
-    views: 4567,
-    likes: 278,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Cloud', 'Migration', 'Enterprise', 'AWS'],
-    featured: true,
-    seller: {
-      name: 'CloudMasters Inc',
-      rating: 4.9,
-      verified: true
-    },
-    location: 'Austin, TX',
-    availability: 'available',
-    deliveryTime: '6-8 weeks',
-    warranty: '90 days support'
-  },
-  {
-    id: 'iot-platform',
-    title: 'IoT Edge Computing Platform',
-    category: 'products',
-    description: 'Comprehensive IoT platform with edge computing capabilities for real-time data processing and analytics.',
-    price: '$18,500',
-    rating: 4.6,
-    reviews: 78,
-    views: 1890,
-    likes: 112,
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['IoT', 'Edge Computing', 'Real-time', 'Analytics'],
-    featured: false,
-    seller: {
-      name: 'IoT Solutions Pro',
-      rating: 4.5,
-      verified: true
-    },
-    location: 'Seattle, WA',
-    availability: 'available',
-    deliveryTime: '3-4 weeks',
     warranty: '2 years'
-  },
-  {
-    id: 'data-scientist',
-    title: 'Senior Data Scientist',
-    category: 'talent',
-    description: 'Experienced data scientist specializing in machine learning, statistical analysis, and big data processing.',
-    price: '$120/hr',
-    rating: 4.7,
-    reviews: 145,
-    views: 3120,
-    likes: 167,
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-    tags['Data Science', 'Machine Learning', 'Python', 'Statistics'],
-    featured: false,
-    seller: {
-      name: 'DataGenius Consulting',
-      rating: 4.7,
-<<<<<<< HEAD
-      verified: true
-    },
-    location: 'Remote',
-    availability: 'available',
-    deliveryTime: 'Immediate',
-    warranty: 'N/A'
-
-=======
-      verified: true;
-    },;
-    location: 'Remote',;
-    availability: 'available',;
-    deliveryTime: 'Immediate',;
-    warranty: 'N/A';
-  };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-];
-
-export const marketplaceCategories = [
-  {
-    id: 'products',
-    name: 'Products',
-    description: 'Hardware and software solutions',
-    count: marketplaceItems.filter(item  => item.category === 'products').length
-  },
-  {
-    id: 'talent',
-    name: 'Talent',
-    description: 'Expert professionals and teams',
-    count: marketplaceItems.filter(item  => item.category === 'talent').length
-  },
-  {
-    id: 'equipment',
-    name: 'Equipment',
-    description: 'Computing and networking equipment',
-    count: marketplaceItems.filter(item  => item.category === 'equipment').length
-  },
-  {
-<<<<<<< HEAD
-    id: 'services',
-    name: 'Services',
-    description: 'Professional services and consulting',
-<<<<<<< HEAD
-    count: marketplaceItems.filter(item => item.category === 'services').length
-
-=======
-    count: marketplaceItems.filter(item  => item.category === 'services').length
-  };
-=======;
-    id: 'services',;
-    name: 'Services',;
-    description: 'Professional services and consulting',;
-    count: marketplaceItems.filter(item => item.category === 'services').length;
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-];
-
-export const marketplaceFilters = [
-  {
-    title: 'Category',
-    key: 'category',
-    type: 'checkbox' as const,
-    options: marketplaceCategories.map(cat  => ({
-      value: cat.id,
-      label: cat.name,
-      count: cat.count
-    }))
-  },
-  {
-    title: 'Price Range',
-    key: 'priceRange',
-    type: 'radio' as const,
-    options[
-      { value: '0-1000', label: 'Under $1,000' },
-      { value: '1000-5000', label: '$1,000 - $5,000' },
-      { value: '5000-10000', label: '$5,000 - $10,000' },
-      { value: '10000+', label: 'Over $10,000' }
-    ]
-  },
-  {
-    title: 'Rating',
-    key: 'rating',
-    type: 'checkbox' as const,
-    options[
-      { value: '4.5+', label: '4.5+ Stars' },
-      { value: '4.0+', label: '4.0+ Stars' },
-      { value: '3.5+', label: '3.5+ Stars' }
-    ]
-  },
-  {
-    title: 'Availability',
-    key: 'availability',
-    type: 'checkbox' as const,
-<<<<<<< HEAD
-    options[
-      { value: 'available', label: 'Available' },
-      { value: 'limited', label: 'Limited' },
-      { value: 'out-of-stock', label: 'Out of Stock' }
-    ]
-<<<<<<< HEAD
-
-];}}}}
-=======
   }
-=======;
-    options: [;
-      { value: 'available', label: 'Available' },;
-      { value: 'limited', label: 'Limited' },;
-      { value: 'out-of-stock', label: 'Out of Stock' };
-    ];
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export const generateSearchSuggestions = () => {
+  return marketplaceItems.map(item => ({
+    title: item.title,
+    description: item.description,
+    category: item.category,
+    price: item.price
+  }));
+};

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const About: React.FC = () => {
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -71,7 +68,6 @@ export default function About() {
     }
   ];
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -103,24 +99,22 @@ export default function About() {
       {/* Mission & Vision */}
       <section className="py-20">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <div className="flex items-center mb-6">
-                <Target className="w-8 h-8 text-cyan-400 mr-3" />
-                <h2 className="text-3xl font-bold text-white">Our Mission</h2>
-              </div>
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                To democratize access to advanced AI and quantum technologies, enabling businesses of all sizes 
-                to leverage cutting-edge solutions for growth, efficiency, and competitive advantage.
+              <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                To democratize access to cutting-edge AI and quantum technologies, enabling businesses 
+                of all sizes to leverage the power of next-generation computing for unprecedented growth 
+                and innovation.
               </p>
-              <p className="text-gray-400 leading-relaxed">
-                We believe that technology should be accessible, understandable, and transformative. 
-                Our team works tirelessly to bridge the gap between complex technological innovations 
-                and practical business applications.
+              <p className="text-gray-300 leading-relaxed">
+                We believe that technology should be accessible, secure, and transformative, driving 
+                positive change across industries and communities worldwide.
               </p>
             </motion.div>
 
@@ -128,32 +122,17 @@ export default function About() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative"
+              viewport={{ once: true }}
             >
-              <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-400/20">
-                <div className="flex items-center mb-6">
-                  <Zap className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-2xl font-bold text-white">Our Vision</h3>
-                </div>
-                <p className="text-gray-300 leading-relaxed mb-6">
-                  To be the global leader in AI-powered business solutions, driving the next wave of 
-                  digital transformation and creating a future where technology serves humanity.
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                    <span>AI-First Business Solutions</span>
-                  </div>
-                  <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                    <span>Quantum Computing Innovation</span>
-                  </div>
-                  <div className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                    <span>Sustainable Technology</span>
-                  </div>
-                </div>
-              </div>
+              <h2 className="text-3xl font-bold text-white mb-6">Our Vision</h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                To be the global leader in AI-powered business transformation, pioneering the future 
+                of work through intelligent automation, quantum computing, and sustainable technology solutions.
+              </p>
+              <p className="text-gray-300 leading-relaxed">
+                We envision a world where every organization can harness the full potential of AI 
+                to solve complex challenges and create lasting value for humanity.
+              </p>
             </motion.div>
           </div>
         </div>
@@ -166,29 +145,21 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            viewport={{ once: true }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
-            <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-400/20">
-                  <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <stat.icon className="w-8 h-8 text-white" />
+                  </div>
                 </div>
-              </motion.div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -199,24 +170,32 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-300">The principles that guide everything we do</p>
+            <h2 className="text-4xl font-bold text-white mb-6">Our Core Values</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              The principles that guide our work and relationships with clients, partners, and communities.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
-                key={value.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                viewport={{ once: true }}
+                className="text-center p-6 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30"
               >
-                <value.icon className="w-12 h-12 text-cyan-400 mb-4" />
-                <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{value.description}</p>
+                <div className="flex justify-center mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{value.title}</h3>
+                <p className="text-gray-300">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -230,29 +209,31 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">Meet Our Team</h2>
-            <p className="text-xl text-gray-300">The brilliant minds behind our innovative solutions</p>
+            <h2 className="text-4xl font-bold text-white mb-6">Our Leadership Team</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Meet the visionary leaders and experts driving innovation at Zion Tech Group.
+            </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {team.map((member, index) => (
               <motion.div
-                key={member.name}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 text-center hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+                viewport={{ once: true }}
+                className="text-center p-6 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-700/50 border border-slate-600/30"
               >
-                <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-white">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                <div className="w-24 h-24 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <Users className="w-12 h-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                <h3 className="text-xl font-semibold text-white mb-2">{member.name}</h3>
                 <p className="text-cyan-400 mb-3">{member.role}</p>
-                <p className="text-gray-300 leading-relaxed">{member.bio}</p>
+                <p className="text-gray-300">{member.bio}</p>
               </motion.div>
             ))}
           </div>
@@ -266,34 +247,24 @@ export default function About() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies already leveraging our AI-powered solutions 
-              to drive growth and innovation.
+            <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Business?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Join hundreds of organizations already leveraging our AI and quantum computing solutions 
+              to drive innovation and growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
-              >
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:-translate-y-1">
                 Get Started Today
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
-              <a
-                href="/services"
-                className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
-              >
-                Explore Our Services
-              </a>
+              </button>
+              <button className="px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300">
+                Schedule a Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default About;
+}
