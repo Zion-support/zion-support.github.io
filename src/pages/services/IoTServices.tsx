@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe const IoTServices = () => {
-=======
 import React from 'react.ts';
 import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe               } from 'lucide-react.ts';
 
@@ -103,10 +95,6 @@ const IoTServices = () => {
               operations and unlock new possibilities.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {iotServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {iotServices.map((service, index)              => (
@@ -143,10 +131,6 @@ const IoTServices = () => {
               scalable IoT solutions.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {iotTechnologies.map((tech, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {iotTechnologies.map((tech, index)              => (

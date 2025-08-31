@@ -1,36 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Helmet              } from 'react-helmet-async.ts';
-import { Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
-  Zap, 
-  Users, 
-  Target, 
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Award,
-  Clock,
-  DollarSign,
-  Activity,
-  Database,
-  Cpu,
-  Network,
-  Fingerprint,
-  Key,
-  Bug,
-  Virus,
-  Fire,
-  Globe,
-  Server,
-  Smartphone,
-<<<<<<< HEAD
-  Tablet,
-  Laptop
-import { SEO              } from '../../components/SEO';
-=======
   Monitor,
   CreditCard
 } from 'lucide-react';
@@ -59,15 +27,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
     {
       icon: Zap,
       title: 'Automated Incident Response',
-<<<<<<< HEAD
-      description: 'Intelligent automation that responds to security incidents within seconds, containing threats and minimizing potential damage automatically.'
-    },
-    {
-      icon: Eye,
-      title: '360° Security Visibility',
-      description: 'Comprehensive monitoring across all endpoints, networks, and cloud environments with unified threat intelligence and real-time dashboards.'
-
-=======
       description: 'AI-driven incident response that automatically contains and remediates threats within seconds.',
       benefits: ['Instant containment', 'Automated remediation', 'Playbook execution', 'Recovery automation']
     }
@@ -82,21 +41,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       features: ['Next-gen firewalls', 'IDS/IPS systems', 'Network monitoring', 'Traffic analysis']
     },
     {
-<<<<<<< HEAD
-      title: 'Cloud Security',
-      description: 'Comprehensive cloud infrastructure protection and compliance monitoring',
-      icon: Cloud,
-      benefits: ['Multi-cloud support', 'Compliance monitoring', 'Access control', 'Data protection']
-
-  ];
-
-  const useCases = [
-    {
-      industry: 'Financial Services',
-      description: 'Protect sensitive financial data, ensure regulatory compliance, and prevent sophisticated cyber attacks with AI-powered security',
-      icon: Shield,
-      metrics: ['Threat Detection Rate', 'Compliance Score', 'Incident Response Time', 'Data Protection Level']
-=======
       icon: Server,
       title: 'Endpoint Protection',
       description: 'Comprehensive endpoint security for all devices and operating systems',
@@ -105,36 +49,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
     },
     {
       icon: Globe,
-<<<<<<< HEAD
-      metrics: ['Infrastructure Security', 'Data Classification', 'Threat Intelligence', 'National Security']
-
-  ];
-
-  const benefits = [
-    {
-      icon: Shield,
-      title: 'Enhanced Threat Protection',
-      description: 'Detect and prevent 99.7% of cyber threats with AI-powered intelligence and automated response.'
-    },
-    {
-      icon: Clock,
-      title: 'Faster Incident Response',
-      description: 'Reduce incident response time from hours to seconds with intelligent automation and real-time monitoring.'
-    },
-    {
-      icon: DollarSign,
-      title: 'Reduced Security Costs',
-      description: 'Lower total cost of ownership by 40-60% through automation and reduced manual security operations.'
-    },
-    {
-      icon: Users,
-      title: 'Improved Compliance',
-      description: 'Maintain 100% compliance with industry regulations and standards through automated monitoring and reporting.'
-
-  ];
-
-  const pricing = [
-=======
       title: 'Cloud Security',
       description: 'Multi-cloud security with compliance and governance controls',
       features: ['Cloud access security', 'Compliance monitoring', 'Data protection', 'Identity management']
@@ -273,30 +187,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
       </Helmet>
 
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
-              AI Cybersecurity Platform
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Protect your organization with AI-powered cybersecurity that detects 99.7% of threats,
-              responds in seconds, and reduces security costs by 40-60%
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-red-400 text-red-400 rounded-lg font-semibold hover:bg-red-400 hover:text-white transition-all duration-300">
-                Schedule Demo
-              </button>
-=======
       <section className="relative overflow-hidden bg-gradient-to-br from-red-900 via-gray-900 to-black text-white py-20 lg:py-32">
         <div className="absolute inset-0 bg-black/40"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 via-gray-600/20 to-black/20"></div>
@@ -444,20 +334,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Features */}
-<<<<<<< HEAD
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Advanced AI-Powered Security Features
-=======
       {/* Features Section */}
       <section className="py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -474,17 +350,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
             {features.map((feature, index)              => (
-<<<<<<< HEAD
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-
-                <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-red-400" />
-=======
               <div key={index} className="group">
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -586,20 +451,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Capabilities */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Comprehensive Security Capabilities
-=======
       {/* Security Layers Section */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -615,19 +466,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           </div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-<<<<<<< HEAD
-            {capabilities.map((capability, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center">
-                    <capability.icon className="w-8 h-8 text-red-400" />
-=======
             {securityLayers.map((layer, index) => (
               <div key={index} className="bg-gradient-to-br from-gray-50 to-red-50 rounded-2xl p-8 border border-gray-200">
                 <div className="flex items-center gap-4 mb-6">
@@ -687,19 +525,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Use Cases */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Industry Use Cases
-=======
       {/* Compliance Section */}
       <section className="py-20 lg:py-32 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -714,22 +539,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             </p>
           </div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center">
-                    <useCase.icon className="w-8 h-8 text-red-400" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-white">{useCase.industry}</h3>
-=======
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
             {complianceFrameworks.map((framework, index)              => (
               <div key={index} className="text-center group">
@@ -745,19 +554,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Benefits */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Business Benefits
-=======
       {/* Pricing Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-red-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -770,26 +566,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               Choose the security plan that best fits your organization's needs. All plans include 
               our core AI-powered protection and dedicated support.
             </p>
-<<<<<<< HEAD
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105 text-center"
-
-                <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-8 h-8 text-red-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>
-            ))}
-=======
       {/* Security Solutions */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -851,38 +627,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
       </section>
 
       {/* Pricing */}
-<<<<<<< HEAD
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect security plan for your business needs. All plans include a 14-day free trial
-              and our industry-leading 99.9% uptime guarantee.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
-            {pricing.map((plan, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-slate-800/50 p-8 rounded-xl border transition-all duration-300 hover:scale-105 ${
-                  plan.popular
-                    ? 'border-red-400/50 bg-gradient-to-br from-red-500/10 to-orange-500/10'
-                    : 'border-slate-700/50 hover:border-red-400/50'
-                }`}
-
-=======
           </div>
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
@@ -932,63 +676,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             ))}
           </div>
 
-<<<<<<< HEAD
-      {/* Implementation Process */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Implementation Process
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our proven methodology ensures successful AI Cybersecurity deployment
-              and rapid security posture improvement.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {[
-              {
-                step: '01',
-                title: 'Security Assessment',
-                description: 'Evaluate your current security posture and identify vulnerabilities and risks'
-              },
-              {
-                step: '02',
-                title: 'Platform Deployment',
-                description: 'Deploy AI cybersecurity agents across your infrastructure and configure policies'
-              },
-              {
-                step: '03',
-                title: 'Team Training',
-                description: 'Train your security team on the platform and incident response procedures'
-              },
-              {
-                step: '04',
-                title: 'Go Live',
-                description: 'Activate full protection with continuous monitoring and ongoing support'
-
-            ].map((phase, index)              => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-
-                <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                  {phase.step}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
-                <p className="text-gray-300">{phase.description}</p>
-              </motion.div>
-            ))}
-=======
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom security solution?</p>
             <a
@@ -1004,24 +691,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-500/10">
-        <div className="container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Organization?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover how AI-powered Cybersecurity can revolutionize your security posture
-              and protect your critical assets from evolving threats.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <button className="px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-lg font-semibold hover:from-red-600 hover:to-orange-600 transition-all duration-300 hover:scale-105">
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -1240,16 +909,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               <Shield className="w-5 h-5 text-green-400" />
               <span>No setup fees</span>
             </div>
-<<<<<<< HEAD
-            <div className="flex items-center gap-2">
-              <Users className="w-5 h-5 text-purple-400" />
-              <span>24/7 security support</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
             <div>
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-6 h-6 text-white" />

@@ -22,11 +22,6 @@ import { Brain,
   Clock,
   Star,
   Heart
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 import SEO from '../components/SEO';
@@ -128,9 +123,6 @@ const AIServices = [
       results: ['80% faster diagnosis', 'Improved accuracy', 'Better patient outcomes'];
     };
   ];
-<<<<<<< HEAD
-const AIServicesPage: React.FC = () => {
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 const AIServicesPage: React.FC = (): JSX.Element => {
@@ -223,9 +215,6 @@ const AIServicesPage: React.FC = (): JSX.Element => {
   delay: index * 0.1 
 }}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
-<<<<<<< HEAD
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
-=======
 
                   <h3 className="text-xl font-semibold text-white mb-2">{study.comp}</h3>
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

@@ -1,57 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { cuttingEdgeComprehensiveServices2027 } from "../../data/2027-cutting-edge-comprehensive-services";
-import { specializedInnovativeServices2027 } from "../../data/2027-specialized-innovative-services";
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film } from "lucide-react";
-import { Link } from "react-router-dom";
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle                } from '@/components/ui/card';
-import { Badge                } from '@/components/ui/badge';
-import { Button                } from '@/components/ui/button';
-import { cuttingEdgeComprehensiveServices2027                } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027                } from '../../data/2027-specialized-innovative-services';
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film                } from 'lucide-react.ts';
-import { Link                } from 'react-router-dom.ts';
-=======
 import React, { useState } from 'react.ts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle               } from '@/components/ui/card';
 import { Badge               } from '@/components/ui/badge';
 import { Button               } from '@/components/ui/button';
-<<<<<<< HEAD
-import { cuttingEdgeComprehensiveServices2027               } from '../../data/2027-cutting-edge-comprehensive-services';
-import { specializedInnovativeServices2027               } from '../../data/2027-specialized-innovative-services';
-import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film import { Link               } from 'react-router-dom.ts';
-
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI & Autonomous Systems': Brain,
-  'Quantum Computing & AI': Cpu,
-  'Blockchain & Web3': Database,
-  'Cybersecurity & Privacy': Shield,
-  'Healthcare & Biotech': Heart,
-  'Financial Technology': DollarSign,
-  'IoT & Automation': Cloud,
-  'Cloud & Infrastructure': Cloud,
-  'Data Analytics & BI': BarChart3,
-  'Digital Marketing & Automation': Users,
-  'E-commerce & Retail': ShoppingCart,
-  'Education & Learning Technology': GraduationCap,
-  'Space Technology & Earth Observation': Rocket,
-  'AR/VR & Immersive Technology': Users,
-  'Robotics & Automation': Factory,
-  'Green Technology & Sustainability': Leaf,
-  'Supply Chain & Logistics': Truck,
-  'Human Resources & Talent Management': Users,
-  'Legal Technology & Compliance': Gavel,
-  'Real Estate & Property Technology': Home,
-  'Sports Technology & Analytics': Trophy,
-  'Entertainment & Media Technology': Film
-};
-=======
 import { cuttingEdgeComprehensiveServices2027               } from '../../data/2027-cutting-edge-comprehensive-services';
 import { specializedInnovativeServices2027               } from '../../data/2027-specialized-innovative-services';
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film               } from 'lucide-react.ts';
@@ -131,9 +81,6 @@ const contactInfo = {
   website: 'https://ziontechgroup.com';
 ;
 };
-<<<<<<< HEAD
-export function ComprehensiveServicesShowcase2027(...args[]):  {
-=======
 
 export function ComprehensiveServicesShowcase2027(...args[]: any):  {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

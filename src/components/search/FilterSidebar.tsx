@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Filter, X  } from 'lucide-react';
-interface FilterOption {
-  value: string;
-  label: string;
-  count?: number}
-interface FilterGroup {
-  title: string;
-  key: string;
-  options: FilterOption[];
-  type: 'checkbox' | 'radio' | 'range'}
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Filter, X interface FilterOption {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  value: string;
-  label: string;
-  count?: number;
-=======
 import React from 'react.ts';
 import { Filter, X   
  
@@ -103,9 +69,6 @@ interface FilterGroup {
   title: string;
   key: string;
   options: FilterOption[];
-<<<<<<< HEAD
-  type: 'checkbox' | 'radio' | 'range';
-=======
 type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'checkbox' | 'radio' | 'range';
 
 
@@ -126,26 +89,9 @@ type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'checkbox' | 'radio' | 'range';
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-<<<<<<< HEAD
-  onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: ()  => void;
-  isOpen: boolean;
-  onClose: ()  => void}
-export function FilterSidebar({
-  filters,
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
-  onClose
-}: FilterSidebarProps) {
-=======
   onFilterChange: (key: string, value: string, checked: boolean)                => void;
   onClearFilters: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void;
   isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-<<<<<<< HEAD
-  onClose: ()               => void;
-=======
   onClose: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -182,13 +128,6 @@ export function FilterSidebar(...args: any[]): any {
             <span className="text-sm text-zion-slate-light">Active filters</span>
             <button
               onClick={onClearFilters}
-<<<<<<< HEAD
-              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline"
-=======
-<<<<<<< HEAD
-              className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
-
-=======
               className="text-sm text-zion-cyan hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanytext-zion-cyan-light transition-colors underline"
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             >
@@ -196,16 +135,6 @@ export function FilterSidebar(...args: any[]): any {
             </button>
           </div>
           {/* Filter groups */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          {filters.map((group)                => (
-            <div key={group.key} className="space-y-3">
-              <h4 className="font-medium text-white">{group.title}</h4>
-
-              <div className="space-y-2">
-                {group.options.map((option) => {
-=======;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           {filters.map((group) => (;
             <div key={group.key} className="space-y-3">;

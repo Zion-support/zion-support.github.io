@@ -19,9 +19,6 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-<<<<<<< HEAD
-  structuredData?: object;
-=======
 structuredData?: object;
 
 
@@ -48,25 +45,6 @@ interface UseSEOOptions {
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
-<<<<<<< HEAD
-  enableAnalytics?: boolean;
-
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */;
-
-
-
-
-
-
-
-
-}) => {
-  const {
-    enableAutoTitle = true,
-    enableStructuredData = true,
-    enablePerformanceTracking = true,
-    enableAnalytics = true
-=======
   enableAnalytics?: boolean}
 
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
@@ -84,29 +62,9 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
 
   // Memoize the canonical URL
-<<<<<<< HEAD
-  const canonicalUrl = useMemo(() => {
-    if (seoData.canonical) {;
-      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`};
-    return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
-
-  // Update document title
-  const updateTitle = useCallback((title: anyanyanyanyanyanyanyanyanystring)           => {
-    if (typeof document !== 'null') {;
-      document.title = title};
-  }, []);
-
-  // Update meta tags
-  const updateMetaTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)           => {;
-    if (typeof document === 'null') return;
-=======
   const canonicalUrl = useMemo(() => {;
     if (seoData.canonical) {;
       return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`;
-<<<<<<< HEAD
-
-    return typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com';
-=======
     }
     return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -129,10 +87,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     if (!metaDesc) {
       metaDesc = document.createElement('meta');
       metaDesc.setAttribute('name', 'description');
-<<<<<<< HEAD
-      document.head.appendChild(metaDesc);
-
-=======
       document.head.appendChild(metaDesc)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     metaDesc.setAttribute('content', data.description);
@@ -143,11 +97,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       if (!metaKeywords) {
         metaKeywords = document.createElement('meta');
         metaKeywords.setAttribute('name', 'keywords');
-<<<<<<< HEAD
-        document.head.appendChild(metaKeywords);
-
-      metaKeywords.setAttribute('content', data.keywords);
-=======
         document.head.appendChild(metaKeywords)}
       metaKeywords.setAttribute('content', data.keywords)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -157,10 +106,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     if (!canonicalLink) {
       canonicalLink = document.createElement('link');
       canonicalLink.setAttribute('rel', 'canonical');
-<<<<<<< HEAD
-      document.head.appendChild(canonicalLink);
-
-=======
       document.head.appendChild(canonicalLink)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     canonicalLink.setAttribute('href', canonicalUrl);
@@ -171,22 +116,12 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       if (!robotsMeta) {
         robotsMeta = document.createElement('meta');
         robotsMeta.setAttribute('name', 'robots');
-<<<<<<< HEAD
-        document.head.appendChild(robotsMeta);
-
-      robotsMeta.setAttribute('content', 'noindex, nofollow');
-
-=======
         document.head.appendChild(robotsMeta)}
       robotsMeta.setAttribute('content', 'noindex, nofollow')}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [canonicalUrl]);
 
   // Update Open Graph tags
-<<<<<<< HEAD
-  const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)           => {;
-    if (typeof document === 'null') return;
-=======
   const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)          => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -206,22 +141,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       if (!ogTag) {
         ogTag = document.createElement('meta');
         ogTag.setAttribute('property', property);
-<<<<<<< HEAD
-        document.head.appendChild(ogTag);
-
-      ogTag.setAttribute('content', content);
-    });
-  }, [fullTitle, canonicalUrl]);
-=======
         document.head.appendChild(ogTag)}
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Update Twitter Card tags
-<<<<<<< HEAD
-  const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)           => {;
-    if (typeof document === 'null') return;
-=======
   const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanySEOData)          => {;
     if (typeof document === 'null') return;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -239,28 +163,11 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       if (!twitterTag) {
         twitterTag = document.createElement('meta');
         twitterTag.setAttribute('name', name);
-<<<<<<< HEAD
-        document.head.appendChild(twitterTag);
-
-      twitterTag.setAttribute('content', content);
-    });
-  }, [fullTitle]);
-=======
         document.head.appendChild(twitterTag)}
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   // Add structured data
-<<<<<<< HEAD
-  const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyobject)           => {;
-    if (!enableStructuredData || typeof document === 'null') return;
-
-    // Remove existing structured data
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script = > {
-      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
-        script.remove()};
-=======;
   const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyobject)          => {;
     if (!enableStructuredData || typeof document === 'null') return;
 
@@ -269,9 +176,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     existingScripts.forEach(script = > {;
       if (script.textContent && script.textContent.includes('"@type":"Organization"')) {;
         script.remove();
-<<<<<<< HEAD
-
-=======
       }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -305,18 +209,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
-<<<<<<< HEAD
-    sameAs[
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://www.facebook.com/ziontechgroup';
-    ];
-  }), []);
-
-  // Track page view
-  const trackPageView = useCallback((pageData: anyanyanyanyanyanyanyanyanySEOData)           => {;
-    if (!enableAnalytics || typeof window === 'null') return;
-=======
     sameAs: [;
       'https://www.linkedin.com/company/zion-tech-group',;
       'https://twitter.com/ziontechgroup',;
@@ -335,9 +227,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         page_title: pageData.title,
         page_location: canonicalUrl,
         page_path: window.location.pathname
-<<<<<<< HEAD
-      });
-=======
       })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -348,10 +237,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         page_title: pageData.title,
         page_url: canonicalUrl,
         page_type: pageData.ogType || 'website'
-<<<<<<< HEAD
-      });
-
-=======
       })}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   }, [canonicalUrl, enableAnalytics]);
@@ -361,18 +246,10 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     if (!enablePerformanceTracking || typeof window === 'null') return;
 
     // Wait for page load
-<<<<<<< HEAD
-    if (document.readyState = == 'complete') {
-      measureAndTrackPerformance()} else {
-      window.addEventListener('load', measureAndTrackPerformance)};
-=======;
     if (document.readyState = == 'complete') {;
       measureAndTrackPerformance();
     } else {
       window.addEventListener('load', measureAndTrackPerformance);
-<<<<<<< HEAD
-
-=======
     }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -385,10 +262,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     // Core Web Vitals
     if ('web-vital' in window) {
       // This would require the web-vitals library
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log('Web Vitals available');
-=======
       // // // // // // // console.log('Web Vitals available');
     }
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
@@ -426,13 +299,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
               event_category: 'performance',
               event_label: key,
               value: Math.round(value)
-<<<<<<< HEAD
-            });
-          });
-
-
-
-=======
             })})}
       }
     }
@@ -443,9 +309,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
   useEffect(()  => {
     // Update document title
     if (enableAutoTitle) {
-<<<<<<< HEAD
-      updateTitle(fullTitle);
-=======
       updateTitle(fullTitle)}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -462,19 +325,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     if (enableStructuredData) {
       addStructuredData(defaultStructuredData);
       if (seoData.structuredData) {
-<<<<<<< HEAD
-        addStructuredData(seoData.structuredData);
-
-
-    // Track page view
-    if (enableAnalytics) {
-      trackPageView(seoData);
-
-    // Track performance
-    if (enablePerformanceTracking) {
-      trackPerformance();
-
-=======
         addStructuredData(seoData.structuredData)}
     }
 
@@ -528,20 +378,6 @@ declare global {
 
 
 
-<<<<<<< HEAD
-    gtag?: (...args: anyanyanyanyanyanyanyanyanyany[])          => void;
-    dataLayer?: any[];
-
-
-
-
-
-
-
-
-
-}}}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
 
     gtag?: (...args[])  => void;
     dataLayer?[]}

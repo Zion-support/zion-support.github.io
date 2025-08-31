@@ -264,8 +264,6 @@ import { Brain,
   AVLTree,
   SplayTree,
   Treap,
-<<<<<<< HEAD
-=======
           } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -361,14 +359,6 @@ const blockchainSolutions = [
       "Data migration",
       "Legacy support"
     ],
-<<<<<<< HEAD
-    price: "From $200,000",
-    timeline: "18-30 weeks",
-    category: "Integration",
-<<<<<<< HEAD
-    technologies: ["Integration", "APIs", "Migration", "Legacy Systems"]
-
-=======
     technologies["Integration", "APIs", "Migration", "Legacy Systems"]
   };
 =======;
@@ -403,15 +393,6 @@ const blockchainTechnologies = [
     useCase: "Network Security",
     reliability: "High"
   },
-<<<<<<< HEAD
-  {
-    name: "Cryptography",
-    description: "Advanced cryptographic security solutions",
-    icon: Lock,
-    useCase: "Security & Privacy",
-    reliability: "High"
-
-=======
   {;
     name: "Cryptography",;
     description: "Advanced cryptographic security solutions",;
@@ -443,15 +424,6 @@ const successStories = [
   },
   {
     id: 3,
-<<<<<<< HEAD
-    company: "Healthcare Identity Solutions",
-    industry: "Healthcare",
-    challenge: "Needed secure patient identity management system",
-    solution: "Built blockchain-based identity management platform",
-    results: "100% data security, 90% faster verification, better privacy, improved compliance",
-    logo: "HIS"
-
-=======
     comp: "Healthcare Identity Solutions",;
     industry: "Healthcare",;
     challenge: "Needed secure patient identity management system",;
@@ -484,15 +456,6 @@ const processSteps = [
     icon: Wrench,
     duration: "16-48 weeks"
   },
-<<<<<<< HEAD
-  {
-    step: 4,
-    title: "Testing & Deployment",
-    description: "Test blockchain systems and deploy to production",
-    icon: Gauge,
-    duration: "4-8 weeks"
-
-=======
   {;
     step: 4,;
     title: "Testing & Deployment",;
@@ -523,14 +486,6 @@ const blockchainBenefits = [
     examples["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]
   },
   {
-<<<<<<< HEAD
-    title: "Cost Reduction",
-    description: "Blockchain eliminates intermediaries and reduces operational costs",
-    icon: TrendingUp,
-<<<<<<< HEAD
-    examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
-
-=======
     examples["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
   };
 =======;
@@ -1210,23 +1165,12 @@ export default function BlockchainEnterpriseSolutions(...args[]: any):  {
 
                 Blockchain Consultation
               </a>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

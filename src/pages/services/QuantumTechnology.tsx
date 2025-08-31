@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity const QuantumTechnology = () => {
-=======
 import React from 'react.ts';
 import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity               } from 'lucide-react.ts';
 
@@ -143,10 +135,6 @@ const QuantumTechnology = () => {
               the most complex computational challenges.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {quantumServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {quantumServices.map((service, index)              => (
@@ -183,10 +171,6 @@ const QuantumTechnology = () => {
               revolutionary computing solutions.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {quantumTechnologies.map((tech, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {quantumTechnologies.map((tech, index)              => (

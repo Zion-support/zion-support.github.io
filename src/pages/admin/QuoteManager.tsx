@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import {
-  Card,
-=======
 
 import React, { useState } from 'react.ts';
 import { useAdminQuotes              } from '@/hooks/useAdminQuotes';
@@ -22,13 +15,6 @@ import { ExportToCSV               } from '@/components/quotes/ExportToCSV';
 import { QuoteStatusCards,
   QuotesFilter,
   QuotesTable
-<<<<<<< HEAD
- } from '@/components/admin/quotes';
-export default function QuoteManager(...args[]):  {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-=======
               } from '@/components/admin/quotes';
 
 export default function QuoteManager(...args[]: any):  {
@@ -56,12 +42,6 @@ export default function QuoteManager(...args[]: any):  {
   } = useAdminQuotes();
   // Count quotes by status
   const statusCounts = {
-<<<<<<< HEAD
-  new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
-    in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,;
-    accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,;
-    responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,;
-=======
   <<<<<<< HEAD
     new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'new').length,
     in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'in_review').length,
@@ -84,9 +64,6 @@ export default function QuoteManager(...args[]: any):  {
   closed: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'closed').length;
   ;
 };
-<<<<<<< HEAD
-  const handleViewDetails = (quote: QuoteRequest) => {;
-=======
 
   const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd

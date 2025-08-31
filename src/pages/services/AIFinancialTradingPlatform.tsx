@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { Brain,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
@@ -46,13 +34,6 @@ import { Brain,
   Lock,
   Eye,
   AlertTriangle
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function AIFinancialTradingPlatform(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function AIFinancialTradingPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function AIFinancialTradingPlatform(...args[]: any):  {
@@ -212,10 +193,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
               Everything you need to trade like a professional with AI-powered insights and automation
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
@@ -265,10 +242,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
               See measurable improvements in your trading performance and profitability
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index)               => (
@@ -318,10 +291,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
               From beginners to institutional investors, our platform adapts to your trading needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index)               => (
@@ -371,10 +340,6 @@ export default function AIFinancialTradingPlatform(...args[]: any):  {
               Choose the plan that fits your trading style and scale as you grow
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricing.map((plan, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)               => (

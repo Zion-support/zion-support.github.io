@@ -23,9 +23,6 @@ import { Code,
   Building2,
   Cpu,
   Network
-<<<<<<< HEAD
-export default function CustomDevelopment(...args: any[]): any {
-=======
              } from 'lucide-react.ts';
 
 export default function CustomDevelopment(...args[]: any):  {
@@ -50,14 +47,6 @@ export default function CustomDevelopment(...args[]: any):  {
       features['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
     },
     {
-<<<<<<< HEAD
-      title: 'System Integration',
-      description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
-      icon: Workflow,
-<<<<<<< HEAD
-      features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
-
-=======
       features['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
     };
 =======;
@@ -90,14 +79,6 @@ export default function CustomDevelopment(...args[]: any):  {
       stack['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
     {
-<<<<<<< HEAD
-      title: 'Database',
-      description: 'Modern database solutions for data storage and management.',
-      icon: Database,
-<<<<<<< HEAD
-      stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
-
-=======
       stack['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
     };
 =======;
@@ -124,15 +105,6 @@ export default function CustomDevelopment(...args[]: any):  {
     {
       title: 'Security',
       description: 'Enterprise-grade security measures built into every application.',
-<<<<<<< HEAD
-      icon: Shield
-    },
-    {
-      title: 'Support & Maintenance',
-      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
-      icon: Settings
-
-=======
       icon: Shield;
     },;
     {;
@@ -243,12 +215,6 @@ export default function CustomDevelopment(...args[]: any):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -349,12 +315,6 @@ export default function CustomDevelopment(...args[]: any):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10 group"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -445,12 +405,6 @@ export default function CustomDevelopment(...args[]: any):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -535,12 +489,6 @@ export default function CustomDevelopment(...args[]: any):  {
               <motion.div
                 key={index}
                 className="bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg p-6 text-center hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/10"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 20 
@@ -625,12 +573,6 @@ export default function CustomDevelopment(...args[]: any):  {
               <motion.div
                 key={index}
                 className="text-center"
-<<<<<<< HEAD
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-
-=======
                 initial = {
   { opacity: 0,
   y: 30 
@@ -721,23 +663,12 @@ export default function CustomDevelopment(...args[]: any):  {
 
                 Explore Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion            } from 'framer-motion.ts';
-import { SEO            } from '@/components/SEO';
-import { Brain,
-  PenTool,
-  TrendingUp,
-  Target,
-  Users,
-  BarChart3,
-=======
 import React from 'react.ts';
 import { motion             } from 'framer-motion.ts';
 import { SEO             } from '@/components/SEO';
@@ -37,9 +26,6 @@ import { Brain,
   Shield,
   Headphones,
   Rocket
-<<<<<<< HEAD
-export default function AIContentMarketingAutomation(...args: any[]): any {
-=======
             } from 'lucide-react.ts';
 
 export default function AIContentMarketingAutomation(...args[]: any):  {
@@ -120,20 +106,6 @@ export default function AIContentMarketingAutomation(...args[]: any):  {
         "Custom AI model training",
         "Advanced audience targeting",
         "White-label solutions",
-<<<<<<< HEAD
-        "API access",
-        "Dedicated account manager",
-        "24/7 phone support"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
         "API access",;
         "Dedicated account manager",;
         "24/7 phone support";
@@ -636,23 +608,12 @@ export default function AIContentMarketingAutomation(...args[]: any):  {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
             <span>📞 +1 302 464 0950</span>
             <span>📧 kleber@ziontechgroup.com</span>
-<<<<<<< HEAD
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <span>🌐 https://ziontechgroup.com</span>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

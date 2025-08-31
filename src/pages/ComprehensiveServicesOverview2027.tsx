@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
-=======
-<<<<<<< HEAD
-import { SEO              } from '@/components/SEO';
-import { Badge              } from '@/components/ui/badge';
-import { Button              } from '@/components/ui/button';
-import { Input              } from '@/components/ui/input';
-import { MICRO_SAAS_SERVICES              } from '@/data/microSaasServices';
-import { motion              } from 'framer-motion.ts';
-import { ArrowRight,
-    Brain,
-    CheckCircle,
-    ChevronDown,
-    ChevronUp,
-    ExternalLink,
-    Globe,
-    Grid,
-    List,
-    Mail,
-    MapPin,
-    Phone,
-    Search,
-    Server,
-    Star,
-    TrendingUp
-import { useEffect, useState              } from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-=======
 
 import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
@@ -132,23 +99,6 @@ import { Brain,
   Grid,
   List,
   ChevronDown,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  ChevronUp
-              } from 'lucide-react.ts';
-import { MICRO_SAAS_SERVICES               } from '@/data/microSaasServices';
-import { SEO               } from '@/components/SEO';
-import { Button               } from '@/components/ui/button';
-import { Input               } from '@/components/ui/input';
-import { Badge               } from '@/components/ui/badge';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const categories = [
-  { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5" />, count: MICRO_SAAS_SERVICES.length },
-  { id: 'AI Services', name: 'AI Services', icon: <Brain className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s               => s.category === 'AI Services').length },
-  { id: 'IT Services', name: 'IT Services', icon: <Server className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s               => s.category === 'IT Services').length },
-  { id: 'Business Solutions', name: 'Business Solutions', icon: <TrendingUp className="w-5 h-5" />, count: anyanyanyanyanyanyanyanyanyanyanyanyanyMICRO_SAAS_SERVICES.filter(s               => s.category === 'Business Solutions').length }
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ShoppingCart,
   MessageCircle,
@@ -160,10 +110,6 @@ const categories = [
 } from 'lucide-react';
 import { MICRO_SAAS_SERVICES              } from '@/data/microSaasServices';
 import SEO from '@/components/SEO';
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-=======
 import { Button              } from '@/components/ui/button';
 import { Badge              } from '@/components/ui/badge';
 
@@ -228,125 +174,6 @@ const categories = [;
   { id: 'Customer Support', name: 'Customer Support', icon: <MessageCircle className="w-4 h-4" />, count: 1 },;
   { id: 'Analytics', name: 'Analytics', icon: <BarChart3 className="w-4 h-4" />, count: 1 };
 ];
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const ServiceCard = ({ service }: { service: anyanyanyanyanyanyanyanyanyanyanyanyanyany })              => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-    className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
-
-    {service.featured && (
-      <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
-        Featured
-      </div>
-    )}
-    <div className="relative mb-6 overflow-hidden rounded-xl">
-      <img
-        src={service.images[0]}
-        alt={service.title}
-        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-      <div className="absolute bottom-3 left-3 right-3">
-        <div className="flex items-center justify-between">
-          <Badge variant="secondary" className="bg-zion-purple/80 text-white">
-            {service.category}
-          </Badge>
-          <div className="flex items-center space-x-1 text-white">
-            <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-            <span className="text-sm font-medium">{service.rating}</span>
-            <span className="text-xs text-zion-slate-light">({service.reviewCount})</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div className="space-y-4">
-      <div>
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors">
-          {service.title}
-        </h3>
-        <p className="text-zion-slate-light text-sm leading-relaxed">
-          {service.description}
-        </p>
-      </div>
-      <div className="flex items-center justify-between">
-        <div className="flex items-center space-x-2">
-          <Badge variant="outline" className="text-zion-cyan border-zion-cyan/30">
-            {service.subcategory}
-          </Badge>
-          <Badge variant="outline" className="text-zion-purple border-zion-purple/30">
-            AI Score: {service.aiScore}
-          </Badge>
-        </div>
-      </div>
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <span className="text-zion-slate-light text-sm">Starting Price:</span>
-          <span className="text-2xl font-bold text-zion-cyan">
-            {service.currency}{service.price}
-            <span className="text-sm text-zion-slate-light">/{service.pricingModel}</span>
-          </span>
-        </div>
-        <div className="flex items-center justify-between">
-          <span className="text-zion-slate-light text-sm">Market Price:</span>
-          <span className="text-zion-purple font-semibold">{service.marketPrice}</span>
-        </div>
-      </div>
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <span className="text-zion-slate-light text-sm">Key Benefits:</span>
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-            className="text-zion-cyan hover:text-zion-cyan-light"
-
-            {expandedService === service.id ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </Button>
-        </div>
-        {expandedService === service.id && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="space-y-2"
-
-            {service.benefits.map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
-              <div key={index} className="flex items-start space-x-2">
-                <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
-                <span className="text-zion-slate-light text-sm">{benefit}</span>
-              </div>
-            ))}
-          </motion.div>
-        )}
-      </div>
-      <div className="pt-4 border-t border-zion-blue-light/20">
-        <div className="flex items-center justify-between">
-          <Link
-            to={service.website}
-            className="inline-flex items-center space-x-2 text-zion-cyan hover:text-zion-cyan-light transition-colors"
-
-            <span className="text-sm font-medium">Learn More</span>
-            <ExternalLink className="w-4 h-4" />
-          </Link>
-          <Link
-            to={`mailto:${service.contactEmail}`}
-            className="inline-flex items-center space-x-2 text-zion-purple hover:text-zion-purple-light transition-colors"
-
-            <span className="text-sm font-medium">Contact</span>
-            <Mail className="w-4 h-4" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  </motion.div>
-);
-
-export default function ComprehensiveServicesOverview2027(...args: any[]): any {
-=======
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const pricingModels = [;
@@ -356,9 +183,6 @@ const pricingModels = [;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
 ];
-<<<<<<< HEAD
-export default function ComprehensiveServicesOverview2027(...args[]):  {
-=======
 export default function ComprehensiveServicesOverview2027(...args[]: any):  {
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

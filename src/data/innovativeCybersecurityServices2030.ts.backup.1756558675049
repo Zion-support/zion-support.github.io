@@ -65,9 +65,6 @@ marketPrice: string;
   image: string;
   createdAt: string;
   featured: boolean;
-<<<<<<< HEAD
-  trending: boolean;
-=======
   trending: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -177,10 +174,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
-    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
-=======
     tags: ["Quantum Encryption", "Post-Quantum Cryptography", "Data Protection", "Compliance", "Zero Trust"],
     image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto = format&fit=crop&w=800&h=500",
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -554,15 +547,6 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     responseTime: "< 3 seconds",
     availability: "Global",
     location: "Global",
-<<<<<<< HEAD
-    tags["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],
-    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500",
-    createdAt: "2030-01-15T10:00:00.000Z",
-    featured: true,
-    trending: true
-<<<<<<< HEAD
-
-=======
   }
 =======;
     tags: ["Blockchain Security", "Smart Contract Auditing", "DeFi Security", "Cryptocurrency", "Digital Assets"],;

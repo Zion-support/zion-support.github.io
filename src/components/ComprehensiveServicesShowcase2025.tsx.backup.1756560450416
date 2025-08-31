@@ -401,9 +401,6 @@ import { Search,
   Psi,
   Omega,
   Crown
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025            } from '../data/innovativeMicroSaasServices2025';
-=======
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025            } from '../data/innovativeMicroSaasServices2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -486,10 +483,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
       case 'name':
         return a.title.localeCompare(b.title);
       case 'innovation':
-<<<<<<< HEAD
-        const innovationOrder = { 'Advanced': 1, 'Cutting-edge': 2, 'Revolutionary': 3 };
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) -
-=======
         const innovationOrder = {
   'Advanced': 1, 'Cutting-edge': 2,;
   ;
@@ -515,26 +508,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
 
   });
 
-<<<<<<< HEAD
-  const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyanyany)            => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
-
-  const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -556,15 +529,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
 
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -987,11 +951,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
                   setPriceRange([0,
   10000]);
                   setInnovationLevel('all');
-<<<<<<< HEAD
-                }}
-                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
-
-=======
                 
 
 

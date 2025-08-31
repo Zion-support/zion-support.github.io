@@ -44,7 +44,8 @@ import {
   Shield as ShieldIcon,
   Heart as HeartIcon,
   Users as UsersIcon,
-  Zap as ZapIcon
+  Zap as ZapIcon,
+  Home
 } from 'lucide-react';
 
 export default function EnhancedHeader() {
@@ -57,7 +58,6 @@ export default function EnhancedHeader() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -161,10 +161,10 @@ export default function EnhancedHeader() {
           description: 'Next-generation retail technology'
         },
         {
-          name: 'Government Solutions',
-          href: '/solutions/government',
-          icon: ShieldIcon,
-          description: 'Secure government technology solutions'
+          name: 'Education Solutions',
+          href: '/solutions/education',
+          icon: BookOpen,
+          description: 'Innovative educational technology platforms'
         }
       ]
     },
@@ -185,85 +185,67 @@ export default function EnhancedHeader() {
     }
   ];
 
-  const companyInfo = {
-    name: 'Zion Tech Group',
-    tagline: 'Innovating Tomorrow, Today',
-    contact: {
-      phone: '+1 (555) 123-4567',
-      email: 'info@ziontechgroup.com',
-      address: '123 Innovation Drive, Tech City, TC 12345'
-    }
-  };
-
   return (
-    <>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
+    }`}>
       {/* Top Bar */}
-      <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-b border-slate-700/50">
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between py-2">
-            {/* Company Info */}
-            <div className="flex items-center space-x-6 text-sm text-gray-300">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span>{companyInfo.contact.phone}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span>{companyInfo.contact.email}</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>{companyInfo.contact.address}</span>
-              </div>
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
+          <div className="flex items-center space-x-6">
+            <div className="flex items-center space-x-2">
+              <Phone className="w-4 h-4" />
+              <span>+1 (555) 123-4567</span>
             </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Globe className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <Users className="w-4 h-4" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                <MessageCircle className="w-4 h-4" />
-              </a>
+            <div className="flex items-center space-x-2">
+              <Mail className="w-4 h-4" />
+              <span>info@ziontechgroup.com</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <MapPin className="w-4 h-4" />
+              <span>New York, NY</span>
+            </div>
+          </div>
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <Globe className="w-4 h-4" />
+              <span>Global Solutions</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Zap className="w-4 h-4" />
+              <span>24/7 Support</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main Header */}
-      <header className={`sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-lg shadow-cyan-500/10' 
-          : 'bg-slate-900/80 backdrop-blur-sm'
-      }`}>
-        <div className="container mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
-                <Zap className="w-7 h-7 text-white" />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="flex items-center space-x-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                  {companyInfo.name}
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  Zion Tech Group
                 </h1>
-                <p className="text-xs text-cyan-400 font-medium tracking-wider">
-                  {companyInfo.tagline}
-                </p>
+                <p className="text-xs text-gray-600">Innovation • Technology • Solutions</p>
               </div>
             </Link>
+          </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1">
-              {navigation.map((item) => (
-                <div key={item.name} className="relative group">
-                  {item.dropdown ? (
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center space-x-1 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
+                      className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
                     >
                       <item.icon className="w-4 h-4" />
                       <span>{item.name}</span>
@@ -271,163 +253,160 @@ export default function EnhancedHeader() {
                         activeDropdown === item.name ? 'rotate-180' : ''
                       }`} />
                     </button>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className="flex items-center space-x-1 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
-                    >
-                      <item.icon className="w-4 h-4" />
-                      <span>{item.name}</span>
-                    </Link>
-                  )}
-
-                  {/* Dropdown Menu */}
-                  {item.dropdown && (
+                    
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
-                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          initial={{ opacity: 0, y: -10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl border border-slate-600/50 rounded-xl shadow-xl shadow-slate-900/50 overflow-hidden"
+                          className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-xl border border-gray-100 py-4 z-50"
                         >
-                          <div className="p-4">
-                            <div className="grid grid-cols-1 gap-2">
-                              {item.dropdown.map((dropdownItem) => (
-                                <Link
-                                  key={dropdownItem.name}
-                                  to={dropdownItem.href}
-                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-all duration-200 group"
-                                >
-                                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                                    <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
-                                  </div>
-                                  <div className="flex-1">
-                                    <h4 className="font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                                      {dropdownItem.name}
-                                    </h4>
-                                    <p className="text-sm text-gray-400 mt-1">
-                                      {dropdownItem.description}
-                                    </p>
-                                  </div>
-                                  <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
-                                </Link>
-                              ))}
-                            </div>
+                          <div className="grid grid-cols-1 gap-2">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.href}
+                                className="flex items-start space-x-3 p-3 hover:bg-gray-50 rounded-lg transition-colors duration-200 group"
+                                onClick={() => setActiveDropdown(null)}
+                              >
+                                <div className="w-8 h-8 bg-gradient-to-br from-blue-100 to-purple-100 rounded-lg flex items-center justify-center group-hover:from-blue-200 group-hover:to-purple-200 transition-all duration-200">
+                                  <dropdownItem.icon className="w-4 h-4 text-blue-600" />
+                                </div>
+                                <div className="flex-1">
+                                  <h4 className="font-medium text-gray-900 group-hover:text-blue-600 transition-colors duration-200">
+                                    {dropdownItem.name}
+                                  </h4>
+                                  <p className="text-sm text-gray-600 mt-1">
+                                    {dropdownItem.description}
+                                  </p>
+                                </div>
+                                <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors duration-200" />
+                              </Link>
+                            ))}
                           </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  )}
-                </div>
-              ))}
-            </nav>
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className="flex items-center space-x-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                )}
+              </div>
+            ))}
+          </nav>
 
-            {/* CTA Button */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link
-                to="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
-                Get Started
-              </Link>
-            </div>
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            >
+              Get Started
+            </Link>
+          </div>
 
-            {/* Mobile Menu Button */}
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-all duration-200"
+              className="text-gray-700 hover:text-blue-600 transition-colors duration-200"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
-        <AnimatePresence>
-          {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-slate-700/50 bg-slate-800/95 backdrop-blur-xl"
-            >
-              <div className="container mx-auto px-6 py-6">
-                <nav className="space-y-2">
-                  {navigation.map((item) => (
-                    <div key={item.name}>
-                      {item.dropdown ? (
-                        <div>
-                          <button
-                            onClick={() => toggleDropdown(item.name)}
-                            className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 rounded-lg transition-all duration-200"
-                          >
-                            <div className="flex items-center space-x-3">
-                              <item.icon className="w-5 h-5" />
-                              <span>{item.name}</span>
-                            </div>
-                            <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
-                              activeDropdown === item.name ? 'rotate-180' : ''
-                            }`} />
-                          </button>
-                          
-                          {activeDropdown === item.name && (
-                            <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: 'auto' }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
-                              className="ml-6 mt-2 space-y-2"
-                            >
-                              {item.dropdown.map((dropdownItem) => (
-                                <Link
-                                  key={dropdownItem.name}
-                                  to={dropdownItem.href}
-                                  className="flex items-center space-x-3 px-4 py-3 text-gray-400 hover:text-cyan-400 hover:bg-slate-700/50 rounded-lg transition-all duration-200"
-                                >
-                                  <dropdownItem.icon className="w-4 h-4" />
-                                  <span>{dropdownItem.name}</span>
-                                </Link>
-                              ))}
-                            </motion.div>
-                          )}
-                        </div>
-                      ) : (
-                        <Link
-                          to={item.href}
-                          className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 rounded-lg transition-all duration-200"
-                        >
-                          <item.icon className="w-5 h-5" />
+      {/* Mobile Navigation */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-white border-t border-gray-200"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {navigation.map((item) => (
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <button
+                        onClick={() => toggleDropdown(item.name)}
+                        className="flex items-center justify-between w-full text-left py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                      >
+                        <div className="flex items-center space-x-2">
+                          <item.icon className="w-4 h-4" />
                           <span>{item.name}</span>
-                        </Link>
-                      )}
+                        </div>
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item.name ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      <AnimatePresence>
+                        {activeDropdown === item.name && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="ml-6 mt-2 space-y-2"
+                          >
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                to={dropdownItem.href}
+                                className="flex items-center space-x-3 py-2 text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setActiveDropdown(null);
+                                }}
+                              >
+                                <dropdownItem.icon className="w-4 h-4" />
+                                <span>{dropdownItem.name}</span>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
-                  ))}
-                </nav>
-                
-                {/* Mobile CTA */}
-                <div className="mt-6 pt-6 border-t border-slate-700/50">
-                  <Link
-                    to="/contact"
-                    className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg text-center hover:from-cyan-500 hover:to-blue-600 transition-all duration-200"
-                  >
-                    Get Started
-                  </Link>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className="flex items-center space-x-2 py-2 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <item.icon className="w-4 h-4" />
+                      <span>{item.name}</span>
+                    </Link>
+                  )}
                 </div>
+              ))}
+              
+              {/* Mobile CTA */}
+              <div className="pt-4 border-t border-gray-200">
+                <Link
+                  to="/contact"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg text-center font-medium shadow-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Started
+                </Link>
               </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </header>
-    </>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }
-
-// Placeholder Home icon component
-const Home = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-  </svg>
-);

@@ -11,28 +11,6 @@ class LintAutomationManager {;
     this.isRunning = false;
     this.watcher = null;
     this.logFile = path.join(__dirname, 'logs', 'lint-automation.log');
-<<<<<<< HEAD
-    // // // // // // // // console.log(message);
-    fs.appendFileSync(this.logFile, logMessage);
-
-    this.ensureLogDirectory()}
-  ensureLogDirectory() {
-=======
-<<<<<<< HEAD;
-    this.ensureLogDirectory();
-;
-  ensureLogDirectory() {;
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir, { recursive: true });
-;
-;
-  log(message) {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-<<<<<<< HEAD;
-    // // // // // console.log(message);
-=======;
     // // // // // // // // console.log(message);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
     fs.appendFileSync(this.logFile, logMessage);
@@ -49,11 +27,6 @@ class LintAutomationManager {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     console.log(message);
-<<<<<<< HEAD
-    fs.appendFileSync(this.logFile, logMessage)}
-  async runLint() {
-    try {
-=======
     fs.appendFileSync(this.logFile, logMessage)};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async runLint() {;
@@ -67,17 +40,6 @@ class LintAutomationManager {;
       this.log('✅ Lint completed successfully');
       return { success: true, output: result }} catch (error) {;
       this.log(`❌ Lint errors found: ${error.message}`);
-<<<<<<< HEAD
-      return { success: false, output: error.stdout || error.message }}
-  }
-  async fixLintErrors() {
-    try {
-=======
-<<<<<<< HEAD;
-      return { success: false, output: error.stdout || error.message };
-;
-;
-=======;
       return { success: false, output: error.stdout || error.message }};
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
@@ -92,16 +54,6 @@ class LintAutomationManager {;
       this.log('✅ Lint errors fixed successfully');
       return { success: true, output: result }} catch (error) {;
       this.log(`❌ Failed to fix lint errors: ${error.message}`);
-<<<<<<< HEAD
-      return { success: false, output: error.stdout || error.message }}
-  }
-  startFileWatcher() {
-=======
-<<<<<<< HEAD;
-      return { success: false, output: error.stdout || error.message };
-;
-;
-=======;
       return { success: false, output: error.stdout || error.message }};
   };
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
@@ -125,14 +77,6 @@ class LintAutomationManager {;
         this.log(`📝 File changed: ${filePath}`);
         await this.handleFileChange(filePath)}, 1000)});
     this.watcher = watcher;
-<<<<<<< HEAD
-    this.log('✅ File watcher started')}
-  async handleFileChange(filePath) {
-=======
-<<<<<<< HEAD;
-    this.log('✅ File watcher started');
-;
-=======;
     this.log('✅ File watcher started')};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async handleFileChange(filePath) {;
@@ -145,27 +89,6 @@ class LintAutomationManager {;
         encoding: 'utf8',;
         stdio: 'pipe';
       });
-<<<<<<< HEAD
-      this.log(`✅ Fixed issues in: ${filePath}`)} catch (error) {
-      this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`)}
-  }
-  async start() {
-    if (this.isRunning) {
-      this.log('⚠️ Automation is already running');
-      return}
-=======
-<<<<<<< HEAD;
-      this.log(`✅ Fixed issues in: ${filePath}`);
-    } catch (error) {;
-      this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`);
-;
-;
-  async start() {;
-    if (this.isRunning) {;
-      this.log('⚠️ Automation is already running');
-      return;
-;
-=======;
       this.log(`✅ Fixed issues in: ${filePath}`)} catch (error) {;
       this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`)};
   };
@@ -179,16 +102,7 @@ class LintAutomationManager {;
     this.log('🚀 Starting Lint Automation Manager...');
     // Initial lint check;
     const initialResult = await this.runLint();
-<<<<<<< HEAD
-    if (!initialResult.success) {
-      await this.fixLintErrors()}
-    // Start file watcher
-=======
     if (!initialResult.success) {;
-<<<<<<< HEAD;
-      await this.fixLintErrors();
-;
-=======;
       await this.fixLintErrors()};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     // Start file watcher;
@@ -198,19 +112,6 @@ class LintAutomationManager {;
     setInterval(async () => {;
       if (this.isRunning) {;
         this.log('🔄 Running periodic lint check...');
-<<<<<<< HEAD
-        await this.runLint()}
-    }, 5 * 60 * 1000); // Every 5 minutes
-    this.log('✅ Lint Automation Manager started successfully')}
-  stop() {
-=======
-<<<<<<< HEAD;
-        await this.runLint();
-;
-    }, 5 * 60 * 1000); // Every 5 minutes;
-    this.log('✅ Lint Automation Manager started successfully');
-;
-=======;
         await this.runLint()};
     }, 5 * 60 * 1000); // Every 5 minutes;
     this.log('✅ Lint Automation Manager started successfully')};
@@ -220,28 +121,6 @@ class LintAutomationManager {;
     this.isRunning = false;
     if (this.watcher) {;
       this.watcher.close();
-<<<<<<< HEAD
-      this.watcher = null}
-    this.log('🛑 Lint Automation Manager stopped')}
-  status() {
-    const status = this.isRunning ? 'Running' : 'Stopped';
-    this.log(`📊 Status: ${status}`);
-    return { running: this.isRunning }}
-}
-// CLI handling
-=======
-<<<<<<< HEAD;
-      this.watcher = null;
-;
-    this.log('🛑 Lint Automation Manager stopped');
-;
-  status() {;
-    const status = this.isRunning ? 'Running' : 'Stopped';
-    this.log(`📊 Status: ${status}`);
-    return { running: this.isRunning };
-;
-;
-=======;
       this.watcher = null};
     this.log('🛑 Lint Automation Manager stopped')};
   status() {;
@@ -266,21 +145,7 @@ switch (command) {;
     manager.status();
     process.exit(0);
     break;
-<<<<<<< HEAD
-  default:
-    // // // // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
-    process.exit(1);
-
-    console.log('Usage: node lint-automation-manager.js [start|stop|status]');
-    process.exit(1)}
-// Graceful shutdown
-process.on('SIGINT', () => {
-=======
   default:;
-<<<<<<< HEAD;
-<<<<<<< HEAD;
-    // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
-=======;
     // // // // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
     process.exit(1);
@@ -296,14 +161,6 @@ process.on('SIGINT', () => {;
   process.exit(0)});
 process.on('SIGTERM', () => {;
   manager.stop();
-<<<<<<< HEAD
-  process.exit(0)});
-=======
-<<<<<<< HEAD;
-  process.exit(0);
-});
-}}}}}}}}}}}}}}}}}}}};
-=======;
   process.exit(0)});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

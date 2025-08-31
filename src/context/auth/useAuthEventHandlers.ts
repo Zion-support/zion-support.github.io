@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useCallback  } from 'react.ts';
-interface User {
-=======
 import { useCallback                } from 'react.ts';
 
 interface User {
@@ -28,12 +24,6 @@ interface User {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string}
-=======
-<<<<<<< HEAD
-  updatedAt?: string;
-=======
 updatedAt?: string;
 
 
@@ -53,12 +43,6 @@ updatedAt?: string;
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const useAuthEventHandlers = (
-<<<<<<< HEAD
-  setUser: anyanyanyanyanyanyanyanyanyanyanyanyanyany(user: User | null)                => void,
-  setOnboardingStep: anyanyanyanyanyanyanyanyanyanyanyanyanyany(step: number)                => void
-) => {;
-  const handleSignedIn = useCallback((user: anyanyanyanyanyanyanyanyanyanyanyanyanyanyUser)                => {;
-=======
   setUser: (user: User | null) => void,
   setOnboardingStep: (step: number) => void
 ) => {

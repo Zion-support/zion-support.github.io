@@ -8,15 +8,6 @@ import { Eye,
   Users,
   Globe,
   ArrowRight,
-<<<<<<< HEAD
-  Accessibility,
-  Monitor,
-  Smartphone,
-  Tablet,
-  Laptop
-const AccessibilityAuditor: React.FC = (): JSX.Element => {
-  const features = [
-=======
   Star,
   Heart,
   Users,
@@ -68,12 +59,6 @@ export default function AccessibilityPage(...args: any[]): any {
       ]
     },
     {
-<<<<<<< HEAD
-      title: "Compliance Reporting",
-      description: "Detailed reports with actionable recommendations",
-      icon: "📋"
-
-=======
       category: 'Cognitive Accessibility',
       icon: Brain,
       features: [
@@ -138,11 +123,6 @@ export default function AccessibilityPage(...args: any[]): any {
       icon: Smartphone
     },
     {
-<<<<<<< HEAD
-      category: "Technical Accessibility",
-      items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
-
-=======
       name: 'Voice Navigation',
       description: 'Voice control support for hands-free navigation and interaction',
       icon: Globe
@@ -352,24 +332,11 @@ export default function AccessibilityPage(...args: any[]): any {
                   View All Services
                 </Link>
               </div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-};
-
-export default AccessibilityAuditor;}}}
-=======
 }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -8,10 +8,6 @@ interface LoaderProps extends React.PropsWithChildren<{}> {
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-<<<<<<< HEAD
-
-export const PerformanceOptimizedLoader = memo<LoaderProps>(({
-=======
 
 }
 export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
@@ -86,16 +82,6 @@ export const PerformanceOptimizedLoader = memo<LoadingSpinnerProps>(({
         <div className="mt-4 text-center">
           <motion.div
             className={`text-zion-cyan ${textSizes[size]} animate-pulse`}
-<<<<<<< HEAD
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-
-            {text}
-          </motion.div>
-        </div>
-      </div>
-    </div>
-=======
             animate = {
   { opacity: [0.5, 1,
   0.5] 

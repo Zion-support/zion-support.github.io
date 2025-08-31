@@ -59,15 +59,6 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
       price: '$1,299/mo',
       details: [
         'Unlimited content creation',
-<<<<<<< HEAD
-        'Full AI content suite',
-        'Custom AI models',
-        'Dedicated support',
-        'API access',
-        'White-label solutions'
-      ]
-
-=======
         'Full AI content suite',;
         'Custom AI models',;
         'Dedicated support',;
@@ -104,15 +95,6 @@ import { PenTool, Image, Video, FileText, Check, ArrowRight, ExternalLink, Phone
       solutions: ['Blog posts', 'Social media posts', 'Email campaigns', 'Product descriptions', 'Press releases']
     },
     {
-<<<<<<< HEAD
-      type: 'Visual Content',
-      solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets']
-    },
-    {
-      type: 'Video Content',
-      solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams']
-
-=======
       type: 'Visual Content',;
       solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets'];
     },;

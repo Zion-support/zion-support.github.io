@@ -36,18 +36,6 @@ import { Cpu, BarChart3, ArrowRight, Check, ExternalLink, Phone, Mail, Wifi, Tre
       price: '$499/mo',
       details: ['Up to 100 devices', 'Basic AI processing', 'Standard monitoring', 'Email support']
     },
-<<<<<<< HEAD
-    {
-      name: 'Edge Professional',
-      price: '$1,299/mo',
-      details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support']
-    },
-    {
-      name: 'Enterprise Edge',
-      price: '$3,999/mo',
-      details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support']
-    },
-=======
     { 
       name: 'Edge Professional', 
       price: '$1,299/mo', 

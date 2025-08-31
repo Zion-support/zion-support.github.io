@@ -1,6 +1,4 @@
 export interface NextGenInnovativeService {
-<<<<<<< HEAD
-=======
 
 
 

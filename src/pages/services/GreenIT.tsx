@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Leaf,
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu               } from 'lucide-react.ts';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Leaf,
@@ -34,14 +24,6 @@ import { Leaf,
   Target,
   Award,
   BarChart3
-<<<<<<< HEAD
-} from 'lucide-react';
-import SEO from '../../components/SEO';
-export default function GreenIT() {
-=======
-<<<<<<< HEAD
-import { SEO              } from '../../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -200,10 +182,6 @@ export default function GreenIT(...args: any[]): any {
               environmental impact and improve operational efficiency.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {greenServices.map((service, index)  => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {greenServices.map((service, index)               => (
@@ -240,10 +218,6 @@ export default function GreenIT(...args: any[]): any {
               environmentally responsible IT solutions.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {greenTechnologies.map((tech, index)  => (
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {greenTechnologies.map((tech, index)               => (
@@ -379,10 +353,6 @@ export default function GreenIT(...args: any[]): any {
               technology implementation and environmental impact reduction.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
@@ -434,10 +404,6 @@ export default function GreenIT(...args: any[]): any {
               infrastructure into a sustainable, energy-efficient ecosystem.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {solutions.map((solution, index)              => (
@@ -499,10 +465,6 @@ export default function GreenIT(...args: any[]): any {
               enabling sustainable operations and environmental responsibility.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
@@ -564,10 +526,6 @@ export default function GreenIT(...args: any[]): any {
               and drive measurable business and environmental outcomes.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
@@ -618,9 +576,6 @@ export default function GreenIT(...args: any[]): any {
               Our proven methodology ensures successful Green IT deployment and rapid sustainability impact.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -644,9 +599,6 @@ export default function GreenIT(...args: any[]): any {
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
-<<<<<<< HEAD
-            ].map((phase, index) => (
-=======
 
             ].map((phase, index)              => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

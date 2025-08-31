@@ -1,35 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
-import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle  } from 'lucide-react.ts';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025  } from '../data/innovativeMicroSaasServices2025';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { SEO               } from '@/components/SEO';
-import { Link               } from 'react-router-dom.ts';
-import { Brain,
-  Zap,
-  Shield,
-  Database,
-  Users,
-  TrendingUp,
-  Globe,
-  Lock,
-  Cloud,
-  Briefcase,
-  Scale,
-  Rocket,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Search
-import { ULTIMATE_REAL_SERVICES_2025, ULTIMATE_SERVICE_CATEGORIES_2025, ULTIMATE_SERVICE_SUBCATEGORIES_2025, ULTIMATE_PRICING_TIERS_2025, ULTIMATE_CONTACT_INFO_2025, ULTIMATE_SERVICE_GUARANTEES_2025               } from '@/data/ultimateRealServices2025';
-=======
 import React, { useState, useEffect } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Search, Filter, Star, ArrowRight, ChevronDown, Globe, Zap, Shield, Brain, Cloud, Lock, Users, TrendingUp, Award, Clock, DollarSign, CheckCircle               } from 'lucide-react.ts';
@@ -56,9 +24,6 @@ interface ServiceContact {
   mobile: string;
   email: string;
   address: string;
-<<<<<<< HEAD
-  website: string;
-=======
 website: string;
 
 
@@ -88,18 +53,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
 
   const categories = [
-<<<<<<< HEAD
-    { id: stringall', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s  => s.category === 'AI & Automation').length, icon: string🤖' },
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s  => s.category === 'Quantum Computing').length, icon: string⚛️' },
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s  => s.category === 'Blockchain').length, icon: string🔗' },
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s  => s.category === 'AI & Healthcare').length, icon: string🏥' },
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s  => s.category === 'Edge Computing').length, icon: string🌐' },
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s  => s.category === 'Metaverse').length, icon: string🌍' },
-    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s  => s.category === 'AI & Content').length, icon: string✍️' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s  => s.category === 'Cybersecurity').length, icon: string🛡️' },
-    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s  => s.category === 'AI & HR').length, icon: '👥' }
-=======
     { id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: allServices.length, icon: '🚀' },
     { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s               => s.category === 'AI & Automation').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🤖' },
     { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s               => s.category === 'AI & Analytics').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'📊' },
@@ -145,49 +98,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
     }
   });
 
-<<<<<<< HEAD
-  const handleServiceClick = (service: any)  => {
-    setSelectedService(service);
-  };
-=======
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    if (category === 'all') return <Rocket className="w-6 h-6" />;
-    return ULTIMATE_SERVICE_CATEGORIES_2025[category]?.icon ?
-      <span className="text-2xl">{ULTIMATE_SERVICE_CATEGORIES_2025[category].icon}</span> :
-      <Rocket className="w-6 h-6" />;
-=======
-<<<<<<< HEAD
-  const handleServiceClick = (service)  => {;
-    setSelectedService(service)};
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-
-  const closeModal = () => {
-    setSelectedService(null);
-  };
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-      }
-<<<<<<< HEAD
-    }
-=======
     };
 =======;
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
@@ -314,9 +224,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.4 }}
           >
-<<<<<<< HEAD
-            {categories.map((category)  => (
-=======
             {categories.map((category)               => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.button
@@ -564,9 +471,6 @@ const UltimateServicesShowcase2025: React.FC = (): JSX.Element => {
   );
 };
 
-<<<<<<< HEAD
-export default UltimateServicesShowcase2025;
-=======
       {/* Services Grid */}
       <section className="px-4 sm:px-6 lg:px-8 mb-20">
         <div className="max-w-7xl mx-auto">
@@ -664,25 +568,12 @@ export default UltimateServicesShowcase2025;
               className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
 
               View Pricing
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-
-export default UltimateServicesShowcase2025;
-=======
             </Link>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

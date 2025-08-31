@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet             } from 'react-helmet-async.ts';
-import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield import { Link             } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import { Cpu, Wifi, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Shield              } from 'lucide-react.ts';
@@ -100,10 +95,6 @@ export default function IoTEdge(...args: []):  {
                   icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with encryption and access controls."
-<<<<<<< HEAD
-
-              ].map((feature, index)             => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -168,10 +159,6 @@ export default function IoTEdge(...args: []):  {
                   description: "Inventory management, supply chain optimization, and customer experience.",
                   icon: Activity,
                   benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
-<<<<<<< HEAD
-
-              ].map((application, index)             => (
-=======
                 }
               ].map((application, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -275,10 +262,6 @@ export default function IoTEdge(...args: []):  {
                 {
                   title: "Security",
                   description: "TLS encryption, device authentication, and secure communication"
-<<<<<<< HEAD
-
-              ].map((technology, index)             => (
-=======
                 }
               ].map((technology, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -327,10 +310,6 @@ export default function IoTEdge(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize the system."
-<<<<<<< HEAD
-
-              ].map((step, index)             => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -366,16 +345,6 @@ export default function IoTEdge(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

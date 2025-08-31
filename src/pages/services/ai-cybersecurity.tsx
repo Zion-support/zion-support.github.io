@@ -120,10 +120,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               Experience next-generation cybersecurity powered by artificial intelligence
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
@@ -174,10 +170,6 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               End-to-end cybersecurity protection for your business
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-=======
 
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (

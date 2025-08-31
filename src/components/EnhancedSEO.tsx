@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
-
-interface SEOData {
-=======
 import React, { useEffect, useCallback } from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 
@@ -22,11 +15,6 @@ export interface SEOData {
   keywords?: string[];
   canonical?: string;
   ogImage?: string;
-<<<<<<< HEAD
-  ogType?: 'website' | 'article' | 'product' | 'service';
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
-<<<<<<< HEAD
-=======
   ogType?: string;
   twitterCard?: string;
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
@@ -147,44 +135,6 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
     noFollow = false
   } = data;
 
-<<<<<<< HEAD
-  // Default structured data for Zion Tech Group
-  const defaultStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
-    "description": "Empowering the future through innovative technology solutions including AI, IT services, and MicroSaaS platforms.",
-    "foundingDate": "2020",
-    "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-555-0123",
-      "contactType": "customer service",
-      "email": "info@ziontechgroup.com"
-    },
-<<<<<<< HEAD
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Innovation Drive",
-      "addressLocality": "Tech City",
-      "addressRegion": "CA",
-      "postalCode": "90210",
-      "addressCountry": "US"
-    },
-=======
-<<<<<<< HEAD
-    "sameAs"[
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ]
-=======
     "sameAs": [
       "https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
@@ -226,38 +176,6 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
     }
   };
 
-<<<<<<< HEAD
-  // Merge custom structured data with default
-  const finalStructuredData = structuredData 
-    ? { ...defaultStructuredData, ...structuredData }
-    : defaultStructuredData;
-
-  // Generate meta robots content
-  const robotsContent = [
-    noIndex ? 'noindex' : 'index',
-    noFollow ? 'nofollow' : 'follow'
-  ].join(',');
-
-  // Enhanced meta description with proper length
-  const optimizedDescription = description.length > 160 
-    ? description.substring(0, 157) + '...'
-    : description;
-
-  // Enhanced title with proper length
-  const optimizedTitle = title.length > 60 
-    ? title.substring(0, 57) + '...'
-    : title;
-
-  // Generate keywords string
-  const keywordsString = keywords.join(', ');
-
-  // Set canonical URL
-  const canonicalUrl = canonical || window.location.href;
-
-  useEffect(() => {
-    // Update page title for better UX
-    document.title = optimizedTitle;
-=======
   // Preload critical resources
   useEffect(()               => {
     // Preload critical fonts
@@ -277,9 +195,6 @@ export const EnhancedSEO: React.FC<EnhancedSEOProps> = ({ data, children }) => {
         document.head.removeChild(script);
       };
     }
-<<<<<<< HEAD
-  }, [optimizedTitle, finalStructuredData]);
-=======
 
     // DNS prefetch for external domains
     const dnsPrefetchDomains = [

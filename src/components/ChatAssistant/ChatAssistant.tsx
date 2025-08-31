@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-import React, { useState, useRef } from 'react.ts';
-import { X, Send export interface Message {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 import React, { useState, useRef  
  
  
@@ -36,8 +15,6 @@ import React, { useState, useRef
 } from 'react.ts';
 import { X, Send                } from 'lucide-react.ts';
 export interface Message {
-<<<<<<< HEAD
-=======
 
 
 
@@ -59,46 +36,12 @@ export interface Message {
   role: 'user' | 'assistant';
   message: string;
   timestamp: Date;
-<<<<<<< HEAD
-  read?: boolean}
-=======
-<<<<<<< HEAD
-  read?: boolean;
-
-export interface ChatAssistantProps extends React.PropsWithChildren<{
-
-
-
-
-
-
-
-
-
-
-
-
-}> {
-=======
 read?: boolean;
 }
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   isOpen?: boolean;
-<<<<<<< HEAD
   onClose?: () => void;
-}
-export function ChatAssistant({ isOpen = false, onClose }: ChatAssistantProps) {;
-=======
-<<<<<<< HEAD
-  onClose?: ()  => void}
-export function ChatAssistant(...args[]: any):  {
-=======
-  onClose?: () => void;
-<<<<<<< HEAD
-
-export function ChatAssistant(...args: any[]): any {
-=======
 }
 export function ChatAssistant(...args: any[]): any {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -108,24 +51,6 @@ export function ChatAssistant(...args: any[]): any {;
   const [messages, setMessages] = useState<any>([]);
   const [inputMessage, setInputMessage] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-<<<<<<< HEAD
-      timestamp: new Date(),;
-=======
-<<<<<<< HEAD
-  const handleSendMessage = async (message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    if (!message.trim()) return;
-    const userMessage: Message = {
-  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanyDate.now().toString(),
-      role: 'user',
-      message: message.trim(),
-<<<<<<< HEAD
-      timestamp: new Date(),;
-  ;
-
-};
-    setMessages(prev                => [...prev, userMessage]);
-=======
       timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
@@ -133,9 +58,6 @@ export function ChatAssistant(...args: any[]): any {;
   ;
   ;
 };
-<<<<<<< HEAD
-    setMessages(prev => [...prev, userMessage]);
-=======
     setMessages(prev               => [...prev, userMessage]);
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -146,22 +68,6 @@ export function ChatAssistant(...args: any[]): any {;
   id: anyanyanyanyanyanyanyanyanyanyanyanyanyany(Date.now() + 1).toString(),
         role: 'assistant',
         message: 'Thank you for your message! Our team will get back to you soon.',
-<<<<<<< HEAD
-        timestamp: new Date(),;
-=======
-<<<<<<< HEAD
-        timestamp: new Date(),;
-  ;
-
-};
-      setMessages(prev                => [...prev, aiMessage])}, 1000)};
-  const handleSubmit = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)                => {;
-    e.preventDefault();
-    handleSendMessage(inputMessage)};
-  const toggleChat = () => {;
-    setIsChatOpen(!isChatOpen)};
-  const closeChat = () => {;
-=======;
         timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynew Date(),;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;

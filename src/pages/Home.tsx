@@ -150,224 +150,106 @@ export default function Home() {
       link: "/services/AIAutonomousBusinessOperations"
     },
     {
-      title: "Quantum-Safe Cryptography",
-      description: "Future-proof security solutions for the quantum computing era",
-      icon: Shield,
-      color: "from-red-500 to-orange-500",
-      link: "/services/QuantumSafeCryptography"
+      title: "Quantum Edge Computing",
+      description: "Revolutionary quantum-enhanced edge computing platform",
+      icon: Atom,
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/quantum-edge-computing-solutions"
     },
     {
-      title: "Space Technology Innovation",
-      description: "Advanced satellite and space exploration technologies",
-      icon: Satellite,
-      color: "from-indigo-500 to-purple-500",
-      link: "/services/SpaceTechInnovation"
-    },
-    {
-      title: "Sustainable Tech Analytics",
-      description: "AI-powered environmental impact assessment and optimization",
-      icon: Leaf,
+      title: "AI Customer Experience Analytics",
+      description: "Transform customer relationships with AI-powered analytics",
+      icon: BarChart3,
       color: "from-green-500 to-emerald-500",
-      link: "/services/SustainableTechAnalytics"
-    },
-    {
-      title: "FinTech Operations & Compliance",
-      description: "Comprehensive financial technology solutions with regulatory compliance",
-      icon: Coins,
-      color: "from-blue-500 to-violet-500",
-      link: "/services/FintechOperationsCompliance"
-    },
-    {
-      title: "AI Content Creation Studio",
-      description: "Professional content generation powered by artificial intelligence",
-      icon: FileText,
-      color: "from-pink-500 to-rose-500",
-      link: "/services/AIContentCreationStudio"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      content: "Zion Tech Group transformed our business operations with their AI solutions. The results exceeded our expectations.",
-      avatar: "/images/testimonials/sarah-johnson.jpg",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "CEO, InnovateLab",
-      content: "Their quantum computing expertise helped us solve complex problems that were previously impossible.",
-      avatar: "/images/testimonials/michael-chen.jpg",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Director of IT, GlobalTech",
-      content: "The sustainable technology solutions not only improved our efficiency but also reduced our carbon footprint.",
-      avatar: "/images/testimonials/emily-rodriguez.jpg",
-      rating: 5
+      link: "/services/ai-customer-experience-analytics"
     }
   ];
 
   useEffect(() => {
-    if (isPlaying) {
-      const timer = setInterval(() => {
-        setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-      }, 5000);
-      return () => clearInterval(timer);
-    }
+    if (!isPlaying) return;
+    
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    }, 5000);
+    
+    return () => clearInterval(timer);
   }, [isPlaying, heroSlides.length]);
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
   return (
-    <div className="min-h-screen bg-slate-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative z-10 pt-20 pb-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
-            {/* Hero Slides */}
-            <div className="relative h-[600px] lg:h-[700px] overflow-hidden rounded-3xl">
-              {heroSlides.map((slide, index) => (
-                <motion.div
-                  key={index}
-                  className={`absolute inset-0 flex items-center ${
-                    index === currentSlide ? 'opacity-100' : 'opacity-0'
-                  }`}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: index === currentSlide ? 1 : 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
-                    <motion.div
-                      initial={{ opacity: 0, x: -50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: 0.2 }}
-                    >
-                      <div className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${slide.color} text-white text-sm font-medium mb-6`}>
-                        <slide.icon className="w-4 h-4 mr-2" />
-                        Featured Service
-                      </div>
-                      
-                      <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
-                        {slide.title}
-                      </h1>
-                      
-                      <h2 className="text-xl lg:text-2xl text-slate-300 mb-6">
-                        {slide.subtitle}
-                      </h2>
-                      
-                      <p className="text-lg text-slate-400 mb-8 leading-relaxed">
-                        {slide.description}
-                      </p>
-                      
-                      <div className="flex flex-col sm:flex-row gap-4">
-                        <Link
-                          to={slide.link}
-                          className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
-                        >
-                          {slide.cta}
-                          <ArrowRight className="w-5 h-5 ml-2" />
-                        </Link>
-                        
-                        <button
-                          onClick={() => setIsPlaying(!isPlaying)}
-                          className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 inline-flex items-center"
-                        >
-                          {isPlaying ? (
-                            <>
-                              <Play className="w-5 h-5 mr-2" />
-                              Pause
-                            </>
-                          ) : (
-                            <>
-                              <Play className="w-5 h-5 mr-2" />
-                              Resume
-                            </>
-                          )}
-                        </button>
-                      </div>
-                    </motion.div>
-                    
-                    <motion.div
-                      initial={{ opacity: 0, x: 50 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.8, delay: 0.4 }}
-                      className="hidden lg:flex justify-center"
-                    >
-                      <div className={`w-80 h-80 bg-gradient-to-br ${slide.color} rounded-full flex items-center justify-center shadow-2xl`}>
-                        <slide.icon className="w-32 h-32 text-white" />
-                      </div>
-                    </motion.div>
+            {heroSlides.map((slide, index) => (
+              <motion.div
+                key={slide.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ 
+                  opacity: currentSlide === index ? 1 : 0,
+                  y: currentSlide === index ? 0 : 20
+                }}
+                transition={{ duration: 0.8 }}
+                className={`absolute inset-0 ${currentSlide === index ? 'relative' : 'hidden'}`}
+              >
+                <div className="text-center max-w-4xl mx-auto">
+                  <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-300 text-sm font-medium mb-6">
+                    <slide.icon className="w-4 h-4 mr-2" />
+                    {slide.subtitle}
                   </div>
-                </motion.div>
-              ))}
-            </div>
-            
-            {/* Navigation Controls */}
-            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-4">
-              {heroSlides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    index === currentSlide ? 'bg-cyan-400 scale-125' : 'bg-slate-600 hover:bg-slate-500'
-                  }`}
-                />
-              ))}
-            </div>
-            
-            {/* Arrow Controls */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-slate-800/50 hover:bg-slate-700/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
-            
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-slate-800/50 hover:bg-slate-700/50 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+                    {slide.title}
+                  </h1>
+                  <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
+                    {slide.description}
+                  </p>
+                  <Link
+                    to={slide.link}
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+                  >
+                    <span>{slide.cta}</span>
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Slide Navigation */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {heroSlides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentSlide === index ? 'bg-blue-400 scale-125' : 'bg-blue-400/30'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
+      <section className="relative z-10 py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
-                  <div className="text-slate-300">{stat.label}</div>
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-white" />
                 </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-zinc-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -375,105 +257,56 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative z-10 py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              Our Cutting-Edge Services
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Our Services
             </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Discover our comprehensive suite of AI, quantum, and sustainable technology solutions
+            <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
+              Discover our comprehensive range of AI-powered solutions designed to transform your business
             </p>
           </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group relative"
               >
-                <Link
-                  to={service.link}
-                  className="block bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105 group"
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
+                <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-blue-500/20 rounded-2xl p-8 h-full hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`}></div>
                   
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  
-                  <p className="text-slate-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
-                    <span className="font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <div className="relative z-10">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Real results from real businesses that trust Zion Tech Group
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
+                      {service.title}
+                    </h3>
+                    <p className="text-zinc-300 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <Link
+                      to={service.link}
+                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+                    >
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
                   </div>
-                  <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
-                    <p className="text-slate-400 text-sm">{testimonial.role}</p>
-                  </div>
-                </div>
-                
-                <p className="text-slate-300 mb-6 leading-relaxed">
-                  "{testimonial.content}"
-                </p>
-                
-                <div className="flex items-center">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
                 </div>
               </motion.div>
             ))}
@@ -482,55 +315,35 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative z-10 py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
+            viewport={{ once: true }}
+            className="text-center"
           >
-            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl border border-slate-700 p-12">
-              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Join hundreds of companies already leveraging our cutting-edge technology solutions to drive innovation and growth.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center"
-                >
-                  <Phone className="w-5 h-5 mr-2" />
-                  Get Started Today
-                </Link>
-                
-                <Link
-                  to="/services"
-                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 inline-flex items-center"
-                >
-                  <Eye className="w-5 h-5 mr-2" />
-                  Explore Services
-                </Link>
-              </div>
-              
-              <div className="mt-8 flex items-center justify-center space-x-8 text-sm text-slate-400">
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Free Consultation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>24/7 Support</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>Custom Solutions</span>
-                </div>
-              </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-lg text-zinc-300 max-w-3xl mx-auto mb-8">
+              Join the future of business with our cutting-edge AI solutions. Let's build something amazing together.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+              >
+                <span>Get Started</span>
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border border-blue-500/20 text-blue-300 font-semibold rounded-xl hover:border-blue-400/40 hover:bg-blue-500/10 transition-all duration-300"
+              >
+                <span>View All Services</span>
+              </Link>
             </div>
           </motion.div>
         </div>

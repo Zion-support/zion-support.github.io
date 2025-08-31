@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useState, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-=======
 import React, { useEffect, useState, useCallback, useRef } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { BarChart3,
-  TrendingUp,
-  Users,
-  Eye,
-  MousePointer,
-  Clock,
-  Globe,
-  X,
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   BarChart3, 
@@ -40,9 +25,6 @@ import {
   Filter,
   Calendar,
   RefreshCw
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
               } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -90,39 +72,8 @@ interface UserBehavior {
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  locations: Array<{ country: string; count: number }>;
-=======
   topPages: Array<any>;
   userAgents: Array<any>;
-<<<<<<< HEAD
-  referrers: Array<any>;
-  timeOnPage: number;
-  scrollDepth: number;
-  clickEvents: number;
-  formSubmissions: number;
-
-interface Props extends React.PropsWithChildren<{
-
-
-
-
-
-
-
-
-
-
-
-
-}> {
-
-  enabled?: boolean;
-  showMetrics?: boolean;
-=======
   locations: Array<any>;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   performance: {
@@ -138,9 +89,6 @@ interface Props extends React.PropsWithChildren<{
     errors: number;
   };
 }
-<<<<<<< HEAD
-interface AdvancedAnalyticsProps {
-=======
 
 interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
 
@@ -152,15 +100,6 @@ interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
   enableAITesting?: boolean;
 
 }
-<<<<<<< HEAD
-export function AdvancedAnalytics({ 
-  enabled, 
-  trackingId,
-  enableHeatmap = false,
-  enableSessionRecording = false,
-  enableAITesting = false
-}: AdvancedAnalyticsProps) {
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AdvancedAnalytics(...args: any[]): any {
@@ -220,13 +159,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
     acquisitionCost: 0
   });
   const [isTracking, setIsTracking] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [sessionStart, setSessionStart] = useState<number>(Date.now());
-  const [currentPage, setCurrentPage] = useState<string>(window.location.pathname);
-  const [userSession, setUserSession] = useState<string>('');
-  const [heatmapData, setHeatmapData] = useState<Array<{ x: number; y: number; type: 'click' | 'scroll' | 'hover' }>>([]);
-=======
   const [sessionStart, setSessionStart] = useState<any>(Date.now());
   const [currentPage, setCurrentPage] = useState<any>(window.location.pathname);
   const [userSession, setUserSession] = useState<any>('');
@@ -291,177 +223,13 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       language: navigator.language,
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
     };
-<<<<<<< HEAD
-    // Send to analytics service
-    this.sendAnalyticsData('pageview', pageViewData);
-    // Update local state
-    setAnalyticsData(prev               => ({
-      ...prev,
-      pageViews: prev.pageViews + 1
-    }));
-  }, [enabled, userSession]);
-  // Track user interactions
-  const trackInteraction = useCallback((type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'click' | 'scroll' | 'form' | 'error', data?: )               => {
-    if (!enabled) return;
-    const interactionData = {
-      sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
-      type,
-      timestamp: new Date().toISOString(),
-      page: currentPage,
-      data,
-      element: data?.target?.tagName || 'unknown',
-      position: data?.position || null
-    };
-    // Update tracking ref
-    switch (type) {
-      case 'click':
-        trackingRef.current.clicks++;
-        break;
-      case 'scroll':
-        trackingRef.current.scrolls++;
-        break;
-      case 'form':
-        trackingRef.current.formSubmissions++;
-        break;
-      case 'error':
-        trackingRef.current.errors++;
-        break;
-    }
-    // Send to analytics service
-    this.sendAnalyticsData('interaction', interactionData);
-    // Update local state
-    setAnalyticsData(prev               => ({
-      ...prev,
-      interactions: {
-        ...prev.interactions,
-        [type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`]: 
-          prev.interactions[type === 'form' ? 'formSubmissions' : type === 'error' ? 'errors' : `${type}s`] + 1
-      }
-    }));
-  }, [enabled, userSession, currentPage]);
-  // Track performance metrics
-  const trackPerformance = useCallback(() => {
-    if (!enabled) return;
-    // Use Performance API to get metrics
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const performanceData = {
-        sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstPaint: paint.find(entry               => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyanyanyanypaint.find(entry               => entry.name === 'first-contentful-paint')?.startTime || 0,
-        largestContentfulPaint: anyanyanyanyanyanyanyanyanyanyanyanyanyany0, // Will be updated by observer
-        timestamp: new Date().toISOString()
-      };
-      // Update local state
-      setAnalyticsData(prev               => ({
-        ...prev,
-        performance: anyanyanyanyanyanyanyanyanyanyanyanyanyany{
-          loadTime: performanceData.loadTime,
-          firstPaint: performanceData.firstPaint,
-          firstContentfulPaint: performanceData.firstContentfulPaint,
-          largestContentfulPaint: performanceData.largestContentfulPaint
-        }
-      }));
-      // Send to analytics service
-      this.sendAnalyticsData('performance', performanceData);
-    }
-  }, [enabled, userSession]);
-  // Setup event listeners
-  useEffect(()               => {
-    if (!enabled) return;
-    setIsTracking(true);
-    // Track initial page view
-    trackPageView(window.location.pathname);
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-    // Track scroll depth
-    const trackScrollDepth = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
-
-      setAnalyticsData(prev => ({
-        ...prev,
-        scrollDepth: Math.max(prev.scrollDepth, scrollPercent)
-      }));
-    };
-
-    // Track time on page
-    const trackTimeOnPage = () => {
-      const timeSpent = Math.round((Date.now() - sessionStart) / 1000);
-      setAnalyticsData(prev => ({
-        ...prev,
-        timeOnPage: timeSpent
-      }));
-    };
-
-    // Track click events
-    const trackClickEvents = () => {
-      setAnalyticsData(prev => ({
-        ...prev,
-        clickEvents: prev.clickEvents + 1
-      }));
-    };
-
-    // Track form submissions
-    const trackFormSubmissions = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyEvent)               => {
-      if (e.target instanceof HTMLFormElement) {
-        setAnalyticsData(prev => ({
-          ...prev,
-          formSubmissions: prev.formSubmissions + 1
-        }));
-
-    };
-
-    // Track user agent
-    const trackUserAgent = () => {
-      const userAgent = navigator.userAgent;
-      let device = 'Desktop';
-
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
-        device = /iPad/i.test(userAgent) ? 'Tablet' : 'Mobile';
-
-      setAnalyticsData(prev => {
-        const existingDevice = prev.userAgents.find(d => d.device === device);
-        if (existingDevice) {
-          existingDevice.count++;
-        } else {
-          prev.userAgents.push({ device, count: 1 });
-
-        return { ...prev };
-      });
-    };
-
-    // Track referrer
-    const trackReferrer = () => {
-      if (document.referrer) {
-        const referrer = new URL(document.referrer);
-        const source = referrer.hostname;
-
-        setAnalyticsData(prev => {
-          const existingSource = prev.referrers.find(r => r.source === source);
-          if (existingSource) {
-            existingSource.count++;
-          } else {
-            prev.referrers.push({ source, count: 1 });
-
-          return { ...prev };
-        });
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Track performance metrics
     trackPerformance();
     // Setup click tracking
     const handleClick = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMouseEvent)               => {
       const target = e.target as HTMLElement;
-<<<<<<< HEAD
-      const position = { x: e.clientX, y: e.clientY };
-=======
       const position = { x: anyanyanyanyanyanyanyanyanyanyanyanyanyanye.clientX, y: e.clientY };
       
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -557,34 +325,7 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
           }));
         }
       });
-<<<<<<< HEAD
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      return () => lcpObserver.disconnect();
-=======
 
-<<<<<<< HEAD
-      return ()               => clearInterval(interval);
-
-  }, [isTracking, sessionStart]);
-
-  // Simulate some analytics data for demonstration
-  useEffect(() => {
-    if (enabled) {
-      // Simulate top pages
-      setAnalyticsData(prev => ({
-        ...prev,
-        topPages: [
-          { path: '/', views: 1250 },
-          { path: '/services', views: 890 },
-          { path: '/about', views: 456 },
-          { path: '/contact', views: 234 },
-          { path: '/blog', views: 189 }
-        ],
-        bounceRate: 35.2,
-        conversionRate: 8.7
-      }));
-
-=======
       lcpObserver.observe({ entryTypes: anyanyanyanyanyanyanyanyanyanyanyanyanyany['largest-contentful-paint'] });
 
       return ()               => lcpObserver.disconnect();
@@ -679,47 +420,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       // Store locally for retry
       storeEventLocally(event);
     }
-<<<<<<< HEAD
-  }, [trackingId, userSession]);
-  // Generate mock data for demonstration
-  useEffect(()               => {
-    if (!enabled) return;
-    // Simulate data collection
-    const mockData: AnalyticsData = {
-      pageViews: Math.floor(Math.random() * 1000) + 500,
-      uniqueVisitors: Math.floor(Math.random() * 500) + 200,
-      sessionDuration: Math.floor(Math.random() * 300) + 120,
-      bounceRate: Math.random() * 40 + 20,
-      conversionRate: Math.random() * 5 + 1,
-      topPages: [
-        { path: '/', views: Math.floor(Math.random() * 500) + 200 },
-        { path: '/services', views: Math.floor(Math.random() * 300) + 150 },
-        { path: '/about', views: Math.floor(Math.random() * 200) + 100 },
-        { path: '/contact', views: Math.floor(Math.random() * 150) + 80 }
-      ],
-      userAgents: [
-        { device: 'Desktop', count: Math.floor(Math.random() * 400) + 200 },
-        { device: 'Mobile', count: Math.floor(Math.random() * 300) + 150 },
-        { device: 'Tablet', count: Math.floor(Math.random() * 100) + 50 }
-      ],
-      locations: [
-        { country: 'United States', count: Math.floor(Math.random() * 300) + 150 },
-        { country: 'United Kingdom', count: Math.floor(Math.random() * 150) + 80 },
-        { country: 'Canada', count: Math.floor(Math.random() * 100) + 50 },
-        { country: 'Germ', count: Math.floor(Math.random() * 80) + 40 }
-      ],
-      performance: {
-        loadTime: Math.random() * 2000 + 500,
-        firstPaint: Math.random() * 1000 + 200,
-        firstContentfulPaint: Math.random() * 1500 + 300,
-        largestContentfulPaint: Math.random() * 2000 + 500
-      },
-      interactions: {
-        clicks: Math.floor(Math.random() * 500) + 200,
-        scrolls: Math.floor(Math.random() * 1000) + 500,
-        formSubmissions: Math.floor(Math.random() * 50) + 20,
-        errors: Math.floor(Math.random() * 10) + 2
-=======
   }, [apiEndpoint]);
 
   // Store event locally if API fails

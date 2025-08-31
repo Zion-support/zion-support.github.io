@@ -774,15 +774,6 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       currency: "$",
       features: ["Autonomous research", "Data analysis", "Report generation", "Custom methodologies", "24/7 support"]
     },
-<<<<<<< HEAD
-    link: "https://ziontechgroup.com/ai-research-assistant",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-
-
-=======
     link: "https://ziontechgroup.com/ai-research-assistant",;
     contactInfo: {;
       phone: "+1 302 464 0950",;
@@ -810,11 +801,6 @@ export const getFeaturedEnhancedServices = () => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.featured);
 };
 
-<<<<<<< HEAD
-export const getEnhancedServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanynumber, maxPrice: number)          => {
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service =>
-    service.price >= minPrice && service.price <= maxPrice
-=======
 export const getEnhancedServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanynumber, maxPrice: number)          => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;

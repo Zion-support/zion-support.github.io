@@ -63,86 +63,18 @@ import { ALL_EXPANDED_SERVICES_2027,
   type ExpandedService2027
          } from '@/data/expandedInnovativeServices2027';
 
-<<<<<<< HEAD
-const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [expandedService, setExpandedService] = useState<any>(null);
-  const [filteredServices, setFilteredServices] = useState<any>(ALL_EXPANDED_SERVICES_2027);
-
-  useEffect(() => {
-    let services = getExpandedServicesByCategory(selectedCategory);
-    if (searchQuery) {
-<<<<<<< HEAD
-      services = searchExpandedServices(searchQuery);
-
-    setFilteredServices(services);
-  }, [selectedCategory, searchQuery]);
-=======
       services = searchExpandedServices(searchQuery)};
     setFilteredServices(services)}, [selectedCategory, searchQuery]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanystring)          => {;
-    switch (category) {;
-      case 'Cybersecurity':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return Shield;
-      case 'Data Analytics':
-        return BarChart3;
-      case 'Cloud & DevOps':
-        return Cloud;
-      case 'IoT & Edge Computing':
-        return IoT;
-      case 'Financial Technology':
-        return FinTech;
-      case 'Healthcare Technology':
-        return Healthcare;
-      default:
-<<<<<<< HEAD
-        return Rocket;
-
-=======
         return Rocket}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanystring)          => {;
-    switch (category) {;
-      case 'Cybersecurity':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return 'from-red-500 to-pink-600';
-      case 'Data Analytics':
-        return 'from-blue-500 to-cyan-600';
-      case 'Cloud & DevOps':
-        return 'from-indigo-500 to-purple-600';
-      case 'IoT & Edge Computing':
-        return 'from-green-500 to-emerald-600';
-      case 'Financial Technology':
-        return 'from-yellow-500 to-orange-600';
-      case 'Healthcare Technology':
-        return 'from-teal-500 to-blue-600';
-      default:
-<<<<<<< HEAD
-        return 'from-gray-500 to-slate-600';
-
-=======
         return 'from-gray-500 to-slate-600'}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])           => {
-    if (pricing.model === 'Transaction Fees + Governance') {;
-      return 'Free + Transaction Fees'};
-    return `$${pricing.basePrice.toLocaleString()}/month`};
-
-  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyExpandedService2027)           => {;
-=======;
   const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])          => {;
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
@@ -367,16 +299,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
 
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-<<<<<<< HEAD
-              </a>
-            </div>
-          </div>
-        </div>;
-      </motion.div>;
-    )};
-
-  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyExpandedService2027)           => {;
-=======;
               </a>;
             </div>;
           </div>;
@@ -483,14 +405,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
 
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-<<<<<<< HEAD
-              </a>
-            </div>
-          </div>
-        </div>;
-      </motion.div>;
-    )};
-=======
               </a>;
             </div>;
           </div>;
@@ -573,9 +487,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
 
 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
-<<<<<<< HEAD
-
-=======
             >
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services.
@@ -669,11 +580,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-
-                {EXPANDED_SERVICE_CATEGORIES.map((category)          => (
-=======
                 className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
                 {EXPANDED_SERVICE_CATEGORIES.map((category)           => (
@@ -762,14 +668,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
 
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;

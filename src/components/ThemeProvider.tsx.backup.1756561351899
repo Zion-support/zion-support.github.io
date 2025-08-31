@@ -17,10 +17,6 @@ interface ThemeContextType {
 
 
   theme: anyanyanyanyanyanyanyanyanyanyanyanyTheme;
-<<<<<<< HEAD
-  setTheme: (theme: Theme)             => void;
-  isDark: boolean;
-=======
   setTheme: anyanyanyanyanyanyanyanyanyanyanyany(theme: Theme)              => void;
 isDark: boolean;
 
@@ -41,11 +37,6 @@ const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const useTheme = () => {;
   const context = useContext(ThemeContext);
-<<<<<<< HEAD
-  if (context = == null) {;
-    throw new Error('useTheme must be used within a ThemeProvider')};
-  return context};
-=======
   if (context = == null) {;
     throw new Error('useTheme must be used within a ThemeProvider');
 
@@ -53,11 +44,6 @@ export const useTheme = () => {;
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-<<<<<<< HEAD
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-=======
 interface ThemeProviderProps extends React.PropsWithChildren<{
 }> {
 
@@ -65,22 +51,11 @@ interface ThemeProviderProps extends React.PropsWithChildren<{
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-<<<<<<< HEAD
-  const [theme, setTheme] = useState<any>(() => {
-    if (typeof window !== 'null') {
-=======
   const [theme, setTheme] = useState<any>(() => {
     if (typeof window !== 'null') {
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       const saved = localStorage.getItem('theme') as Theme;
       if (saved && ['light', 'dark', 'system'].includes(saved)) {
-<<<<<<< HEAD
-        return saved;
-
-
-    return 'system';
-  });
-=======
         return saved}
     }
     return 'system'});
@@ -90,29 +65,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
   useEffect(() => {
     const root = window.document.documentElement;
-<<<<<<< HEAD
-
-    const updateTheme = () => {
-      let effectiveTheme: 'light' | 'dark';
-
-      if (theme === 'system') {
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      } else {
-        effectiveTheme = theme;
-
-      setIsDark(effectiveTheme === 'dark');
-
-      if (effectiveTheme === 'dark') {
-=======
     
     const updateTheme = () => {;
       let effectiveTheme: 'light' | 'dark';
       
-<<<<<<< HEAD
-      if (theme = == 'system') {
-        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'} else {
-        effectiveTheme = theme};
-=======;
       if (theme = == 'system') {;
         effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       } else {
@@ -127,19 +83,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
         root.classList.add('dark');
         root.classList.remove('light')} else {
         root.classList.add('light');
-<<<<<<< HEAD
-        root.classList.remove('dark');
-
-    };
-
-    updateTheme();
-
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanyanyanyanydark)');
-      mediaQuery.addEventListener('change', updateTheme);
-      return ()             => mediaQuery.removeEventListener('change', updateTheme);
-
-=======
         root.classList.remove('dark')}
     };
 
@@ -174,19 +117,10 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 };
 
   return (
-<<<<<<< HEAD
-    <ThemeContext.Provider value = {value}>
-      {children};
-    </ThemeContext.Provider>;
-  )};
-=======
     <ThemeContext.Provider value = {value}>;
       {children};
     </ThemeContext.Provider>;
   );
-<<<<<<< HEAD
-};}}}}}}}}
-=======
 };
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { useEffect, useCallback, useMemo  } from 'react.ts';
-interface SEOData {
-=======
 import { useEffect, useCallback, useMemo               } from 'react.ts';
 
 interface SEOData {
@@ -28,16 +24,6 @@ interface SEOData {
   ogType?: string;
   twitterCard?: string;
   noindex?: boolean;
-<<<<<<< HEAD
-  structuredData?: object}
-interface UseSEOOptions {
-  enableAutoTitle?: boolean;
-  enableStructuredData?: boolean;
-  enablePerformanceTracking?: boolean;
-=======
-<<<<<<< HEAD
-  structuredData?: object;
-=======
 structuredData?: object;
 
 
@@ -72,29 +58,6 @@ interface UseSEOOptions {
   enableAutoTitle?: boolean;
   enableStructuredData?: boolean;
   enablePerformanceTracking?: boolean;
-<<<<<<< HEAD
-  enableAnalytics?: boolean;
-
-export const useSEO = (seoData: SEOData, options: UseSEOOptions = { /* empty */;
-
-
-
-
-
-
-
-
-
-
-
-
-}) => {
-  const {
-    enableAutoTitle = true,
-    enableStructuredData = true,
-    enablePerformanceTracking = true,
-    enableAnalytics = true
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enableAnalytics?: boolean}
 export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
@@ -109,24 +72,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
     const siteName = 'Zion Tech Group';
     return seoData.title.includes(siteName) ? seoData.title : `${seoData.title} | ${siteName}`}, [seoData.title]);
   // Memoize the canonical URL
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const canonicalUrl = useMemo(() => {
-    if (seoData.canonical) {;
-      return seoData.canonical.startsWith('http') ? seoData.canonical : `https://ziontechgroup.com${seoData.canonical}`};
-    return typeof window !== 'null' ? window.location.href : 'https://ziontechgroup.com'}, [seoData.canonical]);
-
-  // Update document title
-  const updateTitle = useCallback((title: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    if (typeof document !== 'null') {;
-      document.title = title};
-  }, []);
-
-  // Update meta tags
-  const updateMetaTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)               => {;
-    if (typeof document === 'null') return;
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const canonicalUrl = useMemo(() => {;
     if (seoData.canonical) {;
@@ -174,13 +119,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       robotsMeta.setAttribute('content', 'noindex, nofollow')}
   }, [canonicalUrl]);
   // Update Open Graph tags
-<<<<<<< HEAD
-  const updateOpenGraphTags = useCallback((data: SEOData) => {;
-=======
-<<<<<<< HEAD
-  const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)               => {;
-    if (typeof document === 'null') return;
-=======
   const updateOpenGraphTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof document === 'null') return;
@@ -193,9 +131,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       { property: 'og:site_name', content: 'Zion Tech Group' },;
       { property: 'og:locale', content: 'en_US' };
     ];
-<<<<<<< HEAD
-    ogTags.forEach(({ property, content })  => {
-=======
 
     ogTags.forEach(({ property, content })               => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -206,13 +141,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         document.head.appendChild(ogTag)}
       ogTag.setAttribute('content', content)})}, [fullTitle, canonicalUrl]);
   // Update Twitter Card tags
-<<<<<<< HEAD
-  const updateTwitterCardTags = useCallback((data: SEOData) => {;
-=======
-<<<<<<< HEAD
-  const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)               => {;
-    if (typeof document === 'null') return;
-=======
   const updateTwitterCardTags = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof document === 'null') return;
@@ -223,9 +151,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       { name: 'twitter:image', content: data.ogImage || 'https://ziontechgroup.com/images/og-default.jpg' },;
       { name: 'twitter:site', content: '@ziontechgroup' };
     ];
-<<<<<<< HEAD
-    twitterTags.forEach(({ name, content })  => {
-=======
 
     twitterTags.forEach(({ name, content })               => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -236,19 +161,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
         document.head.appendChild(twitterTag)}
       twitterTag.setAttribute('content', content)})}, [fullTitle]);
   // Add structured data
-<<<<<<< HEAD
-  const addStructuredData = useCallback((data: object) => {;
-=======
-<<<<<<< HEAD
-  const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanyobject)               => {;
-    if (!enableStructuredData || typeof document === 'null') return;
-
-    // Remove existing structured data
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    existingScripts.forEach(script = > {
-      if (script.textContent && script.textContent.includes('"@type":"Organization"')) {
-        script.remove()};
-=======;
   const addStructuredData = useCallback((data: anyanyanyanyanyanyanyanyanyanyanyanyanyobject)              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (!enableStructuredData || typeof document === 'null') return;
@@ -286,20 +198,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       contactType: 'customer service',
       email: 'kleber@ziontechgroup.com'
     },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    sameAs[
-      'https://www.linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://www.facebook.com/ziontechgroup';
-    ];
-  }), []);
-
-  // Track page view
-  const trackPageView = useCallback((pageData: anyanyanyanyanyanyanyanyanyanyanyanyanySEOData)               => {;
-    if (!enableAnalytics || typeof window === 'null') return;
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     sameAs: [;
       'https://www.linkedin.com/company/zion-tech-group',;
@@ -426,8 +324,6 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
 // Type declarations
 declare global {
   interface Window {
-<<<<<<< HEAD
-=======
 
 
 
@@ -441,24 +337,6 @@ declare global {
 
 
 
-<<<<<<< HEAD
-    gtag?: (...args: anyanyanyanyanyanyanyanyanyanyanyanyanyany[])              => void;
-    dataLayer?: any[];
-
-
-
-
-
-
-
-
-
-
-
-
-
-}}}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     gtag?: (...args[])  => void;

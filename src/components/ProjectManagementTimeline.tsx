@@ -23,12 +23,6 @@ import { Calendar,
   Trash2,
   Eye,
   Settings
-<<<<<<< HEAD
- } from 'lucide-react';
-interface Project {
-=======
-<<<<<<< HEAD
-=======
                } from 'lucide-react.ts';
 
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -61,13 +55,6 @@ interface Project {
   client: string;
   budget: number;
   tags: string[];
-<<<<<<< HEAD
-  milestones: Milestone[]}
-interface Milestone {
-=======
-<<<<<<< HEAD
-  milestones: Milestone[];
-=======
 milestones: Milestone[];
 
 
@@ -108,12 +95,6 @@ interface Milestone {
   dueDate: string;
   status: 'pending' | 'in-progress' | 'completed' | 'overdue';
   assignee: string;
-<<<<<<< HEAD
-  priority: 'low' | 'medium' | 'high'}
-=======
-<<<<<<< HEAD
-  priority: 'low' | 'medium' | 'high';
-=======
 priority: 'low' | 'medium' | 'high';
 
 
@@ -140,12 +121,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   showStats = true,;
   maxProjects = 10;
 }) => {;
-<<<<<<< HEAD
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
-=======
   const [projects, setProjects] = useState<any>([]);
   const [filteredProjects, setFilteredProjects] = useState<any>([]);
   const [selectedStatus, setSelectedStatus] = useState<any>('all');
@@ -270,9 +245,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setProjects(sampleProjects);
     setFilteredProjects(sampleProjects)}, []);
   // Filter projects
-<<<<<<< HEAD
-  useEffect(() => {
-=======
   useEffect(()                => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     let filtered = projects;
@@ -297,14 +269,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setFilteredProjects(filtered.slice(0, maxProjects))}, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]);
   // Calculate project stats
   const projectStats = {
-<<<<<<< HEAD
-  total: projects.length,
-    active: projects.filter(p => p.status === 'active').length,
-    completed: projects.filter(p => p.status === 'completed').length,
-    onHold: projects.filter(p => p.status === 'on-hold').length,;
-    totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),;
-    averageProgress: projects.reduce((sum, p) => sum + p.progress,;
-=======
   <<<<<<< HEAD
     total: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
     active: projects.filter(p                => p.status === 'active').length,
@@ -351,57 +315,14 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
   };
   // Get priority color
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getPriorityColor = (priority: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (priority) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'low': return 'text-green-400 bg-green-400/20';
-      case 'medium': return 'text-yellow-400 bg-yellow-400/20';
-      case 'high': return 'text-orange-400 bg-orange-400/20';
-      case 'critical': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get milestone status color
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const getMilestoneStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'pending': return 'text-zinc-400 bg-zinc-400/20';
-      case 'in-progress': return 'text-blue-400 bg-blue-400/20';
-      case 'completed': return 'text-green-400 bg-green-400/20';
-      case 'overdue': return 'text-red-400 bg-red-400/20';
-<<<<<<< HEAD
-      default: return 'text-zinc-400 bg-zinc-400/20';
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Format currency
-<<<<<<< HEAD
-  const formatCurrency = (amount: number) => {;
-=======
-<<<<<<< HEAD
-  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)                => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-      minimumFractionDigits: 0,;
-      maximumFractionDigits: 0;
-    }).format(amount)};
-
-  // Calculate days remaining
-  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
-=======;
   const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Intl.NumberFormat('en-US', {;
@@ -412,9 +333,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     }).format(amount);
   };
   // Calculate days remaining
-<<<<<<< HEAD
-  const getDaysRemaining = (endDate: string) => {;
-=======
   const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

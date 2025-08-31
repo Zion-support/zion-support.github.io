@@ -1,94 +1,6 @@
 
 
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Download,
-  FileText,
-  Search,
-  Filter,
-  Calendar,
-  User,
-  Eye,
-  Star,
-  ArrowRight,
-  Tag,
-  BookOpen,
-  TrendingUp,
-  Lightbulb,
-  Zap,
-  Brain,
-  Server,
-  Shield,
-  Cloud,
-  Target,
-  Rocket,
-  CheckCircle,
-  BarChart3,
-  Atom,
-  Network,
-  Lock,
-  Cpu,
-  Wifi,
-  Satellite,
-  Handshake,
-  Video,
-  GraduationCap,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Clock,
-  Users,
-  Building2,
-  Settings,
-  Tool,
-  Wrench,
-  Cog,
-  Key,
-  Unlock,
-  Eye as EyeIcon,
-  EyeOff,
-  Copy,
-  Check,
-  X,
-  Plus,
-  Minus,
-  SortAsc,
-  SortDesc,
-  Grid,
-  List,
-  Bookmark,
-  Share2,
-  Heart,
-  Download as DownloadIcon,
-  Upload,
-  RefreshCw,
-  Save,
-  Edit,
-  Trash2,
-  Archive,
-  Hash,
-  Hash as HashIcon,
-  Hash as HashIcon2,
-  Hash as HashIcon3,
-  Hash as HashIcon4,
-  Hash as HashIcon5,
-  Hash as HashIcon6,
-  Hash as HashIcon7,
-  Hash as HashIcon8,
-  Hash as HashIcon9,
-  Hash as HashIcon10
-} from 'lucide-react';
-
-export default function WhitePapers() {
-=======
 import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award import { SEO              } from '@/components/SEO';
-=======
 import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award              } from 'lucide-react.ts';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -113,11 +25,6 @@ export default function WhitePapers(...args: any[]): any {
 
   const whitePapers = [
     {
-<<<<<<< HEAD
-      id: 1,
-      title: 'The Future of AI in Enterprise: A Comprehensive Guide',
-      description: 'Explore how artificial intelligence is transforming business operations, from automation to decision-making, and discover implementation strategies for your organization.',
-=======
       id: anyanyanyanyanyanyanyanyanyanyanyanyany1,
       title: 'AI Autonomous Research: Revolutionizing Business Intelligence',
       description: 'Comprehensive guide on implementing AI Autonomous Research Assistant systems that discover, analyze, and synthesize information across multiple sources autonomously.',
@@ -260,16 +167,6 @@ export default function WhitePapers(...args: any[]): any {
     },
     {
       id: 8,
-<<<<<<< HEAD
-      title: 'Blockchain in Supply Chain: Transparency and Traceability',
-      description: 'Learn how blockchain technology is revolutionizing supply chain management through enhanced transparency, traceability, and trust.',
-      category: 'industry',
-      author: 'Marcus Chen',
-      publishDate: '2024-12-10',
-      readTime: '48 min',
-      downloads: 654,
-      rating: 4.4,
-=======
       title: 'Edge Computing and IoT: Building the Connected Future',
       category: 'digital-transformation',
       author: 'Alex Thompson, Director of Cloud Operations',
@@ -303,26 +200,6 @@ export default function WhitePapers(...args: any[]): any {
       publishDate: '2025-01-08',
       readTime: '22 min',
       downloads: 8930,
-<<<<<<< HEAD
-      rating: 4.5,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      featured: false,
-      tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Traceability'],
-      abstract: 'This paper examines blockchain applications in supply chain management, covering implementation strategies, use cases, and business benefits for modern organizations.',
-      keyInsights: [
-        'Blockchain fundamentals and applications',
-        'Supply chain use cases and benefits',
-        'Implementation challenges and solutions',
-        'ROI analysis and business case development'
-      ]
-    }
-  ];
-
-<<<<<<< HEAD
-  const filteredPapers = whitePapers.filter(paper => {
-    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-=======
   const featuredInsights = [
     {
       title: 'AI Adoption Trends 2025',
@@ -335,15 +212,6 @@ export default function WhitePapers(...args: any[]): any {
       description: 'Current threats and emerging security challenges',
       icon: <Shield className="w-6 h-6" />,
       link: '/insights/cybersecurity-2025'
-<<<<<<< HEAD
-    },
-    {
-      title: 'Cloud Migration Success Stories',
-      description: 'Real-world examples of successful cloud transformations',
-      icon: <Cloud className="w-6 h-6" />,
-      link: '/insights/cloud-success-stories'
-
-=======
     },;
     {;
       title: 'Cloud Migration Success Stories',;
@@ -391,20 +259,6 @@ export default function WhitePapers(...args: any[]): any {
     }
   });
 
-<<<<<<< HEAD
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
-  const handleDownload = (paperId: number, title: string) => {
-    // Simulate download
-    console.log(`Downloading: ${title}`);
-    // In a real app, this would trigger an actual download
-=======
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
@@ -443,19 +297,6 @@ export default function WhitePapers(...args: any[]): any {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-<<<<<<< HEAD
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              White Papers
-            </h1>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-8">
-              In-depth research, insights, and thought leadership on the latest technology trends, 
-              industry developments, and innovative solutions from Zion Tech Group.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4 text-zinc-300">
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5 text-zion-cyan" />
-                <span>Expert Insights</span>
-=======
             <FileText className="w-10 h-10 text-white" />
           </motion.div>
           
@@ -578,44 +419,6 @@ export default function WhitePapers(...args: any[]): any {
               </select>
             </div>
 
-<<<<<<< HEAD
-            {/* Sort Options */}
-            <div>
-              <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              >
-                <option value="latest">Latest First</option>
-                <option value="popular">Most Popular</option>
-                <option value="rating">Highest Rated</option>
-                <option value="title">Alphabetical</option>
-              </select>
-            </div>
-
-            {/* View Mode Toggle */}
-            <div className="flex space-x-2">
-              <button
-                onClick={() => setViewMode('grid')}
-                className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'grid'
-                    ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                    : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'
-                }`}
-              >
-                <Grid className="w-4 h-4 mx-auto" />
-              </button>
-              <button
-                onClick={() => setViewMode('list')}
-                className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'list'
-                    ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                    : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'
-                }`}
-              >
-                <List className="w-4 h-4 mx-auto" />
-              </button>
-=======
               {/* Sort Options */}
               <div className="flex items-center gap-2">
                 <span className="text-zion-slate-light">Sort by:</span>
@@ -637,19 +440,6 @@ export default function WhitePapers(...args: any[]): any {
         </motion.div>
       </div>
 
-<<<<<<< HEAD
-      {/* Results Count */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-zinc-400"
-        >
-          Showing {sortedPapers.length} of {whitePapers.length} white papers
-        </motion.div>
-      </div>
-=======
       {/* Featured Insights */}
       <div className="py-12 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -915,9 +705,6 @@ export default function WhitePapers(...args: any[]): any {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      )}
-=======
       </section>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -970,14 +757,6 @@ export default function WhitePapers(...args: any[]): any {
                   {paper.summary}
                 </p>
 
-<<<<<<< HEAD
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {paper.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
-=======
                 {/* Tags */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-2">
@@ -1048,90 +827,3 @@ export default function WhitePapers(...args: any[]): any {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Featured Research */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="container mx-auto">
-          <motion.h2 
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-            transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-center mb-16 text-white"
-          >
-            Featured Research Areas
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
-            {categories.slice(1).map((category, index)               => (
-              <motion.div
-                key={category.id}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="text-center group"
-              >
-                <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <category.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
-                <p className="text-slate-300 text-sm">
-                  {whitePapers.filter(wp => wp.category === category.id).length} papers available
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-
-      {/* CTA Section */}
-      <div className="bg-zinc-800/30 border-t border-zinc-700/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="text-center"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Stay Updated with Latest Research
-            </h2>
-            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
-              Get notified when we publish new white papers and research insights.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                Subscribe
-              </button>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </div>
-  );
-}

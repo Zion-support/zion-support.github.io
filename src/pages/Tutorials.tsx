@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 } from 'lucide-react';
-
-const Tutorials = () => {
-=======
 import React, { useState } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield, Database, Globe, Zap, ArrowRight, Filter, TrendingUp, Lightbulb, Target, Award, Eye, MessageCircle, Type, BarChart3, Settings, Rocket, Heart, Download, Share2 const Tutorials = () => {
@@ -206,19 +199,6 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
           ))}
         </div>
 
-<<<<<<< HEAD
-        {/* Tutorials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sortedTutorials.map((tutorial, index) => (
-            <div
-              key={index}
-              className="bg-white dark:bg-slate-800 rounded-lg shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-            >
-              {/* Thumbnail */}
-              <div className="relative h-48 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-600">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-slate-400" />
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {featuredTutorials.map((tutorial, index)              => (
               <div
@@ -251,11 +231,6 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
                   {tutorial.description}
                 </p>
 
-<<<<<<< HEAD
-                {/* Meta */}
-                <div className="flex items-center justify-between text-sm text-slate-500 dark:text-slate-400 mb-4">
-                  <div className="flex items-center gap-2">
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {learningPaths.map((path, index)              => (
               <div

@@ -1,34 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, 
-  BookOpen, 
-  Users, 
-  Globe, 
-  Settings, 
-  CreditCard, 
-  Shield, 
-  ChevronDown, 
-  ChevronUp, 
-  ExternalLink,
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Search,
-  BookOpen,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  MessageCircle,
-  Phone,
-  Mail,
-  Clock,
-<<<<<<< HEAD
-  HelpCircle,
-  FileText,
-  Video,
-  Star
-=======
 =======
 import { SEO              } from '../components/SEO';
 import { Link              } from 'react-router-dom.ts';
@@ -47,19 +18,12 @@ import { Search,
   Zap,
   Users,
   Globe,
-<<<<<<< HEAD
-  Rocket
-import { SEO              } from '../components/SEO';
-=======
   ArrowRight,
   ExternalLink,
   ChevronRight
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
-<<<<<<< HEAD
-const Help = () => {
-=======
 export default function Help(...args[]: any):  {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
@@ -309,11 +273,6 @@ export default function Help(...args[]: any):  {
         </div>
       </section>
 
-<<<<<<< HEAD
-      {/* Support Channels */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-=======
       {/* Category Filters */}
       <section className="py-8">
         <div className="container mx-auto px-6">
@@ -358,11 +317,6 @@ export default function Help(...args[]: any):  {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-12"
-<<<<<<< HEAD
-
-            <h2 className="text-3xl font-bold text-white mb-4">Quick Support</h2>
-            <p className="text-gray-300">Get immediate assistance through our support channels</p>
-=======
             initial = {
   { opacity: 0,
   y: 20 
@@ -379,29 +333,6 @@ export default function Help(...args[]: any):  {
             <p className="text-xl text-gray-300">Most frequently accessed help content</p>
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           </motion.div>
-<<<<<<< HEAD
-          
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
-            {quickActions.map((action, index)               => (
-              <motion.div
-                key={action.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                animate = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-}}
-                className="group"
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
             {popularArticles.map((article, index)              => (
@@ -409,18 +340,6 @@ export default function Help(...args[]: any):  {
                 key={article.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 group"
-
-                <div className={`w-16 h-16 bg-gradient-to-r ${link.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <link.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{link.title}</h3>
-                <p className="text-gray-300 text-sm">{link.description}</p>
-              </motion.a>
-            ))}
-=======
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
@@ -453,18 +372,6 @@ export default function Help(...args[]: any):  {
         </section>
       )}
 
-<<<<<<< HEAD
-      {/* Support Hours */}
-      <section className="py-16 bg-slate-800/30">
-        <div className="container mx-auto px-6">
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-            viewport={{ once: true }}
-=======
             className="text-center mb-12"
 
             <h2 className="text-3xl font-bold text-white mb-4">Support Hours</h2>
@@ -765,13 +672,6 @@ export default function Help(...args[]: any):  {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-
-            <h2 className="text-3xl font-bold text-white mb-4">Help Categories</h2>
-            <p className="text-gray-300">Browse our organized help content by category</p>
-=======
             transition={{ duration: 0.8 }}
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             className="text-center mb-16"
@@ -782,10 +682,6 @@ export default function Help(...args[]: any):  {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {supportChannels.map((channel, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {supportOptions.map((option, index)              => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -866,34 +762,6 @@ export default function Help(...args[]: any):  {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3 }}
                     className="border-t border-slate-700/50"
-<<<<<<< HEAD
-                  >
-                    <div className="p-6 space-y-4">
-                      {category.articles.map((article, articleIndex) => (
-                        <motion.div
-                          key={articleIndex}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.3, delay: articleIndex * 0.1 }}
-                          className="flex items-start space-x-4 p-4 bg-slate-700/20 rounded-lg hover:bg-slate-700/30 transition-colors duration-200"
-                        >
-                          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                            <FileText className="w-4 h-4 text-white" />
-                          </div>
-                          <div className="flex-1">
-                            <h4 className="text-white font-semibold mb-1">{article.title}</h4>
-                            <p className="text-gray-400 text-sm mb-2">{article.description}</p>
-                            <a
-                              href={article.url}
-                              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors duration-200"
-                            >
-                              Read Article
-                              <ExternalLink className="w-4 h-4 ml-1" />
-                            </a>
-                          </div>
-                        </motion.div>
-                      ))}
-=======
 
                     <div className="p-6">
                       <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4">
@@ -943,11 +811,6 @@ export default function Help(...args[]: any):  {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <motion.div
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {[
               {

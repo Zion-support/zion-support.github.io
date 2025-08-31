@@ -1,21 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket } from 'lucide-react';
-import { SEO } from "../components/SEO";
-interface DemoFormData {
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket               } from 'lucide-react.ts';
-import { SEO               } from '../components/SEO';
-=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket import { SEO              } from '../components/SEO';
-=======
 import { Calendar, Clock, Users, Video, MessageCircle, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Zap, Brain, Cloud, Shield, Rocket              } from 'lucide-react.ts';
 import { SEO              } from '../components/SEO';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -46,12 +30,6 @@ interface DemoFormData {
   preferredTime: string;
   attendees: string;
   services: string[];
-<<<<<<< HEAD
-  message: string}
-=======
-<<<<<<< HEAD
-  message: string;
-=======
 message: string;
 
 
@@ -98,41 +76,7 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
     { id: 'cloud-devops', name: 'Cloud DevOps', icon: Cloud, description: 'DevOps & Infrastructure' },;
     { id: 'micro-saas', name: 'Micro SaaS Products', icon: Star, description: 'AI automations with transparent pricing' };
   ];
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const handleServiceToggle = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
-    setFormData(prev => ({
-      ...prev,
-      services: anyanyanyanyanyanyanyanyanyanyanyanyanyprev.services.includes(serviceId)
-        ? prev.services.filter(id               => id !== serviceId);
-        [...prev.services, serviceId];
-    }))};
-
-  const handleServiceToggle = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    setFormData(prev => ({;
-      ...prev,;
-      services: anyanyanyanyanyanyanyanyanyanyanyanyanyprev.services.includes(serviceId);
-        ? prev.services.filter(id              => id !== serviceId);
-        : [...prev.services, serviceId];
-    }));
-  };
-
-  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-<<<<<<< HEAD
-      setIsSubmitted(true);
-    } catch (error) {
-<<<<<<< HEAD
-      // // // console.error('Error submitting form:', error);
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.error('Error submitting form:', error);
     } finally {
@@ -332,17 +276,6 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
                       <input
                         type="text"
                         required
-<<<<<<< HEAD
-                        value={formData.company}
-=======
-<<<<<<< HEAD
-                        value={formData.comp}
-                        onChange = {
-  (e) => setFormData(prev => ({ ...prev,
-  comp: e.target.value 
-
-}))}
-=======
                         value={formData.comp}
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         onChange = {

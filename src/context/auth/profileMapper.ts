@@ -1,6 +1,4 @@
 interface SupabaseUser {
-<<<<<<< HEAD
-=======
 
 
 
@@ -19,25 +17,6 @@ interface SupabaseUser {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   email?: string;
-<<<<<<< HEAD
-user_metadata?: {;
-    full_name?: string;
-avatar_url?: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
-=======
   user_metadata?: {
     full_name?: string;
     avatar_url?: string;
@@ -46,8 +25,6 @@ avatar_url?: string;
   created_at?: string;
   updated_at?: string}
 interface Profile {
-<<<<<<< HEAD
-=======
 
 
 
@@ -70,13 +47,6 @@ interface Profile {
   role?: string;
   is_email_verified?: boolean;
   created_at?: string;
-<<<<<<< HEAD
-  updated_at?: string}
-interface MappedUser {
-=======
-<<<<<<< HEAD
-  updated_at?: string;
-=======
 updated_at?: string;
 
 
@@ -118,13 +88,6 @@ interface MappedUser {
   role?: string;
   isEmailVerified?: boolean;
   createdAt?: string;
-<<<<<<< HEAD
-  updatedAt?: string}
-export const mapProfileToUser = (supabaseUser: SupabaseUser, profile: Profile): MappedUser  => {
-=======
-<<<<<<< HEAD
-  updatedAt?: string;
-=======
 updatedAt?: string;
 
 

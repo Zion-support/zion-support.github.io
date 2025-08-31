@@ -1,8 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { Link  } from 'react-router-dom.ts';
-export function BlogSection(...args[]):  {
-=======
 import { Link                } from 'react-router-dom.ts';
 
 export function BlogSection(...args[]: any):  {

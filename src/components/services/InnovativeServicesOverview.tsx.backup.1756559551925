@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react.ts';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory            } from '../../data/innovativeServices2025';
-
-interface InnovativeServicesOverviewProps extends React.PropsWithChildren<{}> {
-=======
 import React, { useState, useMemo } from 'react.ts';
 import { INNOVATIVE_SERVICES_2025, getServicesByCategory           } from '../../data/innovativeServices2025';
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   maxServices?: number;
   category?: string;
-<<<<<<< HEAD
-  showViewAllButton?: boolean;
-=======
   showViewAllButton?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -58,9 +49,6 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           break;
         default:
           services = INNOVATIVE_SERVICES_2025;
-<<<<<<< HEAD
-
-=======
       }
     }
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -228,14 +216,6 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
-<<<<<<< HEAD
-            </a>
-          </div>
-        )}
-      </div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         )};

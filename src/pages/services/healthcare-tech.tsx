@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet              } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope import { Link              } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope               } from 'lucide-react.ts';
@@ -69,9 +58,6 @@ export default function HealthcareTech(...args: []):  {
                 from AI diagnostics to patient management systems.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -105,12 +91,6 @@ export default function HealthcareTech(...args: []):  {
                   icon: Globe,
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
@@ -136,9 +116,6 @@ export default function HealthcareTech(...args: []):  {
                 Discover how our technology solutions can transform different aspects of healthcare delivery.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -178,12 +155,6 @@ export default function HealthcareTech(...args: []):  {
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.",
                   icon: Database,
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((application, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((application, index)  => (
@@ -267,9 +238,6 @@ export default function HealthcareTech(...args: []):  {
                 Built-in compliance features ensure your healthcare technology meets all regulatory requirements.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -309,12 +277,6 @@ export default function HealthcareTech(...args: []):  {
                   description: "Information security management system certification.",
                   icon: Settings,
                   features: ["Security framework", "Risk management", "Continuous improvement"]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((compliance, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((compliance, index)  => (
@@ -348,9 +310,6 @@ export default function HealthcareTech(...args: []):  {
                 Our systematic approach ensures successful healthcare technology implementation.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -374,12 +333,6 @@ export default function HealthcareTech(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((step, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (

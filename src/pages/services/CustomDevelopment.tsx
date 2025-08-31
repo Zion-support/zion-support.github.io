@@ -23,13 +23,6 @@ import { Code,
   Building2,
   Cpu,
   Network
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function CustomDevelopment(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function CustomDevelopment(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 
 export default function CustomDevelopment(...args[]: any):  {
@@ -177,10 +170,6 @@ export default function CustomDevelopment(...args[]: any):  {
               that perfectly align with your business requirements.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)              => (
@@ -248,10 +237,6 @@ export default function CustomDevelopment(...args[]: any):  {
               scalable, and maintainable applications.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {technologies.map((tech, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {technologies.map((tech, index)              => (
@@ -308,10 +293,6 @@ export default function CustomDevelopment(...args[]: any):  {
               Custom development offers unique advantages that off-the-shelf solutions cannot provide.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {benefits.map((benefit, index)              => (
@@ -364,10 +345,6 @@ export default function CustomDevelopment(...args[]: any):  {
               each with unique software requirements and challenges.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {industries.map((industry, index) => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
             {industries.map((industry, index)              => (
@@ -415,9 +392,6 @@ export default function CustomDevelopment(...args[]: any):  {
               A proven agile development methodology that ensures successful project delivery and client satisfaction.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

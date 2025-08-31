@@ -15,10 +15,6 @@ import { Brain,
   Activity,
   DollarSign,
   BarChart
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO  } from "../../components/SEO";
-=======
               } from 'lucide-react.ts';
 import { SEO               } from '../../components/SEO';
 
@@ -203,10 +199,6 @@ const AIQuantumFinancialTrading = () => {
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
@@ -266,10 +258,6 @@ const AIQuantumFinancialTrading = () => {
               Flexible pricing options designed to scale with your trading needs
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)  => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
             {services.map((service, index)               => (
@@ -322,10 +310,6 @@ const AIQuantumFinancialTrading = () => {
               Choose the plan that best fits your trading needs and budget.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)              => (
@@ -412,10 +396,6 @@ const AIQuantumFinancialTrading = () => {
               Tailored trading solutions for various financial institutions with proven results
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)               => (
@@ -478,10 +458,6 @@ const AIQuantumFinancialTrading = () => {
               Built on the latest technologies to ensure speed, accuracy, and reliability
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)  => (
-=======
 
           <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
             {technologies.map((tech, index)               => (

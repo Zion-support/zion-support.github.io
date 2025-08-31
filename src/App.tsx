@@ -13,6 +13,7 @@ import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnh
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
+
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
@@ -100,6 +101,7 @@ const AISupplyChainOptimization = createLazyComponent(() => import('./pages/serv
 const AIWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-workflow-automation'));
 const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/ai-workflow-orchestrator'));
 
+
 // New AI Services
 const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/AI-Data-Governance-Platform'));
 const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AI-Financial-Risk-Management'));
@@ -121,6 +123,7 @@ const QuantumTechnology = createLazyComponent(() => import('./pages/services/Qua
 
 // Other Services
 const BlockchainEnterpriseSolutions = createLazyComponent(() => import('./pages/services/blockchain-enterprise-solutions'));
+
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
 const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
 const DigitalTransformation = createLazyComponent(() => import('./pages/services/digital-transformation'));
@@ -286,6 +289,7 @@ function App() {
                   <Route path="/financial-solutions" element={<GreenIT />} />
                   <Route path="/mobile" element={<GreenIT />} />
 
+
                   {/* 2025 Innovative Services Routes */}
                   <Route path="/innovative-services-2025" element={<InnovativeServices2025 />} />
                   <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
@@ -311,6 +315,7 @@ function App() {
                   <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                   <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
                   <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+
 
                   {/* Service Detail Routes */}
                   <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
@@ -382,6 +387,7 @@ function App() {
                   {/* Additional Pages */}
                   <Route path="/api" element={<API />} />
                   <Route path="/developer-portal" element={<DeveloperPortal />} />
+
 
                   {/* Showcase Routes */}
                   <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
@@ -456,6 +462,7 @@ function App() {
           {/* Performance Monitor */}
           <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'} />
         </div>
+
       </ErrorBoundary>
     </HelmetProvider>
   );

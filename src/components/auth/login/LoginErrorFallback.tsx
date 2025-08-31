@@ -1,24 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { AlertTriangle, RefreshCw interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
-
-  error: anyanyanyanyanyanyanyanyanyanyanyanyanyanyError;
-  resetErrorBoundary: ()               => void;
-
-export default function LoginErrorFallback(...args: any[]): any {;
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { AlertTriangle, RefreshCw   
              } from 'lucide-react.ts';
 interface LoginErrorFallbackProps extends React.PropsWithChildren<{}> {
-<<<<<<< HEAD
-  error: Error;
-  resetErrorBoundary: ()  => void}
-export default function LoginErrorFallback(...args[]):  {
-=======
 
   error: anyanyanyanyanyanyanyanyanyanyanyanyanyanyError;
   resetErrorBoundary: ()                => void}

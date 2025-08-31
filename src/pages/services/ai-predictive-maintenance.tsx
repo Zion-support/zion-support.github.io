@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Activity,
-  Brain,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  Users,
-  BarChart3,
-  Shield,
-  Cloud,
-  Cpu,
-  Database,
-  Network,
-  TrendingUp,
-  Target,
-  Rocket,
-  Star,
-  Award,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Wrench,
-  AlertTriangle,
-  Settings,
-  Monitor
-} from 'lucide-react';
-
-export default function AIPredictiveMaintenance() {
-=======
 import React from 'react.ts';
 import SEO from '../../components/SEO';
 import { motion              } from 'framer-motion.ts';
@@ -174,39 +139,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-                <Activity className="w-4 h-4 mr-2" />
-                AI-Powered Predictive Maintenance
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Predictive Maintenance
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your maintenance operations with intelligent predictive analytics. 
-                Our AI-powered platform predicts equipment failures before they occur, 
-                reducing downtime and optimizing maintenance costs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 transition-all duration-300">
-                  Watch Demo
-                </button>
-              </div>
-            </motion.div>
-=======
           <motion.div
             initial = {
   { opacity: 0,
@@ -361,10 +293,6 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-=======
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {applications.map((application, index)              => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

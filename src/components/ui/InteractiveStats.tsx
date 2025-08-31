@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React from 'react.ts';
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -22,12 +19,6 @@ interface Stat {
   label: string;
   value: string;
   description: string;
-<<<<<<< HEAD
-interface InteractiveStatsProps {
-  stats: Stat[];
-  className?: string;
-const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" }) => {
-=======
 
 interface InteractiveStatsProps extends React.PropsWithChildren<{
 

@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-=======
 import React, { useState } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { cn               } from '@/lib/utils';
-import { Home,
-  Briefcase,
-  Users,
-  Settings,
-  BarChart3,
-  FileText,
-  MessageSquare,
-  HelpCircle,
-  Code,
-  Smartphone,
-  Globe,
-  Building,
-  Mail,
-  Phone,
-  MapPin,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Menu, 
@@ -57,70 +31,6 @@ import {
   Network,
   Palette,
   Video,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  Audio,
-  Document,
-  Folder,
-  File,
-  Archive,
-  Backup,
-  Restore,
-  Sync,
-  Share,
-  Export,
-  Import,
-  Download,
-  Upload,
-  Copy,
-  Paste,
-  Cut,
-  Delete,
-  Undo,
-  Redo,
-  Save,
-  Load,
-  Open,
-  Close,
-  Minimize,
-  Maximize,
-  Restore as RestoreIcon,
-  Move,
-  Resize,
-  Rotate,
-  Scale,
-  Transform,
-  Animate,
-  Transition,
-  Effect,
-  Filter,
-  Blend,
-  Mask,
-  Clip,
-  Crop,
-  Resize as ResizeIcon,
-  Rotate as RotateIcon,
-  Scale as ScaleIcon,
-  Transform as TransformIcon,
-  Animate as AnimateIcon,
-  Transition as TransitionIcon,
-  Effect as EffectIcon,
-  Filter as FilterIcon,
-  Blend as BlendIcon,
-  Mask as MaskIcon,
-  Clip as ClipIcon,
-  Crop as CropIcon,
-  Clock,
-  Handshake,
-  Leaf,
-  HardDrive,
-  RefreshCw
-interface MainSidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()               => void;
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   PenTool,
   Atom,
@@ -135,11 +45,6 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
-  Users
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
  
 } from 'lucide-react.ts';
 
@@ -156,6 +61,7 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Activity,
   Workflow,
   Truck
+
 } from 'lucide-react';
 
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
@@ -195,9 +101,6 @@ interface SidebarItem {
 
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 interface NavigationSection {
   title: string;
@@ -205,6 +108,7 @@ interface NavigationSection {
 }
 
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+
 export function MainSidebar() {
 =======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -214,9 +118,6 @@ export function MainSidebar(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   const toggleSection = (section: string) => {
@@ -372,123 +273,6 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
-<<<<<<< HEAD
-      name: 'Emerging Tech',
-      href: '#',
-      icon: Rocket,
-      children: [
-        {
-          name: 'Quantum Computing',
-          href: '/services/quantum-computing',
-          icon: Atom,
-          description: 'Next-gen Computing'
-        },
-        {
-          name: 'AI Cybersecurity',
-          href: '/services/ai-cybersecurity',
-          icon: Lock,
-          description: 'Intelligent Security'
-        },
-        {
-          name: 'IoT Edge Computing',
-          href: '/services/iot-edge-computing',
-          icon: Smartphone,
-          description: 'Connected Ecosystems'
-        },
-        {
-          name: 'AI Content Creation',
-          href: '/services/ai-content-creation',
-          icon: Video,
-          description: 'Creative AI'
-        }
-      ]
-    },
-    {
-      name: 'Business Solutions',
-      href: '#',
-      icon: Briefcase,
-      children: [
-        {
-          name: 'Marketplace',
-          href: '/marketplace',
-          icon: ShoppingCart,
-          description: 'Product & Service Hub'
-        },
-        {
-          name: 'Talent Solutions',
-          href: '/talent',
-          icon: Users,
-          description: 'HR & Recruitment'
-        },
-        {
-          name: 'Equipment Services',
-          href: '/equipment',
-          icon: Server,
-          description: 'Hardware Solutions'
-        },
-        {
-          name: 'Request Quote',
-          href: '/request-quote',
-          icon: MessageCircle,
-          description: 'Get Pricing'
-        }
-      ]
-    },
-    {
-      name: 'Comp',
-      href: '#',
-      icon: Info,
-      children: [
-        {
-          name: 'About Us',
-          href: '/about',
-          icon: Info,
-          description: 'Our Story'
-        },
-        {
-          name: 'Team',
-          href: '/team',
-          icon: Users,
-          description: 'Meet Our Team'
-        },
-        {
-          name: 'Careers',
-          href: '/careers',
-          icon: Briefcase,
-          description: 'Join Us'
-        },
-        {
-          name: 'Partners',
-          href: '/partners',
-          icon: Users,
-          description: 'Partnerships'
-        }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '#',
-      icon: BookOpen,
-      children: [
-        {
-          name: 'Blog',
-          href: '/blog',
-          icon: FileText,
-          description: 'Latest Insights'
-        },
-        {
-          name: 'FAQ',
-          href: '/faq',
-          icon: HelpCircle,
-          description: 'Common Questions'
-        },
-        {
-          name: 'Help Center',
-          href: '/help',
-          icon: MessageCircle,
-          description: 'Support Resources'
-        },
-=======
       title: 'Resources',
       items: [
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
@@ -531,9 +315,64 @@ export function MainSidebar(...args: any[]): any {
       ]
     }
   ];
-
-  const isActive = (href: string) => location.pathname === href;
-
+  const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
+    const isActive = location.pathname === item.href;
+    const hasChildren = item.children && item.children.length > 0;
+    const isExpanded = expandedSections.includes(item.name.toLowerCase());
+    const isFeatured = item.featured;
+    return (
+      <div key={item.name} className="mb-1">
+        {hasChildren ? (
+          <div>
+            <button
+              onClick={() => toggleSection(item.name.toLowerCase())}
+              className={`w-full flex items-center justify-between px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+                level === 0 
+                  ? 'text-slate-300 hover:text-white hover:bg-slate-700/50' 
+                  : 'text-slate-400 hover:text-slate-300'
+              }`}
+            >
+              <div className="flex items-center space-x-3">
+                <item.icon className="w-4 h-4" />
+                <span>{item.name}</span>
+                {isFeatured && (
+                  <Star className="w-3 h-3 text-yellow-400" />
+                )}
+              </div>
+              {isExpanded ? (
+                <ChevronDown className="w-4 h-4" />
+              ) : (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
+            {isExpanded && (
+              <div className="ml-6 mt-2 space-y-1">
+                {item.children!.map(child => renderSidebarItem(child, level + 1))}
+              </div>
+            )}
+          </div>
+        ) : (
+          <Link
+            to={item.href}
+            className={`flex items-center space-x-3 px-3 py-2 text-sm font-medium rounded-lg transition-colors duration-200 ${
+              isActive
+                ? 'text-cyan-400 bg-cyan-400/10 border border-cyan-400/20'
+                : level === 0
+                ? 'text-slate-300 hover:text-white hover:bg-slate-700/50'
+                : 'text-slate-400 hover:text-slate-300'
+            }`}
+            onClick={() => setIsOpen(false)}
+          >
+            <item.icon className="w-4 h-4" />
+            <span>{item.name}</span>
+            {isFeatured && (
+              <Star className="w-3 h-3 text-yellow-400" />
+            )}
+          />
+        )}
+      </div>
+    );
+  };
   return (
     <>
       {/* Mobile Toggle Button */}
@@ -552,128 +391,12 @@ export function MainSidebar(...args: any[]): any {
           onClick={() => setIsOpen(false)}
         />
       )}
-
-      {/* Sidebar */}
-      <div className={`
-        fixed lg:sticky top-0 left-0 h-full w-80 bg-zion-blue-dark border-r border-zion-purple/30 
-        transform transition-transform duration-300 ease-in-out z-50
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-        overflow-y-auto
-      `}>
-        <div className="p-6">
-          {/* Logo & Brand */}
-          <div className="flex items-center mb-8">
-            <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-3">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <div>
-              <h1 className="text-xl font-bold text-white">Zion Tech</h1>
-              <p className="text-zion-cyan text-sm">Innovation Hub</p>
-            </div>
-          </div>
-
-          {/* Search Bar */}
-          <div className="mb-6">
-            <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-              <input
-                type="text"
-                placeholder="Search services..."
-                className="w-full pl-10 pr-4 py-2 bg-zion-slate-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-1 focus:ring-zion-cyan/20"
-              />
-            </div>
-          </div>
-
-          {/* Navigation Sections */}
-          <div className="space-y-6">
-            {navigation.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="space-y-3">
-                <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider">
-                  {section.title}
-                </h3>
-                <div className="space-y-1">
-                  {section.items.map((item, itemIndex) => (
-                    <Link
-                      key={itemIndex}
-                      to={item.href}
-                      className={`
-                        flex items-center px-3 py-2 rounded-lg text-sm transition-all duration-200 group
-                        ${isActive(item.href) 
-                          ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30' 
-                          : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/10'
-                        }
-                      `}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <item.icon className={`w-4 h-4 mr-3 ${isActive(item.href) ? 'text-zion-cyan' : 'text-zion-slate-light group-hover:text-zion-cyan'}`} />
-                      <div className="flex-1">
-                        <div className="font-medium">{item.name}</div>
-                        {item.description && (
-                          <div className="text-xs text-zion-slate-light mt-1">{item.description}</div>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Quick Actions */}
-          <div className="mt-8 pt-6 border-t border-zion-purple/20">
-            <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider mb-3">
-              Quick Actions
-            </h3>
-            <div className="space-y-2">
-              <Link
-                to="/contact"
-                className="flex items-center px-3 py-2 bg-zion-purple/20 hover:bg-zion-purple/30 rounded-lg text-zion-purple hover:text-white transition-all duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                <MessageCircle className="w-4 h-4 mr-3" />
-                <span className="text-sm font-medium">Get Support</span>
-              </Link>
-              <Link
-                to="/pricing"
-                className="flex items-center px-3 py-2 bg-zion-cyan/20 hover:bg-zion-cyan/30 rounded-lg text-zion-cyan hover:text-white transition-all duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                <DollarSign className="w-4 h-4 mr-3" />
-                <span className="text-sm font-medium">View Pricing</span>
-              </Link>
-              <Link
-                to="/request-quote"
-                className="flex items-center px-3 py-2 bg-gradient-to-r from-zion-purple to-zion-cyan hover:from-zion-purple-light hover:to-zion-cyan-light rounded-lg text-white transition-all duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                <Rocket className="w-4 h-4 mr-3" />
-                <span className="text-sm font-medium">Request Quote</span>
-              </Link>
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="mt-8 pt-6 border-t border-zion-purple/20">
-            <h3 className="text-sm font-semibold text-zion-cyan uppercase tracking-wider mb-3">
-              Contact
-            </h3>
-            <div className="space-y-2 text-sm text-zion-slate-light">
-              <div className="flex items-center">
-                <Phone className="w-4 h-4 mr-2 text-zion-cyan" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center">
-                <Mail className="w-4 h-4 mr-2 text-zion-cyan" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-start">
-                <MapPin className="w-4 h-4 mr-2 text-zion-cyan mt-0.5" />
-                <span>Middletown, DE 19709</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </>
+  )};
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
   );
 }

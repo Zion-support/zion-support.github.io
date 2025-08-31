@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import {
-  Users,
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO               } from '../components/SEO';
-import { Users, MessageSquare, BookOpen, Star, TrendingUp, Award               } from 'lucide-react.ts';
-=======
 import React from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
@@ -34,14 +22,6 @@ import { Users,
   Award,
   CheckCircle,
   ArrowRight
-<<<<<<< HEAD
-} from 'lucide-react';
-import { SEO } from "../components/SEO";
-export default function Community() {
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
 } from 'lucide-react';
 import { SEO              } from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -199,9 +179,6 @@ export default function Community(...args: any[]): any {
       color: 'from-orange-500 to-red-500';
     };
   ];
-<<<<<<< HEAD
-export default function Community(...args[]):  {
-=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function Community(...args[]: any):  {
@@ -285,10 +262,6 @@ export default function Community(...args[]: any):  {
             className="text-3xl font-bold text-white text-center mb-12"
             Community Forums
           </motion.h2>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {communityForums.map((forum, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {communityForums.map((forum, index)              => (
@@ -366,10 +339,6 @@ export default function Community(...args[]: any):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Upcoming Events
         </motion.h2>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {upcomingEvents.map((event, index) => (
-=======
 
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-16">
           {upcomingEvents.map((event, index)              => (
@@ -451,10 +420,6 @@ export default function Community(...args[]: any):  {
             className="text-3xl font-bold text-white text-center mb-12"
             Featured Discussions
           </motion.h2>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {featuredDiscussions.map((discussion, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {featuredDiscussions.map((discussion, index)              => (
@@ -535,10 +500,6 @@ export default function Community(...args[]: any):  {
           className="text-3xl font-bold text-white text-center mb-12"
           Community Resources
         </motion.h2>
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {communityResources.map((resource, index) => (
-=======
 
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {communityResources.map((resource, index)              => (

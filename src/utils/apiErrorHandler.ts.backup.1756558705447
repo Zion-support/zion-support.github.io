@@ -8,12 +8,6 @@ export const showApiError = (error: anyanyanyanyanyanyanyanyany, fallbackMessage
     description: message,
   });
   // Log error for debugging
-<<<<<<< HEAD
-  if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-    // // // console.error('API Error:', error);
-
-=======
     // // // // // // // console.error('API Error:', error);
 =======
   if (process.env.NODE_ENV = == 'development') {;

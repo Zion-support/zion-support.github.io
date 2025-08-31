@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion          } from 'framer-motion.ts';
-import { SEO          } from '@/components/SEO';
-import { Brain,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  CheckCircle,
-  ArrowRight,
-=======
 import React from 'react.ts';
 import { motion           } from 'framer-motion.ts';
 import { SEO           } from '@/components/SEO';
@@ -36,9 +24,6 @@ import { Brain,
   Target,
   Rocket,
   Sparkles
-<<<<<<< HEAD
-export default function AIEnterpriseOrchestrator(...args: any[]): any {
-=======
           } from 'lucide-react.ts';
 
 export default function AIEnterpriseOrchestrator(...args[]: any):  {
@@ -81,15 +66,6 @@ export default function AIEnterpriseOrchestrator(...args[]: any):  {
       title: "Enterprise Security Suite",
       description: "AI-powered threat detection and response with zero-trust architecture",
       icon: Shield,
-<<<<<<< HEAD
-      benefits: [
-        "99.9% threat detection rate",
-        "Zero-day attack prevention",
-        "Automated incident response",
-        "Compliance automation"
-      ]
-
-=======
       benefits[;
         "99.9% threat detection rate",;
         "Zero-day attack prevention",;
@@ -144,15 +120,6 @@ export default function AIEnterpriseOrchestrator(...args[]: any):  {
         "Enterprise security",
         "24/7 dedicated support",
         "Custom AI models",
-<<<<<<< HEAD
-        "White-label solutions",
-        "On-premise deployment",
-        "SLA guarantees"
-      ],
-      cta: "Contact Sales",
-      popular: false
-
-=======
         "White-label solutions",;
         "On-premise deployment",;
         "SLA guarantees";
@@ -193,20 +160,6 @@ export default function AIEnterpriseOrchestrator(...args[]: any):  {
     },
     {
       industry: "Retail",
-<<<<<<< HEAD
-      applications: [
-        "Customer behavior analysis",
-        "Inventory optimization",
-        "Personalized marketing",
-        "Demand forecasting"
-      ]
-
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
       applications[;
         "Customer behavior analysis",;
         "Inventory optimization",;
@@ -639,23 +592,12 @@ export default function AIEnterpriseOrchestrator(...args[]: any):  {
 
                 Contact Sales Team
               </motion.button>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

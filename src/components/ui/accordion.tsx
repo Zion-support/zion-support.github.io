@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { ChevronDown  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { ChevronDown interface AccordionProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
-  className?: string;
-  type?: 'single' | 'multiple';
-  defaultValue?: string | string[];
-=======
 import React, { useState  
 } from 'react.ts';
 import { ChevronDown                } from 'lucide-react.ts';
@@ -21,18 +8,6 @@ interface AccordionProps extends React.PropsWithChildren<{}> {
   className?: string;
   type?: 'single' | 'multiple';
   defaultValue?: string | string[]}
-<<<<<<< HEAD
-export function Accordion({
-  children,
-  className = '',
-  type = 'single',
-  defaultValue
-}: AccordionProps) {
-  const [openItems, setOpenItems] = useState<string[]>(
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
-  );
-  const handleToggle = (value: string)  => {
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function Accordion(...args: any[]): any {
@@ -60,18 +35,6 @@ export function Accordion(...args: any[]): any {
             onToggle: ()                => handleToggle(child.props.value)
           })}
         return child})}
-<<<<<<< HEAD
-export function Accordion({ 
-  children, ;
-  className = '', ;
-  type = 'single',;
-  defaultValue ;
-}: AccordionProps) {;
-  const [openItems, setOpenItems] = useState<string[]>(;
-    defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
-  );
-  const handleToggle = (value: string) => {;
-=======
 =======
 export function Accordion(...args: any[]): any {;
   const [openItems, setOpenItems] = useState<any>(;
@@ -102,28 +65,12 @@ export function Accordion(...args: any[]): any {;
     </div>
   )}
 interface AccordionItemProps extends React.PropsWithChildren<{}> {
-<<<<<<< HEAD
-  children: React.ReactNode;
-  value: string;
-  className?: string;
-  isOpen?: boolean;
-  onToggle?: ()  => void}
-export function AccordionItem({
-  children,
-  className = '',
-  isOpen = false,;
-  onToggle;
-}: AccordionItemProps) {;
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: ()               => void;
-=======
   onToggle?: ()  => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -139,26 +86,11 @@ export function AccordionItem(...args: any[]): any {;
     </div>
   )}
 interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
-<<<<<<< HEAD
-  children: React.ReactNode;
-  className?: string;
-  isOpen?: boolean;
-  onToggle?: ()  => void}
-export function AccordionTrigger({
-  children,
-  className = '',
-  isOpen = false,
-  onToggle
-}: AccordionTriggerProps) {
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.ReactNode;
   className?: string;
   isOpen?: boolean;
-<<<<<<< HEAD
-  onToggle?: ()               => void;
-=======
   onToggle?: ()  => void}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -187,13 +119,6 @@ interface AccordionContentProps extends React.PropsWithChildren<{}> {;
   children: React.ReactNode;
   className?: string;
   isOpen?: boolean}
-<<<<<<< HEAD
-export function AccordionContent({
-  children,
-  className = '',
-  isOpen = false
-}: AccordionContentProps) {
-=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export function AccordionContent(...args: any[]): any {
@@ -204,13 +129,6 @@ export function AccordionContent(...args: any[]): any {
       {children}
     </div>
   )}
-<<<<<<< HEAD
-export function AccordionContent({ ;
-  children, ;
-  className = '',;
-  isOpen = false;
-}: AccordionContentProps) {;
-=======
 =======
 export function AccordionContent(...args: any[]): any {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

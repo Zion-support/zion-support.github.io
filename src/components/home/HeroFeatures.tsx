@@ -1,12 +1,4 @@
 import React from 'react.ts';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion.ts';
-interface HeroFeature {
-icon: React.ComponentType<{ className?: string}>;
-  title: string;
-  description: string;
-  gradient: string}
-=======
 import { motion                } from 'framer-motion.ts';
 
 interface HeroFeature {
@@ -42,13 +34,6 @@ icon: React.ComponentType<{ className?: string;
 }>;
   title: string;
   description: string;
-<<<<<<< HEAD
-  gradient: string;
-
-interface HeroFeaturesProps extends React.PropsWithChildren<{}> {
-
-  features: HeroFeature[];
-=======
 gradient: string;
 }
 
@@ -61,10 +46,6 @@ const HeroFeatures: React.FC<HeroFeaturesProps> = ({ features }) => {
       className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-20"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-      transition={{ duration: 0.8, delay: 0.6 }}
-      {features.map((feature, index) => (
-=======
       transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.8, delay: 0.6 }}
 
       {features.map((feature, index)               => (

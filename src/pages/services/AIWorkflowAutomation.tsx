@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Workflow, 
-=======
-<<<<<<< HEAD
-import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 export default function AIWorkflowAutomation(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Workflow, 
@@ -46,11 +37,6 @@ import { Workflow,
   GitBranch,
   Code,
   Terminal
-<<<<<<< HEAD
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-export default function AIWorkflowAutomation(...args[]):  {
-=======
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
 
@@ -267,10 +253,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Everything you need to build, deploy, and manage intelligent workflows at scale.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
@@ -307,10 +289,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Leverage cutting-edge AI and automation technologies to transform your business processes.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {capabilities.map((capability, index)              => (
@@ -360,10 +338,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               See how AI workflow automation transforms different industries and use cases.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index)              => (
@@ -408,10 +382,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Choose the plan that fits your automation needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricing.map((plan, index)              => (
@@ -482,10 +452,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
               Join thousands of companies that have revolutionized their operations with AI workflow automation.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (

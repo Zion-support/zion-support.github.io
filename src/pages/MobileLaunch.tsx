@@ -37,14 +37,6 @@ import { Smartphone,
   Wifi as WifiIcon,
   Battery as BatteryIcon,
   Signal
-<<<<<<< HEAD
-} from 'lucide-react';
-import SEO from '../components/SEO';
-const MobileLaunch: React.FC = () => {
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -275,10 +267,6 @@ const MobileLaunch: React.FC = (): JSX.Element => {
               with our feature-rich mobile application.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
@@ -329,10 +317,6 @@ const MobileLaunch: React.FC = (): JSX.Element => {
               Explore the intuitive interface and powerful features available in our mobile application.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {appScreens.map((screen, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {appScreens.map((screen, index)              => (
@@ -391,10 +375,6 @@ const MobileLaunch: React.FC = (): JSX.Element => {
               Get started with Zion Tech Group's mobile app today. Available on all major platforms.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {downloadOptions.map((option, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
             {downloadOptions.map((option, index)              => (
@@ -457,10 +437,6 @@ const MobileLaunch: React.FC = (): JSX.Element => {
               Ensure your device meets the requirements for optimal performance and experience.
             </p>
           </motion.div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            {systemRequirements.map((req, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6 max-w-4xl mx-auto">
             {systemRequirements.map((req, index)              => (

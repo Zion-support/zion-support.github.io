@@ -401,13 +401,6 @@ import { Search,
   Psi,
   Omega,
   Crown
-<<<<<<< HEAD
-} from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
-=======
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '../data/innovativeMicroSaasServices2025';
-=======
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '../data/innovativeMicroSaasServices2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -432,9 +425,6 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
-<<<<<<< HEAD
-const ComprehensiveServicesShowcase2025: React.FC = () => {;
-=======
 
 const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -511,29 +501,7 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
       default:
         return 0;
   });
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyany)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
-
-  const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     hidden: { opacity: 0 },;
     visible: {;
@@ -556,9 +524,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
       };
     };
   };
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
-=======
 
   const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -576,9 +541,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
       case 'Cybersecurity': return <Shield className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
   };
-<<<<<<< HEAD
-  const getInnovationIcon = (level: string) => {;
-=======
 
   const getInnovationIcon = (level: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -664,10 +626,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
                 <select
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                  {categories.map((category) => (
-=======
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
                   {categories.map((category)               => (
@@ -684,10 +642,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
                 <select
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                  {innovationLevels.map((level) => (
-=======
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
                   {innovationLevels.map((level)               => (
@@ -784,9 +738,6 @@ const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
             className={viewMode === 'grid'
               ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
-<<<<<<< HEAD
-            {sortedServices.map((service) => (
-=======
 
             {sortedServices.map((service)               => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

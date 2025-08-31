@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight const DigitalTransformation = () => {
-=======
 import React from 'react.ts';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight             } from 'lucide-react.ts';
 
@@ -22,15 +18,6 @@ const DigitalTransformation = () => {
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
     },
-<<<<<<< HEAD
-    {
-      title: "Change Management",
-      description: "Guide your team through digital adoption and transformation.",
-      price: "From $8,000/month",
-      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
-      icon: Users
-
-=======
     {;
       title: "Change Management",;
       description: "Guide your team through digital adoption and transformation.",;
@@ -53,15 +40,6 @@ const DigitalTransformation = () => {
       description: "Optimize internal processes and efficiency",
       icon: TrendingUp,
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Technology",
-      description: "Modernize your technology stack and infrastructure",
-      icon: BarChart3,
-      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
-
-=======
     },;
     {;
       name: "Technology",;

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React, { memo } from 'react';
-import { motion } from 'framer-motion';
-interface LoaderProps {
-=======
 import React, { memo } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 
@@ -14,12 +9,6 @@ interface LoaderProps extends React.PropsWithChildren<{}> {
   text?: string;
   fullScreen?: boolean;
   showLogo?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-export const PerformanceOptimizedLoader = memo<LoaderProps>(({
-=======
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }

@@ -31,9 +31,6 @@ import { Rocket,
   BarChart3,
   Globe2,
   ShieldCheck
-<<<<<<< HEAD
-const InnovativeServicesHub: React.FC = (): JSX.Element => {
-=======
            } from 'lucide-react.ts';
 
 const InnovativeServicesHub: React.FC = (): JSX.Element => {
@@ -74,14 +71,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
       icon: Globe,
-<<<<<<< HEAD
-      color: 'from-emerald-600 to-green-600',
-      route: '/green-it',
-      features['Renewable Energy', 'Carbon Reduction', 'Sustainable Computing', 'Green AI'],
-      stats: { services: 8, avgROI: '400%', innovation: 'Sustainable' }
-<<<<<<< HEAD
-
-=======
     };
 =======;
       color: 'from-emerald-600 to-green-600',;
@@ -111,36 +100,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       delivery: '12 months'
     },
     {
-<<<<<<< HEAD
-      title: 'Autonomous Space Mining System',
-      description: 'AI-powered space exploration and resource extraction',
-      category: 'Space Tech',
-      price: '$500,000',
-      roi: '2000%',
-      delivery: '18 months'
-
-  ];
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5
-
-
-=======
       title: 'Autonomous Space Mining System',;
       description: 'AI-powered space exploration and resource extraction',;
       category: 'Space Tech',;
@@ -193,12 +152,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.h1
             className="text-5xl md:text-7xl font-bold text-white mb-6"
-<<<<<<< HEAD
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-
-=======
             initial = {
   { y: -50,
   opacity: 0 
@@ -235,12 +188,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-indigo-100 max-w-4xl mx-auto mb-8"
-<<<<<<< HEAD
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-
-=======
             initial = {
   { y: 50,
   opacity: 0 
@@ -277,12 +224,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </motion.p>
           <motion.div
             className="flex flex-wrap justify-center gap-4 text-sm"
-<<<<<<< HEAD
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-
-=======
             initial = {
   { scale: 0.8,
   opacity: 0 
@@ -334,12 +275,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       {/* Statistics Section */}
       <motion.div
         className="container mx-auto px-4 py-16"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 20 
@@ -405,13 +340,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
           </h2>
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             From revolutionary AI to sustainable green technology, discover the perfect solution for your business
-<<<<<<< HEAD
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-          {serviceCategories.map((category)            => {;
-=======;
           </p>;
         </div>;
 ;
@@ -424,10 +352,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                 key = {category.id}
                 className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20"
                 variants={itemVariants}
-<<<<<<< HEAD
-                whileHover={{ y: -5, scale: 1.02 }}
-
-=======
                 whileHover = {
   { y: -5,
   scale: 1.02 
@@ -486,18 +410,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
                 <a
                   href={category.route}
                   className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-                >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                  Explore {category.title}
-                  <ArrowRight className="w-5 h-5" />
-                </a>
-              </motion.div>
-            )})};
-=======;
                 >;
                   Explore {category.title};
                   <ArrowRight className="w-5 h-5" />;
@@ -530,13 +442,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
             <motion.div
               key={index}
               className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
-<<<<<<< HEAD
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-
-=======
               initial = {
   { opacity: 0,
   y: 20 
@@ -617,12 +522,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
       {/* Contact Section */}
       <motion.div
         className="bg-gradient-to-r from-indigo-900/20 via-purple-900/20 to-pink-900/20 border-t border-slate-700/50"
-<<<<<<< HEAD
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.6 }}
-
-=======
         initial = {
   { opacity: 0,
   y: 50 
@@ -705,14 +604,6 @@ const InnovativeServicesHub: React.FC = (): JSX.Element => {
 
               Visit Our Website
               <ExternalLink className="w-5 h-5" />
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </motion.div>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;

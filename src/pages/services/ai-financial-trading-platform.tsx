@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from 'react';
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { SEO              } from '@/components/SEO';
-import { TrendingUp,
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  Brain,
-  TrendingUp,
-  DollarSign,
-  Shield,
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
   Zap,
   CheckCircle,
@@ -57,86 +40,6 @@ import { TrendingUp,
   Database,
   Cloud,
   Lock,
-<<<<<<< HEAD
-  Eye,
-<<<<<<< HEAD
-  EyeOff,
-  RefreshCw,
-  Save,
-  Share2,
-  Copy,
-  ExternalLink,
-  ChevronRight,
-  ChevronDown,
-  Plus,
-  Minus,
-  Edit,
-  Trash2,
-  Filter,
-  SortAsc,
-  SortDesc,
-  Grid,
-  List,
-  Maximize2,
-  Minimize2,
-  RotateCcw,
-  RotateCw,
-  ZoomIn,
-  ZoomOut,
-  Move,
-  Crop,
-  Scissors,
-  Type,
-  Image,
-  Video,
-  Music,
-  File,
-  Folder,
-  HardDrive,
-  Wifi,
-  Bluetooth,
-  Battery,
-  Signal,
-  WifiOff,
-  BluetoothOff,
-  BatteryCharging,
-  SignalHigh,
-  SignalMedium,
-  SignalLow,
-  SignalOff,
-  WifiHigh,
-  WifiMedium,
-  WifiLow,
-  WifiOff2,
-  BluetoothHigh,
-  BluetoothMedium,
-  BluetoothLow,
-  BluetoothOff2,
-  BatteryHigh,
-  BatteryMedium,
-  BatteryLow,
-  BatteryEmpty,
-  BatteryCharging2,
-  BatteryFull,
-  BatteryHalf,
-  BatteryQuarter,
-  BatteryThreeQuarters,
-  BatteryEmpty2,
-  BatteryCharging3,
-  BatteryFull2,
-  BatteryHalf2,
-  BatteryQuarter2,
-  BatteryThreeQuarters2,
-  DollarSign,
-  Coins,
-  Wallet,
-  CreditCard,
-  PiggyBank,
-  Banknote,
-  Receipt,
-  Calculator,
-  PieChart,
-=======
   Target,
   Globe,
   Cpu,
@@ -167,9 +70,6 @@ import { TrendingUp,
 } from 'lucide-react';
 =======
   PieChart
-<<<<<<< HEAD
-export default function AIFinancialTradingPlatform(...args: any[]): any {
-=======
               } from 'lucide-react.ts';
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
@@ -401,14 +301,6 @@ const AIFinancialTradingPlatform: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {/* Stats Section */}
-      <section className="py-16 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-=======
       {/* Performance Metrics */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
@@ -460,10 +352,6 @@ const AIFinancialTradingPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {features.map((feature, index) => (
@@ -516,10 +404,6 @@ const AIFinancialTradingPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {tradingStrategies.map((strategy, index) => (
@@ -560,19 +444,6 @@ const AIFinancialTradingPlatform: React.FC = () => {
                     <div className="text-sm text-gray-400">Risk Level</div>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <h3 className="text-xl font-bold text-white mb-4">{strategy.title}</h3>
-                <p className="text-gray-400 mb-6">{strategy.description}</p>
-                <ul className="space-y-2 text-left">
-                  {strategy.examples.map((example, exampleIndex) => (
-                    <li key={exampleIndex} className="text-sm text-gray-300 flex items-center">
-                      <div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div>
-                      {example}
-                    </li>
-                  ))}
-                </ul>
-=======
                 <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
@@ -686,11 +557,6 @@ const AIFinancialTradingPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index)               => (
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

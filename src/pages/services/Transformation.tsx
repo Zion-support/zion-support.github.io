@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight  } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight const DigitalTransformation = () => {
-=======
 import React from 'react.ts';
 import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight               } from 'lucide-react.ts';
 
@@ -103,10 +95,6 @@ const DigitalTransformation = () => {
               your business and drive sustainable growth.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {transformationServices.map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {transformationServices.map((service, index)              => (
@@ -143,10 +131,6 @@ const DigitalTransformation = () => {
               comprehensive digital-first organization.
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {transformationAreas.map((area, index) => (
-=======
 
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {transformationAreas.map((area, index)              => (

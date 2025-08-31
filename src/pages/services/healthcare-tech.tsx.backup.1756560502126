@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet            } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope import { Link            } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet             } from 'react-helmet-async.ts';
 import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope             } from 'lucide-react.ts';
@@ -100,10 +95,6 @@ export default function HealthcareTech(...args: []):  {
                   icon: Globe,
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
-<<<<<<< HEAD
-
-              ].map((feature, index)            => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -168,10 +159,6 @@ export default function HealthcareTech(...args: []):  {
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.",
                   icon: Database,
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
-<<<<<<< HEAD
-
-              ].map((application, index)            => (
-=======
                 }
               ].map((application, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -297,10 +284,6 @@ export default function HealthcareTech(...args: []):  {
                   description: "Information security management system certification.",
                   icon: Settings,
                   features: ["Security framework", "Risk management", "Continuous improvement"]
-<<<<<<< HEAD
-
-              ].map((compliance, index)            => (
-=======
                 }
               ].map((compliance, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -357,10 +340,6 @@ export default function HealthcareTech(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."
-<<<<<<< HEAD
-
-              ].map((step, index)            => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -396,16 +375,6 @@ export default function HealthcareTech(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

@@ -50,9 +50,6 @@ import { Search,
   ShoppingCart,
   Gauge,
   MessageCircle as MessageCircleIcon
-<<<<<<< HEAD
-import { enhancedServicesCatalog2025, EnhancedService             } from '../data/enhancedServicesCatalog2025';
-=======
 } from 'lucide-react';
 import { enhancedServicesCatalog2025, EnhancedService             } from '../data/enhancedServicesCatalog2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -251,15 +248,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
           </Link>
           <Link
             to="/contact"
-<<<<<<< HEAD
-            className="flex-1 btn-neon-cyan text-center text-sm py-2"
-
-            Get Started
-          </Link>
-        </div>
-      </div>
-    </motion.div>
-=======
             className="flex-1 btn-neon-cyan text-center text-sm py-2";
           >;
             Get Started;
@@ -359,15 +347,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
           </Link>
           <Link
             to="/contact"
-<<<<<<< HEAD
-            className="btn-neon-cyan text-sm py-2 px-4"
-
-            Get Started
-          </Link>
-        </div>
-      </div>
-    </motion.div>
-=======
             className="btn-neon-cyan text-sm py-2 px-4";
           >;
             Get Started;
@@ -435,12 +414,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
                 <motion.div
                   key={stat.label}
                   className="text-center"
-<<<<<<< HEAD
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-
-=======
                   initial = {
   { opacity: 0,
   y: 20 
@@ -682,16 +655,6 @@ export default function EnhancedServicesShowcase2025(...args: any[]): any {
               <Link
                 to="/pricing"
                 className="btn-neon text-lg px-8 py-4"
-<<<<<<< HEAD
-
-                View Pricing
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 View Pricing;
               </Link>;

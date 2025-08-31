@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import { Workflow, Zap, Check, ExternalLink, Phone, Mail, ArrowRight, Brain, Clock, BarChart3 export default function AIWorkflowAutomation(...args: any[]): any {
-=======
 import React from 'react.ts';
 import { motion           } from 'framer-motion.ts';
 import { Workflow, 
@@ -67,23 +64,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
     }
   ];
 
-<<<<<<< HEAD
-  const tiers = [
-    {
-      name: 'Starter',
-      price: '$199/mo',
-      details: ['Up to 10 workflows', '5 team members', 'Basic integrations', 'Email support']
-    },
-    {
-      name: 'Professional',
-      price: '$499/mo',
-      details: ['Up to 50 workflows', '25 team members', 'Advanced integrations', 'Priority support']
-    },
-    {
-      name: 'Enterprise',
-      price: '$1,299/mo',
-      details: ['Unlimited workflows', 'Unlimited team members', 'Custom integrations', '24/7 support']
-=======
   const capabilities = [
     {
       title: 'Workflow Orchestration',
@@ -575,9 +555,6 @@ export default function AIWorkflowAutomation(...args[]: any):  {
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

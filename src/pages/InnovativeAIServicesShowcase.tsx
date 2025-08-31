@@ -4,14 +4,6 @@ import { motion              } from 'framer-motion.ts';
 import { Zap, Sparkles, TrendingUp, Route, Users, PenTool,
   CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
   BarChart3, Shield, Briefcase, Package, Target
-<<<<<<< HEAD
-} from 'lucide-react';
-import SEO from '@/components/SEO';
-export default function InnovativeAIServicesShowcase() {
-=======
-<<<<<<< HEAD
-import { SEO              } from '@/components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '@/components/SEO';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

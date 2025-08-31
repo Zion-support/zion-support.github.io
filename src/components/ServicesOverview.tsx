@@ -26,14 +26,6 @@ import { Brain,
   Star,
   CheckCircle,
   Clock
-<<<<<<< HEAD
- } from 'lucide-react';
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
-export function ServicesOverview(...args[]):  {
-=======
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES               } from '@/data/innovativeMicroSaasServices2025';
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES                } from '@/data/innovativeMicroSaasServices2025';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -132,19 +124,6 @@ export function ServicesOverview(...args[]: any):  {
     {
       id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'healthcare-ai',
       name: 'Healthcare AI',
-<<<<<<< HEAD
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Healthcare'))
-    };
-      icon: Heart,;
-=======
-<<<<<<< HEAD
-      icon: Heart,
-      color: 'from-zion-pink to-zion-purple',
-      description: 'Healthcare artificial intelligence solutions',
-<<<<<<< HEAD
-      services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s               => s.category.includes('Healthcare'))
-
-=======
       services: anyanyanyanyanyanyanyanyanyanyanyanyanyanyINNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s                => s.category.includes('Healthcare'))
     };
 =======;
@@ -250,10 +229,6 @@ export function ServicesOverview(...args[]: any):  {
           <h2 className="heading-responsive font-bold mb-8 text-center">
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index) => (
-=======
 
           <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index)               => (

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-export interface NewInnovativeService {
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
 export type ServiceItem = {
 >>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   id: string;
@@ -25,41 +9,6 @@ export type ServiceItem = {
   features: string[];
   benefits: string[];
   useCases: string[];
-<<<<<<< HEAD
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
-  innovationLevel: string;
-contactInfo: {;
-    phone: string;
-    email: string;
-    website: string;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-};
-  technicalSpecs?: {
-    technology: string[];
-    integrations: string[];
-    apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
-  competitors?: string[];
-=======
   ctaLabel: string;
   href: string;
   external?: boolean;

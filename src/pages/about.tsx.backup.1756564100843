@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-const About: React.FC = (): JSX.Element => {
-=======
 import React from 'react.ts';
 import { motion             } from 'framer-motion.ts';
 import { Link             } from 'react-router-dom.ts';

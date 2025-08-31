@@ -24,11 +24,6 @@ function DisputesPage(...args[]: any):  {
       </>;
     </ProtectedRoute>;
   );
-<<<<<<< HEAD
-
-export default DisputesPage;
-}
-=======
 }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 

@@ -1,13 +1,6 @@
 // Comprehensive IT Services 2030 - Zion Tech Group
 // Enterprise-grade IT infrastructure, consulting, and managed services
 export interface ServiceContact {
-<<<<<<< HEAD
-  phone: string;
-  email: string;
-  website: string;
-  address: string}
-export interface ITService {
-=======
 
 
 
@@ -26,9 +19,6 @@ export interface ITService {
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
 address: string;
 
 
@@ -86,12 +76,6 @@ export interface ITService {
   technologies: string[];
   useCases: string[];
   roi: string;
-<<<<<<< HEAD
-  setupTime: string}
-=======
-<<<<<<< HEAD
-  setupTime: string;
-=======
 setupTime: string;
 
 

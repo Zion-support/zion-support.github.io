@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Helmet             } from 'react-helmet-async.ts';
-import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart import { Link             } from 'react-router-dom.ts';
-=======
 import React from 'react.ts';
 import { Helmet              } from 'react-helmet-async.ts';
 import { DollarSign, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart              } from 'lucide-react.ts';
@@ -100,10 +95,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   icon: Database,
                   title: "Multi-cloud Support",
                   description: "Manage costs across AWS, Azure, Google Cloud, and other providers."
-<<<<<<< HEAD
-
-              ].map((feature, index)             => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -168,10 +159,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   description: "Optimize support plans, licensing, and service agreements.",
                   icon: Shield,
                   benefits: ["Support plans", "Licensing", "Service agreements"]
-<<<<<<< HEAD
-
-              ].map((area, index)             => (
-=======
                 }
               ].map((area, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -223,10 +210,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   step: "03",
                   title: "Operate",
                   description: "Establish ongoing cost management processes and governance."
-<<<<<<< HEAD
-
-              ].map((step, index)             => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -343,10 +326,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   description: "REST APIs for custom integrations and automated workflows.",
                   icon: Settings,
                   features: ["REST APIs", "Custom integrations", "Automated workflows"]
-<<<<<<< HEAD
-
-              ].map((tool, index)             => (
-=======
                 }
               ].map((tool, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -403,10 +382,6 @@ export default function FinOpsAdvisor(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve cost management."
-<<<<<<< HEAD
-
-              ].map((step, index)             => (
-=======
                 }
               ].map((step, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -442,16 +417,6 @@ export default function FinOpsAdvisor(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

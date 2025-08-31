@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
-<<<<<<< HEAD
-import { SEO              } from '@/components/SEO';
-import { PenTool,
-  FileText,
-  Image,
-  Video,
-  Globe,
-  Zap,
-  Brain,
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import SEO from '@/components/SEO';
 import { 
@@ -33,13 +19,6 @@ import {
   BarChart3,
   Users,
   Sparkles
-<<<<<<< HEAD
-} from 'lucide-react';
-export default function AIContentGenerator(...args[]):  {
-=======
-<<<<<<< HEAD
-export default function AIContentGenerator(...args: any[]): any {
-=======
              } from 'lucide-react.ts';
 
 export default function AIContentGenerator(...args[]: any):  {
@@ -272,10 +251,6 @@ export default function AIContentGenerator(...args[]: any):  {
                 that engages your audience and drives results.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)               => (
@@ -316,10 +291,6 @@ export default function AIContentGenerator(...args[]: any):  {
                 From blog posts to social media content, our AI handles it all
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {contentTypes.map((type, index)  => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {contentTypes.map((type, index)               => (
@@ -361,10 +332,6 @@ export default function AIContentGenerator(...args[]: any):  {
                 Whether you're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index)  => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map((useCase, index)               => (
@@ -417,10 +384,6 @@ export default function AIContentGenerator(...args[]: any):  {
                 their content strategy with AI-powered generation.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
               {benefits.map((benefit, index)               => (
@@ -469,10 +432,6 @@ export default function AIContentGenerator(...args[]: any):  {
                 All plans include a 14-day free trial.
               </p>
             </div>
-<<<<<<< HEAD
-            <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
-=======
             
             <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
               {pricingPlans.map((plan, index)               => (

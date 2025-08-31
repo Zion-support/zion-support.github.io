@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings const MicroSAAS = () => {
-=======
 import React from 'react.ts';
 import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, Rocket, Settings             } from 'lucide-react.ts';
 
@@ -43,15 +39,6 @@ const MicroSAAS = () => {
       price: "From $18,000/month",
       features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
     },
-<<<<<<< HEAD
-    {
-      icon: Globe,
-      title: "Cloud Deployment",
-      description: "Scalable cloud infrastructure and deployment solutions",
-      price: "From $15,000/month",
-      features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]
-
-=======
     {;
       icon: Globe,;
       title: "Cloud Deployment",;
@@ -83,15 +70,6 @@ const MicroSAAS = () => {
       description: "Node.js, Python, Java with microservices architecture",
       icon: Database,
       features: ["Microservices", "API development", "Scalable architecture", "Performance optimization"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Cloud",
-      description: "AWS, Azure, GCP with containerization and orchestration",
-      icon: Globe,
-      features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]
-
-=======
     },;
     {;
       name: "Cloud",;
@@ -116,15 +94,6 @@ const MicroSAAS = () => {
     {
       title: "Education",
       description: "Learning management systems and educational technology platforms",
-<<<<<<< HEAD
-      icon: Users
-    },
-    {
-      title: "E-commerce",
-      description: "Online marketplace and retail management solutions",
-      icon: Package
-
-=======
       icon: Users;
     },;
     {;

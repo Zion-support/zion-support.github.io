@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Plus, 
-=======
-<<<<<<< HEAD
-import React, { useState, useCallback } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Plus,
-  MessageCircle,
-  Phone,
-  Mail,
-  ArrowUp,
-  Settings,
-  HelpCircle,
-=======
 import React, { useState, useCallback, useEffect               } from 'react.ts';
 import { Plus, 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -30,22 +13,6 @@ import { Plus,
   Heart,
   Share2,
   Download,
-<<<<<<< HEAD
-  Bookmark,
-  Calendar,
-  MapPin
-} from 'lucide-react';
-
-interface FloatingAction {
-  id: string;
-  icon: React.ComponentType<any>;
-=======
-<<<<<<< HEAD
-  Search
-interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
-
-  enabled?: boolean;
-=======
   Printer
  
 } from 'lucide-react.ts';
@@ -88,15 +55,6 @@ interface FloatingAction {
   priority?: 'high' | 'medium' | 'low';
 }
 
-<<<<<<< HEAD
-interface FloatingActionButtonProps {
-  enabled: boolean;
-  position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
-  theme?: 'light' | 'dark' | 'auto';
-  showLabels?: boolean;
-  actions?: FloatingAction[];
-  onAction?: (actionId: string) => void;
-=======
 interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
 
   actions?: FloatingAction[];
@@ -118,77 +76,9 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   onAction
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-<<<<<<< HEAD
-  const [isHovered, setIsHovered] = useState(false);
-
-  // Default actions if none provided
-  const defaultActions: FloatingAction[] = [
-    {
-      id: 'contact',
-      icon: MessageCircle,
-      label: 'Contact Us',
-      action: () => window.location.href = '/contact',
-      color: 'from-blue-500 to-cyan-500',
-      priority: 'high'
-    },
-    {
-      id: 'phone',
-      icon: Phone,
-      label: 'Call Now',
-      action: () => window.location.href = 'tel:+13024640950',
-      color: 'from-green-500 to-emerald-500',
-      priority: 'high'
-    },
-    {
-      id: 'email',
-      icon: Mail,
-      label: 'Send Email',
-      action: () => window.location.href = 'mailto:kleber@ziontechgroup.com',
-      color: 'from-purple-500 to-pink-500',
-      priority: 'medium'
-    },
-    {
-      id: 'help',
-      icon: HelpCircle,
-      label: 'Get Help',
-      action: () => window.location.href = '/support',
-      color: 'from-orange-500 to-red-500',
-      priority: 'medium'
-    },
-    {
-      id: 'services',
-      icon: Star,
-      label: 'Our Services',
-      action: () => window.location.href = '/services',
-      color: 'from-yellow-500 to-orange-500',
-      priority: 'low'
-    },
-    {
-      id: 'about',
-      icon: Heart,
-      label: 'About Us',
-      action: () => window.location.href = '/about',
-      color: 'from-pink-500 to-rose-500',
-      priority: 'low'
-    }
-=======
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [currentTheme, setCurrentTheme] = useState<any>('light');
 
-<<<<<<< HEAD
-  // Hide button when scrolling down, show when scrolling up
-  const handleScroll = useCallback(() => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const isScrollingDown = scrollTop > (window as ).lastScrollTop;
-
-    if (isScrollingDown && scrollTop > 100) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-
-    (window as ).lastScrollTop = scrollTop;
-  }, []);
-=======
   // Detect theme
   useEffect(() => {
     if (theme === 'auto') {
@@ -217,101 +107,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
-  // Quick actions
-  const quickActions = [
-    {
-      icon: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMessageCircle,
-      label: 'Chat Support',
-      action: ()               => {
-        // Trigger chat support
-        const chatButton = document.querySelector('[data-chat-trigger]') as HTMLElement;
-        if (chatButton) chatButton.click();
-      },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-blue-500 to-blue-600',
-      delay: 0.1
-    },
-    {
-      icon: Phone,
-      label: 'Call Us',
-      action: ()               => {
-        window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1-555-0123';
-      },
-      color: 'from-green-500 to-green-600',
-      delay: 0.2
-    },
-    {
-      icon: Mail,
-      label: 'Email',
-      action: ()               => {
-        window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanycontact@ziontechgroup.com';
-      },
-      color: 'from-purple-500 to-purple-600',
-      delay: 0.3
-    },
-    {
-      icon: Search,
-      label: 'Search',
-      action: ()               => {
-        const searchInput = document.querySelector('[data-search-input]') as HTMLInputElement;
-        if (searchInput) {
-          searchInput.focus();
-          searchInput.click();
-
-      },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-orange-500 to-orange-600',
-      delay: 0.4
-    },
-    {
-      icon: Bookmark,
-      label: 'Bookmark',
-      action: ()               => {
-        if (navigator.share) {
-          navigator.share({
-            title: 'Zion Tech Group',
-            url: window.location.href
-          });
-        } else {
-          // Fallback for browsers that don't support Web Share API
-          const url = window.location.href;
-          const title = document.title;
-          const bookmarkUrl = `https://del.icio.us/post?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`;
-          window.open(bookmarkUrl, '_blank');
-
-      },
-      color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'from-red-500 to-red-600',
-      delay: 0.5
-    },
-    {
-      icon: Download,
-      label: 'Download App',
-      action: ()               => {
-        // Trigger app download or PWA install
-        const installButton = document.querySelector('[data-pwa-install]') as HTMLElement;
-        if (installButton) {
-          installButton.click();
-        } else {
-          // Show app store links
-          const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-          const isAndroid = /Android/.test(navigator.userAgent);
-
-          if (isIOS) {
-            window.open('https://apps.apple.com/app/zion-tech-group/id123456789', '_blank');
-          } else if (isAndroid) {
-            window.open('https://play.google.com/store/apps/details?id=com.ziontechgroup.app', '_blank');
-          } else {
-            // Show PWA install prompt
-            const deferredPrompt = (window as ).deferredPrompt;
-            if (deferredPrompt) {
-              deferredPrompt.prompt();
-
-
-
-      },
-      color: 'from-indigo-500 to-indigo-600',
-      delay: 0.6
-
-=======
   // Default actions
   const defaultActions: FloatingAction[] = [
     // Contact actions
@@ -442,9 +237,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
 
   const finalActions = actions.length > 0 ? actions : defaultActions;
 
-<<<<<<< HEAD
-  // Position classes
-=======
   // Toggle expansion
   const toggleExpansion = useCallback(() => {
     setIsExpanded(prev => !prev);

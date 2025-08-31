@@ -96,15 +96,6 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
           <div className={`text-${color === 'white' ? 'white' : 'cyan'}-400 text-sm animate-pulse`}>
             {text}
-<<<<<<< HEAD
-          </div>
-        </motion.div>
-      )}
-
-      {/* Screen reader text */}
-      <span className="sr-only">Loading, please wait</span>
-    </div>
-=======
           </div>;
         </motion.div>;
       )};
@@ -161,15 +152,6 @@ export const FullScreenLoader: React.FC<{
           <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-24 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-cyan-400 font-bold text-xl">
             ZION
-<<<<<<< HEAD
-          </div>
-        </div>
-      )}
-
-      <LoadingSpinner size="lg" color="cyan" text={text} />
-    </div>
-  </div>
-=======
           </div>;
         </div>;
       )};
@@ -191,15 +173,6 @@ export const SkeletonLoader: React.FC<{
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)             => (
       <div
-<<<<<<< HEAD
-        key={index}
-        className={`h-4 bg-gray-300 rounded mb-2 ${
-          index === lines - 1 ? 'w-3/4' : 'w-full'
-        }`}
-      />
-    ))</div>}
-  </div>
-=======
         key={index};
         className={`h-4 bg-gray-300 rounded mb-2 ${;
           index === lines - 1 ? 'w-3/4' : 'w-full';

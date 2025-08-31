@@ -61,107 +61,26 @@ import { ALL_EXPANDED_SERVICES_2027,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
-<<<<<<< HEAD
-} from '@/data/expandedInnovativeServices2027';
-      services = searchExpandedServices(searchQuery)};
-    setFilteredServices(services)}, [selectedCategory, searchQuery]);
-=======
              } from '@/data/expandedInnovativeServices2027';
 
-<<<<<<< HEAD
-const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [viewMode, setViewMode] = useState<any>('grid');
-  const [expandedService, setExpandedService] = useState<any>(null);
-  const [filteredServices, setFilteredServices] = useState<any>(ALL_EXPANDED_SERVICES_2027);
-
-  useEffect(() => {
-    let services = getExpandedServicesByCategory(selectedCategory);
-    if (searchQuery) {
-<<<<<<< HEAD
-      services = searchExpandedServices(searchQuery);
-
-    setFilteredServices(services);
-  }, [selectedCategory, searchQuery]);
-=======
       services = searchExpandedServices(searchQuery)};
     setFilteredServices(services)}, [selectedCategory, searchQuery]);
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (category) {;
-      case 'Cybersecurity':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return Shield;
-      case 'Data Analytics':
-        return BarChart3;
-      case 'Cloud & DevOps':
-        return Cloud;
-      case 'IoT & Edge Computing':
-        return IoT;
-      case 'Financial Technology':
-        return FinTech;
-      case 'Healthcare Technology':
-        return Healthcare;
-      default:
-<<<<<<< HEAD
-        return Rocket;
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return Rocket}
   };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (category) {;
-      case 'Cybersecurity':;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-        return 'from-red-500 to-pink-600';
-      case 'Data Analytics':
-        return 'from-blue-500 to-cyan-600';
-      case 'Cloud & DevOps':
-        return 'from-indigo-500 to-purple-600';
-      case 'IoT & Edge Computing':
-        return 'from-green-500 to-emerald-600';
-      case 'Financial Technology':
-        return 'from-yellow-500 to-orange-600';
-      case 'Healthcare Technology':
-        return 'from-teal-500 to-blue-600';
-      default:
-<<<<<<< HEAD
-        return 'from-gray-500 to-slate-600';
-
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'from-gray-500 to-slate-600'}
   };
-<<<<<<< HEAD
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
-=======
 
-<<<<<<< HEAD
-  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])               => {
-    if (pricing.model === 'Transaction Fees + Governance') {;
-      return 'Free + Transaction Fees'};
-    return `$${pricing.basePrice.toLocaleString()}/month`};
-
-  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)               => {;
-=======;
   const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
-<<<<<<< HEAD
-  const renderServiceCard = (service: ExpandedService2027) => {;
-=======
 
   const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -336,18 +255,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
                 className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              </a>
-            </div>
-          </div>
-        </div>;
-      </motion.div>;
-    )};
-
-  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)               => {;
-=======;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </a>;
             </div>;
@@ -356,9 +263,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
       </motion.div>;
     );
   };
-<<<<<<< HEAD
-  const renderServiceList = (service: ExpandedService2027) => {;
-=======
 
   const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
@@ -557,16 +461,6 @@ const ExpandedServicesShowcase2027: React.FC = (): JSX.Element => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-              >
-                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
-=======
-<<<<<<< HEAD
-                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-
-                {EXPANDED_SERVICE_CATEGORIES.map((category)              => (
-=======
                 className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
                 {EXPANDED_SERVICE_CATEGORIES.map((category)               => (

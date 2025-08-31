@@ -97,207 +97,219 @@ export default function EnhancedFooter() {
     { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign },
     { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Truck },
     { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart },
-    { name: 'Government Solutions', href: '/solutions/government', icon: ShieldIcon }
+    { name: 'Education Solutions', href: '/solutions/education', icon: BookOpen }
   ];
 
   const resources = [
     { name: 'Blog & Insights', href: '/blog', icon: FileText },
     { name: 'Case Studies', href: '/case-studies', icon: Award },
-    { name: 'White Papers', href: '/white-papers', icon: FileText },
-    { name: 'Webinars', href: '/webinars', icon: Calendar },
+    { name: 'White Papers', href: '/white-papers', icon: Document },
+    { name: 'Webinars', href: '/webinars', icon: Video },
     { name: 'Documentation', href: '/docs', icon: BookOpen },
-    { name: 'Support Center', href: '/support', icon: MessageCircle }
+    { name: 'API Reference', href: '/api', icon: Code }
   ];
 
   const company = [
     { name: 'About Us', href: '/about', icon: Users },
-    { name: 'Our Team', href: '/team', icon: Users },
+    { name: 'Leadership Team', href: '/leadership', icon: Award },
     { name: 'Careers', href: '/careers', icon: Briefcase },
     { name: 'News & Press', href: '/news', icon: FileText },
     { name: 'Partners', href: '/partners', icon: Handshake },
-    { name: 'Contact', href: '/contact', icon: MessageCircle }
-  ];
-
-  const footerSections = [
-    {
-      title: 'Services',
-      links: services,
-      description: 'Cutting-edge technology solutions for modern businesses'
-    },
-    {
-      title: 'Solutions',
-      links: solutions,
-      description: 'Industry-specific solutions that drive transformation'
-    },
-    {
-      title: 'Resources',
-      links: resources,
-      description: 'Knowledge and insights to help you succeed'
-    },
-    {
-      title: 'Company',
-      links: company,
-      description: 'Learn more about our mission and team'
-    }
+    { name: 'Contact Us', href: '/contact', icon: MessageCircle }
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 border-t border-slate-700/50">
+    <footer className="bg-gray-900 text-white">
+      {/* Quick Links Bar */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center items-center space-x-8 text-sm">
+            {quickLinks.map((link) => (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-white hover:text-blue-100 transition-colors duration-200 font-medium"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-6 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2 xl:col-span-2">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/25">
-                <Zap className="w-7 h-7 text-white" />
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Brain className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">{companyInfo.name}</h3>
-                <p className="text-sm text-cyan-400 font-medium tracking-wider">{companyInfo.tagline}</p>
+                <h3 className="text-xl font-bold text-white">{companyInfo.name}</h3>
+                <p className="text-sm text-blue-200">{companyInfo.tagline}</p>
               </div>
             </div>
-            
             <p className="text-gray-300 mb-6 leading-relaxed">
               {companyInfo.description}
             </p>
-
+            
             {/* Contact Info */}
-            <div className="space-y-3 mb-6">
+            <div className="space-y-3">
               <div className="flex items-center space-x-3 text-gray-300">
-                <Phone className="w-4 h-4 text-cyan-400" />
+                <Phone className="w-4 h-4 text-blue-400" />
                 <span>{companyInfo.contact.phone}</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <Mail className="w-4 h-4 text-cyan-400" />
+                <Mail className="w-4 h-4 text-blue-400" />
                 <span>{companyInfo.contact.email}</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <MapPin className="w-4 h-4 text-cyan-400" />
+                <MapPin className="w-4 h-4 text-blue-400" />
                 <span>{companyInfo.contact.address}</span>
               </div>
             </div>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              <a href={companyInfo.social.facebook} className="w-10 h-10 bg-slate-700/50 hover:bg-cyan-500/20 border border-slate-600/50 hover:border-cyan-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href={companyInfo.social.twitter} className="w-10 h-10 bg-slate-700/50 hover:bg-cyan-500/20 border border-slate-600/50 hover:border-cyan-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href={companyInfo.social.linkedin} className="w-10 h-10 bg-slate-700/50 hover:bg-cyan-500/20 border border-slate-600/50 hover:border-cyan-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href={companyInfo.social.instagram} className="w-10 h-10 bg-slate-700/50 hover:bg-cyan-500/20 border border-slate-600/50 hover:border-cyan-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href={companyInfo.social.youtube} className="w-10 h-10 bg-slate-700/50 hover:bg-cyan-500/20 border border-slate-600/50 hover:border-cyan-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200">
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a href={companyInfo.social.github} className="w-10 h-10 bg-slate-700/50 hover:bg-cyan-500/20 border border-slate-600/50 hover:border-cyan-400/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200">
-                <Github className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
-          {/* Footer Sections */}
-          {footerSections.map((section) => (
-            <div key={section.title}>
-              <h4 className="text-lg font-semibold text-white mb-4">{section.title}</h4>
-              <p className="text-sm text-gray-400 mb-4">{section.description}</p>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
+          {/* Services */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Rocket className="w-5 h-5 text-blue-400 mr-2" />
+              Services
+            </h4>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.href}
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-200 flex items-center group"
+                  >
+                    <service.icon className="w-4 h-4 mr-2 text-blue-400 group-hover:scale-110 transition-transform" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Target className="w-5 h-5 text-purple-400 mr-2" />
+              Solutions
+            </h4>
+            <ul className="space-y-2">
+              {solutions.map((solution) => (
+                <li key={solution.name}>
+                  <Link
+                    to={solution.href}
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-200 flex items-center group"
+                  >
+                    <solution.icon className="w-4 h-4 mr-2 text-purple-400 group-hover:scale-110 transition-transform" />
+                    {solution.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources & Company */}
+          <div className="space-y-6">
+            {/* Resources */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                <BookOpen className="w-5 h-5 text-green-400 mr-2" />
+                Resources
+              </h4>
+              <ul className="space-y-2">
+                {resources.map((resource) => (
+                  <li key={resource.name}>
                     <Link
-                      to={link.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
+                      to={resource.href}
+                      className="text-gray-300 hover:text-green-400 transition-colors duration-200 flex items-center group"
                     >
-                      <link.icon className="w-4 h-4 text-cyan-400/50 group-hover:text-cyan-400 transition-colors" />
-                      <span className="text-sm">{link.name}</span>
+                      <resource.icon className="w-4 h-4 mr-2 text-green-400 group-hover:scale-110 transition-transform" />
+                      {resource.name}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
 
-        {/* Quick Links Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-700/50">
-          <div className="flex flex-wrap items-center justify-between gap-4">
-            <div className="flex flex-wrap items-center gap-6">
-              <span className="text-sm text-gray-400">Quick Links:</span>
-              {quickLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  to={link.href}
-                  className="text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </div>
-            
-            <div className="flex items-center space-x-4">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
-              >
-                <MessageCircle className="w-4 h-4 mr-2" />
-                Get Started
-              </Link>
+            {/* Company */}
+            <div>
+              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                <Building className="w-5 h-5 text-orange-400 mr-2" />
+                Company
+              </h4>
+              <ul className="space-y-2">
+                {company.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      to={item.href}
+                      className="text-gray-300 hover:text-orange-400 transition-colors duration-200 flex items-center group"
+                    >
+                      <item.icon className="w-4 h-4 mr-2 text-orange-400 group-hover:scale-110 transition-transform" />
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-slate-700/50">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <span>&copy; {currentYear} {companyInfo.name}. All rights reserved.</span>
-              <Link to="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
-              <Link to="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
-              <Link to="/cookies" className="hover:text-cyan-400 transition-colors">Cookie Policy</Link>
-            </div>
-            
-            <div className="flex items-center space-x-4 text-sm text-gray-400">
-              <span>Made with ❤️ by Zion Tech Group</span>
-              <div className="flex items-center space-x-2">
-                <span>Powered by</span>
-                <div className="w-6 h-6 bg-gradient-to-br from-cyan-500 to-blue-600 rounded flex items-center justify-center">
-                  <Zap className="w-3 h-3 text-white" />
-                </div>
-                <span className="text-cyan-400 font-medium">Innovation</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Newsletter Signup */}
-      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-slate-700/50">
-        <div className="container mx-auto px-6 py-8">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-white mb-2">Stay Updated</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Get the latest insights, industry trends, and technology updates delivered to your inbox.
+        {/* Newsletter Signup */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="max-w-2xl mx-auto text-center">
+            <h4 className="text-xl font-semibold text-white mb-2">
+              Stay Updated with Latest Tech Insights
+            </h4>
+            <p className="text-gray-300 mb-6">
+              Get the latest news, insights, and updates from Zion Tech Group delivered to your inbox.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/20"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105">
+              <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg">
                 Subscribe
               </button>
             </div>
-            <p className="text-xs text-gray-400 mt-3">
-              No spam, unsubscribe at any time. We respect your privacy.
-            </p>
+          </div>
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">
+              © {currentYear} {companyInfo.name}. All rights reserved.
+            </div>
+            
+            {/* Social Links */}
+            <div className="flex items-center space-x-4">
+              <a href={companyInfo.social.facebook} className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                <Facebook className="w-5 h-5" />
+              </a>
+              <a href={companyInfo.social.twitter} className="text-gray-400 hover:text-blue-400 transition-colors duration-200">
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a href={companyInfo.social.linkedin} className="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a href={companyInfo.social.instagram} className="text-gray-400 hover:text-pink-400 transition-colors duration-200">
+                <Instagram className="w-5 h-5" />
+              </a>
+              <a href={companyInfo.social.youtube} className="text-gray-400 hover:text-red-500 transition-colors duration-200">
+                <Youtube className="w-5 h-5" />
+              </a>
+              <a href={companyInfo.social.github} className="text-gray-400 hover:text-gray-300 transition-colors duration-200">
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

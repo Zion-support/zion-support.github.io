@@ -33,15 +33,6 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
       price: '$899/mo',
       features: ['Up to 200 ESG metrics', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
-<<<<<<< HEAD
-    },
-    {
-      name: 'Enterprise',
-      price: '$2,999/mo',
-      features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
-      popular: false
-
-=======
     },;
     { ;
       name: 'Enterprise', ;
@@ -293,19 +284,6 @@ import { Leaf, TrendingUp, BarChart3, CheckCircle, ArrowRight, ExternalLink, Pho
           <p className="text-gray-600 mb-4">
             Learn more about our complete suite of AI-powered business solutions
           </p>
-<<<<<<< HEAD
-          <a
-            href="https://ziontechgroup.com"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
-
-            Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
-        </div>
-      </section>
-    </div>
-=======
           <a 
             href="https://ziontechgroup.com" 
             target="_blank" 

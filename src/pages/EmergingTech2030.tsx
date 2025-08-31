@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Brain,
-  Rocket,
-  Zap,
-  Shield,
-  Cloud,
-  Cpu,
-  ArrowRight,
-  Star,
-  TrendingUp,
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
@@ -44,21 +28,6 @@ import { Brain,
   Eye,
   Heart,
   Zap as Lightning
-<<<<<<< HEAD
-} from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { emergingTechServices2030 } from "../data/emergingTechServices2030";
-export default function EmergingTech2030(...args[]):  {
-=======
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-import { emergingTechServices2030              } from '../data/emergingTechServices2030';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { SEO               } from '../components/SEO';
-import { emergingTechServices2030               } from '../data/emergingTechServices2030';
-=======
 } from 'lucide-react';
 import { SEO              } from '../components/SEO';
 import { emergingTechServices2030              } from '../data/emergingTechServices2030';
@@ -177,20 +146,6 @@ export default function EmergingTech2030(...args[]: any):  {
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Our emerging technology services represent the cutting edge of innovation, designed to give your business a competitive advantage in the future
-<<<<<<< HEAD
-              </p>;
-            </motion.div>;
-;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-              {emergingTechServices2030.map((service, index) => {;
-=======
-<<<<<<< HEAD
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-              {emergingTechServices2030.map((service, index)               => {;
-=======;
               </p>;
             </motion.div>;
 ;
@@ -271,9 +226,6 @@ export default function EmergingTech2030(...args[]: any):  {
                 We combine cutting-edge technology with deep industry expertise to deliver solutions that drive real business value
               </p>
             </motion.div>
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-=======
 
             <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
@@ -313,12 +265,6 @@ export default function EmergingTech2030(...args[]: any):  {
                   title: 'Enterprise Security',
                   description: 'Bank-grade security with SOC 2 compliance and enterprise-level data protection.',
                   color: 'from-red-500 to-pink-600'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-              ].map((feature, index)              => (
-=======
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (

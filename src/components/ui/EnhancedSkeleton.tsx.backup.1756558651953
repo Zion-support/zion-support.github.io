@@ -9,9 +9,6 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
   width?: string | number;
   height?: string | number;
   lines?: number;
-<<<<<<< HEAD
-  animated?: boolean;
-=======
   animated?: boolean}
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
@@ -61,13 +58,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
   cn(
               baseClasses,
               'h-4',
-<<<<<<< HEAD
-              index === lines - 1 ? 'w-3/4' : 'w-full'
-            )}
-            initial={animated ? { opacity: 0.5 } : { /* empty */ }}
-            animate={animated ? { opacity: [0.5, 1, 0.5] } : { /* empty */ }}
-            transition={{
-=======
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
 
@@ -78,27 +68,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
 
 }
             initial={animated ? { opacity: 0.5 } : {}}
-<<<<<<< HEAD
-            animate = {
-  animated ? { opacity[0.5, 1,
-  0.5] 
-
-} : {}}
-            transition = {
-  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-              duration: 1.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-  delay: index * 0.1
-            
-
-}}
-          />
-        ))}
-      </div>
-    )}
-=======
             animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
@@ -127,8 +96,6 @@ const Skeleton: React.FC<SkeletonProps> = ({
         ))};
       </div>;
     );
-<<<<<<< HEAD
-=======
   }
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -141,30 +108,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
     <motion.div
       className = {skeletonClasses}
       style={style}
-<<<<<<< HEAD
-      initial={animated ? { opacity: 0.5 } : { /* empty */ }}
-      animate={animated ? { opacity: [0.5, 1, 0.5] } : { /* empty */ }}
-      transition={{
-=======
       initial={animated ? { opacity: 0.5 } : {}}
-<<<<<<< HEAD
-      animate = {
-  animated ? { opacity[0.5, 1,
-  0.5] 
-
-} : {}}
-      transition = {
-  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-        duration: 1.5,
-        repeat: Infinity,
-  ease: 'easeInOut'
-      
-
-}};
-    />;
-  )};
-=======
       animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
@@ -239,14 +183,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
     {/* Rows */}
     {Array.from({ length: anyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)           => (
       <div key={rowIndex} className="flex space-x-4">
-<<<<<<< HEAD
-        {Array.from({ length: anyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)           => (
-          <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />
-        ))}
-      </div>
-    ))}
-  </div>
-=======;
         {Array.from({ length: anyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)          => (;
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
         ))};
@@ -260,14 +196,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   items = 5,
   className
 }) => (
-<<<<<<< HEAD
-  <div className = {
-  cn('space-y-4',
-  className)
-
-}>
-    {Array.from({ length: anyanyanyanyanyanyanyanyanyitems }).map((_, index)           => (
-=======
   <div className = {
   cn('space-y-4',
   className)
@@ -312,13 +240,6 @@ export const GridSkeleton: React.FC<{
 
 } style={{
     gridTemplateColumns: anyanyanyanyanyanyanyanyany`repeat(${columns}, minmax(0, 1fr))`
-<<<<<<< HEAD
-  }}>
-    {Array.from({ length: rows * columns }).map((_, index)           => (
-      <Skeleton key={index} variant="card" height={itemHeight} />
-    ))}
-  </div>;
-=======;
   }}>;
     {Array.from({ length: anyanyanyanyanyanyanyanyanyrows * columns }).map((_, index)          => (;
       <Skeleton key={index} variant="card" height={itemHeight} />;
