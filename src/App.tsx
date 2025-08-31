@@ -288,9 +288,9 @@ function App() {
                     <Route path="/services/edge-computing-solutions" element={<EdgeComputingSolutions />} />
 
                     {/* New Innovative AI Services 2025 - From remote version */}
-                    <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
-                    <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
-                    <Route path="/services/quantum-edge-computing-solutions" element={<QuantumEdgeComputingSolutions />} />
+                    <Route path="/services/ai-autonomous-business-operations-platform" element={<ModernLayout><AIAutonomousBusinessOperationsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-customer-experience-analytics-platform" element={<ModernLayout><AICustomerExperienceAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/quantum-edge-computing-solutions" element={<ModernLayout><QuantumEdgeComputingSolutions /></ModernLayout>} />
 
                     {/* Additional service routes from remote branch */}
                     <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />

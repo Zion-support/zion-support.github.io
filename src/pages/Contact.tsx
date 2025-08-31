@@ -69,19 +69,19 @@ const Contact = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
+      details: '+1 302 464 0950',
       description: 'Available Mon-Fri, 9AM-6PM EST'
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
-      details: 'hello@ziontechgroup.com',
+      details: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: 'Office',
-      details: 'San Francisco, CA',
+      details: '364 E Main St STE 1008 Middletown DE 19709',
       description: 'Visit us anytime during business hours'
     }
   ];
