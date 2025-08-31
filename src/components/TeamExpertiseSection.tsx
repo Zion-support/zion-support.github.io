@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Award,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Award,
   Users,
   Brain,
   Shield,
@@ -11,7 +10,9 @@ import {
   CheckCircle,
   Globe,
   Rocket
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       projects: '50+';
     };
   ];
@@ -63,7 +64,9 @@ const coreExpertise = [
   "IoT & Edge Computing",;
   "Mobile & Web Development";
 ];
-export function TeamExpertiseSection() {
+
+export function TeamExpertiseSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -88,6 +91,8 @@ export function TeamExpertiseSection() {
             in cutting-edge technologies and proven methodologies.
           </p>
         </motion.div>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
   y: 20 
@@ -100,9 +105,11 @@ export function TeamExpertiseSection() {
   { duration: 0.6,
   delay: 0.1 
 }}
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
-          {stats.map((stat, index)  => {;
+          {stats.map((stat, index)                => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = stat.icon;
             return (
               <div key = {stat.label} className="text-center">
@@ -115,8 +122,10 @@ export function TeamExpertiseSection() {
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {teamExpertise.map((expertise, index) => (
+=======
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {teamExpertise.map((expertise, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={expertise.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
@@ -140,8 +149,8 @@ export function TeamExpertiseSection() {
             )})}
         </motion.div>
         {/* Expertise Grid */}
-        <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
-          {expertise.map((item, index)  => {;
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">;
+          {expertise.map((item, index)                => {;
             const IconComponent = item.icon;
             return (
               <motion.div

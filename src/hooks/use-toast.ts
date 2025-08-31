@@ -1,12 +1,44 @@
-import React, { useState } from 'react';
-import { useState, useCallback } from 'react';
+import React, { useState } from 'react.ts';
+import { useState, useCallback              } from 'react.ts';
+
 interface Toast {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title?: string;
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
-  duration?: number}
-export function useToast(...args[]):  {
+duration?: number;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export function useToast(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [toasts, setToasts] = useState<any>([]);
   const toast = useCallback(({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;
     const id = Math.random().toString(36).substr(2, 9);
@@ -19,7 +51,9 @@ export function useToast(...args[]):  {
     }
     return id;
   }, []);
-  const dismiss = useCallback((id: string) => {;
+
+  const dismiss = useCallback((id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setToasts(prev => prev.filter(toast => toast.id !== id));
   }, []);
   const dismissAll = useCallback(() => {;

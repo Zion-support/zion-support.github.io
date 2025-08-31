@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Atom, 
   Zap, 
@@ -19,6 +20,7 @@ import {
   LineChart,
   Activity,
   Target,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Lightbulb,
   Search,
   Filter,
@@ -46,8 +48,11 @@ import {
   Bluetooth,
   Radio
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
-export default function QuantumComputingSolutions() {
+import { SEO              } from '../../components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function QuantumComputingSolutions(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Atom,
@@ -223,6 +228,7 @@ export default function QuantumComputingSolutions() {
               1000x faster than classical computers. From AI enhancement to cryptography, unlock new possibilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -258,8 +264,11 @@ export default function QuantumComputingSolutions() {
               Cutting-edge quantum technology that revolutionizes computational capabilities.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -293,8 +302,10 @@ export default function QuantumComputingSolutions() {
               Comprehensive quantum computing solutions for enterprise applications.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -340,8 +351,11 @@ export default function QuantumComputingSolutions() {
               Transform your industry with quantum computing solutions.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -382,8 +396,10 @@ export default function QuantumComputingSolutions() {
               Access to quantum computing power at competitive prices. All plans include a 30-day free trial.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -450,8 +466,10 @@ export default function QuantumComputingSolutions() {
               Transform your business with the power of quantum computing.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

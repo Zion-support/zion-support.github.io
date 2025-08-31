@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Brain,
   Zap,
   Shield,
   TrendingUp,
@@ -13,25 +12,58 @@ import {
   Star,
   CheckCircle,
   Rocket
-import { Link } from 'react-router-dom';
+import { Link               } from 'react-router-dom.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AIService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   description: string;
   category: string;
   features: string[];
-  pricing: {
+pricing: {;
     starter: number;
     professional: number;
     enterprise: number;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
   icon: React.ComponentType<any>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
-const AdvancedAIServicesHub: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [searchQuery, setSearchQuery] = useState<string>('');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
+
+const AdvancedAIServicesHub: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [searchQuery, setSearchQuery] = useState<any>('');
+  const [sortBy, setSortBy] = useState<any>('popularity');
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const aiServices: AIService[] = [
     {
       id: 'ai-project-management',
@@ -124,6 +156,8 @@ const AdvancedAIServicesHub: React.FC = () => {;
       default:
         return 0;
   });
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="container mx-auto px-4 py-16">
@@ -171,6 +205,9 @@ const AdvancedAIServicesHub: React.FC = () => {;
               />
               <Brain className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {/* Sort Options */}
             <select
               value={sortBy}
@@ -183,6 +220,8 @@ const AdvancedAIServicesHub: React.FC = () => {;
             </select>
           </div>
         </motion.div>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Category Filters */}
         <motion.div
           initial = {
@@ -224,10 +263,10 @@ const AdvancedAIServicesHub: React.FC = () => {;
   y: 0 
 }}
           transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8"
         >
           <AnimatePresence>
-            {sortedServices.map((service, index) => (
+            {sortedServices.map((service, index)               => (
               <motion.div
                 key={service.id}
                 initial = {

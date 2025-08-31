@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Shield,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Shield,
   Lock,
   CheckCircle,
   AlertTriangle,
@@ -11,7 +10,9 @@ import {
   Globe,
   Server,
   Eye
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       benefits['Firewall protection', 'IDS/IPS systems', 'DDoS mitigation', 'VPN solutions'];
     };
   ];
@@ -88,7 +89,9 @@ const complianceFeatures = [
     ];
   };
 ];
-export function SecurityComplianceSection() {
+
+export function SecurityComplianceSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -113,6 +116,8 @@ export function SecurityComplianceSection() {
             Your data and systems are protected by the highest security standards.
           </p>
         </motion.div>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
   y: 20 
@@ -125,9 +130,11 @@ export function SecurityComplianceSection() {
   { duration: 0.6,
   delay: 0.1 
 }}
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
-          {securityMetrics.map((metric, index)  => {;
+          {securityMetrics.map((metric, index)                => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = metric.icon;
             return (
               <div key = {metric.label} className="text-center">
@@ -135,8 +142,8 @@ export function SecurityComplianceSection() {
                   <div className="p-3 bg-blue-600 rounded-full">
                     <IconComponent className="h-8 w-8 text-white" />
         {/* Security Certifications */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {securityFeatures.map((feature, index) => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {securityFeatures.map((feature, index)               => (
             <motion.div
               key={feature.title}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
@@ -173,8 +180,8 @@ export function SecurityComplianceSection() {
             )})}
         </motion.div>
         {/* Security Features Grid */}
-        <div className="grid md: grid-cols-2 gap-8 mb-16">;
-          {securityFeatures.map((feature, index)  => {;
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16">;
+          {securityFeatures.map((feature, index)                => {;
             const IconComponent = feature.icon;
             return (
               <motion.div
@@ -223,8 +230,10 @@ export function SecurityComplianceSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Comprehensive Security Features
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {complianceFeatures.map((category, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {complianceFeatures.map((category, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={category.category} className="bg-slate-800 border border-slate-700 rounded-xl p-6">
                 <h4 className="text-xl font-bold text-white mb-4 text-center">
                   {category.category}
@@ -258,8 +267,8 @@ export function SecurityComplianceSection() {
           <h3 className="text-2xl font-bold text-center mb-8">
             Compliance & Certifications
           </h3>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-6">;
-            {complianceFrameworks.map((framework, index)  => {;
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">;
+            {complianceFrameworks.map((framework, index)                => {;
               const IconComponent = framework.icon;
               return (
                 <div key = {framework.name} className="bg-gray-800 rounded-xl p-6 text-center">

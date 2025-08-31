@@ -1,4 +1,19 @@
 export interface IndustrySolution {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -9,11 +24,24 @@ export interface IndustrySolution {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
+pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+custom: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -455,7 +483,8 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     certifications['ISO 27001', 'SOC 2 Type II', 'Content Management']
   }
 ];
-export const getIndustrySolutionsByIndustry = (industry: string): IndustrySolution[] => {;
+export const getIndustrySolutionsByIndustry = (industry: anyanyanyanyanyanyanyanyanyanyanyanyanystring): IndustrySolution[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (industry === 'All') {;
     return SPECIALIZED_INDUSTRY_SOLUTIONS_2025;
   return SPECIALIZED_INDUSTRY_SOLUTIONS_2025.filter(solution => solution.industry === industry);

@@ -1,4 +1,6 @@
-import { ProductListing  } from '@/types/listings';
+import { ProductListing               } from '@/types/listings';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Emerging Technology Services 2030 - Zion Tech Group
 // Next-generation technology solutions for the future
 export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [

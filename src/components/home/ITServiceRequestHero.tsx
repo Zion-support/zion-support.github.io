@@ -1,15 +1,19 @@
-import React, { useState } from 'react.ts';
-import { GradientHeading  } from '@/components/GradientHeading';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { useNavigate  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
-import { Clock, Globe, Shield, Zap, MapPin, CheckCircle  } from 'lucide-react';
-export function ITServiceRequestHero(...args[]):  {
+import React, { useState               } from 'react.ts';
+import { GradientHeading                } from '@/components/GradientHeading';
+import { Button                } from '@/components/ui/button';
+import { Input                } from '@/components/ui/input';
+import { useNavigate                } from 'react-router-dom.ts';
+import { motion                } from 'framer-motion.ts';
+import { Clock, Globe, Shield, Zap, MapPin, CheckCircle                } from 'lucide-react.ts';
+
+export function ITServiceRequestHero(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [location, setLocation] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
-  const handleSubmit = async (e: React.FormEvent)  => {;
+
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)                => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     if (location.trim()) {
       setIsSubmitting(true);

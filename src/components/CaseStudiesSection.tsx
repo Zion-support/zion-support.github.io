@@ -1,15 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  TrendingUp,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { TrendingUp,
   Users,
   DollarSign,
   Clock,
   ArrowRight,
   Star,
   CheckCircle
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       color: 'from-purple-500 to-pink-500';
     };
   ];
@@ -60,7 +61,10 @@ const caseStudies = [
     color: "from-green-500 to-emerald-500";
   };
 ];
-export function CaseStudiesSection() {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export function CaseStudiesSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -85,9 +89,11 @@ export function CaseStudiesSection() {
             remarkable results through innovative technology solutions.
           </p>
         </motion.div>
-        <div className="grid lg: grid-cols-3 gap-8 mb-12">
-          {caseStudies.map((study, index)  => (
+
+        <div className="grid lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 mb-12">
+          {caseStudies.map((study, index)                => (
             <motion.div
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               key={study.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial = {

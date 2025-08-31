@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain,
   Zap,
   Shield,
   CheckCircle,
@@ -265,7 +264,10 @@ import {
   AVLTree,
   SplayTree,
   Treap,
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const blockchainSolutions = [
   {
     id: 1,
@@ -483,13 +485,17 @@ const blockchainBenefits = [
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"];
   };
 ];
-export default function BlockchainEnterpriseSolutions(...args[]):  {
+
+export default function BlockchainEnterpriseSolutions(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
   const categories = ['All', 'Platform', 'Supply Chain', 'Financial', 'Identity', 'Smart Contracts', 'Integration'];
   const filteredSolutions = selectedCategory === 'All'
-    ? blockchainSolutions
-    : blockchainSolutions.filter(solution => solution.category === selectedCategory);
+    ? blockchainSolutions: anyanyanyanyanyanyanyanyanyanyanyanyanyblockchainSolutions.filter(solution              => solution.category === selectedCategory);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -571,8 +577,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               Understanding the fundamental advantages that make blockchain essential for enterprises
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {blockchainBenefits.map((benefit, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {blockchainBenefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={benefit.title}
                 initial = {
@@ -594,8 +602,8 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4 text-center">{benefit.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
                 <div className="space-y-2">
-                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
-                  {benefit.examples.map((example, exampleIndex)  => (
+                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                  {benefit.examples.map((example, exampleIndex)               => (
                     <div key={exampleIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                       <span className="text-zion-slate-light text-sm">{example}</span>
@@ -626,8 +634,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               Comprehensive support for leading blockchain enterprise technologies
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {blockchainTechnologies.map((technology, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {blockchainTechnologies.map((technology, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={technology.name}
                 initial = {
@@ -682,8 +692,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               A proven methodology that ensures successful blockchain enterprise implementation
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {processSteps.map((step, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={step.step}
                 initial = {
@@ -751,8 +763,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               </button>
             ))}
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredSolutions.map((solution, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredSolutions.map((solution, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={solution.id}
                 initial = {
@@ -828,8 +842,10 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               Organizations that have transformed their operations with blockchain enterprise solutions
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {successStories.map((story, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {successStories.map((story, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={story.id}
                 initial = {

@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import React, { useState, useEffect              } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Brain, 
   Cpu, 
   Atom, 
@@ -27,10 +28,13 @@ import { Brain,
   Pause,
   RotateCcw
 } from 'lucide-react';
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
-const EmergingTechShowcase2025: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedService, setSelectedService] = useState<string | null>(null);
+import { EMERGING_TECH_SERVICES_2025              } from '../data/emergingTechServices2025';
+
+const EmergingTechShowcase2025: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedService, setSelectedService] = useState<any>(null);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [autoPlay, setAutoPlay] = useState(true);
   const [currentSlide, setCurrentSlide] = useState(0);
   const categories = [
@@ -48,6 +52,8 @@ const EmergingTechShowcase2025: React.FC = () => {;
     { id: 'Nanotechnology', name: 'Nanotechnology', icon: Microscope, color: 'from-amber-500 to-yellow-600' },;
     { id: 'Advanced Robotics', name: 'Robotics', icon: Bot, color: 'from-slate-500 to-gray-600' };
   ];
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const filteredServices = selectedCategory === 'all';
     ? EMERGING_TECH_SERVICES_2025;
     : EMERGING_TECH_SERVICES_2025.filter(service => service.category === selectedCategory);
@@ -58,11 +64,17 @@ const EmergingTechShowcase2025: React.FC = () => {;
       }, 5000);
       return () => clearInterval(interval);
   }, [autoPlay, filteredServices.length]);
-  const getCategoryIcon = (category: string) => {;
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     const categoryData = categories.find(cat => cat.id === category);
     return categoryData ? categoryData.icon : Globe};
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 initial = {

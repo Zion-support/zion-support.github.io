@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Rocket,
   Zap,
   Cpu,
@@ -40,6 +39,7 @@ import {
   Globe2,
   Bot,
   Code,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Server,
   Chip,
   Wifi,
@@ -49,8 +49,11 @@ import {
   Target as TargetIcon,
   TrendingUp as TrendingUpIcon
 } from 'lucide-react';
-import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
-export default function RevolutionaryServices2030() {
+import { allRevolutionaryServices2030              } from '../data/revolutionaryServices2030';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function RevolutionaryServices2030(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -88,10 +91,14 @@ export default function RevolutionaryServices2030() {
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
     return categoryMatch && priceMatch;
   });
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Service Card Component
-const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
+const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyanyanyanyany; type: 'microSaas' | 'itService' | 'aiService' })              => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const getIcon = (category: string) => {
+
+  const getIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (category.includes('AI') || category.includes('Neural')) return Brain;
     if (category.includes('Quantum')) return Atom;
     if (category.includes('Space')) return Satellite;
@@ -169,7 +176,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
               Key Features
             </h4>
             <div className="grid grid-cols-1 gap-2">
-              {service.features.slice(0, 3).map((feature: string, index: number) => (
+              {service.features.slice(0, 3).map((feature: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                 <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                   <span>{feature}</span>
@@ -192,7 +199,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">All Features</h4>
                     <div className="grid grid-cols-1 gap-2">
-                      {service.features.map((feature: string, index: number) => (
+                      {service.features.map((feature: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
@@ -204,7 +211,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">Benefits</h4>
                     <div className="grid grid-cols-1 gap-2">
-                      {service.benefits.map((benefit: string, index: number) => (
+                      {service.benefits.map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
@@ -216,7 +223,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">Target Audience</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.targetAudience.map((audience: string, index: number) => (
+                      {service.targetAudience.map((audience: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                         <span key={index} className="px-2 py-1 bg-slate-600 text-slate-300 text-xs rounded-full">
                           {audience}
                         </span>
@@ -254,8 +261,10 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
   );
 };
 // Main Component
-export default function RevolutionaryServices2030() {
-  const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'>('all');
+export default function RevolutionaryServices2030(...args: any[]): any {
+  const [activeTab, setActiveTab] = useState<any>('all');
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const tabs = [
     { id: 'all', label: 'All Services', count: allRevolutionaryServices2030.microSaas.length + allRevolutionaryServices2030.itServices.length + allRevolutionaryServices2030.aiServices.length },
     { id: 'microSaas', label: 'Micro SAAS', count: allRevolutionaryServices2030.microSaas.length },
@@ -265,16 +274,16 @@ export default function RevolutionaryServices2030() {
   const getFilteredServices = () => {
     switch (activeTab) {
       case 'microSaas':
-        return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const }));
+        return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'microSaas' as const }));
       case 'itServices':
-        return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));
+        return allRevolutionaryServices2030.itServices.map(service              => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'itService' as const }));
       case 'aiServices':
-        return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
+        return allRevolutionaryServices2030.aiServices.map(service              => ({ service, type: 'aiService' as const }));
       default:
         return [
-          ...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const })),
-          ...allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const })),
-          ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }))
+          ...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'microSaas' as const })),
+          ...allRevolutionaryServices2030.itServices.map(service              => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'itService' as const })),
+          ...allRevolutionaryServices2030.aiServices.map(service              => ({ service, type: 'aiService' as const }))
         ];
     }
   };
@@ -312,13 +321,13 @@ export default function RevolutionaryServices2030() {
               Transform your business with solutions that were once science fiction.
             </p>
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               {[
                 { label: 'Total Services', value: '11', icon: Zap },
                 { label: 'Innovation Level', value: 'Revolutionary', icon: Star },
                 { label: 'Market Size', value: '$100B+', icon: TrendingUp },
                 { label: 'Success Rate', value: '99.9%', icon: Target }
-              ].map((stat, index) => (
+              ].map((stat, index)              => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -370,6 +379,7 @@ export default function RevolutionaryServices2030() {
         </div>
       </div>
       {/* Services Section */}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <div className="relative z-10 pb-20">
         <div className="container mx-auto px-4">
           {/* Tab Navigation */}
@@ -377,7 +387,7 @@ export default function RevolutionaryServices2030() {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as )}
                 className={`px-6 py-3 mx-2 mb-2 rounded-xl font-semibold transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
@@ -393,9 +403,9 @@ export default function RevolutionaryServices2030() {
           </div>
 ;
           {/* Services Grid */};
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
-              {sortedServices.map((service, index) => {;
+              {sortedServices.map((service, index)              => {;
                 const IconComponent = getServiceIcon(service.category);
                 const colorClass = getServiceColor(service.category);
                 return (
@@ -434,30 +444,30 @@ export default function RevolutionaryServices2030() {
                     className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                       activeCategory === 'all'
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                        : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
+                        : 'bg-white/10 backdrop-blur-sm text-white hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
                     }`}
                   >
                     All Services ({REVOLUTIONARY_SERVICES_2030.length})
                   </button>
-                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category)  => (
+                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category)               => (
                     <button
                       key={category}
                       onClick={() => setActiveCategory(category)}
                       className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                         activeCategory === category
                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                          : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
+                          : 'bg-white/10 backdrop-blur-sm text-white hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
                       }`}
                     >
-                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s  => s.category === category).length})
+                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s               => s.category === category).length})
                     </button>
                   ))}
                 </div>
               </div>
             </div>
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service)               => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -531,6 +541,7 @@ export default function RevolutionaryServices2030() {
                         key={index}
                         className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
                       >
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
                   <div className="space-y-4">

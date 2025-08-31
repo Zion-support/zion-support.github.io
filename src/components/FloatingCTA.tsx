@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  MessageCircle,
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { MessageCircle,
   X,
   ArrowRight,
   Phone,
@@ -96,7 +95,9 @@ import {
   MicOff,
   Volume2,
   VolumeX
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const FloatingCTA: React.FC = (): JSX.Element => {;
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
@@ -233,6 +234,8 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             onClick={() => setIsExpanded(false)};
           />;
         )};

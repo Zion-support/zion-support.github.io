@@ -1,10 +1,14 @@
-import React from 'react';
-import { cn } from '@/lib/utils';
-interface BadgeProps {
+import React from 'react.ts';
+import { cn               } from '@/lib/utils';
+
+interface BadgeProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   variant?: 'default' | 'secondary' | 'destructive' | 'outline' | 'success' | 'warning';
   size?: 'sm' | 'md' | 'lg';
   children: React.ReactNode;
   className?: string;
+
 }
 const Badge = React.forwardRef<HTMLDivElement, BadgeProps>(
   ({ variant = 'default', size = 'md', children, className, ...props }, ref) => {

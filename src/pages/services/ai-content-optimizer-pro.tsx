@@ -1,6 +1,7 @@
-import React from 'react';
-import { SEO } from "../../components/SEO";
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { SEO              } from '../../components/SEO';
+import { motion              } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   CheckCircle, 
   TrendingUp, 
@@ -22,7 +23,9 @@ import {
   PenTool,
   Eye,
   Share2
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIContentOptimizerPro: React.FC = (): JSX.Element => {
   const contactInfo = {
   phone: '+1 302 464 0950',
@@ -253,8 +256,10 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 Our platform combines cutting-edge AI with industry-leading content optimization techniques to deliver exceptional results.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -311,8 +316,10 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 See how different businesses are achieving remarkable results with our AI Content Optimizer Pro platform.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-              {useCases.map((useCase, index)  => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -366,8 +373,10 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 Choose the plan that best fits your content optimization needs. All plans include a 14-day free trial.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -467,8 +476,10 @@ const AIContentOptimizerPro: React.FC = (): JSX.Element => {
                 Don't just take our word for it. Here's what content creators and marketers are saying about our platform.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index)  => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {testimonials.map((testimonial, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

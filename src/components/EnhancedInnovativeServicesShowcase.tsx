@@ -1,5 +1,7 @@
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import { Link                } from 'react-router-dom.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const EnhancedInnovativeServicesShowcase = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 to-slate-800">

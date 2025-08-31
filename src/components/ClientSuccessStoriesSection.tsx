@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Star,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Star,
   Quote,
   TrendingUp,
   Users,
@@ -9,7 +8,9 @@ import {
   CheckCircle,
   ArrowRight,
   Heart
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       metrics['8 Week Launch', 'MVP Ready', 'Scalable Architecture'];
     };
   ];
@@ -72,7 +73,10 @@ const successStories = [
     image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400";
   };
 ];
-export function ClientSuccessStoriesSection() {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+export function ClientSuccessStoriesSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -99,6 +103,7 @@ export function ClientSuccessStoriesSection() {
         </motion.div>
         {/* Success Metrics */}
         <motion.div
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial = {
   { opacity: 0,
   y: 20 
@@ -111,9 +116,11 @@ export function ClientSuccessStoriesSection() {
   { duration: 0.6,
   delay: 0.1 
 }}
-          className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
         >;
-          {successMetrics.map((metric, index)  => {;
+          {successMetrics.map((metric, index)                => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const IconComponent = metric.icon;
             return (
               <div key = {metric.label} className="text-center">
@@ -130,8 +137,8 @@ export function ClientSuccessStoriesSection() {
             )})}
         </motion.div>
         {/* Testimonials Grid */}
-        <div className="grid md: grid-cols-2 gap-8 mb-12">
-          {testimonials.map((testimonial, index)  => (
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-12">
+          {testimonials.map((testimonial, index)                => (
             <motion.div
               key={story.id}
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"

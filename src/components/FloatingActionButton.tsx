@@ -1,7 +1,6 @@
-import React, { useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Plus, 
+import React, { useState, useCallback, useEffect               } from 'react.ts';
+import { Plus, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   MessageCircle, 
   Phone, 
   Mail, 
@@ -14,27 +13,58 @@ import {
   Heart,
   Share2,
   Download,
-  Bookmark,
-  Calendar,
-  MapPin
-} from 'lucide-react';
+  Printer
+ 
+} from 'lucide-react.ts';
 
 interface FloatingAction {
-  id: string;
-  icon: React.ComponentType<any>;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
+  icon: React.ComponentType<{ size?: number; className?: string 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}>;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   label: string;
-  action: () => void;
+  action: ()               => void;
   color: string;
   priority?: 'high' | 'medium' | 'low';
 }
 
-interface FloatingActionButtonProps {
-  enabled: boolean;
+interface FloatingActionButtonProps extends React.PropsWithChildren<{}> {
+
+  actions?: FloatingAction[];
   position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   theme?: 'light' | 'dark' | 'auto';
-  showLabels?: boolean;
-  actions?: FloatingAction[];
-  onAction?: (actionId: string) => void;
+  showScrollToTop?: boolean;
+  showContactActions?: boolean;
+  showUtilityActions?: boolean;
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
@@ -46,63 +76,205 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({
   onAction
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState<any>('light');
 
-  // Default actions if none provided
-  const defaultActions: FloatingAction[] = [
-    {
-      id: 'contact',
-      icon: MessageCircle,
-      label: 'Contact Us',
-      action: () => window.location.href = '/contact',
-      color: 'from-blue-500 to-cyan-500',
-      priority: 'high'
-    },
-    {
-      id: 'phone',
-      icon: Phone,
-      label: 'Call Now',
-      action: () => window.location.href = 'tel:+13024640950',
-      color: 'from-green-500 to-emerald-500',
-      priority: 'high'
-    },
-    {
-      id: 'email',
-      icon: Mail,
-      label: 'Send Email',
-      action: () => window.location.href = 'mailto:kleber@ziontechgroup.com',
-      color: 'from-purple-500 to-pink-500',
-      priority: 'medium'
-    },
-    {
-      id: 'help',
-      icon: HelpCircle,
-      label: 'Get Help',
-      action: () => window.location.href = '/support',
-      color: 'from-orange-500 to-red-500',
-      priority: 'medium'
-    },
-    {
-      id: 'services',
-      icon: Star,
-      label: 'Our Services',
-      action: () => window.location.href = '/services',
-      color: 'from-yellow-500 to-orange-500',
-      priority: 'low'
-    },
-    {
-      id: 'about',
-      icon: Heart,
-      label: 'About Us',
-      action: () => window.location.href = '/about',
-      color: 'from-pink-500 to-rose-500',
-      priority: 'low'
+  // Detect theme
+  useEffect(() => {
+    if (theme === 'auto') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      setCurrentTheme(mediaQuery.matches ? 'dark' : 'light');
+      
+      const handleChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyMediaQueryListEvent)               => {
+        setCurrentTheme(e.matches ? 'dark' : 'light');
+      };
+      
+      mediaQuery.addEventListener('change', handleChange);
+      return () => mediaQuery.removeEventListener('change', handleChange);
+    } else {
+      setCurrentTheme(theme);
     }
+  }, [theme]);
+
+  // Show scroll to top button when scrolled down
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 300);
+    };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Default actions
+  const defaultActions: FloatingAction[] = [
+    // Contact actions
+    ...(showContactActions ? [
+      {
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'contact',
+        icon: MessageCircle,
+        label: 'Contact Us',
+        action: ()               => {
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: anyanyanyanyanyanyanyanyanyanyanyanyanyany'smooth' });
+          }
+        },
+        color: 'bg-blue-500 hover:bg-blue-600',
+        priority: 'high' as const
+      },
+      {
+        id: 'phone',
+        icon: Phone,
+        label: 'Call Now',
+        action: ()               => {
+          window.location.href = 'tel: anyanyanyanyanyanyanyanyanyanyanyanyanyany+1234567890';
+        },
+        color: 'bg-green-500 hover:bg-green-600',
+        priority: 'high' as const
+      },
+      {
+        id: 'email',
+        icon: Mail,
+        label: 'Send Email',
+        action: ()               => {
+          window.location.href = 'mailto: anyanyanyanyanyanyanyanyanyanyanyanyanyanyinfo@ziontechgroup.com';
+        },
+        color: 'bg-purple-500 hover:bg-purple-600',
+        priority: 'medium' as const
+      },
+      {
+        id: 'location',
+        icon: MapPin,
+        label: 'Get Directions',
+        action: ()               => {
+          window.open('https://maps.google.com/?q=Zion+Tech+Group', '_blank');
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-red-500 hover:bg-red-600',
+        priority: 'medium' as const
+      }
+    ] : []),
+    
+    // Utility actions
+    ...(showUtilityActions ? [
+      {
+        id: 'bookmark',
+        icon: Bookmark,
+        label: 'Bookmark Page',
+        action: ()               => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            });
+          } else {
+            // Fallback for browsers without share API
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+              // Show success message
+              showNotification('Page URL copied to clipboard!');
+            });
+          }
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-yellow-500 hover:bg-yellow-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'share',
+        icon: Share2,
+        label: 'Share Page',
+        action: ()               => {
+          if (navigator.share) {
+            navigator.share({
+              title: document.title,
+              url: window.location.href
+            });
+          } else {
+            // Fallback for browsers without share API
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+              showNotification('Page URL copied to clipboard!');
+            });
+          }
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-indigo-500 hover:bg-indigo-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'download',
+        icon: Download,
+        label: 'Download Brochure',
+        action: ()               => {
+          // Create a temporary link to trigger download
+          const link = document.createElement('a');
+          link.href = '/brochure.pdf'; // Adjust path as needed
+          link.download = 'Zion-Tech-Group-Brochure.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        },
+        color: anyanyanyanyanyanyanyanyanyanyanyanyanyany'bg-teal-500 hover:bg-teal-600',
+        priority: 'low' as const
+      },
+      {
+        id: 'print',
+        icon: Printer,
+        label: 'Print Page',
+        action: ()               => {
+          window.print();
+        },
+        color: 'bg-gray-500 hover:bg-gray-600',
+        priority: 'low' as const
+      }
+    ] : []),
+    
+    // Custom actions
+    ...actions
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   const finalActions = actions.length > 0 ? actions : defaultActions;
 
-  // Position classes
+  // Toggle expansion
+  const toggleExpansion = useCallback(() => {
+    setIsExpanded(prev => !prev);
+  }, []);
+
+  // Scroll to top
+  const scrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
+  // Show notification
+  const showNotification = useCallback((message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `
+      fixed top-4 right-4 z-50 px-4 py-2 bg-green-500 text-white rounded-lg shadow-lg
+      transform translate-x-full transition-transform duration-300 ease-in-out
+    `;
+    notification.textContent = message;
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+      notification.classList.remove('translate-x-full');
+    }, 100);
+    
+    // Remove after 3 seconds
+    setTimeout(() => {
+      notification.classList.add('translate-x-full');
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 300);
+    }, 3000);
+  }, []);
+
+  // Get position classes
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const getPositionClasses = () => {
     switch (position) {
       case 'bottom-left':

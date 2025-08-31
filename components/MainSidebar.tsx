@@ -1,6 +1,7 @@
-import React, { useState } from 'react.ts';
+import React, { useState              } from 'react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import Link from 'next/link.ts';
-import { useRouter  } from 'next/router.ts';
+import { useRouter               } from 'next/router.ts';
 import { Home, 
   Briefcase, 
   Users, 
@@ -64,18 +65,22 @@ import { Home,
   Leaf,
   Sun,
   Wind
- } from 'lucide-react';
+  
+} from 'lucide-react.ts';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
 
-  isOpen: boolean;
-  onClose: ()  => void}
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()               => void}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<any>([]);
 
-  const toggleSection = (section: string) => {;
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedSections(prev => ;
       prev.includes(section) ;
         ? prev.filter(s => s !== section);
@@ -83,7 +88,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     );
   };
 
-  const isActive = (path: string) => router.pathname === path;
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const navigation = {
     main: [
@@ -149,7 +155,8 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code, color: 'text-gray-400' },
   ];
 
-  const renderNavSection = (title: string, items: any[], sectionKey: string) => (
+  const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div key={sectionKey} className="mb-6">
       <button
         onClick={() => toggleSection(sectionKey)}

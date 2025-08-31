@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, TrendingUp, Sparkles, Bot, Shield, FileText, Users, BarChart3, Cloud, ShieldCheck, Star, Phone, Mail, MapPin, Zap, Rocket, Car, Dna, Robot, Eye, Atom, Microscope, City, RefreshCw, Globe2              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+import { zionCuttingEdgeServices2029              } from '../../data/zion-2029-cutting-edge-services';
+import { zionEmergingTechServices2029              } from '../../data/zion-2029-emerging-tech-services';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
+  Zap,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Shield,
   Cloud,
   Cpu,
@@ -39,36 +43,15 @@ import {
   Target,
   TrendingUp,
   Award,
-  Lightbulb,
-  Workflow,
-  Bot,
-  Sparkles,
-  Palette,
-  FileText,
-  Video,
-  TestTube,
-  GraduationCap,
-  ShoppingCart,
-  HelpCircle,
-  Activity,
-  Link as LinkIcon,
-  Layers,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon,
-  Shield as ShieldIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Rocket as RocketIcon,
-  Leaf as LeafIcon,
-  Search,
-  Filter
+  TrendingUp
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 } from 'lucide-react';
 
-export default function ComprehensiveServices() {
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [priceRange, setPriceRange] = useState('all');
+export default function ComprehensiveServices(...args: any[]): any {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [sortBy, setSortBy] = useState<any>('popular');
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   // Comprehensive service categories with real market prices
   const serviceCategories = [
@@ -397,30 +380,54 @@ export default function ComprehensiveServices() {
       {/* Search and Filters */}
       <section className="py-8 bg-slate-800/30">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-center">
-            {/* Search */}
-            <div className="relative lg:col-span-2">
-              <input
-                type="text"
-                placeholder="Search services..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              />
-              <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)              => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center"
+
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <stat.icon className="w-8 h-8 text-cyan-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-cyan-400 font-semibold">{stat.label}</div>
+              </motion.div>
+            ))}
+=======
+      {/* Search and Filter Section */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            <div className="flex-1 max-w-md">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400/50"
+                />
+              </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
 
             {/* Category Filter */}
             <div className="relative">
               <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <select
-                value={activeCategory}
-                onChange={(e) => setActiveCategory(e.target.value)}
-                className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 appearance-none cursor-pointer"
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400/50"
               >
-                <option value="all">All Categories</option>
-                {serviceCategories.map((category) => (
-                  <option key={category.id} value={category.id}>{category.name}</option>
+                {categories.map(category              => (
+                  <option key={category} value={category} className="bg-slate-800 text-white">
+                    {category === 'all' ? 'All Categories' : category}
+                  </option>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 ))}
               </select>
             </div>
@@ -444,27 +451,37 @@ export default function ComprehensiveServices() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          {filteredServices.length === 0 ? (
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center py-20"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                {filteredServices.length} Revolutionary Services
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of cutting-edge technology solutions designed to transform industries and drive innovation
+            </p>
+          </motion.div>
+          
+          {sortedServices.length > 0 ? (
+            <motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
             >
-              <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
-              <p className="text-slate-300 mb-6">Try adjusting your search criteria or filters</p>
-              <button
-                onClick={() => {
-                  setSearchQuery('');
-                  setActiveCategory('all');
-                  setPriceRange('all');
-                }}
-                className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors duration-300"
-              >
-                Clear Filters
-              </button>
+              {sortedServices.map((service, index)              => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>
           ) : (
             <>

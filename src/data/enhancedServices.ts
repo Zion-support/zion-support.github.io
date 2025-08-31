@@ -1,4 +1,6 @@
-import { ProductListing  } from '@/types/listings';
+import { ProductListing               } from '@/types/listings';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Enhanced real micro SAAS services and solutions
 export const ENHANCED_SERVICES: ProductListing[] = [
   // AI & Machine Learning Services

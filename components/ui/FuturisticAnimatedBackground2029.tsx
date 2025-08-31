@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from 'react.ts';
 
-interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{}> {
+interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<{
+}> {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         this.color = `hsl(${Math.random() * 60 + 200}, 70%, 60%)`}
 ;
       update() {;

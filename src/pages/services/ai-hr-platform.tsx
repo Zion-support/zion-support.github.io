@@ -1,38 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Users,
-  Brain,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Clock,
-  BarChart3,
-  Shield,
-  Cloud,
-  Cpu,
-  Database,
-  Network,
-  TrendingUp,
-  Target,
-  Rocket,
-  Star,
-  Award,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  UserCheck,
-  FileText,
-  Calendar,
-  MessageCircle,
-  Search,
-  Filter,
-  PieChart
-} from 'lucide-react';
-
-export default function AIHRPlatform() {
+import React from 'react.ts';
+import SEO from '../../components/SEO';
+import { motion              } from 'framer-motion.ts';
+import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
@@ -169,37 +139,138 @@ export default function AIHRPlatform() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-                <Users className="w-4 h-4 mr-2" />
-                AI-Powered HR Platform
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI HR Platform
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your human resources with intelligent automation and AI-powered insights. 
-                Our comprehensive HR platform streamlines recruitment, enhances employee experience, 
-                and drives organizational success.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/request-quote"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  Get Started
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Link>
-                <button className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-gray-500 transition-all duration-300">
-                  Watch Demo
-                </button>
-              </div>
-            </motion.div>
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-full border border-blue-400/30 mb-6">
+              <Users className="w-5 h-5 text-blue-400 mr-2" />
+              <span className="text-blue-300 font-medium">AI HR Platform</span>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI HR
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-400">
+                Platform
+              </span>
+            </h1>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Revolutionize your HR operations with AI-powered recruitment, talent management, and performance analytics.
+              Streamline processes and create exceptional employee experiences.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-indigo-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
+                Get Started
+              </button>
+              <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
+                Schedule Demo
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">
+              AI HR Platform Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Comprehensive HR solutions powered by artificial intelligence
+            </p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
+              <motion.div
+                key={feature.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 hover:scale-105"
+
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           </div>
         </div>
       </section>
@@ -222,8 +293,9 @@ export default function AIHRPlatform() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {modules.map((module, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

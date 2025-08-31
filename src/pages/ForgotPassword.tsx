@@ -1,6 +1,7 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState              } from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Mail, 
   ArrowLeft, 
   CheckCircle, 
@@ -13,7 +14,9 @@ import { Mail,
   Rocket,
   ArrowRight,
   RefreshCw
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     setIsLoading(true);
     setError('');
@@ -25,6 +28,8 @@ import { Mail,
       setError('Failed to send verification code. Please try again.')} finally {
       setIsLoading(false)}
   };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     setIsLoading(true);
     setError('');
@@ -36,6 +41,8 @@ import { Mail,
       setError('Invalid verification code. Please try again.')} finally {
       setIsLoading(false)}
   };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return}
     if (newPassword !== confirmPassword) {
       setError('Passwords do not match');
@@ -51,6 +58,8 @@ import { Mail,
       setError('Failed to reset password. Please try again.')} finally {;
       setIsLoading(false)};
   };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       description: 'Enhanced security with verification codes';
     },;
     {;

@@ -9,6 +9,7 @@ import {
   Linkedin, 
   Twitter, 
   Facebook, 
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Instagram,
   Youtube,
   Github,
@@ -58,16 +59,55 @@ import {
   Award,
   Users,
   TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Heart,
+  Crown,
+  Sparkles,
+  Flame,
+  Sun,
+  Moon,
+  Infinity
+export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  Smartphone,
+  Monitor,
+  Server,
+  DollarSign,
+  Scale,
+  Leaf,
+  Factory,
+  Building,
   CheckCircle
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+=======
+  Car,
+  Atom
+              } from 'lucide-react.ts';
 
-  const footerSections = [
+      title: 'Comp',
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+      links: [
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'Digital Twin', href: '/services/digital-twin' },
+        { name: 'IoT Edge Computing', href: '/services/iot-edge' },
+        { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot' },
+        { name: 'Data Analytics', href: '/services/data-analytics' }
+      ]
+    },
     {
+      title: 'Innovation Hub',
+      icon: Star,
+=======
       title: 'AI & Analytics Services',
       icon: Brain,
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       color: 'from-purple-600 to-pink-600',
       links: [
         { name: 'AI Predictive Analytics Platform', href: '/services/ai-predictive-analytics-platform' },
@@ -163,6 +203,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
 
   // Create missing pages for broken links
   const createMissingPage = (name: string, href: string) => {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
@@ -274,6 +315,7 @@ export const EnhancedFuturisticFooter: React.FC = () => {
             Complete Service Portfolio
           </motion.h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {footerSections.map((section, index) => (
               <motion.div
                 key={section.title}

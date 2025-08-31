@@ -1,38 +1,94 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  AlertTriangle, 
-  RefreshCw, 
-  Home, 
-  ArrowLeft, 
-  Bug, 
-  FileText, 
-  MessageCircle,
-  X,
-  CheckCircle,
-  Info
-} from 'lucide-react';
-import { AnimatePresence } from 'framer-motion';
-
-interface Props {
-  children: ReactNode;
-  FallbackComponent?: React.ComponentType<{ error: Error; errorInfo: ErrorInfo; resetError: () => void }>;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   showDetails?: boolean;
   autoRecover?: boolean;
   maxRetries?: number;
 }
 
 interface State {
+
+
+
+
+
+
+
+
+
+
+
+
+
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   retryCount: number;
   isRecovering: boolean;
   showErrorDetails: boolean;
   errorId: string;
 }
 
+=======
+=======
+import { AlertTriangle, RefreshCw, Home, ArrowLeft  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'lucide-react.ts';
+
+interface Props extends React.PropsWithChildren<{}> {
+  children: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo)               => void;
+}
+
+interface State {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
@@ -67,6 +123,20 @@ export class ErrorBoundary extends Component<Props, State> {
       onError(error, errorInfo);
     }
 
+
+      // // // // // // // console.log('Error logged:', errorData);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+
+      // Example: Send to external service
+      // fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(errorData)
+      // });
+    } catch (logError) {
+      // // // // // // // console.error('Failed to log error:', logError);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
     // Auto-recovery logic
     if (autoRecover && retryCount < maxRetries) {
       this.setState(prev => ({ 
@@ -83,6 +153,7 @@ export class ErrorBoundary extends Component<Props, State> {
           isRecovering: false 
         });
       }, 2000 + (retryCount * 1000)); // Exponential backoff
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     }
 
     // Send error to analytics/monitoring service
@@ -121,6 +192,7 @@ export class ErrorBoundary extends Component<Props, State> {
   };
 
   private resetError = () => {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     this.setState({
       hasError: false,
       error: null,
@@ -131,6 +203,49 @@ export class ErrorBoundary extends Component<Props, State> {
     });
   };
 
+User Agent: ${navigator.userAgent}
+      `.trim();
+
+      navigator.clipboard.writeText(errorText).then(()               => {
+        // Show success feedback
+        const button = document.querySelector('[data-copy-button]') as HTMLButtonElement;
+        if (button) {
+          const originalText = button.innerHTML;
+          button.innerHTML = '<CheckCircle className="w-4 h-4" /> Copied!';
+          button.classList.add('text-green-600');
+          setTimeout(() => {
+            button.innerHTML = originalText;
+            button.classList.remove('text-green-600');
+          }, 2000);
+
+      }).catch(() => {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = errorText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+      });
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
+    try {
+      await navigator.clipboard.writeText(errorText);
+      // Show temporary success message
+      setTimeout(() => this.setState({ reportSent: false }), 2000);
+    } catch (err) {
+      console.error('Failed to copy error details:', err);
+    }
+  };
+
+  // Navigate back
+  private goBack = () => {
+    window.history.back();
+  };
+
+  // Navigate home
+=======
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   private goHome = () => {
     window.location.href = '/';
   };
@@ -390,6 +505,7 @@ export const useErrorHandler = () => {
   const [error, setError] = React.useState<Error | null>(null);
 
   const handleError = React.useCallback((error: Error) => {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     setError(error);
     console.error('Error caught by useErrorHandler:', error);
   }, []);
@@ -415,14 +531,27 @@ export const withErrorBoundary = <P extends object>(
   WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   return WrappedComponent;
 };
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
+    // // // // // // // console.error('Error caught by useErrorHandler:', error, errorInfo);
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+
+    // You can add custom error handling logic here
+    // For example, sending to an error reporting service
+
+    // Re-throw the error to trigger error boundaries
+    throw error;
+  }, []);
+}}}}}}}}}}}}}}}}
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Global error handler for unhandled errors
 if (typeof window !== 'undefined') {
   window.addEventListener('error', (event) => {
-    console.error('Unhandled error:', event.error);
+    console.error('Unhandled error: anyanyanyanyanyanyanyanyanyanyanyanyanyany', event.error);
   });
 
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection', (event)               => {
     console.error('Unhandled promise rejection:', event.reason);
   });
 }

@@ -1,4 +1,5 @@
 export type ServiceItem = {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   id: string;
   title: string;
   description: string;
@@ -11,6 +12,7 @@ export type ServiceItem = {
   ctaLabel: string;
   href: string;
   external?: boolean;
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   marketSize?: string;
   roi?: string;
   implementationTime?: string;

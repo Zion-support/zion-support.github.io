@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Leaf,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Leaf,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Zap,
   Shield,
   Globe,
@@ -26,7 +26,10 @@ import {
   BarChart3
 } from 'lucide-react';
 import SEO from '../../components/SEO';
-export default function GreenIT() {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function GreenIT(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Leaf,
@@ -179,8 +182,10 @@ export default function GreenIT() {
               environmental impact and improve operational efficiency.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {greenServices.map((service, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {greenServices.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -213,8 +218,10 @@ export default function GreenIT() {
               environmentally responsible IT solutions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {greenTechnologies.map((tech, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {greenTechnologies.map((tech, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -346,8 +353,10 @@ export default function GreenIT() {
               technology implementation and environmental impact reduction.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -395,8 +404,10 @@ export default function GreenIT() {
               infrastructure into a sustainable, energy-efficient ecosystem.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {solutions.map((solution, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -454,8 +465,10 @@ export default function GreenIT() {
               enabling sustainable operations and environmental responsibility.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -513,8 +526,10 @@ export default function GreenIT() {
               and drive measurable business and environmental outcomes.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -561,7 +576,9 @@ export default function GreenIT() {
               Our proven methodology ensures successful Green IT deployment and rapid sustainability impact.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 step: '01',
@@ -582,7 +599,9 @@ export default function GreenIT() {
                 step: '04',
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
-            ].map((phase, index) => (
+
+            ].map((phase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

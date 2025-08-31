@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -44,9 +44,13 @@ import { ArrowRight,
   SortDesc,
   X
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
-export default function RevolutionaryServicesShowcase2030(...args[]):  {
+import { SEO              } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030              } from '../data/revolutionaryServices2030';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('aiScore');
@@ -93,13 +97,18 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
-  const handleServiceSelect = (service: any) => {;
+
+  const handleServiceSelect = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSelectedService(service);
   };
   const closeModal = () => {;
     setSelectedService(null);
   };
-  const getCategoryIcon = (category: string)  => {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -132,7 +141,9 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Emerging Technology': <Lightbulb className="w-6 h-6" />;
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
-  const getCategoryColor = (category: string)  => {
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -165,6 +176,8 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Emerging Technology': 'from-violet-500 to-purple-500';
     };
     return colorMap[category] || 'from-gray-500 to-slate-500'};
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return sum + roiNumber}
     return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
   return (
@@ -329,8 +342,8 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               </div>
             </div>
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service, index)               => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -418,7 +431,10 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
                     <ChevronLeft className="w-5 h-5" />
                   </button>
-                  {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
+                  
+                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)               => i + 1).map((page) => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}

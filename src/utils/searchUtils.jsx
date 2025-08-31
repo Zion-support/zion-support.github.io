@@ -112,103 +112,117 @@ export const filterResults = (results, filters) => {
  * Generate search suggestions based on query
  */
 export const generateDynamicSuggestions = (query, recentSearches = [], availableCategories = [], availableTags = []) => {
-    const suggestions = [];
-    const lowerQuery = query.toLowerCase();
-    // Add exact query as first suggestion
-    if (query.trim()) {
-        suggestions.push({
-            text: query,
-            type: 'recent',
-            id: `query-${query}`
-        });
-    // Add matching categories
-    availableCategories
-        .filter(category => category.toLowerCase().includes(lowerQuery))
-        .slice(0, 3)
-        .forEach(category => {
-        suggestions.push({
-            text: category,
-            type: 'category',
-            id: `category-${category}`
-        });
+  const suggestions = [];
+  const lowerQuery = query.toLowerCase();
+  
+  // Add exact query as first suggestion
+  if (query.trim()) {
+    suggestions.push({
+      text: query,
+      type: 'recent',
+      id: `query-${query}`
     });
-    // Add matching tags
-    availableTags
-        .filter(tag => tag.toLowerCase().includes(lowerQuery))
-        .slice(0, 3)
-        .forEach(tag => {
-        suggestions.push({
-            text: tag,
-            type: 'tag',
-            id: `tag-${tag}`
-        });
+  }
+  
+  // Add matching categories
+  availableCategories
+    .filter(category => category.toLowerCase().includes(lowerQuery))
+    .slice(0, 3)
+    .forEach(category => {
+      suggestions.push({
+        text: category,
+        type: 'category',
+        id: `category-${category}`
+      });
     });
-    // Add recent searches that match
-    recentSearches
-        .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
-        .slice(0, 3)
-        .forEach(search => {
-        suggestions.push({
-            text: search,
-            type: 'recent',
-            id: `recent-${search}`
-        });
+  
+  // Add matching tags
+  availableTags
+    .filter(tag => tag.toLowerCase().includes(lowerQuery))
+    .slice(0, 3)
+    .forEach(tag => {
+      suggestions.push({
+        text: tag,
+        type: 'tag',
+        id: `tag-${tag}`
+      });
     });
-    return suggestions.slice(0, 8); // Limit to 8 suggestions
+  
+  // Add recent searches that match
+  recentSearches
+    .filter(search => search.toLowerCase().includes(lowerQuery) && search !== query)
+    .slice(0, 3)
+    .forEach(search => {
+      suggestions.push({
+        text: search,
+        type: 'recent',
+        id: `recent-${search}`
+      });
+    });
+  
+  return suggestions.slice(0, 8); // Limit to 8 suggestions
 };
+
 /**
  * Perform fuzzy search on text
  */
 export const calculateSearchMetrics = (results, searchTime) => {
-    const totalResults = results.length;
-    // Calculate top categories
-    const categoryCount = new Map();
-    results.forEach(result => {
-        if (result.category) {
-            categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
-    });
-    const topCategories = Array.from(categoryCount.entries())
-        .map(([category, count]) => ({ category, count }))
-        .sort((a, b) => b.count - a.count)
-        .slice(0, 5);
-    // Calculate average price
-    const pricesResults = results.filter(r => r.price && r.price > 0);
-    const averagePrice = pricesResults.length > 0
-        ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length
-        : 0;
-    // Calculate average rating
-    const ratedResults = results.filter(r => r.rating && r.rating > 0);
-    const averageRating = ratedResults.length > 0
-        ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length
-        : 0;
-    return {
-        totalResults,
-        searchTime,
-        topCategories,
-        averagePrice,
-        averageRating
-    };
+  const totalResults = results.length;
+  
+  // Calculate top categories
+  const categoryCount = new Map();
+  results.forEach(result => {
+    if (result.category) {
+      categoryCount.set(result.category, (categoryCount.get(result.category) || 0) + 1);
+    }
+  });
+  
+  const topCategories = Array.from(categoryCount.entries())
+    .map(([category, count]) => ({ category, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 5);
+  
+  // Calculate average price
+  const pricesResults = results.filter(r => r.price && r.price > 0);
+  const averagePrice = pricesResults.length > 0
+    ? pricesResults.reduce((sum, r) => sum + (r.price || 0), 0) / pricesResults.length
+    : 0;
+  
+  // Calculate average rating
+  const ratedResults = results.filter(r => r.rating && r.rating > 0);
+  const averageRating = ratedResults.length > 0
+    ? ratedResults.reduce((sum, r) => sum + (r.rating || 0), 0) / ratedResults.length
+    : 0;
+  
+  return {
+    totalResults,
+    searchTime,
+    topCategories,
+    averagePrice,
+    averageRating
+  };
 };
+
 /**
  * Get search suggestions based on input
  */
 export const getSearchSuggestions = (query, suggestions, maxResults = 5) => {
-    if (!query.trim()) return [];
-    
-    const queryLower = query.toLowerCase();
-    const matches = suggestions.filter(suggestion => 
-        suggestion.toLowerCase().includes(queryLower)
-    );
-    
-    return matches.slice(0, maxResults);
+  if (!query.trim()) return [];
+  
+  const queryLower = query.toLowerCase();
+  const matches = suggestions.filter(suggestion => 
+    suggestion.toLowerCase().includes(queryLower)
+  );
+  
+  return matches.slice(0, maxResults);
 };
 
 export default {
-    highlightSearchTerms,
-    matchesSearchTerm,
-    calculateRelevanceScore,
-    sortResults,
-    filterResults,
-    fuzzySearch,
-    getSearchSuggestions
+  highlightSearchTerms,
+  matchesSearchTerm,
+  calculateRelevanceScore,
+  sortResults,
+  filterResults,
+  fuzzySearch,
+  getSearchSuggestions
 };

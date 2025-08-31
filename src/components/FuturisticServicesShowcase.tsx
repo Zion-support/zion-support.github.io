@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-	Rocket,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Rocket,
 	Brain,
 	Zap,
 	Shield,
@@ -15,8 +14,25 @@ import {
 	Star,
 	Play,
 	Pause
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ServiceShowcase {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 	id: string;
 	title: string;
 	description: string;
@@ -24,7 +40,23 @@ interface ServiceShowcase {
 	color: string;
 	features: string[];
 	price: string;
-	status: 'active' | 'beta' | 'new'}
+status: 'active' | 'beta' | 'new';
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const futuristicServices: ServiceShowcase[] = [
 	{
 		id: 'quantum-ai-controller',
@@ -86,23 +118,25 @@ const futuristicServices: ServiceShowcase[] = [
 		price: '$22,000/month',
 		status: 'active'
 ];
-export default function FuturisticServicesShowcase(...args[]):  {
+export default function FuturisticServicesShowcase(...args[]: any):  {
 	const [currentService, setCurrentService] = useState(0);
 	const [isPlaying, setIsPlaying] = useState(true);
 	useEffect(() => {
 		if (!isPlaying) return;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 		const interval = setInterval(() => {;
 			setCurrentService((prev) => (prev + 1) % futuristicServices.length);
 		}, 5000);
 		return () => clearInterval(interval);
 	}, [isPlaying]);
-	const getStatusColor = (status: string) => {;
+	const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
 		switch (status) {;
 			case 'new': return 'bg-green-500';
 			case 'beta': return 'bg-yellow-500';
 			case 'active': return 'bg-blue-500';
 			default: return 'bg-gray-500'}
 	};
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 			default: return 'UNKNOWN'}
 	};
 	return (
@@ -255,8 +289,8 @@ export default function FuturisticServicesShowcase(...args[]):  {
 					<h3 className="text-3xl font-bold text-white text-center mb-12">
 						Explore All Services
 					</h3>
-					<div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-						{futuristicServices.map((service, index)  => (
+					<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+						{futuristicServices.map((service, index)                => (
 							<motion.div
 								key={service.id}
 								initial = {

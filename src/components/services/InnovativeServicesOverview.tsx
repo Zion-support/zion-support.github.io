@@ -1,5 +1,8 @@
-import React, { useState, useMemo } from 'react';
-import { INNOVATIVE_SERVICES_2025, getServicesByCategory } from "../../data/innovativeServices2025";
+import React, { useState, useMemo } from 'react.ts';
+import { INNOVATIVE_SERVICES_2025, getServicesByCategory               } from '../../data/innovativeServices2025';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   maxServices?: number;
   category?: string;
   showViewAllButton?: boolean}
@@ -160,8 +163,8 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           </div>
         )}
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-          {filteredServices.map((service)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          {filteredServices.map((service)                => (
             <ServiceCard key={service.id} service={service} />
           ))}
         </div>

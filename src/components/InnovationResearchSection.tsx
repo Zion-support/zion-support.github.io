@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Lightbulb,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Lightbulb,
   TestTube,
   BookOpen,
   Award,
@@ -11,7 +10,9 @@ import {
   Brain,
   Microscope,
   Target
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       patents: '11';
     };
   ];
@@ -57,7 +58,9 @@ const innovationMetrics = [
   { label: "R&D Investment", value: "$2M+", icon: "💰" },
   { label: "Innovation Awards", value: "8+", icon: "🏆" }
 ];
-export function InnovationResearchSection() {
+
+export function InnovationResearchSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -78,19 +81,22 @@ export function InnovationResearchSection() {
         </motion.div>
         {/* Innovation Metrics */}
         <motion.div 
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 mb-16"
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.6, delay: 0.2 }}
         >
-          {innovationMetrics.map((metric, index) => (
+          {innovationMetrics.map((metric, index)               => (
             <div key={metric.label} className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">{metric.icon}</span>
               </div>
             )})}
         </motion.div>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Research Areas */}
         <motion.div 
           className = "mb-16"
@@ -111,8 +117,11 @@ export function InnovationResearchSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Active Research Areas
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {researchAreas.map((area, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {researchAreas.map((area, index)               => (
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={area.title}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"

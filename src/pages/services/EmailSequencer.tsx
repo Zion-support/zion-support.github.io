@@ -1,5 +1,7 @@
-import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon } from 'lucide-react';
-export default function EmailSequencer() {
+import { Mail, Zap, Calendar, BarChart3, Check, Link as LinkIcon              } from 'lucide-react.ts';
+
+export default function EmailSequencer(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 	const features = [;
 		'Multi-step sequences with A/B testing',;
 		'AI subject line and body suggestions',;
@@ -31,8 +33,10 @@ export default function EmailSequencer() {
 						Automate multi-step outreach with AI-assisted copy, throttling, and deep CRM/webhook integrations.
 					</p>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-					{features.map((f) => (
+
+				<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 mb-16">
+					{features.map((f)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 						<div key={f} className="p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg">
 							<Check className="w-5 h-5 text-zion-cyan mb-3" />
 							<p className="text-white text-sm">{f}</p>
@@ -41,8 +45,8 @@ export default function EmailSequencer() {
 				</div>
 				<div className="mb-16">
 					<h2 className="text-2xl font-semibold text-white mb-6">Plans</h2>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-						{plans.map((p) => (
+					<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+						{plans.map((p)              => (
 							<div key={p.name} className="p-6 rounded-2xl border border-white/10 bg-white/5">
 								<div className="flex items-center justify-between mb-2">
 									<h3 className="text-white font-bold">{p.name}</h3>
@@ -63,8 +67,8 @@ export default function EmailSequencer() {
 				<div>
 					<h2 className="text-2xl font-semibold text-white mb-4">Market reference links</h2>
 					<p className="text-zion-slate-light mb-4 text-sm">Compare typical pricing and features across leading platforms:</p>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-						{references.map((ref) => (
+					<div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4">
+						{references.map((ref)              => (
 							<a key={ref.href} href={ref.href} target="_blank" rel="noopener noreferrer" className="flex items-center p-4 rounded-lg border border-white/10 bg-white/5 hover:bg-white/10 transition">
 								<LinkIcon className="w-4 h-4 text-zion-cyan mr-2" />
 								<span className="text-white text-sm">{ref.label}</span>;

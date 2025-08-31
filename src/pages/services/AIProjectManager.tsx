@@ -1,8 +1,11 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone } from 'lucide-react';
-import { SEO } from '@/components/SEO';
-export default function AIProjectManager() {
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { CheckCircle, Clock, Users, TrendingUp, Shield, Zap, BarChart3, Target, Globe, Smartphone              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+
+export default function AIProjectManager(...args: any[]): any {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "AI-Powered Task Prioritization",
@@ -110,6 +113,7 @@ export default function AIProjectManager() {
     }
   ];
   return (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="AI Project Manager - Intelligent Project Management Solution | Zion Tech Group"
@@ -161,8 +165,10 @@ export default function AIProjectManager() {
               Our AI engine learns from your team's patterns and continuously optimizes your project workflows
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
@@ -182,6 +188,8 @@ export default function AIProjectManager() {
           </div>
         </div>
       </section>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-r from-white/5 to-white/10 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -199,8 +207,10 @@ export default function AIProjectManager() {
               Join thousands of teams who have transformed their project management with AI
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className="text-center"
@@ -237,8 +247,10 @@ export default function AIProjectManager() {
               Choose the plan that fits your team size and needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 className={`relative bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
@@ -257,6 +269,8 @@ export default function AIProjectManager() {
                     </span>
                   </div>
                 )}
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">

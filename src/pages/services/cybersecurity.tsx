@@ -1,132 +1,19 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import {
-  Shield,
-  Lock,
-  Eye,
-  Zap,
-  Target,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Code,
-  Database,
-  Cloud,
+import React from 'react.ts';
+import { SEO              } from '../../components/SEO';
+import { Shield, 
+  Brain, 
+  Zap, 
+  Users, 
+  TrendingUp, 
+  Lock, 
+  Clock,
   BarChart3,
   AlertTriangle,
-  CreditCard,
-  Key,
-  Monitor,
-  Network,
-  Server
-} from 'lucide-react';
+  Eye
+             } from 'lucide-react.ts';
 
-export default function CybersecurityServices() {
-  const cyberServices = [
-    {
-      name: "Security Assessment & Auditing",
-      description: "Comprehensive security evaluation and compliance auditing",
-      icon: Eye,
-      features: [
-        "Vulnerability assessments",
-        "Penetration testing",
-        "Security audits and compliance",
-        "Risk analysis and reporting"
-      ],
-      price: "From $3,500",
-      duration: "2-6 weeks"
-    },
-    {
-      name: "Threat Detection & Response",
-      description: "Advanced threat monitoring and incident response",
-      icon: AlertTriangle,
-      features: [
-        "24/7 security monitoring",
-        "Threat intelligence",
-        "Incident response planning",
-        "Forensic analysis"
-      ],
-      price: "From $5,000/month",
-      duration: "Ongoing"
-    },
-    {
-      name: "Identity & Access Management",
-      description: "Secure user authentication and authorization systems",
-      icon: Key,
-      features: [
-        "Single sign-on (SSO)",
-        "Multi-factor authentication",
-        "Role-based access control",
-        "Privileged access management"
-      ],
-      price: "From $4,200",
-      duration: "4-8 weeks"
-    },
-    {
-      name: "Data Protection & Encryption",
-      description: "Comprehensive data security and encryption solutions",
-      icon: Lock,
-      features: [
-        "Data encryption at rest and in transit",
-        "Data loss prevention",
-        "Backup and recovery",
-        "Compliance frameworks (GDPR, HIPAA, SOC2)"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
-    }
-  ];
-
-  const securityTechnologies = [
-    { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },
-    { name: "EDR", description: "Endpoint Detection and Response", icon: Server },
-    { name: "NGFW", description: "Next-Generation Firewall", icon: Network },
-    { name: "WAF", description: "Web Application Firewall", icon: Shield },
-    { name: "DLP", description: "Data Loss Prevention", icon: Database },
-    { name: "IAM", description: "Identity and Access Management", icon: Key }
-  ];
-
-  const complianceFrameworks = [
-    {
-      name: "SOC 2",
-      description: "Service Organization Control 2 compliance",
-      icon: Shield,
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      name: "ISO 27001",
-      description: "Information Security Management System",
-      icon: Lock,
-      color: "from-blue-500 to-indigo-600"
-    },
-    {
-      name: "GDPR",
-      description: "General Data Protection Regulation",
-      icon: Eye,
-      color: "from-purple-500 to-violet-600"
-    },
-    {
-      name: "HIPAA",
-      description: "Health Insurance Portability and Accountability Act",
-      icon: Users,
-      color: "from-red-500 to-pink-600"
-    },
-    {
-      name: "PCI DSS",
-      description: "Payment Card Industry Data Security Standard",
-      icon: CreditCard,
-      color: "from-orange-500 to-amber-600"
-    },
-    {
-      name: "NIST",
-      description: "National Institute of Standards and Technology",
-      icon: Target,
-      color: "from-cyan-500 to-blue-600"
-    }
-  ];
-
+export default function Cybersecurity(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <>
       <Helmet>

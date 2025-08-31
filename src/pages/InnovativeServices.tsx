@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain,
   Atom,
   Lock,
   Wifi,
@@ -21,7 +20,9 @@ import {
   Lightbulb,
   Target,
   Award
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const InnovativeServices: React.FC = (): JSX.Element => {
   const innovations = [
     {
@@ -188,8 +189,8 @@ const InnovativeServices: React.FC = (): JSX.Element => {
       {/* Stats Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)               => (
               <motion.div
                 key={stat.label}
                 initial = {
@@ -237,8 +238,10 @@ const InnovativeServices: React.FC = (): JSX.Element => {
               and creating new possibilities for the future.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {innovations.map((innovation, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {innovations.map((innovation, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={innovation.id}
                 initial = {

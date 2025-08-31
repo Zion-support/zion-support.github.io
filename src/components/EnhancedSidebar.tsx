@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Home,
+import React, { useState } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Home,
   Brain,
   Cloud,
   Server,
@@ -43,17 +42,25 @@ import {
   Leaf,
   Building,
   User
- } from 'lucide-react';
-export const EnhancedSidebar: React.FC = () => {;
+               } from 'lucide-react.ts';
+
+export const EnhancedSidebar: React.FC = (): JSX.Element => {;
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
-  const toggleSection = (section: string) => {;
+
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section)} else {
       newExpanded.add(section)}
     setExpandedSections(newExpanded)};
-  const isActive = (path: string)  => location.pathname === path;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path;
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const navigationSections = [
     {
       title: "Main Navigation",

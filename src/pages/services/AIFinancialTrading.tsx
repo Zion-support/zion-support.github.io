@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   TrendingUp, 
   DollarSign, 
   CheckCircle, 
@@ -32,9 +32,12 @@ import {
   DollarSign as DollarIcon,
   BarChart,
   PieChart as PieChartIcon
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
-export default function AIFinancialTrading() {
+             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
+
+export default function AIFinancialTrading(...args: any[]): any {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -204,8 +207,10 @@ export default function AIFinancialTrading() {
               to deliver unprecedented trading performance and risk management.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -240,8 +245,10 @@ export default function AIFinancialTrading() {
               track records and consistent returns.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {tradingStrategies.map((strategy, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {tradingStrategies.map((strategy, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -289,8 +296,10 @@ export default function AIFinancialTrading() {
               Trade across multiple asset classes with our unified AI trading platform.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {supportedAssets.map((asset, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {supportedAssets.map((asset, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -321,8 +330,10 @@ export default function AIFinancialTrading() {
               Transform your trading performance with intelligent automation and advanced analytics.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -353,8 +364,10 @@ export default function AIFinancialTrading() {
               Choose the plan that fits your trading needs. All plans include our core AI features.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

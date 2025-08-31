@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Calendar,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Calendar,
   Clock,
   CheckCircle,
   Circle,
@@ -24,8 +23,26 @@ import {
   Trash2,
   Eye,
   Settings
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Project {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   description: string;
@@ -38,15 +55,63 @@ interface Project {
   client: string;
   budget: number;
   tags: string[];
-  milestones: Milestone[]}
+milestones: Milestone[];
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
 interface Milestone {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
   dueDate: string;
   status: 'pending' | 'in-progress' | 'completed' | 'overdue';
   assignee: string;
-  priority: 'low' | 'medium' | 'high'}
+priority: 'low' | 'medium' | 'high';
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
   showFilters?: boolean;
   showStats?: boolean;
@@ -56,10 +121,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   showStats = true,;
   maxProjects = 10;
 }) => {;
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
-  const [selectedPriority, setSelectedPriority] = useState<string>('all');
+  const [projects, setProjects] = useState<any>([]);
+  const [filteredProjects, setFilteredProjects] = useState<any>([]);
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+  const [selectedPriority, setSelectedPriority] = useState<any>('all');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('timeline');
   const [showProjectForm, setShowProjectForm] = useState(false);
@@ -68,7 +135,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   useEffect(() => {
     const sampleProjects: Project[] = [
       {
-        id: '1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -178,7 +245,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setProjects(sampleProjects);
     setFilteredProjects(sampleProjects)}, []);
   // Filter projects
-  useEffect(() => {
+  useEffect(()                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     let filtered = projects;
     if (selectedStatus !== 'all') {
       filtered = filtered.filter(p => p.status === selectedStatus)}
@@ -201,19 +269,37 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     setFilteredProjects(filtered.slice(0, maxProjects))}, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]);
   // Calculate project stats
   const projectStats = {
-  total: projects.length,
-    active: projects.filter(p => p.status === 'active').length,
-    completed: projects.filter(p => p.status === 'completed').length,
-    onHold: projects.filter(p => p.status === 'on-hold').length,;
-    totalBudget: projects.reduce((sum, p) => sum + p.budget, 0),;
-    averageProgress: projects.reduce((sum, p) => sum + p.progress,;
+  <<<<<<< HEAD
+    total: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
+    active: projects.filter(p                => p.status === 'active').length,
+    completed: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p                => p.status === 'completed').length,
+    onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p                => p.status === 'on-hold').length,
+    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)                => sum + p.budget, 0),
+    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)                => sum + p.progress,
+  0) / projects.length || 0;
+  ;
+
+};
+
+  // Get status color and icon
+  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
+    switch (status) {
+      case 'planning':
+=======
+  total: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
+    active: projects.filter(p               => p.status === 'active').length,
+    completed: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'completed').length,
+    onHold: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'on-hold').length,;
+    totalBudget: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.budget, 0),;
+    averageProgress: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.reduce((sum, p)               => sum + p.progress,;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
   0) / projects.length || 0;
   ;
 };
   // Get status color and icon
-  const getStatusDisplay = (status: string) => {;
+  const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     switch (status) {;
       case 'planning':;
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
@@ -229,13 +315,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         return { color: 'text-zinc-400 bg-zinc-400/20', icon: <Circle className = "w-4 h-4" /> }};
   };
   // Get priority color
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get milestone status color
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Format currency
-  const formatCurrency = (amount: number) => {;
+  const formatCurrency = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Intl.NumberFormat('en-US', {;
       style: 'currency',;
       currency: 'USD',;
@@ -244,7 +333,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
     }).format(amount);
   };
   // Calculate days remaining
-  const getDaysRemaining = (endDate: string) => {;
+  const getDaysRemaining = (endDate: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const end = new Date(endDate);
     const today = new Date();
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));

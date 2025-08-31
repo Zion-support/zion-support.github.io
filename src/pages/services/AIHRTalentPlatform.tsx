@@ -1,4 +1,4 @@
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
+import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform(...args: any[]): any {
   const features = [
     'AI-powered candidate screening and matching',
     'Automated resume parsing and skill assessment',;
@@ -116,8 +116,10 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Complete Platform Modules</h2>
             <p className="text-xl text-gray-600">From recruitment to retention, we cover all your HR needs</p>
           </div>
-          <div className="grid md:grid-cols-4 gap-6">
-            {platformModules.map((module, index) => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6">
+            {platformModules.map((module, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 text-center">
                 <Briefcase className="w-8 h-8 text-orange-500 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-gray-900 text-sm">{module}</h3>
@@ -132,8 +134,10 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Perfect For</h2>
           <p className="text-xl text-gray-600">Ideal for HR teams and organizations seeking to optimize their talent management</p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
+
+        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={index} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
               <Target className="w-8 h-8 text-orange-500 mb-4" />
               <h3 className="text-lg font-semibold text-gray-900 mb-2">{useCase}</h3>
@@ -174,8 +178,10 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
             <p className="text-xl text-gray-600">Choose the plan that fits your organization size and needs</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className={`relative bg-white rounded-xl p-8 shadow-lg border-2 ${
                 plan.popular ? 'border-orange-500 ring-2 ring-orange-500/20' : 'border-gray-200'
               }`}>

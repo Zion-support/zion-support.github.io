@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, 
-  Linkedin, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
+import { Linkedin, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Twitter, 
   Mail, 
   Globe, 
@@ -36,49 +36,11 @@ import {
   Eye,
   Sparkles,
   Heart,
-  Target,
-  Lightbulb,
-  TrendingUp,
-  Building2,
-  Briefcase,
-  GraduationCap,
-  Globe2,
-  Users2,
-  Handshake,
-  Trophy,
-  Clock,
-  MapPin
-} from 'lucide-react';
+  ArrowRight
+             } from 'lucide-react.ts';
 
-export default function Team() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-  const [selectedLocation, setSelectedLocation] = useState('all');
-
-  const departments = [
-    { id: 'all', name: 'All Departments', icon: Users, count: 0 },
-    { id: 'leadership', name: 'Leadership', icon: Building2, count: 8 },
-    { id: 'engineering', name: 'Engineering', icon: Code, count: 25 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 18 },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 12 },
-    { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Cloud, count: 15 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 8 },
-    { id: 'data-science', name: 'Data Science', icon: BarChart, count: 14 },
-    { id: 'sales', name: 'Sales & Business Development', icon: Target, count: 10 },
-    { id: 'marketing', name: 'Marketing', icon: Lightbulb, count: 8 },
-    { id: 'operations', name: 'Operations', icon: Settings, count: 6 },
-    { id: 'research', name: 'Research & Development', icon: Rocket, count: 12 }
-  ];
-
-  const locations = [
-    { id: 'all', name: 'All Locations', icon: Globe2, count: 0 },
-    { id: 'middletown', name: 'Middletown, DE', icon: MapPin, count: 45 },
-    { id: 'new-york', name: 'New York, NY', icon: MapPin, count: 28 },
-    { id: 'san-francisco', name: 'San Francisco, CA', icon: MapPin, count: 32 },
-    { id: 'london', name: 'London, UK', icon: MapPin, count: 18 },
-    { id: 'singapore', name: 'Singapore', icon: MapPin, count: 15 },
-    { id: 'remote', name: 'Remote', icon: Wifi, count: 42 }
-  ];
-
+export default function Team(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const teamMembers = [
     {
       id: 1,
@@ -352,9 +314,122 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Company Values */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark">
-        <div className="max-w-7xl mx-auto">
+      {/* Stats Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)              => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl p-6 border border-cyan-400/20">
+                  <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Team Member */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          {teamMembers.filter(member => member.featured).map((member, index) => (
+            <motion.div
+              key={member.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-cyan-400/20"
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div className="text-center lg:text-left">
+                  <div className="w-32 h-32 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto lg:mx-0 mb-6 flex items-center justify-center">
+                    <span className="text-4xl font-bold text-white">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <h2 className="text-3xl font-bold text-white mb-2">{member.name}</h2>
+                  <p className="text-cyan-400 text-xl mb-4">{member.role}</p>
+                  <p className="text-gray-300 leading-relaxed mb-6">{member.bio}</p>
+                  
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {member.expertise.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex justify-center lg:justify-start space-x-4">
+                    {member.social.linkedin && (
+                      <a
+                        href={member.social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-purple-500 hover:text-white transition-all duration-300"
+                      >
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                    )}
+                    {member.social.twitter && (
+                      <a
+                        href={member.social.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-purple-500 hover:text-white transition-all duration-300"
+                      >
+                        <Twitter className="w-5 h-5" />
+                      </a>
+                    )}
+                    {member.social.website && (
+                      <a
+                        href={member.social.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-purple-500 hover:text-white transition-all duration-300"
+                      >
+                        <Globe className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <div className="lg:col-span-2">
+                  <div className="bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-xl p-6 border border-cyan-400/20">
+                    <h3 className="text-2xl font-bold text-white mb-4">Leadership Vision</h3>
+                    <p className="text-gray-300 leading-relaxed mb-6">
+                      As the founder of Zion Tech Group, I believe that technology should be accessible, 
+                      understandable, and transformative. Our mission is to democratize access to advanced 
+                      AI and quantum technologies, enabling businesses of all sizes to leverage cutting-edge 
+                      solutions for growth, efficiency, and competitive advantage.
+                    </p>
+                    <p className="text-gray-300 leading-relaxed">
+                      We're building a future where innovation serves humanity, where complex technologies 
+                      become simple tools, and where every business can harness the power of AI to transform 
+                      their operations and achieve their goals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Team Members Grid */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -370,8 +445,96 @@ export default function Team() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {companyValues.map((value, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.filter(member              => !member.featured).map((member, index) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="text-center mb-6">
+                  <div className="w-24 h-24 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-white">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{member.name}</h3>
+                  <p className="text-cyan-400 mb-3">{member.role}</p>
+                  <p className="text-gray-300 leading-relaxed text-sm">{member.bio}</p>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3 text-center">Expertise</h4>
+                  <div className="flex flex-wrap gap-2 justify-center">
+                    {member.expertise.slice(0, 3).map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="px-2 py-1 bg-slate-700/50 text-cyan-400 text-xs rounded"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex justify-center space-x-3">
+                  {member.social.linkedin && (
+                    <a
+                      href={member.social.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-purple-500 hover:text-white transition-all duration-300"
+                    >
+                      <Linkedin className="w-4 h-4" />
+                    </a>
+                  )}
+                  {member.social.twitter && (
+                    <a
+                      href={member.social.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-purple-500 hover:text-white transition-all duration-300"
+                    >
+                      <Twitter className="w-4 h-4" />
+                    </a>
+                  )}
+                  {member.social.website && (
+                    <a
+                      href={member.social.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 border border-cyan-400/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-gradient-to-br hover:from-cyan-400 hover:to-purple-500 hover:text-white transition-all duration-300"
+                    >
+                      <Globe className="w-4 h-4" />
+                    </a>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Our Core Values</h2>
+            <p className="text-xl text-gray-300">
+              The principles that guide everything we do and every decision we make
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {values.map((value, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={value.title}
                 initial={{ opacity: 0, y: 20 }}

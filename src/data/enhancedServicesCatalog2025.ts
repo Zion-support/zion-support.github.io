@@ -1,4 +1,17 @@
 export interface EnhancedService {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   tagline: string;
@@ -15,11 +28,24 @@ export interface EnhancedService {
   growthRate: string;
   implementationTime: string;
   trialDays: number;
-  contactInfo: {
+contactInfo: {;
     mobile: string;
     email: string;
     address: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   link: string;
   icon: string;
   color: string;

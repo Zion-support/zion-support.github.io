@@ -1,9 +1,30 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Shield, Lock, Eye, Users, Database, Globe, AlertTriangle, CheckCircle, Key, Server, Network, Zap } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
+import { Shield, 
+  Lock, 
+  Eye, 
+  Key, 
+  Server, 
+  Users, 
+  CheckCircle, 
+  AlertTriangle,
+  FileText,
+  Globe,
+  Database,
+  Network,
+  Zap,
+  ArrowRight,
+  ExternalLink,
+  ChevronDown,
+  ChevronUp,
+  Mail
+             } from 'lucide-react.ts';
 
-const Security: React.FC = () => {
-  const lastUpdated = "January 15, 2025";
+export default function Security(...args: any[]): any {
+  const [expandedCompliance, setExpandedCompliance] = useState<any>(null);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   const securityFeatures = [
     {
@@ -108,6 +129,11 @@ const Security: React.FC = () => {
     }
   ];
 
+  const toggleCompliance = (name: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    setExpandedCompliance(expandedCompliance === name ? null : name);
+  };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
@@ -142,24 +168,27 @@ const Security: React.FC = () => {
 
       {/* Main Content */}
       <section className="py-16">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="space-y-16">
-            {/* Security Commitment */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Our Security Commitment
-              </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                At Zion Tech Group, we understand that security is not just a feature—it's a fundamental requirement. 
-                We employ industry-leading security practices, technologies, and processes to ensure the confidentiality, 
-                integrity, and availability of your data and systems.
-              </p>
-            </motion.div>
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {securityMetrics.map((metric, index)              => (
+              <motion.div
+                key={metric.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50">
+                  <div className="text-4xl font-bold text-white mb-2">{metric.metric}</div>
+                  <div className="text-lg font-semibold text-cyan-400 mb-2">{metric.label}</div>
+                  <div className="text-gray-300 text-sm">{metric.description}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
             {/* Security Features */}
             <motion.div
@@ -196,35 +225,40 @@ const Security: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Compliance Standards */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold text-white text-center mb-12">
-                Security Compliance & Certifications
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {complianceStandards.map((standard, index) => (
-                  <motion.div
-                    key={standard.standard}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6"
-                  >
-                    <div className="flex items-center justify-between mb-4">
-                      <h3 className="text-lg font-bold text-white">{standard.standard}</h3>
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium border ${standard.color}`}>
-                        {standard.status}
-                      </span>
-                    </div>
-                    <p className="text-gray-300 text-sm">{standard.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {securityFeatures.map((feature, index)              => (
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105 h-full">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl mb-6">
+                    <feature.icon className="w-8 h-8 text-red-400" />
+                  </div>
+                  
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 text-sm mb-6 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  
+                  <ul className="space-y-2">
+                    {feature.features.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
             {/* Security Measures */}
             <motion.div
@@ -258,38 +292,33 @@ const Security: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Data Protection */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
-            >
-              <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <Database className="w-6 h-6 text-cyan-400 mr-3" />
-                Data Protection & Privacy
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-semibold text-white mb-4">Data Encryption</h3>
-                  <ul className="space-y-2 text-gray-300">
-                    <li className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>AES-256 encryption for data at rest</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>TLS 1.3 encryption for data in transit</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>End-to-end encryption for sensitive communications</span>
-                    </li>
-                    <li className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                      <span>Key management and rotation policies</span>
-                    </li>
-                  </ul>
+      {/* Best Practices */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Security Best Practices</h2>
+            <p className="text-xl text-gray-300">
+              We follow industry-leading security practices to ensure your protection
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {bestPractices.map((practice, index)              => (
+              <motion.div
+                key={practice.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="flex items-start"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl mr-4 flex-shrink-0">
+                  <practice.icon className="w-6 h-6 text-red-400" />
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-white mb-4">Privacy Controls</h3>

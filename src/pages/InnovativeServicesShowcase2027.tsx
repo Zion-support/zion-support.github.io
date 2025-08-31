@@ -1,3 +1,57 @@
+ } from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2027               } from '@/data/innovativeMicroSaasServices2027';
+import { EMERGING_TECH_SERVICES_2027               } from '@/data/emergingTechServices2027';
+export default function InnovativeServicesShowcase2027(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [sortBy, setSortBy] = useState<any>('aiScore');
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2027, ...EMERGING_TECH_SERVICES_2027];
+  const categories = ['All', ...Array.from(new Set(allServices.map(service => service.category)))];
+  const filteredServices = allServices
+    .filter(service =>
+      (selectedCategory === 'All' || service.category === selectedCategory) &&
+      (searchQuery === '' ||
+        service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())))
+    )
+    .sort((a, b) => b[sortBy] - a[sortBy]);
+  const containerVariants = {
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0.1;
+      };
+    };
+  };
+  const itemVariants = {
+  hidden: { y: 20,
+  opacity: 0 
+},
+    visible: {
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0.5,;
+        ease: "easeOut";
+      };
+    };
+  };
+  const cardVariants = {
+  hidden: { scale: 0.8,
+  opacity: 0 
+},
+    visible: {
+      scale: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut"
+=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { EnhancedSEO, SEOConfigs } from '../components/EnhancedSEO.tsx';
@@ -71,6 +125,7 @@ const InnovativeServicesShowcase2027 = () => {
       link: "/services/ai-autonomous-financial-advisor",
       features: ["Investment Analysis", "Portfolio Optimization", "Risk Management", "Market Prediction"],
       pricing: "Starting at $99/month"
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     },
     {
       title: "AI Autonomous Healthcare Diagnostics",
@@ -211,6 +266,16 @@ const InnovativeServicesShowcase2027 = () => {
   ];
 
   return (
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
+                >
+                  {categories.map(category               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+                    <option key={category} value={category}>{category}</option>
+                  ))}
+                </select>
+                <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
+=======
     <EnhancedSEO data={SEOConfigs.innovativeServicesShowcase2027}>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-blue-dark">
         <SEO
@@ -260,6 +325,7 @@ const InnovativeServicesShowcase2027 = () => {
                   <Mail className="w-5 h-5" />
                   Get Consultation
                 </a>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </motion.div>
           </div>
@@ -546,9 +612,202 @@ const InnovativeServicesShowcase2027 = () => {
               </div>
             </div>
           </div>
+                transition={{ duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.3 }}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+              >
+                {filteredServices.map((service, index)  => (
+                  <motion.div
+                    key={service.id}
+                    variants={viewMode === 'grid' ? itemVariants : { /* empty */ }}
+                    className={viewMode === 'grid' ? '' : 'bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20'}
+                    {viewMode === 'grid' ? (
+                      <motion.div
+                        className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
+                        variants={cardVariants}
+                        whileHover="hover"
+                        onClick = {
+  () => window.open(service.website,
+  '_blank')
+}
+                      >
+                        {/* Service Image */}
+                        <div className="relative mb-6 overflow-hidden rounded-lg">
+                          <img
+                            src={service.images[0]}
+                            alt={service.title}
+                            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                          />
+                          <div className="absolute top-4 right-4 bg-zion-cyan text-black px-3 py-1 rounded-full text-sm font-semibold">
+                            {service.category}
+                          </div>
+                          {service.featured && (
+                            <div className="absolute top-4 left-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center gap-1">
+                              <Star className="w-4 h-4" />
+                              Featured
+                            </div>
+                          )}
+                        </div>
+                        {/* Service Content */}
+                        <div className="space-y-4">
+                          <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors">
+                            {service.title}
+                          </h3>
+                          <p className="text-gray-300 text-sm line-clamp-3">
+                            {service.description}
+                          </p>
+                          {/* Tags */}
+                          <div className="flex flex-wrap gap-2">
+                            {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                              <span
+                                key={tagIndex}
+                                className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                          {/* Stats */}
+                          <div className="flex items-center justify-between pt-4 border-t border-zion-purple/20">
+                            <div className="flex items-center gap-4">
+                              <div className="flex items-center gap-1">
+                                <Brain className="w-4 h-4 text-zion-cyan" />
+                                <span className="text-sm text-gray-300">{service.aiScore}%</span>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <Star className="w-4 h-4 text-yellow-500" />
+                                <span className="text-sm text-gray-300">{service.rating}</span>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <div className="text-lg font-bold text-zion-cyan">{service.currency}{service.price}</div>
+                              <div className="text-xs text-gray-400">per {service.pricingModel}</div>
+                            </div>
+                          </div>
+                          {/* CTA Button */}
+                          <button className="w-full mt-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-3 px-6 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                            Learn More
+                            <ArrowRight className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </motion.div>
+                    ) : (
+                      <div className="flex gap-6">
+                        {/* Service Image */}
+                        <div className="relative w-48 h-32 overflow-hidden rounded-lg flex-shrink-0">
+                          <img
+                            src={service.images[0]}
+                            alt={service.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute top-2 right-2 bg-zion-cyan text-black px-2 py-1 rounded-full text-xs font-semibold">
+                            {service.category}
+                          </div>
+                        </div>
+                        {/* Service Content */}
+                        <div className="flex-1 space-y-3">
+                          <div className="flex items-start justify-between">
+                            <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                            <div className="text-right">
+                              <div className="text-lg font-bold text-zion-cyan">{service.currency}{service.price}</div>
+                              <div className="text-xs text-gray-400">per {service.pricingModel}</div>
+                            </div>
+                          </div>
+                          <p className="text-gray-300 text-sm">{service.description}</p>
+                          <div className="flex items-center gap-4 text-sm text-gray-400">
+                            <div className="flex items-center gap-1">
+                              <Brain className="w-4 h-4 text-zion-cyan" />
+                              AI Score: {service.aiScore}%
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Star className="w-4 h-4 text-yellow-500" />
+                              Rating: {service.rating}
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <CheckCircle className="w-4 h-4 text-green-500" />
+                              {service.availability}
+                            </div>
+                          </div>
+                          <div className="flex items-center justify-between">
+                            <div className="flex flex-wrap gap-2">
+                              {service.tags.slice(0, 4).map((tag, tagIndex) => (
+                                <span
+                                  key={tagIndex}
+                                  className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                            <button
+                              onClick={() => window.open(service.website, '_blank')}
+                              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
+                              View Details
+                              <ArrowRight className="w-4 h-4" />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </motion.div>
+                ))}
+              </motion.div>
+            ) : (
+              <motion.div
+                className="text-center py-20"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
+                <p className="text-gray-400">Try adjusting your search criteria or filters</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      </motion.section>
+      {/* CTA Section */}
+      <motion.section
+        className="relative z-10 px-6 pb-20"
+        initial = {
+  { opacity: 0,
+  y: 30 
+}}
+        animate = {
+  { opacity: 1,
+  y: 0 
+}}
+        transition = {
+  { duration: 0.8,
+  delay: 1.2 
+}}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-blue/20 backdrop-blur-md rounded-2xl p-12 border border-zion-cyan/30">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get in touch with our experts to discuss how these innovative services can drive your success
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+                Contact Our Team
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
+                Call +1 302 464 0950
+              </a>
+            </div>;
+          </div>;
+        </div>;
+      </motion.section>;
+    </div>;
+=======
         </section>
       </div>
     </EnhancedSEO>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 };
 

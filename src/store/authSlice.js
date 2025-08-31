@@ -98,14 +98,14 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-      
+
       if (token && user) {
         return {
           user: JSON.parse(user),
-          token: token
+          token
         };
       } else {
-        throw new Error('No valid session found');
+        throw new Error('No auth data found');
       }
     } catch (error) {
       return rejectWithValue(error.message);
@@ -134,7 +134,7 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
-    },
+    }
   },
   extraReducers: (builder) => {
     // Login

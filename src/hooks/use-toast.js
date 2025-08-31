@@ -31,14 +31,9 @@ export const useToast = () => {
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
 
-  const dismissAll = useCallback(() => {
-    setToasts([]);
-  }, []);
-
   return {
     toast,
     dismiss,
-    dismissAll,
     toasts
   };
 };

@@ -1,4 +1,6 @@
-import { ProductListing  } from '@/types/listings';
+import { ProductListing                } from '@/types/listings';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Advanced AI Services 2030 - Zion Tech Group
 // Cutting-edge AI solutions with real market applications
 export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [

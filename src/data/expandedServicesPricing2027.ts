@@ -1,12 +1,27 @@
 // Expanded Services Pricing Guide 2027 - Zion Tech Group
 // Comprehensive pricing information for all expanded innovative services
 export interface ExpandedServicePricing {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   serviceId: string;
   serviceName: string;
   category: string;
   subcategory: string;
-pricingTiers: {
-starter: {
+pricingTiers: {;
+starter: {;
       price: number;
       currency: string;
       billingCycle: string;
@@ -14,7 +29,20 @@ starter: {
       limitations: string[];
       bestFor: string[];
       setupFee: number;
-      contractTerm: string};
+contractTerm: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
     professional: {
       price: number;
       currency: string;
@@ -1121,16 +1149,20 @@ export const ALL_EXPANDED_SERVICES_PRICING = [;
   ...healthcarePricing;
 ];
 // Helper functions
-export const getPricingByServiceId = (serviceId: string): ExpandedServicePricing | null => {;
+export const getPricingByServiceId = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing | null              => {;
   return ALL_EXPANDED_SERVICES_PRICING.find(pricing => pricing.serviceId === serviceId);
 };
-export const getPricingByCategory = (category: string): ExpandedServicePricing[] => {;
+
+export const getPricingByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]              => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.category === category);
 };
-export const getPricingBySubcategory = (subcategory: string): ExpandedServicePricing[] => {;
+
+export const getPricingBySubcategory = (subcategory: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]              => {;
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing => pricing.subcategory === subcategory);
 };
-export const searchPricing = (query: string): ExpandedServicePricing[] => {;
+
+export const searchPricing = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring): ExpandedServicePricing[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const lowercaseQuery = query.toLowerCase();
   return ALL_EXPANDED_SERVICES_PRICING.filter(pricing =>
     pricing.serviceName.toLowerCase().includes(lowercaseQuery) ||

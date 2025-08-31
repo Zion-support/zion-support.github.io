@@ -1,6 +1,7 @@
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
 import { Cpu, 
   Zap, 
   Globe, 
@@ -61,7 +62,9 @@ import { Cpu,
   Droplets,
   Umbrella,
   MapPin
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {
   const features = [
     {
@@ -294,8 +297,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Everything you need to deploy and manage edge computing infrastructure
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -334,8 +340,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               See how edge computing revolutionizes performance and user experience
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -373,8 +382,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Edge computing solutions for every industry and use case
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -418,8 +430,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Deploy edge nodes worldwide for optimal performance and reliability
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {edgeLocations.map((location, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {edgeLocations.map((location, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -464,8 +479,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {
               Choose the plan that fits your edge computing needs
             </p>
           </div>
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

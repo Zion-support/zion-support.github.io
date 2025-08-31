@@ -1,8 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import { 
-  PenTool, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../../components/SEO';
+import { PenTool, 
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   FileText, 
   Brain, 
   Zap, 
@@ -22,8 +23,11 @@ import {
   DollarSign,
   Target,
   Award
- } from 'lucide-react';
-export default function AIContentGenerationPlatform(...args[]):  {
+              } from 'lucide-react.ts';
+
+export default function AIContentGenerationPlatform(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -295,8 +299,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
               to deliver exceptional content creation capabilities.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -354,8 +360,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
               See how our AI content generation platform is transforming industries and driving measurable results.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -379,8 +387,8 @@ export default function AIContentGenerationPlatform(...args[]):  {
                 <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
                 <p className="text-slate-300 mb-6 leading-relaxed">{useCase.description}</p>
                 <div className="space-y-3">
-                  <h4 className="text-white font-semibold">Key Results: any</h4>
-                  {useCase.metrics.map((metric, idx)  => (
+                  <h4 className="text-white font-semibold">Key Results: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                  {useCase.metrics.map((metric, idx)               => (
                     <div key={idx} className="flex items-center space-x-2 text-sm">
                       <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                       <span className="text-slate-300">{metric}</span>
@@ -416,8 +424,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
               Our AI content generation platform delivers quantifiable results that directly impact your content strategy.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -468,8 +478,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
               Built on the latest AI and machine learning technologies to deliver superior content generation capabilities.
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4">
-            {technologies.map((tech, index)  => (
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-4 gap-4">
+            {technologies.map((tech, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -515,8 +527,10 @@ export default function AIContentGenerationPlatform(...args[]):  {
               Choose the perfect plan for your content creation needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

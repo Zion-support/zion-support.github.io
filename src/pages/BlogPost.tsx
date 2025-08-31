@@ -1,8 +1,9 @@
-import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Calendar, 
+
+import React from 'react.ts';
+import { useParams, Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Calendar, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   User, 
   Clock, 
   Tag, 
@@ -21,9 +22,11 @@ import {
   Cpu,
   Network,
   BookOpen
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
-export default function BlogPost() {
+             } from 'lucide-react.ts';
+import { SEO              } from '../components/SEO';
+
+export default function BlogPost(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { slug } = useParams();
   // Mock blog post data - in a real app, this would come from an API
   const blogPost = {
@@ -160,14 +163,18 @@ export default function BlogPost() {
       }
     ]
   };
-  const formatDate = (dateString: string) => {
+
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
   };
-  const getCategoryIcon = (category: string) => {
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const categoryIcons: { [key: string]: any } = {
       ai: Brain,
       quantum: Cpu,
@@ -179,7 +186,9 @@ export default function BlogPost() {
     };
     return categoryIcons[category] || BookOpen;
   };
-  const getCategoryName = (category: string) => {
+
+  const getCategoryName = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const categoryNames: { [key: string]: string } = {
       ai: 'Artificial Intelligence',
       quantum: 'Quantum Computing',
@@ -359,8 +368,10 @@ export default function BlogPost() {
               Continue exploring insights and analysis on related topics
             </p>
           </motion.div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPost.relatedPosts.map((post, index) => (
+          
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {blogPost.relatedPosts.map((post, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.article
                 key={post.id}
                 initial={{ opacity: 0, y: 20 }}

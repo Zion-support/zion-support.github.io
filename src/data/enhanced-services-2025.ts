@@ -1,14 +1,42 @@
 export interface EnhancedService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech';
-pricing: {
+pricing: {;
     monthly: string;
     yearly: string;
     enterprise: string;
-    setup: string};
+setup: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   features: string[];
   benefits: string[];
   technology: string[];

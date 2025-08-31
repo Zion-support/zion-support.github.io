@@ -1,6 +1,6 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
 import { Brain, 
   TrendingUp, 
   BarChart3, 
@@ -15,8 +15,10 @@ import { Brain,
   Activity,
   DollarSign,
   BarChart
- } from 'lucide-react';
-import { SEO  } from "../../components/SEO";
+              } from 'lucide-react.ts';
+import { SEO               } from '../../components/SEO';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIQuantumFinancialTrading = () => {
   const features = [
     {
@@ -197,8 +199,10 @@ const AIQuantumFinancialTrading = () => {
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -254,8 +258,10 @@ const AIQuantumFinancialTrading = () => {
               Flexible pricing options designed to scale with your trading needs
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {services.map((service, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -304,8 +310,10 @@ const AIQuantumFinancialTrading = () => {
               Choose the plan that best fits your trading needs and budget.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -388,8 +396,10 @@ const AIQuantumFinancialTrading = () => {
               Tailored trading solutions for various financial institutions with proven results
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -448,8 +458,10 @@ const AIQuantumFinancialTrading = () => {
               Built on the latest technologies to ensure speed, accuracy, and reliability
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {technologies.map((tech, index)  => (
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto">
+            {technologies.map((tech, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

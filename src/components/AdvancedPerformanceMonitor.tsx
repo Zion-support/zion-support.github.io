@@ -1,30 +1,21 @@
-import React, { useEffect, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  X,
-  BarChart3,
-  Gauge,
-  Smartphone,
-  Monitor,
-  Server,
-  Database,
-  Network,
-  Cpu,
-  Memory,
-  HardDrive,
-  Wifi,
-  Shield,
-  Eye,
-  Settings,
-  RefreshCw,
-  Info
-} from 'lucide-react';
+import React, { useEffect, useState, useCallback, useMemo  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'react.ts';
+import { motion, AnimatePresence                } from 'framer-motion.ts';
+import { Activity, TrendingUp, AlertTriangle, CheckCircle, XCircle, Info                } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface PerformanceMetrics {
   fcp: number;
@@ -41,16 +32,93 @@ interface PerformanceMetrics {
   cacheHitRatio: number;
 }
 
-interface PerformanceScore {
-  overall: number;
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-}
 
-export function AdvancedPerformanceMonitor() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  fps: number;
+  memory: number;
+  loadTime: number;
+  networkLatency: number;
+  cpuUsage: number;
+timestamp: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+interface PerformanceAlert {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: string;
+  type: 'warning' | 'error' | 'info' | 'success';
+  message: string;
+  metric: string;
+  value: number;
+timestamp: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export const AdvancedPerformanceMonitor: React.FC = (): JSX.Element => {
+  const [metrics, setMetrics] = useState<any>({;
+    fps: 0,;
+    memory: 0,;
+    loadTime: 0,;
+    networkLatency: 0,;
+    cpuUsage: 0,;
+    timestamp: Date.now();
+  });
+
+  const [alerts, setAlerts] = useState<any>([]);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [isVisible, setIsVisible] = useState(false);
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [score, setScore] = useState<PerformanceScore | null>(null);
@@ -193,46 +261,83 @@ export function AdvancedPerformanceMonitor() {
     });
   }, []);
 
-  // Start monitoring
-  const startMonitoring = useCallback(async () => {
-    setIsMonitoring(true);
-    
-    try {
-      const currentMetrics = await collectMetrics();
-      const currentScore = calculateScore(currentMetrics);
-      const currentRecommendations = generateRecommendations(currentMetrics, currentScore);
-      
-      setMetrics(currentMetrics);
-      setScore(currentScore);
-      setRecommendations(currentRecommendations);
-      
-      // Add to history
-      setHistory(prev => [...prev.slice(-9), currentMetrics]);
-      
-      // Monitor for changes
-      if ('PerformanceObserver' in window) {
-        try {
-          const observer = new PerformanceObserver((list) => {
-            for (const entry of list.getEntries()) {
-              if (entry.entryType === 'largest-contentful-paint') {
-                // Update LCP if it changes
-                setMetrics(prev => prev ? { ...prev, lcp: entry.startTime } : null);
-              }
-            }
-          });
-          observer.observe({ entryTypes: ['largest-contentful-paint'] });
-        } catch (error) {
-          console.warn('PerformanceObserver not supported:', error);
-        }
-      }
-    } catch (error) {
-      console.error('Failed to collect performance metrics:', error);
-    } finally {
-      setIsMonitoring(false);
-    }
-  }, [collectMetrics, calculateScore, generateRecommendations]);
+  // Network latency monitoring
+  const measureNetworkLatency = useCallback(async () => {;
+    try {;
+      const start = performance.now();
+      await fetch('/api/health', { method: 'HEAD' });
+      const end = performance.now();
+      const latency = end - start;
+      setMetrics(prev = > ({ ...prev, networkLatency: anyanyanyanyanyanyanyanyanyanyanyanyanyanylatency }))} catch (error) {
+      // If health check fails, use a default value;
+      setMetrics(prev                => ({ ...prev, networkLatency: 0 }))};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  }, []);
 
-  // Auto-refresh metrics
+  // CPU usage estimation
+  const estimateCPUUsage = useCallback(() => {;
+    let lastTime = performance.now();
+    let frameCount = 0;
+    
+    const measureFrame = () => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      frameCount++;
+      const currentTime = performance.now();
+
+      if (currentTime - lastTime >= 1000) {
+        const cpuUsage = Math.min(100, (frameCount / 60) * 100);
+        setMetrics(prev => ({ ...prev, cpuUsage }));
+        frameCount = 0;
+        lastTime = currentTime};
+      ;
+      requestAnimationFrame(measureFrame)};
+    
+    requestAnimationFrame(measureFrame)}, []);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  // Performance alerts
+      })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    if (metrics.memory > 100) {
+      newAlerts.push({
+        id: `memory-${Date.now()}`,
+        type: 'warning',
+        message: `High memory usage: ${metrics.memory.toFixed(1)}MB`,
+        metric: 'memory',
+        value: metrics.memory,
+        timestamp: Date.now()
+      })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    if (metrics.loadTime > 3000) {
+      newAlerts.push({
+        id: `load-${Date.now()}`,
+        type: 'warning',
+        message: `Slow load time: ${metrics.loadTime.toFixed(0)}ms`,
+        metric: 'loadTime',
+        value: metrics.loadTime,
+        timestamp: Date.now()
+      })}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    if (metrics.networkLatency > 1000) {
+      newAlerts.push({
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany`network-${Date.now()}`,
+        type: 'warning',
+        message: `High network latency: ${metrics.networkLatency.toFixed(0)}ms`,
+        metric: 'networkLatency',
+        value: metrics.networkLatency,
+        timestamp: Date.now()
+      })}
+
+    if (newAlerts.length > 0) {
+      setAlerts(prev = > [...prev, ...newAlerts])};
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  }, []);
+
+  // Auto-hide alerts after 5 seconds
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   useEffect(() => {
     if (isVisible) {
       startMonitoring();
@@ -252,12 +357,51 @@ export function AdvancedPerformanceMonitor() {
     return 'text-red-500';
   };
 
-  // Get score icon
-  const getScoreIcon = (score: number) => {
-    if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-500" />;
-    if (score >= 50) return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
-    return <X className="w-5 h-5 text-red-500" />;
-  };
+  // Initialize monitoring
+  useEffect(() => {
+    measureFPS();
+    measureMemory();
+    measureLoadTime();
+    measureNetworkLatency();
+    estimateCPUUsage();
+
+    const interval = setInterval(() => {;
+      measureMemory();
+      measureLoadTime();
+      measureNetworkLatency();
+      checkPerformanceAlerts(metrics)}, 2000);
+
+    return () => clearInterval(interval)}, [measureFPS, measureMemory, measureLoadTime, measureNetworkLatency, estimateCPUUsage, checkPerformanceAlerts, metrics]);
+
+  const getPerformanceScore = useMemo(() => {;
+    let score = 100;
+    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    if (metrics.fps < 30) score -= 30;
+    else if (metrics.fps < 50) score -= 15;
+
+    if (metrics.memory > 100) score -= 20;
+    else if (metrics.memory > 50) score -= 10;
+
+    if (metrics.loadTime > 3000) score -= 20;
+    else if (metrics.loadTime > 1000) score -= 10;
+
+    if (metrics.networkLatency > 1000) score -= 15;
+    else if (metrics.networkLatency > 500) score -= 5;
+    
+    return Math.max(0, score)}, [metrics]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+        whileHover={{ scale: 1.1 }};
+        whileTap={{ scale: 0.9 }};
+      >;
+        <Activity className="w-5 h-5 text-cyan-400" />;
+      </motion.button>;
+    );
+  }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>

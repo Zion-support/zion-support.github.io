@@ -1,5 +1,6 @@
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { Heart, 
   Brain, 
   TrendingUp, 
@@ -42,8 +43,12 @@ import { Heart,
   Clipboard,
   TestTube
 } from 'lucide-react';
-import { SEO } from "../../components/SEO";
-export default function AIHealthcarePredictiveAnalytics(...args[]):  {
+import { SEO              } from '../../components/SEO';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function AIHealthcarePredictiveAnalytics(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -285,8 +290,11 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
               Everything you need to predict, prevent, and optimize healthcare delivery
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -335,8 +343,11 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
               Specialized AI solutions for every medical specialty
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {clinicalApplications.map((application, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {clinicalApplications.map((application, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -385,8 +396,11 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
               Transform your healthcare delivery and unlock new levels of patient care
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -432,8 +446,11 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
               Built with healthcare-grade security and compliance standards
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6">
-            {complianceFeatures.map((feature, index)  => (
+          
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {complianceFeatures.map((feature, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -479,8 +496,11 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
               From small clinics to large health systems, our platform scales with your needs
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -529,8 +549,11 @@ export default function AIHealthcarePredictiveAnalytics(...args[]):  {
               Choose the plan that fits your healthcare organization size and needs
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

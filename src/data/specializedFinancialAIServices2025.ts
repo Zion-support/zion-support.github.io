@@ -1,6 +1,21 @@
 // Specialized Financial AI Services 2025 - Zion Tech Group
 // Advanced AI-powered financial technology solutions
 export interface FinancialAIService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: number;
   name: string;
   category: string;
@@ -21,10 +36,11 @@ export interface FinancialAIService {
   regulatoryApproval: string[];
   useCases: string[];
   technologies: string[];
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     address: string}}
 // Zion Tech Group Contact Information
 const zionContact = {

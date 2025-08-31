@@ -1,5 +1,6 @@
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { Brain, 
   TrendingUp, 
   BarChart3, 
@@ -21,10 +22,13 @@ import { Brain,
   LineChart,
   Activity
  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
-import { Button  } from '@/components/ui/button';
-import { Badge  } from '@/components/ui/badge';
-export default function AIBusinessIntelligencePlatform(...args[]):  {
+import { SEO               } from '@/components/SEO';
+import { Button               } from '@/components/ui/button';
+import { Badge               } from '@/components/ui/badge';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function AIBusinessIntelligencePlatform(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -203,8 +207,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               to deliver actionable business intelligence.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -253,8 +259,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               See measurable improvements in efficiency, decision-making, and business outcomes.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -300,8 +308,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               Flexible pricing options designed to scale with your business needs.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingTiers.map((tier, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingTiers.map((tier, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -380,8 +390,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {
               Our platform is designed to work across various industries and use cases.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

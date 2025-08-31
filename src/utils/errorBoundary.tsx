@@ -1,16 +1,44 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { motion } from 'framer-motion';
+import React, { Component, ErrorInfo, ReactNode } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 
-interface Props {
+interface Props extends React.PropsWithChildren<{}> {
+
   children: ReactNode;
   fallback?: ReactNode;
+
 }
 
 interface State {
+
+
+
+
+
+
+
+
+
+
+
+
+
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
   retryCount: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -41,7 +69,7 @@ class ErrorBoundary extends Component<Props, State> {
     this.logError(error, errorInfo);
   }
 
-  logError = (error: Error, errorInfo: ErrorInfo) => {
+  logError = (error: anyanyanyanyanyanyanyanyanyanyanyanyanyError, errorInfo: ErrorInfo)              => {
     // Log to console for development
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Boundary Error');

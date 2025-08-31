@@ -1,15 +1,61 @@
-import { useEffect, useRef, useCallback, useMemo  } from 'react.ts';
+import { useEffect, useRef, useCallback, useMemo               } from 'react.ts';
+
 interface UseAccessibilityOptions {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enableKeyboardNavigation?: boolean;
   enableFocusManagement?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableReducedMotion?: boolean;
-  enableLargeText?: boolean}
+enableLargeText?: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
 interface AccessibilityFeatures {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   isHighContrast: boolean;
   isReducedMotion: boolean;
   isLargeText: boolean;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   isScreenReader: boolean}
 export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const {;
@@ -51,6 +97,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       isScreenReader: false // Would need to detect screen reader usage
     }}, []);
   // Keyboard navigation
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           navigateFocus('forward', currentElement)}
         break;
       case 'Escape':
@@ -76,6 +123,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
         break}
   }, [enableKeyboardNavigation]);
   // Focus management
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       lastFocusedElementRef.current = document.activeElement}
 ;
     // Focus the new element;
@@ -86,6 +134,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     setTimeout(() => {
       element.classList.remove('focus-visible')}, 2000)}, [enableFocusManagement]);
   // Focus trap for modals
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       focusableElements[0].focus()}
     // Store focusable elements
     focusableElementsRef.current = focusableElements}, [enableFocusManagement]);
@@ -97,7 +146,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       focusableElementsRef.current = []};
   }, []);
   // Get all focusable elements
-  const getFocusableElements = useCallback((container: HTMLElement): HTMLElement[]  => {
+  const getFocusableElements = useCallback((container: anyanyanyanyanyanyanyanyanyanyanyanyanyHTMLElement): HTMLElement[]               => {
     const selector = [
       'button:not([disabled])',;
       'input:not([disabled])',;
@@ -109,6 +158,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     ].join(', ');
     return Array.from(container.querySelectorAll(selector)) as HTMLElement[]}, []);
   // Navigate focus
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (direction = == 'forward') {;
       nextIndex = currentIndex < focusableElements.length - 1 ? currentIndex + 1 : 0;
     } else {
@@ -116,6 +166,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
     }
     manageFocus(focusableElements[nextIndex])}, [getFocusableElements, manageFocus]);
   // Vertical navigation
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (direction = == 'up') {;
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
     } else {
@@ -126,6 +177,7 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
       manageFocus(nextElement)}
   }, [manageFocus]);
   // Horizontal navigation
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (direction = == 'left') {;
       nextIndex = currentIndex > 0 ? currentIndex - 1 : items.length - 1;
     } else {

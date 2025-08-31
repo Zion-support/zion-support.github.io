@@ -1,11 +1,14 @@
-import React from 'react';
+import React from 'react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Database,
   Cpu,
   Lock
 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+>>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
+=======
+import { motion              } from 'framer-motion.ts';
+import { Brain,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   BarChart3,
   TrendingUp,
   Zap,
@@ -22,8 +25,11 @@ import {
   Clock,
   DollarSign,
   Lightbulb
- } from 'lucide-react';
-const AIBusinessIntelligence: React.FC = () => {
+              } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+const AIBusinessIntelligence: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Brain,
@@ -202,8 +208,10 @@ const AIBusinessIntelligence: React.FC = () => {
               to deliver actionable insights that transform your business.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 lg:gap-12">
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Powerful Features
@@ -213,8 +221,10 @@ const AIBusinessIntelligence: React.FC = () => {
               data analysis, visualization, and decision-making support.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial = {
@@ -264,6 +274,7 @@ const AIBusinessIntelligence: React.FC = () => {
               Join thousands of businesses that have transformed their operations with AI-powered insights
             </p>
           </motion.div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="group">
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -383,8 +394,10 @@ const AIBusinessIntelligence: React.FC = () => {
               platform to achieve remarkable results.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Industry Applications
@@ -394,8 +407,10 @@ const AIBusinessIntelligence: React.FC = () => {
               enabling data-driven decision making and operational excellence.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index)  => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={useCase.industry}
                 initial = {
@@ -452,8 +467,10 @@ const AIBusinessIntelligence: React.FC = () => {
               and drive measurable business outcomes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
                 plan.popular ? 'border-blue-500 ring-4 ring-blue-500/20' : 'border-gray-200'
               }`}>
@@ -493,6 +510,8 @@ const AIBusinessIntelligence: React.FC = () => {
               </div>
             ))}
           </div>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Need a custom solution?</p>
             <a

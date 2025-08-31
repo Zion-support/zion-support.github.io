@@ -1,7 +1,10 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Heart, Users, Shield, Zap, Settings, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Stethoscope               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function HealthcareTech(...args: []):  {
   return (
     <>
@@ -55,7 +58,9 @@ export default function HealthcareTech(...args: []):  {
                 from AI diagnostics to patient management systems.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Heart,
@@ -86,6 +91,7 @@ export default function HealthcareTech(...args: []):  {
                   icon: Globe,
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -110,7 +116,9 @@ export default function HealthcareTech(...args: []):  {
                 Discover how our technology solutions can transform different aspects of healthcare delivery.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Diagnostic Imaging",
@@ -147,6 +155,7 @@ export default function HealthcareTech(...args: []):  {
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.",
                   icon: Database,
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((application, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -202,11 +211,11 @@ export default function HealthcareTech(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>
                 <div className="space-y-4">
                   {[
-                    { benefit: "Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
+                    { benefit: anyanyanyanyanyanyanyanyanyanyanyanyany"Improved Accuracy", metric: "95%", description: "Diagnostic accuracy" },
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
                       <div className="text-2xl font-bold text-pink-400 mb-1">{item.metric}</div>
                       <div className="text-sm text-slate-300">{item.benefit}</div>
@@ -229,7 +238,9 @@ export default function HealthcareTech(...args: []):  {
                 Built-in compliance features ensure your healthcare technology meets all regulatory requirements.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "HIPAA Compliance",
@@ -266,6 +277,7 @@ export default function HealthcareTech(...args: []):  {
                   description: "Information security management system certification.",
                   icon: Settings,
                   features: ["Security framework", "Risk management", "Continuous improvement"]
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((compliance, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -298,7 +310,9 @@ export default function HealthcareTech(...args: []):  {
                 Our systematic approach ensures successful healthcare technology implementation.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   step: "01",
@@ -319,6 +333,7 @@ export default function HealthcareTech(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
                 <div key={index} className="text-center">

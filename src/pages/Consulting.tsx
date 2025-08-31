@@ -1,5 +1,7 @@
 import React from 'react.ts';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase  } from 'lucide-react';
+import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase               } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const Consulting = () => {
   const consultingServices = [
     {
@@ -144,8 +146,10 @@ const Consulting = () => {
               technology challenges and opportunities.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {consultingServices.map((service, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {consultingServices.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -177,8 +181,10 @@ const Consulting = () => {
               to deliver relevant and effective solutions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {industries.map((industry, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-orange-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <industry.icon className="w-8 h-8 text-white"/>
@@ -239,8 +245,10 @@ const Consulting = () => {
             A systematic approach to delivering consulting services that ensures
             success and maximizes value for our clients.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((phase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {process.map((phase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
                   {index + 1}

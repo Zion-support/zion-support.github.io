@@ -1,7 +1,23 @@
-import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions";
+import { specializedIndustrySolutions2026              } from '../../data/2026-specialized-industry-solutions';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 // Interface for the existing service structure
 export interface Service {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -20,11 +36,25 @@ export interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     phone: string;
     email: string;
     website: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

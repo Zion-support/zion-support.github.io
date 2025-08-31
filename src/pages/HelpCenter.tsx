@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState } from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Search,
   HelpCircle,
   MessageCircle,
   Phone,
@@ -33,25 +32,86 @@ import {
   CheckCircle,
   AlertCircle,
   Info
-} from 'lucide-react';
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'lucide-react.ts';
+
 interface HelpSection {
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
-  icon: any;
+  icon: ;
   description: string;
-  articles: Array<{
-    title: string;
-    description: string;
-    path?: string;
-    external?: boolean;
-    difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-    readTime: string;
-  }>;
+articles: Array<any>;
+
+
+
+
+
+
+
+
+
+
+
+
 }
 interface FAQItem {
+
+
+
+
+
+
+
+
+
+
+
+
+
   question: string;
   answer: string;
   category: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 const helpSections: HelpSection[] = [
   {
@@ -302,11 +362,14 @@ const faqData: FAQItem[] = [
     category: 'Security'
   }
 ];
-export function HelpCenter() {
+
+export function HelpCenter(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const handleSearch = (query: string) => {
+  const [selectedCategory, setSelectedCategory] = useState<any>('All');
+
+  const handleSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSearchQuery(query);
     if (query.trim() === '') {
       setFilteredFAQs(faqData);
@@ -319,8 +382,9 @@ export function HelpCenter() {
     setFilteredFAQs(filtered);
   };
   const filteredFAQ = selectedCategory === 'All' 
-    ? faqData 
-    : faqData.filter(item => item.category === selectedCategory);
+    ? faqData: anyanyanyanyanyanyanyanyanyanyanyanyanyfaqData.filter(item              => item.category === selectedCategory);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = ['All', ...Array.from(new Set(faqData.map(item => item.category)))];
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">
@@ -360,8 +424,8 @@ export function HelpCenter() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Browse Help Topics</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {helpCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {helpCategories.map((category, index)              => (
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -391,8 +455,8 @@ export function HelpCenter() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {supportOptions.map((option, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {supportOptions.map((option, index)              => (
               <motion.div
                 key={option.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -429,11 +493,11 @@ export function HelpCenter() {
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory === 'all'
                     ? 'bg-zion-cyan text-white'
-                    : 'bg-white/10 text-zion-slate-light hover:bg-white/20'
+                    : 'bg-white/10 text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
                 }`}
                 All Categories
               </button>
-              {helpCategories.map(category => (
+              {helpCategories.map(category              => (
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
@@ -497,6 +561,7 @@ export function HelpCenter() {
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.3 }}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                           className="border-t border-cyan-400/20"
                         >
                           <div className="p-6 space-y-4">

@@ -1,71 +1,65 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Shield, 
-  Heart, 
-  Zap, 
-  Rocket, 
-  Target, 
-  Users, 
-  Globe, 
-  Database, 
-  Cloud,
-  CheckCircle,
+import React, { useState, useEffect } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Search,
+  Filter,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
   ArrowRight,
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Star,
   Clock,
-  DollarSign,
-  BarChart3,
-  Cpu,
-  Network,
-  BookOpen,
-  GraduationCap,
-  Building2,
-  Atom,
-  Satellite,
-  Search,
-  FileText,
-  Server,
-  Truck,
-  Leaf,
-  TrendingUp,
-  Lock,
-  Lightbulb,
-  Sparkles
-} from 'lucide-react';
+  CheckCircle,
+  ArrowRight
+import { SEO              } from '../components/SEO';
+import { revolutionaryMicroSaasServices2026,
+  revolutionaryITInfrastructureServices2026,
+  revolutionaryAIServices2026,
+  ALL_REVOLUTIONARY_SERVICES_2026
+             } from '../data/comprehensiveServices2026';
+const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState('all');
+  const categories = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.category)))];
+  const innovationLevels = ['all', ...Array.from(new Set(ALL_REVOLUTIONARY_SERVICES_2026.map(s => s.innovationLevel)))];
+  const filtered = ALL_REVOLUTIONARY_SERVICES_2026;
+    if (searchTerm) {
+      const lowerQuery = searchTerm.toLowerCase();
+      filtered = filtered.filter(service =>
+        service.name.toLowerCase().includes(lowerQuery) ||
+        service.description.toLowerCase().includes(lowerQuery) ||
+        service.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
+      );
 
-export default function ComprehensiveServicesShowcase2026() {
-  const aiServices = [
-    {
-      icon: Brain,
-      title: "AI Autonomous Research Assistant",
-      description: "AI-powered research that works 24/7, continuously gathering and analyzing data from multiple sources",
-      price: "From $299/month",
-      features: ["Autonomous research", "Multi-source intelligence", "Predictive analytics", "Collaborative research"],
-      link: "/services/ai-autonomous-research-assistant",
-      category: "AI & Research"
-    },
-    {
-      icon: Shield,
-      title: "AI Cybersecurity Threat Intelligence",
-      description: "Advanced AI-powered threat detection with 99.9% accuracy and real-time response capabilities",
-      price: "From $499/month",
-      features: ["AI threat detection", "Real-time monitoring", "Predictive intelligence", "Automated response"],
-      link: "/services/ai-cybersecurity-threat-intelligence",
-      category: "Cybersecurity"
-    },
-    {
-      icon: Heart,
-      title: "AI Healthcare Diagnostics Platform",
-      description: "Revolutionary AI-powered healthcare diagnostics with 99.7% accuracy for early disease detection",
-      price: "From $799/month",
-      features: ["AI-powered diagnosis", "Multi-modal analysis", "Predictive healthcare", "HIPAA compliant"],
-      link: "/services/ai-healthcare-diagnostics-platform",
-      category: "Healthcare"
-    },
-    {
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory);
+
+    if (selectedInnovationLevel !== 'all') {
+      filtered = filtered.filter(service => service.innovationLevel === selectedInnovationLevel);
+
+    return filtered;
+  }, [searchTerm, selectedCategory, selectedInnovationLevel]);
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    switch (category) {;
+      case 'Quantum Computing': return <Cpu className="w-5 h-5" />;
+      case 'Neural Networks': return <Brain className="w-5 h-5" />;
+      case 'Blockchain Development': return <Shield className="w-5 h-5" />;
+      case 'Quantum Computing Infrastructure': return <Cpu className="w-5 h-5" />;
+      case 'Edge Computing': return <Network className="w-5 h-5" />;
+      case 'Autonomous Systems': return <Brain className="w-5 h-5" />;
+      case 'Quantum AI': return <Zap className="w-5 h-5" />;
+      default: return <Zap className="w-5 h-5" />;
+
+  };
+  const getInnovationLevelColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    switch (level) {;
+      case 'Revolutionary': return 'bg-gradient-to-r from-purple-600 to-pink-600';
+      case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
+      case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
+      default: return 'bg-gray-600';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
       icon: Search,
       title: "AI-Powered SEO Platform",
       description: "Intelligent SEO optimization using AI to boost search rankings and drive organic traffic",
@@ -91,6 +85,7 @@ export default function ComprehensiveServicesShowcase2026() {
       features: ["Demand forecasting", "Inventory optimization", "Route optimization", "Risk management"],
       link: "/services/ai-supply-chain-optimization-enhanced",
       category: "Supply Chain"
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     }
   ];
 
@@ -338,6 +333,7 @@ export default function ComprehensiveServicesShowcase2026() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -351,9 +347,139 @@ export default function ComprehensiveServicesShowcase2026() {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
+              Revolutionary Services
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+                2026
+              </span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
+            >
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+              Experience the future with Zion Tech Group's cutting-edge micro SAAS, IT infrastructure, and AI services.
+              Quantum computing, edge AI, autonomous agents, and blockchain solutions that redefine what's possible.
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="flex flex-wrap justify-center gap-4 text-sm text-zinc-400"
+
+              <span className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                {ALL_REVOLUTIONARY_SERVICES_2026.length} Revolutionary Services
+              </span>
+              <span className="flex items-center gap-2">
+                <TrendingUp className="w-4 h-4 text-blue-400" />
+                Up to 1000x Performance Improvement
+              </span>
+              <span className="flex items-center gap-2">
+                <Star className="w-4 h-4 text-yellow-400" />
+                Market Leading Innovation
+              </span>
+            </motion.div>
+          </div>
+        </section>
+        {/* Search and Filter Section */}
+        <section className="py-8">
+          <div className="container mx-auto px-4">
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Search */}
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search services..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  />
+                </div>
+                {/* Category Filter */}
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+
+                  {categories.map(category              => (
+                    <option key={category} value={category} className="bg-zinc-800 text-white">
+                      {category === 'all' ? 'All Categories' : category}
+                    </option>
+                  ))}
+                </select>
+                {/* Innovation Level Filter */}
+                <select
+                  value={selectedInnovationLevel}
+                  onChange={(e) => setSelectedInnovationLevel(e.target.value)}
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+
+                  {innovationLevels.map(level              => (
+                    <option key={level} value={level} className="bg-zinc-800 text-white">
+                      {level === 'all' ? 'All Innovation Levels' : level}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Services Grid */}
+        <section className="py-12">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredServices.map((service, index)              => (
+                <motion.div
+                  key={service.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                  animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                >
+                  <category.icon className="h-5 w-5" />
+                  {category.name}
+                  <span className="bg-white/20 px-2 py-1 rounded-full text-sm">
+                    {category.count}
+                  </span>
+                </motion.button>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+              ))}
+            </div>
                   <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">
                     {service.category}
                   </span>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                 </div>
 
                 {/* Service Content */}

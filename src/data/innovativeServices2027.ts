@@ -1,4 +1,19 @@
 export interface InnovativeService2027 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   category: string;
@@ -14,7 +29,22 @@ export interface InnovativeService2027 {
   rating: number;
   reviews: number;
   launchDate: string;
-  status: 'active' | 'beta' | 'coming-soon'}
+status: 'active' | 'beta' | 'coming-soon';
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const innovativeServices2027: InnovativeService2027[] = [
   {
     id: 'quantum-ai-platform',
@@ -112,7 +142,8 @@ export const serviceCategories2027 = [
   'Nanotechnology',;
   'Neural Technology';
 ];
-export const getServicesByCategory = (category: string): InnovativeService2027[] => {;
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): InnovativeService2027[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return innovativeServices2027;
   return innovativeServices2027.filter(service => service.category === category);

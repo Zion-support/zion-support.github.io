@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Heart, 
   Activity, 
@@ -320,7 +321,9 @@ import {
   CloudHail10,
   CloudSnow10,
   CloudSleet10
-} from 'lucide-react';
+             } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIHealthcareAnalyticsPlatform = () => {
   const features = [
     {
@@ -512,11 +515,14 @@ const AIHealthcareAnalyticsPlatform = () => {
           </motion.div>
         </div>
       </section>
+
       {/* Key Metrics Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {keyMetrics.map((item, index) => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {keyMetrics.map((item, index)              => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -547,8 +553,11 @@ const AIHealthcareAnalyticsPlatform = () => {
               Our platform combines cutting-edge AI with healthcare best practices
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -582,8 +591,10 @@ const AIHealthcareAnalyticsPlatform = () => {
               See real results with our AI-powered healthcare analytics platform
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -614,8 +625,10 @@ const AIHealthcareAnalyticsPlatform = () => {
               Tailored solutions for various healthcare organizations and specialties
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -646,8 +659,10 @@ const AIHealthcareAnalyticsPlatform = () => {
               Meet all major healthcare compliance and regulatory requirements
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {complianceStandards.map((standard, index) => (
+          
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-4">
+            {complianceStandards.map((standard, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -677,8 +692,11 @@ const AIHealthcareAnalyticsPlatform = () => {
               Choose the plan that fits your healthcare organization and scale as you grow
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -731,8 +749,11 @@ const AIHealthcareAnalyticsPlatform = () => {
               Connect with your existing EHR systems and healthcare platforms
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

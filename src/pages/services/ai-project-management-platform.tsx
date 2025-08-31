@@ -1,11 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Workflow,
-  Brain,
-  TrendingUp,
-  Users,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
+import { Brain, 
+  Users, 
+  Calendar, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  ArrowRight,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Clock,
   DollarSign,
   CheckCircle,
@@ -36,48 +41,9 @@ import {
   Cpu,
   Network,
   Smartphone,
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Play,
-  Award,
-  Rocket,
-  Building2,
-  Cloud,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  MessageCircle,
-  BookOpen,
-  Video,
-  GraduationCap,
-  PenTool,
-  Handshake,
-  ShoppingCart,
-  Heart,
-  Star,
-  ThumbsUp,
-  UserCheck,
-  MousePointer,
-  ArrowUpRight,
-  CheckCircle2,
-  Clock3,
-  Target2,
-  Users2,
-  Palette,
-  Search as SearchIcon,
-  Settings as SettingsIcon,
-  Palette as PaletteIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon
-} from 'lucide-react';
+  Cloud
+              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const AIProjectManagementPlatform: React.FC = () => {
   const features = [
@@ -384,14 +350,76 @@ const AIProjectManagementPlatform: React.FC = () => {
             </p>
           </motion.div>
 
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
+
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {features.map((feature, index) => (
+            className="text-center mb-16"
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join thousands of teams already experiencing the benefits of AI-powered project management
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}
@@ -413,6 +441,53 @@ const AIProjectManagementPlatform: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 text-lg">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
 
@@ -437,14 +512,9 @@ const AIProjectManagementPlatform: React.FC = () => {
             </p>
           </motion.div>
 
-          <motion.div
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
-          >
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 variants={itemVariants}

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  BarChart3,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { BarChart3,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   PieChart,
   TrendingUp,
   Activity,
@@ -16,22 +16,73 @@ import {
   Download,
   Share2,
   RefreshCw
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
 interface ChartData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   labels: string[];
-datasets: {
+datasets: {;
     label: string;
     data: number[];
     backgroundColor: string[];
     borderColor: string[];
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     borderWidth: number}[]}
 interface MetricCard {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   value: string | number;
   change: number;
   changeType: 'increase' | 'decrease' | 'neutral';
   icon: React.ReactNode;
-  color: string}
+color: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
   title?: string;
   showMetrics?: boolean;
@@ -97,11 +148,12 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     // Update chart data with new random values
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setChartData(prev = > ({;
       ...prev,;
-      datasets: [{;
+      datasets: anyanyanyanyanyanyanyanyanyanyanyanyanyany[{;
         ...prev.datasets[0],;
-        data: prev.datasets[0].data.map(() => Math.floor(Math.random() * 100) + 20);
+        data: prev.datasets[0].data.map(()               => Math.floor(Math.random() * 100) + 20);
       }];
     }));
     // Update metrics with new random values
@@ -115,6 +167,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     })));
     setIsLoading(false)};
   // Get change icon and color
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
     datasets: [{
       data: [35, 25, 20, 15, 5],
@@ -201,8 +254,10 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 ;
       {/* Metrics Cards */};
       {showMetrics && (;
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
-          {metrics.map((metric, index) => {;
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">;
+          {metrics.map((metric, index)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
               <motion.div

@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Server,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Server,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Shield,
   Cloud,
   Database,
@@ -12,7 +12,10 @@ import {
   Cpu,
   HardDrive,
   Check
-} from 'lucide-react';
+             } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const ITInfrastructure = () => {
   const services = [
     {
@@ -105,8 +108,10 @@ const ITInfrastructure = () => {
               that ensure your business runs smoothly and efficiently.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -143,6 +148,7 @@ const ITInfrastructure = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               transition={{ duration: 0.6 }}
               className="text-center mb-16"
             >
@@ -153,8 +159,11 @@ const ITInfrastructure = () => {
                 Experience enterprise-grade infrastructure with unmatched reliability, security, and performance.
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+              {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}

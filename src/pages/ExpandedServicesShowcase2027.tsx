@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Search,
   Filter,
   Grid3X3,
   List,
@@ -56,26 +55,36 @@ import {
   Server as Edge,
   Monitor as Healthcare,
   Cpu as FinTech
-import { SEO } from '@/components/SEO';
-import {
-  ALL_EXPANDED_SERVICES_2027,
+import { SEO              } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_2027,
   EXPANDED_SERVICE_CATEGORIES,
   getExpandedServicesByCategory,
   searchExpandedServices,
   type ExpandedService2027
-} from '@/data/expandedInnovativeServices2027';
+             } from '@/data/expandedInnovativeServices2027';
+
       services = searchExpandedServices(searchQuery)};
     setFilteredServices(services)}, [selectedCategory, searchQuery]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return Rocket}
   };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'from-gray-500 to-slate-600'}
   };
-  const formatPrice = (pricing: ExpandedService2027['pricing']) => {;
+
+  const formatPrice = (pricing: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027['pricing'])              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (pricing.model === 'Transaction Fees + Governance') {;
       return 'Free + Transaction Fees';
     return `$${pricing.basePrice.toLocaleString()}/month`;
   };
-  const renderServiceCard = (service: ExpandedService2027) => {;
+
+  const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
     return (
@@ -246,6 +255,7 @@ import {
                 className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </a>;
             </div>;
           </div>;
@@ -253,7 +263,10 @@ import {
       </motion.div>;
     );
   };
-  const renderServiceList = (service: ExpandedService2027) => {;
+
+  const renderServiceList = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyExpandedService2027)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const CategoryIcon = getCategoryIcon(service.category);
     const categoryColor = getCategoryColor(service.category);
     return (
@@ -448,9 +461,11 @@ import {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {EXPANDED_SERVICE_CATEGORIES.map((category)  => (
+                {EXPANDED_SERVICE_CATEGORIES.map((category)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -488,8 +503,8 @@ import {
         </div>
         {/* Services Grid/List */}
         {filteredServices.length > 0 ? (
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-            {filteredServices.map((service) =>
+          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            {filteredServices.map((service)              =>
               viewMode === 'grid' ? renderServiceCard(service) : renderServiceList(service)
             )}
           </div>

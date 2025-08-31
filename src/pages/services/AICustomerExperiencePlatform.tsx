@@ -1,6 +1,7 @@
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
+import { SEO               } from '../../components/SEO';
+import { motion               } from 'framer-motion.ts';
 import { Users, 
   Brain, 
   MessageSquare, 
@@ -26,8 +27,11 @@ import { Users,
   MessageCircle,
   Bot,
   Headphones
- } from 'lucide-react';
-export default function AICustomerExperiencePlatform(...args[]):  {
+              } from 'lucide-react.ts';
+
+export default function AICustomerExperiencePlatform(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     'AI-powered sentiment analysis and emotion detection',
     'Real-time customer journey mapping and optimization',;
@@ -110,8 +114,8 @@ export default function AICustomerExperiencePlatform(...args[]):  {
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-900 mb-4">Competitive Pricing</h3>
-            <div className="grid md:grid-cols-3 gap-4">
-              {tiers.map((t) => (
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+              {tiers.map((t)              => (
                 <div key={t.name} className="rounded-lg p-4 border border-gray-200 hover:border-pink-300 transition-colors">
                   <div className="text-lg font-semibold mb-1">{t.name}</div>
                   <div className="text-2xl font-bold text-pink-600 mb-2">{t.price}</div>
@@ -131,8 +135,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
             </div>
           </div>
         </div>
-        <div className="mt-12 grid md:grid-cols-3 gap-6">
-          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t) => (
+
+        <div className="mt-12 grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+          {['25-40% CSAT improvement', 'Real-time insights', 'AI personalization'].map((t)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
@@ -141,8 +147,8 @@ export default function AICustomerExperiencePlatform(...args[]):  {
         </div>
         <div className="mt-16 bg-gray-50 rounded-xl p-8">
           <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Popular Use Cases</h3>
-          <div className="grid md:grid-cols-2 gap-6">
-            {useCases.map((useCase) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
+            {useCases.map((useCase)              => (
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">
                 <MessageCircle className="w-5 h-5 text-pink-600 mr-3" />
                 <span className="text-gray-700">{useCase}</span>
@@ -195,8 +201,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               Our AI platform delivers personalized, intelligent customer experiences across every touchpoint
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -244,8 +252,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               From initial assessment to ongoing optimization, we provide end-to-end CX transformation
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 gap-8">
-            {services.map((service, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -299,8 +309,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               See how AI-powered customer experience transforms different business functions
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -353,8 +365,10 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               Experience the advantages of intelligent customer experience management
             </p>
           </motion.div>
-          <div className="grid md: grid-cols-2 gap-8">
-            {benefits.map((benefit, index)  => (
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -379,6 +393,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {
               </motion.div>
             ))}
           </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;

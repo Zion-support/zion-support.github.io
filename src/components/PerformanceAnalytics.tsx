@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
 import {
   Activity,
   TrendingUp,
@@ -14,6 +14,20 @@ import {
   Network,
   Monitor
 interface PerformanceMetric {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   name: string;
   value: number;
   unit: string;
@@ -25,22 +39,39 @@ interface PerformanceData {
   metrics: PerformanceMetric[];
   alerts: string[];
   recommendations: string[];
-const PerformanceAnalytics: React.FC = () => {;
-  const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
+
+const PerformanceAnalytics: React.FC = (): JSX.Element => {;
+  const [performanceData, setPerformanceData] = useState<any>(null);
   const [isMonitoring, setIsMonitoring] = useState(false);
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
+  const [selectedTimeframe, setSelectedTimeframe] = useState<any>('24h');
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Mock performance data - in real implementation, this would come from actual monitoring
   const generateMockData = useCallback((): PerformanceData => {;
     const now = Date.now();
-    const metrics: PerformanceMetric[] = [
+const metrics: PerformanceMetric[] = [;
       {
-        name: 'Page Load Time',
-        value: Math.random() * 2000 + 500,
-        unit: 'ms',
-        trend: Math.random() > 0.5 ? 'up' : 'down',
-        status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
-        icon: Clock
-      },
+name: 'Page Load Time',;
+value: Math.random() * 2000 + 500,;
+unit: 'ms',;
+trend: Math.random() > 0.5 ? 'up' : 'down',;
+status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',;
+icon: Clock;
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+},
       {
         name: 'Memory Usage',
         value: Math.random() * 40 + 60,
@@ -92,13 +123,15 @@ const PerformanceAnalytics: React.FC = () => {;
       'Enable CDN for static assets delivery';
     ];
     return {
-      timestamp: now,
+      timestamp: anyanyanyanyanyanyanyanyanyanyanyanyanyanynow,
       metrics,
       alerts,
       recommendations
     };
   }, []);
-  useEffect(() => {
+
+  useEffect(()               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (isMonitoring) {
       const interval = setInterval(() => {;
         setPerformanceData(generateMockData());
@@ -106,21 +139,28 @@ const PerformanceAnalytics: React.FC = () => {;
       return () => clearInterval(interval);
     }
   }, [isMonitoring, generateMockData]);
-  const getStatusColor = (status: string) => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (status) {;
       case 'good': return 'text-green-400';
       case 'warning': return 'text-yellow-400';
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
   };
-  const getStatusBgColor = (status: string) => {;
+
+  const getStatusBgColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (status) {;
       case 'good': return 'bg-green-500/20';
       case 'warning': return 'bg-yellow-500/20';
       case 'critical': return 'bg-red-500/20';
       default: return 'bg-gray-500/20';
   };
-  const getTrendIcon = (trend: string) => {;
+
+  const getTrendIcon = (trend: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (trend) {;
       case 'up': return <TrendingUp className="w-4 h-4 text-red-400" />;
       case 'down': return <TrendingDown className="w-4 h-4 text-green-400" />;
@@ -177,6 +217,7 @@ const PerformanceAnalytics: React.FC = () => {;
                   ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                   : 'bg-green-600 hover:bg-green-700 text-white'
               }`}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             >
               <Activity className="w-5 h-5" />
               Start Monitoring
@@ -217,9 +258,9 @@ const PerformanceAnalytics: React.FC = () => {;
   y: 0 
 }}
             transition={{ delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+            className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 mb-12"
           >
-            {performanceData.metrics.map((metric, index) => (
+            {performanceData.metrics.map((metric, index)               => (
               <motion.div
                 key={metric.name}
                 initial = {

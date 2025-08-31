@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Code,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Code,
   Database,
   Cloud,
   Shield,
@@ -11,7 +10,9 @@ import {
   Server,
   Cpu,
   Network
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       color: 'from-red-500 to-pink-500';
     };
   ];
@@ -69,7 +70,9 @@ const emergingTech = [;
   { name: "IoT Platforms", icon: "📱", status: "Production" },;
   { name: "AR/VR", icon: "🥽", status: "Research" };
 ];
-export function TechnologyStackSection() {
+
+export function TechnologyStackSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -95,8 +98,9 @@ export function TechnologyStackSection() {
           </p>
         </motion.div>
         {/* Technology Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {technologyCategories.map((category, index) => (
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16">
+          {technologyCategories.map((category, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={category.category}
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
@@ -170,8 +174,10 @@ export function TechnologyStackSection() {
           <h3 className="text-3xl font-bold text-white text-center mb-8">
             Emerging Technologies
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {emergingTech.map((tech, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {emergingTech.map((tech, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tech.name}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"

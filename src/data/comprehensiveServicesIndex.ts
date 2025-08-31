@@ -85,18 +85,23 @@ export const SERVICE_STATS = {
 ;
 };
 // Helper Functions
-export const getServicesByCategory = (category: string) => {;
+export const getServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 };
-export const getServicesByInnovationLevel = (level: string) => {;
+
+export const getServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 };
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+
+export const getServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
-export const getServicesByTags = (tags: string[]) => {;
+
+export const getServicesByTags = (tags: anyanyanyanyanyanyanyanyanyanyanyanyanystring[])              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   );

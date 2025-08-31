@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, 
+import React, { useState, useEffect, useMemo } from 'react.ts';
+import { Link, useSearchParams              } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Search, 
   Filter, 
   X, 
   ArrowRight, 
@@ -47,17 +46,46 @@ import {
   Video,
   GraduationCap,
   TestTube
-} from 'lucide-react';
+             } from 'lucide-react.ts';
+
 interface SearchResult {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
   description: string;
   path: string;
   category: string;
-  icon: any;
+  icon: ;
   tags: string[];
   featured?: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 const mockSearchResults: SearchResult[] = [
   {
@@ -155,17 +183,19 @@ const filters = {
   '3.5+'];
 ;
 };
-export default function SearchPage(...args[]):  {
+
+export default function SearchPage(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState(searchParams.get('q') || '');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedTags, setSelectedTags] = useState<any>([]);
   const [isSearching, setIsSearching] = useState(false);
   // All searchable content
   const allContent: SearchResult[] = [
     // Main Pages
     { id: 'home', title: 'Home', description: 'Main landing page', path: '/', category: 'Main Pages', icon: Globe, tags: ['home', 'landing', 'main'] },
-    { id: 'about', title: 'About Us', description: 'Company information and mission', path: '/about', category: 'Main Pages', icon: Users, tags: ['company', 'about', 'mission'] },
+    { id: 'about', title: 'About Us', description: 'Company information and mission', path: '/about', category: 'Main Pages', icon: Users, tags: ['comp', 'about', 'mission'] },
     { id: 'contact', title: 'Contact', description: 'Get in touch with us', path: '/contact', category: 'Main Pages', icon: MessageCircle, tags: ['contact', 'support', 'help'] },
     { id: 'careers', title: 'Careers', description: 'Job opportunities and career growth', path: '/careers', category: 'Main Pages', icon: Users, tags: ['jobs', 'careers', 'hiring'] },
     { id: 'partners', title: 'Partners', description: 'Partnership opportunities', path: '/partners', category: 'Main Pages', icon: Users, tags: ['partnerships', 'collaboration'] },
@@ -282,16 +312,16 @@ export default function SearchPage(...args[]):  {
     return results;
   }, [searchQuery, selectedCategory, selectedTags]);
   // Handle search
-  const handleSearch = (e: React.FormEvent) => {
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setSearchParams({ q: searchQuery.trim() });
+      setSearchParams({ q: anyanyanyanyanyanyanyanyanyanyanyanyanysearchQuery.trim() });
       setIsSearching(true);
-      setTimeout(() => setIsSearching(false), 1000);
+      setTimeout(()              => setIsSearching(false), 1000);
     }
   };
   // Handle tag selection
-  const toggleTag = (tag: string) => {
+  const toggleTag = (tag: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setSelectedTags(prev => 
       prev.includes(tag) 
         ? prev.filter(t => t !== tag)
@@ -366,9 +396,9 @@ export default function SearchPage(...args[]):  {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
+                className="px-4 py-2 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400/50"
               >
-                {categories.map(category => (
+                {categories.map(category              => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -416,9 +446,9 @@ export default function SearchPage(...args[]):  {
             </p>
           </div>
           {/* Results Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredResults.map((result, index) => (
+              {filteredResults.map((result, index)              => (
                 <motion.div
                   key={result.id}
                   initial={{ opacity: 0, y: 20 }}

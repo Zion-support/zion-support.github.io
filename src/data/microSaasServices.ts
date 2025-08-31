@@ -1,4 +1,19 @@
 export interface MicroSaasService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -25,11 +40,24 @@ export interface MicroSaasService {
   featured: boolean;
   location: string;
   availability: string;
-author: {
+author: {;
     name: string;
     id: string;
     avatarUrl?: string;
-    verified: boolean};
+verified: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   images: string[];
   createdAt: string}
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
@@ -668,3 +696,5 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
 };
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894

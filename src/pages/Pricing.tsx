@@ -1,9 +1,35 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
+import { Link              } from 'react-router-dom.ts';
+import { Check, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  Star, 
+  Zap, 
+  Shield, 
+  Users, 
+  Globe,
+  CreditCard,
+  Clock,
 import { Check, Star, Zap, Shield, Users, Globe } from 'lucide-react';
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 
 const Pricing = () => {
   const pricingTiers = [
+=======
+  MessageSquare,
+  Phone,
+  Mail,
+  Calendar
+             } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Pricing(...args: any[]): any {
+  const [billingCycle, setBillingCycle] = useState<any>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<any>(null);
+
+  const pricingPlans = [
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       name: "Starter",
       price: "$99",
@@ -129,7 +155,16 @@ const Pricing = () => {
   ];
 
   return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Pricing - Zion Tech Group"
+        description="Transparent pricing for Zion Tech Group's AI, cloud, and technology services. Choose the plan that fits your business needs."
+      />
+      
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -161,11 +196,52 @@ const Pricing = () => {
         </div>
       </section>
 
-      {/* Pricing Tiers */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {pricingTiers.map((tier, index) => (
+      {/* Billing Toggle */}
+      <section className="py-8">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex justify-center"
+          >
+            <div className="bg-slate-800/50 rounded-xl p-1 border border-slate-600/50">
+              <button
+                onClick={() => setBillingCycle('monthly')}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  billingCycle === 'monthly'
+                    ? 'bg-cyan-400 text-white'
+                    : 'text-gray-300 hover:text-white'
+                }`}
+              >
+                Monthly
+              </button>
+              <button
+                onClick={() => setBillingCycle('annual')}
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
+                  billingCycle === 'annual'
+                    ? 'bg-cyan-400 text-white'
+                    : 'text-white'
+                }`}
+              >
+                Annual
+                {billingCycle === 'annual' && (
+                  <span className="ml-2 px-2 py-1 bg-green-500 text-white text-xs rounded-full">
+                    Save {savings}%
+                  </span>
+                )}
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -188,6 +264,7 @@ const Pricing = () => {
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-4">{tier.name}</h3>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
                   <div className="mb-4">
                     <span className="text-4xl font-bold text-white">{tier.price}</span>
                     {tier.period && (
@@ -195,6 +272,60 @@ const Pricing = () => {
                     )}
                   </div>
                   <p className="text-gray-300 text-sm">{tier.description}</p>
+=======
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <Check className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button
+                    onClick={() => setSelectedPlan(plan.name)}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                        : 'bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600'
+                    } hover:scale-105`}
+                  >
+                    Get Started
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Packages */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Custom Service Packages</h2>
+            <p className="text-xl text-gray-300">
+              Need something specific? We offer custom solutions tailored to your business requirements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {servicePackages.map((pkg, index)              => (
+              <motion.div
+                key={pkg.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-6 border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-lg mb-4">
+                  <pkg.icon className="w-6 h-6 text-cyan-400" />
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
 
                 <ul className="space-y-4 mb-8">
@@ -215,7 +346,26 @@ const Pricing = () => {
                   }`}
                 >
                   {tier.cta}
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
+            {addOns.map((addon, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+              <motion.div
+                key={addon.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <addon.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{addon.name}</h3>
+                <div className="text-2xl font-bold text-cyan-400 mb-2">{addon.price}</div>
+                <p className="text-gray-300 text-sm">{addon.description}</p>
+=======
                 </a>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </motion.div>
             ))}
           </div>
@@ -266,7 +416,11 @@ const Pricing = () => {
             Frequently Asked Questions
           </motion.h2>
           
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
           <div className="space-y-6">
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-4xl mx-auto">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 question: "Can I change my plan at any time?",
@@ -284,7 +438,7 @@ const Pricing = () => {
                 question: "Do you offer custom pricing for large teams?",
                 answer: "Yes, we offer custom pricing and features for enterprise customers. Contact our sales team for details."
               }
-            ].map((faq, index) => (
+            ].map((faq, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}

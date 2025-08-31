@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   GitFork, 
   Shield, 
   Users, 
@@ -115,8 +115,10 @@ import {
   Gamepad2 as Gamepad2Icon3,
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
-} from 'lucide-react';
-export default function NewInnovativeServices2025() {
+             } from 'lucide-react.ts';
+
+export default function NewInnovativeServices2025(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const featuredServices = [
     {
       title: "AI Workflow Orchestrator",
@@ -214,6 +216,7 @@ export default function NewInnovativeServices2025() {
     },
     {
       icon: DollarSign,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       title: "Cost Reduction",
       description: "Reduce operational costs through intelligent automation and process optimization"
     },
@@ -282,6 +285,8 @@ export default function NewInnovativeServices2025() {
             </motion.div>
           </div>
         </section>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Featured Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -305,8 +310,10 @@ export default function NewInnovativeServices2025() {
                 Our flagship AI-powered solutions designed to revolutionize how you do business
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
+
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {featuredServices.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -393,8 +400,10 @@ export default function NewInnovativeServices2025() {
                 Explore our organized service portfolio designed to meet every aspect of your business needs
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {serviceCategories.map((category, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {serviceCategories.map((category, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -458,8 +467,10 @@ export default function NewInnovativeServices2025() {
                 Experience the transformative power of AI-powered solutions designed for modern businesses
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

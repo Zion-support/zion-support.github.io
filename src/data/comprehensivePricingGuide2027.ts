@@ -1,4 +1,6 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing              } from '@/types/listings';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   // AI-Powered Micro SAAS Services
   {
@@ -605,9 +607,9 @@ export const COMPREHENSIVE_PRICING_GUIDE_2027: ProductListing[] = [
   }
 ];
 export const getComprehensivePricingGuide2027 = () => comprehensivePricingGuide2027;
-export const getComprehensivePricingGuide2027ByCategory = (category: string) =>
+export const getComprehensivePricingGuide2027ByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              =>
   comprehensivePricingGuide2027.filter(item => item.category === category);
-export const getComprehensivePricingGuide2027ById = (id: string) =>
+export const getComprehensivePricingGuide2027ById = (id: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              =>
   comprehensivePricingGuide2027.find(item => item.id === id);
 export const pricingCategories2027 = [;
   'Metaverse Solutions',;

@@ -1,27 +1,36 @@
 import React, { useState } from 'react.ts';
-import { useNavigate, Link  } from 'react-router-dom.ts';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { ProductListing  } from '@/types/listings';
-import { DollarSign  } from 'lucide-react';
-import { RatingStars  } from '@/components/RatingStars';
-import { FavoriteButton  } from '@/components/FavoriteButton';
-import { useDispatch  } from 'react-redux.ts';
+import { useNavigate, Link                } from 'react-router-dom.ts';
+import { Badge                } from '@/components/ui/badge';
+import { Button                } from '@/components/ui/button';
+import { ProductListing                } from '@/types/listings';
+import { DollarSign                } from 'lucide-react.ts';
+import { RatingStars                } from '@/components/RatingStars';
+import { FavoriteButton                } from '@/components/FavoriteButton';
+import { useDispatch                } from 'react-redux.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import type { AppDispatch } from '@/store';
-import { addItem } from '@/store/cartSlice';
+import { addItem               } from '@/store/cartSlice';
 ; // Import next/image
-  listing: ProductListing;
+
+  listing: anyanyanyanyanyanyanyanyanyanyanyanyanyanyProductListing;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string)  => void;
+  onRequestQuote?: (id: string)                => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
-  const handleRequestQuote = (e: React.MouseEvent) => {
+
+  const handleRequestQuote = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     e.stopPropagation();
     if (onRequestQuote) {

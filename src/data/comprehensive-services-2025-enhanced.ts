@@ -31,6 +31,7 @@ export interface EnhancedServiceItem {
   compliance: string[];
   scalability: string;
   security: string[];
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 }
 
 export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [

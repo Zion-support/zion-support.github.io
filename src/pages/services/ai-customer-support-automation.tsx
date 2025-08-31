@@ -1,52 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  MessageCircle, 
-  Bot, 
-  Users, 
-  Clock, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Brain, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Globe,
-  Database,
-  Activity,
-  Eye,
-  Settings,
-  Download,
-  Share2,
-  Filter,
-  Search,
-  AlertTriangle,
-  Lightbulb,
-  Phone,
-  Mail,
-  Chat,
-  Video,
-  FileText,
-  BarChart3,
-  Target,
-  Cpu,
-  Network,
-  Smartphone,
-  Lock,
-  BarChart,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Workflow,
-  Play
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { MessageCircle, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Target, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Headphones              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
-export default function AICustomerSupportAutomation() {
+export default function AICustomerSupportAutomation(...args: any[]): any {
   const features = [
     {
       icon: Bot,
@@ -293,8 +251,8 @@ export default function AICustomerSupportAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -342,10 +300,46 @@ export default function AICustomerSupportAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
               <motion.div
-                key={plan.name}
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                <span className="text-white font-medium">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+              Flexible Solutions for Every Business
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose from our range of AI-powered customer support solutions designed to 
+              meet your specific business needs and scale with your growth.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {solutions.map((solution, index)              => (
+              <motion.div
+                key={index}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -413,8 +407,9 @@ export default function AICustomerSupportAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={useCase.industry}
                 initial={{ opacity: 0, y: 20 }}

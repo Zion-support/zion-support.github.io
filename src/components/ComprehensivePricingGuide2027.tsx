@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  DollarSign,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { DollarSign,
   TrendingUp,
   Clock,
   Users,
@@ -23,9 +22,12 @@ import {
   Brain,
   Rocket
 } from 'lucide-react';
-import { servicesCatalog } from "../data/servicesCatalog";
-import { innovativeServices2027 } from "../data/innovativeServices2027";
-export const ComprehensivePricingGuide2027: React.FC = () => {;
+import { servicesCatalog               } from '../data/servicesCatalog';
+import { innovativeServices2027               } from '../data/innovativeServices2027';
+
+export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<any>('All');
   const [priceRange, setPriceRange] = useState<any>('All');
@@ -45,11 +47,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
     ...servicesCatalog.flatMap(category =>
       category.items.map(item => ({
         ...item,
-        source: 'catalog',
+        source: anyanyanyanyanyanyanyanyanyanyanyanyanyany'catalog',
         category: category.name
       }))
     ),
-    ...innovativeServices2027.map(service  => ({
+    ...innovativeServices2027.map(service                => ({
       ...service,;
       source: 'innovative',;
       category: service.category,;
@@ -92,17 +94,28 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 ;
 ;
 };
-  const getPriceRange = (price: string) => {;
+
+  const getPriceRange = (price: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High'};
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-white'}
   };
-  const getCategoryIcon = (category: string)  => {
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const iconMap: { [key: string]: React.ComponentType<any> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
@@ -194,9 +207,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {categories.map(category  => (
+                {categories.map(category                => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
                   </option>
@@ -206,9 +221,11 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
               >
-                {priceRanges.map(range  => (
+                {priceRanges.map(range                => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
                   </option>
@@ -251,7 +268,9 @@ export const ComprehensivePricingGuide2027: React.FC = () => {;
   { duration: 0.8,
   delay: 0.4 
 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         >
           {sortedServices.map((service, index)  => (
             <motion.div

@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
+import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { ArrowRight,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Play,
   Star,
   CheckCircle,
@@ -16,8 +16,24 @@ import {
   Target,
   TrendingUp,
   Pause
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface HeroSlide {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   subtitle: string;
@@ -28,7 +44,21 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
-  stats: { label: string; value: string; icon: React.ComponentType<any> }[];
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}[];
 }
 const heroSlides: HeroSlide[] = [
   {
@@ -84,8 +114,8 @@ const heroSlides: HeroSlide[] = [
   }
 ];
 const slideVariants = {
-  enter: (direction: number) => ({
-    x: direction > 0 ? 1000 : -1000,
+  enter: anyanyanyanyanyanyanyanyanyanyanyanyanyany(direction: number)               => ({
+    x: anyanyanyanyanyanyanyanyanyanyanyanyanyanydirection > 0 ? 1000 : -1000,
     opacity: 0
   }),
   center: {
@@ -93,17 +123,19 @@ const slideVariants = {
     x: 0,
     opacity: 1
   },
-  exit: (direction: number) => ({
+  exit: (direction: number)               => ({
     zIndex: 0,
     x: direction < 0 ? 1000 : -1000,
     opacity: 0
   })
 };
 const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => {
+const swipePower = (offset: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber, velocity: number)               => {
   return Math.abs(offset) * velocity;
 };
-export default function HeroSection() {
+
+export default function HeroSection(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [direction, setDirection] = useState(0);
@@ -121,13 +153,15 @@ export default function HeroSection() {
     setCurrentSlide((prev) => (prev - 1 + memoizedSlides.length) % memoizedSlides.length);
     setIsAutoPlaying(false);
   }, [memoizedSlides.length]);
-  const goToSlide = useCallback((index: number) => {
-    setDirection(index > currentSlide ? 1 : -1);
+
+  const goToSlide = useCallback((index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+    setDirection(index > currentSlide ? 1: anyanyanyanyanyanyanyanyanyanyanyanyanyany-1);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setCurrentSlide(index);
     setIsAutoPlaying(false);
   }, [currentSlide]);
   // Auto-play functionality with pause on hover
-  useEffect(() => {
+  useEffect(()               => {
     if (!isAutoPlaying) return;
     const interval = setInterval(() => {
       setDirection(1);
@@ -137,7 +171,7 @@ export default function HeroSection() {
   }, [isAutoPlaying, memoizedSlides.length]);
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {
       if (e.key === 'ArrowLeft') prevSlide();
       if (e.key === 'ArrowRight') nextSlide();
       if (e.key === ' ') {

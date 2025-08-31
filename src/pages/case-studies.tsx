@@ -1,18 +1,22 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Award, 
-  TrendingUp, 
-  Users, 
-  Clock, 
-  DollarSign, 
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { CheckCircle,
+  TrendingUp,
+  Users,
+  DollarSign,
+  Clock,
+  Target,
+  ArrowRight,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Star,
   Brain,
   Shield,
   Cloud,
   Zap,
   Globe
-} from 'lucide-react';
+              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const caseStudies = [
   {
@@ -164,7 +168,8 @@ const caseStudies = [
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
 
-const CaseStudies = () => {
+export default function CaseStudies(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
@@ -240,9 +245,11 @@ const CaseStudies = () => {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-cyan-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {industries.map(industry => (
+                  {industries.map(industry               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
@@ -253,10 +260,12 @@ const CaseStudies = () => {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-cyan-500 transition-colors"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
                 >
-                  {technologies.map(technology => (
-                    <option key={technology} value={technology}>{technology}</option>
+                  {technologies.map(tech               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                    <option key={tech} value={tech}>{tech}</option>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   ))}
                 </select>
               </div>
@@ -266,19 +275,11 @@ const CaseStudies = () => {
       </section>
 
       {/* Case Studies Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
-          >
-            Success Stories ({filteredCaseStudies.length})
-          </motion.h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {filteredCaseStudies.map((study, index) => (
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredCaseStudies.map((study, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={study.id}
                 initial={{ opacity: 0, y: 20 }}

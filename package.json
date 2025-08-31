@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+
   "scripts": {
     "dev": "NODE_OPTIONS=\"--max-old-space-size=4096 --openssl-legacy-provider\" vite",
     "build": "NODE_OPTIONS=\"--max-old-space-size=6144 --openssl-legacy-provider\" vite build",
@@ -18,7 +19,7 @@
     "type-check:backend": "cd server && npm run type-check",
     "type-check:all": "npm run type-check && npm run lint:backend",
     "prepare": "git config core.hooksPath .husky || true",
-    "fix:all": "npm run lint --fix || true",
+    "fix:all": "npm run lint:fix || true",
     "install:all": "npm install && cd server && npm install",
     "preview": "vite preview",
     "test": "vitest",
@@ -56,8 +57,8 @@
     "quality:quick": "npm run lint:fix && npm run quality:check",
     "quality:security": "npm run security:scan && npm run deps:check",
     "quality:performance": "npm run perf:check && npm run build:optimize",
-    "dev:quality": "concurrently \"npm run dev\" \"npm run quality:monitor\"",
-    "dev:secure": "concurrently \"npm run dev\" \"npm run security:monitor\"",
+    "dev:quality": "concurrently \"npm run dev\" \"npm run quality:check\"",
+    "dev:secure": "concurrently \"npm run dev\" \"npm run security:scan\"",
     "dev:test": "concurrently \"npm run dev\" \"npm run test:automation\"",
     "build:analyze": "npm run build && npm run build:optimize",
     "build:secure": "npm run security:scan && npm run build",
@@ -186,6 +187,7 @@
     "vite-plugin-compression": "^0.5.1",
     "vitest": "^1.3.1"
   },
+  "type": "module",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"

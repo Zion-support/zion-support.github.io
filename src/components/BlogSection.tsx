@@ -1,6 +1,8 @@
 import React from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
-export function BlogSection(...args[]):  {
+import { Link                } from 'react-router-dom.ts';
+
+export function BlogSection(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const blogPosts = [
     {
       id: '1',
@@ -26,8 +28,8 @@ export function BlogSection(...args[]):  {
             View all posts →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-          {blogPosts.map((post)  => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {blogPosts.map((post)                => (
             <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">
                 <Link to={`/blog/${post.id}`} className="hover:text-zion-cyan">

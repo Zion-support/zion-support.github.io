@@ -1,7 +1,10 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap  } from 'lucide-react';
-export default function CustomerExperience(...args[]):  {
+import { motion               } from 'framer-motion.ts';
+import { Heart, MessageCircle, Users, Star, ArrowRight, Shield, Cloud, Database, Cpu, TrendingUp, Target, Zap               } from 'lucide-react.ts';
+
+export default function CustomerExperience(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Heart,
@@ -109,8 +112,10 @@ export default function CustomerExperience(...args[]):  {
               Transform customer interactions into lasting relationships
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial = {
@@ -159,8 +164,10 @@ export default function CustomerExperience(...args[]):  {
               Everything you need to create exceptional customer experiences
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {capabilities.map((capability, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={capability.title}
                 initial = {

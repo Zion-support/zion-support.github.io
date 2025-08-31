@@ -1,14 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
+import React, { useState } from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Twitter,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  Linkedin,
+  Instagram,
+=======
   Globe, 
   Linkedin, 
   Twitter, 
   Facebook, 
   Instagram, 
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Youtube,
   Github,
   Zap,
@@ -26,6 +29,15 @@ import {
   Star,
   CheckCircle,
   Award,
+  Lock,
+  Eye,
+  Atom,
+  Code,
+  Database,
+  Network,
+  Server
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
   Rocket,
   Target,
   Handshake,
@@ -56,71 +68,76 @@ import {
   Users2,
   Settings,
   Palette
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 } from 'lucide-react';
 
-export function Footer() {
+export function Footer(...args: any[]): any {
   const currentYear = new Date().getFullYear();
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  const [activeSection, setActiveSection] = useState<any>(null);
 
   const footerSections = [
     {
-      title: "AI & Machine Learning",
+      title: 'Comp',
+      icon: Building,
+      links: [
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Story', path: '/about/story', icon: FileText },
+        { name: 'Team', path: '/about/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Network },
+        { name: 'Press', path: '/press', icon: Newspaper },
+        { name: 'Contact', path: '/contact', icon: Phone }
+      ]
+    },
+    {
+      title: 'AI & Quantum Solutions',
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       icon: Brain,
+      category: "Core Services",
       services: [
-        { name: "AI Customer Success Automation", href: "/services/ai-powered-customer-success-automation" },
-        { name: "AI Churn Predictor", href: "/services/ai-powered-churn-predictor" },
-        { name: "AI Interview Assessment", href: "/services/ai-interview-assessment-platform" },
-        { name: "AI Returns Management", href: "/services/ai-returns-management-saas" },
-        { name: "AI SEO Platform", href: "/services/ai-powered-seo-platform" },
-        { name: "AI Workflow Automation", href: "/services/ai-workflow-automation-platform" },
-        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-suite" },
-        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization" },
-        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics" },
-        { name: "AI Project Management", href: "/services/ai-project-management-platform" },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
-        { name: "AI Content Optimizer Pro", href: "/services/ai-content-optimizer-pro" },
-        { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
-        { name: "AI DevOps Automation", href: "/services/ai-devops-automation-platform" },
-        { name: "AI IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
-        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
-        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
-        { name: "AI Content Intelligence", href: "/services/ai-content-intelligence-platform" },
-        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management" },
-        { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
-        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
-        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
-        { name: "Micro SAAS Solutions", href: "/micro-saas" }
+        { name: "AI Customer Success Automation", href: "/services/ai-customer-success-automation", badge: "Popular" },
+        { name: "AI Healthcare Analytics Platform", href: "/services/ai-healthcare-analytics-platform", badge: "New" },
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced", badge: "Featured" },
+        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced", badge: "Trending" },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", badge: "Innovative" },
+        { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform", badge: "Healthcare" },
+        { name: "AI Smart Home Energy Management", href: "/services/ai-smart-home-energy-management-platform", badge: "IoT" },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", badge: "Logistics" },
+        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", badge: "Marketing" },
+        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", badge: "Quantum" },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", badge: "Space Tech" },
+        { name: "AI Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform", badge: "Green Tech" },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", badge: "Manufacturing" },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" },
+        { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }
+>>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
       ]
     },
     {
       title: "AI Cybersecurity & Infrastructure",
       icon: Shield,
+      category: "Security & Infrastructure",
       services: [
-        { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite" },
-        { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management" },
-        { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization" },
-        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
-        { name: "AI DevOps Automation", href: "/services/ai-devops-automation" },
-        { name: "Edge Computing Platform", href: "/services/edge-computing-platform" }
+        { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite", badge: "Security" },
+        { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management", badge: "Infrastructure" },
+        { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization", badge: "Cloud" },
+        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform", badge: "Analytics" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation", badge: "DevOps" },
+        { name: "Edge Computing Platform", href: "/services/edge-computing-platform", badge: "Edge" }
       ]
     },
     {
-      title: "Cloud & Infrastructure",
-      icon: Cloud,
-      services: [
-        { name: "Cloud DevOps", href: "/services/cloud-devops" },
-        { name: "IT Infrastructure", href: "/services/it-infrastructure" },
-        { name: "FinOps Advisor", href: "/services/finops-advisor" },
-        { name: "Cloud Migration", href: "/services/cloud-migration-services" },
-        { name: "Edge Computing", href: "/services/iot-edge-computing" },
-        { name: "Edge Computing Solutions", href: "/services/edge-computing-solutions" }
-      ]
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' }
+>>>>>>> 4cf84cee096ee4bad48102099687eb335d856d5c
+>>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
       ]
     },
     {
@@ -168,71 +185,12 @@ export function Footer() {
     { name: "Startup Solutions", href: "/solutions/startup" }
   ];
 
-  const resources = [
-    { name: "Blog", href: "/blog" },
-    { name: "Case Studies", href: "/case-studies" },
-    { name: "White Papers", href: "/white-papers" },
-    { name: "Webinars", href: "/webinars" },
-    { name: "Documentation", href: "/documentation" },
-    { name: "API Reference", href: "/api" },
-    { name: "Help Center", href: "/help" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Services Overview", href: "/services-overview" },
-    { name: "Marketplace", href: "/marketplace" }
+    { name: "FAQ", href: "/faq" }
   ];
-
-  const company = [
-    { name: "About Us", href: "/about" },
-    { name: "Leadership", href: "/leadership" },
-    { name: "Careers", href: "/careers" },
-    { name: "Partners", href: "/partners" },
-    { name: "News", href: "/news" },
-    { name: "Contact", href: "/contact" },
-    { name: "Request Quote", href: "/request-quote" },
-    { name: "Schedule Demo", href: "/schedule-demo" }
-  ];
-
-  const legal = [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/cookies" },
-    { name: "GDPR Compliance", href: "/gdpr" },
-    { name: "Accessibility", href: "/accessibility" },
-    { name: "Security", href: "/security" }
-  ];
-
-  const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-  ];
-
-  const contactInfo = [
-    {
-      icon: Phone,
-      text: '+1 (302) 464-0950',
-      href: 'tel:+13024640950'
-    },
-    {
-      icon: Mail,
-      text: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com'
-    },
-    {
-      icon: MapPin,
-      text: '364 E Main St STE 1008, Middletown DE 19709',
-      href: '#'
-    },
-    {
-      icon: Clock,
-      text: 'Mon-Fri: 9AM-6PM EST',
-      href: '#'
-    }
-  ];
-
->>>>>>> origin/comprehensive-improvements-merge
+=======
+=======
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+>>>>>>> d4314cba993c451b7b958557c24f2c20ed57c961
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       {/* Main Footer Content */}
@@ -264,9 +222,99 @@ export function Footer() {
                   kleber@ziontechgroup.com
                 </a>
               </div>
+            </div>
+          </div>
+
+          {/* Service Sections */}
+          {footerSections.slice(1, 6).map((section) => (
+            <div key={section.title} className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <section.icon className="w-5 h-5 text-cyan-400" />
+                <h3 className="font-semibold text-white">{section.title}</h3>
+              </div>
+
+              <div className="space-y-2">
+                {section.links.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
+
+                    <div className="flex items-center space-x-2">
+                      <link.icon className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                      <span>{link.name}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+=======
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          {footerSections.map((section)               => (
+            <div key={section.title} className="space-y-4">
+              <motion.button
+                onClick={() => setActiveSection(activeSection === section.title ? null : section.title)}
+                className="flex items-center space-x-2 text-lg font-semibold text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2"
+                aria-expanded={activeSection === section.title}
+              >
+                <section.icon className="w-5 h-5" />
+                <span>{section.title}</span>
+              </motion.button>
+              
+              <motion.div
+                initial={false}
+                animate={{ height: activeSection === section.title ? 'auto' : 0, opacity: activeSection === section.title ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-2">
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group"
+                    >
+                      <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm">{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            </div>
+          ))}
+        </div>
+
+        {/* Contact & Social Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>Get in Touch</span>
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <span>contact@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>123 Innovation Drive, Tech City, TC 12345</span>
+                </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
               <div className="flex items-center text-zion-slate-light text-sm">
                 <MapPin className="w-4 h-4 mr-2 text-zion-cyan" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </div>
             <div className="flex space-x-4">

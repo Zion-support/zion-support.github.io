@@ -1,0 +1,111 @@
+import { createSlice, PayloadAction            } from '@reduxjs/toolkit';
+
+interface User {
+
+
+
+
+
+
+
+
+
+
+  id: string;
+  email: string;
+  name: string;
+  avatar?: string;
+
+
+
+
+
+
+
+
+
+
+}
+
+interface AuthState {
+
+
+
+
+
+
+
+
+
+
+
+  isLoggedIn: boolean;
+  user:  | null;
+  token: string | null;
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+const initialState: AuthState = {
+  user: null,
+  isAuthenticated: false,
+  isLoading: false,
+  error: null,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  ;
+
+
+
+
+
+
+};
+
+const authSlice = createSlice({;
+  name: anyanyanyanyanyanyanyanyanyany'auth',;
+  initialState,;
+  reducers: {;
+    setUser: (state, action: PayloadAction<User>)           => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      state.user = action.payload;
+      state.isAuthenticated = true;
+      state.error = null;
+    },
+    setToken: anyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)            => {
+      state.token = action.payload;
+    },
+    logout: anyanyanyanyanyanyanyanyanyany(state)            => {
+      state.isLoggedIn = false;
+      state.user = null;
+      state.isAuthenticated = false;
+      state.error = null;
+    },
+    setLoading: anyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<boolean>)           => {
+      state.isLoading = action.payload;
+    },
+    setError: anyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)           => {
+      state.error = action.payload;
+    },
+    clearError: anyanyanyanyanyanyanyanyanyany(state)           => {
+      state.error = null;
+    },
+  },
+});
+
+export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
+export default authSlice.reducer;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

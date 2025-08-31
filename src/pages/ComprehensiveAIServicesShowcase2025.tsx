@@ -1,6 +1,7 @@
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
 import { Brain, 
   Shield, 
   Activity, 
@@ -20,8 +21,11 @@ import { Brain,
   Truck,
   Target
  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
-export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function ComprehensiveAIServicesShowcase2025(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const aiServices = [
     {
       icon: FileText,
@@ -190,8 +194,10 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 designed for maximum efficiency and innovation
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index)  => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {aiServices.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -263,8 +269,10 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 and regulatory requirements
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {industrySolutions.map((solution, index)  => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {industrySolutions.map((solution, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -312,8 +320,10 @@ export default function ComprehensiveAIServicesShowcase2025(...args[]):  {
                 maximum performance and reliability
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {advancedTechnologies.map((tech, index)  => (
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {advancedTechnologies.map((tech, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

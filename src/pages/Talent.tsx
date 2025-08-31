@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Link } from 'react-router-dom';
-import { 
-  Users, 
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
+import { Link              } from 'react-router-dom.ts';
+import { Users, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Search, 
   Filter, 
   Grid, 
@@ -463,13 +463,17 @@ import {
   YellowEyeBean,
   YellowIndianBean,
   YellowWaxBean
-} from 'lucide-react';
-export default function Talent() {
+             } from 'lucide-react.ts';
+
+export default function Talent(...args: any[]): any {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedExperience, setSelectedExperience] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedTalent, setExpandedTalent] = useState<any>(null);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = [
     { id: 'all', name: 'All Categories', count: 45 },
     { id: 'ai-ml', name: 'AI & Machine Learning', count: 12 },
@@ -600,7 +604,9 @@ export default function Talent() {
       featured: false
     }
   ];
-  const toggleTalentExpansion = (talentId: string) => {
+
+  const toggleTalentExpansion = (talentId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedTalent(expandedTalent === talentId ? null : talentId);
   };
   const filteredTalent = talentPool.filter(talent => {
@@ -613,7 +619,9 @@ export default function Talent() {
     }
     return true;
   });
-  const getCategoryColor = (category: string) => {
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -623,7 +631,9 @@ export default function Talent() {
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
-  const getExperienceColor = (experience: string) => {
+
+  const getExperienceColor = (experience: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (experience) {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400';
@@ -632,11 +642,14 @@ export default function Talent() {
       default: return 'bg-slate-500/20 text-slate-400';
     }
   };
-  const getAvailabilityColor = (availability: string) => {
+
+  const getAvailabilityColor = (availability: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
   };
-  const renderStars = (rating: number) => {
-    return Array.from({ length: 5 }, (_, i) => (
+
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -697,9 +710,9 @@ export default function Talent() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {categories.map((category) => (
+                  {categories.map((category)              => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -711,9 +724,9 @@ export default function Talent() {
                 <select
                   value={selectedExperience}
                   onChange={(e) => setSelectedExperience(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {experienceLevels.map((level) => (
+                  {experienceLevels.map((level)              => (
                     <option key={level.id} value={level.id}>
                       {level.name} ({level.count})
                     </option>
@@ -759,8 +772,10 @@ export default function Talent() {
             <h2 className="text-3xl font-bold text-white mb-4">Featured Professionals</h2>
             <p className="text-xl text-gray-300">Top-tier talent with exceptional track records</p>
           </motion.div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {talentPool.filter(t => t.featured).map((talent, index) => (
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {talentPool.filter(t              => t.featured).map((talent, index) => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={talent.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -886,8 +901,8 @@ export default function Talent() {
             </p>
           </motion.div>
           {viewMode === 'grid' ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredTalent.map((talent, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredTalent.map((talent, index)              => (
                 <motion.div
                   key={talent.id}
                   initial={{ opacity: 0, y: 20 }}

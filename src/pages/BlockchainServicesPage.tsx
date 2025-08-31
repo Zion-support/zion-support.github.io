@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Link,
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link,
   Coins,
   Shield,
   Zap,
@@ -24,7 +23,9 @@ import {
   Users,
   Clock,
   Check
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         "Network monitoring";
       ],;
       icon: Globe,;
@@ -34,7 +35,8 @@ import {
     };
   ];
   const categories = [
-    { id: 'all', name: 'All Services', count: blockchainServices.length },
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: blockchainServices.length },
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               }
             ].map((feature, index)  => (
               <motion.div

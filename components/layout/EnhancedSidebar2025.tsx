@@ -1,15 +1,29 @@
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect              } from 'react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import Link from 'next/link.ts';
-import { useRouter  } from 'next/router.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { useRouter               } from 'next/router.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
   Award, Clock, Heart, Lightbulb, Users, FileText, 
   HelpCircle, BookOpen, Target, TrendingUp, Star
- } from 'lucide-react';
+              } from 'lucide-react.ts';
 
 interface SidebarItem {
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   name: string;
   href: string;
@@ -21,11 +35,26 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-  category?: string}
+category?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const sidebarSections = [
   {
-    title: 'Revolutionary Services',
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items[
@@ -233,7 +262,9 @@ const sidebarSections = [
         description: 'Get help and support',
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
-          { name: 'Training Programs', href: '/training' },;
+{ name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
+},;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
         ];
@@ -245,12 +276,13 @@ const sidebarSections = [
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
   isOpen: boolean;
-  onClose: ()  => void}
+  onClose: ()               => void}
 
-export default function EnhancedSidebar2025(...args[]):  {
+export default function EnhancedSidebar2025(...args[]: any):  {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       newExpanded.delete(sectionTitle)} else {
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
@@ -264,6 +296,7 @@ export default function EnhancedSidebar2025(...args[]):  {
     );
   );
 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       newExpanded.delete(itemName)} else {
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};
@@ -276,7 +309,7 @@ export default function EnhancedSidebar2025(...args[]):  {
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-  const isActive = (href: string)  => router.pathname === href;
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
 
   return (
     <>

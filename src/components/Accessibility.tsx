@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useState, useEffect               } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Accessibility as AccessibilityIcon, 
   Type, 
@@ -14,21 +15,52 @@ import {
   Moon,
   Settings
 interface AccessibilitySettings {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   fontSize: number;
   highContrast: boolean;
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-export function Accessibility() {
+
+export function Accessibility(...args: any[]): any {;
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
-    highContrast: false,
-    reducedMotion: false,
-    soundEnabled: true,
-    theme: 'auto'
-  });
-  useEffect(() => {
+  const [settings, setSettings] = useState<any>({
+fontSize: anyanyanyanyanyanyanyanyanyanyanyanyanyany16,;
+highContrast: false,;
+reducedMotion: false,;
+soundEnabled: true,;
+theme: 'auto';
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+  useEffect(()               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Load settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
@@ -36,7 +68,7 @@ export function Accessibility() {
       setSettings(parsed);
       applySettings(parsed);
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
       if (e.ctrlKey) {;
         switch (e.key) {;
           case '=':;
@@ -56,7 +88,9 @@ export function Accessibility() {
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
-  const applySettings = (newSettings: AccessibilitySettings) => {;
+
+  const applySettings = (newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const root = document.documentElement;
     // Apply font size
     root.style.fontSize = `${newSettings.fontSize}px`;
@@ -80,7 +114,9 @@ export function Accessibility() {
     } else {
       root.classList.remove('light-theme', 'dark-theme');
   };
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+
+  const updateSetting = (key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const newSettings = {
   ...settings,;
   ;

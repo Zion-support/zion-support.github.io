@@ -1,12 +1,36 @@
 import React, { useState, useEffect } from 'react';
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Brain,
-  TrendingUp,
-  DollarSign,
-  Shield,
+=======
+  Zap,
+  CheckCircle,
+=======
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { SEO               } from '@/components/SEO';
+import { TrendingUp, 
+  Brain, 
+  DollarSign, 
+  BarChart3, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  ArrowRight,
+  Clock,
+  Target,
+  Activity,
+  Globe,
+  Smartphone,
+  Cloud,
+  Database,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  Cpu,
+=======
   BarChart3,
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Activity,
   Clock,
   CheckCircle,
@@ -20,6 +44,7 @@ import {
   Globe,
   Cpu,
   Bot,
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   LineChart,
   PieChart,
   BarChart,
@@ -43,6 +68,10 @@ import {
   Tablet,
   Laptop
 } from 'lucide-react';
+=======
+  PieChart
+              } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const AIFinancialTradingPlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -272,11 +301,19 @@ const AIFinancialTradingPlatform: React.FC = () => {
         </div>
       </section>
 
+      {/* Performance Metrics */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {performanceMetrics.map((item, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
       {/* Performance Metrics Section */}
       <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {performanceMetrics.map((metric, index) => (
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={metric.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -316,7 +353,12 @@ const AIFinancialTradingPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {features.map((feature, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -363,7 +405,12 @@ const AIFinancialTradingPlatform: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {tradingStrategies.map((strategy, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={strategy.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -397,6 +444,95 @@ const AIFinancialTradingPlatform: React.FC = () => {
                     <div className="text-sm text-gray-400">Risk Level</div>
                   </div>
                 </div>
+                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trading Markets Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Trade Across All Markets
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI platform excels in analyzing and trading across multiple asset classes
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {tradingMarkets.map((market, index)               => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+
+                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6">
+                  <market.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{market.title}</h3>
+                <p className="text-gray-300 text-lg">{market.description}</p>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </motion.div>
             ))}
           </div>
@@ -421,8 +557,13 @@ const AIFinancialTradingPlatform: React.FC = () => {
             </p>
           </motion.div>
 
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}

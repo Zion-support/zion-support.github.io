@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  BarChart3,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { BarChart3,
   PieChart,
   TrendingUp,
   Download,
@@ -26,8 +25,26 @@ import {
   Smartphone,
   Monitor,
   Tablet
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface ReportData {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -40,15 +57,62 @@ interface ReportData {
   author: string;
   views: number;
   downloads: number;
-  rating: number}
+rating: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
 interface ReportMetrics {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalReports: number;
   activeReports: number;
   totalViews: number;
   totalDownloads: number;
   averageRating: number;
   topCategories: Array<any>;
-  recentActivity: Array<any>}
+recentActivity: Array<any>;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
   showMetrics?: boolean;
   showFilters?: boolean;
@@ -60,11 +124,13 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   showCharts = true,;
   maxReports = 15;
 }) => {;
-  const [reports, setReports] = useState<ReportData[]>([]);
-  const [filteredReports, setFilteredReports] = useState<ReportData[]>([]);
-  const [selectedType, setSelectedType] = useState<string>('all');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedStatus, setSelectedStatus] = useState<string>('all');
+  const [reports, setReports] = useState<any>([]);
+  const [filteredReports, setFilteredReports] = useState<any>([]);
+  const [selectedType, setSelectedType] = useState<any>('all');
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedStatus, setSelectedStatus] = useState<any>('all');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showReportForm, setShowReportForm] = useState(false);
@@ -76,7 +142,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   useEffect(() => {
     const sampleReports: ReportData[] = [
       {
-        id: '1',
+        id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'1',
         title: 'Q4 Financial Performance Analysis',
         type: 'financial',
         category: 'Financial Reports',
@@ -188,7 +254,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     setReports(sampleReports);
     setFilteredReports(sampleReports)}, []);
   // Filter and sort reports
-  useEffect(()  => {
+  useEffect(()                => {
     let filtered = reports;
     if (selectedType !== 'all') {
       filtered = filtered.filter(r => r.type === selectedType)}
@@ -210,7 +276,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     }
     // Sort reports
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+      let aValue: , bValue: ;
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       switch (sortBy) {
         case 'date':
           aValue = new Date(a.lastUpdated).getTime();
@@ -253,12 +321,27 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     setFilteredReports(filtered.slice(0, maxReports))}, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
   // Calculate report metrics
   const reportMetrics = {
+  <<<<<<< HEAD
+    totalReports: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.length,
+    activeReports: reports.filter(r                => r.status === 'active').length,
+    totalViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)                => sum + r.views, 0),
+    totalDownloads: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)                => sum + r.downloads, 0),
+    averageRating: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)                => sum + r.rating, 0) / reports.length || 0,
+    topCategories: anyanyanyanyanyanyanyanyanyanyanyanyanyany(()                => {
+      const catCounts = reports.reduce((acc,;
+  r) => {;
+        acc[r.category] = (acc[r.category] || 0) + 1;
+        return acc
+
+}, {} as Record<string, any>);
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   totalReports: reports.length,
     activeReports: reports.filter(r = > r.status === 'active').length,
-    totalViews: reports.reduce((sum, r) => sum + r.views, 0),
-    totalDownloads: reports.reduce((sum, r) => sum + r.downloads, 0),
-    averageRating: reports.reduce((sum, r) => sum + r.rating, 0) / reports.length || 0,;
-    topCategories: (() => {;
+    totalViews: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)               => sum + r.views, 0),
+    totalDownloads: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)               => sum + r.downloads, 0),
+    averageRating: anyanyanyanyanyanyanyanyanyanyanyanyanyanyreports.reduce((sum, r)               => sum + r.rating, 0) / reports.length || 0,;
+    topCategories: anyanyanyanyanyanyanyanyanyanyanyanyanyany(()               => {;
       const catCounts = reports.reduce((acc,;
   ;
   ;
@@ -266,14 +349,23 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   r) => {;
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
-}, {} as Record<string, number>);
+      
+
+
+
+
+}, {} as Record<string, any>);
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return Object.entries(catCounts)
         .map(([name, count]) => ({
           name,
           count,
-          percentage: (count / reports.length) * 100
+          percentage: anyanyanyanyanyanyanyanyanyanyanyanyanyany(count / reports.length) * 100
         }))
-        .sort((a, b)  => b.count - a.count)
+        .sort((a, b)                => b.count - a.count)
         .slice(0, 5)})(),
     recentActivity[
       { action: 'Report viewed', timestamp: '2 minutes ago', user: 'John Doe' },
@@ -283,7 +375,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     ]
   };
   // Get type icon and color
-  const getTypeDisplay = (type: string)  => {
+  const getTypeDisplay = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     const types = {
   financial: { icon: <DollarSign className="w-4 h-4" />,
   color: 'text-green-400 bg-green-400/20' 
@@ -297,12 +389,15 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     };
     return types[type as keyof typeof types] || { icon: <FileText className="w-4 h-4" />, color: 'text-zinc-400 bg-zinc-400/20' }};
   // Get priority color
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Get status color
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zinc-400 bg-zinc-400/20'}
   };
   // Handle report actions
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           // // // // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':
@@ -315,7 +410,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           break;
   };
   // Export report data
-  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
+  const exportReport = (report: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReportData, format: 'pdf' | 'excel' | 'csv')               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
           // // // // console.log(`Downloading ${report.title}`);
           break;
@@ -330,6 +426,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
     }
   };
   // Export report data
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>;
           </motion.div>;
         )};

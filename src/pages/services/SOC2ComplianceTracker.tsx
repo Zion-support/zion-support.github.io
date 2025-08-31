@@ -1,8 +1,11 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell               } from 'lucide-react.ts';
+import { SEO               } from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function SOC2ComplianceTracker(...args: []):  {
   const features = [
     {
@@ -230,8 +233,11 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Everything you need to achieve and maintain SOC2 compliance efficiently
               </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -268,8 +274,11 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Comprehensive coverage of all SOC2 Trust Service Criteria
               </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceAreas.map((area, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {complianceAreas.map((area, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -306,8 +315,11 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Step-by-step guidance through the entire compliance process
               </p>
             </div>
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceSteps.map((step, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {complianceSteps.map((step, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -344,8 +356,11 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Professional compliance tools that help you achieve and maintain SOC2 certification
               </p>
             </div>
-            <div className="grid md: grid-cols-2 gap-8">
-              {benefits.map((benefit, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -384,8 +399,11 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Choose the compliance plan that fits your organization's needs
               </p>
             </div>
-            <div className="grid md: grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index)  => (
+            
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

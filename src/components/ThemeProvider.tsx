@@ -1,9 +1,41 @@
 import React, { createContext, useContext, useEffect, useState } from 'react.ts';
 type Theme = 'light' | 'dark' | 'system';
 interface ThemeContextType {
-  theme: Theme;
-  setTheme: (theme: Theme)  => void;
-  isDark: boolean}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  theme: anyanyanyanyanyanyanyanyanyanyanyanyanyanyTheme;
+  setTheme: anyanyanyanyanyanyanyanyanyanyanyanyanyany(theme: Theme)                => void;
+isDark: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const ThemeContext = createContext<ThemeContextType | null>(null);
 export const useTheme = () => {;
   const context = useContext(ThemeContext);
@@ -11,10 +43,16 @@ export const useTheme = () => {;
     throw new Error('useTheme must be used within a ThemeProvider');
   return context;
 };
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+interface ThemeProviderProps extends React.PropsWithChildren<{
+}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   children: React.ReactNode}
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>(() => {
+  const [theme, setTheme] = useState<any>(() => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (typeof window !== 'null') {
       const saved = localStorage.getItem('theme') as Theme;
       if (saved && ['light', 'dark', 'system'].includes(saved)) {
@@ -36,13 +74,16 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
         root.classList.add('dark');
         root.classList.remove('light')} else {
         root.classList.add('light');
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         root.classList.remove('dark')}
     };
     updateTheme();
     if (theme = == 'system') {;
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: anyanyanyanyanyanyanyanyanyanyanyanyanyanydark)');
       mediaQuery.addEventListener('change', updateTheme);
-      return ()  => mediaQuery.removeEventListener('change', updateTheme)}
+      return ()                => mediaQuery.removeEventListener('change', updateTheme)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   }, [theme]);
   useEffect(() => {
     localStorage.setItem('theme', theme)}, [theme]);

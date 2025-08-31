@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface User {
   id: string;
@@ -73,11 +73,10 @@ export function useAuth() {
       isLoading: false,
     });
 
-    // Store user data in localStorage
+    localStorage.setItem('authToken', 'dummy-token');
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'mock-jwt-token');
 
-    return { success: true, user: mockUser };
+    return mockUser;
   };
 
   const logout = () => {
@@ -86,20 +85,17 @@ export function useAuth() {
       isAuthenticated: false,
       isLoading: false,
     });
-
-    // Clear localStorage
     localStorage.removeItem('zion_user');
     localStorage.removeItem('authToken');
   };
 
   const register = async (email: string, password: string, name: string) => {
-    // In a real app, you would make an API call to your backend
+    // Implement actual registration logic here
     const mockUser: User = {
-      id: Date.now().toString(),
+      id: '1',
       email,
       name,
-      role: 'user',
-      userType: 'creator',
+      role: 'user'
     };
 
     setAuthState({
@@ -108,31 +104,20 @@ export function useAuth() {
       isLoading: false,
     });
 
-    // Store user data in localStorage
     localStorage.setItem('zion_user', JSON.stringify(mockUser));
-    localStorage.setItem('authToken', 'mock-jwt-token');
+    localStorage.setItem('authToken', 'dummy-token');
 
-    return { success: true, user: mockUser };
-  };
-
-  const updateProfile = (updates: Partial<User>) => {
-    if (authState.user) {
-      const updatedUser = { ...authState.user, ...updates };
-      setAuthState(prev => ({
-        ...prev,
-        user: updatedUser,
-      }));
-
-      // Update localStorage
-      localStorage.setItem('zion_user', JSON.stringify(updatedUser));
-    }
+    return mockUser;
   };
 
   return {
-    ...authState,
+    user: authState.user,
+    loading: authState.isLoading,
     login,
     logout,
     register,
-    updateProfile,
+    isAuthenticated: authState.isAuthenticated,
+    isLoading: authState.isLoading,
+    isAdmin: authState.user?.role === 'admin'
   };
 }

@@ -1,7 +1,11 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
+
+import React, { useState, useRef, useEffect } from 'react.ts';
+import { Link, useLocation              } from 'react-router-dom.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { ChevronDown,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Menu,
   X,
   ChevronDown,
@@ -10,13 +14,45 @@ import {
   Cloud,
   Code,
   BarChart3
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationLink {
-  key: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  key: anyanyanyanyanyanyanyanyanyanyanyanyanystring;
   href: string;
   name: string;
-  matches: (path: string)  => boolean;
-  children?: NavigationLink[]}
+  matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => boolean;
+children?: NavigationLink[];
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         setIsCompOpen(false);
         setActiveDropdown(null)}
     };
@@ -24,46 +60,54 @@ interface NavigationLink {
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []);
   const baseLinks: NavigationLink[] = [
     {
-      key: 'home',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'home',
       href: '/',
       name: 'Home',
-      matches: (path: string) => path = == '/'
+      matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)              => path = == '/'
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     },
     {
-      key: 'services',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'services',
       href: '/services',
       name: 'Services',
       matches: (path: string) => path.startsWith('/services'),
       children: [
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         {
-          key: 'ai-services',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'ai-services',
           href: '/services/ai',
           name: 'AI & Analytics',
           matches: (path: string) => path.startsWith('/services/ai')
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
-          key: 'quantum',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'quantum',
           href: '/services/quantum',
           name: 'Quantum Computing',
           matches: (path: string) => path.startsWith('/services/quantum')
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
-          key: 'blockchain',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'blockchain',
           href: '/services/blockchain',
           name: 'Blockchain',
           matches: (path: string) => path.startsWith('/services/blockchain')
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
-          key: 'iot',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'iot',
           href: '/services/iot',
           name: 'IoT & Edge',
           matches: (path: string) => path.startsWith('/services/iot')
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         },
         {
-          key: 'cybersecurity',
+          key: anyanyanyanyanyanyanyanyanyanyanyanyany'cybersecurity',
           href: '/services/cybersecurity',
           name: 'Cybersecurity',
           matches: (path: string) => path.startsWith('/services/cybersecurity')
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         }
       ]
     },
@@ -78,23 +122,30 @@ interface NavigationLink {
       href: '/pricing',
       name: 'Pricing',
       matches: (path: string) => path.startsWith('/pricing')
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     },
     {
-      key: 'about',
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'about',
       href: '/about',
       name: 'About',
       matches: (path: string) => path.startsWith('/about')
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     },
     {
-      matches: (path: string)  => path.startsWith('/contact')
+      matches: anyanyanyanyanyanyanyanyanyanyanyanyany(path: string)               => path.startsWith('/contact')
     };
-      key: 'contact',;
+=======;
+      key: anyanyanyanyanyanyanyanyanyanyanyanyany'contact',;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       href: '/contact',;
       name: 'Contact',;
-      matches: (path: string) => path.startsWith('/contact');
+      matches: (path: string)              => path.startsWith('/contact');
     };
   ];
-  const isActive = (link: NavigationLink)  => link.matches(location.pathname);
+
+  const isActive = (link: anyanyanyanyanyanyanyanyanyanyanyanyanyNavigationLink)               => link.matches(location.pathname);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </div>;
             </motion.div>;
           )};
@@ -105,8 +156,8 @@ interface NavigationLink {
   return (
     <nav className = {`${className}`}>
       {/* Desktop Navigation */}
-      <div className="hidden lg: flex items-center space-x-1">
-        {baseLinks.map((link)  => (
+      <div className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-1">
+        {baseLinks.map((link)               => (
           <div key={link.key}>
             {link.children ? (
               renderDropdown(

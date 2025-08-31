@@ -1,0 +1,16 @@
+import React from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Cloud, DollarSign, Gauge, CheckCircle, BarChart3, ArrowRight               } from 'lucide-react.ts';
+
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+
+export default CloudFinOpsOptimizer;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

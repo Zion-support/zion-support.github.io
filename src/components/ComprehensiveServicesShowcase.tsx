@@ -1,7 +1,6 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import {
-  Brain,
+import React, { useState, useMemo } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Brain,
   Cpu,
   Cloud,
   Shield,
@@ -27,10 +26,28 @@ import {
   ExternalLink,
   Search
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { EXPANDED_INNOVATIVE_SERVICES_2025 } from "../data/expandedInnovativeServices2025";
-import { EMERGING_TECH_SERVICES_2025 } from "../data/emergingTechServices2025";
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { Link               } from 'react-router-dom.ts';
+import { EXPANDED_INNOVATIVE_SERVICES_2025               } from '../data/expandedInnovativeServices2025';
+import { EMERGING_TECH_SERVICES_2025               } from '../data/emergingTechServices2025';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 interface Service {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -49,10 +66,24 @@ interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
-    website: string};
+website: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -61,10 +92,13 @@ contactInfo: {
     security: string[];
   };
 }
-const ComprehensiveServicesShowcase: React.FC = () => {;
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
-  const [searchTerm, setSearchTerm] = useState<string>('');
+const ComprehensiveServicesShowcase: React.FC = (): JSX.Element => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const [selectedCategory, setSelectedCategory] = useState<any>('all');
+  const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<any>('all');
+  const [searchTerm, setSearchTerm] = useState<any>('');
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   // Combine all services
   const allServices: Service[] = [
     ...EXPANDED_INNOVATIVE_SERVICES_2025,
@@ -85,7 +119,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchesCategory && matchesInnovationLevel && matchesSearch})}, [allServices, selectedCategory, selectedInnovationLevel, searchTerm]);
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Customer Experience':;
@@ -125,6 +159,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       default:
         return <Star className = "h-6 w-6" />};
   };
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'bg-gradient-to-r from-gray-600 to-slate-600'}
   };
   return (
@@ -208,9 +243,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {categories.map(category  => (
+                {categories.map(category                => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
                   </option>
@@ -223,9 +260,11 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
               <select
                 value={selectedInnovationLevel}
                 onChange={(e) => setSelectedInnovationLevel(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-zion-cyan focus:border-transparent"
+                className="px-4 py-2 border border-gray-300 rounded-lg focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyring-2 focus:ring-zion-cyan focus:border-transparent"
               >
-                {innovationLevels.map(level  => (
+                {innovationLevels.map(level                => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={level} value={level}>
                     {level === 'all' ? 'All Levels' : level}
                   </option>
@@ -238,8 +277,8 @@ const ComprehensiveServicesShowcase: React.FC = () => {;
       {/* Services Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg: grid-cols-2 xl:grid-cols-3 gap-8">
-            {filteredServices.map((service, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 xl:grid-cols-3 gap-8">
+            {filteredServices.map((service, index)                => (
               <motion.div
                 key={service.id}
                 initial = {

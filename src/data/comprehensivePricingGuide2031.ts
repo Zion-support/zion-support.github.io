@@ -1,7 +1,19 @@
-// Comprehensive Pricing Guide 2031 - Zion Tech Group
-// Complete pricing information for all micro SAAS, IT services, and AI solutions
+export interface PricingTier2031 {
 
-export interface PricingTier {
+
+
+
+
+
+
+
+
+
+
+
+
+  id: string;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   name: string;
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
@@ -9,45 +21,82 @@ export interface PricingTier {
   features: string[];
   benefits: string[];
   bestFor: string[];
-  popular?: boolean;
-  savings?: string;
-  setupFee?: string;
-  annualDiscount?: string;
+  includedServices: string[];
+addOns: {;
+    name: string;
+    price: number;
+    description: string;
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}[];
+  roi: string;
+  implementationTime: string;
+  supportLevel: string;
 }
 
-export interface ServicePricing {
+export interface ServiceCategory2031 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
-  category: string;
-  pricingTiers: PricingTier[];
-  marketComparison: {
-    averageMarketPrice: string;
-    ourPrice: string;
-    savings: string;
-    valueProposition: string;
+  icon: string;
+services: {;
+    id: string;
+    name: string;
+    description: string;
+    pricingTiers: PricingTier2031[];
+    marketPrice: string;
     competitors: string[];
-  };
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
-  innovationLevel: string;
-  marketSize: string;
-  growthRate: string;
-  roi: string;
-  setupTime: string;
-  freeTrial: boolean;
-  trialPeriod: string;
-  moneyBackGuarantee: boolean;
-  sla: string;
-  support: string;
+    marketSize: string;
+    roi: string;
+    features: string[];
+    benefits: string[];
+    useCases: string[];
+    targetAudience: string[];
+contactInfo: {;
+      phone: string;
+      email: string;
+      website: string;
+    
+
+
+
+
+
+
+
+
+
+
+
+
+};
+  }[];
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 
 // Contact Information for Zion Tech Group
@@ -654,8 +703,9 @@ export default comprehensivePricingGuide2031;
 
 // Pricing summary for 2031
 export const PRICING_SUMMARY_2031 = {
-  totalServices: comprehensivePricingGuide2031.length,
-  totalCategories: 4, // Micro SAAS, IT Services, AI Services, Quantum Computing
+  totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyCOMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category)              => acc + category.services.length, 0),
+  totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   priceRange: {
     min: "$299/month",
     max: "$50,000/project"

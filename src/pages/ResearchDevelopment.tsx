@@ -1,83 +1,9 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Microscope,
-  TestTube,
-  Atom,
-  Brain,
-  Zap,
-  Search,
-  Filter,
-  Calendar,
-  User,
-  Star,
-  Eye,
-  Heart,
-  Share2,
-  ArrowRight,
-  CheckCircle,
-  Server,
-  Shield,
-  Cloud,
-  Target,
-  Rocket,
-  BarChart3,
-  Network,
-  Lock,
-  Cpu,
-  Wifi,
-  Satellite,
-  Handshake,
-  FileText,
-  Video,
-  GraduationCap,
-  Lightbulb,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Settings,
-  Tool,
-  Wrench,
-  Cog,
-  Key,
-  Unlock,
-  Eye as EyeIcon,
-  EyeOff,
-  Copy,
-  Check,
-  X,
-  Plus,
-  Minus,
-  SortAsc,
-  SortDesc,
-  Grid,
-  List,
-  Bookmark,
-  Download,
-  Upload,
-  RefreshCw,
-  Save,
-  Edit,
-  Trash2,
-  Archive,
-  Tag,
-  Hash,
-  Hash as HashIcon,
-  Hash as HashIcon2,
-  Hash as HashIcon3,
-  Hash as HashIcon4,
-  Hash as HashIcon5,
-  Hash as HashIcon6,
-  Hash as HashIcon7,
-  Hash as HashIcon8,
-  Hash as HashIcon9,
-  Hash as HashIcon10
-} from 'lucide-react';
-
-export default function ResearchDevelopment() {
-  const [searchQuery, setSearchQuery] = useState('');
+  BookOpen,
+  Users,
+  Award,
+  ArrowRight
+const ResearchDevelopment: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedArea, setSelectedArea] = useState('all');
   const [selectedStatus, setSelectedStatus] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -399,18 +325,13 @@ export default function ResearchDevelopment() {
     return `$${amount}`;
   };
 
-  const handleViewProject = (projectId: number, title: string) => {
-    // Simulate viewing project
-    console.log(`Viewing project: ${title}`);
-    // In a real app, this would show project details
-  };
+  ];
+=======
+import React from 'react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const handleCollaborate = (projectId: number, title: string) => {
-    // Simulate collaboration request
-    console.log(`Requesting collaboration on: ${title}`);
-    // In a real app, this would open a collaboration form
-  };
-
+export default function ResearchDevelopment(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
@@ -685,11 +606,18 @@ export default function ResearchDevelopment() {
         {filteredProjects.length > 0 ? (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.4 }}
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-          >
-            {filteredProjects.map((project, index) => (
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">Active Research Projects</h2>
+            <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredProjects.map((project, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -757,19 +685,52 @@ export default function ResearchDevelopment() {
                       </div>
                     </div>
 
-                    <div className="flex space-x-2">
-                      <button
-                        onClick={() => handleViewProject(project.id, project.title)}
-                        className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300"
-                      >
-                        View
-                      </button>
-                      <button
-                        onClick={() => handleCollaborate(project.id, project.title)}
-                        className="px-4 py-2 border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold rounded-lg transition-all duration-300"
-                      >
-                        Collaborate
-                      </button>
+                      View Paper
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Research Partnerships */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">Research Partnerships</h2>
+            <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {partnerships.map((partner, index)              => (
+              <motion.div
+                key={partner.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
+
+                <div className="flex items-start gap-4">
+                  <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Users className="w-8 h-8 text-zion-cyan" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+                    <div className="space-y-2 text-zion-slate-light">
+                      <p><span className="text-zion-cyan font-semibold">Type:</span> {partner.type}</p>
+                      <p><span className="text-zion-cyan font-semibold">Focus:</span> {partner.focus}</p>
+                      <p><span className="text-zion-cyan font-semibold">Duration:</span> {partner.duration}</p>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     </div>
                   </div>
                 ) : (
@@ -880,8 +841,44 @@ export default function ResearchDevelopment() {
               Clear Filters
             </button>
           </motion.div>
-        )}
-      </div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {[
+              {
+                icon: Flask,
+                title: 'Experimental Research',
+                description: 'State-of-the-art laboratories for cutting-edge experiments'
+              },
+              {
+                icon: Code,
+                title: 'Software Development',
+                description: 'Advanced development environments for software innovation'
+              },
+              {
+                icon: Database,
+                title: 'Data Analytics',
+                description: 'High-performance computing for big data research'
+
+            ].map((lab, index)              => (
+              <motion.div
+                key={lab.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+
+                <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <lab.icon className="w-10 h-10 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">{lab.title}</h3>
+                <p className="text-zion-slate-light">{lab.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
       {/* CTA Section */}
       <div className="bg-zinc-800/30 border-t border-zinc-700/50">

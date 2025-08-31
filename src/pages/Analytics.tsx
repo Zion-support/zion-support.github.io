@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  BarChart3,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { BarChart3,
   TrendingUp,
   PieChart,
   Activity,
@@ -41,7 +40,10 @@ import {
   ScatterPlot
 } from 'lucide-react';
 import SEO from '../components/SEO';
-const Analytics: React.FC = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+const Analytics: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const analyticsFeatures = [
     {
       title: "Real-time Monitoring",
@@ -169,8 +171,8 @@ const Analytics: React.FC = () => {
       {/* Metrics Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {metrics.map((metric, index)              => (
               <motion.div
                 key={index}
                 initial = {
@@ -219,8 +221,10 @@ const Analytics: React.FC = () => {
               and make informed business decisions.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {analyticsFeatures.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {analyticsFeatures.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -268,8 +272,10 @@ const Analytics: React.FC = () => {
               every aspect of your business intelligence needs.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsTypes.map((type, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {analyticsTypes.map((type, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -331,8 +337,10 @@ const Analytics: React.FC = () => {
               and get a complete view of your business.
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6">
+            {integrations.map((integration, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

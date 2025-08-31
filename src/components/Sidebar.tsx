@@ -1,70 +1,51 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  X, 
-  Home, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Atom, 
-  Rocket, 
-  Code, 
-  Target, 
-  Users, 
-  MessageCircle, 
-  BookOpen, 
-  HelpCircle, 
-  DollarSign, 
-  Settings, 
-  User, 
-  Bell, 
-  Search, 
-  Star, 
-  TrendingUp, 
-  Award, 
-  Globe, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
+import React, { useState } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import {
+  Home,
+  Zap,
+  Target,
+  Users,
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  FileText,
+  Phone,
   ChevronRight,
-  ChevronDown,
-  Plus,
-  Minus
-} from 'lucide-react';
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  BarChart3,
+  Activity,
+  Globe,
+  Building,
+  Eye,
+  Cpu,
+  Cloud,
+  Network,
+  Server,
+  GraduationCap,
+  HelpCircle,
+  Settings,
+  Menu,
+  X
+} from 'lucide-react.ts';
 
-interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export function Sidebar({ isOpen, onClose }: SidebarProps) {
+export function Sidebar(...args: any[]): any {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [activeSection, setActiveSection] = useState<any>(null);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
 
-  const toggleSection = (section: string) => {
-    setExpandedSections(prev => 
-      prev.includes(section) 
-        ? prev.filter(s => s !== section)
-        : [...prev, section]
-    );
-  };
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    if (href === '/') {
+      return location.pathname === '/';
 
-  const isActive = (path: string) => location.pathname === path;
-
-  const mainNavigation = [
-    { name: 'Home', href: '/', icon: Home, badge: null },
-    { name: 'Services', href: '/services', icon: Zap, badge: 'New', hasDropdown: true },
-    { name: 'Solutions', href: '/solutions', icon: Target, badge: null },
-    { name: 'About', href: '/about', icon: Users, badge: null },
-    { name: 'Contact', href: '/contact', icon: MessageCircle, badge: null },
-    { name: 'Blog', href: '/blog', icon: BookOpen, badge: null },
-    { name: 'Help Center', href: '/help', icon: HelpCircle, badge: null },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign, badge: null },
-  ];
-
-  const serviceCategories = [
+    return location.pathname.startsWith(href);
+=======
+    },
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       id: 'ai-ml',
       title: 'AI & Machine Learning',
@@ -149,26 +130,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     }
   ];
 
-  const quickActions = [
-    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, color: 'bg-blue-500' },
-    { name: 'Schedule Demo', href: '/schedule-demo', icon: Users, color: 'bg-green-500' },
-    { name: 'Support Chat', href: '/support', icon: HelpCircle, color: 'bg-purple-500' },
-    { name: 'Documentation', href: '/documentation', icon: BookOpen, color: 'bg-orange-500' }
-  ];
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
 
-  const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
-    { icon: MapPin, text: 'Middletown, DE 19709', href: 'https://maps.google.com/?q=Middletown,DE' },
-    { icon: Clock, text: 'Mon-Fri: 9AM-6PM EST', href: '#' }
-  ];
-
-  const recentServices = [
-    { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', views: '2.3k' },
-    { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing', views: '1.8k' },
-    { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', views: '1.5k' },
-    { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', views: '1.2k' }
-  ];
+  const toggleSection = (sectionName: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    setActiveSection(activeSection === sectionName ? null : sectionName);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  };
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>

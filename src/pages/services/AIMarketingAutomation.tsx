@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Target, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Target, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   TrendingUp, 
   Users, 
   Clock, 
@@ -21,8 +21,10 @@ import {
   Cpu,
   Heart,
   Eye
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AIMarketingAutomation = () => {
   const features = [
     {
@@ -134,6 +136,7 @@ const AIMarketingAutomation = () => {
     }
   ];
   return (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     <>
       <SEO 
         title="AI Marketing Automation - Zion Tech Group"
@@ -201,8 +204,10 @@ const AIMarketingAutomation = () => {
                 See measurable improvements in ROI, customer engagement, and campaign performance
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -236,8 +241,10 @@ const AIMarketingAutomation = () => {
                 Our AI doesn't just automate—it personalizes, optimizes, and delivers results that matter
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -272,8 +279,10 @@ const AIMarketingAutomation = () => {
                 Start with our free trial and scale as you grow. All plans include our core AI features.
               </p>
             </motion.div>
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+
+            <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {pricingPlans.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
@@ -308,6 +317,8 @@ const AIMarketingAutomation = () => {
                       </li>
                     ))}
                   </ul>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}

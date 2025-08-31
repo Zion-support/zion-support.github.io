@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu,
+import React, { useState, useEffect, useRef } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { Menu,
   X,
   ChevronDown,
   Home,
@@ -33,11 +32,43 @@ import {
   Mail,
   MapPin,
   Clock
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationItem {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }>;
   children?: NavigationItem[];
   description?: string}
@@ -128,6 +159,8 @@ const quickActions = [
     color: 'bg-zion-blue';
   };
 ];
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       }
     };
     if (isOpen) {
@@ -137,10 +170,14 @@ const quickActions = [
     return () => {;
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
+
         newSet.delete(label)} else {
         newSet.add(label)}
       return newSet})};
-  const isActive = (path: string) => {;
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (path === '/') {;
       return activePath === '/';
     return activePath.startsWith(path);

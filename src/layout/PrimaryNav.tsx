@@ -12,7 +12,10 @@ import { useAuth } from '@/context/auth/AuthContext';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useMessaging } from '@/context/MessagingContext';
 import { generateSearchSuggestions, slugify } from '@/utils/searchUtils';
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 import type { RootState } from '@/store';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');

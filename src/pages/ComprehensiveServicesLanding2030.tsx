@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { ArrowRight,
   Brain,
   Cloud,
@@ -16,10 +16,14 @@ import { ArrowRight,
   Zap,
   Phone
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
-import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030 } from "../data/comprehensiveServicesIndex2030";
-import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030 } from "../data/comprehensivePricingGuide2030";
-export default function ComprehensiveServicesLanding2030(...args[]):  {
+import { SEO              } from '../components/SEO';
+import { COMPREHENSIVE_SERVICES_INDEX_2030, SERVICE_CATEGORIES_2030, SERVICE_STATISTICS_2030              } from '../data/comprehensiveServicesIndex2030';
+import { COMPREHENSIVE_PRICING_GUIDE_2030, PRICING_ANALYSIS_2030, PAYMENT_OPTIONS_2030, PRICING_CONTACT_2030              } from '../data/comprehensivePricingGuide2030';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function ComprehensiveServicesLanding2030(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
@@ -47,7 +51,9 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
       default:
         return 0}
   });
-  const getCategoryIcon = (category: string)  => {
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const icons: { [key: string]: React.ReactNode } = {
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
       'AI & Healthcare': <Heart className="w-6 h-6" />,
@@ -70,7 +76,9 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
       'Sustainable Technology': <Heart className="w-6 h-6" />;
     };
     return icons[category] || <Rocket className="w-6 h-6" />};
-  const getCategoryColor = (category: string)  => {
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const colors: { [key: string]: string } = {
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
       'AI & Healthcare': 'from-pink-500 to-red-500',
@@ -99,6 +107,8 @@ export default function ComprehensiveServicesLanding2030(...args[]):  {
     setSortBy('rating');
     setPriceRange([0, 50000]);
     setAiScoreRange([80, 100])};
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>;
           </motion.div>;
         )};

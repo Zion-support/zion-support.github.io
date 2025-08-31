@@ -1,14 +1,157 @@
 // Enhanced Innovative Services 2025 - Zion Tech Group
 // Comprehensive micro SAAS, IT, and AI services with real market data and pricing
 
-export interface EnhancedService {
-  id: string;
-  title: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+  phone: string;
+  email: string;
+  website: string;
+address: string;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export interface MicroSaasService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: number;
+  name: string;
+  category: string;
+  pricing: string;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   description: string;
   category: 'Micro SAAS' | 'IT Services' | 'AI Solutions' | 'Emerging Tech';
   subcategory: string;
   price: number;
-  currency: string;
+  pricingModel: string;
+  userLimit: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  integrations: string[];
+  freeTier: boolean;
+trialPeriod: string;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export interface ITService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  hourlyRate: number;
+  projectRate: number;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  responseTime: string;
+  sla: string;
+  certifications: string[];
+  deliveryTime: string;
+support: string;
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export interface AIService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  pricing: string;
+  price: number;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   pricingModel: string;
   features: string[];
   benefits: string[];
@@ -42,17 +185,25 @@ export interface EnhancedService {
   compliance?: string[];
 }
 
-// Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
-  email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709"
-};
+=======
+useCases: string[];
 
-// Enhanced Innovative Services 2025
-export const enhancedInnovativeServices2025: EnhancedService[] = [
-  // NEW MICRO SAAS SERVICES
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
+  // Advanced AI & Machine Learning Services
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
     id: "ai-powered-customer-success-automation",
     title: "AI-Powered Customer Success Automation Platform",

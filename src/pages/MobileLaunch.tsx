@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Smartphone,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Smartphone,
   Download,
   Zap,
   Shield,
@@ -40,7 +39,10 @@ import {
   Signal
 } from 'lucide-react';
 import SEO from '../components/SEO';
-const MobileLaunch: React.FC = () => {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+const MobileLaunch: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       title: "AI-Powered Insights",
@@ -265,8 +267,10 @@ const MobileLaunch: React.FC = () => {
               with our feature-rich mobile application.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -313,8 +317,10 @@ const MobileLaunch: React.FC = () => {
               Explore the intuitive interface and powerful features available in our mobile application.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {appScreens.map((screen, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {appScreens.map((screen, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -369,8 +375,10 @@ const MobileLaunch: React.FC = () => {
               Get started with Zion Tech Group's mobile app today. Available on all major platforms.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {downloadOptions.map((option, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-4xl mx-auto">
+            {downloadOptions.map((option, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {
@@ -429,8 +437,10 @@ const MobileLaunch: React.FC = () => {
               Ensure your device meets the requirements for optimal performance and experience.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-4xl mx-auto">
-            {systemRequirements.map((req, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6 max-w-4xl mx-auto">
+            {systemRequirements.map((req, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

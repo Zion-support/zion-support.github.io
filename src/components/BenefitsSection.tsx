@@ -1,7 +1,24 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star } from 'lucide-react';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Bot, Clock, Globe, TrendingDown, CheckCircle, Rocket, Users, Star               } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface Benefit {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   title: string;
   description: string;
   icon: React.ReactNode;
@@ -9,21 +26,37 @@ interface Benefit {
   bgColor: string;
   stats: string;
   features: string[];
-const benefits: Benefit[] = [
+
+const benefits: Benefit[] = [;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   {
-    title: "AI-Powered Matchmaking",
-    description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",
-    icon: <Bot className="w-8 h-8" />,
-    color: "from-zion-cyan to-zion-cyan-dark",
-    bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",
-    stats: "95% Match Rate",
-    features: [
+title: "AI-Powered Matchmaking",;
+description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.",;
+icon: <Bot className="w-8 h-8" />,;
+color: "from-zion-cyan to-zion-cyan-dark",;
+bgColor: "from-zion-cyan/20 to-zion-cyan-dark/20",;
+stats: "95% Match Rate",;
+features: [;
       "Intelligent service matching",
       "Real-time availability",
       "Expert talent matching",
       "Personalized recommendations"
     ]
-  },
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+},
   {
     title: "Global Availability",
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.",
@@ -66,8 +99,11 @@ const benefits: Benefit[] = [
       "Transparent cost structure"
     ]
 ];
-export function BenefitsSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+
+export function BenefitsSection(...args: any[]): any {
+  const [hoveredIndex, setHoveredIndex] = useState<any>(null);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -138,8 +174,10 @@ export function BenefitsSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
-          {stats.map((stat, index) => (
+          viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
+
+          {stats.map((stat, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={statsVariants}
@@ -163,8 +201,8 @@ export function BenefitsSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue opacity-20 blur-sm"></div>
           </div>
           {/* Benefits */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-5xl mx-auto">
+            {benefits.map((benefit, index)               => (
               <motion.div
                 key={index}
                 className="relative group"
@@ -213,6 +251,7 @@ export function BenefitsSection() {
                   <AnimatePresence>
                     {hoveredIndex === index && (
                       <motion.div
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                         className="absolute inset-0 bg-gradient-to-br from-zion-cyan/10 to-zion-purple/10 rounded-2xl"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -226,6 +265,7 @@ export function BenefitsSection() {
             ))}
           </div>
         </motion.div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       </div>
     </section>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { Brain,
   Cloud,
   Shield,
@@ -55,23 +55,55 @@ import { Brain,
   Zap as ZapIcon,
   Grid,
   List
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Import our existing service data
-import { ultimateInnovativeServices2026 } from "../data/ultimateInnovativeServices2026";
-import { zion2026ComprehensiveServices } from "../data/zion2026ComprehensiveServices";
+import { ultimateInnovativeServices2026              } from '../data/ultimateInnovativeServices2026';
+import { zion2026ComprehensiveServices              } from '../data/zion2026ComprehensiveServices';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
 interface Service {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   category: string;
   description: string;
   features: string[];
   benefits: string[];
-pricing: {
+pricing: {;
     starter: number;
     professional: number;
     enterprise: number;
     currency: string;
-    billingCycle: string};
+billingCycle: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -87,6 +119,9 @@ pricing: {
   marketSize?: string;
   growthRate?: string;
   roi?: string}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         status: service.status,;
         marketPrice: service.marketPrice,;
         estimatedDelivery: service.estimatedDelivery,;
@@ -149,11 +184,17 @@ pricing: {
         filtered.sort((a, b) => (b.innovationLevel || b.rating.toString()).localeCompare(a.innovationLevel || a.rating.toString()));
         break}
     return filtered}, [allServices, searchTerm, selectedCategory, sortBy]);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Lightbulb className = "w-6 h-6" />};
   };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return 'bg-gray-100 text-gray-800'}
   };
-  const getInnovationBadge = (service: Service) => {;
+
+  const getInnovationBadge = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyService)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (service.innovationLevel === 'Revolutionary') {;
       return <span className="px-2 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-bold rounded-full flex items-center gap-1"><Sparkles className="w-3 h-3" /> Revolutionary</span>;
     } else if (service.innovationLevel = == 'Cutting-Edge') {;
@@ -225,9 +266,11 @@ pricing: {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-purple-500"
+                className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-purple-500"
               >
-                {categories.map(category  => (
+                {categories.map(category               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -270,9 +313,9 @@ pricing: {
       {/* Services Grid/List */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {viewMode === 'grid' ? (
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence>
-              {filteredServices.map((service, index)  => (
+              {filteredServices.map((service, index)               => (
                 <motion.div
                   key={service.id}
                   initial = {

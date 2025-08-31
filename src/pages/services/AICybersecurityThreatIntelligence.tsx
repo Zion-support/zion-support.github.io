@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from "../../components/SEO";
-import { 
-  Shield, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../../components/SEO';
+import { Shield, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CheckCircle, 
   BarChart3, 
   Zap, 
@@ -11,6 +11,7 @@ import {
   Settings,
   Target,
   Cpu,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Activity,
   Sparkles,
   Search,
@@ -50,8 +51,11 @@ import {
   MapPin,
   Calendar,
   Calculator
-} from 'lucide-react';
-export default function AICybersecurityThreatIntelligence(...args[]):  {
+             } from 'lucide-react.ts';
+
+export default function AICybersecurityThreatIntelligence(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const features = [
     {
       icon: Shield,
@@ -288,8 +292,10 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               analysis, and response capabilities for modern organizations.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -330,10 +336,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               solutions powered by artificial intelligence.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
               <motion.div
                 key={index}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -375,6 +383,8 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               Experience measurable improvements in threat detection, response time, and overall security effectiveness.
             </p>
           </motion.div>
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               {benefits.slice(0, 3).map((benefit, index) => (
@@ -430,8 +440,10 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               All plans include a 14-day free trial.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -494,8 +506,10 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
               security and compliance for your specific business needs.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

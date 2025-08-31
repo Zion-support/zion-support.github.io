@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Star,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Star,
   Quote,
   ChevronLeft,
   ChevronRight,
@@ -9,8 +8,26 @@ import {
   Building,
   Users,
   Award
- } from 'lucide-react';
+               } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Testimonial {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   position: string;
@@ -20,7 +37,24 @@ interface Testimonial {
   rating: number;
   industry: string;
   results: string[];
-  avatar: string}
+avatar: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const testimonials: Testimonial[] = [
   {
     id: '1',
@@ -82,7 +116,9 @@ const testimonials: Testimonial[] = [
     results['40% cost reduction', '60% performance boost', 'Unified management'],
     avatar: '/images/avatars/lisa-park.jpg'
 ];
-export default function EnhancedTestimonialsSection(...args[]):  {
+
+export default function EnhancedTestimonialsSection(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   useEffect(() => {
@@ -97,6 +133,8 @@ export default function EnhancedTestimonialsSection(...args[]):  {
   const prevTestimonial = () => {;
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
     setIsAutoPlaying(false)};
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   animate = {
   { rotate: [0,
   360] 
@@ -126,8 +164,8 @@ export default function EnhancedTestimonialsSection(...args[]):  {
                     "{currentTestimonialData.content}"
                   </blockquote>
                   {/* Results */}
-                  <div className="grid grid-cols-1 md: grid-cols-3 gap-4 mb-8">
-                    {currentTestimonialData.results.map((result, index)  => (
+                  <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4 mb-8">
+                    {currentTestimonialData.results.map((result, index)                => (
                       <motion.div
                         key={result}
                         initial = {
@@ -219,13 +257,13 @@ export default function EnhancedTestimonialsSection(...args[]):  {
             <h3 className="text-2xl font-bold text-white mb-8">
               Trusted by Industry Leaders
             </h3>
-            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8 max-w-4xl mx-auto">
               {[
                 { icon: Users, label: '500+ Clients', value: 'Global Reach' },
                 { icon: Award, label: '15+ Awards', value: 'Industry Recognition' },
                 { icon: Globe, label: '50+ Countries', value: 'Worldwide Service' },
                 { icon: Building, label: '99.9% Uptime', value: 'Reliability' }
-              ].map((indicator, index)  => (
+              ].map((indicator, index)                => (
                 <motion.div
                   key={indicator.label}
                   initial = {

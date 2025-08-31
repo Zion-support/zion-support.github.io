@@ -1,14 +1,71 @@
-import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction               } from '@reduxjs/toolkit';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface User {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   email: string;
   name: string;
   avatar?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 interface AuthState {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   isLoggedIn: boolean;
-  user: User | null;
+  user:  | null;
   token: string | null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 const initialState: AuthState = {
   isLoggedIn: false,
@@ -24,11 +81,15 @@ const initialState: AuthState = {
   ;
   ;
 };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const authSlice = createSlice({;
-  name: 'auth',;
+  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',;
   initialState,;
   reducers: {;
-    setUser: (state, action: PayloadAction<User>) => {;
+    setUser: (state, action: PayloadAction<User>)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
@@ -37,19 +98,20 @@ const authSlice = createSlice({;
       state.token = action.payload;
     },
     logout: (state) => {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       state.isLoggedIn = false;
       state.user = null;
       state.token = null;
       state.isAuthenticated = false;
       state.error = null;
     },
-    setLoading: (state, action: PayloadAction<boolean>) => {
+    setLoading: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<boolean>)              => {
       state.isLoading = action.payload;
     },
-    setError: (state, action: PayloadAction<string>) => {
+    setError: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)              => {
       state.error = action.payload;
     },
-    clearError: (state) => {
+    clearError: anyanyanyanyanyanyanyanyanyanyanyanyany(state)              => {
       state.error = null;
     },
   },

@@ -2,208 +2,160 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Cpu, 
-  Network, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Cloud, 
-  Smartphone, 
-  Wifi, 
   Database, 
-  BarChart3,
-  CheckCircle,
+  BarChart3, 
+  Globe, 
+  Zap, 
+  Users, 
+  CheckCircle, 
   ArrowRight,
-  Star,
-  Clock,
-  Users,
-  Globe,
-  Lock,
-  Activity,
-  TrendingUp,
-  Target,
-  Rocket,
-  Lightbulb,
-  Code,
-  Server,
-  Chip,
   Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  MessageCircle,
-  BarChart,
-  Users2,
   Settings,
-  Palette,
-  Handshake,
-  Building2,
-  FileText,
-  HelpCircle,
-  Award,
-  Heart,
-  DollarSign,
-  Phone,
-  Mail,
-  MapPin,
+  Target,
+  Star,
+  TrendingUp,
+  Shield,
   Monitor,
-  Gauge,
-  Layers,
-  RefreshCw,
-  AlertTriangle,
-  CheckSquare,
-  PieChart,
-  LineChart,
-  BarChart3 as BarChartIcon,
-  Activity as ActivityIcon
+  Network
 } from 'lucide-react';
 
-export default function AIDigitalTwinPlatform() {
+const AIDigitalTwinPlatform: React.FC = () => {
   const features = [
     {
-      title: "Real-time Synchronization",
-      description: "Live data synchronization between physical assets and digital representations",
-      icon: RefreshCw,
-      benefits: ["Real-time updates", "Live monitoring", "Instant alerts"]
+      icon: Cpu,
+      title: "Real-time Digital Twin Creation",
+      description: "Build accurate digital replicas of physical assets, processes, and systems"
     },
     {
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms for predictive insights",
-      icon: Brain,
-      benefits: ["Predictive maintenance", "Anomaly detection", "Performance optimization"]
+      icon: Database,
+      title: "AI-Powered Predictive Analytics",
+      description: "Use machine learning to predict maintenance needs and optimize performance"
     },
     {
-      title: "3D Visualization",
-      description: "Immersive 3D models with interactive controls and real-time data overlay",
-      icon: Monitor,
-      benefits: ["Interactive models", "Data visualization", "Virtual walkthroughs"]
+      icon: BarChart3,
+      title: "Live Performance Monitoring",
+      description: "Monitor real-time data from IoT sensors and connected devices"
     },
     {
-      title: "Predictive Maintenance",
-      description: "AI-driven maintenance scheduling and failure prediction",
-      icon: AlertTriangle,
-      benefits: ["Failure prediction", "Maintenance optimization", "Cost reduction"]
+      icon: Globe,
+      title: "Multi-Asset Management",
+      description: "Manage digital twins across multiple locations and asset types"
+    },
+    {
+      icon: Zap,
+      title: "Automated Optimization",
+      description: "AI-driven recommendations for performance improvement and cost reduction"
+    },
+    {
+      icon: Users,
+      title: "Collaborative Workspace",
+      description: "Team-based access to digital twin data and analytics"
+    }
+  ];
+
+  const benefits = [
+    "Reduce operational costs by 25-40% through predictive maintenance",
+    "Improve asset performance by 30-50% with real-time optimization",
+    "Cut downtime by up to 60% through early issue detection",
+    "Increase energy efficiency by 20-35% with AI optimization",
+    "Enable remote monitoring and control of critical assets",
+    "Reduce safety risks by 40% through virtual testing and simulation"
+  ];
+
+  const pricing = [
+    {
+      plan: "Professional",
+      price: "$4,200",
+      period: "/month",
+      features: [
+        "Up to 50 digital twins",
+        "Basic AI analytics",
+        "Real-time monitoring",
+        "Standard reporting",
+        "Email support",
+        "Basic integrations"
+      ]
+    },
+    {
+      plan: "Enterprise",
+      price: "$9,800",
+      period: "/month",
+      features: [
+        "Up to 500 digital twins",
+        "Advanced AI analytics",
+        "Predictive maintenance",
+        "Custom dashboards",
+        "Priority support",
+        "API access",
+        "Advanced integrations"
+      ]
+    },
+    {
+      plan: "Industrial",
+      price: "$24,000",
+      period: "/month",
+      features: [
+        "Unlimited digital twins",
+        "Custom AI model training",
+        "Multi-site management",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "White-label options",
+        "On-premise deployment"
+      ]
     }
   ];
 
   const useCases = [
     {
       title: "Manufacturing",
-      description: "Production line optimization and quality control",
-      icon: Cpu,
-      examples: ["Production monitoring", "Quality assurance", "Efficiency optimization"]
+      description: "Digital twins of production lines, equipment, and processes",
+      icon: Cpu
     },
     {
-      title: "Smart Buildings",
-      description: "Building management and energy optimization",
-      icon: Building2,
-      examples: ["Energy management", "HVAC optimization", "Space utilization"]
+      title: "Smart Cities",
+      description: "Urban infrastructure, traffic systems, and utility networks",
+      icon: Globe
     },
     {
       title: "Healthcare",
-      description: "Patient monitoring and medical device management",
-      icon: Heart,
-      examples: ["Patient tracking", "Device monitoring", "Treatment optimization"]
+      description: "Medical devices, hospital systems, and patient monitoring",
+      icon: Shield
     },
     {
-      title: "Infrastructure",
-      description: "Critical infrastructure monitoring and maintenance",
-      icon: Network,
-      examples: ["Bridge monitoring", "Road conditions", "Utility management"]
-    }
-  ];
-
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$3,500",
-      period: "/month",
-      description: "Perfect for small-scale digital twin projects",
-      features: [
-        "Up to 10 digital twins",
-        "Basic AI analytics",
-        "Standard visualization",
-        "Email support",
-        "Basic reporting"
-      ],
-      cta: "Get Started",
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$8,500",
-      period: "/month",
-      description: "Ideal for medium-scale digital twin deployments",
-      features: [
-        "Up to 100 digital twins",
-        "Advanced AI analytics",
-        "3D visualization",
-        "Priority support",
-        "Advanced reporting",
-        "Custom integrations"
-      ],
-      cta: "Start Free Trial",
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$18,000",
-      period: "/month",
-      description: "For large-scale digital twin implementations",
-      features: [
-        "Unlimited digital twins",
-        "Custom AI models",
-        "Advanced 3D visualization",
-        "24/7 support",
-        "Custom analytics",
-        "White-label options",
-        "Dedicated infrastructure"
-      ],
-      cta: "Contact Sales",
-      popular: false
+      title: "Energy",
+      description: "Power plants, renewable energy systems, and grid management",
+      icon: Zap
     }
   ];
 
   const technologies = [
-    "Unity 3D", "Unreal Engine", "Three.js", "WebGL", "OpenGL", "Vulkan",
-    "TensorFlow", "PyTorch", "Scikit-learn", "Apache Spark", "Kafka", "Redis",
-    "PostgreSQL", "MongoDB", "InfluxDB", "TimescaleDB", "Kubernetes", "Docker",
-    "MQTT", "OPC UA", "REST APIs", "GraphQL", "WebSockets", "gRPC"
-  ];
-
-  const benefits = [
     {
-      title: "Operational Efficiency",
-      description: "Optimize operations with real-time insights and predictive analytics",
-      icon: TrendingUp,
-      metrics: ["15-25% efficiency improvement", "30% reduction in downtime", "20% cost savings"]
+      title: "IoT Integration",
+      description: "Connect sensors, devices, and equipment for real-time data",
+      icon: Network
     },
     {
-      title: "Risk Mitigation",
-      description: "Identify and prevent potential issues before they occur",
-      icon: Shield,
-      metrics: ["90% early warning accuracy", "60% reduction in failures", "Proactive maintenance"]
+      title: "AI/ML Models",
+      description: "Advanced algorithms for prediction and optimization",
+      icon: Brain
     },
     {
-      title: "Data-Driven Decisions",
-      description: "Make informed decisions based on comprehensive data analysis",
-      icon: BarChart3,
-      metrics: ["Real-time insights", "Historical analysis", "Predictive modeling"]
+      title: "3D Visualization",
+      description: "Immersive 3D models and augmented reality interfaces",
+      icon: Eye
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce operational costs through intelligent resource management",
-      icon: DollarSign,
-      metrics: ["25% maintenance cost reduction", "Energy optimization", "Resource planning"]
+      title: "Cloud Computing",
+      description: "Scalable infrastructure for processing and storage",
+      icon: Cloud
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -211,31 +163,33 @@ export default function AIDigitalTwinPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-full text-sm font-medium mb-6">
-              <Monitor className="w-4 h-4 mr-2" />
-              AI Digital Twin Platform
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
+              <Cpu className="w-4 h-4 mr-2" />
+              AI-Powered Digital Twin Platform
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Digital Twins
-              <span className="block text-zion-cyan">Powered by AI</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Digital Twin
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                {" "}Platform
+              </span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Create intelligent digital replicas of physical assets with real-time data synchronization, 
-              AI-powered analytics, and predictive insights. Transform how you monitor, maintain, and optimize your operations.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Create intelligent digital replicas of your physical world. Monitor, predict, and 
+              optimize performance with AI-powered digital twins for maximum efficiency and insight.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#pricing"
-                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white rounded-lg font-semibold hover:bg-zion-cyan-dark transition-colors"
+                href="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
               >
-                View Pricing
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/20 transition-colors"
+                href="#demo"
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
               >
-                Schedule Demo
+                Watch Demo
               </a>
             </div>
           </motion.div>
@@ -243,214 +197,40 @@ export default function AIDigitalTwinPlatform() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Digital Twin Capabilities
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with immersive visualization to create 
-              the most advanced digital twin solution available.
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Leverage cutting-edge AI to create, manage, and optimize digital twins
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-colors"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Measurable Business Impact
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Digital twins deliver tangible results that directly impact your bottom line 
-              and operational excellence.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-8"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
-                <p className="text-zion-slate-light mb-6">{benefit.description}</p>
-                <div className="space-y-3">
-                  {benefit.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckSquare className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {metric}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Digital twins are transforming industries across the globe, enabling 
-              unprecedented levels of insight and control.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-8"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mb-6">
-                  <useCase.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-zion-slate-light mb-6">{useCase.description}</p>
-                <div className="space-y-3">
-                  {useCase.examples.map((example, idx) => (
-                    <div key={idx} className="flex items-center text-zion-slate-light">
-                      <ArrowRight className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                      {example}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your digital twin needs and scale as you grow.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-zion-blue-dark/50 border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/20' 
-                    : 'border-zion-purple/30'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-semibold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-zion-slate-light ml-1">{plan.period}</span>
-                  </div>
-                  <p className="text-zion-slate-light">{plan.description}</p>
-                </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <button className="w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-                  plan.popular
-                    ? 'bg-zion-cyan text-white hover:bg-zion-cyan-dark'
-                    : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan/20'
-                }">
-                  {plan.cta}
-                </button>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -458,35 +238,179 @@ export default function AIDigitalTwinPlatform() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Built with Modern Technologies
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Cutting-Edge Technologies
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform leverages cutting-edge technologies to deliver 
-              exceptional performance and reliability.
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Built on the latest advancements in AI, IoT, and cloud computing
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {technologies.map((tech, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-lg p-4 text-center hover:border-zion-cyan/50 transition-colors"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
               >
-                <span className="text-sm text-zion-slate-light font-medium">{tech}</span>
+                <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <tech.icon className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {tech.title}
+                </h3>
+                <p className="text-gray-400">
+                  {tech.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Transform operations across various industries with digital twin technology
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <useCase.icon className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-400">
+                  {useCase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Operations
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              See measurable improvements in efficiency, performance, and cost savings
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Flexible Pricing Plans
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Choose the plan that fits your digital twin implementation needs
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {pricing.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                  index === 1 
+                    ? 'border-purple-500/50 bg-purple-500/5' 
+                    : 'border-slate-700'
+                }`}
+              >
+                {index === 1 && (
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-purple-500 text-white text-sm font-medium mb-4">
+                    Most Popular
+                  </div>
+                )}
+                <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                <div className="mb-6">
+                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-gray-400">{plan.period}</span>
+                </div>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/contact"
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    index === 1
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                      : 'border border-slate-600 text-gray-300 hover:border-slate-500 hover:text-white'
+                  }`}
+                >
+                  Get Started
+                </a>
               </motion.div>
             ))}
           </div>
@@ -494,34 +418,32 @@ export default function AIDigitalTwinPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/30">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Create Your Digital Twin?
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Build Your Digital Twin?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Join leading organizations that are already leveraging digital twins 
-              to gain competitive advantages and drive innovation.
+            <p className="text-xl text-gray-400 mb-8">
+              Join leading organizations that trust our AI-powered digital twin platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white rounded-lg font-semibold hover:bg-zion-cyan-dark transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
               >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Schedule a Demo
+                <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/20 transition-colors"
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
               >
-                Schedule Consultation
+                Call +1 (302) 464-0950
               </a>
             </div>
           </motion.div>
@@ -529,34 +451,35 @@ export default function AIDigitalTwinPlatform() {
       </section>
 
       {/* Contact Info */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-zion-blue-dark/50">
+      <section className="py-12 px-4 border-t border-slate-700">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="flex flex-col items-center">
-              <Phone className="w-6 h-6 text-zion-cyan mb-2" />
-              <span className="text-zion-slate-light text-sm">Phone</span>
-              <a href="tel:+13024640950" className="text-white hover:text-zion-cyan transition-colors">
-                +1 302 464 0950
-              </a>
+          <div className="grid md:grid-cols-3 gap-8 text-gray-400">
+            <div>
+              <h3 className="text-white font-semibold mb-2">Contact Us</h3>
+              <p>kleber@ziontechgroup.com</p>
+              <p>+1 (302) 464-0950</p>
             </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-6 h-6 text-zion-cyan mb-2" />
-              <span className="text-zion-slate-light text-sm">Email</span>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-zion-cyan transition-colors">
-                kleber@ziontechgroup.com
-              </a>
+            <div>
+              <h3 className="text-white font-semibold mb-2">Address</h3>
+              <p>364 E Main St STE 1008</p>
+              <p>Middletown DE 19709</p>
             </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-6 h-6 text-zion-cyan mb-2" />
-              <span className="text-zion-slate-light text-sm">Address</span>
-              <span className="text-white text-center">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </span>
+            <div>
+              <h3 className="text-white font-semibold mb-2">Website</h3>
+              <a 
+                href="https://ziontechgroup.com" 
+                className="text-purple-400 hover:text-purple-300 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ziontechgroup.com
+              </a>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AIDigitalTwinPlatform;

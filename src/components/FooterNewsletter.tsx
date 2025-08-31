@@ -1,5 +1,7 @@
-import React, { useState } from 'react.ts';
-import { Mail, Send, CheckCircle  } from 'lucide-react';
+import React, { useState               } from 'react.ts';
+import { Mail, Send, CheckCircle                } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       // // // // // // // console.error('Newsletter subscription failed:', error);
     } finally {
       setIsSubmitting(false);

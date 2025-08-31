@@ -1,6 +1,10 @@
-import React, { useEffect, useCallback, useState } from 'react';
-interface ModernUIEnhancerProps {
+import React, { useEffect, useCallback, useState } from 'react.ts';
+
+interface ModernUIEnhancerProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   enabled?: boolean;
+
 }
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
   enabled = true 
@@ -29,7 +33,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     // Modern color palette
     const colors = {
-      primary: accentColor,
+      primary: anyanyanyanyanyanyanyanyanyanyanyanyanyanyaccentColor,
       secondary: '#6366f1',
       success: '#10b981',
       warning: '#f59e0b',
@@ -48,6 +52,8 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
         900: '#0f172a'
       }
     };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Apply CSS custom properties
     Object.entries(colors).forEach(([key, value]) => {
       if (typeof value === 'string') {
@@ -67,7 +73,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     // Modern spacing scale (4px base unit)
     const spacing = {
-      0: '0px',
+      0: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
       1: '4px',
       2: '8px',
       3: '12px',
@@ -86,7 +92,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       28: '112px',
       32: '128px'
     };
-    Object.entries(spacing).forEach(([key, value]) => {
+
+    Object.entries(spacing).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--spacing-${key}`, value);
     });
   }, [enabled]);
@@ -95,7 +103,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     // Modern shadow system
     const shadows = {
-      xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+      xs: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0 1px 2px 0 rgb(0 0 0 / 0.05)',
       sm: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
       md: '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
       lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
@@ -103,7 +111,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
       inner: 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)'
     };
-    Object.entries(shadows).forEach(([key, value]) => {
+
+    Object.entries(shadows).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--shadow-${key}`, value);
     });
   }, [enabled]);
@@ -112,14 +122,16 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     // Modern transition system
     const transitions = {
-      fast: '150ms ease-in-out',
+      fast: anyanyanyanyanyanyanyanyanyanyanyanyanyany'150ms ease-in-out',
       normal: '250ms ease-in-out',
       slow: '350ms ease-in-out',
       bounce: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
       smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
       sharp: 'cubic-bezier(0.4, 0, 0.6, 1)'
     };
-    Object.entries(transitions).forEach(([key, value]) => {
+
+    Object.entries(transitions).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--transition-${key}`, value);
     });
   }, [enabled]);
@@ -128,7 +140,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     const root = document.documentElement;
     // Modern border radius system
     const radius = {
-      none: '0px',
+      none: anyanyanyanyanyanyanyanyanyanyanyanyanyany'0px',
       sm: '2px',
       md: '6px',
       lg: '8px',
@@ -137,7 +149,9 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       '3xl': '24px',
       full: '9999px'
     };
-    Object.entries(radius).forEach(([key, value]) => {
+
+    Object.entries(radius).forEach(([key, value])               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       root.style.setProperty(`--radius-${key}`, value);
     });
   }, [enabled]);

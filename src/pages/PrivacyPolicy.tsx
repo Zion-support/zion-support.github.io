@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Shield,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Shield,
   Lock,
   Eye,
   Database,
@@ -14,7 +13,9 @@ import {
   AlertTriangle,
   Info,
   Share
- } from 'lucide-react';
+              } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const PrivacyPolicy = () => {;
   const lastUpdated = '2025-01-15';
   const sections = [
@@ -580,8 +581,10 @@ const PrivacyPolicy = () => {;
                 <Eye className="w-8 h-8 text-zion-cyan" />
                 How We Use Your Information
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {sections.map((section, index) => (
+              
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-4">
+                {sections.map((section, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.a
                     key={section.id}
                     href={`#${section.id}`}
@@ -623,11 +626,11 @@ const PrivacyPolicy = () => {;
   y: 0 
 }}
               transition = {
-  { duration: 0.6,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.4 
 }}
             >
-              {sections.map((section, index) => (
+              {sections.map((section, index)              => (
                 <div key={section.id} id={section.id} className="mb-16">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
@@ -663,8 +666,10 @@ const PrivacyPolicy = () => {;
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Categories and Retention
               </h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {dataCategories.map((category, index) => (
+              
+              <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+                {dataCategories.map((category, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={category.category}
                     initial = {
@@ -726,8 +731,10 @@ const PrivacyPolicy = () => {;
               <h2 className="text-3xl font-bold text-slate-900 text-center mb-12">
                 Data Security Measures
               </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {securityMeasures.map((measure, index) => (
+              
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                {securityMeasures.map((measure, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={measure.measure}
                     initial = {

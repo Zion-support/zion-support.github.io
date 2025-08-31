@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect              } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Brain, 
   Search, 
@@ -40,7 +41,9 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
-export default function AIAutonomousResearchAssistant() {
+
+export default function AIAutonomousResearchAssistant(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeTab, setActiveTab] = useState('overview');
   const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
@@ -196,6 +199,7 @@ export default function AIAutonomousResearchAssistant() {
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
@@ -214,6 +218,7 @@ export default function AIAutonomousResearchAssistant() {
       {/* Navigation Tabs */}
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {['overview', 'features', 'pricing', 'technical', 'contact'].map((tab) => (
               <button
@@ -317,8 +322,10 @@ export default function AIAutonomousResearchAssistant() {
                     Discover the cutting-edge capabilities that make our AI research platform the most advanced in the world
                   </p>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index) => (
+
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 20 }}

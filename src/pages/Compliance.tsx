@@ -1,10 +1,45 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Shield, CheckCircle, FileText, Globe, Users, Database, Lock, AlertTriangle, Calendar, Award, BarChart3, Zap } from 'lucide-react';
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Shield, 
+  CheckCircle, 
+  Award, 
+  FileText, 
+  Globe, 
+  Building, 
+  Users, 
+  Lock, 
+  Eye, 
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  Database,
+  FileText,
+  Clock,
+  AlertTriangle,
+  Info,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Zap,
+  Brain,
+  Cloud,
+  Rocket,
+  Heart,
+  Cpu,
+  Network,
+  Server,
+  Key,
+  Fingerprint,
+  Monitor,
+  Clock,
+  AlertTriangle,
+  Info
+} from 'lucide-react';
+import { SEO              } from '../components/SEO';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-const Compliance: React.FC = () => {
-  const lastUpdated = "January 15, 2025";
-
+export default function Compliance(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const complianceFrameworks = [
     {
       name: "ISO 27001",
@@ -160,19 +195,161 @@ const Compliance: React.FC = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
 
-      {/* Main Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="space-y-16">
-            {/* Compliance Overview */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
+      {/* Compliance Commitment */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.2 
+
+
+
+
+
+
+}}
+          className="bg-gradient-to-r from-green-600/20 to-emerald-600/20 border border-green-500/30 rounded-2xl p-8 text-center"
+
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Our Compliance Commitment
+          </h2>
+          <p className="text-slate-300 max-w-4xl mx-auto">
+            Compliance is not just about meeting requirements—it's about building trust and ensuring
+            operational excellence. Our comprehensive compliance program covers international standards,
+            industry best practices, and regulatory requirements to provide you with confidence in our services.
+          </p>
+        </motion.div>
+      </div>
+
+      {/* Compliance Frameworks */}
+      <div className="bg-slate-800/20 py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+
+
+
+
+
+
+}}
+            className="text-3xl font-bold text-white text-center mb-12"
+
+            Compliance Frameworks & Certifications
+          </motion.h2>
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {complianceFrameworks.map((framework, index)              => (
+              <motion.div
+                key={framework.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.4 + index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
+
+                <div className="flex items-center space-x-4 mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-xl flex items-center justify-center`}>
+                    <framework.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{framework.title}</h3>
+                    <p className="text-slate-400 text-sm">{framework.description}</p>
+                  </div>
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400">98.5%</div>
+                  <div className="text-slate-400">Compliance Score</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-cyan-400">100%</div>
+                  <div className="text-slate-400">Audit Success Rate</div>
+                </div>;
+                <div className="text-center">;
+                  <div className="text-3xl font-bold text-cyan-400">&lt; 24h</div>
+                  <div className = "text-slate-400">Remediation Time</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Compliance Commitment */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <h2 className="text-3xl font-bold text-white mb-6">
                 Our Compliance Commitment
               </h2>
@@ -183,50 +360,312 @@ const Compliance: React.FC = () => {
               </p>
             </motion.div>
 
-            {/* Compliance Frameworks */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <h2 className="text-3xl font-bold text-white text-center mb-12">
-                Compliance Frameworks & Certifications
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {complianceFrameworks.map((framework, index) => (
-                  <motion.div
-                    key={framework.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6"
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${framework.color} rounded-2xl flex items-center justify-center mb-4`}>
-                      <Shield className="w-8 h-8 text-white" />
-                    </div>
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-lg font-bold text-white">{framework.name}</h3>
-                      <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm font-medium rounded-full border border-green-500/30">
-                        {framework.status}
-                      </span>
-                    </div>
-                    <p className="text-gray-300 text-sm mb-3">{framework.description}</p>
-                    <div className="space-y-2 text-xs text-gray-400">
-                      <div className="flex items-center space-x-2">
-                        <Calendar className="w-3 h-3" />
-                        <span>{framework.validity}</span>
-                      </div>
-                      <div className="flex items-start space-x-2">
-                        <Globe className="w-3 h-3 mt-0.5" />
-                        <span>{framework.scope}</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+        {/* Compliance Frameworks */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Compliance Frameworks & Certifications</h2>
+              <p className="text-xl text-slate-300">International standards and industry-specific compliance</p>
+            </div>
+            
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {complianceFrameworks.map((framework, index)               => (
+                <motion.div
+                  key={index}
+                  initial = {
+  { opacity: 0,
+  y: 20 
 
-            {/* Compliance Areas */}
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                  transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
+                >
+                  <div className="flex items-center mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-2xl flex items-center justify-center mr-4`}>
+                      <framework.icon className="h-8 w-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-2xl font-bold text-white">{framework.name}</h3>
+                      <p className="text-slate-300">{framework.description}</p>
+                    </div>
+                    <div className="text-right">
+                      <div className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold ${
+                        framework.status === 'Certified' ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
+                      }`}>
+                        <CheckCircle className="h-4 w-4 mr-1" />
+                        {framework.status}
+                      </div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <p className="text-slate-300 text-sm">{framework.details}</p>
+                    
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="font-semibold text-cyan-400">Scope:</span>
+                        <p className="text-slate-300">{framework.scope}</p>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-cyan-400">Last Audit:</span>
+                        <p className="text-slate-300">{framework.lastAudit}</p>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-cyan-400">Next Audit:</span>
+                        <p className="text-slate-300">{framework.nextAudit}</p>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-semibold text-cyan-400 mb-2">Key Benefits:</h4>
+                      <ul className="space-y-1">
+                        {framework.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-slate-300">
+                            <CheckCircle className="h-3 w-3 text-cyan-400 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+      {/* Industry Standards */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.h2
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.5 
+
+
+
+
+
+
+}}
+          className="text-3xl font-bold text-white text-center mb-12"
+
+          Industry Standards & Best Practices
+        </motion.h2>
+
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {industryStandards.map((standard, index)              => (
+            <motion.div
+              key={standard.title}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.6,
+  delay: 0.6 + index * 0.1 
+
+
+
+
+
+
+}}
+              className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
+
+              <div className="text-center mb-6">
+                <div className={`w-16 h-16 bg-gradient-to-br ${standard.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <standard.icon className="w-8 h-8 text-white" />
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+                </div>
+              </div>
+      {/* Compliance Processes */}
+      <div className="bg-slate-800/20 py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.7 
+
+
+
+
+
+
+}}
+            className="text-3xl font-bold text-white text-center mb-12"
+
+            Compliance Processes & Procedures
+          </motion.h2>
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {complianceProcesses.map((process, index)              => (
+              <motion.div
+                key={process.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 0.8 + index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
+
+                <div className="text-center mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${process.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                    <process.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{process.title}</h3>
+                  <p className="text-slate-400 text-sm mb-3">{process.description}</p>
+                  <span className="px-3 py-1 bg-slate-700 rounded-full text-xs text-slate-300">
+                    Frequency: {process.frequency}
+                  </span>
+                </div>
+
+                <div className="space-y-3">
+                  {process.process.map((item, idx) => (
+                    <div key={idx} className="flex items-center space-x-3">
+                      <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                      <span className="text-slate-300 text-sm">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+          </div>
+        </section>
+      </div>
+
+      {/* Compliance Tools */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.h2
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.6,
+  delay: 0.9 
+
+
+
+
+
+
+}}
+          className="text-3xl font-bold text-white text-center mb-12"
+
+          Compliance Tools & Resources
+        </motion.h2>
+
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {complianceTools.map((tool, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -266,31 +705,89 @@ const Compliance: React.FC = () => {
               </div>
             </motion.div>
 
-            {/* Compliance Process */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
-            >
-              <h2 className="text-2xl font-bold text-white mb-6 flex items-center">
-                <FileText className="w-6 h-6 text-cyan-400 mr-3" />
-                Our Compliance Process
-              </h2>
-              <p className="text-gray-300 mb-8">
-                We follow a systematic approach to achieve and maintain compliance across all frameworks and standards.
-              </p>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                {complianceProcesses.map((process, index) => (
-                  <motion.div
-                    key={process.step}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <process.icon className="w-8 h-8 text-cyan-400" />
+      {/* Contact Information */}
+      <div className="bg-slate-800/20 py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 1.1 
+
+
+
+
+
+
+}}
+            className="text-3xl font-bold text-white text-center mb-12"
+
+            Compliance Support & Inquiries
+          </motion.h2>
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {contactInfo.map((contact, index)              => (
+              <motion.div
+                key={contact.title}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+
+
+
+
+
+
+}}
+                animate = {
+  { opacity: 1,
+  x: 0 
+
+
+
+
+
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: 1.2 + index * 0.1 
+
+
+
+
+
+
+}}
+                className="bg-slate-800/30 border border-slate-700 rounded-xl p-6"
+
+                <h3 className="text-xl font-semibold text-white mb-4">{contact.title}</h3>
+                <p className="text-slate-400 mb-6">{contact.description}</p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-slate-700 rounded-lg flex items-center justify-center">
+                      <span className="text-green-400 text-sm font-medium">@</span>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     </div>
                     <h3 className="text-lg font-bold text-white mb-2">{process.step}</h3>
                     <p className="text-gray-300 text-sm mb-3">{process.description}</p>

@@ -1,7 +1,10 @@
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Brain, Zap, Settings, Users, TrendingUp, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export default function AIEnterpriseOrchestrator(...args: []):  {
   return (
     <>
@@ -55,7 +58,9 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 making your enterprise more efficient, responsive, and intelligent.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   icon: Brain,
@@ -86,6 +91,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   icon: Shield,
                   title: "Security & Compliance",
                   description: "Enterprise-grade security with built-in compliance monitoring and audit trails."
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((feature, index)  => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
@@ -111,7 +117,9 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 transform your enterprise operations.
               </p>
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   step: "01",
@@ -132,6 +140,7 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                   step: "04",
                   title: "Continuous Learning",
                   description: "The system continuously learns and improves based on performance data and outcomes."
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((step, index)  => (
                 <div key={index} className="text-center">
@@ -178,11 +187,11 @@ export default function AIEnterpriseOrchestrator(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Metrics</h3>
                 <div className="space-y-4">
                   {[
-                    { metric: "40%", label: "Cost Reduction" },
+                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"40%", label: "Cost Reduction" },
                     { metric: "60%", label: "Efficiency Improvement" },
                     { metric: "24/7", label: "Operation Availability" },
                     { metric: "99.9%", label: "Uptime Reliability" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex justify-between items-center">
                       <span className="text-slate-300">{item.label}</span>
                       <span className="text-2xl font-bold text-cyan-400">{item.metric}</span>

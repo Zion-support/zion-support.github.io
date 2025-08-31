@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { 
   Users, 
   MessageSquare, 
@@ -78,6 +79,7 @@ import {
   Server2,
   Phone,
   Mail,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Calendar,
   MessageSquare2,
   UserPlus,
@@ -221,7 +223,9 @@ import {
   UserEditOff,
   UserSearch3,
   UserSearchOff
-} from 'lucide-react';
+             } from 'lucide-react.ts';
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 const AICustomerSuccessPlatform = () => {
   const features = [
     {
@@ -395,8 +399,10 @@ const AICustomerSuccessPlatform = () => {
               Our platform combines cutting-edge AI with proven customer success methodologies
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -415,6 +421,8 @@ const AICustomerSuccessPlatform = () => {
         </div>
       </section>
       {/* Benefits Section */}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -430,8 +438,10 @@ const AICustomerSuccessPlatform = () => {
               See real results with our AI-powered customer success platform
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -462,8 +472,10 @@ const AICustomerSuccessPlatform = () => {
               Tailored solutions for various industries and business models
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -494,8 +506,10 @@ const AICustomerSuccessPlatform = () => {
               Choose the plan that fits your business needs and scale as you grow
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -548,8 +562,10 @@ const AICustomerSuccessPlatform = () => {
               Connect with your existing tools and workflows
             </p>
           </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+          
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
+            {integrations.map((integration, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}

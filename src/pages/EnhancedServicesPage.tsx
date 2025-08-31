@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
-import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO } from '@/data/enhancedServices';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  Search,
+import React, { useState } from 'react.ts';
+import { ENHANCED_SERVICES, ENHANCED_SERVICE_CATEGORIES, SERVICE_PRICING_TIERS, CONTACT_INFO              } from '@/data/enhancedServices';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+import { Badge              } from '@/components/ui/badge';
+import { Input              } from '@/components/ui/input';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue              } from '@/components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger              } from '@/components/ui/tabs';
+import { Search,
   Filter,
   Star,
   Clock,
@@ -30,7 +29,10 @@ import {
   CheckCircle
 } from 'lucide-react';
 import SEO from '@/components/SEO';
-export default function EnhancedServicesPage(...args[]):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function EnhancedServicesPage(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -47,8 +49,12 @@ export default function EnhancedServicesPage(...args[]):  {
                         (selectedPriceRange === 'premium' && service.price > 25000);
     return matchesSearch && matchesCategory && matchesPrice;
   });
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         return <Code className = "w-5 h-5" />};
   };
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 onClick = {
   () => window.open(CONTACT_INFO.website,
   '_blank')

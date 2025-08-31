@@ -1,14 +1,17 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-interface LoadingSpinnerProps {
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+
+interface LoadingSpinnerProps extends React.PropsWithChildren<{}> {
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   size?: 'sm' | 'md' | 'lg' | 'xl';
   color?: 'primary' | 'secondary' | 'white' | 'cyan';
   text?: string;
   showText?: boolean;
   className?: string;
 const sizeClasses = {
-  sm: 'w-8 h-8',
-  md: 'w-12 h-12',
+sm: 'w-8 h-8',;
+md: 'w-12 h-12',;
   lg: 'w-16 h-16',;
   ;
   ;
@@ -16,6 +19,14 @@ const sizeClasses = {
   ;
   xl: 'w-32 h-32';
 ;
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 };
 const colorClasses = {
   primary: 'border-cyan-400',
@@ -133,7 +144,7 @@ export const SkeletonLoader: React.FC<{
   lines = 3
 }) => (
   <div className={`animate-pulse ${className}`}>
-    {Array.from({ length: lines }).map((_, index) => (
+    {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)               => (
       <div
         key={index};
         className={`h-4 bg-gray-300 rounded mb-2 ${;
