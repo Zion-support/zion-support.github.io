@@ -1,137 +1,20 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, 
-  Zap, 
-  Clock, 
-  TrendingUp, 
-  AlertTriangle, 
-  CheckCircle, 
-  Info,
-  X,
-  Settings,
-  BarChart3,
-  Cpu,
-  HardDrive,
-  Network,
-  Smartphone
-} from 'lucide-react';
-
-interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  domSize: number;
-  resourceCount: number;
-  totalSize: number;
-}
+import React, { useEffect, useCallback, useRef } from 'react';
 
 interface PerformanceOptimizerProps {
-  enabled: boolean;
-  showMetrics?: boolean;
-  autoOptimize?: boolean;
+  enabled?: boolean;
+  enableLazyLoading?: boolean;
+  enableImageOptimization?: boolean;
+  enablePerformanceMonitoring?: boolean;
+}
 }
 
 export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enabled = true,
-  showMetrics = false,
-  autoOptimize = true
+  enableLazyLoading = true,
+  enableImageOptimization = true,
+  enablePerformanceMonitoring = true,
 }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [isExpanded, setIsExpanded] = useState(false);
-  const [autoOptimizationEnabled, setAutoOptimizationEnabled] = useState(autoOptimize);
-
-  // Enhanced performance monitoring
-  const measurePerformance = useCallback(async () => {
-    if (!enabled) return;
-
-    try {
-      // Core Web Vitals
-      const fcp = await new Promise<number>((resolve) => {
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
-          if (fcpEntry) {
-            resolve(fcpEntry.startTime);
-          }
-        }).observe({ entryTypes: ['paint'] });
-      });
-
-      const lcp = await new Promise<number>((resolve) => {
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const lcpEntry = entries[entries.length - 1];
-          if (lcpEntry) {
-            resolve(lcpEntry.startTime);
-          }
-        }).observe({ entryTypes: ['largest-contentful-paint'] });
-      });
-
-      const fid = await new Promise<number>((resolve) => {
-        new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          const fidEntry = entries.find(entry => entry.entryType === 'first-input');
-          if (fidEntry) {
-            resolve(fidEntry.processingStart - fidEntry.startTime);
-          }
-        }).observe({ entryTypes: ['first-input'] });
-      });
-
-      const cls = await new Promise<number>((resolve) => {
-        let clsValue = 0;
-        new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift') {
-              clsValue += (entry as any).value;
-            }
-          }
-          resolve(clsValue);
-        }).observe({ entryTypes: ['layout-shift'] });
-      });
-
-      // Additional metrics
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const ttfb = navigationEntry?.responseStart - navigationEntry?.requestStart || 0;
-      
-      const domSize = document.querySelectorAll('*').length;
-      const resourceCount = performance.getEntriesByType('resource').length;
-      const totalSize = performance.getEntriesByType('resource').reduce((acc, resource) => {
-        return acc + (resource as PerformanceResourceTiming).transferSize || 0;
-      }, 0);
-
-      const newMetrics: PerformanceMetrics = {
-        fcp,
-        lcp,
-        fid,
-        cls,
-        ttfb,
-        domSize,
-        resourceCount,
-        totalSize
-      };
-
-      setMetrics(newMetrics);
-      generateOptimizations(newMetrics);
-    } catch (error) {
-      console.warn('Performance measurement failed:', error);
-    }
-  }, [enabled]);
-
-  // Generate optimization suggestions
-  const generateOptimizations = useCallback((currentMetrics: PerformanceMetrics) => {
-    const suggestions: string[] = [];
-
-    if (currentMetrics.fcp > 1800) {
-      suggestions.push('First Contentful Paint is slow. Consider optimizing critical rendering path.');
-    }
-
-    if (currentMetrics.lcp > 2500) {
-      suggestions.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.');
-    }
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
     if (currentMetrics.fid > 100) {
       suggestions.push('First Input Delay is high. Reduce JavaScript execution time.');
@@ -188,127 +71,238 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
     });
   }, [autoOptimizationEnabled, optimizations]);
+=======
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
-  // Performance monitoring interval
+  // Performance monitoring
+  const monitorPerformance = useCallback(() => {
+    if (!enablePerformanceMonitoring) return;
+
+    // Monitor Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+            } else if (entry.entryType === 'first-input-delay') {
+              console.log('FID:', entry.processingStart - entry.startTime);
+            } else if (entry.entryType === 'layout-shift') {
+              console.log('CLS:', (entry as any).value);
+            }
+          }
+        });
+
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input-delay', 'layout-shift'] });
+      } catch (error) {
+        console.warn('Performance monitoring failed:', error);
+      }
+    }
+
+    // Monitor page load time
+    window.addEventListener('load', () => {
+      const loadTime = performance.now();
+      console.log('Page load time:', loadTime);
+    });
+  }, [enablePerformanceMonitoring]);
+
+  // Lazy loading for images
+  const setupLazyLoading = useCallback(() => {
+    if (!enableLazyLoading) return;
+
+    const images = document.querySelectorAll('img[data-src]');
+    
+    if (images.length === 0) return;
+
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          const src = img.getAttribute('data-src');
+          
+          if (src) {
+            img.src = src;
+            img.removeAttribute('data-src');
+            img.classList.remove('lazy');
+            observerRef.current?.unobserve(img);
+          }
+        }
+      });
+    }, {
+      rootMargin: '50px 0px',
+      threshold: 0.01
+    });
+
+    images.forEach((img) => {
+      observerRef.current?.observe(img);
+    });
+  }, [enableLazyLoading]);
+
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
+
+    const images = document.querySelectorAll('img');
+    
+    images.forEach((img) => {
+      // Add loading="lazy" for images below the fold
+      if (!img.hasAttribute('loading')) {
+        img.setAttribute('loading', 'lazy');
+      }
+
+      // Add decoding="async" for better performance
+      if (!img.hasAttribute('decoding')) {
+        img.setAttribute('decoding', 'async');
+      }
+
+      // Add alt text if missing
+      if (!img.hasAttribute('alt')) {
+        img.setAttribute('alt', 'Zion Tech Group image');
+      }
+    });
+  }, [enableImageOptimization]);
+
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.as = 'style';
+    criticalCSS.href = '/css/critical.css';
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const fontPreload = document.createElement('link');
+    fontPreload.rel = 'preload';
+    fontPreload.as = 'font';
+    fontPreload.href = '/fonts/inter-var.woff2';
+    fontPreload.crossOrigin = 'anonymous';
+    document.head.appendChild(fontPreload);
+  }, []);
+
+  // Optimize third-party scripts
+  const optimizeThirdPartyScripts = useCallback(() => {
+    // Defer non-critical scripts
+    const scripts = document.querySelectorAll('script[data-defer]');
+    scripts.forEach((script) => {
+      script.setAttribute('defer', '');
+    });
+
+    // Add async to analytics scripts
+    const analyticsScripts = document.querySelectorAll('script[data-analytics]');
+    analyticsScripts.forEach((script) => {
+      script.setAttribute('async', '');
+    });
+  }, []);
+
+  // Memory management
+  const optimizeMemory = useCallback(() => {
+    // Clean up event listeners on unmount
+    const cleanup = () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', cleanup);
+    
+    return cleanup;
+  }, []);
+  // Initialize performance optimizations
+  monitorPerformance();
+  setupLazyLoading();
+  optimizeImages();
+  // Performance monitoring
+  const monitorPerformance = useCallback(() => {
+    if (!enablePerformanceMonitoring) return;
+
+    // Monitor Core Web Vitals
+    if ('PerformanceObserver' in window) {
+      try {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            console.log('Performance metric:', entry.name, entry.startTime);
+          }
+        });
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      } catch (error) {
+        console.warn('Performance monitoring failed:', error);
+      }
+    }
+  }, [enablePerformanceMonitoring]);
+
+  // Lazy loading implementation
+  const setupLazyLoading = useCallback(() => {
+    if (!enableLazyLoading) return;
+
+    if (observerRef.current) {
+      observerRef.current.disconnect();
+    }
+
+    observerRef.current = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const target = entry.target as HTMLElement;
+          if (target.dataset.src) {
+            target.setAttribute('src', target.dataset.src);
+            target.removeAttribute('data-src');
+            observerRef.current?.unobserve(target);
+          }
+        }
+      });
+    });
+
+    // Observe all images with data-src
+    document.querySelectorAll('img[data-src]').forEach((img) => {
+      observerRef.current?.observe(img);
+    });
+  }, [enableLazyLoading]);
+
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
+
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      const src = img.getAttribute('src');
+      if (src && !src.includes('data:image')) {
+        // Add loading="lazy" to images below the fold
+        if (img.offsetTop > window.innerHeight) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add srcset for responsive images if not already present
+        if (!img.srcset) {
+          img.setAttribute('srcset', `${src} 1x, ${src} 2x`);
+        }
+      }
+    });
+  }, [enableImageOptimization]);
+
   useEffect(() => {
     if (!enabled) return;
 
-    const interval = setInterval(measurePerformance, 10000); // Check every 10 seconds
-    measurePerformance(); // Initial measurement
+    monitorPerformance();
+    setupLazyLoading();
+    optimizeImages();
 
-    return () => clearInterval(interval);
-  }, [enabled, measurePerformance]);
+    // Preconnect to external domains
+    const preconnect = document.createElement('link');
+    preconnect.rel = 'preconnect';
+    preconnect.href = 'https://fonts.googleapis.com';
+    document.head.appendChild(preconnect);
 
-  // Auto-apply optimizations
-  useEffect(() => {
-    if (autoOptimizationEnabled && optimizations.length > 0) {
-      const timer = setTimeout(applyAutoOptimizations, 2000);
-      return () => clearTimeout(timer);
-    }
-  }, [autoOptimizationEnabled, optimizations, applyAutoOptimizations]);
-
-  // Show performance issues
-  useEffect(() => {
-    if (metrics && (metrics.fcp > 2000 || metrics.lcp > 3000 || metrics.cls > 0.15)) {
-      setIsVisible(true);
-    }
-  }, [metrics]);
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [enabled, monitorPerformance, setupLazyLoading, optimizeImages]);
 
   if (!enabled) return null;
 
-  const getPerformanceScore = (): number => {
-    if (!metrics) return 0;
-
-    let score = 100;
-
-    if (metrics.fcp > 1800) score -= 20;
-    if (metrics.lcp > 2500) score -= 20;
-    if (metrics.fid > 100) score -= 15;
-    if (metrics.cls > 0.1) score -= 15;
-    if (metrics.ttfb > 600) score -= 10;
-    if (metrics.domSize > 1500) score -= 10;
-    if (metrics.resourceCount > 50) score -= 10;
-
-    return Math.max(0, score);
-  };
-
-  const getPerformanceStatus = (): 'excellent' | 'good' | 'needs-improvement' | 'poor' => {
-    const score = getPerformanceScore();
-    if (score >= 90) return 'excellent';
-    if (score >= 70) return 'good';
-    if (score >= 50) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const status = getPerformanceStatus();
-  const statusColors = {
-    excellent: 'text-green-500',
-    good: 'text-blue-500',
-    'needs-improvement': 'text-yellow-500',
-    poor: 'text-red-500'
-  };
-
-  const statusIcons = {
-    excellent: CheckCircle,
-    good: CheckCircle,
-    'needs-improvement': AlertTriangle,
-    poor: AlertTriangle
-  };
-
-  const StatusIcon = statusIcons[status];
-
-  return (
-    <>
-      {/* Floating Performance Indicator */}
-      <AnimatePresence>
-        {isVisible && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className="fixed bottom-6 right-6 z-50"
-          >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setIsExpanded(!isExpanded)}
-              className={`
-                flex items-center space-x-2 px-4 py-3 rounded-full shadow-lg
-                ${status === 'excellent' ? 'bg-green-500 hover:bg-green-600' : ''}
-                ${status === 'good' ? 'bg-blue-500 hover:bg-blue-600' : ''}
-                ${status === 'needs-improvement' ? 'bg-yellow-500 hover:bg-yellow-600' : ''}
-                ${status === 'poor' ? 'bg-red-500 hover:bg-red-600' : ''}
-                text-white font-medium transition-all duration-300
-              `}
-            >
-              <StatusIcon className="w-5 h-5" />
-              <span className="hidden sm:inline">Performance: {getPerformanceScore()}/100</span>
-              <span className="sm:hidden">Perf</span>
-            </motion.button>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Expanded Performance Dashboard */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsExpanded(false)}
-          >
-            <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: 50, opacity: 0 }}
-              className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-                <div className="flex items-center space-x-3">
+  return null; // This component doesn't render anything visible
                   <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
                     <BarChart3 className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
@@ -471,6 +465,15 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </motion.div>
         )}
       </AnimatePresence>
+=======
+      {/* Performance monitoring overlay for development */}
+      {process.env.NODE_ENV === 'development' && enablePerformanceMonitoring && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-2 rounded text-xs z-50">
+          <div>Performance Monitor Active</div>
+          <div>Check console for metrics</div>
+        </div>
+      )}
+>>>>>>> cursor/analyze-improve-and-deploy-application-1d8a
     </>
   );
 };
