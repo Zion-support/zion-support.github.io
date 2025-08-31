@@ -34,10 +34,10 @@ export function EnhancedFooter() {
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Content Intelligence', href: '/services/ai-content-intelligence-platform' },
-        { name: 'AI Customer Success Predictor', href: '/services/ai-customer-success-predictor' },
-        { name: 'AI Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostic-assistant' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection-engine' }
+        { name: 'AI Advanced Data Intelligence', href: '/services/ai-advanced-data-intelligence-platform' },
+        { name: 'Quantum AI Hybrid Platform', href: '/services/quantum-ai-hybrid-platform' },
+        { name: 'AI Content Creation Studio', href: '/services/AI-Content-Creation-Studio-Pro' },
+        { name: 'AI Customer Success Predictor', href: '/services/ai-customer-success-predictor' }
       ]
     },
     {

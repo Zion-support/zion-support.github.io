@@ -44,6 +44,7 @@ const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
+const ServicesOverview = createLazyComponent(() => import('./pages/services-overview'));
 
 // Service pages
 const Services = createLazyComponent(() => import('./pages/Services'));
@@ -89,6 +90,11 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 // New Innovative Services
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
+
+// New Advanced AI Services
+const AIAdvancedDataIntelligencePlatform = lazy(() => import('./pages/services/AI-Advanced-Data-Intelligence-Platform'));
+const QuantumAIHybridPlatform = lazy(() => import('./pages/services/Quantum-AI-Hybrid-Platform'));
+const ComprehensiveMicroSAASSolutions = lazy(() => import('./pages/services/Comprehensive-Micro-SAAS-Solutions'));
 
 // New Cutting-Edge Services 2025
 const AIQuantumComputingPlatform = lazy(() => import('./pages/services/AI-Quantum-Computing-Platform'));
@@ -274,6 +280,7 @@ function App() {
                   <Route path="/services" element={<Services />} />
                   <Route path="/services2026" element={<Services2026 />} />
                   <Route path="/services2027" element={<Services2027 />} />
+                  <Route path="/services-overview" element={<ServicesOverview />} />
 
                   {/* Service Routes */}
                   <Route path="/ai-services" element={<AIServices />} />
@@ -431,6 +438,11 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+                  
+                  {/* New Advanced AI Services */}
+                  <Route path="/services/ai-advanced-data-intelligence-platform" element={<AIAdvancedDataIntelligencePlatform />} />
+                  <Route path="/services/quantum-ai-hybrid-platform" element={<QuantumAIHybridPlatform />} />
+                  <Route path="/services/comprehensive-micro-saas-solutions" element={<ComprehensiveMicroSAASSolutions />} />
 
                   {/* 404 Page */}
                   <Route

@@ -226,20 +226,27 @@ const EnhancedHeader: React.FC = () => {
     { 
       name: 'AI & Machine Learning', 
       icon: Brain, 
-      href: '/services#ai',
+      href: '/services/ai-advanced-data-intelligence-platform',
       description: 'Intelligent automation and AI solutions',
-      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']
+      services: ['AI Data Intelligence', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']
     },
     { 
       name: 'Quantum Computing', 
       icon: Atom, 
-      href: '/services/ai-quantum-computing-platform',
+      href: '/services/quantum-ai-hybrid-platform',
       description: 'Revolutionary quantum computing solutions',
       services: ['Quantum AI Hybrid', 'Post-Quantum Crypto', 'Quantum Data Storage', 'Quantum Analytics']
     },
     { 
-      name: 'Space Technology', 
+      name: 'Micro SAAS Solutions', 
       icon: Rocket, 
+      href: '/services/comprehensive-micro-saas-solutions',
+      description: 'Innovative micro SAAS business tools',
+      services: ['AI Content Studio', 'Lead Generation', 'Support Automation', 'Business Analytics']
+    },
+    { 
+      name: 'Space Technology', 
+      icon: Satellite, 
       href: '/services/ai-space-technology-platform',
       description: 'Cutting-edge space technology solutions',
       services: ['Satellite Systems', 'Space Navigation', 'Planetary Exploration', 'Space Analytics']
@@ -271,19 +278,13 @@ const EnhancedHeader: React.FC = () => {
       href: '/services#data',
       description: 'Data platforms and business intelligence',
       services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']
-    },
-    { 
-      name: 'Enterprise Solutions', 
-      icon: Database, 
-      href: '/services#enterprise',
-      description: 'Enterprise-grade business solutions',
-      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']
     }
   ];
 
   const mainNavigation = [
     { name: 'Home', href: '/', hasDropdown: false },
     { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Services Overview', href: '/services-overview', hasDropdown: false },
     { name: 'Showcase', href: '/comprehensive-services-showcase-2025', hasDropdown: false },
     { name: 'Pricing', href: '/comprehensive-pricing-guide-2025', hasDropdown: false },
     { name: 'Solutions', href: '/solutions', hasDropdown: false },
