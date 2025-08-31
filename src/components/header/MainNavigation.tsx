@@ -161,6 +161,19 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         Blockchain Solutions
                       </Link>
                     </li>
+                    {/* Additional services from remote branch */}
+                    <li>
+                      <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Sales Copilot
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Compliance Assistant
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -197,6 +210,19 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Network className="w-3 h-3 mr-2" />
                         Blockchain Solutions
+                      </Link>
+                    </li>
+                    {/* Additional services from remote branch */}
+                    <li>
+                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <DollarSign className="w-3 h-3 mr-2" />
+                        Cloud FinOps Optimizer
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/it-infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Server className="w-3 h-3 mr-2" />
+                        IT Infrastructure
                       </Link>
                     </li>
                   </ul>
@@ -260,6 +286,19 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <MessageCircle className="w-3 h-3 mr-2" />
                         AI Support
+                      </Link>
+                    </li>
+                    {/* Additional solutions from remote branch */}
+                    <li>
+                      <Link to="/talent" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users2 className="w-3 h-3 mr-2" />
+                        Find Experts
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/interview-assessment-ai" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Hiring
                       </Link>
                     </li>
                   </ul>

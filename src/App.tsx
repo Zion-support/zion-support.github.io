@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { AnimatePresence, motion } from 'framer-motion';
 
-// Performance & Optimization Components
+// Layout Components
+import { Header } from './components/header/Header';
+import { Footer } from './components/layout/Footer';
+
+// Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
@@ -20,8 +24,6 @@ import { EnhancedFooter } from './components/ui/EnhancedFooter';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
 import { AppFooter } from './components/layout/AppFooter';
 
 // Enhanced lazy loading with preloading hints
@@ -59,7 +61,7 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const ResearchDevelopment = createLazyComponent(() => import('./pages/ResearchDevelopment'));
 const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 
-// New AI Services 2025
+// New AI Services 2025 - Combined from both versions
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
@@ -78,6 +80,17 @@ const MicroSaaSSolutionsComprehensive = createLazyComponent(() => import('./page
 const AIQuantumNeuralNetworkPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Neural-Network-Platform'));
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
+
+// Additional service pages from remote branch
+const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sales-copilot'));
+const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/cloud-finops-optimizer'));
+const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/ai-compliance-assistant'));
+const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
+const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/services/digital-transformation'));
+const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITInfrastructure'));
+const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
+const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
@@ -124,7 +137,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       </button>
     </div>
   </div>
-);
+ );
 
 function App() {
   return (
@@ -203,6 +216,17 @@ function App() {
                     <Route path="/services/ai-quantum-neural-network-platform" element={<AIQuantumNeuralNetworkPlatform />} />
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
+
+                    {/* Additional service routes from remote branch */}
+                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
+                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
+                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                    <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                    <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
+                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
+                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
+                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
