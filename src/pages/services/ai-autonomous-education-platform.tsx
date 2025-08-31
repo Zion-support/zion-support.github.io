@@ -1,49 +1,84 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Search, 
-  FileText, 
-  Scale, 
+  GraduationCap, 
   Brain, 
-  Zap, 
-  Shield, 
+  BookOpen, 
   Users, 
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  BookOpen,
-  Gavel,
-  Library,
-  Target,
+  Target, 
+  TrendingUp, 
+  CheckCircle, 
+  Zap,
+  Shield,
+  Globe,
+  Monitor,
+  Smartphone,
+  Server,
+  Cloud,
+  Database,
+  Workflow,
+  MessageCircle,
+  Phone,
+  Mail,
+  MapPin,
   BarChart3,
   Clock,
   DollarSign,
   Star,
   Award,
-  Globe,
   Lock,
-  Database,
-  Cloud,
-  Smartphone,
-  Monitor,
-  Server,
   Network,
   Cpu,
-  Workflow,
-  MessageCircle,
-  Phone,
-  Mail,
-  MapPin
+  Activity,
+  Lightbulb,
+  Code,
+  Palette,
+  Video,
+  Headphones,
+  BookMarked,
+  Microscope,
+  Flask,
+  TestTube,
+  Beaker,
+  Dna,
+  Pill,
+  Stethoscope,
+  Car,
+  Plane,
+  Ship,
+  Train,
+  Building,
+  Factory,
+  Warehouse,
+  Store,
+  Bank,
+  CreditCard,
+  PiggyBank,
+  ChartLine,
+  PieChart,
+  TrendingDown,
+  AlertTriangle,
+  UserCheck,
+  UserPlus,
+  UserMinus,
+  UserX,
+  UserCog,
+  UserEdit,
+  UserSearch,
+  UserVoice,
+  UserHeart,
+  UserStar,
+  UserCheckCircle
 } from 'lucide-react';
 
-export default function AIAutonomousLegalResearchPlatform() {
+export default function AIAutonomousEducationPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Helmet>
-        <title>AI Autonomous Legal Research Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered legal research platform that autonomously analyzes case law, statutes, and legal documents with unprecedented accuracy and speed." />
-        <meta name="keywords" content="AI legal research, autonomous legal analysis, legal AI platform, case law analysis, legal document review, AI law firm solutions" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-legal-research-platform" />
+        <title>AI Autonomous Education Platform | Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered education platform that provides personalized learning experiences, adaptive curriculum, and autonomous educational content creation." />
+        <meta name="keywords" content="AI education platform, autonomous learning, personalized education, adaptive curriculum, AI tutoring, educational technology, EdTech solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-education-platform" />
       </Helmet>
 
       {/* Hero Section */}
@@ -51,26 +86,26 @@ export default function AIAutonomousLegalResearchPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <div className="flex justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl">
-                <Gavel className="w-12 h-12 text-white" />
+              <div className="p-3 bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl">
+                <GraduationCap className="w-12 h-12 text-white" />
               </div>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous Legal Research Platform
+              AI Autonomous Education Platform
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Revolutionizing legal research with autonomous AI that analyzes case law, statutes, and legal documents with unprecedented accuracy and speed.
+              Transform education with AI-powered personalized learning, adaptive curriculum, and autonomous content creation that adapts to every student's unique needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="#pricing" 
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View Pricing
               </a>
               <a 
                 href="#contact" 
-                className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+                className="px-8 py-4 border-2 border-green-500 text-green-400 font-semibold rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300"
               >
                 Schedule Demo
               </a>
@@ -84,71 +119,71 @@ export default function AIAutonomousLegalResearchPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary Legal Research Capabilities
+              Revolutionary Educational Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform transforms legal research from hours to minutes, providing comprehensive analysis and insights.
+              Our AI platform revolutionizes education by providing personalized learning experiences that adapt to each student's unique learning style and pace.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
-              <div className="p-3 bg-blue-500/20 rounded-lg w-fit mb-4">
-                <Search className="w-8 h-8 text-blue-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Autonomous Case Analysis</h3>
-              <p className="text-gray-300">
-                AI autonomously analyzes case law, identifies relevant precedents, and extracts key legal principles with 99.7% accuracy.
-              </p>
-            </div>
-
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
-              <div className="p-3 bg-purple-500/20 rounded-lg w-fit mb-4">
-                <Brain className="w-8 h-8 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Intelligent Document Review</h3>
-              <p className="text-gray-300">
-                Advanced NLP algorithms review legal documents, contracts, and agreements, highlighting potential issues and risks.
-              </p>
-            </div>
-
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
               <div className="p-3 bg-green-500/20 rounded-lg w-fit mb-4">
-                <TrendingUp className="w-8 h-8 text-green-400" />
+                <Brain className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Predictive Legal Insights</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Personalized Learning Paths</h3>
               <p className="text-gray-300">
-                Machine learning models predict case outcomes, settlement probabilities, and legal strategy recommendations.
+                AI algorithms create customized learning journeys based on individual student performance, preferences, and learning styles.
               </p>
             </div>
 
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
+              <div className="p-3 bg-blue-500/20 rounded-lg w-fit mb-4">
+                <BookOpen className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Adaptive Curriculum</h3>
+              <p className="text-gray-300">
+                Dynamic curriculum that automatically adjusts difficulty, content, and pace based on real-time student performance analysis.
+              </p>
+            </div>
+
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
+              <div className="p-3 bg-purple-500/20 rounded-lg w-fit mb-4">
+                <Users className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI Tutoring System</h3>
+              <p className="text-gray-300">
+                Intelligent tutoring that provides instant feedback, explanations, and guidance tailored to each student's needs.
+              </p>
+            </div>
+
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
               <div className="p-3 bg-orange-500/20 rounded-lg w-fit mb-4">
-                <Database className="w-8 h-8 text-orange-400" />
+                <Video className="w-8 h-8 text-orange-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Comprehensive Legal Database</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Content Creation</h3>
               <p className="text-gray-300">
-                Access to millions of cases, statutes, regulations, and legal documents from federal and state jurisdictions.
+                AI autonomously generates educational content, quizzes, and assessments aligned with curriculum standards.
               </p>
             </div>
 
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
               <div className="p-3 bg-red-500/20 rounded-lg w-fit mb-4">
-                <Shield className="w-8 h-8 text-red-400" />
+                <BarChart3 className="w-8 h-8 text-red-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Compliance Monitoring</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Progress Analytics</h3>
               <p className="text-gray-300">
-                Real-time monitoring of regulatory changes and compliance requirements across multiple jurisdictions.
+                Comprehensive analytics dashboard providing insights into student progress, learning patterns, and areas for improvement.
               </p>
             </div>
 
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
               <div className="p-3 bg-cyan-500/20 rounded-lg w-fit mb-4">
-                <Workflow className="w-8 h-8 text-cyan-400" />
+                <Globe className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Automated Workflow</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Multi-Language Support</h3>
               <p className="text-gray-300">
-                Streamlined legal research workflows with automated citation checking, document generation, and report creation.
+                Global accessibility with support for multiple languages and cultural adaptations for diverse student populations.
               </p>
             </div>
           </div>
@@ -160,10 +195,10 @@ export default function AIAutonomousLegalResearchPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Legal Research Platform?
+              Why Choose Our AI Education Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your legal practice with cutting-edge AI technology that delivers unprecedented efficiency and accuracy.
+              Transform your educational institution with cutting-edge AI technology that delivers personalized learning experiences.
             </p>
           </div>
 
@@ -175,8 +210,8 @@ export default function AIAutonomousLegalResearchPlatform() {
                     <CheckCircle className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">90% Time Savings</h3>
-                    <p className="text-gray-300">Reduce legal research time from hours to minutes with autonomous AI analysis.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">40% Improvement in Learning Outcomes</h3>
+                    <p className="text-gray-300">Students using our platform show significant improvement in retention and comprehension.</p>
                   </div>
                 </div>
 
@@ -185,8 +220,8 @@ export default function AIAutonomousLegalResearchPlatform() {
                     <CheckCircle className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">99.7% Accuracy Rate</h3>
-                    <p className="text-gray-300">Industry-leading accuracy in legal document analysis and case law interpretation.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Personalized Learning Experience</h3>
+                    <p className="text-gray-300">Every student receives a customized learning path that adapts to their unique needs.</p>
                   </div>
                 </div>
 
@@ -195,8 +230,8 @@ export default function AIAutonomousLegalResearchPlatform() {
                     <CheckCircle className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">24/7 Availability</h3>
-                    <p className="text-gray-300">Access legal research capabilities anytime, anywhere with cloud-based platform.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">24/7 Learning Availability</h3>
+                    <p className="text-gray-300">Students can learn anytime, anywhere with our cloud-based platform.</p>
                   </div>
                 </div>
 
@@ -205,31 +240,31 @@ export default function AIAutonomousLegalResearchPlatform() {
                     <CheckCircle className="w-6 h-6 text-orange-400" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">Cost Reduction</h3>
-                    <p className="text-gray-300">Significantly reduce legal research costs while improving quality and efficiency.</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">Reduced Administrative Burden</h3>
+                    <p className="text-gray-300">Automate grading, content creation, and progress tracking to focus on teaching.</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/30">
+            <div className="bg-gradient-to-br from-green-500/20 to-blue-600/20 p-8 rounded-2xl border border-green-500/30">
               <h3 className="text-2xl font-bold text-white mb-6 text-center">Platform Statistics</h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400 mb-2">10M+</div>
-                  <div className="text-gray-300">Legal Documents</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">1M+</div>
+                  <div className="text-gray-300">Students</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                  <div className="text-gray-300">Jurisdictions</div>
+                  <div className="text-3xl font-bold text-blue-400 mb-2">500+</div>
+                  <div className="text-gray-300">Institutions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">99.7%</div>
-                  <div className="text-gray-300">Accuracy Rate</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+                  <div className="text-gray-300">Learning Improvement</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-400 mb-2">90%</div>
-                  <div className="text-gray-300">Time Savings</div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2">95%</div>
+                  <div className="text-gray-300">Student Satisfaction</div>
                 </div>
               </div>
             </div>
@@ -245,31 +280,31 @@ export default function AIAutonomousLegalResearchPlatform() {
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your legal practice needs and scale as you grow.
+              Choose the plan that best fits your educational institution's needs and scale as you grow.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Starter Plan */}
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-                <div className="text-4xl font-bold text-blue-400 mb-2">$299</div>
+                <div className="text-4xl font-bold text-green-400 mb-2">$199</div>
                 <div className="text-gray-400">per month</div>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Up to 100 research queries/month</span>
+                  <span className="text-gray-300">Up to 100 students</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Basic case law analysis</span>
+                  <span className="text-gray-300">Basic AI tutoring</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Document review (up to 50 pages)</span>
+                  <span className="text-gray-300">Standard curriculum</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -277,39 +312,39 @@ export default function AIAutonomousLegalResearchPlatform() {
                 </li>
               </ul>
 
-              <button className="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors">
+              <button className="w-full py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors">
                 Get Started
               </button>
             </div>
 
             {/* Professional Plan */}
-            <div className="bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-8 rounded-xl border-2 border-blue-500 relative">
+            <div className="bg-gradient-to-br from-green-500/20 to-blue-600/20 p-8 rounded-xl border-2 border-green-500 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
+                <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
               </div>
               
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-                <div className="text-4xl font-bold text-blue-400 mb-2">$799</div>
+                <div className="text-4xl font-bold text-green-400 mb-2">$599</div>
                 <div className="text-gray-400">per month</div>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Up to 1,000 research queries/month</span>
+                  <span className="text-gray-300">Up to 1,000 students</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Advanced case law analysis</span>
+                  <span className="text-gray-300">Advanced AI tutoring</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Unlimited document review</span>
+                  <span className="text-gray-300">Adaptive curriculum</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Predictive legal insights</span>
+                  <span className="text-gray-300">Content creation</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -321,23 +356,23 @@ export default function AIAutonomousLegalResearchPlatform() {
                 </li>
               </ul>
 
-              <button className="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors">
+              <button className="w-full py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors">
                 Get Started
               </button>
             </div>
 
             {/* Enterprise Plan */}
-            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
+            <div className="bg-slate-700/50 p-8 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
-                <div className="text-4xl font-bold text-blue-400 mb-2">Custom</div>
+                <div className="text-4xl font-bold text-green-400 mb-2">Custom</div>
                 <div className="text-gray-400">contact us</div>
               </div>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300">Unlimited research queries</span>
+                  <span className="text-gray-300">Unlimited students</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <CheckCircle className="w-5 h-5 text-green-400" />
@@ -361,7 +396,7 @@ export default function AIAutonomousLegalResearchPlatform() {
                 </li>
               </ul>
 
-              <button className="w-full py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition-colors">
+              <button className="w-full py-3 bg-green-500 text-white font-semibold rounded-lg hover:bg-green-600 transition-colors">
                 Contact Sales
               </button>
             </div>
@@ -374,61 +409,61 @@ export default function AIAutonomousLegalResearchPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ideal for Various Legal Practice Areas
+              Ideal for Various Educational Institutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From solo practitioners to large law firms, our platform adapts to your specific legal needs.
+              From K-12 schools to universities and corporate training programs, our platform adapts to your educational needs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-slate-700/50 p-6 rounded-xl border border-slate-600">
-              <div className="p-3 bg-blue-500/20 rounded-lg w-fit mb-4">
-                <Scale className="w-8 h-8 text-blue-400" />
+              <div className="p-3 bg-green-500/20 rounded-lg w-fit mb-4">
+                <GraduationCap className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Litigation</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">K-12 Education</h3>
               <p className="text-gray-300">
-                Comprehensive case research, precedent analysis, and strategy development for litigation matters.
+                Personalized learning experiences for elementary, middle, and high school students with adaptive curriculum.
               </p>
             </div>
 
             <div className="bg-slate-700/50 p-6 rounded-xl border border-slate-600">
-              <div className="p-3 bg-green-500/20 rounded-lg w-fit mb-4">
-                <FileText className="w-8 h-8 text-green-400" />
+              <div className="p-3 bg-blue-500/20 rounded-lg w-fit mb-4">
+                <BookOpen className="w-8 h-8 text-blue-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Contract Law</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Higher Education</h3>
               <p className="text-gray-300">
-                Automated contract review, risk assessment, and compliance checking for various contract types.
+                Advanced AI tutoring and content creation for universities and colleges across all academic disciplines.
               </p>
             </div>
 
             <div className="bg-slate-700/50 p-6 rounded-xl border border-slate-600">
               <div className="p-3 bg-purple-500/20 rounded-lg w-fit mb-4">
-                <Target className="w-8 h-8 text-purple-400" />
+                <Building className="w-8 h-8 text-purple-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Corporate Law</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Corporate Training</h3>
               <p className="text-gray-300">
-                Regulatory compliance monitoring, corporate governance analysis, and legal risk assessment.
+                Employee skill development and professional training programs with AI-powered learning paths.
               </p>
             </div>
 
             <div className="bg-slate-700/50 p-6 rounded-xl border border-slate-600">
               <div className="p-3 bg-orange-500/20 rounded-lg w-fit mb-4">
-                <Shield className="w-8 h-8 text-orange-400" />
+                <Users className="w-8 h-8 text-orange-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Compliance</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Online Learning</h3>
               <p className="text-gray-300">
-                Real-time regulatory updates, compliance monitoring, and automated reporting capabilities.
+                Virtual classrooms and distance learning programs with intelligent content delivery and assessment.
               </p>
             </div>
 
             <div className="bg-slate-700/50 p-6 rounded-xl border border-slate-600">
               <div className="p-3 bg-red-500/20 rounded-lg w-fit mb-4">
-                <Users className="w-8 h-8 text-red-400" />
+                <Microscope className="w-8 h-8 text-red-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Employment Law</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">STEM Education</h3>
               <p className="text-gray-300">
-                Employment case analysis, policy review, and compliance monitoring for HR departments.
+                Specialized AI tutoring for science, technology, engineering, and mathematics subjects.
               </p>
             </div>
 
@@ -436,9 +471,9 @@ export default function AIAutonomousLegalResearchPlatform() {
               <div className="p-3 bg-cyan-500/20 rounded-lg w-fit mb-4">
                 <Globe className="w-8 h-8 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">International Law</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Language Learning</h3>
               <p className="text-gray-300">
-                Multi-jurisdictional research, international treaty analysis, and cross-border legal compliance.
+                AI-powered language acquisition with cultural context and personalized pronunciation training.
               </p>
             </div>
           </div>
@@ -450,10 +485,10 @@ export default function AIAutonomousLegalResearchPlatform() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Legal Practice?
+              Ready to Transform Your Educational Institution?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Schedule a demo today and discover how AI can revolutionize your legal research and document review processes.
+              Schedule a demo today and discover how AI can revolutionize your teaching and learning processes.
             </p>
           </div>
 
@@ -462,8 +497,8 @@ export default function AIAutonomousLegalResearchPlatform() {
               <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-blue-500/20 rounded-lg">
-                    <Phone className="w-6 h-6 text-blue-400" />
+                  <div className="p-3 bg-green-500/20 rounded-lg">
+                    <Phone className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
                     <div className="text-white font-semibold">Phone</div>
@@ -472,8 +507,8 @@ export default function AIAutonomousLegalResearchPlatform() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-purple-500/20 rounded-lg">
-                    <Mail className="w-6 h-6 text-purple-400" />
+                  <div className="p-3 bg-blue-500/20 rounded-lg">
+                    <Mail className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
                     <div className="text-white font-semibold">Email</div>
@@ -482,8 +517,8 @@ export default function AIAutonomousLegalResearchPlatform() {
                 </div>
 
                 <div className="flex items-center space-x-4">
-                  <div className="p-3 bg-green-500/20 rounded-lg">
-                    <MapPin className="w-6 h-6 text-green-400" />
+                  <div className="p-3 bg-purple-500/20 rounded-lg">
+                    <MapPin className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
                     <div className="text-white font-semibold">Address</div>
@@ -500,7 +535,7 @@ export default function AIAutonomousLegalResearchPlatform() {
                   <label className="block text-white font-medium mb-2">Full Name</label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500"
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -508,29 +543,29 @@ export default function AIAutonomousLegalResearchPlatform() {
                   <label className="block text-white font-medium mb-2">Email</label>
                   <input 
                     type="email" 
-                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
+                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500"
                     placeholder="Enter your email"
                   />
                 </div>
                 <div>
-                  <label className="block text-white font-medium mb-2">Company</label>
+                  <label className="block text-white font-medium mb-2">Institution</label>
                   <input 
                     type="text" 
-                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                    placeholder="Enter your company name"
+                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500"
+                    placeholder="Enter your institution name"
                   />
                 </div>
                 <div>
                   <label className="block text-white font-medium mb-2">Message</label>
                   <textarea 
                     rows={4}
-                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-blue-500"
-                    placeholder="Tell us about your legal research needs"
+                    className="w-full px-4 py-3 bg-slate-600 border border-slate-500 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-green-500"
+                    placeholder="Tell us about your educational needs"
                   ></textarea>
                 </div>
                 <button 
                   type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                  className="w-full py-3 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300"
                 >
                   Request Demo
                 </button>
@@ -544,21 +579,21 @@ export default function AIAutonomousLegalResearchPlatform() {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Start Your AI-Powered Legal Research Journey Today
+            Start Your AI-Powered Education Journey Today
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of legal professionals who have already transformed their practice with our AI platform.
+            Join thousands of educational institutions that have already transformed their teaching and learning with our AI platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#contact" 
-              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Get Started Now
             </a>
             <a 
               href="https://ziontechgroup.com" 
-              className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
+              className="px-8 py-4 border-2 border-green-500 text-green-400 font-semibold rounded-lg hover:bg-green-500 hover:text-white transition-all duration-300"
             >
               Learn More
             </a>
