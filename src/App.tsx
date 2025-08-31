@@ -23,7 +23,7 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
-import { FloatingActionButton } from './components/FloatingActionButton';
+import FloatingActionButton from './components/FloatingActionButton';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
