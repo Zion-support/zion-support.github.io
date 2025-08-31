@@ -1,139 +1,322 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-interface EnhancedLoadingSpinnerProps {
+import { motion, AnimatePresence } from 'framer-motion';
+import { Loader2, CheckCircle, AlertCircle, Clock, Zap } from 'lucide-react';
+
+interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
+  variant?: 'default' | 'success' | 'error' | 'warning' | 'info';
   showProgress?: boolean;
   progress?: number;
-  variant?: 'default' | 'futuristic' | 'minimal';
+  message?: string;
+  animated?: boolean;
+  className?: string;
 }
-export function EnhancedLoadingSpinner({
+
+export const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-  text = 'Loading...',
+  variant = 'default',
   showProgress = false,
   progress = 0,
-  variant = 'futuristic'
-}: EnhancedLoadingSpinnerProps) {
+  message,
+  animated = true,
+  className = ''
+}) => {
   const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-16 h-16',
-    lg: 'w-32 h-32',
-    xl: 'w-48 h-48'
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
   };
-  const textSizes = {
-    sm: 'text-xs',
-    md: 'text-sm',
-    lg: 'text-lg',
-    xl: 'text-xl'
+
+  const variantConfig = {
+    default: {
+      color: 'text-zion-cyan',
+      bgColor: 'bg-zion-cyan/20',
+      icon: Loader2
+    },
+    success: {
+      color: 'text-green-500',
+      bgColor: 'bg-green-500/20',
+      icon: CheckCircle
+    },
+    error: {
+      color: 'text-red-500',
+      bgColor: 'bg-red-500/20',
+      icon: AlertCircle
+    },
+    warning: {
+      color: 'text-yellow-500',
+      bgColor: 'bg-yellow-500/20',
+      icon: Clock
+    },
+    info: {
+      color: 'text-blue-500',
+      bgColor: 'bg-blue-500/20',
+      icon: Zap
+    }
   };
-  if (variant === 'minimal') {
-    return (
-      <div className="flex items-center justify-center">
-        <div className={`${sizeClasses[size]} border-2 border-gray-300 border-t-blue-600 rounded-full animate-spin`} />
-        {text && <span className={`ml-3 ${textSizes[size]} text-gray-600`}>{text}</span>}
-      </div>
-    );
-  }
-  if (variant === 'default') {
-    return (
-      <div className="flex flex-col items-center justify-center space-y-4">
-        <div className={`${sizeClasses[size]} border-4 border-gray-200 border-t-blue-600 rounded-full animate-spin`} />
-        {text && <p className={`${textSizes[size]} text-gray-600 font-medium`}>{text}</p>}
-        {showProgress && (
-          <div className="w-48 bg-gray-200 rounded-full h-2">
-            <motion.div
-              className="bg-blue-600 h-2 rounded-full"
-              initial={{ width: 0 }}
-              animate={{ width: `${progress}%` }}
-              transition={{ duration: 0.5 }}
-            />
-          </div>
-        )}
-      </div>
-    );
-  }
-  // Futuristic variant (default)
+
+  const config = variantConfig[variant];
+  const IconComponent = config.icon;
+
+  const spinnerVariants = {
+    rotate: {
+      rotate: 360,
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: "linear"
+      }
+    },
+    pulse: {
+      scale: [1, 1.1, 1],
+      opacity: [1, 0.8, 1],
+      transition: {
+        duration: 1.5,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    },
+    bounce: {
+      y: [0, -10, 0],
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: "easeInOut"
+      }
+    }
+  };
+
+  const progressVariants = {
+    initial: { width: 0 },
+    animate: { width: `${progress}%` }
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center space-y-6">
-      {/* Main spinner with gradient */}
-      <div className="relative">
-        <div className={`${sizeClasses[size]} border-4 border-cyan-400/20 rounded-full`} />
-        <motion.div
-          className={`absolute top-0 left-0 ${sizeClasses[size]} border-4 border-cyan-400 border-t-transparent rounded-full`}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-        />
-        {/* Inner glow effect */}
-        <div className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${sizeClasses[size === 'xl' ? 'lg' : size === 'lg' ? 'md' : 'sm']} bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-20 blur-sm`} />
-        {/* Center logo/text */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
-          <div className="text-cyan-400 font-bold text-lg animate-pulse">ZION</div>
-        </div>
-      </div>
-      {/* Loading text */}
-      <div className="text-center space-y-2">
-        <motion.p
-          className={`${textSizes[size]} text-cyan-400 animate-pulse`}
-          animate={{ opacity: [0.5, 1, 0.5] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          {text}
-        </motion.p>
-        {/* Animated dots */}
-        <div className="flex justify-center space-x-1">
-          {[0, 1, 2].map((i) => (
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <div className={`relative ${sizeClasses[size]}`}>
+        {/* Background circle */}
+        <div className={`absolute inset-0 rounded-full ${config.bgColor}`} />
+        
+        {/* Animated spinner */}
+        <AnimatePresence mode="wait">
+          {animated && variant === 'default' ? (
             <motion.div
-              key={i}
-              className="w-2 h-2 bg-cyan-400 rounded-full"
-              animate={{ scale: [1, 1.5, 1] }}
-              transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+              key="spinner"
+              className={`absolute inset-0 rounded-full border-2 border-transparent border-t-current ${config.color}`}
+              variants={spinnerVariants}
+              animate="rotate"
             />
-          ))}
-        </div>
+          ) : (
+            <motion.div
+              key="icon"
+              className={`absolute inset-0 flex items-center justify-center ${config.color}`}
+              variants={spinnerVariants}
+              animate="pulse"
+            >
+              <IconComponent className="w-full h-full" />
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
-      {/* Progress bar if enabled */}
+
+      {/* Progress bar */}
       {showProgress && (
-        <div className="w-64 bg-gray-800/50 rounded-full h-3 border border-cyan-400/30">
+        <div className="mt-4 w-32 bg-zion-slate-darker rounded-full h-2 overflow-hidden">
           <motion.div
-            className="bg-gradient-to-r from-cyan-400 to-blue-500 h-3 rounded-full relative overflow-hidden"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            {/* Shimmer effect */}
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-              animate={{ x: [-100, 100] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </motion.div>
+            className={`h-full ${config.color.replace('text-', 'bg-')}`}
+            variants={progressVariants}
+            initial="initial"
+            animate="animate"
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
         </div>
       )}
-      {/* Floating particles */}
-      <div className="relative w-full h-20">
-        {[...Array(6)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"
-            animate={{
-              x: [0, 50, 0],
-              y: [0, -30, 0],
-              opacity: [0.6, 1, 0.6],
-            }}
-            transition={{
-              duration: 3 + i * 0.5,
-              repeat: Infinity,
-              delay: i * 0.3,
-            }}
+
+      {/* Progress percentage */}
+      {showProgress && (
+        <motion.div
+          className="mt-2 text-sm text-zion-slate-light font-mono"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          {Math.round(progress)}%
+        </motion.div>
+      )}
+
+      {/* Message */}
+      {message && (
+        <motion.div
+          className="mt-3 text-center text-zion-slate-light text-sm max-w-xs"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          {message}
+        </motion.div>
+      )}
+    </div>
+  );
+};
+
+// Skeleton loading components
+export const Skeleton: React.FC<{
+  className?: string;
+  variant?: 'text' | 'circular' | 'rectangular';
+  width?: string | number;
+  height?: string | number;
+  lines?: number;
+}> = ({
+  className = '',
+  variant = 'rectangular',
+  width,
+  height,
+  lines = 1
+}) => {
+  const baseClasses = 'animate-pulse bg-zion-slate-darker rounded';
+  
+  if (variant === 'text') {
+    return (
+      <div className="space-y-2">
+        {Array.from({ length: lines }).map((_, index) => (
+          <div
+            key={index}
+            className={`${baseClasses} h-4 ${className}`}
             style={{
-              left: `${20 + i * 15}%`,
-              top: `${30 + i * 10}%`,
+              width: width || (index === lines - 1 ? '80%' : '100%')
             }}
           />
         ))}
       </div>
-    </div>
+    );
+  }
+
+  if (variant === 'circular') {
+    return (
+      <div
+        className={`${baseClasses} ${className}`}
+        style={{
+          width: width || height || '40px',
+          height: height || width || '40px',
+          borderRadius: '50%'
+        }}
+      />
+    );
+  }
+
+  return (
+    <div
+      className={`${baseClasses} ${className}`}
+      style={{
+        width: width || '100%',
+        height: height || '20px'
+      }}
+    />
   );
-}
-// Export default for backward compatibility
-export default EnhancedLoadingSpinner;
+};
+
+// Card skeleton
+export const CardSkeleton: React.FC<{
+  className?: string;
+  showImage?: boolean;
+  showActions?: boolean;
+}> = ({ className = '', showImage = true, showActions = true }) => (
+  <div className={`bg-zion-slate-dark border border-zion-purple/20 rounded-lg p-4 ${className}`}>
+    {showImage && (
+      <Skeleton className="w-full h-32 mb-4" />
+    )}
+    
+    <div className="space-y-3">
+      <Skeleton className="h-6 w-3/4" />
+      <Skeleton className="h-4 w-full" />
+      <Skeleton className="h-4 w-2/3" />
+      
+      {showActions && (
+        <div className="flex space-x-2 pt-2">
+          <Skeleton className="h-8 w-20" />
+          <Skeleton className="h-8 w-20" />
+        </div>
+      )}
+    </div>
+  </div>
+);
+
+// Table skeleton
+export const TableSkeleton: React.FC<{
+  rows?: number;
+  columns?: number;
+  className?: string;
+}> = ({ rows = 5, columns = 4, className = '' }) => (
+  <div className={`bg-zion-slate-dark border border-zion-purple/20 rounded-lg overflow-hidden ${className}`}>
+    {/* Header */}
+    <div className="bg-zion-slate-darker px-4 py-3 border-b border-zion-purple/20">
+      <div className="flex space-x-4">
+        {Array.from({ length: columns }).map((_, index) => (
+          <Skeleton key={index} className="h-4 flex-1" />
+        ))}
+      </div>
+    </div>
+    
+    {/* Rows */}
+    <div className="divide-y divide-zion-purple/20">
+      {Array.from({ length: rows }).map((_, rowIndex) => (
+        <div key={rowIndex} className="px-4 py-3">
+          <div className="flex space-x-4">
+            {Array.from({ length: columns }).map((_, colIndex) => (
+              <Skeleton key={colIndex} className="h-4 flex-1" />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+// Page skeleton
+export const PageSkeleton: React.FC<{
+  className?: string;
+  showHeader?: boolean;
+  showSidebar?: boolean;
+}> = ({ className = '', showHeader = true, showSidebar = true }) => (
+  <div className={`min-h-screen bg-zion-slate-dark ${className}`}>
+    {showHeader && (
+      <div className="bg-zion-slate-darker border-b border-zion-purple/20 p-4">
+        <div className="flex items-center justify-between">
+          <Skeleton className="h-8 w-48" />
+          <div className="flex space-x-4">
+            <Skeleton className="h-8 w-20" />
+            <Skeleton className="h-8 w-20" />
+            <Skeleton className="h-8 w-20" />
+          </div>
+        </div>
+      </div>
+    )}
+    
+    <div className="flex">
+      {showSidebar && (
+        <div className="w-64 bg-zion-slate-darker border-r border-zion-purple/20 p-4">
+          <div className="space-y-4">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <Skeleton key={index} className="h-6 w-full" />
+            ))}
+          </div>
+        </div>
+      )}
+      
+      <div className="flex-1 p-6">
+        <div className="space-y-6">
+          <Skeleton className="h-8 w-64" />
+          <Skeleton className="h-4 w-full" />
+          <Skeleton className="h-4 w-3/4" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {Array.from({ length: 6 }).map((_, index) => (
+              <CardSkeleton key={index} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);

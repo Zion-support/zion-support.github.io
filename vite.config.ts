@@ -5,6 +5,7 @@ import { resolve } from 'path'
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -43,9 +44,27 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-          utils: ['clsx', 'tailwind-merge', 'class-variance-authority'],
+          // Core React libraries
+          'react-core': ['react', 'react-dom'],
+          'react-router': ['react-router-dom'],
+          
+          // UI and animation libraries
+          'ui': ['framer-motion', 'lucide-react', '@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu'],
+          
+          // Utility libraries
+          'utils': ['clsx', 'tailwind-merge', 'class-variance-authority', 'date-fns'],
+          
+          // Form and validation
+          'forms': ['react-hook-form', '@hookform/resolvers', 'zod'],
+          
+          // Charts and data visualization
+          'charts': ['recharts', 'd3-color', 'd3-format', 'd3-path', 'd3-time-format'],
+          
+          // AI and specialized libraries
+          'ai': ['fuse.js', 'embla-carousel-react'],
+          
+          // Large vendor chunks
+          'vendor': ['axios', 'i18next', 'react-i18next'],
         },
         chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId
@@ -59,14 +78,17 @@ export default defineConfig({
           if (/\.(css)$/.test(assetInfo.name || '')) {
             return `css/[name]-[hash].${ext}`
           }
-          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico|webp|avif)$/i.test(assetInfo.name || '')) {
             return `images/[name]-[hash].${ext}`
           }
           return `assets/[name]-[hash].${ext}`
         },
       },
     },
-    chunkSizeWarningLimit: 1000,
+    chunkSizeWarningLimit: 800, // Reduced from 1000 for better optimization
+    reportCompressedSize: true,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096, // Inline small assets
   },
   optimizeDeps: {
     include: [
@@ -80,9 +102,12 @@ export default defineConfig({
       'class-variance-authority',
       'react-hook-form',
       '@hookform/resolvers',
-      'zod'
+      'zod',
+      '@radix-ui/react-accordion',
+      '@radix-ui/react-dialog',
+      '@radix-ui/react-dropdown-menu',
     ],
-    exclude: ['@vite/client', '@vite/env'],
+    exclude: ['@vite/client', '@vite/env', 'firebase'],
   },
   server: {
     port: 3000,
@@ -106,8 +131,26 @@ export default defineConfig({
   },
   esbuild: {
     drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
+    target: 'es2020',
   },
   worker: {
     format: 'es',
   },
+  css: {
+    postcss: {
+      plugins: [
+        tailwindcss,
+        autoprefixer,
+        cssnano({
+          preset: ['default', {
+            discardComments: { removeAll: true },
+            normalizeWhitespace: true,
+            colormin: true,
+            minifyFontValues: true,
+            minifySelectors: true,
+          }]
+        })
+      ]
+    }
+  }
 })
