@@ -109,6 +109,8 @@ const EdgeComputingSolutions = createLazyComponent(() => import('./pages/service
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations-platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
+const AICustomerExperienceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-optimization-platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
 
 // Additional service pages from remote branch
@@ -274,6 +276,8 @@ function App() {
                     <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                     <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
                     <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
+                    <Route path="/services/ai-customer-experience-optimization-platform" element={<AICustomerExperienceOptimizationPlatform />} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
                     <Route path="/services/cloud-devops" element={<CloudDevOps />} />
                     <Route path="/services/cybersecurity" element={<Cybersecurity />} />
                     <Route path="/services/digital-transformation" element={<DigitalTransformation />} />

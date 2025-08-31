@@ -6,16 +6,18 @@ const Pricing = () => {
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$19",
+      price: "$99",
       period: "/month",
-      description: "Perfect for individuals and small teams getting started with AI tools",
+      description: "Perfect for small businesses and startups getting started with AI tools",
       features: [
-        "AI Content Generation (100 credits/month)",
+        "AI Content Generation (500 credits/month)",
         "Basic AI Image Editing",
-        "AI Meeting Assistant (5 hours/month)",
+        "AI Meeting Assistant (10 hours/month)",
         "Email Support",
         "Basic Analytics Dashboard",
-        "Mobile App Access"
+        "Mobile App Access",
+        "AI Sales Copilot (Basic)",
+        "AI Compliance Assistant (Basic)"
       ],
       popular: false,
       cta: "Start Free Trial",
@@ -23,20 +25,23 @@ const Pricing = () => {
     },
     {
       name: "Professional",
-      price: "$49",
+      price: "$299",
       period: "/month",
       description: "Ideal for growing businesses and professional teams",
       features: [
         "Everything in Starter",
-        "AI Content Generation (500 credits/month)",
+        "AI Content Generation (2000 credits/month)",
         "Advanced AI Image & Video Editing",
         "AI Code Assistant (Basic)",
-        "AI Meeting Assistant (20 hours/month)",
-        "AI Translation (10 languages)",
+        "AI Meeting Assistant (50 hours/month)",
+        "AI Translation (25 languages)",
         "Priority Support",
         "Advanced Analytics",
-        "API Access (1000 calls/month)",
-        "Team Collaboration Tools"
+        "API Access (5000 calls/month)",
+        "Team Collaboration Tools",
+        "AI Project Management Platform",
+        "AI Marketing Automation",
+        "AI Customer Support Automation"
       ],
       popular: true,
       cta: "Start Free Trial",
@@ -44,12 +49,12 @@ const Pricing = () => {
     },
     {
       name: "Business",
-      price: "$99",
+      price: "$799",
       period: "/month",
       description: "Comprehensive solution for established businesses",
       features: [
         "Everything in Professional",
-        "AI Content Generation (2000 credits/month)",
+        "AI Content Generation (10000 credits/month)",
         "AI Code Assistant (Advanced)",
         "AI Data Analytics Platform",
         "AI Threat Detection",
@@ -60,8 +65,11 @@ const Pricing = () => {
         "AI Translation (100+ languages)",
         "24/7 Support",
         "Custom Integrations",
-        "API Access (10000 calls/month)",
-        "Advanced Security Features"
+        "API Access (50000 calls/month)",
+        "Advanced Security Features",
+        "AI Predictive Maintenance",
+        "AI HR Platform",
+        "AI Financial Risk Management"
       ],
       popular: false,
       cta: "Start Free Trial",
@@ -69,8 +77,8 @@ const Pricing = () => {
     },
     {
       name: "Enterprise",
-      price: "Custom",
-      period: "",
+      price: "$2,999",
+      period: "/month",
       description: "Tailored solutions for large organizations with specific requirements",
       features: [
         "Everything in Business",
@@ -86,7 +94,10 @@ const Pricing = () => {
         "Custom Development",
         "On-Premise Deployment",
         "SLA Guarantees",
-        "Compliance Certifications"
+        "Compliance Certifications",
+        "Quantum AI Solutions",
+        "Blockchain Integration",
+        "IoT Edge Computing Platform"
       ],
       popular: false,
       cta: "Contact Sales",

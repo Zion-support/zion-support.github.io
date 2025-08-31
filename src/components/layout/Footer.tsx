@@ -57,9 +57,11 @@ export function Footer() {
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
         { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Supply Chain Optimization Platform", href: "/services/ai-supply-chain-optimization-platform" },
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
         { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
+        { name: "AI Customer Experience Optimization", href: "/services/ai-customer-experience-optimization-platform" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
       ]
     },
@@ -155,10 +157,6 @@ export function Footer() {
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Phone className="w-4 h-4" />
                 <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-4 text-zinc-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />

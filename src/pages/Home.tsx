@@ -184,7 +184,9 @@ const HeroSection = React.memo(() => {
           className="text-lg md:text-xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed"
         >
           We deliver cutting-edge technology solutions that drive innovation, 
-          efficiency, and growth for forward-thinking organizations worldwide.
+          efficiency, and growth for forward-thinking organizations worldwide. From AI-powered 
+          micro SaaS platforms to enterprise digital transformation solutions, we help 
+          organizations of all sizes achieve their technology goals.
         </motion.p>
 
         {/* Enhanced CTA Buttons */}
@@ -234,6 +236,14 @@ const HeroSection = React.memo(() => {
             <Award className="w-5 h-5 text-yellow-400" />
             <span className="text-sm">Industry Leader 2024</span>
           </div>
+          <div className="flex items-center gap-2">
+            <Brain className="w-5 h-5 text-cyan-400" />
+            <span className="text-sm">50+ AI Services</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Globe className="w-5 h-5 text-purple-400" />
+            <span className="text-sm">25+ Countries Served</span>
+          </div>
         </motion.div>
       </div>
 
@@ -266,7 +276,9 @@ const StatisticsSection = React.memo(() => {
     { icon: Users, value: "500+", label: "Global Clients", color: "text-blue-400" },
     { icon: TrendingUp, value: "98%", label: "Client Satisfaction", color: "text-green-400" },
     { icon: Rocket, value: "24/7", label: "Support Available", color: "text-cyan-400" },
-    { icon: Award, value: "15+", label: "Years Experience", color: "text-purple-400" }
+    { icon: Award, value: "15+", label: "Years Experience", color: "text-purple-400" },
+    { icon: Brain, value: "50+", label: "AI Services", color: "text-cyan-400" },
+    { icon: Globe, value: "25+", label: "Countries Served", color: "text-purple-400" }
   ];
 
   return (
@@ -288,7 +300,7 @@ const StatisticsSection = React.memo(() => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {stats.map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -359,6 +371,22 @@ const ServicesPreviewSection = React.memo(() => {
       features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
     },
     {
+      icon: Eye,
+      title: "Customer Experience",
+      description: "AI-powered customer experience optimization and analytics platforms",
+      href: "/services/ai-customer-experience-optimization-platform",
+      color: "from-purple-500 to-pink-500",
+      features: ["Experience Optimization", "Predictive Analytics", "Personalization", "Multi-channel Tracking"]
+    },
+    {
+      icon: Truck,
+      title: "Supply Chain AI",
+      description: "AI-powered supply chain optimization and logistics management",
+      href: "/services/ai-supply-chain-optimization-platform",
+      color: "from-blue-500 to-green-500",
+      features: ["Demand Forecasting", "Route Optimization", "Inventory Management", "Risk Assessment"]
+    },
+    {
       icon: Zap,
       title: "Quantum AI",
       description: "Next-generation quantum computing and AI integration",
@@ -379,11 +407,11 @@ const ServicesPreviewSection = React.memo(() => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our Core Services
+            Our Comprehensive AI & Technology Services
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            Comprehensive technology solutions designed to accelerate your digital transformation 
-            and drive business growth.
+            From cutting-edge AI solutions to innovative micro SaaS platforms, we offer comprehensive 
+            technology services designed to accelerate your digital transformation and drive business growth.
           </p>
         </motion.div>
 
@@ -446,6 +474,37 @@ const ServicesPreviewSection = React.memo(() => {
               <ArrowRight className="w-5 h-5" />
             </span>
           </Link>
+        </motion.div>
+
+        {/* Latest Innovations Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16 text-center"
+        >
+          <h3 className="text-2xl font-bold text-white mb-6">Latest Innovations</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              to="/services/ai-customer-experience-optimization-platform"
+              className="px-6 py-3 border border-purple-400/50 text-purple-400 font-medium rounded-lg hover:bg-purple-400/10 hover:border-purple-400 transition-all duration-300"
+            >
+              AI Customer Experience Platform
+            </Link>
+            <Link
+              to="/services/ai-supply-chain-optimization-platform"
+              className="px-6 py-3 border border-blue-400/50 text-blue-400 font-medium rounded-lg hover:bg-blue-400/10 hover:border-blue-400 transition-all duration-300"
+            >
+              AI Supply Chain Optimization
+            </Link>
+            <Link
+              to="/innovative-services-showcase-2026"
+              className="px-6 py-3 border border-cyan-400/50 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300"
+            >
+              Innovation Showcase 2026
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
@@ -595,11 +654,12 @@ const CTASection = React.memo(() => {
         >
           <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 rounded-3xl p-12 md:p-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
+              Ready to Transform Your Business with AI?
             </h2>
             <p className="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
               Join hundreds of organizations that have already accelerated their digital 
-              transformation with Zion Tech Group. Let's discuss how we can help you.
+              transformation with Zion Tech Group. From AI-powered micro SaaS solutions to 
+              enterprise digital transformation, we have the expertise to help you succeed.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
