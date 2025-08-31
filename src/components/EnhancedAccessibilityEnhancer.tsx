@@ -20,6 +20,14 @@ import {
   RotateCcw
 } from 'lucide-react';
 
+interface AccessibilityIssue {
+  id: string;
+  type: 'error' | 'warning' | 'info';
+  message: string;
+  element?: HTMLElement;
+  severity: 'high' | 'medium' | 'low';
+}
+
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;

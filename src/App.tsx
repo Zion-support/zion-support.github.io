@@ -10,6 +10,9 @@ import { Footer } from './components/layout/Footer';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
+import { MobileResponsivenessEnhancer } from './components/MobileResponsivenessEnhancer';
+import { SEO } from './components/SEO';
+import FloatingActionButton from './components/FloatingActionButton';
 import { AdvancedAnalytics } from './components/AdvancedAnalytics';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
@@ -110,6 +113,11 @@ const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./
 const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/services/ai-mental-health-support-platform'));
 const AISmartHomeEnergyManagementPlatform = createLazyComponent(() => import('./pages/services/ai-smart-home-energy-management-platform'));
 
+// New Innovative Services 2026 - Legal & Education
+const AIAutonomousLegalResearchPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-legal-research-platform'));
+const AIEducationalContentCreationPlatform = createLazyComponent(() => import('./pages/services/ai-educational-content-creation-platform'));
+const AIRealEstateInvestmentAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-analytics-platform'));
+
 // New Innovative Services 2025 - Additional
 const AIEnterpriseWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-enterprise-workflow-automation'));
 const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
@@ -148,6 +156,10 @@ const DigitalTransformation = createLazyComponent(() => import('./pages/services
 const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+
+// New Innovative Services 2025 - Content Creation & Analytics
+const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
+const PricingGuide = createLazyComponent(() => import('./components/PricingGuide'));
 
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
@@ -329,6 +341,10 @@ function App() {
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
 
+                    {/* New Innovative Services 2025 - Content Creation & Analytics */}
+                    <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
+                    <Route path="/pricing-guide" element={<PricingGuide />} />
+                    
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
                     <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
@@ -339,6 +355,11 @@ function App() {
                     <Route path="/services/ai-carbon-footprint-management-platform" element={<ModernLayout><AICarbonFootprintManagementPlatform /></ModernLayout>} />
                     <Route path="/services/ai-mental-health-support-platform" element={<ModernLayout><AIMentalHealthSupportPlatform /></ModernLayout>} />
                     <Route path="/services/ai-smart-home-energy-management-platform" element={<ModernLayout><AISmartHomeEnergyManagementPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 - Legal & Education */}
+                    <Route path="/services/ai-autonomous-legal-research-platform" element={<ModernLayout><AIAutonomousLegalResearchPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-educational-content-creation-platform" element={<ModernLayout><AIEducationalContentCreationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-real-estate-investment-analytics-platform" element={<ModernLayout><AIRealEstateInvestmentAnalyticsPlatform /></ModernLayout>} />
                     
                     {/* New Innovative Services 2026 */}
                     <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
@@ -431,13 +452,21 @@ function App() {
             <AppFooter />
 
             {/* Enhanced Performance Optimizer */}
-            <PerformanceOptimizer enabled={true} />
+            <PerformanceOptimizer enabled={true} showMetrics={false} />
 
             {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} />
+            <EnhancedAccessibilityEnhancer enabled={true} showIssues={false} autoFix={true} />
+
+            {/* Mobile Responsiveness Enhancer */}
+            <MobileResponsivenessEnhancer 
+              enabled={true} 
+              showMobileIndicator={false}
+              enableTouchGestures={true}
+              enableMobileOptimizations={true}
+            />
 
             {/* Advanced Analytics */}
-            <AdvancedAnalytics enabled={true} showMetrics={true} />
+            <AdvancedAnalytics enabled={true} showMetrics={false} />
 
             {/* Smart Notification System */}
             <SmartNotificationSystem enabled={true} />

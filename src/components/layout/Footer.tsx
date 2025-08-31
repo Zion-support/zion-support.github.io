@@ -54,7 +54,8 @@ import {
   Headphones,
   Truck,
   Search,
-  Layers
+  Layers,
+  Database
 } from 'lucide-react';
 
 export function Footer() {
@@ -73,10 +74,17 @@ export function Footer() {
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
+        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
         { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
+        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
         { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
+        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
         { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
         { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", icon: Database },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
+        { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
       ]
     },
@@ -121,6 +129,16 @@ export function Footer() {
         { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
         { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
         { name: "Future Technologies", href: "/innovative-services-showcase-2032", icon: Rocket }
+      ]
+    },
+    {
+      title: "Legal & Education",
+      icon: BookOpen,
+      links: [
+        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: Scale },
+        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
+        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText }
       ]
     },
     {
@@ -193,7 +211,7 @@ export function Footer() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info - Spans 2 columns on large screens */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
@@ -201,10 +219,8 @@ export function Footer() {
                 <Globe className="w-7 h-7 text-white" />
               </div>
               <div>
-                <span className="text-2xl font-bold bg-gradient-to-r from-white via-zion-cyan to-zion-purple bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-                <div className="text-xs text-zion-cyan font-medium">Innovation • Technology • Growth</div>
+                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
+                <p className="text-zion-cyan text-sm">Innovation • Technology • Growth</p>
               </div>
             </div>
             
@@ -236,7 +252,7 @@ export function Footer() {
                 <div className="p-2 bg-zion-purple/20 rounded-lg">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span>Delaware, United States</span>
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
 

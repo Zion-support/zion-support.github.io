@@ -1,5 +1,6 @@
 export class SitemapGenerator {
     config;
+
     constructor(config) {
         this.config = {
   outputPath: './public/sitemap.xml',
@@ -12,7 +13,11 @@ export class SitemapGenerator {
     generateXML() {
         const { baseUrl, urls } = this.config;
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
-        const urlElement = `<url>
+        const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+        const urlsetClose = '</urlset>';
+        
+        const urlElements = urls.map(url => {
+            const urlElement = `<url>
         <loc>${baseUrl}${url.url}</loc>
         ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
         ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
@@ -20,18 +25,23 @@ export class SitemapGenerator {
       </url>`;
             return urlElement.replace(/\s+/g, ' ').trim();
         }).join('');
+        
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`;
     /**
      * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
+        const sitemapindexOpen = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+        const sitemapindexClose = '</sitemapindex>';
+        
         const sitemapElements = sitemaps.map(sitemap => {
             return `<sitemap>
         <loc>${sitemap}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
       </sitemap>`;
         }).join('');
+        
         return `${xmlHeader}\n${sitemapindexOpen}\n${sitemapElements}\n${sitemapindexClose}`;
     /**
      * Generate robots.txt content
@@ -107,27 +117,19 @@ Sitemap: ${baseUrl}/sitemap.xml
         </div>
         <div class="sitemap-section">
             <h2>Services</h2>
-            <div class="sitemap-links">
-                ${urls
-            .filter(url => url.url.startsWith('/services/'))
-            .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
-                    </a>
-                  `).join('')}
-            </div>
+            <ul class="url-list">
+                ${urls.filter(url => url.url.startsWith('/services/'))
+                    .map(url => `<li><a href="${baseUrl}${url.url}">${url.url.split('/').pop().replace(/-/g, ' ')}</a></li>`)
+                    .join('')}
+            </ul>
         </div>
         <div class="sitemap-section">
             <h2>Solutions</h2>
-            <div class="sitemap-links">
-                ${urls
-            .filter(url => url.url.startsWith('/solutions/'))
-            .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
-                        ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
-                    </a>
-                  `).join('')}
-            </div>
+            <ul class="url-list">
+                ${urls.filter(url => url.url.startsWith('/solutions/'))
+                    .map(url => `<li><a href="${baseUrl}${url.url}">${url.url.split('/').pop().replace(/-/g, ' ')}</a></li>`)
+                    .join('')}
+            </ul>
         </div>
         <div class="sitemap-section">
             <h2>Other Pages</h2>
@@ -148,6 +150,7 @@ Sitemap: ${baseUrl}/sitemap.xml
     </div>
 </body>
 </html>`;
+        
         return html;
 // Default sitemap configuration for Zion Tech Group
 export const defaultSitemapConfig = {
@@ -206,10 +209,8 @@ export const generator = new SitemapGenerator(config);
         // Generate JSON sitemap
         const jsonSitemap = generator.generateJSON();
         return {
-            xml: xmlSitemap,
-            robots: robotsTxt,
-            html: htmlSitemap,
-            json: jsonSitemap
+            isValid: errors.length === 0,
+            errors
         };
     catch (error) {
         // // // // // // // console.error('Error generating sitemaps:', error);
