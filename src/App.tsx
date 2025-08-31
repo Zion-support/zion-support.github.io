@@ -71,11 +71,8 @@ const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/servic
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 
-// All pages - combining both branches
-const Blog = createLazyComponent(() => import('./pages/Blog'));
-const Careers = createLazyComponent(() => import('./pages/Careers'));
+// Additional pages
 const Events = createLazyComponent(() => import('./pages/Events'));
-const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
 const Cookies = createLazyComponent(() => import('./pages/Cookies'));

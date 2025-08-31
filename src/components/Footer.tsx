@@ -82,7 +82,6 @@ export function Footer() {
         { name: 'Training', href: '/training' },
         { name: 'Blog', href: '/blog' },
         { name: 'Research', href: '/research-development' }
->>>>>>> cursor/website-audit-content-update-and-deployment-5e7a
       ]
     }
   ];
@@ -158,7 +157,6 @@ export function Footer() {
       text: 'Mon-Fri: 9AM-6PM EST',
       href: '#'
     }
-  ];
   ];
 
   return (
