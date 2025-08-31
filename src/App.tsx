@@ -72,6 +72,62 @@ const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
 const ComprehensivePricingGuide2025 = lazy(() => import('./pages/ComprehensivePricingGuide2025'));
 
+// Enhanced Services Showcase Components
+const EnhancedServicesShowcase2025 = createLazyComponent(() => import('./pages/EnhancedServicesShowcase2025'));
+const ComprehensiveServicesShowcase2025Page = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025Page'));
+const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/UltimateServicesShowcase2026'));
+const ComprehensiveServicesShowcase2027Page = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2027Page'));
+const ComprehensiveServicesLanding2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesLanding2025'));
+const ComprehensivePricingGuide2027 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2027'));
+const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
+const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
+
+// Innovative Services Components
+const UltimateInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/UltimateInnovativeServicesShowcase2025'));
+const NewServicesShowcase2025 = createLazyComponent(() => import('./pages/NewServicesShowcase2025'));
+
+// Service Detail Components
+const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/AIBusinessIntelligence'));
+const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/AIComplianceAssistant'));
+const AISalesCopilot = createLazyComponent(() => import('./pages/services/AISalesCopilot'));
+const AIPoweredSEO = createLazyComponent(() => import('./pages/services/AIPoweredSEO'));
+const InterviewAssessmentAI = createLazyComponent(() => import('./pages/services/InterviewAssessmentAI'));
+const AIContentMarketingSuite = createLazyComponent(() => import('./pages/services/AIContentMarketingSuite'));
+const AICustomerSupportAutomation = createLazyComponent(() => import('./pages/services/AICustomerSupportAutomation'));
+const AIProjectManagement = createLazyComponent(() => import('./pages/services/AIProjectManagement'));
+const AIFinancialAnalytics = createLazyComponent(() => import('./pages/services/AIFinancialAnalytics'));
+const CloudDevOps = createLazyComponent(() => import('./pages/services/CloudDevOps'));
+const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITInfrastructure'));
+const FinOpsAdvisor = createLazyComponent(() => import('./pages/services/FinOpsAdvisor'));
+const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/CloudFinOpsOptimizer'));
+const AICybersecurityPlatform = createLazyComponent(() => import('./pages/services/AICybersecurityPlatform'));
+const SecurityHeadersCSP = createLazyComponent(() => import('./pages/services/SecurityHeadersCSP'));
+const DSRPortal = createLazyComponent(() => import('./pages/services/DSRPortal'));
+const ZeroTrustNetworkAccess = createLazyComponent(() => import('./pages/services/ZeroTrustNetworkAccess'));
+const DigitalTwin = createLazyComponent(() => import('./pages/services/DigitalTwin'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/services/DigitalTransformation'));
+const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
+const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/IoTEdgeComputing'));
+const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AIQuantumHybridPlatform'));
+const SpaceTech = createLazyComponent(() => import('./pages/services/SpaceTech'));
+const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
+const MicroCRM = createLazyComponent(() => import('./pages/services/MicroCRM'));
+const HelpdeskPlatform = createLazyComponent(() => import('./pages/services/HelpdeskPlatform'));
+const WebsiteAnalytics = createLazyComponent(() => import('./pages/services/WebsiteAnalytics'));
+const AIAutonomousResearchAssistant = createLazyComponent(() => import('./pages/services/AIAutonomousResearchAssistant'));
+const AIHealthcarePlatform = createLazyComponent(() => import('./pages/services/AIHealthcarePlatform'));
+
+// Additional AI Service Components
+const AISupplyChainRiskManagement = createLazyComponent(() => import('./pages/services/AISupplyChainRiskManagement'));
+const AIESGCompliancePlatform = createLazyComponent(() => import('./pages/services/AIESGCompliancePlatform'));
+const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services/AIDigitalTwinPlatform'));
+const AIQuantumComputingPlatform = createLazyComponent(() => import('./pages/services/AIQuantumComputingPlatform'));
+const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AIEdgeComputingPlatform'));
+
+// Additional Page Components
+const API = createLazyComponent(() => import('./pages/API'));
+const DeveloperPortal = createLazyComponent(() => import('./pages/DeveloperPortal'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -265,10 +321,9 @@ function App() {
                     <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
                     <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
 
-<<<<<<< HEAD
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
-=======
+
                     {/* Enhanced Services Showcase 2025 */}
                     <Route path="/enhanced-services-showcase-2025" element={
                       <Suspense fallback={<div className="loading-spinner mx-auto mt-20"></div>}>
