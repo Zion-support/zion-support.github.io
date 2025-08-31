@@ -45,6 +45,9 @@ const Footer = () => {
       title: 'Services',
       links: [
         { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
+        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant', icon: Brain },
+        { name: 'AI Trading Platform', href: '/services/ai-financial-trading-platform', icon: TrendingUp },
+        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Network },
         { name: 'Digital Transformation', href: '/it-services', icon: Cpu },
         { name: 'Cloud & DevOps', href: '/services', icon: Cloud },
         { name: 'Cybersecurity', href: '/services', icon: ShieldIcon },
