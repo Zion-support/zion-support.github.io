@@ -54,7 +54,9 @@ export function AppFooter() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "Quantum-Enhanced AI Decision Intelligence", href: "/services/quantum-enhanced-ai-decision-intelligence" },
+        { name: "Autonomous AI Business Operations", href: "/services/autonomous-ai-business-operations" }
       ]
     },
     {
@@ -70,7 +72,10 @@ export function AppFooter() {
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
         { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
-        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" }
+        { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
+        { name: "Quantum-Enhanced Cybersecurity Operations", href: "/services/quantum-enhanced-cybersecurity-operations" },
+        { name: "AI-Powered Cloud Infrastructure", href: "/services/ai-powered-cloud-infrastructure" },
+        { name: "Blockchain Supply Chain Security", href: "/services/blockchain-supply-chain-security" }
       ]
     },
     {
@@ -87,10 +92,9 @@ export function AppFooter() {
         { name: "AI HR Management Platform", href: "/services/ai-hr-management-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
-        { name: "AI BI Platform Enterprise", href: "/services/ai-business-intelligence-platform-enterprise" },
-        { name: "AI Cybersecurity Enterprise", href: "/services/ai-cybersecurity-threat-detection-enterprise" },
-        { name: "AI Quantum Computing Enterprise", href: "/services/ai-quantum-computing-solutions-enterprise" },
-        { name: "AI Blockchain Web3 Enterprise", href: "/services/ai-blockchain-web3-solutions-enterprise" }
+        { name: "AI Customer Churn Prevention", href: "/services/ai-customer-churn-prevention" },
+        { name: "Intelligent Content Marketing Automation", href: "/services/intelligent-content-marketing-automation" },
+        { name: "Smart Financial Operations Automation", href: "/services/smart-financial-operations-automation" }
       ]
     }
   ];
@@ -101,7 +105,8 @@ export function AppFooter() {
     { name: "News & Events", href: "/news", icon: Star },
     { name: "Partners", href: "/partners", icon: Handshake },
     { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
-    { name: "Contact", href: "/contact", icon: MessageCircle }
+    { name: "Contact", href: "/contact", icon: MessageCircle },
+    { name: "Innovative Services 2026", href: "/innovative-services-showcase-2026", icon: Rocket }
   ];
 
   const resourceLinks = [
