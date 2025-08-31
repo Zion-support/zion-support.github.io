@@ -253,6 +253,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Compliance Assistant
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI Project Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Edge Computing
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div>

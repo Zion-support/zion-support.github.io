@@ -49,136 +49,99 @@ import {
   Calendar,
   Phone,
   Mail,
-  MapPin,
-  Calendar as CalendarIcon,
-  Users as UsersIcon,
-  Target as TargetIcon,
-  BarChart as BarChartIcon,
-  Clock as ClockIcon,
-  CheckCircle as CheckCircleIcon,
-  AlertTriangle,
-  TrendingDown,
-  PieChart,
-  LineChart,
-  Activity as ActivityIcon,
-  MessageSquare,
-  Bell,
-  Settings as SettingsIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Workflow as WorkflowIcon,
-  Database as DatabaseIcon,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Rocket as RocketIcon,
-  Lightbulb as LightbulbIcon,
-  Code as CodeIcon,
-  Monitor as MonitorIcon,
-  Smartphone as SmartphoneIcon,
-  Network as NetworkIcon,
-  Wifi as WifiIcon,
-  Activity as ActivityIcon2,
-  Eye as EyeIcon,
-  Search as SearchIcon,
-  Settings as SettingsIcon2,
-  Palette as PaletteIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon
+  MapPin
 } from 'lucide-react';
 
-export default function AIProjectManagementPlatform() {
+export default function AIAutonomousBusinessOperationsPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Task Prioritization",
-      description: "Intelligent algorithms that automatically prioritize tasks based on deadlines, dependencies, and team capacity."
+      title: "AI-Powered Decision Making",
+      description: "Advanced machine learning algorithms that make real-time business decisions based on data analysis and predictive modeling."
     },
     {
       icon: Workflow,
-      title: "Smart Workflow Automation",
-      description: "Automate repetitive project processes and create intelligent workflows that adapt to your team's patterns."
+      title: "Automated Process Orchestration",
+      description: "Intelligent workflow automation that coordinates complex business processes across departments and systems."
     },
     {
       icon: BarChart3,
-      title: "Predictive Project Analytics",
-      description: "Forecast project completion dates, identify potential bottlenecks, and optimize resource allocation with 90%+ accuracy."
+      title: "Predictive Analytics",
+      description: "Forecast business trends, customer behavior, and market conditions with 95%+ accuracy using AI models."
+    },
+    {
+      icon: Shield,
+      title: "Intelligent Risk Management",
+      description: "AI-driven risk assessment and mitigation strategies that protect your business from potential threats."
     },
     {
       icon: Users,
-      title: "Intelligent Team Management",
-      description: "AI-driven insights into team performance, workload balancing, and skill-based task assignment."
+      title: "Smart Resource Allocation",
+      description: "Optimize resource distribution across teams, projects, and departments using AI-powered insights."
     },
     {
-      icon: Clock,
-      title: "Real-Time Progress Tracking",
-      description: "Monitor project progress in real-time with AI-powered insights and automated status updates."
-    },
-    {
-      icon: Target,
-      title: "Smart Goal Optimization",
-      description: "Automatically adjust project goals and milestones based on changing requirements and team performance."
+      icon: Globe,
+      title: "Global Operations Management",
+      description: "Manage multi-location operations with centralized AI oversight and localized decision-making capabilities."
     }
   ];
 
   const benefits = [
-    "Increase project completion rates by 40-60%",
-    "Reduce project delays by 50-70% through predictive analytics",
-    "Improve team productivity by 30-50%",
-    "Lower project management overhead by 40-60%",
-    "Achieve 90%+ accuracy in project timeline predictions",
-    "Enable real-time collaboration across global teams"
+    "Reduce operational costs by 40-60% through intelligent automation",
+    "Improve decision-making speed by 80% with real-time AI insights",
+    "Increase operational efficiency by 50-70%",
+    "Minimize human errors by 90% in repetitive tasks",
+    "Scale operations seamlessly without proportional cost increases",
+    "24/7 autonomous monitoring and response capabilities"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$2,999",
       period: "/month",
-      description: "Perfect for small teams and startups",
+      description: "Perfect for small businesses starting their AI journey",
       features: [
-        "Up to 10 team members",
-        "Basic AI task prioritization",
-        "Standard project templates",
+        "Basic AI decision making",
+        "Up to 5 automated workflows",
+        "Standard analytics dashboard",
         "Email support",
-        "Basic integrations",
-        "Mobile app access"
+        "Basic integrations"
       ],
       cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$7,999",
       period: "/month",
-      description: "Ideal for growing teams and businesses",
+      description: "Ideal for growing businesses with complex operations",
       features: [
-        "Up to 50 team members",
-        "Advanced AI analytics",
-        "Custom workflow automation",
+        "Advanced AI decision making",
+        "Up to 25 automated workflows",
+        "Advanced analytics & reporting",
         "Priority support",
-        "Advanced integrations",
-        "Real-time collaboration",
-        "Advanced reporting",
-        "API access"
+        "Custom integrations",
+        "Multi-department coordination",
+        "Risk management tools"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$19,999",
       period: "/month",
-      description: "For large organizations requiring full features",
+      description: "For large enterprises requiring full autonomy",
       features: [
-        "Unlimited team members",
-        "Full AI-powered platform",
+        "Full AI autonomy",
+        "Unlimited workflows",
         "Custom AI model training",
         "Dedicated support team",
         "White-label solutions",
         "Advanced security features",
-        "Custom development",
-        "On-premise deployment"
+        "Global operations support",
+        "Custom development"
       ],
       cta: "Contact Sales",
       popular: false
@@ -187,47 +150,24 @@ export default function AIProjectManagementPlatform() {
 
   const useCases = [
     {
-      industry: "Software Development",
-      description: "Agile project management, sprint planning, and code review automation",
-      roi: "45% faster delivery"
-    },
-    {
-      industry: "Marketing Agencies",
-      description: "Campaign management, creative workflow automation, and client collaboration",
-      roi: "60% efficiency improvement"
-    },
-    {
-      industry: "Construction",
-      description: "Project timeline management, resource allocation, and risk assessment",
-      roi: "50% cost reduction"
+      industry: "Manufacturing",
+      description: "Automated production scheduling, quality control, and supply chain optimization",
+      roi: "45% cost reduction"
     },
     {
       industry: "Healthcare",
-      description: "Patient care coordination, medical device projects, and research management",
-      roi: "70% better outcomes"
-    }
-  ];
-
-  const platformCapabilities = [
-    {
-      category: "Project Planning",
-      capabilities: ["AI timeline estimation", "Resource optimization", "Risk assessment", "Dependency mapping"],
-      icon: Target
+      description: "Patient flow management, resource allocation, and predictive diagnostics",
+      roi: "60% efficiency improvement"
     },
     {
-      category: "Team Collaboration",
-      capabilities: ["Real-time communication", "Task assignment", "Progress tracking", "Performance analytics"],
-      icon: Users
+      industry: "Finance",
+      description: "Risk assessment, fraud detection, and automated trading decisions",
+      roi: "70% faster decision making"
     },
     {
-      category: "Analytics & Reporting",
-      capabilities: ["Predictive insights", "Performance metrics", "Custom dashboards", "Export capabilities"],
-      icon: BarChart3
-    },
-    {
-      category: "Integration & Automation",
-      capabilities: ["API access", "Workflow automation", "Third-party tools", "Custom webhooks"],
-      icon: Workflow
+      industry: "Retail",
+      description: "Inventory management, demand forecasting, and customer experience optimization",
+      roi: "55% revenue increase"
     }
   ];
 
@@ -243,20 +183,20 @@ export default function AIProjectManagementPlatform() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 text-zion-purple text-sm font-medium mb-6">
-              <Workflow className="w-4 h-4 mr-2" />
-              AI-Powered Project Management
+              <Bot className="w-4 h-4 mr-2" />
+              AI-Powered Business Operations
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Project Management
+              AI Autonomous Business
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                {" "}Platform
+                {" "}Operations Platform
               </span>
             </h1>
             
             <p className="text-xl text-zinc-300 mb-8 max-w-4xl mx-auto">
-              Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation 
-              that helps teams deliver projects faster, smarter, and more efficiently.
+              Transform your business operations with the world's most advanced AI platform that autonomously manages, 
+              optimizes, and scales your entire business ecosystem in real-time.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -289,10 +229,10 @@ export default function AIProjectManagementPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary Project Management Capabilities
+              Revolutionary AI Capabilities
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with intuitive project management to deliver unprecedented efficiency
+              Our platform combines cutting-edge AI technologies to create a truly autonomous business operations system
             </p>
           </motion.div>
 
@@ -317,7 +257,7 @@ export default function AIProjectManagementPlatform() {
         </div>
       </section>
 
-      {/* Platform Capabilities Section */}
+      {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -328,58 +268,10 @@ export default function AIProjectManagementPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Platform Features
+              Transform Your Business Operations
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Advanced capabilities that provide everything you need for successful project management
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {platformCapabilities.map((capability, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
-                    <capability.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{capability.category}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {capability.capabilities.map((cap, capIndex) => (
-                    <li key={capIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zinc-300">{cap}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Project Management
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Experience unprecedented efficiency and success with AI-powered project management
+              Experience unprecedented efficiency and growth with AI-powered autonomous operations
             </p>
           </motion.div>
 
@@ -432,7 +324,7 @@ export default function AIProjectManagementPlatform() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -445,7 +337,7 @@ export default function AIProjectManagementPlatform() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your team size and project management needs
+              Choose the plan that best fits your business needs and scale as you grow
             </p>
           </motion.div>
 
@@ -506,7 +398,7 @@ export default function AIProjectManagementPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -545,7 +437,7 @@ export default function AIProjectManagementPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -554,10 +446,10 @@ export default function AIProjectManagementPlatform() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Project Management?
+              Ready to Transform Your Business Operations?
             </h2>
             <p className="text-xl text-zinc-300 mb-8">
-              Join the future of intelligent project management with our AI-powered platform
+              Join the future of autonomous business management with our AI-powered platform
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -580,7 +472,7 @@ export default function AIProjectManagementPlatform() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>

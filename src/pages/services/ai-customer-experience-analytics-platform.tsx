@@ -50,135 +50,111 @@ import {
   Phone,
   Mail,
   MapPin,
-  Calendar as CalendarIcon,
-  Users as UsersIcon,
-  Target as TargetIcon,
-  BarChart as BarChartIcon,
-  Clock as ClockIcon,
-  CheckCircle as CheckCircleIcon,
-  AlertTriangle,
-  TrendingDown,
+  Heart,
+  Star,
+  ThumbsUp,
+  MessageSquare,
+  UserCheck,
   PieChart,
   LineChart,
   Activity as ActivityIcon,
-  MessageSquare,
-  Bell,
-  Settings as SettingsIcon,
-  Zap as ZapIcon,
-  Brain as BrainIcon,
-  Workflow as WorkflowIcon,
-  Database as DatabaseIcon,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Rocket as RocketIcon,
-  Lightbulb as LightbulbIcon,
-  Code as CodeIcon,
-  Monitor as MonitorIcon,
+  MousePointer,
   Smartphone as SmartphoneIcon,
-  Network as NetworkIcon,
-  Wifi as WifiIcon,
-  Activity as ActivityIcon2,
-  Eye as EyeIcon,
-  Search as SearchIcon,
-  Settings as SettingsIcon2,
-  Palette as PaletteIcon,
-  Phone as PhoneIcon,
-  Mail as MailIcon,
-  MapPin as MapPinIcon
+  Globe as GlobeIcon
 } from 'lucide-react';
 
-export default function AIProjectManagementPlatform() {
+export default function AICustomerExperienceAnalyticsPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Task Prioritization",
-      description: "Intelligent algorithms that automatically prioritize tasks based on deadlines, dependencies, and team capacity."
-    },
-    {
-      icon: Workflow,
-      title: "Smart Workflow Automation",
-      description: "Automate repetitive project processes and create intelligent workflows that adapt to your team's patterns."
+      title: "AI-Powered Sentiment Analysis",
+      description: "Advanced natural language processing that understands customer emotions, intent, and satisfaction levels across all touchpoints."
     },
     {
       icon: BarChart3,
-      title: "Predictive Project Analytics",
-      description: "Forecast project completion dates, identify potential bottlenecks, and optimize resource allocation with 90%+ accuracy."
+      title: "Real-Time Customer Journey Mapping",
+      description: "Track customer interactions in real-time across all channels to identify friction points and optimization opportunities."
     },
     {
       icon: Users,
-      title: "Intelligent Team Management",
-      description: "AI-driven insights into team performance, workload balancing, and skill-based task assignment."
+      title: "Predictive Customer Behavior Modeling",
+      description: "Forecast customer actions, churn risk, and lifetime value using machine learning algorithms with 90%+ accuracy."
     },
     {
-      icon: Clock,
-      title: "Real-Time Progress Tracking",
-      description: "Monitor project progress in real-time with AI-powered insights and automated status updates."
+      icon: Eye,
+      title: "Omnichannel Experience Monitoring",
+      description: "Unified view of customer interactions across web, mobile, social media, call centers, and physical locations."
+    },
+    {
+      icon: Heart,
+      title: "Emotional Intelligence Analytics",
+      description: "Measure and analyze customer emotional responses to improve brand perception and loyalty."
     },
     {
       icon: Target,
-      title: "Smart Goal Optimization",
-      description: "Automatically adjust project goals and milestones based on changing requirements and team performance."
+      title: "Personalization Engine",
+      description: "AI-driven personalization that adapts content, offers, and experiences based on individual customer preferences."
     }
   ];
 
   const benefits = [
-    "Increase project completion rates by 40-60%",
-    "Reduce project delays by 50-70% through predictive analytics",
-    "Improve team productivity by 30-50%",
-    "Lower project management overhead by 40-60%",
-    "Achieve 90%+ accuracy in project timeline predictions",
-    "Enable real-time collaboration across global teams"
+    "Increase customer satisfaction scores by 35-50%",
+    "Reduce customer churn by 25-40% through predictive insights",
+    "Improve customer lifetime value by 30-60%",
+    "Optimize conversion rates by 20-45%",
+    "Reduce customer service costs by 30-50%",
+    "Achieve 90%+ accuracy in customer behavior prediction"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$1,999",
       period: "/month",
-      description: "Perfect for small teams and startups",
+      description: "Perfect for small businesses starting their CX analytics journey",
       features: [
-        "Up to 10 team members",
-        "Basic AI task prioritization",
-        "Standard project templates",
+        "Basic sentiment analysis",
+        "Up to 10,000 customer interactions/month",
+        "Standard analytics dashboard",
         "Email support",
         "Basic integrations",
-        "Mobile app access"
+        "Real-time monitoring"
       ],
       cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$4,999",
       period: "/month",
-      description: "Ideal for growing teams and businesses",
+      description: "Ideal for growing businesses with complex customer journeys",
       features: [
-        "Up to 50 team members",
         "Advanced AI analytics",
-        "Custom workflow automation",
+        "Up to 100,000 interactions/month",
+        "Predictive modeling",
         "Priority support",
-        "Advanced integrations",
-        "Real-time collaboration",
-        "Advanced reporting",
-        "API access"
+        "Custom integrations",
+        "Multi-channel tracking",
+        "Customer journey mapping",
+        "A/B testing tools"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$12,999",
       period: "/month",
-      description: "For large organizations requiring full features",
+      description: "For large enterprises requiring comprehensive CX insights",
       features: [
-        "Unlimited team members",
-        "Full AI-powered platform",
+        "Full AI-powered analytics",
+        "Unlimited interactions",
         "Custom AI model training",
         "Dedicated support team",
         "White-label solutions",
         "Advanced security features",
-        "Custom development",
-        "On-premise deployment"
+        "Global customer insights",
+        "Custom development"
       ],
       cta: "Contact Sales",
       popular: false
@@ -187,46 +163,46 @@ export default function AIProjectManagementPlatform() {
 
   const useCases = [
     {
-      industry: "Software Development",
-      description: "Agile project management, sprint planning, and code review automation",
-      roi: "45% faster delivery"
+      industry: "E-commerce",
+      description: "Personalized shopping experiences, cart abandonment analysis, and product recommendation optimization",
+      roi: "40% revenue increase"
     },
     {
-      industry: "Marketing Agencies",
-      description: "Campaign management, creative workflow automation, and client collaboration",
-      roi: "60% efficiency improvement"
-    },
-    {
-      industry: "Construction",
-      description: "Project timeline management, resource allocation, and risk assessment",
-      roi: "50% cost reduction"
+      industry: "Banking & Finance",
+      description: "Customer journey optimization, fraud detection, and personalized financial advice",
+      roi: "55% customer retention"
     },
     {
       industry: "Healthcare",
-      description: "Patient care coordination, medical device projects, and research management",
-      roi: "70% better outcomes"
+      description: "Patient experience monitoring, appointment scheduling optimization, and care quality improvement",
+      roi: "65% patient satisfaction"
+    },
+    {
+      industry: "Telecommunications",
+      description: "Service quality monitoring, customer support optimization, and churn prediction",
+      roi: "50% service improvement"
     }
   ];
 
-  const platformCapabilities = [
+  const analyticsCapabilities = [
     {
-      category: "Project Planning",
-      capabilities: ["AI timeline estimation", "Resource optimization", "Risk assessment", "Dependency mapping"],
-      icon: Target
+      category: "Customer Sentiment",
+      metrics: ["Emotion detection", "Satisfaction scoring", "Brand perception", "Voice of customer"],
+      icon: Heart
     },
     {
-      category: "Team Collaboration",
-      capabilities: ["Real-time communication", "Task assignment", "Progress tracking", "Performance analytics"],
-      icon: Users
+      category: "Behavioral Analytics",
+      metrics: ["Click patterns", "Navigation flows", "Engagement metrics", "Conversion tracking"],
+      icon: MousePointer
     },
     {
-      category: "Analytics & Reporting",
-      capabilities: ["Predictive insights", "Performance metrics", "Custom dashboards", "Export capabilities"],
-      icon: BarChart3
+      category: "Predictive Insights",
+      metrics: ["Churn prediction", "Lifetime value", "Next best action", "Demand forecasting"],
+      icon: TrendingUp
     },
     {
-      category: "Integration & Automation",
-      capabilities: ["API access", "Workflow automation", "Third-party tools", "Custom webhooks"],
+      category: "Journey Mapping",
+      metrics: ["Touchpoint analysis", "Friction identification", "Optimization opportunities", "Cross-channel insights"],
       icon: Workflow
     }
   ];
@@ -243,20 +219,20 @@ export default function AIProjectManagementPlatform() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 text-zion-purple text-sm font-medium mb-6">
-              <Workflow className="w-4 h-4 mr-2" />
-              AI-Powered Project Management
+              <Heart className="w-4 h-4 mr-2" />
+              AI-Powered Customer Experience
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Project Management
+              AI Customer Experience
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                {" "}Platform
+                {" "}Analytics Platform
               </span>
             </h1>
             
             <p className="text-xl text-zinc-300 mb-8 max-w-4xl mx-auto">
-              Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation 
-              that helps teams deliver projects faster, smarter, and more efficiently.
+              Transform customer relationships with AI-powered analytics that understand, predict, and optimize every customer interaction 
+              across all touchpoints in real-time.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -289,10 +265,10 @@ export default function AIProjectManagementPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary Project Management Capabilities
+              Revolutionary CX Analytics Capabilities
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI with intuitive project management to deliver unprecedented efficiency
+              Our platform combines cutting-edge AI technologies to deliver unprecedented insights into customer behavior and preferences
             </p>
           </motion.div>
 
@@ -317,7 +293,7 @@ export default function AIProjectManagementPlatform() {
         </div>
       </section>
 
-      {/* Platform Capabilities Section */}
+      {/* Analytics Capabilities Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -328,15 +304,15 @@ export default function AIProjectManagementPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Platform Features
+              Comprehensive Analytics Suite
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Advanced capabilities that provide everything you need for successful project management
+              Advanced analytics capabilities that provide deep insights into every aspect of customer experience
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {platformCapabilities.map((capability, index) => (
+            {analyticsCapabilities.map((capability, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -352,10 +328,10 @@ export default function AIProjectManagementPlatform() {
                   <h3 className="text-xl font-semibold text-white">{capability.category}</h3>
                 </div>
                 <ul className="space-y-2">
-                  {capability.capabilities.map((cap, capIndex) => (
-                    <li key={capIndex} className="flex items-center space-x-2">
+                  {capability.metrics.map((metric, metricIndex) => (
+                    <li key={metricIndex} className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zinc-300">{cap}</span>
+                      <span className="text-zinc-300">{metric}</span>
                     </li>
                   ))}
                 </ul>
@@ -376,10 +352,10 @@ export default function AIProjectManagementPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Project Management
+              Transform Your Customer Experience
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Experience unprecedented efficiency and success with AI-powered project management
+              Experience unprecedented customer insights and loyalty with AI-powered analytics
             </p>
           </motion.div>
 
@@ -407,19 +383,19 @@ export default function AIProjectManagementPlatform() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">Built on enterprise-grade infrastructure</span>
+                  <span className="text-zinc-300">Real-time processing of customer data</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">99.9% uptime guarantee</span>
+                  <span className="text-zinc-300">99.9% accuracy in sentiment analysis</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">SOC 2 Type II certified</span>
+                  <span className="text-zinc-300">GDPR and SOC 2 compliant</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">24/7 expert support</span>
+                  <span className="text-zinc-300">24/7 customer insights monitoring</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
@@ -445,7 +421,7 @@ export default function AIProjectManagementPlatform() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your team size and project management needs
+              Choose the plan that best fits your customer analytics needs and scale as you grow
             </p>
           </motion.div>
 
@@ -554,10 +530,10 @@ export default function AIProjectManagementPlatform() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Project Management?
+              Ready to Transform Your Customer Experience?
             </h2>
             <p className="text-xl text-zinc-300 mb-8">
-              Join the future of intelligent project management with our AI-powered platform
+              Join the future of customer experience analytics with our AI-powered platform
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
