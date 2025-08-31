@@ -1,18 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Workflow, 
-  Users, 
-  Calendar, 
-  Target, 
-  Zap, 
-  Brain, 
+import { Link } from 'react-router-dom';
+import {
+  Workflow,
+  Brain,
+  TrendingUp,
+  Users,
+  Clock,
+  DollarSign,
   CheckCircle,
   ArrowRight,
-  Star,
-  Clock,
-  Globe,
-  Database,
+  BarChart3,
+  Calendar,
+  Target,
+  Zap,
+  Shield,
   Activity,
   Eye,
   Settings,
@@ -22,13 +24,19 @@ import {
   Search,
   AlertTriangle,
   Lightbulb,
-  BarChart3,
-  TrendingUp,
+  BarChart,
+  Mail,
+  MessageSquare,
+  Phone,
+  FileText,
+  PieChart,
+  LineChart,
+  Megaphone,
+  Bot,
   Cpu,
   Network,
   Smartphone,
   Lock,
-  BarChart,
   Code,
   Server,
   Chip,
@@ -36,58 +44,78 @@ import {
   ShieldCheck,
   Globe2,
   Play,
-  FileText,
-  PieChart,
-  LineChart,
-  Activity as ActivityIcon,
-  Eye as EyeIcon,
-  Settings as SettingsIcon,
-  Download as DownloadIcon,
-  Share2 as Share2Icon,
-  Filter as FilterIcon,
+  Award,
+  Rocket,
+  Building2,
+  Cloud,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle,
+  BookOpen,
+  Video,
+  GraduationCap,
+  PenTool,
+  Handshake,
+  ShoppingCart,
+  Heart,
+  Star,
+  ThumbsUp,
+  UserCheck,
+  MousePointer,
+  ArrowUpRight,
+  CheckCircle2,
+  Clock3,
+  Target2,
+  Users2,
+  Palette,
   Search as SearchIcon,
-  AlertTriangle as AlertTriangleIcon,
-  Lightbulb as LightbulbIcon
+  Settings as SettingsIcon,
+  Palette as PaletteIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
-export default function AIProjectManagementPlatform() {
+const AIProjectManagementPlatform: React.FC = () => {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Planning",
-      description: "Intelligent project planning with automated task breakdown, resource allocation, and timeline optimization",
-      benefits: ["Smart task decomposition", "Resource optimization", "Risk assessment", "Timeline prediction"]
-    },
-    {
-      icon: Workflow,
-      title: "Intelligent Workflow Automation",
-      description: "Automate repetitive tasks, approvals, and workflows with AI-driven decision making",
-      benefits: ["Process automation", "Smart routing", "Approval workflows", "Status tracking"]
-    },
-    {
-      icon: Users,
-      title: "Team Collaboration Hub",
-      description: "Centralized platform for team communication, file sharing, and real-time collaboration",
-      benefits: ["Real-time chat", "File management", "Version control", "Team analytics"]
-    },
-    {
+      title: "AI-Powered Task Prioritization",
+      description: "Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and business impact.",
       icon: Target,
-      title: "Smart Goal Tracking",
-      description: "AI-powered goal setting, progress monitoring, and predictive completion analysis",
-      benefits: ["Goal visualization", "Progress tracking", "Milestone management", "Completion prediction"]
+      benefits: ["Optimized workflow efficiency", "Reduced project delays", "Better resource allocation"]
     },
     {
+      title: "Smart Workflow Automation",
+      description: "Automate repetitive project management tasks and create intelligent workflows that adapt to your team's needs.",
+      icon: Workflow,
+      benefits: ["Time savings", "Consistent processes", "Reduced human error"]
+    },
+    {
+      title: "Predictive Project Analytics",
+      description: "AI-driven insights predict project outcomes, identify risks, and suggest optimizations before issues arise.",
       icon: BarChart3,
-      title: "Advanced Analytics & Reporting",
-      description: "Comprehensive project insights with predictive analytics and performance optimization",
-      benefits: ["Performance metrics", "Predictive analytics", "Custom reports", "Data visualization"]
+      benefits: ["Proactive risk management", "Data-driven decisions", "Improved project success rates"]
     },
     {
-      icon: Zap,
-      title: "Resource Management",
-      description: "Intelligent resource allocation, capacity planning, and workload optimization",
-      benefits: ["Resource allocation", "Capacity planning", "Workload balancing", "Skill matching"]
+      title: "Intelligent Team Management",
+      description: "AI-powered team matching, workload balancing, and performance analytics for optimal team productivity.",
+      icon: Users,
+      benefits: ["Better team collaboration", "Balanced workloads", "Enhanced performance tracking"]
+    },
+    {
+      title: "Real-Time Progress Tracking",
+      description: "Live monitoring of project progress with AI-powered insights and automated status updates.",
+      icon: Activity,
+      benefits: ["Transparent project visibility", "Timely interventions", "Stakeholder confidence"]
+    },
+    {
+      title: "Smart Goal Optimization",
+      description: "AI algorithms continuously optimize project goals and milestones based on real-time data and constraints.",
+      icon: TrendingUp,
+      benefits: ["Adaptive planning", "Resource optimization", "Goal achievement"]
     }
   ];
 
@@ -99,47 +127,42 @@ export default function AIProjectManagementPlatform() {
       description: "Perfect for small teams and startups",
       features: [
         "Up to 10 team members",
-        "Basic project templates",
-        "Task management",
-        "Basic reporting",
-        "Email support",
-        "Mobile app access"
+        "AI task prioritization",
+        "Basic workflow automation",
+        "Project templates",
+        "Email support"
       ],
-      cta: "Start Free Trial",
+      cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
       price: "$299",
       period: "/month",
-      description: "Ideal for growing teams and businesses",
+      description: "Ideal for growing businesses",
       features: [
         "Up to 50 team members",
-        "Advanced project templates",
-        "AI-powered planning",
-        "Advanced analytics",
+        "Advanced AI analytics",
+        "Custom workflows",
+        "Team performance insights",
         "Priority support",
-        "Custom integrations",
-        "Advanced workflows",
-        "Resource management"
+        "API access"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$999",
       period: "/month",
-      description: "For large organizations with complex project needs",
+      description: "For large organizations",
       features: [
         "Unlimited team members",
-        "Custom project templates",
-        "Advanced AI features",
-        "Custom analytics",
-        "24/7 dedicated support",
-        "Custom development",
+        "Full AI suite",
+        "Custom AI model training",
         "Advanced security",
-        "On-premise deployment"
+        "Dedicated account manager",
+        "24/7 phone support"
       ],
       cta: "Contact Sales",
       popular: false
@@ -149,352 +172,528 @@ export default function AIProjectManagementPlatform() {
   const useCases = [
     {
       industry: "Software Development",
-      description: "Manage agile development cycles, sprint planning, and release management with AI insights",
-      metrics: ["Sprint velocity", "Code quality", "Release frequency", "Team productivity"]
+      description: "Manage complex software projects with AI-powered sprint planning and release management.",
+      icon: Code,
+      benefits: ["Agile optimization", "Release automation", "Quality assurance"]
     },
     {
-      industry: "Construction",
-      description: "Coordinate complex construction projects with resource optimization and timeline management",
-      metrics: ["Project completion", "Resource utilization", "Cost management", "Safety compliance"]
+      industry: "Marketing Campaigns",
+      description: "Coordinate multi-channel marketing campaigns with intelligent scheduling and performance tracking.",
+      icon: Megaphone,
+      benefits: ["Campaign automation", "Performance optimization", "ROI tracking"]
     },
     {
-      industry: "Marketing",
-      description: "Execute marketing campaigns with automated workflows and performance tracking",
-      metrics: ["Campaign ROI", "Lead generation", "Conversion rates", "Team efficiency"]
+      industry: "Product Launch",
+      description: "Streamline product launches with AI-driven timeline optimization and risk management.",
+      icon: Rocket,
+      benefits: ["Launch coordination", "Risk mitigation", "Market timing"]
     },
     {
-      industry: "Consulting",
-      description: "Manage client projects with intelligent resource allocation and progress tracking",
-      metrics: ["Client satisfaction", "Project profitability", "Resource efficiency", "Delivery time"]
+      industry: "Event Planning",
+      description: "Plan and execute events with AI-powered logistics optimization and attendee management.",
+      icon: Calendar,
+      benefits: ["Logistics automation", "Attendee engagement", "Resource optimization"]
     }
   ];
 
-  const benefits = [
+  const platformCapabilities = [
     {
-      icon: Clock,
-      title: "Time Savings",
-      description: "Automate routine tasks and reduce manual work by up to 40%"
+      category: "AI & Machine Learning",
+      capabilities: [
+        "Natural language task processing",
+        "Predictive analytics",
+        "Pattern recognition",
+        "Automated decision making",
+        "Continuous learning algorithms"
+      ]
     },
     {
-      icon: TrendingUp,
-      title: "Improved Efficiency",
-      description: "Optimize workflows and increase team productivity by 30%"
+      category: "Project Management",
+      capabilities: [
+        "Gantt charts and timelines",
+        "Resource allocation",
+        "Budget tracking",
+        "Risk management",
+        "Stakeholder communication"
+      ]
     },
     {
-      icon: Users,
-      title: "Better Collaboration",
-      description: "Enhanced team communication and seamless project coordination"
+      category: "Team Collaboration",
+      capabilities: [
+        "Real-time messaging",
+        "File sharing and storage",
+        "Video conferencing",
+        "Task comments and feedback",
+        "Team performance analytics"
+      ]
     },
     {
-      icon: Target,
-      title: "Higher Success Rate",
-      description: "AI-powered insights help complete projects on time and within budget"
+      category: "Integration & API",
+      capabilities: [
+        "Third-party integrations",
+        "RESTful API access",
+        "Webhook support",
+        "Data import/export",
+        "Custom app development"
+      ]
     }
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20"></div>
+        <div className="relative z-10 container mx-auto px-4 py-20 lg:py-32">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 bg-zion-purple/20 border border-zion-purple/30 rounded-full text-zion-purple text-sm font-medium mb-6">
               <Workflow className="w-4 h-4 mr-2" />
               AI-Powered Project Management
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Transform Project Management with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> AI Intelligence</span>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Project Management
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}Platform
+              </span>
             </h1>
             
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Revolutionize your project management with AI-powered planning, intelligent automation, and predictive analytics. 
-              Deliver projects on time, within budget, and exceed expectations.
+            <p className="text-xl md:text-2xl text-zinc-300 mb-8 leading-relaxed">
+              Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation. 
+              Deliver projects faster, smarter, and with unprecedented success rates.
             </p>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
               >
-                <span className="flex items-center gap-2">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </span>
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              
-              <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300">
-                <span className="flex items-center gap-2">
-                  Watch Demo
-                  <Play className="w-5 h-5" />
-                </span>
-              </button>
+              <Link
+                to="#features"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+              >
+                Learn More
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Key Benefits */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose AI-Powered Project Management?
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Why Choose AI-Powered
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}Project Management?
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover how AI automation can transform your project delivery and team productivity
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Our AI platform delivers measurable results that transform how you manage projects and teams.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          >
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-6">
+                <TrendingUp className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">50% Faster Delivery</h3>
+              <p className="text-zinc-400">AI-optimized workflows and intelligent resource allocation reduce project timelines significantly.</p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-2xl mb-6">
+                <DollarSign className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">40% Cost Reduction</h3>
+              <p className="text-zinc-400">Eliminate inefficiencies and optimize resource usage with AI-driven insights and automation.</p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple-dark rounded-2xl mb-6">
+                <CheckCircle className="w-10 h-10 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-white mb-4">90% Success Rate</h3>
+              <p className="text-zinc-400">Predictive analytics and risk management ensure projects are delivered on time and within budget.</p>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="features" className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful Features for Modern Project Management
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Powerful
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}AI Features
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to plan, execute, and deliver successful projects with AI intelligence
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Discover how our AI technology revolutionizes every aspect of project management.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
+                key={index}
+                variants={itemVariants}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate-light/20 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-zinc-400 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                    <li key={idx} className="flex items-center text-zinc-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
                   ))}
                 </ul>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transparent Pricing
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Simple,
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}Transparent Pricing
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the plan that best fits your team size and project complexity
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Choose the plan that fits your team size and project requirements. All plans include our core AI features.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+          >
             {pricingPlans.map((plan, index) => (
               <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+                key={index}
+                variants={itemVariants}
+                className={`relative bg-zion-slate-dark/50 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20' 
-                    : 'border-slate-700/50'
+                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' 
+                    : 'border-zion-slate-light/20'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-semibold rounded-full">
                       Most Popular
                     </span>
                   </div>
                 )}
-
+                
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
+                  <p className="text-zinc-400 mb-6">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-zinc-400 ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-gray-400">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                    <li key={idx} className="flex items-center text-zinc-300">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
 
-                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                    : 'bg-slate-700 text-white hover:bg-slate-600'
-                }`}>
+                <Link
+                  to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-purple hover:to-zion-cyan'
+                      : 'border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
+                  }`}
+                >
                   {plan.cta}
-                </button>
+                </Link>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-zion-slate-dark/30">
+        <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Industry-Specific Solutions
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Industry
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}Use Cases
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Tailored project management solutions for different industries and use cases
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Our AI platform adapts to various industries and project types, delivering tailored solutions for your specific needs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
             {useCases.map((useCase, index) => (
               <motion.div
-                key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
+                key={index}
+                variants={itemVariants}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate-light/20 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.industry}</h3>
-                <p className="text-gray-400 mb-4">{useCase.description}</p>
-                
-                <div>
-                  <h4 className="text-cyan-400 font-medium mb-2">Key Metrics:</h4>
-                  <ul className="space-y-1">
-                    {useCase.metrics.map((metric, idx) => (
-                      <li key={idx} className="text-sm text-gray-300 flex items-center">
-                        <Target className="w-3 h-3 text-cyan-400 mr-2" />
-                        {metric}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="flex items-center mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mr-4">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
                 </div>
+                <p className="text-zinc-400 mb-6">{useCase.description}</p>
+                <ul className="space-y-2">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-zinc-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Platform Capabilities */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Comprehensive
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}Platform Capabilities
+              </span>
+            </h2>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Our platform combines cutting-edge AI technology with enterprise-grade project management tools.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          >
+            {platformCapabilities.map((category, index) => (
+              <motion.div
+                key={index}
+                variants={itemVariants}
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-slate-light/20 rounded-2xl p-8"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">{category.category}</h3>
+                <ul className="space-y-3">
+                  {category.capabilities.map((capability, idx) => (
+                    <li key={idx} className="flex items-center text-zinc-300">
+                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+                      {capability}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Project Management?
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Ready to Transform
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}Your Project Management?
+              </span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Join thousands of teams that have already revolutionized their project delivery with AI-powered management
+            <p className="text-xl text-zinc-400 mb-8 leading-relaxed">
+              Join thousands of teams already using AI to deliver projects faster, smarter, and with unprecedented success rates.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
               >
-                <span className="flex items-center gap-2">
-                  Get Started Today
-                  <ArrowRight className="w-5 h-5" />
-                </span>
+                Start Free Trial
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                <span className="flex items-center gap-2">
-                  Schedule Demo
-                  <ArrowRight className="w-5 h-5" />
-                </span>
+                Schedule Demo
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
+
+      {/* Contact Information */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Get in
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+                {" "}Touch
+              </span>
+            </h2>
+            <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+              Ready to discuss how our AI Project Management Platform can transform your business? Contact us today.
+            </p>
+          </motion.div>
+
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+          >
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-6">
+                <Phone className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Phone</h3>
+              <p className="text-zinc-400">+1 302 464 0950</p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-purple to-zion-cyan rounded-2xl mb-6">
+                <Mail className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Email</h3>
+              <p className="text-zinc-400">kleber@ziontechgroup.com</p>
+            </motion.div>
+
+            <motion.div variants={itemVariants} className="text-center">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple-dark rounded-2xl mb-6">
+                <MapPinIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">Address</h3>
+              <p className="text-zinc-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-}
+};
 
-// Missing icon components
-const Target = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-  </svg>
-);
+export default AIProjectManagementPlatform;

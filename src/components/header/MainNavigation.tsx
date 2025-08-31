@@ -230,6 +230,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI Project Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Edge Computing
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/ai-content-creation-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <PenTool className="w-3 h-3 mr-2" />
                         AI Content Studio
@@ -245,12 +257,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <MessageCircle className="w-3 h-3 mr-2" />
                         AI Support Automation
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Workflow className="w-3 h-3 mr-2" />
-                        AI Project Management
                       </Link>
                     </li>
                     <li>
