@@ -53,7 +53,6 @@ const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/
 const AISmartHomeEnergyManagementPlatform = createLazyComponent(() => import('./pages/services/ai-smart-home-energy-management-platform'));
 
 // New Innovative Services 2026 - Legal & Education
-const AIAutonomousLegalResearchPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-legal-research-platform'));
 const AIEducationalContentCreationPlatform = createLazyComponent(() => import('./pages/services/ai-educational-content-creation-platform'));
 const AIRealEstateInvestmentAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-analytics-platform'));
 
@@ -64,7 +63,6 @@ const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pa
 
 // New AI Services 2026
 const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
-const AIAutonomousManufacturingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-manufacturing-platform'));
 
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
@@ -143,7 +141,6 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const Tutorials = createLazyComponent(() => import('./pages/Tutorials'));
 const Support = createLazyComponent(() => import('./pages/Support'));
 const Sustainability = createLazyComponent(() => import('./pages/Sustainability'));
-const SpaceTech = createLazyComponent(() => import('./pages/SpaceTech'));
 const StartupSolutions = createLazyComponent(() => import('./pages/StartupSolutions'));
 const SupplyChain = createLazyComponent(() => import('./pages/SupplyChain'));
 const Talent = createLazyComponent(() => import('./pages/Talent'));
