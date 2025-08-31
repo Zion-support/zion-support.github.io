@@ -70,6 +70,12 @@ const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pa
 const AIAutonomousBusinessManager = createLazyComponent(() => import('./pages/services/ai-autonomous-business-manager'));
 const QuantumAIHybridPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-hybrid-platform'));
 
+// New AI Services 2025 - Enhanced
+const AILegalResearchCompliancePlatform = createLazyComponent(() => import('./pages/services/ai-legal-research-compliance-platform'));
+const AIHealthcarePredictiveAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-predictive-analytics-platform'));
+const AIFinancialRiskManagementTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-trading-platform'));
+const AISupplyChainIntelligenceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-intelligence-optimization-platform'));
+
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
 
@@ -276,6 +282,12 @@ function App() {
                     {/* New Innovative Services 2028 */}
                     <Route path="/services/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
                     <Route path="/services/quantum-ai-hybrid-platform" element={<QuantumAIHybridPlatform />} />
+
+                    {/* New AI Services 2025 - Enhanced */}
+                    <Route path="/services/ai-legal-research-compliance-platform" element={<AILegalResearchCompliancePlatform />} />
+                    <Route path="/services/ai-healthcare-predictive-analytics-platform" element={<AIHealthcarePredictiveAnalyticsPlatform />} />
+                    <Route path="/services/ai-financial-risk-management-trading-platform" element={<AIFinancialRiskManagementTradingPlatform />} />
+                    <Route path="/services/ai-supply-chain-intelligence-optimization-platform" element={<AISupplyChainIntelligenceOptimizationPlatform />} />
 
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
