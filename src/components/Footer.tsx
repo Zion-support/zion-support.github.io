@@ -49,7 +49,10 @@ export function Footer() {
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
         { name: "AI Content Marketing", href: "/services/ai-content-marketing-suite" },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
-        { name: "AI Project Management", href: "/services/ai-project-management" }
+        { name: "AI Project Management", href: "/services/ai-project-management" },
+        { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
+        { name: "AI Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" }
       ]
     },
     {

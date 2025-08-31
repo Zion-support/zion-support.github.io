@@ -125,6 +125,42 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Cybersecurity
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-research-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Research Assistant
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-financial-trading-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Trading Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Healthcare
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum AI Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        Supply Chain AI
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Network className="w-3 h-3 mr-2" />
+                        Blockchain Solutions
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -155,6 +191,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Atom className="w-3 h-3 mr-2" />
                         Quantum Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Network className="w-3 h-3 mr-2" />
+                        Blockchain Solutions
                       </Link>
                     </li>
                   </ul>
