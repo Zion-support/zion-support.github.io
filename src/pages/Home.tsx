@@ -137,31 +137,31 @@ export default function Home() {
   const services = [
     {
       icon: Brain,
-      title: "AI Autonomous Business Operations",
-      description: "Automate complex business processes with intelligent AI agents",
+      title: "AI Business Intelligence Elite",
+      description: "Advanced AI-powered analytics with real-time insights and predictive analytics",
       color: "from-purple-500 to-pink-500",
-      link: "/services/ai-autonomous-business-operations"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Infrastructure & DevOps",
-      description: "Scalable cloud solutions with automated deployment and management",
-      color: "from-blue-500 to-cyan-500",
-      link: "/services/cloud-infrastructure-devops"
+      link: "/enhanced-services"
     },
     {
       icon: Shield,
-      title: "Cybersecurity & Zero Trust",
-      description: "Advanced security solutions for modern threat landscapes",
+      title: "AI Cybersecurity Elite",
+      description: "Military-grade AI-powered cybersecurity with zero-day protection",
       color: "from-red-500 to-orange-500",
-      link: "/services/cybersecurity-zero-trust"
+      link: "/enhanced-services"
     },
     {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation",
+      icon: Atom,
+      title: "Quantum Computing Elite",
+      description: "Access to cutting-edge quantum computing with AI-quantum hybrid systems",
+      color: "from-blue-500 to-cyan-500",
+      link: "/enhanced-services"
+    },
+    {
+      icon: Rocket,
+      title: "Micro-SaaS Platform Elite",
+      description: "Complete platform to launch and scale your micro-SaaS business",
       color: "from-green-500 to-emerald-500",
-      link: "/services/digital-transformation"
+      link: "/enhanced-services"
     }
   ];
 
@@ -241,10 +241,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/services" 
+                to="/enhanced-services" 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Explore Solutions
+                Explore Micro-SaaS Solutions
               </Link>
               <Link 
                 to="/contact" 
@@ -486,10 +486,16 @@ export default function Home() {
                 Schedule a Consultation
               </Link>
               <Link
-                to="/services"
+                to="/enhanced-services"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
-                Explore Services
+                Explore Micro-SaaS Services
+              </Link>
+              <Link
+                to="/comprehensive-pricing-2029"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+              >
+                View Pricing
               </Link>
             </motion.div>
           </div>

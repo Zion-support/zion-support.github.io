@@ -144,6 +144,8 @@ const UltimateServicesShowcase2025 = createLazyComponent(() => import('./compone
 const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
+const ComprehensivePricing2029 = createLazyComponent(() => import('./pages/ComprehensivePricing2029'));
+const EnhancedServices = createLazyComponent(() => import('./pages/EnhancedServices'));
 
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 const ZionCuttingEdgeServices2029 = createLazyComponent(() => import('./pages/ZionCuttingEdgeServices2029'));
@@ -303,6 +305,9 @@ function App() {
                       </Suspense>
                     } />
 
+                    {/* Enhanced Services */}
+                    <Route path="/enhanced-services" element={<EnhancedServices />} />
+
                     {/* Comprehensive Services Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025Page />} />
                     <Route path="/ultimate-services-showcase-2026" element={<UltimateServicesShowcase2026 />} />
@@ -311,6 +316,7 @@ function App() {
                     <Route path="/comprehensive-pricing-guide-2027" element={<ComprehensivePricingGuide2027 />} />
                     <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                     <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
+                    <Route path="/comprehensive-pricing-2029" element={<ComprehensivePricing2029 />} />
 
                     {/* Innovative Services Routes */}
                     <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
