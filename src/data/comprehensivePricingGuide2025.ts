@@ -42,91 +42,91 @@ export interface ServicePricing {
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE: ServicePricing[] = [
+  // AI-Powered Business Intelligence Platform
   {
-    id: "ai-autonomous-business-operations-platform",
-    title: "AI Autonomous Business Operations Platform",
-    description: "Next-generation autonomous business operations platform that uses advanced AI to automatically manage, optimize, and scale business processes across all departments without human intervention.",
-    category: "AI & Automation",
-    basePrice: 4999,
+    id: "ai-business-intelligence-platform",
+    title: "AI-Powered Business Intelligence & Analytics Platform",
+    description: "Advanced business intelligence platform that uses AI to analyze data, generate insights, and provide predictive analytics for informed decision-making across all business functions.",
+    category: "AI & Analytics",
+    basePrice: 899,
     currency: "$",
     pricingTiers: [
       {
         name: "Starter",
-        price: 4999,
+        price: 899,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Up to 100 automated processes",
-          "Basic AI decision making",
-          "Standard integrations",
+          "Up to 5 data sources",
+          "Basic AI analytics",
+          "Standard dashboards",
           "Email support",
           "Basic reporting"
         ],
-        bestFor: "Small to medium businesses starting automation"
+        bestFor: "Small businesses starting with data analytics"
       },
       {
         name: "Professional",
-        price: 8999,
+        price: 1899,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Up to 500 automated processes",
-          "Advanced AI decision making",
-          "Premium integrations",
+          "Up to 20 data sources",
+          "Advanced AI analytics",
+          "Custom dashboards",
           "Priority support",
-          "Advanced analytics",
-          "Custom workflows",
-          "API access"
+          "Advanced reporting",
+          "API access",
+          "Real-time monitoring"
         ],
-        bestFor: "Growing businesses with complex operations",
+        bestFor: "Growing businesses with complex data needs",
         popular: true
       },
       {
         name: "Enterprise",
-        price: 14999,
+        price: 3999,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Unlimited automated processes",
-          "Full AI autonomy",
-          "All integrations",
+          "Unlimited data sources",
+          "Full AI capabilities",
+          "White-label dashboards",
           "24/7 dedicated support",
           "Custom AI models",
-          "White-label options",
           "Advanced security",
           "Compliance automation"
         ],
-        bestFor: "Large enterprises requiring full automation"
+        bestFor: "Large enterprises requiring comprehensive analytics"
       }
     ],
-    marketPrice: "$4,999 - $15,000/month",
-    roi: "300-500%",
-    implementationTime: "8-12 weeks",
+    marketPrice: "$899 - $3,999/month",
+    roi: "400-600%",
+    implementationTime: "3-4 weeks",
     trainingRequired: "2-3 days",
-    supportLevel: "enterprise",
-    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Pega"],
+    supportLevel: "Premium",
+    competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
     competitorPricing: [
       {
-        name: "UiPath",
-        price: "$1,200 - $5,000/month",
-        features: ["Basic automation", "Limited AI", "Standard support"]
+        name: "Tableau",
+        price: "$70-70/user/month",
+        features: ["Data visualization", "Basic analytics", "Standard support"]
       },
       {
-        name: "Automation Anywhere",
-        price: "$2,500 - $8,000/month",
-        features: ["Process automation", "Some AI features", "Enterprise support"]
+        name: "Power BI",
+        price: "$9.99-20/user/month",
+        features: ["Microsoft integration", "Basic AI", "Standard support"]
       },
       {
-        name: "Blue Prism",
-        price: "$3,000 - $12,000/month",
-        features: ["RPA platform", "Basic intelligence", "Professional support"]
+        name: "Qlik",
+        price: "$30-40/user/month",
+        features: ["Associative analytics", "Basic AI", "Standard support"]
       }
     ],
     roiBreakdown: {
       timeframe: "6-12 months",
-      savings: "Reduce operational costs by 60%",
-      efficiency: "Improve process efficiency by 85%",
-      additionalBenefits: "24/7 autonomous operations, eliminate human error"
+      savings: "Reduce analysis time by 80%",
+      efficiency: "Improve decision making by 50%",
+      additionalBenefits: "Uncover hidden insights, enable data-driven culture"
     },
     contactInfo: {
       phone: "+1 302 464 0950",
@@ -136,90 +136,91 @@ export const COMPREHENSIVE_PRICING_GUIDE: ServicePricing[] = [
     }
   },
 
+  // AI-Powered Customer Experience Platform
   {
-    id: "quantum-safe-cybersecurity-intelligence-platform",
-    title: "Quantum-Safe Cybersecurity Intelligence Platform",
-    description: "Future-proof cybersecurity platform that combines quantum-resistant cryptography with advanced AI threat detection, providing protection against both current and future quantum computing threats.",
-    category: "Cybersecurity",
-    basePrice: 7999,
+    id: "ai-customer-experience-platform",
+    title: "AI-Powered Customer Experience & Personalization Platform",
+    description: "Intelligent customer experience platform that uses AI to personalize interactions, predict customer needs, and optimize customer journeys across all touchpoints.",
+    category: "AI & Customer Experience",
+    basePrice: 699,
     currency: "$",
     pricingTiers: [
       {
-        name: "Standard",
-        price: 7999,
+        name: "Starter",
+        price: 699,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Post-quantum cryptography",
-          "AI threat detection",
-          "Basic compliance",
-          "Standard support",
-          "Core security features"
+          "Up to 10,000 customers",
+          "Basic personalization",
+          "Standard analytics",
+          "Email support",
+          "Basic integrations"
         ],
-        bestFor: "Medium businesses requiring quantum-safe security"
+        bestFor: "Small businesses starting with personalization"
       },
       {
-        name: "Advanced",
-        price: 12999,
+        name: "Professional",
+        price: 1499,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Advanced quantum algorithms",
-          "AI threat intelligence",
-          "Full compliance suite",
+          "Up to 100,000 customers",
+          "Advanced personalization",
+          "Predictive analytics",
           "Priority support",
-          "Advanced forensics",
-          "Custom security policies",
-          "24/7 monitoring"
+          "Advanced integrations",
+          "A/B testing",
+          "Customer journey mapping"
         ],
-        bestFor: "Large enterprises with high security requirements",
+        bestFor: "Growing businesses with customer experience focus",
         popular: true
       },
       {
-        name: "Government",
-        price: 19999,
+        name: "Enterprise",
+        price: 2999,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Military-grade quantum security",
-          "Full threat intelligence",
-          "Government compliance",
-          "Dedicated support team",
-          "Custom deployments",
+          "Unlimited customers",
+          "Full AI personalization",
           "Advanced analytics",
-          "Zero-trust architecture"
+          "24/7 dedicated support",
+          "Custom AI models",
+          "White-label options",
+          "Advanced security"
         ],
-        bestFor: "Government agencies and defense contractors"
+        bestFor: "Large enterprises requiring advanced personalization"
       }
     ],
-    marketPrice: "$7,999 - $25,000/month",
-    roi: "400-600%",
-    implementationTime: "10-14 weeks",
-    trainingRequired: "3-5 days",
-    supportLevel: "enterprise",
-    competitors: ["CrowdStrike", "Palo Alto Networks", "FireEye", "Carbon Black"],
+    marketPrice: "$699 - $2,999/month",
+    roi: "350-550%",
+    implementationTime: "2-3 weeks",
+    trainingRequired: "1-2 days",
+    supportLevel: "Professional",
+    competitors: ["Segment", "Amplitude", "Mixpanel", "Optimizely"],
     competitorPricing: [
       {
-        name: "CrowdStrike",
-        price: "$8.99 - $15.99/user/month",
-        features: ["Endpoint protection", "Threat intelligence", "Basic AI"]
+        name: "Segment",
+        price: "$120-2,000/month",
+        features: ["Data collection", "Basic analytics", "Standard support"]
       },
       {
-        name: "Palo Alto Networks",
-        price: "$5,000 - $20,000/month",
-        features: ["Network security", "Threat prevention", "Enterprise features"]
+        name: "Amplitude",
+        price: "$995-2,000/month",
+        features: ["Product analytics", "Basic personalization", "Standard support"]
       },
       {
-        name: "FireEye",
-        price: "$3,000 - $15,000/month",
-        features: ["Threat detection", "Incident response", "Security services"]
+        name: "Mixpanel",
+        price: "$25-2,000/month",
+        features: ["Event tracking", "Basic analytics", "Standard support"]
       }
     ],
     roiBreakdown: {
-      timeframe: "12-18 months",
-      savings: "Prevent security breaches worth millions",
-      efficiency: "Reduce security incidents by 90%",
-      additionalBenefits: "Future-proof protection, compliance automation"
+      timeframe: "4-8 months",
+      savings: "Increase customer satisfaction by 35%",
+      efficiency: "Improve conversion rates by 45%",
+      additionalBenefits: "Reduce customer churn, enhance loyalty"
     },
     contactInfo: {
       phone: "+1 302 464 0950",
@@ -229,90 +230,91 @@ export const COMPREHENSIVE_PRICING_GUIDE: ServicePricing[] = [
     }
   },
 
+  // AI-Powered Marketing Automation Platform
   {
-    id: "ai-autonomous-research-assistant-platform",
-    title: "AI Autonomous Research Assistant Platform",
-    description: "Advanced autonomous research platform that independently conducts comprehensive research, analyzes data, generates insights, and produces research reports across multiple domains without human supervision.",
-    category: "AI & Research",
-    basePrice: 3499,
+    id: "ai-marketing-automation-platform",
+    title: "AI-Powered Marketing Automation & Campaign Optimization Platform",
+    description: "Intelligent marketing automation platform that uses AI to optimize campaigns, personalize content, and maximize marketing ROI through predictive analytics and automation.",
+    category: "AI & Marketing",
+    basePrice: 799,
     currency: "$",
     pricingTiers: [
       {
-        name: "Academic",
+        name: "Starter",
+        price: 799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Up to 10,000 contacts",
+          "Basic automation",
+          "Email marketing",
+          "Standard analytics",
+          "Email support"
+        ],
+        bestFor: "Small businesses starting with marketing automation"
+      },
+      {
+        name: "Professional",
+        price: 1699,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Up to 100,000 contacts",
+          "Advanced automation",
+          "Multi-channel marketing",
+          "AI optimization",
+          "Priority support",
+          "Advanced analytics",
+          "A/B testing"
+        ],
+        bestFor: "Growing businesses with marketing automation needs",
+        popular: true
+      },
+      {
+        name: "Enterprise",
         price: 3499,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Basic research automation",
-          "Academic databases access",
-          "Standard report generation",
-          "Email support",
-          "Basic analytics"
-        ],
-        bestFor: "Universities and research institutions"
-      },
-      {
-        name: "Professional",
-        price: 5999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced research automation",
-          "Multiple domain support",
-          "Custom research methodologies",
-          "Priority support",
-          "Advanced analytics",
-          "Collaboration tools",
-          "API access"
-        ],
-        bestFor: "Consulting firms and research companies",
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 9999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full research autonomy",
-          "All domains and sources",
+          "Unlimited contacts",
+          "Full AI automation",
+          "Advanced optimization",
+          "24/7 dedicated support",
           "Custom AI models",
-          "Dedicated support",
           "White-label options",
-          "Advanced security",
-          "Compliance features"
+          "Advanced security"
         ],
-        bestFor: "Large research organizations and corporations"
+        bestFor: "Large enterprises requiring advanced marketing automation"
       }
     ],
-    marketPrice: "$3,499 - $12,000/month",
-    roi: "250-400%",
-    implementationTime: "6-8 weeks",
+    marketPrice: "$799 - $3,499/month",
+    roi: "400-600%",
+    implementationTime: "3-4 weeks",
     trainingRequired: "2-3 days",
-    supportLevel: "enterprise",
-    competitors: ["Iris.ai", "Semantic Scholar", "ResearchGate", "Mendeley"],
+    supportLevel: "Professional",
+    competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
     competitorPricing: [
       {
-        name: "Iris.ai",
-        price: "$500 - $2,000/month",
-        features: ["Research discovery", "Basic AI", "Limited domains"]
+        name: "HubSpot",
+        price: "$45-3,200/month",
+        features: ["Marketing automation", "Basic AI", "Standard support"]
       },
       {
-        name: "Semantic Scholar",
-        price: "Free - $1,000/month",
-        features: ["Academic search", "Basic analytics", "Open access"]
+        name: "Marketo",
+        price: "$1,250-2,000/month",
+        features: ["Enterprise automation", "Basic AI", "Standard support"]
       },
       {
-        name: "ResearchGate",
-        price: "Free - $500/month",
-        features: ["Academic networking", "Basic tools", "Community features"]
+        name: "Pardot",
+        price: "$1,250-2,000/month",
+        features: ["B2B automation", "Basic AI", "Standard support"]
       }
     ],
     roiBreakdown: {
-      timeframe: "3-6 months",
-      savings: "Reduce research costs by 70%",
-      efficiency: "Accelerate research by 10x",
-      additionalBenefits: "24/7 autonomous operation, eliminate human bias"
+      timeframe: "6-10 months",
+      savings: "Increase marketing ROI by 60%",
+      efficiency: "Improve campaign performance by 45%",
+      additionalBenefits: "Reduce manual work, enhance engagement"
     },
     contactInfo: {
       phone: "+1 302 464 0950",
@@ -322,91 +324,91 @@ export const COMPREHENSIVE_PRICING_GUIDE: ServicePricing[] = [
     }
   },
 
+  // AI-Powered Sales Intelligence Platform
   {
-    id: "ai-financial-trading-risk-management-platform",
-    title: "AI Financial Trading Risk Management Platform",
-    description: "Intelligent financial trading platform that uses advanced AI to analyze market data, predict trends, manage risk, and execute trades with sophisticated risk management algorithms.",
-    category: "AI & Finance",
-    basePrice: 5999,
+    id: "ai-sales-intelligence-platform",
+    title: "AI-Powered Sales Intelligence & Lead Generation Platform",
+    description: "Advanced sales intelligence platform that uses AI to identify prospects, predict sales opportunities, and optimize sales processes for maximum revenue generation.",
+    category: "AI & Sales",
+    basePrice: 649,
     currency: "$",
     pricingTiers: [
       {
-        name: "Professional",
-        price: 5999,
+        name: "Starter",
+        price: 649,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "AI market analysis",
-          "Basic risk management",
-          "Standard trading tools",
+          "Up to 5 sales users",
+          "Basic lead scoring",
+          "Standard analytics",
           "Email support",
-          "Basic reporting"
+          "Basic integrations"
         ],
-        bestFor: "Individual traders and small funds"
+        bestFor: "Small sales teams starting with AI intelligence"
       },
       {
-        name: "Institutional",
-        price: 9999,
+        name: "Professional",
+        price: 1399,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Advanced AI algorithms",
-          "Comprehensive risk management",
-          "Multi-asset support",
+          "Up to 25 sales users",
+          "Advanced lead scoring",
+          "Predictive analytics",
           "Priority support",
-          "Advanced analytics",
-          "Custom strategies",
-          "API access"
+          "Advanced integrations",
+          "Pipeline analytics",
+          "Revenue forecasting"
         ],
-        bestFor: "Hedge funds and investment firms",
+        bestFor: "Growing sales teams with intelligence needs",
         popular: true
       },
       {
         name: "Enterprise",
-        price: 15999,
+        price: 2999,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Full AI autonomy",
-          "Advanced risk modeling",
-          "All asset classes",
-          "Dedicated support",
+          "Unlimited sales users",
+          "Full AI intelligence",
+          "Advanced analytics",
+          "24/7 dedicated support",
           "Custom AI models",
           "White-label options",
-          "Advanced compliance",
-          "Real-time monitoring"
+          "Advanced security"
         ],
-        bestFor: "Large investment banks and asset managers"
+        bestFor: "Large sales organizations requiring advanced intelligence"
       }
     ],
-    marketPrice: "$5,999 - $18,000/month",
-    roi: "350-500%",
-    implementationTime: "8-10 weeks",
-    trainingRequired: "3-4 days",
-    supportLevel: "enterprise",
-    competitors: ["Bloomberg Terminal", "Thomson Reuters", "FactSet", "Refinitiv"],
+    marketPrice: "$649 - $2,999/month",
+    roi: "450-650%",
+    implementationTime: "2-3 weeks",
+    trainingRequired: "1-2 days",
+    supportLevel: "Professional",
+    competitors: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM"],
     competitorPricing: [
       {
-        name: "Bloomberg Terminal",
-        price: "$24,000/year per terminal",
-        features: ["Market data", "Trading tools", "News and research"]
+        name: "Salesforce",
+        price: "$25-300/user/month",
+        features: ["CRM platform", "Basic AI", "Standard support"]
       },
       {
-        name: "Thomson Reuters",
-        price: "$15,000 - $50,000/year",
-        features: ["Financial data", "Trading platforms", "Risk management"]
+        name: "HubSpot",
+        price: "$45-3,200/month",
+        features: ["CRM platform", "Basic AI", "Standard support"]
       },
       {
-        name: "FactSet",
-        price: "$12,000 - $40,000/year",
-        features: ["Portfolio analytics", "Risk management", "Data feeds"]
+        name: "Pipedrive",
+        price: "$12.50-99/user/month",
+        features: ["Sales CRM", "Basic analytics", "Standard support"]
       }
     ],
     roiBreakdown: {
-      timeframe: "6-12 months",
-      savings: "Improve trading performance by 40%",
-      efficiency: "Reduce risk exposure by 60%",
-      additionalBenefits: "24/7 market monitoring, automated compliance"
+      timeframe: "4-8 months",
+      savings: "Increase sales productivity by 40%",
+      efficiency: "Improve lead conversion by 50%",
+      additionalBenefits: "Reduce sales cycle time, enhance forecasting"
     },
     contactInfo: {
       phone: "+1 302 464 0950",
@@ -416,90 +418,279 @@ export const COMPREHENSIVE_PRICING_GUIDE: ServicePricing[] = [
     }
   },
 
+  // AI-Powered HR & Talent Management Platform
   {
-    id: "ai-healthcare-analytics-platform",
-    title: "AI Healthcare Analytics Platform",
-    description: "Comprehensive healthcare analytics platform that leverages AI to analyze patient data, predict outcomes, optimize treatments, and improve healthcare delivery across all aspects of patient care.",
-    category: "AI & Healthcare",
-    basePrice: 4499,
+    id: "ai-hr-talent-management-platform",
+    title: "AI-Powered HR & Talent Management Platform",
+    description: "Intelligent HR platform that uses AI to streamline recruitment, optimize employee performance, and enhance workforce management through predictive analytics.",
+    category: "AI & HR",
+    basePrice: 549,
     currency: "$",
     pricingTiers: [
       {
-        name: "Clinical",
+        name: "Starter",
+        price: 549,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Up to 100 employees",
+          "Basic AI screening",
+          "Standard analytics",
+          "Email support",
+          "Basic integrations"
+        ],
+        bestFor: "Small companies starting with AI HR"
+      },
+      {
+        name: "Professional",
+        price: 1199,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Up to 500 employees",
+          "Advanced AI screening",
+          "Performance analytics",
+          "Priority support",
+          "Advanced integrations",
+          "Employee engagement",
+          "Workforce planning"
+        ],
+        bestFor: "Growing companies with HR automation needs",
+        popular: true
+      },
+      {
+        name: "Enterprise",
+        price: 2499,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Unlimited employees",
+          "Full AI capabilities",
+          "Advanced analytics",
+          "24/7 dedicated support",
+          "Custom AI models",
+          "White-label options",
+          "Advanced security"
+        ],
+        bestFor: "Large organizations requiring advanced HR AI"
+      }
+    ],
+    marketPrice: "$549 - $2,499/month",
+    roi: "400-600%",
+    implementationTime: "2-3 weeks",
+    trainingRequired: "1-2 days",
+    supportLevel: "Professional",
+    competitors: ["Workday", "BambooHR", "Greenhouse", "Lever"],
+    competitorPricing: [
+      {
+        name: "Workday",
+        price: "$99-200/user/month",
+        features: ["HR platform", "Basic AI", "Standard support"]
+      },
+      {
+        name: "BambooHR",
+        price: "$6.19-8.75/user/month",
+        features: ["HR platform", "Basic analytics", "Standard support"]
+      },
+      {
+        name: "Greenhouse",
+        price: "$500-1,000/month",
+        features: ["ATS platform", "Basic analytics", "Standard support"]
+      }
+    ],
+    roiBreakdown: {
+      timeframe: "6-10 months",
+      savings: "Reduce hiring time by 50%",
+      efficiency: "Improve candidate quality by 40%",
+      additionalBenefits: "Enhance retention, optimize workforce planning"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+
+  // AI-Powered Financial Analytics Platform
+  {
+    id: "ai-financial-analytics-platform",
+    title: "AI-Powered Financial Analytics & Risk Management Platform",
+    description: "Advanced financial analytics platform that uses AI to analyze financial data, predict market trends, and provide comprehensive risk assessment for informed financial decisions.",
+    category: "AI & Finance",
+    basePrice: 999,
+    currency: "$",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 999,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Up to 5 financial users",
+          "Basic AI analytics",
+          "Standard risk assessment",
+          "Email support",
+          "Basic integrations"
+        ],
+        bestFor: "Small financial teams starting with AI analytics"
+      },
+      {
+        name: "Professional",
+        price: 2199,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Up to 25 financial users",
+          "Advanced AI analytics",
+          "Comprehensive risk assessment",
+          "Priority support",
+          "Advanced integrations",
+          "Portfolio optimization",
+          "Fraud detection"
+        ],
+        bestFor: "Growing financial organizations with analytics needs",
+        popular: true
+      },
+      {
+        name: "Enterprise",
         price: 4499,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Basic patient analytics",
-          "Treatment optimization",
-          "Standard reporting",
-          "Email support",
-          "Basic integrations"
+          "Unlimited financial users",
+          "Full AI capabilities",
+          "Advanced risk management",
+          "24/7 dedicated support",
+          "Custom AI models",
+          "White-label options",
+          "Advanced security"
         ],
-        bestFor: "Small clinics and medical practices"
+        bestFor: "Large financial institutions requiring advanced analytics"
+      }
+    ],
+    marketPrice: "$999 - $4,499/month",
+    roi: "350-550%",
+    implementationTime: "4-6 weeks",
+    trainingRequired: "3-4 days",
+    supportLevel: "Enterprise",
+    competitors: ["Bloomberg", "Thomson Reuters", "FactSet", "Refinitiv"],
+    competitorPricing: [
+      {
+        name: "Bloomberg",
+        price: "$2,000-25,000/month",
+        features: ["Financial data", "Basic analytics", "Standard support"]
       },
       {
-        name: "Hospital",
-        price: 7999,
+        name: "Thomson Reuters",
+        price: "$1,500-20,000/month",
+        features: ["Financial data", "Basic analytics", "Standard support"]
+      },
+      {
+        name: "FactSet",
+        price: "$1,200-15,000/month",
+        features: ["Financial data", "Basic analytics", "Standard support"]
+      }
+    ],
+    roiBreakdown: {
+      timeframe: "8-15 months",
+      savings: "Improve investment decisions by 45%",
+      efficiency: "Reduce financial risks by 35%",
+      additionalBenefits: "Enhance compliance, optimize portfolio performance"
+    },
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  },
+
+  // AI-Powered Healthcare Analytics Platform
+  {
+    id: "ai-healthcare-analytics-platform",
+    title: "AI-Powered Healthcare Analytics & Clinical Decision Support Platform",
+    description: "Revolutionary healthcare analytics platform that uses AI to analyze patient data, predict health outcomes, and provide clinical decision support for improved patient care.",
+    category: "AI & Healthcare",
+    basePrice: 1299,
+    currency: "$",
+    pricingTiers: [
+      {
+        name: "Starter",
+        price: 1299,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Advanced patient analytics",
-          "Population health management",
-          "Clinical decision support",
-          "Priority support",
-          "Full EHR integrations",
-          "Custom analytics",
-          "Compliance tools"
+          "Up to 100 healthcare users",
+          "Basic AI analytics",
+          "Standard clinical support",
+          "Email support",
+          "Basic integrations"
         ],
-        bestFor: "Hospitals and healthcare systems",
+        bestFor: "Small healthcare practices starting with AI analytics"
+      },
+      {
+        name: "Professional",
+        price: 2799,
+        currency: "$",
+        billingCycle: "monthly",
+        features: [
+          "Up to 500 healthcare users",
+          "Advanced AI analytics",
+          "Comprehensive clinical support",
+          "Priority support",
+          "Advanced integrations",
+          "Population health management",
+          "Treatment optimization"
+        ],
+        bestFor: "Growing healthcare organizations with analytics needs",
         popular: true
       },
       {
         name: "Enterprise",
-        price: 12999,
+        price: 5499,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Full AI healthcare suite",
-          "Multi-site management",
+          "Unlimited healthcare users",
+          "Full AI capabilities",
+          "Advanced clinical support",
+          "24/7 dedicated support",
           "Custom AI models",
-          "Dedicated support",
-          "Advanced security",
           "White-label options",
-          "Research capabilities"
+          "Advanced security"
         ],
-        bestFor: "Large healthcare networks and research institutions"
+        bestFor: "Large healthcare systems requiring advanced analytics"
       }
     ],
-    marketPrice: "$4,499 - $15,000/month",
-    roi: "300-450%",
-    implementationTime: "10-12 weeks",
-    trainingRequired: "3-5 days",
-    supportLevel: "enterprise",
-    competitors: ["Epic", "Cerner", "Allscripts", "Practice Fusion"],
+    marketPrice: "$1,299 - $5,499/month",
+    roi: "300-500%",
+    implementationTime: "6-8 weeks",
+    trainingRequired: "4-5 days",
+    supportLevel: "Enterprise",
+    competitors: ["Epic", "Cerner", "Allscripts", "Athenahealth"],
     competitorPricing: [
       {
         name: "Epic",
-        price: "$1,200 - $2,400/bed/month",
-        features: ["EHR system", "Basic analytics", "Standard support"]
+        price: "$1,200-2,500/user/month",
+        features: ["EHR platform", "Basic analytics", "Standard support"]
       },
       {
         name: "Cerner",
-        price: "$800 - $1,800/bed/month",
-        features: ["EHR platform", "Some analytics", "Professional support"]
+        price: "$1,000-2,000/user/month",
+        features: ["EHR platform", "Basic analytics", "Standard support"]
       },
       {
         name: "Allscripts",
-        price: "$500 - $1,200/bed/month",
-        features: ["EHR solution", "Basic reporting", "Standard support"]
+        price: "$800-1,800/user/month",
+        features: ["EHR platform", "Basic analytics", "Standard support"]
       }
     ],
     roiBreakdown: {
       timeframe: "12-18 months",
       savings: "Improve patient outcomes by 35%",
       efficiency: "Reduce healthcare costs by 25%",
-      additionalBenefits: "Enhanced diagnostic accuracy, optimized treatment plans"
+      additionalBenefits: "Optimize treatment plans, enhance clinical decision making"
     },
     contactInfo: {
       phone: "+1 302 464 0950",
@@ -509,462 +700,91 @@ export const COMPREHENSIVE_PRICING_GUIDE: ServicePricing[] = [
     }
   },
 
+  // AI-Powered Supply Chain Intelligence Platform
   {
-    id: "ai-supply-chain-optimization-platform",
-    title: "AI Supply Chain Optimization Platform",
-    description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, manage logistics, and streamline operations across the entire supply chain network.",
+    id: "ai-supply-chain-intelligence-platform",
+    title: "AI-Powered Supply Chain Intelligence & Optimization Platform",
+    description: "Intelligent supply chain platform that uses AI to optimize operations, predict demand, manage inventory, and streamline logistics for maximum efficiency and cost savings.",
     category: "AI & Supply Chain",
-    basePrice: 3999,
-    currency: "$",
-    pricingTiers: [
-      {
-        name: "Basic",
-        price: 3999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic demand forecasting",
-          "Inventory optimization",
-          "Standard reporting",
-          "Email support",
-          "Core integrations"
-        ],
-        bestFor: "Small manufacturers and retailers"
-      },
-      {
-        name: "Advanced",
-        price: 6999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced AI forecasting",
-          "Full supply chain optimization",
-          "Real-time tracking",
-          "Priority support",
-          "Advanced analytics",
-          "Custom workflows",
-          "Multi-location support"
-        ],
-        bestFor: "Medium-sized companies with complex supply chains",
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 11999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full AI supply chain suite",
-          "Global optimization",
-          "Custom AI models",
-          "Dedicated support",
-          "Advanced security",
-          "White-label options",
-          "Compliance automation"
-        ],
-        bestFor: "Large multinational corporations"
-      }
-    ],
-    marketPrice: "$3,999 - $12,000/month",
-    roi: "250-400%",
-    implementationTime: "8-10 weeks",
-    trainingRequired: "2-3 days",
-    supportLevel: "enterprise",
-    competitors: ["SAP", "Oracle", "Microsoft Dynamics", "Blue Yonder"],
-    competitorPricing: [
-      {
-        name: "SAP",
-        price: "$50,000 - $500,000/year",
-        features: ["ERP system", "Supply chain modules", "Enterprise features"]
-      },
-      {
-        name: "Oracle",
-        price: "$30,000 - $300,000/year",
-        features: ["ERP platform", "SCM tools", "Professional support"]
-      },
-      {
-        name: "Microsoft Dynamics",
-        price: "$20,000 - $200,000/year",
-        features: ["ERP solution", "Basic SCM", "Standard support"]
-      }
-    ],
-    roiBreakdown: {
-      timeframe: "6-12 months",
-      savings: "Reduce inventory costs by 30%",
-      efficiency: "Improve delivery times by 25%",
-      additionalBenefits: "Optimize supply chain efficiency, reduce waste"
-    },
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-
-  {
-    id: "ai-customer-experience-analytics-platform",
-    title: "AI Customer Experience Analytics Platform",
-    description: "Advanced customer experience platform that uses AI to analyze customer behavior, predict needs, personalize interactions, and optimize customer journeys across all touchpoints.",
-    category: "AI & Customer Experience",
-    basePrice: 2999,
+    basePrice: 799,
     currency: "$",
     pricingTiers: [
       {
         name: "Starter",
-        price: 2999,
+        price: 799,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Basic customer analytics",
-          "Simple personalization",
-          "Standard reporting",
+          "Up to 5 supply chain users",
+          "Basic AI optimization",
+          "Standard analytics",
           "Email support",
-          "Core integrations"
+          "Basic integrations"
         ],
-        bestFor: "Small e-commerce businesses"
-      },
-      {
-        name: "Growth",
-        price: 4999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced customer analytics",
-          "AI-powered personalization",
-          "Customer journey mapping",
-          "Priority support",
-          "Advanced analytics",
-          "Custom dashboards",
-          "API access"
-        ],
-        bestFor: "Growing businesses with customer focus",
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 8999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full CX AI suite",
-          "Custom AI models",
-          "Advanced personalization",
-          "Dedicated support",
-          "White-label options",
-          "Advanced security",
-          "Compliance features"
-        ],
-        bestFor: "Large companies with complex customer needs"
-      }
-    ],
-    marketPrice: "$2,999 - $9,000/month",
-    roi: "200-350%",
-    implementationTime: "6-8 weeks",
-    trainingRequired: "2-3 days",
-    supportLevel: "enterprise",
-    competitors: ["Segment", "Mixpanel", "Amplitude", "Hotjar"],
-    competitorPricing: [
-      {
-        name: "Segment",
-        price: "$120 - $1,200/month",
-        features: ["Customer data platform", "Basic analytics", "Standard support"]
-      },
-      {
-        name: "Mixpanel",
-        price: "$25 - $1,000/month",
-        features: ["Event analytics", "User behavior", "Basic personalization"]
-      },
-      {
-        name: "Amplitude",
-        price: "$995 - $5,000/month",
-        features: ["Product analytics", "User insights", "Professional support"]
-      }
-    ],
-    roiBreakdown: {
-      timeframe: "3-6 months",
-      savings: "Increase customer satisfaction by 40%",
-      efficiency: "Reduce churn by 30%",
-      additionalBenefits: "Improve conversion rates, enhance customer loyalty"
-    },
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-
-  {
-    id: "ai-project-management-platform",
-    title: "AI Project Management Platform",
-    description: "Intelligent project management platform that uses AI to automate task allocation, predict project timelines, identify risks, and optimize resource utilization for maximum project success.",
-    category: "AI & Project Management",
-    basePrice: 2499,
-    currency: "$",
-    pricingTiers: [
-      {
-        name: "Team",
-        price: 2499,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic AI task allocation",
-          "Project timeline prediction",
-          "Standard reporting",
-          "Email support",
-          "Core integrations"
-        ],
-        bestFor: "Small teams and startups"
+        bestFor: "Small companies starting with supply chain AI"
       },
       {
         name: "Professional",
-        price: 4499,
+        price: 1699,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Advanced AI project management",
-          "Risk identification",
-          "Resource optimization",
+          "Up to 25 supply chain users",
+          "Advanced AI optimization",
+          "Comprehensive analytics",
           "Priority support",
-          "Advanced analytics",
-          "Custom workflows",
-          "API access"
+          "Advanced integrations",
+          "Demand forecasting",
+          "Inventory optimization"
         ],
-        bestFor: "Growing companies with multiple projects",
+        bestFor: "Growing companies with supply chain optimization needs",
         popular: true
       },
       {
         name: "Enterprise",
-        price: 7999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full AI project suite",
-          "Custom AI models",
-          "Advanced risk management",
-          "Dedicated support",
-          "White-label options",
-          "Advanced security",
-          "Compliance features"
-        ],
-        bestFor: "Large organizations with complex projects"
-      }
-    ],
-    marketPrice: "$2,499 - $8,000/month",
-    roi: "200-300%",
-    implementationTime: "6-8 weeks",
-    trainingRequired: "2-3 days",
-    supportLevel: "enterprise",
-    competitors: ["Asana", "Monday.com", "ClickUp", "Notion"],
-    competitorPricing: [
-      {
-        name: "Asana",
-        price: "$10.99 - $24.99/user/month",
-        features: ["Task management", "Basic reporting", "Standard support"]
-      },
-      {
-        name: "Monday.com",
-        price: "$8 - $16/user/month",
-        features: ["Project management", "Visual workflows", "Basic analytics"]
-      },
-      {
-        name: "ClickUp",
-        price: "$5 - $12/user/month",
-        features: ["All-in-one platform", "Basic AI", "Standard support"]
-      }
-    ],
-    roiBreakdown: {
-      timeframe: "3-6 months",
-      savings: "Improve project success rate by 50%",
-      efficiency: "Reduce project delays by 40%",
-      additionalBenefits: "Optimize resource utilization, enhance team collaboration"
-    },
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-
-  {
-    id: "ai-marketing-automation-platform",
-    title: "AI Marketing Automation Platform",
-    description: "Advanced marketing automation platform that uses AI to personalize campaigns, optimize content, predict customer behavior, and automate marketing workflows for maximum engagement and conversion.",
-    category: "AI & Marketing",
-    basePrice: 1999,
-    currency: "$",
-    pricingTiers: [
-      {
-        name: "Starter",
-        price: 1999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic AI personalization",
-          "Campaign automation",
-          "Standard reporting",
-          "Email support",
-          "Core integrations"
-        ],
-        bestFor: "Small businesses starting automation"
-      },
-      {
-        name: "Professional",
-        price: 3999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced AI marketing",
-          "Multi-channel automation",
-          "Predictive analytics",
-          "Priority support",
-          "Advanced analytics",
-          "Custom campaigns",
-          "API access"
-        ],
-        bestFor: "Growing businesses with marketing focus",
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 6999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full AI marketing suite",
-          "Custom AI models",
-          "Advanced personalization",
-          "Dedicated support",
-          "White-label options",
-          "Advanced security",
-          "Compliance features"
-        ],
-        bestFor: "Large companies with complex marketing needs"
-      }
-    ],
-    marketPrice: "$1,999 - $6,000/month",
-    roi: "150-300%",
-    implementationTime: "6-8 weeks",
-    trainingRequired: "2-3 days",
-    supportLevel: "enterprise",
-    competitors: ["HubSpot", "Marketo", "Pardot", "ActiveCampaign"],
-    competitorPricing: [
-      {
-        name: "HubSpot",
-        price: "$45 - $3,200/month",
-        features: ["Marketing automation", "CRM integration", "Basic AI"]
-      },
-      {
-        name: "Marketo",
-        price: "$800 - $2,000/month",
-        features: ["Marketing automation", "Advanced analytics", "Professional support"]
-      },
-      {
-        name: "Pardot",
-        price: "$1,250 - $15,000/month",
-        features: ["B2B marketing", "Lead management", "Enterprise features"]
-      }
-    ],
-    roiBreakdown: {
-      timeframe: "3-6 months",
-      savings: "Increase conversion rates by 35%",
-      efficiency: "Reduce marketing costs by 25%",
-      additionalBenefits: "Improve customer engagement, automate repetitive tasks"
-    },
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-
-  {
-    id: "ai-workflow-orchestrator",
-    title: "AI Workflow Orchestrator",
-    description: "Intelligent workflow orchestration platform that uses AI to automate, optimize, and orchestrate complex business workflows across multiple systems and departments.",
-    category: "AI & Automation",
-    basePrice: 3499,
-    currency: "$",
-    pricingTiers: [
-      {
-        name: "Basic",
         price: 3499,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Basic workflow automation",
-          "Standard integrations",
-          "Simple reporting",
-          "Email support",
-          "Core features"
-        ],
-        bestFor: "Small businesses with simple workflows"
-      },
-      {
-        name: "Advanced",
-        price: 5999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced workflow orchestration",
-          "Multi-system integration",
-          "AI optimization",
-          "Priority support",
-          "Advanced analytics",
-          "Custom workflows",
-          "API access"
-        ],
-        bestFor: "Medium companies with complex workflows",
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 9999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full AI workflow suite",
+          "Unlimited supply chain users",
+          "Full AI capabilities",
+          "Advanced optimization",
+          "24/7 dedicated support",
           "Custom AI models",
-          "Advanced orchestration",
-          "Dedicated support",
           "White-label options",
-          "Advanced security",
-          "Compliance features"
+          "Advanced security"
         ],
-        bestFor: "Large enterprises with complex operations"
+        bestFor: "Large organizations requiring advanced supply chain AI"
       }
     ],
-    marketPrice: "$3,499 - $12,000/month",
-    roi: "250-400%",
-    implementationTime: "8-10 weeks",
-    trainingRequired: "3-4 days",
-    supportLevel: "enterprise",
-    competitors: ["Apache Airflow", "Prefect", "Dagster", "n8n"],
+    marketPrice: "$799 - $3,499/month",
+    roi: "400-600%",
+    implementationTime: "4-6 weeks",
+    trainingRequired: "2-3 days",
+    supportLevel: "Professional",
+    competitors: ["SAP", "Oracle", "Manhattan Associates", "JDA Software"],
     competitorPricing: [
       {
-        name: "Apache Airflow",
-        price: "Free - $500/month",
-        features: ["Open source", "Basic orchestration", "Community support"]
+        name: "SAP",
+        price: "$2,000-5,000/month",
+        features: ["ERP platform", "Basic analytics", "Standard support"]
       },
       {
-        name: "Prefect",
-        price: "$50 - $500/month",
-        features: ["Workflow automation", "Basic AI", "Professional support"]
+        name: "Oracle",
+        price: "$1,800-4,500/month",
+        features: ["ERP platform", "Basic analytics", "Standard support"]
       },
       {
-        name: "n8n",
-        price: "Free - $200/month",
-        features: ["Visual workflows", "Basic automation", "Standard support"]
+        name: "Manhattan Associates",
+        price: "$1,500-4,000/month",
+        features: ["SCM platform", "Basic analytics", "Standard support"]
       }
     ],
     roiBreakdown: {
-      timeframe: "6-12 months",
-      savings: "Reduce workflow processing time by 70%",
-      efficiency: "Eliminate manual errors",
-      additionalBenefits: "Improve operational efficiency, enhance system integration"
+      timeframe: "8-12 months",
+      savings: "Reduce supply chain costs by 30%",
+      efficiency: "Improve inventory turnover by 40%",
+      additionalBenefits: "Optimize delivery routes, reduce lead times"
     },
     contactInfo: {
       phone: "+1 302 464 0950",
@@ -974,183 +794,91 @@ export const COMPREHENSIVE_PRICING_GUIDE: ServicePricing[] = [
     }
   },
 
+  // AI-Powered Cybersecurity Intelligence Platform
   {
-    id: "ai-predictive-maintenance-platform",
-    title: "AI Predictive Maintenance Platform",
-    description: "Intelligent predictive maintenance platform that uses AI and IoT sensors to predict equipment failures, optimize maintenance schedules, and reduce downtime in industrial and manufacturing environments.",
-    category: "AI & IoT",
-    basePrice: 3999,
+    id: "ai-cybersecurity-intelligence-platform",
+    title: "AI-Powered Cybersecurity Intelligence & Threat Prevention Platform",
+    description: "Advanced cybersecurity platform that uses AI to detect threats, analyze security patterns, predict attacks, and provide autonomous threat response and prevention.",
+    category: "AI & Cybersecurity",
+    basePrice: 899,
     currency: "$",
     pricingTiers: [
       {
-        name: "Basic",
-        price: 3999,
+        name: "Starter",
+        price: 899,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Basic failure prediction",
-          "Standard monitoring",
-          "Simple reporting",
+          "Up to 100 endpoints",
+          "Basic AI threat detection",
+          "Standard security analytics",
           "Email support",
-          "Core integrations"
+          "Basic integrations"
         ],
-        bestFor: "Small manufacturing facilities"
-      },
-      {
-        name: "Advanced",
-        price: 6999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Advanced AI prediction",
-          "IoT sensor integration",
-          "Maintenance optimization",
-          "Priority support",
-          "Advanced analytics",
-          "Custom alerts",
-          "Mobile access"
-        ],
-        bestFor: "Medium manufacturing companies",
-        popular: true
-      },
-      {
-        name: "Enterprise",
-        price: 11999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Full AI maintenance suite",
-          "Custom AI models",
-          "Advanced IoT integration",
-          "Dedicated support",
-          "White-label options",
-          "Advanced security",
-          "Compliance features"
-        ],
-        bestFor: "Large industrial facilities and manufacturers"
-      }
-    ],
-    marketPrice: "$3,999 - $15,000/month",
-    roi: "300-500%",
-    implementationTime: "8-10 weeks",
-    trainingRequired: "3-4 days",
-    supportLevel: "enterprise",
-    competitors: ["IBM Maximo", "SAP PM", "Oracle EAM", "Infor EAM"],
-    competitorPricing: [
-      {
-        name: "IBM Maximo",
-        price: "$100 - $200/user/month",
-        features: ["EAM system", "Basic maintenance", "Professional support"]
-      },
-      {
-        name: "SAP PM",
-        price: "$50 - $150/user/month",
-        features: ["Plant maintenance", "Basic analytics", "Enterprise support"]
-      },
-      {
-        name: "Oracle EAM",
-        price: "$75 - $175/user/month",
-        features: ["Asset management", "Maintenance tools", "Professional support"]
-      }
-    ],
-    roiBreakdown: {
-      timeframe: "6-12 months",
-      savings: "Reduce unplanned downtime by 50%",
-      efficiency: "Lower maintenance costs by 30%",
-      additionalBenefits: "Extend equipment lifespan, improve safety"
-    },
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    }
-  },
-
-  {
-    id: "ai-hr-platform",
-    title: "AI HR Platform",
-    description: "Comprehensive HR platform that uses AI to automate recruitment, optimize employee performance, predict turnover, and enhance the overall employee experience.",
-    category: "AI & HR",
-    basePrice: 1999,
-    currency: "$",
-    pricingTiers: [
-      {
-        name: "Basic",
-        price: 1999,
-        currency: "$",
-        billingCycle: "monthly",
-        features: [
-          "Basic AI recruitment",
-          "Simple performance tracking",
-          "Standard reporting",
-          "Email support",
-          "Core HR features"
-        ],
-        bestFor: "Small companies and startups"
+        bestFor: "Small organizations starting with AI cybersecurity"
       },
       {
         name: "Professional",
-        price: 3999,
+        price: 1899,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Advanced AI HR suite",
-          "Performance optimization",
-          "Turnover prediction",
+          "Up to 1000 endpoints",
+          "Advanced AI threat detection",
+          "Comprehensive security analytics",
           "Priority support",
-          "Advanced analytics",
-          "Custom workflows",
-          "API access"
+          "Advanced integrations",
+          "Threat hunting",
+          "Incident response automation"
         ],
-        bestFor: "Growing companies with HR focus",
+        bestFor: "Growing organizations with cybersecurity needs",
         popular: true
       },
       {
         name: "Enterprise",
-        price: 6999,
+        price: 3999,
         currency: "$",
         billingCycle: "monthly",
         features: [
-          "Full AI HR suite",
+          "Unlimited endpoints",
+          "Full AI capabilities",
+          "Advanced security analytics",
+          "24/7 dedicated support",
           "Custom AI models",
-          "Advanced analytics",
-          "Dedicated support",
           "White-label options",
-          "Advanced security",
-          "Compliance features"
+          "Advanced security"
         ],
-        bestFor: "Large organizations with complex HR needs"
+        bestFor: "Large organizations requiring advanced cybersecurity AI"
       }
     ],
-    marketPrice: "$1,999 - $6,000/month",
-    roi: "200-350%",
-    implementationTime: "6-8 weeks",
+    marketPrice: "$899 - $3,999/month",
+    roi: "400-600%",
+    implementationTime: "3-4 weeks",
     trainingRequired: "2-3 days",
-    supportLevel: "enterprise",
-    competitors: ["Workday", "BambooHR", "Greenhouse", "Lever"],
+    supportLevel: "Professional",
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Fortinet"],
     competitorPricing: [
       {
-        name: "Workday",
-        price: "$45 - $100/user/month",
-        features: ["HR management", "Basic AI", "Enterprise features"]
+        name: "CrowdStrike",
+        price: "$8.99-15/user/month",
+        features: ["EDR platform", "Basic AI", "Standard support"]
       },
       {
-        name: "BambooHR",
-        price: "$6.19 - $8.25/user/month",
-        features: ["HR platform", "Basic analytics", "Standard support"]
+        name: "SentinelOne",
+        price: "$6-12/user/month",
+        features: ["EDR platform", "Basic AI", "Standard support"]
       },
       {
-        name: "Greenhouse",
-        price: "$50 - $100/user/month",
-        features: ["Recruitment platform", "Basic AI", "Professional support"]
+        name: "Palo Alto Networks",
+        price: "$5-10/user/month",
+        features: ["Security platform", "Basic AI", "Standard support"]
       }
     ],
     roiBreakdown: {
-      timeframe: "3-6 months",
-      savings: "Reduce hiring time by 60%",
-      efficiency: "Improve employee retention by 40%",
-      additionalBenefits: "Enhance candidate quality, optimize performance management"
+      timeframe: "6-10 months",
+      savings: "Improve threat detection by 70%",
+      efficiency: "Reduce false positives by 60%",
+      additionalBenefits: "Automate incident response, enhance security posture"
     },
     contactInfo: {
       phone: "+1 302 464 0950",

@@ -1,364 +1,631 @@
-import { ProductListing } from "@/types/listings";
+export interface ComprehensiveITService {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  subcategory: string;
+  price: number;
+  currency: string;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  useCases: string[];
+  targetAudience: string[];
+  tags: string[];
+  estimatedDelivery: string;
+  supportLevel: string;
+  marketPrice: string;
+  roi: string;
+  innovationLevel: string;
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+    address: string;
+  };
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+  competitors?: string[];
+  marketSize?: string;
+}
 
-export const COMPREHENSIVE_IT_SERVICES_2025: ProductListing[] = [
+export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [
+  // Cloud Infrastructure & DevOps
   {
-    id: "cloud-migration-automation",
-    title: "Enterprise Cloud Migration & Automation Suite",
-    description: "Comprehensive cloud migration platform that automates the transition to AWS, Azure, and Google Cloud with zero-downtime deployment, cost optimization, and performance monitoring.",
-    category: "Cloud Services",
-    subcategory: "Migration",
-    price: 15999,
-    currency: "$",
-    tags: ["Cloud Migration", "AWS", "Azure", "Google Cloud", "Automation", "Zero Downtime"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/cloud-migration.jpg"],
-    createdAt: "2024-01-15T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 156,
-    featured: true,
-    location: "Global",
-    availability: "8-10 Weeks",
-    aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/cloud-migration",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$15,000-25,000",
-    competitors: ["AWS Migration Hub", "Azure Migrate", "Google Cloud Migrate"],
-    roi: "300% within 12 months",
-    setupTime: "8-10 weeks",
-    integrations: ["AWS Services", "Azure Services", "Google Cloud", "Monitoring Tools", "CI/CD Pipelines"]
-  },
-  {
-    id: "devops-automation-platform",
-    title: "DevOps Automation & CI/CD Platform",
-    description: "Advanced DevOps platform that automates software development, testing, and deployment processes with intelligent pipeline management, automated testing, and continuous integration.",
-    category: "DevOps",
+    id: "cloud-infrastructure-automation",
+    title: "Cloud Infrastructure Automation & Management Platform",
+    description: "Comprehensive cloud infrastructure automation platform that streamlines deployment, scaling, and management across multiple cloud providers with intelligent resource optimization.",
+    category: "Cloud & Infrastructure",
     subcategory: "Automation",
-    price: 8999,
+    price: 899,
     currency: "$",
-    tags: ["DevOps", "CI/CD", "Automation", "Testing", "Deployment", "Pipeline Management"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/devops-automation.jpg"],
-    createdAt: "2024-01-20T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 234,
-    featured: true,
-    location: "Global",
-    availability: "4-6 Weeks",
-    aiScore: 93,
+    pricingModel: "monthly",
+    features: [
+      "Multi-cloud management",
+      "Infrastructure as code",
+      "Auto-scaling",
+      "Cost optimization",
+      "Performance monitoring",
+      "Security compliance",
+      "Disaster recovery",
+      "Backup automation",
+      "Resource tagging",
+      "Cost analytics"
+    ],
+    benefits: [
+      "Reduce cloud costs by 35%",
+      "Improve deployment speed",
+      "Enhance security posture",
+      "Automate compliance",
+      "Optimize resource utilization"
+    ],
+    useCases: [
+      "Cloud migration",
+      "Infrastructure automation",
+      "Cost optimization",
+      "Compliance management",
+      "Disaster recovery"
+    ],
+    targetAudience: [
+      "Enterprise companies",
+      "Tech startups",
+      "DevOps teams",
+      "IT departments",
+      "Cloud architects"
+    ],
+    tags: ["Cloud", "Infrastructure", "Automation", "DevOps", "Cost Optimization"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "premium",
+    marketPrice: "$899 - $2,999/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/devops-automation",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$8,000-15,000",
-    competitors: ["Jenkins", "GitLab CI", "GitHub Actions"],
-    roi: "400% within 8 months",
-    setupTime: "4-6 weeks",
-    integrations: ["GitHub", "GitLab", "Bitbucket", "Docker", "Kubernetes", "AWS", "Azure"]
+    technicalSpecs: {
+      technology: ["Terraform", "Kubernetes", "Docker", "Python", "Go"],
+      integrations: ["AWS", "Azure", "GCP", "GitHub", "GitLab", "Jenkins"],
+      apiEndpoints: 250,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "Zero trust", "Encryption at rest"]
+    },
+    competitors: ["HashiCorp", "Pulumi", "CloudFormation", "Azure ARM"],
+    marketSize: "$45.2 billion by 2025"
   },
+
+  // Cybersecurity & Threat Intelligence
   {
-    id: "cybersecurity-threat-intelligence",
-    title: "Advanced Cybersecurity & Threat Intelligence Platform",
-    description: "Comprehensive cybersecurity platform that provides real-time threat detection, automated incident response, and intelligent security monitoring for enterprise networks and applications.",
+    id: "advanced-cybersecurity-suite",
+    title: "Advanced Cybersecurity Suite & Threat Intelligence Platform",
+    description: "Comprehensive cybersecurity platform that provides advanced threat detection, incident response, security orchestration, and automated threat hunting across all endpoints and networks.",
     category: "Cybersecurity",
     subcategory: "Threat Intelligence",
-    price: 12999,
+    price: 1299,
     currency: "$",
-    tags: ["Cybersecurity", "Threat Detection", "Incident Response", "Security Monitoring", "AI Security"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/cybersecurity-platform.jpg"],
-    createdAt: "2024-01-25T10:00:00.000Z",
-    rating: 4.9,
-    reviewCount: 189,
-    featured: true,
-    location: "Global",
-    availability: "6-8 Weeks",
-    aiScore: 96,
+    pricingModel: "monthly",
+    features: [
+      "Advanced threat detection",
+      "Behavioral analytics",
+      "Incident response automation",
+      "Threat hunting",
+      "Security orchestration",
+      "Compliance reporting",
+      "Vulnerability management",
+      "Security awareness training",
+      "Penetration testing",
+      "Security metrics dashboard"
+    ],
+    benefits: [
+      "Reduce security incidents by 60%",
+      "Improve threat detection accuracy",
+      "Automate incident response",
+      "Ensure compliance",
+      "Reduce security costs"
+    ],
+    useCases: [
+      "Enterprise security",
+      "Compliance management",
+      "Incident response",
+      "Threat hunting",
+      "Security operations"
+    ],
+    targetAudience: [
+      "Large enterprises",
+      "Financial institutions",
+      "Healthcare organizations",
+      "Government agencies",
+      "Educational institutions"
+    ],
+    tags: ["Cybersecurity", "Threat Intelligence", "Incident Response", "Compliance", "Automation"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "enterprise",
+    marketPrice: "$1,299 - $3,999/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/cybersecurity",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$12,000-20,000",
-    competitors: ["CrowdStrike", "SentinelOne", "Carbon Black"],
-    roi: "450% within 10 months",
-    setupTime: "6-8 weeks",
-    integrations: ["SIEM Systems", "EDR Solutions", "Firewall Management", "Cloud Security", "Identity Management"]
+    technicalSpecs: {
+      technology: ["Machine Learning", "AI", "Python", "React", "PostgreSQL"],
+      integrations: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners"],
+      apiEndpoints: 300,
+      uptime: "99.99%",
+      security: ["SOC 2", "ISO 27001", "NIST", "Zero trust"]
+    },
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks", "Fortinet"],
+    marketSize: "$52.8 billion by 2025"
   },
+
+  // Data Analytics & Business Intelligence
   {
-    id: "data-analytics-platform",
+    id: "enterprise-data-analytics-platform",
     title: "Enterprise Data Analytics & Business Intelligence Platform",
-    description: "Powerful data analytics platform that transforms raw data into actionable insights with advanced visualization, predictive analytics, and real-time reporting capabilities.",
-    category: "Data Analytics",
+    description: "Powerful data analytics platform that transforms raw data into actionable insights, enabling data-driven decision making across all business functions.",
+    category: "Data & Analytics",
     subcategory: "Business Intelligence",
-    price: 9999,
+    price: 699,
     currency: "$",
-    tags: ["Data Analytics", "Business Intelligence", "Data Visualization", "Predictive Analytics", "Real-time Reporting"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/data-analytics.jpg"],
-    createdAt: "2024-01-30T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 167,
-    featured: true,
-    location: "Global",
-    availability: "5-7 Weeks",
-    aiScore: 95,
+    pricingModel: "monthly",
+    features: [
+      "Data integration",
+      "Real-time analytics",
+      "Predictive modeling",
+      "Interactive dashboards",
+      "Data visualization",
+      "Report automation",
+      "Data governance",
+      "Self-service analytics",
+      "Mobile access",
+      "API integration"
+    ],
+    benefits: [
+      "Improve decision making by 40%",
+      "Reduce reporting time by 70%",
+      "Increase data accuracy",
+      "Enable self-service analytics",
+      "Drive business growth"
+    ],
+    useCases: [
+      "Business reporting",
+      "Performance monitoring",
+      "Customer analytics",
+      "Financial analysis",
+      "Operational insights"
+    ],
+    targetAudience: [
+      "Business analysts",
+      "Data scientists",
+      "Executives",
+      "Department managers",
+      "Operations teams"
+    ],
+    tags: ["Data Analytics", "Business Intelligence", "Reporting", "Visualization", "Insights"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "professional",
+    marketPrice: "$699 - $1,999/month",
+    roi: "350-550%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/data-analytics",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$9,000-16,000",
-    competitors: ["Tableau", "Power BI", "Qlik"],
-    roi: "350% within 9 months",
-    setupTime: "5-7 weeks",
-    integrations: ["SQL Databases", "NoSQL Databases", "Cloud Storage", "CRM Systems", "ERP Systems"]
+    technicalSpecs: {
+      technology: ["Python", "R", "SQL", "React", "Node.js", "PostgreSQL"],
+      integrations: ["ERP systems", "CRM systems", "Databases", "Cloud platforms", "APIs"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["GDPR", "CCPA", "Data encryption", "Access controls"]
+    },
+    competitors: ["Tableau", "Power BI", "Qlik", "Looker"],
+    marketSize: "$38.9 billion by 2025"
   },
+
+  // Digital Transformation & Process Automation
+  {
+    id: "digital-transformation-automation",
+    title: "Digital Transformation & Process Automation Platform",
+    description: "Comprehensive digital transformation platform that automates business processes, digitizes workflows, and enables organizations to operate more efficiently in the digital age.",
+    category: "Digital Transformation",
+    subcategory: "Process Automation",
+    price: 999,
+    currency: "$",
+    pricingModel: "monthly",
+    features: [
+      "Workflow automation",
+      "Process digitization",
+      "Document management",
+      "Approval workflows",
+      "Integration capabilities",
+      "Mobile access",
+      "Analytics dashboard",
+      "Compliance tracking",
+      "Custom workflows",
+      "API connectivity"
+    ],
+    benefits: [
+      "Reduce process time by 50%",
+      "Improve accuracy by 80%",
+      "Reduce operational costs",
+      "Enhance compliance",
+      "Improve customer experience"
+    ],
+    useCases: [
+      "HR processes",
+      "Finance operations",
+      "Customer service",
+      "Sales processes",
+      "Operations management"
+    ],
+    targetAudience: [
+      "Large organizations",
+      "Government agencies",
+      "Healthcare systems",
+      "Financial institutions",
+      "Manufacturing companies"
+    ],
+    tags: ["Digital Transformation", "Process Automation", "Workflow", "Efficiency", "Innovation"],
+    estimatedDelivery: "4-6 weeks",
+    supportLevel: "premium",
+    marketPrice: "$999 - $2,999/month",
+    roi: "300-500%",
+    innovationLevel: "Advanced",
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    technicalSpecs: {
+      technology: ["RPA", "BPM", "Workflow engines", "React", "Node.js", "PostgreSQL"],
+      integrations: ["ERP systems", "CRM systems", "HR systems", "Financial systems", "Legacy systems"],
+      apiEndpoints: 180,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Data encryption", "Access controls"]
+    },
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism", "Pega"],
+    marketSize: "$41.7 billion by 2025"
+  },
+
+  // Network & Infrastructure Management
   {
     id: "network-infrastructure-management",
-    title: "Network Infrastructure & Management Platform",
-    description: "Comprehensive network management platform that provides network monitoring, optimization, and automation for enterprise networks with intelligent traffic management and security.",
-    category: "Network Infrastructure",
+    title: "Network & Infrastructure Management Platform",
+    description: "Comprehensive network and infrastructure management platform that provides real-time monitoring, optimization, and automation for complex IT environments.",
+    category: "Network & Infrastructure",
     subcategory: "Management",
-    price: 7499,
+    price: 799,
     currency: "$",
-    tags: ["Network Management", "Network Monitoring", "Traffic Optimization", "Network Security", "Automation"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/network-infrastructure.jpg"],
-    createdAt: "2024-02-05T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 145,
-    featured: true,
-    location: "Global",
-    availability: "4-6 Weeks",
-    aiScore: 92,
+    pricingModel: "monthly",
+    features: [
+      "Network monitoring",
+      "Performance optimization",
+      "Traffic analysis",
+      "Bandwidth management",
+      "Security monitoring",
+      "Automated alerts",
+      "Capacity planning",
+      "Network mapping",
+      "Configuration management",
+      "Reporting dashboard"
+    ],
+    benefits: [
+      "Improve network performance by 40%",
+      "Reduce downtime by 60%",
+      "Optimize bandwidth usage",
+      "Enhance security",
+      "Reduce operational costs"
+    ],
+    useCases: [
+      "Network operations",
+      "Infrastructure management",
+      "Performance monitoring",
+      "Capacity planning",
+      "Security monitoring"
+    ],
+    targetAudience: [
+      "Network administrators",
+      "IT operations teams",
+      "System administrators",
+      "Network engineers",
+      "IT managers"
+    ],
+    tags: ["Network", "Infrastructure", "Monitoring", "Performance", "Management"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "professional",
+    marketPrice: "$799 - $2,499/month",
+    roi: "350-550%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/network-infrastructure",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$7,000-12,000",
-    competitors: ["Cisco", "Juniper", "Aruba"],
-    roi: "300% within 8 months",
-    setupTime: "4-6 weeks",
-    integrations: ["Network Devices", "Monitoring Tools", "Security Systems", "Cloud Platforms", "Management Tools"]
+    technicalSpecs: {
+      technology: ["SNMP", "NetFlow", "Python", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Network devices", "Monitoring tools", "Alerting systems", "Ticketing systems"],
+      apiEndpoints: 150,
+      uptime: "99.9%",
+      security: ["SSL", "Data encryption", "Access controls", "Audit logging"]
+    },
+    competitors: ["SolarWinds", "PRTG", "Nagios", "Zabbix"],
+    marketSize: "$35.4 billion by 2025"
   },
+
+  // IT Service Management & Help Desk
   {
-    id: "it-service-management",
+    id: "it-service-management-platform",
     title: "IT Service Management & Help Desk Platform",
-    description: "Comprehensive IT service management platform that streamlines IT operations with ticket management, asset tracking, change management, and automated workflows.",
+    description: "Comprehensive IT service management platform that streamlines help desk operations, incident management, change management, and service delivery.",
     category: "IT Service Management",
     subcategory: "Help Desk",
-    price: 5999,
+    price: 599,
     currency: "$",
-    tags: ["ITSM", "Help Desk", "Ticket Management", "Asset Tracking", "Change Management"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/itsm-platform.jpg"],
-    createdAt: "2024-02-10T10:00:00.000Z",
-    rating: 4.6,
-    reviewCount: 234,
-    featured: true,
-    location: "Global",
-    availability: "3-5 Weeks",
-    aiScore: 90,
+    pricingModel: "monthly",
+    features: [
+      "Ticket management",
+      "Incident tracking",
+      "Change management",
+      "Asset management",
+      "Knowledge base",
+      "Self-service portal",
+      "Reporting analytics",
+      "Workflow automation",
+      "Mobile access",
+      "Integration capabilities"
+    ],
+    benefits: [
+      "Improve response time by 50%",
+      "Reduce ticket volume by 30%",
+      "Enhance user satisfaction",
+      "Streamline processes",
+      "Improve visibility"
+    ],
+    useCases: [
+      "Help desk operations",
+      "IT support",
+      "Service delivery",
+      "Change management",
+      "Asset tracking"
+    ],
+    targetAudience: [
+      "IT support teams",
+      "Service desk managers",
+      "IT managers",
+      "System administrators",
+      "Help desk agents"
+    ],
+    tags: ["ITSM", "Help Desk", "Service Management", "Incident Management", "Change Management"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "professional",
+    marketPrice: "$599 - $1,799/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/itsm-platform",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$5,000-10,000",
-    competitors: ["ServiceNow", "Jira Service Management", "Freshservice"],
-    roi: "250% within 6 months",
-    setupTime: "3-5 weeks",
-    integrations: ["Active Directory", "Email Systems", "Monitoring Tools", "Asset Management", "Knowledge Base"]
+    technicalSpecs: {
+      technology: ["React", "Node.js", "PostgreSQL", "Redis", "WebSocket"],
+      integrations: ["Email systems", "Chat platforms", "Monitoring tools", "Asset management", "Directory services"],
+      apiEndpoints: 120,
+      uptime: "99.9%",
+      security: ["SSL", "Data encryption", "Access controls", "Audit logging"]
+    },
+    competitors: ["ServiceNow", "Jira Service Management", "Freshservice", "Zendesk"],
+    marketSize: "$28.6 billion by 2025"
   },
+
+  // Backup & Disaster Recovery
   {
-    id: "disaster-recovery-platform",
-    title: "Disaster Recovery & Business Continuity Platform",
-    description: "Advanced disaster recovery platform that ensures business continuity with automated backup, replication, and recovery solutions for critical business systems and data.",
-    category: "Disaster Recovery",
-    subcategory: "Business Continuity",
-    price: 11999,
+    id: "backup-disaster-recovery-platform",
+    title: "Backup & Disaster Recovery Platform",
+    description: "Comprehensive backup and disaster recovery platform that ensures business continuity through automated backups, replication, and rapid recovery capabilities.",
+    category: "Data Protection",
+    subcategory: "Backup & Recovery",
+    price: 499,
     currency: "$",
-    tags: ["Disaster Recovery", "Business Continuity", "Backup", "Replication", "Recovery"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/disaster-recovery.jpg"],
-    createdAt: "2024-02-15T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 98,
-    featured: true,
-    location: "Global",
-    availability: "6-8 Weeks",
-    aiScore: 94,
+    pricingModel: "monthly",
+    features: [
+      "Automated backups",
+      "Incremental backup",
+      "Data replication",
+      "Point-in-time recovery",
+      "Disaster recovery testing",
+      "Backup verification",
+      "Compression & deduplication",
+      "Encryption",
+      "Cloud storage",
+      "Recovery automation"
+    ],
+    benefits: [
+      "Reduce recovery time by 80%",
+      "Ensure data protection",
+      "Minimize data loss",
+      "Comply with regulations",
+      "Reduce operational risk"
+    ],
+    useCases: [
+      "Data protection",
+      "Business continuity",
+      "Compliance",
+      "Cloud migration",
+      "Data archiving"
+    ],
+    targetAudience: [
+      "IT administrators",
+      "Data protection officers",
+      "Compliance managers",
+      "Business continuity managers",
+      "System administrators"
+    ],
+    tags: ["Backup", "Disaster Recovery", "Data Protection", "Business Continuity", "Compliance"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "professional",
+    marketPrice: "$499 - $1,499/month",
+    roi: "500-700%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/disaster-recovery",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$11,000-18,000",
-    competitors: ["Veeam", "Zerto", "Commvault"],
-    roi: "400% within 10 months",
-    setupTime: "6-8 weeks",
-    integrations: ["VMware", "Hyper-V", "Cloud Platforms", "Storage Systems", "Monitoring Tools"]
+    technicalSpecs: {
+      technology: ["Backup engines", "Replication", "Compression", "Encryption", "Cloud APIs"],
+      integrations: ["Storage systems", "Cloud platforms", "Virtualization", "Databases", "Applications"],
+      apiEndpoints: 100,
+      uptime: "99.9%",
+      security: ["Encryption at rest", "Encryption in transit", "Access controls", "Audit logging"]
+    },
+    competitors: ["Veeam", "Commvault", "Rubrik", "Cohesity"],
+    marketSize: "$31.2 billion by 2025"
   },
+
+  // Identity & Access Management
   {
-    id: "identity-access-management",
+    id: "identity-access-management-platform",
     title: "Identity & Access Management Platform",
-    description: "Comprehensive identity and access management platform that provides secure authentication, authorization, and user management with single sign-on and multi-factor authentication.",
-    category: "Identity Management",
-    subcategory: "Access Control",
-    price: 8499,
+    description: "Comprehensive identity and access management platform that provides secure authentication, authorization, and user lifecycle management across all systems and applications.",
+    category: "Security",
+    subcategory: "Identity Management",
+    price: 699,
     currency: "$",
-    tags: ["IAM", "Single Sign-On", "Multi-Factor Authentication", "User Management", "Security"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/iam-platform.jpg"],
-    createdAt: "2024-02-20T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 156,
-    featured: true,
-    location: "Global",
-    availability: "5-7 Weeks",
-    aiScore: 93,
+    pricingModel: "monthly",
+    features: [
+      "Single sign-on (SSO)",
+      "Multi-factor authentication",
+      "User provisioning",
+      "Role-based access control",
+      "Password management",
+      "Directory integration",
+      "Compliance reporting",
+      "Audit logging",
+      "Self-service portal",
+      "API security"
+    ],
+    benefits: [
+      "Improve security posture",
+      "Reduce access management overhead",
+      "Enhance user experience",
+      "Ensure compliance",
+      "Reduce security risks"
+    ],
+    useCases: [
+      "User authentication",
+      "Access control",
+      "Compliance management",
+      "Security governance",
+      "User lifecycle management"
+    ],
+    targetAudience: [
+      "Security teams",
+      "IT administrators",
+      "Compliance officers",
+      "HR departments",
+      "System administrators"
+    ],
+    tags: ["Identity Management", "Access Control", "Authentication", "Security", "Compliance"],
+    estimatedDelivery: "3-4 weeks",
+    supportLevel: "professional",
+    marketPrice: "$699 - $2,199/month",
+    roi: "400-600%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/iam-platform",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$8,000-14,000",
-    competitors: ["Okta", "Azure AD", "OneLogin"],
-    roi: "350% within 9 months",
-    setupTime: "5-7 weeks",
-    integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "Cloud Applications"]
+    technicalSpecs: {
+      technology: ["SAML", "OAuth", "OIDC", "LDAP", "React", "Node.js", "PostgreSQL"],
+      integrations: ["Active Directory", "LDAP", "Cloud platforms", "Applications", "SSO providers"],
+      apiEndpoints: 200,
+      uptime: "99.9%",
+      security: ["SOC 2", "ISO 27001", "Encryption", "Access controls"]
+    },
+    competitors: ["Okta", "Azure AD", "OneLogin", "Ping Identity"],
+    marketSize: "$24.8 billion by 2025"
   },
+
+  // API Management & Integration
   {
-    id: "api-management-platform",
+    id: "api-management-integration-platform",
     title: "API Management & Integration Platform",
-    description: "Advanced API management platform that enables organizations to design, deploy, and manage APIs with security, monitoring, and analytics capabilities.",
-    category: "API Management",
-    subcategory: "Integration",
-    price: 6999,
+    description: "Comprehensive API management platform that enables organizations to design, deploy, secure, and monitor APIs while providing seamless integration capabilities.",
+    category: "Integration",
+    subcategory: "API Management",
+    price: 549,
     currency: "$",
-    tags: ["API Management", "API Gateway", "Integration", "Security", "Analytics"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/api-management.jpg"],
-    createdAt: "2024-02-25T10:00:00.000Z",
-    rating: 4.6,
-    reviewCount: 123,
-    featured: true,
-    location: "Global",
-    availability: "4-6 Weeks",
-    aiScore: 91,
+    pricingModel: "monthly",
+    features: [
+      "API design & development",
+      "API gateway",
+      "Rate limiting",
+      "Authentication & authorization",
+      "API documentation",
+      "Developer portal",
+      "Analytics & monitoring",
+      "Version management",
+      "Testing tools",
+      "Integration connectors"
+    ],
+    benefits: [
+      "Accelerate development",
+      "Improve API security",
+      "Enhance developer experience",
+      "Enable digital transformation",
+      "Reduce integration costs"
+    ],
+    useCases: [
+      "API development",
+      "System integration",
+      "Digital transformation",
+      "Microservices architecture",
+      "Third-party integrations"
+    ],
+    targetAudience: [
+      "Developers",
+      "Architects",
+      "DevOps teams",
+      "Integration specialists",
+      "IT managers"
+    ],
+    tags: ["API Management", "Integration", "Microservices", "Developer Experience", "Digital Transformation"],
+    estimatedDelivery: "2-3 weeks",
+    supportLevel: "professional",
+    marketPrice: "$549 - $1,799/month",
+    roi: "450-650%",
+    innovationLevel: "Advanced",
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/api-management",
+      website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    marketPrice: "$6,000-12,000",
-    competitors: ["Apigee", "Kong", "AWS API Gateway"],
-    roi: "300% within 8 months",
-    setupTime: "4-6 weeks",
-    integrations: ["REST APIs", "GraphQL", "SOAP", "OAuth", "JWT", "Cloud Platforms"]
-  },
-  {
-    id: "container-orchestration-platform",
-    title: "Container Orchestration & Kubernetes Management Platform",
-    description: "Enterprise-grade container orchestration platform that simplifies Kubernetes deployment, management, and monitoring with automated scaling and high availability.",
-    category: "Container Management",
-    subcategory: "Orchestration",
-    price: 9999,
-    currency: "$",
-    tags: ["Kubernetes", "Container Orchestration", "Docker", "Microservices", "Automation"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/container-orchestration.jpg"],
-    createdAt: "2024-03-01T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 89,
-    featured: true,
-    location: "Global",
-    availability: "6-8 Weeks",
-    aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/container-orchestration",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
+    technicalSpecs: {
+      technology: ["Kong", "Express", "React", "Node.js", "PostgreSQL", "Redis"],
+      integrations: ["Cloud platforms", "Databases", "Message queues", "Authentication systems", "Monitoring tools"],
+      apiEndpoints: 300,
+      uptime: "99.9%",
+      security: ["OAuth", "JWT", "Rate limiting", "API security"]
     },
-    marketPrice: "$9,000-16,000",
-    competitors: ["OpenShift", "Rancher", "VMware Tanzu"],
-    roi: "400% within 10 months",
-    setupTime: "6-8 weeks",
-    integrations: ["Docker", "Kubernetes", "Helm", "Prometheus", "Grafana", "Cloud Platforms"]
-  },
-  {
-    id: "database-management-platform",
-    title: "Database Management & Optimization Platform",
-    description: "Comprehensive database management platform that provides database administration, performance optimization, backup, and monitoring for multiple database types.",
-    category: "Database Management",
-    subcategory: "Administration",
-    price: 7999,
-    currency: "$",
-    tags: ["Database Management", "Performance Optimization", "Backup", "Monitoring", "Administration"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/database-management.jpg"],
-    createdAt: "2024-03-05T10:00:00.000Z",
-    rating: 4.7,
-    reviewCount: 134,
-    featured: true,
-    location: "Global",
-    availability: "5-7 Weeks",
-    aiScore: 92,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/database-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$7,000-13,000",
-    competitors: ["Oracle Enterprise Manager", "SQL Server Management Studio", "pgAdmin"],
-    roi: "300% within 8 months",
-    setupTime: "5-7 weeks",
-    integrations: ["MySQL", "PostgreSQL", "Oracle", "SQL Server", "MongoDB", "Redis"]
-  },
-  {
-    id: "storage-management-platform",
-    title: "Storage Management & Data Protection Platform",
-    description: "Advanced storage management platform that provides unified storage management, data protection, and optimization for enterprise storage infrastructure.",
-    category: "Storage Management",
-    subcategory: "Data Protection",
-    price: 12999,
-    currency: "$",
-    tags: ["Storage Management", "Data Protection", "Backup", "Optimization", "Unified Management"],
-    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images: ["https://ziontechgroup.com/images/storage-management.jpg"],
-    createdAt: "2024-03-10T10:00:00.000Z",
-    rating: 4.8,
-    reviewCount: 78,
-    featured: true,
-    location: "Global",
-    availability: "7-9 Weeks",
-    aiScore: 93,
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      website: "https://ziontechgroup.com/storage-management",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-    },
-    marketPrice: "$12,000-20,000",
-    competitors: ["NetApp", "EMC", "HPE"],
-    roi: "350% within 10 months",
-    setupTime: "7-9 weeks",
-    integrations: ["SAN", "NAS", "Cloud Storage", "Backup Systems", "Monitoring Tools"]
+    competitors: ["Kong", "Apigee", "Azure API Management", "AWS API Gateway"],
+    marketSize: "$19.6 billion by 2025"
   }
 ];
