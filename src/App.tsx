@@ -446,7 +446,6 @@ function App() {
                     <Route path="/accessibility" element={<ModernLayout><Accessibility /></ModernLayout>} />
                     <Route path="/security" element={<ModernLayout><Security /></ModernLayout>} />
                     <Route path="/compliance" element={<ModernLayout><Compliance /></ModernLayout>} />
-<<<<<<< HEAD
                     <Route path="/sitemap" element={<ModernLayout><Sitemap /></ModernLayout>} />
 
                     {/* New pages we created */}
