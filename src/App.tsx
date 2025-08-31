@@ -69,6 +69,16 @@ const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/s
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations-platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
 
+// New Innovative AI Services 2026
+const AIAutonomousFinancialAdvisor = createLazyComponent(() => import('./pages/services/ai-autonomous-research-assistant'));
+const AICybersecurityThreatIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-intelligence'));
+const AIHealthcareDiagnosticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-diagnostics-platform'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+const AIQuantumComputingAsAServicePlatform = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
+
+// Comprehensive Services Showcase 2026
+const ComprehensiveServicesShowcase2026 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2026'));
+
 // Showcase pages that exist
 const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 const InnovativeServicesHub = createLazyComponent(() => import('./pages/InnovativeServicesHub'));
@@ -158,6 +168,16 @@ function App() {
                     <Route path="/services/ai-enterprise-resource-planning" element={<ModernLayout><AIEnterpriseResourcePlanning /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<ModernLayout><AIAutonomousBusinessOperationsPlatform /></ModernLayout>} />
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<ModernLayout><AICustomerExperienceAnalyticsPlatform /></ModernLayout>} />
+
+                    {/* New Innovative AI Services 2026 Routes */}
+                    <Route path="/services/ai-autonomous-financial-advisor" element={<ModernLayout><AIAutonomousFinancialAdvisor /></ModernLayout>} />
+                    <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<ModernLayout><AICybersecurityThreatIntelligencePlatform /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-diagnostics-platform" element={<ModernLayout><AIHealthcareDiagnosticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-quantum-computing-as-a-service-platform" element={<ModernLayout><AIQuantumComputingAsAServicePlatform /></ModernLayout>} />
+
+                    {/* Comprehensive Services Showcase 2026 */}
+                    <Route path="/comprehensive-services-showcase-2026" element={<ModernLayout><ComprehensiveServicesShowcase2026 /></ModernLayout>} />
 
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-pricing-guide-2025" element={<ModernLayout><ComprehensivePricingGuide2025 /></ModernLayout>} />
