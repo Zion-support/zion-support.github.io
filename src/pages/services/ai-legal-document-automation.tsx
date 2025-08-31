@@ -2,184 +2,155 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
+  FileText, 
+  Scale, 
   Shield, 
-  AlertTriangle, 
-  TrendingUp, 
-  BarChart3, 
-  Globe, 
+  Zap, 
   CheckCircle, 
   ArrowRight, 
   Clock, 
+  DollarSign,
   Users,
-  Zap,
+  BarChart3,
+  Lock,
+  Globe,
   Search,
+  Edit3,
+  Download,
+  Share2,
   Eye,
-  AlertCircle,
-  MapPin,
+  Calendar,
+  AlertTriangle,
+  BookOpen,
+  Gavel,
+  Briefcase,
   Phone,
   Mail,
-  MapPin as MapPinIcon,
-  Truck,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Database,
-  Network,
-  Target,
-  PieChart,
-  LineChart,
-  Bell,
-  Settings,
-  FileText,
-  Calendar,
-  DollarSign,
-  Percent
+  MapPin
 } from 'lucide-react';
 
-export default function AISupplyChainRiskManagement() {
+export default function AILegalDocumentAutomation() {
   const features = [
     {
-      title: "Real-Time Risk Monitoring",
-      description: "24/7 monitoring of supply chain risks with instant alerts and notifications",
-      icon: Eye,
-      benefits: ["Instant risk detection", "Proactive alerts", "Real-time updates", "Automated monitoring"]
+      title: "AI-Powered Document Generation",
+      description: "Generate legal documents in seconds using advanced AI trained on millions of legal cases",
+      icon: FileText,
+      benefits: ["90% faster document creation", "Reduced human error", "Consistent formatting"]
     },
     {
-      title: "AI-Powered Risk Assessment",
-      description: "Advanced AI algorithms analyze multiple risk factors and predict potential disruptions",
-      icon: AlertTriangle,
-      benefits: ["Predictive analytics", "Risk scoring", "Scenario modeling", "Impact assessment"]
+      title: "Smart Contract Analysis",
+      description: "AI-powered contract review with risk assessment and compliance checking",
+      icon: Scale,
+      benefits: ["Instant risk identification", "Compliance verification", "Cost savings up to 70%"]
     },
     {
-      title: "Supply Chain Mapping",
-      description: "Complete visibility into your supply chain network with supplier relationships and dependencies",
-      icon: Network,
-      benefits: ["End-to-end visibility", "Supplier mapping", "Dependency analysis", "Network optimization"]
+      title: "Legal Research Assistant",
+      description: "Advanced legal research with case law analysis and precedent identification",
+      icon: Search,
+      benefits: ["Faster research", "Comprehensive coverage", "Updated case law"]
     },
     {
-      title: "Automated Mitigation Strategies",
-      description: "AI-driven recommendations for risk mitigation and contingency planning",
-      icon: Shield,
-      benefits: ["Automated responses", "Contingency plans", "Mitigation strategies", "Recovery planning"]
+      title: "Document Review & Redlining",
+      description: "Automated document comparison and change tracking with AI insights",
+      icon: Edit3,
+      benefits: ["Accurate change detection", "Version control", "Collaborative editing"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$399",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses with basic supply chain needs",
+      description: "Perfect for small law firms and solo practitioners",
       features: [
-        "Up to 100 suppliers monitored",
-        "Basic risk alerts",
-        "Standard reporting",
+        "Up to 100 documents/month",
+        "Basic AI document generation",
+        "Standard templates",
         "Email support",
-        "Mobile app access",
-        "Basic risk scoring"
+        "Basic compliance checking"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
       name: "Professional",
-      price: "$899",
+      price: "$599",
       period: "/month",
-      description: "Ideal for growing companies with complex supply chains",
+      description: "Ideal for growing law firms and legal departments",
       features: [
-        "Up to 500 suppliers monitored",
-        "Advanced AI risk assessment",
-        "Real-time monitoring",
+        "Up to 500 documents/month",
+        "Advanced AI capabilities",
+        "Custom templates",
         "Priority support",
+        "Full compliance suite",
         "API access",
-        "Custom dashboards",
-        "Team collaboration",
-        "Advanced analytics"
+        "Team collaboration"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,299",
       period: "/month",
-      description: "For large enterprises with global supply chains",
+      description: "For large law firms and corporate legal departments",
       features: [
-        "Unlimited suppliers",
-        "Custom AI models",
+        "Unlimited documents",
+        "Custom AI training",
         "White-label solution",
         "24/7 dedicated support",
-        "Advanced risk modeling",
+        "Advanced analytics",
         "Custom integrations",
         "On-premise deployment",
-        "SLA guarantees",
-        "Multi-site management",
-        "Advanced reporting"
+        "SLA guarantees"
       ],
       popular: false,
       cta: "Contact Sales"
     }
   ];
 
-  const riskTypes = [
+  const useCases = [
     {
-      title: "Supplier Risks",
-      description: "Monitor supplier financial health, performance, and compliance",
-      icon: Factory,
-      risks: ["Financial instability", "Quality issues", "Delivery delays", "Compliance violations"]
+      title: "Contract Management",
+      description: "Automate contract creation, review, and management processes",
+      icon: Briefcase,
+      benefits: ["Standardized templates", "Automated approval workflows", "Risk assessment"]
     },
     {
-      title: "Logistics Risks",
-      description: "Track transportation and delivery risks across all modes",
-      icon: Truck,
-      risks: ["Port congestion", "Weather delays", "Capacity constraints", "Route disruptions"]
+      title: "Legal Research",
+      description: "Accelerate legal research with AI-powered case analysis",
+      icon: BookOpen,
+      benefits: ["Faster research", "Comprehensive coverage", "Precedent identification"]
     },
     {
-      title: "Geopolitical Risks",
-      description: "Monitor political, economic, and regulatory changes",
-      icon: Globe,
-      risks: ["Trade wars", "Sanctions", "Political instability", "Regulatory changes"]
+      title: "Compliance Monitoring",
+      description: "Stay compliant with automated regulatory updates and checks",
+      icon: Shield,
+      benefits: ["Real-time updates", "Automated compliance", "Risk mitigation"]
     },
     {
-      title: "Demand Risks",
-      description: "Predict and manage demand fluctuations and market changes",
-      icon: TrendingUp,
-      risks: ["Demand volatility", "Market shifts", "Seasonal changes", "Competitive pressure"]
+      title: "Document Review",
+      description: "Streamline document review with AI-powered analysis",
+      icon: Eye,
+      benefits: ["Faster review", "Accurate analysis", "Cost reduction"]
     }
   ];
 
-  const transportationModes = [
-    { name: "Ocean Freight", icon: Ship, description: "Container ships and bulk carriers" },
-    { name: "Air Freight", icon: Plane, description: "Cargo planes and express delivery" },
-    { name: "Rail Transport", icon: Train, description: "Freight trains and intermodal" },
-    { name: "Road Transport", icon: Car, description: "Trucks and delivery vehicles" }
-  ];
-
   const stats = [
-    { number: "99.9%", label: "Uptime", icon: Clock },
-    { number: "50+", label: "Countries Monitored", icon: Globe },
-    { number: "10,000+", label: "Suppliers Tracked", icon: Database },
-    { number: "24/7", label: "Monitoring", icon: Eye }
-  ];
-
-  const benefits = [
-    "Reduce supply chain disruptions by 80%",
-    "Cut risk management costs by 60%",
-    "Improve supplier performance by 45%",
-    "Increase supply chain resilience by 70%",
-    "Reduce inventory costs by 30%",
-    "Improve customer satisfaction by 50%"
+    { number: "90%", label: "Faster Document Creation", icon: Clock },
+    { number: "70%", label: "Cost Reduction", icon: DollarSign },
+    { number: "99.9%", label: "Accuracy Rate", icon: CheckCircle },
+    { number: "24/7", label: "AI Availability", icon: Globe }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Supply Chain Risk Management Platform - Zion Tech Group</title>
-        <meta name="description" content="Protect your supply chain with AI-powered risk management. Monitor suppliers, predict disruptions, and automate mitigation strategies with our advanced platform." />
-        <meta name="keywords" content="AI supply chain risk management, supplier monitoring, supply chain visibility, risk assessment AI, disruption prediction" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-supply-chain-risk-management" />
+        <title>AI Legal Document Automation Platform - Zion Tech Group</title>
+        <meta name="description" content="Transform your legal practice with AI-powered document automation. Generate legal documents, analyze contracts, and streamline legal research with our advanced platform." />
+        <meta name="keywords" content="AI legal automation, legal document generation, contract analysis, legal research AI, law firm software" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-legal-document-automation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -195,14 +166,14 @@ export default function AISupplyChainRiskManagement() {
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zinc-800/50 border border-zinc-700/50 text-zinc-300 text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2 text-yellow-400" />
-                AI-Powered Risk Management
+                AI-Powered Legal Solutions
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                AI Supply Chain <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Risk Management</span>
+                AI Legal Document <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Automation</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Protect your supply chain with AI-powered risk management. Monitor suppliers in real-time, predict disruptions, 
-                and automate mitigation strategies. Reduce supply chain disruptions by 80% and cut risk management costs by 60%.
+                Transform your legal practice with cutting-edge AI technology. Generate documents, analyze contracts, 
+                and conduct legal research in minutes, not hours. Reduce costs by 70% while improving accuracy and efficiency.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -262,7 +233,7 @@ export default function AISupplyChainRiskManagement() {
                 Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform provides comprehensive supply chain risk management with real-time monitoring and predictive analytics.
+                Our AI platform combines cutting-edge technology with legal expertise to deliver unmatched efficiency and accuracy.
               </p>
             </motion.div>
 
@@ -298,7 +269,7 @@ export default function AISupplyChainRiskManagement() {
           </div>
         </section>
 
-        {/* Risk Types Section */}
+        {/* Use Cases Section */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -309,17 +280,17 @@ export default function AISupplyChainRiskManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Risk <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Categories</span>
+                Legal <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Use Cases</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive coverage of all major supply chain risk categories with AI-powered monitoring and assessment.
+                Discover how our AI platform transforms various aspects of legal practice and operations.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {riskTypes.map((riskType, index) => (
+              {useCases.map((useCase, index) => (
                 <motion.div
-                  key={riskType.title}
+                  key={useCase.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -328,97 +299,20 @@ export default function AISupplyChainRiskManagement() {
                 >
                   <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center">
-                      <riskType.icon className="w-8 h-8 text-white" />
+                      <useCase.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{riskType.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{riskType.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{useCase.description}</p>
                   
                   <div className="space-y-2">
-                    {riskType.risks.map((risk, idx) => (
+                    {useCase.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
-                        <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{risk}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{benefit}</span>
                       </div>
                     ))}
                   </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Transportation Modes Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transportation Modes Covered
-              </h2>
-              <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-                Monitor risks across all major transportation modes and logistics networks.
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {transportationModes.map((mode, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zinc-800/30 border border-zinc-700/30 rounded-lg p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="flex justify-center mb-4">
-                    <mode.icon className="w-12 h-12 text-blue-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{mode.name}</h3>
-                  <p className="text-sm text-zinc-400">{mode.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-black/20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our Platform?
-              </h2>
-              <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-                Proven results and measurable impact across all our risk management solutions.
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zinc-800/30 border border-zinc-700/30 rounded-lg p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                  <p className="text-zinc-300 font-medium">{benefit}</p>
                 </motion.div>
               ))}
             </div>
@@ -439,7 +333,7 @@ export default function AISupplyChainRiskManagement() {
                 Simple <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that best fits your supply chain risk management needs. All plans include a 14-day free trial.
+                Choose the plan that best fits your legal practice needs. All plans include a 14-day free trial.
               </p>
             </motion.div>
 
@@ -510,10 +404,10 @@ export default function AISupplyChainRiskManagement() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Protect Your Supply Chain?
+                Ready to Transform Your Legal Practice?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Join thousands of companies who have already revolutionized their supply chain risk management with AI-powered solutions.
+                Join thousands of legal professionals who have already revolutionized their practice with AI-powered automation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -543,7 +437,7 @@ export default function AISupplyChainRiskManagement() {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6">Get in Touch</h3>
                   <p className="text-gray-300 mb-8">
-                    Ready to revolutionize your supply chain risk management? Our team is here to help you get started with AI-powered solutions.
+                    Ready to revolutionize your legal practice? Our team is here to help you get started with AI-powered legal automation.
                   </p>
                   
                   <div className="space-y-4">
@@ -556,7 +450,7 @@ export default function AISupplyChainRiskManagement() {
                       <span className="text-gray-300">kleber@ziontechgroup.com</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <MapPinIcon className="w-5 h-5 text-blue-400" />
+                      <MapPin className="w-5 h-5 text-blue-400" />
                       <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
                     </div>
                   </div>

@@ -2,184 +2,192 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  AlertTriangle, 
+  Home, 
   TrendingUp, 
   BarChart3, 
-  Globe, 
+  MapPin, 
+  DollarSign, 
   CheckCircle, 
   ArrowRight, 
   Clock, 
   Users,
-  Zap,
+  Shield,
+  Globe,
   Search,
-  Eye,
-  AlertCircle,
-  MapPin,
+  Calculator,
+  PieChart,
+  Target,
+  Building,
   Phone,
   Mail,
   MapPin as MapPinIcon,
-  Truck,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Database,
-  Network,
-  Target,
-  PieChart,
-  LineChart,
-  Bell,
-  Settings,
-  FileText,
+  Zap,
+  Eye,
+  AlertTriangle,
+  BookOpen,
+  Briefcase,
   Calendar,
-  DollarSign,
-  Percent
+  LineChart,
+  PieChart as PieChartIcon,
+  Target as TargetIcon,
+  Building as BuildingIcon
 } from 'lucide-react';
 
-export default function AISupplyChainRiskManagement() {
+export default function AIRealEstateInvestmentAnalytics() {
   const features = [
     {
-      title: "Real-Time Risk Monitoring",
-      description: "24/7 monitoring of supply chain risks with instant alerts and notifications",
-      icon: Eye,
-      benefits: ["Instant risk detection", "Proactive alerts", "Real-time updates", "Automated monitoring"]
+      title: "AI-Powered Market Analysis",
+      description: "Advanced machine learning algorithms analyze market trends, property values, and investment opportunities",
+      icon: TrendingUp,
+      benefits: ["Real-time market insights", "Predictive analytics", "Risk assessment", "ROI projections"]
     },
     {
-      title: "AI-Powered Risk Assessment",
-      description: "Advanced AI algorithms analyze multiple risk factors and predict potential disruptions",
-      icon: AlertTriangle,
-      benefits: ["Predictive analytics", "Risk scoring", "Scenario modeling", "Impact assessment"]
+      title: "Property Valuation Engine",
+      description: "Accurate property valuations using AI and comprehensive data analysis",
+      icon: Calculator,
+      benefits: ["Instant valuations", "Market comparisons", "Historical trends", "Future projections"]
     },
     {
-      title: "Supply Chain Mapping",
-      description: "Complete visibility into your supply chain network with supplier relationships and dependencies",
-      icon: Network,
-      benefits: ["End-to-end visibility", "Supplier mapping", "Dependency analysis", "Network optimization"]
+      title: "Investment Portfolio Optimization",
+      description: "AI-driven portfolio management with diversification strategies and risk management",
+      icon: PieChart,
+      benefits: ["Portfolio optimization", "Risk diversification", "Performance tracking", "Rebalancing alerts"]
     },
     {
-      title: "Automated Mitigation Strategies",
-      description: "AI-driven recommendations for risk mitigation and contingency planning",
-      icon: Shield,
-      benefits: ["Automated responses", "Contingency plans", "Mitigation strategies", "Recovery planning"]
+      title: "Market Trend Forecasting",
+      description: "Predict future market movements and identify emerging investment opportunities",
+      icon: LineChart,
+      benefits: ["Trend prediction", "Opportunity identification", "Market timing", "Risk mitigation"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$399",
+      name: "Investor",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small businesses with basic supply chain needs",
+      description: "Perfect for individual real estate investors",
       features: [
-        "Up to 100 suppliers monitored",
-        "Basic risk alerts",
-        "Standard reporting",
+        "Up to 100 property analyses/month",
+        "Basic market insights",
+        "Property valuations",
         "Email support",
         "Mobile app access",
-        "Basic risk scoring"
+        "Basic reporting"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
       name: "Professional",
-      price: "$899",
+      price: "$499",
       period: "/month",
-      description: "Ideal for growing companies with complex supply chains",
+      description: "Ideal for real estate professionals and small firms",
       features: [
-        "Up to 500 suppliers monitored",
-        "Advanced AI risk assessment",
-        "Real-time monitoring",
+        "Up to 500 property analyses/month",
+        "Advanced AI analytics",
+        "Portfolio optimization",
         "Priority support",
         "API access",
-        "Custom dashboards",
+        "Custom reports",
         "Team collaboration",
-        "Advanced analytics"
+        "Market alerts"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,299",
       period: "/month",
-      description: "For large enterprises with global supply chains",
+      description: "For large investment firms and real estate companies",
       features: [
-        "Unlimited suppliers",
+        "Unlimited analyses",
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
-        "Advanced risk modeling",
+        "Advanced analytics",
         "Custom integrations",
         "On-premise deployment",
         "SLA guarantees",
-        "Multi-site management",
-        "Advanced reporting"
+        "Data export",
+        "Multi-user management"
       ],
       popular: false,
       cta: "Contact Sales"
     }
   ];
 
-  const riskTypes = [
+  const useCases = [
     {
-      title: "Supplier Risks",
-      description: "Monitor supplier financial health, performance, and compliance",
-      icon: Factory,
-      risks: ["Financial instability", "Quality issues", "Delivery delays", "Compliance violations"]
+      title: "Property Investment Analysis",
+      description: "Comprehensive analysis of potential investment properties",
+      icon: Home,
+      benefits: ["ROI calculation", "Cash flow analysis", "Market comparison", "Risk assessment"]
     },
     {
-      title: "Logistics Risks",
-      description: "Track transportation and delivery risks across all modes",
-      icon: Truck,
-      risks: ["Port congestion", "Weather delays", "Capacity constraints", "Route disruptions"]
+      title: "Portfolio Management",
+      description: "Optimize your real estate investment portfolio",
+      icon: PieChartIcon,
+      benefits: ["Diversification", "Performance tracking", "Rebalancing", "Risk management"]
     },
     {
-      title: "Geopolitical Risks",
-      description: "Monitor political, economic, and regulatory changes",
-      icon: Globe,
-      risks: ["Trade wars", "Sanctions", "Political instability", "Regulatory changes"]
+      title: "Market Research",
+      description: "Deep dive into local and national real estate markets",
+      icon: Search,
+      benefits: ["Trend analysis", "Opportunity identification", "Market timing", "Competitive analysis"]
     },
     {
-      title: "Demand Risks",
-      description: "Predict and manage demand fluctuations and market changes",
-      icon: TrendingUp,
-      risks: ["Demand volatility", "Market shifts", "Seasonal changes", "Competitive pressure"]
+      title: "Development Planning",
+      description: "Plan and analyze real estate development projects",
+      icon: BuildingIcon,
+      benefits: ["Feasibility studies", "Cost analysis", "Market demand", "ROI projections"]
     }
   ];
 
-  const transportationModes = [
-    { name: "Ocean Freight", icon: Ship, description: "Container ships and bulk carriers" },
-    { name: "Air Freight", icon: Plane, description: "Cargo planes and express delivery" },
-    { name: "Rail Transport", icon: Train, description: "Freight trains and intermodal" },
-    { name: "Road Transport", icon: Car, description: "Trucks and delivery vehicles" }
+  const marketData = [
+    {
+      metric: "Market Coverage",
+      value: "50+",
+      unit: "Markets",
+      description: "Major metropolitan areas across the US"
+    },
+    {
+      metric: "Data Points",
+      value: "10M+",
+      unit: "Properties",
+      description: "Comprehensive property database"
+    },
+    {
+      metric: "Accuracy Rate",
+      value: "95%",
+      unit: "Predictions",
+      description: "AI-powered forecasting accuracy"
+    },
+    {
+      metric: "Update Frequency",
+      value: "Real-time",
+      unit: "Data",
+      description: "Live market data updates"
+    }
   ];
 
-  const stats = [
-    { number: "99.9%", label: "Uptime", icon: Clock },
-    { number: "50+", label: "Countries Monitored", icon: Globe },
-    { number: "10,000+", label: "Suppliers Tracked", icon: Database },
-    { number: "24/7", label: "Monitoring", icon: Eye }
-  ];
-
-  const benefits = [
-    "Reduce supply chain disruptions by 80%",
-    "Cut risk management costs by 60%",
-    "Improve supplier performance by 45%",
-    "Increase supply chain resilience by 70%",
-    "Reduce inventory costs by 30%",
-    "Improve customer satisfaction by 50%"
+  const industries = [
+    { name: "Residential", icon: "🏠", description: "Single-family homes, condos, and apartments" },
+    { name: "Commercial", icon: "🏢", description: "Office buildings, retail spaces, and warehouses" },
+    { name: "Industrial", icon: "🏭", description: "Manufacturing facilities and logistics centers" },
+    { name: "Land", icon: "🌱", description: "Development land and agricultural properties" },
+    { name: "Multi-family", icon: "🏘️", description: "Apartment complexes and townhomes" },
+    { name: "Hospitality", icon: "🏨", description: "Hotels, resorts, and vacation rentals" }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Supply Chain Risk Management Platform - Zion Tech Group</title>
-        <meta name="description" content="Protect your supply chain with AI-powered risk management. Monitor suppliers, predict disruptions, and automate mitigation strategies with our advanced platform." />
-        <meta name="keywords" content="AI supply chain risk management, supplier monitoring, supply chain visibility, risk assessment AI, disruption prediction" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-supply-chain-risk-management" />
+        <title>AI Real Estate Investment Analytics Platform - Zion Tech Group</title>
+        <meta name="description" content="Transform your real estate investments with AI-powered analytics. Get market insights, property valuations, and portfolio optimization with our advanced platform." />
+        <meta name="keywords" content="AI real estate analytics, property investment analysis, real estate market data, portfolio optimization, property valuation AI" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-real-estate-investment-analytics" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -195,14 +203,14 @@ export default function AISupplyChainRiskManagement() {
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zinc-800/50 border border-zinc-700/50 text-zinc-300 text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2 text-yellow-400" />
-                AI-Powered Risk Management
+                AI-Powered Real Estate Analytics
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                AI Supply Chain <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Risk Management</span>
+                AI Real Estate <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Investment Analytics</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Protect your supply chain with AI-powered risk management. Monitor suppliers in real-time, predict disruptions, 
-                and automate mitigation strategies. Reduce supply chain disruptions by 80% and cut risk management costs by 60%.
+                Make smarter real estate investment decisions with AI-powered analytics. Get instant property valuations, 
+                market insights, and portfolio optimization recommendations. Cover 50+ markets with 10M+ properties analyzed.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -224,13 +232,13 @@ export default function AISupplyChainRiskManagement() {
           </div>
         </section>
 
-        {/* Stats Section */}
+        {/* Market Data Section */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {marketData.map((data, index) => (
                 <motion.div
-                  key={stat.label}
+                  key={data.metric}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -238,10 +246,11 @@ export default function AISupplyChainRiskManagement() {
                   className="text-center"
                 >
                   <div className="flex justify-center mb-4">
-                    <stat.icon className="w-12 h-12 text-blue-400" />
+                    <BarChart3 className="w-12 h-12 text-blue-400" />
                   </div>
-                  <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-400">{stat.label}</div>
+                  <div className="text-4xl font-bold text-white mb-2">{data.value}</div>
+                  <div className="text-gray-400 mb-2">{data.unit}</div>
+                  <div className="text-sm text-gray-500">{data.description}</div>
                 </motion.div>
               ))}
             </div>
@@ -262,7 +271,7 @@ export default function AISupplyChainRiskManagement() {
                 Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform provides comprehensive supply chain risk management with real-time monitoring and predictive analytics.
+                Our AI platform combines advanced analytics with comprehensive real estate data to deliver unmatched investment insights.
               </p>
             </motion.div>
 
@@ -298,7 +307,7 @@ export default function AISupplyChainRiskManagement() {
           </div>
         </section>
 
-        {/* Risk Types Section */}
+        {/* Use Cases Section */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -309,17 +318,17 @@ export default function AISupplyChainRiskManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Risk <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Categories</span>
+                Investment <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Use Cases</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive coverage of all major supply chain risk categories with AI-powered monitoring and assessment.
+                Discover how our AI platform transforms various aspects of real estate investment and portfolio management.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {riskTypes.map((riskType, index) => (
+              {useCases.map((useCase, index) => (
                 <motion.div
-                  key={riskType.title}
+                  key={useCase.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -328,17 +337,17 @@ export default function AISupplyChainRiskManagement() {
                 >
                   <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center">
-                      <riskType.icon className="w-8 h-8 text-white" />
+                      <useCase.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{riskType.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{riskType.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{useCase.description}</p>
                   
                   <div className="space-y-2">
-                    {riskType.risks.map((risk, idx) => (
+                    {useCase.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
-                        <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{risk}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{benefit}</span>
                       </div>
                     ))}
                   </div>
@@ -348,7 +357,7 @@ export default function AISupplyChainRiskManagement() {
           </div>
         </section>
 
-        {/* Transportation Modes Section */}
+        {/* Industries Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -359,15 +368,15 @@ export default function AISupplyChainRiskManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transportation Modes Covered
+                Real Estate Sectors We Cover
               </h2>
               <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-                Monitor risks across all major transportation modes and logistics networks.
+                Comprehensive coverage across all major real estate sectors and property types.
               </p>
             </motion.div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {transportationModes.map((mode, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {industries.map((industry, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -376,49 +385,9 @@ export default function AISupplyChainRiskManagement() {
                   viewport={{ once: true }}
                   className="bg-zinc-800/30 border border-zinc-700/30 rounded-lg p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
                 >
-                  <div className="flex justify-center mb-4">
-                    <mode.icon className="w-12 h-12 text-blue-400" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{mode.name}</h3>
-                  <p className="text-sm text-zinc-400">{mode.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 bg-black/20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Our Platform?
-              </h2>
-              <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-                Proven results and measurable impact across all our risk management solutions.
-              </p>
-            </motion.div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zinc-800/30 border border-zinc-700/30 rounded-lg p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                  <p className="text-zinc-300 font-medium">{benefit}</p>
+                  <div className="text-4xl mb-3">{industry.icon}</div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{industry.name}</h3>
+                  <p className="text-sm text-zinc-400">{industry.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -426,7 +395,7 @@ export default function AISupplyChainRiskManagement() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -439,7 +408,7 @@ export default function AISupplyChainRiskManagement() {
                 Simple <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that best fits your supply chain risk management needs. All plans include a 14-day free trial.
+                Choose the plan that best fits your investment needs. All plans include a 14-day free trial.
               </p>
             </motion.div>
 
@@ -501,7 +470,7 @@ export default function AISupplyChainRiskManagement() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-black/20">
+        <section className="py-20">
           <div className="container mx-auto px-4 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -510,10 +479,10 @@ export default function AISupplyChainRiskManagement() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Protect Your Supply Chain?
+                Ready to Transform Your Real Estate Investments?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Join thousands of companies who have already revolutionized their supply chain risk management with AI-powered solutions.
+                Join thousands of investors who have already revolutionized their real estate strategy with AI-powered analytics.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -536,14 +505,14 @@ export default function AISupplyChainRiskManagement() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20">
+        <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6">Get in Touch</h3>
                   <p className="text-gray-300 mb-8">
-                    Ready to revolutionize your supply chain risk management? Our team is here to help you get started with AI-powered solutions.
+                    Ready to revolutionize your real estate investment strategy? Our team is here to help you get started with AI-powered analytics.
                   </p>
                   
                   <div className="space-y-4">

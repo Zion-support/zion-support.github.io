@@ -2,31 +2,24 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet-async';
 import { 
-  Shield, 
-  AlertTriangle, 
-  TrendingUp, 
-  BarChart3, 
-  Globe, 
+  BookOpen, 
+  GraduationCap, 
+  Brain, 
+  Zap, 
   CheckCircle, 
   ArrowRight, 
   Clock, 
   Users,
-  Zap,
+  Shield,
+  Globe,
   Search,
-  Eye,
-  AlertCircle,
-  MapPin,
+  Edit3,
+  Video,
+  Mic,
+  Image,
   Phone,
   Mail,
-  MapPin as MapPinIcon,
-  Truck,
-  Factory,
-  Ship,
-  Plane,
-  Train,
-  Car,
-  Database,
-  Network,
+  MapPin,
   Target,
   PieChart,
   LineChart,
@@ -35,151 +28,158 @@ import {
   FileText,
   Calendar,
   DollarSign,
-  Percent
+  Percent,
+  Play,
+  Camera,
+  Headphones,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Laptop
 } from 'lucide-react';
 
-export default function AISupplyChainRiskManagement() {
+export default function AIEducationalContentCreation() {
   const features = [
     {
-      title: "Real-Time Risk Monitoring",
-      description: "24/7 monitoring of supply chain risks with instant alerts and notifications",
-      icon: Eye,
-      benefits: ["Instant risk detection", "Proactive alerts", "Real-time updates", "Automated monitoring"]
+      title: "AI-Powered Content Generation",
+      description: "Generate high-quality educational content in multiple formats using advanced AI",
+      icon: Brain,
+      benefits: ["Automated content creation", "Multiple format support", "Quality assurance", "Scalable production"]
     },
     {
-      title: "AI-Powered Risk Assessment",
-      description: "Advanced AI algorithms analyze multiple risk factors and predict potential disruptions",
-      icon: AlertTriangle,
-      benefits: ["Predictive analytics", "Risk scoring", "Scenario modeling", "Impact assessment"]
+      title: "Interactive Learning Materials",
+      description: "Create engaging interactive content with quizzes, simulations, and assessments",
+      icon: Play,
+      benefits: ["Interactive quizzes", "Virtual simulations", "Adaptive learning", "Student engagement"]
     },
     {
-      title: "Supply Chain Mapping",
-      description: "Complete visibility into your supply chain network with supplier relationships and dependencies",
-      icon: Network,
-      benefits: ["End-to-end visibility", "Supplier mapping", "Dependency analysis", "Network optimization"]
+      title: "Multi-Format Content Creation",
+      description: "Generate content in text, video, audio, and interactive formats simultaneously",
+      icon: Video,
+      benefits: ["Text generation", "Video creation", "Audio production", "Interactive elements"]
     },
     {
-      title: "Automated Mitigation Strategies",
-      description: "AI-driven recommendations for risk mitigation and contingency planning",
-      icon: Shield,
-      benefits: ["Automated responses", "Contingency plans", "Mitigation strategies", "Recovery planning"]
+      title: "Personalized Learning Paths",
+      description: "AI-driven personalization based on student performance and learning styles",
+      icon: Target,
+      benefits: ["Adaptive content", "Learning analytics", "Performance tracking", "Customized paths"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$399",
+      name: "Educator",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses with basic supply chain needs",
+      description: "Perfect for individual teachers and educators",
       features: [
-        "Up to 100 suppliers monitored",
-        "Basic risk alerts",
-        "Standard reporting",
+        "Up to 100 content pieces/month",
+        "Basic AI content generation",
+        "Standard templates",
         "Email support",
         "Mobile app access",
-        "Basic risk scoring"
+        "Basic analytics"
       ],
       popular: false,
       cta: "Start Free Trial"
     },
     {
-      name: "Professional",
-      price: "$899",
+      name: "Institution",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing companies with complex supply chains",
+      description: "Ideal for schools, colleges, and training organizations",
       features: [
-        "Up to 500 suppliers monitored",
-        "Advanced AI risk assessment",
-        "Real-time monitoring",
+        "Up to 500 content pieces/month",
+        "Advanced AI capabilities",
+        "Custom templates",
         "Priority support",
         "API access",
-        "Custom dashboards",
         "Team collaboration",
-        "Advanced analytics"
+        "Advanced analytics",
+        "Multi-format support"
       ],
       popular: true,
       cta: "Start Free Trial"
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$799",
       period: "/month",
-      description: "For large enterprises with global supply chains",
+      description: "For large educational institutions and corporate training",
       features: [
-        "Unlimited suppliers",
+        "Unlimited content creation",
         "Custom AI models",
         "White-label solution",
         "24/7 dedicated support",
-        "Advanced risk modeling",
+        "Advanced analytics",
         "Custom integrations",
         "On-premise deployment",
         "SLA guarantees",
-        "Multi-site management",
-        "Advanced reporting"
+        "Multi-language support",
+        "Advanced security"
       ],
       popular: false,
       cta: "Contact Sales"
     }
   ];
 
-  const riskTypes = [
+  const contentTypes = [
     {
-      title: "Supplier Risks",
-      description: "Monitor supplier financial health, performance, and compliance",
-      icon: Factory,
-      risks: ["Financial instability", "Quality issues", "Delivery delays", "Compliance violations"]
+      title: "Text Content",
+      description: "Generate comprehensive educational materials and documentation",
+      icon: FileText,
+      features: ["Lesson plans", "Study guides", "Textbooks", "Worksheets", "Assessments"]
     },
     {
-      title: "Logistics Risks",
-      description: "Track transportation and delivery risks across all modes",
-      icon: Truck,
-      risks: ["Port congestion", "Weather delays", "Capacity constraints", "Route disruptions"]
+      title: "Video Content",
+      description: "Create engaging video lessons and presentations",
+      icon: Video,
+      features: ["Video lessons", "Presentations", "Tutorials", "Animations", "Screen recordings"]
     },
     {
-      title: "Geopolitical Risks",
-      description: "Monitor political, economic, and regulatory changes",
-      icon: Globe,
-      risks: ["Trade wars", "Sanctions", "Political instability", "Regulatory changes"]
+      title: "Audio Content",
+      description: "Generate podcasts, lectures, and audio learning materials",
+      icon: Mic,
+      features: ["Podcasts", "Audio lectures", "Language learning", "Audio books", "Sound effects"]
     },
     {
-      title: "Demand Risks",
-      description: "Predict and manage demand fluctuations and market changes",
-      icon: TrendingUp,
-      risks: ["Demand volatility", "Market shifts", "Seasonal changes", "Competitive pressure"]
+      title: "Interactive Content",
+      description: "Create engaging interactive learning experiences",
+      icon: Monitor,
+      features: ["Quizzes", "Simulations", "Games", "Virtual labs", "Interactive exercises"]
     }
   ];
 
-  const transportationModes = [
-    { name: "Ocean Freight", icon: Ship, description: "Container ships and bulk carriers" },
-    { name: "Air Freight", icon: Plane, description: "Cargo planes and express delivery" },
-    { name: "Rail Transport", icon: Train, description: "Freight trains and intermodal" },
-    { name: "Road Transport", icon: Car, description: "Trucks and delivery vehicles" }
+  const platforms = [
+    { name: "Web Platform", icon: Globe, description: "Browser-based learning management system" },
+    { name: "Mobile Apps", icon: Smartphone, description: "iOS and Android learning applications" },
+    { name: "Tablet Apps", icon: Tablet, description: "Optimized for tablet learning experiences" },
+    { name: "Desktop Apps", icon: Laptop, description: "Full-featured desktop applications" }
   ];
 
   const stats = [
-    { number: "99.9%", label: "Uptime", icon: Clock },
-    { number: "50+", label: "Countries Monitored", icon: Globe },
-    { number: "10,000+", label: "Suppliers Tracked", icon: Database },
-    { number: "24/7", label: "Monitoring", icon: Eye }
+    { number: "95%", label: "Content Quality Score", icon: CheckCircle },
+    { number: "10x", label: "Faster Content Creation", icon: Clock },
+    { number: "50+", label: "Content Formats", icon: FileText },
+    { number: "24/7", label: "AI Availability", icon: Brain }
   ];
 
   const benefits = [
-    "Reduce supply chain disruptions by 80%",
-    "Cut risk management costs by 60%",
-    "Improve supplier performance by 45%",
-    "Increase supply chain resilience by 70%",
-    "Reduce inventory costs by 30%",
-    "Improve customer satisfaction by 50%"
+    "Reduce content creation time by 90%",
+    "Improve student engagement by 60%",
+    "Cut educational content costs by 70%",
+    "Increase learning outcomes by 40%",
+    "Support multiple learning styles",
+    "Enable personalized learning experiences"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Supply Chain Risk Management Platform - Zion Tech Group</title>
-        <meta name="description" content="Protect your supply chain with AI-powered risk management. Monitor suppliers, predict disruptions, and automate mitigation strategies with our advanced platform." />
-        <meta name="keywords" content="AI supply chain risk management, supplier monitoring, supply chain visibility, risk assessment AI, disruption prediction" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-supply-chain-risk-management" />
+        <title>AI Educational Content Creation Platform - Zion Tech Group</title>
+        <meta name="description" content="Revolutionize education with AI-powered content creation. Generate high-quality educational materials in multiple formats with our advanced platform." />
+        <meta name="keywords" content="AI educational content, content creation AI, educational technology, learning management system, AI teaching tools" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-educational-content-creation" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -195,14 +195,14 @@ export default function AISupplyChainRiskManagement() {
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zinc-800/50 border border-zinc-700/50 text-zinc-300 text-sm font-medium mb-6">
                 <Zap className="w-4 h-4 mr-2 text-yellow-400" />
-                AI-Powered Risk Management
+                AI-Powered Education Technology
               </div>
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                AI Supply Chain <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Risk Management</span>
+                AI Educational <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Creation</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-                Protect your supply chain with AI-powered risk management. Monitor suppliers in real-time, predict disruptions, 
-                and automate mitigation strategies. Reduce supply chain disruptions by 80% and cut risk management costs by 60%.
+                Revolutionize education with AI-powered content creation. Generate high-quality educational materials in multiple formats, 
+                create personalized learning experiences, and engage students like never before. Reduce content creation time by 90%.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -262,7 +262,7 @@ export default function AISupplyChainRiskManagement() {
                 Powerful <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Features</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI platform provides comprehensive supply chain risk management with real-time monitoring and predictive analytics.
+                Our AI platform combines advanced content generation with educational expertise to deliver engaging learning experiences.
               </p>
             </motion.div>
 
@@ -298,7 +298,7 @@ export default function AISupplyChainRiskManagement() {
           </div>
         </section>
 
-        {/* Risk Types Section */}
+        {/* Content Types Section */}
         <section className="py-20 bg-black/20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -309,17 +309,17 @@ export default function AISupplyChainRiskManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Risk <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Categories</span>
+                Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Types</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive coverage of all major supply chain risk categories with AI-powered monitoring and assessment.
+                Generate comprehensive educational content across multiple formats and learning styles.
               </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {riskTypes.map((riskType, index) => (
+              {contentTypes.map((contentType, index) => (
                 <motion.div
-                  key={riskType.title}
+                  key={contentType.title}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -328,17 +328,17 @@ export default function AISupplyChainRiskManagement() {
                 >
                   <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-2xl flex items-center justify-center">
-                      <riskType.icon className="w-8 h-8 text-white" />
+                      <contentType.icon className="w-8 h-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3">{riskType.title}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{riskType.description}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{contentType.title}</h3>
+                  <p className="text-gray-300 mb-4 text-sm">{contentType.description}</p>
                   
                   <div className="space-y-2">
-                    {riskType.risks.map((risk, idx) => (
+                    {contentType.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center space-x-2">
-                        <AlertCircle className="w-4 h-4 text-red-400 flex-shrink-0" />
-                        <span className="text-gray-300 text-sm">{risk}</span>
+                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                        <span className="text-gray-300 text-sm">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -348,7 +348,7 @@ export default function AISupplyChainRiskManagement() {
           </div>
         </section>
 
-        {/* Transportation Modes Section */}
+        {/* Platforms Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
@@ -359,15 +359,15 @@ export default function AISupplyChainRiskManagement() {
               className="text-center mb-16"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Transportation Modes Covered
+                Multi-Platform Support
               </h2>
               <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-                Monitor risks across all major transportation modes and logistics networks.
+                Deliver educational content across all devices and platforms for maximum accessibility.
               </p>
             </motion.div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {transportationModes.map((mode, index) => (
+              {platforms.map((platform, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -377,10 +377,10 @@ export default function AISupplyChainRiskManagement() {
                   className="bg-zinc-800/30 border border-zinc-700/30 rounded-lg p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex justify-center mb-4">
-                    <mode.icon className="w-12 h-12 text-blue-400" />
+                    <platform.icon className="w-12 h-12 text-blue-400" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-2">{mode.name}</h3>
-                  <p className="text-sm text-zinc-400">{mode.description}</p>
+                  <h3 className="text-lg font-semibold text-white mb-2">{platform.name}</h3>
+                  <p className="text-sm text-zinc-400">{platform.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -401,7 +401,7 @@ export default function AISupplyChainRiskManagement() {
                 Why Choose Our Platform?
               </h2>
               <p className="text-xl text-zinc-300 max-w-2xl mx-auto">
-                Proven results and measurable impact across all our risk management solutions.
+                Proven results and measurable impact across all our educational technology solutions.
               </p>
             </motion.div>
             
@@ -416,7 +416,7 @@ export default function AISupplyChainRiskManagement() {
                   className="bg-zinc-800/30 border border-zinc-700/30 rounded-lg p-6 text-center hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6 text-white" />
+                    <GraduationCap className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-zinc-300 font-medium">{benefit}</p>
                 </motion.div>
@@ -439,7 +439,7 @@ export default function AISupplyChainRiskManagement() {
                 Simple <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Pricing</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that best fits your supply chain risk management needs. All plans include a 14-day free trial.
+                Choose the plan that best fits your educational content creation needs. All plans include a 14-day free trial.
               </p>
             </motion.div>
 
@@ -510,10 +510,10 @@ export default function AISupplyChainRiskManagement() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Protect Your Supply Chain?
+                Ready to Revolutionize Education?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Join thousands of companies who have already revolutionized their supply chain risk management with AI-powered solutions.
+                Join thousands of educators who have already transformed their teaching with AI-powered content creation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
@@ -543,7 +543,7 @@ export default function AISupplyChainRiskManagement() {
                 <div>
                   <h3 className="text-3xl font-bold text-white mb-6">Get in Touch</h3>
                   <p className="text-gray-300 mb-8">
-                    Ready to revolutionize your supply chain risk management? Our team is here to help you get started with AI-powered solutions.
+                    Ready to revolutionize your educational content creation? Our team is here to help you get started with AI-powered solutions.
                   </p>
                   
                   <div className="space-y-4">
@@ -556,7 +556,7 @@ export default function AISupplyChainRiskManagement() {
                       <span className="text-gray-300">kleber@ziontechgroup.com</span>
                     </div>
                     <div className="flex items-center space-x-3">
-                      <MapPinIcon className="w-5 h-5 text-blue-400" />
+                      <MapPin className="w-5 h-5 text-blue-400" />
                       <span className="text-gray-300">364 E Main St STE 1008, Middletown DE 19709</span>
                     </div>
                   </div>
