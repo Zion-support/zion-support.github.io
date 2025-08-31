@@ -3,15 +3,17 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  Zap, 
+  Building2, 
   Shield, 
-  Activity, 
+  Zap, 
   CheckCircle,
   ArrowRight,
   Star,
-  Rocket,
+  Globe,
   Lock,
+  Activity,
   Target,
+  Rocket,
   Cpu,
   ChartLine,
   Network,
@@ -26,128 +28,121 @@ import {
   Phone,
   Mail,
   MapPin,
-  Settings,
-  BarChart3,
-  TrendingUp,
-  BrainCircuit,
-  ShieldCheck,
-  Cog,
-  Workflow,
-  Automation,
-  Bot,
-  Globe,
   Lightbulb,
-  Target,
-  CheckSquare,
+  Wifi,
+  Car,
+  Leaf,
+  Eye,
+  BarChart3,
+  Settings,
   AlertTriangle,
-  FileText,
-  UserCheck,
-  Microscope
+  CheckSquare,
+  TrendingUp
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIAutonomousBusinessOperationsPlatform() {
+export default function AISmartCityPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Decision Making",
-      description: "Autonomous AI systems that make intelligent business decisions without human intervention"
+      title: "AI-Powered Urban Analytics",
+      description: "Advanced machine learning algorithms that analyze city data for intelligent decision-making"
     },
     {
-      icon: Automation,
-      title: "End-to-End Automation",
-      description: "Complete automation of business processes from data input to decision execution"
+      icon: Building2,
+      title: "Smart Infrastructure Management",
+      description: "Real-time monitoring and optimization of city infrastructure systems"
     },
     {
       icon: Shield,
-      title: "Intelligent Risk Management",
-      description: "AI-driven risk assessment and mitigation across all business operations"
+      title: "Cybersecurity & Privacy",
+      description: "Enterprise-grade security with citizen privacy protection and GDPR compliance"
     },
     {
       icon: Zap,
-      title: "Real-time Optimization",
-      description: "Continuous optimization of business processes and resource allocation"
+      title: "Real-time Response Systems",
+      description: "Instant alerts and automated responses to urban incidents and emergencies"
     }
   ];
 
   const services = [
     {
-      title: "Autonomous Supply Chain",
-      description: "AI-powered supply chain management with automated procurement, inventory, and logistics",
-      icon: Workflow,
-      features: ["Automated procurement", "Smart inventory management", "Predictive logistics", "Supplier optimization"]
+      title: "Smart Transportation",
+      description: "AI-powered traffic management, public transit optimization, and intelligent parking systems",
+      icon: Car,
+      features: ["Traffic flow optimization", "Smart parking management", "Public transit analytics", "Congestion prediction"]
     },
     {
-      title: "Intelligent Finance Operations",
-      description: "Autonomous financial management with AI-powered budgeting, forecasting, and risk assessment",
-      icon: BarChart3,
-      features: ["Automated budgeting", "AI forecasting", "Risk assessment", "Compliance monitoring"]
+      title: "Energy Management",
+      description: "Intelligent grid management, renewable energy integration, and consumption optimization",
+      icon: Lightbulb,
+      features: ["Smart grid optimization", "Renewable energy integration", "Demand response", "Energy efficiency analytics"]
     },
     {
-      title: "Smart HR Operations",
-      description: "AI-driven human resources with automated recruitment, performance management, and training",
-      icon: Users,
-      features: ["Automated recruitment", "Performance analytics", "Training optimization", "Employee engagement"]
+      title: "Public Safety",
+      description: "AI-powered surveillance, emergency response, and crime prevention systems",
+      icon: Shield,
+      features: ["Predictive policing", "Emergency response optimization", "Surveillance analytics", "Crime hotspot detection"]
     },
     {
-      title: "Autonomous Customer Service",
-      description: "AI-powered customer service with automated responses, issue resolution, and satisfaction monitoring",
-      icon: Bot,
-      features: ["Automated responses", "Issue resolution", "Satisfaction monitoring", "Proactive support"]
+      title: "Environmental Monitoring",
+      description: "Real-time air quality, water quality, and environmental impact monitoring",
+      icon: Leaf,
+      features: ["Air quality monitoring", "Water quality tracking", "Noise pollution analysis", "Sustainability metrics"]
     }
   ];
 
   const technologies = [
+    "Internet of Things (IoT)",
+    "5G Network Infrastructure",
+    "Edge Computing",
     "Machine Learning & AI",
-    "Robotic Process Automation (RPA)",
-    "Natural Language Processing",
-    "Predictive Analytics",
+    "Big Data Analytics",
     "Cloud Computing",
-    "IoT Integration",
     "Blockchain Security",
-    "Edge Computing"
+    "Digital Twin Technology"
   ];
 
   const pricing = [
     {
-      plan: "Business Starter",
-      price: "$5,000",
+      plan: "City Starter",
+      price: "$15,000",
       period: "/month",
       features: [
-        "Basic AI automation",
-        "Process optimization",
-        "Standard reporting",
+        "Basic smart city modules",
+        "IoT sensor integration",
+        "Basic analytics dashboard",
         "Email support",
-        "Basic integrations"
+        "Standard security"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      plan: "Business Professional",
-      price: "$18,500",
+      plan: "City Professional",
+      price: "$45,000",
       period: "/month",
       features: [
-        "Advanced AI automation",
-        "Full process automation",
-        "Real-time optimization",
+        "Full smart city platform",
+        "Advanced AI analytics",
+        "Real-time monitoring",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics"
+        "Advanced security"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      plan: "Business Enterprise",
-      price: "$45,000",
+      plan: "City Enterprise",
+      price: "$125,000",
       period: "/month",
       features: [
-        "Complete autonomous platform",
+        "Complete smart city solution",
         "Custom AI development",
-        "White-label solutions",
+        "White-label platform",
         "24/7 dedicated support",
-        "Strategic consulting",
+        "Compliance consulting",
         "Full API access"
       ],
       cta: "Contact Sales",
@@ -159,49 +154,38 @@ export default function AIAutonomousBusinessOperationsPlatform() {
     {
       icon: TrendingUp,
       title: "Operational Efficiency",
-      description: "Increase operational efficiency by 40-60% through intelligent automation and optimization"
+      description: "Reduce operational costs by 30-40% through intelligent automation and optimization"
     },
     {
-      icon: Clock,
-      title: "24/7 Operations",
-      description: "Enable round-the-clock business operations with autonomous AI systems"
+      icon: Users,
+      title: "Citizen Experience",
+      description: "Improve quality of life with better services, reduced wait times, and enhanced accessibility"
     },
     {
-      icon: ShieldCheck,
-      title: "Risk Reduction",
-      description: "Minimize operational risks and errors with AI-powered monitoring and decision-making"
+      icon: Globe,
+      title: "Sustainability",
+      description: "Achieve environmental goals with smart resource management and green technology integration"
     },
     {
-      icon: Rocket,
-      title: "Scalability",
-      description: "Scale operations seamlessly without proportional increases in human resources"
+      icon: Shield,
+      title: "Public Safety",
+      description: "Enhance security and emergency response with AI-powered monitoring and prediction"
     }
-  ];
-
-  const useCases = [
-    "Manufacturing Operations",
-    "Retail & E-commerce",
-    "Financial Services",
-    "Healthcare Administration",
-    "Logistics & Transportation",
-    "Energy Management",
-    "Real Estate Operations",
-    "Education Administration"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
-        title="AI Autonomous Business Operations Platform - Zion Tech Group"
-        description="Transform your business with our AI-powered Autonomous Business Operations Platform. Intelligent automation, decision-making, and optimization for the future of business."
+        title="AI Smart City Platform - Zion Tech Group"
+        description="Transform your city with our AI-powered Smart City Platform. Intelligent infrastructure management, transportation optimization, and sustainable urban development."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4">
@@ -211,34 +195,34 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">
-              <Automation className="w-4 h-4 mr-2" />
-              Autonomous Business Innovation
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-green-500/20 border border-blue-400/30 rounded-full text-blue-300 text-sm font-medium mb-6">
+              <Building2 className="w-4 h-4 mr-2" />
+              Smart City Innovation
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-500 to-green-600 bg-clip-text text-transparent">
-                Business Operations
+              AI Smart City
+              <span className="block bg-gradient-to-r from-blue-400 via-green-500 to-purple-600 bg-clip-text text-transparent">
+                Platform
               </span>
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your business with autonomous AI operations. Our platform enables intelligent automation, 
-              decision-making, and optimization across all aspects of your business operations.
+              Transform your city into an intelligent, sustainable, and efficient urban ecosystem. 
+              Our AI-powered platform integrates all aspects of city management for the future of urban living.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-green-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-blue-400/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
               >
                 View All Services
               </Link>
@@ -257,11 +241,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Autonomous Business Features
+              Smart City Features
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our AI-powered platform provides comprehensive autonomous business capabilities that transform 
-              operations and drive unprecedented efficiency.
+              Our AI-powered platform provides comprehensive smart city capabilities that transform 
+              urban management and citizen experience.
             </p>
           </motion.div>
           
@@ -272,10 +256,10 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 group"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-400/30 transition-all duration-200 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-blue-500/40 transition-all duration-200">
-                  <feature.icon className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-400/20 to-green-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-blue-400/40 group-hover:to-green-500/40 transition-all duration-200">
+                  <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
@@ -295,11 +279,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Autonomous Solutions
+              Comprehensive Smart City Solutions
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From supply chain to customer service, our platform provides autonomous AI solutions for every aspect 
-              of modern business operations.
+              From transportation to environmental monitoring, our platform covers every aspect 
+              of modern city management and citizen services.
             </p>
           </motion.div>
           
@@ -310,17 +294,17 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-purple-400" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-slate-300 text-lg mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -341,11 +325,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Business Transformation Benefits
+              Smart City Benefits
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Discover how our AI Autonomous Business Operations Platform delivers measurable benefits for 
-              businesses across all industries and sizes.
+              Discover how our AI Smart City Platform delivers measurable benefits for cities, 
+              citizens, and the environment.
             </p>
           </motion.div>
           
@@ -356,10 +340,10 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-purple-400" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-green-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <benefit.icon className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-slate-300 text-lg">{benefit.description}</p>
@@ -369,7 +353,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Pricing Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -379,46 +363,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Smart City Pricing Plans
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our autonomous business operations platform is designed to transform operations across diverse industries 
-              and business models.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200"
-              >
-                <Rocket className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                <span className="text-white text-sm">{useCase}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Autonomous Platform Pricing
-            </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core autonomous AI 
-              capabilities and business optimization features.
+              Choose the plan that fits your city's needs. All plans include our core smart city 
+              infrastructure and AI capabilities.
             </p>
           </motion.div>
           
@@ -431,13 +380,13 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
+                    ? 'border-blue-400/50 bg-gradient-to-br from-blue-500/10 to-green-500/10' 
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -454,7 +403,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -464,7 +413,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-400 hover:to-blue-500 hover:scale-105'
+                      ? 'bg-gradient-to-r from-blue-500 to-green-600 text-white hover:from-blue-400 hover:to-green-500 hover:scale-105'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
@@ -477,7 +426,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-20 bg-slate-900/50">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -489,8 +438,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               Advanced Technologies
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our platform leverages cutting-edge technologies to create the most advanced autonomous 
-              business operations solution available.
+              Our platform leverages cutting-edge technologies to create the most advanced smart city solution available.
             </p>
           </motion.div>
           
@@ -501,9 +449,9 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200"
+                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-blue-400/30 transition-all duration-200"
               >
-                <BrainCircuit className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                <Cpu className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                 <span className="text-white text-sm">{tech}</span>
               </motion.div>
             ))}
@@ -512,7 +460,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-green-500/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -521,24 +469,24 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Business?
+                Ready to Build the Future?
               </h2>
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Join the future of autonomous business operations. Transform your business with AI-powered 
-                automation and optimization today.
+                Transform your city into a smart, sustainable, and efficient urban ecosystem. 
+                Start your smart city journey today.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-12">
                 <div className="flex items-center justify-center space-x-3 text-slate-300">
-                  <Phone className="w-5 h-5 text-purple-400" />
+                  <Phone className="w-5 h-5 text-blue-400" />
                   <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-slate-300">
-                  <Mail className="w-5 h-5 text-purple-400" />
+                  <Mail className="w-5 h-5 text-blue-400" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-slate-300">
-                  <MapPin className="w-5 h-5 text-purple-400" />
+                  <MapPin className="w-5 h-5 text-blue-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
@@ -546,14 +494,14 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-green-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border border-blue-400/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
                 >
                   Explore All Services
                 </Link>

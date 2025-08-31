@@ -3,15 +3,16 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
-  Zap, 
-  Shield, 
   Activity, 
+  Shield, 
+  Zap, 
   CheckCircle,
   ArrowRight,
   Star,
-  Rocket,
+  Heart,
   Lock,
   Target,
+  Rocket,
   Cpu,
   ChartLine,
   Network,
@@ -26,128 +27,124 @@ import {
   Phone,
   Mail,
   MapPin,
-  Settings,
+  Stethoscope,
+  Pill,
+  Eye,
   BarChart3,
-  TrendingUp,
-  BrainCircuit,
-  ShieldCheck,
-  Cog,
-  Workflow,
-  Automation,
-  Bot,
-  Globe,
-  Lightbulb,
-  Target,
-  CheckSquare,
+  Settings,
   AlertTriangle,
-  FileText,
+  CheckSquare,
+  TrendingUp,
   UserCheck,
-  Microscope
+  FileText,
+  Microscope,
+  BrainCircuit,
+  ShieldCheck
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 
-export default function AIAutonomousBusinessOperationsPlatform() {
+export default function AIHealthcareAnalyticsPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Decision Making",
-      description: "Autonomous AI systems that make intelligent business decisions without human intervention"
+      title: "AI-Powered Diagnostics",
+      description: "Advanced machine learning algorithms for accurate disease detection and diagnosis"
     },
     {
-      icon: Automation,
-      title: "End-to-End Automation",
-      description: "Complete automation of business processes from data input to decision execution"
+      icon: Activity,
+      title: "Predictive Analytics",
+      description: "Early disease prediction and risk assessment using patient data and AI models"
     },
     {
       icon: Shield,
-      title: "Intelligent Risk Management",
-      description: "AI-driven risk assessment and mitigation across all business operations"
+      title: "HIPAA Compliant Security",
+      description: "Enterprise-grade security with full HIPAA compliance and patient privacy protection"
     },
     {
       icon: Zap,
-      title: "Real-time Optimization",
-      description: "Continuous optimization of business processes and resource allocation"
+      title: "Real-time Monitoring",
+      description: "Continuous patient monitoring with instant alerts and automated responses"
     }
   ];
 
   const services = [
     {
-      title: "Autonomous Supply Chain",
-      description: "AI-powered supply chain management with automated procurement, inventory, and logistics",
-      icon: Workflow,
-      features: ["Automated procurement", "Smart inventory management", "Predictive logistics", "Supplier optimization"]
+      title: "Clinical Decision Support",
+      description: "AI-powered clinical decision support system for healthcare providers",
+      icon: Stethoscope,
+      features: ["Evidence-based recommendations", "Drug interaction alerts", "Treatment optimization", "Clinical guidelines"]
     },
     {
-      title: "Intelligent Finance Operations",
-      description: "Autonomous financial management with AI-powered budgeting, forecasting, and risk assessment",
-      icon: BarChart3,
-      features: ["Automated budgeting", "AI forecasting", "Risk assessment", "Compliance monitoring"]
+      title: "Patient Risk Assessment",
+      description: "Predictive risk modeling for early intervention and preventive care",
+      icon: Heart,
+      features: ["Risk stratification", "Early warning systems", "Preventive care planning", "Population health insights"]
     },
     {
-      title: "Smart HR Operations",
-      description: "AI-driven human resources with automated recruitment, performance management, and training",
+      title: "Medical Imaging Analysis",
+      description: "AI-powered analysis of X-rays, MRIs, CT scans, and other medical images",
+      icon: Eye,
+      features: ["Automated detection", "Image enhancement", "Comparative analysis", "Radiologist assistance"]
+    },
+    {
+      title: "Population Health Management",
+      description: "Comprehensive analytics for managing population health and outcomes",
       icon: Users,
-      features: ["Automated recruitment", "Performance analytics", "Training optimization", "Employee engagement"]
-    },
-    {
-      title: "Autonomous Customer Service",
-      description: "AI-powered customer service with automated responses, issue resolution, and satisfaction monitoring",
-      icon: Bot,
-      features: ["Automated responses", "Issue resolution", "Satisfaction monitoring", "Proactive support"]
+      features: ["Health trends analysis", "Outcome tracking", "Resource optimization", "Quality metrics"]
     }
   ];
 
   const technologies = [
     "Machine Learning & AI",
-    "Robotic Process Automation (RPA)",
     "Natural Language Processing",
-    "Predictive Analytics",
+    "Computer Vision",
+    "Big Data Analytics",
     "Cloud Computing",
-    "IoT Integration",
+    "IoT Medical Devices",
     "Blockchain Security",
-    "Edge Computing"
+    "Predictive Modeling"
   ];
 
   const pricing = [
     {
-      plan: "Business Starter",
-      price: "$5,000",
+      plan: "Healthcare Starter",
+      price: "$3,500",
       period: "/month",
       features: [
-        "Basic AI automation",
-        "Process optimization",
+        "Basic AI analytics",
+        "Patient data integration",
         "Standard reporting",
         "Email support",
-        "Basic integrations"
+        "HIPAA compliance"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      plan: "Business Professional",
-      price: "$18,500",
+      plan: "Healthcare Professional",
+      price: "$12,500",
       period: "/month",
       features: [
-        "Advanced AI automation",
-        "Full process automation",
-        "Real-time optimization",
+        "Advanced AI diagnostics",
+        "Predictive analytics",
+        "Real-time monitoring",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics"
+        "Advanced security"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      plan: "Business Enterprise",
-      price: "$45,000",
+      plan: "Healthcare Enterprise",
+      price: "$35,000",
       period: "/month",
       features: [
-        "Complete autonomous platform",
+        "Complete healthcare platform",
         "Custom AI development",
         "White-label solutions",
         "24/7 dedicated support",
-        "Strategic consulting",
+        "Compliance consulting",
         "Full API access"
       ],
       cta: "Contact Sales",
@@ -158,48 +155,48 @@ export default function AIAutonomousBusinessOperationsPlatform() {
   const benefits = [
     {
       icon: TrendingUp,
-      title: "Operational Efficiency",
-      description: "Increase operational efficiency by 40-60% through intelligent automation and optimization"
+      title: "Improved Patient Outcomes",
+      description: "Increase treatment success rates by 25-40% with AI-powered diagnostics and predictive analytics"
     },
     {
       icon: Clock,
-      title: "24/7 Operations",
-      description: "Enable round-the-clock business operations with autonomous AI systems"
+      title: "Faster Diagnosis",
+      description: "Reduce diagnosis time by 60% with automated AI analysis and clinical decision support"
     },
     {
       icon: ShieldCheck,
-      title: "Risk Reduction",
-      description: "Minimize operational risks and errors with AI-powered monitoring and decision-making"
+      title: "Enhanced Patient Safety",
+      description: "Minimize medical errors and improve patient safety with AI-powered risk assessment"
     },
     {
-      icon: Rocket,
-      title: "Scalability",
-      description: "Scale operations seamlessly without proportional increases in human resources"
+      icon: Users,
+      title: "Better Resource Management",
+      description: "Optimize healthcare resources and reduce costs by 20-30% through intelligent analytics"
     }
   ];
 
-  const useCases = [
-    "Manufacturing Operations",
-    "Retail & E-commerce",
-    "Financial Services",
-    "Healthcare Administration",
-    "Logistics & Transportation",
-    "Energy Management",
-    "Real Estate Operations",
-    "Education Administration"
+  const compliance = [
+    "HIPAA Compliance",
+    "HITECH Act",
+    "GDPR Compliance",
+    "SOC 2 Type II",
+    "ISO 27001",
+    "FDA Guidelines",
+    "Clinical Validation",
+    "Data Encryption"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
-        title="AI Autonomous Business Operations Platform - Zion Tech Group"
-        description="Transform your business with our AI-powered Autonomous Business Operations Platform. Intelligent automation, decision-making, and optimization for the future of business."
+        title="AI Healthcare Analytics Platform - Zion Tech Group"
+        description="Revolutionary AI-powered healthcare analytics platform for improved patient outcomes, predictive diagnostics, and clinical decision support."
       />
       
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-96 h-96 bg-red-500/10 rounded-full blur-3xl"></div>
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
         </div>
@@ -211,34 +208,34 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6">
-              <Automation className="w-4 h-4 mr-2" />
-              Autonomous Business Innovation
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-blue-500/20 border border-red-400/30 rounded-full text-red-300 text-sm font-medium mb-6">
+              <Heart className="w-4 h-4 mr-2" />
+              AI Healthcare Innovation
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous
-              <span className="block bg-gradient-to-r from-purple-400 via-blue-500 to-green-600 bg-clip-text text-transparent">
-                Business Operations
+              AI Healthcare
+              <span className="block bg-gradient-to-r from-red-400 via-blue-500 to-green-600 bg-clip-text text-transparent">
+                Analytics Platform
               </span>
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your business with autonomous AI operations. Our platform enables intelligent automation, 
-              decision-making, and optimization across all aspects of your business operations.
+              Transform healthcare delivery with our AI-powered analytics platform. Improve patient outcomes, 
+              accelerate diagnosis, and enhance clinical decision-making with cutting-edge artificial intelligence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 border border-red-400/30 text-red-400 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200"
               >
                 View All Services
               </Link>
@@ -257,11 +254,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Autonomous Business Features
+              Healthcare AI Features
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our AI-powered platform provides comprehensive autonomous business capabilities that transform 
-              operations and drive unprecedented efficiency.
+              Our AI-powered platform provides comprehensive healthcare analytics capabilities that transform 
+              patient care and clinical decision-making.
             </p>
           </motion.div>
           
@@ -272,10 +269,10 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 group"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-blue-500/40 transition-all duration-200">
-                  <feature.icon className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-gradient-to-br from-red-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-red-400/40 group-hover:to-blue-500/40 transition-all duration-200">
+                  <feature.icon className="w-6 h-6 text-red-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
@@ -295,11 +292,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Autonomous Solutions
+              Comprehensive Healthcare Solutions
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              From supply chain to customer service, our platform provides autonomous AI solutions for every aspect 
-              of modern business operations.
+              From clinical decision support to population health management, our platform covers every aspect 
+              of modern healthcare analytics and AI-powered diagnostics.
             </p>
           </motion.div>
           
@@ -310,17 +307,17 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-red-400/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <service.icon className="w-8 h-8 text-purple-400" />
+                <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <service.icon className="w-8 h-8 text-red-400" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{service.title}</h3>
                 <p className="text-slate-300 text-lg mb-6">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -341,11 +338,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Business Transformation Benefits
+              Healthcare Transformation Benefits
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Discover how our AI Autonomous Business Operations Platform delivers measurable benefits for 
-              businesses across all industries and sizes.
+              Discover how our AI Healthcare Analytics Platform delivers measurable benefits for patients, 
+              healthcare providers, and healthcare organizations.
             </p>
           </motion.div>
           
@@ -356,10 +353,10 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200"
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-red-400/30 transition-all duration-200"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
-                  <benefit.icon className="w-8 h-8 text-purple-400" />
+                <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
+                  <benefit.icon className="w-8 h-8 text-red-400" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-slate-300 text-lg">{benefit.description}</p>
@@ -369,7 +366,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Pricing Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -379,46 +376,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Healthcare Platform Pricing
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our autonomous business operations platform is designed to transform operations across diverse industries 
-              and business models.
-            </p>
-          </motion.div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200"
-              >
-                <Rocket className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                <span className="text-white text-sm">{useCase}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Autonomous Platform Pricing
-            </h2>
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core autonomous AI 
-              capabilities and business optimization features.
+              Choose the plan that fits your healthcare organization's needs. All plans include our core 
+              AI healthcare analytics and HIPAA compliance features.
             </p>
           </motion.div>
           
@@ -431,13 +393,13 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-800/50 border rounded-xl p-8 ${
                   plan.popular 
-                    ? 'border-purple-400/50 bg-gradient-to-br from-purple-500/10 to-blue-500/10' 
+                    ? 'border-red-400/50 bg-gradient-to-br from-red-500/10 to-blue-500/10' 
                     : 'border-slate-700/50'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-red-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -454,7 +416,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -464,12 +426,47 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white hover:from-purple-400 hover:to-blue-500 hover:scale-105'
+                      ? 'bg-gradient-to-r from-red-500 to-blue-600 text-white hover:from-red-400 hover:to-blue-500 hover:scale-105'
                       : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
                   {plan.cta}
                 </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Compliance Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Healthcare Compliance & Security
+            </h2>
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              Our platform meets the highest standards of healthcare compliance and data security 
+              to protect patient privacy and ensure regulatory adherence.
+            </p>
+          </motion.div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {compliance.map((item, index) => (
+              <motion.div
+                key={item}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-red-400/30 transition-all duration-200"
+              >
+                <ShieldCheck className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
+                <span className="text-white text-sm">{item}</span>
               </motion.div>
             ))}
           </div>
@@ -486,11 +483,11 @@ export default function AIAutonomousBusinessOperationsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Technologies
+              Advanced Healthcare Technologies
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Our platform leverages cutting-edge technologies to create the most advanced autonomous 
-              business operations solution available.
+              Our platform leverages cutting-edge technologies to create the most advanced healthcare 
+              analytics solution available.
             </p>
           </motion.div>
           
@@ -501,9 +498,9 @@ export default function AIAutonomousBusinessOperationsPlatform() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-purple-400/30 transition-all duration-200"
+                className="flex items-center p-4 bg-slate-800/50 border border-slate-700/50 rounded-lg hover:border-red-400/30 transition-all duration-200"
               >
-                <BrainCircuit className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                <BrainCircuit className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                 <span className="text-white text-sm">{tech}</span>
               </motion.div>
             ))}
@@ -512,7 +509,7 @@ export default function AIAutonomousBusinessOperationsPlatform() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-blue-500/10">
+      <section className="py-20 bg-gradient-to-r from-red-500/10 to-blue-500/10">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -521,24 +518,24 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Automate Your Business?
+                Ready to Transform Healthcare?
               </h2>
               <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-                Join the future of autonomous business operations. Transform your business with AI-powered 
-                automation and optimization today.
+                Join the future of healthcare with AI-powered analytics and diagnostics. 
+                Improve patient outcomes and clinical decision-making today.
               </p>
               
               <div className="grid md:grid-cols-3 gap-6 mb-12">
                 <div className="flex items-center justify-center space-x-3 text-slate-300">
-                  <Phone className="w-5 h-5 text-purple-400" />
+                  <Phone className="w-5 h-5 text-red-400" />
                   <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-slate-300">
-                  <Mail className="w-5 h-5 text-purple-400" />
+                  <Mail className="w-5 h-5 text-red-400" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-slate-300">
-                  <MapPin className="w-5 h-5 text-purple-400" />
+                  <MapPin className="w-5 h-5 text-red-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
@@ -546,14 +543,14 @@ export default function AIAutonomousBusinessOperationsPlatform() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-blue-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20"
                 >
                   Start Free Trial
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
+                  className="inline-flex items-center px-8 py-4 border border-red-400/30 text-red-400 font-semibold rounded-lg hover:bg-red-400/10 transition-all duration-200"
                 >
                   Explore All Services
                 </Link>
