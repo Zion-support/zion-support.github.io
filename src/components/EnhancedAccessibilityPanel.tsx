@@ -1,8 +1,24 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Accessibility, 
   Eye, 
+=======
+<<<<<<< HEAD
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Type,
+  Contrast,
+=======
+import React, { useState, useEffect, useCallback               } from 'react.ts';
+import { motion, AnimatePresence                } from 'framer-motion.ts';
+import { Eye, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   EyeOff, 
   Volume2, 
   VolumeX, 
@@ -22,6 +38,7 @@ import {
   Tablet,
   Settings,
   X,
+<<<<<<< HEAD
   ChevronDown,
   ChevronUp,
   Play,
@@ -30,14 +47,40 @@ import {
   SkipForward,
   Volume1
 } from 'lucide-react';
+=======
+  Check,
+  AlertTriangle
+<<<<<<< HEAD
+=======
+               } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface AccessibilitySettings {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
   screenReader: boolean;
   focusIndicator: boolean;
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+<<<<<<< HEAD
   fontSize: number;
   lineHeight: number;
   letterSpacing: number;
@@ -57,6 +100,33 @@ export function EnhancedAccessibilityPanel() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
+=======
+<<<<<<< HEAD
+  fontSize: 'small' | 'medium' | 'large' | 'extra-large';
+=======
+fontSize: 'small' | 'medium' | 'large' | 'extra-large';
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const [isOpen, setIsOpen] = useState(false);
+  const [settings, setSettings] = useState<any>({
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     highContrast: false,
     largeText: false,
     reducedMotion: false,
@@ -133,6 +203,7 @@ export function EnhancedAccessibilityPanel() {
     }
   }, [applySettings]);
 
+<<<<<<< HEAD
   // Keyboard navigation support
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -141,6 +212,312 @@ export function EnhancedAccessibilityPanel() {
         setKeyboardMode(true);
         document.body.classList.add('keyboard-navigation');
       }
+=======
+  // Apply accessibility settings to the document
+<<<<<<< HEAD
+  const applySettings = useCallback((newSettings: anyanyanyanyanyanyanyanyanyanyanyanyanyanyAccessibilitySettings)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const root = document.documentElement;
+
+    // High contrast mode
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
+      root.style.setProperty('--bg-primary', '#000000');
+      root.style.setProperty('--text-primary', '#ffffff');
+      root.style.setProperty('--accent-color', '#ffff00')} else {
+      root.classList.remove('high-contrast');
+      root.style.removeProperty('--bg-primary');
+      root.style.removeProperty('--text-primary');
+<<<<<<< HEAD
+      root.style.removeProperty('--accent-color');
+
+    // Large text
+    if (newSettings.largeText) {
+      root.style.fontSize = '120%';
+    } else {
+      root.style.fontSize = '100%';
+=======
+      root.style.removeProperty('--accent-color')}
+
+    // Large text
+    if (newSettings.largeText) {
+      root.style.fontSize = '120%'} else {
+      root.style.fontSize = '100%'}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    // Reduced motion;
+    if (newSettings.reducedMotion) {;
+      root.style.setProperty('--animation-duration', '0.01ms');
+      root.style.setProperty('--transition-duration', '0.01ms')} else {
+      root.style.removeProperty('--animation-duration');
+<<<<<<< HEAD
+      root.style.removeProperty('--transition-duration');
+=======
+      root.style.removeProperty('--transition-duration')}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    // Color blindness simulation
+    if (newSettings.colorBlindness !== 'none') {
+      const filters = {
+  <<<<<<< HEAD
+        protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
+        deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',
+  tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)';
+      ;
+
+};
+      root.style.filter = filters[newSettings.colorBlindness]} else {
+      root.style.filter = 'none'}
+=======;
+  protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',;
+        deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',;
+  ;
+  ;
+  tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)';
+      ;
+
+
+
+
+};
+      root.style.filter = filters[newSettings.colorBlindness];
+    } else {
+      root.style.filter = 'none';
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    // Font size
+    const fontSizes = {
+  small: '0.875rem',
+      medium: '1rem',
+      large: '1.125rem',;
+  ;
+  ;
+  ;
+  ;
+  'extra-large': '1.25rem';
+    ;
+
+
+
+
+
+
+};
+    root.style.setProperty('--base-font-size', fontSizes[newSettings.fontSize]);
+
+    // Focus indicator
+    if (newSettings.focusIndicator) {
+<<<<<<< HEAD
+      root.style.setProperty('--focus-outline', '2px solid #06b6d4');
+    } else {
+      root.style.setProperty('--focus-outline', 'none');
+
+    // Keyboard navigation
+    if (newSettings.keyboardNavigation) {
+      document.addEventListener('keydown', handleKeyboardNavigation);
+    } else {
+      document.removeEventListener('keydown', handleKeyboardNavigation);
+=======
+      root.style.setProperty('--focus-outline', '2px solid #06b6d4')} else {
+      root.style.setProperty('--focus-outline', 'none')}
+
+    // Keyboard navigation
+    if (newSettings.keyboardNavigation) {
+      document.addEventListener('keydown', handleKeyboardNavigation)} else {
+      document.removeEventListener('keydown', handleKeyboardNavigation)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+    // Save settings
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))}, []);
+
+  // Handle keyboard navigation
+<<<<<<< HEAD
+  const handleKeyboardNavigation = useCallback((event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
+    const focusableElements = document.querySelectorAll(;
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    );
+
+    const currentIndex = Array.from(focusableElements).findIndex(el => el === document.activeElement);
+
+    switch (event.key) {
+      case 'Tab':
+        // Let default tab behavior work
+        break;
+      case 'ArrowRight':
+      case 'ArrowDown':
+        event.preventDefault();
+        const nextIndex = (currentIndex + 1) % focusableElements.length;
+        (focusableElements[nextIndex] as HTMLElement).focus();
+        announceToScreenReader(`Focused on ${(focusableElements[nextIndex] as HTMLElement).textContent || 'element'}`);
+        break;
+      case 'ArrowLeft':
+      case 'ArrowUp':
+        event.preventDefault();
+        const prevIndex = currentIndex <= 0 ? focusableElements.length - 1 : currentIndex - 1;
+        (focusableElements[prevIndex] as HTMLElement).focus();
+        announceToScreenReader(`Focused on ${(focusableElements[prevIndex] as HTMLElement).textContent || 'element'}`);
+        break;
+      case 'Enter':
+      case ' ':
+        if (document.activeElement instanceof HTMLElement) {
+<<<<<<< HEAD
+          document.activeElement.click();
+
+        break;
+
+=======
+          document.activeElement.click()}
+        break}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  }, []);
+
+  // Screen reader announcements
+<<<<<<< HEAD
+  const announceToScreenReader = useCallback((message: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    if (!settings.screenReader) return;
+
+    const announcement = document.createElement('div');
+    announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only';
+    announcement.textContent = message;
+
+    document.body.appendChild(announcement);
+
+    // Remove after announcement
+    setTimeout(() => {
+      if (announcement.parentNode) {
+<<<<<<< HEAD
+        announcement.parentNode.removeChild(announcement);
+
+=======
+        announcement.parentNode.removeChild(announcement)}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }, 1000);
+
+    setAnnouncements(prev => [...prev, message]);
+    setIsAnnouncing(true);
+    setTimeout(() => setIsAnnouncing(false), 1000)}, [settings.screenReader]);
+
+  // Update settings
+<<<<<<< HEAD
+  const updateSetting = useCallback((key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value)                => {
+    const newSettings = {
+  ...settings,;
+  [key]: value ;
+
+};
+=======
+  const updateSetting = useCallback((key: anyanyanyanyanyanyanyanyanyanyanyanyanyanykeyof AccessibilitySettings, value: )               => {
+    const newSettings = {
+  ...settings,;
+  ;
+  ;
+  ;
+  ;
+  ;
+  [key]: value ;
+
+
+
+
+
+
+};
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    setSettings(newSettings);
+    applySettings(newSettings);
+
+    // Announce changes to screen reader
+    const settingNames = {
+  highContrast: 'high contrast mode',
+      largeText: 'large text',
+      reducedMotion: 'reduced motion',
+      screenReader: 'screen reader support',
+      keyboardNavigation: 'keyboard navigation',
+      focusIndicator: 'focus indicator',
+<<<<<<< HEAD
+      colorBlindness: 'color blindness simulation',
+      fontSize: 'font size'
+    };
+
+    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`);
+  }, [settings, applySettings, announceToScreenReader]);
+=======
+      colorBlindness: 'color blindness simulation',;
+  ;
+  ;
+  ;
+  ;
+  fontSize: 'font size';
+    ;
+
+
+
+
+
+
+};
+    
+    announceToScreenReader(`${settingNames[key]} ${value ? 'enabled' : 'disabled'}`)}, [settings, applySettings, announceToScreenReader]);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+  // Reset to defaults
+  const resetToDefaults = useCallback(() => {
+    const defaultSettings: AccessibilitySettings = {
+  highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      keyboardNavigation: false,
+      focusIndicator: true,
+<<<<<<< HEAD
+      colorBlindness: 'none',
+      fontSize: 'medium'
+    };
+
+=======
+      colorBlindness: 'none',;
+  ;
+  ;
+  ;
+  ;
+  fontSize: 'medium';
+    ;
+
+
+
+
+
+
+};
+    
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    setSettings(defaultSettings);
+    applySettings(defaultSettings);
+    announceToScreenReader('Accessibility settings reset to defaults')}, [applySettings, announceToScreenReader]);
+
+  // Toggle panel
+  const togglePanel = useCallback(() => {;
+    setIsOpen(!isOpen);
+    announceToScreenReader(isOpen ? 'Accessibility panel closed' : 'Accessibility panel opened')}, [isOpen, announceToScreenReader]);
+
+  // Handle escape key
+  useEffect(() => {
+<<<<<<< HEAD
+    const handleEscape = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
+      if (event.key === 'Escape' && isOpen) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+        setIsOpen(false);
+<<<<<<< HEAD
+        announceToScreenReader('Accessibility panel closed');
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
       // Escape key to close panel
       if (event.key === 'Escape' && isVisible) {

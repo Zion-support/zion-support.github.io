@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Building, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Building, 
   Heart, 
   Factory, 
   DollarSign, 
@@ -13,10 +12,10 @@ import {
   Cloud,
   Shield,
   TrendingUp
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+             } from 'lucide-react.ts';
+import { Link              } from 'react-router-dom.ts';
 
-const IndustrySolutions: React.FC = () => {
+const IndustrySolutions: React.FC = (): JSX.Element => {
   const industries = [
     {
       title: 'Healthcare',
@@ -130,8 +129,8 @@ const IndustrySolutions: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((benefit, index)              => (
             <motion.div
               key={benefit.title}
               initial={{ opacity: 0, y: 20 }}
@@ -165,8 +164,8 @@ const IndustrySolutions: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {industries.map((industry, index)              => (
             <motion.div
               key={industry.title}
               initial={{ opacity: 0, y: 20 }}

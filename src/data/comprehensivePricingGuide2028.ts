@@ -1,4 +1,17 @@
 export interface ComprehensivePricingPlan2028 {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   description: string;
@@ -9,11 +22,24 @@ export interface ComprehensivePricingPlan2028 {
   benefits: string[];
   targetAudience: string[];
   includedServices: string[];
-  addOns: {
+addOns: {;
     name: string;
     price: number;
     description: string;
-  }[];
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}[];
   comparison: {
     feature: string;
     included: boolean;
@@ -27,10 +53,23 @@ export interface ComprehensivePricingPlan2028 {
 }
 
 export interface ServiceCategory2028 {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   description: string;
-  services: {
+services: {;
     id: string;
     name: string;
     description: string;
@@ -39,7 +78,20 @@ export interface ServiceCategory2028 {
     roi: string;
     features: string[];
     benefits: string[];
-  }[];
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}[];
 }
 
 export const COMPREHENSIVE_PRICING_PLANS_2028: ComprehensivePricingPlan2028[] = [

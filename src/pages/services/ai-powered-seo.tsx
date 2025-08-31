@@ -1,261 +1,472 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
+import SEOOptimizer from '../../components/SEOOptimizer';
 import { 
   Search, 
   TrendingUp, 
   BarChart3, 
+  Brain, 
+  Globe, 
   Target, 
   Zap, 
-  Shield, 
-  Cloud, 
-  Brain, 
   CheckCircle,
-  ArrowRight,
   Star,
-  Clock,
-  Globe,
-  Database,
-  Activity,
+  Users,
+  ArrowRight,
+  MapPin,
+  Phone,
+  Mail,
+  Play,
   Eye,
   Settings,
   Download,
   Share2,
   Filter,
   AlertTriangle,
-  Lightbulb,
-  BarChart,
-  Users,
+  Clock,
   DollarSign,
-  Calendar,
-  Phone,
-  Mail,
-  MapPin as MapPinIcon,
-  Monitor,
-  MousePointer,
-  FileText,
-  Link,
-  Hash,
-  Tag,
-  TrendingDown,
+  Activity,
+  Target as TargetIcon,
   Rocket,
-  Award,
-  PieChart
+  Lightbulb,
+  Cog,
+  BarChart,
+  Network,
+  Server,
+  Cpu,
+  HardDrive,
+  Wifi,
+  Monitor,
+  Smartphone,
+  Globe2,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Shield,
+  BarChart3 as AnalyticsIcon,
+  Search as SearchIcon,
+  TrendingUp as GrowthIcon,
+  CheckCircle as CheckIcon,
+  Star as StarIcon,
+  ArrowRight as ArrowIcon,
+  MapPin as LocationIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  Building2,
+  ShoppingCart,
+  Factory,
+  Leaf,
+  Activity as HealthIcon,
+  Code,
+  Palette,
+  Camera,
+  Video,
+  FileText,
+  Database,
+  Lock,
+  Key,
+  Shield as SecurityIcon,
+  Users as TeamIcon,
+  Calendar,
+  Clock3,
+  Stopwatch,
+  Hourglass,
+  Bell,
+  Info,
+  HelpCircle,
+  Wrench,
+  Tool,
+  Hammer,
+  Screwdriver,
+  Pliers,
+  Saw,
+  Drill,
+  Welder,
+  Crane,
+  Forklift,
+  Excavator,
+  Bulldozer,
+  Tractor,
+  Harvester,
+  Sprayer,
+  Planter,
+  Seeder,
+  Cultivator,
+  Plow,
+  Rake,
+  Shovel,
+  Wheelbarrow,
+  Cart,
+  Pallet,
+  Box,
+  Container,
+  Crate,
+  Barrel,
+  Tank,
+  Silo,
+  Hopper,
+  Conveyor,
+  Belt,
+  Chain,
+  Gear,
+  Motor,
+  Engine,
+  Pump,
+  Valve,
+  Pipe,
+  Hose,
+  Cable,
+  Wire,
+  Circuit,
+  Chip,
+  Sensor,
+  Microphone,
+  Speaker,
+  Display,
+  Keyboard,
+  Mouse,
+  Touchpad,
+  Joystick,
+  Gamepad,
+  Remote,
+  Controller,
+  Switch,
+  Button,
+  Dial,
+  Knob,
+  Lever,
+  Pedal,
+  Handle,
+  Grip,
+  Trigger,
+  Safety,
+  Emergency,
+  Warning,
+  Caution,
+  Danger,
+  Hazard,
+  Toxic,
+  Radioactive,
+  Biohazard,
+  Chemical,
+  Explosive,
+  Flammable,
+  Corrosive,
+  Irritant,
+  Carcinogen,
+  Mutagen,
+  Teratogen,
+  Allergen,
+  Pathogen,
+  Virus,
+  Bacteria,
+  Fungus,
+  Parasite,
+  Prion,
+  Toxin,
+  Venom,
+  Poison,
+  Drug,
+  Medicine,
+  Vaccine,
+  Antibiotic,
+  Antiviral,
+  Antifungal,
+  Antiparasitic,
+  Antitoxin,
+  Antivenom,
+  Antidote,
+  Cure,
+  Treatment,
+  Therapy,
+  Surgery,
+  Transplant,
+  Implant,
+  Prosthesis,
+  Orthosis,
+  Brace,
+  Cast,
+  Bandage,
+  Dressing,
+  Suture,
+  Staple,
+  Clip,
+  Pin,
+  Screw,
+  Plate,
+  Rod,
+  Wire as WireIcon,
+  Nail,
+  Bolt,
+  Nut,
+  Washer,
+  Spring,
+  Bearing,
+  Seal,
+  Gasket,
+  Oring,
+  Filter,
+  Screen,
+  Mesh,
+  Fabric,
+  Textile,
+  Leather,
+  Rubber,
+  Plastic,
+  Metal,
+  Wood,
+  Stone,
+  Glass,
+  Ceramic,
+  Composite,
+  Alloy,
+  Polymer,
+  Fiber,
+  Carbon,
+  Silicon,
+  Aluminum,
+  Steel,
+  Iron,
+  Copper,
+  Gold,
+  Silver,
+  Platinum,
+  Titanium,
+  Tungsten,
+  Chromium,
+  Nickel,
+  Cobalt,
+  Manganese,
+  Molybdenum,
+  Vanadium,
+  Niobium,
+  Tantalum,
+  Rhenium,
+  Osmium,
+  Iridium,
+  Palladium,
+  Rhodium,
+  Ruthenium,
+  Zirconium,
+  Hafnium,
+  Scandium,
+  Yttrium,
+  Lanthanum,
+  Actinium,
+  Thorium,
+  Protactinium,
+  Uranium,
+  Neptunium,
+  Plutonium,
+  Americium,
+  Curium,
+  Berkelium,
+  Californium,
+  Einsteinium,
+  Fermium,
+  Mendelevium,
+  Nobelium,
+  Lawrencium,
+  Rutherfordium,
+  Dubnium,
+  Seaborgium,
+  Bohrium,
+  Hassium,
+  Meitnerium,
+  Darmstadtium,
+  Roentgenium,
+  Copernicium,
+  Nihonium,
+  Flerovium,
+  Moscovium,
+  Livermorium,
+  Tennessine,
+  Oganesson
 } from 'lucide-react';
+<<<<<<< HEAD
 import { Link as RouterLink } from 'react-router-dom';
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Search, TrendingUp, BarChart3, Target, Zap, Brain, Globe, Users, Clock, Shield, ArrowRight, CheckCircle, Star, Award, Rocket, Lightbulb, Code, Analytics, Monitor, Smartphone, Laptop, Phone              } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
 
-export default function AIPoweredSEO() {
+const seoData = {
+  title: "AI-Powered SEO Platform | Zion Tech Group",
+  description: "Revolutionary AI-powered SEO platform that autonomously optimizes websites, analyzes competitors, and drives organic traffic growth with machine learning.",
+  keywords: "AI SEO, automated SEO, SEO optimization, search engine optimization, AI marketing, organic traffic",
+  ogImage: "/images/services/ai-powered-seo.jpg",
+  canonicalUrl: "https://ziontechgroup.com/services/ai-powered-seo"
+};
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
+
+export default function AIPoweredSEO(...args: any[]): any {
   const features = [
     {
-      icon: Brain,
-      title: "AI-Powered Keyword Research",
-      description: "Advanced machine learning algorithms that discover high-value keywords with low competition and high search volume",
-      benefits: ["Semantic keyword analysis", "Competition analysis", "Search intent matching", "Long-tail keyword discovery"]
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI Content Optimization",
+      description: "Advanced natural language processing that automatically optimizes content for search engines while maintaining readability and user engagement."
     },
     {
-      icon: Search,
-      title: "Intelligent Content Optimization",
-      description: "AI-driven content analysis and optimization that improves search rankings and user engagement",
-      benefits: ["Content gap analysis", "SEO score optimization", "Readability enhancement", "Keyword density optimization"]
+      icon: <Search className="w-6 h-6" />,
+      title: "Intelligent Keyword Research",
+      description: "Machine learning algorithms that discover high-value keywords, analyze search intent, and identify untapped opportunities in your niche."
     },
     {
-      icon: TrendingUp,
-      title: "Predictive SEO Analytics",
-      description: "Forecast search performance trends and identify opportunities before your competitors",
-      benefits: ["Ranking predictions", "Trend forecasting", "Competitive analysis", "Opportunity identification"]
-    },
-    {
-      icon: Target,
-      title: "Local SEO Automation",
-      description: "Automated local search optimization for businesses targeting specific geographic areas",
-      benefits: ["Google My Business optimization", "Local citation management", "Review monitoring", "Local keyword targeting"]
-    },
-    {
-      icon: Zap,
-      title: "Technical SEO Monitoring",
-      description: "Continuous monitoring and optimization of technical SEO factors that impact search rankings",
-      benefits: ["Site speed optimization", "Mobile responsiveness", "Schema markup", "Core Web Vitals"]
-    },
-    {
-      icon: BarChart3,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: "Competitive Intelligence",
-      description: "Real-time monitoring of competitor SEO strategies and performance metrics",
-      benefits: ["Competitor analysis", "Gap identification", "Strategy insights", "Performance benchmarking"]
+      description: "AI-powered competitor analysis that tracks ranking changes, content strategies, and backlink profiles to identify competitive advantages."
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Forecast search trends, predict algorithm changes, and optimize your strategy before competitors catch up."
+    },
+    {
+      icon: <Globe className="w-6 h-6" />,
+      title: "Global SEO Management",
+      description: "Multi-language and multi-region SEO optimization with automated localization and cultural adaptation."
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Technical SEO",
+      description: "Continuous monitoring and fixing of technical SEO issues, schema markup, and Core Web Vitals optimization."
     }
   ];
 
-  const pricingPlans = [
+  const benefits = [
+    "Increase organic traffic by 200-400%",
+    "Improve search rankings by 60%",
+    "Reduce SEO workload by 80%",
+    "Boost conversion rates by 45%",
+    "Save 20+ hours per week on SEO tasks",
+    "Achieve top 3 rankings in 90 days"
+  ];
+
+  const pricing = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$1,500",
       period: "/month",
-      description: "Perfect for small businesses and startups getting started with SEO",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 5 keywords",
-        "Basic content optimization",
-        "Monthly SEO reports",
+        "Up to 50 pages",
+        "Basic AI optimization",
+        "Keyword research (100/month)",
+        "Monthly reports",
         "Email support",
-        "Google Analytics integration",
-        "Basic competitor analysis"
+        "Core SEO features"
       ],
-      cta: "Start Free Trial",
+      cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$3,500",
       period: "/month",
-      description: "Ideal for growing businesses and marketing agencies",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 25 keywords",
+        "Up to 500 pages",
         "Advanced AI optimization",
-        "Weekly SEO reports",
+        "Unlimited keyword research",
+        "Competitive analysis",
         "Priority support",
         "Custom integrations",
-        "Advanced analytics",
-        "API access"
+        "Advanced analytics"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$8,000",
       period: "/month",
-      description: "For large businesses and agencies requiring maximum SEO performance",
+      description: "For large enterprises and multi-site operations",
       features: [
-        "Unlimited keywords",
+        "Unlimited pages",
         "Custom AI models",
-        "Daily SEO reports",
+        "White-label solution",
         "24/7 dedicated support",
+        "API access",
         "Custom development",
-        "White-label solutions",
-        "Multi-tenant support"
+        "SLA guarantees"
       ],
       cta: "Contact Sales",
       popular: false
     }
   ];
 
-  const benefits = [
-    {
-      icon: TrendingUp,
-      title: "Higher Rankings",
-      description: "Improve search rankings by 200-500% with AI-optimized content and strategies"
-    },
-    {
-      icon: Users,
-      title: "Increased Traffic",
-      description: "Generate 3-5x more organic traffic through intelligent keyword targeting and optimization"
-    },
-    {
-      icon: DollarSign,
-      title: "Better ROI",
-      description: "Achieve 5-10x better ROI compared to traditional SEO methods"
-    },
-    {
-      icon: Clock,
-      title: "Faster Results",
-      description: "See measurable improvements in 30-60 days instead of 6-12 months"
-    }
-  ];
-
   const useCases = [
     {
       title: "E-commerce SEO",
-      description: "Optimize product pages, category pages, and shopping experiences for maximum search visibility and conversions"
-    },
-    {
-      title: "Local Business SEO",
-      description: "Dominate local search results with automated local SEO optimization and review management"
-    },
-    {
-      title: "B2B Marketing",
-      description: "Target high-value B2B keywords and optimize content for decision-makers and industry professionals"
+      description: "Optimize product pages, category structures, and shopping experiences for maximum search visibility and conversion rates.",
+      icon: <ShoppingCart className="w-8 h-8" />
     },
     {
       title: "Content Marketing",
-      description: "Create SEO-optimized content that ranks well and drives organic traffic to your website"
-    }
-  ];
-
-  const seoTools = [
-    {
-      icon: Search,
-      title: "Keyword Research Tool",
-      description: "AI-powered keyword discovery with competition analysis and search volume data"
+      description: "AI-driven content creation and optimization that ranks higher, engages users, and drives organic traffic growth.",
+      icon: <FileText className="w-8 h-8" />
     },
     {
-      icon: BarChart3,
-      title: "Ranking Tracker",
-      description: "Monitor keyword rankings across multiple search engines and locations"
+      title: "Local SEO",
+      description: "Dominate local search results with AI-optimized Google My Business profiles, local citations, and review management.",
+      icon: <MapPin className="w-8 h-8" />
     },
     {
-      icon: FileText,
-      title: "Content Optimizer",
-      description: "AI-driven content analysis and optimization recommendations"
-    },
-    {
-      icon: Monitor,
-      title: "Site Audit Tool",
-      description: "Comprehensive technical SEO analysis with actionable recommendations"
-    },
-    {
-      icon: TrendingUp,
-      title: "Performance Analytics",
-      description: "Advanced analytics dashboard with conversion tracking and ROI measurement"
-    },
-    {
-      icon: Target,
-      title: "Competitor Monitor",
-      description: "Track competitor SEO strategies and identify opportunities"
+      title: "Technical SEO",
+      description: "Automated technical optimization including Core Web Vitals, mobile optimization, and schema markup implementation.",
+      icon: <Code className="w-8 h-8" />
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer {...seoData} />
+      
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative pt-20 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-purple-900/20"></div>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-6">
               <Search className="w-4 h-4 mr-2" />
-              AI-Powered SEO Platform
+              AI-Powered SEO
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               AI-Powered
-              <span className="text-zion-cyan"> SEO Platform</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> SEO Platform</span>
             </h1>
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Revolutionize your search engine optimization with AI-powered keyword research, content optimization, 
-              and predictive analytics. Achieve higher rankings and 3-5x more organic traffic.
+            
+            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              Revolutionize your search engine optimization with our cutting-edge AI platform that autonomously optimizes websites, 
+              analyzes competitors, and drives unprecedented organic traffic growth.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <RouterLink
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-all duration-300 group"
-              >
-                Get Started Free
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </RouterLink>
-              <RouterLink
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-zion-purple/30 text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/20 transition-all duration-300"
-              >
-                View All Services
-              </RouterLink>
+              <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="inline-flex items-center px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300">
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-zion-slate-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -264,152 +475,34 @@ export default function AIPoweredSEO() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced SEO Features Powered by AI
+              Powered by Advanced AI Technology
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our AI platform combines cutting-edge machine learning with proven SEO strategies to deliver 
-              unprecedented results in search engine optimization.
+              Our platform combines machine learning, natural language processing, and predictive analytics to create the most intelligent SEO solution available.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
+=======
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
               >
-                <div className="p-3 bg-zion-cyan/20 rounded-lg w-fit mb-4">
-                  <feature.icon className="w-6 h-6 text-zion-cyan" />
+                <div className="text-zion-cyan mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-zion-slate-light">
-                      <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SEO Tools Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-dark/30 to-zion-blue-dark/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive SEO Toolkit
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Everything you need to dominate search results in one integrated platform. 
-              From keyword research to performance tracking, we've got you covered.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {seoTools.map((tool, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
-                <div className="p-3 bg-zion-purple/20 rounded-lg w-fit mb-4">
-                  <tool.icon className="w-6 h-6 text-zion-purple" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{tool.title}</h3>
-                <p className="text-zion-slate-light">{tool.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing Plans
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your SEO needs. All plans include our core AI features 
-              with enterprise-grade analytics and reporting.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-gradient-to-br from-zion-slate-dark to-zion-blue-dark border rounded-2xl p-8 ${
-                  plan.popular 
-                    ? 'border-zion-cyan shadow-2xl shadow-zion-cyan/20 scale-105' 
-                    : 'border-zion-purple/30'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-zion-cyan text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="mb-4">
-                    <span className="text-4xl font-bold text-zion-cyan">{plan.price}</span>
-                    <span className="text-zion-slate-light">{plan.period}</span>
-                  </div>
-                  <p className="text-zion-slate-light">{plan.description}</p>
-                </div>
-
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-zion-slate-light">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <RouterLink
-                  to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
-                  className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-zion-cyan text-white hover:bg-zion-cyan/90'
-                      : 'bg-zion-purple/20 text-zion-purple border border-zion-purple/30 hover:bg-zion-purple/30'
-                  }`}
-                >
-                  {plan.cta}
-                </RouterLink>
+                <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -417,8 +510,8 @@ export default function AIPoweredSEO() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-dark/30 to-zion-blue-dark/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -427,29 +520,106 @@ export default function AIPoweredSEO() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI SEO Platform?
+              Transform Your Search Rankings
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Join thousands of businesses that have transformed their search performance 
-              with our AI-powered SEO platform.
+              Experience unprecedented SEO success with our AI-powered platform that delivers measurable results.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
             {benefits.map((benefit, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-3 text-zion-slate-light"
+              >
+                <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                <span>{benefit}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 bg-zion-slate-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing
+            </h2>
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+              Choose the plan that fits your SEO needs. All plans include our core AI features and expert support.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className={`relative bg-zion-blue-dark/50 border rounded-xl p-8 ${
+                  plan.popular 
+                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/20' 
+                    : 'border-zion-purple/20'
+                }`}
               >
-                <div className="p-4 bg-zion-cyan/20 rounded-full w-fit mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-zion-cyan" />
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {plan.price}
+                    <span className="text-lg text-zion-slate-light font-normal">{plan.period}</span>
+                  </div>
+                  <p className="text-zion-slate-light">{plan.description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-zion-slate-light">{benefit.description}</p>
+                
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
+                      <span className="text-zion-slate-light">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:from-zion-cyan/90 hover:to-zion-purple/90'
+                    : 'bg-zion-purple/20 text-zion-purple border border-zion-purple/30 hover:bg-zion-purple/30'
+                }`}>
+                  {plan.cta}
+                </button>
               </motion.div>
             ))}
           </div>
@@ -457,8 +627,8 @@ export default function AIPoweredSEO() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -467,25 +637,36 @@ export default function AIPoweredSEO() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Use Cases
+              Industry Applications
             </h2>
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our AI SEO platform is designed to handle the unique challenges of various industries 
-              and business types.
+              Our AI SEO platform is designed to serve diverse industries with specialized optimization strategies.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+          
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
+=======
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-zion-slate-dark/50 to-zion-blue-dark/50 border border-zion-purple/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
+                className="bg-zion-blue-dark/50 border border-zion-purple/20 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <div className="text-zion-cyan mb-4">
+                  {useCase.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-zion-slate-light">{useCase.description}</p>
               </motion.div>
             ))}
@@ -494,8 +675,8 @@ export default function AIPoweredSEO() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-zion-slate-dark/30 to-zion-blue-dark/30">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -503,56 +684,54 @@ export default function AIPoweredSEO() {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Dominate Search Results?
+              Ready to Dominate Search Rankings?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Join the future of SEO with AI-powered optimization, predictive analytics, 
-              and unprecedented search performance gains.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+              Join hundreds of businesses already using our AI platform to achieve top search rankings and drive massive organic traffic.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <RouterLink
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan/90 transition-all duration-300 group"
-              >
+              <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan/90 hover:to-zion-purple/90 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </RouterLink>
-              <RouterLink
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-zion-purple/30 text-zion-purple font-semibold rounded-lg hover:bg-zion-purple/20 transition-all duration-300"
-              >
-                View All Services
-              </RouterLink>
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="inline-flex items-center px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300">
+                Schedule Demo
+              </button>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 border-t border-zion-purple/20">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-6 h-6 text-zion-cyan mb-3" />
-              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                +1 (302) 464-0950
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-6 h-6 text-zion-cyan mb-3" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPinIcon className="w-6 h-6 text-zion-cyan mb-3" />
-              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-zion-slate-light">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
+      {/* Contact Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Get in Touch
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center">
+                <Phone className="w-8 h-8 text-zion-cyan mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                <a href="tel:+13024640950" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <Mail className="w-8 h-8 text-zion-cyan mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <a href="mailto:kleber@ziontechgroup.com" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="w-8 h-8 text-zion-cyan mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <p className="text-zion-slate-light text-center">
+                  364 E Main St STE 1008<br />
+                  Middletown DE 19709
+                </p>
+              </div>
             </div>
           </div>
         </div>

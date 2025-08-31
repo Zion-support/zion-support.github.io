@@ -1,9 +1,137 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Handshake, 
   Users, 
   Globe, 
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Users,
+  Handshake,
+  Globe,
+  Award,
+  TrendingUp,
+  Shield,
+  Zap,
+  Brain,
+  Cloud,
+  Lock,
+  Rocket,
+  Star
+import { SEO              } from '../components/SEO';
+=======
+<<<<<<< HEAD
+import { SEO              } from '../components/SEO';
+import { Link              } from 'react-router-dom.ts';
+=======
+>>>>>>> origin/cursor/fix-project-errors-and-automate-future-fixes-3a8c
+import { Handshake, 
+  Users, 
+  Globe, 
+<<<<<<< HEAD
+  Award, 
+  TrendingUp, 
+  Search, 
+  Filter,
+  ArrowRight,
+  ExternalLink,
+  Star,
+  Building2,
+  Zap,
+  Shield,
+  BookOpen,
+  ChevronDown,
+  ChevronUp,
+  Mail,
+  Phone
+             } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function Partners(...args: any[]): any {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedPartner, setExpandedPartner] = useState<any>(null);
+
+  const partnerCategories = [
+    { id: 'all', name: 'All Partners', count: 24 },
+    { id: 'technology', name: 'Technology', count: 8 },
+    { id: 'consulting', name: 'Consulting', count: 6 },
+    { id: 'enterprise', name: 'Enterprise', count: 5 },
+    { id: 'startup', name: 'Startups', count: 3 },
+    { id: 'academic', name: 'Academic', count: 2 }
+  ];
+
+  const featuredPartners = [
+    {
+      id: 'partner-001',
+      name: 'Microsoft',
+      logo: '/images/partners/microsoft-logo.png',
+      description: 'Global technology leader providing cloud computing, AI, and enterprise solutions.',
+      longDescription: 'Microsoft is a global technology leader that has been at the forefront of innovation for decades. Our partnership focuses on cloud computing solutions, AI integration, and enterprise software development. Together, we deliver cutting-edge solutions that transform businesses and drive digital transformation.',
+      category: 'technology',
+      partnershipType: 'Strategic Alliance',
+      partnershipDuration: '5+ years',
+      jointProjects: 12,
+      successStories: 8,
+      website: 'https://microsoft.com',
+      contact: 'partnerships@microsoft.com',
+      featured: true,
+      benefits: [
+        'Joint go-to-market strategies',
+        'Co-development of AI solutions',
+        'Shared technology roadmaps',
+        'Collaborative customer success'
+      ],
+      testimonials: [
+        {
+          quote: 'Our partnership with Zion Tech Group has been instrumental in delivering innovative AI solutions to our enterprise customers.',
+          author: 'Sarah Williams',
+          role: 'VP of Strategic Partnerships',
+          company: 'Microsoft'
+        }
+      ]
+    },
+    {
+<<<<<<< HEAD
+      name: 'AWS',
+      logo: '🟠',
+      category: 'Cloud Services',
+      description: 'Leading cloud provider for scalable and reliable infrastructure.',
+      benefits: ['AWS credits', 'Architecture guidance', 'Marketplace integration']
+    },
+    {
+      name: 'Google Cloud',
+      logo: '🔴',
+      category: 'AI & ML Platform',
+      description: 'Advanced AI and machine learning capabilities for enterprise solutions.',
+      benefits: ['GCP credits', 'AI/ML expertise', 'Innovation labs access']
+    },
+    {
+      name: 'Cisco',
+      logo: '🔵',
+      category: 'Networking',
+      description: 'Enterprise networking and security solutions for modern businesses.',
+      benefits: ['Certification programs', 'Technical training', 'Partner support']
+    },
+    {
+      name: 'Dell Technologies',
+      logo: '🔵',
+      category: 'Hardware & Infrastructure',
+      description: 'End-to-end technology solutions for enterprise transformation.',
+      benefits: ['Hardware discounts', 'Technical expertise', 'Joint solutions']
+    },
+    {
+      name: 'Intel',
+      logo: '🔵',
+      category: 'Processor Technology',
+      description: 'Leading processor technology for AI and high-performance computing.',
+      benefits: ['Early access programs', 'Technical resources', 'Innovation support']
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       id: 'partner-002',
       name: 'Amazon Web Services',
       category: 'cloud',
@@ -77,12 +205,27 @@ import {
       tier: 'Gold'
     },
     {
+<<<<<<< HEAD
       id: 5,
       name: 'IBM',
       category: 'technology',
       logo: '🔵',
       description: 'Enterprise technology partner for AI and quantum computing solutions.',
       partnership: 'Strategic Partner',
+=======
+      id: 'partner-006',
+      name: 'McKinsey & Comp',
+      logo: '/images/partners/mckinsey-logo.png',
+      description: 'Global management consulting firm specializing in business strategy and operations.',
+      category: 'consulting',
+      partnershipType: 'Strategic Consulting',
+      partnershipDuration: '3+ years',
+      jointProjects: 9,
+      successStories: 6,
+      website: 'https://mckinsey.com',
+      contact: 'partnerships@mckinsey.com',
+      featured: false,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       benefits: [
         'Joint strategy consulting',
         'Shared industry insights',
@@ -188,7 +331,39 @@ import {
       ]
     }
   ];
+<<<<<<< HEAD
   const togglePartnerExpansion = (partnerId: string) => {
+=======
+
+  const partnershipTypes = [
+    {
+      type: 'Strategic Alliance',
+      description: 'Long-term partnerships focused on joint market development and innovation',
+      examples: ['Microsoft', 'Amazon Web Services', 'Google Cloud'],
+      icon: Star
+    },
+    {
+      type: 'Technology Partnership',
+      description: 'Collaboration on technology integration and platform development',
+      examples: ['Salesforce', 'Oracle', 'Adobe'],
+      icon: Zap
+    },
+    {
+      type: 'Consulting Partnership',
+      description: 'Joint delivery of consulting services and strategic advisory',
+      examples: ['Deloitte', 'McKinsey', 'Bain & Comp'],
+      icon: BookOpen
+    },
+    {
+      type: 'Academic Partnership',
+      description: 'Research collaboration and talent development initiatives',
+      examples: ['Stanford University', 'MIT', 'Harvard'],
+      icon: Building2
+    }
+  ];
+
+  const togglePartnerExpansion = (partnerId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setExpandedPartner(expandedPartner === partnerId ? null : partnerId);
   };
   const allPartners = [...featuredPartners, ...regularPartners];
@@ -201,7 +376,12 @@ import {
     }
     return true;
   });
+<<<<<<< HEAD
   const getCategoryColor = (category: string) => {
+=======
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {
       case 'technology': return 'bg-blue-500/20 text-blue-400';
       case 'consulting': return 'bg-green-500/20 text-green-400';
@@ -248,14 +428,69 @@ import {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Why Partner With Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We offer comprehensive support, resources, and opportunities to help our partners
+              succeed in the rapidly evolving technology landscape.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                icon: Users,
+                title: 'Expanded Market Reach',
+                description: 'Access our extensive customer base and market presence across multiple industries.'
+              },
+              {
+                icon: Handshake,
+                title: 'Joint Go-to-Market',
+                description: 'Collaborate on marketing campaigns, events, and customer acquisition strategies.'
+              },
+              {
+                icon: Globe,
+                title: 'Global Presence',
+                description: 'Leverage our international network and local market expertise.'
+              },
+              {
+                icon: Award,
+                title: 'Recognition & Rewards',
+                description: 'Earn rewards, certifications, and recognition for your partnership achievements.'
+              },
+              {
+                icon: TrendingUp,
+                title: 'Revenue Growth',
+                description: 'Increase your revenue through joint solutions and referral programs.'
+              },
+              {
+                icon: Shield,
+                title: 'Technical Support',
+                description: 'Access our technical expertise and resources to enhance your solutions.'
+
+            ].map((benefit, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
           >
             <h2 className="text-4xl font-bold text-white mb-4">Why Partner With Us?</h2>
             <p className="text-xl text-gray-300">
               Discover the benefits of strategic partnerships with Zion Tech Group
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {partnershipBenefits.map((benefit, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {partnershipBenefits.map((benefit, index)              => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -300,8 +535,14 @@ import {
               Different ways we collaborate with our partners
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {partnershipTypes.map((type, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {partnershipTypes.map((type, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -348,8 +589,14 @@ import {
               Our strategic alliances with industry leaders
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredPartners.map((partner, index) => (
+=======
+
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {featuredPartners.map((partner, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={partner.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -502,9 +749,9 @@ import {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
+                  className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-200"
                 >
-                  {partnerCategories.map((category) => (
+                  {partnerCategories.map((category)              => (
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -529,8 +776,14 @@ import {
               Our complete network of strategic partners
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPartners.map((partner, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredPartners.map((partner, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={partner.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -679,10 +932,18 @@ import {
   Phone,
   MapPin
 } from 'lucide-react';
+<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 const Partners: React.FC = () => {
+=======
+import { SEO              } from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle              } from '@/components/ui/card';
+
+const Partners: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const partnershipTypes = [
     {
@@ -902,8 +1163,14 @@ const Partners: React.FC = () => {
                 We offer flexible arrangements to support your growth.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnershipTypes.map((type, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {partnershipTypes.map((type, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={type.id}
                   initial={{ opacity: 0, y: 30 }}
@@ -979,8 +1246,14 @@ const Partners: React.FC = () => {
                 how we can help accelerate your business growth.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partnerBenefits.map((benefit, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {partnerBenefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={benefit.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -1021,8 +1294,14 @@ const Partners: React.FC = () => {
                 with Zion Tech Group.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {successStories.map((story, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {successStories.map((story, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={story.partner}
                   initial={{ opacity: 0, y: 30 }}
@@ -1045,8 +1324,8 @@ const Partners: React.FC = () => {
                         {story.description}
                       </p>
                       <div className="space-y-2">
-                        <h4 className="text-white font-semibold">Key Results:</h4>
-                        {story.results.map((result, resultIndex) => (
+                        <h4 className="text-white font-semibold">Key Results: anyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                        {story.results.map((result, resultIndex)              => (
                           <div key={resultIndex} className="flex items-center space-x-2 text-sm">
                             <Star className="w-4 h-4 text-zion-cyan flex-shrink-0" />
                             <span className="text-gray-300">{result}</span>
@@ -1078,8 +1357,14 @@ const Partners: React.FC = () => {
                 to get you started quickly.
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {applicationSteps.map((step, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {applicationSteps.map((step, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={step.step}
                   initial={{ opacity: 0, y: 30 }}
@@ -1129,8 +1414,14 @@ const Partners: React.FC = () => {
                 Let's discuss how we can work together to create value for both our businesses 
                 and your customers.
               </p>
+<<<<<<< HEAD
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {contactInfo.map((contact, index) => (
+=======
+              
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6 mb-8">
+                {contactInfo.map((contact, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   <motion.div
                     key={contact.label}
                     initial={{ opacity: 0, y: 20 }}

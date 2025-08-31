@@ -1,14 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 import React from 'react.ts';
-import { Helmet  } from 'react-helmet-async.ts';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database  } from 'lucide-react';
-import { Link  } from 'react-router-dom.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link              } from 'react-router-dom.ts';
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+import React from 'react.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default function DigitalTwin(...args: []):  {
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export default function DigitalTwin() {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   return (
     <>
       <Helmet>
         <title>Digital Twin Solutions - Zion Tech Group</title>
-        <meta name = "description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
+        <meta name="description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
         <meta name="keywords" content="digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -33,6 +50,7 @@ export default function DigitalTwin(...args: []):  {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -44,6 +62,7 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
+
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,7 +75,16 @@ export default function DigitalTwin(...args: []):  {
                 real-time monitoring, simulation, and optimization.
               </p>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               {[
                 {
                   icon: Cpu,
@@ -87,9 +115,15 @@ export default function DigitalTwin(...args: []):  {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              ].map((feature, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
-              ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+              ].map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -101,6 +135,7 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
         {/* Applications Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -112,7 +147,12 @@ export default function DigitalTwin(...args: []):  {
                 Discover how digital twin technology can revolutionize different industries and operations.
               </p>
             </div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               {[
                 {
                   title: "Manufacturing",
@@ -149,6 +189,13 @@ export default function DigitalTwin(...args: []):  {
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+              ].map((application, index)              => (
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 }
               ].map((application, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -204,11 +251,11 @@ export default function DigitalTwin(...args: []):  {
                 <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>
                 <div className="space-y-4">
                   {[
-                    { component: "Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
+                    { component: anyanyanyanyanyanyanyanyanyanyanyanyany"Data Ingestion", icon: Database, color: "from-blue-500 to-cyan-500" },
                     { component: "Processing Engine", icon: Cpu, color: "from-purple-500 to-pink-500" },
                     { component: "Visualization", icon: Eye, color: "from-emerald-500 to-teal-500" },
                     { component: "Analytics", icon: BarChart3, color: "from-orange-500 to-red-500" }
-                  ].map((item, index)  => (
+                  ].map((item, index)               => (
                     <div key={index} className="flex items-center space-x-3">
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>
                         <item.icon className="w-4 h-4 text-white" />
@@ -221,84 +268,84 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
+=======
+
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         {/* Benefits Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Transform Your Operations
+                Why Choose Digital Twin Technology?
               </h2>
               <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Experience unprecedented visibility, control, and optimization across your entire operation.
+                Transform your operations with virtual replication and real-time insights.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-6">Operational Benefits</h3>
-                <div className="space-y-4">
-                  {[
-                    "Reduce operational costs by up to 30% through predictive maintenance",
-                    "Improve asset utilization by 25% with real-time optimization",
-                    "Minimize downtime by 40% with proactive issue detection",
-                    "Enhance decision-making with comprehensive data insights",
-                    "Accelerate innovation through virtual testing and simulation",
-                    "Improve safety with real-time risk assessment and monitoring"
-                  ].map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{benefit}</span>
-                    </div>
-                  ))}
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Operational Efficiency</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">Reduce downtime with predictive maintenance</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">Optimize resource allocation</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">Improve decision-making with real-time data</span>
+                  </li>
+                </ul>
               </div>
-              <div>
-                <h3 className="text-2xl font-semibold text-white mb-6">Strategic Advantages</h3>
-                <div className="space-y-4">
-                  {[
-                    "Gain competitive advantage through operational excellence",
-                    "Enable data-driven strategic planning and decision-making",
-                    "Improve customer satisfaction with optimized service delivery",
-                    "Support sustainability goals through efficient resource management",
-                    "Enable remote monitoring and management capabilities",
-                    "Facilitate digital transformation and Industry 4.0 adoption"
-                  ].map((advantage, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-slate-300">{advantage}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-4">Risk Mitigation</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">Test changes in virtual environment</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">Identify potential issues before they occur</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span className="text-slate-300">Minimize operational risks</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
+
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10">
+        <section className="py-20">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Create Your Digital Twin?
-            </h2>
-            <p className="text-xl text-slate-300 mb-8">
-              Transform your physical operations with virtual intelligence and real-time optimization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
-                Schedule a Consultation
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
-              >
-                Explore All Services;
-              </Link>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-    </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            <div className="bg-gradient-to-r from-emerald-500/20 to-teal-600/20 backdrop-blur-sm border border-emerald-500/30 rounded-2xl p-8">
+              <h2 className="text-3xl font-bold text-white mb-4">Ready to Implement Digital Twin Technology?</h2>
+              <p className="text-xl text-slate-300 mb-8">
+                Transform your operations with virtual replication and real-time insights.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
+                >
+                  Get Started
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+                <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
+                  <Download className="mr-2 w-5 h-5" />
+                  Download Brochure
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
-}}}}
+}

@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-08-31T11:54:21.233Z",
+  "summary": {
+    "total": 6,
+    "passed": 4,
+    "failed": 2
+  },
+  "results": {
+    "unit": {
+      "status": "success",
+      "results": "No unit tests found\n"
+    },
+    "integration": {
+      "status": "failure",
+      "results": "Command failed: npm run build"
+    },
+    "e2e": {
+      "status": "success",
+      "results": "No E2E testing framework available"
+    },
+    "performance": {
+      "status": "failure",
+      "results": "Command failed: npm run build\nnpm error Missing script: \"build\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/miami2/.npm/_logs/2025-08-31T11_54_15_098Z-debug-0.log\n"
+    },
+    "accessibility": {
+      "status": "success",
+      "results": "Lint check failed: Command failed: npm run lint\nnpm error Missing script: \"lint\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm link # Symlink a package folder\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/miami2/.npm/_logs/2025-08-31T11_54_16_652Z-debug-0.log\n"
+    },
+    "coverage": {
+      "status": "success",
+      "results": "Coverage generation failed\n"
+    }
+  },
+  "qualityGates": false
+}

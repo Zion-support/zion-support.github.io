@@ -1,7 +1,339 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Building, 
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Building, 
+  Heart, 
+  DollarSign, 
+  Truck, 
+  BookOpen, 
+  Shield, 
+  Users, 
+  Globe,
+  Brain,
+  Server,
+  Rocket,
+  Cloud,
+  Atom,
+  Sparkles,
+  TrendingUp,
+  Zap,
+  Target,
+  Award,
+  CheckCircle,
+  ArrowRight
+             } from 'lucide-react.ts';
+
+export default function Solutions(...args: any[]): any {
+  const industrySolutions = [
+    {
+      title: 'Enterprise Solutions',
+      icon: Building,
+      description: 'Scalable enterprise-grade solutions for large organizations',
+      color: 'from-blue-500 to-indigo-600',
+      features: [
+        'Digital Transformation Consulting',
+        'Enterprise AI Integration',
+        'Scalable Cloud Infrastructure',
+        'Enterprise Security & Compliance',
+        'Business Process Automation',
+        'Data Governance & Analytics'
+      ],
+      useCases: [
+        'Fortune 500 Digital Transformation',
+        'Multi-national AI Implementation',
+        'Enterprise Security Modernization',
+        'Legacy System Migration'
+      ],
+      href: '/solutions/enterprise'
+    },
+    {
+      title: 'Healthcare Solutions',
+      icon: Heart,
+      description: 'AI-powered healthcare solutions for improved patient outcomes',
+      color: 'from-red-500 to-pink-600',
+      features: [
+        'AI Diagnostic Tools',
+        'Patient Data Analytics',
+        'Healthcare Process Automation',
+        'Medical Imaging AI',
+        'Drug Discovery Support',
+        'Healthcare Compliance'
+      ],
+      useCases: [
+        'AI-Powered Diagnosis Systems',
+        'Patient Outcome Prediction',
+        'Medical Image Analysis',
+        'Healthcare Workflow Optimization'
+      ],
+      href: '/solutions/healthcare'
+    },
+    {
+      title: 'Financial Services',
+      icon: DollarSign,
+      description: 'Advanced financial technology solutions for modern banking',
+      color: 'from-green-500 to-emerald-600',
+      features: [
+        'AI Trading Algorithms',
+        'Risk Management Systems',
+        'Fraud Detection AI',
+        'Financial Analytics',
+        'Regulatory Compliance',
+        'Customer Experience AI'
+      ],
+      useCases: [
+        'Algorithmic Trading Platforms',
+        'Real-time Risk Assessment',
+        'AI Fraud Prevention',
+        'Personalized Banking'
+      ],
+      href: '/solutions/financial'
+    },
+    {
+      title: 'Manufacturing Solutions',
+      icon: Truck,
+      description: 'Smart manufacturing and Industry 4.0 solutions',
+      color: 'from-orange-500 to-red-600',
+      features: [
+        'Predictive Maintenance',
+        'Quality Control AI',
+        'Supply Chain Optimization',
+        'IoT Integration',
+        'Production Analytics',
+        'Smart Factory Solutions'
+      ],
+      useCases: [
+        'Predictive Maintenance Systems',
+        'Quality Control Automation',
+        'Supply Chain Optimization',
+        'Smart Factory Implementation'
+      ],
+      href: '/solutions/manufacturing'
+    },
+    {
+      title: 'Government Solutions',
+      icon: Shield,
+      description: 'Secure and compliant government technology solutions',
+      color: 'from-purple-500 to-indigo-600',
+      features: [
+        'Cybersecurity & Compliance',
+        'Data Governance',
+        'Citizen Services AI',
+        'Infrastructure Management',
+        'Public Safety Systems',
+        'Regulatory Compliance'
+      ],
+      useCases: [
+        'Government Cybersecurity',
+        'Smart City Infrastructure',
+        'Citizen Service Automation',
+        'Public Safety AI'
+      ],
+      href: '/solutions/government'
+    },
+    {
+      title: 'Education Solutions',
+      icon: BookOpen,
+      description: 'Innovative educational technology for modern learning',
+      color: 'from-cyan-500 to-blue-600',
+      features: [
+        'AI Learning Platforms',
+        'Personalized Education',
+        'Student Analytics',
+        'Virtual Learning Environments',
+        'Assessment Automation',
+        'Educational Content AI'
+      ],
+      useCases: [
+        'Personalized Learning Systems',
+        'Student Performance Analytics',
+        'Virtual Classroom Platforms',
+        'AI-Powered Assessment'
+      ],
+      href: '/solutions/education'
+    }
+  ];
+
+  const technologySolutions = [
+    {
+      title: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'Cutting-edge AI solutions for business transformation',
+      color: 'from-purple-500 to-pink-600',
+      solutions: [
+        'AI Business Intelligence',
+        'Machine Learning Platforms',
+        'Natural Language Processing',
+        'Computer Vision Systems',
+        'Predictive Analytics',
+        'AI Automation'
+      ]
+    },
+    {
+      title: 'Cloud & Infrastructure',
+      icon: Cloud,
+      description: 'Scalable cloud solutions and infrastructure management',
+      color: 'from-blue-500 to-cyan-600',
+      solutions: [
+        'Cloud Migration',
+        'DevOps Automation',
+        'Container Orchestration',
+        'Serverless Computing',
+        'Multi-cloud Management',
+        'Edge Computing'
+      ]
+    },
+    {
+      title: 'Cybersecurity',
+      icon: Shield,
+      description: 'Advanced security solutions for modern threats',
+      color: 'from-red-500 to-orange-600',
+      solutions: [
+        'Zero Trust Security',
+        'AI Threat Detection',
+        'Compliance Management',
+        'Identity & Access Management',
+        'Security Automation',
+        'Incident Response'
+      ]
+    },
+    {
+      title: 'Quantum Computing',
+      icon: Atom,
+      description: 'Next-generation quantum computing solutions',
+      color: 'from-indigo-500 to-purple-600',
+      solutions: [
+        'Quantum Algorithms',
+        'Quantum Machine Learning',
+        'Quantum Cryptography',
+        'Quantum Simulation',
+        'Hybrid Quantum-Classical',
+        'Quantum Optimization'
+      ]
+    }
+  ];
+
+  const successMetrics = [
+    { metric: '500+', label: 'Successful Implementations', icon: CheckCircle, color: 'text-green-400' },
+    { metric: '98%', label: 'Client Satisfaction Rate', icon: Award, color: 'text-yellow-400' },
+    { metric: '40%', label: 'Average Cost Reduction', icon: TrendingUp, color: 'text-blue-400' },
+    { metric: '3x', label: 'Performance Improvement', icon: Zap, color: 'text-purple-400' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Header Section */}
+      <div className="bg-black/95 backdrop-blur-xl border-b border-cyan-500/30">
+        <div className="container mx-auto px-4 py-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+          >
+            <div className="flex items-center justify-center space-x-3 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
+                <Target className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h1 className="text-4xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Solutions
+                </h1>
+                <p className="text-lg text-cyan-400 font-rajdhani tracking-wider">
+                  Industry-Specific Solutions
+                </p>
+              </div>
+            </div>
+            
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Discover tailored solutions designed for your industry. From healthcare to finance, 
+              manufacturing to government, we provide cutting-edge technology solutions that drive real results.
+            </p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Success Metrics */}
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-16"
+        >
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {successMetrics.map((item, index)              => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <item.icon className={`w-8 h-8 ${item.color}`} />
+                </div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">{item.metric}</div>
+                <div className="text-sm text-gray-400">{item.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Industry Solutions */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-12 uppercase tracking-wider">
+            Industry Solutions
+          </h2>
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {industrySolutions.map((solution, index)              => (
+              <motion.div
+                key={solution.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+              >
+                <Link
+                  to={solution.href}
+                  className="block p-8 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 group h-full"
+                >
+                  <div className="flex items-center space-x-4 mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <solution.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold font-rajdhani text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                        {solution.title}
+                      </h3>
+                      <p className="text-gray-400">
+                        {solution.description}
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-cyan-300 mb-3">Key Features</h4>
+                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-2">
+                      {solution.features.map((feature, featureIndex)              => (
+                        <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+=======
+import React, { useState } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Building, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Shield, 
   Cloud, 
   Brain, 
@@ -26,6 +358,7 @@ import {
   Settings,
   CheckCircle,
   ArrowRight,
+<<<<<<< HEAD
   Play,
   Heart as HeartIcon,
   DollarSign,
@@ -37,6 +370,11 @@ import {
   Award
 } from 'lucide-react';
 import { SEO } from '@/components/SEO';
+=======
+  Play
+              } from 'lucide-react.ts';
+import { SEO               } from '@/components/SEO';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 const solutionCategories = [
   {
@@ -224,6 +562,7 @@ const Solutions: React.FC = (): JSX.Element => {
         )
       );
 
+<<<<<<< HEAD
   const filteredIndustries = selectedCategory === 'all'
     ? industrySolutions
     : industrySolutions.filter(ind => 
@@ -231,6 +570,139 @@ const Solutions: React.FC = (): JSX.Element => {
           sol.name.toLowerCase().includes(selectedCategory.toLowerCase())
         )
       );
+=======
+  const solutions = [
+    {
+      id: 1,
+      title: 'AI-Powered Healthcare Analytics',
+      industry: 'healthcare',
+      description: 'Transform patient care with predictive analytics and intelligent diagnosis support.',
+      features: [
+        'Predictive disease modeling',
+        'Medical image analysis',
+        'Patient risk assessment',
+        'Drug discovery optimization'
+      ],
+      benefits: [
+        'Improved diagnostic accuracy',
+        'Reduced healthcare costs',
+        'Enhanced patient outcomes',
+        'Streamlined clinical workflows'
+      ],
+      icon: Brain,
+      demo: true,
+      trial: true
+    },
+    {
+      id: 2,
+      title: 'Cybersecurity for Financial Services',
+      industry: 'finance',
+      description: 'Protect financial institutions with advanced threat detection and compliance solutions.',
+      features: [
+        'Real-time threat monitoring',
+        'Compliance automation',
+        'Fraud detection systems',
+        'Secure transaction processing'
+      ],
+      benefits: [
+        'Enhanced security posture',
+        'Regulatory compliance',
+        'Reduced fraud losses',
+        'Customer trust protection'
+      ],
+      icon: Shield,
+      demo: true,
+      trial: false
+    },
+    {
+      id: 3,
+      title: 'Smart Manufacturing Platform',
+      industry: 'manufacturing',
+      description: 'Optimize production with IoT sensors, predictive maintenance, and quality control.',
+      features: [
+        'Predictive maintenance',
+        'Quality control automation',
+        'Supply chain optimization',
+        'Energy efficiency monitoring'
+      ],
+      benefits: [
+        'Reduced downtime',
+        'Improved product quality',
+        'Lower operational costs',
+        'Increased productivity'
+      ],
+      icon: Building,
+      demo: true,
+      trial: true
+    },
+    {
+      id: 4,
+      title: 'E-commerce Personalization Engine',
+      industry: 'retail',
+      description: 'Boost sales with AI-driven product recommendations and customer insights.',
+      features: [
+        'Personalized recommendations',
+        'Customer behavior analysis',
+        'Dynamic pricing optimization',
+        'Inventory management'
+      ],
+      benefits: [
+        'Increased conversion rates',
+        'Higher customer retention',
+        'Optimized pricing strategies',
+        'Better inventory control'
+      ],
+      icon: Users,
+      demo: true,
+      trial: true
+    },
+    {
+      id: 5,
+      title: 'Cloud-Native Development Platform',
+      industry: 'technology',
+      description: 'Accelerate software development with cloud-native tools and DevOps automation.',
+      features: [
+        'Container orchestration',
+        'CI/CD pipelines',
+        'Microservices architecture',
+        'Auto-scaling infrastructure'
+      ],
+      benefits: [
+        'Faster time to market',
+        'Reduced infrastructure costs',
+        'Improved scalability',
+        'Enhanced reliability'
+      ],
+      icon: Cloud,
+      demo: true,
+      trial: true
+    },
+    {
+      id: 6,
+      title: 'Data Intelligence Platform',
+      industry: 'technology',
+      description: 'Unlock insights from your data with advanced analytics and machine learning.',
+      features: [
+        'Data warehousing',
+        'Real-time analytics',
+        'Machine learning models',
+        'Business intelligence dashboards'
+      ],
+      benefits: [
+        'Data-driven decisions',
+        'Improved operational efficiency',
+        'Competitive advantage',
+        'Cost optimization'
+      ],
+      icon: Database,
+      demo: true,
+      trial: false;
+    };
+  ];
+
+  const filteredSolutions = selectedIndustry === 'all' ;
+    ? solutions: anyanyanyanyanyanyanyanyanyanyanyanyanysolutions.filter(solution               => solution.industry === selectedIndustry);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
@@ -276,6 +748,7 @@ const Solutions: React.FC = (): JSX.Element => {
         </div>
       </div>
 
+<<<<<<< HEAD
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Solution Categories */}
         <motion.section 
@@ -296,6 +769,124 @@ const Solutions: React.FC = (): JSX.Element => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredCategories.map((category, index) => (
+=======
+        {/* Industry Filter */}
+        <section className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-wrap gap-4 justify-center">
+              {industries.map((industry) => (
+                <button
+                  key={industry.id}
+                  onClick={() => setSelectedIndustry(industry.id)}
+                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
+                    selectedIndustry === industry.id
+                      ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50'
+                  }`}
+                >
+                  <industry.icon className="w-5 h-5 mr-2" />
+                  {industry.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Solutions Grid */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredSolutions.map((solution, index)               => (
+                <motion.div
+                  key={solution.id}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+}}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
+                >
+                  <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
+                    <solution.icon className="w-8 h-8 text-blue-400" />
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
+                  
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {solution.features.slice(0, 4).map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">
+                          <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+<<<<<<< HEAD
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-cyan-300 mb-3">Use Cases</h4>
+                    <div className="space-y-2">
+                      {solution.useCases.map((useCase, useCaseIndex) => (
+                        <div key={useCaseIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                          <ArrowRight className="w-3 h-3 text-cyan-500" />
+                          <span>{useCase}</span>
+                        </div>
+=======
+                  {/* Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Benefits</h4>
+                    <ul className="space-y-2">
+                      {solution.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
+                          <span>{benefit}</span>
+                        </li>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                      ))}
+                    </ul>
+                  </div>
+
+<<<<<<< HEAD
+                  <div className="flex items-center justify-between">
+                    <span className="text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors">
+                      Learn More
+                    </span>
+                    <ArrowRight className="w-5 h-5 text-cyan-500 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Technology Solutions */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-16"
+        >
+          <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-12 uppercase tracking-wider">
+            Technology Solutions
+          </h2>
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologySolutions.map((tech, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={category.id}
                 initial={{ opacity: 0, y: 20 }}

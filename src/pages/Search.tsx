@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { 
   Search, 
+=======
+import React, { useState, useEffect } from 'react.ts';
+<<<<<<< HEAD
+import { Search as SearchIcon, Filter, MapPin, Briefcase, Server, Users, Building, Star, Clock, ArrowRight import { useSearchParams              } from 'react-router-dom.ts';
+=======
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
+import { Link              } from 'react-router-dom.ts';
+import { Search, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Filter, 
   Grid, 
   List, 
@@ -179,17 +190,32 @@ import {
   Cockatoo,
   Canary,
   Finch
+<<<<<<< HEAD
 } from 'lucide-react';
 export default function SearchPage() {
+=======
+             } from 'lucide-react.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function SearchPage(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [searchResults, setSearchResults] = useState<any>([]);
   const [isSearching, setIsSearching] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
+<<<<<<< HEAD
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const [popularSearches, setPopularSearches] = useState<string[]>([]);
+=======
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [expandedItem, setExpandedItem] = useState<any>(null);
+  const [recentSearches, setRecentSearches] = useState<any>([]);
+  const [popularSearches, setPopularSearches] = useState<any>([]);
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const categories = [
     { id: 'all', name: 'All', icon: <SearchIcon className="w-4 h-4" />, count: 0 },
     { id: 'services', name: 'Services', icon: <Server className="w-4 h-4" />, count: 0 },
@@ -340,6 +366,161 @@ export default function SearchPage() {
     }
   ];
   useEffect(() => {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Load recent searches from localStorage
+    const saved = localStorage.getItem('recentSearches');
+    if (saved) {
+      setRecentSearches(JSON.parse(saved));
+    }
+
+    // Set popular searches
+    setPopularSearches([
+      'AI solutions',
+      'Cloud migration',
+      'Cybersecurity',
+      'Data analytics',
+      'Machine learning',
+      'DevOps services',
+      'Green IT',
+      'Digital transformation'
+    ]);
+  }, []);
+
+  const performSearch = async (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    if (!query.trim()) {
+      setSearchResults([]);
+      return;
+    }
+
+    setIsSearching(true);
+    
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    
+    // Filter mock data based on search query
+    const filtered = mockSearchData.filter(item => {
+      const searchTerm = query.toLowerCase();
+      return (
+        item.title.toLowerCase().includes(searchTerm) ||
+        item.description.toLowerCase().includes(searchTerm) ||
+        item.content.toLowerCase().includes(searchTerm) ||
+        item.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+      );
+    });
+
+    // Apply category and type filters
+    let results = filtered;
+    if (selectedCategory !== 'all') {
+      results = results.filter(item => item.category === selectedCategory);
+    }
+    if (selectedType !== 'all') {
+      results = results.filter(item => item.type === selectedType);
+    }
+
+    setSearchResults(results);
+    setIsSearching(false);
+
+    // Save to recent searches
+    if (query.trim() && !recentSearches.includes(query.trim())) {
+      const newRecent = [query.trim(), ...recentSearches.slice(0, 4)];
+      setRecentSearches(newRecent);
+      localStorage.setItem('recentSearches', JSON.stringify(newRecent));
+    }
+  };
+
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
+    e.preventDefault();
+    performSearch(searchQuery);
+  };
+
+  const handleQuickSearch = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    setSearchQuery(query);
+    performSearch(query);
+  };
+
+  const toggleItemExpansion = (itemId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    setExpandedItem(expandedItem === itemId ? null : itemId);
+  };
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    switch (category) {
+      case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
+      case 'cloud': return 'bg-blue-500/20 text-blue-400';
+      case 'security': return 'bg-red-500/20 text-red-400';
+      case 'data': return 'bg-green-500/20 text-green-400';
+      case 'development': return 'bg-orange-500/20 text-orange-400';
+      case 'hardware': return 'bg-gray-500/20 text-gray-400';
+      case 'services': return 'bg-cyan-500/20 text-cyan-400';
+      case 'blog': return 'bg-pink-500/20 text-pink-400';
+      case 'documentation': return 'bg-indigo-500/20 text-indigo-400';
+      default: return 'bg-slate-500/20 text-slate-400';
+    }
+  };
+
+  const getTypeColor = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    switch (type) {
+      case 'software': return 'bg-blue-500/20 text-blue-400';
+      case 'service': return 'bg-green-500/20 text-green-400';
+      case 'hardware': return 'bg-orange-500/20 text-orange-400';
+      case 'article': return 'bg-purple-500/20 text-purple-400';
+      case 'guide': return 'bg-cyan-500/20 text-cyan-400';
+      case 'case-study': return 'bg-pink-500/20 text-pink-400';
+      default: return 'bg-slate-500/20 text-slate-400';
+    }
+  };
+
+  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {
+    const stars = [];
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    
+    for (let i = 0; i < fullStars; i++) {
+      stars.push(<Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />);
+    }
+    
+    if (hasHalfStar) {
+      stars.push(<Star key="half" className="w-4 h-4 text-yellow-400 fill-current" />);
+    }
+    
+    const emptyStars = 5 - Math.ceil(rating);
+    for (let i = 0; i < emptyStars; i++) {
+      stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400" />);
+    }
+    
+    return stars;
+  };
+
+  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Search - Zion Tech Group"
+        description="Search our comprehensive collection of technology solutions, services, articles, and resources. Find exactly what you need to accelerate your digital transformation."
+      />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
+        <div className="container mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center"
+          >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
+              <Search className="w-10 h-10 text-green-400" />
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (searchQuery) {
       performSearch();
   }, [searchQuery, activeCategory, sortBy]);
@@ -372,12 +553,22 @@ export default function SearchPage() {
     setResults(filteredResults);
     setLoading(false);
   };
+<<<<<<< HEAD
   const handleSearch = (e: React.FormEvent) => {
+=======
+
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     if (searchQuery.trim()) {
       setSearchParams({ q: searchQuery.trim() });
   };
+<<<<<<< HEAD
   const getTypeIcon = (type: string) => {
+=======
+
+  const getTypeIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {
       case 'service':
         return <Server className="w-5 h-5 text-zion-cyan" />;
@@ -388,7 +579,12 @@ export default function SearchPage() {
       default:
         return <SearchIcon className="w-5 h-5 text-zion-slate-light" />;
   };
+<<<<<<< HEAD
   const getTypeLabel = (type: string) => {
+=======
+
+  const getTypeLabel = (type: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {
       case 'service':
         return 'Service';
@@ -449,6 +645,43 @@ export default function SearchPage() {
                   className="w-full pl-14 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200 text-lg"
                 />
                 <button
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
+                    activeCategory === category.id
+                      ? 'bg-zion-cyan text-zion-slate-dark'
+                      : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                  }`}
+
+                  {category.icon}
+                  {category.name}
+                  <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
+                    {category.id === 'all' ? results.length: anyanyanyanyanyanyanyanyanyanyanyanyanyresults.filter(r              => r.type === category.id).length}
+                  </span>
+                </button>
+              ))}
+            </div>
+
+            {/* Sort Options */}
+            <div className="flex items-center gap-2">
+              <span className="text-zion-slate-light">Sort by:</span>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan"
+
+                {sortOptions.map((option)              => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   type="submit"
                   className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
                 >
@@ -499,8 +732,8 @@ export default function SearchPage() {
               {/* Search Categories */}
               <div>
                 <h3 className="text-xl font-bold text-white mb-6">Browse by Category</h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {categories.slice(1).map((category) => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {categories.slice(1).map((category)              => (
                     <button
                       key={category.id}
                       onClick={() => {
@@ -544,9 +777,9 @@ export default function SearchPage() {
                       setSelectedCategory(e.target.value);
                       performSearch(searchQuery);
                     }}
-                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
-                    {categories.map((category) => (
+                    {categories.map((category)              => (
                       <option key={category.id} value={category.id}>
                         {category.name}
                       </option>
@@ -559,9 +792,9 @@ export default function SearchPage() {
                       setSelectedType(e.target.value);
                       performSearch(searchQuery);
                     }}
-                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                    className="px-4 py-2 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                   >
-                    {types.map((type) => (
+                    {types.map((type)              => (
                       <option key={type.id} value={type.id}>
                         {type.name}
                       </option>
@@ -623,8 +856,8 @@ export default function SearchPage() {
               {!isSearching && searchResults.length > 0 && (
                 <>
                   {viewMode === 'grid' ? (
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                      {searchResults.map((item, index) => (
+                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                      {searchResults.map((item, index)              => (
                         <motion.div
                           key={item.id}
                           initial={{ opacity: 0, y: 20 }}

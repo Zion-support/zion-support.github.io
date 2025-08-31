@@ -1,4 +1,71 @@
+<<<<<<< HEAD
 import { SitemapConfig, SitemapUrl } from '../types/sitemap';
+=======
+interface SitemapUrl {
+
+
+
+
+
+
+
+
+
+
+
+
+
+  url: string;
+  lastmod?: string;
+  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+interface SitemapConfig {
+
+
+
+
+
+
+
+
+
+
+
+
+
+  baseUrl: string;
+  urls: SitemapUrl[];
+  outputPath?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 export class SitemapGenerator {
   private config: SitemapConfig;

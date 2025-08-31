@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info  } from 'lucide-react';
 export default function ApiPlayground() {
+=======
+import React, { useState } from 'react.ts';
+<<<<<<< HEAD
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info export default function ApiPlayground(...args: any[]): any {
+=======
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info               } from 'lucide-react.ts';
+
+export default function ApiPlayground(...args: any[]): any {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -220,9 +231,65 @@ export default function ApiPlayground() {
     const matchesMethod = activeMethod === 'all' || api.method === method.id;
     return matchesSearch && matchesCategory && matchesMethod;
   });
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />};
+
+  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'};
+
+  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
+  };
+
+  const getMethodColor = (method: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
+  };
+
+  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    switch (status) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      case 'stable': return 'text-green-400';
+      case 'beta': return 'text-yellow-400';
+      case 'alpha': return 'text-red-400';
+<<<<<<< HEAD
+      default: return 'text-zion-slate-light';
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return 'text-zion-slate-light'}
   };
+<<<<<<< HEAD
   const copyToClipboard = (text: string) => {;
+=======
+
+<<<<<<< HEAD
+  const handleApiSelect = (api: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    setSelectedApi(api);
+    setRequestBody(JSON.stringify(api.requestExample, null, 2));
+    setResponseData('');
+    setActiveTab('playground')};
+
+  const handleTestApi = async () => {;
+    if (!selectedApi) return;
+
+    setIsLoading(true);
+
+    // Simulate API call
+    setTimeout(() => {
+      setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
+      setIsLoading(false)}, 1500)};
+
+<<<<<<< HEAD
+  const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    navigator.clipboard.writeText(text)};
+=======
+  const copyToClipboard = (text: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     navigator.clipboard.writeText(text);
   };
   const downloadResponse = () => {;

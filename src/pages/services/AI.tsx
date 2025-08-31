@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Cpu,
   Zap,
   Target,
@@ -22,8 +21,18 @@ import {
   DollarSign,
   Factory,
   ShoppingCart
+<<<<<<< HEAD
  } from 'lucide-react';
 export default function AIServices(...args[]):  {
+=======
+<<<<<<< HEAD
+export default function AIServices(...args: any[]): any {
+=======
+              } from 'lucide-react.ts';
+
+export default function AIServices(...args[]: any):  {
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const aiServices = [
     {
       name: "AI Strategy & Consulting",
@@ -157,8 +166,14 @@ export default function AIServices(...args[]):  {
               Comprehensive AI solutions designed to accelerate your digital transformation journey
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {aiServices.map((service, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-2 gap-8">
+            {aiServices.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
@@ -206,8 +221,14 @@ export default function AIServices(...args[]):  {
               We leverage the latest AI frameworks and tools to deliver exceptional results
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {aiTechnologies.map((tech, index) => (
+=======
+
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-8">
+            {aiTechnologies.map((tech, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div
                 key={index}
                 className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
@@ -232,8 +253,14 @@ export default function AIServices(...args[]):  {
               Discover how AI is transforming various sectors and creating new opportunities
             </p>
           </div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <div
                 key={index}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"

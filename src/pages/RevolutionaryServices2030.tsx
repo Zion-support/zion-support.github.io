@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Rocket,
   Zap,
   Cpu,
@@ -40,6 +39,18 @@ import {
   Globe2,
   Bot,
   Code,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  Palette,
+  Gamepad2,
+  Music
+import { SEO              } from '@/components/SEO';
+import { REVOLUTIONARY_SERVICES_2030              } from '@/data/revolutionaryServices2030';
+import { EMERGING_TECH_SERVICES_2030              } from '@/data/emergingTechServices2030';
+import { REVOLUTIONARY_PRICING_GUIDE_2030              } from '@/data/revolutionaryPricingGuide2030';
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Server,
   Chip,
   Wifi,
@@ -49,8 +60,42 @@ import {
   Target as TargetIcon,
   TrendingUp as TrendingUpIcon
 } from 'lucide-react';
+<<<<<<< HEAD
 import { allRevolutionaryServices2030 } from '../data/revolutionaryServices2030';
 export default function RevolutionaryServices2030() {
+=======
+import { allRevolutionaryServices2030              } from '../data/revolutionaryServices2030';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+export default function RevolutionaryServices2030(...args[]: any):  {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('rating');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(12);
+  const [selectedService, setSelectedService] = useState(null);
+
+  // Filter and sort services
+  const filteredServices = REVOLUTIONARY_SERVICES_2030.filter(service => {;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch});
+
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {;
+      case 'rating':;
+        return b.rating - a.rating;
+      case 'price':
+        return a.price - b.price;
+      case 'reviews':
+        return b.reviewCount - a.reviewCount;
+      case 'aiScore':
+        return b.aiScore - a.aiScore;
+=======
+export default function RevolutionaryServices2030(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
   const [sortBy, setSortBy] = useState('featured');
@@ -88,10 +133,47 @@ export default function RevolutionaryServices2030() {
       (selectedPriceRange === 'enterprise' && service.pricing.monthly > 25000);
     return categoryMatch && priceMatch;
   });
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'price-low':
+        return a.pricing.monthly - b.pricing.monthly;
+      case 'price-high':
+        return b.pricing.monthly - a.pricing.monthly;
+      case 'innovation':
+        return b.innovationLevel.localeCompare(a.innovationLevel);
+      case 'market-size':
+        return parseFloat(b.marketSize.replace(/[^0-9.]/g, '')) - parseFloat(a.marketSize.replace(/[^0-9.]/g, ''));
+      default:
+        return b.featured ? 1 : -1;
+
+  });
+
+  const getServiceIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+    switch (category) {
+      case 'AI Services':
+        return Brain;
+      case 'Blockchain Services':
+        return Lock;
+      case 'Cybersecurity Services':
+        return Shield;
+      default:
+        return Rocket;
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // Service Card Component
-const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itService' | 'aiService' }) => {
+const ServiceCard = ({ service, type }: { service: anyanyanyanyanyanyanyanyanyanyanyanyany; type: 'microSaas' | 'itService' | 'aiService' })              => {
   const [isExpanded, setIsExpanded] = useState(false);
+<<<<<<< HEAD
   const getIcon = (category: string) => {
+=======
+
+  const getIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (category.includes('AI') || category.includes('Neural')) return Brain;
     if (category.includes('Quantum')) return Atom;
     if (category.includes('Space')) return Satellite;
@@ -169,7 +251,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
               Key Features
             </h4>
             <div className="grid grid-cols-1 gap-2">
-              {service.features.slice(0, 3).map((feature: string, index: number) => (
+              {service.features.slice(0, 3).map((feature: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                 <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">
                   <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                   <span>{feature}</span>
@@ -192,7 +274,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">All Features</h4>
                     <div className="grid grid-cols-1 gap-2">
-                      {service.features.map((feature: string, index: number) => (
+                      {service.features.map((feature: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                           <span>{feature}</span>
@@ -204,7 +286,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">Benefits</h4>
                     <div className="grid grid-cols-1 gap-2">
-                      {service.benefits.map((benefit: string, index: number) => (
+                      {service.benefits.map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                         <div key={index} className="flex items-center space-x-2 text-slate-300 text-sm">
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
@@ -216,7 +298,7 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
                   <div>
                     <h4 className="text-cyan-400 font-semibold mb-2">Target Audience</h4>
                     <div className="flex flex-wrap gap-2">
-                      {service.targetAudience.map((audience: string, index: number) => (
+                      {service.targetAudience.map((audience: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)              => (
                         <span key={index} className="px-2 py-1 bg-slate-600 text-slate-300 text-xs rounded-full">
                           {audience}
                         </span>
@@ -254,8 +336,14 @@ const ServiceCard = ({ service, type }: { service: any; type: 'microSaas' | 'itS
   );
 };
 // Main Component
+<<<<<<< HEAD
 export default function RevolutionaryServices2030() {
   const [activeTab, setActiveTab] = useState<'all' | 'microSaas' | 'itServices' | 'aiServices'>('all');
+=======
+export default function RevolutionaryServices2030(...args: any[]): any {
+  const [activeTab, setActiveTab] = useState<any>('all');
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const tabs = [
     { id: 'all', label: 'All Services', count: allRevolutionaryServices2030.microSaas.length + allRevolutionaryServices2030.itServices.length + allRevolutionaryServices2030.aiServices.length },
     { id: 'microSaas', label: 'Micro SAAS', count: allRevolutionaryServices2030.microSaas.length },
@@ -265,16 +353,16 @@ export default function RevolutionaryServices2030() {
   const getFilteredServices = () => {
     switch (activeTab) {
       case 'microSaas':
-        return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const }));
+        return allRevolutionaryServices2030.microSaas.map(service => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'microSaas' as const }));
       case 'itServices':
-        return allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const }));
+        return allRevolutionaryServices2030.itServices.map(service              => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'itService' as const }));
       case 'aiServices':
-        return allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }));
+        return allRevolutionaryServices2030.aiServices.map(service              => ({ service, type: 'aiService' as const }));
       default:
         return [
-          ...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: 'microSaas' as const })),
-          ...allRevolutionaryServices2030.itServices.map(service => ({ service, type: 'itService' as const })),
-          ...allRevolutionaryServices2030.aiServices.map(service => ({ service, type: 'aiService' as const }))
+          ...allRevolutionaryServices2030.microSaas.map(service => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'microSaas' as const })),
+          ...allRevolutionaryServices2030.itServices.map(service              => ({ service, type: anyanyanyanyanyanyanyanyanyanyanyanyany'itService' as const })),
+          ...allRevolutionaryServices2030.aiServices.map(service              => ({ service, type: 'aiService' as const }))
         ];
     }
   };
@@ -312,13 +400,13 @@ export default function RevolutionaryServices2030() {
               Transform your business with solutions that were once science fiction.
             </p>
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
+            <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
               {[
                 { label: 'Total Services', value: '11', icon: Zap },
                 { label: 'Innovation Level', value: 'Revolutionary', icon: Star },
                 { label: 'Market Size', value: '$100B+', icon: TrendingUp },
                 { label: 'Success Rate', value: '99.9%', icon: Target }
-              ].map((stat, index) => (
+              ].map((stat, index)              => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -370,6 +458,64 @@ export default function RevolutionaryServices2030() {
         </div>
       </div>
       {/* Services Section */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Filters */}
+          <div className="mb-12">
+            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+              {/* Category Filter */}
+              <div className="flex flex-wrap gap-3">
+                {categories.map((category) => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-gradient-to-r ' + category.color + ' text-white'
+                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    }`}
+
+                    <category.icon className="mr-2 h-4 w-4" />
+                    {category.name}
+                  </button>
+                ))}
+              </div>
+
+              {/* Price Range Filter */}
+              <div className="flex gap-3">
+                {priceRanges.map((range) => (
+                  <button
+                    key={range.id}
+                    onClick={() => setSelectedPriceRange(range.id)}
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                      selectedPriceRange === range.id
+                        ? 'bg-zion-cyan text-white'
+                        : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    }`}
+
+                    {range.name}
+                  </button>
+                ))}
+              </div>
+
+              {/* Sort Options */}
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value)}
+                className="px-4 py-2 bg-gray-800 text-gray-300 rounded-lg border border-gray-700 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-zion-cyan focus:outline-none"
+
+                {sortOptions.map((option)              => (
+                  <option key={option.id} value={option.id}>
+                    {option.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       <div className="relative z-10 pb-20">
         <div className="container mx-auto px-4">
           {/* Tab Navigation */}
@@ -377,7 +523,7 @@ export default function RevolutionaryServices2030() {
             {tabs.map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                onClick={() => setActiveTab(tab.id as )}
                 className={`px-6 py-3 mx-2 mb-2 rounded-xl font-semibold transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/25'
@@ -393,9 +539,9 @@ export default function RevolutionaryServices2030() {
           </div>
 ;
           {/* Services Grid */};
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">;
             <AnimatePresence>;
-              {sortedServices.map((service, index) => {;
+              {sortedServices.map((service, index)              => {;
                 const IconComponent = getServiceIcon(service.category);
                 const colorClass = getServiceColor(service.category);
                 return (
@@ -434,30 +580,30 @@ export default function RevolutionaryServices2030() {
                     className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                       activeCategory === 'all'
                         ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                        : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
+                        : 'bg-white/10 backdrop-blur-sm text-white hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
                     }`}
                   >
                     All Services ({REVOLUTIONARY_SERVICES_2030.length})
                   </button>
-                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category)  => (
+                  {REVOLUTIONARY_SERVICE_CATEGORIES.map((category)               => (
                     <button
                       key={category}
                       onClick={() => setActiveCategory(category)}
                       className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                         activeCategory === category
                           ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
-                          : 'bg-white/10 backdrop-blur-sm text-white hover: bg-white/20'
+                          : 'bg-white/10 backdrop-blur-sm text-white hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-white/20'
                       }`}
                     >
-                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s  => s.category === category).length})
+                      {category} ({REVOLUTIONARY_SERVICES_2030.filter(s               => s.category === category).length})
                     </button>
                   ))}
                 </div>
               </div>
             </div>
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service)               => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -531,6 +677,280 @@ export default function RevolutionaryServices2030() {
                         key={index}
                         className="px-3 py-1 bg-white/10 rounded-full text-xs text-white"
                       >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2 text-sm text-gray-400">
+                      <Users className="w-4 h-4" />
+                      <span>{service.reviewCount} reviews</span>
+                    </div>
+                    <ArrowUpRight className="w-5 h-5 text-purple-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Pagination */}
+            {totalPages > 1 && (
+              <div className="mt-12 flex justify-center">
+                <div className="flex space-x-2">
+                  <button
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                  >
+                    <ChevronLeft className="w-5 h-5" />
+                  </button>
+                  
+                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)               => i + 1).map((page) => (
+                    <button
+                      key={page}
+                      onClick={() => handlePageChange(page)}
+                      className={`px-4 py-2 rounded-lg transition-colors ${
+                        currentPage === page
+                          ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white'
+                          : 'bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20'
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  ))}
+                  
+                  <button
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
+                  >
+                    <ChevronRight className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Why Choose Zion Tech Group */}
+        <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We're not just another technology comp. We're your strategic partner in digital transformation, 
+                offering cutting-edge solutions with proven results and exceptional support.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  icon: <Award className="w-12 h-12" />,
+                  title: "Proven Excellence",
+                  description: "Industry-leading solutions with documented success stories and measurable ROI"
+                },
+                {
+                  icon: <Zap className="w-12 h-12" />,
+                  title: "Rapid Deployment",
+                  description: "Quick setup times ranging from 4-24 weeks depending on complexity"
+                },
+                {
+                  icon: <Shield className="w-12 h-12" />,
+                  title: "Enterprise Security",
+                  description: "Bank-grade security with compliance certifications and 24/7 monitoring"
+                },
+                {
+                  icon: <Users className="w-12 h-12" />,
+                  title: anyanyanyanyanyanyanyanyanyanyanyanyany"Expert Support",
+                  description: "Dedicated support team with deep technical expertise and rapid response times"
+                }
+              ].map((feature, index)               => (
+                <motion.div
+                  key={index}
+                  initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                  whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                  transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+}}
+                  className="text-center"
+                >
+                  <div className="inline-flex p-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl text-white mb-4">
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+              whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Let's discuss how our revolutionary services can accelerate your digital transformation 
+                and drive unprecedented growth. Contact us today for a personalized consultation.
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <motion.div
+                initial = {
+  { opacity: 0,
+  x: -20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}}
+                transition={{ duration: 0.8 }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+              >
+                <h3 className="text-2xl font-bold text-white mb-6">Get Started Today</h3>
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input
+                      type="text"
+                      placeholder="First Name"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    />
+                    <input
+                      type="text"
+                      placeholder="Last Name"
+                      className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    />
+                  </div>
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                  <select className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
+                    <option value="">Select Service Category</option>
+                    {REVOLUTIONARY_SERVICE_CATEGORIES.map((category) => (
+                      <option key={category} value={category}>{category}</option>
+                    ))}
+                  </select>
+                  <textarea
+                    placeholder="Tell us about your project requirements..."
+                    rows={4}
+                    className="w-full px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                  <button
+                    type="submit"
+                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Request Consultation
+                  </button>
+                </form>
+              </motion.div>
+
+              {/* Contact Information */}
+              <motion.div
+                initial = {
+  { opacity: 0,
+  x: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+
+}}
+                transition={{ duration: 0.8 }}
+                className="space-y-8"
+              >
+                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                  <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-4">
+                      <Phone className="w-6 h-6 text-purple-400" />
+                      <div>
+                        <p className="text-white font-semibold">Phone</p>
+                        <p className="text-gray-300">+1 302 464 0950</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <MailIcon className="w-6 h-6 text-purple-400" />
+                      <div>
+                        <p className="text-white font-semibold">Email</p>
+                        <p className="text-gray-300">kleber@ziontechgroup.com</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <MapPin className="w-6 h-6 text-purple-400" />
+                      <div>
+                        <p className="text-white font-semibold">Address</p>
+                        <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+<<<<<<< HEAD
+                    {/* Service Actions */}
+                    <div className="flex flex-col space-y-3">
+                      <Link
+                        to={`/services/${service.id}`}
+                        className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-center py-3 px-4 rounded-lg font-medium hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                   <h3 className="text-2xl font-bold text-white mb-6">Why Choose Us?</h3>
                   <div className="space-y-4">

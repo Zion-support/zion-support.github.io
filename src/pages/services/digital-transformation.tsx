@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
@@ -103,6 +104,18 @@ export default function DigitalTransformation() {
       icon: BarChart3
     }
   ];
+=======
+<<<<<<< HEAD
+import React from 'react.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone import { Link              } from 'react-router-dom.ts';
+=======
+import React from 'react.ts';
+import { Helmet               } from 'react-helmet-async.ts';
+import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone               } from 'lucide-react.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>
@@ -164,6 +177,7 @@ export default function DigitalTransformation() {
               </p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group">
@@ -172,6 +186,204 @@ export default function DigitalTransformation() {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-slate-400">{feature.description}</p>
+=======
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Brain,
+                  title: "Digital Strategy",
+                  description: "Develop comprehensive digital transformation roadmap and strategy."
+                },
+                {
+                  icon: Cloud,
+                  title: "Cloud Migration",
+                  description: "Migrate legacy systems to modern cloud infrastructure and platforms."
+                },
+                {
+                  icon: Settings,
+                  title: "Process Automation",
+                  description: "Automate manual processes and workflows for improved efficiency."
+                },
+                {
+                  icon: Users,
+                  title: "Customer Experience",
+                  description: "Enhance customer journey and digital touchpoints across all channels."
+                },
+                {
+                  icon: Shield,
+                  title: "Digital Security",
+                  description: "Implement robust cybersecurity and data protection measures."
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Data Analytics",
+                  description: "Leverage data insights for informed decision-making and optimization."
+<<<<<<< HEAD
+
+              ].map((feature, index)              => (
+=======
+                }
+              ].map((feature, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                  <p className="text-slate-300">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Transformation Areas Section */}
+        <section className="py-20 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Digital Transformation Areas
+              </h2>
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+                Comprehensive transformation across all critical business functions and processes.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Technology Infrastructure",
+                  description: "Modernize IT infrastructure with cloud, automation, and scalability.",
+                  icon: Cpu,
+                  benefits: ["Cloud migration", "Infrastructure automation", "Scalability planning"]
+                },
+                {
+                  title: "Business Processes",
+                  description: "Streamline and automate business processes for efficiency gains.",
+                  icon: Settings,
+                  benefits: ["Process mapping", "Workflow automation", "Efficiency optimization"]
+                },
+                {
+                  title: "Customer Experience",
+                  description: "Transform customer interactions and digital touchpoints.",
+                  icon: Users,
+                  benefits: ["Omnichannel strategy", "Digital touchpoints", "Customer journey mapping"]
+                },
+                {
+                  title: "Data & Analytics",
+                  description: "Implement data-driven decision making and analytics capabilities.",
+                  icon: BarChart3,
+                  benefits: ["Data strategy", "Analytics implementation", "Business intelligence"]
+                },
+                {
+                  title: "Digital Culture",
+                  description: "Foster digital-first mindset and organizational change.",
+                  icon: Brain,
+                  benefits: ["Change management", "Digital literacy", "Innovation culture"]
+                },
+                {
+                  title: "Security & Compliance",
+                  description: "Ensure digital security and regulatory compliance.",
+                  icon: Shield,
+                  benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
+<<<<<<< HEAD
+
+              ].map((area, index)              => (
+=======
+                }
+              ].map((area, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                    <area.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
+                  <p className="text-slate-300 mb-4">{area.description}</p>
+                  <ul className="space-y-1">
+                    {area.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">
+                        <CheckCircle className="w-3 h-3 mr-2" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Technology Stack Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Modern Technology Stack
+              </h2>
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+                Leverage cutting-edge technologies for your digital transformation journey.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Cloud Platforms",
+                  description: "AWS, Azure, Google Cloud for scalable infrastructure.",
+                  icon: Cloud,
+                  features: ["Multi-cloud strategy", "Serverless computing", "Container orchestration"]
+                },
+                {
+                  title: "AI & Machine Learning",
+                  description: "Intelligent automation and predictive analytics.",
+                  icon: Brain,
+                  features: ["Predictive analytics", "Process automation", "Intelligent insights"]
+                },
+                {
+                  title: "Mobile & Web",
+                  description: "Modern web and mobile application development.",
+                  icon: Smartphone,
+                  features: ["Progressive web apps", "Native mobile apps", "Responsive design"]
+                },
+                {
+                  title: "Data & Analytics",
+                  description: "Big data processing and business intelligence tools.",
+                  icon: BarChart3,
+                  features: ["Data lakes", "Real-time analytics", "Business intelligence"]
+                },
+                {
+                  title: "DevOps & Automation",
+                  description: "Continuous integration and deployment automation.",
+                  icon: Settings,
+                  features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing"]
+                },
+                {
+                  title: "Security & Compliance",
+                  description: "Advanced cybersecurity and compliance solutions.",
+                  icon: Shield,
+                  features: ["Zero-trust security", "Compliance automation", "Threat detection"]
+<<<<<<< HEAD
+
+              ].map((tech, index)              => (
+=======
+                }
+              ].map((tech, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                    <tech.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{tech.title}</h3>
+                  <p className="text-slate-300 mb-4">{tech.description}</p>
+                  <ul className="space-y-1">
+                    {tech.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-sm text-purple-400 flex items-center">
+                        <CheckCircle className="w-3 h-3 mr-2" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </div>
               ))}
             </div>
@@ -199,6 +411,7 @@ export default function DigitalTransformation() {
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
               <div className="space-y-6">
                 {benefits.slice(3).map((benefit, index) => (
                   <div key={index} className="flex items-start space-x-4">
@@ -206,6 +419,25 @@ export default function DigitalTransformation() {
                     <p className="text-slate-300 text-lg">{benefit}</p>
                   </div>
                 ))}
+=======
+
+              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
+                <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>
+                <div className="space-y-4">
+                  {[
+                    { metric: anyanyanyanyanyanyanyanyanyanyanyanyany"25-40%", label: "Efficiency", description: "Operational improvement" },
+                    { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },
+                    { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },
+                    { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
+                  ].map((item, index)               => (
+                    <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">
+                      <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>
+                      <div className="text-sm text-slate-300">{item.label}</div>
+                      <div className="text-xs text-slate-400">{item.description}</div>
+                    </div>
+                  ))}
+                </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               </div>
             </div>
           </div>
@@ -222,12 +454,47 @@ export default function DigitalTransformation() {
                 End-to-end digital transformation solutions tailored to your business needs.
               </p>
             </div>
+<<<<<<< HEAD
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 text-white" />
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {[
+                {
+                  step: "01",
+                  title: "Assessment",
+                  description: "Evaluate current state and identify transformation opportunities."
+                },
+                {
+                  step: "02",
+                  title: "Strategy",
+                  description: "Develop comprehensive digital transformation roadmap and strategy."
+                },
+                {
+                  step: "03",
+                  title: "Implementation",
+                  description: "Execute transformation initiatives with agile methodology."
+                },
+                {
+                  step: "04",
+                  title: "Optimization",
+                  description: "Continuously monitor, optimize, and scale digital capabilities."
+<<<<<<< HEAD
+
+              ].map((step, index)              => (
+=======
+                }
+              ].map((step, index)  => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">{step.step}</span>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                   <p className="text-slate-400 mb-4">{service.description}</p>

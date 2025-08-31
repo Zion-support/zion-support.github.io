@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -40,12 +41,111 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
+=======
+import React, { useState } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import {
+<<<<<<< HEAD
+  ChevronRight,
+  Home,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Server,
+  BarChart3,
+  Users,
+  ShoppingCart,
+  BookOpen,
+  MessageCircle,
+  HelpCircle,
+  Settings,
+  Star,
+  Atom,
+  Network,
+  Eye,
+  PenTool,
+  Globe,
+  Cpu,
+  Lock,
+  TrendingUp,
+  Rocket,
+  Heart,
+  Crown,
+  Sparkles,
+  Flame,
+  Sun,
+  Moon,
+  Infinity,
+  ArrowRight,
+  DollarSign,
+  Workflow,
+  Briefcase,
+  Newspaper,
+=======
+  Home,
+  Zap,
+  Target,
+  Users,
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  FileText,
+  Phone,
+  ChevronRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  BarChart3,
+  Activity,
+  Globe,
+  Building,
+<<<<<<< HEAD
+  Truck,
+  Mail,
+  Video,
+  Satellite,
+  TestTube,
+  Code,
+  Target
+interface SidebarProps extends React.PropsWithChildren<{}> {
+
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: ()               => void;
+
+export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose;
+}) => {
+=======
+  Eye,
+  Cpu,
+  Cloud,
+  Network,
+  Server,
+  GraduationCap,
+  HelpCircle,
+  Settings,
+  Menu,
+  X
+} from 'lucide-react.ts';
+
+export function Sidebar(...args: any[]): any {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [activeSection, setActiveSection] = useState<any>(null);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
 
+<<<<<<< HEAD
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
       prev.includes(section) 
+=======
+<<<<<<< HEAD
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    setExpandedSections(prev =>
+      prev.includes(section)
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         ? prev.filter(s => s !== section)
         : [...prev, section]
     );
@@ -64,7 +164,17 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Pricing', href: '/pricing', icon: DollarSign, badge: null },
   ];
 
+<<<<<<< HEAD
   const serviceCategories = [
+=======
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    if (href === '/') {
+      return location.pathname === '/';
+
+    return location.pathname.startsWith(href);
+=======
+    },
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     {
       id: 'ai-ml',
       title: 'AI & Machine Learning',
@@ -149,6 +259,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     }
   ];
 
+<<<<<<< HEAD
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: MessageCircle, color: 'bg-blue-500' },
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Users, color: 'bg-green-500' },
@@ -169,6 +280,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'AI Healthcare Platform', href: '/services/ai-healthcare-platform', views: '1.5k' },
     { name: 'Micro SaaS Solutions', href: '/services/micro-saas-solutions', views: '1.2k' }
   ];
+=======
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => location.pathname === href;
+
+  const toggleSection = (sectionName: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    setActiveSection(activeSection === sectionName ? null : sectionName);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  };
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
   return (
     <>

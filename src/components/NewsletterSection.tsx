@@ -1,6 +1,58 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap  } from 'lucide-react';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap const NewsletterSection: React.FC = (): JSX.Element => {
+=======
+import React, { useState               } from 'react.ts';
+import { motion                } from 'framer-motion.ts';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap                } from 'lucide-react.ts';
+
+<<<<<<< HEAD
+const NewsletterSection: React.FC = (): JSX.Element => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const [email, setEmail] = useState('');
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+<<<<<<< HEAD
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    e.preventDefault();
+    if (!email) return;
+
+    setIsLoading(true);
+
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubscribed(true);
+      setIsLoading(false);
+      setEmail('')}, 1500)};
+
+  const benefits = [
+    {
+      icon: Bell,
+      title: "Latest Updates",
+      description: "Stay informed about new services and features"
+    },
+    {
+      icon: TrendingUp,
+      title: "Industry Insights",
+<<<<<<< HEAD
+      description: "Get exclusive access to tech trends and analysis"
+    },
+    {
+      icon: Zap,
+      title: "Early Access",
+      description: "Be the first to know about beta programs and launches"
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       description: "Get exclusive access to tech trends and analysis";
     },;
     {;

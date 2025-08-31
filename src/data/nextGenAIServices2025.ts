@@ -1,4 +1,21 @@
 export interface NextGenAIService {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -9,11 +26,24 @@ export interface NextGenAIService {
   features: string[];
   benefits: string[];
   useCases: string[];
-pricing: {
+pricing: {;
     starter: string;
     professional: string;
     enterprise: string;
-    custom: string};
+custom: string;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -369,7 +399,19 @@ export const NEXT_GEN_AI_SERVICES_2025: NextGenAIService[] = [
     ethicalCompliance['Fairness', 'Transparency', 'Bias Prevention', 'Accountability']
   }
 ];
+<<<<<<< HEAD
 export const getNextGenAIServicesByCategory = (category: string): NextGenAIService[] => {;
+=======
+<<<<<<< HEAD
+export const getNextGenAIServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): NextGenAIService[]               => {
+  if (category === 'All') {;
+    return NEXT_GEN_AI_SERVICES_2025};
+  return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category)};
+export const getAllNextGenAIServices = (): NextGenAIService[] => {;
+  return NEXT_GEN_AI_SERVICES_2025};
+=======
+export const getNextGenAIServicesByCategory = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring): NextGenAIService[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   if (category === 'All') {;
     return NEXT_GEN_AI_SERVICES_2025;
   return NEXT_GEN_AI_SERVICES_2025.filter(service => service.category === category);

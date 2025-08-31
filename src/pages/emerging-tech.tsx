@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Atom, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Atom, 
   Brain, 
   Network, 
   Satellite, 
@@ -13,10 +12,10 @@ import {
   Globe,
   Rocket,
   Star
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
+             } from 'lucide-react.ts';
+import { Link              } from 'react-router-dom.ts';
 
-const EmergingTech: React.FC = () => {
+const EmergingTech: React.FC = (): JSX.Element => {
   const technologies = [
     {
       title: 'Quantum Computing',
@@ -100,8 +99,8 @@ const EmergingTech: React.FC = () => {
 
       {/* Technologies Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+          {technologies.map((tech, index)              => (
             <motion.div
               key={tech.title}
               initial={{ opacity: 0, y: 20 }}

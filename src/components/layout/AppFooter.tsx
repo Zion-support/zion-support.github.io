@@ -34,7 +34,14 @@ import {
   FileText,
   HelpCircle,
   ExternalLink,
-  Rocket
+  Rocket,
+  Handshake,
+  Monitor,
+  GraduationCap,
+  Lightbulb,
+  Code,
+  Activity,
+  Target
 } from 'lucide-react';
 
 export function AppFooter() {
@@ -47,6 +54,9 @@ export function AppFooter() {
       color: "text-zion-cyan",
       bgColor: "bg-zion-cyan/20",
       services: [
+        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
+        { name: "AI Autonomous Logistics Optimization", href: "/services/ai-autonomous-logistics-optimization" },
+        { name: "AI Autonomous Manufacturing Platform", href: "/services/ai-autonomous-manufacturing-platform" },
         { name: "AI Business Intelligence Dashboard", href: "/services/ai-business-intelligence-dashboard" },
         { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
         { name: "AI Project Management Platform", href: "/services/ai-project-management-platform" },
@@ -54,7 +64,8 @@ export function AppFooter() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Autonomous Financial Advisor", href: "/services/ai-autonomous-financial-advisor-platform" }
       ]
     },
     {
@@ -66,6 +77,7 @@ export function AppFooter() {
         { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
         { name: "Cloud & DevOps", href: "/services/cloud-devops" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "AI Cybersecurity Intelligence", href: "/services/ai-autonomous-cybersecurity-intelligence" },
         { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
@@ -90,37 +102,65 @@ export function AppFooter() {
         { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
         { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" }
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-autonomous-supply-chain-intelligence" },
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
+        { name: "AI BI Platform Enterprise", href: "/services/ai-business-intelligence-platform-enterprise" },
+        { name: "AI Cybersecurity Enterprise", href: "/services/ai-cybersecurity-threat-detection-enterprise" },
+        { name: "AI Quantum Computing Enterprise", href: "/services/ai-quantum-computing-solutions-enterprise" },
+        { name: "AI Blockchain Web3 Enterprise", href: "/services/ai-blockchain-web3-solutions-enterprise" }
       ]
     }
   ];
 
   const companyLinks = [
-    { name: "About Us", href: "/about", icon: Users },
-    { name: "Careers", href: "/careers", icon: Award },
-    { name: "News & Events", href: "/news", icon: Star },
-    { name: "Partners", href: "/partners", icon: Handshake },
-    { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
-    { name: "Contact", href: "/contact", icon: MessageCircle }
+    { name: "About Us", href: "/about" },
+    { name: "Leadership", href: "/leadership" },
+    { name: "Careers", href: "/careers" },
+    { name: "Partners", href: "/partners" },
+    { name: "News & Events", href: "/news" },
+    { name: "Contact Us", href: "/contact" }
   ];
 
   const resourceLinks = [
-    { name: "Blog & Insights", href: "/blog", icon: FileText },
-    { name: "Documentation", href: "/docs", icon: FileText },
-    { name: "White Papers", href: "/white-papers", icon: FileText },
-    { name: "Webinars", href: "/webinars", icon: Monitor },
-    { name: "Training", href: "/training", icon: GraduationCap },
-    { name: "Research & Development", href: "/research-development", icon: Lightbulb },
-    { name: "Pricing Guide", href: "/pricing-guide" }
+    { name: "Blog & Insights", href: "/blog" },
+    { name: "Documentation", href: "/docs" },
+    { name: "White Papers", href: "/white-papers" },
+    { name: "Webinars", href: "/webinars" },
+    { name: "Training", href: "/training" },
+    { name: "Research", href: "/research" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Help Center", href: "/help" }
   ];
 
   const supportLinks = [
-    { name: "Help Center", href: "/help", icon: HelpCircle },
-    { name: "Support", href: "/support", icon: MessageCircle },
-    { name: "FAQ", href: "/faq", icon: HelpCircle },
-    { name: "Status Page", href: "/status", icon: Activity },
-    { name: "API Documentation", href: "/api-docs", icon: Code },
-    { name: "Community Forum", href: "/community", icon: Users }
+    { name: "Support Center", href: "/support" },
+    { name: "Help Documentation", href: "/help" },
+    { name: "Contact Support", href: "/contact" },
+    { name: "System Status", href: "/system-status" },
+    { name: "Community Forum", href: "/community" },
+    { name: "Bug Reports", href: "/bug-reports" }
+  ];
+
+  const innovationLinks = [
+    { name: "Innovation Showcase 2025", href: "/innovative-services-showcase-2025" },
+    { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026" },
+    { name: "Innovation Showcase 2032", href: "/innovative-services-showcase-2032" },
+    { name: "Comprehensive Services 2025", href: "/comprehensive-services-showcase-2025" },
+    { name: "Innovation Hub", href: "/innovative-services-hub" },
+    { name: "Pricing Guide", href: "/pricing-guide" }
+  ];
+
+  const solutionLinks = [
+    { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+    { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+    { name: "Financial Solutions", href: "/solutions/financial" },
+    { name: "Manufacturing Solutions", href: "/solutions/manufacturing" },
+    { name: "Government Solutions", href: "/solutions/government" },
+    { name: "Retail Solutions", href: "/solutions/retail" },
+    { name: "Quantum Edge Computing", href: "/solutions/quantum-edge-computing" },
+    { name: "Blockchain & Web3", href: "/solutions/blockchain-web3" },
+    { name: "IoT Edge Computing", href: "/solutions/iot-edge-computing" },
+    { name: "Space Technology", href: "/solutions/space-tech" }
   ];
 
   const scrollToTop = () => {
@@ -139,63 +179,107 @@ export function AppFooter() {
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg">
-                <Zap className="w-7 h-7 text-white" />
+        {/* Company Info Section */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Company Branding */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <span className="text-3xl font-bold text-white">Zion Tech Group</span>
+                  <div className="text-zion-cyan font-medium text-sm">Innovation • Technology • Growth</div>
+                </div>
               </div>
-              <div>
-                <span className="text-3xl font-bold text-white">Zion Tech Group</span>
-                <div className="text-zion-cyan font-medium text-sm">Innovation • Technology • Growth</div>
+              <p className="text-zion-slate-light mb-8 max-w-md text-lg leading-relaxed">
+                Leading provider of innovative AI, IT, and Micro SaaS solutions. 
+                Transforming businesses through cutting-edge technology and expert consulting.
+              </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
+                    <Phone className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <a href="tel:+13024640950" className="hover:text-zion-cyan">+1 (302) 464-0950</a>
+                </div>
+                <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
+                    <Mail className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan">kleber@ziontechgroup.com</a>
+                </div>
+                <div className="flex items-start text-zion-slate-light">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
+                    <MapPin className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
+                    <Clock className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <span>24/7 Support Available</span>
+                </div>
               </div>
             </div>
-            <p className="text-zion-slate-light mb-8 max-w-md text-lg leading-relaxed">
-              Leading provider of innovative AI, IT, and Micro SaaS solutions. 
-              Transforming businesses through cutting-edge technology and expert consulting.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
-                  <Phone className="w-4 h-4 text-zion-cyan" />
+
+            {/* Quick Links */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <Link to="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    AI Services
+                  </Link>
+                  <Link to="/it-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    IT Services
+                  </Link>
+                  <Link to="/micro-saas" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Micro SaaS
+                  </Link>
+                  <Link to="/pricing" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Pricing
+                  </Link>
                 </div>
-                <a href="tel:+1 302 464 0950" className="hover:text-zion-cyan">+1 302 464 0950</a>
-              </div>
-              <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
-                  <Mail className="w-4 h-4 text-zion-cyan" />
+                <div className="space-y-3">
+                  <Link to="/about" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    About Us
+                  </Link>
+                  <Link to="/contact" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Contact
+                  </Link>
+                  <Link to="/support" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Support
+                  </Link>
+                  <Link to="/blog" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Blog
+                  </Link>
                 </div>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan">kleber@ziontechgroup.com</a>
-              </div>
-              <div className="flex items-start text-zion-slate-light">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
-                  <MapPin className="w-4 h-4 text-zion-cyan" />
-                </div>
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center text-zion-slate-light">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
-                  <Clock className="w-4 h-4 text-zion-cyan" />
-                </div>
-                <span>24/7 Support Available</span>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Services */}
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-16">
+          {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <div key={index} className="space-y-4">
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
                 <div className={`p-2 ${category.bgColor} rounded-lg`}>
                   <category.icon className={`w-5 h-5 ${category.color}`} />
                 </div>
-                <h3 className={`text-lg font-bold ${category.color}`}>{category.title}</h3>
+                <h3 className={`${category.color} font-bold text-lg`}>{category.title}</h3>
               </div>
               <ul className="space-y-3">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.slice(0, 6).map((service, serviceIndex) => (
                   <li key={serviceIndex}>
                     <Link 
                       to={service.href} 
@@ -255,20 +339,67 @@ export function AppFooter() {
                 ))}
               </ul>
             </div>
+          </div>
+
+          {/* Solutions & Innovation */}
+          <div className="space-y-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-zion-green/20 rounded-lg">
+                  <Target className="w-5 h-5 text-zion-green" />
+                </div>
+                <h3 className="text-lg font-bold text-zion-green">Industry Solutions</h3>
+              </div>
+              <ul className="space-y-3">
+                {solutionLinks.slice(0, 6).map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.href} 
+                      className="text-zion-slate-light hover:text-zion-green transition-all duration-300 text-sm flex items-center group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <div className="p-2 bg-zion-purple/20 rounded-lg">
-                  <HelpCircle className="w-5 h-5 text-zion-purple" />
+                  <Rocket className="w-5 h-5 text-zion-purple" />
                 </div>
-                <h3 className="text-lg font-bold text-zion-purple">Support</h3>
+                <h3 className="text-lg font-bold text-zion-purple">Innovation & Pricing</h3>
+              </div>
+              <ul className="space-y-3">
+                {innovationLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.href} 
+                      className="text-zion-slate-light hover:text-zion-purple transition-all duration-300 text-sm flex items-center group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-zion-blue/20 rounded-lg">
+                  <HelpCircle className="w-5 h-5 text-zion-blue" />
+                </div>
+                <h3 className="text-lg font-bold text-zion-blue">Support</h3>
               </div>
               <ul className="space-y-3">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
                     <Link 
                       to={link.href} 
-                      className="text-zion-slate-light hover:text-zion-purple transition-all duration-300 text-sm flex items-center group"
+                      className="text-zion-slate-light hover:text-zion-blue transition-all duration-300 text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
                       {link.name}
@@ -290,14 +421,14 @@ export function AppFooter() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Link 
-              to="/innovative-services-showcase-2032"
+              to="/innovative-services-showcase-2026"
               className="group p-6 bg-zion-slate-dark/50 rounded-xl border border-zion-purple/30 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               <div className="flex items-center space-x-3 mb-3">
                 <Rocket className="w-6 h-6 text-zion-purple" />
-                <h4 className="text-lg font-semibold text-white">2032 Innovation Showcase</h4>
+                <h4 className="text-lg font-semibold text-white">2026 Innovation Showcase</h4>
               </div>
-              <p className="text-zion-slate-light text-sm">Explore our revolutionary services and solutions for the future.</p>
+              <p className="text-zion-slate-light text-sm">Explore our revolutionary AI autonomous platforms and services.</p>
             </Link>
             <Link 
               to="/comprehensive-services-showcase-2025"
@@ -394,41 +525,3 @@ export function AppFooter() {
     </footer>
   );
 }
-
-// Missing icon components
-const Handshake = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-);
-
-const Monitor = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-  </svg>
-);
-
-const GraduationCap = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-  </svg>
-);
-
-const Lightbulb = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-  </svg>
-);
-
-const Code = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-  </svg>
-);
-
-const Activity = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-  </svg>
-);

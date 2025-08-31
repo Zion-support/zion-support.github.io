@@ -26,7 +26,7 @@ import {
   Mail,
   MapPin,
   Building,
-  ChartBar,
+  BarChart3,
   Target,
   Lightbulb,
   Calculator,
@@ -49,7 +49,7 @@ export default function AIRealEstateInvestmentAnalyticsPlatform() {
       description: "Advanced AI algorithms analyze real estate markets, trends, and investment opportunities with 95% accuracy"
     },
     {
-      icon: ChartBar,
+      icon: BarChart3,
       title: "Predictive Investment Modeling",
       description: "Machine learning models predict property values, rental yields, and market appreciation over time"
     },

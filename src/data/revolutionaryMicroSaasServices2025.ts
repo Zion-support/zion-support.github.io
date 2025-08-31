@@ -1,4 +1,21 @@
+<<<<<<< HEAD
 export interface RevolutionaryMicroSaasService2025 {
+=======
+export interface RevolutionaryMicroSaasService {
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -17,12 +34,29 @@ export interface RevolutionaryMicroSaasService2025 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
+<<<<<<< HEAD
     address: string;
   };
+=======
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

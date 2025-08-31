@@ -1,8 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain, 
   Shield, 
   Cloud, 
   Server, 
@@ -26,10 +25,10 @@ import {
   Workflow,
   Sparkles,
   Award
-} from 'lucide-react';
-import { SEO } from '../../components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '../../components/SEO';
 
-export default function Solutions() {
+export default function Solutions(...args: any[]): any {
   const solutionCategories = [
     {
       title: 'AI & Machine Learning Solutions',
@@ -199,8 +198,8 @@ export default function Solutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredSolutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredSolutions.map((solution, index)              => (
               <motion.div
                 key={solution.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -270,8 +269,8 @@ export default function Solutions() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.solutions.map((solution, solutionIndex) => (
+                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.solutions.map((solution, solutionIndex)              => (
                     <Link
                       key={solution.name}
                       to={solution.href}

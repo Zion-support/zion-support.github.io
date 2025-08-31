@@ -1,24 +1,42 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { useAdminQuotes } from "@/hooks/useAdminQuotes";
 import { useAuth } from "@/hooks/useAuth";
 import {
   Card,
+=======
+
+import React, { useState } from 'react.ts';
+import { useAdminQuotes              } from '@/hooks/useAdminQuotes';
+import { useAuth              } from '@/hooks/useAuth';
+import { Card,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   CardContent
- } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components/ui/tabs';
-import { Navigate  } from 'react-router-dom.ts';
+              } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger               } from '@/components/ui/tabs';
+import { Navigate               } from 'react-router-dom.ts';
 import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { QuoteDetails  } from '@/components/quotes/QuoteDetails';
-import { ExportToCSV  } from '@/components/quotes/ExportToCSV';
+import { ProtectedRoute               } from '@/components/ProtectedRoute';
+import { QuoteDetails               } from '@/components/quotes/QuoteDetails';
+import { ExportToCSV               } from '@/components/quotes/ExportToCSV';
 import { QuoteStatusCards,
   QuotesFilter,
   QuotesTable
+<<<<<<< HEAD
  } from '@/components/admin/quotes';
 export default function QuoteManager(...args[]):  {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
+=======
+              } from '@/components/admin/quotes';
+
+export default function QuoteManager(...args[]: any):  {
+  const { user } = useAuth();
+  const isAdmin = user?.userType === 'admin';
+
+  const [selectedQuote, setSelectedQuote] = useState<any>(null);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [showDetails, setShowDetails] = useState(false);
   const {
     quotes,
@@ -38,16 +56,41 @@ export default function QuoteManager(...args[]):  {
   } = useAdminQuotes();
   // Count quotes by status
   const statusCounts = {
+<<<<<<< HEAD
   new: quotes.filter((q: QuoteRequest) => q.status === 'new').length,
     in_review: quotes.filter((q: QuoteRequest) => q.status === 'in_review').length,;
     accepted: quotes.filter((q: QuoteRequest) => q.status === 'accepted').length,;
     responded: quotes.filter((q: QuoteRequest) => q.status === 'responded').length,;
+=======
+  <<<<<<< HEAD
+    new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'new').length,
+    in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'in_review').length,
+    accepted: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'accepted').length,
+    responded: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'responded').length,
+  closed: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)               => q.status === 'closed').length;
+  ;
+
+};
+
+  const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)               => {
+=======
+  new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'new').length,
+    in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'in_review').length,;
+    accepted: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'accepted').length,;
+    responded: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'responded').length,;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ;
   ;
-  closed: quotes.filter((q: QuoteRequest) => q.status === 'closed').length;
+  closed: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'closed').length;
   ;
 };
+<<<<<<< HEAD
   const handleViewDetails = (quote: QuoteRequest) => {;
+=======
+
+  const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSelectedQuote(quote);
     setShowDetails(true)};
   const handleResetFilters = () => {;
@@ -94,7 +137,7 @@ export default function QuoteManager(...args[]):  {
                 {/* Quotes Table */}
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: QuoteRequest)  => !quote.is_archived)}
+                    quotes={quotes.filter((quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)               => !quote.is_archived)}
                     isLoading={isLoading}
                     updateStatus={updateStatus}
                     toggleArchive={toggleArchive}
@@ -106,7 +149,7 @@ export default function QuoteManager(...args[]):  {
               <TabsContent value="archived">
                 <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
                   <QuotesTable
-                    quotes={quotes.filter((quote: QuoteRequest)  => quote.is_archived)}
+                    quotes={quotes.filter((quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)               => quote.is_archived)}
                     isArchived={true}
                     isLoading={isLoading}
                     updateStatus={updateStatus}

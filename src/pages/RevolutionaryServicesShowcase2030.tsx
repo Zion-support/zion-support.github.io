@@ -1,5 +1,5 @@
 import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import { motion               } from 'framer-motion.ts';
 import { ArrowRight,
   ChevronLeft,
   ChevronRight,
@@ -43,10 +43,29 @@ import { ArrowRight,
   SortAsc,
   SortDesc,
   X
+<<<<<<< HEAD
 } from 'lucide-react';
 import { SEO } from "../components/SEO";
 import { REVOLUTIONARY_SERVICES_2030 } from "../data/revolutionaryServices2030";
 export default function RevolutionaryServicesShowcase2030(...args[]):  {
+=======
+<<<<<<< HEAD
+import { SEO              } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030              } from '../data/revolutionaryServices2030';
+=======
+<<<<<<< HEAD
+ } from 'lucide-react';
+import { SEO               } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030               } from '../data/revolutionaryServices2030';
+=======
+} from 'lucide-react';
+import { SEO              } from '../components/SEO';
+import { REVOLUTIONARY_SERVICES_2030              } from '../data/revolutionaryServices2030';
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function RevolutionaryServicesShowcase2030(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('aiScore');
@@ -93,13 +112,37 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentServices = sortedServices.slice(startIndex, endIndex);
+<<<<<<< HEAD
   const handleServiceSelect = (service: any) => {;
+=======
+
+<<<<<<< HEAD
+  const handlePageChange = (page: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' })};
+
+<<<<<<< HEAD
+  const handleServiceSelect = (service)  => {;
+    setSelectedService(service)};
+
+  const closeModal = () => {;
+    setSelectedService(null)};
+=======
+  const handleServiceSelect = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     setSelectedService(service);
   };
   const closeModal = () => {;
     setSelectedService(null);
   };
+<<<<<<< HEAD
   const getCategoryIcon = (category: string)  => {
+=======
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const iconMap: { [key: string]: React.ReactNode } = {
       'AI & Autonomous Systems': <Rocket className="w-6 h-6" />,
       'AI & Business Intelligence': <Brain className="w-6 h-6" />,
@@ -132,7 +175,12 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Emerging Technology': <Lightbulb className="w-6 h-6" />;
     };
     return iconMap[category] || <Rocket className="w-6 h-6" />};
+<<<<<<< HEAD
   const getCategoryColor = (category: string)  => {
+=======
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const colorMap: { [key: string]: string } = {
       'AI & Autonomous Systems': 'from-cyan-500 to-blue-500',
       'AI & Business Intelligence': 'from-purple-500 to-pink-500',
@@ -165,6 +213,39 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
       'Emerging Technology': 'from-violet-500 to-purple-500';
     };
     return colorMap[category] || 'from-gray-500 to-slate-500'};
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const getROIColor = (roi: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+    if (roiNumber >= 800) return 'text-green-400';
+    if (roiNumber >= 500) return 'text-blue-400';
+    if (roiNumber >= 300) return 'text-yellow-400';
+    return 'text-red-400'};
+
+<<<<<<< HEAD
+  const getSetupTimeColor = (setupTime: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+    if (weeks <= 8) return 'text-green-400';
+    if (weeks <= 16) return 'text-yellow-400';
+    return 'text-red-400'};
+
+  // Calculate statistics
+  const totalValue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.price, 0);
+  const averageROI = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => {;
+    const roi = service.roi;
+    if (typeof roi = == 'string') {;
+      const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+<<<<<<< HEAD
+      return sum + roiNumber;
+
+    return sum;
+  }, 0) / REVOLUTIONARY_SERVICES_2030.length;
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       return sum + roiNumber}
     return sum}, 0) / REVOLUTIONARY_SERVICES_2030.length;
   return (
@@ -329,8 +410,8 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
               </div>
             </div>
             {/* Services Grid */}
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentServices.map((service, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {currentServices.map((service, index)               => (
                 <motion.div
                   key={service.id}
                   initial = {
@@ -418,7 +499,17 @@ export default function RevolutionaryServicesShowcase2030(...args[]):  {
                     className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:bg-white/20 transition-colors"
                     <ChevronLeft className="w-5 h-5" />
                   </button>
+<<<<<<< HEAD
                   {Array.from({ length: totalPages }, (_, i)  => i + 1).map((page) => (
+=======
+<<<<<<< HEAD
+
+                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)              => i + 1).map((page) => (
+=======
+                  
+                  {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanytotalPages }, (_, i)               => i + 1).map((page) => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <button
                       key={page}
                       onClick={() => handlePageChange(page)}

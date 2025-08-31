@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Search,
   Filter,
   Star,
   ArrowRight,
@@ -402,35 +401,78 @@ import {
   Psi,
   Omega,
   Crown
+<<<<<<< HEAD
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
+=======
+<<<<<<< HEAD
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '../data/innovativeMicroSaasServices2025';
+=======
+} from 'lucide-react';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2025               } from '../data/innovativeMicroSaasServices2025';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface ServiceContact {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   mobile: string;
   email: string;
   address: string;
   website: string;
+<<<<<<< HEAD
 const ComprehensiveServicesShowcase2025: React.FC = () => {;
+=======
+
+const ComprehensiveServicesShowcase2025: React.FC = (): JSX.Element => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState<any>(null);
   const [sortBy, setSortBy] = useState('rating');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [priceRange, setPriceRange] = useState<any>([0, 10000]);
   const [innovationLevel, setInnovationLevel] = useState('all');
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖' },
-    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s => s.category === 'AI & Analytics').length, icon: '📊' },
-    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s => s.category === 'AI & Research').length, icon: '🔬' },
-    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s => s.category === 'AI & Logistics').length, icon: '🚛' },
-    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s => s.category === 'AI & Marketing').length, icon: '📢' },;
-    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥' },;
-    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️' },;
-    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗' },;
-    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍' },;
-    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐' },;
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️' };
+{ id: anyanyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: allServices.length, icon: '🚀';
+
+
+
+
+
+
+
+
+
+
+
+
+
+},
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s               => s.category === 'AI & Automation').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🤖' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s               => s.category === 'AI & Analytics').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'📊' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s               => s.category === 'AI & Research').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🔬' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s               => s.category === 'AI & Logistics').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🚛' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s               => s.category === 'AI & Marketing').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'📢' },;
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s               => s.category === 'AI & Healthcare').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🏥' },;
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s               => s.category === 'Quantum Computing').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'⚛️' },;
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s               => s.category === 'Blockchain').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🔗' },;
+    { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s               => s.category === 'Metaverse').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🌍' },;
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s               => s.category === 'Edge Computing').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyanyany'🌐' },;
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s               => s.category === 'Cybersecurity').length, icon: '🛡️' };
   ];
   const innovationLevels = [;
     { id: 'all', name: 'All Levels', icon: '🌟' },;
@@ -469,6 +511,30 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       default:
         return 0;
   });
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const handleServiceClick = (service: anyanyanyanyanyanyanyanyanyanyanyanyanyany)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    setSelectedService(service);
+  };
+
+  const closeModal = () => {;
+    setSelectedService(null);
+  };
+
+  const containerVariants = {
+<<<<<<< HEAD
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -490,7 +556,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       };
     };
   };
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {;
+=======
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (category) {;
       case 'AI & Automation': return <Bot className="w-5 h-5" />;
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;
@@ -505,7 +576,12 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       case 'Cybersecurity': return <Shield className="w-5 h-5" />;
       default: return <Zap className="w-5 h-5" />;
   };
+<<<<<<< HEAD
   const getInnovationIcon = (level: string) => {;
+=======
+
+  const getInnovationIcon = (level: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (level) {;
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
@@ -588,8 +664,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 <select
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}
+<<<<<<< HEAD
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
                   {categories.map((category) => (
+=======
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
+
+                  {categories.map((category)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
@@ -602,8 +684,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 <select
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}
+<<<<<<< HEAD
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
                   {innovationLevels.map((level) => (
+=======
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
+
+                  {innovationLevels.map((level)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
                     </option>
@@ -694,9 +782,14 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid'
-              ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
+              ? 'grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
+<<<<<<< HEAD
             {sortedServices.map((service) => (
+=======
+
+            {sortedServices.map((service)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 variants={itemVariants}

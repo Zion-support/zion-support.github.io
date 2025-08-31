@@ -1,8 +1,7 @@
-import React, { useState, useMemo } from 'react';
-import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
-import { 
-    Search, 
+import React, { useState, useMemo } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Helmet              } from 'react-helmet-async.ts';
+import { Search, 
     Filter, 
     TrendingUp, 
     Shield, 
@@ -26,20 +25,19 @@ import {
     Plus,
     Database,
     Layers
-} from 'lucide-react';
-import { 
-    comprehensiveServicesIndex2025, 
+             } from 'lucide-react.ts';
+import { comprehensiveServicesIndex2025, 
     getServiceStats, 
     getServicesByCategory,
     getServicesBySource,
     ServiceIndex 
-} from '../data/comprehensive-services-index-2025';
+             } from '../data/comprehensive-services-index-2025';
 
-const ComprehensiveServicesDashboard2025: React.FC = () => {
+const ComprehensiveServicesDashboard2025: React.FC = (): JSX.Element => {
     const [searchTerm, setSearchTerm] = useState('');
-    const [selectedCategory, setSelectedCategory] = useState<string>('all');
-    const [selectedSource, setSelectedSource] = useState<string>('all');
-    const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+    const [selectedCategory, setSelectedCategory] = useState<any>('all');
+    const [selectedSource, setSelectedSource] = useState<any>('all');
+    const [viewMode, setViewMode] = useState<any>('grid');
 
     const stats = getServiceStats();
     const categories = stats.categoryBreakdown;
@@ -66,7 +64,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () => {
         return filtered;
     }, [searchTerm, selectedCategory, selectedSource]);
 
-    const getCategoryColor = (category: string) => {
+    const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
         const colors: { [key: string]: string } = {
             'fintech': 'from-green-500 to-emerald-600',
             'healthtech': 'from-red-500 to-pink-600',
@@ -87,7 +85,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () => {
         return colors[category] || 'from-gray-500 to-gray-600';
     };
 
-    const getCategoryIcon = (category: string) => {
+    const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
         const icons: { [key: string]: React.ReactNode } = {
             'fintech': <DollarSign className="w-5 h-5" />,
             'healthtech': <Heart className="w-5 h-5" />,
@@ -108,7 +106,7 @@ const ComprehensiveServicesDashboard2025: React.FC = () => {
         return icons[category] || <Globe className="w-5 h-5" />;
     };
 
-    const getSourceBadge = (source: string) => {
+    const getSourceBadge = (source: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
         const badges = {
             'existing': { color: 'bg-blue-100 text-blue-800', text: 'Existing' },
             'new': { color: 'bg-green-100 text-green-800', text: 'New' },
@@ -362,8 +360,8 @@ const ComprehensiveServicesDashboard2025: React.FC = () => {
                             </div>
 
                             {viewMode === 'grid' ? (
-                                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                    {filteredServices.map((service, index) => (
+                                <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+                                    {filteredServices.map((service, index)              => (
                                         <motion.div
                                             key={service.id}
                                             initial={{ opacity: 0, y: 20 }}

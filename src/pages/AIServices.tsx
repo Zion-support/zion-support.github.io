@@ -1,9 +1,9 @@
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import { Brain, Zap, BarChart3, LineChart, Activity, Search, Bot, Wand2 } from 'lucide-react';
+import React from 'react.ts';
+import { SEO              } from '@/components/SEO';
+import { Link              } from 'react-router-dom.ts';
+import { Brain, Zap, BarChart3, LineChart, Activity, Search, Bot, Wand2              } from 'lucide-react.ts';
 
-export default function AIServices() {
+export default function AIServices(...args: any[]): any {
   const plans = [
     {
       name: 'Starter AI',
@@ -74,7 +74,7 @@ export default function AIServices() {
           </div>
 
           {/* Capabilities */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="mt-16 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
             {[
               { icon: Brain, title: 'Chat & Agents', desc: 'Multilingual, tool-using assistants with guardrails.' },
               { icon: Search, title: 'RAG & Search', desc: 'Accurate answers grounded in your content.' },
@@ -82,7 +82,7 @@ export default function AIServices() {
               { icon: Activity, title: 'Automation', desc: 'AI workflows to triage, route, and summarize.' },
               { icon: Wand2, title: 'Fine-tuning', desc: 'Domain-adapted models for tone and accuracy.' },
               { icon: Bot, title: 'Safety & QA', desc: 'Hallucination, PII, toxicity filters and audits.' },
-            ].map((c) => (
+            ].map((c)              => (
               <div key={c.title} className="card-futuristic">
                 <div className="flex items-center gap-3">
                   <c.icon className="w-6 h-6 text-cyan-400" />
@@ -97,8 +97,8 @@ export default function AIServices() {
           <div className="mt-20">
             <h2 className="text-2xl md:text-3xl font-bold text-white text-center">Transparent Pricing</h2>
             <p className="text-slate-300 text-center mt-2">Market-aligned, value-focused. Cancel anytime.</p>
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-              {plans.map((p) => (
+            <div className="mt-10 grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+              {plans.map((p)              => (
                 <div key={p.name} className={`card-futuristic ${p.highlighted ? 'ring-2 ring-cyan-400' : ''}`}>
                   <div className="flex items-center justify-between">
                     <h3 className="text-white font-semibold">{p.name}</h3>
