@@ -61,7 +61,8 @@ import {
   Video,
   Headphones,
   Download,
-  ExternalLink
+  ExternalLink,
+  GitBranch
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 
@@ -212,39 +213,39 @@ const ServicesPreview = () => {
       features: ["Predictive Analytics", "Natural Language Processing", "Computer Vision", "Automated Workflows"]
     },
     {
+      title: "AI Edge Computing",
+      description: "Revolutionary edge AI platform for real-time processing and distributed intelligence",
+      icon: Cpu,
+      color: "from-cyan-500 to-blue-600",
+      features: ["Real-time AI Processing", "Edge AI Optimization", "Distributed Intelligence", "Edge-Cloud Hybrid"]
+    },
+    {
+      title: "AI Business Intelligence",
+      description: "AI-powered BI platform with predictive analytics and natural language queries",
+      icon: BarChart3,
+      color: "from-green-500 to-emerald-600",
+      features: ["Predictive Analytics", "Natural Language Query", "Real-time Dashboards", "Automated Insights"]
+    },
+    {
+      title: "AI Customer Experience",
+      description: "Intelligent customer experience platform with AI chatbots and sentiment analysis",
+      icon: MessageCircle,
+      color: "from-pink-500 to-rose-600",
+      features: ["AI Chatbots", "Sentiment Analysis", "Personalized Recommendations", "Omnichannel Support"]
+    },
+    {
+      title: "AI DevOps Automation",
+      description: "AI-powered DevOps platform with intelligent CI/CD and predictive infrastructure",
+      icon: GitBranch,
+      color: "from-indigo-500 to-purple-600",
+      features: ["Intelligent CI/CD", "Predictive Infrastructure", "Automated Security", "Smart Monitoring"]
+    },
+    {
       title: "Quantum Computing",
       description: "Next-generation quantum platforms for complex problem-solving and optimization",
       icon: Atom,
       color: "from-blue-500 to-cyan-600",
       features: ["Quantum Algorithms", "Hybrid Classical-Quantum Systems", "Optimization Problems", "Cryptography"]
-    },
-    {
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation services for modern enterprises",
-      icon: Rocket,
-      color: "from-green-500 to-emerald-600",
-      features: ["Process Automation", "Cloud Migration", "Legacy Modernization", "Change Management"]
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions protecting against evolving threats",
-      icon: Shield,
-      color: "from-red-500 to-orange-600",
-      features: ["Threat Detection", "Incident Response", "Compliance Management", "Security Training"]
-    },
-    {
-      title: "Cloud & DevOps",
-      description: "Scalable cloud infrastructure and automated development operations",
-      icon: Cloud,
-      color: "from-indigo-500 to-purple-600",
-      features: ["Multi-Cloud Strategy", "CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting"]
-    },
-    {
-      title: "Micro SAAS Solutions",
-      description: "Custom software-as-a-service applications for specific business needs",
-      icon: Code,
-      color: "from-yellow-500 to-orange-600",
-      features: ["Custom Development", "API Integration", "Scalable Architecture", "User Management"]
     }
   ];
 

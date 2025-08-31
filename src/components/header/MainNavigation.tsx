@@ -69,6 +69,8 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <li><Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
                     <li><Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum AI Platform</Link></li>
                     <li><Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Supply Chain AI</Link></li>
+                    <li><Link to="/services/ai-edge-computing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Edge Computing</Link></li>
+                    <li><Link to="/services/ai-business-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Business Intelligence</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -78,6 +80,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-2 text-sm">
                     <li><Link to="/services/cloud-devops-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+                    <li><Link to="/services/ai-devops-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI DevOps Automation</Link></li>
                     <li><Link to="/services/it-infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Infrastructure</Link></li>
                     <li><Link to="/services/cybersecurity-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
                     <li><Link to="/services/network-infrastructure" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Network Solutions</Link></li>
@@ -91,6 +94,69 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
                 >
                   View All Services
+                  <TrendingUp className="w-4 h-4 ml-2"/>
+                </Link>
+                <Link 
+                  to="/innovative-services-showcase-2025" 
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center mt-2"
+                >
+                  Innovative Services 2025
+                  <Zap className="w-4 h-4 ml-2"/>
+                </Link>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      
+      {/* Micro SaaS Solutions Dropdown */}
+      <div className="relative group">
+        <button 
+          onMouseEnter={() => setIsServicesOpen(true)} 
+          onMouseLeave={() => setIsServicesOpen(false)} 
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+        >
+          <Zap className="w-4 h-4"/>
+          <span>Micro SaaS</span>
+          <ChevronDown className="w-3 h-3"/>
+        </button>
+        {isServicesOpen && (
+          <div 
+            onMouseEnter={() => setIsServicesOpen(true)} 
+            onMouseLeave={() => setIsServicesOpen(false)} 
+            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+          >
+            <div className="p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Zap className="w-4 h-4 mr-2"/>
+                    Customer Experience
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link to="/services/ai-customer-experience-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI CX Platform</Link></li>
+                    <li><Link to="/services/micro-crm" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro CRM</Link></li>
+                    <li><Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Support Automation</Link></li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Brain className="w-4 h-4 mr-2"/>
+                    Business Tools
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link to="/services/ai-business-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI BI Platform</Link></li>
+                    <li><Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Project Management</Link></li>
+                    <li><Link to="/services/ai-workflow-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Workflow Automation</Link></li>
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-4 pt-4 border-t border-zion-purple/20">
+                <Link 
+                  to="/micro-saas" 
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
+                >
+                  View All Micro SaaS
                   <TrendingUp className="w-4 h-4 ml-2"/>
                 </Link>
               </div>

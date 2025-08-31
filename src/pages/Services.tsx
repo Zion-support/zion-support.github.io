@@ -71,6 +71,36 @@ export default function Services() {
       link: '/services/ai-autonomous-research-assistant'
     },
     {
+      id: 'ai-edge-computing-platform',
+      name: 'AI Edge Computing Platform',
+      category: 'ai-ml',
+      icon: Cpu,
+      description: 'Revolutionary edge AI platform for real-time processing and distributed intelligence.',
+      features: ['Real-time AI processing', 'Edge AI optimization', 'Distributed intelligence', 'Edge-cloud hybrid'],
+      pricing: 'Starting at $2,500/month',
+      link: '/services/ai-edge-computing-platform'
+    },
+    {
+      id: 'ai-business-intelligence-platform',
+      name: 'AI Business Intelligence Platform',
+      category: 'ai-ml',
+      icon: BarChart3,
+      description: 'AI-powered BI platform with predictive analytics and natural language queries.',
+      features: ['Predictive analytics', 'Natural language query', 'Real-time dashboards', 'Automated insights'],
+      pricing: 'Starting at $3,500/month',
+      link: '/services/ai-business-intelligence-platform'
+    },
+    {
+      id: 'ai-customer-experience-platform',
+      name: 'AI Customer Experience Platform',
+      category: 'ai-ml',
+      icon: MessageCircle,
+      description: 'Intelligent customer experience platform with AI chatbots and sentiment analysis.',
+      features: ['AI chatbots', 'Sentiment analysis', 'Personalized recommendations', 'Omnichannel support'],
+      pricing: 'Starting at $1,500/month',
+      link: '/services/ai-customer-experience-platform'
+    },
+    {
       id: 'ai-cybersecurity-platform',
       name: 'AI Cybersecurity Platform',
       category: 'ai-ml',
@@ -155,6 +185,16 @@ export default function Services() {
       features: ['Infrastructure as Code', 'CI/CD pipelines', 'Auto-scaling', 'Monitoring & alerting'],
       pricing: 'Starting at $2,500/month',
       link: '/services/cloud-devops-automation'
+    },
+    {
+      id: 'ai-devops-automation-platform',
+      name: 'AI DevOps Automation Platform',
+      category: 'cloud-devops',
+      icon: Cpu,
+      description: 'AI-powered DevOps platform with intelligent CI/CD and predictive infrastructure.',
+      features: ['Intelligent CI/CD', 'Predictive infrastructure', 'Automated security', 'Smart monitoring'],
+      pricing: 'Starting at $4,000/month',
+      link: '/services/ai-devops-automation-platform'
     },
     {
       id: 'cloud-migration',

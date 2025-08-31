@@ -29,7 +29,10 @@ import {
   Cpu,
   Shield as ShieldIcon,
   Handshake,
-  Code
+  Code,
+  BarChart3,
+  MessageCircle,
+  GitBranch
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -45,11 +48,11 @@ const Footer = () => {
       title: 'Services',
       links: [
         { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
-        { name: 'Digital Transformation', href: '/it-services', icon: Cpu },
-        { name: 'Cloud & DevOps', href: '/services', icon: Cloud },
-        { name: 'Cybersecurity', href: '/services', icon: ShieldIcon },
-        { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Zap },
-        { name: 'Consulting Services', href: '/services', icon: Users }
+        { name: 'AI Edge Computing', href: '/services/ai-edge-computing-platform', icon: Cpu },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence-platform', icon: BarChart3 },
+        { name: 'AI Customer Experience', href: '/services/ai-customer-experience-platform', icon: MessageCircle },
+        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation-platform', icon: GitBranch },
+        { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Zap }
       ]
     },
     {
