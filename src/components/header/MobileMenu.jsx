@@ -122,6 +122,8 @@ export function MobileMenu({ onClose }) {
     { href: '/pricing', label: 'Pricing' },
     { href: '/contact', label: 'Contact' },
     { href: '/help', label: 'Support' },
+    { href: '/get-started', label: 'Get Started' },
+    { href: '/request-quote', label: 'Request Quote' },
   ];
 
   const contactInfo = [

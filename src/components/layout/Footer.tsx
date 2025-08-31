@@ -138,7 +138,7 @@ export function Footer() {
   ];
 
   const quickLinks = [
-    { name: "Get Started", href: "/signup", icon: Rocket },
+    { name: "Get Started", href: "/get-started", icon: Rocket },
     { name: "Request Quote", href: "/request-quote", icon: TrendingUp },
     { name: "Support", href: "/help", icon: HelpCircle },
     { name: "Pricing", href: "/pricing", icon: BarChart3 },

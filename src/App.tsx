@@ -40,6 +40,9 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
+const Signup = createLazyComponent(() => import('./pages/Signup'));
 const Services = createLazyComponent(() => import('./pages/Services'));
 const AIServices = createLazyComponent(() => import('./pages/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
@@ -218,6 +221,11 @@ function App() {
                         </motion.div>
                       }
                     />
+                    
+                    {/* Additional Core Routes */}
+                    <Route path="/get-started" element={<ModernLayout><GetStarted /></ModernLayout>} />
+                    <Route path="/request-quote" element={<ModernLayout><RequestQuote /></ModernLayout>} />
+                    <Route path="/signup" element={<ModernLayout><Signup /></ModernLayout>} />
                     {/* Main Pages with Sidebar */}
                     <Route path="/about" element={<ModernLayout><About /></ModernLayout>} />
                     <Route path="/contact" element={<ModernLayout><Contact /></ModernLayout>} />
