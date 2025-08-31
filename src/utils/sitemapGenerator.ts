@@ -1,3 +1,6 @@
+// Sitemap Generator for Zion Tech Group
+// Generates XML sitemap for better SEO
+
 interface SitemapUrl {
   url: string;
   lastmod?: string;
@@ -15,111 +18,72 @@ export class SitemapGenerator {
   private config: SitemapConfig;
 
   constructor(config: SitemapConfig) {
-    this.config = config;
+    this.config = {
+      baseUrl: config.baseUrl.replace(/\/$/, ''),
+      urls: config.urls,
+      outputPath: config.outputPath || 'public/sitemap.xml'
+    };
   }
 
-  /**
-   * Generate XML sitemap content
-   */
+  // Generate XML sitemap
   generateXML(): string {
-    const { baseUrl, urls } = this.config;
-    
-    const xmlUrls = urls.map(url => {
+    const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>';
+    const urlsetOpen = '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+    const urlsetClose = '</urlset>';
+
+    const urlElements = this.config.urls.map(url => {
+      const fullUrl = `${this.config.baseUrl}${url.url}`;
       const lastmod = url.lastmod || new Date().toISOString().split('T')[0];
       const changefreq = url.changefreq || 'weekly';
       const priority = url.priority || 0.5;
-      
+
       return `  <url>
-    <loc>${baseUrl}${url.url}</loc>
+    <loc>${fullUrl}</loc>
     <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`;
     }).join('\n');
 
-    return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${xmlUrls}
-</urlset>`;
+    return `${xmlHeader}
+${urlsetOpen}
+${urlElements}
+${urlsetClose}`;
   }
 
-  /**
-   * Generate robots.txt content
-   */
+  // Generate robots.txt content
   generateRobotsTxt(): string {
-    const { baseUrl } = this.config;
-    
     return `User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: ${baseUrl}/sitemap.xml
+# Sitemap
+Sitemap: ${this.config.baseUrl}/sitemap.xml
 
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /server/
-
-# Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /blog
-Allow: /careers
+Disallow: /static/
 
 # Crawl delay (optional)
 Crawl-delay: 1`;
   }
 
-  /**
-   * Generate sitemap index for large sites
-   */
-  generateSitemapIndex(sitemaps: string[]): string {
-    const sitemapEntries = sitemaps.map(sitemap => {
-      const lastmod = new Date().toISOString().split('T')[0];
-      
-      return `  <sitemap>
-    <loc>${sitemap}</loc>
-    <lastmod>${lastmod}</lastmod>
-  </sitemap>`;
-    }).join('\n');
-
-    return `<?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapEntries}
-</sitemapindex>`;
+  // Save sitemap to file
+  async saveSitemap(): Promise<void> {
+    const fs = await import('fs/promises');
+    const xml = this.generateXML();
+    await fs.writeFile(this.config.outputPath!, xml, 'utf-8');
+    console.log(`Sitemap saved to ${this.config.outputPath}`);
   }
 
-  /**
-   * Generate JSON-LD structured data for sitemap
-   */
-  generateStructuredData(): string {
-    const { baseUrl, urls } = this.config;
-    
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Zion Tech Group",
-      "url": baseUrl,
-      "description": "Empowering the future through innovative technology solutions",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": `${baseUrl}/search?q={search_term_string}`
-        },
-        "query-input": "required name=search_term_string"
-      },
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ]
-    };
-
-    return JSON.stringify(structuredData, null, 2);
+  // Save robots.txt to file
+  async saveRobotsTxt(): Promise<void> {
+    const fs = await import('fs/promises');
+    const robots = this.generateRobotsTxt();
+    await fs.writeFile('public/robots.txt', robots, 'utf-8');
+    console.log('Robots.txt saved to public/robots.txt');
   }
 }
 
@@ -131,56 +95,117 @@ export const defaultSitemapConfig: SitemapConfig = {
     { url: '/', priority: 1.0, changefreq: 'daily' },
     { url: '/about', priority: 0.8, changefreq: 'monthly' },
     { url: '/contact', priority: 0.8, changefreq: 'monthly' },
-    { url: '/sitemap', priority: 0.6, changefreq: 'weekly' },
-    
-    // Service pages
     { url: '/services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/ai-services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/it-services', priority: 0.9, changefreq: 'weekly' },
-    { url: '/micro-saas', priority: 0.8, changefreq: 'weekly' },
-    
-    // Service showcases
-    { url: '/new-innovative-services-2025', priority: 0.8, changefreq: 'weekly' },
-    { url: '/ultimate-services-showcase-2026', priority: 0.8, changefreq: 'weekly' },
-    { url: '/comprehensive-services-showcase-2027', priority: 0.8, changefreq: 'weekly' },
-    { url: '/zion-cutting-edge-services-2029', priority: 0.8, changefreq: 'weekly' },
-    
-    // Individual service pages
-    { url: '/services/ai-workflow-orchestrator', priority: 0.7, changefreq: 'monthly' },
-    { url: '/services/ai-data-governance-platform', priority: 0.7, changefreq: 'monthly' },
-    { url: '/services/ai-customer-experience-analytics', priority: 0.7, changefreq: 'monthly' },
-    { url: '/services/cloud-devops', priority: 0.7, changefreq: 'monthly' },
-    { url: '/services/it-infrastructure', priority: 0.7, changefreq: 'monthly' },
-    { url: '/services/ai-sales-copilot', priority: 0.7, changefreq: 'monthly' },
-    
-    // Solution pages
-    { url: '/ai-solutions', priority: 0.8, changefreq: 'weekly' },
-    { url: '/solutions/enterprise', priority: 0.7, changefreq: 'monthly' },
-    { url: '/solutions/healthcare', priority: 0.7, changefreq: 'monthly' },
-    
-    // Additional pages
-    { url: '/blog', priority: 0.6, changefreq: 'weekly' },
+    { url: '/solutions', priority: 0.9, changefreq: 'weekly' },
+    { url: '/resources', priority: 0.7, changefreq: 'weekly' },
+    { url: '/case-studies', priority: 0.7, changefreq: 'weekly' },
+    { url: '/blog', priority: 0.8, changefreq: 'daily' },
+    { url: '/pricing', priority: 0.8, changefreq: 'monthly' },
+    { url: '/faq', priority: 0.6, changefreq: 'monthly' },
     { url: '/careers', priority: 0.6, changefreq: 'weekly' },
-    { url: '/partners', priority: 0.5, changefreq: 'monthly' },
-    { url: '/news', priority: 0.5, changefreq: 'weekly' },
-    { url: '/case-studies', priority: 0.6, changefreq: 'monthly' },
-    { url: '/help-center', priority: 0.5, changefreq: 'monthly' },
-    { url: '/faq', priority: 0.5, changefreq: 'monthly' },
-    { url: '/pricing', priority: 0.6, changefreq: 'monthly' },
-    { url: '/marketplace', priority: 0.7, changefreq: 'weekly' }
+    { url: '/partners', priority: 0.6, changefreq: 'monthly' },
+    { url: '/team', priority: 0.5, changefreq: 'monthly' },
+    { url: '/news', priority: 0.7, changefreq: 'daily' },
+    { url: '/help', priority: 0.6, changefreq: 'weekly' },
+    { url: '/sitemap', priority: 0.3, changefreq: 'monthly' },
+
+    // Service pages
+    { url: '/services/ai-business-intelligence', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/cloud-devops', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/digital-twin', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/data-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/it-infrastructure', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-sales-copilot', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/cloud-finops-optimizer', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-compliance-assistant', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-auto-email-responder', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/mobile-feedback-surveys', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-compliance-copilot', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/llm-content-studio', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/finops-advisor', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/returns-management', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/email-sequencer', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/podcast-transcription', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/micro-crm', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/website-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/it-helpdesk', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/affiliate-tracking', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/mobile-survey', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-seo', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/interview-assessment', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/helpdesk', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/dsr-portal', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/security-headers-csp', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-project-management', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-customer-support-automation', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-financial-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-marketing-automation', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-quantum-financial-trading', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-predictive-maintenance', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-autonomous-supply-chain', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-cybersecurity-threat-intelligence', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-workflow-orchestrator', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-data-governance-platform', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-customer-experience-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-financial-risk-management', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-customer-feedback-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-inventory-management', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-employee-performance-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-financial-planning', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-autonomous-business-intelligence', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-quantum-computing-platform', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-code-review-security-scanner', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-devops-automation-platform', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-business-intelligence-analytics', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-customer-experience-support', priority: 0.8, changefreq: 'weekly' },
+    { url: '/services/ai-marketing-automation-personalization', priority: 0.8, changefreq: 'weekly' },
+
+    // Solution pages
+    { url: '/solutions/enterprise', priority: 0.8, changefreq: 'weekly' },
+    { url: '/solutions/healthcare', priority: 0.8, changefreq: 'weekly' },
+
+    // Showcase pages
+    { url: '/new-innovative-services-2025', priority: 0.7, changefreq: 'weekly' },
+    { url: '/comprehensive-improvements-2025', priority: 0.7, changefreq: 'weekly' },
+    { url: '/comprehensive-services-showcase-2029', priority: 0.7, changefreq: 'weekly' },
+    { url: '/comprehensive-services-showcase-2031', priority: 0.7, changefreq: 'weekly' },
+    { url: '/services/enhanced-services-showcase-2025', priority: 0.7, changefreq: 'weekly' },
+    { url: '/zion-tech-group-2025-comprehensive-showcase', priority: 0.7, changefreq: 'weekly' },
+
+    // Additional pages
+    { url: '/marketplace', priority: 0.6, changefreq: 'weekly' },
+    { url: '/it-consulting', priority: 0.7, changefreq: 'weekly' },
+    { url: '/space-tech', priority: 0.6, changefreq: 'weekly' },
+    { url: '/ai-services', priority: 0.8, changefreq: 'weekly' },
+    { url: '/it-services', priority: 0.8, changefreq: 'weekly' },
+    { url: '/micro-saas', priority: 0.8, changefreq: 'weekly' },
+    { url: '/ai-solutions', priority: 0.8, changefreq: 'weekly' },
+    { url: '/comprehensive-pricing-guide-2025', priority: 0.7, changefreq: 'monthly' },
+
+    // Legal pages
+    { url: '/privacy', priority: 0.3, changefreq: 'yearly' },
+    { url: '/terms', priority: 0.3, changefreq: 'yearly' },
+    { url: '/cookies', priority: 0.3, changefreq: 'yearly' },
+
+    // Action pages
+    { url: '/request-quote', priority: 0.9, changefreq: 'monthly' },
+    { url: '/schedule-demo', priority: 0.9, changefreq: 'monthly' },
+    { url: '/login', priority: 0.5, changefreq: 'monthly' },
+    { url: '/dashboard', priority: 0.4, changefreq: 'monthly' }
   ]
 };
 
-// Utility function to generate sitemap
-export function generateSitemap(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
-  return generator.generateXML();
+// Generate sitemap function
+export async function generateSitemap(): Promise<void> {
+  try {
+    const generator = new SitemapGenerator(defaultSitemapConfig);
+    await generator.saveSitemap();
+    await generator.saveRobotsTxt();
+    console.log('Sitemap and robots.txt generated successfully');
+  } catch (error) {
+    console.error('Error generating sitemap:', error);
+  }
 }
 
-// Utility function to generate robots.txt
-export function generateRobotsTxt(config: SitemapConfig = defaultSitemapConfig): string {
-  const generator = new SitemapGenerator(config);
-  return generator.generateRobotsTxt();
-}
-
-export default to;
+// Export for use in build scripts
+export default SitemapGenerator;

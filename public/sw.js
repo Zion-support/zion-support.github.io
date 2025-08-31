@@ -1,56 +1,259 @@
+// Zion Tech Group Service Worker
+// Version: 1.0.0
+// Purpose: Offline functionality, caching, and performance optimization
+
 const CACHE_NAME = 'zion-tech-group-v1.0.0';
-const urlsToCache = [
+const STATIC_CACHE = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
+
+// Files to cache immediately
+const STATIC_FILES = [
   '/',
-  '/offline.html',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
+  '/index.html',
+  '/manifest.json',
+  '/favicon.svg',
+  '/logo192.png',
+  '/logo512.png'
 ];
 
-// Install event - cache resources
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then((cache) => {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
-      })
-  );
-});
+// API endpoints to cache
+const API_CACHE = [
+  '/api/services',
+  '/api/contact',
+  '/api/blog'
+];
 
-// Fetch event - serve from cache when offline
-self.addEventListener('fetch', (event) => {
-  event.respondWith(
-    caches.match(event.request)
-      .then((response) => {
-        // Return cached version or fetch from network
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
+// Install event - cache static files
+self.addEventListener('install', (event) => {
+  console.log('Service Worker: Installing...');
+  
+  event.waitUntil(
+    caches.open(STATIC_CACHE)
+      .then((cache) => {
+        console.log('Service Worker: Caching static files');
+        return cache.addAll(STATIC_FILES);
+      })
+      .then(() => {
+        console.log('Service Worker: Static files cached');
+        return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Service Worker: Error caching static files', error);
+      })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker: Activating...');
+  
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== CACHE_NAME) {
-            console.log('Deleting old cache:', cacheName);
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Service Worker: Deleting old cache', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker: Activated');
+        return self.clients.claim();
+      })
   );
 });
 
-// Handle skip waiting
+// Fetch event - serve from cache or network
+self.addEventListener('fetch', (event) => {
+  const { request } = event;
+  const url = new URL(request.url);
+
+  // Skip non-GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+
+  // Handle different types of requests
+  if (request.destination === 'document') {
+    // HTML pages - network first, fallback to cache
+    event.respondWith(networkFirst(request));
+  } else if (request.destination === 'script' || request.destination === 'style') {
+    // CSS and JS files - cache first, fallback to network
+    event.respondWith(cacheFirst(request));
+  } else if (request.destination === 'image') {
+    // Images - cache first with network fallback
+    event.respondWith(cacheFirst(request));
+  } else if (url.pathname.startsWith('/api/')) {
+    // API requests - network first with cache fallback
+    event.respondWith(networkFirst(request, DYNAMIC_CACHE));
+  } else {
+    // Other requests - network first
+    event.respondWith(networkFirst(request));
+  }
+});
+
+// Network first strategy
+async function networkFirst(request, cacheName = STATIC_CACHE) {
+  try {
+    const networkResponse = await fetch(request);
+    
+    if (networkResponse.ok) {
+      const cache = await caches.open(cacheName);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.log('Service Worker: Network failed, serving from cache', error);
+    
+    const cachedResponse = await caches.match(request);
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+    
+    // Return offline page for HTML requests
+    if (request.destination === 'document') {
+      return caches.match('/offline.html');
+    }
+    
+    throw error;
+  }
+}
+
+// Cache first strategy
+async function cacheFirst(request) {
+  const cachedResponse = await caches.match(request);
+  
+  if (cachedResponse) {
+    return cachedResponse;
+  }
+  
+  try {
+    const networkResponse = await fetch(request);
+    
+    if (networkResponse.ok) {
+      const cache = await caches.open(STATIC_CACHE);
+      cache.put(request, networkResponse.clone());
+    }
+    
+    return networkResponse;
+  } catch (error) {
+    console.log('Service Worker: Cache and network failed', error);
+    throw error;
+  }
+}
+
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'background-sync') {
+    console.log('Service Worker: Background sync triggered');
+    event.waitUntil(doBackgroundSync());
+  }
+});
+
+async function doBackgroundSync() {
+  try {
+    const db = await openDB();
+    const offlineData = await db.getAll('offlineForms');
+    
+    for (const formData of offlineData) {
+      try {
+        const response = await fetch(formData.url, {
+          method: formData.method,
+          headers: formData.headers,
+          body: formData.body
+        });
+        
+        if (response.ok) {
+          await db.delete('offlineForms', formData.id);
+          console.log('Service Worker: Offline form submitted successfully');
+        }
+      } catch (error) {
+        console.error('Service Worker: Failed to submit offline form', error);
+      }
+    }
+  } catch (error) {
+    console.error('Service Worker: Background sync failed', error);
+  }
+}
+
+// Push notifications
+self.addEventListener('push', (event) => {
+  console.log('Service Worker: Push notification received');
+  
+  const options = {
+    body: event.data ? event.data.text() : 'New update from Zion Tech Group',
+    icon: '/logo192.png',
+    badge: '/logo192.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'View Details',
+        icon: '/logo192.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/logo192.png'
+      }
+    ]
+  };
+  
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+
+// Notification click
+self.addEventListener('notificationclick', (event) => {
+  console.log('Service Worker: Notification clicked');
+  
+  event.notification.close();
+  
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// IndexedDB for offline data storage
+async function openDB() {
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open('ZionTechGroupDB', 1);
+    
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => resolve(request.result);
+    
+    request.onupgradeneeded = (event) => {
+      const db = event.target.result;
+      
+      // Create object stores
+      if (!db.objectStoreNames.contains('offlineForms')) {
+        const store = db.createObjectStore('offlineForms', { keyPath: 'id', autoIncrement: true });
+        store.createIndex('url', 'url', { unique: false });
+      }
+    };
+  });
+}
+
+// Performance monitoring
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
+  
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
 });
+
+console.log('Service Worker: Loaded successfully');

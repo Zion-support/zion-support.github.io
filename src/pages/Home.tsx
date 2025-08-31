@@ -1,5 +1,7 @@
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Brain, Atom, Zap, Rocket, ChevronLeft, ChevronRight, ArrowRight, CheckCircle, Star, Users, Shield, Globe, Code, Database, Cloud, Lock, Target, TrendingUp, Award, Clock, Phone, Mail, MapPin, Sparkles } from 'lucide-react';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
@@ -75,7 +77,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       description: "Modernize your infrastructure for the future",
       icon: Rocket,
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
-})
+    }
   ], []);
 
   const nextSlide = useCallback(() => {
@@ -87,67 +89,10 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   }, [heroSlides.length]);
 
   useEffect(() => {
-  // TODO: Add dependencies if needed
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000);
 
-  return () => {
-    // Cleanup function
-  
-  return () => {
-    // Cleanup function
-  
-  return () => {
-    // Cleanup function
-  
-  return () => {
-    // Cleanup function
-  };
-
-
-
-}, []);, []);
-  // TODO: Add dependencies if needed
-
-  // TODO: Add dependencies if needed
-
-  // TODO: Add dependencies if needed
-
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  
-  return () => {
-    // Cleanup function
-  
-  return () => {
-    // Cleanup function
-  };
-
-
-}, []);, []);
-  // TODO: Add dependencies if needed
-
-  // TODO: Add dependencies if needed
-
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  
-  return () => {
-    // Cleanup function
-  };
-
-}, []);, []);
-  // TODO: Add dependencies if needed
-
-  // TODO: Add dependencies if needed
-
-  return () => {
-    // Cleanup function
-  };
-}, []);, []);
-    const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, [nextSlide]);
 
