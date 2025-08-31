@@ -25,12 +25,12 @@ export function EnhancedFooter() {
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-solutions', description: 'Machine learning & automation' },
-        { name: 'Cloud Services', href: '/services/cloud-devops', description: 'Infrastructure & DevOps' },
-        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', description: 'Security & compliance' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
-        { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
-        { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
+        { name: 'All Services 2028', href: '/comprehensive-services-showcase-2028', description: 'Complete service portfolio' },
+        { name: 'AI Quantum Cybersecurity', href: '/services/ai-quantum-cybersecurity-platform', description: 'Quantum-resistant security' },
+        { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-optimization', description: 'Supply chain optimization' },
+        { name: 'AI Autonomous Trading', href: '/services/ai-autonomous-financial-trading-platform', description: 'Autonomous trading platform' },
+        { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML' },
+        { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Infrastructure & automation' },
       ]
     },
     {
@@ -90,22 +90,22 @@ export function EnhancedFooter() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@ziontechgroup.com',
-      href: 'mailto:contact@ziontechgroup.com',
+      value: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
       description: 'Send us a message'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+1 302 464 0950',
+      href: 'tel:+13024640950',
       description: 'Call us directly'
     },
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Tech Street, Innovation City, IC 12345',
-      href: 'https://maps.google.com/?q=123+Tech+Street+Innovation+City',
+      value: '364 E Main St STE 1008 Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       description: 'Visit our headquarters'
     }
   ];

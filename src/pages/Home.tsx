@@ -241,10 +241,10 @@ export default function Home() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/services" 
+                to="/comprehensive-services-showcase-2028" 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                Explore Solutions
+                Explore All Services
               </Link>
               <Link 
                 to="/contact" 
@@ -395,6 +395,84 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Services Section */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Featured Services 2028
+            </h2>
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              Discover our most innovative AI-powered solutions that are transforming industries
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {[
+              {
+                name: 'AI Quantum Cybersecurity Platform',
+                description: 'Revolutionary AI-powered cybersecurity with quantum-resistant encryption',
+                icon: Shield,
+                href: '/services/ai-quantum-cybersecurity-platform',
+                color: 'from-red-500 to-orange-500'
+              },
+              {
+                name: 'AI Autonomous Supply Chain',
+                description: 'Transform your supply chain with AI-powered autonomous optimization',
+                icon: Truck,
+                href: '/services/ai-autonomous-supply-chain-optimization',
+                color: 'from-green-500 to-blue-500'
+              },
+              {
+                name: 'AI Autonomous Trading Platform',
+                description: 'Revolutionary AI-powered autonomous trading platform',
+                icon: TrendingUp,
+                href: '/services/ai-autonomous-financial-trading-platform',
+                color: 'from-green-500 to-emerald-500'
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-slate-700/50 backdrop-blur-sm rounded-xl p-6 border border-slate-600/50 hover:border-cyan-500/50 transition-all duration-300 hover:scale-105"
+              >
+                <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4`}>
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.name}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <Link
+                  to={service.href}
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              to="/comprehensive-services-showcase-2028"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+            >
+              View All Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -486,10 +564,10 @@ export default function Home() {
                 Schedule a Consultation
               </Link>
               <Link
-                to="/services"
+                to="/comprehensive-services-showcase-2028"
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
-                Explore Services
+                Explore All Services
               </Link>
             </motion.div>
           </div>

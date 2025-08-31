@@ -36,9 +36,10 @@ export function EnhancedHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'All Services 2028', href: '/comprehensive-services-showcase-2028', current: false },
     { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
-    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Pricing', href: '/comprehensive-pricing-guide-2028', current: false },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
@@ -58,6 +59,8 @@ export function EnhancedHeader() {
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
         { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' },
+        { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-optimization', description: 'Supply chain optimization' },
+        { name: 'AI Autonomous Trading', href: '/services/ai-autonomous-financial-trading-platform', description: 'Autonomous financial trading' },
       ]
     },
     {
@@ -76,7 +79,9 @@ export function EnhancedHeader() {
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: [
+        { name: 'AI Quantum Cybersecurity Platform', href: '/services/ai-quantum-cybersecurity-platform', description: 'Quantum-resistant AI security' },
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced AI-powered security' },
+        { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence', description: 'AI threat detection' },
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening' },
         { name: 'DSR Privacy Portal', href: '/services/dsr-portal', description: 'GDPR/CCPA compliance' },
         { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Modern security architecture' },

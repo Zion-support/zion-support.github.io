@@ -70,6 +70,17 @@ const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pa
 const AIAutonomousBusinessManager = createLazyComponent(() => import('./pages/services/ai-autonomous-business-manager'));
 const QuantumAIHybridPlatform = createLazyComponent(() => import('./pages/services/quantum-ai-hybrid-platform'));
 
+// 2028 New AI Services
+const AIQuantumCybersecurityPlatform = createLazyComponent(() => import('./pages/services/AIQuantumCybersecurityPlatform'));
+const AIAutonomousSupplyChainOptimization = createLazyComponent(() => import('./pages/services/AIAutonomousSupplyChainOptimization'));
+const AIAutonomousFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/AIAutonomousFinancialTradingPlatform'));
+
+// 2028 Comprehensive Services Showcase
+const ComprehensiveServicesShowcase2028 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2028'));
+
+// 2028 Comprehensive Pricing Guide
+const ComprehensivePricingGuide2028 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2028'));
+
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
 
@@ -276,6 +287,17 @@ function App() {
                     {/* New Innovative Services 2028 */}
                     <Route path="/services/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
                     <Route path="/services/quantum-ai-hybrid-platform" element={<QuantumAIHybridPlatform />} />
+
+                    {/* 2028 New AI Services */}
+                    <Route path="/services/ai-quantum-cybersecurity-platform" element={<AIQuantumCybersecurityPlatform />} />
+                    <Route path="/services/ai-autonomous-supply-chain-optimization" element={<AIAutonomousSupplyChainOptimization />} />
+                    <Route path="/services/ai-autonomous-financial-trading-platform" element={<AIAutonomousFinancialTradingPlatform />} />
+
+                    {/* 2028 Comprehensive Services Showcase */}
+                    <Route path="/comprehensive-services-showcase-2028" element={<ComprehensiveServicesShowcase2028 />} />
+
+                    {/* 2028 Comprehensive Pricing Guide */}
+                    <Route path="/comprehensive-pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
 
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
