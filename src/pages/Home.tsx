@@ -257,11 +257,25 @@ const ServicesSection = () => {
       link: "/services/ai-autonomous-business-operations-platform"
     },
     {
-      title: "Quantum Edge Computing",
-      description: "Revolutionize your infrastructure with the world's first quantum-enhanced edge computing platform.",
-      icon: Atom,
-      color: "from-zion-cyan to-zion-purple",
-      link: "/services/quantum-edge-computing-solutions"
+      title: "AI Autonomous Logistics Platform",
+      description: "Revolutionize logistics with AI-powered fleet management, route optimization, and autonomous operations.",
+      icon: Truck,
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/ai-autonomous-logistics-platform"
+    },
+    {
+      title: "AI Space Technology Platform",
+      description: "Explore the cosmos with AI-powered satellite operations, mission planning, and space data analytics.",
+      icon: Satellite,
+      color: "from-indigo-500 to-purple-500",
+      link: "/services/ai-space-technology-platform"
+    },
+    {
+      title: "AI Legal Document Automation",
+      description: "Transform legal practice with AI-powered document analysis, contract review, and automated compliance.",
+      icon: FileText,
+      color: "from-green-500 to-emerald-500",
+      link: "/services/ai-legal-document-automation-platform"
     },
     {
       title: "AI Customer Experience Analytics",

@@ -54,7 +54,10 @@ export function AppFooter() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform" },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform" },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform" }
       ]
     },
     {

@@ -204,15 +204,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/ai-content-creation-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <PenTool className="w-3 h-3 mr-2" />
-                        AI Content Creation Studio
+                      <Link to="/services/ai-legal-document-automation-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <FileText className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Legal Document Automation</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <BarChart3 className="w-3 h-3 mr-2" />
-                        AI Customer Experience Analytics
+                      <Link to="/services/ai-content-creation-studio" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <PenTool className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Content Creation Studio</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-experience-analytics-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <BarChart3 className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Customer Experience Analytics</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                       </Link>
                     </li>
                   </ul>
