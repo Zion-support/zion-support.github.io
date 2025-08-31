@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Code, 
   Play, 
   Copy, 
   Check, 
+  Search,
+  Filter,
+  ArrowRight,
+  Download,
   ExternalLink,
   Terminal,
   Database,
@@ -12,12 +18,10 @@ import {
   Zap,
   Globe,
   Lock,
-  Download,
   BookOpen,
   Github,
   MessageSquare
 } from 'lucide-react';
-
 const API: React.FC = () => {
   const [copiedEndpoint, setCopiedEndpoint] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState('overview');
@@ -172,30 +176,31 @@ const API: React.FC = () => {
           >
             <Code className="w-10 h-10 text-white" />
           </motion.div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            API Reference
+          <motion.div
+            initial={{ scale: 0.8 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-8"
+          >
+            <Code className="w-10 h-10 text-white" />
+          </motion.div>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            Developer
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-500 to-teal-400">
+              API Reference
+            </span>
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Powerful, RESTful APIs to integrate Zion Tech Group's services into your applications. 
-            Build, test, and deploy with confidence.
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Integrate Zion Tech Group's cutting-edge services into your applications
+            with our comprehensive RESTful APIs. Build, deploy, and scale with confidence.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#playground"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-            >
-              <Play className="w-4 h-4 mr-2" />
-              Try API Playground
-            </a>
-            <a
-              href="/docs"
-              className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300"
-            >
-              <BookOpen className="w-4 h-4 mr-2" />
+            <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
+              Get API Key
+            </button>
+            <button className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
               View Documentation
-            </a>
+            </button>
           </div>
         </div>
       </motion.div>
@@ -525,5 +530,4 @@ const API: React.FC = () => {
     </div>
   );
 };
-
 export default API;

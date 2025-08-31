@@ -16,15 +16,12 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
       reviews: '1.9k',
       downloadUrl: '#',
       badge: 'Top Rated'
-
   ];
-
   const features = [
     { icon: Star, text: '4.8/5 Rating', color: 'text-yellow-400' },
     { icon: Users, text: '10K+ Downloads', color: 'text-blue-400' },
     { icon: Award, text: 'Editor\'s Choice', color: 'text-green-400' }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,7 +34,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
             Available on iOS and Android devices.
           </p>
         </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* App Preview */}
           <div className="relative">
@@ -51,7 +47,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                   <p className="text-blue-100 mb-6">
                     Professional IT asset management in your pocket
                   </p>
-
                   {/* Feature highlights */}
                   <div className="space-y-3 mb-8">
                     {features.map((feature, index) => (
@@ -64,12 +59,10 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                 </div>
               </div>
             </div>
-
             {/* Background decoration */}
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
             <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-purple-500/20 rounded-full blur-xl"></div>
           </div>
-
           {/* Download Options */}
           <div className="space-y-8">
             <div className="text-center lg:text-left">
@@ -81,7 +74,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                 Free download with no hidden costs.
               </p>
             </div>
-
             <div className="space-y-6">
               {appStores.map((store, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -99,7 +91,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                         </div>
                       </div>
                     </div>
-
                     <div className="text-right">
                       <span className="inline-block px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-semibold rounded-full mb-2">
                         {store.badge}
@@ -107,7 +98,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                       <a
                         href={store.downloadUrl}
                         className="inline-flex items-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-
                         <Download className="w-4 h-4 mr-2" />
                         Download
                       </a>
@@ -116,7 +106,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
                 </div>
               ))}
             </div>
-
             {/* Additional Info */}
             <div className="bg-white/5 rounded-xl p-6 border border-white/10">
               <h4 className="text-lg font-semibold text-white mb-3">What's Included:</h4>
@@ -141,7 +130,6 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 max-w-2xl mx-auto">
@@ -155,13 +143,11 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
               <a
                 href="#support"
                 className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-
                 Get Support
               </a>
               <a
                 href="#demo"
                 className="px-8 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
-
                 Watch Demo
               </a>
             </div>
@@ -169,9 +155,4 @@ import { Download, Star, Users, Award export const AppStoreBanner = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-};}}
-=======
   )};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

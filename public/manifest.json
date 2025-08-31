@@ -5,7 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
-  "theme_color": "#06b6d4",
+  "theme_color": "#0891b2",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
@@ -60,11 +60,37 @@
       "purpose": "maskable any"
     }
   ],
+  "screenshots": [
+    {
+      "src": "/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+=======
+      "src": "/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+>>>>>>> bb9f345ec29d22bee9995e045f36838dca876fa2
+    }
+  ],
   "shortcuts": [
     {
       "name": "Services",
       "short_name": "Services",
-      "description": "View our comprehensive service offerings",
+      "description": "View all our technology services",
       "url": "/services",
       "icons": [
         {
@@ -112,6 +138,7 @@
       "type": "image/png",
       "form_factor": "narrow",
       "label": "Zion Tech Group Mobile View"
+>>>>>>> bb9f345ec29d22bee9995e045f36838dca876fa2
     }
   ],
   "related_applications": [],

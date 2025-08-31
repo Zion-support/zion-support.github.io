@@ -16,8 +16,6 @@ const serviceIcons = {
     'Healthcare Technology': Heart,
     'Financial Technology': DollarSign,
     'Blockchain': LinkIcon,
-  
-
 };
 export function EnhancedServicesShowcase() {
     return (<section className="py-20 bg-zion-blue-dark">
@@ -30,7 +28,6 @@ export function EnhancedServicesShowcase() {
             Discover our extensive portfolio of micro SAAS services, AI solutions, and enterprise-grade IT services designed to transform your business operations
           </p>
         </div>
-
         {/* Featured Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {featuredServices.map((service) => {
@@ -66,13 +63,11 @@ export function EnhancedServicesShowcase() {
                       </div>
                     </div>
                   </div>
-
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, index) => (<Badge key={index} variant="outline" className="text-xs border-zion-purple/30 text-zion-purple">
                         {tag}
                       </Badge>))}
                   </div>
-
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-zion-slate-light">
                       <TrendingUp className="w-4 h-4"/>
@@ -88,7 +83,6 @@ export function EnhancedServicesShowcase() {
                 </CardContent>
               </Card>)})}
         </div>
-
         {/* Service Categories Overview */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
@@ -100,7 +94,6 @@ export function EnhancedServicesShowcase() {
               Process automation, customer insights, and intelligent content optimization
             </p>
           </div>
-
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <Cloud className="w-8 h-8 text-white"/>
@@ -110,7 +103,6 @@ export function EnhancedServicesShowcase() {
               Multi-cloud orchestration, edge computing, and cost optimization
             </p>
           </div>
-
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="w-8 h-8 text-white"/>
@@ -120,7 +112,6 @@ export function EnhancedServicesShowcase() {
               AI threat detection, zero trust security, and compliance frameworks
             </p>
           </div>
-
           <div className="text-center p-6 bg-zion-blue rounded-lg border border-zion-blue-light">
             <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
               <Database className="w-8 h-8 text-white"/>
@@ -131,7 +122,6 @@ export function EnhancedServicesShowcase() {
             </p>
           </div>
         </div>
-
         {/* Key Benefits */}
         <div className="bg-zion-blue rounded-lg p-8 border border-zion-blue-light">
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -147,7 +137,6 @@ export function EnhancedServicesShowcase() {
                 Industry-leading solutions with measurable ROI and customer success stories
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-6 h-6 text-white"/>
@@ -157,7 +146,6 @@ export function EnhancedServicesShowcase() {
                 Cutting-edge AI and emerging technologies to keep you ahead of competition
               </p>
             </div>
-
             <div className="text-center">
               <div className="w-12 h-12 bg-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-6 h-6 text-zion-blue-dark"/>
@@ -169,7 +157,6 @@ export function EnhancedServicesShowcase() {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-white mb-6">
@@ -193,9 +180,4 @@ export function EnhancedServicesShowcase() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </section>);
-</Card></Card></Card></Card>}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

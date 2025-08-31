@@ -47,14 +47,6 @@ router.post('/users', [
     const newUser = {
   id: Date.now(),
       name,
-<<<<<<< HEAD
-      email,
-      createdAt: new Date().toISOString()
-    };
-
-    res.status(201).json({
-      success: true,
-=======
       email,;
   ;
   ;
@@ -72,7 +64,6 @@ router.post('/users', [
     
     res.status(201).json({ 
       success: true, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       data: newUser,
       message: 'User created successfully'
     });
@@ -93,12 +84,6 @@ router.get('/users/:id', async (req, res) => {
     const user = {
   id: parseInt(id),
       name: 'John Doe',
-<<<<<<< HEAD
-      email: 'john@example.com',
-      createdAt: new Date().toISOString()
-    };
-
-=======
       email: 'john@example.com',;
   ;
   ;
@@ -114,7 +99,6 @@ router.get('/users/:id', async (req, res) => {
 
 };
     
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (!user) {
       return res.status(404).json({
         success: false,

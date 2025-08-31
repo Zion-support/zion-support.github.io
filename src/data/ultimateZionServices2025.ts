@@ -1,19 +1,11 @@
 // Ultimate Zion Services 2025 - Zion Tech Group
 // Revolutionary Micro SAAS, IT Infrastructure, and AI Services
-
 export interface ServiceContact {
-
   phone: string;
   email: string;
   website: string;
-<<<<<<< HEAD
-  address: string;
-=======
   address: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export interface MicroSaasService {
-
   id: number;
   name: string;
   category: string;
@@ -38,14 +30,8 @@ export interface MicroSaasService {
   marketSize: string;
   growthRate: string;
   useCases: string[];
-<<<<<<< HEAD
-  technologies: string[];
-=======
   technologies: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export interface ITService {
-
   id: number;
   name: string;
   category: string;
@@ -67,14 +53,8 @@ export interface ITService {
   marketSize: string;
   compliance: string[];
   useCases: string[];
-<<<<<<< HEAD
-  technologies: string[];
-=======
   technologies: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export interface AIService {
-
   id: number;
   name: string;
   category: string;
@@ -97,12 +77,7 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-<<<<<<< HEAD
-  technologies: string[];
-=======
   technologies: string[]}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
   phone: "+1 302 464 0950",
@@ -114,14 +89,7 @@ const zionContact: ServiceContact = {
   ;
   address: "364 E Main St STE 1008 Middletown DE 19709";
 ;
-
-
-
-
-
-
 };
-
 // Ultimate Micro SAAS Services 2025
 export const ultimateMicroSaasServices2025: MicroSaasService[] = [
   {
@@ -506,15 +474,9 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Cost optimization",
       "Performance monitoring"
     ],
-<<<<<<< HEAD
-    technologies: ["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]
-
-=======
     technologies["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 // Ultimate IT Infrastructure Services 2025
 export const ultimateITInfrastructureServices2025: ITService[] = [
   {
@@ -650,15 +612,9 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Threat detection deployment",
       "Incident response setup"
     ],
-<<<<<<< HEAD
-    technologies: ["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]
-
-=======
     technologies["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 // Ultimate AI Services 2025
 export const ultimateAIServices2025: AIService[] = [
   {
@@ -797,17 +753,10 @@ export const ultimateAIServices2025: AIService[] = [
     ],
     innovationLevel: "Advanced",
     marketSize: "$15.3 billion",
-<<<<<<< HEAD
-    ethicalAI: ["Content safety", "Bias prevention", "Quality standards"],
-    technologies: ["Natural Language Generation", "Multimodal AI", "Content Optimization", "Brand Voice AI"]
-
-=======
     ethicalAI["Content safety", "Bias prevention", "Quality standards"],
     technologies["Natural Language Generation", "Multimodal AI", "Content Optimization", "Brand Voice AI"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export default {
   ultimateMicroSaasServices2025,
   ultimateITInfrastructureServices2025,

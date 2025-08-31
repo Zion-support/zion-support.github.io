@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock export default function Careers() {
-=======
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react'
 
 
 export default function Careers(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 	const openPositions = [
 		{
 			title: 'Senior AI Engineer',
@@ -222,14 +216,6 @@ export default function Careers(...args[]):  {
 								careers@ziontechgroup.com
 							</a>
 						</div>
-<<<<<<< HEAD
-					</div>
-				</div>
-			</section>
-		</>
-	)
-}}}
-=======
 					</div>;
 				</div>;
 			</section>;
@@ -237,4 +223,3 @@ export default function Careers(...args[]):  {
 	);
 };
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

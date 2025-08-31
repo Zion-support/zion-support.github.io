@@ -1,519 +1,437 @@
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useCallback, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Users, TrendingUp, MousePointer, Eye, Zap, Settings, BarChart3, Target } from 'lucide-react';
+import { 
+  MousePointer, 
+  Zap, 
+  TrendingUp, 
+  Eye, 
+  Clock, 
+  Target,
+  CheckCircle,
+  AlertCircle,
+  Loader2
+} from 'lucide-react';
 
 interface UXMetrics {
-  pageViews: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
-  userSatisfaction: number;
-  performanceScore: number;
-  accessibilityScore: number;
-  mobileUsability: number;
-}
-
-interface UserBehavior {
-  clicks: number;
   scrollDepth: number;
   timeOnPage: number;
   interactions: number;
+  loadTime: number;
   errors: number;
-  navigationPaths: string[];
-}
-
-interface UXOptimization {
-  type: 'performance' | 'accessibility' | 'usability' | 'engagement';
-  description: string;
-  impact: 'high' | 'medium' | 'low';
-  implemented: boolean;
 }
 
 interface UserExperienceOptimizerProps {
   enabled?: boolean;
-  showMetrics?: boolean;
-  autoOptimize?: boolean;
-  trackUserBehavior?: boolean;
+  enableSmoothScrolling?: boolean;
+  enableLoadingStates?: boolean;
+  enableInteractionTracking?: boolean;
+  enablePerformanceMonitoring?: boolean;
 }
 
 export const UserExperienceOptimizer: React.FC<UserExperienceOptimizerProps> = ({
   enabled = true,
-  showMetrics = false,
-  autoOptimize = true,
-  trackUserBehavior = true
+  enableSmoothScrolling = true,
+  enableLoadingStates = true,
+  enableInteractionTracking = true,
+  enablePerformanceMonitoring = true,
 }) => {
-  const [uxMetrics, setUxMetrics] = useState<UXMetrics>({
-    pageViews: 0,
-    sessionDuration: 0,
-    bounceRate: 0,
-    conversionRate: 0,
-    userSatisfaction: 0,
-    performanceScore: 0,
-    accessibilityScore: 0,
-    mobileUsability: 0
-  });
-  const [userBehavior, setUserBehavior] = useState<UserBehavior>({
-    clicks: 0,
+  const [metrics, setMetrics] = useState<UXMetrics>({
     scrollDepth: 0,
     timeOnPage: 0,
     interactions: 0,
+    loadTime: 0,
     errors: 0,
-    navigationPaths: []
   });
-  const [optimizations, setOptimizations] = useState<UXOptimization[]>([]);
-  const [showPanel, setShowPanel] = useState(false);
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [currentPage, setCurrentPage] = useState(window.location.pathname);
+  const [isLoading, setIsLoading] = useState(false);
+  const [showMetrics, setShowMetrics] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
   
-  const sessionStartTime = useRef(Date.now());
-  const lastActivityTime = useRef(Date.now());
-  const scrollDepthRef = useRef(0);
-  const clickCountRef = useRef(0);
-  const errorCountRef = useRef(0);
+  const startTime = useRef(Date.now());
+  const interactionCount = useRef(0);
+  const errorCount = useRef(0);
+  const scrollTimeout = useRef<NodeJS.Timeout>();
 
-  // Track user behavior
-  const trackBehavior = useCallback(() => {
-    if (!trackUserBehavior || !enabled) return;
+  // Smooth scrolling enhancement
+  const setupSmoothScrolling = useCallback(() => {
+    if (!enableSmoothScrolling) return;
 
-    // Track clicks
-    const handleClick = () => {
-      clickCountRef.current++;
-      lastActivityTime.current = Date.now();
-      setUserBehavior(prev => ({ ...prev, clicks: clickCountRef.current }));
+    // Add smooth scrolling to all internal links
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+    
+    internalLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href')?.substring(1);
+        const targetElement = document.getElementById(targetId || '');
+        
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+          });
+        }
+      });
+    });
+
+    // Enhanced scroll behavior for the page
+    document.documentElement.style.scrollBehavior = 'smooth';
+  }, [enableSmoothScrolling]);
+
+  // Loading states management
+  const setupLoadingStates = useCallback(() => {
+    if (!enableLoadingStates) return;
+
+    // Show loading state for navigation
+    const handleBeforeUnload = () => {
+      setIsLoading(true);
     };
 
+    const handleLoad = () => {
+      setIsLoading(false);
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener('load', handleLoad);
+
+    // Add loading states to forms
+    const forms = document.querySelectorAll('form');
+    forms.forEach(form => {
+      form.addEventListener('submit', () => {
+        setIsLoading(true);
+      });
+    });
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('load', handleLoad);
+    };
+  }, [enableLoadingStates]);
+
+  // Interaction tracking
+  const setupInteractionTracking = useCallback(() => {
+    if (!enableInteractionTracking) return;
+
+    const trackInteraction = () => {
+      interactionCount.current++;
+      setMetrics(prev => ({ ...prev, interactions: interactionCount.current }));
+    };
+
+    // Track clicks
+    document.addEventListener('click', trackInteraction);
+    
+    // Track form interactions
+    document.addEventListener('input', trackInteraction);
+    document.addEventListener('change', trackInteraction);
+    
     // Track scroll depth
-    const handleScroll = () => {
+    const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
-      scrollDepthRef.current = Math.max(scrollDepthRef.current, scrollPercent);
-      lastActivityTime.current = Date.now();
-      setUserBehavior(prev => ({ ...prev, scrollDepth: scrollDepthRef.current }));
+      
+      setScrollProgress(Math.min(scrollPercent, 100));
+      setMetrics(prev => ({ ...prev, scrollDepth: Math.round(scrollPercent) }));
     };
 
-    // Track errors
-    const handleError = () => {
-      errorCountRef.current++;
-      setUserBehavior(prev => ({ ...prev, errors: errorCountRef.current }));
+    // Throttled scroll tracking
+    const throttledScrollTrack = () => {
+      if (scrollTimeout.current) return;
+      
+      scrollTimeout.current = setTimeout(() => {
+        trackScrollDepth();
+        scrollTimeout.current = undefined;
+      }, 100);
     };
 
-    // Track navigation
-    const handleNavigation = () => {
-      const newPath = window.location.pathname;
-      if (newPath !== currentPage) {
-        setCurrentPage(newPath);
-        setUserBehavior(prev => ({
-          ...prev,
-          navigationPaths: [...prev.navigationPaths, newPath]
-        }));
-      }
-    };
-
-    // Add event listeners
-    document.addEventListener('click', handleClick);
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('error', handleError);
-    window.addEventListener('popstate', handleNavigation);
-
-    // Track time on page
-    const timeInterval = setInterval(() => {
-      const timeOnPage = Date.now() - sessionStartTime.current;
-      setUserBehavior(prev => ({ ...prev, timeOnPage }));
-    }, 1000);
+    window.addEventListener('scroll', throttledScrollTrack);
 
     return () => {
-      document.removeEventListener('click', handleClick);
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('error', handleError);
-      window.removeEventListener('popstate', handleNavigation);
-      clearInterval(timeInterval);
+      document.removeEventListener('click', trackInteraction);
+      document.removeEventListener('input', trackInteraction);
+      document.removeEventListener('change', trackInteraction);
+      window.removeEventListener('scroll', throttledScrollTrack);
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
     };
-  }, [trackUserBehavior, enabled, currentPage]);
+  }, [enableInteractionTracking]);
 
-  // Calculate UX metrics
-  const calculateUXMetrics = useCallback(() => {
+  // Performance monitoring
+  const setupPerformanceMonitoring = useCallback(() => {
+    if (!enablePerformanceMonitoring) return;
+
+    // Monitor page load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime: Math.round(loadTime) }));
+
+    // Monitor errors
+    const handleError = (event: ErrorEvent) => {
+      errorCount.current++;
+      setMetrics(prev => ({ ...prev, errors: errorCount.current }));
+      console.warn('UX Error detected:', event.error);
+    };
+
+    const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
+      errorCount.current++;
+      setMetrics(prev => ({ ...prev, errors: errorCount.current }));
+      console.warn('UX Unhandled rejection:', event.reason);
+    };
+
+    window.addEventListener('error', handleError);
+    window.addEventListener('unhandledrejection', handleUnhandledRejection);
+
+    return () => {
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('unhandledrejection', handleUnhandledRejection);
+    };
+  }, [enablePerformanceMonitoring]);
+
+  // Time tracking
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const timeSpent = Math.round((Date.now() - startTime.current) / 1000);
+      setMetrics(prev => ({ ...prev, timeOnPage: timeSpent }));
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Setup all UX optimizations
+  useEffect(() => {
     if (!enabled) return;
 
-    // Calculate session duration
-    const sessionDuration = (Date.now() - sessionStartTime.current) / 1000;
-    
-    // Calculate bounce rate (simplified - would be more complex in real implementation)
-    const bounceRate = userBehavior.timeOnPage < 10 ? 100 : 
-                      userBehavior.timeOnPage < 30 ? 70 : 
-                      userBehavior.timeOnPage < 60 ? 40 : 20;
-    
-    // Calculate conversion rate (simplified)
-    const conversionRate = userBehavior.interactions > 5 ? 80 : 
-                          userBehavior.interactions > 3 ? 60 : 
-                          userBehavior.interactions > 1 ? 40 : 20;
-    
-    // Calculate user satisfaction based on behavior
-    const userSatisfaction = Math.min(100, Math.max(0, 
-      100 - (userBehavior.errors * 10) + (userBehavior.interactions * 5) + (userBehavior.scrollDepth / 2)
-    ));
-    
-    // Calculate performance score (would integrate with actual performance metrics)
-    const performanceScore = Math.min(100, Math.max(0, 
-      100 - (userBehavior.errors * 15) + (userBehavior.interactions * 3)
-    ));
-    
-    // Calculate accessibility score
-    const accessibilityScore = Math.min(100, Math.max(0, 
-      100 - (userBehavior.errors * 20) + (userBehavior.interactions * 2)
-    ));
-    
-    // Calculate mobile usability
-    const isMobile = window.innerWidth <= 768;
-    const mobileUsability = isMobile ? 
-      Math.min(100, Math.max(0, 100 - (userBehavior.errors * 25) + (userBehavior.interactions * 4))) :
-      100;
+    const cleanupSmooth = setupSmoothScrolling();
+    const cleanupLoading = setupLoadingStates();
+    const cleanupInteraction = setupInteractionTracking();
+    const cleanupPerformance = setupPerformanceMonitoring();
 
-    setUxMetrics({
-      pageViews: userBehavior.navigationPaths.length + 1,
-      sessionDuration,
-      bounceRate,
-      conversionRate,
-      userSatisfaction,
-      performanceScore,
-      accessibilityScore,
-      mobileUsability
+    return () => {
+      cleanupSmooth?.();
+      cleanupLoading?.();
+      cleanupInteraction?.();
+      cleanupPerformance?.();
+    };
+  }, [
+    enabled,
+    setupSmoothScrolling,
+    setupLoadingStates,
+    setupInteractionTracking,
+    setupPerformanceMonitoring
+  ]);
+
+  // Enhanced hover effects
+  useEffect(() => {
+    if (!enabled) return;
+
+    // Add enhanced hover effects to interactive elements
+    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
+    
+    interactiveElements.forEach(element => {
+      element.addEventListener('mouseenter', () => {
+        element.classList.add('enhanced-hover');
+      });
+      
+      element.addEventListener('mouseleave', () => {
+        element.classList.remove('enhanced-hover');
+      });
     });
-  }, [enabled, userBehavior]);
 
-  // Generate UX optimizations
-  const generateOptimizations = useCallback(() => {
-    if (!enabled) return;
-
-    const newOptimizations: UXOptimization[] = [];
-
-    // Performance optimizations
-    if (uxMetrics.performanceScore < 80) {
-      newOptimizations.push({
-        type: 'performance',
-        description: 'Implement lazy loading for images and components',
-        impact: 'high',
-        implemented: false
-      });
-    }
-
-    if (userBehavior.errors > 2) {
-      newOptimizations.push({
-        type: 'usability',
-        description: 'Add error boundaries and better error handling',
-        impact: 'high',
-        implemented: false
-      });
-    }
-
-    if (userBehavior.scrollDepth < 50) {
-      newOptimizations.push({
-        type: 'engagement',
-        description: 'Improve content layout and add engaging elements',
-        impact: 'medium',
-        implemented: false
-      });
-    }
-
-    if (uxMetrics.accessibilityScore < 85) {
-      newOptimizations.push({
-        type: 'accessibility',
-        description: 'Enhance keyboard navigation and screen reader support',
-        impact: 'medium',
-        implemented: false
-      });
-    }
-
-    if (uxMetrics.mobileUsability < 90) {
-      newOptimizations.push({
-        type: 'usability',
-        description: 'Optimize mobile layout and touch interactions',
-        impact: 'high',
-        implemented: false
-      });
-    }
-
-    setOptimizations(newOptimizations);
-  }, [enabled, uxMetrics, userBehavior]);
-
-  // Apply UX optimizations
-  const applyOptimizations = useCallback(async () => {
-    if (!autoOptimize || !enabled) return;
-
-    setIsOptimizing(true);
-    const appliedOptimizations: UXOptimization[] = [];
-
-    try {
-      // Apply performance optimizations
-      const performanceOpts = optimizations.filter(opt => opt.type === 'performance');
-      for (const opt of performanceOpts) {
-        if (opt.description.includes('lazy loading')) {
-          // Implement lazy loading
-          const images = document.querySelectorAll('img[data-src]');
-          images.forEach(img => {
-            const dataSrc = img.getAttribute('data-src');
-            if (dataSrc) {
-              img.src = dataSrc;
-              img.removeAttribute('data-src');
-            }
-          });
-          appliedOptimizations.push({ ...opt, implemented: true });
-        }
+    // Add CSS for enhanced hover effects
+    const style = document.createElement('style');
+    style.textContent = `
+      .enhanced-hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2) !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
       }
-
-      // Apply usability optimizations
-      const usabilityOpts = optimizations.filter(opt => opt.type === 'usability');
-      for (const opt of usabilityOpts) {
-        if (opt.description.includes('error handling')) {
-          // Add error boundaries
-          const errorBoundary = document.createElement('div');
-          errorBoundary.className = 'error-boundary';
-          errorBoundary.innerHTML = '<div class="error-fallback">Something went wrong. Please try again.</div>';
-          document.body.appendChild(errorBoundary);
-          appliedOptimizations.push({ ...opt, implemented: true });
-        }
-      }
-
-      // Apply accessibility optimizations
-      const accessibilityOpts = optimizations.filter(opt => opt.type === 'accessibility');
-      for (const opt of accessibilityOpts) {
-        if (opt.description.includes('keyboard navigation')) {
-          // Enhance keyboard navigation
-          const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');
-          focusableElements.forEach((el, index) => {
-            (el as HTMLElement).tabIndex = index + 1;
-          });
-          appliedOptimizations.push({ ...opt, implemented: true });
-        }
-      }
-
-      // Apply engagement optimizations
-      const engagementOpts = optimizations.filter(opt => opt.type === 'engagement');
-      for (const opt of engagementOpts) {
-        if (opt.description.includes('engaging elements')) {
-          // Add engaging elements
-          const engagingElement = document.createElement('div');
-          engagingElement.className = 'engaging-element';
-          engagingElement.innerHTML = '<div class="pulse-animation">✨ Interactive Element</div>';
-          document.body.appendChild(engagingElement);
-          appliedOptimizations.push({ ...opt, implemented: true });
-        }
-      }
-
-      // Update optimizations list
-      setOptimizations(prev => prev.map(opt => {
-        const applied = appliedOptimizations.find(ao => ao.description === opt.description);
-        return applied || opt;
-      }));
-
-      console.log('UX optimizations applied successfully');
-    } catch (error) {
-      console.warn('Failed to apply UX optimizations:', error);
-    } finally {
-      setIsOptimizing(false);
-    }
-  }, [autoOptimize, enabled, optimizations]);
-
-  // Monitor and update metrics
-  useEffect(() => {
-    if (enabled) {
-      const cleanup = trackBehavior();
       
-      // Update metrics every 5 seconds
-      const metricsInterval = setInterval(calculateUXMetrics, 5000);
+      .ux-loading {
+        position: relative;
+        overflow: hidden;
+      }
       
-      // Generate optimizations when metrics change
-      const optimizationInterval = setInterval(generateOptimizations, 10000);
+      .ux-loading::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        animation: loading-shimmer 1.5s infinite;
+      }
       
-      return () => {
-        cleanup?.();
-        clearInterval(metricsInterval);
-        clearInterval(optimizationInterval);
-      };
-    }
-  }, [enabled, trackBehavior, calculateUXMetrics, generateOptimizations]);
+      @keyframes loading-shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+      }
+    `;
+    document.head.appendChild(style);
 
-  // Auto-apply optimizations
-  useEffect(() => {
-    if (autoOptimize && enabled && optimizations.length > 0) {
-      const timer = setTimeout(applyOptimizations, 15000); // Apply after 15 seconds
-      return () => clearTimeout(timer);
-    }
-  }, [autoOptimize, enabled, optimizations, applyOptimizations]);
+    return () => {
+      document.head.removeChild(style);
+    };
+  }, [enabled]);
 
   if (!enabled) return null;
 
   return (
     <>
-      {/* UX Optimizer Toggle */}
+      {/* UX Metrics Toggle Button */}
       <motion.button
-        className="fixed bottom-36 right-4 z-50 bg-gradient-to-r from-purple-500 to-pink-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        onClick={() => setShowPanel(!showPanel)}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        aria-label="UX Optimizer"
+        onClick={() => setShowMetrics(!showMetrics)}
+        className="fixed bottom-4 right-20 z-50 bg-gradient-to-r from-green-600 to-emerald-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        aria-label="UX Metrics"
+        aria-expanded={showMetrics}
       >
-        <Users className="w-6 h-6" />
+        <TrendingUp className="w-6 h-6" />
       </motion.button>
 
-      {/* UX Panel */}
+      {/* UX Metrics Panel */}
       <AnimatePresence>
-        {showPanel && (
+        {showMetrics && (
           <motion.div
             initial={{ opacity: 0, y: 100, scale: 0.8 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.8 }}
-            className="fixed bottom-44 right-4 z-40 bg-slate-900/95 backdrop-blur-lg border border-purple-500/30 rounded-2xl p-6 w-80 max-h-96 overflow-y-auto"
+            className="fixed bottom-20 right-4 z-40 bg-slate-900/95 backdrop-blur-lg border border-green-500/30 rounded-2xl p-6 w-80 max-h-96 overflow-y-auto"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-                <Users className="w-5 h-5 text-purple-400" />
-                UX Optimizer
+                <TrendingUp className="w-5 h-5 text-green-400" />
+                UX Metrics
               </h3>
               <button
-                onClick={() => setShowPanel(false)}
+                onClick={() => setShowMetrics(false)}
                 className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Close UX metrics panel"
               >
                 ×
               </button>
             </div>
 
-            {/* UX Score */}
-            <div className="bg-slate-800/50 p-4 rounded-lg mb-4">
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-gray-300">Overall UX Score</span>
-                <span className={`text-lg font-bold ${
-                  uxMetrics.userSatisfaction >= 90 ? 'text-green-400' :
-                  uxMetrics.userSatisfaction >= 70 ? 'text-yellow-400' : 'text-red-400'
-                }`}>
-                  {Math.round(uxMetrics.userSatisfaction)}/100
+            <div className="space-y-4">
+              {/* Scroll Progress */}
+              <div className="space-y-2">
+                <div className="flex items-center justify-between text-sm">
+                  <span className="text-gray-300">Scroll Progress</span>
+                  <span className="text-green-400 font-semibold">{Math.round(scrollProgress)}%</span>
+                </div>
+                <div className="w-full bg-slate-700 rounded-full h-2">
+                  <div 
+                    className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full transition-all duration-300"
+                    style={{ width: `${scrollProgress}%` }}
+                  />
+                </div>
+              </div>
+
+              {/* Time on Page */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Clock className="w-4 h-4" />
+                  <span className="text-sm">Time on Page</span>
+                </div>
+                <span className="text-green-400 font-semibold">
+                  {Math.floor(metrics.timeOnPage / 60)}:{(metrics.timeOnPage % 60).toString().padStart(2, '0')}
                 </span>
               </div>
-              <div className="w-full bg-slate-700 rounded-full h-2">
-                <div
-                  className={`h-2 rounded-full transition-all duration-500 ${
-                    uxMetrics.userSatisfaction >= 90 ? 'bg-green-500' :
-                    uxMetrics.userSatisfaction >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                  }`}
-                  style={{ width: `${uxMetrics.userSatisfaction}%` }}
-                />
-              </div>
-            </div>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-3 mb-4">
-              <div className="bg-slate-800/50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 text-sm text-gray-300 mb-1">
-                  <Eye className="w-4 h-4" />
-                  Page Views
-                </div>
-                <div className="text-lg font-semibold text-blue-400">
-                  {uxMetrics.pageViews}
-                </div>
-              </div>
-              
-              <div className="bg-slate-800/50 p-3 rounded-lg">
-                <div className="flex items-center gap-2 text-sm text-gray-300 mb-1">
+              {/* Interactions */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
                   <MousePointer className="w-4 h-4" />
-                  Clicks
+                  <span className="text-sm">Interactions</span>
                 </div>
-                <div className="text-lg font-semibold text-purple-400">
-                  {userBehavior.clicks}
+                <span className="text-blue-400 font-semibold">{metrics.interactions}</span>
+              </div>
+
+              {/* Load Time */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Zap className="w-4 h-4" />
+                  <span className="text-sm">Load Time</span>
                 </div>
+                <span className="text-purple-400 font-semibold">{metrics.loadTime}ms</span>
               </div>
-            </div>
 
-            {/* Detailed Metrics */}
-            <div className="space-y-2 mb-4">
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Session Duration:</span>
-                <span className="text-white">{Math.round(uxMetrics.sessionDuration)}s</span>
+              {/* Errors */}
+              <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                <div className="flex items-center gap-2 text-gray-300">
+                  <AlertCircle className="w-4 h-4" />
+                  <span className="text-sm">Errors</span>
+                </div>
+                <span className={`font-semibold ${metrics.errors > 0 ? 'text-red-400' : 'text-green-400'}`}>
+                  {metrics.errors}
+                </span>
               </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Scroll Depth:</span>
-                <span className="text-white">{Math.round(userBehavior.scrollDepth)}%</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Bounce Rate:</span>
-                <span className="text-white">{Math.round(uxMetrics.bounceRate)}%</span>
-              </div>
-              <div className="flex justify-between text-sm">
-                <span className="text-gray-400">Conversion Rate:</span>
-                <span className="text-white">{Math.round(uxMetrics.conversionRate)}%</span>
-              </div>
-            </div>
 
-            {/* Optimizations */}
-            {optimizations.length > 0 && (
-              <div className="mb-4">
-                <h4 className="text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-yellow-400" />
-                  Recommended Optimizations
-                </h4>
-                <div className="space-y-1">
-                  {optimizations.slice(0, 3).map((opt, index) => (
-                    <div key={index} className={`text-xs p-2 rounded border ${
-                      opt.implemented 
-                        ? 'text-green-400 bg-green-900/20 border-green-500/30' 
-                        : 'text-yellow-400 bg-yellow-900/20 border-yellow-500/30'
+              {/* Performance Indicators */}
+              <div className="pt-4 border-t border-slate-700">
+                <h4 className="text-sm font-medium text-white mb-2">Performance</h4>
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-gray-400">Scroll Depth</span>
+                    <span className={`font-semibold ${
+                      metrics.scrollDepth > 80 ? 'text-green-400' : 
+                      metrics.scrollDepth > 50 ? 'text-yellow-400' : 'text-red-400'
                     }`}>
-                      {opt.implemented ? '✓' : '⚡'} {opt.description}
-                      <span className={`ml-2 px-1 py-0.5 rounded text-xs ${
-                        opt.impact === 'high' ? 'bg-red-500/30 text-red-300' :
-                        opt.impact === 'medium' ? 'bg-yellow-500/30 text-yellow-300' :
-                        'bg-blue-500/30 text-blue-300'
-                      }`}>
-                        {opt.impact}
-                      </span>
-                    </div>
-                  ))}
-                  {optimizations.length > 3 && (
-                    <div className="text-xs text-gray-500 text-center">
-                      +{optimizations.length - 3} more optimizations
-                    </div>
-                  )}
+                      {metrics.scrollDepth > 80 ? 'Excellent' : 
+                       metrics.scrollDepth > 50 ? 'Good' : 'Needs Improvement'}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="text-gray-400">Engagement</span>
+                    <span className={`font-semibold ${
+                      metrics.interactions > 10 ? 'text-green-400' : 
+                      metrics.interactions > 5 ? 'text-yellow-400' : 'text-red-400'
+                    }`}>
+                      {metrics.interactions > 10 ? 'High' : 
+                       metrics.interactions > 5 ? 'Medium' : 'Low'}
+                    </span>
+                  </div>
                 </div>
               </div>
-            )}
-
-            {/* Action Buttons */}
-            <div className="space-y-2">
-              <button
-                onClick={applyOptimizations}
-                disabled={isOptimizing}
-                className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isOptimizing ? 'Applying...' : 'Apply Optimizations'}
-              </button>
-              
-              <button
-                onClick={generateOptimizations}
-                className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-2 px-4 rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300"
-              >
-                Generate Recommendations
-              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* UX Status Indicator */}
-      {showMetrics && (
-        <motion.div
+      {/* Global Loading Indicator */}
+      <AnimatePresence>
+        {isLoading && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[60] bg-black/50 backdrop-blur-sm flex items-center justify-center"
+          >
+            <div className="bg-slate-900/95 border border-slate-700/50 rounded-2xl p-8 text-center">
+              <Loader2 className="w-12 h-12 text-green-400 animate-spin mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-2">Loading...</h3>
+              <p className="text-gray-400">Please wait while we process your request</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Scroll to Top Button */}
+      {scrollProgress > 20 && (
+        <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="fixed top-20 right-4 bg-slate-900/95 backdrop-blur-lg border border-purple-500/30 rounded-lg p-3 z-50"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-20 right-4 z-40 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+          aria-label="Scroll to top"
         >
-          <div className="flex items-center gap-2">
-            <div className={`w-3 h-3 rounded-full ${
-              uxMetrics.userSatisfaction >= 90 ? 'bg-green-400' :
-              uxMetrics.userSatisfaction >= 70 ? 'bg-yellow-400' : 'bg-red-400'
-            }`} />
-            <span className="text-sm text-white font-medium">
-              UX: {Math.round(uxMetrics.userSatisfaction)}%
-            </span>
-          </div>
-        </motion.div>
+          <Target className="w-6 h-6" />
+        </motion.button>
       )}
     </>
   );

@@ -21,11 +21,8 @@ import { Calendar,
   MessageCircle,
   BookOpen,
   CheckCircle
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const events = [
   {
     id: 1,
@@ -145,16 +142,6 @@ const events = [
     speakers["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
     attendees: 400,
     price: "$249",
-<<<<<<< HEAD
-    highlights: [
-      "Transformation roadmaps",
-      "Change management strategies",
-      "Technology selection",
-      "Success metrics"
-    ],
-    image: "/images/digital-transformation-summit.jpg"
-
-=======
     highlights[
       "Transformation roadmaps",;
       "Change management strategies",;
@@ -163,7 +150,6 @@ const events = [
     ],;
     image: "/images/digital-transformation-summit.jpg";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const eventTypes = ['All', 'Conference', 'Workshop', 'Webinar', 'Symposium'];
@@ -180,59 +166,16 @@ export default function Events(...args[]):  {
     const matchesSearch = event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          event.speakers.some(speaker => speaker.toLowerCase().includes(searchTerm.toLowerCase()));
-<<<<<<< HEAD
-
-    return matchesType && matchesCategory && matchesStatus && matchesSearch;
-  });
-=======
     
     return matchesType && matchesCategory && matchesStatus && matchesSearch});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
   const pastEvents = filteredEvents.filter(event => event.status === 'past');
 
-<<<<<<< HEAD
-  const formatDate = (dateString: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    })};
-
-<<<<<<< HEAD
-  const getCategoryIcon = (category: string) => {;
-    switch (category) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-      case 'AI & ML': return Brain;
-      case 'Cybersecurity': return Shield;
-      case 'Cloud & DevOps': return Cloud;
-      case 'Data Analytics': return TrendingUp;
-      case 'IoT & Edge': return Zap;
-      case 'Digital Transformation': return Globe;
-<<<<<<< HEAD
-      default: return BookOpen;
-
-=======
       default: return BookOpen}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-<<<<<<< HEAD
-  const getStatusBadge = (status: string) => {;
-    if (status === 'upcoming') {;
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Upcoming</span>;
-    } else {
-      return <span className="px-3 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Past</span>;
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -303,15 +246,9 @@ export default function Events(...args[]):  {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {eventTypes.map(type => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {eventTypes.map(type  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={type} value={type}>{type}</option>
                   ))}
                 </select>
@@ -322,15 +259,9 @@ export default function Events(...args[]):  {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {categories.map(category => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {categories.map(category  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={category} value={category}>{category}</option>
                   ))}
                 </select>
@@ -341,15 +272,9 @@ export default function Events(...args[]):  {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {statuses.map(status => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={status} value={status}>
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
                     </option>
@@ -391,19 +316,11 @@ export default function Events(...args[]):  {
               className="mb-12"
 
               <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
-<<<<<<< HEAD
-              <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {upcomingEvents.map((event, index)  => {;
-=======;
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
 ;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {upcomingEvents.map((event, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
@@ -519,14 +436,6 @@ export default function Events(...args[]):  {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                       <div className="text-right">
-<<<<<<< HEAD
-                        <div className="text-sm text-zion-slate-light">Contact us for details</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )})};
-=======;
                         <div className="text-sm text-zion-slate-light">Contact us for details</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
@@ -534,7 +443,6 @@ export default function Events(...args[]):  {
                   </motion.div>;
                 );
               })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </div>
         </section>
@@ -570,19 +478,11 @@ export default function Events(...args[]):  {
               className="mb-12"
 
               <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
-<<<<<<< HEAD
-              <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-              {pastEvents.map((event, index)  => {;
-=======;
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>;
             </motion.div>;
 ;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {pastEvents.map((event, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 const CategoryIcon = getCategoryIcon(event.category);
                 return (
                   <motion.div
@@ -661,14 +561,6 @@ export default function Events(...args[]):  {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
                       <div className="text-right">
-<<<<<<< HEAD
-                        <div className="text-sm text-zion-slate-light">Contact us for future events</div>
-                        <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                      </div>
-                    </div>
-                  </motion.div>
-                )})};
-=======;
                         <div className="text-sm text-zion-slate-light">Contact us for future events</div>;
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
@@ -676,7 +568,6 @@ export default function Events(...args[]):  {
                   </motion.div>;
                 );
               })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             </div>
           </div>
         </section>
@@ -731,23 +622,10 @@ export default function Events(...args[]):  {
 
                 View Our Services
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

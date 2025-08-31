@@ -1,6 +1,5 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
-
 export const EnhancedPricingComparison = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
@@ -13,7 +12,6 @@ export const EnhancedPricingComparison = () => {
             Competitive pricing for our comprehensive technology solutions
           </p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
@@ -36,7 +34,6 @@ export const EnhancedPricingComparison = () => {
               Get Started
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-cyan-400/50 relative">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-cyan-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
               Most Popular
@@ -61,7 +58,6 @@ export const EnhancedPricingComparison = () => {
               Get Started
             </Link>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
             <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
             <div className="text-4xl font-bold text-cyan-400 mb-6">$999<span className="text-lg text-gray-400">/month</span></div>
@@ -81,14 +77,6 @@ export const EnhancedPricingComparison = () => {
             </ul>
             <Link to="/pricing" className="block w-full text-center bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
               Contact Sales
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </Link>;
           </div>;
         </div>;
@@ -96,6 +84,4 @@ export const EnhancedPricingComparison = () => {
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default EnhancedPricingComparison;

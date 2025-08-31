@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -33,13 +32,8 @@ import {
   PenTool,
   Shield,
   Cloud
-<<<<<<< HEAD
-export function FeatureCTAs() {
-=======
  } from 'lucide-react';
-
 export function FeatureCTAs(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       title: "AI Services & Solutions",
@@ -153,15 +147,6 @@ export function FeatureCTAs(...args[]):  {
       details: "Our intuitive project management tools help you track progress, manage deliverables, and ensure timely completion."
     },
     {
-<<<<<<< HEAD
-      title: "Micro SAAS Hub",
-      description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",
-      icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,
-      link: "/micro-saas",
-      badge: "New",
-      details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank."
-
-=======
       title: "Micro SAAS Hub",;
       description: "Affordable software solutions for growing businesses including CRM, project management, and marketing tools.",;
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-violet-100 text-violet-700" />,;
@@ -169,9 +154,7 @@ export function FeatureCTAs(...args[]):  {
       badge: "New",;
       details: "Discover powerful, affordable software solutions designed to help your business scale without breaking the bank.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <section className = "py-20 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -183,7 +166,6 @@ export function FeatureCTAs(...args[]):  {
             From AI services to IT infrastructure, discover the tools and expertise you need to transform your business
           </p>
         </div>
-
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {features.map((feature, index)  => (
             <Card key={index} className="bg-slate-800/50 border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25">
@@ -201,13 +183,11 @@ export function FeatureCTAs(...args[]):  {
                   {feature.description}
                 </CardDescription>
               </CardHeader>
-
               <CardContent className="pb-4">
                 <p className="text-sm text-gray-300 leading-relaxed">
                   {feature.details}
                 </p>
               </CardContent>
-
               <CardFooter>
                 <Link to={feature.link} className="w-full">
                   <Button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white">
@@ -219,7 +199,6 @@ export function FeatureCTAs(...args[]):  {
             </Card>
           ))}
         </div>
-
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 border border-blue-500/20 rounded-2xl p-8 max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -240,23 +219,10 @@ export function FeatureCTAs(...args[]):  {
                   View All Services
                 </Button>
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-</Card></Card></Card></Card></Card>}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

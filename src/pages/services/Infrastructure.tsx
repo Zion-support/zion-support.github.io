@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 const InfrastructureServices = () => {
-=======
 import React from 'react.ts';
 import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3  } from 'lucide-react';
-
 const InfrastructureServices = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const infrastructureServices = [
     {
       title: "Network Design & Management",
@@ -22,15 +16,6 @@ const InfrastructureServices = () => {
       features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],
       icon: Server
     },
-<<<<<<< HEAD
-    {
-      title: "Data Center Solutions",
-      description: "Reliable hosting, colocation, and data center management.",
-      price: "From $8,000/month",
-      features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
-      icon: Database
-
-=======
     {;
       title: "Data Center Solutions",;
       description: "Reliable hosting, colocation, and data center management.",;
@@ -38,9 +23,7 @@ const InfrastructureServices = () => {
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],;
       icon: Database;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const technologies = [
     {
       name: "Virtualization",
@@ -53,15 +36,6 @@ const InfrastructureServices = () => {
       description: "Enterprise storage and backup systems",
       icon: HardDrive,
       features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Network Security",
-      description: "Advanced network protection and monitoring",
-      icon: Shield,
-      features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]
-
-=======
     },;
     {;
       name: "Network Security",;
@@ -69,9 +43,7 @@ const InfrastructureServices = () => {
       icon: Shield,;
       features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [;
     "Improved system reliability and uptime",;
     "Enhanced security and compliance",;
@@ -80,7 +52,6 @@ const InfrastructureServices = () => {
     "Expert support and maintenance",;
     "Future-proof technology solutions";
   ];
-
   return (
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}
@@ -110,7 +81,6 @@ const InfrastructureServices = () => {
           </div>
         </div>
       </section>
-
       {/* Infrastructure Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -123,7 +93,6 @@ const InfrastructureServices = () => {
               reliability and performance your business demands.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {infrastructureServices.map((service, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
@@ -146,7 +115,6 @@ const InfrastructureServices = () => {
           </div>
         </div>
       </section>
-
       {/* Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -159,7 +127,6 @@ const InfrastructureServices = () => {
               scalable infrastructure solutions.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-purple-500/50 transition-all duration-300">
@@ -180,7 +147,6 @@ const InfrastructureServices = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -220,7 +186,6 @@ const InfrastructureServices = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -244,5 +209,4 @@ const InfrastructureServices = () => {
     </div>;
   );
 };
-
 export default InfrastructureServices;}}}

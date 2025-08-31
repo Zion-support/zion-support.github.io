@@ -17,14 +17,8 @@ export default function ProductsAdminPage() {
             ? {
                 ...p,
                 status: p.status === 'approved' ? 'rejected' : 'approved',
-<<<<<<< HEAD
-
-            : p));
-    };
-=======
             }
             : p))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<AdminLayout>
       <div className="space-y-4">
         <div className="flex items-center justify-between">
@@ -56,9 +50,4 @@ export default function ProductsAdminPage() {
           </Table>
         </div>
       </div>
-<<<<<<< HEAD
-    </AdminLayout>);
-}}
-=======
     </AdminLayout>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

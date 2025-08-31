@@ -15,13 +15,9 @@ import { User,
   Zap,
   Brain,
   Cloud
-<<<<<<< HEAD
-export default function Signup() {
-=======
  } from 'lucide-react'
 
 export default function Signup(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -38,11 +34,7 @@ export default function Signup(...args[]):  {
   const [showPassword, setShowPassword] = useState(false)
   const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
-<<<<<<< HEAD
-  const [errors, setErrors] = useState<Record<string, string>>({ /* empty */ })
-=======
   const [errors, setErrors] = useState<Record<string, any>>({})
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const industries = [
     'Technology',
@@ -68,66 +60,14 @@ export default function Signup(...args[]):  {
     'Other'
   ]
 
-<<<<<<< HEAD
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }))
-
-
-  const validateForm = () => {
-    const newErrors: Record<string, string> = { /* empty */ }
-
-    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required'
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required'
-    if (!formData.email.trim()) newErrors.email = 'Email is required'
-    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
-
-    if (!formData.password) newErrors.password = 'Password is required'
-    else if (formData.password.length < 8) newErrors.password = 'Password must be at least 8 characters'
-
-    if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match'
-
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-
-=======
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const handleSubmit = async (e: React.FormEvent) => {
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    e.preventDefault()
-
-    if (!validateForm()) return
-
-    setIsSubmitting(true)
-
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-
-      // Success - redirect or show success message
-<<<<<<< HEAD
-<<<<<<< HEAD
-      // // // console.log('Signup successful:', formData)
-
-    } catch (error) {
-      // // // console.error('Signup error:', error)
-=======
       // // // // // // // console.log('Signup successful:', formData)
 
     } catch (error) {
       // // // // // // // console.error('Signup error:', error)
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
-=======
       // // // // console.log('Signup successful:', formData)
       
     } catch (error) {
       // // // // console.error('Signup error:', error)
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     } finally {
       setIsSubmitting(false)
 
@@ -722,15 +662,6 @@ export default function Signup(...args[]):  {
                   Scalable cloud infrastructure and DevOps solutions for modern applications
                 </p>
               </motion.div>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
-  )
-}}}}}}}}
-=======
             </div>;
           </div>;
         </section>;
@@ -738,4 +669,3 @@ export default function Signup(...args[]):  {
     </>;
   );
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

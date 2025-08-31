@@ -55,20 +55,18 @@ import {
   Cog,
   ArrowRight,
   Handshake,
-  Calendar
+  Calendar,
+  GraduationCap
 } from 'lucide-react';
 
 export function MobileMenu({ onClose }) {
-  const [expandedSections, setExpandedSections] = useState({});
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const location = useLocation();
   
-  const toggleSection = (section) => {
-    setExpandedSections(prev => ({
-      ...prev,
-      [section]: !prev[section]
-    }));
-  };
-
+  const toggleServices = () => setIsServicesOpen(!isServicesOpen);
+  const toggleSolutions = () => setIsSolutionsOpen(!isSolutionsOpen);
+  
   const isActive = (path) => location.pathname === path || location.pathname.startsWith(path);
   
   const navigationSections = [
@@ -81,49 +79,50 @@ export function MobileMenu({ onClose }) {
           label: 'AI & Automation',
           icon: Brain,
           items: [
-            { href: '/services/ai-business-intelligence-dashboard', label: 'AI BI Dashboard' },
-            { href: '/services/ai-customer-support-automation', label: 'AI Support Automation' },
-            { href: '/services/ai-project-management-platform', label: 'AI Project Management' },
-            { href: '/services/ai-marketing-automation-platform', label: 'AI Marketing Automation' },
-            { href: '/services/ai-enterprise-automation-platform', label: 'AI Enterprise Automation' },
-            { href: '/services/ai-enterprise-intelligence-platform', label: 'AI Enterprise Intelligence' },
-            { href: '/services/ai-data-analytics-platform', label: 'AI Data Analytics' },
-            { href: '/services/ai-cybersecurity-platform', label: 'AI Cybersecurity' },
-            { href: '/services/ai-autonomous-research-assistant', label: 'AI Research Assistant' },
-            { href: '/services/ai-financial-trading-platform', label: 'AI Trading Platform' },
-            { href: '/services/ai-healthcare-platform', label: 'AI Healthcare' },
-            { href: '/services/ai-quantum-hybrid-platform', label: 'Quantum AI Platform' },
-            { href: '/services/ai-supply-chain-optimization', label: 'Supply Chain AI' },
-            { href: '/services/ai-sales-copilot', label: 'AI Sales Copilot' },
-            { href: '/services/ai-compliance-assistant', label: 'AI Compliance' },
-            { href: '/services/ai-business-intelligence', label: 'AI Business Intelligence' },
-            { href: '/services/ai-healthcare-analytics', label: 'AI Healthcare Analytics' }
+            { label: 'AI Enterprise Automation', href: '/services/ai-enterprise-automation-platform' },
+            { label: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },
+            { label: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
+            { label: 'AI Project Management', href: '/services/ai-project-management-platform' },
+            { label: 'AI Marketing Automation', href: '/services/ai-marketing-automation-platform' },
+            { label: 'AI Data Analytics', href: '/services/ai-data-analytics-platform' },
+            { label: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform' },
+            { label: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant' },
+            { label: 'AI Financial Trading', href: '/services/ai-financial-trading-platform' },
+            { label: 'AI Healthcare', href: '/services/ai-healthcare-platform' },
+            { label: 'Quantum AI Platform', href: '/services/ai-quantum-hybrid-platform' },
+            { label: 'Supply Chain AI', href: '/services/ai-supply-chain-optimization' },
+            { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+            { label: 'AI Compliance', href: '/services/ai-compliance-assistant' },
+            { label: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics' }
           ]
         },
         {
           label: 'IT & Infrastructure',
           icon: Server,
           items: [
-            { href: '/services/it-infrastructure-management', label: 'Infrastructure Management' },
-            { href: '/services/cloud-devops', label: 'Cloud & DevOps' },
-            { href: '/services/cybersecurity', label: 'Cybersecurity' },
-            { href: '/services/blockchain-enterprise-solutions', label: 'Blockchain Solutions' },
-            { href: '/services/it-infrastructure', label: 'IT Infrastructure' },
-            { href: '/services/digital-transformation', label: 'Digital Transformation' },
-            { href: '/services/cloud-finops-optimizer', label: 'Cloud FinOps' }
+            { label: 'Cloud & DevOps', href: '/services/cloud-devops' },
+            { label: 'Cybersecurity', href: '/services/cybersecurity' },
+            { label: 'Infrastructure Management', href: '/services/it-infrastructure-management' },
+            { label: 'Digital Transformation', href: '/services/digital-transformation' }
           ]
         },
         {
-          label: 'Micro SaaS',
-          icon: Rocket,
+          label: 'Micro SaaS & Specialized',
+          icon: Building2,
           items: [
-            { href: '/services/micro-saas-solutions-comprehensive', label: 'Comprehensive Solutions' },
-            { href: '/services/ai-customer-success-automation', label: 'Customer Success AI' },
-            { href: '/services/ai-financial-risk-management-enhanced', label: 'Financial Risk Management' },
-            { href: '/services/ai-workflow-orchestrator', label: 'AI Workflow Orchestrator' },
-            { href: '/services/ai-predictive-maintenance', label: 'AI Predictive Maintenance' },
-            { href: '/services/ai-hr-platform', label: 'AI HR Platform' },
-            { href: '/services/ai-financial-trading-risk-management', label: 'AI Trading Risk Management' }
+            { label: 'Comprehensive Solutions', href: '/services/micro-saas-solutions-comprehensive' },
+            { label: 'AI Sales Copilot', href: '/services/ai-sales-copilot' },
+            { label: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer' },
+            { label: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant' }
+          ]
+        },
+        {
+          label: 'Legal & Education',
+          icon: GraduationCap,
+          items: [
+            { label: 'AI Legal Research Platform', href: '/services/ai-autonomous-legal-research-platform' },
+            { label: 'AI Educational Content', href: '/services/ai-educational-content-creation-platform' },
+            { label: 'AI Real Estate Analytics', href: '/services/ai-real-estate-investment-analytics-platform' }
           ]
         }
       ]
@@ -133,231 +132,223 @@ export function MobileMenu({ onClose }) {
       label: 'Solutions',
       icon: Target,
       items: [
-        { href: '/solutions/healthcare', label: 'Healthcare' },
-        { href: '/solutions/financial', label: 'Financial Services' },
-        { href: '/solutions/manufacturing', label: 'Manufacturing' },
-        { href: '/solutions/government', label: 'Government' },
-        { href: '/solutions/retail', label: 'Retail' },
-        { href: '/solutions/quantum-edge-computing', label: 'Quantum Edge' },
-        { href: '/solutions/ai-autonomous-business', label: 'AI Autonomous', icon: Brain },
-        { href: '/solutions/blockchain-web3', label: 'Blockchain Web3', icon: Network },
-        { href: '/solutions/iot-edge-computing', label: 'IoT Edge', icon: Wifi },
-        { href: '/solutions/space-tech', label: 'Space Tech', icon: Satellite }
+        { label: 'Healthcare', href: '/solutions/healthcare' },
+        { label: 'Financial Services', href: '/solutions/financial' },
+        { label: 'Manufacturing', href: '/solutions/manufacturing' },
+        { label: 'Retail & E-commerce', href: '/solutions/retail' },
+        { label: 'Government', href: '/solutions/government' }
       ]
     },
-    { 
-      label: 'Company', 
-      icon: Users, 
-      matches: (path) => path.startsWith('/about') || path.startsWith('/leadership') || path.startsWith('/careers'),
-      hasDropdown: true,
-      dropdownItems: [
-        { href: '/about', label: 'About Us', icon: Users },
-        { href: '/leadership', label: 'Leadership', icon: Star },
-        { href: '/careers', label: 'Careers', icon: Rocket },
-        { href: '/partners', label: 'Partners', icon: Handshake },
-        { href: '/news', label: 'News', icon: FileText },
-        { href: '/events', label: 'Events', icon: Calendar }
+    {
+      id: 'company',
+      label: 'Company',
+      icon: Building2,
+      items: [
+        { label: 'About Us', href: '/about' },
+        { label: 'Leadership', href: '/leadership' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'News', href: '/news' },
+        { label: 'Events', href: '/events' },
+        { label: 'Partners', href: '/partners' },
+        { label: 'Contact', href: '/contact' }
       ]
     },
-    { 
-      label: 'Resources', 
-      icon: FileText, 
-      matches: (path) => path.startsWith('/blog') || path.startsWith('/docs') || path.startsWith('/webinars'),
-      hasDropdown: true,
-      dropdownItems: [
-        { href: '/blog', label: 'Blog', icon: FileText },
-        { href: '/docs', label: 'Documentation', icon: FileText },
-        { href: '/white-papers', label: 'White Papers', icon: FileText },
-        { href: '/webinars', label: 'Webinars', icon: Monitor },
-        { href: '/training', label: 'Training', icon: Users2 },
-        { href: '/case-studies', label: 'Case Studies', icon: BarChart3 },
-        { href: '/research-development', label: 'R&D', icon: Lightbulb }
+    {
+      id: 'resources',
+      label: 'Resources',
+      icon: FileText,
+      items: [
+        { label: 'Blog', href: '/blog' },
+        { label: 'API Documentation', href: '/docs' },
+        { label: 'Help Center', href: '/help' },
+        { label: 'White Papers', href: '/white-papers' },
+        { label: 'Webinars', href: '/webinars' },
+        { label: 'Training', href: '/training' },
+        { label: 'Research', href: '/research-development' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'Marketplace', href: '/marketplace' },
+        { label: 'Request Quote', href: '/request-quote' }
       ]
-    },
-    { href: '/contact', label: 'Contact', icon: MessageSquare, matches: (path) => path.startsWith('/contact') },
-  ];
-  
-  const directLinks = [
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/contact', label: 'Contact' },
-    { href: '/support', label: 'Support' },
-    { href: '/training', label: 'Training' }
-  ];
-
-  const contactInfo = [
-    { icon: Phone, label: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: Mail, label: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: MapPin, label: '123 Innovation Drive, Tech City, TC 12345' }
+    }
   ];
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
       {/* Backdrop */}
       <div 
-        className="fixed inset-0 bg-black/50 backdrop-blur-sm" 
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
         onClick={onClose}
-        aria-hidden="true"
       />
       
       {/* Menu Panel */}
-      <div className="fixed right-0 top-0 h-full w-80 max-w-[90vw] bg-gradient-to-b from-zion-slate-dark via-zion-blue-dark to-zion-slate-dark border-l border-zion-purple/30 shadow-2xl shadow-zion-purple/20 overflow-y-auto">
+      <div className="fixed right-0 top-0 h-full w-80 max-w-[90vw] bg-zion-blue-dark border-l border-zion-purple/30 shadow-2xl shadow-zion-purple/20">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-zion-purple/20">
-          <div className="flex items-center space-x-3">
-            <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">Z</span>
-            </div>
-            <div>
-              <h2 className="text-white font-bold">Zion Tech Group</h2>
-              <p className="text-zion-cyan text-xs">AI-Powered Innovation</p>
-            </div>
-          </div>
+        <div className="flex items-center justify-between p-4 border-b border-zion-purple/20">
+          <h2 className="text-lg font-semibold text-white">Menu</h2>
           <button
             onClick={onClose}
-            className="p-2 text-zion-slate-light hover:text-white hover:bg-zion-purple/20 rounded-lg transition-all duration-300"
-            aria-label="Close menu"
+            className="p-2 text-zion-slate-light hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Navigation Content */}
-        <div className="p-6 space-y-8">
-          {/* Navigation Sections */}
-          {navigationSections.map((section) => (
-            <div key={section.id} className="space-y-3">
-              <button
-                onClick={() => toggleSection(section.id)}
-                className={`flex items-center justify-between w-full p-3 rounded-lg transition-all duration-300 ${
-                  expandedSections[section.id]
-                    ? 'bg-zion-purple/20 text-zion-cyan border border-zion-cyan/30'
-                    : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
-                }`}
-              >
-                <div className="flex items-center space-x-3">
-                  <section.icon className="w-4 h-4" />
-                  <span className="font-medium">{section.label}</span>
-                </div>
-                <ChevronRight 
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    expandedSections[section.id] ? 'rotate-90' : ''
-                  }`} 
-                />
-              </button>
-              
-              {expandedSections[section.id] && (
-                <div className="ml-6 space-y-2">
-                  {section.items.map((item, index) => {
-                    if (item.items) {
-                      // Subsection with nested items
-                      return (
-                        <div key={index} className="space-y-2">
-                          <div className="flex items-center space-x-2 text-zion-cyan font-medium text-sm">
-                            <item.icon className="w-3 h-3" />
-                            <span>{item.label}</span>
-                          </div>
-                          <div className="ml-4 space-y-1">
-                            {item.items.map((subItem, subIndex) => (
-                              <Link
-                                key={subIndex}
-                                to={subItem.href}
-                                onClick={onClose}
-                                className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                                  isActive(subItem.href)
-                                    ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
-                                    : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
-                                }`}
-                              >
-                                {subItem.label}
-                              </Link>
-                            ))}
-                          </div>
-                        </div>
-                      );
-                    } else {
-                      // Direct link
-                      return (
+        <div className="p-4 space-y-6 overflow-y-auto h-[calc(100vh-80px)]">
+          {/* Home */}
+          <Link
+            to="/"
+            className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
+              isActive('/') 
+                ? 'bg-zion-cyan/10 text-zion-cyan' 
+                : 'text-zion-slate-light hover:bg-zion-purple/10 hover:text-white'
+            }`}
+            onClick={onClose}
+          >
+            <Home className="w-5 h-5" />
+            <span className="font-medium">Home</span>
+          </Link>
+
+          {/* Services Section */}
+          <div>
+            <button
+              onClick={toggleServices}
+              className="flex items-center justify-between w-full p-3 rounded-lg text-zion-slate-light hover:bg-zion-purple/10 hover:text-white transition-colors"
+            >
+              <div className="flex items-center space-x-3">
+                <Zap className="w-5 h-5" />
+                <span className="font-medium">Services</span>
+              </div>
+              <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isServicesOpen && (
+              <div className="mt-2 ml-6 space-y-2">
+                {navigationSections.find(s => s.id === 'services')?.items.map((category, categoryIndex) => (
+                  <div key={categoryIndex} className="space-y-2">
+                    <div className="flex items-center space-x-2 text-sm text-zion-cyan font-medium">
+                      {React.createElement(category.icon, { className: 'w-4 h-4' })}
+                      <span>{category.label}</span>
+                    </div>
+                    <div className="ml-4 space-y-1">
+                      {category.items?.map((item, itemIndex) => (
                         <Link
-                          key={index}
+                          key={itemIndex}
                           to={item.href}
-                          onClick={onClose}
-                          className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
+                          className={`block px-3 py-2 rounded text-sm transition-colors ${
                             isActive(item.href)
-                              ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
+                              ? 'text-zion-cyan bg-zion-cyan/10'
                               : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
                           }`}
+                          onClick={onClose}
                         >
                           {item.label}
                         </Link>
-                      );
-                    }
-                  })}
-                </div>
-              )}
-            </div>
-          ))}
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
 
-          {/* Direct Links */}
-          <div className="space-y-3">
-            <h3 className="text-zion-purple font-semibold text-sm uppercase tracking-wide">Quick Links</h3>
-            <div className="space-y-2">
-              {directLinks.map((link) => (
+          {/* Solutions Section */}
+          <div>
+            <button
+              onClick={toggleSolutions}
+              className="flex items-center justify-between w-full p-3 rounded-lg text-zion-slate-light hover:bg-zion-purple/10 hover:text-white transition-colors"
+            >
+              <div className="flex items-center space-x-3">
+                <Target className="w-5 h-5" />
+                <span className="font-medium">Solutions</span>
+              </div>
+              <ChevronDown className={`w-4 h-4 transition-transform ${isSolutionsOpen ? 'rotate-180' : ''}`} />
+            </button>
+            
+            {isSolutionsOpen && (
+              <div className="mt-2 ml-6 space-y-1">
+                {navigationSections.find(s => s.id === 'solutions')?.items.map((item, index) => (
+                  <Link
+                    key={index}
+                    to={item.href}
+                    className={`block px-3 py-2 rounded text-sm transition-colors ${
+                      isActive(item.href)
+                        ? 'text-zion-cyan bg-zion-cyan/10'
+                        : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                    }`}
+                    onClick={onClose}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Company Section */}
+          <div>
+            <h3 className="text-sm font-medium text-zion-cyan mb-2">Company</h3>
+            <div className="ml-4 space-y-1">
+              {navigationSections.find(s => s.id === 'company')?.items.map((item, index) => (
                 <Link
-                  key={link.href}
-                  to={link.href}
-                  onClick={onClose}
-                  className={`block px-3 py-2 text-sm rounded-lg transition-all duration-300 ${
-                    isActive(link.href)
-                      ? 'bg-zion-purple/20 text-zion-purple border border-zion-purple/30'
+                  key={index}
+                  to={item.href}
+                  className={`block px-3 py-2 rounded text-sm transition-colors ${
+                    isActive(item.href)
+                      ? 'text-zion-cyan bg-zion-cyan/10'
                       : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
                   }`}
+                  onClick={onClose}
                 >
-                  {link.label}
+                  {item.label}
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Contact Information */}
-          <div className="space-y-3">
-            <h3 className="text-zion-cyan font-semibold text-sm uppercase tracking-wide">Contact Info</h3>
-            <div className="space-y-3">
-              {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center space-x-3 text-zion-slate-light text-sm">
-                  <contact.icon className="w-4 h-4 text-zion-cyan flex-shrink-0" />
-                  {contact.href ? (
-                    <a 
-                      href={contact.href}
-                      className="hover:text-zion-cyan transition-colors"
-                    >
-                      {contact.label}
-                    </a>
-                  ) : (
-                    <span>{contact.label}</span>
-                  )}
-                </div>
+          {/* Resources Section */}
+          <div>
+            <h3 className="text-sm font-medium text-zion-cyan mb-2">Resources</h3>
+            <div className="ml-4 space-y-1">
+              {navigationSections.find(s => s.id === 'resources')?.items.map((item, index) => (
+                <Link
+                  key={index}
+                  to={item.href}
+                  className={`block px-3 py-2 rounded text-sm transition-colors ${
+                    isActive(item.href)
+                      ? 'text-zion-cyan bg-zion-cyan/10'
+                      : 'text-zion-slate-light hover:text-white hover:bg-zion-purple/10'
+                  }`}
+                  onClick={onClose}
+                >
+                  {item.label}
+                </Link>
               ))}
             </div>
           </div>
-        </div>
 
-        {/* Footer CTA */}
-        <div className="p-6 border-t border-zion-purple/20 space-y-3">
-          <Link
-            to="/get-started"
-            onClick={onClose}
-            className="block w-full px-4 py-3 text-center bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300 transform hover:scale-105"
-          >
-            Get Started
-            <ArrowRight className="w-4 h-4 ml-2 inline" />
-          </Link>
-          <Link
-            to="/contact"
-            onClick={onClose}
-            className="block w-full px-4 py-3 text-center border-2 border-zion-purple text-zion-purple font-semibold rounded-lg hover:bg-zion-purple hover:text-white transition-all duration-300"
-          >
-            Contact Sales
-          </Link>
+          {/* Quick Actions */}
+          <div className="pt-4 border-t border-zion-purple/20">
+            <div className="space-y-2">
+              <Link
+                to="/contact"
+                className="flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-medium rounded-lg hover:from-zion-cyan-light hover:to-zion-blue-light transition-all duration-300"
+                onClick={onClose}
+              >
+                <MessageSquare className="w-4 h-4 mr-2" />
+                Contact Us
+              </Link>
+              
+              <Link
+                to="/pricing"
+                className="flex items-center justify-center w-full px-4 py-3 border border-zion-purple/30 text-zion-slate-light hover:text-white hover:bg-zion-purple/10 rounded-lg transition-all duration-300"
+                onClick={onClose}
+              >
+                <DollarSign className="w-4 h-4 mr-2" />
+                View Pricing
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

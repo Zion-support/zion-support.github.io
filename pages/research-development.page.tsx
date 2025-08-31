@@ -38,11 +38,8 @@ import { FlaskConical,
   Atom,
   Satellite,
   Telescope
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const researchAreas = [
   {
     id: 'ai-ml',
@@ -145,15 +142,6 @@ const researchAreas = [
       'Container Orchestration',
       'Serverless Computing',
       'Multi-cloud Strategies',
-<<<<<<< HEAD
-      'Cloud Security',
-      'DevOps Automation'
-    ],
-    publications: 20,
-    patents: 10,
-    projects: 16
-
-=======
       'Cloud Security',;
       'DevOps Automation';
     ],;
@@ -161,7 +149,6 @@ const researchAreas = [
     patents: 10,;
     projects: 16;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const researchProjects = [
@@ -266,15 +253,6 @@ const researchProjects = [
     funding: '$350,000',
     outcomes[
       'AI ethics framework',
-<<<<<<< HEAD
-      'Responsible AI guidelines',
-      '4 research publications',
-      'Industry standards contribution'
-    ],
-    icon: Brain,
-    color: 'from-purple-500 to-indigo-600'
-
-=======
       'Responsible AI guidelines',;
       '4 research publications',;
       'Industry standards contribution';
@@ -282,7 +260,6 @@ const researchProjects = [
     icon: Brain,;
     color: 'from-purple-500 to-indigo-600';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const publications = [
@@ -329,15 +306,6 @@ const publications = [
   {
     id: 5,
     title: 'Security-First Cloud Architecture Patterns',
-<<<<<<< HEAD
-    authors: ['Dr. Lisa Garcia', 'Dr. David Kim'],
-    journal: 'Cloud Computing Security',
-    year: 2026,
-    citations: 38,
-    area: 'Cloud-Native',
-    abstract: 'This paper introduces security-first design patterns for cloud-native applications...'
-
-=======
     authors['Dr. Lisa Garcia', 'Dr. David Kim'],;
     journal: 'Cloud Computing Security',;
     year: 2026,;
@@ -345,7 +313,6 @@ const publications = [
     area: 'Cloud-Native',;
     abstract: 'This paper introduces security-first design patterns for cloud-native applications...';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const patents = [
@@ -392,15 +359,6 @@ const patents = [
   {
     id: 5,
     title: 'Cloud Security Architecture Pattern',
-<<<<<<< HEAD
-    inventors: ['Dr. Lisa Garcia'],
-    filingDate: '2026-02-15',
-    status: 'Pending',
-    patentNumber: 'US 2026/0098765',
-    area: 'Cloud-Native',
-    description: 'A security architecture pattern for cloud-native applications.'
-
-=======
     inventors['Dr. Lisa Garcia'],;
     filingDate: '2026-02-15',;
     status: 'Pending',;
@@ -408,7 +366,6 @@ const patents = [
     area: 'Cloud-Native',;
     description: 'A security architecture pattern for cloud-native applications.';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function ResearchDevelopment(...args[]):  {
@@ -422,41 +379,10 @@ export default function ResearchDevelopment(...args[]):  {
   const filteredProjects = researchProjects.filter(project => {;
     const matchesSearch = project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
-<<<<<<< HEAD
-
-    return matchesArea && matchesStatus && matchesSearch;
-  });
-=======
     
     return matchesArea && matchesStatus && matchesSearch});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  const getAreaIcon = (areaName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.icon : FlaskConical};
-
-<<<<<<< HEAD
-  const getAreaColor = (areaName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const area = researchAreas.find(a => a.name === areaName);
-    return area ? area.color : 'from-gray-500 to-slate-600'};
-
-<<<<<<< HEAD
-  const getStatusBadge = (status: string) => {;
-    if (status === 'Active') {;
-      return <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Active</span>;
-    } else if (status = == 'Completed') {;
-      return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs rounded-full border border-blue-500/30">Completed</span>;
-    } else {
-      return <span className="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Planning</span>;
-<<<<<<< HEAD
-
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   return (
@@ -527,15 +453,9 @@ export default function ResearchDevelopment(...args[]):  {
                 <select
                   value={selectedArea}
                   onChange={(e) => setSelectedArea(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {areas.map(area => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {areas.map(area  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={area} value={area}>{area}</option>
                   ))}
                 </select>
@@ -546,15 +466,9 @@ export default function ResearchDevelopment(...args[]):  {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-
-                  {statuses.map(status => (
-=======
                   className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
                 >
                   {statuses.map(status  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                     <option key={status} value={status}>{status}</option>
                   ))}
                 </select>
@@ -593,19 +507,11 @@ export default function ResearchDevelopment(...args[]):  {
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {researchAreas.map((area, index)  => {;
-=======;
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map((area, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = area.icon;
               return (
                 <motion.div
@@ -671,14 +577,6 @@ export default function ResearchDevelopment(...args[]):  {
                       <div className="text-xs text-zion-slate-light">Patents</div>
                     </div>
                     <div>
-<<<<<<< HEAD
-                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>
-                      <div className="text-xs text-zion-slate-light">Projects</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;
                       <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
@@ -686,7 +584,6 @@ export default function ResearchDevelopment(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -720,19 +617,11 @@ export default function ResearchDevelopment(...args[]):  {
             className="mb-12 text-center"
 
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
-<<<<<<< HEAD
-            <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredProjects.map((project, index)  => {;
-=======;
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
           </motion.div>;
 ;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredProjects.map((project, index) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               const IconComponent = getAreaIcon(project.area);
               const areaColor = getAreaColor(project.area);
               return (
@@ -841,14 +730,6 @@ export default function ResearchDevelopment(...args[]):  {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                     <div className="text-right">
-<<<<<<< HEAD
-                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>
-                      <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
-                    </div>
-                  </div>
-                </motion.div>
-              )})};
-=======;
                       <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
@@ -856,7 +737,6 @@ export default function ResearchDevelopment(...args[]):  {
                 </motion.div>;
               );
             })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
           </div>
         </div>
       </section>
@@ -1143,23 +1023,10 @@ export default function ResearchDevelopment(...args[]):  {
 
                 View Research Impact
               </Link>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

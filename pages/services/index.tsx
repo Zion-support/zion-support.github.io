@@ -107,23 +107,10 @@ export default function ServicesIndex(...args[]):  {
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               <Link href="/contact"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Contact Us</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">Explore Automations</a></Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  )};
-=======;
             </div>;
           </div>;
         </section>;
       </main>;
     </div>;
   );
-<<<<<<< HEAD
-</div></div></div></div></div></div></div>}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

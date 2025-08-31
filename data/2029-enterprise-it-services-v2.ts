@@ -36,13 +36,7 @@ export interface EnterpriseITService2029V2 {
     mobile: string;
     email: string;
     website: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
     address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
   {
     id: 'autonomous-devops-platform',

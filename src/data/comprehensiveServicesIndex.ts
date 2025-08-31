@@ -1,25 +1,20 @@
 // Comprehensive Services Index
 // This file exports all our innovative technology services
-
 // Core Innovative Services
 export { EXPANDED_INNOVATIVE_SERVICES_2025 } from "./expandedInnovativeServices2025";
 export type { ExpandedInnovativeService } from "./expandedInnovativeServices2025";
-
 // Emerging Technology Services
 export { EMERGING_TECH_SERVICES_2025 } from "./emergingTechServices2025";
 export type { EmergingTechService } from "./emergingTechServices2025";
-
 // Ultimate Micro SAAS Services
 export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
-
 // Combined Services Array
 export const ALL_COMPREHENSIVE_SERVICES = [;
   ...EXPANDED_INNOVATIVE_SERVICES_2025,;
   ...EMERGING_TECH_SERVICES_2025,;
   ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
 ];
-
 // Service Categories
 export const SERVICE_CATEGORIES = [
   'AI & Analytics',
@@ -44,21 +39,18 @@ export const SERVICE_CATEGORIES = [
   'Sustainability & Energy',;
   'Autonomous Vehicles & Fleet Management';
 ];
-
 // Innovation Levels
 export const INNOVATION_LEVELS = [;
   'Cutting-edge',;
   'Advanced',;
   'Professional';
 ];
-
 // Support Levels
 export const SUPPORT_LEVELS = [;
   'enterprise',;
   'professional',;
   'basic';
 ];
-
 // Pricing Models
 export const PRICING_MODELS = [;
   'monthly',;
@@ -66,7 +58,6 @@ export const PRICING_MODELS = [;
   'one-time',;
   'usage-based';
 ];
-
 // Contact Information
 export const CONTACT_INFO = {
   phone: '+1 302 464 0950',
@@ -79,14 +70,7 @@ export const CONTACT_INFO = {
   ;
   Middletown DE 19709';
 ;
-
-
-
-
-
-
 };
-
 // Service Statistics
 export const SERVICE_STATS = {
   totalServices: ALL_COMPREHENSIVE_SERVICES.length,
@@ -99,60 +83,24 @@ export const SERVICE_STATS = {
   ;
   pricingModels: PRICING_MODELS.length;
 ;
-
-
-
-
-
-
 };
-
 // Helper Functions
-<<<<<<< HEAD
-export const getServicesByCategory = (category: string)  => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category)};
-
-export const getServicesByInnovationLevel = (level: string)  => {;
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level)};
-
-export const getServicesByPriceRange = (minPrice: number, maxPrice: number)  => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service => ;
-    service.price >= minPrice && service.price <= maxPrice;
-  )};
-
-export const getServicesByTags = (tags: string[])  => {
-  return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
-    tags.some(tag => service.tags.includes(tag));
-  )};
-
-export const searchTerm = query.toLowerCase();
-  return ALL_COMPREHENSIVE_SERVICES.filter(service = >
-    service.title.toLowerCase().includes(searchTerm) ||
-    service.description.toLowerCase().includes(searchTerm) ||
-    service.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||;
-    service.category.toLowerCase().includes(searchTerm);
-  )};
-=======
 export const getServicesByCategory = (category: string) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.category === category);
 };
-
 export const getServicesByInnovationLevel = (level: string) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service => service.innovationLevel === level);
 };
-
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>
     service.price >= minPrice && service.price <= maxPrice
   );
 };
-
 export const getServicesByTags = (tags: string[]) => {;
   return ALL_COMPREHENSIVE_SERVICES.filter(service =>;
     tags.some(tag => service.tags.includes(tag));
   );
 };
-
 export const searchTerm = query.toLowerCase();
   return ALL_COMPREHENSIVE_SERVICES.filter(service = >;
     service.title.toLowerCase().includes(searchTerm) ||;
@@ -161,6 +109,4 @@ export const searchTerm = query.toLowerCase();
     service.category.toLowerCase().includes(searchTerm);
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default ALL_COMPREHENSIVE_SERVICES;
