@@ -402,13 +402,13 @@ export default function FAQ(...args: any[]): any {
               <a
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-
+              >
                 Contact Us
               </a>
               <a
                 href="/support"
                 className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-
+              >
                 Get Support
               </a>
             </div>

@@ -1,46 +1,30 @@
-<<<<<<< HEAD
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown import { Link, useLocation               } from 'react-router-dom.ts';
-=======
-import React, { useState } from 'react.ts';
-import { motion, AnimatePresence                } from 'framer-motion.ts';
-import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown                } from 'lucide-react.ts';
-import { Link, useLocation                } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, Menu, Home, Brain, Cloud, Server, Rocket, Users, Briefcase, FileText, HelpCircle, MessageCircle, Zap, Target, BookOpen, Building, ChevronRight, ChevronDown, Phone } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
-<<<<<<< HEAD
-export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export const MobileSidebarToggle: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-<<<<<<< HEAD
-  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
-<<<<<<< HEAD
       newExpanded.delete(section);
     } else {
       newExpanded.add(section);
-
+    }
     setExpandedSections(newExpanded);
   };
-=======
-      newExpanded.delete(section)} else {
-      newExpanded.add(section)}
-    setExpandedSections(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path;
+  const isActive = (path: string) => location.pathname === path;
 
   const navigationSections = [
     {
       title: "Main",
       icon: Home,
-      items[
+      items: [
         { name: "Home", href: "/", icon: Home },
         { name: "About Us", href: "/about", icon: Users },
         { name: "Contact", href: "/contact", icon: MessageCircle },
@@ -51,7 +35,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
     {
       title: "Services",
       icon: Zap,
-      items[
+      items: [
         { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
         { name: "Micro SAAS Solutions", href: "/micro-saas", icon: Cloud },
         { name: "IT Infrastructure", href: "/it-services", icon: Server },
@@ -61,7 +45,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
     {
       title: "Solutions",
       icon: Target,
-      items[
+      items: [
         { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Rocket },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain", icon: Cloud },
         { name: "Edge Computing", href: "/emerging-tech/edge", icon: Server },
@@ -71,42 +55,31 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
     {
       title: "Resources",
       icon: BookOpen,
-<<<<<<< HEAD
       items: [
         { name: "Documentation", href: "/docs", icon: FileText },
         { name: "API Reference", href: "/api", icon: FileText },
         { name: "Developer Portal", href: "/developer", icon: Server },
         { name: "Support Center", href: "/support", icon: HelpCircle }
       ]
-
-=======
-      items[;
-        { name: "Documentation", href: "/docs", icon: FileText },;
-        { name: "API Reference", href: "/api", icon: FileText },;
-        { name: "Developer Portal", href: "/developer", icon: Server },;
-        { name: "Support Center", href: "/support", icon: HelpCircle };
-      ];
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
-  const quickActions = [;
-    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },;
-    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },;
-    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" };
+  const quickActions = [
+    { name: "Get Quote", href: "/contact", icon: MessageCircle, variant: "primary" },
+    { name: "Book Demo", href: "/demo", icon: Users, variant: "secondary" },
+    { name: "Support", href: "/support", icon: HelpCircle, variant: "secondary" }
   ];
 
   return (
     <>
       {/* Mobile Menu Button */}
-      <motion.button
-        whileHover = {{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </motion.button>
+      <button
+        onClick={() => setIsOpen(true)}
+        className="lg:hidden p-2 text-white hover:bg-zion-blue-dark rounded-lg transition-colors"
+        aria-label="Open mobile menu"
+      >
+        <Menu className="w-6 h-6" />
+      </button>
 
       {/* Mobile Sidebar Overlay */}
       <AnimatePresence>
@@ -117,301 +90,127 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {;
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsOpen(false)}
+              className="fixed inset-0 bg-black/50 z-40 lg:hidden"
             />
 
-            {/* Mobile Sidebar */}
+            {/* Sidebar */}
             <motion.div
-              initial={{ x: '-100%' }}
+              initial={{ x: '100%' }}
               animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
-              transition = {
-  { duration: 0.3,
-  ease: 'easeOut' 
-
-
-
-
-
-
-}}
-              className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
-
-              <div className="p-6">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-8">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center">
-                      <span className="text-xl font-bold text-white">Z</span>
-                    </div>
-                    <div>
-                      <h2 className="text-lg font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent">
-                        ZION TECH GROUP
-                      </h2>
-                      <p className="text-xs text-zion-slate-light">Mobile Navigation</p>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
-                    <X className="w-5 h-5" />
-                  </button>
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed right-0 top-0 h-full w-80 max-w-[85vw] bg-zion-blue-dark shadow-2xl z-50 lg:hidden overflow-hidden"
+            >
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-zion-blue-light">
+                <div className="flex items-center gap-3">
+                  <Building className="w-8 h-8 text-zion-cyan" />
+                  <h2 className="text-xl font-bold text-white">Zion Tech Group</h2>
                 </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 text-white hover:bg-zion-blue rounded-lg transition-colors"
+                  aria-label="Close mobile menu"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
 
+              {/* Navigation Content */}
+              <div className="flex-1 overflow-y-auto p-6 space-y-6">
                 {/* Quick Actions */}
-                <div className="mb-8">
-                  <h3 className="text-sm font-semibold text-zion-slate-light mb-3 uppercase tracking-wide">Quick Actions</h3>
+                <div className="space-y-3">
+                  <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider">
+                    Quick Actions
+                  </h3>
                   <div className="space-y-2">
-                    {quickActions.map((action, index) => (
-                      <motion.div
+                    {quickActions.map((action) => (
+                      <Link
                         key={action.name}
-<<<<<<< HEAD
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.3, delay: index * 0.1 }}
-
-=======
-                        initial = {
-  { opacity: 0,
-  x: -20 
-
-
-
-
-
-
-}}
-                        animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                        transition = {
-  { duration: 0.3,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                        to={action.href}
+                        onClick={() => setIsOpen(false)}
+                        className={`flex items-center gap-3 p-3 rounded-lg transition-colors ${
+                          action.variant === "primary"
+                            ? "bg-zion-purple text-white hover:bg-zion-purple-dark"
+                            : "text-zion-slate-light hover:bg-zion-blue hover:text-white"
+                        }`}
                       >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                        <Link
-                          to={action.href}
-                          onClick={() => setIsOpen(false)}
-                          className={`flex items-center space-x-3 p-3 rounded-lg transition-all duration-300 group ${
-                            action.variant === 'primary'
-                              ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white hover:from-zion-cyan/90 hover:to-zion-blue/90 shadow-lg shadow-zion-cyan/25'
-                              : 'bg-zion-slate-dark/50 text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 border border-zion-cyan/20 hover:border-zion-cyan/40'
-                          }`}
-
-                          <action.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                          <span className="font-medium">{action.name}</span>
-                        </Link>
-                      </motion.div>
+                        <action.icon className="w-5 h-5" />
+                        <span className="font-medium">{action.name}</span>
+                      </Link>
                     ))}
                   </div>
                 </div>
 
                 {/* Navigation Sections */}
-                <div className="space-y-6">
-                  {navigationSections.map((section, sectionIndex) => (
-                    <motion.div
-                      key={section.title}
-<<<<<<< HEAD
-                      initial={{ opacity: 0, y: -20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-
-=======
-                      initial = {
-  { opacity: 0,
-  y: -20 
-
-
-
-
-
-
-}}
-                      animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                      transition = {
-  { duration: 0.5,
-  delay: sectionIndex * 0.1 
-
-
-
-
-
-
-}}
-                    >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+                <div className="space-y-4">
+                  {navigationSections.map((section) => (
+                    <div key={section.title} className="space-y-2">
                       <button
                         onClick={() => toggleSection(section.title)}
-                        className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
-
-                        <div className="flex items-center space-x-3">
-                          <section.icon className="w-4 h-4 group-hover:text-zion-cyan transition-colors duration-300" />
+                        className="flex items-center justify-between w-full p-3 text-left text-white hover:bg-zion-blue rounded-lg transition-colors"
+                      >
+                        <div className="flex items-center gap-3">
+                          <section.icon className="w-5 h-5 text-zion-cyan" />
                           <span className="font-medium">{section.title}</span>
                         </div>
                         {expandedSections.has(section.title) ? (
-                          <ChevronDown className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronDown className="w-5 h-5 text-zion-slate-light" />
                         ) : (
-                          <ChevronRight className="w-4 h-4 transition-transform duration-300" />
+                          <ChevronRight className="w-5 h-5 text-zion-slate-light" />
                         )}
                       </button>
 
                       <AnimatePresence>
                         {expandedSections.has(section.title) && (
                           <motion.div
-                            initial = {
-  { opacity: 0,
-  height: 0 
-
-
-
-
-
-
-}}
-                            animate = {
-  { opacity: 1,
-  height: 'auto' 
-
-
-
-
-
-
-}}
-                            exit = {
-  { opacity: 0,
-  height: 0 
-
-
-
-
-
-
-}}
-                            transition={{ duration: 0.3 }}
-                            className="ml-7 mt-2 space-y-1"
-
-                            {section.items.map((item, itemIndex) => (
-                              <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="ml-8 space-y-1"
+                          >
+                            {section.items.map((item) => (
+                              <Link
                                 key={item.name}
-<<<<<<< HEAD
-                                initial={{ opacity: 0, x: -20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.2, delay: itemIndex * 0.05 }}
-
-=======
-                                initial = {
-  { opacity: 0,
-  x: -20 
-
-
-
-
-
-
-}}
-                                animate = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                                transition = {
-  { duration: 0.2,
-  delay: itemIndex * 0.05 
-
-
-
-
-
-
-}}
+                                to={item.href}
+                                onClick={() => setIsOpen(false)}
+                                className={`flex items-center gap-3 p-2 rounded-lg transition-colors ${
+                                  isActive(item.href)
+                                    ? "bg-zion-cyan/20 text-zion-cyan"
+                                    : "text-zion-slate-light hover:bg-zion-blue hover:text-white"
+                                }`}
                               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                                <Link
-                                  to={item.href}
-                                  onClick={() => setIsOpen(false)}
-                                  className={`flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group ${
-                                    isActive(item.href)
-                                      ? 'text-zion-cyan bg-zion-cyan/10 border border-zion-cyan/30'
-                                      : 'text-zion-slate-light hover:text-white hover:bg-zion-cyan/5'
-                                  }`}
-
-                                  <item.icon className="w-3 h-3 group-hover:scale-110 transition-transform duration-300" />
-                                  <span className="text-sm">{item.name}</span>
-                                </Link>
-                              </motion.div>
+                                <item.icon className="w-4 h-4" />
+                                <span className="text-sm">{item.name}</span>
+                              </Link>
                             ))}
                           </motion.div>
                         )}
                       </AnimatePresence>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
                 {/* Contact Info */}
-                <div className="mt-8 p-4 bg-zion-slate-dark/50 border border-zion-cyan/20 rounded-lg">
-                  <h3 className="text-sm font-semibold text-zion-cyan mb-3">Need Help?</h3>
-                  <div className="space-y-2 text-xs text-zion-slate-light">
-                    <div className="flex items-center space-x-2">
-                      <span>📞 +1 302 464 0950</span>
+                <div className="pt-6 border-t border-zion-blue-light">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-zion-slate-light">
+                      <MessageCircle className="w-5 h-5 text-zion-cyan" />
+                      <span className="text-sm">kleber@ziontechgroup.com</span>
                     </div>
-                    <div className="flex items-center space-x-2">
-                      <span>✉️ kleber@ziontechgroup.com</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span>📍 Middletown, DE</span>
+                    <div className="flex items-center gap-3 text-zion-slate-light">
+                      <Phone className="w-5 h-5 text-zion-cyan" />
+                      <span className="text-sm">+1 302 464 0950</span>
                     </div>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
             </motion.div>
           </>
         )}
-      </AnimatePresence>;
-    </>;
-  )};
-=======
-            </motion.div>;
-          </>;
-        )};
-      </AnimatePresence>;
-    </>;
+      </AnimatePresence>
+    </>
   );
-<<<<<<< HEAD
-};}}</section></motion.div>}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

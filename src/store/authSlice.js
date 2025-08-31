@@ -6,9 +6,8 @@ export const loginUser = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       // Simulate API call
-      const response = await new Promise((resolve) => {
+      const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
-<<<<<<< HEAD
           if (credentials.email && credentials.password) {
             resolve({
               user: {
@@ -21,18 +20,7 @@ export const loginUser = createAsyncThunk(
             });
           } else {
             reject(new Error('Invalid credentials'));
-
-=======
-          resolve({
-            user: {
-              id: 1,
-              email: credentials.email,
-              name: 'John Doe',
-              role: 'user'
-            },
-            token: 'mock-jwt-token'
-          });
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          }
         }, 1000);
       });
 
@@ -43,8 +31,8 @@ export const loginUser = createAsyncThunk(
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
 // Async thunk for signup
@@ -53,7 +41,7 @@ export const signupUser = createAsyncThunk(
   async (userData, { rejectWithValue }) => {
     try {
       // Simulate API call
-      const response = await new Promise((resolve) => {
+      const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
           if (userData.email && userData.password && userData.name) {
             resolve({
@@ -66,13 +54,8 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-<<<<<<< HEAD
             reject(new Error('Invalid user data'));
-
-=======
-            throw new Error('Invalid user data');
           }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         }, 1000);
       });
 
@@ -83,8 +66,8 @@ export const signupUser = createAsyncThunk(
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
 // Async thunk for logout
@@ -97,11 +80,15 @@ export const logoutUser = createAsyncThunk(
         setTimeout(resolve, 500);
       });
       
+      // Clear localStorage
+      localStorage.removeItem('token');
+      localStorage.removeItem('user');
+      
       return null;
     } catch (error) {
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
 // Async thunk for checking auth status
@@ -111,34 +98,27 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
-
+      
       if (token && user) {
         return {
           user: JSON.parse(user),
-          token
+          token: token
         };
       } else {
-        throw new Error('No auth data found');
-
+        throw new Error('No valid session found');
+      }
     } catch (error) {
       return rejectWithValue(error.message);
-
-
+    }
+  }
 );
 
 const initialState = {
   user: null,
-  token: null,
+  token: localStorage.getItem('token'),
   isAuthenticated: false,
   isLoading: false,
   error: null
-
-
-
-
-
-
-
 };
 
 const authSlice = createSlice({
@@ -154,7 +134,7 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
-
+    }
   },
   extraReducers: (builder) => {
     // Login
@@ -228,12 +208,16 @@ const authSlice = createSlice({
         state.user = null;
         state.token = null;
       });
-
+  }
 });
 
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
 
 // Selectors
+export const selectUser = (state) => state.auth.user;
+export const selectToken = (state) => state.auth.token;
+export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
+export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
 
-export default authSlice.reducer;}}}}}}}}}}}}}
+export default authSlice.reducer;

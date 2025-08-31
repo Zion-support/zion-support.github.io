@@ -1,11 +1,43 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Research(...args: any[]): any {
-=======
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon               } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { 
+  FlaskConical, 
+  BookOpen, 
+  Users, 
+  Clock, 
+  Star, 
+  Search, 
+  Filter, 
+  Download, 
+  ExternalLink, 
+  ArrowRight, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Zap, 
+  Globe, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  CheckCircle, 
+  Calendar, 
+  MapPin, 
+  DollarSign, 
+  FileText, 
+  Lightbulb, 
+  Microscope, 
+  Rocket, 
+  Code, 
+  Network, 
+  Cpu, 
+  Lock, 
+  BarChart3, 
+  Palette, 
+  Smartphone, 
+  Eye 
+} from 'lucide-react';
 
-export default function Research(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
@@ -62,7 +94,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1038/s41534-024-00800-5',
           citations: 23
-
+        }
       ],
       tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
       featured: true,
@@ -99,7 +131,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 18
-
+        }
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
       featured: true,
@@ -129,7 +161,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1109/MSEC.2024.001234',
           citations: 12
-
+        }
       ],
       tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
       featured: false,
@@ -181,7 +213,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1111/jscm.12345',
           citations: 28
-
+        }
       ],
       tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
       featured: false,
@@ -211,52 +243,31 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
-<<<<<<< HEAD
-
+        }
       ],
       tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
       featured: true,
       progress: 55,
       impact: 'high'
-
-=======
-        };
-      ],;
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
-      featured: true,;
-      progress: 55,;
-      impact: 'high';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   // Update counts
-<<<<<<< HEAD
-  categories.forEach(cat = > {;
-    cat.count = researchProjects.filter(p => p.category === cat.id).length});
-
-  statuses.forEach(status = > {;
-    status.count = researchProjects.filter(p => p.status === status.id).length});
-
-  types.forEach(type = > {;
-    type.count = researchProjects.filter(p => p.type === type.id).length});
-=======
-  categories.forEach(cat = > {;
+  categories.forEach(cat => {
     cat.count = researchProjects.filter(p => p.category === cat.id).length;
   });
 
-  statuses.forEach(status = > {;
+  statuses.forEach(status => {
     status.count = researchProjects.filter(p => p.status === status.id).length;
   });
 
-  types.forEach(type = > {;
+  types.forEach(type => {
     type.count = researchProjects.filter(p => p.type === type.id).length;
   });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredProjects = researchProjects.filter(project => {;
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredProjects = researchProjects.filter(project => {
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
@@ -266,77 +277,48 @@ export default function Research(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
-
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+  const getCategoryIcon = (categoryId: string) => {
     return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
   };
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const getStatusColor = (status: string) => {
+    switch (status) {
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
       case 'planning': return 'text-yellow-400';
       case 'published': return 'text-purple-400';
-<<<<<<< HEAD
       default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   };
 
-<<<<<<< HEAD
-  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (impact) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-green-400';
-<<<<<<< HEAD
       default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   };
 
-<<<<<<< HEAD
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',;
-      month: 'short';
-    })};
-
-  const formatFunding = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
-    if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {;
-      return `$${(amount / 1000).toFixed(0)}K`};
-    return `$${amount.toLocaleString()}`};
-=======
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'short';
+      year: 'numeric',
+      month: 'short'
     });
   };
 
-  const formatFunding = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
-    if (amount >= 1000000) {;
+  const formatFunding = (amount: number) => {
+    if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`;
-
+    }
     return `$${amount.toLocaleString()}`;
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
         <div className="container mx-auto px-4 text-center">
@@ -385,7 +367,7 @@ export default function Research(...args: any[]): any {
                           ? 'bg-zion-cyan text-zion-slate-dark'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-
+                    >
                       {category.icon}
                       {category.name}
                     </button>
@@ -406,7 +388,7 @@ export default function Research(...args: any[]): any {
                           ? 'bg-zion-purple text-white'
                           : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-
+                    >
                       {status.name} ({status.count})
                     </button>
                   ))}
@@ -424,9 +406,9 @@ export default function Research(...args: any[]): any {
                       className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
                         activeType === type.id
                           ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-light hover:text-white'
+                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
                       }`}
-
+                    >
                       {type.name} ({type.count})
                     </button>
                   ))}
@@ -438,18 +420,18 @@ export default function Research(...args: any[]): any {
       </div>
 
       {/* Featured Research */}
-      {researchProjects.filter(p               => p.featured).length > 0 && (
+      {researchProjects.filter(p => p.featured).length > 0 && (
         <div className="py-12 bg-zion-slate-dark">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold text-center text-white mb-12">
               Featured Research Projects
             </h2>
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {researchProjects.filter(p               => p.featured).map((project) => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {researchProjects.filter(p => p.featured).map((project) => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-
+                >
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
@@ -522,12 +504,12 @@ export default function Research(...args: any[]): any {
           </h2>
 
           {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project)               => (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredProjects.map((project) => (
                 <div
                   key={project.id}
                   className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
+                >
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(project.category)}
@@ -558,7 +540,7 @@ export default function Research(...args: any[]): any {
                       <span
                         key={index}
                         className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
+                      >
                         {tag}
                       </span>
                     ))}
@@ -650,23 +632,10 @@ export default function Research(...args: any[]): any {
             </button>
             <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
               Contact Research Team
-<<<<<<< HEAD
             </button>
           </div>
         </div>
       </div>
     </div>
-  )};
-=======;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

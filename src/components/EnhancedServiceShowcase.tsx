@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react.ts';
-import { motion, AnimatePresence               } from 'framer-motion.ts';
-import { Link               } from 'react-router-dom.ts';
-import { Brain,
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { 
+  Brain,
   Cloud,
   Shield,
   Zap,
@@ -17,45 +18,13 @@ import { Brain,
   Target,
   Award,
   CheckCircle
-<<<<<<< HEAD
-=======
-               } from 'lucide-react.ts';
+} from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Service {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   title: string;
   description: string;
-icon: React.ComponentType<{ className?: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
-}>;
+  icon: React.ComponentType<{ className?: string }>;
   category: string;
   features: string[];
   pricing: string;
@@ -63,11 +32,8 @@ icon: React.ComponentType<{ className?: string;
   reviews: number;
   color: string;
   popular?: boolean;
-<<<<<<< HEAD
   link: string;
-=======
-  link: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+}
 
 const services: Service[] = [
   {
@@ -76,7 +42,7 @@ const services: Service[] = [
     description: 'Advanced analytics with AI-powered insights and predictive modeling',
     icon: Brain,
     category: 'AI & Machine Learning',
-    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
+    features: ['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
     pricing: '$2,999/month',
     rating: 4.9,
     reviews: 156,
@@ -90,7 +56,7 @@ const services: Service[] = [
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: Rocket,
     category: 'Emerging Tech',
-    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
+    features: ['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
     pricing: '$5,000/month',
     rating: 4.8,
     reviews: 89,
@@ -99,239 +65,105 @@ const services: Service[] = [
   },
   {
     id: 'cybersecurity-platform',
-    title: 'AI-Powered Cybersecurity Platform',
-    description: 'Intelligent threat detection and response with zero-trust architecture',
+    title: 'Advanced Cybersecurity Platform',
+    description: 'Comprehensive security solutions with AI-powered threat detection',
     icon: Shield,
-    category: 'Cybersecurity',
-    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],
-    pricing: '$2,500/month',
+    category: 'Security',
+    features: ['Threat detection', 'Vulnerability assessment', 'Incident response', 'Compliance monitoring'],
+    pricing: '$3,500/month',
     rating: 4.9,
-    reviews: 234,
+    reviews: 203,
     color: 'from-red-500 to-orange-500',
     popular: true,
-    link: '/it-services/cybersecurity'
+    link: '/security/cybersecurity'
   },
   {
-    id: 'cloud-devops-automation',
-    title: 'Cloud & DevOps Automation',
-    description: 'Scalable cloud infrastructure with intelligent automation',
+    id: 'cloud-infrastructure',
+    title: 'Cloud Infrastructure Solutions',
+    description: 'Scalable cloud infrastructure with automated management',
     icon: Cloud,
-    category: 'Cloud & DevOps',
-    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],
-    pricing: '$1,500/month',
+    category: 'Infrastructure',
+    features: ['Auto-scaling', 'Load balancing', 'Monitoring', 'Backup & recovery'],
+    pricing: '$1,999/month',
     rating: 4.7,
-    reviews: 189,
-    color: 'from-green-500 to-emerald-500',
-    link: '/it-services/cloud-devops'
+    reviews: 178,
+    color: 'from-blue-500 to-indigo-500',
+    link: '/infrastructure/cloud'
   },
   {
-    id: 'blockchain-defi-platform',
-    title: 'Blockchain & DeFi Platform',
-    description: 'Decentralized finance solutions with advanced blockchain technology',
-    icon: Globe,
-    category: 'Blockchain & Web3',
-    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],
+    id: 'data-analytics',
+    title: 'Data Analytics & Visualization',
+    description: 'Transform raw data into actionable insights with interactive dashboards',
+    icon: TrendingUp,
+    category: 'Analytics',
+    features: ['Data processing', 'Interactive dashboards', 'Real-time insights', 'Custom reports'],
+    pricing: '$2,500/month',
+    rating: 4.8,
+    reviews: 134,
+    color: 'from-green-500 to-teal-500',
+    link: '/analytics/data-visualization'
+  },
+  {
+    id: 'api-integration',
+    title: 'API Integration Services',
+    description: 'Seamless integration solutions for modern applications',
+    icon: Code,
+    category: 'Development',
+    features: ['REST APIs', 'GraphQL', 'Authentication', 'Documentation'],
     pricing: '$1,800/month',
     rating: 4.6,
-    reviews: 123,
-    color: 'from-yellow-500 to-orange-500',
-    link: '/emerging-tech/blockchain-defi'
-  },
-  {
-    id: 'digital-transformation',
-    title: 'Digital Transformation Consulting',
-    description: 'End-to-end business transformation with cutting-edge technology',
-    icon: TrendingUp,
-    category: 'Digital Transformation',
-    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],
-    pricing: '$3,500/month',
-    rating: 4.8,
-    reviews: 167,
-    color: 'from-indigo-500 to-purple-500',
-    link: '/services/digital-transformation'
-  },
-  {
-    id: 'micro-saas-platform',
-    title: 'Micro SaaS Development Platform',
-    description: 'Rapid development and deployment of SaaS applications',
-    icon: Code,
-    category: 'Micro SAAS',
-    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],
-    pricing: '$899/month',
-    rating: 4.7,
     reviews: 98,
-    color: 'from-cyan-500 to-blue-500',
-    link: '/micro-saas/development-platform'
-  },
-  {
-    id: 'healthcare-ai',
-    title: 'Healthcare AI Solutions',
-    description: 'AI-powered diagnostic and patient care optimization',
-    icon: Users,
-    category: 'Healthcare AI',
-    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],
-    pricing: '$4,500/month',
-    rating: 4.9,
-    reviews: 78,
-    color: 'from-emerald-500 to-teal-500',
-    link: '/ai-services/healthcare'
-
+    color: 'from-purple-500 to-violet-500',
+    link: '/development/api-integration'
+  }
 ];
 
-const categories = [
-  'All Services',
-  'AI & Machine Learning',
-  'Emerging Tech',;
-  'Cybersecurity',;
-  'Cloud & DevOps',;
-  'Blockchain & Web3',;
-  'Digital Transformation',;
-  'Micro SAAS',;
-  'Healthcare AI';
-];
+const EnhancedServiceShowcase: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [hoveredService, setHoveredService] = useState<string | null>(null);
 
-<<<<<<< HEAD
-export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
+  const categories = ['all', 'AI & Machine Learning', 'Emerging Tech', 'Security', 'Infrastructure', 'Analytics', 'Development'];
 
-  useEffect(() => {
-<<<<<<< HEAD
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible(true);
-<<<<<<< HEAD
-
-=======
-        }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-      },
-      { threshold: 0.1 }
-    );
-
-    const element = document.getElementById('service-showcase');
-    if (element) {
-<<<<<<< HEAD
-      observer.observe(element);
-=======
-      observer.observe(element)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-    return () => observer.disconnect()}, []);
-
-  const filteredServices = selectedCategory === 'All Services'
-    ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service               => service.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-  const renderStars = (rating: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)                => {
-    return Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyany5 }, (_, i)                => (
-      <Star
-        key={i}
-        className={`w-4 h-4 ${
-          i < Math.floor(rating)
-            ? 'text-yellow-400 fill-current'
-            : 'text-gray-400'
-        }`};
-      />;
-    ))};
-=======
-          i < Math.floor(rating) ;
-            ? 'text-yellow-400 fill-current' ;
-            : 'text-gray-400';
-        }`};
-      />;
-    ));
-  };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
 
   return (
-    <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Header */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      {/* Header Section */}
+      <div className="container mx-auto px-4 py-16">
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-} : { opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
-
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
-              Services
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Comprehensive technology solutions designed to drive your business forward with
-            cutting-edge AI, cybersecurity, and innovative digital transformation services.
+        >
+          <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover cutting-edge technology solutions designed to transform your business and drive innovation
           </p>
         </motion.div>
 
         {/* Category Filter */}
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-} : { opacity: 0, y: 20 }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.2 
-
-
-
-
-
-
-}}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-
-          {categories.map((category, index) => (
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-4 mb-12"
+        >
+          {categories.map((category) => (
             <button
               key={category}
               onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                 selectedCategory === category
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-zion-slate-light text-gray-300 hover:bg-zion-cyan/10 hover:text-zion-cyan border border-zion-slate'
+                  ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
+                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
               }`}
-
-              {category}
+            >
+              {category === 'all' ? 'All Services' : category}
             </button>
           ))}
         </motion.div>
@@ -339,106 +171,90 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.4 
-
-
-
-
-
-
-}}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-
-          <AnimatePresence mode="wait">
+        >
+          <AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                  type: "spring",
-  stiffness: 100
-                
-
-
-
-
-
-
-}}
-                whileHover={{ y: -10 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
-                className="relative group"
-
-                <Link to={service.link}>
-                  <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
-                    {/* Popular Badge */}
-                    {service.popular && (
-                      <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-blue text-black px-4 py-1 rounded-full text-sm font-bold">
-                        Popular
-                      </div>
-                    )}
-
-                    {/* Service Icon */}
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="w-8 h-8 text-white" />
+                className="group relative"
+              >
+                <motion.div
+                  whileHover={{ y: -8 }}
+                  className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${service.color} p-8 h-full cursor-pointer transition-all duration-300 ${
+                    service.popular ? 'ring-2 ring-yellow-400 ring-offset-4 ring-offset-slate-900' : ''
+                  }`}
+                >
+                  {/* Popular Badge */}
+                  {service.popular && (
+                    <div className="absolute top-4 right-4 bg-yellow-400 text-slate-900 px-3 py-1 rounded-full text-sm font-bold">
+                      Most Popular
                     </div>
+                  )}
 
-                    {/* Service Info */}
-                    <div className="space-y-4">
-                      <h3 className="text-xl font-bold text-white group-hover:text-zion-cyan transition-colors duration-300">
-                        {service.title}
-                      </h3>
+                  {/* Service Icon */}
+                  <div className="mb-6">
+                    <service.icon className="w-12 h-12 text-white" />
+                  </div>
 
-                      <p className="text-gray-400 leading-relaxed">
-                        {service.description}
-                      </p>
+                  {/* Service Content */}
+                  <div className="mb-6">
+                    <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-100 text-sm leading-relaxed">{service.description}</p>
+                  </div>
 
-                      {/* Features */}
-                      <div className="space-y-2">
-                        {service.features.slice(0, 3).map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-zion-cyan mr-2 flex-shrink-0" />
-                            {feature}
-                          </div>
-                        ))}
-                        {service.features.length > 3 && (
-                          <div className="text-sm text-zion-cyan">
-                            +{service.features.length - 3} more features
-                          </div>
-                        )}
-                      </div>
+                  {/* Features */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-3">Key Features:</h4>
+                    <ul className="space-y-2">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-100">
+                          <CheckCircle className="w-4 h-4 text-green-300 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
-                      {/* Pricing & Rating */}
-                      <div className="flex items-center justify-between pt-4 border-t border-zion-slate">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-2xl font-bold text-zion-cyan">{service.pricing}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="flex items-center">
-                            {renderStars(service.rating)}
-                          </div>
-                          <span className="text-sm text-gray-400">({service.reviews})</span>
-                        </div>
-                      </div>
-
-                      {/* CTA Button */}
-                      <div className="flex items-center justify-between pt-4">
-                        <span className="text-sm text-zion-cyan font-semibold">
-                          Learn More
-                        </span>
-                        <ArrowRight className="w-5 h-5 text-zion-cyan group-hover:translate-x-1 transition-transform duration-300" />
-                      </div>
+                  {/* Pricing & Rating */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="text-2xl font-bold text-white">{service.pricing}</div>
+                    <div className="flex items-center">
+                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
+                      <span className="ml-1 text-white font-semibold">{service.rating}</span>
+                      <span className="ml-1 text-gray-300 text-sm">({service.reviews})</span>
                     </div>
                   </div>
-                </Link>
+
+                  {/* CTA Button */}
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="w-full"
+                  >
+                    <Link
+                      to={service.link}
+                      className="block w-full bg-white text-slate-900 py-3 px-6 rounded-xl font-semibold text-center hover:bg-gray-100 transition-colors duration-300"
+                    >
+                      Learn More
+                      <ArrowRight className="inline-block w-4 h-4 ml-2" />
+                    </Link>
+                  </motion.div>
+
+                  {/* Hover Overlay */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: hoveredService === service.id ? 1 : 0 }}
+                    className="absolute inset-0 bg-black bg-opacity-20 rounded-2xl"
+                  />
+                </motion.div>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -446,78 +262,35 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {;
 
         {/* CTA Section */}
         <motion.div
-          initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-          animate = {
-  isVisible ? { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-} : { opacity: 0, y: 20 }}
-          transition = {
-  { duration: 0.6,
-  delay: 0.6 
-
-
-
-
-
-
-}}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-16"
-
-          <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Let our expert team help you implement cutting-edge technology solutions
-              that drive real business results and competitive advantage.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
-
-                <Play className="w-5 h-5 mr-2" />
-                Get Started Today
-              </Link>
-              <Link
-                to="/enhanced-services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
-                View All Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-<<<<<<< HEAD
-            </div>
+        >
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our services can help transform your business and drive innovation
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Started Today
+            </Link>
+            <Link
+              to="/services"
+              className="border-2 border-cyan-500 text-cyan-400 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
+            >
+              View All Services
+            </Link>
           </div>
         </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </section>;
+      </div>
+    </div>
   );
-<<<<<<< HEAD
-};}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default EnhancedServiceShowcase;
