@@ -12,7 +12,9 @@ import {
   BarChart3,
   Cpu,
   Memory,
-  HardDrive
+  HardDrive,
+  Gauge,
+  Network
 } from 'lucide-react';
 
 interface PerformanceMetrics {
@@ -21,6 +23,13 @@ interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   networkLatency: number;
+  bundleSize: number;
+  networkRequests: number;
+  coreWebVitals: {
+    lcp: number;
+    fid: number;
+    cls: number;
+  };
 }
 
 interface PerformanceOptimizerProps {
@@ -39,17 +48,26 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     memoryUsage: 0,
     loadTime: 0,
     renderTime: 0,
-    networkLatency: 0
+    networkLatency: 0,
+    bundleSize: 0,
+    networkRequests: 0,
+    coreWebVitals: {
+      lcp: 0,
+      fid: 0,
+      cls: 0
+    }
   });
   
   const [isVisible, setIsVisible] = useState(showMetrics);
   const [optimizations, setOptimizations] = useState<string[]>([]);
   const [isOptimizing, setIsOptimizing] = useState(false);
 
-  // Performance monitoring
-  const measurePerformance = useCallback(() => {
+  // Enhanced performance monitoring
+  const measurePerformance = useCallback(async () => {
     if (!enabled) return;
 
+    const startTime = performance.now();
+    
     // Measure FPS
     let frameCount = 0;
     let lastTime = performance.now();
@@ -68,6 +86,80 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       requestAnimationFrame(measureFPS);
     };
 
+    // Measure Core Web Vitals
+    const measureLCP = () => {
+      return new Promise<number>((resolve) => {
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const lastEntry = entries[entries.length - 1];
+            resolve(lastEntry.startTime);
+          });
+          observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        } else {
+          resolve(0);
+        }
+      });
+    };
+
+    const measureFID = () => {
+      return new Promise<number>((resolve) => {
+        if ('PerformanceObserver' in window) {
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            const firstEntry = entries[0];
+            resolve(firstEntry.processingStart - firstEntry.startTime);
+          });
+          observer.observe({ entryTypes: ['first-input'] });
+        } else {
+          resolve(0);
+        }
+      });
+    };
+
+    const measureCLS = () => {
+      return new Promise<number>((resolve) => {
+        if ('PerformanceObserver' in window) {
+          let cls = 0;
+          const observer = new PerformanceObserver((list) => {
+            for (const entry of list.getEntries()) {
+              if (!entry.hadRecentInput) {
+                cls += (entry as any).value;
+              }
+            }
+            resolve(cls);
+          });
+          observer.observe({ entryTypes: ['layout-shift'] });
+        } else {
+          resolve(0);
+        }
+      });
+    };
+
+    try {
+      const [lcp, fid, cls] = await Promise.all([
+        measureLCP(),
+        measureFID(),
+        measureCLS()
+      ]);
+
+      const loadTime = performance.now() - startTime;
+      const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
+      const networkRequests = performance.getEntriesByType('resource').length;
+      const bundleSize = performance.getEntriesByType('navigation')[0]?.transferSize || 0;
+
+      setMetrics(prev => ({
+        ...prev,
+        loadTime,
+        bundleSize,
+        memoryUsage,
+        networkRequests,
+        coreWebVitals: { lcp, fid, cls }
+      }));
+    } catch (error) {
+      console.warn('Performance measurement failed:', error);
+    }
+
     // Measure memory usage (if available)
     if ('memory' in performance) {
       const memory = (performance as any).memory;
@@ -78,46 +170,105 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
 
     // Measure render time
-    const startTime = performance.now();
+    const renderStartTime = performance.now();
     requestAnimationFrame(() => {
-      const renderTime = performance.now() - startTime;
+      const renderTime = performance.now() - renderStartTime;
       setMetrics(prev => ({ ...prev, renderTime }));
     });
 
     requestAnimationFrame(measureFPS);
   }, [enabled]);
 
-  // Auto-optimization logic
+  // Enhanced auto-optimization logic
   const performOptimizations = useCallback(async () => {
     if (!autoOptimize || isOptimizing) return;
     
     setIsOptimizing(true);
     const newOptimizations: string[] = [];
 
-    // Check FPS and suggest optimizations
-    if (metrics.fps < 30) {
-      newOptimizations.push('Low FPS detected - Consider reducing animations');
-      // Reduce animation complexity
-      document.documentElement.style.setProperty('--animation-duration', '0.2s');
-    }
+    try {
+      // Check FPS and suggest optimizations
+      if (metrics.fps < 30) {
+        newOptimizations.push('Low FPS detected - Consider reducing animations');
+        // Reduce animation complexity
+        document.documentElement.style.setProperty('--animation-duration', '0.2s');
+      }
 
-    // Check memory usage
-    if (metrics.memoryUsage > 100) {
-      newOptimizations.push('High memory usage - Consider lazy loading');
-    }
+      // Check memory usage
+      if (metrics.memoryUsage > 100) {
+        newOptimizations.push('High memory usage - Consider lazy loading');
+      }
 
-    // Check render time
-    if (metrics.renderTime > 16) {
-      newOptimizations.push('Slow rendering - Optimizing component updates');
-    }
+      // Check render time
+      if (metrics.renderTime > 16) {
+        newOptimizations.push('Slow rendering - Optimizing component updates');
+      }
 
-    // Network optimization
-    if (metrics.networkLatency > 100) {
-      newOptimizations.push('High network latency - Enabling compression');
-    }
+      // Network optimization
+      if (metrics.networkLatency > 100) {
+        newOptimizations.push('High network latency - Enabling compression');
+      }
 
-    setOptimizations(newOptimizations);
-    setIsOptimizing(false);
+      // Preload critical resources
+      const criticalResources = [
+        '/fonts/orbitron-v19-latin-700.woff2',
+        '/fonts/rajdhani-v13-latin-500.woff2'
+      ];
+
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = 'font';
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+        newOptimizations.push(`Preloaded critical font: ${resource}`);
+      });
+
+      // Optimize images
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+          newOptimizations.push('Added lazy loading to images');
+        }
+        if (!img.decoding) {
+          img.decoding = 'async';
+          newOptimizations.push('Added async decoding to images');
+        }
+      });
+
+      // Optimize CSS
+      const styleSheets = Array.from(document.styleSheets);
+      styleSheets.forEach(sheet => {
+        if (sheet.href && !sheet.href.includes('critical')) {
+          const link = document.querySelector(`link[href="${sheet.href}"]`);
+          if (link) {
+            link.setAttribute('media', 'print');
+            link.setAttribute('onload', "this.media='all'");
+            newOptimizations.push('Optimized CSS loading');
+          }
+        }
+      });
+
+      // Service worker optimization
+      if ('serviceWorker' in navigator) {
+        try {
+          const registration = await navigator.serviceWorker.getRegistration();
+          if (registration) {
+            newOptimizations.push('Service worker active and optimized');
+          }
+        } catch (error) {
+          console.warn('Service worker optimization failed:', error);
+        }
+      }
+
+      setOptimizations(newOptimizations);
+    } catch (error) {
+      console.warn('Auto-optimization failed:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
   }, [metrics, autoOptimize, isOptimizing]);
 
   // Debounced optimization
@@ -138,8 +289,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     measurePerformance();
     debouncedOptimize();
 
+    // Continuous monitoring
+    const interval = setInterval(measurePerformance, 30000);
+
     // Cleanup
     return () => {
+      clearInterval(interval);
       // Reset any applied optimizations
       document.documentElement.style.removeProperty('--animation-duration');
     };
@@ -157,6 +312,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     
     if (metrics.renderTime > 16) score -= 20;
     else if (metrics.renderTime > 8) score -= 10;
+    
+    // Core Web Vitals scoring
+    if (metrics.coreWebVitals.lcp > 2500) score -= 15;
+    if (metrics.coreWebVitals.fid > 100) score -= 15;
+    if (metrics.coreWebVitals.cls > 0.1) score -= 10;
     
     return Math.max(0, score);
   }, [metrics]);
@@ -184,7 +344,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed top-20 right-4 z-40 bg-slate-900/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 shadow-2xl min-w-[280px]"
+            className="fixed top-20 right-4 z-40 bg-slate-900/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 shadow-2xl min-w-[320px] max-h-96 overflow-y-auto"
           >
             <div className="flex items-center justify-between mb-4">
               <h3 className="text-sm font-semibold text-white flex items-center gap-2">
@@ -210,7 +370,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               </div>
             </div>
 
-            {/* Metrics Grid */}
+            {/* Core Metrics Grid */}
             <div className="grid grid-cols-2 gap-3 mb-4">
               <div className="text-center p-2 bg-slate-800/30 rounded">
                 <div className="text-xs text-gray-400">FPS</div>
@@ -225,15 +385,40 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                 </div>
               </div>
               <div className="text-center p-2 bg-slate-800/30 rounded">
-                <div className="text-xs text-gray-400">Render</div>
-                <div className={`text-sm font-semibold ${metrics.renderTime > 16 ? 'text-red-400' : 'text-green-400'}`}>
-                  {metrics.renderTime.toFixed(1)}ms
+                <div className="text-xs text-gray-400">Load Time</div>
+                <div className={`text-sm font-semibold ${metrics.loadTime > 1000 ? 'text-red-400' : 'text-green-400'}`}>
+                  {metrics.loadTime.toFixed(0)}ms
                 </div>
               </div>
               <div className="text-center p-2 bg-slate-800/30 rounded">
-                <div className="text-xs text-gray-400">Network</div>
-                <div className={`text-sm font-semibold ${metrics.networkLatency > 100 ? 'text-red-400' : 'text-green-400'}`}>
-                  {metrics.networkLatency}ms
+                <div className="text-xs text-gray-400">Bundle</div>
+                <div className="text-sm font-semibold text-purple-400">
+                  {(metrics.bundleSize / 1024).toFixed(1)}KB
+                </div>
+              </div>
+            </div>
+
+            {/* Core Web Vitals */}
+            <div className="mb-4 bg-slate-800/50 p-3 rounded-lg">
+              <h4 className="text-xs font-medium text-gray-300 mb-2">Core Web Vitals</h4>
+              <div className="space-y-1">
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-400">LCP:</span>
+                  <span className={metrics.coreWebVitals.lcp < 2500 ? 'text-green-400' : 'text-red-400'}>
+                    {metrics.coreWebVitals.lcp.toFixed(0)}ms
+                  </span>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-400">FID:</span>
+                  <span className={metrics.coreWebVitals.fid < 100 ? 'text-green-400' : 'text-red-400'}>
+                    {metrics.coreWebVitals.fid.toFixed(0)}ms
+                  </span>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-gray-400">CLS:</span>
+                  <span className={metrics.coreWebVitals.cls < 0.1 ? 'text-green-400' : 'text-red-400'}>
+                    {metrics.coreWebVitals.cls.toFixed(3)}
+                  </span>
                 </div>
               </div>
             </div>

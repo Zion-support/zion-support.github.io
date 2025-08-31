@@ -1,715 +1,520 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'react';
-import {
-  Users, TrendingUp, MousePointer, Eye, Clock, Target,
-  BarChart3, PieChart, Activity, Zap, Lightbulb, CheckCircle,
-  AlertTriangle, Info, Settings, RefreshCw, Download, Share2,
-  Maximize2, Minimize2, X, Search, Filter, Calendar,
-  Smartphone, Monitor, Globe, Heart, Star, ThumbsUp
-} from 'lucide-react';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Users, TrendingUp, MousePointer, Eye, Zap, Settings, BarChart3, Target } from 'lucide-react';
+
+interface UXMetrics {
+  pageViews: number;
+  sessionDuration: number;
+  bounceRate: number;
+  conversionRate: number;
+  userSatisfaction: number;
+  performanceScore: number;
+  accessibilityScore: number;
+  mobileUsability: number;
+}
 
 interface UserBehavior {
-  id: string;
-  action: string;
-  timestamp: Date;
-  duration: number;
-  success: boolean;
-  userType: 'new' | 'returning' | 'power';
-  device: 'desktop' | 'mobile' | 'tablet';
-  location: string;
-  sessionId: string;
+  clicks: number;
+  scrollDepth: number;
+  timeOnPage: number;
+  interactions: number;
+  errors: number;
+  navigationPaths: string[];
 }
 
-interface UXMetric {
-  id: string;
-  name: string;
-  value: number;
-  target: number;
-  unit: string;
-  trend: 'up' | 'down' | 'stable';
-  change: number;
-  category: 'engagement' | 'performance' | 'conversion' | 'satisfaction';
-}
-
-interface OptimizationSuggestion {
-  id: string;
-  title: string;
+interface UXOptimization {
+  type: 'performance' | 'accessibility' | 'usability' | 'engagement';
   description: string;
   impact: 'high' | 'medium' | 'low';
-  effort: 'low' | 'medium' | 'high';
-  category: 'ui' | 'ux' | 'performance' | 'accessibility';
-  priority: number;
-  estimatedImprovement: number;
-  implementation: string;
+  implemented: boolean;
 }
 
 interface UserExperienceOptimizerProps {
   enabled?: boolean;
-  showRealTime?: boolean;
-  autoAnalyze?: boolean;
-  onOptimizationComplete?: (suggestions: OptimizationSuggestion[]) => void;
+  showMetrics?: boolean;
+  autoOptimize?: boolean;
+  trackUserBehavior?: boolean;
 }
 
-export function UserExperienceOptimizer({
+export const UserExperienceOptimizer: React.FC<UserExperienceOptimizerProps> = ({
   enabled = true,
-  showRealTime = true,
-  autoAnalyze = true,
-  onOptimizationComplete
-}: UserExperienceOptimizerProps) {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isFullscreen, setIsFullscreen] = useState(false);
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisComplete, setAnalysisComplete] = useState(false);
-  const [userBehaviors, setUserBehaviors] = useState<UserBehavior[]>([]);
-  const [uxMetrics, setUxMetrics] = useState<UXMetric[]>([]);
-  const [optimizationSuggestions, setOptimizationSuggestions] = useState<OptimizationSuggestion[]>([]);
-  const [selectedView, setSelectedView] = useState<'metrics' | 'behaviors' | 'suggestions'>('metrics');
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'1h' | '24h' | '7d' | '30d'>('24h');
-  const [showAdvanced, setShowAdvanced] = useState(false);
-  const [overallScore, setOverallScore] = useState(0);
-  const [targetScore, setTargetScore] = useState(90);
+  showMetrics = false,
+  autoOptimize = true,
+  trackUserBehavior = true
+}) => {
+  const [uxMetrics, setUxMetrics] = useState<UXMetrics>({
+    pageViews: 0,
+    sessionDuration: 0,
+    bounceRate: 0,
+    conversionRate: 0,
+    userSatisfaction: 0,
+    performanceScore: 0,
+    accessibilityScore: 0,
+    mobileUsability: 0
+  });
+  const [userBehavior, setUserBehavior] = useState<UserBehavior>({
+    clicks: 0,
+    scrollDepth: 0,
+    timeOnPage: 0,
+    interactions: 0,
+    errors: 0,
+    navigationPaths: []
+  });
+  const [optimizations, setOptimizations] = useState<UXOptimization[]>([]);
+  const [showPanel, setShowPanel] = useState(false);
+  const [isOptimizing, setIsOptimizing] = useState(false);
+  const [currentPage, setCurrentPage] = useState(window.location.pathname);
+  
+  const sessionStartTime = useRef(Date.now());
+  const lastActivityTime = useRef(Date.now());
+  const scrollDepthRef = useRef(0);
+  const clickCountRef = useRef(0);
+  const errorCountRef = useRef(0);
 
-  const analysisIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  // Track user behavior
+  const trackBehavior = useCallback(() => {
+    if (!trackUserBehavior || !enabled) return;
 
-  // Generate sample user behaviors
-  const generateUserBehaviors = useCallback(() => {
-    const actions = ['Page View', 'Button Click', 'Form Submit', 'Navigation', 'Search', 'Purchase'];
-    const userTypes = ['new', 'returning', 'power'];
-    const devices = ['desktop', 'mobile', 'tablet'];
-    const locations = ['US', 'UK', 'CA', 'AU', 'DE', 'FR'];
-    
-    const newBehaviors: UserBehavior[] = Array.from({ length: 50 }, (_, index) => ({
-      id: `behavior-${index}`,
-      action: actions[Math.floor(Math.random() * actions.length)],
-      timestamp: new Date(Date.now() - Math.random() * 86400000),
-      duration: Math.floor(Math.random() * 300) + 1,
-      success: Math.random() > 0.2,
-      userType: userTypes[Math.floor(Math.random() * userTypes.length)] as any,
-      device: devices[Math.floor(Math.random() * devices.length)] as any,
-      location: locations[Math.floor(Math.random() * locations.length)],
-      sessionId: `session-${Math.floor(Math.random() * 1000)}`
-    }));
-    
-    setUserBehaviors(newBehaviors);
-  }, []);
+    // Track clicks
+    const handleClick = () => {
+      clickCountRef.current++;
+      lastActivityTime.current = Date.now();
+      setUserBehavior(prev => ({ ...prev, clicks: clickCountRef.current }));
+    };
 
-  // Generate UX metrics
-  const generateUXMetrics = useCallback(() => {
-    const metrics: UXMetric[] = [
-      {
-        id: 'engagement',
-        name: 'User Engagement Rate',
-        value: Math.floor(Math.random() * 30) + 60,
-        target: 80,
-        unit: '%',
-        trend: 'up',
-        change: Math.floor(Math.random() * 15) + 5,
-        category: 'engagement'
-      },
-      {
-        id: 'bounce',
-        name: 'Bounce Rate',
-        value: Math.floor(Math.random() * 20) + 20,
-        target: 25,
-        unit: '%',
-        trend: 'down',
-        change: Math.floor(Math.random() * 10) + 2,
-        category: 'engagement'
-      },
-      {
-        id: 'conversion',
-        name: 'Conversion Rate',
-        value: Math.floor(Math.random() * 5) + 2,
-        target: 5,
-        unit: '%',
-        trend: 'up',
-        change: Math.floor(Math.random() * 2) + 1,
-        category: 'conversion'
-      },
-      {
-        id: 'satisfaction',
-        name: 'User Satisfaction',
-        value: Math.floor(Math.random() * 20) + 70,
-        target: 85,
-        unit: '/100',
-        trend: 'up',
-        change: Math.floor(Math.random() * 10) + 2,
-        category: 'satisfaction'
-      },
-      {
-        id: 'loadTime',
-        name: 'Page Load Time',
-        value: Math.floor(Math.random() * 2) + 1,
-        target: 2,
-        unit: 's',
-        trend: 'down',
-        change: Math.floor(Math.random() * 0.5) + 0.1,
-        category: 'performance'
-      },
-      {
-        id: 'sessionDuration',
-        name: 'Session Duration',
-        value: Math.floor(Math.random() * 3) + 2,
-        target: 5,
-        unit: 'min',
-        trend: 'up',
-        change: Math.floor(Math.random() * 1) + 0.2,
-        category: 'engagement'
+    // Track scroll depth
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollPercent = (scrollTop / docHeight) * 100;
+      scrollDepthRef.current = Math.max(scrollDepthRef.current, scrollPercent);
+      lastActivityTime.current = Date.now();
+      setUserBehavior(prev => ({ ...prev, scrollDepth: scrollDepthRef.current }));
+    };
+
+    // Track errors
+    const handleError = () => {
+      errorCountRef.current++;
+      setUserBehavior(prev => ({ ...prev, errors: errorCountRef.current }));
+    };
+
+    // Track navigation
+    const handleNavigation = () => {
+      const newPath = window.location.pathname;
+      if (newPath !== currentPage) {
+        setCurrentPage(newPath);
+        setUserBehavior(prev => ({
+          ...prev,
+          navigationPaths: [...prev.navigationPaths, newPath]
+        }));
       }
-    ];
-    
-    setUxMetrics(metrics);
-  }, []);
+    };
 
-  // Generate optimization suggestions
-  const generateOptimizationSuggestions = useCallback(() => {
-    const suggestions: OptimizationSuggestion[] = [
-      {
-        id: 'ui-1',
-        title: 'Improve Button Contrast',
-        description: 'Increase button contrast for better visibility and accessibility',
+    // Add event listeners
+    document.addEventListener('click', handleClick);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('error', handleError);
+    window.addEventListener('popstate', handleNavigation);
+
+    // Track time on page
+    const timeInterval = setInterval(() => {
+      const timeOnPage = Date.now() - sessionStartTime.current;
+      setUserBehavior(prev => ({ ...prev, timeOnPage }));
+    }, 1000);
+
+    return () => {
+      document.removeEventListener('click', handleClick);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('error', handleError);
+      window.removeEventListener('popstate', handleNavigation);
+      clearInterval(timeInterval);
+    };
+  }, [trackUserBehavior, enabled, currentPage]);
+
+  // Calculate UX metrics
+  const calculateUXMetrics = useCallback(() => {
+    if (!enabled) return;
+
+    // Calculate session duration
+    const sessionDuration = (Date.now() - sessionStartTime.current) / 1000;
+    
+    // Calculate bounce rate (simplified - would be more complex in real implementation)
+    const bounceRate = userBehavior.timeOnPage < 10 ? 100 : 
+                      userBehavior.timeOnPage < 30 ? 70 : 
+                      userBehavior.timeOnPage < 60 ? 40 : 20;
+    
+    // Calculate conversion rate (simplified)
+    const conversionRate = userBehavior.interactions > 5 ? 80 : 
+                          userBehavior.interactions > 3 ? 60 : 
+                          userBehavior.interactions > 1 ? 40 : 20;
+    
+    // Calculate user satisfaction based on behavior
+    const userSatisfaction = Math.min(100, Math.max(0, 
+      100 - (userBehavior.errors * 10) + (userBehavior.interactions * 5) + (userBehavior.scrollDepth / 2)
+    ));
+    
+    // Calculate performance score (would integrate with actual performance metrics)
+    const performanceScore = Math.min(100, Math.max(0, 
+      100 - (userBehavior.errors * 15) + (userBehavior.interactions * 3)
+    ));
+    
+    // Calculate accessibility score
+    const accessibilityScore = Math.min(100, Math.max(0, 
+      100 - (userBehavior.errors * 20) + (userBehavior.interactions * 2)
+    ));
+    
+    // Calculate mobile usability
+    const isMobile = window.innerWidth <= 768;
+    const mobileUsability = isMobile ? 
+      Math.min(100, Math.max(0, 100 - (userBehavior.errors * 25) + (userBehavior.interactions * 4))) :
+      100;
+
+    setUxMetrics({
+      pageViews: userBehavior.navigationPaths.length + 1,
+      sessionDuration,
+      bounceRate,
+      conversionRate,
+      userSatisfaction,
+      performanceScore,
+      accessibilityScore,
+      mobileUsability
+    });
+  }, [enabled, userBehavior]);
+
+  // Generate UX optimizations
+  const generateOptimizations = useCallback(() => {
+    if (!enabled) return;
+
+    const newOptimizations: UXOptimization[] = [];
+
+    // Performance optimizations
+    if (uxMetrics.performanceScore < 80) {
+      newOptimizations.push({
+        type: 'performance',
+        description: 'Implement lazy loading for images and components',
         impact: 'high',
-        effort: 'low',
-        category: 'ui',
-        priority: 1,
-        estimatedImprovement: 15,
-        implementation: 'Update CSS variables for button colors and ensure WCAG AA compliance'
-      },
-      {
-        id: 'ux-1',
-        title: 'Add Progress Indicators',
-        description: 'Implement progress bars for multi-step processes',
-        impact: 'medium',
-        effort: 'medium',
-        category: 'ux',
-        priority: 2,
-        estimatedImprovement: 12,
-        implementation: 'Create reusable progress component and integrate with form flows'
-      },
-      {
-        id: 'perf-1',
-        title: 'Optimize Image Loading',
-        description: 'Implement lazy loading and WebP format for images',
-        impact: 'high',
-        effort: 'medium',
-        category: 'performance',
-        priority: 1,
-        estimatedImprovement: 20,
-        implementation: 'Add lazy loading attributes and convert images to WebP format'
-      },
-      {
-        id: 'acc-1',
-        title: 'Enhance Screen Reader Support',
-        description: 'Add ARIA labels and improve semantic HTML structure',
-        impact: 'medium',
-        effort: 'low',
-        category: 'accessibility',
-        priority: 3,
-        estimatedImprovement: 10,
-        implementation: 'Audit all interactive elements and add appropriate ARIA attributes'
-      }
-    ];
-    
-    setOptimizationSuggestions(suggestions);
-  }, []);
-
-  // Start UX analysis
-  const startUXAnalysis = useCallback(() => {
-    setIsAnalyzing(true);
-    setAnalysisComplete(false);
-    
-    // Simulate analysis process
-    setTimeout(() => {
-      generateUserBehaviors();
-      generateUXMetrics();
-      generateOptimizationSuggestions();
-      setIsAnalyzing(false);
-      setAnalysisComplete(true);
-      
-      // Calculate overall UX score
-      const avgMetrics = uxMetrics.reduce((sum, metric) => {
-        const normalizedValue = metric.trend === 'up' ? 
-          Math.min(100, metric.value + metric.change) : 
-          Math.max(0, metric.value - metric.change);
-        return sum + (normalizedValue / metric.target) * 100;
-      }, 0) / uxMetrics.length;
-      
-      setOverallScore(Math.round(avgMetrics));
-      
-      if (onOptimizationComplete) {
-        onOptimizationComplete(optimizationSuggestions);
-      }
-    }, 2500);
-  }, [generateUserBehaviors, generateUXMetrics, generateOptimizationSuggestions, uxMetrics, optimizationSuggestions, onOptimizationComplete]);
-
-  // Auto-analyze when component opens
-  useEffect(() => {
-    if (autoAnalyze && isOpen && !analysisComplete) {
-      startUXAnalysis();
+        implemented: false
+      });
     }
-  }, [autoAnalyze, isOpen, analysisComplete, startUXAnalysis]);
 
-  // Setup real-time updates
+    if (userBehavior.errors > 2) {
+      newOptimizations.push({
+        type: 'usability',
+        description: 'Add error boundaries and better error handling',
+        impact: 'high',
+        implemented: false
+      });
+    }
+
+    if (userBehavior.scrollDepth < 50) {
+      newOptimizations.push({
+        type: 'engagement',
+        description: 'Improve content layout and add engaging elements',
+        impact: 'medium',
+        implemented: false
+      });
+    }
+
+    if (uxMetrics.accessibilityScore < 85) {
+      newOptimizations.push({
+        type: 'accessibility',
+        description: 'Enhance keyboard navigation and screen reader support',
+        impact: 'medium',
+        implemented: false
+      });
+    }
+
+    if (uxMetrics.mobileUsability < 90) {
+      newOptimizations.push({
+        type: 'usability',
+        description: 'Optimize mobile layout and touch interactions',
+        impact: 'high',
+        implemented: false
+      });
+    }
+
+    setOptimizations(newOptimizations);
+  }, [enabled, uxMetrics, userBehavior]);
+
+  // Apply UX optimizations
+  const applyOptimizations = useCallback(async () => {
+    if (!autoOptimize || !enabled) return;
+
+    setIsOptimizing(true);
+    const appliedOptimizations: UXOptimization[] = [];
+
+    try {
+      // Apply performance optimizations
+      const performanceOpts = optimizations.filter(opt => opt.type === 'performance');
+      for (const opt of performanceOpts) {
+        if (opt.description.includes('lazy loading')) {
+          // Implement lazy loading
+          const images = document.querySelectorAll('img[data-src]');
+          images.forEach(img => {
+            const dataSrc = img.getAttribute('data-src');
+            if (dataSrc) {
+              img.src = dataSrc;
+              img.removeAttribute('data-src');
+            }
+          });
+          appliedOptimizations.push({ ...opt, implemented: true });
+        }
+      }
+
+      // Apply usability optimizations
+      const usabilityOpts = optimizations.filter(opt => opt.type === 'usability');
+      for (const opt of usabilityOpts) {
+        if (opt.description.includes('error handling')) {
+          // Add error boundaries
+          const errorBoundary = document.createElement('div');
+          errorBoundary.className = 'error-boundary';
+          errorBoundary.innerHTML = '<div class="error-fallback">Something went wrong. Please try again.</div>';
+          document.body.appendChild(errorBoundary);
+          appliedOptimizations.push({ ...opt, implemented: true });
+        }
+      }
+
+      // Apply accessibility optimizations
+      const accessibilityOpts = optimizations.filter(opt => opt.type === 'accessibility');
+      for (const opt of accessibilityOpts) {
+        if (opt.description.includes('keyboard navigation')) {
+          // Enhance keyboard navigation
+          const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+          focusableElements.forEach((el, index) => {
+            (el as HTMLElement).tabIndex = index + 1;
+          });
+          appliedOptimizations.push({ ...opt, implemented: true });
+        }
+      }
+
+      // Apply engagement optimizations
+      const engagementOpts = optimizations.filter(opt => opt.type === 'engagement');
+      for (const opt of engagementOpts) {
+        if (opt.description.includes('engaging elements')) {
+          // Add engaging elements
+          const engagingElement = document.createElement('div');
+          engagingElement.className = 'engaging-element';
+          engagingElement.innerHTML = '<div class="pulse-animation">✨ Interactive Element</div>';
+          document.body.appendChild(engagingElement);
+          appliedOptimizations.push({ ...opt, implemented: true });
+        }
+      }
+
+      // Update optimizations list
+      setOptimizations(prev => prev.map(opt => {
+        const applied = appliedOptimizations.find(ao => ao.description === opt.description);
+        return applied || opt;
+      }));
+
+      console.log('UX optimizations applied successfully');
+    } catch (error) {
+      console.warn('Failed to apply UX optimizations:', error);
+    } finally {
+      setIsOptimizing(false);
+    }
+  }, [autoOptimize, enabled, optimizations]);
+
+  // Monitor and update metrics
   useEffect(() => {
-    if (showRealTime && isOpen && analysisComplete) {
-      analysisIntervalRef.current = setInterval(() => {
-        generateUserBehaviors();
-        generateUXMetrics();
-      }, 45000); // Update every 45 seconds
+    if (enabled) {
+      const cleanup = trackBehavior();
+      
+      // Update metrics every 5 seconds
+      const metricsInterval = setInterval(calculateUXMetrics, 5000);
+      
+      // Generate optimizations when metrics change
+      const optimizationInterval = setInterval(generateOptimizations, 10000);
       
       return () => {
-        if (analysisIntervalRef.current) {
-          clearInterval(analysisIntervalRef.current);
-        }
+        cleanup?.();
+        clearInterval(metricsInterval);
+        clearInterval(optimizationInterval);
       };
     }
-  }, [showRealTime, isOpen, analysisComplete, generateUserBehaviors, generateUXMetrics]);
+  }, [enabled, trackBehavior, calculateUXMetrics, generateOptimizations]);
 
-  // Get trend display
-  const getTrendDisplay = (trend: string, change: number) => {
-    const colors = {
-      up: 'text-green-600',
-      down: 'text-red-600',
-      stable: 'text-gray-600'
-    };
-    
-    const icons = {
-      up: <TrendingUp className="w-4 h-4" />,
-      down: <TrendingDown className="w-4 h-4" />,
-      stable: <Activity className="w-4 h-4" />
-    };
-    
-    return (
-      <div className={`flex items-center space-x-1 ${colors[trend as keyof typeof colors]}`}>
-        {icons[trend as keyof typeof icons]}
-        <span className="text-sm font-medium">+{change.toFixed(1)}</span>
-      </div>
-    );
-  };
-
-  // Get impact color
-  const getImpactColor = (impact: string) => {
-    const colors = {
-      high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
-      medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'
-    };
-    return colors[impact as keyof typeof colors] || colors.low;
-  };
-
-  // Get effort color
-  const getEffortColor = (effort: string) => {
-    const colors = {
-      high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
-      medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
-      low: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400'
-    };
-    return colors[effort as keyof typeof colors] || colors.low;
-  };
-
-  // Filter behaviors by timeframe
-  const getFilteredBehaviors = () => {
-    const now = Date.now();
-    const timeframes = {
-      '1h': 3600000,
-      '24h': 86400000,
-      '7d': 604800000,
-      '30d': 2592000000
-    };
-    
-    return userBehaviors.filter(behavior => 
-      now - behavior.timestamp.getTime() <= timeframes[selectedTimeframe]
-    );
-  };
+  // Auto-apply optimizations
+  useEffect(() => {
+    if (autoOptimize && enabled && optimizations.length > 0) {
+      const timer = setTimeout(applyOptimizations, 15000); // Apply after 15 seconds
+      return () => clearTimeout(timer);
+    }
+  }, [autoOptimize, enabled, optimizations, applyOptimizations]);
 
   if (!enabled) return null;
 
   return (
     <>
-      {/* Floating UX Optimizer Button */}
+      {/* UX Optimizer Toggle */}
       <motion.button
-        onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-72 z-50 bg-gradient-to-r from-green-600 to-teal-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        className="fixed bottom-36 right-4 z-50 bg-gradient-to-r from-purple-500 to-pink-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        onClick={() => setShowPanel(!showPanel)}
         whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="UX Optimizer"
       >
         <Users className="w-6 h-6" />
-        <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
       </motion.button>
 
-      {/* UX Optimizer Modal */}
+      {/* UX Panel */}
       <AnimatePresence>
-        {isOpen && (
+        {showPanel && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 100, scale: 0.8 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 100, scale: 0.8 }}
+            className="fixed bottom-44 right-4 z-40 bg-slate-900/95 backdrop-blur-lg border border-purple-500/30 rounded-2xl p-6 w-80 max-h-96 overflow-y-auto"
           >
-            <motion.div
-              className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl overflow-hidden ${
-                isFullscreen ? 'w-full h-full' : 'w-full max-w-7xl max-h-[90vh]'
-              }`}
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            >
-              {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20">
-                <div className="flex items-center space-x-3">
-                  <Users className="w-8 h-8 text-green-600" />
-                  <div>
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-                      User Experience Optimizer
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Real-time UX metrics and optimization recommendations
-                    </p>
-                  </div>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-white flex items-center gap-2">
+                <Users className="w-5 h-5 text-purple-400" />
+                UX Optimizer
+              </h3>
+              <button
+                onClick={() => setShowPanel(false)}
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                ×
+              </button>
+            </div>
+
+            {/* UX Score */}
+            <div className="bg-slate-800/50 p-4 rounded-lg mb-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-sm text-gray-300">Overall UX Score</span>
+                <span className={`text-lg font-bold ${
+                  uxMetrics.userSatisfaction >= 90 ? 'text-green-400' :
+                  uxMetrics.userSatisfaction >= 70 ? 'text-yellow-400' : 'text-red-400'
+                }`}>
+                  {Math.round(uxMetrics.userSatisfaction)}/100
+                </span>
+              </div>
+              <div className="w-full bg-slate-700 rounded-full h-2">
+                <div
+                  className={`h-2 rounded-full transition-all duration-500 ${
+                    uxMetrics.userSatisfaction >= 90 ? 'bg-green-500' :
+                    uxMetrics.userSatisfaction >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                  }`}
+                  style={{ width: `${uxMetrics.userSatisfaction}%` }}
+                />
+              </div>
+            </div>
+
+            {/* Key Metrics */}
+            <div className="grid grid-cols-2 gap-3 mb-4">
+              <div className="bg-slate-800/50 p-3 rounded-lg">
+                <div className="flex items-center gap-2 text-sm text-gray-300 mb-1">
+                  <Eye className="w-4 h-4" />
+                  Page Views
                 </div>
-                
-                <div className="flex items-center space-x-2">
-                  <button
-                    onClick={startUXAnalysis}
-                    disabled={isAnalyzing}
-                    className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
-                  >
-                    <RefreshCw className={`w-5 h-5 ${isAnalyzing ? 'animate-spin' : ''}`} />
-                  </button>
-                  
-                  <button
-                    onClick={() => setIsFullscreen(!isFullscreen)}
-                    className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
-                  >
-                    {isFullscreen ? <Minimize2 className="w-5 h-5" /> : <Maximize2 className="w-5 h-5" />}
-                  </button>
-                  
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
+                <div className="text-lg font-semibold text-blue-400">
+                  {uxMetrics.pageViews}
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-6 overflow-y-auto max-h-[calc(90vh-200px)]">
-                {isAnalyzing ? (
-                  <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-green-600 mx-auto mb-4"></div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                      Analyzing user experience...
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      Gathering metrics and generating optimization suggestions
-                    </p>
-                  </div>
-                ) : analysisComplete ? (
-                  <div className="space-y-6">
-                    {/* Overall UX Score */}
-                    <div className="bg-gradient-to-r from-green-50 to-teal-50 dark:from-green-900/20 dark:to-teal-900/20 rounded-xl p-6 border border-green-200 dark:border-green-700">
-                      <div className="flex items-center justify-between mb-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Overall UX Score
-                        </h3>
-                        <Users className="w-6 h-6 text-green-600" />
-                      </div>
-                      
-                      <div className="flex items-center space-x-6">
-                        <div className="text-center">
-                          <div className={`text-4xl font-bold mb-2 ${
-                            overallScore >= 85 ? 'text-green-600' :
-                            overallScore >= 70 ? 'text-yellow-600' :
-                            'text-red-600'
-                          }`}>
-                            {overallScore}/100
-                          </div>
-                          <div className="text-sm text-gray-600 dark:text-gray-400">
-                            UX Score
-                          </div>
-                        </div>
-                        
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-400 mb-2">
-                            <span>Target: {targetScore}/100</span>
-                            <span>{Math.round((overallScore / targetScore) * 100)}%</span>
-                          </div>
-                          <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3">
-                            <div 
-                              className={`h-3 rounded-full transition-all duration-500 ${
-                                overallScore >= 85 ? 'bg-green-500' :
-                                overallScore >= 70 ? 'bg-yellow-500' :
-                                'bg-red-500'
-                              }`}
-                              style={{ width: `${Math.min((overallScore / targetScore) * 100, 100)}%` }}
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Navigation Tabs */}
-                    <div className="flex space-x-1 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
-                      {[
-                        { key: 'metrics', label: 'UX Metrics', icon: BarChart3, count: uxMetrics.length },
-                        { key: 'behaviors', label: 'User Behaviors', icon: MousePointer, count: getFilteredBehaviors().length },
-                        { key: 'suggestions', label: 'Optimizations', icon: Lightbulb, count: optimizationSuggestions.length }
-                      ].map(({ key, label, icon: Icon, count }) => (
-                        <button
-                          key={key}
-                          onClick={() => setSelectedView(key as any)}
-                          className={`flex items-center space-x-2 px-4 py-2 rounded-md transition-colors ${
-                            selectedView === key
-                              ? 'bg-white dark:bg-gray-700 text-green-600 dark:text-green-400 shadow-sm'
-                              : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                          }`}
-                        >
-                          <Icon className="w-4 h-4" />
-                          <span>{label}</span>
-                          <span className="bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-full text-xs">
-                            {count}
-                          </span>
-                        </button>
-                      ))}
-                    </div>
-
-                    {/* UX Metrics View */}
-                    {selectedView === 'metrics' && (
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            Key UX Metrics
-                          </h3>
-                          <div className="flex items-center space-x-2">
-                            <select
-                              value={selectedTimeframe}
-                              onChange={(e) => setSelectedTimeframe(e.target.value as any)}
-                              className="px-3 py-1 text-sm border border-gray-300 dark:border-gray-600 rounded-md bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                            >
-                              <option value="1h">Last Hour</option>
-                              <option value="24h">Last 24 Hours</option>
-                              <option value="7d">Last 7 Days</option>
-                              <option value="30d">Last 30 Days</option>
-                            </select>
-                          </div>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                          {uxMetrics.map((metric, index) => (
-                            <motion.div
-                              key={metric.id}
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >
-                              <div className="flex items-center justify-between mb-3">
-                                <h4 className="font-medium text-gray-900 dark:text-white">
-                                  {metric.name}
-                                </h4>
-                                {getTrendDisplay(metric.trend, metric.change)}
-                              </div>
-                              
-                              <div className="text-center mb-3">
-                                <div className="text-2xl font-bold text-gray-900 dark:text-white">
-                                  {metric.value}{metric.unit}
-                                </div>
-                                <div className="text-sm text-gray-500 dark:text-gray-400">
-                                  Target: {metric.target}{metric.unit}
-                                </div>
-                              </div>
-                              
-                              <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                <div 
-                                  className={`h-2 rounded-full transition-all duration-300 ${
-                                    metric.value >= metric.target ? 'bg-green-500' :
-                                    metric.value >= metric.target * 0.8 ? 'bg-yellow-500' :
-                                    'bg-red-500'
-                                  }`}
-                                  style={{ width: `${Math.min((metric.value / metric.target) * 100, 100)}%` }}
-                                ></div>
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* User Behaviors View */}
-                    {selectedView === 'behaviors' && (
-                      <div className="space-y-4">
-                        <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                            User Behavior Analysis
-                          </h3>
-                          <button
-                            onClick={() => setShowAdvanced(!showAdvanced)}
-                            className="px-3 py-1 text-sm bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors"
-                          >
-                            {showAdvanced ? 'Hide' : 'Show'} Advanced
-                          </button>
-                        </div>
-                        
-                        <div className="grid gap-4">
-                          {getFilteredBehaviors().slice(0, 20).map((behavior, index) => (
-                            <motion.div
-                              key={behavior.id}
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.05 }}
-                            >
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center space-x-4">
-                                  <div className={`p-2 rounded-lg ${
-                                    behavior.success ? 'bg-green-100 dark:bg-green-900/30' : 'bg-red-100 dark:bg-red-900/30'
-                                  }`}>
-                                    {behavior.success ? 
-                                      <CheckCircle className="w-4 h-4 text-green-600" /> :
-                                      <AlertTriangle className="w-4 h-4 text-red-600" />
-                                    }
-                                  </div>
-                                  
-                                  <div>
-                                    <h4 className="font-medium text-gray-900 dark:text-white">
-                                      {behavior.action}
-                                    </h4>
-                                    <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400">
-                                      <span>Duration: {behavior.duration}s</span>
-                                      <span>Type: {behavior.userType}</span>
-                                      <span>Device: {behavior.device}</span>
-                                      <span>Location: {behavior.location}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                                
-                                <div className="text-right text-sm text-gray-500 dark:text-gray-400">
-                                  <div>{behavior.timestamp.toLocaleTimeString()}</div>
-                                  <div>{behavior.timestamp.toLocaleDateString()}</div>
-                                </div>
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Optimization Suggestions View */}
-                    {selectedView === 'suggestions' && (
-                      <div className="space-y-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                          Optimization Suggestions
-                        </h3>
-                        
-                        <div className="grid gap-4">
-                          {optimizationSuggestions
-                            .sort((a, b) => a.priority - b.priority)
-                            .map((suggestion, index) => (
-                            <motion.div
-                              key={suggestion.id}
-                              className="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300"
-                              whileHover={{ y: -2 }}
-                              initial={{ opacity: 0, y: 20 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >
-                              <div className="flex items-start justify-between">
-                                <div className="flex-1">
-                                  <div className="flex items-center space-x-3 mb-2">
-                                    <div className={`px-2 py-1 rounded-full text-xs font-medium ${getImpactColor(suggestion.impact)}`}>
-                                      {suggestion.impact} impact
-                                    </div>
-                                    <div className={`px-2 py-1 rounded-full text-xs font-medium ${getEffortColor(suggestion.effort)}`}>
-                                      {suggestion.effort} effort
-                                    </div>
-                                    <div className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400">
-                                      Priority {suggestion.priority}
-                                    </div>
-                                  </div>
-                                  
-                                  <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                                    {suggestion.title}
-                                  </h4>
-                                  
-                                  <p className="text-gray-600 dark:text-gray-400 mb-3">
-                                    {suggestion.description}
-                                  </p>
-                                  
-                                  <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-3">
-                                    <span>Estimated Improvement: +{suggestion.estimatedImprovement}%</span>
-                                    <span>Category: {suggestion.category}</span>
-                                  </div>
-                                  
-                                  {showAdvanced && (
-                                    <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
-                                      <h5 className="font-medium text-gray-900 dark:text-white mb-2">Implementation:</h5>
-                                      <p className="text-sm text-gray-600 dark:text-gray-400">{suggestion.implementation}</p>
-                                    </div>
-                                  )}
-                                </div>
-                                
-                                <div className="flex items-center space-x-2">
-                                  <button className="p-2 text-gray-600 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors">
-                                    <CheckCircle className="w-4 h-4" />
-                                  </button>
-                                  <button className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors">
-                                    <Info className="w-4 h-4" />
-                                  </button>
-                                </div>
-                              </div>
-                            </motion.div>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Action Buttons */}
-                    <div className="flex items-center justify-center space-x-4 pt-6">
-                      <button className="flex items-center space-x-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors">
-                        <Download className="w-4 h-4" />
-                        <span>Export Report</span>
-                      </button>
-                      
-                      <button className="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
-                        <Lightbulb className="w-4 h-4" />
-                        <span>Apply All Suggestions</span>
-                      </button>
-                      
-                      <button className="flex items-center space-x-2 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
-                        <Share2 className="w-4 h-4" />
-                        <span>Share Report</span>
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <Users className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                      Ready to optimize user experience?
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-6">
-                      Click the analyze button to start UX optimization
-                    </p>
-                    <button
-                      onClick={startUXAnalysis}
-                      className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                    >
-                      Start UX Analysis
-                    </button>
-                  </div>
-                )}
+              
+              <div className="bg-slate-800/50 p-3 rounded-lg">
+                <div className="flex items-center gap-2 text-sm text-gray-300 mb-1">
+                  <MousePointer className="w-4 h-4" />
+                  Clicks
+                </div>
+                <div className="text-lg font-semibold text-purple-400">
+                  {userBehavior.clicks}
+                </div>
               </div>
-            </motion.div>
+            </div>
+
+            {/* Detailed Metrics */}
+            <div className="space-y-2 mb-4">
+              <div className="flex justify-between text-sm">
+                <span className="text-gray-400">Session Duration:</span>
+                <span className="text-white">{Math.round(uxMetrics.sessionDuration)}s</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-gray-400">Scroll Depth:</span>
+                <span className="text-white">{Math.round(userBehavior.scrollDepth)}%</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-gray-400">Bounce Rate:</span>
+                <span className="text-white">{Math.round(uxMetrics.bounceRate)}%</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span className="text-gray-400">Conversion Rate:</span>
+                <span className="text-white">{Math.round(uxMetrics.conversionRate)}%</span>
+              </div>
+            </div>
+
+            {/* Optimizations */}
+            {optimizations.length > 0 && (
+              <div className="mb-4">
+                <h4 className="text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
+                  <Zap className="w-4 h-4 text-yellow-400" />
+                  Recommended Optimizations
+                </h4>
+                <div className="space-y-1">
+                  {optimizations.slice(0, 3).map((opt, index) => (
+                    <div key={index} className={`text-xs p-2 rounded border ${
+                      opt.implemented 
+                        ? 'text-green-400 bg-green-900/20 border-green-500/30' 
+                        : 'text-yellow-400 bg-yellow-900/20 border-yellow-500/30'
+                    }`}>
+                      {opt.implemented ? '✓' : '⚡'} {opt.description}
+                      <span className={`ml-2 px-1 py-0.5 rounded text-xs ${
+                        opt.impact === 'high' ? 'bg-red-500/30 text-red-300' :
+                        opt.impact === 'medium' ? 'bg-yellow-500/30 text-yellow-300' :
+                        'bg-blue-500/30 text-blue-300'
+                      }`}>
+                        {opt.impact}
+                      </span>
+                    </div>
+                  ))}
+                  {optimizations.length > 3 && (
+                    <div className="text-xs text-gray-500 text-center">
+                      +{optimizations.length - 3} more optimizations
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Action Buttons */}
+            <div className="space-y-2">
+              <button
+                onClick={applyOptimizations}
+                disabled={isOptimizing}
+                className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-2 px-4 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {isOptimizing ? 'Applying...' : 'Apply Optimizations'}
+              </button>
+              
+              <button
+                onClick={generateOptimizations}
+                className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-2 px-4 rounded-lg hover:from-blue-600 hover:to-cyan-700 transition-all duration-300"
+              >
+                Generate Recommendations
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* UX Status Indicator */}
+      {showMetrics && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="fixed top-20 right-4 bg-slate-900/95 backdrop-blur-lg border border-purple-500/30 rounded-lg p-3 z-50"
+        >
+          <div className="flex items-center gap-2">
+            <div className={`w-3 h-3 rounded-full ${
+              uxMetrics.userSatisfaction >= 90 ? 'bg-green-400' :
+              uxMetrics.userSatisfaction >= 70 ? 'bg-yellow-400' : 'bg-red-400'
+            }`} />
+            <span className="text-sm text-white font-medium">
+              UX: {Math.round(uxMetrics.userSatisfaction)}%
+            </span>
+          </div>
+        </motion.div>
+      )}
     </>
   );
-}
+};

@@ -43,14 +43,13 @@ export function AppFooter() {
       title: "AI & Automation",
       services: [
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
-        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
         { name: "AI Project Management", href: "/services/ai-project-management-platform" },
         { name: "AI Customer Support", href: "/services/ai-customer-support-automation" },
         { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
-        { name: "AI Quantum Computing", href: "/services/ai-quantum-computing-solutions" }
+        { name: "Quantum AI Cybersecurity", href: "/services/quantum-ai-cybersecurity-platform" }
       ]
     },
     {
@@ -61,7 +60,6 @@ export function AppFooter() {
         { name: "Cybersecurity", href: "/services/cybersecurity" },
         { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
-        { name: "Edge Computing", href: "/services/edge-computing-solutions" },
         { name: "Digital Transformation", href: "/services/digital-transformation" }
       ]
     },
@@ -73,8 +71,10 @@ export function AppFooter() {
         { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
         { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" },
+        { name: "AI HR Management", href: "/services/ai-hr-management-platform" },
         { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
-        { name: "AI HR Platform", href: "/services/ai-hr-platform" }
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" }
       ]
     }
   ];
@@ -85,7 +85,6 @@ export function AppFooter() {
     { name: "News & Events", href: "/news" },
     { name: "Partners", href: "/partners" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026" },
     { name: "Contact", href: "/contact" }
   ];
 
@@ -95,7 +94,8 @@ export function AppFooter() {
     { name: "White Papers", href: "/white-papers" },
     { name: "Webinars", href: "/webinars" },
     { name: "Training", href: "/training" },
-    { name: "Research & Development", href: "/research-development" }
+    { name: "Research & Development", href: "/research-development" },
+    { name: "Pricing Guide", href: "/pricing-guide" }
   ];
 
   const supportLinks = [
