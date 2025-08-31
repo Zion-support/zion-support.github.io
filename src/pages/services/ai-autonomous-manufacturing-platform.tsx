@@ -1,229 +1,320 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Cpu,
-  Brain,
-  Zap,
-  Shield,
-  BarChart3,
-  Globe,
-  Clock,
+import { 
+  Factory, 
+  Cpu, 
+  Settings, 
+  Zap, 
+  Brain, 
+  Shield, 
+  Clock, 
+  Users, 
   CheckCircle,
   ArrowRight,
-  TrendingUp,
-  Target,
-  Rocket,
   Star,
-  Award,
+  Database,
+  Eye,
+  Download,
+  Share2,
+  Filter,
+  AlertTriangle,
+  Lightbulb,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
+  Target,
+  TrendingUp,
+  Lock,
+  Cloud,
+  Network,
+  Server,
+  Code,
+  Bot,
+  Workflow,
+  MessageCircle,
   Phone,
   Mail,
   MapPin,
-  Database,
-  Network,
-  Lock,
-  Cloud,
-  Workflow,
-  Users,
-  Eye,
-  Search,
-  Code,
-  Microchip,
-  Settings,
+  DollarSign,
+  Calendar,
+  Award,
+  Rocket,
+  Leaf,
+  Coins,
+  Satellite,
+  Gamepad2,
+  Palette,
+  Gauge,
   Wifi,
-  Activity,
-  Monitor,
-  Factory,
+  ShieldCheck,
+  Sparkles,
+  Atom,
   Cog,
   Wrench,
-  Truck,
-  Package,
-  Gauge,
-  AlertTriangle
+  Gauge as GaugeIcon,
+  Map,
+  Compass,
+  Factory as FactoryIcon,
+  Cpu as CpuIcon,
+  Settings as SettingsIcon,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Shield as ShieldIcon,
+  Clock as ClockIcon,
+  Users as UsersIcon,
+  CheckCircle as CheckCircleIcon,
+  ArrowRight as ArrowRightIcon,
+  Star as StarIcon,
+  Database as DatabaseIcon,
+  Eye as EyeIcon,
+  Download as DownloadIcon,
+  Share2 as Share2Icon,
+  Filter as FilterIcon,
+  AlertTriangle as AlertTriangleIcon,
+  Lightbulb as LightbulbIcon,
+  BarChart as BarChartIcon,
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
+  Activity as ActivityIcon,
+  Target as TargetIcon,
+  TrendingUp as TrendingUpIcon,
+  Lock as LockIcon,
+  Cloud as CloudIcon,
+  Network as NetworkIcon,
+  Server as ServerIcon,
+  Code as CodeIcon,
+  Bot as BotIcon,
+  Workflow as WorkflowIcon,
+  MessageCircle as MessageCircleIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  DollarSign as DollarSignIcon,
+  Calendar as CalendarIcon,
+  Award as AwardIcon,
+  Rocket as RocketIcon,
+  Leaf as LeafIcon,
+  Coins as CoinsIcon,
+  Satellite as SatelliteIcon,
+  Gamepad2 as Gamepad2Icon,
+  Palette as PaletteIcon,
+  Gauge as GaugeIcon,
+  Wifi as WifiIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Sparkles as SparklesIcon,
+  Atom as AtomIcon
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const AIAutonomousManufacturingPlatform = () => {
+export default function AIAutonomousManufacturingPlatform() {
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Production Planning",
-      description: "Intelligent production scheduling and optimization using machine learning algorithms for maximum efficiency"
+      description: "Intelligent algorithms that optimize production schedules and resource allocation",
+      benefits: ["Dynamic scheduling", "Resource optimization", "Demand forecasting", "Capacity planning"]
+    },
+    {
+      icon: Factory,
+      title: "Autonomous Manufacturing Lines",
+      description: "Self-optimizing production lines with minimal human intervention",
+      benefits: ["Automated quality control", "Predictive maintenance", "Real-time monitoring", "Adaptive processes"]
     },
     {
       icon: Cpu,
-      title: "Autonomous Quality Control",
-      description: "Computer vision and AI systems that automatically detect defects and ensure product quality with 99.9% accuracy"
+      title: "Smart Equipment Management",
+      description: "AI-driven monitoring and optimization of manufacturing equipment",
+      benefits: ["Performance analytics", "Efficiency tracking", "Automated alerts", "Optimization suggestions"]
     },
     {
-      icon: Workflow,
-      title: "Smart Process Automation",
-      description: "End-to-end automation of manufacturing processes with AI-driven decision making and predictive maintenance"
+      icon: Settings,
+      title: "Intelligent Process Control",
+      description: "Advanced process automation with real-time optimization",
+      benefits: ["Parameter optimization", "Quality assurance", "Process monitoring", "Automated adjustments"]
     },
     {
-      icon: BarChart3,
-      title: "Real-time Analytics Dashboard",
-      description: "Comprehensive monitoring and analytics for production metrics, efficiency, and predictive insights"
+      icon: Zap,
+      title: "Predictive Analytics",
+      description: "Machine learning models that predict equipment failures and optimize maintenance",
+      benefits: ["Failure prediction", "Maintenance scheduling", "Performance optimization", "Cost reduction"]
     },
     {
       icon: Shield,
-      title: "Cybersecurity & Compliance",
-      description: "Industrial-grade security with OT/IT convergence protection and regulatory compliance (ISO 27001, NIST)"
-    },
-    {
-      icon: Cloud,
-      title: "Edge Computing Integration",
-      description: "Local processing capabilities with cloud connectivity for real-time decision making and data synchronization"
+      title: "Quality Assurance Automation",
+      description: "AI-powered quality control with real-time defect detection",
+      benefits: ["Visual inspection", "Statistical analysis", "Defect classification", "Quality reporting"]
     }
   ];
 
-  const pricing = [
+  const pricingPlans = [
     {
-      name: "Manufacturing Starter",
-      price: "$499",
+      name: "Startup",
+      price: "$799",
       period: "/month",
-      description: "Perfect for small manufacturing facilities (1-10 production lines)",
+      description: "Perfect for small manufacturing companies and startups",
       features: [
-        "Basic AI quality control",
-        "Production monitoring",
-        "5 user licenses",
+        "Up to 5 production lines",
+        "Basic AI optimization",
+        "Real-time monitoring",
         "Email support",
-        "Standard security",
-        "Mobile app access",
-        "Basic analytics"
+        "Basic analytics",
+        "Mobile app access"
       ],
+      cta: "Start Free Trial",
       popular: false
     },
     {
-      name: "Manufacturing Professional",
-      price: "$1,299",
+      name: "Professional",
+      price: "$1,999",
       period: "/month",
-      description: "Ideal for medium-sized facilities (10-50 production lines)",
+      description: "Ideal for growing manufacturing companies",
       features: [
-        "All Starter features",
-        "Advanced AI analytics",
+        "Up to 20 production lines",
+        "Advanced AI algorithms",
         "Predictive maintenance",
-        "20 user licenses",
         "Priority support",
-        "Custom integrations",
-        "Advanced reporting",
-        "API access"
+        "Advanced analytics",
+        "API access",
+        "Custom integrations"
       ],
+      cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Manufacturing Enterprise",
-      price: "$2,999",
+      name: "Enterprise",
+      price: "$4,999",
       period: "/month",
-      description: "For large manufacturing plants (50+ production lines)",
+      description: "For large manufacturing corporations",
       features: [
-        "All Professional features",
         "Unlimited production lines",
         "Custom AI models",
-        "24/7 dedicated support",
-        "White-label solutions",
-        "Advanced security",
-        "Custom development",
-        "On-premise deployment"
+        "White-label solution",
+        "Dedicated support",
+        "Advanced reporting",
+        "Multi-tenant setup",
+        "Custom development"
       ],
+      cta: "Contact Sales",
       popular: false
     }
   ];
 
   const benefits = [
     {
-      icon: TrendingUp,
-      title: "40% Cost Reduction",
-      description: "Streamline operations and eliminate inefficiencies with AI-powered optimization"
-    },
-    {
       icon: Clock,
-      title: "60% Faster Production",
-      description: "AI-driven automation and optimization accelerate manufacturing processes"
+      title: "40% Faster Production",
+      description: "AI-optimized processes reduce cycle times and increase throughput"
     },
     {
-      icon: Target,
-      title: "99.9% Quality Rate",
-      description: "Advanced AI systems ensure consistent product quality and defect detection"
+      icon: DollarSign,
+      title: "35% Cost Reduction",
+      description: "Optimize resource usage, reduce waste, and minimize operational costs"
+    },
+    {
+      icon: CheckCircle,
+      title: "99.5% Quality Rate",
+      description: "AI-powered quality control ensures consistent product quality"
     },
     {
       icon: Users,
-      title: "Enhanced Safety",
-      description: "AI monitoring and automation reduce workplace accidents and improve worker safety"
+      title: "Reduced Labor Costs",
+      description: "Automate repetitive tasks and optimize human resource allocation"
     }
   ];
 
   const useCases = [
     {
-      icon: Factory,
       title: "Automotive Manufacturing",
-      description: "AI-powered assembly lines, quality control, and supply chain optimization"
+      description: "Streamline vehicle production with intelligent assembly line optimization",
+      icon: Factory
     },
     {
-      icon: Package,
       title: "Electronics Production",
-      description: "Precision manufacturing with AI quality assurance and component tracking"
+      description: "Optimize PCB assembly and component manufacturing processes",
+      icon: Cpu
     },
     {
-      icon: Cog,
-      title: "Industrial Equipment",
-      description: "Smart manufacturing with predictive maintenance and performance optimization"
+      title: "Food & Beverage",
+      description: "Ensure quality and efficiency in food processing and packaging",
+      icon: Settings
     },
     {
-      icon: Truck,
-      title: "Supply Chain Management",
-      description: "End-to-end visibility and AI-driven logistics optimization"
+      title: "Pharmaceutical Manufacturing",
+      description: "Maintain strict quality standards in drug production",
+      icon: Shield
     }
   ];
 
+  const stats = [
+    { number: '500+', label: 'Production Lines', icon: Factory },
+    { number: '40%', label: 'Faster Production', icon: Clock },
+    { number: '99.5%', label: 'Quality Rate', icon: CheckCircle },
+    { number: '35%', label: 'Cost Reduction', icon: DollarSign }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-medium mb-6">
-              <Factory className="w-4 h-4" />
-              Next-Generation Smart Manufacturing
-            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Autonomous
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400">
-                Manufacturing Platform
-              </span>
+              AI Autonomous Manufacturing Platform
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your manufacturing operations with the world's most intelligent autonomous platform. 
-              Powered by advanced AI, computer vision, and IoT sensors to drive efficiency, quality, 
-              and safety across your entire production facility.
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Revolutionize your manufacturing operations with AI-powered intelligence. Optimize production, 
+              ensure quality, and maximize efficiency with unprecedented automation and insights.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
-                Start Smart Manufacturing
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href="tel:+1 302 464 0950"
-                className="px-8 py-4 border-2 border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/10 hover:border-green-400 transition-all duration-300"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg hover:border-white hover:text-white transition-all duration-300"
               >
-                <Phone className="w-5 h-5 mr-2 inline" />
-                Call +1 302 464 0950
-              </a>
+                Schedule Demo
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="text-center"
+              >
+                <div className="flex justify-center mb-4">
+                  <stat.icon className="h-12 w-12 text-blue-400" />
+                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-400">{stat.label}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -231,150 +322,38 @@ const AIAutonomousManufacturingPlatform = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Revolutionary Manufacturing Features
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features for Modern Manufacturing
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Experience the future of manufacturing with AI-powered intelligence, automation, 
-              and real-time insights that transform how you produce and deliver products.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI platform combines cutting-edge technology with deep manufacturing expertise to deliver 
+              unprecedented operational efficiency and quality.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-slate-800/50 border border-green-500/30 rounded-2xl p-8 hover:border-green-400/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-green-400" />
+                <div className="flex items-center mb-4">
+                  <feature.icon className="h-8 w-8 text-blue-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Industry Applications
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI manufacturing platform is transforming industries across the globe, 
-              from automotive to electronics, with intelligent automation and quality control.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <useCase.icon className="w-10 h-10 text-green-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {useCase.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Smart Manufacturing Pricing
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your manufacturing facility. All plans include our core AI capabilities 
-              with industrial-grade security and 24/7 support.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricing.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
-                  plan.popular 
-                    ? 'border-green-500 shadow-2xl shadow-green-500/25' 
-                    : 'border-slate-700'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {plan.price}
-                    <span className="text-lg text-gray-400 font-normal">{plan.period}</span>
-                  </div>
-                  <p className="text-gray-300">{plan.description}</p>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                      {benefit}
                     </li>
                   ))}
                 </ul>
-                <Link
-                  to="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-cyan-500 text-white hover:from-green-600 hover:to-cyan-600'
-                      : 'bg-slate-700 text-white hover:bg-slate-600'
-                  }`}
-                >
-                  Get Started
-                </Link>
               </motion.div>
             ))}
           </div>
@@ -382,8 +361,8 @@ const AIAutonomousManufacturingPlatform = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-slate-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -391,34 +370,143 @@ const AIAutonomousManufacturingPlatform = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Proven Manufacturing Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Manufacturing Platform?
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Join hundreds of manufacturing facilities that have transformed their operations 
-              with our AI autonomous manufacturing platform.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your manufacturing operations with AI-powered intelligence that increases productivity, 
+              improves quality, and reduces costs.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
-                key={benefit.title}
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
+              >
+                <div className="flex-shrink-0">
+                  <benefit.icon className="h-12 w-12 text-blue-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <p className="text-gray-300">{benefit.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Perfect for Every Manufacturing Need
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              From small workshops to large industrial facilities, our platform adapts to your specific manufacturing requirements.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="text-center p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-blue-500 transition-all duration-300"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-green-400" />
+                <useCase.icon className="h-12 w-12 text-blue-400 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
+                <p className="text-gray-300 text-sm">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose the plan that fits your production scale and operational needs. All plans include a 14-day free trial.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative p-8 rounded-2xl border-2 ${
+                  plan.popular 
+                    ? 'border-blue-500 bg-gradient-to-br from-gray-800 to-gray-900' 
+                    : 'border-gray-700 bg-gray-800/50'
+                } backdrop-blur-sm`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
+
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
+                      : 'bg-gray-700 text-white hover:bg-gray-600'
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -426,89 +514,69 @@ const AIAutonomousManufacturingPlatform = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-900/50 to-cyan-900/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Manufacturing?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Manufacturing Operations?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Start your free 30-day trial today and experience the power of AI-driven 
-              autonomous manufacturing that revolutionizes your production processes.
+              Join thousands of manufacturing companies who have already revolutionized their operations with AI-powered intelligence.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-              <a
-                href="tel:+1 302 464 0950"
-                className="px-8 py-4 border-2 border-green-400/50 text-green-400 font-semibold rounded-xl hover:bg-green-400/10 hover:border-green-400 transition-all duration-300"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-gray-400 text-gray-300 font-semibold rounded-lg hover:border-white hover:text-white transition-all duration-300"
               >
-                <Phone className="w-5 h-5 mr-2 inline" />
-                Call +1 302 464 0950
-              </a>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-gray-300">
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>30-Day Free Trial</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>No Setup Fees</span>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                <span>24/7 Expert Support</span>
-              </div>
+                Schedule Demo
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-slate-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Call Us</h3>
-              <a href="tel:+1 302 464 0950" className="text-gray-300 hover:text-green-400 transition-colors">
-                +1 302 464 0950
-              </a>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="flex flex-col items-center">
+                <Phone className="h-8 w-8 text-blue-400 mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <Mail className="h-8 w-8 text-blue-400 mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <MapPin className="h-8 w-8 text-blue-400 mb-4" />
+                <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email Us</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-green-400 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-green-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-};
-
-export default AIAutonomousManufacturingPlatform;
+}
