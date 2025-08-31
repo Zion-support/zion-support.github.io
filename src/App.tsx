@@ -80,6 +80,10 @@ const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITIn
 const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
+// New Innovative AI Services 2026
+const AIAutonomousFinancialAdvisor = createLazyComponent(() => import('./pages/services/ai-autonomous-financial-advisor'));
+const AIHealthcareDiagnosticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-diagnostics-platform'));
+
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
 const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
@@ -310,6 +314,10 @@ function App() {
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+
+                    {/* New Innovative AI Services 2026 */}
+                    <Route path="/services/ai-autonomous-financial-advisor" element={<AIAutonomousFinancialAdvisor />} />
+                    <Route path="/services/ai-healthcare-diagnostics-platform" element={<AIHealthcareDiagnosticsPlatform />} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />

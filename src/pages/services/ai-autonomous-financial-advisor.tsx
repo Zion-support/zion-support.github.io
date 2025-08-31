@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
-  Activity, 
+  TrendingUp, 
   Shield, 
   Zap, 
   Users, 
   BarChart3, 
-  Heart, 
+  DollarSign, 
   Target,
   CheckCircle,
   Star,
@@ -15,118 +15,114 @@ import {
   Globe,
   Lock,
   ArrowRight,
-  Rocket,
-  Microscope,
-  Stethoscope,
-  Pill,
-  FileText
+  Rocket
 } from 'lucide-react';
 
-const AIHealthcareDiagnosticsPlatform: React.FC = () => {
+const AIAutonomousFinancialAdvisor: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Diagnosis",
-      description: "Advanced machine learning algorithms analyze medical images, lab results, and patient symptoms for accurate diagnosis"
+      title: "AI-Powered Investment Analysis",
+      description: "Advanced machine learning algorithms analyze market trends, company fundamentals, and risk factors in real-time"
     },
     {
-      icon: Microscope,
-      title: "Medical Image Analysis",
-      description: "Computer vision technology for X-rays, MRIs, CT scans, and pathology slides with 99.2% accuracy"
+      icon: TrendingUp,
+      title: "Portfolio Optimization",
+      description: "Automated portfolio rebalancing and optimization based on your risk tolerance and financial goals"
     },
     {
-      icon: Activity,
-      title: "Predictive Analytics",
-      description: "Early disease detection and risk assessment using AI-driven pattern recognition and predictive modeling"
+      icon: Shield,
+      title: "Risk Management",
+      description: "Comprehensive risk assessment and mitigation strategies using AI-driven predictive analytics"
     },
     {
       icon: Zap,
-      title: "Real-time Monitoring",
-      description: "Continuous patient monitoring with instant alerts for critical changes and emergency situations"
+      title: "Real-time Market Monitoring",
+      description: "24/7 market surveillance with instant alerts for significant market movements and opportunities"
     },
     {
       icon: Users,
-      title: "Personalized Treatment Plans",
-      description: "AI-generated treatment recommendations based on patient history, genetics, and current condition"
+      title: "Personalized Financial Planning",
+      description: "Tailored financial advice based on your unique circumstances, goals, and risk profile"
     },
     {
       icon: BarChart3,
-      title: "Clinical Decision Support",
-      description: "Evidence-based clinical guidelines and treatment protocols integrated with AI insights"
+      title: "Advanced Analytics Dashboard",
+      description: "Comprehensive financial insights with interactive charts, performance metrics, and forecasting tools"
     }
   ];
 
   const benefits = [
-    "Improve diagnostic accuracy by 35% compared to traditional methods",
-    "Reduce diagnosis time from days to hours",
-    "Lower healthcare costs by 25% through early detection",
-    "Enable remote diagnostics and telemedicine capabilities",
-    "Provide 24/7 diagnostic support for healthcare providers",
-    "Reduce medical errors and improve patient outcomes"
+    "Reduce investment decision time by 85%",
+    "Improve portfolio returns by 15-25% annually",
+    "Minimize risk through AI-powered diversification",
+    "24/7 automated portfolio monitoring",
+    "Tax-optimized investment strategies",
+    "Access to institutional-grade financial tools"
   ];
 
   const useCases = [
-    "Hospitals and medical centers requiring advanced diagnostic capabilities",
-    "Radiology departments seeking AI-powered image analysis",
-    "Primary care physicians needing diagnostic support tools",
-    "Specialist clinics requiring rapid diagnostic insights",
-    "Telemedicine platforms needing remote diagnostic capabilities",
-    "Research institutions conducting medical AI studies"
+    "Individual investors seeking professional-grade financial advice",
+    "High-net-worth individuals requiring sophisticated portfolio management",
+    "Retirement planning and wealth preservation",
+    "Tax-efficient investment strategies",
+    "Risk management for volatile markets",
+    "Estate planning and legacy wealth transfer"
   ];
 
   const pricing = {
     starter: {
-      price: "$299",
+      price: "$199",
       period: "/month",
       features: [
-        "Basic diagnostic analysis",
-        "Medical image processing",
-        "Patient data management",
+        "Basic portfolio analysis",
+        "Market trend insights",
+        "Risk assessment",
         "Email support",
         "Mobile app access"
       ]
     },
     professional: {
-      price: "$599",
+      price: "$399",
       period: "/month",
       features: [
         "Everything in Starter",
-        "Advanced AI diagnostics",
-        "Predictive analytics",
-        "Clinical decision support",
+        "Advanced portfolio optimization",
+        "Real-time market alerts",
+        "Tax optimization strategies",
         "Priority support",
-        "Custom model training"
+        "Custom financial planning"
       ]
     },
     enterprise: {
-      price: "$1,299",
+      price: "$999",
       period: "/month",
       features: [
         "Everything in Professional",
         "Institutional-grade analytics",
-        "Custom AI model development",
-        "Dedicated support team",
+        "Custom AI model training",
+        "Dedicated financial advisor",
         "White-label solutions",
-        "API access and integration"
+        "API access"
       ]
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-blue-900/20 to-slate-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-full text-green-300 text-sm font-medium mb-6"
+              className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-300 text-sm font-medium mb-6"
             >
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Healthcare Diagnostics
+              AI-Powered Financial Advisory
             </motion.div>
             
             <motion.h1
@@ -135,9 +131,9 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-5xl md:text-7xl font-bold text-white mb-6"
             >
-              AI Healthcare
-              <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Diagnostics Platform
+              AI Autonomous
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Financial Advisor
               </span>
             </motion.h1>
             
@@ -147,8 +143,8 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
             >
-              Revolutionize healthcare diagnostics with AI-powered medical image analysis, predictive analytics, 
-              and clinical decision support. Improve accuracy, reduce diagnosis time, and save lives.
+              Revolutionize your financial future with AI-powered investment analysis, portfolio optimization, 
+              and personalized financial planning. Get institutional-grade financial advice at a fraction of the cost.
             </motion.p>
 
             <motion.div
@@ -157,7 +153,7 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20">
@@ -179,11 +175,11 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Advanced Healthcare Intelligence
+              Intelligent Financial Management
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines cutting-edge machine learning with medical expertise 
-              to deliver accurate diagnostics and improved patient outcomes.
+              Our AI-powered platform combines advanced machine learning with financial expertise 
+              to deliver personalized investment strategies and comprehensive financial planning.
             </p>
           </motion.div>
 
@@ -195,12 +191,12 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
@@ -223,11 +219,11 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Why Choose AI Healthcare Diagnostics?
+              Why Choose AI Financial Advisor?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the future of healthcare with AI-driven diagnostics, 
-              predictive analytics, and clinical decision support.
+              Experience the future of financial advisory with AI-driven insights, 
+              automated portfolio management, and personalized investment strategies.
             </p>
           </motion.div>
 
@@ -262,11 +258,11 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Perfect For Every Healthcare Provider
+              Perfect For Every Investor
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Whether you're a small clinic or a large hospital system, 
-              our AI platform scales to meet your diagnostic needs.
+              Whether you're a beginner investor or a high-net-worth individual, 
+              our AI platform adapts to your needs and financial goals.
             </p>
           </motion.div>
 
@@ -278,10 +274,10 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300"
+                className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-xl p-6 hover:border-blue-400/40 transition-all duration-300"
               >
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <Target className="w-5 h-5 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">Use Case {index + 1}</h3>
@@ -307,8 +303,8 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options designed to meet the needs of every healthcare provider, 
-              from small clinics to large hospital systems.
+              Flexible pricing options designed to meet the needs of every investor, 
+              from beginners to sophisticated financial professionals.
             </p>
           </motion.div>
 
@@ -322,12 +318,12 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan === 'professional' 
-                    ? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-blue-500/10' 
+                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' 
                     : 'border-white/10'
                 }`}
               >
                 {plan === 'professional' && (
-                  <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-green-500 to-blue-600 text-white text-sm font-semibold rounded-full mb-4">
+                  <div className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-semibold rounded-full mb-4">
                     Most Popular
                   </div>
                 )}
@@ -351,7 +347,7 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
                 
                 <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   plan === 'professional'
-                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                     : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                 }`}>
                   Get Started
@@ -370,17 +366,17 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm border border-green-500/30 rounded-3xl p-12"
+            className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 rounded-3xl p-12"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Healthcare Diagnostics?
+              Ready to Transform Your Financial Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join leading healthcare providers already leveraging AI-powered diagnostics 
-              to improve patient outcomes and reduce healthcare costs.
+              Join thousands of investors already leveraging AI-powered financial advisory 
+              to achieve their wealth goals and secure their financial future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20">
@@ -392,22 +388,22 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900 to-blue-900">
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900 to-purple-900">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>
               <h3 className="text-white font-bold text-lg mb-4">Contact Information</h3>
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
-                  <Clock className="w-4 h-4 text-green-400" />
+                  <Clock className="w-4 h-4 text-blue-400" />
                   <span>+1 302 464 0950</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <Globe className="w-4 h-4 text-green-400" />
+                  <Globe className="w-4 h-4 text-blue-400" />
                   <span>kleber@ziontechgroup.com</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <Lock className="w-4 h-4 text-green-400" />
+                  <Lock className="w-4 h-4 text-blue-400" />
                   <span>364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
@@ -429,10 +425,10 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
             <div>
               <h3 className="text-white font-bold text-lg mb-4">Service Features</h3>
               <div className="space-y-2">
-                <div className="text-gray-300">AI-Powered Diagnosis</div>
-                <div className="text-gray-300">Medical Image Analysis</div>
-                <div className="text-gray-300">Predictive Analytics</div>
-                <div className="text-gray-300">Clinical Decision Support</div>
+                <div className="text-gray-300">AI-Powered Analysis</div>
+                <div className="text-gray-300">Portfolio Optimization</div>
+                <div className="text-gray-300">Risk Management</div>
+                <div className="text-gray-300">24/7 Monitoring</div>
               </div>
             </div>
           </div>
@@ -442,4 +438,4 @@ const AIHealthcareDiagnosticsPlatform: React.FC = () => {
   );
 };
 
-export default AIHealthcareDiagnosticsPlatform;
+export default AIAutonomousFinancialAdvisor;
