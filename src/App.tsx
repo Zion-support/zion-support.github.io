@@ -12,7 +12,7 @@ import { ThemeProvider } from './components/ThemeProvider';
 import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
 import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
 import { InteractiveUserExperience } from './components/InteractiveUserExperience';
-import { SecurityEnhancer } from './components/SecurityEnhancer';
+import SecurityEnhancer from './components/SecurityEnhancer';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
