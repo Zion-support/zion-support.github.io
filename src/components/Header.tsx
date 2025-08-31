@@ -64,27 +64,70 @@ export function Header({ className }: HeaderProps) {
 
   const mobileMenuItems = [
     {
-      title: 'Services',
+      title: 'AI & Machine Learning',
       items: [
-        { name: 'AI & Machine Learning', href: '/services#ai-ml' },
-        { name: 'Quantum Computing', href: '/services#quantum' },
-        { name: 'Cybersecurity', href: '/services#cybersecurity' },
-        { name: 'Cloud & DevOps', href: '/services#cloud-devops' },
-        { name: 'Data & Analytics', href: '/services#data-analytics' },
-        { name: 'Digital Transformation', href: '/services#digital-transformation' },
-        { name: 'IT Infrastructure', href: '/services#it-infrastructure' },
-        { name: 'Emerging Technologies', href: '/services#emerging-tech' }
+        { name: 'AI Research Assistant', href: '/services/ai-autonomous-research-assistant' },
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform' },
+        { name: 'AI Healthcare', href: '/services/ai-healthcare-platform' },
+        { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' },
+        { name: 'AI Customer Analytics', href: '/services/ai-customer-experience-analytics' },
+        { name: 'AI Project Management', href: '/services/ai-project-management-platform' },
+        { name: 'AI Workflow Automation', href: '/services/ai-workflow-automation' },
+        { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer-pro' },
+        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation-platform' },
+        { name: 'AI Email Responder', href: '/services/ai-auto-email-responder' }
       ]
     },
     {
-      title: 'Solutions',
+      title: 'Quantum Computing',
       items: [
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail & E-commerce', href: '/solutions/retail' },
-        { name: 'Transportation & Logistics', href: '/solutions/transportation' },
-        { name: 'Education', href: '/solutions/education' }
+        { name: 'Quantum AI Platform', href: '/services/ai-quantum-hybrid-platform' },
+        { name: 'Quantum Neural Network', href: '/services/ai-quantum-neural-network-platform' },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' }
+      ]
+    },
+    {
+      title: 'IT & Infrastructure',
+      items: [
+        { name: 'Cloud DevOps', href: '/services/cloud-devops' },
+        { name: 'IT Infrastructure', href: '/services/it-infrastructure' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Network Solutions', href: '/services/network-infrastructure' },
+        { name: 'Onsite Support', href: '/services/it-onsite-services' },
+        { name: 'IoT Edge Computing', href: '/services/ai-iot-edge-computing-platform' }
+      ]
+    },
+    {
+      title: 'Micro SaaS Solutions',
+      items: [
+        { name: 'Micro CRM Platform', href: '/services/micro-crm' },
+        { name: 'Employee Scheduling', href: '/services/employee-scheduling-saas' },
+        { name: 'Returns Management', href: '/services/returns-management-saas' },
+        { name: 'Mobile Survey Tool', href: '/services/mobile-survey' },
+        { name: 'Micro SaaS Platform', href: '/micro-saas' }
+      ]
+    },
+    {
+      title: 'Specialized Solutions',
+      items: [
+        { name: 'Healthcare Tech', href: '/services/healthcare-tech' },
+        { name: 'Financial Trading AI', href: '/services/ai-financial-trading-platform' },
+        { name: 'Green IT Solutions', href: '/services/green-it-solutions' },
+        { name: 'Blockchain Enterprise', href: '/services/blockchain-enterprise-solutions' },
+        { name: 'Space Technology', href: '/services/space-tech' },
+        { name: 'Sustainability', href: '/services/sustainability' }
+      ]
+    },
+    {
+      title: 'Showcase & Resources',
+      items: [
+        { name: '2025 Services Showcase', href: '/comprehensive-services-showcase-2025' },
+        { name: 'AI Services Showcase', href: '/innovative-ai-services-showcase-2025' },
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' }
       ]
     },
     {
@@ -108,7 +151,8 @@ export function Header({ className }: HeaderProps) {
         { name: 'White Papers', href: '/white-papers' },
         { name: 'Webinars', href: '/webinars' },
         { name: 'Training', href: '/training' },
-        { name: 'Research & Development', href: '/research-development' }
+        { name: 'Research & Development', href: '/research-development' },
+        { name: 'Help Center', href: '/help-center' }
       ]
     }
   ];
@@ -207,6 +251,14 @@ export function Header({ className }: HeaderProps) {
                 <span className="hidden xl:inline">kleber@ziontechgroup.com</span>
               </a>
             </div>
+
+            {/* CTA Button */}
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25"
+            >
+              Get Started
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -234,18 +286,19 @@ export function Header({ className }: HeaderProps) {
             className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
           >
             <div className="container mx-auto px-6 py-6">
-              {/* Mobile Navigation */}
-              <nav className="space-y-6">
-                {mobileMenuItems.map((section) => (
-                  <div key={section.title}>
-                    <h3 className="text-lg font-semibold text-white mb-3">{section.title}</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {mobileMenuItems.map((section, sectionIndex) => (
+                  <div key={sectionIndex} className="space-y-4">
+                    <h3 className="text-lg font-semibold text-cyan-400 border-b border-cyan-400/20 pb-2">
+                      {section.title}
+                    </h3>
                     <ul className="space-y-2">
-                      {section.items.map((item) => (
-                        <li key={item.name}>
+                      {section.items.map((item, itemIndex) => (
+                        <li key={itemIndex}>
                           <Link
                             to={item.href}
                             onClick={() => setIsMobileMenuOpen(false)}
-                            className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-md transition-colors"
+                            className="text-gray-300 hover:text-cyan-400 transition-colors block py-1"
                           >
                             {item.name}
                           </Link>
@@ -254,40 +307,40 @@ export function Header({ className }: HeaderProps) {
                     </ul>
                   </div>
                 ))}
-              </nav>
-
-              {/* Mobile Contact Info */}
+              </div>
+              
+              {/* Mobile CTA */}
               <div className="mt-8 pt-6 border-t border-slate-700/50">
-                <div className="space-y-4">
-                  <a 
-                    href="tel:+13024640950" 
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <Phone className="w-5 h-5" />
-                    <span>+1 (302) 464-0950</span>
-                  </a>
-                  <a 
-                    href="mailto:kleber@ziontechgroup.com" 
-                    className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    <Mail className="w-5 h-5" />
-                    <span>kleber@ziontechgroup.com</span>
-                  </a>
-                  <div className="flex items-center space-x-3 text-gray-300">
-                    <MapPin className="w-5 h-5" />
-                    <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-                  </div>
-                </div>
-
-                {/* Mobile CTA */}
-                <div className="mt-6 pt-6 border-t border-slate-700/50">
+                <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     to="/contact"
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-6 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300"
                   >
                     Get Started Today
                   </Link>
+                  <a
+                    href="tel:+13024640950"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors duration-300 flex items-center justify-center"
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Now
+                  </a>
+                </div>
+                
+                {/* Contact Info */}
+                <div className="mt-6 text-center text-sm text-gray-400">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex items-center justify-center gap-2">
+                      <Mail className="w-4 h-4" />
+                      <span>kleber@ziontechgroup.com</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-2">
+                      <MapPin className="w-4 h-4" />
+                      <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
