@@ -422,9 +422,17 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     View All Services
                     <TrendingUp className="w-4 h-4 ml-2"/>
                   </Link>
+                  <Link to="/innovative-services-showcase-2032" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Innovation Showcase 2032
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
                   <Link to="/innovative-services-showcase-2026" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
                     Innovation Showcase 2026
                     <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/comprehensive-pricing-guide-2032" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Pricing Guide 2032
+                    <DollarSign className="w-4 h-4 ml-2"/>
                   </Link>
                   <Link to="/comprehensive-services-showcase-2025" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                     Comprehensive Showcase 2025

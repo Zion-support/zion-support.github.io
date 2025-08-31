@@ -388,6 +388,63 @@ const ServicesPreviewSection = React.memo(() => {
           </p>
         </motion.div>
 
+        {/* 2032 Innovation Highlight */}
+        <div className="mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-gradient-to-r from-purple-900/30 via-blue-900/30 to-cyan-900/30 rounded-3xl p-8 border border-purple-500/30"
+          >
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-4">
+                <Rocket className="w-4 h-4" />
+                New for 2032
+              </div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                Next-Generation Innovation
+              </h3>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Experience our revolutionary AI Quantum Neural Networks, Autonomous Business Operations, and Space Technology platforms
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Atom className="w-8 h-8 text-purple-400" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">Quantum AI</h4>
+                <p className="text-gray-400 text-sm">1000x faster computation</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-blue-400" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">Autonomous Operations</h4>
+                <p className="text-gray-400 text-sm">99.9% efficiency</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Satellite className="w-8 h-8 text-cyan-400" />
+                </div>
+                <h4 className="text-white font-semibold mb-2">Space Technology</h4>
+                <p className="text-gray-400 text-sm">Next-gen exploration</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link
+                to="/innovative-services-showcase-2032"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Explore 2032 Services
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div

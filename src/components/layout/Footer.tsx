@@ -51,6 +51,9 @@ export function Footer() {
       title: "AI & Automation Services",
       icon: Brain,
       links: [
+        { name: "AI Quantum Neural Networks 2032", href: "/innovative-services-showcase-2032" },
+        { name: "AI Autonomous Business Operations 2032", href: "/innovative-services-showcase-2032" },
+        { name: "AI Space Technology Platform 2032", href: "/innovative-services-showcase-2032" },
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
@@ -67,6 +70,8 @@ export function Footer() {
       title: "IT & Infrastructure",
       icon: Server,
       links: [
+        { name: "Quantum Edge Computing 2032", href: "/innovative-services-showcase-2032" },
+        { name: "AI Cybersecurity Defense 2032", href: "/innovative-services-showcase-2032" },
         { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
         { name: "Cloud & DevOps", href: "/services/cloud-devops" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
@@ -94,9 +99,25 @@ export function Footer() {
       ]
     },
     {
+      title: "Micro SaaS & Specialized 2032",
+      icon: Zap,
+      links: [
+        { name: "AI Quantum Financial Trading 2032", href: "/innovative-services-showcase-2032" },
+        { name: "AI Healthcare Analytics 2032", href: "/innovative-services-showcase-2032" },
+        { name: "AI Supply Chain Optimization 2032", href: "/innovative-services-showcase-2032" },
+        { name: "AI Customer Support Automation", href: "/services/ai-customer-support-automation" },
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
+        { name: "AI Project Management", href: "/services/ai-project-management-platform" },
+        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform" },
+        { name: "AI Predictive Maintenance", href: "/services/ai-predictive-maintenance" },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" }
+      ]
+    },
+    {
       title: "Company & Resources",
       icon: Building2,
       links: [
+        { name: "Pricing Guide 2032", href: "/comprehensive-pricing-guide-2032" },
         { name: "About Us", href: "/about" },
         { name: "Leadership", href: "/leadership" },
         { name: "Careers", href: "/careers" },
