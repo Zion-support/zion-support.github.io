@@ -1,7 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { CheckCircle, ArrowRight, Star, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, BarChart3, Target, Lightbulb, Database, Network, Eye, Globe2, Smartphone, Monitor, Server, Atom, Car, Scale, Leaf, Factory, Building, Clock, Phone, Mail, MapPin, TrendingUp, Bot } from 'lucide-react';
+import { ArrowRight, Brain, Rocket, Atom } from 'lucide-react';
 import { CategoriesSection } from "@/components/CategoriesSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
 import { HowItWorksSection } from "@/components/HowItWorksSection";
@@ -93,7 +93,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
     {
       title: "Micro SAAS Services",
       description: "Scalable software solutions tailored to your needs",
-      icon: Zap,
+      icon: Rocket,
       features: ["Cloud-Native", "API-First", "Scalable Architecture", "Real-time Analytics"]
     },
     {
@@ -207,28 +207,28 @@ const StatsSection = React.memo(() => {
       value: "500+",
       label: "Projects Delivered",
       description: "Successfully completed across industries",
-      icon: CheckCircle,
+      icon: "🎯", // Placeholder for CheckCircle icon
       color: "from-green-400 to-emerald-500"
     },
     {
       value: "50+",
       label: "AI Solutions",
       description: "Cutting-edge artificial intelligence services",
-      icon: Brain,
+      icon: "🧠", // Placeholder for Brain icon
       color: "from-cyan-400 to-blue-500"
     },
     {
       value: "24/7",
       label: "Support Available",
       description: "Round-the-clock technical assistance",
-      icon: Clock,
+      icon: "⚡", // Placeholder for Clock icon
       color: "from-blue-400 to-indigo-500"
     },
     {
       value: "99.9%",
       label: "Uptime Guarantee",
       description: "Reliable infrastructure and services",
-      icon: Shield,
+      icon: "🛡️", // Placeholder for Shield icon
       color: "from-purple-400 to-pink-500"
     }
   ];
