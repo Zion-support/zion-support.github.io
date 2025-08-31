@@ -57,7 +57,8 @@ import {
   Video,
   GraduationCap,
   Handshake,
-  ShoppingCart
+  ShoppingCart,
+  Truck
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -149,6 +150,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>AI Business Intelligence</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-powered-seo" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Search className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI-Powered SEO</span>
+                        </Link>
+                      </li>
                     </ul>
                   </div>
                   <div>
@@ -161,6 +174,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>Quantum Edge Computing</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>Quantum Edge Computing Solutions</span>
                         </Link>
                       </li>
                       <li>
@@ -241,6 +260,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     </Link>
                     <Link to="/comprehensive-pricing-guide-2032" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                       Pricing Guide 2032
+                      <DollarSign className="w-4 h-4 ml-2"/>
+                    </Link>
+                    <Link to="/comprehensive-pricing-guide-2032" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                      Comprehensive Pricing Guide 2032
                       <DollarSign className="w-4 h-4 ml-2"/>
                     </Link>
                   </div>

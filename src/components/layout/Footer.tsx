@@ -76,6 +76,7 @@ export function Footer() {
         { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
         { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
         { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
       ]
     },
@@ -156,6 +157,7 @@ export function Footer() {
     { name: "Get Started", href: "/get-started", icon: Rocket },
     { name: "Request Quote", href: "/request-quote", icon: TrendingUp },
     { name: "Pricing Guide", href: "/pricing", icon: BarChart3 },
+    { name: "Comprehensive Pricing Guide 2032", href: "/comprehensive-pricing-guide-2032", icon: DollarSign },
     { name: "Marketplace", href: "/marketplace", icon: ShoppingCart },
     { name: "All Services", href: "/services", icon: Zap },
     { name: "Support Center", href: "/help", icon: HelpCircle }
