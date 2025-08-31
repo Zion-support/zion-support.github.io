@@ -2,128 +2,117 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  TrendingUp,
   Users,
-  BarChart3,
   Brain,
-  Shield,
   Zap,
   CheckCircle,
   ArrowRight,
-  Star,
-  Clock,
   DollarSign,
-  Target,
+  Clock,
+  BarChart3,
   Activity,
-  AlertTriangle,
-  MessageCircle,
+  Eye,
+  Shield,
   Mail,
   Phone,
   MapPin,
-  Globe,
-  Rocket,
-  Lightbulb,
+  Play,
+  Calendar,
+  TrendingUp,
+  Target,
   Cpu,
   Database,
   Network,
-  Eye,
+  UserCheck,
+  UserPlus,
   Search,
   Filter,
-  Download,
-  Upload,
-  Settings,
-  Bell,
-  UserCheck,
-  UserX,
-  RefreshCw,
-  TrendingDown,
-  PieChart,
-  LineChart,
-  BarChart,
-  ScatterChart,
-  Play,
-  Calendar,
-  Heart,
-  ShoppingCart
+  MessageCircle,
+  FileText,
+  Star,
+  Award,
+  Briefcase,
+  GraduationCap,
+  Building2,
+  Globe
 } from 'lucide-react';
 
-const AIPoweredCustomerChurnPredictor = () => {
+const AIPoweredHRRecruitmentAssistant = () => {
   const features = [
     {
-      title: "Advanced AI Algorithms",
-      description: "Machine learning models trained on millions of customer interactions to predict churn with 95%+ accuracy",
+      title: "AI Candidate Screening",
+      description: "Automatically screen resumes and applications with 95% accuracy using advanced AI algorithms",
       icon: Brain,
       color: "text-blue-500"
     },
     {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of customer behavior patterns and instant alerts for at-risk customers",
-      icon: Activity,
+      title: "Smart Job Matching",
+      description: "Intelligent matching of candidates to job requirements based on skills, experience, and culture fit",
+      icon: Target,
       color: "text-green-500"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast customer churn up to 90 days in advance with detailed risk scoring",
-      icon: TrendingUp,
+      title: "Automated Interview Scheduling",
+      description: "Streamline interview coordination with AI-powered scheduling and calendar management",
+      icon: Calendar,
       color: "text-purple-500"
     },
     {
-      title: "Behavioral Analysis",
-      description: "Deep analysis of customer usage patterns, engagement metrics, and satisfaction indicators",
-      icon: Eye,
+      title: "Candidate Experience Analytics",
+      description: "Track and optimize the candidate journey with comprehensive analytics and insights",
+      icon: BarChart3,
       color: "text-orange-500"
     },
     {
-      title: "Automated Interventions",
-      description: "Smart automation triggers personalized retention campaigns and customer success actions",
-      icon: Zap,
+      title: "Diversity & Inclusion Tools",
+      description: "Ensure fair hiring practices with AI-powered bias detection and diversity analytics",
+      icon: Users,
       color: "text-yellow-500"
     },
     {
-      title: "Comprehensive Reporting",
-      description: "Detailed dashboards with actionable insights and retention strategy recommendations",
-      icon: BarChart3,
+      title: "Integration Ready",
+      description: "Seamlessly integrate with ATS, HRIS, and other recruitment tools for maximum efficiency",
+      icon: Network,
       color: "text-indigo-500"
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Starter",
+      name: "Startup",
       price: "$299",
       period: "/month",
-      description: "Perfect for small businesses with up to 1,000 customers",
+      description: "Perfect for small businesses hiring up to 20 positions annually",
       features: [
-        "Up to 1,000 customer profiles",
-        "Basic churn prediction models",
-        "Email alerts for at-risk customers",
-        "Standard reporting dashboard",
+        "Up to 20 job postings/month",
+        "Basic AI screening",
+        "Standard job matching",
         "Email support",
-        "API access (1,000 calls/month)",
-        "Basic integrations (CRM, email)",
-        "7-day data retention"
+        "Basic analytics dashboard",
+        "Resume parsing",
+        "Interview scheduling",
+        "3 user accounts"
       ],
       popular: false,
       cta: "Start Free Trial",
       link: "/contact"
     },
     {
-      name: "Professional",
-      price: "$799",
+      name: "Growth",
+      price: "$699",
       period: "/month",
-      description: "Ideal for growing businesses with up to 10,000 customers",
+      description: "Ideal for growing companies hiring up to 100 positions annually",
       features: [
-        "Up to 10,000 customer profiles",
-        "Advanced ML churn prediction",
-        "Real-time monitoring & alerts",
-        "Advanced analytics dashboard",
+        "Up to 100 job postings/month",
+        "Advanced AI screening",
+        "Smart job matching",
         "Priority support",
-        "API access (10,000 calls/month)",
-        "Advanced integrations",
-        "30-day data retention",
-        "Custom retention campaigns",
-        "A/B testing for interventions",
-        "Team collaboration tools"
+        "Advanced analytics",
+        "Multi-channel posting",
+        "Candidate scoring",
+        "Unlimited users",
+        "Custom workflows",
+        "API access"
       ],
       popular: true,
       cta: "Start Free Trial",
@@ -132,22 +121,18 @@ const AIPoweredCustomerChurnPredictor = () => {
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,499",
       period: "/month",
-      description: "Comprehensive solution for large organizations with unlimited customers",
+      description: "Comprehensive solution for large organizations with unlimited hiring needs",
       features: [
-        "Unlimited customer profiles",
-        "Custom ML model training",
-        "Real-time predictive analytics",
-        "Advanced intervention automation",
+        "Unlimited job postings",
+        "Custom AI model training",
+        "Advanced candidate analytics",
         "24/7 dedicated support",
-        "Unlimited API access",
         "Custom integrations",
-        "90-day data retention",
         "White-label solutions",
         "Advanced security features",
-        "Custom reporting & analytics",
-        "Dedicated customer success manager"
+        "Dedicated account manager"
       ],
       popular: false,
       cta: "Contact Sales",
@@ -157,55 +142,55 @@ const AIPoweredCustomerChurnPredictor = () => {
 
   const benefits = [
     {
-      title: "Reduce Customer Churn by 40%",
-      description: "Proactively identify and retain at-risk customers before they leave",
-      icon: TrendingDown,
-      color: "text-red-500"
-    },
-    {
-      title: "Increase Customer Lifetime Value",
-      description: "Improve retention rates and maximize revenue from existing customers",
-      icon: DollarSign,
-      color: "text-green-500"
-    },
-    {
-      title: "Save on Customer Acquisition",
-      description: "Retain existing customers instead of spending on expensive new customer acquisition",
-      icon: Users,
+      title: "Reduce Time-to-Hire by 60%",
+      description: "Accelerate the recruitment process with AI-powered automation and smart screening",
+      icon: Clock,
       color: "text-blue-500"
     },
     {
-      title: "Data-Driven Decisions",
-      description: "Make informed decisions based on comprehensive customer behavior analytics",
-      icon: BarChart3,
+      title: "Improve Quality of Hire by 40%",
+      description: "Better candidate matching leads to higher retention and performance",
+      icon: Star,
+      color: "text-green-500"
+    },
+    {
+      title: "Reduce Recruitment Costs by 50%",
+      description: "Automate manual tasks and reduce agency fees with AI-powered recruitment",
+      icon: DollarSign,
       color: "text-purple-500"
+    },
+    {
+      title: "Enhance Candidate Experience",
+      description: "Provide faster feedback and better communication throughout the hiring process",
+      icon: UserCheck,
+      color: "text-orange-500"
     }
   ];
 
   const useCases = [
     {
-      title: "SaaS Companies",
-      description: "Predict subscription cancellations and reduce churn in software-as-a-service businesses",
+      title: "High-Volume Hiring",
+      description: "Scale recruitment efforts for seasonal hiring, expansion, or rapid growth",
+      icon: Users,
+      examples: ["Seasonal hiring", "Mass recruitment", "Campus recruitment", "International hiring"]
+    },
+    {
+      title: "Technical Recruitment",
+      description: "Specialized AI for technical roles with skill assessment and coding challenges",
       icon: Cpu,
-      examples: ["User engagement monitoring", "Feature adoption tracking", "Subscription renewal prediction"]
+      examples: ["Software engineers", "Data scientists", "DevOps engineers", "Product managers"]
     },
     {
-      title: "E-commerce",
-      description: "Identify customers likely to abandon shopping carts or stop purchasing",
-      icon: ShoppingCart,
-      examples: ["Purchase pattern analysis", "Cart abandonment prediction", "Customer re-engagement campaigns"]
+      title: "Executive Search",
+      description: "AI-powered executive recruitment with culture fit and leadership assessment",
+      icon: Building2,
+      examples: ["C-level positions", "Board members", "Senior executives", "Department heads"]
     },
     {
-      title: "Financial Services",
-      description: "Predict account closures and reduce customer attrition in banking and insurance",
-      icon: DollarSign,
-      examples: ["Account activity monitoring", "Service usage analysis", "Retention campaign automation"]
-    },
-    {
-      title: "Healthcare",
-      description: "Predict patient appointment cancellations and improve healthcare service retention",
-      icon: Heart,
-      examples: ["Appointment adherence tracking", "Treatment compliance monitoring", "Patient engagement optimization"]
+      title: "Diversity Hiring",
+      description: "Ensure inclusive hiring practices with bias detection and diversity analytics",
+      icon: Globe,
+      examples: ["Gender diversity", "Ethnic diversity", "Age diversity", "Neurodiversity"]
     }
   ];
 
@@ -213,7 +198,7 @@ const AIPoweredCustomerChurnPredictor = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-green-600/20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.div
@@ -222,16 +207,16 @@ const AIPoweredCustomerChurnPredictor = () => {
               transition={{ duration: 0.6 }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI-Powered Customer Churn Predictor
+                AI-Powered HR Recruitment Assistant
               </h1>
               <p className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto">
-                Predict customer churn with 95%+ accuracy using advanced machine learning. 
-                Proactively retain customers and boost your business growth.
+                Transform your recruitment process with AI-powered automation. Find the best 
+                candidates faster, reduce costs, and improve hiring quality with intelligent AI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-green-700 transition-all duration-300 transform hover:scale-105"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -260,11 +245,11 @@ const AIPoweredCustomerChurnPredictor = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features for Churn Prevention
+              Advanced Recruitment AI Features
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI-powered platform combines advanced machine learning with comprehensive 
-              customer analytics to help you predict and prevent customer churn.
+              Our AI platform combines cutting-edge recruitment technology with comprehensive 
+              automation to transform how you find and hire talent.
             </p>
           </motion.div>
 
@@ -300,11 +285,11 @@ const AIPoweredCustomerChurnPredictor = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Customer Retention Strategy
+              Transform Your Recruitment Process
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Stop losing valuable customers and start building lasting relationships 
-              with data-driven insights and proactive interventions.
+              Stop spending hours on manual recruitment tasks and start focusing on 
+              what matters most - building your dream team.
             </p>
           </motion.div>
 
@@ -342,11 +327,11 @@ const AIPoweredCustomerChurnPredictor = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Solutions
+              Recruitment Solutions
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI-powered churn prediction platform is designed to work across 
-              various industries and business models.
+              Our AI-powered recruitment platform is designed to serve organizations 
+              across various industries and hiring needs.
             </p>
           </motion.div>
 
@@ -392,10 +377,10 @@ const AIPoweredCustomerChurnPredictor = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Recruitment Platform Pricing
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include a 14-day free trial.
+              Choose the plan that fits your recruitment needs. All plans include a 14-day free trial.
             </p>
           </motion.div>
 
@@ -446,7 +431,7 @@ const AIPoweredCustomerChurnPredictor = () => {
                   to={tier.link}
                   className={`w-full inline-flex justify-center items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     tier.popular
-                      ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                      ? 'bg-gradient-to-r from-blue-600 to-green-600 text-white hover:from-blue-700 hover:to-green-700'
                       : 'bg-slate-600 text-white hover:bg-slate-500'
                   }`}
                 >
@@ -459,7 +444,7 @@ const AIPoweredCustomerChurnPredictor = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-green-600/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -468,16 +453,16 @@ const AIPoweredCustomerChurnPredictor = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Stop Customer Churn?
+              Ready to Transform Your Recruitment?
             </h2>
             <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses that have transformed their customer retention 
-              with our AI-powered churn prediction platform.
+              Join thousands of organizations that have transformed their hiring process 
+              with our AI-powered recruitment platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-green-700 transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -527,4 +512,4 @@ const AIPoweredCustomerChurnPredictor = () => {
   );
 };
 
-export default AIPoweredCustomerChurnPredictor;
+export default AIPoweredHRRecruitmentAssistant;

@@ -217,6 +217,37 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Compliance Assistant
                       </Link>
                     </li>
+                    {/* New Innovative Services 2026 */}
+                    <li>
+                      <Link to="/services/ai-powered-customer-churn-predictor" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Churn Predictor
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-invoice-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <FileText className="w-3 h-3 mr-2" />
+                        AI Invoice Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-legal-document-analyzer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <FileText className="w-3 h-3 mr-2" />
+                        AI Legal Analyzer
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-hr-recruitment-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI HR Assistant
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-marketing-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Marketing Automation
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div>

@@ -81,6 +81,8 @@ const AIPredictiveMaintenance = createLazyComponent(() => import('./pages/servic
 const AIHRPlatform = createLazyComponent(() => import('./pages/services/ai-hr-platform'));
 const AIFinancialTradingRiskManagement = createLazyComponent(() => import('./pages/services/ai-financial-trading-risk-management'));
 
+
+
 // Enhanced Innovative Micro SAAS Services 2025
 const AICustomerSuccessAutomation = createLazyComponent(() => import('./pages/services/ai-customer-success-automation'));
 const AISupplyChainOptimizationEnhanced = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-enhanced'));
@@ -286,6 +288,13 @@ function App() {
                     <Route path="/services/ai-predictive-maintenance" element={<ModernLayout><AIPredictiveMaintenance /></ModernLayout>} />
                     <Route path="/services/ai-hr-platform" element={<ModernLayout><AIHRPlatform /></ModernLayout>} />
                     <Route path="/services/ai-financial-trading-risk-management" element={<ModernLayout><AIFinancialTradingRiskManagement /></ModernLayout>} />
+
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-powered-customer-churn-predictor" element={<ModernLayout><AIPoweredCustomerChurnPredictor /></ModernLayout>} />
+                    <Route path="/services/ai-powered-invoice-automation" element={<ModernLayout><AIPoweredInvoiceAutomation /></ModernLayout>} />
+                    <Route path="/services/ai-powered-legal-document-analyzer" element={<ModernLayout><AIPoweredLegalDocumentAnalyzer /></ModernLayout>} />
+                    <Route path="/services/ai-powered-hr-recruitment-assistant" element={<ModernLayout><AIPoweredHRRecruitmentAssistant /></ModernLayout>} />
+                    <Route path="/services/ai-powered-marketing-automation" element={<ModernLayout><AIPoweredMarketingAutomation /></ModernLayout>} />
 
                     {/* Enhanced Innovative Micro SAAS Services 2025 */}
                     <Route path="/services/ai-customer-success-automation" element={<ModernLayout><AICustomerSuccessAutomation /></ModernLayout>} />
