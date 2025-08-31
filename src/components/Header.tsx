@@ -302,7 +302,7 @@ export function Header({ className }: HeaderProps) {
                       className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
                       onClick={closeMobileMenu}
                     >
-                      Micro SAAS
+                      Micro SaaS
                     </Link>
                     <Link
                       to="/solutions"
@@ -310,6 +310,20 @@ export function Header({ className }: HeaderProps) {
                       onClick={closeMobileMenu}
                     >
                       Solutions
+                    </Link>
+                    <Link
+                      to="/services/ai-compliance-copilot"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      AI Compliance Copilot
+                    </Link>
+                    <Link
+                      to="/services/cloud-devops"
+                      className="block text-zion-slate-light hover:text-zion-cyan transition-colors"
+                      onClick={closeMobileMenu}
+                    >
+                      Cloud & DevOps
                     </Link>
                   </div>
                 </div>

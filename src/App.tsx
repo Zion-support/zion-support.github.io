@@ -39,6 +39,7 @@ const AISupplyChainOptimization = createLazyComponent(() => import('./pages/serv
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
+const AIComplianceCopilot = createLazyComponent(() => import('./pages/services/ai-compliance-copilot'));
 
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
@@ -93,6 +94,8 @@ const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Team = createLazyComponent(() => import('./pages/Team'));
 const Events = createLazyComponent(() => import('./pages/Events'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
+const ScheduleDemo = createLazyComponent(() => import('./pages/ScheduleDemo'));
 
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -181,6 +184,7 @@ function App() {
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
+                    <Route path="/services/ai-compliance-copilot" element={<AIComplianceCopilot />} />
                     
                     {/* New Micro SAAS Services 2025 */}
                     <Route path="/services/ai-legal-document-automation-platform" element={<AILegalDocumentAutomationPlatform />} />
@@ -233,6 +237,8 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/team" element={<Team />} />
                     <Route path="/events" element={<Events />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+                    <Route path="/schedule-demo" element={<ScheduleDemo />} />
                   </Routes>
                 </AnimatePresence>
               </main>

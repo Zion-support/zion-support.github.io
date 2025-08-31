@@ -84,7 +84,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         { name: 'IT Services', href: '/it-services', icon: Settings, description: 'Information Technology services' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: ShoppingCart, description: 'Software-as-a-Service products' },
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Cloud infrastructure' },
-        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Security solutions' }
+        { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform', icon: Shield, description: 'Security solutions' },
+        { name: 'AI Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'AI-powered compliance' }
       ]
     },
     {

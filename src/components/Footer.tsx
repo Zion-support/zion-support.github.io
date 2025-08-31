@@ -118,6 +118,7 @@ export function Footer() {
               <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
               <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
               <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
+              <li><Link to="/services/ai-compliance-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Copilot</Link></li>
               <li><Link to="/services/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
               <li><Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
             </ul>
@@ -252,6 +253,7 @@ export function Footer() {
             
             <div className="flex items-center space-x-6 text-sm">
               <Link to="/sitemap" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Sitemap</Link>
+              <Link to="/schedule-demo" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Schedule Demo</Link>
               <Link to="/accessibility" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Accessibility</Link>
               <Link to="/status" className="text-zion-slate-light hover:text-zion-cyan transition-colors">System Status</Link>
             </div>
