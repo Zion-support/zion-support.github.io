@@ -1,12 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUp, 
-  Shield, 
-  BarChart3, 
-  DollarSign, 
-  Globe, 
+  Atom, 
+  Brain, 
   Zap, 
+  BarChart3, 
+  Globe, 
+  Shield, 
   Database, 
   Users,
   CheckCircle,
@@ -14,94 +14,96 @@ import {
   Phone,
   Mail,
   MapPin,
-  Brain,
+  Cpu,
   Target,
-  Lock
+  Eye,
+  Rocket
 } from 'lucide-react';
 
-const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
+const AIAutonomousQuantumComputingPlatform: React.FC = () => {
   const features = [
     {
+      icon: <Atom className="w-6 h-6 text-purple-500" />,
+      title: "Quantum Processing Units",
+      description: "Access to state-of-the-art quantum computers with 1000+ qubits for complex computational tasks"
+    },
+    {
       icon: <Brain className="w-6 h-6 text-blue-500" />,
-      title: "AI-Powered Investment Analysis",
-      description: "Advanced machine learning algorithms analyze market data, economic indicators, and company fundamentals in real-time"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
-      title: "Automated Portfolio Management",
-      description: "Intelligent rebalancing, risk management, and optimization based on your financial goals and market conditions"
-    },
-    {
-      icon: <Shield className="w-6 h-6 text-red-500" />,
-      title: "Risk Assessment & Management",
-      description: "Comprehensive risk analysis using AI models to protect your investments and optimize risk-adjusted returns"
-    },
-    {
-      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
-      title: "Predictive Market Insights",
-      description: "AI-driven market forecasting and trend analysis to identify investment opportunities before they become mainstream"
-    },
-    {
-      icon: <Globe className="w-6 h-6 text-emerald-500" />,
-      title: "Global Market Coverage",
-      description: "Access to international markets, currencies, and alternative investments with AI-powered analysis"
+      title: "AI-Quantum Hybrid Algorithms",
+      description: "Intelligent algorithms that optimize quantum circuit design and execution for maximum efficiency"
     },
     {
       icon: <Zap className="w-6 h-6 text-yellow-500" />,
-      title: "Real-time Alerts & Notifications",
-      description: "Instant notifications for market movements, portfolio changes, and investment opportunities"
+      title: "Quantum Machine Learning",
+      description: "Advanced quantum algorithms for machine learning, optimization, and pattern recognition"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-green-500" />,
+      title: "Real-time Quantum Analytics",
+      description: "Live monitoring and analysis of quantum computations with performance optimization insights"
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-emerald-500" />,
+      title: "Global Quantum Network",
+      description: "Access to distributed quantum computing resources across multiple locations worldwide"
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-red-500" />,
+      title: "Quantum-Safe Security",
+      description: "Post-quantum cryptography and quantum-resistant security protocols for future-proof protection"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Quantum Starter",
+      price: "$4,999",
       period: "/month",
-      description: "Perfect for individual investors starting their wealth management journey",
+      description: "Perfect for research institutions and startups beginning their quantum computing journey",
       features: [
-        "Up to $100K portfolio management",
-        "Basic AI investment recommendations",
-        "Monthly portfolio reviews",
+        "Up to 100 qubits",
+        "Basic quantum algorithms",
+        "Standard quantum circuits",
         "Email support",
-        "Mobile app access",
-        "Basic risk assessment"
+        "Web interface access",
+        "Basic documentation",
+        "Community forum access"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Quantum Professional",
+      price: "$12,999",
       period: "/month",
-      description: "Ideal for active investors and growing portfolios",
+      description: "Ideal for growing companies and research teams requiring advanced quantum capabilities",
       features: [
-        "Up to $1M portfolio management",
-        "Advanced AI analytics",
-        "Real-time portfolio monitoring",
-        "Custom investment strategies",
+        "Up to 500 qubits",
+        "Advanced quantum algorithms",
+        "Custom circuit design",
         "Priority support",
         "API access",
-        "Advanced risk management",
-        "Tax optimization"
+        "Advanced analytics",
+        "Multi-user accounts",
+        "Quantum simulation tools"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$999",
+      name: "Quantum Enterprise",
+      price: "$29,999",
       period: "/month",
-      description: "For high-net-worth individuals and institutional clients",
+      description: "For large corporations and research institutions requiring maximum quantum computing power",
       features: [
-        "Unlimited portfolio size",
-        "Custom AI models",
-        "Multi-account management",
-        "Dedicated financial advisor",
+        "1000+ qubits",
+        "Custom quantum models",
+        "Dedicated quantum resources",
         "24/7 support",
-        "Advanced compliance tools",
+        "Advanced security features",
         "White-label solutions",
-        "Family office features"
+        "Custom integrations",
+        "Dedicated account manager"
       ],
       cta: "Contact Sales",
       popular: false
@@ -109,45 +111,61 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
   ];
 
   const benefits = [
-    "Achieve higher returns through AI-optimized investment strategies",
-    "Reduce investment risk with intelligent portfolio diversification",
-    "Save time with automated portfolio management and rebalancing",
-    "Access institutional-grade investment analysis and research",
-    "Optimize tax efficiency and minimize investment costs",
-    "Get personalized financial advice based on your unique goals"
+    "Solve complex problems 1000x faster than classical computers",
+    "Achieve quantum advantage in optimization and machine learning",
+    "Reduce computational costs by 90% for specific problem types",
+    "Enable breakthroughs in drug discovery and materials science",
+    "Accelerate AI training and inference by orders of magnitude",
+    "Future-proof your organization with quantum-ready infrastructure"
   ];
 
-  const investmentStrategies = [
+  const quantumModules = [
     {
-      name: "Growth Investing",
-      description: "AI-identified high-growth companies with strong fundamentals",
-      expectedReturn: "15-25% annually",
-      riskLevel: "Moderate-High"
+      category: "Quantum Algorithms",
+      solutions: [
+        "Grover's search algorithm",
+        "Shor's factoring algorithm",
+        "Quantum Fourier transform",
+        "Quantum machine learning",
+        "Quantum optimization algorithms"
+      ]
     },
     {
-      name: "Value Investing",
-      description: "Undervalued stocks identified through AI analysis",
-      expectedReturn: "12-18% annually",
-      riskLevel: "Moderate"
+      category: "Quantum Applications",
+      solutions: [
+        "Drug discovery and molecular modeling",
+        "Financial modeling and risk assessment",
+        "Logistics and supply chain optimization",
+        "Cryptography and cybersecurity",
+        "Artificial intelligence acceleration"
+      ]
     },
     {
-      name: "Dividend Investing",
-      description: "Stable companies with consistent dividend growth",
-      expectedReturn: "8-12% annually",
-      riskLevel: "Low-Moderate"
+      category: "Quantum Development",
+      solutions: [
+        "Quantum programming languages",
+        "Circuit design and optimization",
+        "Quantum error correction",
+        "Hybrid classical-quantum systems",
+        "Performance benchmarking tools"
+      ]
     },
     {
-      name: "Alternative Investments",
-      description: "AI-curated alternative assets for portfolio diversification",
-      expectedReturn: "10-20% annually",
-      riskLevel: "High"
+      category: "Quantum Infrastructure",
+      solutions: [
+        "Cloud-based quantum access",
+        "Quantum simulators",
+        "Hardware abstraction layers",
+        "Multi-cloud quantum deployment",
+        "Quantum networking protocols"
+      ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-purple-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <div className="bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,20 +174,20 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-              <TrendingUp className="w-8 h-8" />
+              <Atom className="w-8 h-8" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI-Powered Autonomous Financial Advisor Platform
+              AI-Powered Autonomous Quantum Computing Platform
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Revolutionize your wealth management with intelligent AI-driven investment strategies, 
-              automated portfolio management, and predictive market insights.
+            <p className="text-xl md:text-2xl text-purple-100 mb-8 max-w-4xl mx-auto">
+              Unlock the power of quantum computing with intelligent AI-driven algorithms, 
+              autonomous optimization, and breakthrough computational capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button className="bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                 Start Free Trial
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition-colors">
                 Schedule Demo
               </button>
             </div>
@@ -187,11 +205,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Intelligent Wealth Management
+              Revolutionary Quantum Computing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI platform combines advanced machine learning with financial expertise to deliver 
-              institutional-grade investment management accessible to individual investors.
+              Our AI-powered quantum platform combines cutting-edge quantum hardware with intelligent 
+              algorithms to solve previously impossible computational challenges.
             </p>
           </motion.div>
 
@@ -217,8 +235,8 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Investment Strategies Section */}
-      <section className="py-20 bg-blue-50">
+      {/* Quantum Modules Section */}
+      <section className="py-20 bg-purple-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,16 +245,16 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI-Optimized Investment Strategies
+              Comprehensive Quantum Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform offers a diverse range of investment strategies, each optimized by AI 
-              to maximize returns while managing risk according to your financial goals.
+              Our platform provides end-to-end quantum computing capabilities, from algorithm development 
+              to deployment and optimization, enabling breakthroughs across all industries.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {investmentStrategies.map((strategy, index) => (
+            {quantumModules.map((module, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -244,22 +262,21 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900">{strategy.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    strategy.riskLevel === 'Low-Moderate' ? 'bg-green-100 text-green-800' :
-                    strategy.riskLevel === 'Moderate' ? 'bg-yellow-100 text-yellow-800' :
-                    strategy.riskLevel === 'Moderate-High' ? 'bg-orange-100 text-orange-800' :
-                    'bg-red-100 text-red-800'
-                  }`}>
-                    {strategy.riskLevel}
-                  </span>
+                <div className="flex items-center mb-4">
+                  {index === 0 && <Rocket className="w-6 h-6 text-purple-500 mr-3" />}
+                  {index === 1 && <Target className="w-6 h-6 text-blue-500 mr-3" />}
+                  {index === 2 && <Cpu className="w-6 h-6 text-green-500 mr-3" />}
+                  {index === 3 && <Eye className="w-6 h-6 text-orange-500 mr-3" />}
+                  <h3 className="text-xl font-semibold text-gray-900">{module.category}</h3>
                 </div>
-                <p className="text-gray-600 mb-4">{strategy.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">Expected Return:</span>
-                  <span className="text-lg font-semibold text-green-600">{strategy.expectedReturn}</span>
-                </div>
+                <ul className="space-y-2">
+                  {module.solutions.map((solution, solutionIndex) => (
+                    <li key={solutionIndex} className="flex items-start space-x-3">
+                      <CheckCircle className="w-4 h-4 text-purple-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{solution}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -276,11 +293,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Financial Platform?
+              Why Choose Our Quantum Platform?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of investors worldwide who trust our AI platform to manage their wealth 
-              and achieve their financial goals.
+              Join the quantum revolution and gain unprecedented computational power to solve 
+              the world's most complex problems and drive innovation across all industries.
             </p>
           </motion.div>
 
@@ -294,7 +311,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>
               ))}
@@ -308,7 +325,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-purple-500 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>
               ))}
@@ -317,7 +334,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Security & Compliance Section */}
+      {/* Technology & Integration Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -327,27 +344,27 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Enterprise-Grade Security & Compliance
+              Advanced Technology & Seamless Integration
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your financial data and investments are protected by the highest security standards 
-              and regulatory compliance frameworks.
+              Built on cutting-edge quantum technologies with seamless integration capabilities 
+              for your existing computational infrastructure and workflows.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center p-6"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <Lock className="w-8 h-8 text-blue-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
+                <Atom className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Bank-Level Security</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Quantum Hardware</h3>
               <p className="text-gray-600">
-                End-to-end encryption, multi-factor authentication, and SOC 2 compliance ensure your data is always secure.
+                Access to superconducting, trapped ion, and photonic quantum computers with 1000+ qubits
               </p>
             </motion.div>
 
@@ -357,12 +374,12 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center p-6"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <Brain className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Regulatory Compliance</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI & ML Integration</h3>
               <p className="text-gray-600">
-                Full compliance with SEC, FINRA, and other financial regulations. SIPC protection for your investments.
+                Intelligent algorithms that optimize quantum circuits and enhance computational efficiency
               </p>
             </motion.div>
 
@@ -372,12 +389,27 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center p-6"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                <Target className="w-8 h-8 text-purple-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                <Database className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Fiduciary Duty</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Quantum Software Stack</h3>
               <p className="text-gray-600">
-                Our AI platform operates under strict fiduciary standards, always putting your financial interests first.
+                Comprehensive development tools, simulators, and optimization frameworks for quantum applications
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center p-6"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
+                <Shield className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Quantum Security</h3>
+              <p className="text-gray-600">
+                Post-quantum cryptography and quantum-resistant security protocols for future-proof protection
               </p>
             </motion.div>
           </div>
@@ -397,8 +429,8 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your investment goals and portfolio size. 
-              All plans include our core AI-powered investment management capabilities.
+              Choose the plan that fits your quantum computing needs and research requirements. 
+              All plans include access to our AI-powered quantum optimization capabilities.
             </p>
           </motion.div>
 
@@ -411,13 +443,13 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white p-8 rounded-2xl shadow-lg border-2 ${
                   plan.popular 
-                    ? 'border-blue-500 scale-105' 
+                    ? 'border-purple-500 scale-105' 
                     : 'border-gray-200'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -435,7 +467,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -443,7 +475,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'bg-purple-600 text-white hover:bg-purple-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   {plan.cta}
@@ -455,7 +487,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-purple-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -463,34 +495,34 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Wealth Management?
+              Ready to Go Quantum?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join thousands of investors worldwide who trust our AI platform to manage their wealth 
-              and achieve their financial goals. Our team of experts is ready to help you get started.
+            <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">
+              Join the quantum computing revolution and unlock unprecedented computational power. 
+              Our team of quantum experts is ready to help you get started.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-blue-300" />
+                <Phone className="w-6 h-6 text-purple-300" />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-blue-300" />
+                <Mail className="w-6 h-6 text-purple-300" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-blue-300" />
+                <MapPin className="w-6 h-6 text-purple-300" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button className="bg-white text-purple-700 px-8 py-4 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
                 Schedule a Demo
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors">
-                Contact Sales Team
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-700 transition-colors">
+                Contact Quantum Team
               </button>
             </div>
           </motion.div>
@@ -509,11 +541,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               Visit Our Website
             </h3>
             <p className="text-gray-300 mb-6">
-              Learn more about our comprehensive financial advisory solutions and explore our full service portfolio.
+              Learn more about our revolutionary quantum computing solutions and explore our full service portfolio.
             </p>
             <a 
-              href="https://ziontechgroup.com/services/ai-autonomous-financial-advisor-platform"
-              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              href="https://ziontechgroup.com/services/ai-autonomous-quantum-computing-platform"
+              className="inline-flex items-center space-x-2 bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               <span>Learn More</span>
               <ArrowRight className="w-5 h-5" />
@@ -525,4 +557,4 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
   );
 };
 
-export default AIAutonomousFinancialAdvisorPlatform;
+export default AIAutonomousQuantumComputingPlatform;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUp, 
   Shield, 
+  Brain, 
+  AlertTriangle, 
   BarChart3, 
-  DollarSign, 
   Globe, 
   Zap, 
   Database, 
@@ -14,94 +14,97 @@ import {
   Phone,
   Mail,
   MapPin,
-  Brain,
+  Lock,
   Target,
-  Lock
+  Eye,
+  Cpu
 } from 'lucide-react';
 
-const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
+const AIAutonomousCybersecurityThreatIntelligencePlatform: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-blue-500" />,
-      title: "AI-Powered Investment Analysis",
-      description: "Advanced machine learning algorithms analyze market data, economic indicators, and company fundamentals in real-time"
+      title: "AI-Powered Threat Detection",
+      description: "Advanced machine learning algorithms detect and analyze cyber threats in real-time with 99.9% accuracy"
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
-      title: "Automated Portfolio Management",
-      description: "Intelligent rebalancing, risk management, and optimization based on your financial goals and market conditions"
+      icon: <AlertTriangle className="w-6 h-6 text-red-500" />,
+      title: "Predictive Threat Intelligence",
+      description: "Forecast emerging cyber threats and vulnerabilities before they become active attacks"
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-500" />,
-      title: "Risk Assessment & Management",
-      description: "Comprehensive risk analysis using AI models to protect your investments and optimize risk-adjusted returns"
+      icon: <Shield className="w-6 h-6 text-green-500" />,
+      title: "Autonomous Response & Mitigation",
+      description: "AI-driven incident response that automatically contains and neutralizes threats within seconds"
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
-      title: "Predictive Market Insights",
-      description: "AI-driven market forecasting and trend analysis to identify investment opportunities before they become mainstream"
+      title: "Real-time Security Analytics",
+      description: "Live dashboards showing threat landscape, attack patterns, and security posture metrics"
     },
     {
       icon: <Globe className="w-6 h-6 text-emerald-500" />,
-      title: "Global Market Coverage",
-      description: "Access to international markets, currencies, and alternative investments with AI-powered analysis"
+      title: "Global Threat Intelligence Network",
+      description: "Access to worldwide threat data, attack patterns, and security intelligence from millions of sources"
     },
     {
       icon: <Zap className="w-6 h-6 text-yellow-500" />,
-      title: "Real-time Alerts & Notifications",
-      description: "Instant notifications for market movements, portfolio changes, and investment opportunities"
+      title: "Zero-Day Vulnerability Detection",
+      description: "Identify and patch unknown vulnerabilities before they can be exploited by attackers"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "SMB Security",
+      price: "$2,499",
       period: "/month",
-      description: "Perfect for individual investors starting their wealth management journey",
+      description: "Perfect for small to medium businesses requiring enterprise-grade cybersecurity protection",
       features: [
-        "Up to $100K portfolio management",
-        "Basic AI investment recommendations",
-        "Monthly portfolio reviews",
+        "Up to 500 endpoints",
+        "Basic threat detection",
+        "Email security",
+        "Web filtering",
+        "24/7 monitoring",
         "Email support",
-        "Mobile app access",
-        "Basic risk assessment"
+        "Basic reporting",
+        "Mobile app access"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Enterprise Security",
+      price: "$5,999",
       period: "/month",
-      description: "Ideal for active investors and growing portfolios",
+      description: "Ideal for growing enterprises with complex security requirements",
       features: [
-        "Up to $1M portfolio management",
-        "Advanced AI analytics",
-        "Real-time portfolio monitoring",
-        "Custom investment strategies",
+        "Up to 5,000 endpoints",
+        "Advanced AI threat detection",
+        "Real-time monitoring",
+        "Custom security policies",
         "Priority support",
         "API access",
-        "Advanced risk management",
-        "Tax optimization"
+        "Advanced analytics",
+        "Multi-site protection"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$999",
+      name: "Global Enterprise",
+      price: "$12,999",
       period: "/month",
-      description: "For high-net-worth individuals and institutional clients",
+      description: "For multinational corporations requiring comprehensive cybersecurity intelligence",
       features: [
-        "Unlimited portfolio size",
+        "Unlimited endpoints",
         "Custom AI models",
-        "Multi-account management",
-        "Dedicated financial advisor",
+        "Multi-region protection",
+        "Dedicated security team",
         "24/7 support",
         "Advanced compliance tools",
         "White-label solutions",
-        "Family office features"
+        "International deployment"
       ],
       cta: "Contact Sales",
       popular: false
@@ -109,45 +112,61 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
   ];
 
   const benefits = [
-    "Achieve higher returns through AI-optimized investment strategies",
-    "Reduce investment risk with intelligent portfolio diversification",
-    "Save time with automated portfolio management and rebalancing",
-    "Access institutional-grade investment analysis and research",
-    "Optimize tax efficiency and minimize investment costs",
-    "Get personalized financial advice based on your unique goals"
+    "Detect threats 10x faster than traditional security solutions",
+    "Reduce false positives by 90% with AI-powered analysis",
+    "Achieve 99.9% threat detection accuracy across all attack vectors",
+    "Cut incident response time from hours to seconds",
+    "Prevent 95% of cyber attacks before they can cause damage",
+    "Reduce security operations costs by 40-60% through automation"
   ];
 
-  const investmentStrategies = [
+  const securityModules = [
     {
-      name: "Growth Investing",
-      description: "AI-identified high-growth companies with strong fundamentals",
-      expectedReturn: "15-25% annually",
-      riskLevel: "Moderate-High"
+      category: "Threat Detection & Prevention",
+      solutions: [
+        "AI-powered malware detection",
+        "Behavioral analysis",
+        "Network traffic monitoring",
+        "Endpoint protection",
+        "Cloud security monitoring"
+      ]
     },
     {
-      name: "Value Investing",
-      description: "Undervalued stocks identified through AI analysis",
-      expectedReturn: "12-18% annually",
-      riskLevel: "Moderate"
+      category: "Incident Response & Recovery",
+      solutions: [
+        "Automated threat containment",
+        "Forensic analysis tools",
+        "Recovery automation",
+        "Incident playbooks",
+        "Post-incident reporting"
+      ]
     },
     {
-      name: "Dividend Investing",
-      description: "Stable companies with consistent dividend growth",
-      expectedReturn: "8-12% annually",
-      riskLevel: "Low-Moderate"
+      category: "Vulnerability Management",
+      solutions: [
+        "Automated vulnerability scanning",
+        "Patch management",
+        "Configuration assessment",
+        "Risk scoring",
+        "Compliance monitoring"
+      ]
     },
     {
-      name: "Alternative Investments",
-      description: "AI-curated alternative assets for portfolio diversification",
-      expectedReturn: "10-20% annually",
-      riskLevel: "High"
+      category: "Security Intelligence",
+      solutions: [
+        "Threat intelligence feeds",
+        "Attack pattern analysis",
+        "Security research",
+        "Threat hunting tools",
+        "Security awareness training"
+      ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-red-50">
       {/* Header */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <div className="bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,20 +175,20 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-              <TrendingUp className="w-8 h-8" />
+              <Shield className="w-8 h-8" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI-Powered Autonomous Financial Advisor Platform
+              AI-Powered Autonomous Cybersecurity Threat Intelligence Platform
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Revolutionize your wealth management with intelligent AI-driven investment strategies, 
-              automated portfolio management, and predictive market insights.
+            <p className="text-xl md:text-2xl text-red-100 mb-8 max-w-4xl mx-auto">
+              Protect your organization with intelligent AI-driven threat detection, 
+              autonomous incident response, and predictive cybersecurity intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button className="bg-white text-red-700 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors">
                 Start Free Trial
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors">
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-700 transition-colors">
                 Schedule Demo
               </button>
             </div>
@@ -187,11 +206,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Intelligent Wealth Management
+              Intelligent Cybersecurity Protection
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI platform combines advanced machine learning with financial expertise to deliver 
-              institutional-grade investment management accessible to individual investors.
+              Our AI platform provides comprehensive cybersecurity protection that learns, adapts, 
+              and responds to threats autonomously, ensuring your organization stays secure 24/7.
             </p>
           </motion.div>
 
@@ -217,8 +236,8 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Investment Strategies Section */}
-      <section className="py-20 bg-blue-50">
+      {/* Security Modules Section */}
+      <section className="py-20 bg-red-50">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,16 +246,16 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI-Optimized Investment Strategies
+              Comprehensive Security Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform offers a diverse range of investment strategies, each optimized by AI 
-              to maximize returns while managing risk according to your financial goals.
+              Our platform addresses every aspect of cybersecurity, providing integrated 
+              solutions that work together to create an intelligent, adaptive, and impenetrable security posture.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {investmentStrategies.map((strategy, index) => (
+            {securityModules.map((module, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -244,22 +263,21 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900">{strategy.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    strategy.riskLevel === 'Low-Moderate' ? 'bg-green-100 text-green-800' :
-                    strategy.riskLevel === 'Moderate' ? 'bg-yellow-100 text-yellow-800' :
-                    strategy.riskLevel === 'Moderate-High' ? 'bg-orange-100 text-orange-800' :
-                    'bg-red-100 text-red-800'
-                  }`}>
-                    {strategy.riskLevel}
-                  </span>
+                <div className="flex items-center mb-4">
+                  {index === 0 && <Eye className="w-6 h-6 text-red-500 mr-3" />}
+                  {index === 1 && <Zap className="w-6 h-6 text-blue-500 mr-3" />}
+                  {index === 2 && <Target className="w-6 h-6 text-green-500 mr-3" />}
+                  {index === 3 && <Brain className="w-6 h-6 text-purple-500 mr-3" />}
+                  <h3 className="text-xl font-semibold text-gray-900">{module.category}</h3>
                 </div>
-                <p className="text-gray-600 mb-4">{strategy.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">Expected Return:</span>
-                  <span className="text-lg font-semibold text-green-600">{strategy.expectedReturn}</span>
-                </div>
+                <ul className="space-y-2">
+                  {module.solutions.map((solution, solutionIndex) => (
+                    <li key={solutionIndex} className="flex items-start space-x-3">
+                      <CheckCircle className="w-4 h-4 text-red-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{solution}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -276,11 +294,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Financial Platform?
+              Why Choose Our Cybersecurity Platform?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of investors worldwide who trust our AI platform to manage their wealth 
-              and achieve their financial goals.
+              Join thousands of organizations worldwide in their mission to achieve 
+              impenetrable cybersecurity through intelligent AI-driven protection.
             </p>
           </motion.div>
 
@@ -294,7 +312,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>
               ))}
@@ -308,7 +326,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="flex items-start space-x-4"
                 >
-                  <CheckCircle className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-6 h-6 text-red-500 mt-1 flex-shrink-0" />
                   <span className="text-lg text-gray-700">{benefit}</span>
                 </motion.div>
               ))}
@@ -317,7 +335,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Security & Compliance Section */}
+      {/* Technology & Integration Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -327,27 +345,27 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Enterprise-Grade Security & Compliance
+              Advanced Technology & Seamless Integration
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your financial data and investments are protected by the highest security standards 
-              and regulatory compliance frameworks.
+              Built on cutting-edge AI and cybersecurity technologies with seamless integration capabilities 
+              for your existing security infrastructure and tools.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-center p-6"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <Lock className="w-8 h-8 text-blue-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-red-100 rounded-full mb-4">
+                <Brain className="w-8 h-8 text-red-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Bank-Level Security</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI & Machine Learning</h3>
               <p className="text-gray-600">
-                End-to-end encryption, multi-factor authentication, and SOC 2 compliance ensure your data is always secure.
+                Advanced algorithms for threat detection, behavioral analysis, and autonomous response
               </p>
             </motion.div>
 
@@ -357,12 +375,12 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-center p-6"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <Database className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Regulatory Compliance</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Big Data Analytics</h3>
               <p className="text-gray-600">
-                Full compliance with SEC, FINRA, and other financial regulations. SIPC protection for your investments.
+                Real-time processing and analysis of massive security datasets for threat intelligence
               </p>
             </motion.div>
 
@@ -372,12 +390,27 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-center p-6"
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                <Target className="w-8 h-8 text-purple-600" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                <Cpu className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Fiduciary Duty</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Automation & Orchestration</h3>
               <p className="text-gray-600">
-                Our AI platform operates under strict fiduciary standards, always putting your financial interests first.
+                Automated incident response, threat containment, and security workflow automation
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center p-6"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
+                <Lock className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Zero Trust Security</h3>
+              <p className="text-gray-600">
+                Comprehensive zero trust architecture with continuous verification and least privilege access
               </p>
             </motion.div>
           </div>
@@ -397,8 +430,8 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your investment goals and portfolio size. 
-              All plans include our core AI-powered investment management capabilities.
+              Choose the plan that fits your organization's security requirements and budget. 
+              All plans include our core AI-powered cybersecurity intelligence capabilities.
             </p>
           </motion.div>
 
@@ -411,13 +444,13 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-white p-8 rounded-2xl shadow-lg border-2 ${
                   plan.popular 
-                    ? 'border-blue-500 scale-105' 
+                    ? 'border-red-500 scale-105' 
                     : 'border-gray-200'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -435,7 +468,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0" />
                       <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
@@ -443,7 +476,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
                   plan.popular
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    ? 'bg-red-600 text-white hover:bg-red-700'
                     : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
                 }`}>
                   {plan.cta}
@@ -455,7 +488,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-red-600 to-red-800 text-white">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -463,34 +496,34 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Wealth Management?
+              Ready to Secure Your Organization?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join thousands of investors worldwide who trust our AI platform to manage their wealth 
-              and achieve their financial goals. Our team of experts is ready to help you get started.
+            <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
+              Join thousands of organizations worldwide in their mission to achieve 
+              impenetrable cybersecurity. Our team of security experts is ready to help you get started.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
               <div className="flex items-center justify-center space-x-3">
-                <Phone className="w-6 h-6 text-blue-300" />
+                <Phone className="w-6 h-6 text-red-300" />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <Mail className="w-6 h-6 text-blue-300" />
+                <Mail className="w-6 h-6 text-red-300" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3">
-                <MapPin className="w-6 h-6 text-blue-300" />
+                <MapPin className="w-6 h-6 text-red-300" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+              <button className="bg-white text-red-700 px-8 py-4 rounded-lg font-semibold hover:bg-red-50 transition-colors">
                 Schedule a Demo
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors">
-                Contact Sales Team
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-red-700 transition-colors">
+                Contact Security Team
               </button>
             </div>
           </motion.div>
@@ -509,11 +542,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               Visit Our Website
             </h3>
             <p className="text-gray-300 mb-6">
-              Learn more about our comprehensive financial advisory solutions and explore our full service portfolio.
+              Learn more about our comprehensive cybersecurity solutions and explore our full service portfolio.
             </p>
             <a 
-              href="https://ziontechgroup.com/services/ai-autonomous-financial-advisor-platform"
-              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              href="https://ziontechgroup.com/services/ai-autonomous-cybersecurity-threat-intelligence-platform"
+              className="inline-flex items-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
             >
               <span>Learn More</span>
               <ArrowRight className="w-5 h-5" />
@@ -525,4 +558,4 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
   );
 };
 
-export default AIAutonomousFinancialAdvisorPlatform;
+export default AIAutonomousCybersecurityThreatIntelligencePlatform;

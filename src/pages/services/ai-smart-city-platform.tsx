@@ -1,289 +1,231 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 import { 
   Building2, 
   TrafficCone, 
-  Lightbulb, 
-  Globe, 
   Zap, 
+  Globe, 
   Shield, 
   BarChart3, 
-  Users, 
-  CheckCircle, 
-  Star,
+  Database, 
+  Users,
+  CheckCircle,
+  ArrowRight,
   Phone,
   Mail,
   MapPin,
-  Clock,
-  DollarSign,
-  TrendingUp,
-  Target,
-  Cpu,
-  Database,
-  Network,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  ArrowRight,
-  Leaf,
-  Car,
+  Brain,
+  Lightbulb,
   Wifi,
-  Camera,
-  Gauge,
-  Activity,
-  Smartphone,
-  Satellite,
-  Cloud,
-  Server
+  Car,
+  Tree
 } from 'lucide-react';
 
-export default function AISmartCityPlatform() {
+const AISmartCityPlatform: React.FC = () => {
   const features = [
-    "AI-powered traffic management with real-time optimization",
-    "Smart energy grid management and demand forecasting",
-    "Intelligent waste management and recycling optimization",
-    "Public safety monitoring with predictive crime prevention",
-    "Environmental monitoring and air quality management",
-    "Smart parking systems with mobile app integration",
-    "Public transportation optimization and route planning",
-    "Water management and leak detection systems",
-    "Noise pollution monitoring and control",
-    "Citizen engagement platform with mobile applications"
+    {
+      icon: <Brain className="w-6 h-6 text-blue-500" />,
+      title: "AI-Powered Traffic Management",
+      description: "Intelligent traffic flow optimization using real-time data, predictive analytics, and adaptive signal control"
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-yellow-500" />,
+      title: "Smart Energy Management",
+      description: "AI-driven energy distribution, renewable integration, and demand response optimization for sustainable cities"
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-red-500" />,
+      title: "Public Safety & Security",
+      description: "Advanced surveillance, emergency response coordination, and predictive crime prevention using AI analytics"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
+      title: "Environmental Monitoring",
+      description: "Real-time air quality, noise pollution, and environmental impact tracking with predictive modeling"
+    },
+    {
+      icon: <Globe className="w-6 h-6 text-green-500" />,
+      title: "Waste Management Optimization",
+      description: "Smart waste collection routes, recycling optimization, and landfill reduction through AI algorithms"
+    },
+    {
+      icon: <Wifi className="w-6 h-6 text-indigo-500" />,
+      title: "IoT Infrastructure Management",
+      description: "Centralized management of smart sensors, connected devices, and city-wide IoT networks"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "City Starter",
+      price: "$2,999",
+      period: "/month",
+      description: "Perfect for small cities and municipalities beginning their smart city transformation",
+      features: [
+        "Up to 50,000 residents",
+        "Basic traffic management",
+        "Energy monitoring",
+        "Public safety alerts",
+        "Email support",
+        "Mobile dashboard",
+        "Basic analytics"
+      ],
+      cta: "Get Started",
+      popular: false
+    },
+    {
+      name: "City Professional",
+      price: "$7,999",
+      period: "/month",
+      description: "Ideal for medium-sized cities with growing smart infrastructure needs",
+      features: [
+        "Up to 500,000 residents",
+        "Advanced AI analytics",
+        "Real-time monitoring",
+        "Custom dashboards",
+        "Priority support",
+        "API access",
+        "Advanced security",
+        "Multi-department integration"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "City Enterprise",
+      price: "$19,999",
+      period: "/month",
+      description: "For large metropolitan areas requiring comprehensive smart city solutions",
+      features: [
+        "Unlimited residents",
+        "Custom AI models",
+        "Multi-city management",
+        "Dedicated account manager",
+        "24/7 support",
+        "Advanced compliance tools",
+        "White-label solutions",
+        "International deployment"
+      ],
+      cta: "Contact Sales",
+      popular: false
+    }
   ];
 
   const benefits = [
-    "Reduce traffic congestion by 35-50% with AI optimization",
-    "Lower energy consumption by 25-40% through smart grids",
-    "Improve public safety response times by 60-80%",
-    "Cut operational costs by 30-45% with automation",
-    "Enhance citizen satisfaction scores by 40-60%",
-    "Reduce carbon emissions by 20-35% with smart systems",
-    "Optimize resource allocation and reduce waste by 25-40%",
-    "Improve emergency response coordination by 70-90%",
-    "Real-time data insights for better decision making",
-    "Scalable solution for cities of all sizes"
+    "Reduce traffic congestion by up to 30% with AI-optimized flow management",
+    "Lower energy costs by 25-40% through smart grid optimization",
+    "Improve public safety response times by 50% with predictive analytics",
+    "Enhance citizen satisfaction through better service delivery",
+    "Achieve sustainability goals with data-driven environmental management",
+    "Generate new revenue streams through smart infrastructure monetization"
   ];
 
   const useCases = [
-    "Metropolitan area traffic management",
-    "Smart grid and renewable energy integration",
-    "Public transportation optimization",
-    "Environmental monitoring and sustainability",
-    "Public safety and emergency response",
-    "Waste management and recycling",
-    "Water and sewage management",
-    "Air quality and pollution control",
-    "Noise monitoring and urban planning",
-    "Citizen services and engagement"
-  ];
-
-  const technologies = [
-    "Machine Learning & Deep Neural Networks",
-    "IoT Sensors and Edge Computing",
-    "Computer Vision for Traffic Analysis",
-    "Natural Language Processing for Citizen Services",
-    "5G Networks for Real-time Communication",
-    "Blockchain for Data Security",
-    "Cloud-native Architecture (AWS/Azure/GCP)",
-    "Predictive Analytics & Time Series Forecasting",
-    "Mobile Applications & APIs",
-    "Real-time Data Processing & Analytics"
-  ];
-
-  const cityModules = [
     {
-      name: "Smart Traffic Management",
-      description: "AI-powered traffic signal optimization, congestion prediction, and emergency vehicle routing",
-      price: "$15,000/month",
-      features: ["Real-time traffic monitoring", "AI signal optimization", "Emergency vehicle priority", "Congestion prediction"]
+      category: "Traffic & Transportation",
+      solutions: [
+        "Smart traffic lights with AI optimization",
+        "Public transit route optimization",
+        "Parking management and guidance",
+        "Emergency vehicle priority routing"
+      ]
     },
     {
-      name: "Smart Energy Grid",
-      description: "Intelligent energy distribution, demand forecasting, and renewable integration",
-      price: "$12,000/month",
-      features: ["Demand forecasting", "Grid optimization", "Renewable integration", "Peak load management"]
+      category: "Energy & Utilities",
+      solutions: [
+        "Smart grid management and optimization",
+        "Renewable energy integration",
+        "Demand response programs",
+        "Street lighting automation"
+      ]
     },
     {
-      name: "Public Safety Platform",
-      description: "Predictive policing, emergency response coordination, and surveillance analytics",
-      price: "$18,000/month",
-      features: ["Crime prediction", "Emergency coordination", "Video analytics", "Response optimization"]
+      category: "Public Safety",
+      solutions: [
+        "AI-powered surveillance and monitoring",
+        "Emergency response coordination",
+        "Predictive crime prevention",
+        "Natural disaster early warning"
+      ]
     },
     {
-      name: "Environmental Monitoring",
-      description: "Air quality monitoring, noise pollution control, and sustainability tracking",
-      price: "$8,000/month",
-      features: ["Air quality sensors", "Noise monitoring", "Pollution tracking", "Sustainability metrics"]
+      category: "Environmental Management",
+      solutions: [
+        "Air quality monitoring and alerts",
+        "Noise pollution tracking",
+        "Waste management optimization",
+        "Green space monitoring"
+      ]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>AI Smart City Platform - Zion Tech Group</title>
-        <meta name="description" content="Revolutionary AI-powered smart city platform for urban infrastructure management. Reduce traffic by 35-50%, lower energy consumption by 25-40%, and improve public safety by 60-80%." />
-        <meta name="keywords" content="AI smart city, urban infrastructure, traffic management, smart grid, public safety, environmental monitoring, IoT sensors" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-smart-city-platform" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Header */}
+      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="container mx-auto px-4 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <div className="flex justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl">
-                <Building2 className="h-8 w-8 text-white" />
-              </div>
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
+              <Building2 className="w-8 h-8" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Smart City Platform
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI-Powered Smart City Platform
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform urban infrastructure with AI-powered smart city solutions. 
-              Reduce traffic by 35-50%, lower energy consumption by 25-40%, and 
-              improve public safety by 60-80% with our comprehensive platform.
+            <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+              Transform your city into an intelligent, sustainable, and efficient urban ecosystem 
+              with AI-driven infrastructure management and citizen services.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <Phone className="h-5 w-5" />
-                Get Free Consultation
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              >
-                <ArrowRight className="h-5 w-5" />
-                View Demo
-              </motion.button>
+              <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors">
+                Schedule Demo
+              </button>
             </div>
           </motion.div>
         </div>
-      </section>
-
-      {/* Key Metrics */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center p-6 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30"
-            >
-              <TrafficCone className="h-12 w-12 text-green-400 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">35-50%</div>
-              <div className="text-gray-300">Traffic Reduction</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-center p-6 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl border border-blue-500/30"
-            >
-              <Zap className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">25-40%</div>
-              <div className="text-gray-300">Energy Savings</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center p-6 bg-gradient-to-br from-red-500/20 to-pink-500/20 rounded-xl border border-red-500/30"
-            >
-              <Shield className="h-12 w-12 text-red-400 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">60-80%</div>
-              <div className="text-gray-300">Safety Response</div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-center p-6 bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-xl border border-purple-500/30"
-            >
-              <Leaf className="h-12 w-12 text-purple-400 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">20-35%</div>
-              <div className="text-gray-300">Carbon Reduction</div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Smart City Features
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Intelligent Urban Management
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform integrates multiple urban systems to create 
-              a truly intelligent and sustainable city infrastructure.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our AI platform integrates all aspects of city operations, from traffic management 
+              to environmental monitoring, creating a truly connected and intelligent urban environment.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl border border-slate-600/30 hover:border-green-500/50 transition-all duration-300"
+                className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <CheckCircle className="h-8 w-8 text-green-400 mb-4" />
-                <p className="text-white text-lg">{feature}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your City Infrastructure
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience unprecedented efficiency, sustainability, and citizen 
-              satisfaction with our AI-powered smart city platform.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start gap-4 p-6 bg-gradient-to-br from-slate-700/50 to-slate-600/50 rounded-xl border border-slate-500/30"
-              >
-                <Star className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-200 text-lg">{benefit}</p>
+                <div className="mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -291,364 +233,325 @@ export default function AISmartCityPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-blue-50">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Urban Applications & Use Cases
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Smart City Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform serves diverse urban needs with specialized solutions 
-              for every city infrastructure challenge.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our platform addresses every major aspect of urban management, providing integrated 
+              solutions that work together to create a smarter, more livable city.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-xl border border-green-500/20 hover:border-green-500/40 transition-all duration-300"
+                className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <Lightbulb className="h-8 w-8 text-green-400 mb-4" />
-                <h3 className="text-white font-semibold text-lg mb-2">{useCase}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Technology Stack */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Cutting-Edge Technology Stack
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built with the latest AI, IoT, and cloud technologies for 
-              maximum performance and urban scalability.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {technologies.map((tech, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-6 bg-gradient-to-br from-slate-700/50 to-slate-600/50 rounded-xl border border-slate-500/30"
-              >
-                <Cpu className="h-8 w-8 text-green-400 mb-4" />
-                <p className="text-gray-200 text-lg">{tech}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* City Modules Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Modular Smart City Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the modules you need with flexible pricing and 
-              seamless integration capabilities.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {cityModules.map((module, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="p-8 bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl border border-slate-600 hover:border-green-500 transition-all duration-300"
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">{module.name}</h3>
-                <p className="text-gray-300 mb-6">{module.description}</p>
-                <div className="text-3xl font-bold text-green-400 mb-6">{module.price}</div>
-                <ul className="space-y-3 mb-8">
-                  {module.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                      {feature}
+                <div className="flex items-center mb-4">
+                  {index === 0 && <TrafficCone className="w-6 h-6 text-orange-500 mr-3" />}
+                  {index === 1 && <Zap className="w-6 h-6 text-yellow-500 mr-3" />}
+                  {index === 2 && <Shield className="w-6 h-6 text-red-500 mr-3" />}
+                  {index === 3 && <Tree className="w-6 h-6 text-green-500 mr-3" />}
+                  <h3 className="text-xl font-semibold text-gray-900">{useCase.category}</h3>
+                </div>
+                <ul className="space-y-2">
+                  {useCase.solutions.map((solution, solutionIndex) => (
+                    <li key={solutionIndex} className="flex items-start space-x-3">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{solution}</span>
                     </li>
                   ))}
                 </ul>
-                <button className="w-full py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors">
-                  Get Started
-                </button>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Smart City Platform?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join hundreds of cities worldwide in their transformation toward intelligent, 
+              sustainable, and citizen-centric urban environments.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.slice(0, 3).map((benefit, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <CheckCircle className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
+                  <span className="text-lg text-gray-700">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+            <div className="space-y-6">
+              {benefits.slice(3).map((benefit, index) => (
+                <motion.div
+                  key={index + 3}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="flex items-start space-x-4"
+                >
+                  <CheckCircle className="w-6 h-6 text-blue-500 mt-1 flex-shrink-0" />
+                  <span className="text-lg text-gray-700">{benefit}</span>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Cutting-Edge Technology Stack
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Built on the latest AI, IoT, and cloud technologies to ensure scalability, 
+              security, and performance for cities of all sizes.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center p-6"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                <Brain className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI & Machine Learning</h3>
+              <p className="text-gray-600">
+                Advanced algorithms for predictive analytics, optimization, and intelligent decision-making
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-center p-6"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+                <Wifi className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">IoT & Sensors</h3>
+              <p className="text-gray-600">
+                Comprehensive network of smart sensors and connected devices for real-time data collection
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-center p-6"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
+                <Database className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Big Data Analytics</h3>
+              <p className="text-gray-600">
+                Real-time processing and analysis of massive urban datasets for actionable insights
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center p-6"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
+                <Shield className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cybersecurity</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security with end-to-end encryption and compliance frameworks
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Pricing Plans
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your city's needs with flexible 
-              pricing and comprehensive support.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose the plan that fits your city's size and smart infrastructure needs. 
+              All plans include our core AI-powered urban management capabilities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Basic Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="p-8 bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl border border-slate-600 hover:border-green-500 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">Basic City</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">
-                $25,000<span className="text-lg text-gray-400">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  Up to 3 city modules
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  Basic AI optimization
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  Standard analytics dashboard
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  Email support
-                </li>
-              </ul>
-              <button className="w-full py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600 transition-colors">
-                Get Started
-              </button>
-            </motion.div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative bg-white p-8 rounded-2xl shadow-lg border-2 ${
+                  plan.popular 
+                    ? 'border-blue-500 scale-105' 
+                    : 'border-gray-200'
+                }`}
+              >
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{plan.name}</h3>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                    <span className="text-gray-600">{plan.period}</span>
+                  </div>
+                  <p className="text-gray-600">{plan.description}</p>
+                </div>
 
-            {/* Professional Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="p-8 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl border-2 border-green-400 transform scale-105"
-            >
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <span className="bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-semibold">
-                  Most Popular
-                </span>
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Professional City</h3>
-              <div className="text-4xl font-bold text-white mb-6">
-                $75,000<span className="text-lg text-green-100">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-white">
-                  <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                  Up to 8 city modules
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                  Advanced AI optimization
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                  Predictive analytics
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                  Priority support
-                </li>
-                <li className="flex items-center text-white">
-                  <CheckCircle className="h-5 w-5 text-green-300 mr-3" />
-                  Custom integrations
-                </li>
-              </ul>
-              <button className="w-full py-3 bg-white text-green-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                Get Started
-              </button>
-            </motion.div>
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                      <span className="text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
 
-            {/* Enterprise Plan */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="p-8 bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
-            >
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise City</h3>
-              <div className="text-4xl font-bold text-purple-400 mb-6">
-                Custom<span className="text-lg text-gray-400">/month</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  All city modules
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  Full AI autonomy
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  Custom AI models
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  24/7 dedicated support
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-400 mr-3" />
-                  White-label solution
-                </li>
-              </ul>
-              <button className="w-full py-3 bg-purple-500 text-white rounded-lg font-semibold hover:bg-purple-600 transition-colors">
-                Contact Sales
-              </button>
-            </motion.div>
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  plan.popular
+                    ? 'bg-blue-600 text-white hover:bg-blue-700'
+                    : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+                }`}>
+                  {plan.cta}
+                </button>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+        <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Build Your Smart City?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Get in touch with our smart city experts for a personalized 
-              consultation and demo of our AI platform.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Join hundreds of cities worldwide in their transformation toward intelligent, 
+              sustainable, and citizen-centric urban environments. Our team of experts is ready to help you get started.
             </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
+              <div className="flex items-center justify-center space-x-3">
+                <Phone className="w-6 h-6 text-blue-300" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3">
+                <Mail className="w-6 h-6 text-blue-300" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3">
+                <MapPin className="w-6 h-6 text-blue-300" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                Schedule a Demo
+              </button>
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-700 transition-colors">
+                Contact Sales Team
+              </button>
+            </div>
           </motion.div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="space-y-6"
+      {/* Footer CTA */}
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h3 className="text-2xl font-bold mb-4">
+              Visit Our Website
+            </h3>
+            <p className="text-gray-300 mb-6">
+              Learn more about our comprehensive smart city solutions and explore our full service portfolio.
+            </p>
+            <a 
+              href="https://ziontechgroup.com/services/ai-smart-city-platform"
+              className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-green-500 rounded-lg">
-                  <Phone className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold text-lg">Phone</h3>
-                  <p className="text-gray-300">+1 302 464 0950</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-500 rounded-lg">
-                  <Mail className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold text-lg">Email</h3>
-                  <p className="text-gray-300">kleber@ziontechgroup.com</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-purple-500 rounded-lg">
-                  <MapPin className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold text-lg">Address</h3>
-                  <p className="text-gray-300">
-                    364 E Main St STE 1008<br />
-                    Middletown DE 19709
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-orange-500 rounded-lg">
-                  <Clock className="h-6 w-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-semibold text-lg">Business Hours</h3>
-                  <p className="text-gray-300">Mon-Fri: 9:00 AM - 6:00 PM EST</p>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="p-8 bg-gradient-to-br from-slate-700 to-slate-600 rounded-2xl border border-slate-500/30"
-            >
-              <h3 className="text-2xl font-bold text-white mb-6">Get Free Consultation</h3>
-              <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="City/Government Name"
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none"
-                />
-                <input
-                  type="email"
-                  placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none"
-                />
-                <input
-                  type="tel"
-                  placeholder="Phone Number"
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none"
-                />
-                <textarea
-                  placeholder="Tell us about your smart city needs"
-                  rows={4}
-                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:border-green-500 focus:outline-none"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
-                >
-                  Request Free Consultation
-                </button>
-              </form>
-            </motion.div>
-          </div>
+              <span>Learn More</span>
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AISmartCityPlatform;

@@ -35,7 +35,12 @@ import { Brain,
   MessageSquare,
   FileText,
   Search,
-  Clock
+  Clock,
+  Leaf,
+  Building2,
+  Heart,
+  Truck,
+  Atom
              } from 'lucide-react.ts';
 
 type Service = {
@@ -203,6 +208,94 @@ const Services: React.FC = (): JSX.Element => {
       color: "from-green-500 to-emerald-500",
       featured: true,
       href: "/services/micro-saas-platform-elite"
+    },
+    {
+      category: 'ai',
+      icon: Leaf,
+      title: "AI Carbon Footprint Management Platform",
+      description: "Intelligent carbon tracking and sustainability management with AI-powered analytics and reporting.",
+      features: ["AI Carbon Tracking", "Predictive Analytics", "Sustainability Reporting", "Regulatory Compliance"],
+      pricing: "$1,999 - $8,999/month",
+      color: "from-green-500 to-emerald-500",
+      featured: true,
+      href: "/services/ai-carbon-footprint-management-platform"
+    },
+    {
+      category: 'ai',
+      icon: TrendingUp,
+      title: "AI Autonomous Financial Advisor Platform",
+      description: "Intelligent investment management with AI-driven portfolio optimization and risk management.",
+      features: ["AI Investment Analysis", "Autonomous Trading", "Risk Management", "Real-time Monitoring"],
+      pricing: "$2,999 - $15,999/month",
+      color: "from-blue-500 to-cyan-500",
+      featured: true,
+      href: "/services/ai-autonomous-financial-advisor-platform"
+    },
+    {
+      category: 'ai',
+      icon: Building2,
+      title: "AI Smart City Platform",
+      description: "Comprehensive smart city solutions with AI-powered infrastructure management and citizen services.",
+      features: ["AI Traffic Management", "Smart Energy Systems", "IoT Integration", "Citizen Engagement"],
+      pricing: "$4,999 - $25,999/month",
+      color: "from-purple-500 to-pink-500",
+      featured: true,
+      href: "/services/ai-smart-city-platform"
+    },
+    {
+      category: 'ai',
+      icon: Heart,
+      title: "AI Autonomous Healthcare Diagnostics Platform",
+      description: "Advanced healthcare diagnostics with AI-powered disease detection and treatment recommendations.",
+      features: ["AI Disease Detection", "Predictive Diagnostics", "Treatment Optimization", "Patient Monitoring"],
+      pricing: "$3,999 - $20,999/month",
+      color: "from-red-500 to-pink-500",
+      featured: true,
+      href: "/services/ai-autonomous-healthcare-diagnostics-platform"
+    },
+    {
+      category: 'ai',
+      icon: Truck,
+      title: "AI Autonomous Supply Chain Intelligence Platform",
+      description: "Intelligent supply chain management with AI-driven forecasting and autonomous optimization.",
+      features: ["AI Demand Forecasting", "Autonomous Logistics", "Risk Management", "Real-time Analytics"],
+      pricing: "$1,499 - $9,999/month",
+      color: "from-blue-500 to-indigo-500",
+      featured: true,
+      href: "/services/ai-autonomous-supply-chain-intelligence-platform"
+    },
+    {
+      category: 'ai',
+      icon: Shield,
+      title: "AI Autonomous Cybersecurity Threat Intelligence Platform",
+      description: "Advanced cybersecurity with AI-powered threat detection and autonomous incident response.",
+      features: ["AI Threat Detection", "Predictive Intelligence", "Autonomous Response", "Real-time Monitoring"],
+      pricing: "$2,499 - $12,999/month",
+      color: "from-red-500 to-orange-500",
+      featured: true,
+      href: "/services/ai-autonomous-cybersecurity-threat-intelligence-platform"
+    },
+    {
+      category: 'ai',
+      icon: Atom,
+      title: "AI Autonomous Quantum Computing Platform",
+      description: "Revolutionary quantum computing with AI-powered optimization and autonomous problem solving.",
+      features: ["1000+ Qubit Access", "AI-Quantum Hybrid", "Autonomous Optimization", "Global Network"],
+      pricing: "$4,999 - $29,999/month",
+      color: "from-purple-500 to-indigo-500",
+      featured: true,
+      href: "/services/ai-autonomous-quantum-computing-platform"
+    },
+    {
+      category: 'ai',
+      icon: Cpu,
+      title: "AI Autonomous Edge Computing Platform",
+      description: "Intelligent edge computing with AI-powered optimization and ultra-low latency processing.",
+      features: ["Distributed Edge Nodes", "AI Edge Intelligence", "Real-time Processing", "Global Network"],
+      pricing: "$1,999 - $12,999/month",
+      color: "from-blue-500 to-cyan-500",
+      featured: true,
+      href: "/services/ai-autonomous-edge-computing-platform"
     },
     {
       category: 'ai',

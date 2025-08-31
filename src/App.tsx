@@ -108,6 +108,16 @@ const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
 
+// 2025 Innovative AI Services
+const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/ai-carbon-footprint-management-platform'));
+const AIAutonomousFinancialAdvisorPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-financial-advisor-platform'));
+const AISmartCityPlatform = createLazyComponent(() => import('./pages/services/ai-smart-city-platform'));
+const AIAutonomousHealthcareDiagnosticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-healthcare-diagnostics-platform'));
+const AIAutonomousSupplyChainIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-supply-chain-intelligence-platform'));
+const AIAutonomousCybersecurityThreatIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-cybersecurity-threat-intelligence-platform'));
+const AIAutonomousQuantumComputingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-quantum-computing-platform'));
+const AIAutonomousEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-edge-computing-platform'));
+
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
@@ -369,6 +379,16 @@ function App() {
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+
+                  {/* 2025 Innovative AI Services */}
+                  <Route path="/services/ai-carbon-footprint-management-platform" element={<AICarbonFootprintManagementPlatform />} />
+                  <Route path="/services/ai-autonomous-financial-advisor-platform" element={<AIAutonomousFinancialAdvisorPlatform />} />
+                  <Route path="/services/ai-smart-city-platform" element={<AISmartCityPlatform />} />
+                  <Route path="/services/ai-autonomous-healthcare-diagnostics-platform" element={<AIAutonomousHealthcareDiagnosticsPlatform />} />
+                  <Route path="/services/ai-autonomous-supply-chain-intelligence-platform" element={<AIAutonomousSupplyChainIntelligencePlatform />} />
+                  <Route path="/services/ai-autonomous-cybersecurity-threat-intelligence-platform" element={<AIAutonomousCybersecurityThreatIntelligencePlatform />} />
+                  <Route path="/services/ai-autonomous-quantum-computing-platform" element={<AIAutonomousQuantumComputingPlatform />} />
+                  <Route path="/services/ai-autonomous-edge-computing-platform" element={<AIAutonomousEdgeComputingPlatform />} />
 
                   {/* Additional Service Routes */}
                   <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />

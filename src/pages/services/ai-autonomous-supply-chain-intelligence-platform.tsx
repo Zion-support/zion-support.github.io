@@ -1,11 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  TrendingUp, 
+  Truck, 
+  Globe, 
   Shield, 
   BarChart3, 
-  DollarSign, 
-  Globe, 
   Zap, 
   Database, 
   Users,
@@ -16,92 +15,94 @@ import {
   MapPin,
   Brain,
   Target,
-  Lock
+  TrendingUp,
+  Package
 } from 'lucide-react';
 
-const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
+const AIAutonomousSupplyChainIntelligencePlatform: React.FC = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-blue-500" />,
-      title: "AI-Powered Investment Analysis",
-      description: "Advanced machine learning algorithms analyze market data, economic indicators, and company fundamentals in real-time"
+      title: "AI-Powered Demand Forecasting",
+      description: "Advanced machine learning algorithms predict demand patterns with 95%+ accuracy across all product categories"
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-500" />,
-      title: "Automated Portfolio Management",
-      description: "Intelligent rebalancing, risk management, and optimization based on your financial goals and market conditions"
+      icon: <Truck className="w-6 h-6 text-green-500" />,
+      title: "Autonomous Logistics Optimization",
+      description: "Intelligent route planning, carrier selection, and delivery optimization for maximum efficiency"
     },
     {
       icon: <Shield className="w-6 h-6 text-red-500" />,
-      title: "Risk Assessment & Management",
-      description: "Comprehensive risk analysis using AI models to protect your investments and optimize risk-adjusted returns"
+      title: "Risk Management & Mitigation",
+      description: "AI-driven risk assessment and proactive mitigation strategies for supply chain disruptions"
     },
     {
       icon: <BarChart3 className="w-6 h-6 text-purple-500" />,
-      title: "Predictive Market Insights",
-      description: "AI-driven market forecasting and trend analysis to identify investment opportunities before they become mainstream"
+      title: "Real-time Supply Chain Analytics",
+      description: "Live dashboards showing inventory levels, supplier performance, and operational metrics"
     },
     {
       icon: <Globe className="w-6 h-6 text-emerald-500" />,
-      title: "Global Market Coverage",
-      description: "Access to international markets, currencies, and alternative investments with AI-powered analysis"
+      title: "Global Supplier Intelligence",
+      description: "Comprehensive supplier assessment, performance tracking, and alternative sourcing recommendations"
     },
     {
       icon: <Zap className="w-6 h-6 text-yellow-500" />,
-      title: "Real-time Alerts & Notifications",
-      description: "Instant notifications for market movements, portfolio changes, and investment opportunities"
+      title: "Automated Procurement",
+      description: "AI-powered purchase order generation, supplier negotiations, and contract management"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "SMB Starter",
+      price: "$1,499",
       period: "/month",
-      description: "Perfect for individual investors starting their wealth management journey",
+      description: "Perfect for small to medium businesses beginning their supply chain transformation",
       features: [
-        "Up to $100K portfolio management",
-        "Basic AI investment recommendations",
-        "Monthly portfolio reviews",
+        "Up to 1,000 SKUs",
+        "Basic demand forecasting",
+        "Inventory optimization",
+        "Supplier performance tracking",
         "Email support",
         "Mobile app access",
-        "Basic risk assessment"
+        "Basic reporting"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Enterprise Professional",
+      price: "$3,999",
       period: "/month",
-      description: "Ideal for active investors and growing portfolios",
+      description: "Ideal for growing enterprises with complex supply chain operations",
       features: [
-        "Up to $1M portfolio management",
+        "Up to 10,000 SKUs",
         "Advanced AI analytics",
-        "Real-time portfolio monitoring",
-        "Custom investment strategies",
+        "Real-time monitoring",
+        "Custom dashboards",
         "Priority support",
         "API access",
         "Advanced risk management",
-        "Tax optimization"
+        "Multi-warehouse support"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$999",
+      name: "Global Enterprise",
+      price: "$9,999",
       period: "/month",
-      description: "For high-net-worth individuals and institutional clients",
+      description: "For multinational corporations requiring comprehensive supply chain intelligence",
       features: [
-        "Unlimited portfolio size",
+        "Unlimited SKUs",
         "Custom AI models",
-        "Multi-account management",
-        "Dedicated financial advisor",
+        "Multi-region management",
+        "Dedicated account manager",
         "24/7 support",
         "Advanced compliance tools",
         "White-label solutions",
-        "Family office features"
+        "International deployment"
       ],
       cta: "Contact Sales",
       popular: false
@@ -109,38 +110,54 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
   ];
 
   const benefits = [
-    "Achieve higher returns through AI-optimized investment strategies",
-    "Reduce investment risk with intelligent portfolio diversification",
-    "Save time with automated portfolio management and rebalancing",
-    "Access institutional-grade investment analysis and research",
-    "Optimize tax efficiency and minimize investment costs",
-    "Get personalized financial advice based on your unique goals"
+    "Reduce inventory costs by 25-40% with AI-optimized stock levels",
+    "Improve forecast accuracy by up to 60% through machine learning",
+    "Cut logistics costs by 20-35% with intelligent route optimization",
+    "Enhance supplier performance through data-driven insights",
+    "Achieve 99.9% order fulfillment rates with predictive analytics",
+    "Reduce supply chain disruptions by 70% with proactive risk management"
   ];
 
-  const investmentStrategies = [
+  const supplyChainModules = [
     {
-      name: "Growth Investing",
-      description: "AI-identified high-growth companies with strong fundamentals",
-      expectedReturn: "15-25% annually",
-      riskLevel: "Moderate-High"
+      category: "Demand Planning",
+      solutions: [
+        "AI-powered demand forecasting",
+        "Seasonal trend analysis",
+        "Promotional impact modeling",
+        "New product introduction planning",
+        "Customer segmentation analysis"
+      ]
     },
     {
-      name: "Value Investing",
-      description: "Undervalued stocks identified through AI analysis",
-      expectedReturn: "12-18% annually",
-      riskLevel: "Moderate"
+      category: "Inventory Management",
+      solutions: [
+        "Dynamic safety stock optimization",
+        "Multi-echelon inventory planning",
+        "ABC analysis and categorization",
+        "Dead stock prevention",
+        "Cycle count optimization"
+      ]
     },
     {
-      name: "Dividend Investing",
-      description: "Stable companies with consistent dividend growth",
-      expectedReturn: "8-12% annually",
-      riskLevel: "Low-Moderate"
+      category: "Logistics & Transportation",
+      solutions: [
+        "Route optimization algorithms",
+        "Carrier selection and management",
+        "Freight cost optimization",
+        "Last-mile delivery optimization",
+        "Real-time shipment tracking"
+      ]
     },
     {
-      name: "Alternative Investments",
-      description: "AI-curated alternative assets for portfolio diversification",
-      expectedReturn: "10-20% annually",
-      riskLevel: "High"
+      category: "Supplier Management",
+      solutions: [
+        "Supplier performance scoring",
+        "Risk assessment and monitoring",
+        "Alternative sourcing recommendations",
+        "Contract management automation",
+        "Quality control integration"
+      ]
     }
   ];
 
@@ -156,14 +173,14 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
-              <TrendingUp className="w-8 h-8" />
+              <Truck className="w-8 h-8" />
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              AI-Powered Autonomous Financial Advisor Platform
+              AI-Powered Autonomous Supply Chain Intelligence Platform
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              Revolutionize your wealth management with intelligent AI-driven investment strategies, 
-              automated portfolio management, and predictive market insights.
+              Transform your supply chain operations with intelligent AI-driven forecasting, 
+              autonomous logistics optimization, and predictive risk management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
@@ -187,11 +204,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Intelligent Wealth Management
+              Intelligent Supply Chain Management
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our AI platform combines advanced machine learning with financial expertise to deliver 
-              institutional-grade investment management accessible to individual investors.
+              Our AI platform integrates all aspects of supply chain operations, from demand planning 
+              to logistics optimization, creating a truly intelligent and autonomous supply network.
             </p>
           </motion.div>
 
@@ -217,7 +234,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Investment Strategies Section */}
+      {/* Supply Chain Modules Section */}
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -227,16 +244,16 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              AI-Optimized Investment Strategies
+              Comprehensive Supply Chain Solutions
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform offers a diverse range of investment strategies, each optimized by AI 
-              to maximize returns while managing risk according to your financial goals.
+              Our platform addresses every major aspect of supply chain management, providing integrated 
+              solutions that work together to create an intelligent, efficient, and resilient supply network.
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {investmentStrategies.map((strategy, index) => (
+            {supplyChainModules.map((module, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -244,22 +261,21 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white p-6 rounded-xl shadow-lg border border-gray-100"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-semibold text-gray-900">{strategy.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    strategy.riskLevel === 'Low-Moderate' ? 'bg-green-100 text-green-800' :
-                    strategy.riskLevel === 'Moderate' ? 'bg-yellow-100 text-yellow-800' :
-                    strategy.riskLevel === 'Moderate-High' ? 'bg-orange-100 text-orange-800' :
-                    'bg-red-100 text-red-800'
-                  }`}>
-                    {strategy.riskLevel}
-                  </span>
+                <div className="flex items-center mb-4">
+                  {index === 0 && <Target className="w-6 h-6 text-blue-500 mr-3" />}
+                  {index === 1 && <Package className="w-6 h-6 text-green-500 mr-3" />}
+                  {index === 2 && <Truck className="w-6 h-6 text-purple-500 mr-3" />}
+                  {index === 3 && <Users className="w-6 h-6 text-orange-500 mr-3" />}
+                  <h3 className="text-xl font-semibold text-gray-900">{module.category}</h3>
                 </div>
-                <p className="text-gray-600 mb-4">{strategy.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm text-gray-500">Expected Return:</span>
-                  <span className="text-lg font-semibold text-green-600">{strategy.expectedReturn}</span>
-                </div>
+                <ul className="space-y-2">
+                  {module.solutions.map((solution, solutionIndex) => (
+                    <li key={solutionIndex} className="flex items-start space-x-3">
+                      <CheckCircle className="w-4 h-4 text-blue-500 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{solution}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -276,11 +292,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our AI Financial Platform?
+              Why Choose Our Supply Chain Platform?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join thousands of investors worldwide who trust our AI platform to manage their wealth 
-              and achieve their financial goals.
+              Join thousands of companies worldwide in their transformation toward intelligent, 
+              efficient, and resilient supply chain operations.
             </p>
           </motion.div>
 
@@ -317,7 +333,7 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Security & Compliance Section */}
+      {/* Technology & Integration Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div
@@ -327,15 +343,15 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Enterprise-Grade Security & Compliance
+              Advanced Technology & Seamless Integration
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Your financial data and investments are protected by the highest security standards 
-              and regulatory compliance frameworks.
+              Built on cutting-edge AI and cloud technologies with seamless integration capabilities 
+              for your existing ERP, WMS, and TMS systems.
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -343,11 +359,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               className="text-center p-6"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-                <Lock className="w-8 h-8 text-blue-600" />
+                <Brain className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Bank-Level Security</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">AI & Machine Learning</h3>
               <p className="text-gray-600">
-                End-to-end encryption, multi-factor authentication, and SOC 2 compliance ensure your data is always secure.
+                Advanced algorithms for predictive analytics, optimization, and autonomous decision-making
               </p>
             </motion.div>
 
@@ -358,11 +374,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               className="text-center p-6"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+                <Database className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Regulatory Compliance</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Big Data Analytics</h3>
               <p className="text-gray-600">
-                Full compliance with SEC, FINRA, and other financial regulations. SIPC protection for your investments.
+                Real-time processing and analysis of massive supply chain datasets for actionable insights
               </p>
             </motion.div>
 
@@ -373,11 +389,26 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               className="text-center p-6"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-full mb-4">
-                <Target className="w-8 h-8 text-purple-600" />
+                <TrendingUp className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Fiduciary Duty</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Predictive Analytics</h3>
               <p className="text-gray-600">
-                Our AI platform operates under strict fiduciary standards, always putting your financial interests first.
+                Forecasting models that predict demand, supply disruptions, and market trends
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="text-center p-6"
+            >
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4">
+                <Shield className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Cybersecurity</h3>
+              <p className="text-gray-600">
+                Enterprise-grade security with end-to-end encryption and compliance frameworks
               </p>
             </motion.div>
           </div>
@@ -397,8 +428,8 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Choose the plan that fits your investment goals and portfolio size. 
-              All plans include our core AI-powered investment management capabilities.
+              Choose the plan that fits your organization's size and supply chain complexity. 
+              All plans include our core AI-powered supply chain intelligence capabilities.
             </p>
           </motion.div>
 
@@ -463,11 +494,11 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Wealth Management?
+              Ready to Transform Your Supply Chain?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join thousands of investors worldwide who trust our AI platform to manage their wealth 
-              and achieve their financial goals. Our team of experts is ready to help you get started.
+              Join thousands of companies worldwide in their mission to create intelligent, 
+              efficient, and resilient supply chain operations. Our team of experts is ready to help you get started.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
@@ -509,10 +540,10 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
               Visit Our Website
             </h3>
             <p className="text-gray-300 mb-6">
-              Learn more about our comprehensive financial advisory solutions and explore our full service portfolio.
+              Learn more about our comprehensive supply chain intelligence solutions and explore our full service portfolio.
             </p>
             <a 
-              href="https://ziontechgroup.com/services/ai-autonomous-financial-advisor-platform"
+              href="https://ziontechgroup.com/services/ai-autonomous-supply-chain-intelligence-platform"
               className="inline-flex items-center space-x-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               <span>Learn More</span>
@@ -525,4 +556,4 @@ const AIAutonomousFinancialAdvisorPlatform: React.FC = () => {
   );
 };
 
-export default AIAutonomousFinancialAdvisorPlatform;
+export default AIAutonomousSupplyChainIntelligencePlatform;
