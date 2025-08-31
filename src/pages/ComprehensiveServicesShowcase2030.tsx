@@ -10,7 +10,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -40,7 +40,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
   };
 
   const getCategories = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -58,7 +58,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
     return categories;
   };
 
-  const renderServiceCard = (service: any) => {
+  const renderServiceCard = (service: ) => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -155,8 +155,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                >
+                  className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Learn More
                 </a>
               </div>
@@ -257,8 +256,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-                >
+                  className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300">
                   Learn More
                 </a>
               </div>
@@ -371,8 +369,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-                >
+                  className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
                   Learn More
                 </a>
               </div>
@@ -467,8 +464,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="all">All Categories</option>
                 {getCategories().map((category) => (
                   <option key={category} value={category}>{category}</option>
@@ -527,8 +523,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
                   setSearchTerm('');
                   setSelectedCategory('all');
                 }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Clear Filters
               </button>
             </div>
@@ -543,14 +538,12 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Email Us
               </a>
             </div>

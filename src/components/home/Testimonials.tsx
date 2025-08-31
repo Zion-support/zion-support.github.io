@@ -3,57 +3,52 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { ChevronLeft, ChevronRight, Star, Quote  } from 'lucide-react.ts';
 
 interface Testimonial {
-
   id: number;
   name: string;
   role: string;
-  company: string;
+  comp: string;
   content: string;
   rating: number;
   avatar: string;
   industry: string;
 
-}
+    }
 
 const Testimonials: React.FC = (): JSX.Element => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const testimonials: Testimonial[] = [
-    {
-      id: 1,
+    { id: 1,
       name: "Sarah Chen",
       role: "CTO",
-      company: "TechFlow Solutions",
+      comp: "TechFlow Solutions",
       content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency. The team's expertise in cybersecurity gave us peace of mind.",
       rating: 5,
       avatar: "/images/testimonials/sarah-chen.jpg",
       industry: "Technology"
     },
-    {
-      id: 2,
+    { id: 2,
       name: "Marcus Rodriguez",
       role: "VP of Operations",
-      company: "Global Manufacturing Co.",
+      comp: "Global Manufacturing Co.",
       content: "Implementing Zion's cloud solutions was seamless. Our development cycles went from months to weeks, and the scalability has been incredible. Their support team is always available when we need them.",
       rating: 5,
       avatar: "/images/testimonials/marcus-rodriguez.jpg",
       industry: "Manufacturing"
     },
-    {
-      id: 3,
+    { id: 3,
       name: "Dr. Emily Watson",
       role: "Research Director",
-      company: "Quantum Research Institute",
+      comp: "Quantum Research Institute",
       content: "Working with Zion on our quantum computing initiatives has been groundbreaking. Their expertise in cutting-edge technologies is unmatched. They've helped us achieve breakthroughs we never thought possible.",
       rating: 5,
       avatar: "/images/testimonials/emily-watson.jpg",
       industry: "Research"
     },
-    {
-      id: 4,
+    { id: 4,
       name: "David Kim",
       role: "CEO",
-      company: "FinTech Innovations",
+      comp: "FinTech Innovations",
       content: "Zion's cybersecurity solutions are enterprise-grade. They helped us achieve SOC 2 compliance in record time and their threat detection systems have prevented multiple potential breaches.",
       rating: 5,
       avatar: "/images/testimonials/david-kim.jpg",
@@ -69,7 +64,7 @@ const Testimonials: React.FC = (): JSX.Element => {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const goToTestimonial = (index: anynumber)  => {
+  const goToTestimonial = (index: number)  => {
     setCurrentIndex(index);
   };
 
@@ -80,8 +75,8 @@ const Testimonials: React.FC = (): JSX.Element => {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8     }}
+          viewport={{ once: true     }}
         >
           <div className="inline-flex items-center mb-4 px-4 py-2 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full">
             <Quote className="w-4 h-4 text-zion-cyan mr-2" />
@@ -105,9 +100,8 @@ const Testimonials: React.FC = (): JSX.Element => {
               initial={{ opacity: 0, x: 100 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden"
-            >
+              transition={{ duration: 0.5     }}
+              className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
               {/* Background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/10 to-zion-blue/10 rounded-full blur-3xl" />
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-br from-zion-purple/10 to-zion-cyan/10 rounded-full blur-3xl" />
@@ -136,7 +130,7 @@ const Testimonials: React.FC = (): JSX.Element => {
                   {testimonials[currentIndex].role}
                 </p>
                 <p className="text-zion-slate-light text-sm mb-2">
-                  {testimonials[currentIndex].company}
+                  {testimonials[currentIndex].comp}
                 </p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/10 border border-zion-cyan/20 rounded-full text-zion-cyan text-xs font-medium">
                   {testimonials[currentIndex].industry}
@@ -185,7 +179,7 @@ const Testimonials: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
         >
           <p className="text-zion-slate-light text-sm mb-6">Join our growing list of satisfied clients</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">

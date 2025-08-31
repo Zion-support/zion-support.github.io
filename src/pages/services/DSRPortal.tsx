@@ -33,132 +33,108 @@ import {
 
 export default function DSRPortal() {
   const features = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Data Subject Rights Management",
       description: "Comprehensive management of GDPR, CCPA, and other privacy regulation rights."
     },
-    {
-      icon: FileText,
+    { icon: FileText,
       title: "Automated Request Processing",
       description: "AI-powered processing of data subject requests with intelligent routing."
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Data Discovery & Mapping",
       description: "Automated discovery and mapping of personal data across all systems and databases."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Compliance Monitoring",
       description: "Real-time monitoring of compliance status and request fulfillment metrics."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Workflow Automation",
       description: "Automated workflows for request validation, processing, and response generation."
     },
-    {
-      icon: CheckCircle,
+    { icon: CheckCircle,
       title: "Audit Trails",
       description: "Complete audit trails for all data subject rights activities and compliance."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Regulatory Compliance",
       description: "Ensure full compliance with GDPR, CCPA, and other privacy regulations."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Data Protection",
       description: "Protect personal data and maintain customer trust through proper rights management."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Efficient Processing",
       description: "Reduce response times and improve efficiency in handling data subject requests."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Transparency",
       description: "Provide clear visibility into data processing activities and compliance status."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Customer Trust",
       description: "Build and maintain customer trust through transparent data rights management."
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Risk Mitigation",
       description: "Minimize legal and reputational risks associated with data privacy violations."
     }
   ];
 
   const dataRights = [
-    {
-      right: "Right to Access",
+    { right: "Right to Access",
       description: "Individuals can request access to their personal data",
       icon: Eye
     },
-    {
-      right: "Right to Rectification",
+    { right: "Right to Rectification",
       description: "Individuals can request correction of inaccurate personal data",
       icon: FileText
     },
-    {
-      right: "Right to Erasure",
+    { right: "Right to Erasure",
       description: "Individuals can request deletion of their personal data",
       icon: Trash
     },
-    {
-      right: "Right to Portability",
+    { right: "Right to Portability",
       description: "Individuals can request transfer of their data to another controller",
       icon: Download
     },
-    {
-      right: "Right to Restriction",
+    { right: "Right to Restriction",
       description: "Individuals can request limitation of data processing",
       icon: Lock
     },
-    {
-      right: "Right to Object",
+    { right: "Right to Object",
       description: "Individuals can object to processing of their personal data",
       icon: AlertTriangle
     }
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Manage customer data rights and privacy requests for online retail",
       icon: ShoppingCart
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       description: "Comply with financial privacy regulations and customer data rights",
       icon: DollarSign
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Manage patient data rights and HIPAA compliance requirements",
       icon: Heart
     },
-    {
-      industry: "Technology",
+    { industry: "Technology",
       description: "Handle user data rights for SaaS and digital service platforms",
       icon: Cpu
     },
-    {
-      industry: "Education",
+    { industry: "Education",
       description: "Manage student data rights and educational privacy compliance",
       icon: GraduationCap
     },
-    {
-      industry: "Real Estate",
+    { industry: "Real Estate",
       description: "Handle client data rights and real estate privacy compliance",
       icon: Home
     }
@@ -179,7 +155,7 @@ export default function DSRPortal() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-indigo-600/20 text-indigo-400 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
@@ -215,10 +191,9 @@ export default function DSRPortal() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -235,9 +210,8 @@ export default function DSRPortal() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -269,10 +243,9 @@ export default function DSRPortal() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Benefits
             </h2>
@@ -289,9 +262,8 @@ export default function DSRPortal() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -323,10 +295,9 @@ export default function DSRPortal() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Data Rights Supported
             </h2>
@@ -343,9 +314,8 @@ export default function DSRPortal() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -377,10 +347,9 @@ export default function DSRPortal() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -397,9 +366,8 @@ export default function DSRPortal() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-indigo-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -431,8 +399,8 @@ export default function DSRPortal() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Streamline DSR Management?

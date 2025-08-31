@@ -1,8 +1,6 @@
 import React from 'react.ts';
 
-interface PostCardProps extends React.PropsWithChildren<{}> {
-
-post: {;
+interface PostCardProps extends React.PropsWithChildren<{}> { post: {  
     id: string;
     title: string;
     content: string;
@@ -11,15 +9,15 @@ post: {;
     likes: number;
     replies: number;
     views: number;
-author: {;
-      name: string;
-      avatar: string;
+author: {
+      name: string
+      avatar: string
     
-};
+    };
   };
 }
 
-export default function PostCard(...args: any[]): any {
+export default function PostCard(...args: []):  {
   return (
     <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-4 border border-white/20 hover:border-white/40 transition-all duration-300">
       <div className="flex items-start space-x-4">

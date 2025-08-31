@@ -58,8 +58,7 @@ import EnhancedSEOManager from '../components/EnhancedSEOManager';
 
 export default function ComprehensiveImprovements2025() {
   const improvements = [
-    {
-      category: 'AI & Machine Learning Services',
+    { category: 'AI & Machine Learning Services',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       title: 'AI-Powered Solutions',
@@ -87,8 +86,7 @@ export default function ComprehensiveImprovements2025() {
         'AI Cybersecurity Threat Intelligence - Threat detection'
       ]
     },
-    {
-      category: 'Cloud & DevOps Solutions',
+    { category: 'Cloud & DevOps Solutions',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       title: 'Infrastructure Excellence',
@@ -99,8 +97,7 @@ export default function ComprehensiveImprovements2025() {
         'Cloud FinOps Optimizer - Financial operations automation'
       ]
     },
-    {
-      category: 'Cybersecurity & Privacy',
+    { category: 'Cybersecurity & Privacy',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       title: 'Security First',
@@ -111,8 +108,7 @@ export default function ComprehensiveImprovements2025() {
         'Zero Trust Network Access - Modern security architecture'
       ]
     },
-    {
-      category: 'Digital Transformation',
+    { category: 'Digital Transformation',
       icon: Zap,
       color: 'from-yellow-500 to-orange-500',
       title: 'Future-Ready Solutions',
@@ -122,8 +118,7 @@ export default function ComprehensiveImprovements2025() {
         'IT Consulting - Technology strategy & planning'
       ]
     },
-    {
-      category: 'Emerging Technologies',
+    { category: 'Emerging Technologies',
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       title: 'Next-Gen Innovation',
@@ -137,38 +132,32 @@ export default function ComprehensiveImprovements2025() {
   ];
 
   const features = [
-    {
-      title: 'Futuristic Design',
+    { title: 'Futuristic Design',
       description: 'Modern neon effects, animated backgrounds, and cutting-edge UI/UX',
       icon: Sparkles,
       color: 'from-pink-500 to-purple-500'
     },
-    {
-      title: 'Responsive Layout',
+    { title: 'Responsive Layout',
       description: 'Optimized for all screen sizes with mobile-first approach',
       icon: Smartphone,
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      title: 'Performance Optimized',
+    { title: 'Performance Optimized',
       description: 'Lazy loading, code splitting, and optimized animations',
       icon: Zap,
       color: 'from-yellow-500 to-orange-500'
     },
-    {
-      title: 'Accessibility Enhanced',
+    { title: 'Accessibility Enhanced',
       description: 'WCAG 2.1 AA compliant with advanced assistive technologies',
       icon: Eye,
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      title: 'SEO Optimized',
+    { title: 'SEO Optimized',
       description: 'Advanced SEO with structured data and performance metrics',
       icon: Search,
       color: 'from-indigo-500 to-purple-500'
     },
-    {
-      title: 'Analytics Driven',
+    { title: 'Analytics Driven',
       description: 'Comprehensive analytics and performance monitoring',
       icon: BarChart3,
       color: 'from-blue-500 to-cyan-500'
@@ -176,38 +165,32 @@ export default function ComprehensiveImprovements2025() {
   ];
 
   const benefits = [
-    {
-      title: 'Enhanced User Experience',
+    { title: 'Enhanced User Experience',
       description: 'Intuitive navigation, smooth animations, and responsive design',
       icon: Users,
       color: 'from-purple-500 to-pink-500'
     },
-    {
-      title: 'Improved Performance',
+    { title: 'Improved Performance',
       description: 'Faster loading times, optimized assets, and efficient rendering',
       icon: Zap,
       color: 'from-yellow-500 to-orange-500'
     },
-    {
-      title: 'Better Accessibility',
+    { title: 'Better Accessibility',
       description: 'Inclusive design for users with diverse abilities',
       icon: Eye,
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      title: 'Advanced Analytics',
+    { title: 'Advanced Analytics',
       description: 'Comprehensive insights into user behavior and performance',
       icon: BarChart3,
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      title: 'SEO Excellence',
+    { title: 'SEO Excellence',
       description: 'Optimized for search engines and improved discoverability',
       icon: Search,
       color: 'from-indigo-500 to-purple-500'
     },
-    {
-      title: 'Security Enhanced',
+    { title: 'Security Enhanced',
       description: 'Advanced security measures and privacy protection',
       icon: Shield,
       color: 'from-red-500 to-orange-500'
@@ -230,7 +213,7 @@ export default function ComprehensiveImprovements2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
@@ -251,15 +234,13 @@ export default function ComprehensiveImprovements2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/ai-services-hub"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center"
-              >
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 mr-2" />
                 Explore AI Services Hub
               </Link>
               <Link
                 to="/performance-analytics"
-                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
-              >
+                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">
                 <BarChart3 className="w-5 h-5 mr-2 inline" />
                 View Performance Analytics
               </Link>
@@ -274,10 +255,9 @@ export default function ComprehensiveImprovements2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Enhancements
             </h2>
@@ -294,9 +274,8 @@ export default function ComprehensiveImprovements2025() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${improvement.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -336,10 +315,9 @@ export default function ComprehensiveImprovements2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -356,9 +334,8 @@ export default function ComprehensiveImprovements2025() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -390,10 +367,9 @@ export default function ComprehensiveImprovements2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Benefits
             </h2>
@@ -410,9 +386,8 @@ export default function ComprehensiveImprovements2025() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -444,8 +419,8 @@ export default function ComprehensiveImprovements2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Experience the Future?
@@ -457,15 +432,13 @@ export default function ComprehensiveImprovements2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center"
-              >
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center">
                 <Phone className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/services"
-                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg"
-              >
+                className="border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg">
                 <ArrowRight className="w-5 h-5 mr-2 inline" />
                 Explore Services
               </Link>

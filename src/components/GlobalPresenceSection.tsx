@@ -2,29 +2,25 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const globalOffices = [
-  {
-    city: "Middletown, DE",
+  { city: "Middletown, DE",
     country: "United States",
     type: "Headquarters",
     icon: "🇺🇸",
     description: "Main office and innovation center"
   },
-  {
-    city: "London",
+  { city: "London",
     country: "United Kingdom",
     type: "European Hub",
     icon: "🇬🇧",
     description: "European operations and client services"
   },
-  {
-    city: "Singapore",
+  { city: "Singapore",
     country: "Singapore",
     type: "Asia-Pacific Hub",
     icon: "🇸🇬",
     description: "APAC market expansion and support"
   },
-  {
-    city: "Toronto",
+  { city: "Toronto",
     country: "Canada",
     type: "North American Hub",
     icon: "🇨🇦",
@@ -47,8 +43,8 @@ export function GlobalPresenceSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Global Presence
@@ -63,7 +59,7 @@ export function GlobalPresenceSection() {
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {globalStats.map((stat, index) => (
@@ -82,7 +78,7 @@ export function GlobalPresenceSection() {
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -96,7 +92,7 @@ export function GlobalPresenceSection() {
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -122,7 +118,7 @@ export function GlobalPresenceSection() {
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
@@ -141,7 +137,7 @@ export function GlobalPresenceSection() {
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 1.0 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

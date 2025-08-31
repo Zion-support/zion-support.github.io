@@ -17,26 +17,24 @@ export interface InnovativeMicroSaasService2026 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026[] = [
   // AI-Powered Business Intelligence & Analytics
-  {
-    id: "ai-business-intelligence-platform-2026",
+  { id: "ai-business-intelligence-platform-2026",
     title: "AI Business Intelligence Platform 2026",
     description: "Next-generation business intelligence platform that uses advanced AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
     category: "AI & Analytics",
@@ -83,13 +81,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$2,999 - $8,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -100,8 +96,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // AI-Powered Cybersecurity Suite
-  {
-    id: "ai-cybersecurity-suite-2026",
+  { id: "ai-cybersecurity-suite-2026",
     title: "AI-Powered Cybersecurity Suite 2026",
     description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
     category: "AI & Security",
@@ -141,13 +136,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$1,800 - $5,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "Machine Learning", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["Python", "Machine Learning", "React", "Node.js", "MongoDB"],
       integrations: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability Scanners"],
       apiEndpoints: 200,
       uptime: "99.99%",
@@ -158,8 +151,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // AI Content Marketing Suite
-  {
-    id: "ai-content-marketing-suite-2026",
+  { id: "ai-content-marketing-suite-2026",
     title: "AI Content Marketing Suite 2026",
     description: "End-to-end AI-powered content creation and marketing automation platform that generates engaging content across all channels.",
     category: "AI & Marketing",
@@ -199,13 +191,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$800 - $2,500/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["GPT-4", "React", "Node.js", "PostgreSQL", "Redis"],
+    technicalSpecs: { technology: ["GPT-4", "React", "Node.js", "PostgreSQL", "Redis"],
       integrations: ["WordPress", "HubSpot", "Mailchimp", "Hootsuite", "Google Analytics"],
       apiEndpoints: 100,
       uptime: "99.8%",
@@ -216,8 +206,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // AI Sales Copilot
-  {
-    id: "ai-sales-copilot-2026",
+  { id: "ai-sales-copilot-2026",
     title: "AI Sales Copilot 2026",
     description: "Intelligent sales assistant that automates lead qualification, follow-ups, and sales process optimization using advanced AI.",
     category: "AI & Sales",
@@ -257,13 +246,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$1,200 - $3,500/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Zoho CRM", "Microsoft Dynamics"],
       apiEndpoints: 120,
       uptime: "99.9%",
@@ -274,8 +261,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // AI Customer Support Platform
-  {
-    id: "ai-customer-support-platform-2026",
+  { id: "ai-customer-support-platform-2026",
     title: "AI Customer Support Platform 2026",
     description: "Intelligent customer support solution that provides instant responses, ticket routing, and customer satisfaction optimization.",
     category: "AI & Support",
@@ -315,13 +301,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$600 - $1,800/month",
     roi: "200-300%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "NLP", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["Python", "NLP", "React", "Node.js", "MongoDB"],
       integrations: ["Zendesk", "Intercom", "Freshdesk", "Help Scout", "Slack"],
       apiEndpoints: 80,
       uptime: "99.8%",
@@ -332,8 +316,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // AI Data Analytics & BI
-  {
-    id: "ai-data-analytics-bi-2026",
+  { id: "ai-data-analytics-bi-2026",
     title: "AI Data Analytics & BI 2026",
     description: "Advanced business intelligence platform that uses AI to transform raw data into actionable insights and predictive analytics.",
     category: "AI & Analytics",
@@ -373,13 +356,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$1,500 - $4,500/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["Google Analytics", "Salesforce", "HubSpot", "QuickBooks", "Shopify"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -390,8 +371,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Cloud Infrastructure & DevOps
-  {
-    id: "cloud-infrastructure-devops-2026",
+  { id: "cloud-infrastructure-devops-2026",
     title: "Cloud Infrastructure & DevOps 2026",
     description: "Enterprise-grade cloud infrastructure with automated DevOps pipelines for scalable, reliable, and secure applications.",
     category: "IT & Infrastructure",
@@ -431,13 +411,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$3,000 - $8,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
+    technicalSpecs: { technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
       integrations: ["GitHub", "GitLab", "Jenkins", "Prometheus", "Grafana"],
       apiEndpoints: 300,
       uptime: "99.99%",
@@ -448,8 +426,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // IT Helpdesk & Support
-  {
-    id: "it-helpdesk-support-2026",
+  { id: "it-helpdesk-support-2026",
     title: "IT Helpdesk & Support 2026",
     description: "Professional IT support services with remote assistance, on-site support, and proactive maintenance for your business.",
     category: "IT & Support",
@@ -489,13 +466,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$1,200 - $3,500/month",
     roi: "150-250%",
     innovationLevel: "Standard",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Remote Desktop", "Ticketing System", "Monitoring Tools", "Asset Management"],
+    technicalSpecs: { technology: ["Remote Desktop", "Ticketing System", "Monitoring Tools", "Asset Management"],
       integrations: ["Active Directory", "Office 365", "Google Workspace", "Slack"],
       apiEndpoints: 50,
       uptime: "99.5%",
@@ -506,8 +481,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Data Management & Backup
-  {
-    id: "data-management-backup-2026",
+  { id: "data-management-backup-2026",
     title: "Data Management & Backup 2026",
     description: "Comprehensive data management solutions including backup, recovery, archiving, and data governance.",
     category: "IT & Data",
@@ -547,13 +521,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$800 - $2,500/month",
     roi: "200-300%",
     innovationLevel: "Standard",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Backup Software", "Cloud Storage", "Encryption", "Compression"],
+    technicalSpecs: { technology: ["Backup Software", "Cloud Storage", "Encryption", "Compression"],
       integrations: ["AWS S3", "Azure Blob", "Google Cloud Storage", "On-premise Storage"],
       apiEndpoints: 60,
       uptime: "99.9%",
@@ -564,8 +536,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Network & Security Infrastructure
-  {
-    id: "network-security-infrastructure-2026",
+  { id: "network-security-infrastructure-2026",
     title: "Network & Security Infrastructure 2026",
     description: "Enterprise networking solutions with advanced security features, monitoring, and optimization.",
     category: "IT & Networking",
@@ -605,13 +576,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$2,000 - $6,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Cisco", "Juniper", "Fortinet", "Palo Alto", "F5"],
+    technicalSpecs: { technology: ["Cisco", "Juniper", "Fortinet", "Palo Alto", "F5"],
       integrations: ["Active Directory", "LDAP", "RADIUS", "SIEM", "Monitoring Tools"],
       apiEndpoints: 100,
       uptime: "99.9%",
@@ -622,8 +591,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Digital Transformation Consulting
-  {
-    id: "digital-transformation-consulting-2026",
+  { id: "digital-transformation-consulting-2026",
     title: "Digital Transformation Consulting 2026",
     description: "Strategic consulting services to help businesses modernize their technology stack and digital processes.",
     category: "IT & Consulting",
@@ -663,13 +631,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$5,000 - $15,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Consulting Tools", "Assessment Tools", "Strategy Frameworks", "ROI Calculators"],
+    technicalSpecs: { technology: ["Consulting Tools", "Assessment Tools", "Strategy Frameworks", "ROI Calculators"],
       integrations: ["Project Management", "Communication Tools", "Analytics Platforms", "CRM Systems"],
       apiEndpoints: 30,
       uptime: "N/A",
@@ -680,8 +646,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Website Analytics & SEO
-  {
-    id: "website-analytics-seo-2026",
+  { id: "website-analytics-seo-2026",
     title: "Website Analytics & SEO 2026",
     description: "Comprehensive website analytics and SEO optimization platform to improve your online presence and drive traffic.",
     category: "Micro SaaS & Marketing",
@@ -721,13 +686,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$200 - $800/month",
     roi: "150-250%",
     innovationLevel: "Standard",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["React", "Node.js", "PostgreSQL", "Redis", "Analytics APIs"],
+    technicalSpecs: { technology: ["React", "Node.js", "PostgreSQL", "Redis", "Analytics APIs"],
       integrations: ["Google Analytics", "Google Search Console", "Bing Webmaster", "Social Media"],
       apiEndpoints: 80,
       uptime: "99.8%",
@@ -738,8 +701,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Email Marketing Automation
-  {
-    id: "email-marketing-automation-2026",
+  { id: "email-marketing-automation-2026",
     title: "Email Marketing Automation 2026",
     description: "Powerful email marketing platform with automation, segmentation, and analytics to boost customer engagement.",
     category: "Micro SaaS & Marketing",
@@ -779,13 +741,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$150 - $500/month",
     roi: "200-300%",
     innovationLevel: "Standard",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["React", "Node.js", "PostgreSQL", "Redis", "SMTP"],
+    technicalSpecs: { technology: ["React", "Node.js", "PostgreSQL", "Redis", "SMTP"],
       integrations: ["Salesforce", "HubSpot", "Shopify", "WooCommerce", "Zapier"],
       apiEndpoints: 60,
       uptime: "99.8%",
@@ -796,8 +756,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Customer Feedback Surveys
-  {
-    id: "customer-feedback-surveys-2026",
+  { id: "customer-feedback-surveys-2026",
     title: "Customer Feedback Surveys 2026",
     description: "Professional survey platform to collect customer feedback, measure satisfaction, and improve your products.",
     category: "Micro SaaS & Analytics",
@@ -837,13 +796,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$100 - $400/month",
     roi: "150-250%",
     innovationLevel: "Standard",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["React", "Node.js", "PostgreSQL", "Redis", "Analytics"],
+    technicalSpecs: { technology: ["React", "Node.js", "PostgreSQL", "Redis", "Analytics"],
       integrations: ["Slack", "Zapier", "Webhooks", "API", "Email"],
       apiEndpoints: 40,
       uptime: "99.8%",
@@ -854,8 +811,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
   },
 
   // Affiliate Tracking Platform
-  {
-    id: "affiliate-tracking-platform-2026",
+  { id: "affiliate-tracking-platform-2026",
     title: "Affiliate Tracking Platform 2026",
     description: "Complete affiliate marketing solution to manage partnerships, track performance, and optimize revenue.",
     category: "Micro SaaS & Marketing",
@@ -895,13 +851,11 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
     marketPrice: "$300 - $1,200/month",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["React", "Node.js", "PostgreSQL", "Redis", "Analytics"],
+    technicalSpecs: { technology: ["React", "Node.js", "PostgreSQL", "Redis", "Analytics"],
       integrations: ["Shopify", "WooCommerce", "Magento", "BigCommerce", "API"],
       apiEndpoints: 80,
       uptime: "99.9%",
@@ -914,8 +868,7 @@ export const INNOVATIVE_MICRO_SAAS_SERVICES_2026: InnovativeMicroSaasService2026
 
 // Additional specialized services for 2026
 export const SPECIALIZED_SERVICES_2026 = [
-  {
-    id: "ai-powered-seo-optimizer-2026",
+  { id: "ai-powered-seo-optimizer-2026",
     title: "AI-Powered SEO Optimizer 2026",
     description: "Advanced SEO platform that uses AI to analyze search trends, optimize content, and improve search rankings with semantic analysis and predictive keyword optimization.",
     category: "AI & Marketing",
@@ -924,14 +877,12 @@ export const SPECIALIZED_SERVICES_2026 = [
     currency: "$",
     pricingModel: "monthly",
     marketPrice: "$1,999 - $6,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "interview-assessment-ai-2026",
+  { id: "interview-assessment-ai-2026",
     title: "Interview Assessment AI 2026",
     description: "Intelligent interview platform that uses AI to conduct structured interviews, assess candidate responses, and provide objective scoring with bias detection and cultural fit analysis.",
     category: "AI & HR",
@@ -940,14 +891,12 @@ export const SPECIALIZED_SERVICES_2026 = [
     currency: "$",
     pricingModel: "monthly",
     marketPrice: "$3,999 - $12,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "helpdesk-platform-2026",
+  { id: "helpdesk-platform-2026",
     title: "AI-Powered Helpdesk Platform 2026",
     description: "Intelligent helpdesk solution that uses AI to automate ticket routing, provide instant responses, and improve customer satisfaction with natural language processing and predictive analytics.",
     category: "AI & Customer Service",
@@ -956,14 +905,12 @@ export const SPECIALIZED_SERVICES_2026 = [
     currency: "$",
     pricingModel: "monthly",
     marketPrice: "$2,999 - $9,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "dsr-privacy-portal-2026",
+  { id: "dsr-privacy-portal-2026",
     title: "DSR Privacy Portal 2026",
     description: "Comprehensive data subject rights portal that automates GDPR, CCPA, and other privacy regulation compliance with automated request processing and data governance.",
     category: "Privacy & Compliance",
@@ -972,14 +919,12 @@ export const SPECIALIZED_SERVICES_2026 = [
     currency: "$",
     pricingModel: "monthly",
     marketPrice: "$4,999 - $15,000/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "security-headers-csp-2026",
+  { id: "security-headers-csp-2026",
     title: "Security Headers & CSP Manager 2026",
     description: "Advanced security platform that automatically manages security headers, content security policies, and web application security with real-time threat monitoring and automated response.",
     category: "Cybersecurity",
@@ -988,8 +933,7 @@ export const SPECIALIZED_SERVICES_2026 = [
     currency: "$",
     pricingModel: "monthly",
     marketPrice: "$1,999 - $6,999/month",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }

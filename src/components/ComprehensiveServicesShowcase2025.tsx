@@ -410,12 +410,12 @@ interface ServiceContact {
   email: string;
   address: string;
   website: string;
-}
+    }
 
 const ComprehensiveServicesShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedService, setSelectedService] = useState(null);
   const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
@@ -474,7 +474,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     }
   });
 
-  const handleServiceClick = (service: any) => {
+  const handleServiceClick = (service: ) => {
     setSelectedService(service);
   };
 
@@ -482,23 +482,17 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
     setSelectedService(null);
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
+  const itemVariants = { hidden: { y: 20, opacity: 0 },
+    visible: { y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
+      transition: { duration: 0.5,
         ease: "easeOut"
       }
     }
@@ -545,7 +539,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-pink bg-clip-text text-transparent mb-6">
               Comprehensive Services 2025
@@ -575,8 +569,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6"
-          >
+            className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6">
             {/* Search Bar */}
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-400 w-5 h-5" />
@@ -596,8 +589,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <select
                   value={activeCategory}
                   onChange={(e) => setActiveCategory(e.target.value)}
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
@@ -612,8 +604,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <select
                   value={innovationLevel}
                   onChange={(e) => setInnovationLevel(e.target.value)}
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none">
                   {innovationLevels.map((level) => (
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
@@ -628,8 +619,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
-                >
+                  className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="innovation">Sort by Innovation</option>
@@ -718,8 +708,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                 className={`bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-700 rounded-2xl p-6 hover:border-zion-cyan/50 hover:shadow-lg hover:shadow-zion-cyan/20 transition-all duration-300 cursor-pointer group ${
                   viewMode === 'list' ? 'flex items-center gap-6' : ''
                 }`}
-                onClick={() => handleServiceClick(service)}
-              >
+                onClick={() => handleServiceClick(service)}>
                 {viewMode === 'grid' ? (
                   // Grid View
                   <>
@@ -747,8 +736,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                       {service.tags.slice(0, 3).map((tag, index) => (
                         <span
                           key={index}
-                          className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
-                        >
+                          className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg">
                           {tag}
                         </span>
                       ))}
@@ -805,8 +793,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                         {service.tags.slice(0, 5).map((tag, index) => (
                           <span
                             key={index}
-                            className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg"
-                          >
+                            className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-lg">
                             {tag}
                           </span>
                         ))}
@@ -832,10 +819,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-20"
-            >
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-zion-slate-400 mb-6">
@@ -848,8 +834,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   setPriceRange([0, 10000]);
                   setInnovationLevel('all');
                 }}
-                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
-              >
+                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors">
                 Clear All Filters
               </button>
             </motion.div>
@@ -861,19 +846,17 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
       <AnimatePresence>
         {selectedService && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
+            exit={{ opacity: 0     }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={closeModal}
-          >
+            onClick={closeModal}>
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-zion-slate-900 border border-zion-slate-700 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
+              onClick={(e) => e.stopPropagation()}>
               <div className="p-8">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -891,8 +874,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {
                   </div>
                   <button
                     onClick={closeModal}
-                    className="text-zion-slate-400 hover:text-white transition-colors"
-                  >
+                    className="text-zion-slate-400 hover:text-white transition-colors">
                     <X className="w-6 h-6" />
                   </button>
                 </div>

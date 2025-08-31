@@ -31,8 +31,7 @@ export class ServiceWorkerManager {
       }
 
       // Register new service worker with better error handling
-      const registration = await navigator.serviceWorker.register('/sw.js', {
-        scope: '/',
+      const registration = await navigator.serviceWorker.register('/sw.js', { scope: '/',
         updateViaCache: 'none'
       });
 
@@ -255,7 +254,7 @@ export class ServiceWorkerManager {
     try {
       const registration = await this.getRegistration();
       if (registration) {
-        await (registration as any).sync.register(tag);
+        await (registration as ).sync.register(tag);
         console.log('Background sync requested:', tag);
         return true;
       }
@@ -300,8 +299,7 @@ export class ServiceWorkerManager {
         return null;
       }
 
-      const subscription = await registration.pushManager.subscribe({
-        userVisibleOnly: true,
+      const subscription = await registration.pushManager.subscribe({ userVisibleOnly: true,
         applicationServerKey: this.urlBase64ToUint8Array(process.env['REACT_APP_VAPID_PUBLIC_KEY'] || '')
       });
 

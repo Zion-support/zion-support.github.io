@@ -19,7 +19,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI-Powered Customer Experience Analytics Platform
@@ -45,10 +45,9 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced AI-Powered Features
               </h2>
@@ -59,33 +58,27 @@ const AICustomerExperienceAnalytics: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "AI Sentiment Analysis",
+                { title: "AI Sentiment Analysis",
                   description: "Advanced natural language processing to analyze customer feedback, reviews, and social media mentions in real-time.",
                   icon: "🧠"
                 },
-                {
-                  title: "Real-Time Customer Journey Tracking",
+                { title: "Real-Time Customer Journey Tracking",
                   description: "Track customer interactions across all touchpoints with detailed journey mapping and behavior analysis.",
                   icon: "🗺️"
                 },
-                {
-                  title: "Predictive Analytics",
+                { title: "Predictive Analytics",
                   description: "Machine learning algorithms that predict customer behavior, churn risk, and lifetime value.",
                   icon: "🔮"
                 },
-                {
-                  title: "Omnichannel Analytics",
+                { title: "Omnichannel Analytics",
                   description: "Unified view of customer interactions across web, mobile, social media, email, and call centers.",
                   icon: "📱"
                 },
-                {
-                  title: "Automated Insights",
+                { title: "Automated Insights",
                   description: "AI-generated insights and recommendations to optimize customer experience and drive business growth.",
                   icon: "💡"
                 },
-                {
-                  title: "Personalization Engine",
+                { title: "Personalization Engine",
                   description: "Dynamic content personalization based on real-time customer behavior and preferences.",
                   icon: "🎯"
                 }
@@ -95,9 +88,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -113,10 +105,9 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Measurable Business Impact
               </h2>
@@ -139,9 +130,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-xl p-8 border border-green-500/30"
-                >
+                  viewport={{ once: true     }}
+                  className="text-center bg-gradient-to-br from-green-600/20 to-blue-600/20 rounded-xl p-8 border border-green-500/30">
                   <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">{benefit.metric}</div>
                   <p className="text-white text-lg">{benefit.description}</p>
                 </motion.div>
@@ -156,10 +146,9 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industry-Specific Use Cases
               </h2>
@@ -170,23 +159,19 @@ const AICustomerExperienceAnalytics: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                {
-                  industry: "E-commerce",
+                { industry: "E-commerce",
                   description: "Optimize online shopping experiences with personalized recommendations and real-time customer support.",
                   features: ["Shopping cart abandonment analysis", "Product recommendation engine", "Customer support optimization"]
                 },
-                {
-                  industry: "SaaS",
+                { industry: "SaaS",
                   description: "Improve user onboarding, feature adoption, and customer success with data-driven insights.",
                   features: ["User onboarding optimization", "Feature adoption tracking", "Customer success metrics"]
                 },
-                {
-                  industry: "Financial Services",
+                { industry: "Financial Services",
                   description: "Enhance banking experiences with personalized financial advice and proactive customer service.",
                   features: ["Financial product recommendations", "Risk assessment", "Proactive customer service"]
                 },
-                {
-                  industry: "Healthcare",
+                { industry: "Healthcare",
                   description: "Improve patient experiences with personalized care plans and proactive health monitoring.",
                   features: ["Patient journey optimization", "Care plan personalization", "Health outcome tracking"]
                 }
@@ -196,9 +181,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-2">
@@ -221,10 +205,9 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Transparent Pricing Plans
               </h2>
@@ -235,8 +218,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                {
-                  name: "Starter",
+                { name: "Starter",
                   price: "$299",
                   period: "/month",
                   description: "Perfect for small businesses starting with customer analytics",
@@ -250,8 +232,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   ],
                   popular: false
                 },
-                {
-                  name: "Professional",
+                { name: "Professional",
                   price: "$799",
                   period: "/month",
                   description: "Ideal for growing companies with advanced analytics needs",
@@ -267,8 +248,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   ],
                   popular: true
                 },
-                {
-                  name: "Enterprise",
+                { name: "Enterprise",
                   price: "$1,999",
                   period: "/month",
                   description: "Comprehensive solution for large organizations",
@@ -290,7 +270,7 @@ const AICustomerExperienceAnalytics: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-green-600 to-blue-600 border-2 border-green-400' 
@@ -338,9 +318,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
+              viewport={{ once: true     }}
+              className="text-center mt-12">
               <p className="text-gray-300 mb-4">
                 All plans include a 14-day free trial. Annual plans save 20%.
               </p>
@@ -357,8 +336,8 @@ const AICustomerExperienceAnalytics: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Customer Experience?

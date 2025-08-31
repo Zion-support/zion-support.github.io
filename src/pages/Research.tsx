@@ -35,8 +35,7 @@ export default function Research() {
   ];
 
   const researchProjects = [
-    {
-      id: 1,
+    { id: 1,
       title: 'Quantum Machine Learning for Financial Modeling',
       description: 'Exploring the application of quantum computing algorithms to enhance financial risk assessment and portfolio optimization.',
       category: 'quantum',
@@ -52,8 +51,7 @@ export default function Research() {
       methodology: 'Hybrid quantum-classical approach using variational quantum algorithms',
       expectedOutcomes: ['Quantum advantage demonstration', 'Financial model improvements', 'Patent applications'],
       publications: [
-        {
-          title: 'Quantum Algorithms for Portfolio Optimization',
+        { title: 'Quantum Algorithms for Portfolio Optimization',
           journal: 'Nature Quantum Information',
           year: 2024,
           doi: '10.1038/s41534-024-00800-5',
@@ -65,8 +63,7 @@ export default function Research() {
       progress: 65,
       impact: 'high'
     },
-    {
-      id: 2,
+    { id: 2,
       title: 'Federated Learning for Privacy-Preserving Healthcare Analytics',
       description: 'Developing secure federated learning frameworks that enable healthcare institutions to collaborate on AI models without sharing sensitive patient data.',
       category: 'ai-ml',
@@ -82,15 +79,13 @@ export default function Research() {
       methodology: 'Differential privacy, secure multi-party computation, federated averaging',
       expectedOutcomes: ['Privacy-preserving framework', 'Healthcare AI models', 'Open-source toolkit'],
       publications: [
-        {
-          title: 'Privacy-Preserving Federated Learning in Healthcare',
+        { title: 'Privacy-Preserving Federated Learning in Healthcare',
           journal: 'Nature Machine Intelligence',
           year: 2024,
           doi: '10.1038/s42256-024-00789-8',
           citations: 45
         },
-        {
-          title: 'Secure Multi-Party Computation for Medical Data',
+        { title: 'Secure Multi-Party Computation for Medical Data',
           journal: 'IEEE Transactions on Medical Imaging',
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
@@ -102,8 +97,7 @@ export default function Research() {
       progress: 100,
       impact: 'very-high'
     },
-    {
-      id: 3,
+    { id: 3,
       title: 'Zero-Trust Architecture for Industrial IoT',
       description: 'Researching and implementing zero-trust security frameworks specifically designed for industrial IoT environments.',
       category: 'security',
@@ -119,8 +113,7 @@ export default function Research() {
       methodology: 'Threat modeling, security architecture design, prototype development, penetration testing',
       expectedOutcomes: ['Zero-trust framework', 'Security prototypes', 'Best practices guide'],
       publications: [
-        {
-          title: 'Zero-Trust Security for Industrial IoT',
+        { title: 'Zero-Trust Security for Industrial IoT',
           journal: 'IEEE Security & Privacy',
           year: 2024,
           doi: '10.1109/MSEC.2024.001234',
@@ -132,8 +125,7 @@ export default function Research() {
       progress: 40,
       impact: 'high'
     },
-    {
-      id: 4,
+    { id: 4,
       title: 'Edge AI for Autonomous Vehicles',
       description: 'Developing lightweight AI models optimized for edge computing in autonomous vehicle systems.',
       category: 'emerging',
@@ -154,8 +146,7 @@ export default function Research() {
       progress: 15,
       impact: 'medium'
     },
-    {
-      id: 5,
+    { id: 5,
       title: 'Blockchain for Supply Chain Transparency',
       description: 'Investigating blockchain technology applications for enhancing supply chain transparency and traceability.',
       category: 'emerging',
@@ -171,8 +162,7 @@ export default function Research() {
       methodology: 'Blockchain design, smart contracts, supply chain modeling, pilot implementation',
       expectedOutcomes: ['Blockchain framework', 'Supply chain pilots', 'Industry partnerships'],
       publications: [
-        {
-          title: 'Blockchain-Enabled Supply Chain Transparency',
+        { title: 'Blockchain-Enabled Supply Chain Transparency',
           journal: 'Journal of Supply Chain Management',
           year: 2024,
           doi: '10.1111/jscm.12345',
@@ -184,8 +174,7 @@ export default function Research() {
       progress: 100,
       impact: 'medium'
     },
-    {
-      id: 6,
+    { id: 6,
       title: 'Neuromorphic Computing for Edge AI',
       description: 'Researching brain-inspired computing architectures for energy-efficient AI processing at the edge.',
       category: 'ai-ml',
@@ -201,8 +190,7 @@ export default function Research() {
       methodology: 'Neuromorphic architecture design, spiking neural networks, hardware-software co-design',
       expectedOutcomes: ['Neuromorphic framework', 'Energy-efficient models', 'Hardware prototypes'],
       publications: [
-        {
-          title: 'Neuromorphic Computing for Edge AI Applications',
+        { title: 'Neuromorphic Computing for Edge AI Applications',
           journal: 'Nature Electronics',
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
@@ -266,8 +254,7 @@ export default function Research() {
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
+    return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric',
       month: 'short'
     });
   };
@@ -394,8 +381,7 @@ export default function Research() {
               {researchProjects.filter(p => p.featured).map((project) => (
                 <div
                   key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-                >
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
@@ -472,8 +458,7 @@ export default function Research() {
               {filteredProjects.map((project) => (
                 <div
                   key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(project.category)}
@@ -503,8 +488,7 @@ export default function Research() {
                     {project.tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full">
                         {tag}
                       </span>
                     ))}
@@ -537,7 +521,7 @@ export default function Research() {
                     <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
                       <div 
                         className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${project.progress}%` }}
+                        style={{ width: `${project.progress    }%` }}
                       ></div>
                     </div>
                   </div>

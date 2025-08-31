@@ -54,49 +54,41 @@ import { SEO } from '../../components/SEO';
 
 export default function AIContentMarketingSuite() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI Content Generation',
       description: 'Advanced AI that creates high-quality, engaging content in seconds - from blog posts and social media to email campaigns and product descriptions.'
     },
-    {
-      icon: PenTool,
+    { icon: PenTool,
       title: 'Smart Content Optimization',
       description: 'AI-powered SEO optimization, readability scoring, and content performance prediction to maximize engagement and conversions.'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Automated Content Distribution',
       description: 'Intelligent scheduling and multi-channel distribution that reaches your audience at the optimal time across all platforms.'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Performance Analytics',
       description: 'Real-time content performance tracking with AI insights that help you optimize your content strategy and ROI.'
     }
   ];
 
   const capabilities = [
-    {
-      title: 'Content Creation',
+    { title: 'Content Creation',
       description: 'AI-powered generation of various content types with brand voice consistency',
       icon: PenTool,
       benefits: ['Blog posts', 'Social media content', 'Email campaigns', 'Product descriptions']
     },
-    {
-      title: 'SEO Optimization',
+    { title: 'SEO Optimization',
       description: 'Intelligent keyword research and content optimization for search engines',
       icon: Search,
       benefits: ['Keyword research', 'Content optimization', 'Ranking analysis', 'Competitor insights']
     },
-    {
-      title: 'Multi-format Support',
+    { title: 'Multi-format Support',
       description: 'Create content in text, image, video, and audio formats with AI assistance',
       icon: FileText,
       benefits: ['Text generation', 'Image creation', 'Video editing', 'Audio transcription']
     },
-    {
-      title: 'Analytics & Insights',
+    { title: 'Analytics & Insights',
       description: 'Comprehensive performance tracking and AI-powered recommendations',
       icon: BarChart3,
       benefits: ['Performance metrics', 'Audience insights', 'ROI tracking', 'Optimization tips']
@@ -104,26 +96,22 @@ export default function AIContentMarketingSuite() {
   ];
 
   const useCases = [
-    {
-      industry: 'E-commerce & Retail',
+    { industry: 'E-commerce & Retail',
       description: 'Generate product descriptions, create engaging social media content, and optimize product pages for better conversions',
       icon: ShoppingCart,
       metrics: ['Content Production', 'SEO Rankings', 'Conversion Rates', 'Engagement Levels']
     },
-    {
-      industry: 'B2B Marketing',
+    { industry: 'B2B Marketing',
       description: 'Create thought leadership content, optimize landing pages, and generate email sequences that drive lead generation',
       icon: Building,
       metrics: ['Lead Generation', 'Content Quality', 'Email Performance', 'Landing Page Conversion']
     },
-    {
-      industry: 'Agency & Freelance',
+    { industry: 'Agency & Freelance',
       description: 'Scale content production, maintain quality across clients, and deliver results faster with AI assistance',
       icon: Users,
       metrics: ['Production Speed', 'Client Satisfaction', 'Content Quality', 'Project Delivery']
     },
-    {
-      industry: 'Publishing & Media',
+    { industry: 'Publishing & Media',
       description: 'Generate articles, optimize headlines, and create engaging content that drives reader engagement and retention',
       icon: BookOpen,
       metrics: ['Reader Engagement', 'Content Quality', 'Publishing Speed', 'Audience Growth']
@@ -131,31 +119,26 @@ export default function AIContentMarketingSuite() {
   ];
 
   const benefits = [
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: '10x Content Production',
       description: 'Create 10x more content in the same time while maintaining or improving quality standards.'
     },
-    {
-      icon: Search,
+    { icon: Search,
       title: 'Better SEO Rankings',
       description: 'Improve search engine rankings by 40-60% with AI-optimized content and keyword strategies.'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Higher Engagement',
       description: 'Increase audience engagement by 35-50% with personalized, optimized content that resonates.'
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: 'Improved ROI',
       description: 'Boost marketing ROI by 25-40% through better content performance and conversion optimization.'
     }
   ];
 
   const pricing = [
-    {
-      name: 'Creator',
+    { name: 'Creator',
       price: '$199',
       period: '/month',
       description: 'Perfect for individual creators',
@@ -169,8 +152,7 @@ export default function AIContentMarketingSuite() {
       cta: 'Start Free Trial',
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$499',
       period: '/month',
       description: 'Ideal for growing businesses',
@@ -185,8 +167,7 @@ export default function AIContentMarketingSuite() {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$1,299',
       period: '/month',
       description: 'For large organizations',
@@ -218,7 +199,7 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent mb-6">
               AI Content Marketing Suite
@@ -245,9 +226,8 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful AI-Powered Features
             </h2>
@@ -264,8 +244,7 @@ export default function AIContentMarketingSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -283,9 +262,8 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Comprehensive Content Capabilities
             </h2>
@@ -302,8 +280,7 @@ export default function AIContentMarketingSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-green-400" />
@@ -331,9 +308,8 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -350,8 +326,7 @@ export default function AIContentMarketingSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-green-400" />
@@ -379,9 +354,8 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -398,8 +372,7 @@ export default function AIContentMarketingSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -417,9 +390,8 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -487,9 +459,8 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -501,23 +472,19 @@ export default function AIContentMarketingSuite() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              {
-                step: '01',
+              { step: '01',
                 title: 'Strategy Assessment',
                 description: 'Evaluate your current content strategy and identify optimization opportunities'
               },
-              {
-                step: '02',
+              { step: '02',
                 title: 'Platform Setup',
                 description: 'Configure AI models, templates, and integrate with your existing tools'
               },
-              {
-                step: '03',
+              { step: '03',
                 title: 'Team Training',
                 description: 'Train your team on AI content creation and optimization best practices'
               },
-              {
-                step: '04',
+              { step: '04',
                 title: 'Launch & Optimize',
                 description: 'Go live with continuous monitoring and ongoing optimization support'
               }
@@ -527,8 +494,7 @@ export default function AIContentMarketingSuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -546,7 +512,7 @@ export default function AIContentMarketingSuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Marketing?

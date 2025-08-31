@@ -5,8 +5,7 @@ import { ProductListing  } from '@/types/listings';
 
 export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   // AI-Powered Autonomous Research Assistant
-  {
-    id: "ai-autonomous-research-assistant",
+  { id: "ai-autonomous-research-assistant",
     title: "AI Autonomous Research Assistant",
     description: "Next-generation autonomous research platform that conducts independent research, analyzes data, and generates comprehensive reports. Reduces research time by 90% and improves accuracy by 95%.",
     category: "AI & Research",
@@ -23,8 +22,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 98,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-research-assistant",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -37,8 +35,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   },
 
   // AI-Powered Metaverse Development Platform
-  {
-    id: "ai-metaverse-development-platform",
+  { id: "ai-metaverse-development-platform",
     title: "AI Metaverse Development Platform",
     description: "Revolutionary metaverse development platform powered by AI that creates immersive 3D environments, virtual assets, and interactive experiences. Enables rapid metaverse creation with 70% less development time.",
     category: "AI & Metaverse",
@@ -55,8 +52,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "8-10 Weeks",
     aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-metaverse-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -69,8 +65,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   },
 
   // AI-Powered Space Technology Analytics
-  {
-    id: "ai-space-technology-analytics",
+  { id: "ai-space-technology-analytics",
     title: "AI Space Technology Analytics",
     description: "Advanced space technology analytics platform that processes satellite data, predicts space weather, and optimizes satellite operations. Provides real-time space insights with 99% accuracy.",
     category: "AI & Space Tech",
@@ -87,8 +82,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "10-12 Weeks",
     aiScore: 99,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-space-analytics",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -101,8 +95,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   },
 
   // AI-Powered Quantum Machine Learning Platform
-  {
-    id: "ai-quantum-machine-learning",
+  { id: "ai-quantum-machine-learning",
     title: "AI Quantum Machine Learning Platform",
     description: "Revolutionary quantum machine learning platform that leverages quantum computing for advanced AI training and optimization. Achieves 1000x faster training times for complex models.",
     category: "AI & Development",
@@ -119,8 +112,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "12-16 Weeks",
     aiScore: 100,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-quantum-ml",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -133,8 +125,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   },
 
   // AI-Powered Environmental Technology Platform
-  {
-    id: "ai-environmental-technology-platform",
+  { id: "ai-environmental-technology-platform",
     title: "AI Environmental Technology Platform",
     description: "Comprehensive environmental technology platform that monitors climate change, predicts environmental risks, and optimizes sustainability solutions. Provides real-time environmental insights with 95% accuracy.",
     category: "AI & Environmental Tech",
@@ -151,8 +142,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "5-7 Weeks",
     aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-environmental-tech",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -165,8 +155,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   },
 
   // AI-Powered Entertainment Content Generation
-  {
-    id: "ai-entertainment-content-generation",
+  { id: "ai-entertainment-content-generation",
     title: "AI Entertainment Content Generation",
     description: "Revolutionary entertainment content generation platform that creates movies, music, and interactive experiences using AI. Generates high-quality content 10x faster than traditional methods.",
     category: "AI & Entertainment",
@@ -183,8 +172,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-entertainment-content",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -197,8 +185,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
   },
 
   // AI-Powered Education Personalization Platform
-  {
-    id: "ai-education-personalization",
+  { id: "ai-education-personalization",
     title: "AI Education Personalization Platform",
     description: "Advanced education personalization platform that adapts learning content to individual student needs using AI. Improves learning outcomes by 60% and reduces dropout rates by 40%.",
     category: "AI & Education",
@@ -215,8 +202,7 @@ export const ADVANCED_AI_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-education-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"

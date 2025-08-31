@@ -45,33 +45,27 @@ import {
 
 const FinOpsAdvisor = () => {
   const features = [
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: 'Cost Optimization',
       description: 'Identify and eliminate unnecessary cloud spending'
     },
-    {
-      icon: TrendingDown,
+    { icon: TrendingDown,
       title: 'Budget Management',
       description: 'Set and track budgets with automated alerts'
     },
-    {
-      icon: Calculator,
+    { icon: Calculator,
       title: 'Cost Allocation',
       description: 'Accurate cost allocation across teams and projects'
     },
-    {
-      icon: PieChart,
+    { icon: PieChart,
       title: 'Resource Analytics',
       description: 'Deep insights into resource utilization patterns'
     },
-    {
-      icon: LineChart,
+    { icon: LineChart,
       title: 'Trend Analysis',
       description: 'Predictive analytics for future cost planning'
     },
-    {
-      icon: Target2,
+    { icon: Target2,
       title: 'ROI Optimization',
       description: 'Maximize return on cloud infrastructure investment'
     }
@@ -87,43 +81,35 @@ const FinOpsAdvisor = () => {
   ];
 
   const services = [
-    {
-      icon: Wallet,
+    { icon: Wallet,
       title: 'Cost Analysis',
       description: 'Comprehensive analysis of current cloud spending patterns'
     },
-    {
-      icon: PiggyBank,
+    { icon: PiggyBank,
       title: 'Optimization Strategies',
       description: 'Custom strategies for cost reduction and efficiency'
     },
-    {
-      icon: CreditCard,
+    { icon: CreditCard,
       title: 'Budget Planning',
       description: 'Strategic budget planning and forecasting'
     },
-    {
-      icon: Receipt,
+    { icon: Receipt,
       title: 'Reporting & Analytics',
       description: 'Detailed reports and actionable insights'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Startups',
+    { industry: 'Startups',
       description: 'Optimize costs while scaling infrastructure'
     },
-    {
-      industry: 'Enterprise',
+    { industry: 'Enterprise',
       description: 'Manage complex multi-cloud environments'
     },
-    {
-      industry: 'E-commerce',
+    { industry: 'E-commerce',
       description: 'Balance performance with cost efficiency'
     },
-    {
-      industry: 'SaaS Companies',
+    { industry: 'SaaS Companies',
       description: 'Optimize costs for multi-tenant applications'
     }
   ];
@@ -137,9 +123,8 @@ const FinOpsAdvisor = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6">
               <DollarSign className="w-4 h-4 mr-2" />
               Cloud Financial Operations
@@ -175,9 +160,8 @@ const FinOpsAdvisor = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive FinOps Features
             </h2>
@@ -194,8 +178,7 @@ const FinOpsAdvisor = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -213,9 +196,8 @@ const FinOpsAdvisor = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core FinOps Services
             </h2>
@@ -232,8 +214,7 @@ const FinOpsAdvisor = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-emerald-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -255,9 +236,8 @@ const FinOpsAdvisor = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Cloud Economics
             </h2>
@@ -274,8 +254,7 @@ const FinOpsAdvisor = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -288,8 +267,7 @@ const FinOpsAdvisor = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -305,9 +283,8 @@ const FinOpsAdvisor = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -324,8 +301,7 @@ const FinOpsAdvisor = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-emerald-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-emerald-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -343,7 +319,7 @@ const FinOpsAdvisor = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Optimize Your Cloud Costs Today

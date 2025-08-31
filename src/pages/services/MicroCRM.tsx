@@ -102,35 +102,29 @@ import {
 
 const MicroCRM = () => {
   const features = [
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Contact Management',
       description: 'Comprehensive contact database with detailed customer profiles'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Lead Tracking',
       description: 'Track leads from initial contact to conversion'
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: 'Sales Pipeline',
       description: 'Visual sales pipeline with customizable stages'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Analytics & Reporting',
       description: 'Real-time insights into sales performance and trends'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Data Security',
       description: 'Enterprise-grade security for customer data protection'
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: 'Cloud-Based',
-      description: 'Access your CRM from anywhere with cloud synchronization'
+      description: 'Access your CRM from where with cloud synchronization'
     }
   ];
 
@@ -144,43 +138,35 @@ const MicroCRM = () => {
   ];
 
   const services = [
-    {
-      icon: Phone,
+    { icon: Phone,
       title: 'Communication Tools',
       description: 'Integrated calling, email, and messaging capabilities'
     },
-    {
-      icon: Calendar,
+    { icon: Calendar,
       title: 'Task Management',
       description: 'Schedule follow-ups and track important activities'
     },
-    {
-      icon: MessageSquare,
+    { icon: MessageSquare,
       title: 'Customer Support',
       description: 'Track customer issues and support requests'
     },
-    {
-      icon: UserPlus,
+    { icon: UserPlus,
       title: 'Lead Generation',
       description: 'Tools for capturing and nurturing new leads'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Small Business',
+    { industry: 'Small Business',
       description: 'Affordable CRM for growing companies'
     },
-    {
-      industry: 'Sales Teams',
+    { industry: 'Sales Teams',
       description: 'Streamline sales processes and tracking'
     },
-    {
-      industry: 'Real Estate',
+    { industry: 'Real Estate',
       description: 'Manage property listings and client relationships'
     },
-    {
-      industry: 'Consulting',
+    { industry: 'Consulting',
       description: 'Track client projects and communications'
     }
   ];
@@ -194,9 +180,8 @@ const MicroCRM = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
               Customer Relationship Management
@@ -232,9 +217,8 @@ const MicroCRM = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Powerful CRM Features
             </h2>
@@ -251,8 +235,7 @@ const MicroCRM = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -270,9 +253,8 @@ const MicroCRM = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core CRM Services
             </h2>
@@ -289,8 +271,7 @@ const MicroCRM = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -312,9 +293,8 @@ const MicroCRM = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               CRM Benefits
             </h2>
@@ -331,8 +311,7 @@ const MicroCRM = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -345,8 +324,7 @@ const MicroCRM = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -362,9 +340,8 @@ const MicroCRM = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -381,8 +358,7 @@ const MicroCRM = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -400,7 +376,7 @@ const MicroCRM = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Managing Your Customers Today

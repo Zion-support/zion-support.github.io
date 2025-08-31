@@ -11,16 +11,16 @@ export interface ExpandedService2027 {
   benefits: string[];
   useCases: string[];
   targetAudience: string[];
-  pricing: {
+  pricing: {  
     model: string;
     basePrice: number;
     currency: string;
     pricingTiers: {
       starter: number;
       professional: number;
-      enterprise: number;
-      custom: string;
-    };
+      enterprise: number
+      custom: string
+        };
     freeTier: boolean;
     trialPeriod: string;
   };
@@ -33,19 +33,17 @@ export interface ExpandedService2027 {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-  contactInfo: {
-    phone: string;
+  contactInfo: { phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
-  technicalSpecs: {
-    uptime: string;
+    website: string
+    address: string
+      };
+  technicalSpecs: { uptime: string;
     security: string[];
     compliance: string[];
-    apiEndpoints: number;
-    scalability: string;
-  };
+    apiEndpoints: number
+    scalability: string
+      };
   support: string;
   rating: number;
   reviews: number;
@@ -55,8 +53,7 @@ export interface ExpandedService2027 {
 
 // 1. ADVANCED CYBERSECURITY & THREAT INTELLIGENCE
 export const advancedCybersecurityServices: ExpandedService2027[] = [
-  {
-    id: 'quantum-threat-hunter',
+  { id: 'quantum-threat-hunter',
     name: 'Quantum Threat Hunter',
     category: 'Cybersecurity',
     subcategory: 'Threat Intelligence',
@@ -95,12 +92,10 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'Large enterprises',
       'Critical infrastructure operators'
     ],
-    pricing: {
-      model: 'Tiered Subscription',
+    pricing: { model: 'Tiered Subscription',
       basePrice: 2500,
       currency: 'USD',
-      pricingTiers: {
-        starter: 2500,
+      pricingTiers: { starter: 2500,
         professional: 5000,
         enterprise: 10000,
         custom: 'Contact Sales'
@@ -117,14 +112,12 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     innovationLevel: 'Revolutionary',
     marketSize: '$4.2 billion by 2027',
     growthRate: '280% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-threat-hunter',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.99%',
+    technicalSpecs: { uptime: '99.99%',
       security: ['Zero Trust Architecture', 'Quantum Encryption', 'AI-Powered Detection'],
       compliance: ['SOC 2 Type II', 'ISO 27001', 'FedRAMP', 'GDPR'],
       apiEndpoints: 200,
@@ -136,8 +129,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     launchDate: '2027-01-15',
     status: 'active'
   },
-  {
-    id: 'ai-compliance-automator',
+  { id: 'ai-compliance-automator',
     name: 'AI Compliance Automator',
     category: 'Cybersecurity',
     subcategory: 'Compliance Automation',
@@ -176,12 +168,10 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'Compliance officers',
       'Risk management teams'
     ],
-    pricing: {
-      model: 'Per-User + Base',
+    pricing: { model: 'Per-User + Base',
       basePrice: 1500,
       currency: 'USD',
-      pricingTiers: {
-        starter: 1500,
+      pricingTiers: { starter: 1500,
         professional: 3000,
         enterprise: 6000,
         custom: 'Contact Sales'
@@ -198,14 +188,12 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$3.8 billion by 2027',
     growthRate: '220% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-compliance-automator',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['Role-based Access Control', 'Data Encryption', 'Audit Logging'],
       compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'HIPAA'],
       apiEndpoints: 150,
@@ -221,8 +209,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
 
 // 2. ADVANCED DATA ANALYTICS & BUSINESS INTELLIGENCE
 export const advancedDataAnalyticsServices: ExpandedService2027[] = [
-  {
-    id: 'predictive-insights-engine',
+  { id: 'predictive-insights-engine',
     name: 'Predictive Insights Engine',
     category: 'Data Analytics',
     subcategory: 'Predictive Analytics',
@@ -261,12 +248,10 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'E-commerce platforms',
       'Consulting firms'
     ],
-    pricing: {
-      model: 'Usage-based + Base',
+    pricing: { model: 'Usage-based + Base',
       basePrice: 1800,
       currency: 'USD',
-      pricingTiers: {
-        starter: 1800,
+      pricingTiers: { starter: 1800,
         professional: 3500,
         enterprise: 7000,
         custom: 'Contact Sales'
@@ -283,14 +268,12 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$5.6 billion by 2027',
     growthRate: '240% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/predictive-insights-engine',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['Data Encryption', 'Access Control', 'Audit Logging'],
       compliance: ['GDPR', 'CCPA', 'SOC 2', 'ISO 27001'],
       apiEndpoints: 180,
@@ -302,8 +285,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     launchDate: '2027-01-20',
     status: 'active'
   },
-  {
-    id: 'real-time-data-streaming',
+  { id: 'real-time-data-streaming',
     name: 'Real-Time Data Streaming Platform',
     category: 'Data Analytics',
     subcategory: 'Real-Time Processing',
@@ -342,12 +324,10 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'Manufacturing firms',
       'Telecommunications'
     ],
-    pricing: {
-      model: 'Per-Stream + Processing',
+    pricing: { model: 'Per-Stream + Processing',
       basePrice: 2200,
       currency: 'USD',
-      pricingTiers: {
-        starter: 2200,
+      pricingTiers: { starter: 2200,
         professional: 4500,
         enterprise: 9000,
         custom: 'Contact Sales'
@@ -364,14 +344,12 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$4.8 billion by 2027',
     growthRate: '260% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/real-time-data-streaming',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.99%',
+    technicalSpecs: { uptime: '99.99%',
       security: ['Data Encryption', 'Access Control', 'Network Security'],
       compliance: ['SOC 2', 'ISO 27001', 'GDPR', 'Industry standards'],
       apiEndpoints: 250,
@@ -387,8 +365,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
 
 // 3. ADVANCED CLOUD & DEVOPS SOLUTIONS
 export const advancedCloudDevOpsServices: ExpandedService2027[] = [
-  {
-    id: 'multi-cloud-orchestrator',
+  { id: 'multi-cloud-orchestrator',
     name: 'Multi-Cloud Orchestrator',
     category: 'Cloud & DevOps',
     subcategory: 'Multi-Cloud Management',
@@ -427,12 +404,10 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Government agencies',
       'E-commerce platforms'
     ],
-    pricing: {
-      model: 'Percentage of Cloud Spend',
+    pricing: { model: 'Percentage of Cloud Spend',
       basePrice: 2000,
       currency: 'USD',
-      pricingTiers: {
-        starter: 2000,
+      pricingTiers: { starter: 2000,
         professional: 4000,
         enterprise: 8000,
         custom: 'Contact Sales'
@@ -449,14 +424,12 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$6.2 billion by 2027',
     growthRate: '280% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/multi-cloud-orchestrator',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['Multi-cloud Security', 'Access Control', 'Encryption'],
       compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Industry standards'],
       apiEndpoints: 300,
@@ -468,8 +441,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     launchDate: '2027-01-10',
     status: 'active'
   },
-  {
-    id: 'ai-powered-devops-automation',
+  { id: 'ai-powered-devops-automation',
     name: 'AI-Powered DevOps Automation',
     category: 'Cloud & DevOps',
     subcategory: 'DevOps Automation',
@@ -508,12 +480,10 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Quality assurance teams',
       'Release managers'
     ],
-    pricing: {
-      model: 'Per-Developer + Base',
+    pricing: { model: 'Per-Developer + Base',
       basePrice: 1200,
       currency: 'USD',
-      pricingTiers: {
-        starter: 1200,
+      pricingTiers: { starter: 1200,
         professional: 2500,
         enterprise: 5000,
         custom: 'Contact Sales'
@@ -530,14 +500,12 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$5.4 billion by 2027',
     growthRate: '250% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-powered-devops-automation',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['Secure CI/CD', 'Access Control', 'Audit Logging'],
       compliance: ['SOC 2', 'ISO 27001', 'DevSecOps standards'],
       apiEndpoints: 200,
@@ -553,8 +521,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
 
 // 4. ADVANCED IOT & EDGE COMPUTING
 export const advancedIoTServices: ExpandedService2027[] = [
-  {
-    id: 'industrial-iot-intelligence',
+  { id: 'industrial-iot-intelligence',
     name: 'Industrial IoT Intelligence Platform',
     category: 'IoT & Edge Computing',
     subcategory: 'Industrial IoT',
@@ -593,12 +560,10 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Chemical plants',
       'Mining operations'
     ],
-    pricing: {
-      model: 'Per-Device + Data Processing',
+    pricing: { model: 'Per-Device + Data Processing',
       basePrice: 2800,
       currency: 'USD',
-      pricingTiers: {
-        starter: 2800,
+      pricingTiers: { starter: 2800,
         professional: 5500,
         enterprise: 11000,
         custom: 'Contact Sales'
@@ -615,14 +580,12 @@ export const advancedIoTServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$7.8 billion by 2027',
     growthRate: '320% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/industrial-iot-intelligence',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['Industrial Security', 'Data Encryption', 'Access Control'],
       compliance: ['ISO 27001', 'IEC 62443', 'Industry 4.0 standards'],
       apiEndpoints: 400,
@@ -634,8 +597,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
     launchDate: '2027-01-25',
     status: 'active'
   },
-  {
-    id: 'smart-city-operations',
+  { id: 'smart-city-operations',
     name: 'Smart City Operations Platform',
     category: 'IoT & Edge Computing',
     subcategory: 'Smart Cities',
@@ -674,12 +636,10 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Utility companies',
       'Public safety agencies'
     ],
-    pricing: {
-      model: 'City Size + Services',
+    pricing: { model: 'City Size + Services',
       basePrice: 5000,
       currency: 'USD',
-      pricingTiers: {
-        starter: 5000,
+      pricingTiers: { starter: 5000,
         professional: 10000,
         enterprise: 20000,
         custom: 'Contact Sales'
@@ -696,14 +656,12 @@ export const advancedIoTServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$8.9 billion by 2027',
     growthRate: '280% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/smart-city-operations',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['City Security', 'Data Privacy', 'Access Control'],
       compliance: ['Government standards', 'Data protection', 'Urban regulations'],
       apiEndpoints: 500,
@@ -719,8 +677,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
 
 // 5. ADVANCED FINANCIAL TECHNOLOGY
 export const advancedFinTechServices: ExpandedService2027[] = [
-  {
-    id: 'quantum-financial-modeling',
+  { id: 'quantum-financial-modeling',
     name: 'Quantum Financial Modeling Platform',
     category: 'Financial Technology',
     subcategory: 'Quantum Finance',
@@ -759,12 +716,10 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Trading firms',
       'Financial advisors'
     ],
-    pricing: {
-      model: 'Usage-based + Base',
+    pricing: { model: 'Usage-based + Base',
       basePrice: 8000,
       currency: 'USD',
-      pricingTiers: {
-        starter: 8000,
+      pricingTiers: { starter: 8000,
         professional: 15000,
         enterprise: 30000,
         custom: 'Contact Sales'
@@ -781,14 +736,12 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     innovationLevel: 'Revolutionary',
     marketSize: '$12.5 billion by 2027',
     growthRate: '350% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/quantum-financial-modeling',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.99%',
+    technicalSpecs: { uptime: '99.99%',
       security: ['Financial-grade Security', 'Quantum Encryption', 'Access Control'],
       compliance: ['SOX', 'Basel III', 'MiFID II', 'Financial regulations'],
       apiEndpoints: 600,
@@ -800,8 +753,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     launchDate: '2027-01-05',
     status: 'active'
   },
-  {
-    id: 'decentralized-finance-protocol',
+  { id: 'decentralized-finance-protocol',
     name: 'Decentralized Finance Protocol',
     category: 'Financial Technology',
     subcategory: 'DeFi',
@@ -840,12 +792,10 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Startups and developers',
       'Global users'
     ],
-    pricing: {
-      model: 'Transaction Fees + Governance',
+    pricing: { model: 'Transaction Fees + Governance',
       basePrice: 0,
       currency: 'USD',
-      pricingTiers: {
-        starter: 0,
+      pricingTiers: { starter: 0,
         professional: 0,
         enterprise: 0,
         custom: 'Governance tokens'
@@ -862,14 +812,12 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$15.2 billion by 2027',
     growthRate: '400% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/defi-protocol',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['Smart Contract Security', 'Multi-sig Wallets', 'Audit Reports'],
       compliance: ['DeFi standards', 'Smart contract best practices'],
       apiEndpoints: 300,
@@ -885,8 +833,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
 
 // 6. ADVANCED HEALTHCARE TECHNOLOGY
 export const advancedHealthcareServices: ExpandedService2027[] = [
-  {
-    id: 'ai-diagnostic-assistant',
+  { id: 'ai-diagnostic-assistant',
     name: 'AI Diagnostic Assistant',
     category: 'Healthcare Technology',
     subcategory: 'AI Diagnostics',
@@ -925,12 +872,10 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Pharmaceutical companies',
       'Medical device companies'
     ],
-    pricing: {
-      model: 'Per-Provider + Usage',
+    pricing: { model: 'Per-Provider + Usage',
       basePrice: 3500,
       currency: 'USD',
-      pricingTiers: {
-        starter: 3500,
+      pricingTiers: { starter: 3500,
         professional: 7000,
         enterprise: 14000,
         custom: 'Contact Sales'
@@ -947,14 +892,12 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$18.7 billion by 2027',
     growthRate: '320% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/ai-diagnostic-assistant',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['HIPAA Compliance', 'Data Encryption', 'Access Control'],
       compliance: ['HIPAA', 'FDA', 'CE Mark', 'Medical standards'],
       apiEndpoints: 250,
@@ -966,8 +909,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     launchDate: '2027-02-01',
     status: 'active'
   },
-  {
-    id: 'telemedicine-platform',
+  { id: 'telemedicine-platform',
     name: 'Advanced Telemedicine Platform',
     category: 'Healthcare Technology',
     subcategory: 'Telemedicine',
@@ -1006,12 +948,10 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Patients',
       'Healthcare startups'
     ],
-    pricing: {
-      model: 'Per-Provider + Transaction',
+    pricing: { model: 'Per-Provider + Transaction',
       basePrice: 2500,
       currency: 'USD',
-      pricingTiers: {
-        starter: 2500,
+      pricingTiers: { starter: 2500,
         professional: 5000,
         enterprise: 10000,
         custom: 'Contact Sales'
@@ -1028,14 +968,12 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     innovationLevel: 'Advanced',
     marketSize: '$22.4 billion by 2027',
     growthRate: '380% annual growth',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com/telemedicine-platform',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
-    technicalSpecs: {
-      uptime: '99.9%',
+    technicalSpecs: { uptime: '99.9%',
       security: ['HIPAA Compliance', 'End-to-End Encryption', 'Secure Video'],
       compliance: ['HIPAA', 'HITECH', 'State regulations', 'International standards'],
       apiEndpoints: 300,

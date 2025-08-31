@@ -180,7 +180,7 @@ import { Menu,
  } from 'lucide-react.ts';
 export const FuturisticNavigation: React.FC = (): JSX.Element => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   useEffect(() => {
@@ -193,19 +193,18 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
   useEffect(() => {
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
-  const toggleDropdown = (dropdown: anystring)  => {
+  const toggleDropdown = (dropdown: string)  => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
   // Enhanced service categories with better organization
   const serviceCategories = [
-    {
-      name: "AI & Machine Learning",
+    { name: "AI & Machine Learning",
       icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
       dropdown: [
@@ -219,8 +218,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
     },
-    {
-      name: "Micro SAAS Solutions",
+    { name: "Micro SAAS Solutions",
       icon: Cloud,
       services: [
         { name: "Micro SAAS Services", href: "/micro-saas" },
@@ -231,8 +229,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
         { name: "Marketplace", href: "/marketplace" }
       ]
     },
-    {
-      name: "IT Infrastructure",
+    { name: "IT Infrastructure",
       icon: Server,
       services: [
         { name: "IT Services", href: "/it-services" },
@@ -243,8 +240,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
         { name: "Network Security", href: "/it-services/network-security" }
       ]
     },
-    {
-      name: "Emerging Technologies",
+    { name: "Emerging Technologies",
       icon: Rocket,
       services: [
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
@@ -255,8 +251,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
     },
-    {
-      name: '2028 Services',
+    { name: '2028 Services',
       href: '/innovative-services-2028',
       icon: Crown,
       color: 'from-zion-cyan to-zion-purple',
@@ -282,7 +277,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
               className="flex items-center"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5     }}
             >
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
@@ -310,8 +305,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
               >
                 <Link
                   to="/about"
-                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
-                >
+                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10">
                   <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-medium">About</span>
                 </Link>
@@ -323,8 +317,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
               >
                 <Link
                   to="/partners"
-                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
-                >
+                  className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10">
                   <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-medium">Partners</span>
                 </Link>
@@ -356,9 +349,8 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
                         initial={{ opacity: 0, y: -10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
-                      >
+                        transition={{ duration: 0.2     }}
+                        className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden">
                         <div className="p-4">
                           <div className="mb-4">
                             <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>
@@ -374,8 +366,7 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
                               >
                                 <Link
                                   to={service.href}
-                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
-                                >
+                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group">
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                     <Brain className="w-4 h-4 text-zion-cyan" /> {/* Using Brain icon for consistency */}
                                   </div>
@@ -413,24 +404,21 @@ export const FuturisticNavigation: React.FC = (): JSX.Element => {
               {/* User actions */}
               <div className="flex items-center space-x-2">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300">
                   <Bell className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300">
                   <User className="w-5 h-5" />
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300">
                   <ShoppingCart className="w-5 h-5" />
                 </motion.button>
               </div>

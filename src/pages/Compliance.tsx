@@ -42,8 +42,7 @@ import { SEO } from '../components/SEO';
 
 export default function Compliance() {
   const complianceFrameworks = [
-    {
-      name: 'ISO 27001',
+    { name: 'ISO 27001',
       description: 'Information Security Management System',
       status: 'Certified',
       icon: FileText,
@@ -59,8 +58,7 @@ export default function Compliance() {
         'International recognition'
       ]
     },
-    {
-      name: 'SOC 2 Type II',
+    { name: 'SOC 2 Type II',
       description: 'Service Organization Control 2',
       status: 'Compliant',
       icon: Award,
@@ -76,8 +74,7 @@ export default function Compliance() {
         'Competitive advantage'
       ]
     },
-    {
-      name: 'GDPR',
+    { name: 'GDPR',
       description: 'General Data Protection Regulation',
       status: 'Compliant',
       icon: Shield,
@@ -93,8 +90,7 @@ export default function Compliance() {
         'Regulatory compliance'
       ]
     },
-    {
-      name: 'HIPAA',
+    { name: 'HIPAA',
       description: 'Health Insurance Portability and Accountability Act',
       status: 'Compliant',
       icon: Users,
@@ -113,8 +109,7 @@ export default function Compliance() {
   ];
 
   const industryCompliance = [
-    {
-      industry: 'Financial Services',
+    { industry: 'Financial Services',
       icon: Building,
       color: 'from-blue-500 to-cyan-600',
       regulations: [
@@ -125,8 +120,7 @@ export default function Compliance() {
       ],
       status: 'Compliant'
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       icon: Heart,
       color: 'from-green-500 to-emerald-600',
       regulations: [
@@ -137,8 +131,7 @@ export default function Compliance() {
       ],
       status: 'Compliant'
     },
-    {
-      industry: 'Government',
+    { industry: 'Government',
       icon: Shield,
       color: 'from-purple-500 to-pink-600',
       regulations: [
@@ -149,8 +142,7 @@ export default function Compliance() {
       ],
       status: 'In Progress'
     },
-    {
-      industry: 'Manufacturing',
+    { industry: 'Manufacturing',
       icon: Cpu,
       color: 'from-orange-500 to-red-600',
       regulations: [
@@ -164,8 +156,7 @@ export default function Compliance() {
   ];
 
   const complianceProcesses = [
-    {
-      phase: 'Assessment',
+    { phase: 'Assessment',
       description: 'Comprehensive compliance gap analysis',
       icon: Eye,
       color: 'from-blue-500 to-cyan-600',
@@ -178,8 +169,7 @@ export default function Compliance() {
       duration: '2-4 weeks',
       deliverables: ['Gap analysis report', 'Risk assessment', 'Compliance roadmap']
     },
-    {
-      phase: 'Implementation',
+    { phase: 'Implementation',
       description: 'Systematic implementation of controls',
       icon: Zap,
       color: 'from-green-500 to-emerald-600',
@@ -192,8 +182,7 @@ export default function Compliance() {
       duration: '8-16 weeks',
       deliverables: ['Implemented controls', 'Policies and procedures', 'Training materials']
     },
-    {
-      phase: 'Testing',
+    { phase: 'Testing',
       description: 'Validation and testing of controls',
       icon: ShieldCheck,
       color: 'from-purple-500 to-pink-600',
@@ -206,8 +195,7 @@ export default function Compliance() {
       duration: '4-6 weeks',
       deliverables: ['Test results', 'Remediation plan', 'Audit readiness']
     },
-    {
-      phase: 'Certification',
+    { phase: 'Certification',
       description: 'External audit and certification',
       icon: Award,
       color: 'from-orange-500 to-red-600',
@@ -223,8 +211,7 @@ export default function Compliance() {
   ];
 
   const complianceMetrics = [
-    {
-      metric: 'Compliance Score',
+    { metric: 'Compliance Score',
       value: '98.5%',
       description: 'Overall compliance with all applicable regulations',
       icon: BarChart3,
@@ -232,8 +219,7 @@ export default function Compliance() {
       trend: 'up',
       change: '+2.3%'
     },
-    {
-      metric: 'Audit Success Rate',
+    { metric: 'Audit Success Rate',
       value: '100%',
       description: 'Successful completion of all compliance audits',
       icon: CheckCircle,
@@ -241,8 +227,7 @@ export default function Compliance() {
       trend: 'stable',
       change: '0%'
     },
-    {
-      metric: 'Remediation Time',
+    { metric: 'Remediation Time',
       value: '< 24h',
       description: 'Average time to address compliance findings',
       icon: Clock,
@@ -250,8 +235,7 @@ export default function Compliance() {
       trend: 'down',
       change: '-15%'
     },
-    {
-      metric: 'Training Completion',
+    { metric: 'Training Completion',
       value: '99.8%',
       description: 'Employee compliance training completion rate',
       icon: Users,
@@ -262,8 +246,7 @@ export default function Compliance() {
   ];
 
   const complianceTools = [
-    {
-      name: 'Compliance Management Platform',
+    { name: 'Compliance Management Platform',
       description: 'Centralized compliance tracking and management',
       icon: Monitor,
       color: 'from-blue-500 to-cyan-600',
@@ -274,8 +257,7 @@ export default function Compliance() {
         'Integration with GRC tools'
       ]
     },
-    {
-      name: 'Policy Management System',
+    { name: 'Policy Management System',
       description: 'Automated policy creation, distribution, and tracking',
       icon: FileText,
       color: 'from-green-500 to-emerald-600',
@@ -286,8 +268,7 @@ export default function Compliance() {
         'Version control'
       ]
     },
-    {
-      name: 'Risk Assessment Tools',
+    { name: 'Risk Assessment Tools',
       description: 'Comprehensive risk assessment and management',
       icon: AlertTriangle,
       color: 'from-purple-500 to-pink-600',
@@ -298,8 +279,7 @@ export default function Compliance() {
         'Integration with compliance frameworks'
       ]
     },
-    {
-      name: 'Audit Management System',
+    { name: 'Audit Management System',
       description: 'Streamlined audit planning and execution',
       icon: ShieldCheck,
       color: 'from-orange-500 to-red-600',
@@ -390,8 +370,7 @@ export default function Compliance() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
-                >
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                   <div className="flex items-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${framework.color} rounded-2xl flex items-center justify-center mr-4`}>
                       <framework.icon className="h-8 w-8 text-white" />
@@ -461,8 +440,7 @@ export default function Compliance() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
-                >
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                   <div className="flex items-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mr-4`}>
                       <industry.icon className="h-8 w-8 text-white" />
@@ -509,8 +487,7 @@ export default function Compliance() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"
-                >
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6">
                   <div className={`w-16 h-16 bg-gradient-to-br ${phase.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <phase.icon className="h-8 w-8 text-white" />
                   </div>
@@ -562,8 +539,7 @@ export default function Compliance() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center"
-                >
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center">
                   <div className={`w-16 h-16 bg-gradient-to-br ${metric.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                     <metric.icon className="h-8 w-8 text-white" />
                   </div>
@@ -600,8 +576,7 @@ export default function Compliance() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8"
-                >
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                   <div className="flex items-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-br ${tool.color} rounded-2xl flex items-center justify-center mr-4`}>
                       <tool.icon className="h-8 w-8 text-white" />
@@ -637,7 +612,7 @@ export default function Compliance() {
                 Compliance Questions or Support?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
-                Our compliance team is here to help you understand our compliance posture and address any questions you may have.
+                Our compliance team is here to help you understand our compliance posture and address  questions you may have.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

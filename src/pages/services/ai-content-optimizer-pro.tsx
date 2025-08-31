@@ -25,46 +25,39 @@ import {
 } from 'lucide-react';
 
 const AIContentOptimizerPro: React.FC = () => {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered SEO Optimization',
       description: 'Advanced machine learning algorithms that analyze search patterns and optimize content for maximum visibility.',
       benefits: ['Improve search rankings', 'Increase organic traffic', 'Optimize for featured snippets']
     },
-    {
-      icon: Search,
+    { icon: Search,
       title: 'Content Readability Scoring',
       description: 'Intelligent analysis of content structure, complexity, and readability to ensure maximum engagement.',
       benefits: ['Enhance user experience', 'Improve engagement rates', 'Reduce bounce rates']
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: 'Multi-Language Support',
       description: 'Support for 50+ languages with cultural context and localization optimization.',
       benefits: ['Global reach', 'Cultural relevance', 'Local SEO optimization']
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Performance Analytics',
       description: 'Comprehensive analytics dashboard with real-time performance metrics and actionable insights.',
       benefits: ['Data-driven decisions', 'Performance tracking', 'ROI measurement']
     },
-    {
-      icon: PenTool,
+    { icon: PenTool,
       title: 'Automated A/B Testing',
       description: 'AI-driven content testing that automatically optimizes headlines, CTAs, and content variations.',
       benefits: ['Increase conversion rates', 'Optimize content performance', 'Reduce testing time']
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Content Plagiarism Detection',
       description: 'Advanced plagiarism detection with originality scoring and content uniqueness analysis.',
       benefits: ['Ensure content originality', 'Protect brand reputation', 'Avoid legal issues']
@@ -72,8 +65,7 @@ const AIContentOptimizerPro: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$199',
       period: '/month',
       description: 'Perfect for small businesses and content creators',
@@ -88,8 +80,7 @@ const AIContentOptimizerPro: React.FC = () => {
       popular: false,
       cta: 'Start Free Trial'
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$399',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
@@ -106,8 +97,7 @@ const AIContentOptimizerPro: React.FC = () => {
       popular: true,
       cta: 'Get Started'
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$799',
       period: '/month',
       description: 'Comprehensive solution for large organizations',
@@ -127,47 +117,40 @@ const AIContentOptimizerPro: React.FC = () => {
   ];
 
   const useCases = [
-    {
-      title: 'E-commerce Content',
+    { title: 'E-commerce Content',
       description: 'Optimize product descriptions, category pages, and blog content for better search visibility and conversion rates.',
       metrics: ['40% increase in organic traffic', '25% improvement in conversion rates']
     },
-    {
-      title: 'Blog & Content Marketing',
+    { title: 'Blog & Content Marketing',
       description: 'Enhance blog posts, articles, and long-form content for better engagement and SEO performance.',
       metrics: ['60% increase in time on page', '35% improvement in social shares']
     },
-    {
-      title: 'Local Business SEO',
+    { title: 'Local Business SEO',
       description: 'Optimize local business content, service pages, and location-specific content for local search.',
       metrics: ['50% increase in local search visibility', '30% improvement in local leads']
     },
-    {
-      title: 'Technical Content',
+    { title: 'Technical Content',
       description: 'Optimize technical documentation, whitepapers, and educational content for better comprehension.',
       metrics: ['45% improvement in readability scores', '40% increase in engagement']
     }
   ];
 
   const testimonials = [
-    {
-      name: 'Jennifer Martinez',
+    { name: 'Jennifer Martinez',
       role: 'Content Marketing Director',
-      company: 'TechFlow Solutions',
+      comp: 'TechFlow Solutions',
       content: 'AI Content Optimizer Pro transformed our content strategy. We saw a 45% increase in organic traffic within 3 months.',
       rating: 5
     },
-    {
-      name: 'David Kim',
+    { name: 'David Kim',
       role: 'SEO Manager',
-      company: 'Digital Growth Agency',
+      comp: 'Digital Growth Agency',
       content: 'The AI-powered optimization suggestions are incredibly accurate. Our clients love the improved search rankings.',
       rating: 5
     },
-    {
-      name: 'Sarah Williams',
+    { name: 'Sarah Williams',
       role: 'Content Creator',
-      company: 'Creative Content Studio',
+      comp: 'Creative Content Studio',
       content: 'This tool saves me hours of work and significantly improves my content quality. Highly recommended!',
       rating: 5
     }
@@ -189,7 +172,7 @@ const AIContentOptimizerPro: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI Content Optimizer Pro
@@ -236,10 +219,9 @@ const AIContentOptimizerPro: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 AI-Powered Features That Transform Content
               </h2>
@@ -255,9 +237,8 @@ const AIContentOptimizerPro: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <feature.icon className="text-blue-400 w-8 h-8 mr-3" />
                     <h3 className="text-xl font-bold text-white">{feature.title}</h3>
@@ -283,10 +264,9 @@ const AIContentOptimizerPro: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Proven Results Across Industries
               </h2>
@@ -302,9 +282,8 @@ const AIContentOptimizerPro: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <div className="space-y-2">
@@ -327,10 +306,9 @@ const AIContentOptimizerPro: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Transparent Pricing Plans
               </h2>
@@ -346,7 +324,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' 
@@ -394,9 +372,8 @@ const AIContentOptimizerPro: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
+              viewport={{ once: true     }}
+              className="text-center mt-12">
               <p className="text-gray-300 mb-4">
                 Annual plans save 20%. Enterprise customers get custom pricing and dedicated support.
               </p>
@@ -413,10 +390,9 @@ const AIContentOptimizerPro: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What Our Customers Say
               </h2>
@@ -432,9 +408,8 @@ const AIContentOptimizerPro: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="text-yellow-400 w-4 h-4 fill-current" />
@@ -444,7 +419,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-blue-400 text-sm">{testimonial.company}</p>
+                    <p className="text-blue-400 text-sm">{testimonial.comp}</p>
                   </div>
                 </motion.div>
               ))}
@@ -458,8 +433,8 @@ const AIContentOptimizerPro: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Content?
@@ -489,15 +464,13 @@ const AIContentOptimizerPro: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href={`tel:${contactInfo.phone}`}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
-                >
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2">
                   <Phone className="w-4 h-4" />
                   <span>Call Now</span>
                 </a>
                 <a 
                   href={`mailto:${contactInfo.email}`}
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
+                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2">
                   <Mail className="w-4 h-4" />
                   <span>Send Email</span>
                 </a>
@@ -505,8 +478,7 @@ const AIContentOptimizerPro: React.FC = () => {
                   href={contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2"
-                >
+                  className="border-2 border-green-400 text-green-400 font-semibold py-3 px-8 rounded-lg hover:bg-green-400 hover:text-gray-900 transition-all duration-300 flex items-center justify-center space-x-2">
                   <ExternalLink className="w-4 h-4" />
                   <span>Visit Website</span>
                 </a>

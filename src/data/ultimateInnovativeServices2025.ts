@@ -17,18 +17,17 @@ export interface UltimateInnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   caseStudies?: string[];
 }
@@ -60,8 +59,7 @@ export const SERVICE_SUBCATEGORIES = {
 };
 
 export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
-  {
-    id: 'ai-autonomous-business-manager',
+  { id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
     description: 'Revolutionary AI system that autonomously manages entire business operations, making strategic decisions, optimizing processes, and driving growth without human intervention.',
     category: 'AI & Automation',
@@ -109,13 +107,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$25,000 - $50,000/month',
     roi: '300-500% within 12 months',
     innovationLevel: 'Revolutionary - First of its kind globally',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
-    technicalSpecs: {
-      technology: ['Advanced AI/ML', 'Quantum Computing Ready', 'Blockchain Integration', 'Edge Computing'],
+    technicalSpecs: { technology: ['Advanced AI/ML', 'Quantum Computing Ready', 'Blockchain Integration', 'Edge Computing'],
       integrations: ['ERP Systems', 'CRM Platforms', 'Financial Systems', 'Cloud Services', 'IoT Devices'],
       apiEndpoints: 150,
       uptime: '99.99%',
@@ -123,13 +119,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     },
     competitors: ['No direct competitors - revolutionary technology'],
     caseStudies: [
-      'Fortune 100 company achieved 400% ROI in 8 months',
+      'Fortune 100 comp achieved 400% ROI in 8 months',
       'Startup scaled from $1M to $50M revenue in 18 months',
       'Government agency reduced operational costs by 85%'
     ]
   },
-  {
-    id: 'quantum-ai-platform',
+  { id: 'quantum-ai-platform',
     title: 'Quantum AI Platform',
     description: 'Groundbreaking quantum computing platform that combines quantum algorithms with artificial intelligence to solve previously impossible computational problems.',
     category: 'Quantum Computing',
@@ -177,21 +172,18 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$50,000 - $100,000/month',
     roi: '500-1000% for research applications',
     innovationLevel: 'Breakthrough - Leading edge of quantum technology',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     },
-    technicalSpecs: {
-      technology: ['Quantum Bits (Qubits)', 'Quantum Gates', 'Quantum Error Correction', 'Hybrid Quantum-Classical'],
+    technicalSpecs: { technology: ['Quantum Bits (Qubits)', 'Quantum Gates', 'Quantum Error Correction', 'Hybrid Quantum-Classical'],
       integrations: ['Research Platforms', 'Cloud Services', 'Scientific Instruments', 'AI Frameworks'],
       apiEndpoints: 75,
       uptime: '99.9%',
       security: ['Quantum Cryptography', 'Post-Quantum Security', 'Zero Trust Architecture']
     }
   },
-  {
-    id: 'blockchain-autonomous-ecosystem',
+  { id: 'blockchain-autonomous-ecosystem',
     title: 'Blockchain Autonomous Ecosystem',
     description: 'Complete decentralized ecosystem that autonomously manages financial transactions, smart contracts, and digital assets with zero human intervention.',
     category: 'Blockchain & Web3',
@@ -239,14 +231,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$20,000 - $40,000/month',
     roi: '200-400% within 12 months',
     innovationLevel: 'Advanced - Leading blockchain automation',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'quantum-cybersecurity-suite',
+  { id: 'quantum-cybersecurity-suite',
     title: 'Quantum Cybersecurity Suite',
     description: 'Next-generation cybersecurity platform that uses quantum computing and AI to provide unbreakable protection against all known and future cyber threats.',
     category: 'Cybersecurity',
@@ -294,14 +284,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$30,000 - $60,000/month',
     roi: '300-600% through threat prevention',
     innovationLevel: 'Revolutionary - Quantum-powered security',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'iot-edge-intelligence-platform',
+  { id: 'iot-edge-intelligence-platform',
     title: 'IoT Edge Intelligence Platform',
     description: 'Advanced IoT platform that processes data at the edge using AI, enabling real-time decision making and autonomous operation of connected devices.',
     category: 'IoT & Edge Computing',
@@ -349,14 +337,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$15,000 - $30,000/month',
     roi: '150-300% through operational efficiency',
     innovationLevel: 'Advanced - Leading edge IoT platform',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'metaverse-creation-platform',
+  { id: 'metaverse-creation-platform',
     title: 'Metaverse Creation Platform',
     description: 'Comprehensive platform for building, managing, and monetizing immersive metaverse experiences with AI-powered content generation and virtual economy management.',
     category: 'Metaverse & AR/VR',
@@ -404,14 +390,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$20,000 - $40,000/month',
     roi: '200-400% through virtual economy',
     innovationLevel: 'Advanced - Leading metaverse platform',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'autonomous-robotics-platform',
+  { id: 'autonomous-robotics-platform',
     title: 'Autonomous Robotics Platform',
     description: 'Advanced robotics platform that enables robots to learn, adapt, and operate autonomously in various environments with minimal human supervision.',
     category: 'Robotics & Automation',
@@ -459,14 +443,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$35,000 - $70,000/month',
     roi: '250-500% through automation',
     innovationLevel: 'Advanced - Leading autonomous robotics',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'biotech-ai-platform',
+  { id: 'biotech-ai-platform',
     title: 'Biotech AI Platform',
     description: 'Revolutionary platform that combines artificial intelligence with biotechnology to accelerate drug discovery, genetic research, and medical breakthroughs.',
     category: 'Biotechnology',
@@ -514,14 +496,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$50,000 - $100,000/month',
     roi: '500-1000% for successful drugs',
     innovationLevel: 'Revolutionary - AI-biotech convergence',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'space-tech-platform',
+  { id: 'space-tech-platform',
     title: 'Space Technology Platform',
     description: 'Advanced platform for satellite operations, space exploration, and space-based services using cutting-edge AI and quantum technologies.',
     category: 'Space Technology',
@@ -569,14 +549,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$40,000 - $80,000/month',
     roi: '300-600% through space services',
     innovationLevel: 'Advanced - Leading space technology',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'green-tech-optimization-platform',
+  { id: 'green-tech-optimization-platform',
     title: 'Green Technology Optimization Platform',
     description: 'Comprehensive platform that uses AI and advanced analytics to optimize renewable energy, carbon capture, and sustainable technology deployment.',
     category: 'Green Technology',
@@ -624,8 +602,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2025: UltimateInnovativeService[] = [
     marketPrice: '$25,000 - $50,000/month',
     roi: '200-400% through energy savings',
     innovationLevel: 'Advanced - Leading green technology',
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com'
     }

@@ -17,24 +17,22 @@ export interface EmergingTechService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
 }
 
 export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   // Quantum Computing as a Service
-  {
-    id: "quantum-computing-as-a-service",
+  { id: "quantum-computing-as-a-service",
     title: "Quantum Computing as a Service Platform",
     description: "Cloud-based quantum computing platform that provides access to quantum processors, quantum algorithms, and quantum software development tools for research and commercial applications.",
     category: "Quantum Computing",
@@ -81,16 +79,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$5,999 - $19,999/month",
     roi: "500-800%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
 
   // RAG Search for Enterprise Knowledge
-  {
-    id: "enterprise-rag-knowledge-search",
+  { id: "enterprise-rag-knowledge-search",
     title: "Enterprise RAG Knowledge Search",
     description: "Secure retrieval‑augmented generation over your docs, wikis, tickets, and data lakes with granular ACLs and audit trails.",
     category: "AI & Analytics",
@@ -129,8 +125,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   },
 
   // Edge Computer Vision for Manufacturing QA
-  {
-    id: "edge-vision-quality-inspection",
+  { id: "edge-vision-quality-inspection",
     title: "Edge Vision Quality Inspection",
     description: "On‑prem/edge CV models detect defects in real‑time on production lines with sub‑100ms latency and offline operation.",
     category: "IoT & Edge Computing",
@@ -166,8 +161,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     roi: "300–600%",
     innovationLevel: "Cutting-edge",
     contactInfo: { phone: "+1 302 464 0950", email: "kleber@ziontechgroup.com", website: "https://ziontechgroup.com" },
-    technicalSpecs: {
-      technology: ["ONNX Runtime", "TensorRT", "OpenVINO", "gRPC"],
+    technicalSpecs: { technology: ["ONNX Runtime", "TensorRT", "OpenVINO", "gRPC"],
       integrations: ["Ignition", "Kepware", "Siemens"],
       apiEndpoints: 27,
       uptime: "99.95%",
@@ -176,8 +170,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   },
 
   // LLM Content Compliance for Regulated Industries
-  {
-    id: "llm-content-compliance",
+  { id: "llm-content-compliance",
     title: "LLM Content Compliance",
     description: "Policy‑aware generation for regulated industries with automated review, redaction, and archiving for audits.",
     category: "AI & Legal Tech",
@@ -216,8 +209,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
   }
 
   // AR/VR Enterprise Solutions
-  {
-    id: "ar-vr-enterprise-solutions",
+  { id: "ar-vr-enterprise-solutions",
     title: "AR/VR Enterprise Solutions Platform",
     description: "Comprehensive augmented and virtual reality platform for enterprise applications including training, design, collaboration, and customer engagement across various industries.",
     category: "AR/VR & Immersive Tech",
@@ -264,16 +256,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$3,299 - $9,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
 
   // 5G Network Optimization Platform
-  {
-    id: "5g-network-optimization",
+  { id: "5g-network-optimization",
     title: "5G Network Optimization Platform",
     description: "Advanced 5G network optimization platform that provides real-time monitoring, performance analysis, and automated optimization for 5G networks and applications.",
     category: "5G & Telecommunications",
@@ -320,16 +310,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$3,899 - $11,999/month",
     roi: "350-550%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
 
   // Space Technology Solutions
-  {
-    id: "space-technology-solutions",
+  { id: "space-technology-solutions",
     title: "Space Technology Solutions Platform",
     description: "Comprehensive space technology platform providing satellite data analytics, space mission planning, and Earth observation services for commercial and research applications.",
     category: "Space Technology",
@@ -376,16 +364,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$4,999 - $15,999/month",
     roi: "400-700%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
 
   // Neuromorphic Computing Platform
-  {
-    id: "neuromorphic-computing-platform",
+  { id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
     description: "Advanced neuromorphic computing platform that mimics the human brain's neural structure for efficient AI processing, pattern recognition, and cognitive computing applications.",
     category: "Neuromorphic Computing",
@@ -432,16 +418,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$6,999 - $22,999/month",
     roi: "600-900%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
 
   // Digital Twin Platform
-  {
-    id: "digital-twin-platform",
+  { id: "digital-twin-platform",
     title: "Digital Twin Platform",
     description: "Comprehensive digital twin platform that creates virtual replicas of physical assets, processes, and systems for real-time monitoring, simulation, and optimization.",
     category: "Digital Twin & Simulation",
@@ -488,16 +472,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$2,799 - $8,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
 
   // Synthetic Biology Platform
-  {
-    id: "synthetic-biology-platform",
+  { id: "synthetic-biology-platform",
     title: "Synthetic Biology Platform",
     description: "Advanced synthetic biology platform that provides tools for genetic engineering, DNA synthesis, and biological system design for research and commercial applications.",
     category: "Synthetic Biology",
@@ -544,16 +526,14 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$5,499 - $17,999/month",
     roi: "500-800%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
 
   // Brain-Computer Interface Platform
-  {
-    id: "brain-computer-interface-platform",
+  { id: "brain-computer-interface-platform",
     title: "Brain-Computer Interface Platform",
     description: "Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers for medical, research, and assistive technology applications.",
     category: "Brain-Computer Interface",
@@ -600,8 +580,7 @@ export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
     marketPrice: "$7,999 - $25,999/month",
     roi: "700-1000%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }

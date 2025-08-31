@@ -1,15 +1,15 @@
 export interface EnhancedService {
-    id: string;
+  id: string;
     name: string;
     tagline: string;
     description: string;
     category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech';
-    pricing: {
+    pricing: {  
         monthly: string;
         yearly: string;
-        enterprise: string;
-        setup: string;
-    };
+        enterprise: string
+        setup: string
+        };
     features: string[];
     benefits: string[];
     roi: string;
@@ -24,24 +24,21 @@ export interface EnhancedService {
     targetAudience?: string;
     marketPosition?: string;
     competitors?: string[];
-    contactInfo: {
-        mobile: string;
+    contactInfo: { mobile: string;
         email: string;
-        address: string;
-        website: string;
-    };
+        address: string
+        website: string
+        };
 }
 
-const CONTACT = {
-    mobile: '+1 302 464 0950',
+const CONTACT = { mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
 };
 
 export const enhancedServices2025: EnhancedService[] = [
-    {
-        id: 'ai-powered-code-review-assistant',
+    { id: 'ai-powered-code-review-assistant',
         name: 'AI-Powered Code Review Assistant',
         tagline: 'Automated code quality, security scanning, and best-practice guidance',
         description: 'Analyzes pull requests to flag security risks, style issues, and performance regressions. Posts actionable comments, gates CI on severity rules, and learns from team decisions.',
@@ -74,8 +71,7 @@ export const enhancedServices2025: EnhancedService[] = [
         competitors: ['SonarQube', 'CodeClimate', 'Snyk Code'],
         contactInfo: CONTACT
     },
-    {
-        id: 'intelligent-incident-response-platform',
+    { id: 'intelligent-incident-response-platform',
         name: 'Intelligent Incident Response Platform',
         tagline: 'AI detection, response runbooks, and post-mortems',
         description: 'Unifies alert correlation, automated triage, and guided remediation with live runbooks and evidence capture for faster incident resolution.',
@@ -99,8 +95,7 @@ export const enhancedServices2025: EnhancedService[] = [
         integrations: ['SIEM', 'EDR', 'Slack', 'Teams', 'Jira'],
         contactInfo: CONTACT
     },
-    {
-        id: 'smart-invoice-management-system',
+    { id: 'smart-invoice-management-system',
         name: 'Smart Invoice Management System',
         tagline: 'OCR, approvals, and payment reconciliation',
         description: 'End-to-end AP automation with invoice capture, duplicate detection, policy workflows, and payment status sync.',
@@ -116,8 +111,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/invoice-management',
         contactInfo: CONTACT
     },
-    {
-        id: 'ai-customer-success-automation',
+    { id: 'ai-customer-success-automation',
         name: 'AI Customer Success Automation',
         tagline: 'Onboarding journeys, churn prediction, and health scoring',
         description: 'Customer lifecycle automation with risk prediction, QBR prep, and proactive playbooks to scale CS impact.',
@@ -133,8 +127,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/customer-success-automation',
         contactInfo: CONTACT
     },
-    {
-        id: 'intelligent-data-analytics-dashboard',
+    { id: 'intelligent-data-analytics-dashboard',
         name: 'Intelligent Data Analytics Dashboard',
         tagline: 'Real‑time KPIs and predictive analytics',
         description: 'Unified dashboards with live connectors and automated narrative insights for business users.',
@@ -151,8 +144,7 @@ export const enhancedServices2025: EnhancedService[] = [
         contactInfo: CONTACT
     },
     // IT services
-    {
-        id: 'network-security-monitoring',
+    { id: 'network-security-monitoring',
         name: 'Network Security Monitoring',
         tagline: '24/7 threat detection and compliance reporting',
         description: 'Managed detection, continuous monitoring, and incident assistance for hybrid networks and clouds.',
@@ -168,8 +160,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/network-security-monitoring',
         contactInfo: CONTACT
     },
-    {
-        id: 'data-backup-recovery-solutions',
+    { id: 'data-backup-recovery-solutions',
         name: 'Data Backup & Recovery Solutions',
         tagline: 'Automated backups with DR runbooks',
         description: 'Policy-based backups, cross-region replication, encrypted stores, and verified recovery drills.',
@@ -185,8 +176,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/backup-recovery',
         contactInfo: CONTACT
     },
-    {
-        id: 'it-asset-management-platform',
+    { id: 'it-asset-management-platform',
         name: 'IT Asset Management Platform',
         tagline: 'Unified hardware, software, and license lifecycle',
         description: 'Discovery, license compliance, depreciation tracking, and cost optimization with vendor workflows.',
@@ -203,8 +193,7 @@ export const enhancedServices2025: EnhancedService[] = [
         contactInfo: CONTACT
     },
     // AI services
-    {
-        id: 'ai-chatbot-development',
+    { id: 'ai-chatbot-development',
         name: 'AI Chatbot Development',
         tagline: 'Custom multilingual chat and voice bots',
         description: '24/7 support across channels with domain-tuned LLMs, guardrails, and human handoff.',
@@ -220,8 +209,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/ai-chatbot',
         contactInfo: CONTACT
     },
-    {
-        id: 'predictive-analytics-platform',
+    { id: 'predictive-analytics-platform',
         name: 'Predictive Analytics Platform',
         tagline: 'Forecasting and scenario planning',
         description: 'Automated model building with explainability and connectors for operational forecasting.',
@@ -237,8 +225,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/predictive-analytics',
         contactInfo: CONTACT
     },
-    {
-        id: 'computer-vision-solutions',
+    { id: 'computer-vision-solutions',
         name: 'Computer Vision Solutions',
         tagline: 'Inspection, safety, and retail analytics',
         description: 'Edge and cloud vision systems for detection, tracking, and QA with human-in-the-loop.',
@@ -255,8 +242,7 @@ export const enhancedServices2025: EnhancedService[] = [
         contactInfo: CONTACT
     },
     // Emerging tech
-    {
-        id: 'quantum-computing-solutions',
+    { id: 'quantum-computing-solutions',
         name: 'Quantum Computing Solutions',
         tagline: 'Optimization and cryptography research services',
         description: 'Advisory and prototypes on major quantum platforms for hard optimization and simulation problems.',
@@ -272,8 +258,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/quantum-computing',
         contactInfo: CONTACT
     },
-    {
-        id: 'blockchain-web3-solutions',
+    { id: 'blockchain-web3-solutions',
         name: 'Blockchain & Web3 Solutions',
         tagline: 'Smart contracts, DeFi, and tokenization',
         description: 'End-to-end Web3 product development with audits and token economics design.',
@@ -290,8 +275,7 @@ export const enhancedServices2025: EnhancedService[] = [
         contactInfo: CONTACT
     },
     // New additions
-    {
-        id: 'seo-content-optimizer',
+    { id: 'seo-content-optimizer',
         name: 'SEO Content Optimizer',
         tagline: 'Programmatic SEO at scale with AI',
         description: 'Generates, audits, and A/B tests landing pages with structured data and internal links.',
@@ -307,8 +291,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/seo-content-optimizer',
         contactInfo: CONTACT
     },
-    {
-        id: 'ai-sales-email-copilot',
+    { id: 'ai-sales-email-copilot',
         name: 'AI Sales Email Copilot',
         tagline: 'Personalized outbound that actually converts',
         description: 'Enrich leads, draft multi-step sequences, and adapt tone by persona with live A/B improvements.',
@@ -324,8 +307,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/ai-sales-email-copilot',
         contactInfo: CONTACT
     },
-    {
-        id: 'cloud-cost-optimizer',
+    { id: 'cloud-cost-optimizer',
         name: 'Cloud Cost Optimizer',
         tagline: 'Rightsizing, RI/SP management, and anomaly alerts',
         description: 'Identifies idle resources, optimizes storage tiers, and automates savings plan purchases safely.',
@@ -341,8 +323,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/cloud-cost-optimizer',
         contactInfo: CONTACT
     },
-    {
-        id: 'data-governance-suite',
+    { id: 'data-governance-suite',
         name: 'Data Governance Suite',
         tagline: 'Lineage, PII detection, and access controls',
         description: 'Map data flows, classify sensitive data, and enforce access with audit trails.',
@@ -358,8 +339,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/data-governance-suite',
         contactInfo: CONTACT
     },
-    {
-        id: 'ai-rag-knowledge-base',
+    { id: 'ai-rag-knowledge-base',
         name: 'AI RAG Knowledge Base',
         tagline: 'Private, secure retrieval-augmented generation',
         description: 'Index your documents and systems to power grounded LLM answers with citations and access controls.',
@@ -375,8 +355,7 @@ export const enhancedServices2025: EnhancedService[] = [
         link: '/services/ai-rag-knowledge-base',
         contactInfo: CONTACT
     },
-    {
-        id: 'edge-iot-observability',
+    { id: 'edge-iot-observability',
         name: 'Edge IoT Observability',
         tagline: 'Unified metrics, logs, and traces for fleets',
         description: 'Collects telemetry from constrained devices and gateways with offline buffering and OTA updates.',

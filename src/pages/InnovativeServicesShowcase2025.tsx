@@ -8,8 +8,7 @@ import { SEO } from '@/components/SEO';
 
 export default function InnovativeServicesShowcase2025() {
   const services = [
-    {
-      id: 'ai-workflow-orchestrator',
+    { id: 'ai-workflow-orchestrator',
       title: 'AI Workflow Orchestrator',
       description: 'Intelligent workflow automation that learns, optimizes, and orchestrates complex business processes with AI-powered decision making.',
       icon: Brain,
@@ -28,8 +27,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-workflow-orchestrator',
       category: 'AI & Automation'
     },
-    {
-      id: 'ai-data-governance-platform',
+    { id: 'ai-data-governance-platform',
       title: 'AI Data Governance Platform',
       description: 'Intelligent data governance that automatically discovers, classifies, and protects your data while ensuring full regulatory compliance.',
       icon: Database,
@@ -48,8 +46,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-data-governance-platform',
       category: 'AI & Data'
     },
-    {
-      id: 'ai-customer-experience-analytics',
+    { id: 'ai-customer-experience-analytics',
       title: 'AI Customer Experience Analytics',
       description: 'Transform customer insights into actionable intelligence with AI-powered analytics that predict, optimize, and enhance every customer interaction.',
       icon: Users,
@@ -68,8 +65,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-customer-experience-analytics',
       category: 'AI & Analytics'
     },
-    {
-      id: 'ai-supply-chain-optimization',
+    { id: 'ai-supply-chain-optimization',
       title: 'AI Supply Chain Optimization',
       description: 'Revolutionize your supply chain with AI-powered optimization that predicts demand, optimizes inventory, and streamlines logistics for maximum efficiency.',
       icon: Truck,
@@ -88,8 +84,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-supply-chain-optimization',
       category: 'AI & Logistics'
     },
-    {
-      id: 'ai-financial-risk-management',
+    { id: 'ai-financial-risk-management',
       title: 'AI Financial Risk Management',
       description: 'Intelligent financial risk management that automatically detects, assesses, and mitigates risks while ensuring regulatory compliance and optimizing returns.',
       icon: Shield,
@@ -108,8 +103,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-financial-risk-management',
       category: 'AI & Finance'
     },
-    {
-      id: 'ai-hr-talent-acquisition',
+    { id: 'ai-hr-talent-acquisition',
       title: 'AI HR Talent Acquisition',
       description: 'Revolutionize your hiring process with AI-powered talent acquisition that finds, screens, and matches the perfect candidates for your organization.',
       icon: Briefcase,
@@ -128,8 +122,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-hr-talent-acquisition',
       category: 'AI & HR'
     },
-    {
-      id: 'ai-iot-edge-computing',
+    { id: 'ai-iot-edge-computing',
       title: 'AI IoT Edge Computing',
       description: 'Transform your IoT infrastructure with AI-powered edge computing that processes data locally, reduces latency, and enables real-time intelligent decision making.',
       icon: Cpu,
@@ -148,8 +141,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-iot-edge-computing',
       category: 'AI & IoT'
     },
-    {
-      id: 'ai-predictive-maintenance',
+    { id: 'ai-predictive-maintenance',
       title: 'AI Predictive Maintenance',
       description: 'Transform your maintenance operations with AI-powered predictive maintenance that prevents failures, reduces downtime, and optimizes equipment performance.',
       icon: Wrench,
@@ -168,8 +160,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-predictive-maintenance',
       category: 'AI & Maintenance'
     },
-    {
-      id: 'ai-sustainable-technology',
+    { id: 'ai-sustainable-technology',
       title: 'AI Sustainable Technology',
       description: 'Transform your organization into a sustainability leader with AI-powered technology that optimizes energy, reduces waste, and minimizes environmental impact.',
       icon: Leaf,
@@ -188,8 +179,7 @@ export default function InnovativeServicesShowcase2025() {
       path: '/services/ai-sustainable-technology',
       category: 'AI & Sustainability'
     },
-    {
-      id: 'ai-quantum-machine-learning',
+    { id: 'ai-quantum-machine-learning',
       title: 'AI Quantum Machine Learning',
       description: 'Revolutionize your computational capabilities with AI-powered quantum machine learning that solves previously impossible problems and accelerates innovation.',
       icon: Atom,
@@ -224,25 +214,22 @@ export default function InnovativeServicesShowcase2025() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6"
-          >
+            transition={{ duration: 0.6     }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">
             <Brain className="w-4 h-4 mr-2" /> Innovative AI Services 2025
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-4"
-          >
+            className="text-4xl md:text-6xl font-bold text-white mb-4">
             Innovative AI Services Showcase 2025
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-zion-slate-light text-xl"
-          >
+            className="text-zion-slate-light text-xl">
             Discover our cutting-edge AI-powered micro SAAS services that are revolutionizing industries and transforming businesses worldwide.
           </motion.p>
         </div>
@@ -267,8 +254,7 @@ export default function InnovativeServicesShowcase2025() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            >
+              className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-zion-cyan/10 rounded-lg">
                   <service.icon className="w-6 h-6 text-zion-cyan" />
@@ -315,8 +301,7 @@ export default function InnovativeServicesShowcase2025() {
               <div className="flex flex-col gap-2">
                 <a 
                   href={service.path} 
-                  className="w-full px-4 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors text-center font-medium inline-flex items-center justify-center"
-                >
+                  className="w-full px-4 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan-dark transition-colors text-center font-medium inline-flex items-center justify-center">
                   Learn More <ArrowRight className="w-4 h-4 ml-2" />
                 </a>
               </div>
@@ -330,18 +315,15 @@ export default function InnovativeServicesShowcase2025() {
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-6">Why Choose Zion Tech Group?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              {
-                icon: Brain,
+              { icon: Brain,
                 title: 'AI-First Approach',
                 description: 'All our services are built with AI at the core, ensuring maximum efficiency and intelligence.'
               },
-              {
-                icon: Target,
+              { icon: Target,
                 title: 'Industry Expertise',
                 description: 'Deep domain knowledge across multiple industries with proven track records.'
               },
-              {
-                icon: Clock,
+              { icon: Clock,
                 title: 'Rapid Implementation',
                 description: 'Quick deployment and onboarding with minimal disruption to your operations.'
               }
@@ -351,8 +333,7 @@ export default function InnovativeServicesShowcase2025() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="p-4 bg-white rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <item.icon className="w-8 h-8 text-zion-cyan" />
                 </div>

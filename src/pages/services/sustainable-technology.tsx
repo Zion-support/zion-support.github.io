@@ -5,46 +5,38 @@ import { Leaf, Globe, Zap, Shield, Users, Target, CheckCircle, Clock, TrendingUp
 
 const SustainableTechnology: React.FC = () => {
   const features = [
-    {
-      icon: Leaf,
+    { icon: Leaf,
       title: 'Green Computing',
       description: 'Energy-efficient computing solutions and practices'
     },
-    {
-      icon: Sun,
+    { icon: Sun,
       title: 'Renewable Energy',
       description: 'Solar, wind, and sustainable power solutions'
     },
-    {
-      icon: Recycle,
+    { icon: Recycle,
       title: 'Circular Economy',
       description: 'Waste reduction and resource optimization'
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: 'Carbon Neutral',
       description: 'Carbon footprint reduction and offsetting'
     }
   ];
 
   const solutions = [
-    {
-      title: 'Green Data Centers',
+    { title: 'Green Data Centers',
       description: 'Energy-efficient data center infrastructure',
       icon: '🏢'
     },
-    {
-      title: 'Smart Grid Technology',
+    { title: 'Smart Grid Technology',
       description: 'Intelligent energy distribution systems',
       icon: '⚡'
     },
-    {
-      title: 'IoT Environmental Monitoring',
+    { title: 'IoT Environmental Monitoring',
       description: 'Real-time environmental data collection',
       icon: '🌱'
     },
-    {
-      title: 'Sustainable Software',
+    { title: 'Sustainable Software',
       description: 'Eco-friendly application development',
       icon: '💻'
     }
@@ -72,9 +64,8 @@ const SustainableTechnology: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
               <Leaf className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">Sustainable Technology</span>
@@ -110,9 +101,8 @@ const SustainableTechnology: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Sustainable Technology Features
             </h2>
@@ -128,8 +118,7 @@ const SustainableTechnology: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-green-400" />
                 </div>
@@ -147,9 +136,8 @@ const SustainableTechnology: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Sustainable Solutions
             </h2>
@@ -165,8 +153,7 @@ const SustainableTechnology: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{solution.icon}</div>
                   <div>
@@ -186,9 +173,8 @@ const SustainableTechnology: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Sustainable Technology?
             </h2>
@@ -201,9 +187,8 @@ const SustainableTechnology: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
+              transition={{ duration: 0.6     }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -218,9 +203,8 @@ const SustainableTechnology: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8"
-            >
+              transition={{ duration: 0.6     }}
+              className="bg-gradient-to-br from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Go Green Today</h3>
               <p className="text-gray-300 mb-6">
                 Ready to make your business more sustainable? Our green technology experts can help you 
@@ -240,7 +224,7 @@ const SustainableTechnology: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Go Green?

@@ -2,13 +2,12 @@
 const API_BASE_URL = import.meta.env.DEV ? '/api' : 'http://localhost:5000/api';
 
 // Generic API response type
-interface ApiResponse<T = any> {
-  success: boolean;
+interface ApiResponse<T = > { success: boolean;
   data?: T;
   error?: string;
   message?: string;
   count?: number;
-}
+    }
 
 // Generic API error
 class ApiError extends Error {
@@ -25,8 +24,7 @@ async function apiRequest<T>(
 ): Promise<ApiResponse<T>> {
   const url = `${API_BASE_URL}${endpoint}`;
   
-  const config: RequestInit = {
-    headers: {
+  const config: RequestInit = { headers: {
       'Content-Type': 'application/json',
       ...options.headers,
     },
@@ -85,14 +83,13 @@ export async function apiClient(endpoint: string, options: ApiClientOptions = {}
   }
 }
 
-export const api = {
-  get: (endpoint: string, headers?: Record<string, string>) => 
+export const api = { get: (endpoint: string, headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'GET', headers }),
   
-  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
+  post: (endpoint: string, data: , headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
   
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
+  put: (endpoint: string, data: , headers?: Record<string, string>) => 
     apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
   
   delete: (endpoint: string, headers?: Record<string, string>) => 

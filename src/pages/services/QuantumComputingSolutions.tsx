@@ -42,26 +42,22 @@ export default function QuantumComputingSolutions() {
   ];
 
   const quantumApplications = [
-    {
-      name: 'Financial Services',
+    { name: 'Financial Services',
       description: 'Portfolio optimization, risk assessment, and algorithmic trading',
       icon: TrendingUp,
       useCases: ['Monte Carlo simulations', 'Option pricing', 'Risk management', 'Market prediction']
     },
-    {
-      name: 'Healthcare & Pharma',
+    { name: 'Healthcare & Pharma',
       description: 'Drug discovery, protein folding, and personalized medicine',
       icon: Brain,
       useCases: ['Molecular dynamics', 'Drug interaction modeling', 'Genomic analysis', 'Clinical trials optimization']
     },
-    {
-      name: 'Logistics & Supply Chain',
+    { name: 'Logistics & Supply Chain',
       description: 'Route optimization, inventory management, and demand forecasting',
       icon: Globe,
       useCases: ['Traveling salesman problem', 'Vehicle routing', 'Warehouse optimization', 'Supply chain resilience']
     },
-    {
-      name: 'Cybersecurity',
+    { name: 'Cybersecurity',
       description: 'Quantum-resistant cryptography and secure communications',
       icon: Shield,
       useCases: ['Post-quantum cryptography', 'Quantum key distribution', 'Secure multi-party computation', 'Blockchain security']
@@ -69,22 +65,19 @@ export default function QuantumComputingSolutions() {
   ];
 
   const pricing = [
-    {
-      plan: 'Research',
+    { plan: 'Research',
       price: '$2,999',
       period: '/month',
       features: ['Up to 100 qubits', 'Basic quantum algorithms', 'Email support', 'Standard documentation'],
       recommended: false
     },
-    {
-      plan: 'Enterprise',
+    { plan: 'Enterprise',
       price: '$9,999',
       period: '/month',
       features: ['Up to 1000 qubits', 'Custom quantum algorithms', 'Priority support', 'Dedicated quantum engineers', 'Custom integrations'],
       recommended: true
     },
-    {
-      plan: 'Government',
+    { plan: 'Government',
       price: '$24,999',
       period: '/month',
       features: ['Unlimited qubits', 'Custom quantum hardware', '24/7 support', 'On-site quantum experts', 'White-label solutions'],
@@ -129,7 +122,7 @@ export default function QuantumComputingSolutions() {
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Quantum Computing</span> Solutions
@@ -140,8 +133,7 @@ export default function QuantumComputingSolutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                 Explore Quantum Solutions
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -149,8 +141,7 @@ export default function QuantumComputingSolutions() {
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noreferrer" 
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Visit Our Site
               </a>
             </div>
@@ -180,8 +171,8 @@ export default function QuantumComputingSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Revolutionary <span className="text-cyan-400">Quantum Applications</span>
@@ -198,7 +189,7 @@ export default function QuantumComputingSolutions() {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="flex items-center mb-6">
@@ -232,8 +223,8 @@ export default function QuantumComputingSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced <span className="text-cyan-400">Quantum Capabilities</span>
@@ -250,7 +241,7 @@ export default function QuantumComputingSolutions() {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
@@ -270,8 +261,8 @@ export default function QuantumComputingSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Quantum <span className="text-cyan-400">Advantages</span>
@@ -288,7 +279,7 @@ export default function QuantumComputingSolutions() {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="flex items-center mb-4">
@@ -311,8 +302,8 @@ export default function QuantumComputingSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Cutting-Edge <span className="text-cyan-400">Research Areas</span>
@@ -329,7 +320,7 @@ export default function QuantumComputingSolutions() {
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="flex items-center mb-4">
@@ -349,8 +340,8 @@ export default function QuantumComputingSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Quantum <span className="text-cyan-400">Pricing</span>
@@ -371,7 +362,7 @@ export default function QuantumComputingSolutions() {
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 {plan.recommended && (
@@ -422,8 +413,8 @@ export default function QuantumComputingSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Leading <span className="text-cyan-400">Quantum Technologies</span>
@@ -443,7 +434,7 @@ export default function QuantumComputingSolutions() {
                 className="bg-slate-800/60 border border-slate-700/60 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="text-sm text-cyan-400 mb-1">{tech.category}</div>
@@ -460,8 +451,8 @@ export default function QuantumComputingSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to <span className="text-cyan-400">Quantum Leap</span> Forward?
@@ -472,15 +463,13 @@ export default function QuantumComputingSolutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
                 Start Quantum Journey
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <a 
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Call +1 302 464 0950
               </a>
             </div>

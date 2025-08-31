@@ -40,132 +40,108 @@ import {
 
 export default function AIAutonomousBusinessIntelligence() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "Autonomous Decision Making",
       description: "AI-powered autonomous decision-making systems that operate independently and continuously optimize business processes."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Advanced predictive modeling that forecasts market trends, customer behavior, and business outcomes with high accuracy."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Intelligent Goal Optimization",
       description: "AI systems that automatically adjust strategies and tactics to achieve business objectives in real-time."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Real-time Intelligence",
       description: "Instant insights and recommendations based on live data streams and market conditions."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Multi-dimensional Analysis",
       description: "Comprehensive analysis across multiple business dimensions including financial, operational, and market factors."
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Pattern Recognition",
       description: "Advanced algorithms that identify hidden patterns and correlations in complex business data."
     }
   ];
 
   const benefits = [
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "24/7 Autonomous Operation",
       description: "Continuous business intelligence monitoring and optimization without human intervention."
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Proven ROI",
       description: "Average 300% ROI within 6 months through optimized decision-making and resource allocation."
     },
-    {
-      icon: Star,
+    { icon: Star,
       title: "Competitive Advantage",
       description: "Stay ahead of competitors with autonomous insights and rapid response to market changes."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Scalable Intelligence",
       description: "Grows with your business, handling increasing data complexity and decision volume."
     },
-    {
-      icon: Cpu,
+    { icon: Cpu,
       title: "Advanced AI Models",
       description: "State-of-the-art machine learning algorithms trained on industry-specific data."
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Real-time Data Processing",
       description: "Process and analyze massive amounts of data in real-time for instant insights."
     }
   ];
 
   const intelligenceTypes = [
-    {
-      icon: Search,
+    { icon: Search,
       title: "Market Intelligence",
       description: "Autonomous monitoring of market trends, competitor activities, and industry developments."
     },
-    {
-      icon: Filter,
+    { icon: Filter,
       title: "Customer Intelligence",
       description: "AI-driven customer behavior analysis and predictive customer lifetime value modeling."
     },
-    {
-      icon: Download,
+    { icon: Download,
       title: "Operational Intelligence",
       description: "Real-time monitoring and optimization of business operations and processes."
     },
-    {
-      icon: Share2,
+    { icon: Share2,
       title: "Financial Intelligence",
       description: "Autonomous financial analysis, risk assessment, and investment optimization."
     },
-    {
-      icon: Lightbulb,
+    { icon: Lightbulb,
       title: "Innovation Intelligence",
       description: "AI-powered identification of new opportunities and innovation pathways."
     },
-    {
-      icon: Rocket,
+    { icon: Rocket,
       title: "Growth Intelligence",
       description: "Strategic growth planning and execution optimization based on market analysis."
     }
   ];
 
   const useCases = [
-    {
-      icon: Building,
+    { icon: Building,
       title: "Enterprise Strategy",
       description: "Autonomous strategic planning and execution for large enterprises across multiple markets."
     },
-    {
-      icon: ShoppingCart,
+    { icon: ShoppingCart,
       title: "E-commerce Optimization",
       description: "AI-driven product recommendations, pricing optimization, and inventory management."
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: "Financial Services",
       description: "Autonomous trading, risk management, and portfolio optimization for financial institutions."
     },
-    {
-      icon: Heart,
+    { icon: Heart,
       title: "Healthcare Analytics",
       description: "AI-powered patient outcome prediction and healthcare resource optimization."
     },
-    {
-      icon: GraduationCap,
+    { icon: GraduationCap,
       title: "Educational Institutions",
       description: "Autonomous student performance analysis and educational program optimization."
     },
-    {
-      icon: Home,
+    { icon: Home,
       title: "Real Estate",
       description: "AI-driven property valuation, market analysis, and investment optimization."
     }
@@ -184,7 +160,7 @@ export default function AIAutonomousBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Autonomous Business Intelligence
@@ -195,17 +171,15 @@ export default function AIAutonomousBusinessIntelligence() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Get Started Today
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
                 Watch Demo
               </motion.button>
             </div>
@@ -219,10 +193,9 @@ export default function AIAutonomousBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Autonomous Intelligence Features
             </h2>
@@ -238,9 +211,8 @@ export default function AIAutonomousBusinessIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -258,10 +230,9 @@ export default function AIAutonomousBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Autonomous Intelligence?
             </h2>
@@ -277,9 +248,8 @@ export default function AIAutonomousBusinessIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
@@ -297,10 +267,9 @@ export default function AIAutonomousBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Types of Autonomous Intelligence
             </h2>
@@ -316,9 +285,8 @@ export default function AIAutonomousBusinessIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <type.icon className="w-6 h-6 text-white" />
                 </div>
@@ -336,10 +304,9 @@ export default function AIAutonomousBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -355,9 +322,8 @@ export default function AIAutonomousBusinessIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-blue-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-blue-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-white" />
                 </div>
@@ -375,8 +341,8 @@ export default function AIAutonomousBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -387,17 +353,15 @@ export default function AIAutonomousBusinessIntelligence() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                 Start Your Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300">
                 Schedule Consultation
               </motion.button>
             </div>

@@ -37,24 +37,21 @@ export function Header() {
   }, []);
 
   const services = [
-    {
-      category: 'AI & Research',
+    { category: 'AI & Research',
       items: [
         { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant', icon: <Brain className="w-4 h-4" /> },
         { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: <FileText className="w-4 h-4" /> },
         { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: <Network className="w-4 h-4" /> }
       ]
     },
-    {
-      category: 'Quantum & Advanced',
+    { category: 'Quantum & Advanced',
       items: [
         { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: <Cpu className="w-4 h-4" /> },
         { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: <Shield className="w-4 h-4" /> },
         { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: <Heart className="w-4 h-4" /> }
       ]
     },
-    {
-      category: 'Innovation Hub',
+    { category: 'Innovation Hub',
       items: [
         { name: 'Innovative Services Showcase', path: '/innovative-services-showcase-2028', icon: <Sparkles className="w-4 h-4" /> },
         { name: 'Comprehensive Pricing 2028', path: '/comprehensive-pricing-2028', icon: <BarChart3 className="w-4 h-4" /> },
@@ -90,8 +87,7 @@ export function Header() {
               <button
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
-                className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200 py-2"
-              >
+                className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors duration-200 py-2">
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -102,11 +98,10 @@ export function Header() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0.2     }}
                     onMouseEnter={() => setIsServicesOpen(true)}
                     onMouseLeave={() => setIsServicesOpen(false)}
-                    className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-4"
-                  >
+                    className="absolute top-full left-0 mt-2 w-96 bg-slate-900/95 backdrop-blur-md border border-white/10 rounded-xl shadow-2xl p-4">
                     <div className="grid grid-cols-1 gap-4">
                       {services.map((category, index) => (
                         <div key={index}>
@@ -119,8 +114,7 @@ export function Header() {
                                 key={serviceIndex}
                                 to={service.path}
                                 className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/5 transition-colors duration-200 group"
-                                onClick={() => setIsServicesOpen(false)}
-                              >
+                                onClick={() => setIsServicesOpen(false)}>
                                 <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
                                   {service.icon}
                                 </div>
@@ -177,8 +171,7 @@ export function Header() {
             {/* CTA Button */}
             <Link 
               to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started
             </Link>
           </div>
@@ -186,8 +179,7 @@ export function Header() {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200"
-          >
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors duration-200">
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
@@ -199,16 +191,14 @@ export function Header() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden border-t border-white/10"
-            >
+              transition={{ duration: 0.3     }}
+              className="lg:hidden border-t border-white/10">
               <div className="py-4 space-y-4">
                 {/* Services Section */}
                 <div>
                   <button
                     onClick={() => setIsServicesOpen(!isServicesOpen)}
-                    className="flex items-center justify-between w-full text-left text-white hover:text-cyan-400 transition-colors duration-200 py-2"
-                  >
+                    className="flex items-center justify-between w-full text-left text-white hover:text-cyan-400 transition-colors duration-200 py-2">
                     <span>Services</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`} />
                   </button>
@@ -219,9 +209,8 @@ export function Header() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="ml-4 mt-2 space-y-2"
-                      >
+                        transition={{ duration: 0.2     }}
+                        className="ml-4 mt-2 space-y-2">
                         {services.map((category, index) => (
                           <div key={index}>
                             <h4 className="text-sm font-semibold text-cyan-400 mb-1">
@@ -233,8 +222,7 @@ export function Header() {
                                   key={serviceIndex}
                                   to={service.path}
                                   className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-1"
-                                  onClick={() => setIsOpen(false)}
-                                >
+                                  onClick={() => setIsOpen(false)}>
                                   {service.icon}
                                   <span className="text-sm">{service.name}</span>
                                 </Link>
@@ -252,8 +240,7 @@ export function Header() {
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/solutions') ? 'text-cyan-400' : ''
                   }`}
-                  onClick={() => setIsOpen(false)}
-                >
+                  onClick={() => setIsOpen(false)}>
                   Solutions
                 </Link>
                 
@@ -262,8 +249,7 @@ export function Header() {
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/about') ? 'text-cyan-400' : ''
                   }`}
-                  onClick={() => setIsOpen(false)}
-                >
+                  onClick={() => setIsOpen(false)}>
                   About
                 </Link>
                 
@@ -272,8 +258,7 @@ export function Header() {
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/blog') ? 'text-cyan-400' : ''
                   }`}
-                  onClick={() => setIsOpen(false)}
-                >
+                  onClick={() => setIsOpen(false)}>
                   Blog
                 </Link>
                 
@@ -282,8 +267,7 @@ export function Header() {
                   className={`block text-white hover:text-cyan-400 transition-colors duration-200 py-2 ${
                     isActive('/contact') ? 'text-cyan-400' : ''
                   }`}
-                  onClick={() => setIsOpen(false)}
-                >
+                  onClick={() => setIsOpen(false)}>
                   Contact
                 </Link>
 
@@ -291,8 +275,7 @@ export function Header() {
                 <Link 
                   to="/contact" 
                   className="block bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
+                  onClick={() => setIsOpen(false)}>
                   Get Started
                 </Link>
               </div>

@@ -10,23 +10,19 @@ interface LoadingSpinnerProps {
   progress?: number;
 }
 
-const iconVariants = {
-  animate: {
+const iconVariants = { animate: {
     rotate: 360,
     scale: [1, 1.2, 1],
-    transition: {
-      rotate: { duration: 2, repeat: Infinity, ease: "linear" },
+    transition: { rotate: { duration: 2, repeat: Infinity, ease: "linear" },
       scale: { duration: 1, repeat: Infinity, ease: "easeInOut" }
     }
   }
 };
 
-const pulseVariants = {
-  animate: {
+const pulseVariants = { animate: {
     scale: [1, 1.1, 1],
     opacity: [0.5, 1, 0.5],
-    transition: {
-      duration: 2,
+    transition: { duration: 2,
       repeat: Infinity,
       ease: "easeInOut"
     }
@@ -40,14 +36,12 @@ export function EnhancedLoadingSpinner({
   showProgress = false,
   progress = 0
 }: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
+  const sizeClasses = { sm: 'w-8 h-8',
     md: 'w-12 h-12',
     lg: 'w-16 h-16'
   };
 
-  const textSizes = {
-    sm: 'text-sm',
+  const textSizes = { sm: 'text-sm',
     md: 'text-base',
     lg: 'text-lg'
   };
@@ -90,8 +84,7 @@ export function EnhancedLoadingSpinner({
           <motion.div
             variants={iconVariants}
             animate="animate"
-            className="w-3/4 h-3/4"
-          >
+            className="w-3/4 h-3/4">
             {getIcon()}
           </motion.div>
         </motion.div>
@@ -101,11 +94,9 @@ export function EnhancedLoadingSpinner({
           <>
             <motion.div
               className="absolute inset-0 w-full h-full"
-              animate={{
-                rotate: 360,
+              animate={{ rotate: 360,
               }}
-              transition={{
-                duration: 3,
+              transition={{ duration: 3,
                 repeat: Infinity,
                 ease: "linear"
               }}
@@ -114,11 +105,9 @@ export function EnhancedLoadingSpinner({
             </motion.div>
             <motion.div
               className="absolute inset-0 w-full h-full"
-              animate={{
-                rotate: -360,
+              animate={{ rotate: -360,
               }}
-              transition={{
-                duration: 4,
+              transition={{ duration: 4,
                 repeat: Infinity,
                 ease: "linear"
               }}
@@ -131,9 +120,9 @@ export function EnhancedLoadingSpinner({
 
       {/* Loading Text */}
       <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+        initial={{ opacity: 0     }}
+        animate={{ opacity: 1     }}
+        transition={{ delay: 0.5     }}
         className={`${textSizes[size]} text-gray-600 dark:text-gray-300 font-medium text-center`}
       >
         {text}
@@ -144,13 +133,12 @@ export function EnhancedLoadingSpinner({
         <motion.div
           initial={{ opacity: 0, width: 0 }}
           animate={{ opacity: 1, width: '100%' }}
-          transition={{ delay: 0.8 }}
-          className="w-48 bg-gray-200 rounded-full h-2 overflow-hidden"
-        >
+          transition={{ delay: 0.8     }}
+          className="w-48 bg-gray-200 rounded-full h-2 overflow-hidden">
           <motion.div
             className="h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
+            initial={{ width: 0     }}
+            animate={{ width: `${progress    }%` }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           />
         </motion.div>
@@ -158,21 +146,18 @@ export function EnhancedLoadingSpinner({
 
       {/* Loading Dots */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="flex space-x-1"
-      >
+        initial={{ opacity: 0     }}
+        animate={{ opacity: 1     }}
+        transition={{ delay: 1     }}
+        className="flex space-x-1">
         {[0, 1, 2].map((i) => (
           <motion.div
             key={i}
             className="w-2 h-2 bg-gray-400 rounded-full"
-            animate={{
-              scale: [1, 1.5, 1],
+            animate={{ scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5],
             }}
-            transition={{
-              duration: 1.5,
+            transition={{ duration: 1.5,
               repeat: Infinity,
               delay: i * 0.2,
               ease: "easeInOut"

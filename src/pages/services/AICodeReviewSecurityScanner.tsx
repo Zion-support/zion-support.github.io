@@ -4,38 +4,32 @@ import { Code, Shield, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Zap, 
 
 const AICodeReviewSecurityScanner = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Vulnerability Detection',
       description: 'Advanced machine learning algorithms that analyze code patterns, identify security vulnerabilities, and suggest remediation strategies.',
       benefits: ['Automated vulnerability scanning', 'Pattern recognition', 'False positive reduction', 'Continuous learning']
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Comprehensive Security Coverage',
       description: 'Cover all major security vulnerabilities including OWASP Top 10, CWE, and industry-specific security requirements.',
       benefits: ['OWASP Top 10 coverage', 'CWE compliance', 'Industry standards', 'Custom rule sets']
     },
-    {
-      icon: Code,
+    { icon: Code,
       title: 'Multi-Language Support',
       description: 'Support for all major programming languages including Python, JavaScript, Java, C#, Go, Rust, and more.',
       benefits: ['25+ programming languages', 'Framework-specific rules', 'Language-specific patterns', 'Cross-language analysis']
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Real-time Code Analysis',
       description: 'Continuous monitoring of code changes with instant security feedback during development and CI/CD pipelines.',
       benefits: ['Real-time scanning', 'CI/CD integration', 'Instant feedback', 'Automated blocking']
     },
-    {
-      icon: AlertTriangle,
+    { icon: AlertTriangle,
       title: 'Intelligent Risk Scoring',
       description: 'AI-driven risk assessment that prioritizes vulnerabilities based on severity, exploitability, and business impact.',
       benefits: ['Risk-based prioritization', 'Business context awareness', 'Exploitability assessment', 'Impact analysis']
     },
-    {
-      icon: GitBranch,
+    { icon: GitBranch,
       title: 'Git Integration & Workflow',
       description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',
       benefits: ['Pull request scanning', 'Branch protection', 'Automated reviews', 'Workflow integration']
@@ -43,8 +37,7 @@ const AICodeReviewSecurityScanner = () => {
   ];
 
   const pricing = [
-    {
-      name: 'Developer',
+    { name: 'Developer',
       price: '$99',
       period: '/month',
       description: 'Perfect for individual developers',
@@ -58,8 +51,7 @@ const AICodeReviewSecurityScanner = () => {
       cta: 'Get Started',
       popular: false
     },
-    {
-      name: 'Team',
+    { name: 'Team',
       price: '$299',
       period: '/month',
       description: 'Ideal for development teams',
@@ -75,8 +67,7 @@ const AICodeReviewSecurityScanner = () => {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$999',
       period: '/month',
       description: 'For large organizations',
@@ -95,26 +86,22 @@ const AICodeReviewSecurityScanner = () => {
   ];
 
   const useCases = [
-    {
-      title: 'Application Development',
+    { title: 'Application Development',
       description: 'Integrate security scanning into your development workflow to catch vulnerabilities before they reach production.',
       icon: Code,
       benefits: ['Early vulnerability detection', 'Developer education', 'Secure coding practices', 'Quality assurance']
     },
-    {
-      title: 'DevOps & CI/CD',
+    { title: 'DevOps & CI/CD',
       description: 'Automate security checks in your CI/CD pipeline to ensure code quality and security at every stage.',
       icon: GitBranch,
       benefits: ['Automated security gates', 'Pipeline integration', 'Quality gates', 'Deployment safety']
     },
-    {
-      title: 'Code Review Process',
+    { title: 'Code Review Process',
       description: 'Enhance your code review process with AI-powered security analysis and automated vulnerability detection.',
       icon: Eye,
       benefits: ['Automated security reviews', 'Pull request scanning', 'Reviewer assistance', 'Quality improvement']
     },
-    {
-      title: 'Compliance & Auditing',
+    { title: 'Compliance & Auditing',
       description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',
       icon: Shield,
       benefits: ['Regulatory compliance', 'Security audits', 'Documentation', 'Risk assessment']
@@ -122,26 +109,22 @@ const AICodeReviewSecurityScanner = () => {
   ];
 
   const vulnerabilityTypes = [
-    {
-      title: 'SQL Injection',
+    { title: 'SQL Injection',
       description: 'Prevent unauthorized database access through malicious SQL queries.',
       icon: Database,
       examples: ['Parameterized queries', 'Input validation', 'ORM usage', 'Database permissions']
     },
-    {
-      title: 'Cross-Site Scripting (XSS)',
+    { title: 'Cross-Site Scripting (XSS)',
       description: 'Protect against malicious script injection in web applications.',
       icon: Globe,
       examples: ['Output encoding', 'Content Security Policy', 'Input sanitization', 'HTTPS enforcement']
     },
-    {
-      title: 'Authentication Bypass',
+    { title: 'Authentication Bypass',
       description: 'Secure authentication mechanisms and prevent unauthorized access.',
       icon: Lock,
       examples: ['Multi-factor authentication', 'Session management', 'Password policies', 'Access controls']
     },
-    {
-      title: 'Insecure Dependencies',
+    { title: 'Insecure Dependencies',
       description: 'Identify and update vulnerable third-party libraries and dependencies.',
       icon: Package,
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']
@@ -156,9 +139,8 @@ const AICodeReviewSecurityScanner = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-medium mb-6">
               <Code className="w-4 h-4 mr-2" />
               AI-Powered Code Security
@@ -176,18 +158,16 @@ const AICodeReviewSecurityScanner = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center">
                 Schedule Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
@@ -202,9 +182,8 @@ const AICodeReviewSecurityScanner = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Security Coverage
             </h2>
@@ -221,8 +200,7 @@ const AICodeReviewSecurityScanner = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
-              >
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
                     <vulnType.icon className="w-6 h-6 text-white" />
@@ -255,9 +233,8 @@ const AICodeReviewSecurityScanner = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Advanced AI-Powered Features
             </h2>
@@ -274,8 +251,7 @@ const AICodeReviewSecurityScanner = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
-              >
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -301,9 +277,8 @@ const AICodeReviewSecurityScanner = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>
@@ -353,8 +328,8 @@ const AICodeReviewSecurityScanner = () => {
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.02     }}
+                  whileTap={{ scale: 0.98     }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
@@ -375,9 +350,8 @@ const AICodeReviewSecurityScanner = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Development Workflow Integration
             </h2>
@@ -394,8 +368,7 @@ const AICodeReviewSecurityScanner = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300"
-              >
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
                 <div className="flex items-start mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mr-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -425,7 +398,7 @@ const AICodeReviewSecurityScanner = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Code?
@@ -436,18 +409,16 @@ const AICodeReviewSecurityScanner = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200 flex items-center justify-center">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200 flex items-center justify-center">
                 Contact Sales
                 <ArrowRight className="ml-2 w-5 h-5" />
               </motion.button>

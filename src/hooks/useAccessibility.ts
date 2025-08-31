@@ -14,7 +14,7 @@ interface AccessibilityFeatures {
   isReducedMotion: boolean;
   isLargeText: boolean;
   isScreenReader: boolean;
-}
+    }
 
 export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   const {
@@ -33,22 +33,19 @@ export const useAccessibility = (options: UseAccessibilityOptions = {}) => {
   // Detect accessibility preferences
   const accessibilityFeatures = useMemo((): AccessibilityFeatures => {
     if (typeof window === 'undefined') {
-      return {
-        isHighContrast: false,
+      return { isHighContrast: false,
         isReducedMotion: false,
         isLargeText: false,
         isScreenReader: false
       };
     }
 
-    const mediaQueries = {
-      highContrast: window.matchMedia('(prefers-contrast: high)'),
+    const mediaQueries = { highContrast: window.matchMedia('(prefers-contrast: high)'),
       reducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)'),
       largeText: window.matchMedia('(prefers-reduced-motion: reduce)'), // Placeholder
     };
 
-    return {
-      isHighContrast: mediaQueries.highContrast.matches,
+    return { isHighContrast: mediaQueries.highContrast.matches,
       isReducedMotion: mediaQueries.reducedMotion.matches,
       isLargeText: false, // Would need to check font size preferences
       isScreenReader: false // Would need to detect screen reader usage

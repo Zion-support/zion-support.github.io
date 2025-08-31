@@ -12,7 +12,7 @@ export interface RevolutionaryPricingTier2030 {
   marketComparison: string;
   includedSupport: string;
   customOptions: string[];
-}
+    }
 
 export interface RevolutionaryPricingGuide2030 {
   serviceId: string;
@@ -22,47 +22,42 @@ export interface RevolutionaryPricingGuide2030 {
   marketSize: string;
   competitors: string[];
   pricingTiers: RevolutionaryPricingTier2030[];
-  enterprisePricing: {
+  enterprisePricing: {  
     custom: string;
     features: string[];
     support: string[];
-    sla: string;
-    roi: string;
-  };
-  marketAnalysis: {
-    averageMarketPrice: string;
+    sla: string
+    roi: string
+      };
+  marketAnalysis: { averageMarketPrice: string;
     priceRange: string;
     valueProposition: string;
-    costSavings: string;
-    competitiveAdvantage: string;
-  };
-  roiCalculator: {
-    implementationCost: string;
+    costSavings: string
+    competitiveAdvantage: string
+      };
+  roiCalculator: { implementationCost: string;
     monthlySavings: string;
     paybackPeriod: string;
-    threeYearROI: string;
-    fiveYearROI: string;
-  };
-  contactInfo: {
-    email: string;
+    threeYearROI: string
+    fiveYearROI: string
+      };
+  contactInfo: { email: string;
     phone: string;
-    address: string;
-    website: string;
-  };
+    address: string
+    website: string
+      };
 }
 
 export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] = [
   // 1. Quantum AI Drug Discovery Platform
-  {
-    serviceId: "quantum-ai-drug-discovery",
+  { serviceId: "quantum-ai-drug-discovery",
     serviceTitle: "Zion Quantum AI Drug Discovery Platform",
     category: "AI Services",
     subcategory: "Healthcare & Drug Discovery",
     marketSize: "$45.2B by 2030",
     competitors: ["Insilico Medicine", "Atomwise", "BenevolentAI", "Exscientia"],
     pricingTiers: [
-      {
-        id: "starter",
+      { id: "starter",
         name: "Starter",
         description: "Perfect for small biotech companies and research institutions starting their AI drug discovery journey",
         monthlyPrice: 15999,
@@ -95,8 +90,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         includedSupport: "Email support with 24-hour response time",
         customOptions: ["Additional quantum computing credits", "Extended API limits", "Basic training"]
       },
-      {
-        id: "professional",
+      { id: "professional",
         name: "Professional",
         description: "Ideal for mid-sized pharmaceutical companies and research organizations with growing AI needs",
         monthlyPrice: 29999,
@@ -131,8 +125,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         includedSupport: "Priority support with 4-hour response time",
         customOptions: ["Custom algorithm development", "Advanced training", "Dedicated support"]
       },
-      {
-        id: "enterprise",
+      { id: "enterprise",
         name: "Enterprise",
         description: "Comprehensive solution for large pharmaceutical companies and research organizations requiring maximum AI capabilities",
         monthlyPrice: 49999,
@@ -168,8 +161,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         customOptions: ["Custom quantum hardware integration", "International deployment", "Regulatory consulting"]
       }
     ],
-    enterprisePricing: {
-      custom: "Contact us for custom enterprise solutions with volume discounts and dedicated infrastructure",
+    enterprisePricing: { custom: "Contact us for custom enterprise solutions with volume discounts and dedicated infrastructure",
       features: [
         "Custom quantum computing infrastructure",
         "Dedicated research teams",
@@ -189,22 +181,19 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
       sla: "99.99% uptime guarantee with 15-minute response time",
       roi: "1000-2000% within 12 months for large deployments"
     },
-    marketAnalysis: {
-      averageMarketPrice: "$25,000-40,000/month for comparable quantum AI drug discovery platforms",
+    marketAnalysis: { averageMarketPrice: "$25,000-40,000/month for comparable quantum AI drug discovery platforms",
       priceRange: "$15,999-50,000/month depending on features and scale",
       valueProposition: "40-60% cost savings compared to building in-house quantum AI infrastructure",
       costSavings: "Reduce drug development costs by 60-80% while accelerating time-to-market by 5-10x",
       competitiveAdvantage: "Only platform combining quantum computing, AI, and drug discovery with proven ROI"
     },
-    roiCalculator: {
-      implementationCost: "$15,999-50,000/month depending on tier",
+    roiCalculator: { implementationCost: "$15,999-50,000/month depending on tier",
       monthlySavings: "$50,000-200,000/month in reduced development costs and accelerated timelines",
       paybackPeriod: "2-6 months depending on drug development pipeline",
       threeYearROI: "1500-3000% for successful drug development programs",
       fiveYearROI: "3000-5000% for comprehensive drug discovery operations"
     },
-    contactInfo: {
-      email: "kleber@ziontechgroup.com",
+    contactInfo: { email: "kleber@ziontechgroup.com",
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com/quantum-ai-drug-discovery"
@@ -212,16 +201,14 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
   },
 
   // 2. Autonomous AI Financial Trading System
-  {
-    serviceId: "autonomous-ai-trading",
+  { serviceId: "autonomous-ai-trading",
     serviceTitle: "Zion Autonomous AI Financial Trading System",
     category: "AI Services",
     subcategory: "Financial Technology",
     marketSize: "$28.7B by 2030",
     competitors: ["Alpaca", "QuantConnect", "MetaTrader", "Interactive Brokers"],
     pricingTiers: [
-      {
-        id: "starter",
+      { id: "starter",
         name: "Starter",
         description: "Perfect for individual traders and small investment firms starting with AI-powered trading",
         monthlyPrice: 8999,
@@ -254,8 +241,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         includedSupport: "Email support with 12-hour response time",
         customOptions: ["Additional trading capacity", "Extended API limits", "Basic training"]
       },
-      {
-        id: "professional",
+      { id: "professional",
         name: "Professional",
         description: "Ideal for mid-sized investment firms and hedge funds requiring advanced AI trading capabilities",
         monthlyPrice: 17999,
@@ -290,8 +276,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         includedSupport: "Priority support with 2-hour response time",
         customOptions: ["Custom algorithm development", "Advanced training", "Dedicated support"]
       },
-      {
-        id: "enterprise",
+      { id: "enterprise",
         name: "Enterprise",
         description: "Comprehensive solution for large financial institutions requiring maximum AI trading capabilities",
         monthlyPrice: 29999,
@@ -327,8 +312,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         customOptions: ["Custom exchange integration", "International deployment", "Regulatory consulting"]
       }
     ],
-    enterprisePricing: {
-      custom: "Contact us for custom enterprise solutions with performance-based pricing and dedicated infrastructure",
+    enterprisePricing: { custom: "Contact us for custom enterprise solutions with performance-based pricing and dedicated infrastructure",
       features: [
         "Custom trading infrastructure",
         "Dedicated trading teams",
@@ -348,22 +332,19 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
       sla: "99.99% uptime guarantee with 1-minute response time",
       roi: "800-1500% within 6 months for large deployments"
     },
-    marketAnalysis: {
-      averageMarketPrice: "$15,000-25,000/month for comparable AI trading platforms",
+    marketAnalysis: { averageMarketPrice: "$15,000-25,000/month for comparable AI trading platforms",
       priceRange: "$8,999-30,000/month depending on features and scale",
       valueProposition: "30-50% cost savings compared to building in-house AI trading infrastructure",
       costSavings: "Increase trading profits by 200-500% while reducing risks by 80%",
       competitiveAdvantage: "Only platform combining quantum computing, AI, and autonomous trading with proven ROI"
     },
-    roiCalculator: {
-      implementationCost: "$8,999-30,000/month depending on tier",
+    roiCalculator: { implementationCost: "$8,999-30,000/month depending on tier",
       monthlySavings: "$25,000-100,000/month in increased profits and reduced risks",
       paybackPeriod: "1-3 months depending on trading volume and performance",
       threeYearROI: "2000-4000% for successful trading operations",
       fiveYearROI: "4000-8000% for comprehensive trading operations"
     },
-    contactInfo: {
-      email: "kleber@ziontechgroup.com",
+    contactInfo: { email: "kleber@ziontechgroup.com",
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com/autonomous-ai-trading"
@@ -371,16 +352,14 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
   },
 
   // 3. Brain-Computer Interface AI Platform
-  {
-    serviceId: "brain-computer-interface-ai",
+  { serviceId: "brain-computer-interface-ai",
     serviceTitle: "Zion Brain-Computer Interface AI Platform",
     category: "AI Services",
     subcategory: "Neural Technology",
     marketSize: "$3.7B by 2030",
     competitors: ["Neuralink", "Kernel", "CTRL-labs", "Emotiv"],
     pricingTiers: [
-      {
-        id: "starter",
+      { id: "starter",
         name: "Starter",
         description: "Perfect for research institutions and healthcare organizations starting with BCI technology",
         monthlyPrice: 12999,
@@ -413,8 +392,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         includedSupport: "Email support with 24-hour response time",
         customOptions: ["Additional user licenses", "Extended API limits", "Basic training"]
       },
-      {
-        id: "professional",
+      { id: "professional",
         name: "Professional",
         description: "Ideal for mid-sized healthcare organizations and research institutions with growing BCI needs",
         monthlyPrice: 24999,
@@ -449,8 +427,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         includedSupport: "Priority support with 4-hour response time",
         customOptions: ["Custom hardware development", "Advanced training", "Dedicated support"]
       },
-      {
-        id: "enterprise",
+      { id: "enterprise",
         name: "Enterprise",
         description: "Comprehensive solution for large healthcare organizations requiring maximum BCI capabilities",
         monthlyPrice: 39999,
@@ -486,8 +463,7 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
         customOptions: ["Custom hardware manufacturing", "International deployment", "Medical consulting"]
       }
     ],
-    enterprisePricing: {
-      custom: "Contact us for custom enterprise solutions with volume discounts and dedicated infrastructure",
+    enterprisePricing: { custom: "Contact us for custom enterprise solutions with volume discounts and dedicated infrastructure",
       features: [
         "Custom BCI hardware manufacturing",
         "Dedicated research teams",
@@ -507,22 +483,19 @@ export const REVOLUTIONARY_PRICING_GUIDE_2030: RevolutionaryPricingGuide2030[] =
       sla: "99.9% uptime guarantee with 15-minute response time",
       roi: "800-1200% within 12 months for large deployments"
     },
-    marketAnalysis: {
-      averageMarketPrice: "$20,000-35,000/month for comparable BCI platforms",
+    marketAnalysis: { averageMarketPrice: "$20,000-35,000/month for comparable BCI platforms",
       priceRange: "$12,999-40,000/month depending on features and scale",
       valueProposition: "35-55% cost savings compared to building in-house BCI infrastructure",
       costSavings: "Accelerate medical research by 3-5x while improving patient outcomes by 200-400%",
       competitiveAdvantage: "Only platform combining BCI, AI, and medical applications with proven ROI"
     },
-    roiCalculator: {
-      implementationCost: "$12,999-40,000/month depending on tier",
+    roiCalculator: { implementationCost: "$12,999-40,000/month depending on tier",
       monthlySavings: "$30,000-120,000/month in accelerated research and improved outcomes",
       paybackPeriod: "3-8 months depending on research scope and outcomes",
       threeYearROI: "1200-2000% for successful medical research programs",
       fiveYearROI: "2500-4000% for comprehensive medical research operations"
     },
-    contactInfo: {
-      email: "kleber@ziontechgroup.com",
+    contactInfo: { email: "kleber@ziontechgroup.com",
       phone: "+1 302 464 0950",
       address: "364 E Main St STE 1008 Middletown DE 19709",
       website: "https://ziontechgroup.com/brain-computer-interface-ai"

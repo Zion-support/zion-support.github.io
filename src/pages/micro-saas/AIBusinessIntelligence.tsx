@@ -4,46 +4,38 @@ import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, U
 
 export default function AIBusinessIntelligence() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Intelligent analysis and predictive modeling'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Real-time Analytics',
       description: 'Live data visualization and reporting'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Automated Intelligence',
       description: 'Smart automation of business processes'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Predictive Analytics',
       description: 'Forecast trends and identify opportunities'
     }
   ];
 
   const capabilities = [
-    {
-      title: 'Business Intelligence Dashboard',
+    { title: 'Business Intelligence Dashboard',
       description: 'Comprehensive view of all business metrics and KPIs',
       icon: BarChart3
     },
-    {
-      title: 'Predictive Modeling',
+    { title: 'Predictive Modeling',
       description: 'AI algorithms to forecast business outcomes',
       icon: TrendingUp
     },
-    {
-      title: 'Natural Language Query',
+    { title: 'Natural Language Query',
       description: 'Ask questions in plain English and get instant answers',
       icon: Database
     },
-    {
-      title: 'Automated Reporting',
+    { title: 'Automated Reporting',
       description: 'Generate reports automatically with AI insights',
       icon: Target
     }
@@ -58,9 +50,8 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center space-x-2 bg-violet-500/10 border border-violet-500/20 rounded-full px-4 py-2 mb-6">
               <Brain className="w-5 h-5 text-violet-400" />
               <span className="text-violet-400 font-medium">AI Business Intelligence</span>
@@ -95,10 +86,9 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI Business Intelligence?
             </h2>
@@ -114,9 +104,8 @@ export default function AIBusinessIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -134,10 +123,9 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Platform Capabilities
             </h2>
@@ -153,9 +141,8 @@ export default function AIBusinessIntelligence() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-violet-500 to-violet-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <capability.icon className="w-8 h-8 text-white" />
@@ -177,10 +164,9 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -195,9 +181,8 @@ export default function AIBusinessIntelligence() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-            >
+              viewport={{ once: true     }}
+              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">$29<span className="text-lg text-zion-slate-light">/month</span></div>
               <ul className="space-y-3 mb-8">
@@ -222,9 +207,8 @@ export default function AIBusinessIntelligence() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-8 border border-violet-500 relative"
-            >
+              viewport={{ once: true     }}
+              className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-8 border border-violet-500 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-black px-4 py-1 rounded-full text-sm font-semibold">
                 Most Popular
               </div>
@@ -258,9 +242,8 @@ export default function AIBusinessIntelligence() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-            >
+              viewport={{ once: true     }}
+              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="text-4xl font-bold text-zion-cyan mb-6">Custom</div>
               <ul className="space-y-3 mb-8">
@@ -293,10 +276,9 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-violet-600 to-violet-700 rounded-3xl p-12 text-center relative overflow-hidden"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="bg-gradient-to-r from-violet-600 to-violet-700 rounded-3xl p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative z-10">
               <h2 className="text-4xl font-bold text-white mb-6">

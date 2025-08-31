@@ -7,36 +7,29 @@ import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail } from 'lucide-react';
 
 export default function AffiliateTracking() {
-  const features: { title: string; description: string }[] = [
-    {
-      title: 'Multi-channel attribution',
+  const features: { title: string description: string     }[] = [
+    { title: 'Multi-channel attribution',
       description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.'
     },
-    {
-      title: 'Real-time fraud prevention',
+    { title: 'Real-time fraud prevention',
       description: 'Auto-flag suspicious clicks, proxy traffic and cookie stuffing using device fingerprinting.'
     },
-    {
-      title: 'Payout automation',
+    { title: 'Payout automation',
       description: 'Automate tiered commissions, bonuses, holds and mass payouts via Stripe, PayPal and ACH.'
     },
-    {
-      title: 'Partner CRM',
+    { title: 'Partner CRM',
       description: 'Manage applications, onboarding, contracts, and partner lifecycle with nurture workflows.'
     },
-    {
-      title: 'E‑commerce integrations',
+    { title: 'E‑commerce integrations',
       description: 'Native integrations for Shopify, WooCommerce, BigCommerce and custom checkouts via webhooks.'
     },
-    {
-      title: 'Analytics & BI',
+    { title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
     }
   ];
 
   const plans = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: 49,
       unit: 'month',
       bestFor: 'Founders validating their first affiliate program',
@@ -47,8 +40,7 @@ export default function AffiliateTracking() {
         'Email support'
       ]
     },
-    {
-      name: 'Growth',
+    { name: 'Growth',
       price: 199,
       unit: 'month',
       bestFor: 'Scaling DTC and SaaS brands with multiple campaigns',
@@ -60,8 +52,7 @@ export default function AffiliateTracking() {
         'Slack alerts and webhooks'
       ]
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: 599,
       unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
@@ -89,9 +80,8 @@ export default function AffiliateTracking() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6">
             Affiliate Tracking Platform
             <span className="block text-zion-cyan text-2xl md:text-3xl mt-2">Recruit. Attribute. Reward.</span>
           </motion.h1>
@@ -123,10 +113,9 @@ export default function AffiliateTracking() {
                 key={f.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4 }}
-                className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50"
-              >
+                viewport={{ once: true     }}
+                transition={{ duration: 0.4     }}
+                className="bg-zion-slate-dark/30 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50">
                 <div className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-zion-cyan mt-0.5" />
                   <div>
@@ -172,7 +161,7 @@ export default function AffiliateTracking() {
                 key={plan.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
               >

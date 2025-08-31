@@ -93,9 +93,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold text-white mb-6"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Zion Tech Group
             </span>
@@ -108,8 +107,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-          >
+            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Discover our cutting-edge suite of AI-powered micro SAAS solutions, 
             enterprise-grade cybersecurity, and innovative emerging technology services 
             designed to transform your business and drive innovation.
@@ -118,8 +116,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center space-x-2 text-white bg-blue-600/20 backdrop-blur-sm rounded-full px-6 py-3 border border-blue-400/30">
               <Phone className="w-5 h-5" />
               <span>+1 302 464 0950</span>
@@ -158,8 +155,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
-                >
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none">
                   <option value="all">All Categories</option>
                   {categories.slice(1).map((category) => (
                     <option key={category.id} value={category.id}>
@@ -193,8 +189,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'category')}
-                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none"
-                >
+                  className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent appearance-none">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="category">Sort by Category</option>
@@ -218,8 +213,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105"
-                >
+                  className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105">
                   {/* Service Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className={`p-3 rounded-lg ${getCategoryColor(service.category)}`}>
@@ -288,8 +282,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                   {/* CTA Button */}
                   <button
                     onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:transform hover:scale-105 mb-4"
-                  >
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 hover:transform hover:scale-105 mb-4">
                     {expandedService === service.id ? 'Show Less' : service.ctaLabel}
                   </button>
 
@@ -315,9 +308,8 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="mt-6 pt-6 border-t border-white/20"
-                      >
+                        transition={{ duration: 0.3     }}
+                        className="mt-6 pt-6 border-t border-white/20">
                         {/* Full Features List */}
                         <div className="mb-6">
                           <h4 className="text-lg font-semibold text-white mb-3">Complete Feature List</h4>
@@ -379,8 +371,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                                 href={service.contactInfo.website} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="text-blue-400 hover:text-blue-300 underline"
-                              >
+                                className="text-blue-400 hover:text-blue-300 underline">
                                 {service.contactInfo.website}
                               </a>
                             </div>
@@ -397,10 +388,9 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
           {/* No Results */}
           {filteredServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-20"
-            >
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              className="text-center py-20">
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
               <button
                 onClick={() => {
@@ -408,8 +398,7 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
                   setSelectedCategory('all');
                   setPriceRange([0, 10000]);
                 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
-              >
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
                 Clear Filters
               </button>
             </motion.div>
@@ -431,15 +420,13 @@ const ZionTechGroup2025ComprehensiveShowcase: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-              >
+                className="flex items-center justify-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
                 <Phone className="w-5 h-5" />
                 <span>Call Now: +1 302 464 0950</span>
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
-              >
+                className="flex items-center justify-center space-x-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors">
                 <Mail className="w-5 h-5" />
                 <span>Email Us</span>
               </a>

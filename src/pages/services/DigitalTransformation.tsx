@@ -156,33 +156,27 @@ import { SEO } from '@/components/SEO';
 
 export default function DigitalTransformation() {
   const features = [
-    {
-      icon: Rocket,
+    { icon: Rocket,
       title: 'Strategic Planning',
       description: 'Comprehensive digital transformation roadmap and strategy'
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: 'Technology Integration',
       description: 'Seamless integration of modern technologies and systems'
     },
-    {
-      icon: Building,
+    { icon: Building,
       title: 'Process Optimization',
       description: 'Streamline and automate business processes for efficiency'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Change Management',
       description: 'Guide organizations through digital transformation journey'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Agile Implementation',
       description: 'Rapid deployment with iterative improvement cycles'
     },
-    {
-      icon: Search,
+    { icon: Search,
       title: 'Performance Monitoring',
       description: 'Track transformation progress and measure ROI'
     }
@@ -197,48 +191,39 @@ export default function DigitalTransformation() {
   ];
 
   const services = [
-    {
-      icon: Strategy,
+    { icon: Strategy,
       title: 'Digital Strategy',
       description: 'Comprehensive digital transformation strategy development'
     },
-    {
-      icon: Workflow,
+    { icon: Workflow,
       title: 'Process Automation',
       description: 'Automate manual processes and workflows'
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: 'Cloud Migration',
       description: 'Migrate legacy systems to modern cloud platforms'
     },
-    {
-      icon: Data,
+    { icon: Data,
       title: 'Data Analytics',
       description: 'Implement advanced analytics and business intelligence'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Manufacturing',
+    { industry: 'Manufacturing',
       description: 'Smart factory and Industry 4.0 transformation'
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       description: 'Digital health records and telemedicine solutions'
     },
-    {
-      industry: 'Financial Services',
+    { industry: 'Financial Services',
       description: 'Digital banking and fintech innovation'
     },
-    {
-      industry: 'Retail',
+    { industry: 'Retail',
       description: 'E-commerce and omnichannel retail transformation'
     }
   ];
-  const contactInfo = {
-    phone: "+1 302 464 0950",
+  const contactInfo = { phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008, Middletown DE 19709"
   };
@@ -262,9 +247,8 @@ export default function DigitalTransformation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full text-orange-400 text-sm font-medium mb-6">
               <Zap className="w-4 h-4 mr-2" />
               Digital Transformation Solutions
@@ -300,9 +284,8 @@ export default function DigitalTransformation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Digital Transformation Features
             </h2>
@@ -319,8 +302,7 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -338,9 +320,8 @@ export default function DigitalTransformation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Transformation Services
             </h2>
@@ -357,8 +338,7 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -379,9 +359,8 @@ export default function DigitalTransformation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Transformation Benefits
             </h2>
@@ -398,8 +377,7 @@ export default function DigitalTransformation() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -412,8 +390,7 @@ export default function DigitalTransformation() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -429,9 +406,8 @@ export default function DigitalTransformation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -448,8 +424,7 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -466,7 +441,7 @@ export default function DigitalTransformation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your Digital Transformation Today

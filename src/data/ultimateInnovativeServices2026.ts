@@ -17,18 +17,17 @@ export interface UltimateInnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
   uniqueValue?: string;
@@ -36,8 +35,7 @@ export interface UltimateInnovativeService {
 
 export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   // Quantum AI Services
-  {
-    id: "quantum-ai-optimization-platform",
+  { id: "quantum-ai-optimization-platform",
     title: "Quantum AI Optimization Platform",
     description: "Revolutionary platform combining quantum computing with AI to solve complex optimization problems in logistics, finance, and manufacturing that are impossible for classical computers.",
     category: "Quantum AI",
@@ -84,13 +82,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$15,999 - $49,999/month",
     roi: "500-2000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Qiskit", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Qiskit", "TensorFlow", "Python", "React", "Node.js", "PostgreSQL"],
       integrations: ["AWS Braket", "IBM Quantum", "Azure Quantum", "Google Quantum AI"],
       apiEndpoints: 200,
       uptime: "99.99%",
@@ -102,8 +98,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Neuromorphic Computing Services
-  {
-    id: "neuromorphic-ai-brain-simulation",
+  { id: "neuromorphic-ai-brain-simulation",
     title: "Neuromorphic AI Brain Simulation Platform",
     description: "Advanced neuromorphic computing platform that simulates human brain functions for AI applications, enabling more efficient and human-like AI systems.",
     category: "Neuromorphic AI",
@@ -150,13 +145,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$8,999 - $25,000/month",
     roi: "300-800%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Intel Loihi", "BrainChip Akida", "Python", "C++", "CUDA", "TensorFlow"],
+    technicalSpecs: { technology: ["Intel Loihi", "BrainChip Akida", "Python", "C++", "CUDA", "TensorFlow"],
       integrations: ["Intel Neuromorphic", "BrainChip", "NVIDIA", "AMD"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -168,8 +161,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Synthetic Biology AI Services
-  {
-    id: "synthetic-biology-ai-design-platform",
+  { id: "synthetic-biology-ai-design-platform",
     title: "Synthetic Biology AI Design Platform",
     description: "Revolutionary AI platform for designing synthetic biological systems, enabling rapid development of bio-based solutions for medicine, agriculture, and materials.",
     category: "Synthetic Biology",
@@ -216,13 +208,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$12,999 - $35,000/month",
     roi: "400-1200%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AlphaFold", "Rosetta", "Python", "BioPython", "React", "Node.js"],
+    technicalSpecs: { technology: ["AlphaFold", "Rosetta", "Python", "BioPython", "React", "Node.js"],
       integrations: ["NCBI", "PDB", "UniProt", "GeneBank"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -234,8 +224,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Space Technology AI Services
-  {
-    id: "space-ai-autonomous-systems",
+  { id: "space-ai-autonomous-systems",
     title: "Space AI Autonomous Systems Platform",
     description: "Advanced AI platform for autonomous space operations, including satellite management, space debris tracking, and autonomous spacecraft navigation.",
     category: "Space Technology",
@@ -282,13 +271,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$19,999 - $75,000/month",
     roi: "600-2000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "ROS", "TensorFlow", "CUDA", "React", "Node.js"],
+    technicalSpecs: { technology: ["Python", "ROS", "TensorFlow", "CUDA", "React", "Node.js"],
       integrations: ["NASA APIs", "ESA systems", "SpaceX", "OneWeb"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -300,8 +287,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Advanced Materials AI Services
-  {
-    id: "advanced-materials-ai-discovery",
+  { id: "advanced-materials-ai-discovery",
     title: "Advanced Materials AI Discovery Platform",
     description: "Revolutionary AI platform for discovering and designing advanced materials with specific properties for aerospace, electronics, energy, and medical applications.",
     category: "Advanced Materials",
@@ -348,13 +334,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$14,999 - $45,000/month",
     roi: "500-1500%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["VASP", "Quantum ESPRESSO", "Python", "TensorFlow", "React", "Node.js"],
+    technicalSpecs: { technology: ["VASP", "Quantum ESPRESSO", "Python", "TensorFlow", "React", "Node.js"],
       integrations: ["Materials Project", "AFLOW", "NOMAD", "Crystallography databases"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -366,8 +350,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Brain-Computer Interface AI Services
-  {
-    id: "brain-computer-interface-ai",
+  { id: "brain-computer-interface-ai",
     title: "Brain-Computer Interface AI Platform",
     description: "Advanced AI platform for brain-computer interfaces, enabling direct communication between the human brain and computers for medical, gaming, and productivity applications.",
     category: "Brain-Computer Interface",
@@ -414,13 +397,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$24,999 - $100,000/month",
     roi: "800-3000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "Signal processing"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "Signal processing"],
       integrations: ["EEG devices", "fNIRS", "Medical devices", "Gaming platforms"],
       apiEndpoints: 400,
       uptime: "99.99%",
@@ -432,8 +413,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Digital Twin AI Services
-  {
-    id: "digital-twin-ai-platform",
+  { id: "digital-twin-ai-platform",
     title: "Digital Twin AI Platform",
     description: "Comprehensive AI platform for creating and managing digital twins of physical systems, enabling real-time monitoring, prediction, and optimization across industries.",
     category: "Digital Twin",
@@ -480,13 +460,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$17,999 - $60,000/month",
     roi: "400-1200%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Unity3D", "Unreal Engine", "Python", "TensorFlow", "React", "Node.js"],
+    technicalSpecs: { technology: ["Unity3D", "Unreal Engine", "Python", "TensorFlow", "React", "Node.js"],
       integrations: ["IoT platforms", "SCADA systems", "ERP systems", "Cloud platforms"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -498,8 +476,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Extended Reality AI Services
-  {
-    id: "extended-reality-ai-platform",
+  { id: "extended-reality-ai-platform",
     title: "Extended Reality AI Platform",
     description: "Advanced AI platform for creating immersive extended reality experiences, combining VR, AR, and MR with intelligent content generation and user interaction.",
     category: "Extended Reality",
@@ -546,13 +523,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$15,999 - $50,000/month",
     roi: "500-1500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Unity3D", "Unreal Engine", "Python", "TensorFlow", "React", "WebXR"],
+    technicalSpecs: { technology: ["Unity3D", "Unreal Engine", "Python", "TensorFlow", "React", "WebXR"],
       integrations: ["VR headsets", "AR glasses", "Mobile devices", "Cloud platforms"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -564,8 +539,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Edge AI Services
-  {
-    id: "edge-ai-intelligence-platform",
+  { id: "edge-ai-intelligence-platform",
     title: "Edge AI Intelligence Platform",
     description: "Revolutionary edge AI platform that brings artificial intelligence to the edge of networks, enabling real-time processing and decision-making without cloud dependency.",
     category: "Edge AI",
@@ -612,13 +586,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$11,999 - $40,000/month",
     roi: "400-1200%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow Lite", "ONNX Runtime", "Python", "C++", "React", "Node.js"],
+    technicalSpecs: { technology: ["TensorFlow Lite", "ONNX Runtime", "Python", "C++", "React", "Node.js"],
       integrations: ["IoT platforms", "Edge devices", "Cloud platforms", "5G networks"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -630,8 +602,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Federated Learning AI Services
-  {
-    id: "federated-learning-ai-platform",
+  { id: "federated-learning-ai-platform",
     title: "Federated Learning AI Platform",
     description: "Advanced AI platform that enables collaborative machine learning across distributed data sources while maintaining data privacy and security.",
     category: "Federated Learning",
@@ -678,13 +649,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$13,999 - $45,000/month",
     roi: "500-1500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["PySyft", "TensorFlow Federated", "Python", "React", "Node.js", "Blockchain"],
+    technicalSpecs: { technology: ["PySyft", "TensorFlow Federated", "Python", "React", "Node.js", "Blockchain"],
       integrations: ["Cloud platforms", "Data sources", "ML frameworks", "Security tools"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -696,8 +665,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
   },
 
   // Sustainable Technology AI Services
-  {
-    id: "sustainable-tech-ai-platform",
+  { id: "sustainable-tech-ai-platform",
     title: "Sustainable Technology AI Platform",
     description: "Comprehensive AI platform for developing and optimizing sustainable technologies, including renewable energy, green manufacturing, and environmental monitoring.",
     category: "Sustainable Technology",
@@ -744,13 +712,11 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2026: UltimateInnovativeService[] = [
     marketPrice: "$9,999 - $35,000/month",
     roi: "300-800%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "IoT platforms", "Blockchain"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "IoT platforms", "Blockchain"],
       integrations: ["Energy management systems", "IoT sensors", "ERP systems", "Sustainability platforms"],
       apiEndpoints: 150,
       uptime: "99.9%",

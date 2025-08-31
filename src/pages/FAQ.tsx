@@ -7,7 +7,7 @@ interface FAQItem {
   question: string;
   answer: string;
   category: string;
-}
+    }
 
 const FAQ: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -16,72 +16,59 @@ const FAQ: React.FC = () => {
 
   const faqData: FAQItem[] = [
     // AI & Machine Learning
-    {
-      question: "What AI services does Zion Tech Group offer?",
+    { question: "What AI services does Zion Tech Group offer?",
       answer: "We offer comprehensive AI services including AI Business Intelligence, AI Content Creation, AI Cybersecurity, AI Financial Analytics, AI Healthcare Analytics, AI HR Platform, AI Marketing Automation, and AI Supply Chain Optimization. Our AI solutions are designed to transform business operations and drive innovation.",
       category: "AI & Machine Learning"
     },
-    {
-      question: "How does AI Business Intelligence work?",
+    { question: "How does AI Business Intelligence work?",
       answer: "Our AI Business Intelligence platform uses advanced machine learning algorithms to analyze your business data, identify patterns, predict trends, and provide actionable insights. It helps you make data-driven decisions and optimize your business performance.",
       category: "AI & Machine Learning"
     },
-    {
-      question: "Can AI replace human employees?",
+    { question: "Can AI replace human employees?",
       answer: "No, our AI solutions are designed to augment human capabilities, not replace them. We focus on AI that enhances productivity, automates repetitive tasks, and provides insights that help humans make better decisions.",
       category: "AI & Machine Learning"
     },
     // Cloud & Infrastructure
-    {
-      question: "What cloud services do you provide?",
+    { question: "What cloud services do you provide?",
       answer: "We offer comprehensive cloud services including Cloud DevOps, IT Infrastructure management, Digital Twin platforms, IoT Edge Computing, and Data Analytics solutions. Our cloud services help businesses scale efficiently and reduce infrastructure costs.",
       category: "Cloud & Infrastructure"
     },
-    {
-      question: "How do you ensure cloud security?",
+    { question: "How do you ensure cloud security?",
       answer: "We implement enterprise-grade security measures including Zero Trust Network Access, Security Headers & CSP, DSR Privacy Portal, and AI-powered cybersecurity solutions. We follow industry best practices and compliance standards.",
       category: "Cloud & Infrastructure"
     },
     // Security & Compliance
-    {
-      question: "What cybersecurity services do you offer?",
+    { question: "What cybersecurity services do you offer?",
       answer: "Our cybersecurity portfolio includes AI Cybersecurity Suite, Zero Trust Network Access, Security Headers & CSP, DSR Privacy Portal, and threat intelligence solutions. We help businesses protect against evolving cyber threats.",
       category: "Security & Compliance"
     },
-    {
-      question: "How do you handle data privacy compliance?",
+    { question: "How do you handle data privacy compliance?",
       answer: "We provide comprehensive data privacy solutions including GDPR/CCPA compliance through our DSR Portal, data governance platforms, and privacy-by-design architecture. We ensure your business meets all regulatory requirements.",
       category: "Security & Compliance"
     },
     // Micro SaaS Solutions
-    {
-      question: "What are Micro SaaS solutions?",
+    { question: "What are Micro SaaS solutions?",
       answer: "Our Micro SaaS solutions are focused, AI-powered applications that solve specific business problems with transparent pricing. These include Micro CRM, Helpdesk Platform, Website Analytics, and other specialized tools.",
       category: "Micro SaaS Solutions"
     },
-    {
-      question: "How much do your Micro SaaS solutions cost?",
+    { question: "How much do your Micro SaaS solutions cost?",
       answer: "We offer transparent, affordable pricing for all our Micro SaaS solutions. Most solutions start at $29/month with enterprise plans available. Contact us for detailed pricing information tailored to your needs.",
       category: "Micro SaaS Solutions"
     },
     // General Services
-    {
-      question: "Do you provide custom development services?",
+    { question: "Do you provide custom development services?",
       answer: "Yes, we offer custom development services tailored to your specific business requirements. Our team of experts can build custom AI solutions, web applications, mobile apps, and enterprise software systems.",
       category: "General Services"
     },
-    {
-      question: "What industries do you serve?",
+    { question: "What industries do you serve?",
       answer: "We serve multiple industries including healthcare, finance, manufacturing, retail, government, and startups. Our solutions are designed to be industry-agnostic while addressing specific sector challenges.",
       category: "General Services"
     },
-    {
-      question: "How do I get started with Zion Tech Group?",
+    { question: "How do I get started with Zion Tech Group?",
       answer: "Getting started is easy! You can schedule a free consultation, request a quote, or contact our sales team. We'll assess your needs and recommend the best solutions for your business.",
       category: "General Services"
     },
-    {
-      question: "Do you provide training and support?",
+    { question: "Do you provide training and support?",
       answer: "Yes, we provide comprehensive training, documentation, and ongoing support for all our solutions. We also offer community forums, webinars, and professional development programs.",
       category: "General Services"
     }
@@ -115,9 +102,8 @@ const FAQ: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
@@ -152,8 +138,7 @@ const FAQ: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 {categories.map((category) => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
@@ -172,12 +157,10 @@ const FAQ: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden"
-            >
+              className="bg-white/10 backdrop-blur-lg rounded-2xl overflow-hidden">
               <button
                 onClick={() => toggleItem(index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/20 transition-colors"
-              >
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-white/20 transition-colors">
                 <div className="flex items-start space-x-4">
                   <HelpCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <div>
@@ -199,9 +182,8 @@ const FAQ: React.FC = () => {
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                  className="px-6 pb-4"
-                >
+                  transition={{ duration: 0.3     }}
+                  className="px-6 pb-4">
                   <div className="pl-10">
                     <p className="text-gray-300 leading-relaxed">{item.answer}</p>
                   </div>
@@ -235,15 +217,13 @@ const FAQ: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">
               <MessageCircle className="w-5 h-5 mr-2" />
               Contact Us
             </Link>
             <Link
               to="/schedule-demo"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors">
               <Phone className="w-5 h-5 mr-2" />
               Schedule Demo
             </Link>

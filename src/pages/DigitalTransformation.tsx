@@ -31,43 +31,37 @@ const DigitalTransformation = () => {
   const [selectedPhase, setSelectedPhase] = useState(0);
 
   const transformationServices = [
-    {
-      title: "Strategy & Planning",
+    { title: "Strategy & Planning",
       description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
       icon: Rocket,
       features: ["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
       color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Process Automation",
+    { title: "Process Automation",
       description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
       icon: Zap,
       features: ["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      title: "Technology Modernization",
+    { title: "Technology Modernization",
       description: "Legacy system modernization and cloud-native architecture implementation.",
       icon: Cpu,
       features: ["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
       color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Data & Analytics",
+    { title: "Data & Analytics",
       description: "Data-driven insights and business intelligence solutions for informed decision-making.",
       icon: Database,
       features: ["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
       color: "from-orange-500 to-red-500"
     },
-    {
-      title: "Customer Experience",
+    { title: "Customer Experience",
       description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
       icon: Users,
       features: ["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
       color: "from-indigo-500 to-purple-500"
     },
-    {
-      title: "Security & Compliance",
+    { title: "Security & Compliance",
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
       icon: Shield,
       features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
@@ -76,8 +70,7 @@ const DigitalTransformation = () => {
   ];
 
   const transformationPhases = [
-    {
-      phase: "01",
+    { phase: "01",
       title: "Discovery & Assessment",
       description: "Evaluate current state, identify opportunities, and assess digital maturity",
       duration: "2-4 weeks",
@@ -89,8 +82,7 @@ const DigitalTransformation = () => {
         "Gap analysis"
       ]
     },
-    {
-      phase: "02",
+    { phase: "02",
       title: "Strategy Development",
       description: "Create comprehensive digital transformation roadmap and business case",
       duration: "4-6 weeks",
@@ -102,8 +94,7 @@ const DigitalTransformation = () => {
         "Risk assessment"
       ]
     },
-    {
-      phase: "03",
+    { phase: "03",
       title: "Pilot & Validation",
       description: "Implement proof-of-concept and validate approach with stakeholders",
       duration: "6-8 weeks",
@@ -115,8 +106,7 @@ const DigitalTransformation = () => {
         "Feedback collection"
       ]
     },
-    {
-      phase: "04",
+    { phase: "04",
       title: "Full Implementation",
       description: "Execute transformation plan with phased rollout and continuous optimization",
       duration: "6-18 months",
@@ -131,20 +121,17 @@ const DigitalTransformation = () => {
   ];
 
   const testimonials = [
-    {
-      content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
+    { content: "Zion's digital transformation approach was game-changing. They didn't just implement technology - they transformed our entire business model.",
       name: "Carlos Rodriguez",
       role: "CEO, InnovateCorp",
       rating: 5
     },
-    {
-      content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
+    { content: "The process automation they implemented saved us 40 hours per week and improved our customer satisfaction scores significantly.",
       name: "Lisa Chang",
       role: "COO, TechFlow Solutions",
       rating: 5
     },
-    {
-      content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",
+    { content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
       name: "Marcus Johnson",
       role: "CTO, DigitalFirst Inc",
       rating: 5
@@ -206,8 +193,7 @@ const DigitalTransformation = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
                 <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
               </motion.div>
@@ -236,8 +222,7 @@ const DigitalTransformation = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -283,8 +268,7 @@ const DigitalTransformation = () => {
                   className={`relative bg-zion-blue-dark/50 backdrop-blur-sm border rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer ${
                     selectedPhase === index ? 'border-zion-cyan' : 'border-zion-cyan/20'
                   }`}
-                  onClick={() => setSelectedPhase(index)}
-                >
+                  onClick={() => setSelectedPhase(index)}>
                   {/* Phase Number */}
                   <div className="absolute -top-4 left-6">
                     <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-sm">
@@ -306,9 +290,8 @@ const DigitalTransformation = () => {
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
-                        transition={{ duration: 0.3 }}
-                        className="space-y-2"
-                      >
+                        transition={{ duration: 0.3     }}
+                        className="space-y-2">
                         <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities:</div>
                         {phase.activities.map((activity, activityIndex) => (
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
@@ -345,8 +328,7 @@ const DigitalTransformation = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-zion-cyan fill-current" />

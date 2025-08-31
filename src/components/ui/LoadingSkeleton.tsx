@@ -22,11 +22,9 @@ export function Skeleton({
     return (
       <motion.div
         className={`${baseClasses} ${className}`}
-        animate={{
-          opacity: [0.5, 1, 0.5],
+        animate={{ opacity: [0.5, 1, 0.5],
         }}
-        transition={{
-          duration: 1.5,
+        transition={{ duration: 1.5,
           repeat: Infinity,
           ease: "easeInOut"
         }}
@@ -68,7 +66,7 @@ export function CardSkeleton({
       
       <div className="space-y-3">
         <Skeleton className="h-6 w-3/4" />
-        {Array.from({ length: lines }).map((_, index) => (
+        {Array.from({ length: lines     }).map((_, index) => (
           <Skeleton 
             key={index} 
             className={`h-4 ${index === lines - 1 ? 'w-2/3' : 'w-full'}`} 
@@ -95,7 +93,7 @@ export function TableSkeleton({
       {/* Header */}
       <div className="bg-gray-50 dark:bg-gray-700 px-6 py-4 border-b border-gray-200 dark:border-gray-600">
         <div className="flex space-x-4">
-          {Array.from({ length: columns }).map((_, index) => (
+          {Array.from({ length: columns     }).map((_, index) => (
             <Skeleton key={index} className="h-4 flex-1" />
           ))}
         </div>
@@ -103,10 +101,10 @@ export function TableSkeleton({
       
       {/* Rows */}
       <div className="divide-y divide-gray-200 dark:divide-gray-600">
-        {Array.from({ length: rows }).map((_, rowIndex) => (
+        {Array.from({ length: rows     }).map((_, rowIndex) => (
           <div key={rowIndex} className="px-6 py-4">
             <div className="flex space-x-4">
-              {Array.from({ length: columns }).map((_, colIndex) => (
+              {Array.from({ length: columns     }).map((_, colIndex) => (
                 <Skeleton 
                   key={colIndex} 
                   className={`h-4 ${colIndex === 0 ? 'w-1/3' : 'flex-1'}`} 
@@ -133,7 +131,7 @@ export function ListSkeleton({
 }: ListSkeletonProps) {
   return (
     <div className={`space-y-4 ${className}`}>
-      {Array.from({ length: items }).map((_, index) => (
+      {Array.from({ length: items     }).map((_, index) => (
         <div key={index} className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
           {showAvatar && (
             <Skeleton className="w-12 h-12 rounded-full flex-shrink-0" />
@@ -163,7 +161,7 @@ export function GridSkeleton({
 }: GridSkeletonProps) {
   return (
     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-${columns} gap-6 ${className}`}>
-      {Array.from({ length: items }).map((_, index) => (
+      {Array.from({ length: items     }).map((_, index) => (
         <CardSkeleton 
           key={index} 
           lines={3} 

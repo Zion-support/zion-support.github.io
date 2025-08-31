@@ -34,38 +34,32 @@ import {
 
 const AIAutonomousSupplyChain = () => {
   const features = [
-    {
-      title: "AI Demand Forecasting",
+    { title: "AI Demand Forecasting",
       description: "Machine learning algorithms predict demand with 95% accuracy, optimizing inventory levels and reducing waste",
       icon: Brain,
       color: "from-blue-500 to-indigo-500"
     },
-    {
-      title: "Autonomous Route Optimization",
+    { title: "Autonomous Route Optimization",
       description: "AI-powered logistics optimization reduces delivery times by 30% and fuel costs by 25%",
       icon: Route,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Real-time Inventory Management",
+    { title: "Real-time Inventory Management",
       description: "IoT sensors and AI analytics provide real-time visibility across all warehouses and distribution centers",
       icon: Warehouse,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Predictive Maintenance",
+    { title: "Predictive Maintenance",
       description: "AI monitors equipment health and predicts failures before they occur, reducing downtime by 40%",
       icon: AlertTriangle,
       color: "from-red-500 to-orange-500"
     },
-    {
-      title: "Supplier Risk Assessment",
+    { title: "Supplier Risk Assessment",
       description: "AI analyzes supplier performance, financial health, and geopolitical risks in real-time",
       icon: Shield,
       color: "from-yellow-500 to-orange-500"
     },
-    {
-      title: "End-to-End Visibility",
+    { title: "End-to-End Visibility",
       description: "Complete transparency across the entire supply chain from raw materials to final delivery",
       icon: Eye,
       color: "from-cyan-500 to-blue-500"
@@ -73,8 +67,7 @@ const AIAutonomousSupplyChain = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$1,999",
       period: "/month",
       description: "Perfect for small to medium businesses",
@@ -88,8 +81,7 @@ const AIAutonomousSupplyChain = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$4,999",
       period: "/month",
       description: "Ideal for growing enterprises",
@@ -104,8 +96,7 @@ const AIAutonomousSupplyChain = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$12,999",
       period: "/month",
       description: "For large corporations and global operations",
@@ -123,49 +114,41 @@ const AIAutonomousSupplyChain = () => {
   ];
 
   const benefits = [
-    {
-      title: "Cost Reduction",
+    { title: "Cost Reduction",
       description: "Optimize operations and reduce supply chain costs significantly",
       metric: "25-40% savings"
     },
-    {
-      title: "Improved Efficiency",
+    { title: "Improved Efficiency",
       description: "Streamline processes and increase productivity across operations",
       metric: "35% efficiency gain"
     },
-    {
-      title: "Better Customer Service",
+    { title: "Better Customer Service",
       description: "Faster delivery times and improved order accuracy",
       metric: "50% faster delivery"
     },
-    {
-      title: "Risk Mitigation",
+    { title: "Risk Mitigation",
       description: "Identify and prevent supply chain disruptions proactively",
       metric: "80% risk reduction"
     }
   ];
 
   const useCases = [
-    {
-      title: "Manufacturing",
+    { title: "Manufacturing",
       description: "Optimize production schedules, manage raw materials, and coordinate with suppliers",
       icon: Package,
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      title: "Retail & E-commerce",
+    { title: "Retail & E-commerce",
       description: "Manage inventory across multiple locations, optimize fulfillment, and improve customer experience",
       icon: ShoppingCart,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Healthcare",
+    { title: "Healthcare",
       description: "Ensure critical medical supplies are always available and properly distributed",
       icon: Heart,
       color: "from-red-500 to-pink-500"
     },
-    {
-      title: "Food & Beverage",
+    { title: "Food & Beverage",
       description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",
       icon: Leaf,
       color: "from-green-500 to-emerald-500"
@@ -181,7 +164,7 @@ const AIAutonomousSupplyChain = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="flex items-center justify-center mb-6">
               <Truck className="w-12 h-12 text-blue-400 mr-3" />
@@ -196,15 +179,13 @@ const AIAutonomousSupplyChain = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
                 Optimize Supply Chain
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#demo"
-                className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Watch Demo
               </a>
             </div>
@@ -218,10 +199,9 @@ const AIAutonomousSupplyChain = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Intelligent Supply Chain Solutions
             </h2>
@@ -238,9 +218,8 @@ const AIAutonomousSupplyChain = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                viewport={{ once: true     }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -258,10 +237,9 @@ const AIAutonomousSupplyChain = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industry Solutions
             </h2>
@@ -277,9 +255,8 @@ const AIAutonomousSupplyChain = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className={`w-20 h-20 bg-gradient-to-r ${useCase.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <useCase.icon className="w-10 h-10 text-white" />
                 </div>
@@ -297,10 +274,9 @@ const AIAutonomousSupplyChain = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Proven Results & Benefits
             </h2>
@@ -316,9 +292,8 @@ const AIAutonomousSupplyChain = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-4">{benefit.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
@@ -334,10 +309,9 @@ const AIAutonomousSupplyChain = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Competitive Pricing Plans
             </h2>
@@ -353,7 +327,7 @@ const AIAutonomousSupplyChain = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
                   plan.popular 
                     ? 'border-blue-400 shadow-2xl shadow-blue-500/20' 
@@ -408,8 +382,8 @@ const AIAutonomousSupplyChain = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Optimize Your Supply Chain?
@@ -420,15 +394,13 @@ const AIAutonomousSupplyChain = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now
               </a>

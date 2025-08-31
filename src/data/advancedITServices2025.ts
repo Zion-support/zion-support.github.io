@@ -17,19 +17,18 @@ export interface AdvancedITService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
-  technicalSpecs: {
-    technology: string[];
+    website: string
+    address: string
+      };
+  technicalSpecs: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors: string[];
   marketSize: string;
   growthRate: string;
@@ -40,8 +39,7 @@ export interface AdvancedITService {
 
 export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   // AI-Powered IT Infrastructure Management
-  {
-    id: "ai-it-infrastructure-management",
+  { id: "ai-it-infrastructure-management",
     title: "AI-Powered IT Infrastructure Management",
     description: "Intelligent IT infrastructure management platform that uses AI to automate monitoring, optimization, and maintenance of complex IT environments.",
     category: "AI & Infrastructure",
@@ -88,14 +86,12 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     marketPrice: "$7,999 - $20,000/month",
     roi: "300-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Machine Learning", "Python", "React", "Node.js", "PostgreSQL"],
       integrations: ["AWS", "Azure", "Google Cloud", "VMware", "Kubernetes"],
       apiEndpoints: 400,
       uptime: "99.99%",
@@ -110,8 +106,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   },
 
   // Quantum-Enhanced Cloud Computing
-  {
-    id: "quantum-cloud-computing",
+  { id: "quantum-cloud-computing",
     title: "Quantum-Enhanced Cloud Computing",
     description: "Revolutionary cloud computing platform that integrates quantum computing capabilities for ultra-fast processing, encryption, and data analysis.",
     category: "Quantum & Cloud",
@@ -158,14 +153,12 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     marketPrice: "$15,999 - $45,000/month",
     roi: "500-1000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"],
+    technicalSpecs: { technology: ["Quantum algorithms", "Qiskit", "React", "Python", "PostgreSQL"],
       integrations: ["AWS", "Azure", "Google Cloud", "Quantum simulators", "AI platforms"],
       apiEndpoints: 800,
       uptime: "99.99%",
@@ -180,8 +173,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   },
 
   // Edge Computing & IoT Platform
-  {
-    id: "edge-computing-iot-platform",
+  { id: "edge-computing-iot-platform",
     title: "Edge Computing & IoT Platform",
     description: "Comprehensive edge computing platform that processes data closer to the source, reducing latency and enabling real-time IoT applications.",
     category: "Edge Computing & IoT",
@@ -228,14 +220,12 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     marketPrice: "$4,999 - $15,000/month",
     roi: "250-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"],
+    technicalSpecs: { technology: ["Edge nodes", "IoT protocols", "React", "Python", "MongoDB"],
       integrations: ["IoT devices", "Cloud platforms", "Analytics tools", "Security systems"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -250,8 +240,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   },
 
   // Zero-Trust Security Architecture
-  {
-    id: "zero-trust-security-architecture",
+  { id: "zero-trust-security-architecture",
     title: "Zero-Trust Security Architecture",
     description: "Comprehensive zero-trust security platform that provides continuous verification, micro-segmentation, and advanced threat protection for modern IT environments.",
     category: "Cybersecurity",
@@ -298,14 +287,12 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     marketPrice: "$9,999 - $25,000/month",
     roi: "400-800%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"],
+    technicalSpecs: { technology: ["AI/ML", "Blockchain", "React", "Python", "PostgreSQL"],
       integrations: ["SIEM", "IAM", "Firewalls", "EDR", "Cloud platforms"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -320,8 +307,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   },
 
   // AI-Powered DevOps Automation
-  {
-    id: "ai-devops-automation",
+  { id: "ai-devops-automation",
     title: "AI-Powered DevOps Automation",
     description: "Intelligent DevOps platform that uses AI to automate software development, testing, deployment, and monitoring processes.",
     category: "AI & DevOps",
@@ -368,14 +354,12 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     marketPrice: "$6,499 - $18,000/month",
     roi: "300-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Docker", "Kubernetes", "React", "Python"],
+    technicalSpecs: { technology: ["Machine Learning", "Docker", "Kubernetes", "React", "Python"],
       integrations: ["GitHub", "Jenkins", "Docker Hub", "AWS", "Azure"],
       apiEndpoints: 350,
       uptime: "99.9%",
@@ -390,8 +374,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   },
 
   // Blockchain-Based Identity Management
-  {
-    id: "blockchain-identity-management",
+  { id: "blockchain-identity-management",
     title: "Blockchain-Based Identity Management",
     description: "Decentralized identity management platform using blockchain technology for secure, verifiable, and self-sovereign digital identities.",
     category: "Blockchain & Identity",
@@ -438,14 +421,12 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     marketPrice: "$3,999 - $12,000/month",
     roi: "250-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["Ethereum", "Hyperledger", "React", "Node.js", "MongoDB"],
       integrations: ["SSO systems", "CRM platforms", "Banking systems", "Government databases"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -460,8 +441,7 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
   },
 
   // Quantum-Enhanced Data Analytics
-  {
-    id: "quantum-data-analytics",
+  { id: "quantum-data-analytics",
     title: "Quantum-Enhanced Data Analytics",
     description: "Advanced data analytics platform that leverages quantum computing for ultra-fast data processing, pattern recognition, and predictive modeling.",
     category: "Quantum & Analytics",
@@ -508,14 +488,12 @@ export const ADVANCED_IT_SERVICES_2025: AdvancedITService[] = [
     marketPrice: "$11,999 - $30,000/month",
     roi: "400-800%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"],
+    technicalSpecs: { technology: ["Quantum algorithms", "Qiskit", "Python", "React", "PostgreSQL"],
       integrations: ["Data warehouses", "Cloud platforms", "BI tools", "AI platforms"],
       apiEndpoints: 600,
       uptime: "99.99%",

@@ -22,25 +22,23 @@ export interface HealthcareAIService {
   clinicalValidation: string[];
   useCases: string[];
   technologies: string[];
-  contactInfo: {
+  contactInfo: {  
     phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
+    website: string
+    address: string
+      };
 }
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
+const zionContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
 export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "MedAI Diagnostics Pro",
     category: "AI-Powered Medical Diagnostics",
     description: "Advanced AI platform for medical imaging analysis, disease detection, and diagnostic assistance with FDA-cleared algorithms and clinical validation",
@@ -82,8 +80,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
     ],
     technologies: ["Deep Learning", "Computer Vision", "Medical Imaging", "Clinical AI"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "GenomicAI Platform",
     category: "AI-Powered Genomic Analysis",
     description: "Comprehensive genomic analysis platform using AI to identify genetic variants, predict disease risk, and provide personalized medicine insights",
@@ -125,8 +122,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
     ],
     technologies: ["Machine Learning", "Bioinformatics", "Cloud Computing", "Data Analytics"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "HealthTech Analytics Suite",
     category: "Healthcare Data Analytics",
     description: "Comprehensive healthcare analytics platform providing insights into patient outcomes, operational efficiency, and population health management",
@@ -168,8 +164,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
     ],
     technologies: ["Data Analytics", "Machine Learning", "Business Intelligence", "Cloud Computing"]
   },
-  {
-    id: 4,
+  { id: 4,
     name: "TeleMed AI Platform",
     category: "AI-Powered Telemedicine",
     description: "Intelligent telemedicine platform with AI-powered symptom assessment, virtual consultations, and automated follow-up care",
@@ -211,8 +206,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
     ],
     technologies: ["AI/ML", "Video Conferencing", "Mobile Apps", "Cloud Computing"]
   },
-  {
-    id: 5,
+  { id: 5,
     name: "PharmaAI Research Platform",
     category: "AI-Powered Drug Discovery",
     description: "Advanced AI platform for pharmaceutical research, drug discovery, and clinical trial optimization using machine learning and predictive modeling",
@@ -254,8 +248,7 @@ export const specializedHealthcareAIServices2025: HealthcareAIService[] = [
     ],
     technologies: ["Machine Learning", "Molecular Modeling", "Predictive Analytics", "High-Performance Computing"]
   },
-  {
-    id: 6,
+  { id: 6,
     name: "MentalHealth AI Companion",
     category: "AI-Powered Mental Health",
     description: "Intelligent mental health platform providing AI-powered therapy, mood tracking, and crisis intervention with clinical validation and safety protocols",

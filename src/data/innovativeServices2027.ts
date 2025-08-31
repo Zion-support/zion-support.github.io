@@ -15,10 +15,9 @@ export interface InnovativeService2027 {
   reviews: number;
   launchDate: string;
   status: 'active' | 'beta' | 'coming-soon';
-}
+    }
 export const innovativeServices2027: InnovativeService2027[] = [
-  {
-    id: 'quantum-ai-platform',
+  { id: 'quantum-ai-platform',
     name: 'Quantum AI Platform',
     category: 'Quantum AI',
     description: 'Advanced quantum artificial intelligence platform for complex problem solving',
@@ -44,8 +43,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     launchDate: '2027-01-15',
     status: 'active'
   },
-  {
-    id: 'autonomous-ai-system',
+  { id: 'autonomous-ai-system',
     name: 'Autonomous AI System',
     category: 'Autonomous AI',
     description: 'Self-learning and self-optimizing artificial intelligence system',
@@ -71,8 +69,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     launchDate: '2027-02-01',
     status: 'active'
   },
-  {
-    id: 'quantum-finance-platform',
+  { id: 'quantum-finance-platform',
     name: 'Quantum Finance Platform',
     category: 'Quantum Finance',
     description: 'Quantum-powered financial modeling and risk assessment platform',

@@ -152,8 +152,7 @@ import {
 
 const microSAASServices2028 = [
   // AI-Powered Content Creation
-  {
-    id: 'ai-content-creator-pro',
+  { id: 'ai-content-creator-pro',
     name: 'AI Content Creator Pro',
     tagline: 'AI-powered content creation for all platforms',
     price: '$299',
@@ -195,8 +194,7 @@ const microSAASServices2028 = [
   },
 
   // AI Image Generator
-  {
-    id: 'ai-image-generator-plus',
+  { id: 'ai-image-generator-plus',
     name: 'AI Image Generator Plus',
     tagline: 'Professional AI image generation for businesses',
     price: '$199',
@@ -238,8 +236,7 @@ const microSAASServices2028 = [
   },
 
   // AI Video Creator
-  {
-    id: 'ai-video-creator-studio',
+  { id: 'ai-video-creator-studio',
     name: 'AI Video Creator Studio',
     tagline: 'AI-powered video creation and editing platform',
     price: '$399',
@@ -281,8 +278,7 @@ const microSAASServices2028 = [
   },
 
   // AI Code Generator
-  {
-    id: 'ai-code-generator-pro',
+  { id: 'ai-code-generator-pro',
     name: 'AI Code Generator Pro',
     tagline: 'AI-powered code generation and development assistance',
     price: '$499',
@@ -324,8 +320,7 @@ const microSAASServices2028 = [
   },
 
   // AI Design Assistant
-  {
-    id: 'ai-design-assistant',
+  { id: 'ai-design-assistant',
     name: 'AI Design Assistant',
     tagline: 'AI-powered design creation and optimization',
     price: '$249',
@@ -367,8 +362,7 @@ const microSAASServices2028 = [
   },
 
   // AI E-commerce Optimizer
-  {
-    id: 'ai-ecommerce-optimizer',
+  { id: 'ai-ecommerce-optimizer',
     name: 'AI E-commerce Optimizer',
     tagline: 'AI-powered e-commerce optimization and automation',
     price: '$349',
@@ -410,8 +404,7 @@ const microSAASServices2028 = [
   },
 
   // AI Customer Service
-  {
-    id: 'ai-customer-service-pro',
+  { id: 'ai-customer-service-pro',
     name: 'AI Customer Service Pro',
     tagline: 'AI-powered customer support and chatbot platform',
     price: '$199',
@@ -453,8 +446,7 @@ const microSAASServices2028 = [
   },
 
   // AI Analytics Platform
-  {
-    id: 'ai-analytics-platform',
+  { id: 'ai-analytics-platform',
     name: 'AI Analytics Platform',
     tagline: 'AI-powered business intelligence and analytics',
     price: '$299',
@@ -543,25 +535,22 @@ const MicroSAASServices2028: React.FC = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
             Micro SAAS Services 2028
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-          >
+            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Powerful, affordable, and intelligent micro SAAS solutions designed to transform your business operations
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
+            className="flex flex-wrap justify-center gap-4">
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
               🚀 AI-Powered Solutions
             </div>
@@ -584,8 +573,8 @@ const MicroSAASServices2028: React.FC = () => {
               {categories.map((category) => (
                 <motion.button
                   key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                     selectedCategory === category.id
@@ -614,8 +603,7 @@ const MicroSAASServices2028: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50"
-              >
+                className="px-4 py-2 bg-zion-slate/50 border border-zion-slate/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50">
                 <option value="popularity">Most Popular</option>
                 <option value="rating">Highest Rated</option>
                 <option value="price-low">Price: Low to High</option>
@@ -636,8 +624,7 @@ const MicroSAASServices2028: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              >
+                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
@@ -694,8 +681,7 @@ const MicroSAASServices2028: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   to={service.link}
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -725,36 +711,31 @@ const MicroSAASServices2028: React.FC = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
             Ready to Get Started?
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-          >
+            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Contact our team to discuss how our micro SAAS services can transform your business operations
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
               <Phone className="w-5 h-5" />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
             </a>

@@ -4,13 +4,13 @@ export interface UltimateZionService {
   tagline: string;
   description: string;
   category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai';
-  pricing: {
+  pricing: {  
     monthly: string;
     yearly: string;
     enterprise: string;
-    setup: string;
-    marketPrice: string;
-  };
+    setup: string
+    marketPrice: string
+      };
   features: string[];
   benefits: string[];
   technology: string[];
@@ -25,25 +25,22 @@ export interface UltimateZionService {
   icon: string;
   color: string;
   link: string;
-  contactInfo: {
-    mobile: string;
+  contactInfo: { mobile: string;
     email: string;
-    address: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    address: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   marketSize?: string;
   innovationLevel: string;
 }
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = { mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
@@ -51,14 +48,12 @@ const contactInfo = {
 
 export const ultimateZionServices2025: UltimateZionService[] = [
   // QUANTUM COMPUTING & AI SERVICES
-  {
-    id: 'quantum-ai-drug-discovery-platform',
+  { id: 'quantum-ai-drug-discovery-platform',
     name: 'Quantum AI Drug Discovery Platform',
     tagline: 'Revolutionary drug discovery using quantum computing and AI',
     description: 'Next-generation pharmaceutical research platform that combines quantum computing power with advanced AI algorithms to accelerate drug discovery, reduce costs, and improve success rates.',
     category: 'quantum-computing',
-    pricing: {
-      monthly: '$15,000/month',
+    pricing: { monthly: '$15,000/month',
       yearly: '$150,000/year',
       enterprise: 'Custom pricing',
       setup: '$25,000 one-time',
@@ -96,8 +91,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-purple-600 to-pink-700',
     link: '/services/quantum-ai-drug-discovery',
     contactInfo,
-    technicalSpecs: {
-      technology: ['IBM Q', 'Google Quantum', 'Microsoft Azure Quantum', 'TensorFlow', 'PyTorch'],
+    technicalSpecs: { technology: ['IBM Q', 'Google Quantum', 'Microsoft Azure Quantum', 'TensorFlow', 'PyTorch'],
       integrations: ['PubChem API', 'ChEMBL API', 'FDA API', 'Clinical Trial APIs'],
       apiEndpoints: 500,
       uptime: '99.9%',
@@ -107,14 +101,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     innovationLevel: 'Revolutionary'
   },
 
-  {
-    id: 'quantum-financial-trading-system',
+  { id: 'quantum-financial-trading-system',
     name: 'Quantum Financial Trading System',
     tagline: 'Quantum-powered algorithmic trading with AI optimization',
     description: 'Advanced financial trading platform that leverages quantum computing for portfolio optimization, risk assessment, and high-frequency trading with unprecedented speed and accuracy.',
     category: 'quantum-computing',
-    pricing: {
-      monthly: '$25,000/month',
+    pricing: { monthly: '$25,000/month',
       yearly: '$250,000/year',
       enterprise: 'Custom pricing',
       setup: '$50,000 one-time',
@@ -152,8 +144,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-green-600 to-emerald-700',
     link: '/services/quantum-financial-trading',
     contactInfo,
-    technicalSpecs: {
-      technology: ['IBM Q', 'Google Quantum', 'Microsoft Azure Quantum', 'TensorFlow', 'PyTorch'],
+    technicalSpecs: { technology: ['IBM Q', 'Google Quantum', 'Microsoft Azure Quantum', 'TensorFlow', 'PyTorch'],
       integrations: ['Bloomberg API', 'Reuters API', 'Trading APIs', 'Bank APIs', 'Regulatory APIs'],
       apiEndpoints: 1000,
       uptime: '99.99%',
@@ -164,14 +155,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
   },
 
   // BLOCKCHAIN & WEB3 SERVICES
-  {
-    id: 'ai-powered-defi-protocol',
+  { id: 'ai-powered-defi-protocol',
     name: 'AI-Powered DeFi Protocol',
     tagline: 'Intelligent decentralized finance with AI optimization',
     description: 'Next-generation DeFi protocol that uses AI to optimize yield farming, risk management, and portfolio allocation while maintaining decentralization and security.',
     category: 'blockchain-web3',
-    pricing: {
-      monthly: '$5,000/month',
+    pricing: { monthly: '$5,000/month',
       yearly: '$50,000/year',
       enterprise: 'Custom pricing',
       setup: '$10,000 one-time',
@@ -209,8 +198,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-blue-600 to-cyan-700',
     link: '/services/ai-defi-protocol',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Solidity', 'Rust', 'Python', 'TensorFlow', 'PyTorch', 'Web3.js'],
+    technicalSpecs: { technology: ['Solidity', 'Rust', 'Python', 'TensorFlow', 'PyTorch', 'Web3.js'],
       integrations: ['Ethereum RPC', 'Polygon RPC', 'BSC RPC', 'Solana RPC', 'DeFi APIs'],
       apiEndpoints: 300,
       uptime: '99.9%',
@@ -220,14 +208,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     innovationLevel: 'Advanced'
   },
 
-  {
-    id: 'nft-intelligence-platform',
+  { id: 'nft-intelligence-platform',
     name: 'NFT Intelligence Platform',
     tagline: 'AI-powered NFT analytics, valuation, and trading insights',
     description: 'Comprehensive NFT platform that provides real-time analytics, AI-powered valuation models, trading signals, and portfolio management for NFT investors and creators.',
     category: 'blockchain-web3',
-    pricing: {
-      monthly: '$299/month',
+    pricing: { monthly: '$299/month',
       yearly: '$2,999/year',
       enterprise: 'Custom pricing',
       setup: '$599 one-time',
@@ -265,8 +251,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-purple-600 to-violet-700',
     link: '/services/nft-intelligence',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Python', 'TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'Web3.js'],
+    technicalSpecs: { technology: ['Python', 'TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'Web3.js'],
       integrations: ['OpenSea API', 'Rarible API', 'Foundation API', 'Ethereum RPC', 'Polygon RPC'],
       apiEndpoints: 200,
       uptime: '99.9%',
@@ -277,14 +262,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
   },
 
   // SPACE TECH SERVICES
-  {
-    id: 'ai-satellite-constellation-management',
+  { id: 'ai-satellite-constellation-management',
     name: 'AI Satellite Constellation Management',
     tagline: 'Intelligent satellite operations and constellation optimization',
     description: 'Advanced satellite management platform that uses AI to optimize satellite operations, predict maintenance needs, and manage large-scale satellite constellations for maximum efficiency.',
     category: 'space-tech',
-    pricing: {
-      monthly: '$50,000/month',
+    pricing: { monthly: '$50,000/month',
       yearly: '$500,000/year',
       enterprise: 'Custom pricing',
       setup: '$100,000 one-time',
@@ -322,8 +305,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-indigo-600 to-purple-700',
     link: '/services/ai-satellite-management',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Python', 'TensorFlow', 'PyTorch', 'Orbital Mechanics', 'IoT', 'Cloud Computing'],
+    technicalSpecs: { technology: ['Python', 'TensorFlow', 'PyTorch', 'Orbital Mechanics', 'IoT', 'Cloud Computing'],
       integrations: ['Satellite APIs', 'Ground Station APIs', 'Weather APIs', 'Regulatory Systems'],
       apiEndpoints: 150,
       uptime: '99.99%',
@@ -334,14 +316,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
   },
 
   // BIOTECH & AI SERVICES
-  {
-    id: 'ai-biomedical-research-platform',
+  { id: 'ai-biomedical-research-platform',
     name: 'AI Biomedical Research Platform',
     tagline: 'Revolutionary biomedical research using AI and machine learning',
     description: 'Cutting-edge biomedical research platform that accelerates drug discovery, protein folding prediction, and disease understanding through advanced AI algorithms and computational biology.',
     category: 'biotech-ai',
-    pricing: {
-      monthly: '$10,000/month',
+    pricing: { monthly: '$10,000/month',
       yearly: '$100,000/year',
       enterprise: 'Custom pricing',
       setup: '$20,000 one-time',
@@ -379,8 +359,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-red-600 to-pink-700',
     link: '/services/ai-biomedical-research',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Python', 'TensorFlow', 'PyTorch', 'BioPython', 'Cloud Computing', 'HPC'],
+    technicalSpecs: { technology: ['Python', 'TensorFlow', 'PyTorch', 'BioPython', 'Cloud Computing', 'HPC'],
       integrations: ['NCBI API', 'UniProt API', 'PDB API', 'Clinical Trial APIs', 'Research Database APIs'],
       apiEndpoints: 400,
       uptime: '99.9%',
@@ -391,14 +370,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
   },
 
   // EMERGING TECH SERVICES
-  {
-    id: 'brain-computer-interface-platform',
+  { id: 'brain-computer-interface-platform',
     name: 'Brain-Computer Interface Platform',
     tagline: 'Next-generation neural interface technology for human-computer interaction',
     description: 'Revolutionary BCI platform that enables direct communication between the human brain and computers, opening new possibilities for accessibility, gaming, and medical applications.',
     category: 'emerging-tech',
-    pricing: {
-      monthly: '$25,000/month',
+    pricing: { monthly: '$25,000/month',
       yearly: '$250,000/year',
       enterprise: 'Custom pricing',
       setup: '$50,000 one-time',
@@ -436,8 +413,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-purple-600 to-indigo-700',
     link: '/services/brain-computer-interface',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Neural Engineering', 'AI/ML', 'Signal Processing', 'Hardware Integration', 'Software Development'],
+    technicalSpecs: { technology: ['Neural Engineering', 'AI/ML', 'Signal Processing', 'Hardware Integration', 'Software Development'],
       integrations: ['EEG APIs', 'EMG APIs', 'Gaming APIs', 'Medical Device APIs', 'Research APIs'],
       apiEndpoints: 100,
       uptime: '99.9%',
@@ -448,14 +424,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
   },
 
   // MICRO SAAS SERVICES
-  {
-    id: 'ai-autonomous-business-manager',
+  { id: 'ai-autonomous-business-manager',
     name: 'AI Autonomous Business Manager',
     tagline: 'Fully autonomous business operations with AI decision-making',
     description: 'Revolutionary business management platform that uses AI to autonomously run business operations, make decisions, and optimize performance without human intervention.',
     category: 'micro-saas',
-    pricing: {
-      monthly: '$2,500/month',
+    pricing: { monthly: '$2,500/month',
       yearly: '$25,000/year',
       enterprise: 'Custom pricing',
       setup: '$5,000 one-time',
@@ -493,8 +467,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-blue-600 to-cyan-700',
     link: '/services/ai-autonomous-business-manager',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Python', 'TensorFlow', 'PyTorch', 'Business Intelligence', 'Process Automation', 'Cloud Computing'],
+    technicalSpecs: { technology: ['Python', 'TensorFlow', 'PyTorch', 'Business Intelligence', 'Process Automation', 'Cloud Computing'],
       integrations: ['CRM APIs', 'ERP APIs', 'Accounting APIs', 'Marketing APIs', 'Communication APIs'],
       apiEndpoints: 250,
       uptime: '99.9%',
@@ -504,14 +477,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     innovationLevel: 'Revolutionary'
   },
 
-  {
-    id: 'quantum-cybersecurity-suite',
+  { id: 'quantum-cybersecurity-suite',
     name: 'Quantum Cybersecurity Suite',
     tagline: 'Quantum-resistant security with AI threat detection',
     description: 'Next-generation cybersecurity platform that combines quantum-resistant cryptography with AI-powered threat detection to protect against current and future cyber threats.',
     category: 'micro-saas',
-    pricing: {
-      monthly: '$1,500/month',
+    pricing: { monthly: '$1,500/month',
       yearly: '$15,000/year',
       enterprise: 'Custom pricing',
       setup: '$3,000 one-time',
@@ -549,8 +520,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-red-600 to-orange-700',
     link: '/services/quantum-cybersecurity',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Quantum Cryptography', 'AI/ML', 'Zero Trust', 'Behavioral Analytics', 'Threat Intelligence'],
+    technicalSpecs: { technology: ['Quantum Cryptography', 'AI/ML', 'Zero Trust', 'Behavioral Analytics', 'Threat Intelligence'],
       integrations: ['SIEM APIs', 'EDR APIs', 'Firewall APIs', 'Identity APIs', 'Security APIs'],
       apiEndpoints: 200,
       uptime: '99.99%',
@@ -561,14 +531,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
   },
 
   // IT SERVICES
-  {
-    id: 'quantum-cloud-infrastructure',
+  { id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Quantum computing as a service with hybrid cloud integration',
     description: 'Revolutionary cloud infrastructure that provides quantum computing capabilities alongside traditional cloud services, enabling hybrid quantum-classical applications.',
     category: 'it-services',
-    pricing: {
-      monthly: '$10,000/month',
+    pricing: { monthly: '$10,000/month',
       yearly: '$100,000/year',
       enterprise: 'Custom pricing',
       setup: '$20,000 one-time',
@@ -606,8 +574,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-blue-600 to-indigo-700',
     link: '/services/quantum-cloud-infrastructure',
     contactInfo,
-    technicalSpecs: {
-      technology: ['Quantum Computing', 'Cloud Computing', 'Hybrid Workflows', 'Quantum Algorithms', 'Security'],
+    technicalSpecs: { technology: ['Quantum Computing', 'Cloud Computing', 'Hybrid Workflows', 'Quantum Algorithms', 'Security'],
       integrations: ['AWS APIs', 'Azure APIs', 'Google Cloud APIs', 'IBM Cloud APIs', 'Quantum Hardware APIs'],
       apiEndpoints: 150,
       uptime: '99.9%',
@@ -617,14 +584,12 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     innovationLevel: 'Revolutionary'
   },
 
-  {
-    id: 'ai-autonomous-devops-platform',
+  { id: 'ai-autonomous-devops-platform',
     name: 'AI Autonomous DevOps Platform',
     tagline: 'Fully autonomous DevOps with AI-powered automation',
     description: 'Next-generation DevOps platform that uses AI to autonomously manage infrastructure, deploy applications, and optimize performance without human intervention.',
     category: 'it-services',
-    pricing: {
-      monthly: '$3,000/month',
+    pricing: { monthly: '$3,000/month',
       yearly: '$30,000/year',
       enterprise: 'Custom pricing',
       setup: '$6,000 one-time',
@@ -662,8 +627,7 @@ export const ultimateZionServices2025: UltimateZionService[] = [
     color: 'from-green-600 to-emerald-700',
     link: '/services/ai-autonomous-devops',
     contactInfo,
-    technicalSpecs: {
-      technology: ['AI/ML', 'DevOps', 'Infrastructure as Code', 'Automation', 'Cloud Computing'],
+    technicalSpecs: { technology: ['AI/ML', 'DevOps', 'Infrastructure as Code', 'Automation', 'Cloud Computing'],
       integrations: ['AWS APIs', 'Azure APIs', 'Google Cloud APIs', 'Kubernetes APIs', 'Docker APIs'],
       apiEndpoints: 300,
       uptime: '99.9%',

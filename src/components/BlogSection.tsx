@@ -1,17 +1,15 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export function BlogSection(...args: any[]): any {
+export function BlogSection(...args: []):  {
   const blogPosts = [
-    {
-      id: '1',
+    { id: '1',
       title: 'The Future of AI in Technology',
       excerpt: 'Exploring how artificial intelligence is reshaping the technology landscape...',
       date: '2024-01-15',
       readTime: '8 min read'
     },
-    {
-      id: '2',
+    { id: '2',
       title: 'Building Scalable Web Applications',
       excerpt: 'Best practices and architectural patterns for creating scalable web apps...',
       date: '2024-01-10',
@@ -28,7 +26,7 @@ export function BlogSection(...args: any[]): any {
             View all posts →
           </Link>
         </div>
-        <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
           {blogPosts.map((post)  => (
             <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold text-white mb-3">

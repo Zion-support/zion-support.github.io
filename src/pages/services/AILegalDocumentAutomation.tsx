@@ -33,8 +33,7 @@ export default function AILegalDocumentAutomation() {
   ];
 
   const tiers = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$299/mo',
       details: [
         'Up to 50 documents/month',
@@ -44,8 +43,7 @@ export default function AILegalDocumentAutomation() {
         'Basic compliance checking'
       ]
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$799/mo',
       details: [
         'Up to 200 documents/month',
@@ -56,8 +54,7 @@ export default function AILegalDocumentAutomation() {
         'Advanced risk assessment'
       ]
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$1,999/mo',
       details: [
         'Unlimited documents',
@@ -70,8 +67,7 @@ export default function AILegalDocumentAutomation() {
     }
   ];
 
-  const technicalSpecs = {
-    technology: ['GPT-4', 'BERT', 'Python', 'React', 'Node.js', 'PostgreSQL'],
+  const technicalSpecs = { technology: ['GPT-4', 'BERT', 'Python', 'React', 'Node.js', 'PostgreSQL'],
     integrations: ['DocuSign', 'Adobe Sign', 'Salesforce', 'HubSpot', 'Microsoft 365'],
     security: ['SOC 2 Type II', 'GDPR', 'HIPAA', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.9%',

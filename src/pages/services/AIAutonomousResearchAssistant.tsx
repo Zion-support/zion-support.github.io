@@ -36,41 +36,34 @@ import { SEO } from '../../components/SEO';
 
 export default function AIAutonomousResearchAssistant() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "Autonomous Research Discovery",
       description: "AI that independently discovers, analyzes, and synthesizes research from multiple sources"
     },
-    {
-      icon: Search,
+    { icon: Search,
       title: "Intelligent Literature Review",
       description: "Automated systematic literature reviews with comprehensive coverage and analysis"
     },
-    {
-      icon: FileText,
+    { icon: FileText,
       title: "Research Paper Generation",
       description: "AI-powered research paper writing with proper citations and academic standards"
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Trend Analysis & Prediction",
       description: "Identify emerging research trends and predict future research directions"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Multi-Source Data Integration",
       description: "Seamlessly integrate data from academic databases, journals, and research repositories"
     },
-    {
-      icon: Workflow,
+    { icon: Workflow,
       title: "Research Workflow Automation",
       description: "Automate repetitive research tasks and streamline the research process"
     }
   ];
 
   const pricingTiers = [
-    {
-      name: "Research Starter",
+    { name: "Research Starter",
       price: "$299",
       period: "monthly",
       description: "Perfect for individual researchers and small research teams",
@@ -84,8 +77,7 @@ export default function AIAutonomousResearchAssistant() {
       ],
       bestFor: "Individual researchers, graduate students, small research teams"
     },
-    {
-      name: "Research Professional",
+    { name: "Research Professional",
       price: "$799",
       period: "monthly",
       description: "Advanced features for growing research organizations",
@@ -101,8 +93,7 @@ export default function AIAutonomousResearchAssistant() {
       ],
       bestFor: "Research institutions, universities, corporate R&D teams"
     },
-    {
-      name: "Research Enterprise",
+    { name: "Research Enterprise",
       price: "$1,999",
       period: "monthly",
       description: "Full-scale research automation platform for large organizations",
@@ -121,33 +112,27 @@ export default function AIAutonomousResearchAssistant() {
   ];
 
   const useCases = [
-    {
-      title: "Academic Research",
+    { title: "Academic Research",
       description: "Automated literature reviews, research gap analysis, and academic paper generation",
       icon: BookOpen
     },
-    {
-      title: "Market Research",
+    { title: "Market Research",
       description: "Competitive analysis, market trend identification, and industry insights",
       icon: TrendingUp
     },
-    {
-      title: "Scientific Discovery",
+    { title: "Scientific Discovery",
       description: "Cross-disciplinary research connections and hypothesis generation",
       icon: Lightbulb
     },
-    {
-      title: "Patent Research",
+    { title: "Patent Research",
       description: "Patent landscape analysis and prior art research automation",
       icon: Shield
     },
-    {
-      title: "Clinical Research",
+    { title: "Clinical Research",
       description: "Medical literature analysis and clinical trial research automation",
       icon: Eye
     },
-    {
-      title: "Policy Research",
+    { title: "Policy Research",
       description: "Government policy analysis and regulatory research automation",
       icon: Globe
     }
@@ -163,33 +148,27 @@ export default function AIAutonomousResearchAssistant() {
   ];
 
   const researchCapabilities = [
-    {
-      title: "Natural Language Processing",
+    { title: "Natural Language Processing",
       description: "Advanced NLP for understanding complex research documents and generating insights",
       icon: Brain
     },
-    {
-      title: "Machine Learning Analysis",
+    { title: "Machine Learning Analysis",
       description: "ML algorithms for pattern recognition and predictive research analytics",
       icon: Cpu
     },
-    {
-      title: "Semantic Search",
+    { title: "Semantic Search",
       description: "Intelligent search that understands context and meaning, not just keywords",
       icon: Search
     },
-    {
-      title: "Data Visualization",
+    { title: "Data Visualization",
       description: "Interactive charts and graphs for research findings presentation",
       icon: BarChart3
     },
-    {
-      title: "Citation Network Analysis",
-      description: "Map research influence and identify key papers in any field",
+    { title: "Citation Network Analysis",
+      description: "Map research influence and identify key papers in  field",
       icon: GitFork
     },
-    {
-      title: "Research Quality Assessment",
+    { title: "Research Quality Assessment",
       description: "AI-powered evaluation of research methodology and credibility",
       icon: Award
     }
@@ -209,9 +188,8 @@ export default function AIAutonomousResearchAssistant() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+            transition={{ duration: 0.8     }}
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               Revolutionary Research AI Technology
@@ -229,19 +207,16 @@ export default function AIAutonomousResearchAssistant() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
-            >
+              className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
               Start Researching
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="#demo"
-              className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
-            >
+              className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors">
               Request Demo
             </a>
           </motion.div>
@@ -254,10 +229,9 @@ export default function AIAutonomousResearchAssistant() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Revolutionary Research AI Features
             </h2>
@@ -274,9 +248,8 @@ export default function AIAutonomousResearchAssistant() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -294,10 +267,9 @@ export default function AIAutonomousResearchAssistant() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Advanced Research Capabilities
             </h2>
@@ -313,9 +285,8 @@ export default function AIAutonomousResearchAssistant() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <capability.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -333,10 +304,9 @@ export default function AIAutonomousResearchAssistant() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Transparent Research AI Pricing
             </h2>
@@ -353,7 +323,7 @@ export default function AIAutonomousResearchAssistant() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   index === 1 ? 'border-blue-500/50 bg-blue-500/10' : 'border-white/10'
                 } hover:border-blue-500/50 transition-all`}
@@ -407,10 +377,9 @@ export default function AIAutonomousResearchAssistant() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Revolutionary Research Use Cases
             </h2>
@@ -427,9 +396,8 @@ export default function AIAutonomousResearchAssistant() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-blue-400" />
                 </div>
@@ -447,10 +415,9 @@ export default function AIAutonomousResearchAssistant() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Why Choose Our AI Research Assistant?
             </h2>
@@ -467,9 +434,8 @@ export default function AIAutonomousResearchAssistant() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
+                viewport={{ once: true     }}
+                className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                   <CheckCircle className="w-5 h-5 text-blue-400" />
                 </div>
@@ -486,8 +452,8 @@ export default function AIAutonomousResearchAssistant() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Revolutionize Your Research?
@@ -499,15 +465,13 @@ export default function AIAutonomousResearchAssistant() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
                 Start Researching with AI
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 hover:bg-blue-500/20 font-semibold rounded-lg transition-colors">
                 <Phone className="mr-2 w-5 h-5" />
                 Call +1 302 464 0950
               </a>

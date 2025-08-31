@@ -25,10 +25,10 @@ interface Notification {
   message: string;
   timestamp: Date;
   read: boolean;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
+  action?: {  
+    label: string
+    onClick: () => void
+      };
   priority: 'low' | 'medium' | 'high';
   category: string;
   expiresAt?: Date;
@@ -48,8 +48,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
   // Generate sample notifications
   const generateSampleNotifications = useCallback(() => {
     const sampleNotifications: Notification[] = [
-      {
-        id: '1',
+      { id: '1',
         type: 'success',
         title: 'Welcome to Zion Tech Group!',
         message: 'Your account has been successfully created. Explore our AI-powered solutions.',
@@ -57,13 +56,11 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         read: false,
         priority: 'high',
         category: 'onboarding',
-        action: {
-          label: 'Get Started',
+        action: { label: 'Get Started',
           onClick: () => console.log('Get Started clicked')
         }
       },
-      {
-        id: '2',
+      { id: '2',
         type: 'achievement',
         title: 'Performance Milestone Reached!',
         message: 'Your website performance score has improved to 95%. Great job!',
@@ -71,13 +68,11 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         read: false,
         priority: 'medium',
         category: 'performance',
-        action: {
-          label: 'View Details',
+        action: { label: 'View Details',
           onClick: () => console.log('View Details clicked')
         }
       },
-      {
-        id: '3',
+      { id: '3',
         type: 'info',
         title: 'New Feature Available',
         message: 'Try our new AI-powered content generator. Create engaging content in seconds.',
@@ -86,8 +81,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         priority: 'low',
         category: 'features'
       },
-      {
-        id: '4',
+      { id: '4',
         type: 'warning',
         title: 'Security Update Required',
         message: 'Please update your password to maintain account security.',
@@ -95,8 +89,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         read: false,
         priority: 'high',
         category: 'security',
-        action: {
-          label: 'Update Now',
+        action: { label: 'Update Now',
           onClick: () => console.log('Update Now clicked')
         }
       }
@@ -229,18 +222,17 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
       <motion.button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-56 right-4 z-50 p-3 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.1     }}
+        whileTap={{ scale: 0.9     }}
         title="Notifications"
         aria-label="Open notifications"
       >
         <Bell className="w-6 h-6 text-white" />
         {unreadCount > 0 && (
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold"
-          >
+            initial={{ scale: 0     }}
+            animate={{ scale: 1     }}
+            className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs rounded-full flex items-center justify-center font-bold">
             {unreadCount > 9 ? '9+' : unreadCount}
           </motion.div>
         )}
@@ -254,8 +246,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
         initial={{ opacity: 0, x: 300 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 300 }}
-        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 max-h-[90vh] overflow-hidden"
-      >
+        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 max-h-[90vh] overflow-hidden">
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <div className="flex items-center gap-2">
@@ -302,15 +293,13 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="border-b border-gray-200 p-4 bg-gray-50"
-            >
+              className="border-b border-gray-200 p-4 bg-gray-50">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Mark all as read</span>
                   <button
                     onClick={markAllAsRead}
-                    className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors"
-                  >
+                    className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors">
                     Mark All
                   </button>
                 </div>
@@ -319,8 +308,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                   <span className="text-sm text-gray-700">Clear all notifications</span>
                   <button
                     onClick={clearAllNotifications}
-                    className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors"
-                  >
+                    className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors">
                     Clear All
                   </button>
                 </div>
@@ -348,8 +336,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                   className={`p-4 hover:bg-gray-50 transition-colors cursor-pointer border-l-4 ${getPriorityColor(notification.priority)} ${
                     !notification.read ? 'bg-blue-50/50' : ''
                   }`}
-                  onClick={() => markAsRead(notification.id)}
-                >
+                  onClick={() => markAsRead(notification.id)}>
                   <div className="flex items-start gap-3">
                     <div className="flex-shrink-0 mt-0.5">
                       {getNotificationIcon(notification.type)}
@@ -371,8 +358,7 @@ export function SmartNotificationSystem({ enabled = true }: Props) {
                                 e.stopPropagation();
                                 notification.action!.onClick();
                               }}
-                              className="mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium transition-colors"
-                            >
+                              className="mt-2 text-xs text-blue-600 hover:text-blue-800 font-medium transition-colors">
                               {notification.action.label} →
                             </button>
                           )}

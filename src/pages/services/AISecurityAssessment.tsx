@@ -13,18 +13,15 @@ export default function AISecurityAssessment() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$499/mo', 
       details: ['Up to 5 assessments/month', 'Basic AI features', 'Standard assessment', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,299/mo', 
       details: ['Up to 20 assessments/month', 'Advanced AI features', 'Enhanced assessment', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,199/mo', 
       details: ['Unlimited assessments', 'Custom AI models', 'Full assessment suite', '24/7 dedicated support'] 
     },

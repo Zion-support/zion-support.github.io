@@ -35,7 +35,7 @@ import {
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027';
 import { SEO } from '../components/SEO';
 
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+const categoryIcons: { [key: string]: React.ComponentType<> } = {
   'AI & Customer Success': Brain,
   'Blockchain & DeFi': Lock,
   'Quantum Computing': Zap,
@@ -103,9 +103,8 @@ export default function InnovativeServices2027() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               2027 Innovative Services
             </h1>
@@ -115,21 +114,18 @@ export default function InnovativeServices2027() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold shadow-lg"
-              >
+                whileHover={{ scale: 1.05     }}
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full text-white font-semibold shadow-lg">
                 🚀 Cutting-Edge Innovation
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-white font-semibold shadow-lg"
-              >
+                whileHover={{ scale: 1.05     }}
+                className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full text-white font-semibold shadow-lg">
                 💎 Premium Quality
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-white font-semibold shadow-lg"
-              >
+                whileHover={{ scale: 1.05     }}
+                className="px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full text-white font-semibold shadow-lg">
                 🌟 Market Leading ROI
               </motion.div>
             </div>
@@ -146,8 +142,8 @@ export default function InnovativeServices2027() {
               {categories.map((category) => (
                 <motion.button
                   key={category}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                     selectedCategory === category
@@ -171,9 +167,8 @@ export default function InnovativeServices2027() {
               />
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-              >
+                onChange={(e) => setSortBy(e.target.value as )}
+                className="px-4 py-2 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500">
                 <option value="innovation">Sort by Innovation</option>
                 <option value="price">Sort by Price</option>
                 <option value="roi">Sort by ROI</option>
@@ -189,12 +184,11 @@ export default function InnovativeServices2027() {
           <AnimatePresence mode="wait">
             <motion.div
               key={`${selectedCategory}-${searchQuery}-${sortBy}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              exit={{ opacity: 0     }}
+              transition={{ duration: 0.5     }}
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {sortedServices.map((service, index) => (
                 <motion.div
                   key={service.id}
@@ -202,13 +196,11 @@ export default function InnovativeServices2027() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -10, scale: 1.02 }}
-                  className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300"
-                >
+                  className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
                   {/* Service Header */}
                   <div className={`p-6 bg-gradient-to-br ${categoryColors[service.category] || 'from-gray-600 to-gray-700'}`}>
                     <div className="flex items-center justify-between mb-4">
-                      {React.createElement(categoryIcons[service.category] || Star, {
-                        className: "w-8 h-8 text-white",
+                      {React.createElement(categoryIcons[service.category] || Star, { className: "w-8 h-8 text-white",
                         size: 32
                       })}
                       <span className="px-3 py-1 bg-white/20 rounded-full text-sm font-medium text-white">
@@ -275,8 +267,7 @@ export default function InnovativeServices2027() {
                         {service.tags.slice(0, 4).map((tag, idx) => (
                           <span
                             key={idx}
-                            className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-full"
-                          >
+                            className="px-2 py-1 bg-gray-800/50 text-xs text-gray-300 rounded-full">
                             {tag}
                           </span>
                         ))}
@@ -285,11 +276,10 @@ export default function InnovativeServices2027() {
 
                     {/* CTA Button */}
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05     }}
+                      whileTap={{ scale: 0.95     }}
                       className="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg"
-                      onClick={() => window.location.href = '/contact'}
-                    >
+                      onClick={() => window.location.href = '/contact'}>
                       Get Started - Contact Us
                     </motion.button>
 
@@ -320,18 +310,16 @@ export default function InnovativeServices2027() {
           {/* No Results */}
           {sortedServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              className="text-center py-16">
               <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
               <button
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchQuery('');
                 }}
-                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-              >
+                className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
                 View All Services
               </button>
             </motion.div>
@@ -345,8 +333,8 @@ export default function InnovativeServices2027() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Lead the Future?
@@ -357,19 +345,17 @@ export default function InnovativeServices2027() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg text-lg"
-                onClick={() => window.location.href = '/contact'}
-              >
+                onClick={() => window.location.href = '/contact'}>
                 Schedule a Consultation
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
                 className="px-8 py-4 bg-gray-800/50 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-700/50 transition-all duration-300 text-lg"
-                onClick={() => window.location.href = '/pricing'}
-              >
+                onClick={() => window.location.href = '/pricing'}>
                 View Pricing Plans
               </motion.button>
             </div>
@@ -384,10 +370,9 @@ export default function InnovativeServices2027() {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
+              className="text-center">
               <Phone className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
               <p className="text-gray-300">+1 302 464 0950</p>
@@ -395,10 +380,9 @@ export default function InnovativeServices2027() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
+              className="text-center">
               <MessageCircle className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
               <p className="text-gray-300">kleber@ziontechgroup.com</p>
@@ -406,10 +390,9 @@ export default function InnovativeServices2027() {
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
+              className="text-center">
               <Building className="w-12 h-12 text-pink-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>

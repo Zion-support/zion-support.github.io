@@ -33,15 +33,13 @@ export default function PricingGuide() {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
 
-  const currencyRates = {
-    USD: { symbol: '$', rate: 1 },
+  const currencyRates = { USD: { symbol: '$', rate: 1 },
     EUR: { symbol: '€', rate: 0.85 },
     GBP: { symbol: '£', rate: 0.73 }
   };
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       icon: Zap,
       description: "Perfect for small businesses getting started with AI",
       price: { monthly: 299, yearly: 2990 },
@@ -61,8 +59,7 @@ export default function PricingGuide() {
       cta: "Get Started",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       icon: Brain,
       description: "Ideal for growing companies with advanced needs",
       price: { monthly: 799, yearly: 7990 },
@@ -84,8 +81,7 @@ export default function PricingGuide() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       icon: Rocket,
       description: "Full-scale solutions for large organizations",
       price: { monthly: 2499, yearly: 24990 },
@@ -108,8 +104,7 @@ export default function PricingGuide() {
   ];
 
   const servicePricing = [
-    {
-      category: "AI & Machine Learning",
+    { category: "AI & Machine Learning",
       icon: Brain,
       services: [
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },
@@ -118,8 +113,7 @@ export default function PricingGuide() {
         { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
       ]
     },
-    {
-      category: "Cloud & DevOps",
+    { category: "Cloud & DevOps",
       icon: Cloud,
       services: [
         { name: "Cloud DevOps", price: "From $599/month", description: "End-to-end cloud solutions" },
@@ -127,8 +121,7 @@ export default function PricingGuide() {
         { name: "FinOps Advisor", price: "From $499/month", description: "Financial operations consulting" }
       ]
     },
-    {
-      category: "Cybersecurity",
+    { category: "Cybersecurity",
       icon: Shield,
       services: [
         { name: "AI Compliance Copilot", price: "From $399/month", description: "AI-powered security compliance" },
@@ -136,8 +129,7 @@ export default function PricingGuide() {
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
       ]
     },
-    {
-      category: "IT Infrastructure",
+    { category: "IT Infrastructure",
       icon: Cpu,
       services: [
         { name: "IT Infrastructure Management", price: "From $699/month", description: "Enterprise infrastructure management" },
@@ -186,8 +178,7 @@ export default function PricingGuide() {
                 <select
                   value={selectedCurrency}
                   onChange={(e) => setSelectedCurrency(e.target.value)}
-                  className="bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:border-cyan-400"
-                >
+                  className="bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:border-cyan-400">
                   <option value="USD">USD ($)</option>
                   <option value="EUR">EUR (€)</option>
                   <option value="GBP">GBP (£)</option>
@@ -362,15 +353,13 @@ export default function PricingGuide() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Custom Quote
               </Link>
               <Link
                 to="/services-overview"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Services
               </Link>

@@ -50,74 +50,61 @@ import {
 
 export default function AIFinancialPlanning() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI Budget Optimization",
       description: "Intelligent budget allocation and optimization based on spending patterns and financial goals."
     },
-    {
-      icon: Calculator,
+    { icon: Calculator,
       title: "Smart Expense Tracking",
       description: "Automated expense categorization and tracking with AI-powered receipt scanning and analysis."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Goal-Based Planning",
       description: "Personalized financial planning based on your goals, timeline, and risk tolerance."
     },
-    {
-      icon: PieChart,
+    { icon: PieChart,
       title: "Investment Recommendations",
       description: "AI-powered investment suggestions based on market analysis and your financial profile."
     },
-    {
-      icon: AlertCircle,
+    { icon: AlertCircle,
       title: "Financial Health Monitoring",
       description: "Real-time monitoring of your financial health with predictive insights and alerts."
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: "Tax Optimization",
       description: "Intelligent tax planning and optimization to maximize savings and minimize liabilities."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Improved Financial Health",
       description: "Better money management and increased savings through intelligent budgeting and planning."
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: "Cost Savings",
       description: "Identify unnecessary expenses and optimize spending to save money on daily transactions."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Goal Achievement",
       description: "Set and achieve financial goals faster with AI-powered planning and optimization."
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Data Security",
       description: "Bank-level security with encryption and secure data handling for your financial information."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Investment Growth",
       description: "Optimize investment portfolios and maximize returns with AI-driven recommendations."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Savings",
       description: "Automate financial tasks and focus on what matters most with intelligent automation."
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Basic",
+    { name: "Basic",
       price: "$9.99",
       period: "/month",
       description: "Perfect for individuals starting their financial planning journey",
@@ -133,8 +120,7 @@ export default function AIFinancialPlanning() {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Premium",
+    { name: "Premium",
       price: "$24.99",
       period: "/month",
       description: "Ideal for individuals and families with advanced financial planning needs",
@@ -151,8 +137,7 @@ export default function AIFinancialPlanning() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$49.99",
       period: "/month",
       description: "For financial advisors and professionals requiring advanced tools",
@@ -172,103 +157,83 @@ export default function AIFinancialPlanning() {
   ];
 
   const useCases = [
-    {
-      industry: "Personal Finance",
+    { industry: "Personal Finance",
       description: "Manage personal budgets, track expenses, and achieve financial goals with AI assistance",
       icon: Wallet
     },
-    {
-      industry: "Small Business",
+    { industry: "Small Business",
       description: "Optimize business finances, track cash flow, and plan for growth",
       icon: Calculator
     },
-    {
-      industry: "Retirement Planning",
+    { industry: "Retirement Planning",
       description: "Plan for retirement with AI-powered investment strategies and goal tracking",
       icon: PiggyBank
     },
-    {
-      industry: "Debt Management",
+    { industry: "Debt Management",
       description: "Create debt payoff strategies and optimize payment schedules",
       icon: CreditCard
     },
-    {
-      industry: "Tax Planning",
+    { industry: "Tax Planning",
       description: "Optimize tax strategies and maximize deductions throughout the year",
       icon: Receipt
     },
-    {
-      industry: "Investment Management",
+    { industry: "Investment Management",
       description: "Build and manage investment portfolios with AI-driven insights",
       icon: TrendingUp
     }
   ];
 
   const integrations = [
-    {
-      name: "Banking & Credit Cards",
+    { name: "Banking & Credit Cards",
       platforms: ["Chase", "Bank of America", "Wells Fargo", "American Express"]
     },
-    {
-      name: "Investment Platforms",
+    { name: "Investment Platforms",
       platforms: ["Robinhood", "Fidelity", "Vanguard", "Charles Schwab"]
     },
-    {
-      name: "Accounting Software",
+    { name: "Accounting Software",
       platforms: ["QuickBooks", "Xero", "FreshBooks", "Wave"]
     },
-    {
-      name: "Tax Software",
+    { name: "Tax Software",
       platforms: ["TurboTax", "H&R Block", "TaxAct", "Credit Karma Tax"]
     },
-    {
-      name: "Payment Platforms",
+    { name: "Payment Platforms",
       platforms: ["PayPal", "Venmo", "Square", "Stripe"]
     },
-    {
-      name: "Cryptocurrency",
+    { name: "Cryptocurrency",
       platforms: ["Coinbase", "Binance", "Kraken", "Gemini"]
     }
   ];
 
   const keyMetrics = [
-    {
-      metric: "25%",
+    { metric: "25%",
       label: "Savings Increase",
       description: "Average increase in savings for users"
     },
-    {
-      metric: "40%",
+    { metric: "40%",
       label: "Expense Reduction",
       description: "Reduction in unnecessary expenses"
     },
-    {
-      metric: "90%",
+    { metric: "90%",
       label: "Goal Achievement",
       description: "Users achieve their financial goals"
     },
-    {
-      metric: "3x",
+    { metric: "3x",
       label: "Faster Planning",
       description: "Faster financial planning process"
     }
   ];
 
   const planningAreas = [
-    {
-      category: "Budgeting",
+    { category: "Budgeting",
       areas: ["Expense Tracking", "Income Management", "Spending Analysis", "Budget Optimization"]
     },
-    {
-      category: "Investing",
+    { category: "Investing",
       areas: ["Portfolio Analysis", "Risk Assessment", "Asset Allocation", "Market Insights"]
     },
-    {
-      category: "Tax Planning",
+    { category: "Tax Planning",
       areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"]
     },
-    {
-      category: "Goal Planning",
+    { category: "Goal Planning",
       areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"]
     }
   ];
@@ -288,7 +253,7 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">
               <DollarSign className="w-4 h-4 mr-2" />
@@ -328,9 +293,8 @@ export default function AIFinancialPlanning() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-emerald-400 mb-2">
                   {metric.metric}
                 </div>
@@ -352,10 +316,9 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Powerful Features
             </h2>
@@ -371,9 +334,8 @@ export default function AIFinancialPlanning() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -405,10 +367,9 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Planning Areas
             </h2>
@@ -424,9 +385,8 @@ export default function AIFinancialPlanning() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300">
                   {category.category}
                 </h3>
@@ -450,10 +410,9 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Financial Benefits
             </h2>
@@ -469,9 +428,8 @@ export default function AIFinancialPlanning() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -503,10 +461,9 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -522,7 +479,7 @@ export default function AIFinancialPlanning() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-emerald-500/50 bg-gradient-to-br from-emerald-500/10 to-teal-500/10' 
@@ -574,10 +531,9 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Use Cases
             </h2>
@@ -593,9 +549,8 @@ export default function AIFinancialPlanning() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -627,10 +582,9 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
@@ -646,9 +600,8 @@ export default function AIFinancialPlanning() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300">
                   {integration.name}
                 </h3>
@@ -656,8 +609,7 @@ export default function AIFinancialPlanning() {
                   {integration.platforms.map((platform, platformIndex) => (
                     <span
                       key={platformIndex}
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
-                    >
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">
                       {platform}
                     </span>
                   ))}
@@ -674,8 +626,8 @@ export default function AIFinancialPlanning() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Financial Future?

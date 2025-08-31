@@ -36,8 +36,7 @@ import {
 
 const InnovativeServicesHub: React.FC = () => {
   const serviceCategories = [
-    {
-      id: 'ultimate-2025',
+    { id: 'ultimate-2025',
       title: 'Ultimate Innovative Services 2025',
       description: 'Revolutionary micro SAAS, IT, and AI services that push the boundaries of technology',
       icon: Rocket,
@@ -46,8 +45,7 @@ const InnovativeServicesHub: React.FC = () => {
       features: ['AI-Powered Solutions', 'Quantum Computing', 'Blockchain Innovation', 'Edge Computing'],
       stats: { services: 10, avgROI: '500%', innovation: 'Revolutionary' }
     },
-    {
-      id: 'advanced-2026',
+    { id: 'advanced-2026',
       title: 'Advanced Innovative Services 2026',
       description: 'Cutting-edge futuristic technologies including brain-computer interfaces and space mining',
       icon: Brain,
@@ -56,8 +54,7 @@ const InnovativeServicesHub: React.FC = () => {
       features: ['Brain-Computer Interfaces', 'Space Mining', 'Synthetic Biology', 'Fusion Energy'],
       stats: { services: 10, avgROI: '1000%', innovation: 'Futuristic' }
     },
-    {
-      id: 'core-it',
+    { id: 'core-it',
       title: 'Core IT & Infrastructure',
       description: 'Enterprise-grade IT solutions and infrastructure services for modern businesses',
       icon: Server,
@@ -66,8 +63,7 @@ const InnovativeServicesHub: React.FC = () => {
       features: ['Cloud Services', 'Cybersecurity', 'IT Infrastructure', 'Digital Transformation'],
       stats: { services: 15, avgROI: '300%', innovation: 'Enterprise' }
     },
-    {
-      id: 'green-tech',
+    { id: 'green-tech',
       title: 'Green Technology Solutions',
       description: 'Sustainable and eco-friendly technology solutions for a better future',
       icon: Globe,
@@ -79,24 +75,21 @@ const InnovativeServicesHub: React.FC = () => {
   ];
 
   const featuredServices = [
-    {
-      title: 'Quantum AI Neural Networks',
+    { title: 'Quantum AI Neural Networks',
       description: 'Revolutionary AI powered by quantum computing principles',
       category: 'AI & Quantum',
       price: '$50,000',
       roi: '800%',
       delivery: '6 months'
     },
-    {
-      title: 'Brain-Computer Interface Platform',
+    { title: 'Brain-Computer Interface Platform',
       description: 'Direct neural interface for human-computer interaction',
       category: 'Neurotech',
       price: '$100,000',
       roi: '1200%',
       delivery: '12 months'
     },
-    {
-      title: 'Autonomous Space Mining System',
+    { title: 'Autonomous Space Mining System',
       description: 'AI-powered space exploration and resource extraction',
       category: 'Space Tech',
       price: '$500,000',
@@ -105,24 +98,18 @@ const InnovativeServicesHub: React.FC = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
+  const itemVariants = { hidden: { y: 20, opacity: 0 },
+    visible: { y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5
+          }
     }
   };
 
@@ -131,9 +118,9 @@ const InnovativeServicesHub: React.FC = () => {
       {/* Hero Section */}
       <motion.div 
         className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 py-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0     }}
+        animate={{ opacity: 1     }}
+        transition={{ duration: 0.8     }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -273,8 +260,7 @@ const InnovativeServicesHub: React.FC = () => {
                 {/* CTA */}
                 <a
                   href={category.route}
-                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3"
-                >
+                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 group-hover:gap-3">
                   Explore {category.title}
                   <ArrowRight className="w-5 h-5" />
                 </a>
@@ -398,8 +384,7 @@ const InnovativeServicesHub: React.FC = () => {
               href="https://ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25"
-            >
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/25">
               Visit Our Website
               <ExternalLink className="w-5 h-5" />
             </a>

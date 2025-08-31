@@ -11,8 +11,7 @@ import { SEO } from '@/components/SEO';
 
 export default function NewServicesShowcase2025() {
   const newServices = [
-    {
-      name: 'AI Supply Chain Risk Management',
+    { name: 'AI Supply Chain Risk Management',
       description: 'Protect your business from supply chain disruptions with AI-driven risk assessment, real-time monitoring, and predictive analytics.',
       features: ['AI-powered risk assessment', 'Real-time disruption alerts', 'Predictive analytics', 'Multi-tier supplier analysis'],
       pricing: 'Starting at $299/mo',
@@ -21,8 +20,7 @@ export default function NewServicesShowcase2025() {
       icon: Shield,
       path: '/services/ai-supply-chain-risk-management'
     },
-    {
-      name: 'AI ESG Compliance Platform',
+    { name: 'AI ESG Compliance Platform',
       description: 'Streamline your ESG compliance with AI-driven data collection, automated reporting, and real-time sustainability monitoring.',
       features: ['AI-powered data collection', 'Automated compliance reporting', 'Real-time sustainability tracking', 'Carbon footprint optimization'],
       pricing: 'Starting at $399/mo',
@@ -31,8 +29,7 @@ export default function NewServicesShowcase2025() {
       icon: Leaf,
       path: '/services/ai-esg-compliance-platform'
     },
-    {
-      name: 'AI Digital Twin Platform',
+    { name: 'AI Digital Twin Platform',
       description: 'Create intelligent digital replicas of your physical assets with AI-driven monitoring, predictive analytics, and real-time optimization.',
       features: ['AI-powered digital twin creation', 'Real-time IoT integration', 'Predictive maintenance', '3D visualization support'],
       pricing: 'Starting at $599/mo',
@@ -41,8 +38,7 @@ export default function NewServicesShowcase2025() {
       icon: Cpu,
       path: '/services/ai-digital-twin-platform'
     },
-    {
-      name: 'AI Quantum Computing Platform',
+    { name: 'AI Quantum Computing Platform',
       description: 'Harness the power of quantum computing with AI-driven optimization, hybrid quantum-classical solutions, and breakthrough computational capabilities.',
       features: ['AI-powered quantum optimization', 'Hybrid quantum-classical computing', 'Quantum machine learning', 'Real-time circuit simulation'],
       pricing: 'Starting at $1,299/mo',
@@ -51,8 +47,7 @@ export default function NewServicesShowcase2025() {
       icon: Atom,
       path: '/services/ai-quantum-computing-platform'
     },
-    {
-      name: 'AI Edge Computing Platform',
+    { name: 'AI Edge Computing Platform',
       description: 'Bring AI processing to the edge with intelligent device management, real-time data processing, and distributed computing capabilities.',
       features: ['AI-powered edge management', 'Real-time data processing', 'Distributed AI deployment', 'Edge-to-cloud synchronization'],
       pricing: 'Starting at $499/mo',
@@ -74,8 +69,7 @@ export default function NewServicesShowcase2025() {
     'Cybersecurity & Defense'
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     website: 'https://ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
@@ -158,8 +152,7 @@ export default function NewServicesShowcase2025() {
                     <span className="text-2xl font-bold text-gray-900">{service.pricing}</span>
                     <a 
                       href={service.path}
-                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
-                    >
+                      className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors">
                       Learn More <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
@@ -276,8 +269,7 @@ export default function NewServicesShowcase2025() {
               href={contactInfo.website} 
               target="_blank" 
               rel="noreferrer" 
-              className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
-            >
+              className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
               Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
             </a>
             <span className="text-gray-400">|</span>

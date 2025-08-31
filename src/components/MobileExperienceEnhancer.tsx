@@ -63,7 +63,7 @@ interface MobileSettings {
   deviceOrientation: 'portrait' | 'landscape' | 'auto';
   touchSensitivity: 'low' | 'medium' | 'high';
   hapticIntensity: 'light' | 'medium' | 'strong';
-}
+    }
 
 interface MobileFeature {
   id: string;
@@ -73,20 +73,18 @@ interface MobileFeature {
   enabled: boolean;
   priority: 'high' | 'medium' | 'low';
   impact: 'high' | 'medium' | 'low';
-}
+    }
 
-interface TouchGesture {
-  type: 'swipe' | 'pinch' | 'rotate' | 'longPress' | 'doubleTap' | 'shake';
+interface TouchGesture { type: 'swipe' | 'pinch' | 'rotate' | 'longPress' | 'doubleTap' | 'shake';
   direction?: 'left' | 'right' | 'up' | 'down';
   timestamp: number;
-  coordinates: { x: number; y: number };
+  coordinates: {  x: number y: number     };
   intensity?: number;
 }
 
-interface DeviceInfo {
-  type: 'mobile' | 'tablet' | 'desktop';
+interface DeviceInfo { type: 'mobile' | 'tablet' | 'desktop';
   platform: 'ios' | 'android' | 'web' | 'unknown';
-  screenSize: { width: number; height: number };
+  screenSize: {  width: number height: number     };
   pixelRatio: number;
   orientation: 'portrait' | 'landscape';
   touchSupport: boolean;
@@ -97,12 +95,11 @@ interface DeviceInfo {
 
 export function MobileExperienceEnhancer({ 
   enabled = true 
-}: { 
-  enabled?: boolean; 
+}: {  
+  enabled?: boolean 
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<MobileSettings>({
-    touchGestures: true,
+  const [settings, setSettings] = useState<MobileSettings>({ touchGestures: true,
     orientationLock: false,
     mobileOptimizations: true,
     pwaFeatures: true,
@@ -120,8 +117,7 @@ export function MobileExperienceEnhancer({
   });
 
   const [features, setFeatures] = useState<MobileFeature[]>([
-    {
-      id: 'touch-gestures',
+    { id: 'touch-gestures',
       name: 'Touch Gestures',
       description: 'Advanced touch gesture recognition and handling',
       category: 'touch',
@@ -129,8 +125,7 @@ export function MobileExperienceEnhancer({
       priority: 'high',
       impact: 'high'
     },
-    {
-      id: 'mobile-optimizations',
+    { id: 'mobile-optimizations',
       name: 'Mobile Optimizations',
       description: 'Performance and layout optimizations for mobile devices',
       category: 'performance',
@@ -138,8 +133,7 @@ export function MobileExperienceEnhancer({
       priority: 'high',
       impact: 'high'
     },
-    {
-      id: 'pwa-features',
+    { id: 'pwa-features',
       name: 'PWA Features',
       description: 'Progressive Web App capabilities and offline support',
       category: 'pwa',
@@ -147,8 +141,7 @@ export function MobileExperienceEnhancer({
       priority: 'medium',
       impact: 'medium'
     },
-    {
-      id: 'adaptive-layout',
+    { id: 'adaptive-layout',
       name: 'Adaptive Layout',
       description: 'Responsive design that adapts to different screen sizes',
       category: 'navigation',
@@ -156,8 +149,7 @@ export function MobileExperienceEnhancer({
       priority: 'high',
       impact: 'high'
     },
-    {
-      id: 'mobile-navigation',
+    { id: 'mobile-navigation',
       name: 'Mobile Navigation',
       description: 'Touch-optimized navigation and menu systems',
       category: 'navigation',
@@ -165,8 +157,7 @@ export function MobileExperienceEnhancer({
       priority: 'high',
       impact: 'high'
     },
-    {
-      id: 'touch-targets',
+    { id: 'touch-targets',
       name: 'Touch Targets',
       description: 'Properly sized touch targets for mobile interaction',
       category: 'accessibility',
@@ -174,8 +165,7 @@ export function MobileExperienceEnhancer({
       priority: 'medium',
       impact: 'medium'
     },
-    {
-      id: 'mobile-performance',
+    { id: 'mobile-performance',
       name: 'Mobile Performance',
       description: 'Performance monitoring and optimization for mobile',
       category: 'performance',
@@ -183,8 +173,7 @@ export function MobileExperienceEnhancer({
       priority: 'high',
       impact: 'high'
     },
-    {
-      id: 'gesture-history',
+    { id: 'gesture-history',
       name: 'Gesture History',
       description: 'Track and analyze user gesture patterns',
       category: 'touch',
@@ -202,7 +191,7 @@ export function MobileExperienceEnhancer({
   const [activeGestures, setActiveGestures] = useState<string[]>([]);
 
   const mobileRef = useRef<HTMLDivElement>(null);
-  const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null);
+  const touchStartRef = useRef<{ x: number; y: number; time: number     } | null>(null);
   const gestureTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Detect device information
@@ -239,7 +228,7 @@ export function MobileExperienceEnhancer({
         orientation: screen.width > screen.height ? 'landscape' : 'portrait',
         touchSupport: 'ontouchstart' in window,
         pwaSupport: 'serviceWorker' in navigator,
-        networkType: (navigator as any).connection?.effectiveType || 'unknown',
+        networkType: (navigator as ).connection?.effectiveType || 'unknown',
         batteryLevel: 0
       };
       
@@ -247,7 +236,7 @@ export function MobileExperienceEnhancer({
       
       // Get battery level if available
       if ('getBattery' in navigator) {
-        (navigator as any).getBattery().then((battery: any) => {
+        (navigator as ).getBattery().then((battery: ) => {
           setDeviceInfo(prev => prev ? { ...prev, batteryLevel: battery.level * 100 } : null);
         });
       }
@@ -270,8 +259,7 @@ export function MobileExperienceEnhancer({
     const handleTouchStart = (e: TouchEvent) => {
       if (e.touches.length === 1) {
         const touch = e.touches[0];
-        touchStartRef.current = {
-          x: touch.clientX,
+        touchStartRef.current = { x: touch.clientX,
           y: touch.clientY,
           time: Date.now()
         };
@@ -303,8 +291,7 @@ export function MobileExperienceEnhancer({
         direction = deltaY > 0 ? 'down' : 'up';
       }
       
-      const gesture: TouchGesture = {
-        type: gestureType,
+      const gesture: TouchGesture = { type: gestureType,
         direction,
         timestamp: Date.now(),
         coordinates: { x: touch.clientX, y: touch.clientY },
@@ -348,8 +335,8 @@ export function MobileExperienceEnhancer({
       }, 3000);
     };
     
-    document.addEventListener('touchstart', handleTouchStart, { passive: true });
-    document.addEventListener('touchend', handleTouchEnd, { passive: true });
+    document.addEventListener('touchstart', handleTouchStart, { passive: true     });
+    document.addEventListener('touchend', handleTouchEnd, { passive: true     });
     
     return () => {
       document.removeEventListener('touchstart', handleTouchStart);
@@ -441,8 +428,7 @@ export function MobileExperienceEnhancer({
 
   // Reset to default settings
   const resetSettings = useCallback(() => {
-    const defaultSettings: MobileSettings = {
-      touchGestures: true,
+    const defaultSettings: MobileSettings = { touchGestures: true,
       orientationLock: false,
       mobileOptimizations: true,
       pwaFeatures: true,
@@ -481,8 +467,8 @@ export function MobileExperienceEnhancer({
       <motion.button
         onClick={() => setIsOpen(true)}
         className="fixed bottom-6 left-20 z-50 p-3 bg-gradient-to-r from-zion-green to-zion-blue rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.1     }}
+        whileTap={{ scale: 0.95     }}
         aria-label="Open Mobile Experience Settings"
       >
         <Smartphone className="w-6 h-6 text-white" />
@@ -493,9 +479,9 @@ export function MobileExperienceEnhancer({
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
+            exit={{ opacity: 0     }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
             ref={mobileRef}
           >
@@ -503,8 +489,7 @@ export function MobileExperienceEnhancer({
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden"
-            >
+              className="bg-white dark:bg-zion-slate-900 rounded-2xl shadow-2xl w-full max-w-6xl max-h-[90vh] overflow-hidden">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-zion-slate-700">
                 <div className="flex items-center space-x-3">
@@ -680,8 +665,7 @@ export function MobileExperienceEnhancer({
                             ? 'bg-zion-green/10 border-zion-green'
                             : 'bg-white dark:bg-zion-slate-800 border-gray-200 dark:border-zion-slate-700 hover:border-zion-green'
                         }`}
-                        onClick={() => toggleFeature(feature.id)}
-                      >
+                        onClick={() => toggleFeature(feature.id)}>
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
@@ -729,8 +713,7 @@ export function MobileExperienceEnhancer({
                       {touchGestures.slice(-6).reverse().map((gesture, index) => (
                         <div
                           key={index}
-                          className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700"
-                        >
+                          className="p-4 bg-white dark:bg-zion-slate-800 rounded-xl border border-gray-200 dark:border-zion-slate-700">
                           <div className="flex items-center space-x-2 mb-2">
                             {gesture.type === 'swipe' && <ArrowLeft className="w-4 h-4 text-zion-blue" />}
                             {gesture.type === 'tap' && <MousePointer className="w-4 h-4 text-zion-green" />}
@@ -764,11 +747,10 @@ export function MobileExperienceEnhancer({
                       {activeGestures.map((gesture, index) => (
                         <motion.span
                           key={index}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          exit={{ scale: 0 }}
-                          className="px-3 py-1 bg-zion-green text-white rounded-full text-sm font-medium"
-                        >
+                          initial={{ scale: 0     }}
+                          animate={{ scale: 1     }}
+                          exit={{ scale: 0     }}
+                          className="px-3 py-1 bg-zion-green text-white rounded-full text-sm font-medium">
                           {gesture}
                         </motion.span>
                       ))}
@@ -780,8 +762,7 @@ export function MobileExperienceEnhancer({
                 <div className="mb-8">
                   <button
                     onClick={() => setShowAdvanced(!showAdvanced)}
-                    className="flex items-center space-x-2 text-zion-green hover:text-zion-green-dark transition-colors"
-                  >
+                    className="flex items-center space-x-2 text-zion-green hover:text-zion-green-dark transition-colors">
                     <Settings className="w-4 h-4" />
                     <span>{showAdvanced ? 'Hide' : 'Show'} Advanced Settings</span>
                   </button>
@@ -791,8 +772,7 @@ export function MobileExperienceEnhancer({
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-4 p-4 bg-gray-50 dark:bg-zion-slate-800 rounded-xl"
-                    >
+                      className="mt-4 p-4 bg-gray-50 dark:bg-zion-slate-800 rounded-xl">
                       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div>
                           <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -800,9 +780,8 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.touchSensitivity}
-                            onChange={(e) => setSettings(prev => ({ ...prev, touchSensitivity: e.target.value as any }))}
-                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
-                          >
+                            onChange={(e) => setSettings(prev => ({ ...prev, touchSensitivity: e.target.value as  }))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700">
                             <option value="low">Low</option>
                             <option value="medium">Medium</option>
                             <option value="high">High</option>
@@ -815,9 +794,8 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.hapticIntensity}
-                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as any }))}
-                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
-                          >
+                            onChange={(e) => setSettings(prev => ({ ...prev, hapticIntensity: e.target.value as  }))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700">
                             <option value="light">Light</option>
                             <option value="medium">Medium</option>
                             <option value="strong">Strong</option>
@@ -830,9 +808,8 @@ export function MobileExperienceEnhancer({
                           </label>
                           <select
                             value={settings.deviceOrientation}
-                            onChange={(e) => setSettings(prev => ({ ...prev, deviceOrientation: e.target.value as any }))}
-                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700"
-                          >
+                            onChange={(e) => setSettings(prev => ({ ...prev, deviceOrientation: e.target.value as  }))}
+                            className="w-full p-2 border border-gray-300 dark:border-zion-slate-600 rounded-lg bg-white dark:bg-zion-slate-700">
                             <option value="auto">Auto</option>
                             <option value="portrait">Portrait</option>
                             <option value="landscape">Landscape</option>
@@ -849,8 +826,7 @@ export function MobileExperienceEnhancer({
                     <button
                       onClick={saveSettings}
                       disabled={isOptimizing}
-                      className="flex items-center space-x-2 px-4 py-2 bg-zion-green text-white rounded-lg hover:bg-zion-green-dark transition-colors disabled:opacity-50"
-                    >
+                      className="flex items-center space-x-2 px-4 py-2 bg-zion-green text-white rounded-lg hover:bg-zion-green-dark transition-colors disabled:opacity-50">
                       {isOptimizing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Save className="w-4 h-4" />}
                       <span>Save Settings</span>
                     </button>
@@ -858,16 +834,14 @@ export function MobileExperienceEnhancer({
                     <button
                       onClick={loadSettings}
                       disabled={isOptimizing}
-                      className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-zion-slate-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-zion-slate-600 transition-colors disabled:opacity-50"
-                    >
+                      className="flex items-center space-x-2 px-4 py-2 bg-gray-200 dark:bg-zion-slate-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-300 dark:hover:bg-zion-slate-600 transition-colors disabled:opacity-50">
                       {isOptimizing ? <Loader2 className="w-4 h-4 animate-spin" /> : <Settings className="w-4 h-4" />}
                       <span>Load Settings</span>
                     </button>
                     
                     <button
                       onClick={resetSettings}
-                      className="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors"
-                    >
+                      className="flex items-center space-x-2 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors">
                       <RotateCcw className="w-4 h-4" />
                       <span>Reset to Default</span>
                     </button>
@@ -893,20 +867,18 @@ export function MobileExperienceEnhancer({
           min-width: 44px !important;
         }
         
-        .mobile-navigation .nav-item {
-          padding: 12px 16px !important;
+        .mobile-navigation .nav-item { padding: 12px 16px !important;
           margin: 4px 0 !important;
-        }
+            }
         
         .mobile-adaptive-layout {
           --zion-mobile-padding: 16px !important;
           --zion-mobile-margin: 8px !important;
         }
         
-        .mobile-touch-feedback *:active {
-          transform: scale(0.98) !important;
+        .mobile-touch-feedback *:active { transform: scale(0.98) !important;
           transition: transform 0.1s ease !important;
-        }
+            }
         
         @media (max-width: 768px) {
           .mobile-adaptive-layout {

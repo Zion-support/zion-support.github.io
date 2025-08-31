@@ -152,33 +152,27 @@ import {
 
 const WebsiteAnalytics = () => {
   const features = [
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Real-time Analytics',
       description: 'Live website performance monitoring and insights'
     },
-    {
-      icon: Users2,
+    { icon: Users2,
       title: 'User Behavior Tracking',
       description: 'Comprehensive user journey and interaction analysis'
     },
-    {
-      icon: MousePointer,
+    { icon: MousePointer,
       title: 'Click Tracking',
       description: 'Detailed click heatmaps and user interaction data'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Performance Monitoring',
       description: 'Page load times and performance optimization insights'
     },
-    {
-      icon: MapPin,
+    { icon: MapPin,
       title: 'Geographic Analytics',
       description: 'User location and regional performance data'
     },
-    {
-      icon: Device,
+    { icon: Device,
       title: 'Device Analytics',
       description: 'Cross-device performance and user experience insights'
     }
@@ -194,43 +188,35 @@ const WebsiteAnalytics = () => {
   ];
 
   const services = [
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: 'Analytics Dashboard',
       description: 'Comprehensive analytics dashboard with real-time data'
     },
-    {
-      icon: Eye2,
+    { icon: Eye2,
       title: 'User Session Recording',
       description: 'Record and analyze user sessions for insights'
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: 'Conversion Tracking',
       description: 'Track conversions and optimize funnels'
     },
-    {
-      icon: Search,
+    { icon: Search,
       title: 'SEO Analytics',
       description: 'Monitor search performance and rankings'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'E-commerce',
+    { industry: 'E-commerce',
       description: 'Track sales funnels and customer behavior'
     },
-    {
-      industry: 'Marketing',
+    { industry: 'Marketing',
       description: 'Measure campaign performance and ROI'
     },
-    {
-      industry: 'Content',
+    { industry: 'Content',
       description: 'Analyze content engagement and user preferences'
     },
-    {
-      industry: 'SaaS',
+    { industry: 'SaaS',
       description: 'Monitor user onboarding and feature usage'
     }
   ];
@@ -244,9 +230,8 @@ const WebsiteAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6">
               <BarChart3 className="w-4 h-4 mr-2" />
               Website Analytics Solutions
@@ -282,9 +267,8 @@ const WebsiteAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Analytics Features
             </h2>
@@ -301,8 +285,7 @@ const WebsiteAnalytics = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -320,9 +303,8 @@ const WebsiteAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Analytics Services
             </h2>
@@ -339,8 +321,7 @@ const WebsiteAnalytics = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -362,9 +343,8 @@ const WebsiteAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Analytics Benefits
             </h2>
@@ -381,8 +361,7 @@ const WebsiteAnalytics = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -395,8 +374,7 @@ const WebsiteAnalytics = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -412,9 +390,8 @@ const WebsiteAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -431,8 +408,7 @@ const WebsiteAnalytics = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-green-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -450,7 +426,7 @@ const WebsiteAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Analyzing Your Website Today

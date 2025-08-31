@@ -14,12 +14,12 @@ export interface EnhancedService2027 {
   ctaLabel: string;
   href: string;
   external?: boolean;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
+    website: string
+    address: string
+      };
   competitors: string[];
   roi: string;
   setupTime: string;
@@ -32,8 +32,7 @@ export interface EnhancedService2027 {
 
 export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   // Web3 & Metaverse Solutions
-  {
-    id: 'metaverse-commerce-platform',
+  { id: 'metaverse-commerce-platform',
     title: 'Metaverse Commerce Platform',
     description: 'Complete metaverse commerce solution with virtual storefronts, NFT marketplaces, and immersive shopping experiences',
     category: 'Metaverse Solutions',
@@ -62,8 +61,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Build Metaverse Store',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -77,8 +75,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     compliance: ['GDPR', 'CCPA', 'SOC2'],
     useCases: ['Virtual retail', 'Digital fashion', 'Virtual events', 'Gaming commerce']
   },
-  {
-    id: 'defi-yield-optimizer',
+  { id: 'defi-yield-optimizer',
     title: 'DeFi Yield Optimizer Pro',
     description: 'AI-powered DeFi yield optimization platform with automated strategy execution and risk management',
     category: 'Web3 Solutions',
@@ -107,8 +104,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Optimize Yields',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -122,8 +118,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     compliance: ['KYC/AML', 'Regulatory reporting'],
     useCases: ['Yield farming', 'Portfolio optimization', 'Risk management', 'Automated trading']
   },
-  {
-    id: 'nft-royalty-management',
+  { id: 'nft-royalty-management',
     title: 'NFT Royalty Management Suite',
     description: 'Comprehensive NFT royalty tracking, distribution, and management platform for creators and collectors',
     category: 'Web3 Solutions',
@@ -152,8 +147,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Manage Royalties',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -169,8 +163,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // Sustainable Tech Solutions
-  {
-    id: 'carbon-neutral-cloud',
+  { id: 'carbon-neutral-cloud',
     title: 'Carbon-Neutral Cloud Platform',
     description: '100% carbon-neutral cloud infrastructure with renewable energy integration and carbon offset tracking',
     category: 'Sustainable Tech',
@@ -199,8 +192,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Go Green Cloud',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -214,8 +206,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     compliance: ['ISO 14001', 'Carbon Trust', 'ESG standards'],
     useCases: ['Web hosting', 'Application deployment', 'Data storage', 'AI/ML workloads']
   },
-  {
-    id: 'circular-economy-platform',
+  { id: 'circular-economy-platform',
     title: 'Circular Economy Management Platform',
     description: 'End-to-end circular economy solution for waste reduction, recycling optimization, and sustainable resource management',
     category: 'Sustainable Tech',
@@ -244,8 +235,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Go Circular',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -261,8 +251,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // NeuroTech Solutions
-  {
-    id: 'brain-computer-interface',
+  { id: 'brain-computer-interface',
     title: 'Brain-Computer Interface Platform',
     description: 'Advanced BCI platform for medical applications, accessibility, and human-computer interaction research',
     category: 'NeuroTech Solutions',
@@ -291,8 +280,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Explore BCI',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -306,8 +294,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     compliance: ['FDA', 'CE marking', 'Medical device regulations'],
     useCases: ['Medical research', 'Patient communication', 'Accessibility', 'Human-computer interaction']
   },
-  {
-    id: 'cognitive-enhancement-app',
+  { id: 'cognitive-enhancement-app',
     title: 'Cognitive Enhancement & Training App',
     description: 'AI-powered cognitive training platform with personalized brain exercises and performance tracking',
     category: 'NeuroTech Solutions',
@@ -336,8 +323,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Train Your Brain',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -353,8 +339,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // Fusion Energy Solutions
-  {
-    id: 'fusion-energy-simulation',
+  { id: 'fusion-energy-simulation',
     title: 'Fusion Energy Simulation Platform',
     description: 'Advanced simulation platform for fusion energy research, plasma physics, and reactor design',
     category: 'Fusion Energy Solutions',
@@ -383,8 +368,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Simulate Fusion',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -400,8 +384,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // OceanTech Solutions
-  {
-    id: 'ocean-monitoring-platform',
+  { id: 'ocean-monitoring-platform',
     title: 'Ocean Monitoring & Conservation Platform',
     description: 'Comprehensive ocean monitoring solution with IoT sensors, AI analytics, and conservation tracking',
     category: 'OceanTech Solutions',
@@ -430,8 +413,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Monitor Oceans',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -447,8 +429,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // AgriTech Solutions
-  {
-    id: 'precision-agriculture-ai',
+  { id: 'precision-agriculture-ai',
     title: 'Precision Agriculture AI Platform',
     description: 'AI-powered precision agriculture solution with drone monitoring, crop optimization, and yield prediction',
     category: 'AgriTech Solutions',
@@ -477,8 +458,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Optimize Farming',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -494,8 +474,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // Smart City Solutions
-  {
-    id: 'smart-city-operations',
+  { id: 'smart-city-operations',
     title: 'Smart City Operations Center',
     description: 'Comprehensive smart city management platform with IoT integration, AI analytics, and citizen services',
     category: 'Smart City Solutions',
@@ -524,8 +503,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Build Smart City',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -541,8 +519,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // Digital Twin Solutions
-  {
-    id: 'digital-twin-platform',
+  { id: 'digital-twin-platform',
     title: 'Digital Twin Management Platform',
     description: 'Comprehensive digital twin solution for industrial assets, buildings, and infrastructure monitoring',
     category: 'Digital Twin Solutions',
@@ -571,8 +548,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Create Digital Twin',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -588,8 +564,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // Edge AI Solutions
-  {
-    id: 'edge-ai-platform',
+  { id: 'edge-ai-platform',
     title: 'Edge AI Computing Platform',
     description: 'Distributed edge AI platform for real-time processing, low-latency inference, and offline AI capabilities',
     category: 'Edge AI Solutions',
@@ -618,8 +593,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Deploy Edge AI',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -635,8 +609,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
   },
 
   // Federated Learning Solutions
-  {
-    id: 'federated-learning-platform',
+  { id: 'federated-learning-platform',
     title: 'Federated Learning Platform',
     description: 'Privacy-preserving AI training platform that enables collaborative learning without sharing raw data',
     category: 'Federated Learning Solutions',
@@ -665,8 +638,7 @@ export const enhancedInnovativeServices2027: EnhancedService2027[] = [
     ctaLabel: 'Start Federated Learning',
     href: 'https://ziontechgroup.com',
     external: true,
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'

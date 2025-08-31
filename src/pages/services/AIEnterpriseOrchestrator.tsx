@@ -28,8 +28,7 @@ import {
 
 export default function AIEnterpriseOrchestrator() {
   const features = [
-    {
-      title: "Intelligent Process Orchestration",
+    { title: "Intelligent Process Orchestration",
       description: "AI-powered workflow automation with dynamic adaptation and real-time optimization",
       icon: Zap,
       benefits: [
@@ -39,8 +38,7 @@ export default function AIEnterpriseOrchestrator() {
         "Predictive failure prevention"
       ]
     },
-    {
-      title: "Multi-Agent Coordination",
+    { title: "Multi-Agent Coordination",
       description: "Advanced AI agents working together to solve complex business problems",
       icon: Brain,
       benefits: [
@@ -50,8 +48,7 @@ export default function AIEnterpriseOrchestrator() {
         "Scalable problem solving"
       ]
     },
-    {
-      title: "Predictive Analytics Engine",
+    { title: "Predictive Analytics Engine",
       description: "Machine learning models that forecast trends and optimize business outcomes",
       icon: TrendingUp,
       benefits: [
@@ -61,8 +58,7 @@ export default function AIEnterpriseOrchestrator() {
         "Risk assessment and mitigation"
       ]
     },
-    {
-      title: "Enterprise Security Suite",
+    { title: "Enterprise Security Suite",
       description: "AI-powered threat detection and response with zero-trust architecture",
       icon: Shield,
       benefits: [
@@ -75,8 +71,7 @@ export default function AIEnterpriseOrchestrator() {
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$15,000",
       period: "/month",
       description: "Perfect for small to medium enterprises",
@@ -90,8 +85,7 @@ export default function AIEnterpriseOrchestrator() {
       cta: "Get Started",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$35,000",
       period: "/month",
       description: "Ideal for growing businesses",
@@ -107,8 +101,7 @@ export default function AIEnterpriseOrchestrator() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$75,000",
       period: "/month",
       description: "For large-scale operations",
@@ -128,8 +121,7 @@ export default function AIEnterpriseOrchestrator() {
   ];
 
   const useCases = [
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       applications: [
         "Fraud detection and prevention",
         "Risk assessment automation",
@@ -137,8 +129,7 @@ export default function AIEnterpriseOrchestrator() {
         "Trading optimization"
       ]
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       applications: [
         "Patient care coordination",
         "Diagnostic assistance",
@@ -146,8 +137,7 @@ export default function AIEnterpriseOrchestrator() {
         "Compliance monitoring"
       ]
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       applications: [
         "Supply chain optimization",
         "Predictive maintenance",
@@ -155,8 +145,7 @@ export default function AIEnterpriseOrchestrator() {
         "Production planning"
       ]
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       applications: [
         "Customer behavior analysis",
         "Inventory optimization",
@@ -179,9 +168,8 @@ export default function AIEnterpriseOrchestrator() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Sparkles className="w-4 h-4 mr-2" />
               Revolutionary AI Technology
@@ -198,17 +186,15 @@ export default function AIEnterpriseOrchestrator() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-purple-600 text-purple-400 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border-2 border-purple-600 text-purple-400 font-semibold rounded-lg hover:bg-purple-600 hover:text-white transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>
@@ -226,9 +212,8 @@ export default function AIEnterpriseOrchestrator() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Revolutionary AI Capabilities
             </h2>
@@ -245,8 +230,7 @@ export default function AIEnterpriseOrchestrator() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg mr-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -276,9 +260,8 @@ export default function AIEnterpriseOrchestrator() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Transparent Pricing
             </h2>
@@ -328,8 +311,8 @@ export default function AIEnterpriseOrchestrator() {
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.02     }}
+                  whileTap={{ scale: 0.98     }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
@@ -350,9 +333,8 @@ export default function AIEnterpriseOrchestrator() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -369,8 +351,7 @@ export default function AIEnterpriseOrchestrator() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
                 <ul className="space-y-2">
                   {useCase.applications.map((application, appIndex) => (
@@ -392,7 +373,7 @@ export default function AIEnterpriseOrchestrator() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Enterprise?
@@ -404,17 +385,15 @@ export default function AIEnterpriseOrchestrator() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-white text-purple-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300">
                 Contact Sales Team
               </motion.button>
             </div>

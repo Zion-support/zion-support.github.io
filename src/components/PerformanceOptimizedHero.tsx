@@ -22,14 +22,13 @@ interface HeroProps {
   description?: string;
   ctaText?: string;
   ctaLink?: string;
-  features?: Array<{
-    icon: React.ComponentType<any>;
+  features?: Array<{ icon: React.ComponentType<>;
     text: string;
     color: string;
-  }>;
+      }>;
 }
 
-const PerformanceOptimizedHero: React.FC<HeroProps> = ({
+const PerformanceOptimizedHero: React.FC = ({
   title = "Revolutionary AI & Technology Solutions",
   subtitle = "2025-2026 Innovation Hub",
   description = "Transform your business with cutting-edge AI, quantum computing, and next-generation technology solutions. Experience the future of digital transformation.",
@@ -60,25 +59,20 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     console.log('Hero CTA clicked');
   }, []);
 
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
+  const containerVariants = { hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
+      transition: { duration: 0.8,
         staggerChildren: 0.2
       }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+  const itemVariants = { hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
   };
 
-  const featureVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+  const featureVariants = { hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 }
   };
 
@@ -133,8 +127,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
           <Link
             to={ctaLink}
             onClick={handleCTAClick}
-            className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full text-lg shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
-          >
+            className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full text-lg shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105">
             {ctaText}
             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-400 to-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -156,7 +149,7 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
               key={index}
               className={`relative p-6 rounded-2xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-white/10 backdrop-blur-sm hover:scale-105 transition-transform duration-300`}
               variants={featureVariants}
-              whileHover={{ y: -5 }}
+              whileHover={{ y: -5     }}
             >
               <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${feature.color} mb-4`}>
                 <feature.icon className="w-6 h-6 text-white" />
@@ -193,24 +186,20 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
       <AnimatePresence>
         <motion.div
           className="absolute top-1/4 right-10 w-2 h-2 bg-cyan-400 rounded-full"
-          animate={{
-            y: [0, -20, 0],
+          animate={{ y: [0, -20, 0],
             opacity: [0.5, 1, 0.5],
           }}
-          transition={{
-            duration: 2,
+          transition={{ duration: 2,
             repeat: Infinity,
             ease: "easeInOut"
           }}
         />
         <motion.div
           className="absolute bottom-1/4 left-10 w-3 h-3 bg-blue-400 rounded-full"
-          animate={{
-            y: [0, 20, 0],
+          animate={{ y: [0, 20, 0],
             opacity: [0.5, 1, 0.5],
           }}
-          transition={{
-            duration: 2.5,
+          transition={{ duration: 2.5,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1

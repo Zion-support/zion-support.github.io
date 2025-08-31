@@ -66,8 +66,7 @@ export function PWAUpdater() {
               <button
                 onClick={handleUpdate}
                 disabled={isUpdating}
-                className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-medium rounded-md hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 disabled:opacity-50"
-              >
+                className="flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-xs font-medium rounded-md hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 disabled:opacity-50">
                 {isUpdating ? (
                   <>
                     <RefreshCw className="w-3 h-3 animate-spin" />
@@ -82,16 +81,14 @@ export function PWAUpdater() {
               </button>
               <button
                 onClick={dismissUpdate}
-                className="px-3 py-2 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200"
-              >
+                className="px-3 py-2 text-gray-400 text-xs font-medium hover:text-white transition-colors duration-200">
                 Later
               </button>
             </div>
           </div>
           <button
             onClick={dismissUpdate}
-            className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
-          >
+            className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200">
             <X className="w-4 h-4" />
           </button>
         </div>

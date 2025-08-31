@@ -6,74 +6,61 @@ import { SEO } from '@/components/SEO';
 
 export default function UptimeSLAMonitor() {
   const features = [
-    {
-      icon: Activity,
+    { icon: Activity,
       title: "Real-time Monitoring",
       description: "24/7 monitoring of websites, APIs, databases, and infrastructure with sub-second response times."
     },
-    {
-      icon: AlertTriangle,
+    { icon: AlertTriangle,
       title: "Instant Alerts",
       description: "Smart notifications via email, SMS, Slack, Discord, and webhooks when issues are detected."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "SLA Tracking",
       description: "Automated SLA compliance monitoring with detailed uptime reports and performance metrics."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive dashboards showing response times, error rates, and performance trends."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Global Monitoring",
       description: "Monitor from multiple locations worldwide to ensure consistent user experience."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Security Monitoring",
       description: "SSL certificate monitoring, security headers, and vulnerability scanning included."
     }
   ];
 
   const monitoringTypes = [
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: "Website Monitoring",
       description: "HTTP/HTTPS monitoring, content validation, and performance tracking"
     },
-    {
-      icon: Server,
+    { icon: Server,
       title: "Server Monitoring",
       description: "CPU, memory, disk usage, and process monitoring"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Database Monitoring",
       description: "Query performance, connection pools, and replication status"
     },
-    {
-      icon: Wifi,
+    { icon: Wifi,
       title: "Network Monitoring",
       description: "Bandwidth usage, latency, packet loss, and connectivity"
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: "Cloud Services",
       description: "AWS, Azure, GCP service monitoring and cost tracking"
     },
-    {
-      icon: Smartphone,
+    { icon: Smartphone,
       title: "Mobile App Monitoring",
       description: "API endpoints, push notifications, and mobile performance"
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$29",
       period: "/month",
       description: "Perfect for small websites and applications",
@@ -87,8 +74,7 @@ export default function UptimeSLAMonitor() {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$79",
       period: "/month",
       description: "Ideal for growing businesses and teams",
@@ -103,8 +89,7 @@ export default function UptimeSLAMonitor() {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$199",
       period: "/month",
       description: "For large-scale operations and compliance",
@@ -122,23 +107,19 @@ export default function UptimeSLAMonitor() {
   ];
 
   const benefits = [
-    {
-      title: "Prevent Downtime",
+    { title: "Prevent Downtime",
       description: "Detect issues before they affect users with proactive monitoring and instant alerts.",
       icon: Shield
     },
-    {
-      title: "Meet SLA Requirements",
+    { title: "Meet SLA Requirements",
       description: "Automatically track and report on SLA compliance for client contracts and internal metrics.",
       icon: Target
     },
-    {
-      title: "Improve Performance",
+    { title: "Improve Performance",
       description: "Identify performance bottlenecks and optimize your infrastructure based on real data.",
       icon: TrendingUp
     },
-    {
-      title: "Reduce MTTR",
+    { title: "Reduce MTTR",
       description: "Faster incident response with detailed error information and automated escalation.",
       icon: Zap
     }
@@ -161,7 +142,7 @@ export default function UptimeSLAMonitor() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6     }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-green-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
@@ -175,14 +156,12 @@ export default function UptimeSLAMonitor() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/request-quote"
-                    className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                  >
+                    className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                     Start Monitoring
                   </Link>
                   <Link 
                     to="/contact"
-                    className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
-                  >
+                    className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
                     Schedule Demo
                   </Link>
                 </div>
@@ -210,8 +189,7 @@ export default function UptimeSLAMonitor() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -242,8 +220,7 @@ export default function UptimeSLAMonitor() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                     <type.icon className="w-6 h-6 text-white" />
                   </div>
@@ -274,8 +251,7 @@ export default function UptimeSLAMonitor() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
+                  className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -362,7 +338,7 @@ export default function UptimeSLAMonitor() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Monitor Your Infrastructure?
@@ -373,14 +349,12 @@ export default function UptimeSLAMonitor() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/contact"
-                  className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
-                >
+                  className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300">
                   Contact Sales
                 </Link>
               </div>

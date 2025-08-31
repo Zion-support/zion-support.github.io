@@ -13,18 +13,15 @@ export default function AISecurityTesting() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$399/mo', 
       details: ['Up to 10 applications', 'Basic AI features', 'Standard testing', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$999/mo', 
       details: ['Up to 50 applications', 'Advanced AI features', 'Enhanced testing', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$2,499/mo', 
       details: ['Unlimited applications', 'Custom AI models', 'Full testing suite', '24/7 dedicated support'] 
     },

@@ -7,14 +7,14 @@ export interface CloudDevOpsService {
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+  pricing: {  
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
-    pricingModel: string;
-    marketPrice: string;
-  };
+    pricingModel: string
+    marketPrice: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -51,22 +51,19 @@ export interface CloudDevOpsService {
 }
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
+const zionContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
 export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
-  {
-    id: "multi-cloud-orchestration-platform",
+  { id: "multi-cloud-orchestration-platform",
     title: "Zion Multi-Cloud Orchestration Platform",
     description: "Advanced multi-cloud orchestration platform that provides unified management, automation, and optimization across AWS, Azure, Google Cloud, and private cloud environments.",
     category: "Cloud & DevOps Services",
     subcategory: "Cloud Management",
-    pricing: {
-      monthly: 799,
+    pricing: { monthly: 799,
       yearly: 7990,
       custom: "Enterprise multi-cloud solutions",
       currency: "$",
@@ -152,14 +149,12 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     trending: true
   },
 
-  {
-    id: "ai-powered-devops-automation",
+  { id: "ai-powered-devops-automation",
     title: "Zion AI-Powered DevOps Automation",
     description: "Intelligent DevOps automation platform that uses AI to optimize CI/CD pipelines, predict deployment issues, and automate infrastructure management for faster, more reliable software delivery.",
     category: "Cloud & DevOps Services",
     subcategory: "DevOps Automation",
-    pricing: {
-      monthly: 599,
+    pricing: { monthly: 599,
       yearly: 5990,
       custom: "Enterprise DevOps automation",
       currency: "$",
@@ -245,14 +240,12 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     trending: true
   },
 
-  {
-    id: "edge-computing-orchestrator",
+  { id: "edge-computing-orchestrator",
     title: "Zion Edge Computing Orchestrator",
     description: "Advanced edge computing orchestration platform that manages distributed computing resources, optimizes data processing, and enables real-time applications at the network edge.",
     category: "Cloud & DevOps Services",
     subcategory: "Edge Computing",
-    pricing: {
-      monthly: 699,
+    pricing: { monthly: 699,
       yearly: 6990,
       custom: "Enterprise edge computing solutions",
       currency: "$",
@@ -338,14 +331,12 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     trending: true
   },
 
-  {
-    id: "serverless-architecture-platform",
+  { id: "serverless-architecture-platform",
     title: "Zion Serverless Architecture Platform",
     description: "Comprehensive serverless platform that simplifies application development, deployment, and scaling while optimizing costs and eliminating infrastructure management overhead.",
     category: "Cloud & DevOps Services",
     subcategory: "Serverless Computing",
-    pricing: {
-      monthly: 299,
+    pricing: { monthly: 299,
       yearly: 2990,
       custom: "Enterprise serverless solutions",
       currency: "$",
@@ -431,14 +422,12 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     trending: true
   },
 
-  {
-    id: "gitops-workflow-automation",
+  { id: "gitops-workflow-automation",
     title: "Zion GitOps Workflow Automation",
     description: "Advanced GitOps platform that automates infrastructure and application deployments using Git as the single source of truth, ensuring consistency, security, and auditability.",
     category: "Cloud & DevOps Services",
     subcategory: "GitOps & Workflows",
-    pricing: {
-      monthly: 399,
+    pricing: { monthly: 399,
       yearly: 3990,
       custom: "Enterprise GitOps solutions",
       currency: "$",

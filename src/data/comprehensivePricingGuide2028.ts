@@ -4,74 +4,65 @@ export interface ComprehensivePricingItem2028 {
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+  pricing: {  
     starter: {
       price: string;
       billing: string;
-      features: string[];
-      limitations: string[];
-    };
-    professional: {
-      price: string;
+      features: string[]
+      limitations: string[]
+        };
+    professional: { price: string;
       billing: string;
-      features: string[];
-      limitations: string[];
-    };
-    enterprise: {
-      price: string;
+      features: string[]
+      limitations: string[]
+        };
+    enterprise: { price: string;
       billing: string;
-      features: string[];
-      limitations: string[];
-    };
-    custom: {
-      description: string;
-      features: string[];
-      contact: string;
-    };
+      features: string[]
+      limitations: string[]
+        };
+    custom: { description: string;
+      features: string[]
+      contact: string
+        };
   };
-  marketInfo: {
-    marketSize: string;
+  marketInfo: { marketSize: string;
     growthRate: string;
     averageMarketPrice: string;
     competitors: string[];
-    roi: string;
-    setupTime: string;
-  };
-  features: {
-    core: string[];
-    advanced: string[];
-    enterprise: string[];
-  };
+    roi: string
+    setupTime: string
+      };
+  features: { core: string[];
+    advanced: string[]
+    enterprise: string[]
+      };
   benefits: string[];
   targetAudience: string[];
   useCases: string[];
   integrations: string[];
   compliance: string[];
-  support: {
-    email: boolean;
+  support: { email: boolean;
     phone: boolean;
     chat: boolean;
-    dedicated: boolean;
-    sla: string;
-  };
-  contactInfo: {
-    phone: string;
+    dedicated: boolean
+    sla: string
+      };
+  contactInfo: { phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
+    website: string
+    address: string
+      };
 }
 
 export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
   // AI-Powered Quantum Computing Platform
-  {
-    id: 'quantum-ai-hybrid-platform-2028',
+  { id: 'quantum-ai-hybrid-platform-2028',
     title: 'AI-Powered Quantum Computing Platform 2028',
     description: 'Revolutionary platform that combines quantum computing with AI to solve complex optimization problems, drug discovery, and financial modeling that are impossible for classical computers.',
     category: 'Quantum AI',
     subcategory: 'Hybrid Computing',
-    pricing: {
-      starter: {
+    pricing: { starter: {
         price: '$15,000/month',
         billing: 'monthly',
         features: [
@@ -89,8 +80,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Community support only'
         ]
       },
-      professional: {
-        price: '$35,000/month',
+      professional: { price: '$35,000/month',
         billing: 'monthly',
         features: [
           'Advanced quantum algorithms',
@@ -108,8 +98,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Standard security protocols'
         ]
       },
-      enterprise: {
-        price: '$75,000/month',
+      enterprise: { price: '$75,000/month',
         billing: 'monthly',
         features: [
           'Unlimited quantum access',
@@ -128,8 +117,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Long-term contracts required'
         ]
       },
-      custom: {
-        description: 'Custom enterprise solutions with dedicated infrastructure and support',
+      custom: { description: 'Custom enterprise solutions with dedicated infrastructure and support',
         features: [
           'Dedicated quantum hardware',
           'Custom AI model development',
@@ -140,16 +128,14 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
         contact: 'Contact our sales team for custom pricing'
       }
     },
-    marketInfo: {
-      marketSize: '$65.4 billion by 2030',
+    marketInfo: { marketSize: '$65.4 billion by 2030',
       growthRate: '45.2% CAGR',
       averageMarketPrice: '$25,000 - $100,000/month',
       competitors: ['IBM Quantum', 'Google Quantum AI', 'Rigetti', 'D-Wave', 'Microsoft Azure Quantum'],
       roi: '500-1000%',
       setupTime: '12-16 weeks'
     },
-    features: {
-      core: [
+    features: { core: [
         'Quantum algorithm library',
         'AI model integration',
         'Basic API access',
@@ -203,15 +189,13 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
       'HIPAA',
       'GDPR'
     ],
-    support: {
-      email: true,
+    support: { email: true,
       phone: true,
       chat: true,
       dedicated: true,
       sla: '99.95% uptime with 4-hour response time'
     },
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -219,14 +203,12 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
   },
 
   // AI-Powered Autonomous Business Operations
-  {
-    id: 'ai-autonomous-business-platform-2028',
+  { id: 'ai-autonomous-business-platform-2028',
     title: 'AI Autonomous Business Operations Platform 2028',
     description: 'Complete business automation platform that uses AI to autonomously manage operations, make decisions, and optimize business processes without human intervention.',
     category: 'Business Automation',
     subcategory: 'Autonomous Operations',
-    pricing: {
-      starter: {
+    pricing: { starter: {
         price: '$8,500/month',
         billing: 'monthly',
         features: [
@@ -244,8 +226,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Community support only'
         ]
       },
-      professional: {
-        price: '$18,000/month',
+      professional: { price: '$18,000/month',
         billing: 'monthly',
         features: [
           'Advanced process automation',
@@ -263,8 +244,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Standard security protocols'
         ]
       },
-      enterprise: {
-        price: '$45,000/month',
+      enterprise: { price: '$45,000/month',
         billing: 'monthly',
         features: [
           'Unlimited automation',
@@ -282,8 +262,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Long-term contracts required'
         ]
       },
-      custom: {
-        description: 'Custom enterprise solutions with dedicated infrastructure and support',
+      custom: { description: 'Custom enterprise solutions with dedicated infrastructure and support',
         features: [
           'Dedicated infrastructure',
           'Custom AI development',
@@ -294,16 +273,14 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
         contact: 'Contact our sales team for custom pricing'
       }
     },
-    marketInfo: {
-      marketSize: '$19.6 billion by 2025',
+    marketInfo: { marketSize: '$19.6 billion by 2025',
       growthRate: '23.4% CAGR',
       averageMarketPrice: '$12,000 - $50,000/month',
       competitors: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Microsoft Power Automate', 'Pega'],
       roi: '400-600%',
       setupTime: '8-12 weeks'
     },
-    features: {
-      core: [
+    features: { core: [
         'Process automation',
         'AI decision making',
         'Basic integrations',
@@ -357,15 +334,13 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
       'HIPAA',
       'SOX'
     ],
-    support: {
-      email: true,
+    support: { email: true,
       phone: true,
       chat: true,
       dedicated: true,
       sla: '99.9% uptime with 8-hour response time'
     },
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -373,14 +348,12 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
   },
 
   // AI-Powered Cybersecurity Threat Intelligence
-  {
-    id: 'ai-cybersecurity-threat-intelligence-2028',
+  { id: 'ai-cybersecurity-threat-intelligence-2028',
     title: 'AI Cybersecurity Threat Intelligence Platform 2028',
     description: 'Advanced cybersecurity platform that uses AI to detect, analyze, and respond to cyber threats in real-time, providing proactive protection against sophisticated attacks.',
     category: 'Cybersecurity',
     subcategory: 'Threat Intelligence',
-    pricing: {
-      starter: {
+    pricing: { starter: {
         price: '$6,500/month',
         billing: 'monthly',
         features: [
@@ -398,8 +371,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Community support only'
         ]
       },
-      professional: {
-        price: '$15,000/month',
+      professional: { price: '$15,000/month',
         billing: 'monthly',
         features: [
           'Advanced threat detection',
@@ -417,8 +389,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Standard security protocols'
         ]
       },
-      enterprise: {
-        price: '$35,000/month',
+      enterprise: { price: '$35,000/month',
         billing: 'monthly',
         features: [
           'Unlimited threat detection',
@@ -436,8 +407,7 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
           'Long-term contracts required'
         ]
       },
-      custom: {
-        description: 'Custom enterprise solutions with dedicated infrastructure and support',
+      custom: { description: 'Custom enterprise solutions with dedicated infrastructure and support',
         features: [
           'Dedicated infrastructure',
           'Custom AI development',
@@ -448,16 +418,14 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
         contact: 'Contact our sales team for custom pricing'
       }
     },
-    marketInfo: {
-      marketSize: '$15.6 billion by 2025',
+    marketInfo: { marketSize: '$15.6 billion by 2025',
       growthRate: '18.7% CAGR',
       averageMarketPrice: '$8,000 - $40,000/month',
       competitors: ['CrowdStrike', 'SentinelOne', 'FireEye', 'Palo Alto Networks', 'Trend Micro'],
       roi: '300-500%',
       setupTime: '6-10 weeks'
     },
-    features: {
-      core: [
+    features: { core: [
         'Threat detection',
         'AI analysis',
         'Basic security',
@@ -511,15 +479,13 @@ export const comprehensivePricingGuide2028: ComprehensivePricingItem2028[] = [
       'NIST',
       'PCI DSS'
     ],
-    support: {
-      email: true,
+    support: { email: true,
       phone: true,
       chat: true,
       dedicated: true,
       sla: '99.99% uptime with 2-hour response time'
     },
-    contactInfo: {
-      phone: '+1 302 464 0950',
+    contactInfo: { phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'

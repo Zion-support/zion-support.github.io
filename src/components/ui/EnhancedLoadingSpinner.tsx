@@ -13,7 +13,7 @@ interface EnhancedLoadingSpinnerProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
+export const EnhancedLoadingSpinner: React.FC = ({
   message = 'Loading amazing experiences...',
   showProgress = false,
   progress = 0,
@@ -50,22 +50,19 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     setCurrentMessage(message);
   }, [message]);
 
-  const spinnerSizeClasses = {
-    sm: 'h-4 w-4 border-2',
+  const spinnerSizeClasses = { sm: 'h-4 w-4 border-2',
     md: 'h-6 w-6 border-2',
     lg: 'h-8 w-8 border-3',
     xl: 'h-12 w-12 border-4',
   };
 
-  const spinnerColorClasses = {
-    default: 'border-t-blue-500',
+  const spinnerColorClasses = { default: 'border-t-blue-500',
     ai: 'border-t-purple-500',
     tech: 'border-t-cyan-500',
     global: 'border-t-green-500',
   };
 
-  const iconMap = {
-    default: Loader2,
+  const iconMap = { default: Loader2,
     ai: Brain,
     tech: Zap,
     global: Globe,
@@ -77,8 +74,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <motion.div
         className={`rounded-full animate-spin ${spinnerSizeClasses[size]} ${spinnerColorClasses[variant]} border-solid border-gray-700`}
-        initial={{ rotate: 0 }}
-        animate={{ rotate: 360 }}
+        initial={{ rotate: 0     }}
+        animate={{ rotate: 360     }}
         transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
       >
         {variant !== 'default' && (
@@ -99,9 +96,8 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.5 }}
-            className="mt-3 text-sm text-gray-400 text-center max-w-xs"
-          >
+            transition={{ duration: 0.5     }}
+            className="mt-3 text-sm text-gray-400 text-center max-w-xs">
             {loadingMessages[messageIndex]}
           </motion.p>
         </AnimatePresence>
@@ -110,9 +106,9 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
         <div className="w-full bg-gray-700 rounded-full h-2.5 mt-3">
           <motion.div
             className="bg-blue-500 h-2.5 rounded-full"
-            initial={{ width: 0 }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.5 }}
+            initial={{ width: 0     }}
+            animate={{ width: `${progress    }%` }}
+            transition={{ duration: 0.5     }}
           ></motion.div>
         </div>
       )}
@@ -120,24 +116,22 @@ export const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
   );
 };
 
-export const ZionLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
+export const ZionLoadingSpinner: React.FC> = (props) => (
   <EnhancedLoadingSpinner {...props} variant="tech" />
 );
 
-export const TechLoadingSpinner: React.FC<Omit<EnhancedLoadingSpinnerProps, 'variant'>> = (props) => (
+export const TechLoadingSpinner: React.FC> = (props) => (
   <EnhancedLoadingSpinner {...props} variant="tech" />
 );
 
-interface LoadingOverlayProps extends React.PropsWithChildren<{}> {
-
-  isOpen: boolean;
+interface LoadingOverlayProps extends React.PropsWithChildren<{}> { isOpen: boolean;
   message?: string;
   progress?: number;
   variant?: 'default' | 'ai' | 'tech' | 'global';
 
-}
+    }
 
-export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
+export const LoadingOverlay: React.FC = ({
   isOpen,
   message,
   progress,
@@ -147,11 +141,10 @@ export const LoadingOverlay: React.FC<LoadingOverlayProps> = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]"
-        >
+          initial={{ opacity: 0     }}
+          animate={{ opacity: 1     }}
+          exit={{ opacity: 0     }}
+          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-[9999]">
           <EnhancedLoadingSpinner message={message} showProgress={progress !== undefined} progress={progress} variant={variant} size="xl" />
         </motion.div>
       )}

@@ -29,26 +29,22 @@ import {
 
 export default function CustomDevelopment() {
   const services = [
-    {
-      title: 'Web Applications',
+    { title: 'Web Applications',
       description: 'Custom web applications built with modern technologies and best practices for optimal performance and user experience.',
       icon: Globe,
       features: ['Responsive Design', 'Progressive Web Apps', 'E-commerce Solutions', 'Content Management Systems']
     },
-    {
-      title: 'Mobile Applications',
+    { title: 'Mobile Applications',
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',
       icon: Smartphone,
       features: ['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']
     },
-    {
-      title: 'API Development',
+    { title: 'API Development',
       description: 'Robust and scalable APIs that enable seamless integration between systems and services.',
       icon: Network,
       features: ['RESTful APIs', 'GraphQL APIs', 'API Documentation', 'Integration Support']
     },
-    {
-      title: 'System Integration',
+    { title: 'System Integration',
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',
               icon: GitFork,
       features: ['Legacy System Integration', 'Third-party APIs', 'Data Synchronization', 'Workflow Automation']
@@ -56,26 +52,22 @@ export default function CustomDevelopment() {
   ];
 
   const technologies = [
-    {
-      title: 'Frontend',
+    { title: 'Frontend',
       description: 'Modern frontend frameworks and libraries for responsive and interactive user interfaces.',
       icon: Monitor,
       stack: ['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']
     },
-    {
-      title: 'Backend',
+    { title: 'Backend',
       description: 'Robust backend technologies for scalable and secure applications.',
       icon: Cpu, // Changed from Server to Cpu
       stack: ['Node.js', 'Python', 'Java', 'C#', 'Go']
     },
-    {
-      title: 'Mobile',
+    { title: 'Mobile',
       description: 'Cross-platform and native mobile development technologies.',
       icon: Smartphone,
       stack: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Xamarin']
     },
-    {
-      title: 'Database',
+    { title: 'Database',
       description: 'Modern database solutions for data storage and management.',
       icon: Database,
       stack: ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis', 'Elasticsearch']
@@ -83,23 +75,19 @@ export default function CustomDevelopment() {
   ];
 
   const benefits = [
-    {
-      title: 'Custom Solutions',
+    { title: 'Custom Solutions',
       description: 'Tailored software solutions designed specifically for your business needs and workflows.',
       icon: Target
     },
-    {
-      title: 'Scalability',
+    { title: 'Scalability',
       description: 'Applications built to grow with your business and handle increasing demands.',
       icon: TrendingUp
     },
-    {
-      title: 'Security',
+    { title: 'Security',
       description: 'Enterprise-grade security measures built into every application.',
       icon: Shield
     },
-    {
-      title: 'Support & Maintenance',
+    { title: 'Support & Maintenance',
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',
       icon: Settings
     }
@@ -119,7 +107,7 @@ export default function CustomDevelopment() {
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
               Custom Development
@@ -131,14 +119,12 @@ export default function CustomDevelopment() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold">
                 Start Your Project
               </Link>
               <Link 
                 to="/services" 
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold">
                 View All Services
               </Link>
             </div>
@@ -153,7 +139,7 @@ export default function CustomDevelopment() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Custom Development Services
@@ -207,7 +193,7 @@ export default function CustomDevelopment() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Technology Stack
@@ -252,7 +238,7 @@ export default function CustomDevelopment() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Custom Development?
@@ -289,7 +275,7 @@ export default function CustomDevelopment() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve
@@ -323,7 +309,7 @@ export default function CustomDevelopment() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Development Process
@@ -365,7 +351,7 @@ export default function CustomDevelopment() {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Build Your Custom Solution?
@@ -377,14 +363,12 @@ export default function CustomDevelopment() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold">
                 Start Your Project
               </Link>
               <Link 
                 to="/services" 
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
-              >
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold">
                 Explore Services
               </Link>
             </div>

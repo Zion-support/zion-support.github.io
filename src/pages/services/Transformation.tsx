@@ -3,22 +3,19 @@ import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowR
 
 const DigitalTransformation = () => {
   const transformationServices = [
-    {
-      title: "Process Automation",
+    { title: "Process Automation",
       description: "Streamline workflows with intelligent automation and AI-powered solutions.",
       price: "From $15,000/project",
       features: ["Workflow automation", "AI-powered decision making", "Process optimization", "Performance monitoring"],
       icon: Zap
     },
-    {
-      title: "Legacy Modernization",
+    { title: "Legacy Modernization",
       description: "Update and integrate legacy systems with modern technologies.",
       price: "From $25,000/project",
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
     },
-    {
-      title: "Change Management",
+    { title: "Change Management",
       description: "Guide your team through digital adoption and transformation.",
       price: "From $8,000/month",
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
@@ -27,20 +24,17 @@ const DigitalTransformation = () => {
   ];
 
   const transformationAreas = [
-    {
-      name: "Customer Experience",
+    { name: "Customer Experience",
       description: "Enhance customer interactions and satisfaction",
       icon: Target,
       features: ["Digital touchpoints", "Personalization", "Omnichannel strategy", "Customer analytics"]
     },
-    {
-      name: "Operations",
+    { name: "Operations",
       description: "Optimize internal processes and efficiency",
       icon: TrendingUp,
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
     },
-    {
-      name: "Technology",
+    { name: "Technology",
       description: "Modernize your technology stack and infrastructure",
       icon: BarChart3,
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]

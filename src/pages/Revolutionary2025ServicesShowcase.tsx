@@ -90,7 +90,7 @@ import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-
 // Combine all services
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
 const Revolutionary2025ServicesShowcase: React.FC = () => {
-  const [services, setServices] = useState<any[]>(ALL_SERVICES);
+  const [services, setServices] = useState<[]>(ALL_SERVICES);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -163,9 +163,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Revolutionary 2025 Services
             </h1>
@@ -199,8 +198,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-              >
+                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
                 <option value="all">All Categories</option>
                 {categories.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -209,8 +207,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-              >
+                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
                 <option value="all">All Prices</option>
                 <option value="0-500">Under $500</option>
                 <option value="500-1000">$500 - $1,000</option>
@@ -220,8 +217,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <select
                 value={selectedROI}
                 onChange={(e) => setSelectedROI(e.target.value)}
-                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-              >
+                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
                 <option value="all">All ROI</option>
                 <option value="500-600">500% - 600%</option>
                 <option value="600-700">600% - 700%</option>
@@ -231,8 +227,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500"
-              >
+                className="px-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
                 <option value="title">Sort by Name</option>
                 <option value="price">Sort by Price</option>
                 <option value="rating">Sort by Rating</option>
@@ -282,8 +277,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               AI-Powered Service Recommendations
@@ -297,14 +292,14 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center mb-4">
                 <Brain className="w-8 h-8 text-blue-400 mr-3" />
                 <h3 className="text-xl font-semibold text-white">Business Size</h3>
               </div>
-              <p className="text-gray-300 mb-4">Select your company size to get tailored recommendations</p>
+              <p className="text-gray-300 mb-4">Select your comp size to get tailored recommendations</p>
               <select className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-blue-500">
                 <option>Startup (1-10 employees)</option>
                 <option>Small Business (11-50 employees)</option>
@@ -317,7 +312,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center mb-4">
                 <Target className="w-8 h-8 text-purple-400 mr-3" />
@@ -338,7 +333,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center mb-4">
                 <TrendingUp className="w-8 h-8 text-green-400 mr-3" />
@@ -368,8 +363,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Seamless Service Integration
@@ -383,8 +378,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="bg-gradient-to-r from-violet-600/20 to-purple-700/20 p-6 rounded-xl border border-violet-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center mb-4">
                 <Network className="w-8 h-8 text-violet-400 mr-3" />
@@ -411,7 +406,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center mb-4">
                 <Atom className="w-8 h-8 text-blue-400 mr-3" />
@@ -438,7 +433,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center mb-4">
                 <Shield className="w-8 h-8 text-green-400 mr-3" />
@@ -476,8 +471,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Service Comparison Matrix
@@ -571,7 +566,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                 >
                   <div className="text-4xl mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
@@ -604,8 +599,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                       href={service.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
-                    >
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
                   </div>
@@ -622,7 +616,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                 >
                   <div className="flex items-start gap-6">
                     <div className="text-4xl">{service.icon}</div>
@@ -659,8 +653,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                           href={service.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
-                        >
+                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold">
                           Learn More <ArrowRight className="w-4 h-4 ml-1" />
                         </a>
                       </div>
@@ -752,8 +745,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                   <p className="text-gray-400 mb-4">Select services from the grid or list view to compare</p>
                   <button
                     onClick={() => setViewMode('grid')}
-                    className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
-                  >
+                    className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors">
                     View Services
                   </button>
                 </div>
@@ -776,8 +768,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-8 rounded-xl border border-green-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-2xl font-bold text-white mb-4">Starter Plan</h3>
               <div className="text-4xl font-bold text-green-400 mb-2">$2,999</div>
@@ -809,7 +801,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="bg-blue-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-4 inline-block">
                 MOST POPULAR
@@ -848,7 +840,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise Plan</h3>
               <div className="text-4xl font-bold text-purple-400 mb-2">$19,999</div>
@@ -921,8 +913,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-indigo-400 mb-2">99.99%</div>
               <p className="text-gray-300 text-sm">Uptime</p>
@@ -935,7 +927,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-purple-400 mb-2">25ms</div>
               <p className="text-gray-300 text-sm">Response Time</p>
@@ -948,7 +940,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-cyan-400 mb-2">1.2M</div>
               <p className="text-gray-300 text-sm">Requests/min</p>
@@ -961,7 +953,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-green-400 mb-2">256-bit</div>
               <p className="text-gray-300 text-sm">Encryption</p>
@@ -975,8 +967,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="bg-gradient-to-r from-indigo-600/20 to-purple-700/20 p-6 rounded-xl border border-indigo-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">AI Services</h3>
               <div className="space-y-3 text-sm text-gray-300">
@@ -999,7 +991,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Quantum Services</h3>
               <div className="space-y-3 text-sm text-gray-300">
@@ -1022,7 +1014,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Cybersecurity</h3>
               <div className="space-y-3 text-sm text-gray-300">
@@ -1062,8 +1054,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-emerald-400 mb-2">$2.4B</div>
               <p className="text-gray-300 text-sm">Total Revenue Generated</p>
@@ -1073,7 +1065,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-teal-400 mb-2">1,500+</div>
               <p className="text-gray-300 text-sm">Happy Clients</p>
@@ -1083,7 +1075,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-cyan-400 mb-2">800%</div>
               <p className="text-gray-300 text-sm">Average ROI</p>
@@ -1093,7 +1085,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
               <p className="text-gray-300 text-sm">Uptime Guarantee</p>
@@ -1104,8 +1096,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="bg-gradient-to-r from-emerald-600/20 to-teal-700/20 p-6 rounded-xl border border-emerald-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Fortune 500 Success</h3>
               <p className="text-gray-300 text-sm mb-4">"Zion Tech Group's AI services increased our operational efficiency by 300% and reduced costs by 40%."</p>
@@ -1116,7 +1108,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Startup Growth</h3>
               <p className="text-gray-300 text-sm mb-4">"Their quantum-enhanced solutions helped us scale from 10 to 1000 customers in just 6 months."</p>
@@ -1127,7 +1119,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Healthcare Innovation</h3>
               <p className="text-gray-300 text-sm mb-4">"AI-powered diagnostics improved our accuracy by 95% and reduced patient wait times by 60%."</p>
@@ -1150,8 +1142,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-amber-400 mb-2">50+</div>
               <p className="text-gray-300 text-sm">Countries</p>
@@ -1161,7 +1153,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-orange-400 mb-2">200+</div>
               <p className="text-gray-300 text-sm">Cities</p>
@@ -1171,7 +1163,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-red-400 mb-2">24/7</div>
               <p className="text-gray-300 text-sm">Support</p>
@@ -1181,7 +1173,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl font-bold text-pink-400 mb-2">15+</div>
               <p className="text-gray-300 text-sm">Languages</p>
@@ -1192,8 +1184,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="bg-gradient-to-r from-amber-600/20 to-orange-700/20 p-6 rounded-xl border border-amber-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">North America</h3>
               <p className="text-gray-300 text-sm mb-4">Headquarters in Delaware, serving Fortune 500 companies across the continent</p>
@@ -1204,18 +1196,18 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Europe & Asia</h3>
               <p className="text-gray-300 text-sm mb-4">Strategic partnerships and regional offices serving global enterprises</p>
-              <div className="text-orange-400 text-sm">UK • Germany • Japan • Singapore</div>
+              <div className="text-orange-400 text-sm">UK • Germ • Japan • Singapore</div>
             </motion.div>
             <motion.div
               className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <h3 className="text-xl font-semibold text-white mb-3">Emerging Markets</h3>
               <p className="text-gray-300 text-sm mb-4">Expanding presence in high-growth regions with innovative solutions</p>
@@ -1236,8 +1228,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Experience the Future?
@@ -1248,14 +1240,12 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button
                 onClick={() => setViewMode('grid')}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Explore All Services
               </button>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Revolutionary 2025 Services Consultation"
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 Get Free Consultation
               </a>
             </div>
@@ -1283,8 +1273,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 className="relative flex items-center"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
+                transition={{ duration: 0.6     }}
+                viewport={{ once: true     }}
               >
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-gradient-to-r from-amber-600/20 to-orange-700/20 p-6 rounded-xl border border-amber-500/30">
@@ -1305,7 +1295,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
               >
                 <div className="w-1/2 pr-8 text-right">
                   <div className="text-orange-400 font-bold">Q2 2025</div>
@@ -1326,7 +1316,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
               >
                 <div className="w-1/2 pr-8 text-right">
                   <div className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30">
@@ -1347,7 +1337,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
               >
                 <div className="w-1/2 pr-8 text-right">
                   <div className="text-pink-400 font-bold">Q2 2027</div>
@@ -1381,8 +1371,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="text-center group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-700/20 p-6 rounded-xl border border-blue-500/30 group-hover:border-blue-400 transition-all duration-300">
                 <Brain className="w-12 h-12 text-blue-400 mx-auto mb-4" />
@@ -1395,7 +1385,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-6 rounded-xl border border-purple-500/30 group-hover:border-purple-400 transition-all duration-300">
                 <Atom className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -1408,7 +1398,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="bg-gradient-to-r from-green-600/20 to-emerald-700/20 p-6 rounded-xl border border-green-500/30 group-hover:border-green-400 transition-all duration-300">
                 <Zap className="w-12 h-12 text-green-400 mx-auto mb-4" />
@@ -1421,7 +1411,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="bg-gradient-to-r from-red-600/20 to-pink-700/20 p-6 rounded-xl border border-red-500/30 group-hover:border-red-400 transition-all duration-300">
                 <Shield className="w-12 h-12 text-red-400 mx-auto mb-4" />
@@ -1461,8 +1451,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl md:text-5xl font-bold text-cyan-400 mb-2">800%</div>
               <p className="text-gray-300">Average ROI</p>
@@ -1472,7 +1462,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">90%</div>
               <p className="text-gray-300">Time Reduction</p>
@@ -1482,7 +1472,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">1,500+</div>
               <p className="text-gray-300">Happy Clients</p>
@@ -1492,7 +1482,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">24/7</div>
               <p className="text-gray-300">Autonomous Operation</p>
@@ -1514,8 +1504,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               className="bg-gradient-to-r from-purple-600/20 to-indigo-700/20 p-8 rounded-xl border border-purple-500/30"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -1535,7 +1525,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -1555,7 +1545,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
             >
               <div className="flex items-center justify-center mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -1602,16 +1592,14 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="mailto:kleber@ziontechgroup.com"
-              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
+              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Get Started
             </a>
             <a 
               href="https://ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
+              className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
               Visit Website
             </a>
           </div>

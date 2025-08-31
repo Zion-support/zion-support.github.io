@@ -29,98 +29,86 @@ import { Brain,
  } from 'lucide-react.ts';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SPECIALIZED_SERVICES  } from '@/data/innovativeMicroSaasServices2025';
 
-export function ServicesOverview(...args: any[]): any {
+export function ServicesOverview(...args: []):  {
   const serviceCategories = [
-    {
-      id: any'ai-analytics',
+    { id: 'ai-analytics',
       name: 'AI & Analytics',
       icon: Brain,
       color: 'from-zion-cyan to-zion-purple',
       description: 'Cutting-edge artificial intelligence and advanced analytics solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('AI'))
     },
-    {
-      id: any'quantum-computing',
+    { id: 'quantum-computing',
       name: 'Quantum Computing',
       icon: Rocket,
       color: 'from-zion-blue to-zion-cyan',
       description: 'Next-generation quantum computing and quantum machine learning',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Quantum'))
     },
-    {
-      id: any'blockchain',
+    { id: 'blockchain',
       name: 'Blockchain & Web3',
       icon: Lock,
       color: 'from-zion-purple to-zion-blue',
       description: 'Decentralized solutions and blockchain technology platforms',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Blockchain'))
     },
-    {
-      id: any'iot-edge',
+    { id: 'iot-edge',
       name: 'IoT & Edge Computing',
       icon: Cpu,
       color: 'from-zion-green to-zion-cyan',
       description: 'Internet of Things and edge computing solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('IoT'))
     },
-    {
-      id: any'cybersecurity',
+    { id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: Shield,
       color: 'from-zion-purple to-zion-red',
       description: 'Advanced security and threat protection solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Cybersecurity'))
     },
-    {
-      id: any'digital-twin',
+    { id: 'digital-twin',
       name: 'Digital Twin',
       icon: Server,
       color: 'from-zion-blue to-zion-purple',
       description: 'Virtual replicas and simulation platforms',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Digital Twin'))
     },
-    {
-      id: any'sustainability',
+    { id: 'sustainability',
       name: 'Sustainability',
       icon: Globe,
       color: 'from-zion-green to-zion-blue',
       description: 'Environmental monitoring and sustainability solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Sustainability'))
     },
-    {
-      id: any'hr-talent',
+    { id: 'hr-talent',
       name: 'HR & Talent',
       icon: Users,
       color: 'from-zion-pink to-zion-purple',
       description: 'Human resources and talent management platforms',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('HR'))
     },
-    {
-      id: any'content-creation',
+    { id: 'content-creation',
       name: 'Content Creation',
       icon: Code,
       color: 'from-zion-orange to-zion-purple',
       description: 'AI-powered content generation and management',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Content'))
     },
-    {
-      id: any'legal-tech',
+    { id: 'legal-tech',
       name: 'Legal Tech',
       icon: FileText,
       color: 'from-zion-purple to-zion-cyan',
       description: 'Legal technology and compliance solutions',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('Legal'))
     },
-    {
-      id: any'fintech',
+    { id: 'fintech',
       name: 'FinTech',
       icon: BarChart3,
       color: 'from-zion-green to-zion-blue',
       description: 'Financial technology and advisory platforms',
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2025.filter(s  => s.category.includes('FinTech'))
     },
-    {
-      id: any'healthcare-ai',
+    { id: 'healthcare-ai',
       name: 'Healthcare AI',
       icon: Heart,
       color: 'from-zion-pink to-zion-purple',
@@ -142,7 +130,7 @@ export function ServicesOverview(...args: any[]): any {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6     }}
         >
           <h1 className="heading-responsive font-bold mb-6">
             <span className="text-gradient neon-text-cyan">Comprehensive Technology</span>
@@ -157,7 +145,7 @@ export function ServicesOverview(...args: any[]): any {
         </motion.div>
 
         {/* Service Categories Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
           {serviceCategories.map((category, index)  => (
             <motion.div
               key={category.id}
@@ -165,7 +153,7 @@ export function ServicesOverview(...args: any[]): any {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10     }}
             >
               <Link to={`/services/${category.id}`} className="block">
                 <div className="card-futuristic h-full hover:border-zion-cyan/50 transition-all duration-300">
@@ -208,13 +196,13 @@ export function ServicesOverview(...args: any[]): any {
           className="mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="heading-responsive font-bold mb-8 text-center">
             <span className="text-gradient neon-text-purple">Featured Services</span>
           </h2>
           
-          <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
             {INNOVATIVE_MICRO_SAAS_SERVICES_2025.slice(0, 6).map((service, index)  => (
               <motion.div
                 key={service.id}
@@ -222,7 +210,7 @@ export function ServicesOverview(...args: any[]): any {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5     }}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
@@ -276,8 +264,7 @@ export function ServicesOverview(...args: any[]): any {
                   
                   <Link
                     to={`/services/${service.id}`}
-                    className="btn-futuristic px-4 py-2 text-sm"
-                  >
+                    className="btn-futuristic px-4 py-2 text-sm">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -292,7 +279,7 @@ export function ServicesOverview(...args: any[]): any {
           className="text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8     }}
         >
           <div className="bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10 rounded-2xl p-12 border border-zion-cyan/20">
             <h2 className="heading-responsive font-bold mb-6">
@@ -306,16 +293,14 @@ export function ServicesOverview(...args: any[]): any {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 to="/contact"
-                className="btn-futuristic px-8 py-4 text-lg"
-              >
+                className="btn-futuristic px-8 py-4 text-lg">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
               
               <a
                 href="tel:+13024640950"
-                className="btn-neon px-8 py-4 text-lg"
-              >
+                className="btn-neon px-8 py-4 text-lg">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 302 464 0950
               </a>

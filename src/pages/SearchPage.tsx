@@ -70,7 +70,7 @@ import {
 
 interface SearchResult {
   id: string;
-  type: 'service' | 'talent' | 'equipment' | 'company';
+  type: 'service' | 'talent' | 'equipment' | 'comp';
   title: string;
   description: string;
   url: string;
@@ -79,9 +79,9 @@ interface SearchResult {
   tags: string[];
   relevance: number;
   lastUpdated: string;
-  icon: any;
+  icon: ;
   featured?: boolean;
-}
+    }
 
 export default function SearchPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -95,8 +95,7 @@ export default function SearchPage() {
   // Mock search results - in a real app, this would come from an API
   const mockSearchResults: SearchResult[] = [
     // AI Services
-    {
-      id: 'ai-bi',
+    { id: 'ai-bi',
       title: 'AI Business Intelligence',
       description: 'Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.',
       url: '/services/ai-business-intelligence',
@@ -108,8 +107,7 @@ export default function SearchPage() {
       icon: Brain,
       featured: true
     },
-    {
-      id: 'ai-compliance',
+    { id: 'ai-compliance',
       title: 'AI Compliance Assistant',
       description: 'Automated regulatory compliance solution that helps businesses stay compliant with industry standards and regulations through intelligent monitoring and reporting.',
       url: '/services/ai-compliance-assistant',
@@ -120,8 +118,7 @@ export default function SearchPage() {
       lastUpdated: '2024-11-28',
       icon: Shield
     },
-    {
-      id: 'ai-sales',
+    { id: 'ai-sales',
       title: 'AI Sales Copilot',
       description: 'Intelligent sales optimization platform that enhances sales performance through AI-driven insights, lead scoring, and automated follow-up sequences.',
       url: '/services/ai-sales-copilot',
@@ -134,8 +131,7 @@ export default function SearchPage() {
     },
 
     // Cloud Services
-    {
-      id: 'cloud-devops',
+    { id: 'cloud-devops',
       title: 'Cloud DevOps Platform',
       description: 'Comprehensive cloud DevOps solution that automates infrastructure deployment, scaling, and management across multiple cloud providers.',
       url: '/services/cloud-devops',
@@ -146,8 +142,7 @@ export default function SearchPage() {
       lastUpdated: '2024-11-20',
       icon: Cloud
     },
-    {
-      id: 'it-infrastructure',
+    { id: 'it-infrastructure',
       title: 'IT Infrastructure Management',
       description: 'Enterprise-grade IT infrastructure solutions including server management, network optimization, and disaster recovery planning.',
       url: '/services/it-infrastructure',
@@ -160,8 +155,7 @@ export default function SearchPage() {
     },
 
     // Security Services
-    {
-      id: 'ai-cybersecurity',
+    { id: 'ai-cybersecurity',
       title: 'AI Cybersecurity Platform',
       description: 'Next-generation cybersecurity solution powered by artificial intelligence for advanced threat detection, prevention, and response.',
       url: '/services/ai-cybersecurity-platform',
@@ -173,8 +167,7 @@ export default function SearchPage() {
       icon: Shield,
       featured: true
     },
-    {
-      id: 'zero-trust',
+    { id: 'zero-trust',
       title: 'Zero Trust Network Access',
       description: 'Modern security architecture that implements zero-trust principles for enhanced network security and access control.',
       url: '/services/zero-trust-network-access',
@@ -187,8 +180,7 @@ export default function SearchPage() {
     },
 
     // Quantum Computing
-    {
-      id: 'quantum-computing',
+    { id: 'quantum-computing',
       title: 'Quantum Computing Solutions',
       description: 'Cutting-edge quantum computing services for optimization problems, cryptography, and scientific simulations.',
       url: '/services/quantum-computing',
@@ -201,8 +193,7 @@ export default function SearchPage() {
     },
 
     // Blog Posts
-    {
-      id: 'ai-trends-2024',
+    { id: 'ai-trends-2024',
       title: 'AI Trends to Watch in 2024',
       description: 'Explore the latest artificial intelligence trends that will shape the technology landscape in 2024 and beyond.',
       url: '/blog/ai-trends-2024',
@@ -213,8 +204,7 @@ export default function SearchPage() {
       lastUpdated: '2024-12-01',
       icon: BookOpen
     },
-    {
-      id: 'cloud-migration-guide',
+    { id: 'cloud-migration-guide',
       title: 'Complete Guide to Cloud Migration',
       description: 'A comprehensive guide to migrating your infrastructure to the cloud, including best practices and common pitfalls.',
       url: '/blog/cloud-migration-guide',
@@ -227,8 +217,7 @@ export default function SearchPage() {
     },
 
     // Case Studies
-    {
-      id: 'healthcare-ai-case-study',
+    { id: 'healthcare-ai-case-study',
       title: 'AI Transformation in Healthcare',
       description: 'How a leading healthcare provider leveraged AI to improve patient outcomes and operational efficiency.',
       url: '/case-studies/healthcare-ai-transformation',
@@ -302,8 +291,7 @@ export default function SearchPage() {
   };
 
   const clearAllFilters = () => {
-    setActiveFilters({
-      type: [],
+    setActiveFilters({ type: [],
       category: [],
       location: [],
       priceRange: [],
@@ -314,7 +302,7 @@ export default function SearchPage() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setSearchParams({ q: searchQuery.trim() });
+      setSearchParams({ q: searchQuery.trim()     });
     }
   };
 
@@ -369,9 +357,8 @@ export default function SearchPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.5     }}
+            className="text-center">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">Search Zion Tech Group</h1>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Find services, documentation, case studies, and insights across our comprehensive technology portfolio.
@@ -386,8 +373,7 @@ export default function SearchPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-8"
-        >
+          className="mb-8">
           <form onSubmit={handleSearch} className="max-w-3xl mx-auto">
             <div className="relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-gray-400" />
@@ -400,8 +386,7 @@ export default function SearchPage() {
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-              >
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">
                 Search
               </button>
             </div>
@@ -417,8 +402,7 @@ export default function SearchPage() {
                 <h3 className="text-lg font-semibold text-gray-900">Filters</h3>
                 <button
                   onClick={clearFilters}
-                  className="text-sm text-blue-600 hover:text-blue-700"
-                >
+                  className="text-sm text-blue-600 hover:text-blue-700">
                   Clear All
                 </button>
               </div>
@@ -428,9 +412,8 @@ export default function SearchPage() {
                 <label className="block text-sm font-medium text-gray-700 mb-2">Sort By</label>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                >
+                  onChange={(e) => setSortBy(e.target.value as )}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                   <option value="relevance">Relevance</option>
                   <option value="date">Date</option>
                   <option value="popularity">Popularity</option>
@@ -476,8 +459,7 @@ export default function SearchPage() {
               {/* Mobile Filter Toggle */}
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="lg:hidden flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50"
-              >
+                className="lg:hidden flex items-center space-x-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
                 <Filter className="h-4 w-4" />
                 <span>Filters</span>
               </button>
@@ -490,8 +472,7 @@ export default function SearchPage() {
                   initial={{ opacity: 0, height: 0 }}
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
-                  className="lg:hidden mb-6 bg-white rounded-xl shadow-sm border border-gray-200 p-4"
-                >
+                  className="lg:hidden mb-6 bg-white rounded-xl shadow-sm border border-gray-200 p-4">
                   <div className="grid grid-cols-2 gap-3">
                     {filterOptions.map(filter => (
                       <button
@@ -528,13 +509,12 @@ export default function SearchPage() {
                     key={result.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-                  >
+                    transition={{ delay: index * 0.1     }}
+                    className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
                     <div className="flex items-start space-x-4">
                                               {/* Icon */}
                         <div className={`flex-shrink-0 w-12 h-12 bg-gradient-to-r ${getResultColor(result.type)} rounded-xl flex items-center justify-center`}>
-                          {React.createElement(getResultIcon(result.type), { className: "h-6 w-6 text-white" })}
+                          {React.createElement(getResultIcon(result.type), { className: "h-6 w-6 text-white"     })}
                         </div>
 
                       {/* Content */}
@@ -558,8 +538,7 @@ export default function SearchPage() {
                               {result.tags.slice(0, 5).map(tag => (
                                 <span
                                   key={tag}
-                                  className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
-                                >
+                                  className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
                                   {tag}
                                 </span>
                               ))}
@@ -592,8 +571,7 @@ export default function SearchPage() {
                             </button>
                             <a
                               href={result.url}
-                              className="p-2 text-blue-600 hover:text-blue-700 transition-colors"
-                            >
+                              className="p-2 text-blue-600 hover:text-blue-700 transition-colors">
                               <ArrowRight className="h-4 w-4" />
                             </a>
                           </div>
@@ -611,8 +589,7 @@ export default function SearchPage() {
                   </p>
                   <button
                     onClick={clearFilters}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-                  >
+                    className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                     Clear Filters
                   </button>
                 </div>

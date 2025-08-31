@@ -36,8 +36,7 @@ export default function LLMContentStudio() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function LLMContentStudio() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Sparkles,
+                { icon: Sparkles,
                   title: "AI Content Generation",
                   description: "Generate original content using advanced language models and AI algorithms."
                 },
-                {
-                  icon: PenTool,
+                { icon: PenTool,
                   title: "Creative Writing",
                   description: "Create compelling stories, articles, and creative content with AI assistance."
                 },
-                {
-                  icon: Target,
+                { icon: Target,
                   title: "Brand Voice Consistency",
                   description: "Maintain consistent brand voice and tone across all content pieces."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Multi-format Support",
                   description: "Create content for blogs, social media, emails, and marketing materials."
                 },
-                {
-                  icon: Zap,
+                { icon: Zap,
                   title: "Rapid Content Creation",
                   description: "Generate high-quality content in minutes, not hours or days."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Quality Assurance",
                   description: "Built-in plagiarism detection and content quality validation."
                 }
@@ -122,38 +115,32 @@ export default function LLMContentStudio() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Blog Posts & Articles",
+                { title: "Blog Posts & Articles",
                   description: "Long-form content, blog posts, and comprehensive articles.",
                   icon: BookOpen,
                   benefits: ["SEO optimization", "Research-backed", "Engaging narratives"]
                 },
-                {
-                  title: "Marketing Copy",
+                { title: "Marketing Copy",
                   description: "Ad copy, landing pages, and promotional content.",
                   icon: Target,
                   benefits: ["Conversion-focused", "Brand-aligned", "Compelling messaging"]
                 },
-                {
-                  title: "Social Media Content",
+                { title: "Social Media Content",
                   description: "Posts, captions, and social media marketing content.",
                   icon: Users,
                   benefits: ["Platform-optimized", "Trend-aware", "Engagement-driven"]
                 },
-                {
-                  title: "Email Marketing",
+                { title: "Email Marketing",
                   description: "Newsletters, promotional emails, and drip campaigns.",
                   icon: Mail,
                   benefits: ["Personalized", "Segmented", "Action-oriented"]
                 },
-                {
-                  title: "Product Descriptions",
+                { title: "Product Descriptions",
                   description: "E-commerce product descriptions and catalog content.",
                   icon: Activity,
                   benefits: ["Feature-focused", "Benefit-driven", "SEO-optimized"]
                 },
-                {
-                  title: "Creative Writing",
+                { title: "Creative Writing",
                   description: "Stories, scripts, and creative content projects.",
                   icon: PenTool,
                   benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
@@ -249,23 +236,19 @@ export default function LLMContentStudio() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Content Brief",
                   description: "Define content goals, target audience, and key messaging points."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "AI Generation",
                   description: "AI creates initial content based on your brief and requirements."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Human Review",
                   description: "Content creators review, edit, and refine AI-generated content."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Publishing",
                   description: "Final content is optimized and published across platforms."
                 }
@@ -350,23 +333,19 @@ export default function LLMContentStudio() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  metric: "Engagement",
+                { metric: "Engagement",
                   title: "Content Engagement",
                   description: "Track reader engagement and interaction metrics"
                 },
-                {
-                  metric: "SEO",
+                { metric: "SEO",
                   title: "Search Performance",
                   description: "Monitor search rankings and organic traffic"
                 },
-                {
-                  metric: "Conversion",
+                { metric: "Conversion",
                   title: "Conversion Rates",
                   description: "Measure content-driven conversion performance"
                 },
-                {
-                  metric: "ROI",
+                { metric: "ROI",
                   title: "Content ROI",
                   description: "Calculate return on investment for content"
                 }
@@ -395,15 +374,13 @@ export default function LLMContentStudio() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200">
                 Start Creating
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

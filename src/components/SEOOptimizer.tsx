@@ -20,17 +20,15 @@ import { Search,
  } from 'lucide-react.ts';
 
 interface SEOAnalysis {
-
-  score: anynumber;
+  score: number;
   issues: SEOIssue[];
   suggestions: SEOSuggestion[];
   metrics: SEOMetrics;
   lastUpdated: Date;
 
-}
+    }
 
 interface SEOIssue {
-
   id: string;
   type: 'error' | 'warning' | 'info';
   title: string;
@@ -39,10 +37,9 @@ interface SEOIssue {
   fixable: boolean;
   category: 'content' | 'technical' | 'performance' | 'accessibility';
 
-}
+    }
 
 interface SEOSuggestion {
-
   id: string;
   title: string;
   description: string;
@@ -50,21 +47,20 @@ interface SEOSuggestion {
   effort: 'low' | 'medium' | 'high';
   estimatedImpact: number;
 
-}
+    }
 
 interface SEOMetrics {
-
   pageSpeed: number;
   mobileFriendliness: number;
   accessibility: number;
   bestPractices: number;
   seoScore: number;
-coreWebVitals: {;
+coreWebVitals: {  
     lcp: number;
-    fid: number;
-    cls: number;
+    fid: number
+    cls: number
   
-};
+    };
 }
 
 interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
@@ -76,24 +72,22 @@ interface SEOOptimizerProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+export const SEOOptimizer: React.FC = ({
   url,
   autoAnalyze = true,
   showDetails = false,
   onAnalysisComplete
 }) => {
-  const [analysis, setAnalysis] = useState<any>(null);
+  const [analysis, setAnalysis] = useState(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [currentUrl, setCurrentUrl] = useState(url || window.location.href);
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
 
   // Mock SEO analysis data (in real app, this would come from actual analysis)
-  const mockAnalysis: SEOAnalysis = useMemo(() => ({
-    score: 87,
+  const mockAnalysis: SEOAnalysis = useMemo(() => ({ score: 87,
     issues: [
-      {
-        id: '1',
+      { id: '1',
         type: 'warning',
         title: 'Missing Meta Description',
         description: 'The page is missing a meta description tag, which is important for search engine snippets.',
@@ -101,8 +95,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         fixable: true,
         category: 'content'
       },
-      {
-        id: '2',
+      { id: '2',
         type: 'error',
         title: 'Slow Page Load Time',
         description: 'Page load time is above the recommended 3-second threshold.',
@@ -110,8 +103,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         fixable: true,
         category: 'performance'
       },
-      {
-        id: '3',
+      { id: '3',
         type: 'info',
         title: 'Missing Alt Text',
         description: 'Some images are missing alt text, which affects accessibility.',
@@ -121,24 +113,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       }
     ],
     suggestions: [
-      {
-        id: '1',
+      { id: '1',
         title: 'Optimize Images',
         description: 'Compress and optimize images to improve page load speed.',
         priority: 'high',
         effort: 'medium',
         estimatedImpact: 15
       },
-      {
-        id: '2',
+      { id: '2',
         title: 'Add Schema Markup',
         description: 'Implement structured data to improve search engine understanding.',
         priority: 'medium',
         effort: 'low',
         estimatedImpact: 8
       },
-      {
-        id: '3',
+      { id: '3',
         title: 'Improve Internal Linking',
         description: 'Add more internal links to improve page authority distribution.',
         priority: 'low',
@@ -146,14 +135,12 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         estimatedImpact: 5
       }
     ],
-    metrics: {
-      pageSpeed: 78,
+    metrics: { pageSpeed: 78,
       mobileFriendliness: 92,
       accessibility: 85,
       bestPractices: 88,
       seoScore: 87,
-      coreWebVitals: {
-        lcp: 2.8,
+      coreWebVitals: { lcp: 2.8,
         fid: 45,
         cls: 0.08
       }
@@ -181,21 +168,21 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   }, [autoAnalyze, analyzeSEO]);
 
   // Get score color
-  const getScoreColor = (score: anynumber)  => {
+  const getScoreColor = (score: number)  => {
     if (score >= 90) return 'text-green-500';
     if (score >= 70) return 'text-yellow-500';
     return 'text-red-500';
   };
 
   // Get score background
-  const getScoreBackground = (score: anynumber)  => {
+  const getScoreBackground = (score: number)  => {
     if (score >= 90) return 'bg-green-100';
     if (score >= 70) return 'bg-yellow-100';
     return 'bg-red-100';
   };
 
   // Get impact color
-  const getImpactColor = (impact: anystring)  => {
+  const getImpactColor = (impact: string)  => {
     switch (impact) {
       case 'high': return 'text-red-500';
       case 'medium': return 'text-yellow-500';
@@ -205,7 +192,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case 'high': return 'text-red-500 bg-red-50 border-red-200';
       case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
@@ -235,8 +222,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         <p className="text-zion-slate/60">No SEO analysis available</p>
         <button
           onClick={analyzeSEO}
-          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors"
-        >
+          className="mt-4 px-6 py-2 bg-zion-cyan hover:bg-zion-cyan/80 text-white rounded-lg transition-colors">
           Analyze SEO
         </button>
       </div>
@@ -269,8 +255,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           <button
             onClick={analyzeSEO}
             disabled={isAnalyzing}
-            className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2"
-          >
+            className="px-4 py-2 bg-zion-cyan hover:bg-zion-cyan/80 disabled:bg-zion-slate/30 text-white rounded-lg transition-colors flex items-center space-x-2">
             {isAnalyzing ? (
               <>
                 <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -448,8 +433,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                   key={suggestion.id}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg"
-                >
+                  className="p-4 bg-gradient-to-r from-zion-cyan/5 to-zion-blue/5 border border-zion-cyan/20 rounded-lg">
                   <div className="flex items-start justify-between">
                     <div className="flex-1">
                       <h5 className="font-medium text-zion-slate-dark mb-1">{suggestion.title}</h5>
@@ -477,8 +461,7 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-                className="border-t border-zion-slate/20 pt-6"
-              >
+                className="border-t border-zion-slate/20 pt-6">
                 <h4 className="text-lg font-semibold text-zion-slate-dark mb-4">Advanced Settings</h4>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-4 bg-zion-slate/5 rounded-lg">
@@ -509,8 +492,8 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 };
 
 // Hook for using SEO optimization
-export const useSEOOptimization: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [analysis, setAnalysis] = useState<any>(null);
+export const useSEOOptimization: [, React.Dispatch<React.SetStateAction<>>] = () => {
+  const [analysis, setAnalysis] = useState(null);
   const [isOptimizing, setIsOptimizing] = useState(false);
 
   const optimizePage = useCallback(async () => {

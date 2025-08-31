@@ -36,8 +36,7 @@ export default function HealthcareTech() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function HealthcareTech() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Heart,
+                { icon: Heart,
                   title: "AI Diagnostics",
                   description: "Machine learning-powered diagnostic tools for accurate and rapid medical assessments."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Patient Monitoring",
                   description: "Real-time patient monitoring with IoT devices and predictive analytics."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Data Security",
                   description: "HIPAA-compliant security with advanced encryption and access controls."
                 },
-                {
-                  icon: Zap,
+                { icon: Zap,
                   title: "Telemedicine",
                   description: "Virtual healthcare delivery platforms for remote patient consultations."
                 },
-                {
-                  icon: Settings,
+                { icon: Settings,
                   title: "Clinical Workflows",
                   description: "Streamlined clinical processes and automated healthcare workflows."
                 },
-                {
-                  icon: Globe,
+                { icon: Globe,
                   title: "Interoperability",
                   description: "Seamless integration with existing healthcare systems and EHR platforms."
                 }
@@ -122,38 +115,32 @@ export default function HealthcareTech() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Diagnostic Imaging",
+                { title: "Diagnostic Imaging",
                   description: "AI-powered analysis of medical images for faster and more accurate diagnoses.",
                   icon: Target,
                   benefits: ["Image analysis", "Pattern recognition", "Diagnostic accuracy"]
                 },
-                {
-                  title: "Patient Management",
+                { title: "Patient Management",
                   description: "Comprehensive patient care management with integrated health records.",
                   icon: Users,
                   benefits: ["Health records", "Care coordination", "Patient engagement"]
                 },
-                {
-                  title: "Drug Discovery",
+                { title: "Drug Discovery",
                   description: "AI-driven pharmaceutical research and drug development acceleration.",
                   icon: Stethoscope,
                   benefits: ["Molecular modeling", "Clinical trials", "Drug optimization"]
                 },
-                {
-                  title: "Preventive Care",
+                { title: "Preventive Care",
                   description: "Predictive analytics for early disease detection and prevention strategies.",
                   icon: Activity,
                   benefits: ["Risk assessment", "Early detection", "Prevention strategies"]
                 },
-                {
-                  title: "Clinical Trials",
+                { title: "Clinical Trials",
                   description: "Streamlined clinical trial management and patient recruitment.",
                   icon: BarChart3,
                   benefits: ["Trial management", "Patient recruitment", "Data analysis"]
                 },
-                {
-                  title: "Healthcare Analytics",
+                { title: "Healthcare Analytics",
                   description: "Data-driven insights for improved healthcare outcomes and operational efficiency.",
                   icon: Database,
                   benefits: ["Performance metrics", "Outcome analysis", "Operational insights"]
@@ -246,38 +233,32 @@ export default function HealthcareTech() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "HIPAA Compliance",
+                { title: "HIPAA Compliance",
                   description: "Full HIPAA compliance with data encryption, access controls, and audit trails.",
                   icon: Shield,
                   features: ["Data encryption", "Access controls", "Audit trails"]
                 },
-                {
-                  title: "FDA Approval",
+                { title: "FDA Approval",
                   description: "FDA-cleared medical devices and software for clinical use.",
                   icon: Target,
                   features: ["Medical device clearance", "Clinical validation", "Safety standards"]
                 },
-                {
-                  title: "SOC 2 Type II",
+                { title: "SOC 2 Type II",
                   description: "SOC 2 compliance for data security and operational controls.",
                   icon: Lock,
                   features: ["Security controls", "Operational controls", "Continuous monitoring"]
                 },
-                {
-                  title: "GDPR Compliance",
+                { title: "GDPR Compliance",
                   description: "European data protection compliance for international healthcare operations.",
                   icon: Globe,
                   features: ["Data protection", "Privacy controls", "Right to be forgotten"]
                 },
-                {
-                  title: "HITECH Act",
+                { title: "HITECH Act",
                   description: "Health Information Technology for Economic and Clinical Health Act compliance.",
                   icon: Activity,
                   features: ["Electronic health records", "Meaningful use", "Interoperability"]
                 },
-                {
-                  title: "ISO 27001",
+                { title: "ISO 27001",
                   description: "Information security management system certification.",
                   icon: Settings,
                   features: ["Security framework", "Risk management", "Continuous improvement"]
@@ -317,23 +298,19 @@ export default function HealthcareTech() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Assessment",
                   description: "Evaluate current healthcare systems and identify technology needs."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "Design",
                   description: "Design healthcare technology solution architecture and workflows."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Implementation",
                   description: "Deploy technology solutions with minimal disruption to operations."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize healthcare delivery."
                 }
@@ -362,15 +339,13 @@ export default function HealthcareTech() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

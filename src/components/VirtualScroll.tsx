@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface VirtualScrollProps<T> {
-  items: T[];
+interface VirtualScrollProps<T> { items: T[];
   height: number;
   itemHeight: number;
   renderItem: (item: T, index: number) => React.ReactNode;
@@ -29,8 +28,7 @@ export function VirtualScroll<T>({
     const visibleCount = Math.ceil(height / itemHeight);
     const end = start + visibleCount + overscan;
     
-    return {
-      start: Math.max(0, start - overscan),
+    return { start: Math.max(0, start - overscan),
       end: Math.min(items.length, end)
     };
   }, [scrollTop, itemHeight, height, overscan, items.length]);
@@ -101,8 +99,8 @@ export function VirtualScroll<T>({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.2 }}
-                  style={{ height: itemHeight }}
+                  transition={{ duration: 0.2     }}
+                  style={{ height: itemHeight     }}
                 >
                   {renderItem(item, visibleRange.start + index)}
                 </motion.div>
@@ -127,14 +125,13 @@ interface ServiceCard {
   description: string;
   category: string;
   icon?: string;
-}
+    }
 
-interface ServiceVirtualScrollProps {
-  services: ServiceCard[];
+interface ServiceVirtualScrollProps { services: ServiceCard[];
   height?: number;
   onServiceClick?: (service: ServiceCard) => void;
   className?: string;
-}
+    }
 
 export function ServiceVirtualScroll({
   services,
@@ -145,11 +142,10 @@ export function ServiceVirtualScroll({
   const renderServiceCard = useCallback((service: ServiceCard, index: number) => (
     <div className="p-4">
       <motion.div
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+        whileHover={{ scale: 1.02     }}
+        whileTap={{ scale: 0.98     }}
         className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 p-6 cursor-pointer hover:shadow-md transition-shadow"
-        onClick={() => onServiceClick?.(service)}
-      >
+        onClick={() => onServiceClick?.(service)}>
         <div className="flex items-start space-x-4">
           {service.icon && (
             <div className="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">

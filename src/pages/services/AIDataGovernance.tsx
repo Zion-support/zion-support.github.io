@@ -46,38 +46,32 @@ import {
 
 const AIDataGovernance: React.FC = () => {
   const features = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "AI-Powered Data Classification",
       description: "Automatically identify and categorize sensitive data using machine learning algorithms",
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Advanced Access Control",
       description: "Role-based permissions with AI-driven anomaly detection and threat prevention",
       color: "from-green-500 to-emerald-500"
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Real-time Data Monitoring",
       description: "Continuous surveillance of data access patterns and compliance violations",
       color: "from-purple-500 to-pink-500"
     },
-    {
-      icon: Search,
+    { icon: Search,
       title: "Intelligent Data Discovery",
       description: "AI algorithms that automatically find and map data across your entire infrastructure",
       color: "from-orange-500 to-red-500"
     },
-    {
-      icon: FileText,
+    { icon: FileText,
       title: "Automated Compliance Reporting",
       description: "Generate regulatory reports automatically with AI-powered accuracy and completeness",
       color: "from-indigo-500 to-purple-500"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Data Lineage Tracking",
       description: "Complete audit trail showing data origins, transformations, and usage patterns",
       color: "from-yellow-500 to-orange-500"
@@ -85,8 +79,7 @@ const AIDataGovernance: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: "Foundation",
+    { name: "Foundation",
       price: "$499",
       period: "/month",
       description: "Essential data governance for small to medium organizations",
@@ -102,8 +95,7 @@ const AIDataGovernance: React.FC = () => {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$1,299",
       period: "/month",
       description: "Advanced data governance for growing enterprises",
@@ -121,8 +113,7 @@ const AIDataGovernance: React.FC = () => {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$3,999",
       period: "/month",
       description: "Comprehensive data governance for large organizations",
@@ -142,26 +133,22 @@ const AIDataGovernance: React.FC = () => {
   ];
 
   const benefits = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "99.9% Data Security",
       description: "Enterprise-grade protection with AI-powered threat detection",
       metric: "99.9%"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "10x Faster Compliance",
       description: "Automate regulatory reporting and reduce manual effort",
       metric: "10x"
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "40% Cost Reduction",
       description: "Eliminate manual data governance processes and reduce risks",
       metric: "40%"
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Real-time Monitoring",
       description: "Instant alerts and proactive threat prevention",
       metric: "24/7"
@@ -169,38 +156,32 @@ const AIDataGovernance: React.FC = () => {
   ];
 
   const complianceFrameworks = [
-    {
-      name: "GDPR",
+    { name: "GDPR",
       description: "European data protection and privacy regulation",
       icon: Globe,
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      name: "CCPA",
+    { name: "CCPA",
       description: "California Consumer Privacy Act compliance",
       icon: ShieldCheck,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      name: "HIPAA",
+    { name: "HIPAA",
       description: "Healthcare data protection and privacy standards",
       icon: FileCheck,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      name: "SOX",
+    { name: "SOX",
       description: "Sarbanes-Oxley financial reporting compliance",
       icon: Building,
       color: "from-orange-500 to-red-500"
     },
-    {
-      name: "ISO 27001",
+    { name: "ISO 27001",
       description: "Information security management system",
       icon: Lock,
       color: "from-indigo-500 to-purple-500"
     },
-    {
-      name: "SOC 2",
+    { name: "SOC 2",
       description: "Service Organization Control 2 compliance",
       icon: CheckCircle,
       color: "from-yellow-500 to-orange-500"
@@ -208,29 +189,25 @@ const AIDataGovernance: React.FC = () => {
   ];
 
   const useCases = [
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       title: "Patient Data Protection",
       description: "Secure PHI management with HIPAA compliance and AI-powered access controls",
       icon: Users,
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      industry: "Finance",
+    { industry: "Finance",
       title: "Financial Data Security",
       description: "SOX compliance with automated audit trails and real-time monitoring",
       icon: DollarSign,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       title: "Customer Privacy",
       description: "GDPR and CCPA compliance with automated consent management",
       icon: ShieldCheck,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      industry: "Technology",
+    { industry: "Technology",
       title: "Intellectual Property",
       description: "Protect trade secrets and proprietary data with advanced classification",
       icon: Cpu,
@@ -253,7 +230,7 @@ const AIDataGovernance: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
                 <Shield className="w-4 h-4 mr-2" />
@@ -302,8 +279,7 @@ const AIDataGovernance: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -336,8 +312,7 @@ const AIDataGovernance: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -369,8 +344,7 @@ const AIDataGovernance: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${framework.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${framework.color} mb-4`}>
                     <framework.icon className="w-6 h-6 text-white" />
@@ -403,8 +377,7 @@ const AIDataGovernance: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
@@ -493,7 +466,7 @@ const AIDataGovernance: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Data?

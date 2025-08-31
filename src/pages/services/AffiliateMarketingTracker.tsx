@@ -6,41 +6,34 @@ import { SEO } from '@/components/SEO';
 
 export default function AffiliateMarketingTracker() {
   const features = [
-    {
-      icon: Target,
+    { icon: Target,
       title: "Smart Affiliate Tracking",
       description: "Advanced pixel tracking, UTM management, and real-time conversion monitoring across all channels."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Performance Analytics",
       description: "Comprehensive dashboards with ROI analysis, conversion rates, and affiliate performance metrics."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Affiliate Management",
       description: "Complete affiliate onboarding, commission structures, and automated payouts system."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Real-time Reporting",
       description: "Live dashboards with instant updates on clicks, conversions, and revenue generation."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Fraud Detection",
       description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Multi-channel Support",
       description: "Track performance across social media, email, influencer partnerships, and more."
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$99",
       period: "/month",
       description: "Perfect for small businesses starting with affiliate marketing",
@@ -53,8 +46,7 @@ export default function AffiliateMarketingTracker() {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$299",
       period: "/month",
       description: "Ideal for growing businesses with active affiliate programs",
@@ -68,8 +60,7 @@ export default function AffiliateMarketingTracker() {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$799",
       period: "/month",
       description: "For large-scale affiliate operations with custom requirements",
@@ -86,23 +77,19 @@ export default function AffiliateMarketingTracker() {
   ];
 
   const benefits = [
-    {
-      title: "Increase Revenue",
+    { title: "Increase Revenue",
       description: "Optimize affiliate performance and boost conversion rates with data-driven insights.",
       icon: TrendingUp
     },
-    {
-      title: "Save Time",
+    { title: "Save Time",
       description: "Automate affiliate management, tracking, and reporting to focus on growth strategies.",
       icon: Zap
     },
-    {
-      title: "Reduce Fraud",
+    { title: "Reduce Fraud",
       description: "AI-powered detection prevents click fraud and ensures campaign integrity.",
       icon: Shield
     },
-    {
-      title: "Scale Efficiently",
+    { title: "Scale Efficiently",
       description: "Manage thousands of affiliates with automated systems and smart workflows.",
       icon: Users
     }
@@ -125,7 +112,7 @@ export default function AffiliateMarketingTracker() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6     }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
@@ -139,14 +126,12 @@ export default function AffiliateMarketingTracker() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/request-quote"
-                    className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                  >
+                    className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </Link>
                   <Link 
                     to="/contact"
-                    className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
-                  >
+                    className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300">
                     Schedule Demo
                   </Link>
                 </div>
@@ -174,8 +159,7 @@ export default function AffiliateMarketingTracker() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -206,8 +190,7 @@ export default function AffiliateMarketingTracker() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
+                  className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -294,7 +277,7 @@ export default function AffiliateMarketingTracker() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Affiliate Marketing?
@@ -305,14 +288,12 @@ export default function AffiliateMarketingTracker() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/contact"
-                  className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300"
-                >
+                  className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300">
                   Contact Sales
                 </Link>
               </div>

@@ -13,18 +13,15 @@ export default function AISecurityAuditing() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$599/mo', 
       details: ['Up to 5 audits/month', 'Basic AI features', 'Standard auditing', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,499/mo', 
       details: ['Up to 20 audits/month', 'Advanced AI features', 'Enhanced auditing', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,999/mo', 
       details: ['Unlimited audits', 'Custom AI models', 'Full auditing suite', '24/7 dedicated support'] 
     },

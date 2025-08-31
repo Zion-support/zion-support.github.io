@@ -40,14 +40,13 @@ interface PricingTier {
   features: string[];
   popular?: boolean;
   color: string;
-  icon: any;
+  icon: ;
   cta: string;
   ctaLink: string;
-}
+    }
 
 const pricingTiers: PricingTier[] = [
-  {
-    name: 'Starter',
+  { name: 'Starter',
     description: 'Perfect for small businesses and startups',
     price: '$499',
     period: '/month',
@@ -66,8 +65,7 @@ const pricingTiers: PricingTier[] = [
     cta: 'Get Started',
     ctaLink: '/contact'
   },
-  {
-    name: 'Professional',
+  { name: 'Professional',
     description: 'Ideal for growing businesses and teams',
     price: '$1,299',
     period: '/month',
@@ -89,8 +87,7 @@ const pricingTiers: PricingTier[] = [
     cta: 'Start Free Trial',
     ctaLink: '/contact'
   },
-  {
-    name: 'Enterprise',
+  { name: 'Enterprise',
     description: 'For large organizations with complex needs',
     price: 'Custom',
     period: '',
@@ -115,8 +112,7 @@ const pricingTiers: PricingTier[] = [
 ];
 
 const servicePricing = [
-  {
-    category: 'AI & Machine Learning',
+  { category: 'AI & Machine Learning',
     icon: Brain,
     services: [
       { name: 'AI Workflow Orchestrator', price: '$299/month', description: 'AI-powered workflow automation' },
@@ -125,8 +121,7 @@ const servicePricing = [
       { name: 'AI Business Intelligence Analytics', price: '$599/month', description: 'Advanced analytics & ML insights' }
     ]
   },
-  {
-    category: 'Cloud & DevOps',
+  { category: 'Cloud & DevOps',
     icon: Cloud,
     services: [
       { name: 'Cloud DevOps', price: '$799/month', description: 'Infrastructure automation & scaling' },
@@ -135,8 +130,7 @@ const servicePricing = [
       { name: 'Cloud FinOps Optimizer', price: '$499/month', description: 'Financial operations automation' }
     ]
   },
-  {
-    category: 'Cybersecurity & Privacy',
+  { category: 'Cybersecurity & Privacy',
     icon: Shield,
     services: [
       { name: 'AI Cybersecurity Platform', price: '$899/month', description: 'Advanced AI-powered security' },
@@ -145,8 +139,7 @@ const servicePricing = [
       { name: 'Zero Trust Network Access', price: '$599/month', description: 'Modern security architecture' }
     ]
   },
-  {
-    category: 'Micro SaaS Solutions',
+  { category: 'Micro SaaS Solutions',
     icon: ShoppingCart,
     services: [
       { name: 'Micro CRM', price: '$49/month', description: 'Customer relationship management' },
@@ -166,9 +159,8 @@ export default function Pricing() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               Pricing & Plans
             </h1>
@@ -178,14 +170,12 @@ export default function Pricing() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300"
-              >
+                className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300">
                 Get Custom Quote
               </Link>
               <Link
                 to="/services"
-                className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20"
-              >
+                className="px-6 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20">
                 View All Services
               </Link>
             </div>
@@ -199,8 +189,7 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Start with what you need and scale as you grow. All plans include our core features.
@@ -286,8 +275,7 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
           <h2 className="text-3xl font-bold text-white mb-4">Individual Service Pricing</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             Need just one specific service? Check out our individual service pricing below.
@@ -323,8 +311,7 @@ export default function Pricing() {
                       <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                       <Link
                         to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                        className="w-full py-2 px-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 text-sm font-medium text-center block"
-                      >
+                        className="w-full py-2 px-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 text-sm font-medium text-center block">
                         Learn More
                       </Link>
                     </div>
@@ -340,8 +327,7 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
-        >
+          className="mt-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="text-center p-6">
             <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <Clock className="w-8 h-8 text-white" />
@@ -372,8 +358,7 @@ export default function Pricing() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-20 text-center"
-        >
+          className="mt-20 text-center">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 rounded-2xl border border-zion-cyan/20 p-12">
             <h2 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h2>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -382,14 +367,12 @@ export default function Pricing() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 font-semibold"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg hover:from-zion-cyan/80 hover:to-zion-purple/80 transition-all duration-300 font-semibold">
                 Get Custom Quote
               </Link>
               <Link
                 to="/case-studies"
-                className="px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20 font-semibold"
-              >
+                className="px-8 py-4 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300 border border-zion-cyan/20 font-semibold">
                 View Case Studies
               </Link>
             </div>

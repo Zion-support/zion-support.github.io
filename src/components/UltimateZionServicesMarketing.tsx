@@ -6,8 +6,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const categories = [
-    { 
-      id: 'quantum-computing', 
+    { id: 'quantum-computing', 
       name: 'Quantum Computing & AI', 
       icon: '⚛️', 
       color: 'from-blue-600 to-cyan-600',
@@ -15,8 +14,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
       marketSize: '$65.4 billion by 2027',
       growthRate: '500% annually'
     },
-    { 
-      id: 'blockchain-web3', 
+    { id: 'blockchain-web3', 
       name: 'Blockchain & Web3', 
       icon: '🔗', 
       color: 'from-green-600 to-emerald-600',
@@ -24,8 +22,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
       marketSize: '$67.4 billion by 2027',
       growthRate: '400% annually'
     },
-    { 
-      id: 'space-tech', 
+    { id: 'space-tech', 
       name: 'Space Technology', 
       icon: '🛰️', 
       color: 'from-indigo-600 to-purple-600',
@@ -33,8 +30,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
       marketSize: '$469.8 billion by 2027',
       growthRate: '300% annually'
     },
-    { 
-      id: 'biotech-ai', 
+    { id: 'biotech-ai', 
       name: 'Biotech & AI', 
       icon: '🧬', 
       color: 'from-red-600 to-pink-600',
@@ -42,8 +38,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
       marketSize: '$67.8 billion by 2027',
       growthRate: '600% annually'
     },
-    { 
-      id: 'emerging-tech', 
+    { id: 'emerging-tech', 
       name: 'Emerging Technology', 
       icon: '🚀', 
       color: 'from-orange-600 to-red-600',
@@ -51,8 +46,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
       marketSize: '$3.7 billion by 2027',
       growthRate: '800% annually'
     },
-    { 
-      id: 'micro-saas', 
+    { id: 'micro-saas', 
       name: 'Micro SAAS Solutions', 
       icon: '💻', 
       color: 'from-blue-600 to-indigo-600',
@@ -60,8 +54,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
       marketSize: '$15.8 billion by 2027',
       growthRate: '200% annually'
     },
-    { 
-      id: 'it-services', 
+    { id: 'it-services', 
       name: 'Enterprise IT Services', 
       icon: '🖥️', 
       color: 'from-gray-600 to-slate-600',
@@ -87,7 +80,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
             className="text-4xl md:text-6xl font-bold mb-6" 
             initial={{ opacity: 0, y: 20 }} 
             whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             Zion Technology Group
             <br />
@@ -106,7 +99,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
             and cutting-edge technology services that transform industries and create unprecedented value.
           </motion.p>
 
-          {/* Company Highlights */}
+          {/* Comp Highlights */}
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12" 
             initial={{ opacity: 0, y: 20 }} 
@@ -183,7 +176,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
             className="flex flex-wrap gap-4 justify-center" 
             initial={{ opacity: 0, y: 20 }} 
             whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             {categories.map((category) => (
               <button 
@@ -216,7 +209,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
                   className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.6     }}
                 >
                   <div className="text-center mb-8">
                     <div className="text-6xl mb-4">{category.icon}</div>
@@ -251,40 +244,34 @@ const UltimateZionServicesMarketing: React.FC = () => {
             className="text-3xl md:text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             {selectedCategory === 'all' ? 'All Revolutionary Services' : `${categories.find(c => c.id === selectedCategory)?.name} Services`}
           </motion.h2>
           
           <motion.div 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" 
-            variants={{
-              hidden: { opacity: 0 },
-              visible: {
-                opacity: 1,
-                transition: {
-                  staggerChildren: 0.1,
+            variants={{ hidden: { opacity: 0     },
+              visible: { opacity: 1,
+                transition: { staggerChildren: 0.1,
                   delayChildren: 0.2
                 }
               }
             }} 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {selectedServices.map((service, index) => (
               <motion.div 
                 key={service.id} 
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: {
-                    opacity: 1,
+                variants={{ hidden: { opacity: 0, y: 20 },
+                  visible: { opacity: 1,
                     y: 0,
-                    transition: { duration: 0.5 }
+                    transition: { duration: 0.5     }
                   }
                 }}
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
-              >
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group">
                 {/* Service Header */}
                 <div className="text-center mb-6">
                   <div className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -418,7 +405,7 @@ const UltimateZionServicesMarketing: React.FC = () => {
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?

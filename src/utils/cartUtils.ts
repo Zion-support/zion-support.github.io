@@ -4,7 +4,7 @@ export interface CartItem {
   price: number;
   quantity: number;
   type: 'equipment' | 'service' | 'talent';
-}
+    }
 
 export const calculateCartTotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);

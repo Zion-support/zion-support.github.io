@@ -52,33 +52,27 @@ import {
 
 const CloudFinOpsOptimizer = () => {
   const features = [
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: 'Multi-Cloud Optimization',
       description: 'Optimize costs across AWS, Azure, GCP, and hybrid environments'
     },
-    {
-      icon: Zap2,
+    { icon: Zap2,
       title: 'Automated Optimization',
       description: 'AI-powered recommendations and automated cost reduction actions'
     },
-    {
-      icon: Gauge,
+    { icon: Gauge,
       title: 'Performance Monitoring',
       description: 'Real-time performance metrics with cost correlation analysis'
     },
-    {
-      icon: BarChart4,
+    { icon: BarChart4,
       title: 'Advanced Analytics',
       description: 'Deep insights into spending patterns and optimization opportunities'
     },
-    {
-      icon: TrendingUp2,
+    { icon: TrendingUp2,
       title: 'Predictive Modeling',
       description: 'Forecast future costs and identify optimization trends'
     },
-    {
-      icon: Lightbulb,
+    { icon: Lightbulb,
       title: 'Smart Recommendations',
       description: 'Intelligent suggestions for cost savings and efficiency improvements'
     }
@@ -94,43 +88,35 @@ const CloudFinOpsOptimizer = () => {
   ];
 
   const services = [
-    {
-      icon: Calculator,
+    { icon: Calculator,
       title: 'Cost Analysis Engine',
       description: 'Advanced algorithms for comprehensive cost analysis and optimization'
     },
-    {
-      icon: Rocket,
+    { icon: Rocket,
       title: 'Automated Actions',
       description: 'Intelligent automation for rightsizing, scheduling, and optimization'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Real-time Dashboards',
       description: 'Live monitoring and reporting of cloud costs and performance'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Goal Setting & Tracking',
       description: 'Set cost targets and track progress with automated alerts'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Enterprise',
+    { industry: 'Enterprise',
       description: 'Optimize large-scale multi-cloud environments'
     },
-    {
-      industry: 'Startups',
+    { industry: 'Startups',
       description: 'Scale efficiently while controlling costs'
     },
-    {
-      industry: 'E-commerce',
+    { industry: 'E-commerce',
       description: 'Balance performance with cost optimization'
     },
-    {
-      industry: 'SaaS Platforms',
+    { industry: 'SaaS Platforms',
       description: 'Optimize costs for multi-tenant applications'
     }
   ];
@@ -144,9 +130,8 @@ const CloudFinOpsOptimizer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-amber-500/10 border border-amber-500/20 rounded-full text-amber-400 text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2" />
               Cloud Financial Optimization
@@ -182,9 +167,8 @@ const CloudFinOpsOptimizer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Intelligent Optimization Features
             </h2>
@@ -201,8 +185,7 @@ const CloudFinOpsOptimizer = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -220,9 +203,8 @@ const CloudFinOpsOptimizer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Optimization Services
             </h2>
@@ -239,8 +221,7 @@ const CloudFinOpsOptimizer = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-amber-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -262,9 +243,8 @@ const CloudFinOpsOptimizer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Cloud Economics
             </h2>
@@ -281,8 +261,7 @@ const CloudFinOpsOptimizer = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -295,8 +274,7 @@ const CloudFinOpsOptimizer = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-amber-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -312,9 +290,8 @@ const CloudFinOpsOptimizer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -331,8 +308,7 @@ const CloudFinOpsOptimizer = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-amber-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-amber-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -350,7 +326,7 @@ const CloudFinOpsOptimizer = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Optimize Your Cloud Costs Today

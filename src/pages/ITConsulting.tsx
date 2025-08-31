@@ -19,26 +19,22 @@ import {
 
 export default function ITConsulting() {
   const consultingServices = [
-    {
-      icon: Target,
+    { icon: Target,
       title: "Strategic Planning",
       description: "Develop comprehensive technology roadmaps aligned with your business objectives",
       features: ["Technology Assessment", "Digital Transformation Strategy", "Innovation Roadmap", "ROI Analysis"]
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Process Optimization",
       description: "Streamline operations and improve efficiency through technology-driven solutions",
       features: ["Workflow Analysis", "Automation Strategy", "Performance Metrics", "Continuous Improvement"]
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Cybersecurity Consulting",
       description: "Protect your business with comprehensive security assessments and strategies",
       features: ["Security Audits", "Compliance Management", "Incident Response", "Security Training"]
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Technology Implementation",
       description: "Expert guidance for successful technology adoption and integration",
       features: ["Change Management", "Training Programs", "Support Systems", "Performance Monitoring"]
@@ -46,23 +42,19 @@ export default function ITConsulting() {
   ];
 
   const benefits = [
-    {
-      icon: Lightbulb,
+    { icon: Lightbulb,
       title: "Expert Insights",
       description: "Access to industry experts with decades of combined experience"
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Faster Results",
       description: "Accelerate your digital transformation with proven methodologies"
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Proven Track Record",
       description: "Successfully delivered 500+ consulting projects across industries"
     },
-    {
-      icon: MessageSquare,
+    { icon: MessageSquare,
       title: "Ongoing Support",
       description: "Continuous guidance and support throughout your journey"
     }
@@ -77,22 +69,17 @@ export default function ITConsulting() {
     { name: "Government", description: "Digital government and citizen services" }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.6     }
     }
   };
 
@@ -109,7 +96,7 @@ export default function ITConsulting() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               IT Consulting for{' '}
@@ -130,16 +117,16 @@ export default function ITConsulting() {
             >
               <motion.button 
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 Get Consultation
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               <motion.button 
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 <Play className="w-5 h-5" />
                 Watch Case Study
@@ -156,8 +143,8 @@ export default function ITConsulting() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Consulting Services
@@ -173,7 +160,7 @@ export default function ITConsulting() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {consultingServices.map((service, index) => (
               <motion.div 
@@ -210,8 +197,8 @@ export default function ITConsulting() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our Consulting?
@@ -227,7 +214,7 @@ export default function ITConsulting() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {benefits.map((benefit, index) => (
               <motion.div 
@@ -253,8 +240,8 @@ export default function ITConsulting() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industries We Serve
@@ -270,7 +257,7 @@ export default function ITConsulting() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {industries.map((industry, index) => (
               <motion.div 
@@ -293,8 +280,8 @@ export default function ITConsulting() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -305,8 +292,8 @@ export default function ITConsulting() {
             </p>
             <motion.button 
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05     }}
+              whileTap={{ scale: 0.95     }}
             >
               Start Your Consultation
             </motion.button>

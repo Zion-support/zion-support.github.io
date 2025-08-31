@@ -1,15 +1,14 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useInView } from 'framer-motion';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceOptimizerProps { children: React.ReactNode;
   threshold?: number;
   rootMargin?: string;
   className?: string;
-}
+    }
 
 // Lazy loading wrapper component
-export const LazyLoadWrapper: React.FC<PerformanceOptimizerProps> = ({
+export const LazyLoadWrapper: React.FC = ({
   children,
   threshold = 0.1,
   rootMargin = '50px',
@@ -24,7 +23,7 @@ export const LazyLoadWrapper: React.FC<PerformanceOptimizerProps> = ({
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.5     }}
         >
           {children}
         </motion.div>
@@ -44,9 +43,9 @@ interface OptimizedImageProps {
   className?: string;
   priority?: boolean;
   lazy?: boolean;
-}
+    }
 
-export const OptimizedImage: React.FC<OptimizedImageProps> = ({
+export const OptimizedImage: React.FC = ({
   src,
   alt,
   width,
@@ -96,8 +95,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
 // Performance monitoring hook
 export const usePerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState({
-    fcp: 0,
+  const [metrics, setMetrics] = useState({ fcp: 0,
     lcp: 0,
     fid: 0,
     cls: 0,
@@ -112,7 +110,7 @@ export const usePerformanceMonitor = () => {
         const fcp = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ entryTypes: ['paint']     });
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
@@ -120,7 +118,7 @@ export const usePerformanceMonitor = () => {
         const lcp = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, lcp: lcp.startTime }));
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint']     });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
@@ -128,19 +126,19 @@ export const usePerformanceMonitor = () => {
         const fid = entries[entries.length - 1];
         setMetrics(prev => ({ ...prev, fid: fid.processingStart - fid.startTime }));
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input']     });
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as ).value;
           }
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift']     });
 
       // Time to First Byte
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -161,7 +159,7 @@ export const usePerformanceMonitor = () => {
 };
 
 // Main performance optimizer component
-export const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const PerformanceOptimizer: React.FC = ({ children }) => {
   const metrics = usePerformanceMonitor();
   const [showMetrics, setShowMetrics] = useState(false);
 
@@ -197,8 +195,7 @@ export const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ 
         <div className="fixed bottom-4 right-4 z-50">
           <button
             onClick={() => setShowMetrics(!showMetrics)}
-            className="bg-zion-cyan text-zion-slate-dark px-3 py-2 rounded-lg text-sm font-medium hover:bg-zion-cyan/80 transition-colors"
-          >
+            className="bg-zion-cyan text-zion-slate-dark px-3 py-2 rounded-lg text-sm font-medium hover:bg-zion-cyan/80 transition-colors">
             {showMetrics ? 'Hide' : 'Show'} Performance
           </button>
           
@@ -206,8 +203,7 @@ export const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute bottom-full right-0 mb-2 bg-zion-slate-dark border border-zion-cyan/30 rounded-lg p-4 text-white text-sm min-w-[300px]"
-            >
+              className="absolute bottom-full right-0 mb-2 bg-zion-slate-dark border border-zion-cyan/30 rounded-lg p-4 text-white text-sm min-w-[300px]">
               <h4 className="font-semibold mb-2 text-zion-cyan">Performance Metrics</h4>
               <div className="space-y-1">
                 <div>FCP: {metrics.fcp.toFixed(2)}ms</div>

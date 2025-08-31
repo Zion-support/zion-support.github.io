@@ -7,11 +7,10 @@ export interface EquipmentItem {
   image: string;
   specs: string[];
   availability: boolean;
-}
+    }
 
 export const EQUIPMENT_DETAILS: EquipmentItem[] = [
-  {
-    id: "1",
+  { id: "1",
     name: "High-Performance GPU Server",
     description: "Enterprise-grade GPU server for AI/ML workloads",
     price: 2500,
@@ -20,8 +19,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     specs: ["NVIDIA RTX 4090", "64GB RAM", "2TB SSD", "Intel i9-13900K"],
     availability: true
   },
-  {
-    id: "2",
+  { id: "2",
     name: "Quantum Computing Simulator",
     description: "Advanced quantum simulation platform",
     price: 5000,
@@ -30,8 +28,7 @@ export const EQUIPMENT_DETAILS: EquipmentItem[] = [
     specs: ["100+ qubit simulation", "Real-time visualization", "API integration"],
     availability: true
   },
-  {
-    id: "3",
+  { id: "3",
     name: "Edge Computing Device",
     description: "IoT edge computing solution",
     price: 800,

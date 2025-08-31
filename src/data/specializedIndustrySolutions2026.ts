@@ -17,26 +17,24 @@ export interface SpecializedIndustrySolution2026 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution2026[] = [
   // Healthcare AI Platform
-  {
-    id: "healthcare-ai-platform-2026",
+  { id: "healthcare-ai-platform-2026",
     title: "Healthcare AI Platform 2026",
     description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance, patient monitoring, and clinical decision support for healthcare providers.",
     category: "Healthcare",
@@ -83,13 +81,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$5,500 - $15,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Computer Vision", "NLP", "Cloud Computing", "IoT"],
+    technicalSpecs: { technology: ["Machine Learning", "Computer Vision", "NLP", "Cloud Computing", "IoT"],
       integrations: ["EHR Systems", "PACS", "Lab Systems", "Telemedicine Platforms"],
       apiEndpoints: 300,
       uptime: "99.99%",
@@ -100,8 +96,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Financial Services AI Platform
-  {
-    id: "financial-services-ai-platform-2026",
+  { id: "financial-services-ai-platform-2026",
     title: "Financial Services AI Platform 2026",
     description: "Advanced AI platform for financial services that provides fraud detection, risk assessment, algorithmic trading, and customer service automation.",
     category: "Financial Services",
@@ -148,13 +143,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$6,800 - $20,000/month",
     roi: "400-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Deep Learning", "NLP", "Blockchain", "Cloud Computing"],
+    technicalSpecs: { technology: ["Machine Learning", "Deep Learning", "NLP", "Blockchain", "Cloud Computing"],
       integrations: ["Core Banking Systems", "Trading Platforms", "CRM Systems", "Regulatory Systems"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -165,8 +158,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Manufacturing IoT Platform
-  {
-    id: "manufacturing-iot-platform-2026",
+  { id: "manufacturing-iot-platform-2026",
     title: "Manufacturing IoT Platform 2026",
     description: "Comprehensive IoT platform for manufacturing that provides real-time monitoring, predictive maintenance, quality control, and supply chain optimization.",
     category: "Manufacturing",
@@ -213,13 +205,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$4,200 - $12,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["IoT Sensors", "Edge Computing", "Cloud Computing", "Machine Learning", "Analytics"],
+    technicalSpecs: { technology: ["IoT Sensors", "Edge Computing", "Cloud Computing", "Machine Learning", "Analytics"],
       integrations: ["ERP Systems", "MES Systems", "SCADA Systems", "PLM Systems"],
       apiEndpoints: 400,
       uptime: "99.9%",
@@ -230,8 +220,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Retail AI Platform
-  {
-    id: "retail-ai-platform-2026",
+  { id: "retail-ai-platform-2026",
     title: "Retail AI Platform 2026",
     description: "AI-powered retail platform that provides personalized recommendations, inventory optimization, customer analytics, and omnichannel experience management.",
     category: "Retail",
@@ -278,13 +267,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$2,800 - $8,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Recommendation Engines", "Analytics", "Cloud Computing", "Mobile"],
+    technicalSpecs: { technology: ["Machine Learning", "Recommendation Engines", "Analytics", "Cloud Computing", "Mobile"],
       integrations: ["E-commerce Platforms", "POS Systems", "CRM Systems", "Marketing Tools"],
       apiEndpoints: 250,
       uptime: "99.8%",
@@ -295,8 +282,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Education Technology Platform
-  {
-    id: "education-technology-platform-2026",
+  { id: "education-technology-platform-2026",
     title: "Education Technology Platform 2026",
     description: "Comprehensive edtech platform that provides personalized learning, student analytics, content management, and virtual classroom capabilities.",
     category: "Education",
@@ -343,13 +329,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$1,800 - $5,500/month",
     roi: "200-300%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Analytics", "Cloud Computing", "Mobile", "Web Technologies"],
+    technicalSpecs: { technology: ["Machine Learning", "Analytics", "Cloud Computing", "Mobile", "Web Technologies"],
       integrations: ["LMS Systems", "SIS Systems", "Content Platforms", "Communication Tools"],
       apiEndpoints: 150,
       uptime: "99.8%",
@@ -360,8 +344,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Transportation & Logistics Platform
-  {
-    id: "transportation-logistics-platform-2026",
+  { id: "transportation-logistics-platform-2026",
     title: "Transportation & Logistics Platform 2026",
     description: "AI-powered transportation and logistics platform that provides route optimization, fleet management, supply chain visibility, and predictive analytics.",
     category: "Transportation",
@@ -408,13 +391,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$3,500 - $10,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "GPS", "IoT", "Cloud Computing", "Mobile"],
+    technicalSpecs: { technology: ["Machine Learning", "GPS", "IoT", "Cloud Computing", "Mobile"],
       integrations: ["TMS Systems", "WMS Systems", "ERP Systems", "GPS Systems"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -425,8 +406,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Energy Management Platform
-  {
-    id: "energy-management-platform-2026",
+  { id: "energy-management-platform-2026",
     title: "Energy Management Platform 2026",
     description: "Comprehensive energy management platform that provides energy monitoring, optimization, renewable energy integration, and sustainability analytics.",
     category: "Energy",
@@ -473,13 +453,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$3,800 - $11,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["IoT Sensors", "Machine Learning", "Analytics", "Cloud Computing", "Mobile"],
+    technicalSpecs: { technology: ["IoT Sensors", "Machine Learning", "Analytics", "Cloud Computing", "Mobile"],
       integrations: ["Building Management Systems", "SCADA Systems", "Smart Meters", "Renewable Systems"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -490,8 +468,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Real Estate Technology Platform
-  {
-    id: "real-estate-technology-platform-2026",
+  { id: "real-estate-technology-platform-2026",
     title: "Real Estate Technology Platform 2026",
     description: "AI-powered real estate platform that provides property analytics, market insights, customer relationship management, and transaction automation.",
     category: "Real Estate",
@@ -538,13 +515,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$2,200 - $6,500/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Analytics", "CRM", "Cloud Computing", "Mobile"],
+    technicalSpecs: { technology: ["Machine Learning", "Analytics", "CRM", "Cloud Computing", "Mobile"],
       integrations: ["MLS Systems", "CRM Systems", "Property Databases", "Marketing Tools"],
       apiEndpoints: 180,
       uptime: "99.8%",
@@ -555,8 +530,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
   },
 
   // Legal Technology Platform
-  {
-    id: "legal-technology-platform-2026",
+  { id: "legal-technology-platform-2026",
     title: "Legal Technology Platform 2026",
     description: "AI-powered legal technology platform that provides document analysis, contract management, legal research, and case management automation.",
     category: "Legal Services",
@@ -603,13 +577,11 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2026: SpecializedIndustrySolution202
     marketPrice: "$3,200 - $9,500/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "NLP", "Document Processing", "Cloud Computing", "Analytics"],
+    technicalSpecs: { technology: ["Machine Learning", "NLP", "Document Processing", "Cloud Computing", "Analytics"],
       integrations: ["Practice Management Systems", "Document Management", "Legal Databases", "CRM Systems"],
       apiEndpoints: 200,
       uptime: "99.9%",

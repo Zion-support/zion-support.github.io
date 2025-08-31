@@ -38,75 +38,64 @@ import {
 interface NavigationItem {
   label: string;
   path: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: React.ComponentType<{ size?: number; className?: string     }>;
   children?: NavigationItem[];
   description?: string;
 }
 
 const navigationItems: NavigationItem[] = [
-  {
-    label: 'Home',
+  { label: 'Home',
     path: '/',
     icon: Home,
     description: 'Welcome to Zion Tech Group'
   },
-  {
-    label: 'About',
+  { label: 'About',
     path: '/about',
     icon: Info,
-    description: 'Learn about our company and mission'
+    description: 'Learn about our comp and mission'
   },
-  {
-    label: 'Services',
+  { label: 'Services',
     path: '/services',
     icon: Briefcase,
     children: [
-      {
-        label: 'AI & Machine Learning',
+      { label: 'AI & Machine Learning',
         path: '/services/ai',
         icon: Brain,
         description: 'Cutting-edge AI solutions'
       },
-      {
-        label: 'Cybersecurity',
+      { label: 'Cybersecurity',
         path: '/services/cybersecurity',
         icon: Shield,
         description: 'Advanced security services'
       },
-      {
-        label: 'Cloud Services',
+      { label: 'Cloud Services',
         path: '/services/cloud',
         icon: Cloud,
         description: 'Scalable cloud solutions'
       },
-      {
-        label: 'Digital Transformation',
+      { label: 'Digital Transformation',
         path: '/services/transformation',
         icon: Zap,
         description: 'Business transformation services'
       },
-      {
-        label: 'Infrastructure',
+      { label: 'Infrastructure',
         path: '/services/infrastructure',
         icon: Server,
         description: 'IT infrastructure solutions'
       },
-      {
-        label: 'Consulting',
+      { label: 'Consulting',
         path: '/services/consulting',
         icon: Users,
         description: 'Strategic IT consulting'
       }
     ]
   },
-  {
-    label: 'Solutions',
+  { label: 'Solutions',
     path: '/solutions',
     icon: Rocket,
     description: 'Industry-specific solutions'
   },
-  {
-    label: 'Contact',
+  { label: 'Contact',
     path: '/contact',
     icon: Phone,
     description: 'Get in touch with us'
@@ -114,20 +103,17 @@ const navigationItems: NavigationItem[] = [
 ];
 
 const quickActions = [
-  {
-    label: 'Get Quote',
+  { label: 'Get Quote',
     path: '/request-quote',
     icon: MessageCircle,
     color: 'bg-zion-cyan'
   },
-  {
-    label: 'Support',
+  { label: 'Support',
     path: '/help',
     icon: HelpCircle,
     color: 'bg-zion-purple'
   },
-  {
-    label: 'Documentation',
+  { label: 'Documentation',
     path: '/docs',
     icon: FileText,
     color: 'bg-zion-blue'
@@ -254,8 +240,7 @@ export const EnhancedMobileNavigation: React.FC = () => {
                 animate={{ height: 'auto', opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className="overflow-hidden"
-              >
+                className="overflow-hidden">
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
@@ -282,20 +267,18 @@ export const EnhancedMobileNavigation: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden"
-          >
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
+            exit={{ opacity: 0     }}
+            transition={{ duration: 0.2     }}
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden">
             <motion.div
               ref={menuRef}
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
+              initial={{ x: '100%'     }}
+              animate={{ x: 0     }}
+              exit={{ x: '100%'     }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl"
-            >
+              className="absolute right-0 top-0 h-full w-full max-w-sm bg-zion-slate-dark border-l border-zion-cyan/30 shadow-2xl">
               {/* Header */}
               <div className="flex items-center justify-between p-6 border-b border-zion-slate-light/20">
                 <div className="flex items-center gap-3">

@@ -5,8 +5,7 @@ import { ProductListing } from "@/types/listings";
 
 export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   // Quantum Internet Infrastructure
-  {
-    id: "quantum-internet-infrastructure",
+  { id: "quantum-internet-infrastructure",
     title: "Quantum Internet Infrastructure",
     description: "Revolutionary quantum internet infrastructure that enables ultra-secure communication using quantum entanglement. Provides unbreakable encryption and quantum teleportation capabilities.",
     category: "Emerging Technology",
@@ -23,8 +22,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "16-20 Weeks",
     aiScore: 100,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-internet",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -37,8 +35,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   },
 
   // Neuromorphic Computing Platform
-  {
-    id: "neuromorphic-computing-platform",
+  { id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing Platform",
     description: "Advanced neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing. Achieves 1000x better energy efficiency than traditional computing.",
     category: "Emerging Technology",
@@ -55,8 +52,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "14-18 Weeks",
     aiScore: 98,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/neuromorphic-computing",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -69,8 +65,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   },
 
   // DNA Data Storage Platform
-  {
-    id: "dna-data-storage-platform",
+  { id: "dna-data-storage-platform",
     title: "DNA Data Storage Platform",
     description: "Revolutionary DNA data storage platform that encodes digital information into synthetic DNA molecules. Provides ultra-dense storage with 1 billion times more capacity than traditional methods.",
     category: "Emerging Technology",
@@ -87,8 +82,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "12-16 Weeks",
     aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/dna-storage",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -101,8 +95,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   },
 
   // Fusion Energy Management Platform
-  {
-    id: "fusion-energy-management-platform",
+  { id: "fusion-energy-management-platform",
     title: "Fusion Energy Management Platform",
     description: "Advanced fusion energy management platform that optimizes fusion reactor operations and energy distribution. Enables clean, unlimited energy with zero carbon emissions.",
     category: "Emerging Technology",
@@ -119,8 +112,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "20-24 Weeks",
     aiScore: 99,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/fusion-energy",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -133,8 +125,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   },
 
   // Holographic Display Technology
-  {
-    id: "holographic-display-technology",
+  { id: "holographic-display-technology",
     title: "Holographic Display Technology",
     description: "Revolutionary holographic display technology that creates true 3D holographic images without special glasses. Enables immersive experiences for entertainment, education, and business applications.",
     category: "Emerging Technology",
@@ -151,8 +142,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "10-14 Weeks",
     aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/holographic-display",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -165,8 +155,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   },
 
   // Biometric Authentication Platform
-  {
-    id: "biometric-authentication-platform",
+  { id: "biometric-authentication-platform",
     title: "Biometric Authentication Platform",
     description: "Advanced biometric authentication platform that uses multiple biometric factors for ultra-secure identity verification. Provides 99.99% accuracy with zero false positives.",
     category: "Emerging Technology",
@@ -183,8 +172,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/biometric-authentication",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -197,8 +185,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
   },
 
   // Autonomous Drone Fleet Management
-  {
-    id: "autonomous-drone-fleet-management",
+  { id: "autonomous-drone-fleet-management",
     title: "Autonomous Drone Fleet Management",
     description: "Intelligent autonomous drone fleet management platform that coordinates multiple drones for delivery, surveillance, and inspection tasks. Reduces operational costs by 60% and improves efficiency by 80%.",
     category: "Emerging Technology",
@@ -215,8 +202,7 @@ export const EMERGING_TECHNOLOGY_SERVICES_2030: ProductListing[] = [
     location: "Global",
     availability: "8-12 Weeks",
     aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-drones",
       address: "364 E Main St STE 1008 Middletown DE 19709"

@@ -16,13 +16,12 @@ interface State {
   errorId: string | null;
   isReporting: boolean;
   reportSent: boolean;
-}
+    }
 
 export class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
+    this.state = { hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
@@ -32,8 +31,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
+    return { hasError: true,
       error,
       errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     };
@@ -57,14 +55,12 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   private async reportError(error: Error, errorInfo: ErrorInfo) {
     try {
       // You can integrate with services like Sentry, LogRocket, etc.
-      const errorReport = {
-        error: {
+      const errorReport = { error: {
           name: error.name,
           message: error.message,
           stack: error.stack,
         },
-        errorInfo: {
-          componentStack: errorInfo.componentStack,
+        errorInfo: { componentStack: errorInfo.componentStack,
         },
         userAgent: navigator.userAgent,
         url: window.location.href,
@@ -73,8 +69,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       };
 
       // Send to your error reporting endpoint
-      await fetch('/api/error-report', {
-        method: 'POST',
+      await fetch('/api/error-report', { method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(errorReport),
       });
@@ -84,8 +79,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   private handleRetry = () => {
-    this.setState({
-      hasError: false,
+    this.setState({ hasError: false,
       error: null,
       errorInfo: null,
       errorId: null,
@@ -102,20 +96,20 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
   };
 
   private handleReportError = async () => {
-    this.setState({ isReporting: true });
+    this.setState({ isReporting: true     });
     
     try {
       await this.reportError(this.state.error!, this.state.errorInfo!);
-      this.setState({ reportSent: true });
+      this.setState({ reportSent: true     });
       
       // Reset report status after 3 seconds
       setTimeout(() => {
-        this.setState({ reportSent: false });
+        this.setState({ reportSent: false     });
       }, 3000);
     } catch (error) {
       console.error('Failed to report error:', error);
     } finally {
-      this.setState({ isReporting: false });
+      this.setState({ isReporting: false     });
     }
   };
 
@@ -130,16 +124,14 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4"
-        >
+          className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white/5 backdrop-blur-sm border border-red-500/20 rounded-2xl p-8 text-center">
             {/* Error Icon */}
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
+              initial={{ scale: 0     }}
+              animate={{ scale: 1     }}
               transition={{ delay: 0.2, type: "spring" }}
-              className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6"
-            >
+              className="mx-auto w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mb-6">
               <AlertTriangle className="w-10 h-10 text-red-400" />
             </motion.div>
 
@@ -147,28 +139,25 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-3xl font-bold text-white mb-4"
-            >
+              transition={{ delay: 0.3     }}
+              className="text-3xl font-bold text-white mb-4">
               Oops! Something went wrong
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-gray-300 mb-6 text-lg"
-            >
+              transition={{ delay: 0.4     }}
+              className="text-gray-300 mb-6 text-lg">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </motion.p>
 
             {/* Error Details (Collapsible) */}
             <motion.details
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="mb-6 text-left"
-            >
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              transition={{ delay: 0.5     }}
+              className="mb-6 text-left">
               <summary className="cursor-pointer text-cyan-400 hover:text-cyan-300 mb-2">
                 Error Details
               </summary>
@@ -194,29 +183,25 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-            >
+              transition={{ delay: 0.6     }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
                 onClick={this.handleRetry}
-                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
-              >
+                className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2">
                 <RefreshCw className="w-5 h-5" />
                 <span>Try Again</span>
               </button>
 
               <button
                 onClick={this.handleGoBack}
-                className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
-              >
+                className="px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2">
                 <ArrowLeft className="w-5 h-5" />
                 <span>Go Back</span>
               </button>
 
               <button
                 onClick={this.handleGoHome}
-                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2"
-              >
+                className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2">
                 <Home className="w-5 h-5" />
                 <span>Go Home</span>
               </button>
@@ -225,11 +210,10 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
             {/* Error Reporting */}
             {this.props.showReportButton && (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.7 }}
-                className="mt-6 pt-6 border-t border-gray-600"
-              >
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                transition={{ delay: 0.7     }}
+                className="mt-6 pt-6 border-t border-gray-600">
                 <p className="text-gray-400 mb-4">
                   Help us improve by reporting this error
                 </p>
@@ -238,8 +222,7 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
                   <button
                     onClick={this.handleReportError}
                     disabled={this.state.isReporting}
-                    className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-green-800 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2 mx-auto disabled:opacity-50"
-                  >
+                    className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-green-800 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center space-x-2 mx-auto disabled:opacity-50">
                     {this.state.isReporting ? (
                       <>
                         <RefreshCw className="w-5 h-5 animate-spin" />
@@ -263,17 +246,15 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
 
             {/* Contact Information */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="mt-6 pt-6 border-t border-gray-600"
-            >
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              transition={{ delay: 0.8     }}
+              className="mt-6 pt-6 border-t border-gray-600">
               <p className="text-gray-400 text-sm">
                 If this problem persists, please contact our support team at{' '}
                 <a
                   href="mailto:support@ziontechgroup.com"
-                  className="text-cyan-400 hover:text-cyan-300 underline"
-                >
+                  className="text-cyan-400 hover:text-cyan-300 underline">
                   support@ziontechgroup.com
                 </a>
               </p>

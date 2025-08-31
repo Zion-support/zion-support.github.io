@@ -11,9 +11,7 @@ import type { AppDispatch } from '@/store';
 import { addItem } from '@/store/cartSlice';
 // Regular img tag will be used instead of next/image
 
-interface ProductListingCardProps extends React.PropsWithChildren<{}> {
-
-  listing: anyProductListing;
+interface ProductListingCardProps extends React.PropsWithChildren<{}> { listing: ProductListing;
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string)  => void;
   /**
@@ -22,9 +20,9 @@ interface ProductListingCardProps extends React.PropsWithChildren<{}> {
    */
   detailBasePath?: string;
 
-}
+    }
 
-export function ProductListingCard(...args: any[]): any {
+export function ProductListingCard() {  
   const isGrid = view === 'grid';
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -33,10 +31,10 @@ export function ProductListingCard(...args: any[]): any {
     ? listing.images[0] 
     : '/placeholder.svg'
   );
-  const [imageError, setImageError] = useState(false);
+  const [imageError, setImageError] = useState(false)
     
   const formatPrice = () => {
-    if (listing.price === null) return "Custom pricing";
+    if (listing.price === null) return "Custom pricing"
     return `${listing.currency}${listing.price.toLocaleString()}`;
   };
 
@@ -51,7 +49,7 @@ export function ProductListingCard(...args: any[]): any {
     navigate(`${detailBasePath}/${listing.id}`);
   };
   
-  const handleRequestQuote = (e: anyReact.MouseEvent)  => {
+  const handleRequestQuote = (e: React.MouseEvent)  => {
     e.preventDefault();
     e.stopPropagation();
     
@@ -136,8 +134,7 @@ export function ProductListingCard(...args: any[]): any {
               {listing.tags.map((tag, idx) => (
                 <span 
                   key={idx} 
-                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
-                >
+                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full">
                   {tag}
                 </span>
               ))}
@@ -187,8 +184,7 @@ export function ProductListingCard(...args: any[]): any {
                 size="sm"
                 variant="outline" 
                 onClick={handleRequestQuote}
-                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
-              >
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground">
                 Request Quote
               </Button>
             )}

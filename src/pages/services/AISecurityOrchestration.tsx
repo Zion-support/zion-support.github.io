@@ -13,18 +13,15 @@ export default function AISecurityOrchestration() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$499/mo', 
       details: ['Up to 25 workflows', 'Basic AI features', 'Standard orchestration', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,299/mo', 
       details: ['Up to 100 workflows', 'Advanced AI features', 'Enhanced orchestration', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,299/mo', 
       details: ['Unlimited workflows', 'Custom AI models', 'Full orchestration suite', '24/7 dedicated support'] 
     },

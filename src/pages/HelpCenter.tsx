@@ -39,8 +39,7 @@ export default function HelpCenter() {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const helpCategories = [
-    {
-      id: 'getting-started',
+    { id: 'getting-started',
       name: 'Getting Started',
       icon: Play,
       description: 'Quick start guides and onboarding resources',
@@ -52,8 +51,7 @@ export default function HelpCenter() {
         { title: 'Platform Overview', type: 'guide', readTime: '8 min' }
       ]
     },
-    {
-      id: 'ai-services',
+    { id: 'ai-services',
       name: 'AI Services',
       icon: Brain,
       description: 'Documentation for AI and machine learning services',
@@ -65,8 +63,7 @@ export default function HelpCenter() {
         { title: 'AI Performance Optimization', type: 'guide', readTime: '18 min' }
       ]
     },
-    {
-      id: 'cloud-services',
+    { id: 'cloud-services',
       name: 'Cloud Services',
       icon: Cloud,
       description: 'Cloud infrastructure and DevOps resources',
@@ -78,8 +75,7 @@ export default function HelpCenter() {
         { title: 'Security Configuration', type: 'guide', readTime: '22 min' }
       ]
     },
-    {
-      id: 'security',
+    { id: 'security',
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security features and compliance documentation',
@@ -91,8 +87,7 @@ export default function HelpCenter() {
         { title: 'Audit Trail Management', type: 'guide', readTime: '18 min' }
       ]
     },
-    {
-      id: 'integrations',
+    { id: 'integrations',
       name: 'Integrations',
       icon: Network,
       description: 'Third-party integrations and API documentation',
@@ -104,8 +99,7 @@ export default function HelpCenter() {
         { title: 'Custom Connectors', type: 'guide', readTime: '30 min' }
       ]
     },
-    {
-      id: 'troubleshooting',
+    { id: 'troubleshooting',
       name: 'Troubleshooting',
       icon: HelpCircle,
       description: 'Common issues and solutions',
@@ -120,29 +114,25 @@ export default function HelpCenter() {
   ];
 
   const videoTutorials = [
-    {
-      title: 'Getting Started with Zion Tech Platform',
+    { title: 'Getting Started with Zion Tech Platform',
       duration: '15:30',
       thumbnail: '/api/placeholder/300/200',
       views: '2.4k',
       rating: 4.8
     },
-    {
-      title: 'AI Service Configuration Walkthrough',
+    { title: 'AI Service Configuration Walkthrough',
       duration: '22:15',
       thumbnail: '/api/placeholder/300/200',
       views: '1.8k',
       rating: 4.9
     },
-    {
-      title: 'Advanced Security Setup',
+    { title: 'Advanced Security Setup',
       duration: '18:45',
       thumbnail: '/api/placeholder/300/200',
       views: '1.2k',
       rating: 4.7
     },
-    {
-      title: 'Cloud Migration Best Practices',
+    { title: 'Cloud Migration Best Practices',
       duration: '28:20',
       thumbnail: '/api/placeholder/300/200',
       views: '3.1k',
@@ -151,32 +141,28 @@ export default function HelpCenter() {
   ];
 
   const supportOptions = [
-    {
-      icon: MessageCircle,
+    { icon: MessageCircle,
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       availability: '24/7',
       responseTime: 'Immediate',
       action: 'Start Chat'
     },
-    {
-      icon: Mail,
+    { icon: Mail,
       title: 'Email Support',
       description: 'Send us a detailed message',
       availability: '24/7',
       responseTime: 'Within 4 hours',
       action: 'Send Email'
     },
-    {
-      icon: Phone,
+    { icon: Phone,
       title: 'Phone Support',
       description: 'Speak directly with our experts',
       availability: 'Mon-Fri 9AM-6PM EST',
       responseTime: 'Immediate',
       action: 'Call Now'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users',
       availability: '24/7',
@@ -206,9 +192,8 @@ export default function HelpCenter() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
+              transition={{ duration: 0.6     }}
+              className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <HelpCircle className="w-10 h-10 text-white" />
               </div>
@@ -255,8 +240,7 @@ export default function HelpCenter() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
-                  >
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <option.icon className="w-8 h-8 text-blue-600" />
                     </div>
@@ -317,8 +301,7 @@ export default function HelpCenter() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden"
-                  >
+                    className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden">
                     <div className={`h-2 bg-gradient-to-r ${category.color}`}></div>
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-4">
@@ -378,8 +361,7 @@ export default function HelpCenter() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden"
-                  >
+                    className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 overflow-hidden">
                     <div className="aspect-video bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center relative">
                       <Play className="w-12 h-12 text-slate-400" />
                       <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">

@@ -30,41 +30,37 @@ export default function Press() {
   ];
 
   const pressReleases = [
-    {
-      id: 1,
+    { id: 1,
       title: "Zion Tech Group Announces Breakthrough in Quantum AI Technology",
       date: "2024-01-15",
       author: "Press Team",
       category: "press-releases",
       excerpt: "Revolutionary quantum neural network platform achieves 1000x performance improvement in complex AI computations, opening new possibilities for scientific research and enterprise applications.",
-      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The company's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
+      content: "Zion Tech Group today announced a major breakthrough in quantum artificial intelligence technology. The comp's new quantum neural network platform has demonstrated unprecedented performance improvements, achieving computational speeds 1000 times faster than traditional AI systems for complex scientific and business applications. This breakthrough represents a significant milestone in the convergence of quantum computing and artificial intelligence, potentially revolutionizing fields from drug discovery to financial modeling.",
       featured: true,
       tags: ["Quantum AI", "Technology Breakthrough", "Innovation"]
     },
-    {
-      id: 2,
+    { id: 2,
       title: "Zion Tech Group Secures $50M Series B Funding Round",
       date: "2024-01-10",
       author: "Press Team",
       category: "press-releases",
       excerpt: "Strategic investment round led by leading venture capital firms to accelerate product development and market expansion in AI and cybersecurity solutions.",
-      content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the company's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",
+      content: "Zion Tech Group has successfully closed a $50 million Series B funding round, led by prominent venture capital firms including Sequoia Capital and Andreessen Horowitz. The funding will be used to accelerate product development, expand the comp's AI and cybersecurity solutions portfolio, and scale operations to meet growing market demand. This investment validates Zion Tech Group's position as a leader in next-generation technology solutions.",
       featured: true,
       tags: ["Funding", "Investment", "Growth"]
     },
-    {
-      id: 3,
+    { id: 3,
       title: "Zion Tech Group Named to Inc. 5000 Fastest-Growing Companies",
       date: "2023-12-20",
       author: "Press Team",
       category: "awards",
-      excerpt: "Company recognized for exceptional growth and innovation in the technology sector, ranking among the top 100 fastest-growing private companies in America.",
-      content: "Zion Tech Group has been named to the prestigious Inc. 5000 list of America's fastest-growing private companies, ranking in the top 100. This recognition highlights the company's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions. The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.",
+      excerpt: "Comp recognized for exceptional growth and innovation in the technology sector, ranking among the top 100 fastest-growing private companies in America.",
+      content: "Zion Tech Group has been named to the prestigious Inc. 5000 list of America's fastest-growing private companies, ranking in the top 100. This recognition highlights the comp's exceptional growth trajectory and innovative approach to solving complex business challenges through AI and technology solutions. The achievement reflects Zion Tech Group's commitment to delivering value to clients while maintaining rapid expansion.",
       featured: false,
       tags: ["Award", "Growth", "Recognition"]
     },
-    {
-      id: 4,
+    { id: 4,
       title: "Zion Tech Group Launches AI-Powered Cybersecurity Platform",
       date: "2023-12-15",
       author: "Press Team",
@@ -74,33 +70,30 @@ export default function Press() {
       featured: false,
       tags: ["Cybersecurity", "AI", "Product Launch"]
     },
-    {
-      id: 5,
+    { id: 5,
       title: "Zion Tech Group CEO Kleber Oliveira Featured in Forbes Technology Council",
       date: "2023-12-10",
       author: "Forbes",
       category: "thought-leadership",
-      excerpt: "Company CEO shares insights on the future of AI and its impact on business transformation in exclusive Forbes Technology Council article.",
+      excerpt: "Comp CEO shares insights on the future of AI and its impact on business transformation in exclusive Forbes Technology Council article.",
       content: "Zion Tech Group CEO Kleber Oliveira has been featured in Forbes Technology Council, sharing expert insights on the future of artificial intelligence and its transformative impact on business operations. The article explores how AI is reshaping industries and creating new opportunities for innovation and growth.",
       featured: false,
       tags: ["Thought Leadership", "AI", "Business Transformation"]
     },
-    {
-      id: 6,
+    { id: 6,
       title: "Zion Tech Group Expands Global Operations to Europe",
       date: "2023-12-05",
       author: "Press Team",
       category: "press-releases",
       excerpt: "Strategic expansion into European markets to serve growing demand for AI and technology solutions across the region.",
-      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the company to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
+      content: "Zion Tech Group has announced the expansion of its global operations into Europe, establishing a new regional headquarters in London and satellite offices in key European markets. This expansion will enable the comp to better serve European clients and capitalize on growing demand for AI and technology solutions in the region.",
       featured: false,
       tags: ["Global Expansion", "Europe", "Market Growth"]
     }
   ];
 
   const mediaCoverage = [
-    {
-      id: 1,
+    { id: 1,
       title: "How Zion Tech Group is Revolutionizing AI with Quantum Computing",
       publication: "TechCrunch",
       date: "2024-01-12",
@@ -110,8 +103,7 @@ export default function Press() {
       url: "https://techcrunch.com/zion-tech-group-quantum-ai",
       featured: true
     },
-    {
-      id: 2,
+    { id: 2,
       title: "The Rise of Autonomous Business Operations: Zion Tech Group's Vision",
       publication: "Harvard Business Review",
       date: "2024-01-08",
@@ -121,8 +113,7 @@ export default function Press() {
       url: "https://hbr.org/autonomous-business-operations",
       featured: true
     },
-    {
-      id: 3,
+    { id: 3,
       title: "Cybersecurity in the AI Era: Zion Tech Group's Defense Strategy",
       publication: "Wired",
       date: "2023-12-18",
@@ -132,8 +123,7 @@ export default function Press() {
       url: "https://wired.com/ai-cybersecurity-zion",
       featured: false
     },
-    {
-      id: 4,
+    { id: 4,
       title: "Startup Spotlight: Zion Tech Group's Journey to AI Leadership",
       publication: "VentureBeat",
       date: "2023-12-12",
@@ -146,8 +136,7 @@ export default function Press() {
   ];
 
   const awards = [
-    {
-      id: 1,
+    { id: 1,
       title: "Inc. 5000 Fastest-Growing Companies",
       organization: "Inc. Magazine",
       year: "2023",
@@ -155,8 +144,7 @@ export default function Press() {
       description: "Ranked among the top 100 fastest-growing private companies in America",
       image: "/images/awards/inc5000.png"
     },
-    {
-      id: 2,
+    { id: 2,
       title: "Best AI Solution Provider",
       organization: "Tech Innovation Awards",
       year: "2023",
@@ -164,8 +152,7 @@ export default function Press() {
       description: "Recognized for excellence in AI-powered business solutions",
       image: "/images/awards/tech-innovation.png"
     },
-    {
-      id: 3,
+    { id: 3,
       title: "Cybersecurity Excellence Award",
       organization: "InfoSec Awards",
       year: "2023",
@@ -179,22 +166,17 @@ export default function Press() {
     ? [...pressReleases, ...mediaCoverage, ...awards]
     : [...pressReleases, ...mediaCoverage, ...awards].filter(item => item.category === selectedCategory);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.6     }
     }
   };
 
@@ -211,7 +193,7 @@ export default function Press() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
@@ -261,8 +243,8 @@ export default function Press() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Latest News & Updates
@@ -277,7 +259,7 @@ export default function Press() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {filteredContent.filter(item => item.featured).map((item) => (
               <motion.article 
@@ -336,14 +318,14 @@ export default function Press() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All Press & Media
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Browse our complete collection of press releases, media coverage, and company updates.
+              Browse our complete collection of press releases, media coverage, and comp updates.
             </p>
           </motion.div>
 
@@ -352,7 +334,7 @@ export default function Press() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {filteredContent.filter(item => !item.featured).map((item) => (
               <motion.article 
@@ -401,14 +383,14 @@ export default function Press() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Media Resources
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-              Access our media kit, company information, and resources for journalists and media professionals.
+              Access our media kit, comp information, and resources for journalists and media professionals.
             </p>
           </motion.div>
 
@@ -417,7 +399,7 @@ export default function Press() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             <motion.div 
               className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group text-center"
@@ -428,7 +410,7 @@ export default function Press() {
                 <Download className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Media Kit</h3>
-              <p className="text-zion-slate-light text-sm mb-6">Download our comprehensive media kit with company information, logos, and press materials.</p>
+              <p className="text-zion-slate-light text-sm mb-6">Download our comprehensive media kit with comp information, logos, and press materials.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>
@@ -442,8 +424,8 @@ export default function Press() {
               <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">Company Fact Sheet</h3>
-              <p className="text-zion-slate-light text-sm mb-6">Key facts, statistics, and company information for media reference.</p>
+              <h3 className="text-xl font-bold text-white mb-4">Comp Fact Sheet</h3>
+              <p className="text-zion-slate-light text-sm mb-6">Key facts, statistics, and comp information for media reference.</p>
               <button className="px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:scale-105 transition-all duration-300">
                 Download
               </button>
@@ -488,8 +470,8 @@ export default function Press() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Contact Our Media Team
@@ -527,8 +509,8 @@ export default function Press() {
             
             <motion.button 
               className="mt-8 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05     }}
+              whileTap={{ scale: 0.95     }}
             >
               Contact Media Team
             </motion.button>

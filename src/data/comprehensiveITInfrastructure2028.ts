@@ -17,26 +17,24 @@ export interface ComprehensiveITInfrastructureService2028 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors: string[];
   marketSize: string;
 }
 
 export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructureService2028[] = [
   // Next-Generation Cloud Infrastructure
-  {
-    id: "next-gen-cloud-infrastructure",
+  { id: "next-gen-cloud-infrastructure",
     title: "Next-Generation Cloud Infrastructure Platform",
     description: "Revolutionary cloud infrastructure that combines edge computing, AI optimization, and quantum-ready architecture to deliver unprecedented performance and scalability.",
     category: "Cloud Infrastructure",
@@ -83,13 +81,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     marketPrice: "$25,000 - $75,000/month",
     roi: "400-700%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Prometheus"],
+    technicalSpecs: { technology: ["Kubernetes", "Docker", "Terraform", "Ansible", "Prometheus"],
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"],
       apiEndpoints: 800,
       uptime: "99.999%",
@@ -100,8 +96,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
   },
 
   // Zero-Trust Network Architecture
-  {
-    id: "zero-trust-network-architecture",
+  { id: "zero-trust-network-architecture",
     title: "Zero-Trust Network Architecture Platform",
     description: "Advanced network security platform that implements zero-trust principles with AI-powered threat detection, continuous authentication, and micro-segmentation.",
     category: "Network Security",
@@ -148,13 +143,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     marketPrice: "$12,000 - $35,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker"],
       integrations: ["Cisco", "Palo Alto", "Fortinet", "Check Point", "Juniper"],
       apiEndpoints: 350,
       uptime: "99.99%",
@@ -165,8 +158,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
   },
 
   // Sustainable Green IT Infrastructure
-  {
-    id: "sustainable-green-it-infrastructure",
+  { id: "sustainable-green-it-infrastructure",
     title: "Sustainable Green IT Infrastructure Platform",
     description: "Eco-friendly IT infrastructure that maximizes energy efficiency, reduces carbon footprint, and implements sustainable computing practices while maintaining high performance.",
     category: "Green IT",
@@ -213,13 +205,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     marketPrice: "$15,000 - $45,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "IoT sensors", "Energy monitoring", "Analytics"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "IoT sensors", "Energy monitoring", "Analytics"],
       integrations: ["Solar panels", "Wind turbines", "Battery storage", "Smart grids", "Energy management"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -230,8 +220,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
   },
 
   // Edge Computing and IoT Infrastructure
-  {
-    id: "edge-computing-iot-infrastructure",
+  { id: "edge-computing-iot-infrastructure",
     title: "Edge Computing and IoT Infrastructure Platform",
     description: "Comprehensive edge computing platform that brings computation and data storage closer to data sources, enabling real-time processing and reduced latency for IoT applications.",
     category: "Edge Computing",
@@ -278,13 +267,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     marketPrice: "$18,000 - $55,000/month",
     roi: "350-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Kubernetes Edge", "Docker", "MQTT", "WebRTC", "5G"],
+    technicalSpecs: { technology: ["Kubernetes Edge", "Docker", "MQTT", "WebRTC", "5G"],
       integrations: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "IBM Edge", "Cisco Edge"],
       apiEndpoints: 500,
       uptime: "99.9%",
@@ -295,8 +282,7 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
   },
 
   // Hybrid Multi-Cloud Management
-  {
-    id: "hybrid-multi-cloud-management",
+  { id: "hybrid-multi-cloud-management",
     title: "Hybrid Multi-Cloud Management Platform",
     description: "Unified platform for managing hybrid and multi-cloud environments with AI-powered optimization, cost management, and seamless workload migration across different cloud providers.",
     category: "Cloud Management",
@@ -343,13 +329,11 @@ export const COMPREHENSIVE_IT_INFRASTRUCTURE_2028: ComprehensiveITInfrastructure
     marketPrice: "$22,000 - $65,000/month",
     roi: "400-700%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Terraform", "Kubernetes", "Ansible", "Python", "React"],
+    technicalSpecs: { technology: ["Terraform", "Kubernetes", "Ansible", "Python", "React"],
       integrations: ["AWS", "Azure", "Google Cloud", "IBM Cloud", "Oracle Cloud"],
       apiEndpoints: 600,
       uptime: "99.99%",

@@ -13,18 +13,15 @@ export default function AISecurityGovernance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$699/mo', 
       details: ['Up to 10 policies', 'Basic AI features', 'Standard governance', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,799/mo', 
       details: ['Up to 50 policies', 'Advanced AI features', 'Enhanced governance', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$4,499/mo', 
       details: ['Unlimited policies', 'Custom AI models', 'Full governance suite', '24/7 dedicated support'] 
     },

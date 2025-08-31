@@ -64,19 +64,18 @@ import { AnimatePresence } from 'framer-motion';
 interface FooterLink {
   name: string;
   path: string;
-  icon: any;
+  icon: ;
   external?: boolean;
-}
+    }
 
 interface FooterSection {
   title: string;
-  icon: any;
+  icon: ;
   links: FooterLink[];
-}
+    }
 
 const footerSections = [
-  {
-    title: 'Company',
+  { title: 'Comp',
     icon: Globe,
     links: [
       { name: 'About Us', path: '/about', icon: Users },
@@ -90,8 +89,7 @@ const footerSections = [
       { name: 'Help Center', path: '/help', icon: HelpCircle }
     ]
   },
-  {
-    title: 'AI & Machine Learning',
+  { title: 'AI & Machine Learning',
     icon: Brain,
     links: [
       { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
@@ -104,8 +102,7 @@ const footerSections = [
       { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign }
     ]
   },
-  {
-    title: 'Cloud & Infrastructure',
+  { title: 'Cloud & Infrastructure',
     icon: Cloud,
     links: [
       { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Server },
@@ -117,8 +114,7 @@ const footerSections = [
       { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
     ]
   },
-  {
-    title: 'Cybersecurity & Privacy',
+  { title: 'Cybersecurity & Privacy',
     icon: Shield,
     links: [
       { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Lock },
@@ -128,8 +124,7 @@ const footerSections = [
       { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
     ]
   },
-  {
-    title: 'Emerging Technologies',
+  { title: 'Emerging Technologies',
     icon: Atom,
     links: [
       { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
@@ -140,8 +135,7 @@ const footerSections = [
       { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
     ]
   },
-  {
-    title: 'Micro SaaS Solutions',
+  { title: 'Micro SaaS Solutions',
     icon: ShoppingCart,
     links: [
       { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
@@ -154,8 +148,7 @@ const footerSections = [
       { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video }
     ]
   },
-  {
-    title: 'Support & Resources',
+  { title: 'Support & Resources',
     icon: HelpCircle,
     links: [
       { name: 'Help Center', path: '/help', icon: HelpCircle },
@@ -172,7 +165,7 @@ const footerSections = [
 ];
 
 const socialLinks = [
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/comp/ziontechgroup', color: 'hover:text-blue-500' },
   { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
   { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
   { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },
@@ -209,8 +202,7 @@ export function Footer() {
 
   // Scroll to top function
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
+    window.scrollTo({ top: 0,
       behavior: 'smooth'
     });
   };
@@ -231,19 +223,16 @@ export function Footer() {
           <motion.div
             key={i}
             className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
-            animate={{
-              x: [0, 50, 0],
+            animate={{ x: [0, 50, 0],
               y: [0, -50, 0],
               opacity: [0.1, 0.5, 0.1],
             }}
-            transition={{
-              duration: 4 + i * 0.3,
+            transition={{ duration: 4 + i * 0.3,
               repeat: Infinity,
               delay: i * 0.2,
               ease: "easeInOut"
             }}
-            style={{
-              left: `${Math.random() * 100}%`,
+            style={{ left: `${Math.random() * 100    }%`,
               top: `${Math.random() * 100}%`,
             }}
           />
@@ -253,7 +242,7 @@ export function Footer() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-8 mb-12">
-          {/* Company Section - Takes 2 columns on larger screens */}
+          {/* Comp Section - Takes 2 columns on larger screens */}
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
@@ -302,8 +291,7 @@ export function Footer() {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
-                  >
+                    className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group">
                     <div className="flex items-center space-x-2">
                       <link.icon className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
                       <span>{link.name}</span>

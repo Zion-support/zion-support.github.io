@@ -20,18 +20,17 @@ export interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
   compliance?: string[];
@@ -39,8 +38,7 @@ export interface Service {
 
 // Map 2026 services to existing service structure
 export function map2026ServicesToExistingStructure(): Service[] {
-  return specializedIndustrySolutions2026.map(service => ({
-    id: service.id,
+  return specializedIndustrySolutions2026.map(service => ({ id: service.id,
     title: service.name,
     description: service.description,
     category: service.category,
@@ -58,13 +56,11 @@ export function map2026ServicesToExistingStructure(): Service[] {
     marketPrice: service.price + service.period,
     roi: service.roi,
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: service.contactInfo.mobile,
+    contactInfo: { phone: service.contactInfo.mobile,
       email: service.contactInfo.email,
       website: service.contactInfo.website
     },
-    technicalSpecs: {
-      technology: service.technology,
+    technicalSpecs: { technology: service.technology,
       integrations: service.integrations,
       apiEndpoints: 200, // Default value
       uptime: "99.9%", // Default value

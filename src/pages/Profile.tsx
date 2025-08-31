@@ -41,14 +41,14 @@ interface UserProfile {
   lastName: string;
   email: string;
   phone: string;
-  company: string;
+  comp: string;
   position: string;
   industry: string;
   location: string;
   website: string;
   bio: string;
   avatar: string;
-}
+    }
 
 interface NotificationSettings {
   emailNotifications: boolean;
@@ -57,7 +57,7 @@ interface NotificationSettings {
   securityAlerts: boolean;
   projectUpdates: boolean;
   weeklyReports: boolean;
-}
+    }
 
 interface SecuritySettings {
   twoFactorEnabled: boolean;
@@ -69,7 +69,7 @@ interface SecuritySettings {
     location: string;
     device: string;
     status: 'success' | 'failed';
-  }>;
+      }>;
 }
 
 const Profile: React.FC = () => {
@@ -79,12 +79,11 @@ const Profile: React.FC = () => {
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
 
-  const [profile, setProfile] = useState<UserProfile>({
-    firstName: 'John',
+  const [profile, setProfile] = useState<UserProfile>({ firstName: 'John',
     lastName: 'Doe',
     email: 'john.doe@ziontechgroup.com',
     phone: '+1 (555) 123-4567',
-    company: 'Zion Tech Group',
+    comp: 'Zion Tech Group',
     position: 'Senior Developer',
     industry: 'Technology',
     location: 'San Francisco, CA',
@@ -93,8 +92,7 @@ const Profile: React.FC = () => {
     avatar: '/api/placeholder/150/150'
   });
 
-  const [notifications, setNotifications] = useState<NotificationSettings>({
-    emailNotifications: true,
+  const [notifications, setNotifications] = useState<NotificationSettings>({ emailNotifications: true,
     pushNotifications: true,
     marketingEmails: false,
     securityAlerts: true,
@@ -102,8 +100,7 @@ const Profile: React.FC = () => {
     weeklyReports: false
   });
 
-  const [security, setSecurity] = useState<SecuritySettings>({
-    twoFactorEnabled: true,
+  const [security, setSecurity] = useState<SecuritySettings>({ twoFactorEnabled: true,
     sessionTimeout: 30,
     passwordLastChanged: '2024-01-15',
     lastLogin: '2024-01-20 14:30:00',
@@ -118,8 +115,7 @@ const Profile: React.FC = () => {
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [showPasswords, setShowPasswords] = useState({
-    current: false,
+  const [showPasswords, setShowPasswords] = useState({ current: false,
     new: false,
     confirm: false
   });
@@ -223,9 +219,8 @@ const Profile: React.FC = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-    >
+      transition={{ duration: 0.6     }}
+      className="space-y-8">
       {/* Profile Header */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <div className="flex items-center gap-6 mb-8">
@@ -242,12 +237,11 @@ const Profile: React.FC = () => {
               {profile.firstName} {profile.lastName}
             </h2>
             <p className="text-slate-300 text-lg mb-1">{profile.position}</p>
-            <p className="text-slate-400">{profile.company}</p>
+            <p className="text-slate-400">{profile.comp}</p>
           </div>
           <button
             onClick={() => setIsEditing(!isEditing)}
-            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2"
-          >
+            className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">
             {isEditing ? <X className="w-5 h-5" /> : <Edit className="w-5 h-5" />}
             {isEditing ? 'Cancel' : 'Edit Profile'}
           </button>
@@ -261,8 +255,7 @@ const Profile: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 + index * 0.1 }}
-              className="text-center p-4 bg-white/5 rounded-xl border border-slate-600/30"
-            >
+              className="text-center p-4 bg-white/5 rounded-xl border border-slate-600/30">
               <div className="flex justify-center mb-2">
                 <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-white">
                   {stat.icon}
@@ -341,13 +334,13 @@ const Profile: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div>
-            <label className="block text-white font-medium mb-2">Company</label>
+            <label className="block text-white font-medium mb-2">Comp</label>
             <div className="relative">
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
               <input
                 type="text"
-                value={profile.company}
-                onChange={(e) => setProfile(prev => ({ ...prev, company: e.target.value }))}
+                value={profile.comp}
+                onChange={(e) => setProfile(prev => ({ ...prev, comp: e.target.value }))}
                 disabled={!isEditing}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
               />
@@ -375,8 +368,7 @@ const Profile: React.FC = () => {
                 value={profile.industry}
                 onChange={(e) => setProfile(prev => ({ ...prev, industry: e.target.value }))}
                 disabled={!isEditing}
-                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed"
-              >
+                className="w-full pl-10 pr-4 py-3 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent disabled:opacity-50 disabled:cursor-not-allowed">
                 {industries.map((industry) => (
                   <option key={industry} value={industry}>{industry}</option>
                 ))}
@@ -429,8 +421,7 @@ const Profile: React.FC = () => {
             <button
               onClick={handleProfileUpdate}
               disabled={isLoading}
-              className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-            >
+              className="px-8 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-medium rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg shadow-green-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
               {isLoading ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -491,9 +482,8 @@ const Profile: React.FC = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-    >
+      transition={{ duration: 0.6     }}
+      className="space-y-8">
       {/* Password Change */}
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Change Password</h3>
@@ -513,8 +503,7 @@ const Profile: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setShowPasswords(prev => ({ ...prev, current: !prev.current }))}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-              >
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200">
                 {showPasswords.current ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
@@ -534,8 +523,7 @@ const Profile: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setShowPasswords(prev => ({ ...prev, new: !prev.new }))}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-              >
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200">
                 {showPasswords.new ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
@@ -574,8 +562,7 @@ const Profile: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setShowPasswords(prev => ({ ...prev, confirm: !prev.confirm }))}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200"
-              >
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-white transition-colors duration-200">
                 {showPasswords.confirm ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
               </button>
             </div>
@@ -584,8 +571,7 @@ const Profile: React.FC = () => {
           <button
             onClick={handlePasswordChange}
             disabled={isLoading}
-            className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-          >
+            className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 shadow-lg shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
             {isLoading ? (
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
@@ -630,8 +616,7 @@ const Profile: React.FC = () => {
             <select
               value={security.sessionTimeout}
               onChange={(e) => setSecurity(prev => ({ ...prev, sessionTimeout: Number(e.target.value) }))}
-              className="px-3 py-2 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-            >
+              className="px-3 py-2 bg-white/10 border border-slate-600/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
               <option value={15}>15 minutes</option>
               <option value={30}>30 minutes</option>
               <option value={60}>1 hour</option>
@@ -675,9 +660,8 @@ const Profile: React.FC = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-    >
+      transition={{ duration: 0.6     }}
+      className="space-y-8">
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Notification Preferences</h3>
         
@@ -717,9 +701,8 @@ const Profile: React.FC = () => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="space-y-8"
-    >
+      transition={{ duration: 0.6     }}
+      className="space-y-8">
       <div className="bg-white/5 border border-slate-600/30 rounded-2xl p-8 backdrop-blur-md">
         <h3 className="text-xl font-semibold text-white mb-6">Account Preferences</h3>
         
@@ -803,9 +786,8 @@ const Profile: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8"
-        >
+          transition={{ duration: 0.6     }}
+          className="mb-8">
           <h1 className="text-4xl font-bold text-white mb-2">Profile Settings</h1>
           <p className="text-slate-300 text-lg">Manage your account settings and preferences</p>
         </motion.div>
@@ -815,8 +797,7 @@ const Profile: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400"
-          >
+            className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center gap-3 text-red-400">
             <AlertCircle className="w-5 h-5" />
             {error}
           </motion.div>
@@ -826,8 +807,7 @@ const Profile: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400"
-          >
+            className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg flex items-center gap-3 text-green-400">
             <CheckCircle className="w-5 h-5" />
             {success}
           </motion.div>
@@ -843,7 +823,7 @@ const Profile: React.FC = () => {
           ].map((tab) => (
             <button
               key={tab.key}
-              onClick={() => setActiveTab(tab.key as any)}
+              onClick={() => setActiveTab(tab.key as )}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 activeTab === tab.key
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'

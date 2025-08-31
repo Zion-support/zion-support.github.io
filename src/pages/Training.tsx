@@ -36,8 +36,7 @@ export default function Training() {
   ];
 
   const trainingPrograms = [
-    {
-      id: 1,
+    { id: 1,
       title: 'AI Fundamentals for Business Leaders',
       description: 'Essential AI concepts and strategies for business leaders to drive digital transformation and innovation.',
       category: 'ai-ml',
@@ -63,8 +62,7 @@ export default function Training() {
       ],
       skills: ['AI Strategy', 'Business Analysis', 'Change Management', 'Data Literacy']
     },
-    {
-      id: 2,
+    { id: 2,
       title: 'Advanced Cybersecurity Architecture',
       description: 'Comprehensive training on designing and implementing enterprise-grade security architectures.',
       category: 'security',
@@ -90,8 +88,7 @@ export default function Training() {
       ],
       skills: ['Security Architecture', 'Risk Assessment', 'IAM', 'Network Security', 'Incident Response']
     },
-    {
-      id: 3,
+    { id: 3,
       title: 'Cloud-Native Application Development',
       description: 'Learn to build scalable, resilient applications using modern cloud-native technologies and practices.',
       category: 'cloud',
@@ -117,8 +114,7 @@ export default function Training() {
       ],
       skills: ['Docker', 'Kubernetes', 'Microservices', 'CI/CD', 'Cloud Platforms']
     },
-    {
-      id: 4,
+    { id: 4,
       title: 'Data Science for Business Intelligence',
       description: 'Transform raw data into actionable insights using advanced analytics and visualization techniques.',
       category: 'data',
@@ -144,8 +140,7 @@ export default function Training() {
       ],
       skills: ['Python', 'R', 'SQL', 'Tableau', 'Statistical Analysis', 'Machine Learning']
     },
-    {
-      id: 5,
+    { id: 5,
       title: 'Quantum Computing Fundamentals',
       description: 'Introduction to quantum computing principles and their potential applications in business.',
       category: 'emerging',
@@ -171,8 +166,7 @@ export default function Training() {
       ],
       skills: ['Quantum Mechanics', 'Quantum Algorithms', 'Innovation Strategy', 'Technology Trends']
     },
-    {
-      id: 6,
+    { id: 6,
       title: 'Digital Transformation Leadership',
       description: 'Strategic leadership skills for driving successful digital transformation initiatives.',
       category: 'leadership',
@@ -250,8 +244,7 @@ export default function Training() {
   };
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
+    return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
@@ -370,8 +363,7 @@ export default function Training() {
               {trainingPrograms.filter(p => p.featured).map((program) => (
                 <div
                   key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-                >
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
                   <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="absolute top-4 left-4">
@@ -447,8 +439,7 @@ export default function Training() {
               {filteredPrograms.map((program) => (
                 <div
                   key={program.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-2">
                       {getCategoryIcon(program.category)}
@@ -479,8 +470,7 @@ export default function Training() {
                     {program.tags.slice(0, 4).map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full">
                         {tag}
                       </span>
                     ))}

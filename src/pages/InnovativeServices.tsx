@@ -25,8 +25,7 @@ import {
 
 const InnovativeServices: React.FC = () => {
   const innovations = [
-    {
-      id: 'ai-automation',
+    { id: 'ai-automation',
       title: 'AI Business Automation',
       description: 'Revolutionary AI-powered business process automation that transforms your operations',
       icon: Brain,
@@ -39,8 +38,7 @@ const InnovativeServices: React.FC = () => {
       benefits: ['300% efficiency increase', '24/7 autonomous operation', 'Cost reduction up to 60%'],
       color: 'from-zion-cyan to-zion-purple'
     },
-    {
-      id: 'quantum-computing',
+    { id: 'quantum-computing',
       title: 'Quantum Computing Services',
       description: 'Next-generation quantum computing solutions for complex problem-solving',
       icon: Atom,
@@ -53,8 +51,7 @@ const InnovativeServices: React.FC = () => {
       benefits: ['1000x faster computation', 'Unbreakable encryption', 'Revolutionary breakthroughs'],
       color: 'from-zion-purple to-zion-blue'
     },
-    {
-      id: 'blockchain',
+    { id: 'blockchain',
       title: 'Enterprise Blockchain',
       description: 'Secure, scalable blockchain solutions for enterprise applications',
       icon: Lock,
@@ -67,8 +64,7 @@ const InnovativeServices: React.FC = () => {
       benefits: ['Immutable security', 'Transparent operations', 'Reduced costs'],
       color: 'from-zion-blue to-zion-green'
     },
-    {
-      id: 'iot-edge',
+    { id: 'iot-edge',
       title: 'IoT Edge Computing',
       description: 'Intelligent IoT solutions with edge computing for real-time processing',
       icon: Wifi,
@@ -81,8 +77,7 @@ const InnovativeServices: React.FC = () => {
       benefits: ['Reduced latency', 'Lower bandwidth costs', 'Enhanced security'],
       color: 'from-zion-green to-zion-emerald'
     },
-    {
-      id: 'cybersecurity',
+    { id: 'cybersecurity',
       title: 'Zero Trust Security',
       description: 'Advanced cybersecurity platform with zero-trust architecture',
       icon: Shield,
@@ -95,8 +90,7 @@ const InnovativeServices: React.FC = () => {
       benefits: ['99.99% threat prevention', 'Real-time monitoring', 'Compliance ready'],
       color: 'from-zion-emerald to-zion-cyan'
     },
-    {
-      id: 'digital-twin',
+    { id: 'digital-twin',
       title: 'Digital Twin Technology',
       description: 'Create virtual replicas of physical systems for simulation and optimization',
       icon: Eye,
@@ -109,8 +103,7 @@ const InnovativeServices: React.FC = () => {
       benefits: ['Reduced downtime', 'Optimized performance', 'Cost savings'],
       color: 'from-zion-cyan to-zion-purple'
     },
-    {
-      id: 'metaverse',
+    { id: 'metaverse',
       title: 'Metaverse & VR',
       description: 'Immersive virtual reality and metaverse development platform',
       icon: Globe2,
@@ -123,8 +116,7 @@ const InnovativeServices: React.FC = () => {
       benefits: ['Enhanced user engagement', 'New revenue streams', 'Innovative experiences'],
       color: 'from-zion-purple to-zion-blue'
     },
-    {
-      id: 'green-tech',
+    { id: 'green-tech',
       title: 'Green Tech Solutions',
       description: 'Sustainable technology solutions for environmental impact reduction',
       icon: Leaf,
@@ -155,7 +147,7 @@ const InnovativeServices: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-gradient mb-6">
               Cutting-Edge
@@ -167,17 +159,15 @@ const InnovativeServices: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 Explore Innovations
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>
@@ -195,8 +185,7 @@ const InnovativeServices: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-zion-cyan" />
                 </div>
@@ -214,9 +203,8 @@ const InnovativeServices: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Technologies
             </h2>
@@ -233,8 +221,7 @@ const InnovativeServices: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative"
-              >
+                className="group relative">
                 <div className="bg-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 h-full hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                   <div className={`w-16 h-16 bg-gradient-to-br ${innovation.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <innovation.icon className="w-8 h-8 text-white" />
@@ -273,10 +260,9 @@ const InnovativeServices: React.FC = () => {
                   </div>
 
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300"
-                  >
+                    whileHover={{ scale: 1.02     }}
+                    whileTap={{ scale: 0.98     }}
+                    className="w-full py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-xl hover:bg-gradient-to-r hover:from-zion-cyan/30 hover:to-zion-purple/30 transition-all duration-300">
                     Learn More
                   </motion.button>
                 </div>
@@ -292,7 +278,7 @@ const InnovativeServices: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Innovate?
@@ -302,17 +288,15 @@ const InnovativeServices: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                 Start Your Project
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Contact Our Team
               </motion.button>
             </div>

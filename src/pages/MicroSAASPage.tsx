@@ -23,8 +23,7 @@ import {
 } from 'lucide-react';
 const MicroSAASPage = () => {
   const saasServices = [
-    {
-      id: 'custom-applications',
+    { id: 'custom-applications',
       title: 'Custom Applications',
       description: 'Tailored software solutions designed for your specific business needs',
       icon: <Code className="w-8 h-8" />,
@@ -32,8 +31,7 @@ const MicroSAASPage = () => {
       useCases: ['Business Tools', 'Industry Solutions', 'Process Automation', 'Customer Portals'],
       pricing: 'Starting from $2,500/month'
     },
-    {
-      id: 'api-development',
+    { id: 'api-development',
       title: 'API Development',
       description: 'Robust and scalable APIs to connect your applications and services',
       icon: <Database className="w-8 h-8" />,
@@ -41,8 +39,7 @@ const MicroSAASPage = () => {
       useCases: ['System Integration', 'Mobile Apps', 'Third-party Services', 'Data Exchange'],
       pricing: 'Starting from $1,800/month'
     },
-    {
-      id: 'scalable-architecture',
+    { id: 'scalable-architecture',
       title: 'Scalable Architecture',
       description: 'Cloud-native architectures that grow with your business',
       icon: <Globe className="w-8 h-8" />,
@@ -50,8 +47,7 @@ const MicroSAASPage = () => {
       useCases: ['High-traffic Applications', 'Growing Businesses', 'Enterprise Solutions', 'Global Deployments'],
       pricing: 'Starting from $3,200/month'
     },
-    {
-      id: 'user-management',
+    { id: 'user-management',
       title: 'User Management',
       description: 'Comprehensive user authentication and authorization systems',
       icon: <Users className="w-8 h-8" />,
@@ -63,23 +59,17 @@ const MicroSAASPage = () => {
   const saasBenefits = [
     'Scalability', 'Cost Efficiency', 'Rapid Deployment', 'Easy Updates', 'Accessibility', 'Integration'
   ];
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5
+          }
     }
   };
   return (
@@ -89,9 +79,8 @@ const MicroSAASPage = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+          transition={{ duration: 0.8     }}
+          className="text-center mb-16">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full mb-6">
             <Zap className="w-10 h-10 text-white" />
           </div>
@@ -125,14 +114,12 @@ const MicroSAASPage = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16"
-        >
+          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
           {saasServices.map((service, index) => (
             <motion.div
               key={service.id}
               variants={itemVariants}
-              className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10"
-            >
+              className="bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10">
               {/* Service Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center text-white mb-4">
@@ -167,8 +154,7 @@ const MicroSAASPage = () => {
                   {service.useCases.map((useCase, useCaseIndex) => (
                     <span
                       key={useCaseIndex}
-                      className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20"
-                    >
+                      className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan text-xs rounded-full border border-zion-cyan/20">
                       {useCase}
                     </span>
                   ))}
@@ -177,8 +163,7 @@ const MicroSAASPage = () => {
               {/* CTA Button */}
               <Link
                 to={`/micro-saas/${service.id}`}
-                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-              >
+                className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                 Learn More
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
@@ -190,8 +175,7 @@ const MicroSAASPage = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="mb-16"
-        >
+          className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Benefits of Micro SAAS
@@ -208,8 +192,7 @@ const MicroSAASPage = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-blue-dark/20 border border-zion-cyan/20 rounded-lg p-4 text-center hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="text-zion-cyan font-medium">{benefit}</div>
               </motion.div>
             ))}
@@ -220,8 +203,7 @@ const MicroSAASPage = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mb-16"
-        >
+          className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Why Choose Our SAAS Solutions?
@@ -262,8 +244,7 @@ const MicroSAASPage = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8"
-        >
+          className="text-center bg-zion-blue-dark/30 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8">
           <h2 className="text-3xl font-bold text-white mb-4">
             Ready to Build Your SAAS?
           </h2>
@@ -274,14 +255,12 @@ const MicroSAASPage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105"
-            >
+              className="px-8 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:scale-105">
               Start SAAS Project
             </Link>
             <Link
               to="/services/pricing"
-              className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300"
-            >
+              className="px-8 py-3 border border-zion-cyan text-zion-cyan rounded-lg font-medium hover:bg-zion-cyan hover:text-white transition-all duration-300">
               View SAAS Pricing
             </Link>
           </div>

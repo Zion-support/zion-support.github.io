@@ -2,55 +2,50 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const testimonials = [
-  {
-    id: 1,
+  { id: 1,
     name: "Sarah Johnson",
     position: "CTO, TechCorp Solutions",
-    company: "TechCorp Solutions",
+    comp: "TechCorp Solutions",
     avatar: "👩‍💼",
     rating: 5,
     content: "Zion Tech Group transformed our entire IT infrastructure. Their AI-powered solutions reduced our operational costs by 40% and improved system reliability to 99.9%. The team's expertise in quantum computing and blockchain integration is unmatched.",
     category: "AI & Infrastructure",
     results: ["40% cost reduction", "99.9% uptime", "3x faster deployment"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Michael Chen",
     position: "VP Engineering, FinTech Pro",
-    company: "FinTech Pro",
+    comp: "FinTech Pro",
     avatar: "👨‍💻",
     rating: 5,
     content: "The quantum neural network platform they built for us revolutionized our trading algorithms. We're seeing 25% better prediction accuracy and processing speeds that are 10x faster than traditional systems. Game-changing technology.",
     category: "Quantum Computing",
     results: ["25% better accuracy", "10x faster processing", "Real-time analytics"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "Dr. Emily Rodriguez",
     position: "Research Director, BioTech Innovations",
-    company: "BioTech Innovations",
+    comp: "BioTech Innovations",
     avatar: "👩‍🔬",
     rating: 5,
     content: "Their AI-powered research assistant has accelerated our drug discovery process by 60%. The platform's ability to analyze complex biological data and generate insights has been invaluable to our breakthrough research.",
     category: "AI Research",
     results: ["60% faster discovery", "Advanced analytics", "Breakthrough insights"]
   },
-  {
-    id: 4,
+  { id: 4,
     name: "David Thompson",
     position: "Operations Manager, Manufacturing Plus",
-    company: "Manufacturing Plus",
+    comp: "Manufacturing Plus",
     avatar: "👨‍🏭",
     rating: 5,
     content: "The autonomous business operations platform streamlined our entire manufacturing process. We've seen a 35% increase in efficiency and 50% reduction in downtime. The IoT integration and real-time monitoring are exceptional.",
     category: "Manufacturing IoT",
     results: ["35% efficiency gain", "50% less downtime", "Real-time monitoring"]
   },
-  {
-    id: 5,
+  { id: 5,
     name: "Lisa Wang",
     position: "Security Director, SecureNet",
-    company: "SecureNet",
+    comp: "SecureNet",
     avatar: "👩‍💻",
     rating: 5,
     content: "Their zero-trust security architecture and SOC 2 compliance automation have made our security posture bulletproof. We've achieved 100% compliance with all industry standards and zero security incidents.",
@@ -90,8 +85,8 @@ export function InteractiveTestimonials() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
@@ -106,7 +101,7 @@ export function InteractiveTestimonials() {
           className="flex flex-wrap justify-center gap-3 mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {categories.map((category) => (
@@ -132,21 +127,19 @@ export function InteractiveTestimonials() {
           className="max-w-4xl mx-auto mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8 relative">
             {/* Navigation Arrows */}
             <button
               onClick={prevTestimonial}
-              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-            >
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
               ←
             </button>
             <button
               onClick={nextTestimonial}
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110"
-            >
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-slate-700 hover:bg-slate-600 rounded-full flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
               →
             </button>
 
@@ -156,9 +149,8 @@ export function InteractiveTestimonials() {
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="text-center"
-              >
+                transition={{ duration: 0.5     }}
+                className="text-center">
                 {/* Avatar and Rating */}
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -181,8 +173,7 @@ export function InteractiveTestimonials() {
                   {currentTestimonial.results.map((result, index) => (
                     <span
                       key={index}
-                      className="px-3 py-1 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm"
-                    >
+                      className="px-3 py-1 bg-blue-600/20 border border-blue-500/30 rounded-full text-blue-300 text-sm">
                       {result}
                     </span>
                   ))}
@@ -192,7 +183,7 @@ export function InteractiveTestimonials() {
                 <div>
                   <div className="text-white font-semibold text-lg">{currentTestimonial.name}</div>
                   <div className="text-gray-400 text-sm">{currentTestimonial.position}</div>
-                  <div className="text-blue-400 text-sm">{currentTestimonial.company}</div>
+                  <div className="text-blue-400 text-sm">{currentTestimonial.comp}</div>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -204,7 +195,7 @@ export function InteractiveTestimonials() {
           className="flex justify-center gap-2 mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           {filteredTestimonials.map((_, index) => (
@@ -225,7 +216,7 @@ export function InteractiveTestimonials() {
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

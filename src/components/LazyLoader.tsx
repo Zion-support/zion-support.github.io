@@ -1,16 +1,13 @@
 import React, { Suspense, lazy } from 'react.ts'
 import { LoadingSpinner  } from './ui/LoadingSpinner'
 
-interface LazyLoaderProps extends React.PropsWithChildren<{}> {
-
-component: React.ComponentType<any>;
+interface LazyLoaderProps extends React.PropsWithChildren<{}> { component: React.ComponentType<>;
 fallback?: React.ReactNode;
-props?: any;
+props?: ;
 
-}
+    }
 
-export const LazyLoader: React.FC<LazyLoaderProps> = ({ 
-  component: Component, 
+export const LazyLoader: React.FC = ({ component: Component, 
   fallback = <LoadingSpinner />, 
   props = {} 
 }) => {

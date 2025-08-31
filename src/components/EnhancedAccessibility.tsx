@@ -27,12 +27,11 @@ interface AccessibilitySettings {
   focusIndicator: boolean;
   colorBlindness: 'normal' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'xlarge';
-}
+    }
 
 export const EnhancedAccessibility: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
+  const [settings, setSettings] = useState<AccessibilitySettings>({ highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: false,
@@ -87,8 +86,7 @@ export const EnhancedAccessibility: React.FC = () => {
     root.style.setProperty('--color-blindness', settings.colorBlindness);
 
     // Font size
-    const fontSizeMap = {
-      small: '0.875em',
+    const fontSizeMap = { small: '0.875em',
       medium: '1em',
       large: '1.125em',
       xlarge: '1.25em'
@@ -141,13 +139,12 @@ export const EnhancedAccessibility: React.FC = () => {
     }
   };
 
-  const toggleSetting = (key: keyof AccessibilitySettings, value?: any) => {
+  const toggleSetting = (key: keyof AccessibilitySettings, value?: ) => {
     const newValue = value !== undefined ? value : !settings[key];
     setSettings(prev => ({ ...prev, [key]: newValue }));
     
     // Announce changes to screen readers
-    const settingNames = {
-      highContrast: 'High contrast',
+    const settingNames = { highContrast: 'High contrast',
       largeText: 'Large text',
       reducedMotion: 'Reduced motion',
       screenReader: 'Screen reader',
@@ -181,7 +178,7 @@ export const EnhancedAccessibility: React.FC = () => {
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.3     }}
             className="fixed top-4 right-20 z-40 bg-zion-slate-dark border border-zion-cyan/30 rounded-lg p-6 text-white shadow-2xl min-w-[320px]"
             role="dialog"
             aria-label="Accessibility settings"
@@ -224,8 +221,7 @@ export const EnhancedAccessibility: React.FC = () => {
                   <select
                     value={settings.fontSize}
                     onChange={(e) => toggleSetting('fontSize', e.target.value)}
-                    className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  >
+                    className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
                     <option value="large">Large</option>
@@ -238,8 +234,7 @@ export const EnhancedAccessibility: React.FC = () => {
                   <select
                     value={settings.colorBlindness}
                     onChange={(e) => toggleSetting('colorBlindness', e.target.value)}
-                    className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-                  >
+                    className="w-full bg-zion-slate border border-zion-cyan/30 rounded px-3 py-2 text-white focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
                     <option value="normal">Normal</option>
                     <option value="protanopia">Protanopia (Red-Blind)</option>
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -336,8 +331,7 @@ export const EnhancedAccessibility: React.FC = () => {
 
 // CSS for accessibility features
 const accessibilityStyles = `
-  .sr-only {
-    position: absolute;
+  .sr-only { position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
@@ -365,9 +359,8 @@ const accessibilityStyles = `
 
   .high-contrast button,
   .high-contrast input,
-  .high-contrast select {
-    border: 2px solid #ffffff !important;
-  }
+  .high-contrast select { border: 2px solid #ffffff !important;
+      }
 
   [style*="--reduced-motion: reduce"] *,
   [style*="--reduced-motion: reduce"] *::before,
@@ -377,22 +370,18 @@ const accessibilityStyles = `
     transition-duration: 0.01ms !important;
   }
 
-  :focus-visible {
-    outline: var(--focus-visible, 2px solid #22ddd2) !important;
+  :focus-visible { outline: var(--focus-visible, 2px solid #22ddd2) !important;
     outline-offset: 2px !important;
   }
 
-  [style*="--color-blindness: protanopia"] {
-    filter: url('#protanopia');
-  }
+  [style*="--color-blindness: protanopia"] { filter: url('#protanopia');
+      }
 
-  [style*="--color-blindness: deuteranopia"] {
-    filter: url('#deuteranopia');
-  }
+  [style*="--color-blindness: deuteranopia"] { filter: url('#deuteranopia');
+      }
 
-  [style*="--color-blindness: tritanopia"] {
-    filter: url('#tritanopia');
-  }
+  [style*="--color-blindness: tritanopia"] { filter: url('#tritanopia');
+      }
 `;
 
 // Inject styles

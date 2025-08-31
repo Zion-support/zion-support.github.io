@@ -66,38 +66,32 @@ import {
 
 const EdgeComputingPlatform: React.FC = () => {
   const features = [
-    {
-      icon: Cpu,
+    { icon: Cpu,
       title: "Distributed Edge Nodes",
       description: "Deploy computing resources closer to data sources for ultra-low latency processing",
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Real-time Processing",
       description: "Sub-millisecond response times for critical applications and IoT devices",
       color: "from-green-500 to-emerald-500"
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Global Edge Network",
       description: "Worldwide infrastructure with automatic failover and load balancing",
       color: "from-purple-500 to-pink-500"
     },
-    {
-      icon: Server,
+    { icon: Server,
       title: "Edge AI Inference",
       description: "Run machine learning models at the edge for instant decision making",
       color: "from-orange-500 to-red-500"
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: "5G & IoT Integration",
       description: "Seamless connectivity with 5G networks and IoT device ecosystems",
       color: "from-indigo-500 to-purple-500"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Edge Security",
       description: "Advanced security protocols and encryption for edge computing environments",
       color: "from-yellow-500 to-orange-500"
@@ -105,8 +99,7 @@ const EdgeComputingPlatform: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$399",
       period: "/month",
       description: "Perfect for small IoT deployments and edge computing experiments",
@@ -122,8 +115,7 @@ const EdgeComputingPlatform: React.FC = () => {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$1,199",
       period: "/month",
       description: "Ideal for growing businesses with significant edge computing needs",
@@ -140,8 +132,7 @@ const EdgeComputingPlatform: React.FC = () => {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$3,999",
       period: "/month",
       description: "For large organizations requiring enterprise-grade edge computing",
@@ -161,26 +152,22 @@ const EdgeComputingPlatform: React.FC = () => {
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "10x Faster Response",
       description: "Reduce latency from 100ms to under 10ms with edge processing",
       metric: "10x"
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "50% Cost Reduction",
       description: "Lower bandwidth costs and reduce cloud computing expenses",
       metric: "50%"
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "99.9% Uptime",
       description: "Distributed architecture ensures high availability and reliability",
       metric: "99.9%"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Global Scale",
       description: "Deploy edge nodes worldwide for optimal user experience",
       metric: "200+"
@@ -188,29 +175,25 @@ const EdgeComputingPlatform: React.FC = () => {
   ];
 
   const useCases = [
-    {
-      industry: "Autonomous Vehicles",
+    { industry: "Autonomous Vehicles",
       title: "Real-time Decision Making",
       description: "Process sensor data and make driving decisions in milliseconds",
       icon: Car,
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      industry: "Smart Cities",
+    { industry: "Smart Cities",
       title: "IoT Infrastructure",
       description: "Manage traffic lights, utilities, and public services in real-time",
       icon: Building,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       title: "Predictive Maintenance",
       description: "Monitor equipment health and prevent failures before they occur",
       icon: Factory,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       title: "Remote Monitoring",
       description: "Real-time patient monitoring and emergency response systems",
       icon: Heart,
@@ -219,26 +202,22 @@ const EdgeComputingPlatform: React.FC = () => {
   ];
 
   const edgeLocations = [
-    {
-      region: "North America",
+    { region: "North America",
       cities: ["New York", "Los Angeles", "Chicago", "Toronto", "Vancouver"],
       icon: Building,
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      region: "Europe",
+    { region: "Europe",
       cities: ["London", "Paris", "Berlin", "Amsterdam", "Frankfurt"],
       icon: Globe,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      region: "Asia Pacific",
+    { region: "Asia Pacific",
       cities: ["Tokyo", "Singapore", "Sydney", "Seoul", "Hong Kong"],
       icon: Satellite,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      region: "Latin America",
+    { region: "Latin America",
       cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],
       icon: MapPin,
       color: "from-orange-500 to-red-500"
@@ -260,7 +239,7 @@ const EdgeComputingPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-8">
                 <Cpu className="w-4 h-4 mr-2" />
@@ -309,8 +288,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -343,8 +321,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-green-500 mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -376,8 +353,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
@@ -415,8 +391,7 @@ const EdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${location.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${location.color} mb-4`}>
                     <location.icon className="w-6 h-6 text-white" />
@@ -506,7 +481,7 @@ const EdgeComputingPlatform: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Deploy to the Edge?

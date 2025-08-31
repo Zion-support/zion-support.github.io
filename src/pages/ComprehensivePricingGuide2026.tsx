@@ -70,9 +70,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-5xl md:text-7xl font-bold text-white mb-6">
               Comprehensive Pricing
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400">
                 Guide 2026
@@ -82,8 +81,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto"
-            >
+              className="text-xl md:text-2xl text-zinc-300 mb-8 max-w-4xl mx-auto">
               Transparent pricing for revolutionary services. Compare pricing tiers, analyze ROI, and understand the value proposition 
               of Zion Tech Group's cutting-edge 2026 solutions.
             </motion.p>
@@ -93,8 +91,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto"
-            >
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="text-3xl font-bold text-green-400 mb-2">{marketSummary2026.totalMarketSize}</div>
                 <div className="text-zinc-400">Total Market Size</div>
@@ -122,8 +119,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                   <select
                     value={selectedService}
                     onChange={(e) => setSelectedService(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                     {services.map(service => (
                       <option key={service} value={service} className="bg-zinc-800 text-white">
                         {service === 'all' ? 'All Services' : service}
@@ -138,8 +134,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                   <select
                     value={selectedTier}
                     onChange={(e) => setSelectedTier(e.target.value)}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  >
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
                     {tiers.map(tier => (
                       <option key={tier} value={tier} className="bg-zinc-800 text-white">
                         {tier === 'all' ? 'All Tiers' : tier}
@@ -161,8 +156,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="mb-16"
-              >
+                className="mb-16">
                 {/* Service Header */}
                 <div className="text-center mb-12">
                   <div className="flex items-center justify-center gap-3 mb-4">
@@ -215,8 +209,7 @@ const ComprehensivePricingGuide2026: React.FC = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: (index * 0.1) + (tierIndex * 0.1) }}
-                      className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
-                    >
+                      className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
                       {/* Tier Header */}
                       <div className="text-center mb-6">
                         <div className={`inline-block p-2 rounded-lg bg-gradient-to-r ${getTierColor(tier.name)} mb-4`}>
@@ -346,9 +339,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-3xl p-12 border border-white/10"
-            >
+              transition={{ duration: 0.8     }}
+              className="bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-green-600/20 rounded-3xl p-12 border border-white/10">
               <h2 className="text-4xl font-bold text-white mb-8 text-center">Market Trends & Competitive Advantages</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -388,9 +380,8 @@ const ComprehensivePricingGuide2026: React.FC = () => {
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/10"
-            >
+              transition={{ duration: 0.8     }}
+              className="bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20 rounded-3xl p-12 border border-white/10">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
@@ -401,15 +392,13 @@ const ComprehensivePricingGuide2026: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors"
-                >
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-green-500 text-white font-medium rounded-lg hover:bg-green-600 transition-colors">
                   <Phone className="w-5 h-5" />
                   Call +1 302 464 0950
                 </a>
                 <a
                   href="mailto:kleber@ziontechgroup.com"
-                  className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors"
-                >
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-blue-500 text-white font-medium rounded-lg hover:bg-blue-600 transition-colors">
                   <Mail className="w-5 h-5" />
                   Email kleber@ziontechgroup.com
                 </a>

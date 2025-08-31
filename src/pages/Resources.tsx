@@ -59,8 +59,7 @@ import {
 
 export default function Resources() {
   const resourceCategories = [
-    {
-      id: 'blog',
+    { id: 'blog',
       title: 'Blog & Insights',
       icon: BookOpen,
       description: 'Latest industry trends and insights',
@@ -73,8 +72,7 @@ export default function Resources() {
         { title: 'Cybersecurity Best Practices', type: 'Tutorial', readTime: '6 min', featured: false }
       ]
     },
-    {
-      id: 'case-studies',
+    { id: 'case-studies',
       title: 'Case Studies',
       icon: Target,
       description: 'Real-world success stories',
@@ -87,8 +85,7 @@ export default function Resources() {
         { title: 'Retail Digital Revolution', type: 'Retail', readTime: '9 min', featured: false }
       ]
     },
-    {
-      id: 'white-papers',
+    { id: 'white-papers',
       title: 'White Papers',
       icon: FileText,
       description: 'In-depth research and analysis',
@@ -101,8 +98,7 @@ export default function Resources() {
         { title: 'Digital Twin Applications', type: 'Technology', readTime: '18 min', featured: false }
       ]
     },
-    {
-      id: 'webinars',
+    { id: 'webinars',
       title: 'Webinars',
       icon: Users,
       description: 'Expert-led learning sessions',
@@ -115,8 +111,7 @@ export default function Resources() {
         { title: 'Data Analytics Masterclass', type: 'Analytics', duration: '75 min', featured: false }
       ]
     },
-    {
-      id: 'documentation',
+    { id: 'documentation',
       title: 'Documentation',
       icon: Code,
       description: 'Technical guides and APIs',
@@ -129,8 +124,7 @@ export default function Resources() {
         { title: 'Troubleshooting Manual', type: 'Reference', readTime: '35 min', featured: false }
       ]
     },
-    {
-      id: 'faq',
+    { id: 'faq',
       title: 'FAQ & Support',
       icon: HelpCircle,
       description: 'Get help and answers',
@@ -143,8 +137,7 @@ export default function Resources() {
         { title: 'Training Resources', type: 'Training', readTime: '10 min', featured: false }
       ]
     },
-    {
-      id: 'pricing-guide-2025',
+    { id: 'pricing-guide-2025',
       title: 'Pricing Guide 2025',
       icon: DollarSign,
       description: 'Complete pricing information',
@@ -160,32 +153,28 @@ export default function Resources() {
   ];
 
   const additionalResources = [
-    {
-      id: 'api-docs',
+    { id: 'api-docs',
       title: 'API Reference',
       icon: GitBranch,
       description: 'Comprehensive API documentation',
       color: 'from-purple-500 to-indigo-500',
       href: '/api-docs'
     },
-    {
-      id: 'developers',
+    { id: 'developers',
       title: 'Developer Portal',
       icon: GitCommit,
       description: 'Developer tools and resources',
       color: 'from-blue-500 to-cyan-500',
       href: '/developers'
     },
-    {
-      id: 'training',
+    { id: 'training',
       title: 'Training & Certification',
       icon: Award,
       description: 'Professional development programs',
       color: 'from-green-500 to-emerald-500',
       href: '/training'
     },
-    {
-      id: 'community',
+    { id: 'community',
       title: 'Community Forum',
       icon: Users,
       description: 'Connect with peers and experts',
@@ -194,8 +183,7 @@ export default function Resources() {
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
@@ -208,9 +196,8 @@ export default function Resources() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Resources & Knowledge
             </h1>
@@ -221,14 +208,12 @@ export default function Resources() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/blog"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Explore Resources
               </Link>
               <Link
                 to="/contact"
-                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
-              >
+                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300">
                 Get Support
               </Link>
             </div>
@@ -248,10 +233,9 @@ export default function Resources() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Featured Resources
             </h2>
@@ -267,9 +251,8 @@ export default function Resources() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
+                viewport={{ once: true     }}
+                className="group relative">
                 <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-${category.color.split('-')[1]}-500/20 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105`}>
                   <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <category.icon className="w-8 h-8 text-white" />
@@ -320,10 +303,9 @@ export default function Resources() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Complete Resource Library
             </h2>
@@ -340,9 +322,8 @@ export default function Resources() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
-              >
+                viewport={{ once: true     }}
+                className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70">
                 <div className={`w-12 h-12 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <category.icon className="w-6 h-6 text-white" />
                 </div>
@@ -382,10 +363,9 @@ export default function Resources() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Additional Resources
             </h2>
@@ -402,9 +382,8 @@ export default function Resources() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70 text-center"
-              >
+                viewport={{ once: true     }}
+                className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70 text-center">
                 <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <resource.icon className="w-8 h-8 text-white" />
                 </div>
@@ -419,8 +398,7 @@ export default function Resources() {
                 
                 <Link
                   to={resource.href}
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm"
-                >
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm">
                   Access Resource
                   <ExternalLink className="w-4 h-4" />
                 </Link>
@@ -436,10 +414,9 @@ export default function Resources() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center">
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Need More Resources?
@@ -485,20 +462,17 @@ export default function Resources() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   to="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                   Get Support
                 </Link>
                 <Link
                   to="/request-quote"
-                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
-                >
+                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300">
                   Request Custom Resources
                 </Link>
                 <Link
                   to="/demo"
-                  className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
-                >
+                  className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300">
                   <Play className="w-5 h-5 inline mr-2" />
                   Schedule Demo
                 </Link>

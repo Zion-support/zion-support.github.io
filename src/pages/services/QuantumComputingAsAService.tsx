@@ -5,38 +5,32 @@ import { Atom, Cpu, Shield, Zap, Target, CheckCircle, Star, ArrowRight, Phone, M
 
 const QuantumComputingAsAService: React.FC = () => {
   const features = [
-    {
-      icon: Atom,
+    { icon: Atom,
       title: 'Quantum Processing Units',
       description: 'Access to state-of-the-art quantum processors with 100+ qubits and quantum error correction',
       color: 'from-purple-500 to-pink-500'
     },
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'Quantum Machine Learning',
       description: 'Quantum algorithms for optimization, classification, and pattern recognition tasks',
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      icon: Cpu,
+    { icon: Cpu,
       title: 'Hybrid Quantum-Classical',
       description: 'Seamless integration between quantum and classical computing resources',
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Quantum Security',
       description: 'Post-quantum cryptography and quantum-resistant encryption solutions',
       color: 'from-red-500 to-orange-500'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Real-time Optimization',
       description: 'Quantum algorithms for complex optimization problems in logistics and finance',
       color: 'from-yellow-500 to-orange-500'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Quantum Simulation',
       description: 'Molecular modeling, material science, and chemical reaction simulations',
       color: 'from-indigo-500 to-purple-500'
@@ -44,8 +38,7 @@ const QuantumComputingAsAService: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: 'Quantum Starter',
+    { name: 'Quantum Starter',
       price: '$2,999',
       period: '/month',
       description: 'Perfect for research institutions and startups',
@@ -60,8 +53,7 @@ const QuantumComputingAsAService: React.FC = () => {
       cta: 'Start Free Trial',
       popular: false
     },
-    {
-      name: 'Quantum Professional',
+    { name: 'Quantum Professional',
       price: '$7,999',
       period: '/month',
       description: 'Ideal for growing businesses and research teams',
@@ -77,8 +69,7 @@ const QuantumComputingAsAService: React.FC = () => {
       cta: 'Get Started',
       popular: true
     },
-    {
-      name: 'Quantum Enterprise',
+    { name: 'Quantum Enterprise',
       price: '$19,999',
       period: '/month',
       description: 'For large enterprises and government agencies',
@@ -97,18 +88,15 @@ const QuantumComputingAsAService: React.FC = () => {
   ];
 
   const useCases = [
-    {
-      title: 'Financial Services',
+    { title: 'Financial Services',
       description: 'Portfolio optimization, risk assessment, and option pricing with quantum algorithms',
       metrics: ['50x faster optimization', '30% better risk models', 'Real-time pricing calculations']
     },
-    {
-      title: 'Pharmaceutical Research',
+    { title: 'Pharmaceutical Research',
       description: 'Drug discovery, molecular modeling, and protein folding simulations',
       metrics: ['100x faster simulations', 'Accurate molecular predictions', 'Reduced R&D costs']
     },
-    {
-      title: 'Logistics & Supply Chain',
+    { title: 'Logistics & Supply Chain',
       description: 'Route optimization, inventory management, and supply chain optimization',
       metrics: ['40% cost reduction', 'Optimal route planning', 'Real-time optimization']
     }
@@ -121,23 +109,19 @@ const QuantumComputingAsAService: React.FC = () => {
   ];
 
   const benefits = [
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: '100x Performance Boost',
       description: 'Quantum algorithms solve complex problems exponentially faster than classical computers'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'No Hardware Investment',
       description: 'Access quantum computing power without expensive infrastructure and maintenance'
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: 'Competitive Advantage',
       description: 'Stay ahead of the competition with cutting-edge quantum computing capabilities'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Immediate Access',
       description: 'Start using quantum computing today with our cloud-based platform'
     }
@@ -157,9 +141,8 @@ const QuantumComputingAsAService: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Atom className="w-10 h-10 text-white" />
@@ -175,15 +158,13 @@ const QuantumComputingAsAService: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a 
                 href="#demo" 
-                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
-              >
+                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600">
                 Watch Demo
               </a>
             </div>
@@ -210,8 +191,7 @@ const QuantumComputingAsAService: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center p-6"
-              >
+                className="text-center p-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -242,8 +222,7 @@ const QuantumComputingAsAService: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200"
-              >
+                className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200">
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -341,8 +320,7 @@ const QuantumComputingAsAService: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800 rounded-xl p-6 border border-slate-700"
-              >
+                className="bg-slate-800 rounded-xl p-6 border border-slate-700">
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-slate-300 mb-4">{useCase.description}</p>
                 <ul className="space-y-2">
@@ -378,8 +356,7 @@ const QuantumComputingAsAService: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
-                className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200"
-              >
+                className="bg-slate-800 rounded-lg p-4 border border-slate-700 text-center hover:border-slate-600 transition-all duration-200">
                 <span className="text-slate-300 font-medium">{integration}</span>
               </motion.div>
             ))}
@@ -403,9 +380,8 @@ const QuantumComputingAsAService: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
-            >
+              transition={{ duration: 0.6     }}
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Lock className="w-8 h-8 text-white" />
               </div>
@@ -417,8 +393,7 @@ const QuantumComputingAsAService: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
-            >
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-white" />
               </div>
@@ -430,8 +405,7 @@ const QuantumComputingAsAService: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center"
-            >
+              className="bg-slate-800 rounded-xl p-6 border border-slate-700 text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Activity className="w-8 h-8 text-white" />
               </div>
@@ -448,9 +422,8 @@ const QuantumComputingAsAService: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Harness Quantum Power?
             </h2>
@@ -461,15 +434,13 @@ const QuantumComputingAsAService: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600"
-              >
+                className="inline-flex items-center px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all duration-200 border border-slate-600">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Us
               </a>
@@ -486,7 +457,7 @@ const QuantumComputingAsAService: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-5 h-5 text-purple-500 mr-2" />
-                <span>Cancel anytime</span>
+                <span>Cancel time</span>
               </div>
             </div>
           </motion.div>

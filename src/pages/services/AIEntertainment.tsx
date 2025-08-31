@@ -13,18 +13,15 @@ export default function AIEntertainment() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Creator', 
+    { name: 'Small Creator', 
       price: '$199/mo', 
       details: ['Up to 100,000 views/month', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
-    { 
-      name: 'Medium Creator', 
+    { name: 'Medium Creator', 
       price: '$599/mo', 
       details: ['Up to 1M views/month', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Creator', 
+    { name: 'Large Creator', 
       price: '$1,499/mo', 
       details: ['Unlimited views', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
     },

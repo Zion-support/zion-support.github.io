@@ -22,25 +22,23 @@ export interface FinancialAIService {
   regulatoryApproval: string[];
   useCases: string[];
   technologies: string[];
-  contactInfo: {
+  contactInfo: {  
     phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
+    website: string
+    address: string
+      };
 }
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
+const zionContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
 export const specializedFinancialAIServices2025: FinancialAIService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "QuantumRisk Pro",
     category: "Quantum Financial Risk Management",
     description: "Revolutionary quantum computing-powered risk management platform for financial institutions, providing real-time risk assessment and portfolio optimization",
@@ -82,8 +80,7 @@ export const specializedFinancialAIServices2025: FinancialAIService[] = [
     ],
     technologies: ["Quantum Computing", "Machine Learning", "Financial Modeling", "Real-time Analytics"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "NeuralTrade Elite",
     category: "AI-Powered Algorithmic Trading",
     description: "Advanced neural network-based algorithmic trading platform with real-time market analysis, predictive modeling, and automated execution strategies",
@@ -125,8 +122,7 @@ export const specializedFinancialAIServices2025: FinancialAIService[] = [
     ],
     technologies: ["Deep Learning", "Neural Networks", "Real-time Processing", "Market Data APIs"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "CryptoGuard Pro",
     category: "Cryptocurrency Security & Compliance",
     description: "Comprehensive cryptocurrency security platform with AI-powered threat detection, compliance monitoring, and regulatory reporting for digital asset operations",
@@ -168,8 +164,7 @@ export const specializedFinancialAIServices2025: FinancialAIService[] = [
     ],
     technologies: ["AI/ML", "Blockchain", "Cryptography", "RegTech"]
   },
-  {
-    id: 4,
+  { id: 4,
     name: "InsurTech AI Platform",
     category: "AI-Powered Insurance Technology",
     description: "Comprehensive AI platform for insurance companies, featuring automated underwriting, claims processing, fraud detection, and risk assessment",
@@ -211,8 +206,7 @@ export const specializedFinancialAIServices2025: FinancialAIService[] = [
     ],
     technologies: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
   },
-  {
-    id: 5,
+  { id: 5,
     name: "RegTech Compliance Suite",
     category: "Regulatory Technology Solutions",
     description: "Comprehensive regulatory technology platform automating compliance monitoring, reporting, and risk management for financial institutions",
@@ -254,8 +248,7 @@ export const specializedFinancialAIServices2025: FinancialAIService[] = [
     ],
     technologies: ["AI/ML", "Automation", "Analytics", "Cloud Computing"]
   },
-  {
-    id: 6,
+  { id: 6,
     name: "WealthTech AI Advisor",
     category: "AI-Powered Wealth Management",
     description: "Intelligent wealth management platform providing personalized investment advice, portfolio optimization, and financial planning using advanced AI algorithms",

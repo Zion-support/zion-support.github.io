@@ -13,18 +13,15 @@ export default function AIHealthcare() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Practice', 
+    { name: 'Small Practice', 
       price: '$399/mo', 
       details: ['Up to 1,000 patients', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
-    { 
-      name: 'Medium Practice', 
+    { name: 'Medium Practice', 
       price: '$999/mo', 
       details: ['Up to 10,000 patients', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Health System', 
+    { name: 'Large Health System', 
       price: '$2,999/mo', 
       details: ['Unlimited patients', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
     },

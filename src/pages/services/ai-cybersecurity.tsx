@@ -5,46 +5,38 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 
 const AICybersecurity: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms detect threats in real-time'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Zero-Day Attack Prevention',
       description: 'Identify and block unknown threats before they can cause damage'
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: 'Intelligent Access Control',
       description: 'AI-driven authentication and authorization systems'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Behavioral Analytics',
       description: 'Monitor and analyze user behavior for suspicious activity'
     }
   ];
 
   const services = [
-    {
-      title: 'Threat Intelligence',
+    { title: 'Threat Intelligence',
       description: 'Real-time threat intelligence and analysis',
       icon: '🔍'
     },
-    {
-      title: 'Incident Response',
+    { title: 'Incident Response',
       description: 'Automated incident detection and response',
       icon: '🚨'
     },
-    {
-      title: 'Vulnerability Assessment',
+    { title: 'Vulnerability Assessment',
       description: 'AI-powered vulnerability scanning and assessment',
       icon: '🛡️'
     },
-    {
-      title: 'Security Automation',
+    { title: 'Security Automation',
       description: 'Automate security operations and responses',
       icon: '⚡'
     }
@@ -72,9 +64,8 @@ const AICybersecurity: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6">
               <Shield className="w-5 h-5 text-red-400 mr-2" />
               <span className="text-red-300 font-medium">AI Cybersecurity</span>
@@ -110,9 +101,8 @@ const AICybersecurity: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Security Features
             </h2>
@@ -128,8 +118,7 @@ const AICybersecurity: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-red-400" />
                 </div>
@@ -147,9 +136,8 @@ const AICybersecurity: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Security Services
             </h2>
@@ -165,8 +153,7 @@ const AICybersecurity: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{service.icon}</div>
                   <div>
@@ -186,9 +173,8 @@ const AICybersecurity: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI Cybersecurity?
             </h2>
@@ -201,9 +187,8 @@ const AICybersecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
+              transition={{ duration: 0.6     }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -218,9 +203,8 @@ const AICybersecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8"
-            >
+              transition={{ duration: 0.6     }}
+              className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Get Protected Today</h3>
               <p className="text-gray-300 mb-6">
                 Don't wait for a security breach. Our AI cybersecurity experts can assess your current 
@@ -240,7 +224,7 @@ const AICybersecurity: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Secure Your Business?

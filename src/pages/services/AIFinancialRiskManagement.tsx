@@ -33,18 +33,15 @@ export default function AIFinancialRiskManagement() {
   ];
 
   const tiers = [
-    { 
-      name: 'Risk Starter', 
+    { name: 'Risk Starter', 
       price: '$799/mo', 
       details: ['Up to 1,000 accounts', 'Basic AI risk assessment', 'Standard reporting', 'Email support'] 
     },
-    { 
-      name: 'Risk Professional', 
+    { name: 'Risk Professional', 
       price: '$1,999/mo', 
       details: ['Up to 10,000 accounts', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Risk', 
+    { name: 'Enterprise Risk', 
       price: '$5,999/mo', 
       details: ['Unlimited accounts', 'Full AI suite', 'White-label options', '24/7 support'] 
     },

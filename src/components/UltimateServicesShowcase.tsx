@@ -27,7 +27,6 @@ import { enterpriseITInfrastructureServices2025  } from '../../data/2025-enterpr
 import { innovativeMicroSaasSolutions2025  } from '../../data/2025-innovative-micro-saas-solutions';
 
 interface Service {
-
   id: string;
   name: string;
   tagline: string;
@@ -53,13 +52,13 @@ interface Service {
   competitors: string[];
   marketSize: string;
   growthRate: string;
-contactInfo: {;
+contactInfo: {  
     mobile: string;
     email: string;
-    address: string;
-    website: string;
+    address: string
+    website: string
   
-};
+    };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -72,32 +71,28 @@ contactInfo: {;
   marketDisruption: string;
 }
 
-const contact = {
-  mobile: '+1 302 464 0950',
+const contact = { mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const categories = [
-  {
-    id: 'ai-services',
+  { id: 'ai-services',
     name: 'AI & Autonomous Systems',
     description: 'Revolutionary AI solutions that transform business operations',
     icon: <Brain className="w-8 h-8" />,
-    color: any'from-purple-600 to-pink-700',
+    color: 'from-purple-600 to-pink-700',
     services: ultimateInnovativeServices2025.filter(s  => s.category.includes('AI'))
   },
-  {
-    id: 'it-infrastructure',
+  { id: 'it-infrastructure',
     name: 'IT Infrastructure & Enterprise',
     description: 'Cutting-edge infrastructure solutions for modern businesses',
     icon: <Cloud className="w-8 h-8" />,
     color: 'from-blue-600 to-cyan-700',
     services: enterpriseITInfrastructureServices2025
   },
-  {
-    id: 'micro-saas',
+  { id: 'micro-saas',
     name: 'Micro SAAS Solutions',
     description: 'Innovative software solutions for small businesses',
     icon: <Code className="w-8 h-8" />,
@@ -120,37 +115,31 @@ const patentStatusColors = {
   'Open Source': 'from-purple-600 to-violet-700'
 };
 
-export function UltimateServicesShowcase(...args: any[]): any {
+export function UltimateServicesShowcase() {  
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedService, setSelectedService] = useState<any>(null);
+  const [selectedService, setSelectedService] = useState(null);
 
   const allServices = [
     ...ultimateInnovativeServices2025,
     ...enterpriseITInfrastructureServices2025,
     ...innovativeMicroSaasSolutions2025
-  ];
+  ]
 
   const filteredServices = selectedCategory === 'all' 
-    ? allServices: anycategories.find(cat  => cat.id === selectedCategory)?.services || [];
+    ? allServices: categories.find(cat  => cat.id === selectedCategory)?.services || []
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1,
         delayChildren: 0.2
       }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6,
+      transition: { duration: 0.6,
         ease: "easeOut"
       }
     }
@@ -164,7 +153,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8     }}
         >
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple bg-clip-text text-transparent">
@@ -207,7 +196,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
             className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-zion-cyan to-zion-blue text-white shadow-lg shadow-zion-cyan/25'
-                : 'bg-zion-slate-light text-zion-gray-light hover: anybg-zion-slate hover:text-white'
+                : 'bg-zion-slate-light text-zion-gray-light hover: bg-zion-slate hover:text-white'
             }`}
           >
             All Services ({allServices.length})
@@ -238,8 +227,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
             <motion.div
               key={service.id}
               variants={itemVariants}
-              className="group relative"
-            >
+              className="group relative">
               <div className="bg-zion-slate-light rounded-2xl p-6 h-full border border-zion-slate hover:border-zion-cyan transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                 {/* Service Header */}
                 <div className="mb-4">
@@ -324,15 +312,13 @@ export function UltimateServicesShowcase(...args: any[]): any {
                 <div className="flex gap-2">
                   <button
                     onClick={() => setSelectedService(service)}
-                    className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+                    className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center justify-center gap-2">
                     Learn More
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <Link
                     to={service.link}
-                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
-                  >
+                    className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center">
                     <Zap className="w-4 h-4" />
                   </Link>
                 </div>
@@ -358,8 +344,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-              >
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2">
                 Get Started Today
                 <ArrowRight className="w-5 h-5" />
               </Link>
@@ -367,8 +352,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
                 href={`tel:${contact.mobile}`
                   .replace(/\s/g, '')
                   .replace(/[^\d+]/g, '')}
-                className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2"
-              >
+                className="bg-zion-slate-light border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -394,8 +378,7 @@ export function UltimateServicesShowcase(...args: any[]): any {
                 </div>
                 <button
                   onClick={() => setSelectedService(null)}
-                  className="text-zion-gray-light hover:text-white text-2xl"
-                >
+                  className="text-zion-gray-light hover:text-white text-2xl">
                   ×
                 </button>
               </div>
@@ -475,16 +458,14 @@ export function UltimateServicesShowcase(...args: any[]): any {
                   <div className="flex gap-3">
                     <Link
                       to={selectedService.link}
-                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center"
-                    >
+                      className="flex-1 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-6 py-3 rounded-lg font-semibold hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 text-center">
                       Get Started
                     </Link>
                     <a
                       href={`tel:${contact.mobile}`
                         .replace(/\s/g, '')
                         .replace(/[^\d+]/g, '')}
-                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center"
-                    >
+                      className="bg-zion-slate border border-zion-cyan text-zion-cyan px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center justify-center">
                       <Phone className="w-5 h-5" />
                     </a>
                   </div>

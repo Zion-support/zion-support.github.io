@@ -6,7 +6,7 @@ interface Toast {
   description?: string;
   variant?: 'default' | 'destructive' | 'success';
   duration?: number;
-}
+    }
 
 export function useToast() {
   const [toasts, setToasts] = useState<Toast[]>([]);

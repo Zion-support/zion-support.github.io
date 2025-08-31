@@ -109,7 +109,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: anystring)  => {
+  const toggleSection = (section: string)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -119,11 +119,10 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
     setExpandedSections(newExpanded);
   };
 
-  const isActive = (path: anystring)  => location.pathname === path;
+  const isActive = (path: string)  => location.pathname === path;
 
   const navigationSections = [
-    {
-      title: "Main Navigation",
+    { title: "Main Navigation",
       icon: Home,
       items: [
         { name: "Home", href: "/", icon: Home },
@@ -136,8 +135,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: "Partners", href: "/partners", icon: Handshake }
       ]
     },
-    {
-      title: "AI & Machine Learning",
+    { title: "AI & Machine Learning",
       icon: Brain,
       items: [
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence", icon: Brain },
@@ -154,8 +152,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot", icon: TrendingUp }
       ]
     },
-    {
-      title: "Cloud & Infrastructure",
+    { title: "Cloud & Infrastructure",
       icon: Cloud,
       items: [
         { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
@@ -170,8 +167,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: "IT Helpdesk", href: "/services/it-helpdesk", icon: Settings }
       ]
     },
-    {
-      title: "Security & Compliance",
+    { title: "Security & Compliance",
       icon: Shield,
       items: [
         { name: "AI Cybersecurity Suite", href: "/services/ai-cybersecurity-suite", icon: Shield },
@@ -184,8 +180,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: "GDPR Cookie Compliance", href: "/services/gdpr-cookie-compliance", icon: CheckCircle }
       ]
     },
-    {
-      title: "Emerging Technologies",
+    { title: "Emerging Technologies",
       icon: Atom,
       items: [
         { name: "Quantum Computing", href: "/services/quantum-computing", icon: Atom },
@@ -198,8 +193,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: "Quantum Financial Trading", href: "/services/quantum-financial-trading", icon: TrendingUp }
       ]
     },
-    {
-      title: "Industry Solutions",
+    { title: "Industry Solutions",
       icon: Building,
       items: [
         { name: "Enterprise Solutions", href: "/solutions/enterprise", icon: Building },
@@ -214,8 +208,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: "Energy Solutions", href: "/solutions/energy", icon: Zap }
       ]
     },
-    {
-      title: "Resources & Support",
+    { title: "Resources & Support",
       icon: BookOpen,
       items: [
         { name: "Blog & Insights", href: "/blog", icon: FileText },
@@ -232,8 +225,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
         { name: "Comprehensive Pricing 2027", href: "/comprehensive-pricing-guide-2027", icon: DollarSign }
       ]
     },
-    {
-      title: "Quick Actions",
+    { title: "Quick Actions",
       icon: Zap,
       items: [
         { name: "Request Quote", href: "/request-quote", icon: MessageCircle },
@@ -268,8 +260,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
             <div key={section.title} className="space-y-2">
               <button
                 onClick={() => toggleSection(section.title)}
-                className="flex items-center justify-between w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-              >
+                className="flex items-center justify-between w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group">
                 <div className="flex items-center space-x-3">
                   <section.icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400 transition-colors" />
                   <span className="font-medium text-slate-300 group-hover:text-white transition-colors">
@@ -289,9 +280,8 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="ml-8 space-y-1"
-                  >
+                    transition={{ duration: 0.2     }}
+                    className="ml-8 space-y-1">
                     {section.items.map((item) => (
                       <Link
                         key={item.name}

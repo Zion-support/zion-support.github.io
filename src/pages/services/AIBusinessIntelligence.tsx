@@ -24,33 +24,27 @@ import {
 
 export default function AIBusinessIntelligence() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns and insights in your business data."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Real-Time Dashboards",
       description: "Live monitoring and visualization of key performance indicators with customizable reporting."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast future trends and outcomes using historical data and AI models."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "User Behavior Analysis",
       description: "Deep insights into customer interactions and engagement patterns."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Goal Tracking",
       description: "Monitor progress towards business objectives with automated alerts and recommendations."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Automated Insights",
       description: "AI-generated recommendations and actionable insights delivered in real-time."
     }
@@ -66,24 +60,19 @@ export default function AIBusinessIntelligence() {
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Customer segmentation, inventory optimization, and sales forecasting"
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Patient outcome prediction, resource allocation, and treatment optimization"
     },
-    {
-      industry: "Finance",
+    { industry: "Finance",
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
     },
-    {
-      industry: "Marketing",
+    { industry: "Marketing",
       description: "Campaign performance analysis, audience targeting, and ROI optimization"
     }
   ];
@@ -102,9 +91,8 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">
               <Brain className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI Business Intelligence</span>
@@ -124,17 +112,15 @@ export default function AIBusinessIntelligence() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
                 Get Started Today
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>
@@ -148,9 +134,8 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Business
             </h2>
@@ -167,8 +152,7 @@ export default function AIBusinessIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>
@@ -186,9 +170,8 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Measurable Business Impact
             </h2>
@@ -205,9 +188,8 @@ export default function AIBusinessIntelligence() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-3"
-              >
+                viewport={{ once: true     }}
+                className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
                 <p className="text-zion-slate-light text-lg">{benefit}</p>
               </motion.div>
@@ -226,8 +208,7 @@ export default function AIBusinessIntelligence() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
-                  >
+                    className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </motion.div>
@@ -270,9 +251,8 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -289,8 +269,7 @@ export default function AIBusinessIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-cyan-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-cyan-400/30 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
                     <Globe className="w-5 h-5 text-cyan-400" />
@@ -310,9 +289,8 @@ export default function AIBusinessIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-12 rounded-2xl border border-cyan-400/20 text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-12 rounded-2xl border border-cyan-400/20 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -323,17 +301,15 @@ export default function AIBusinessIntelligence() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-cyan-500/25">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-cyan-400/30 text-cyan-300 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
                 Contact Sales
               </motion.button>
             </div>

@@ -26,8 +26,7 @@ export default function WhitePapers() {
   ];
 
   const whitePapers = [
-    {
-      id: 1,
+    { id: 1,
       title: 'The Future of AI in Enterprise: 2025 and Beyond',
       description: 'Comprehensive analysis of AI adoption trends, challenges, and opportunities in enterprise environments. Learn how organizations can leverage AI for competitive advantage.',
       category: 'ai-ml',
@@ -42,8 +41,7 @@ export default function WhitePapers() {
       fileSize: '2.4 MB',
       language: 'English'
     },
-    {
-      id: 2,
+    { id: 2,
       title: 'Zero-Trust Security Architecture: A Comprehensive Guide',
       description: 'Deep dive into zero-trust security principles, implementation strategies, and best practices for modern organizations.',
       category: 'security',
@@ -58,8 +56,7 @@ export default function WhitePapers() {
       fileSize: '3.1 MB',
       language: 'English'
     },
-    {
-      id: 3,
+    { id: 3,
       title: 'Cloud-Native Transformation: From Legacy to Modern',
       description: 'Strategic guide for organizations transitioning from legacy systems to cloud-native architectures.',
       category: 'cloud',
@@ -74,8 +71,7 @@ export default function WhitePapers() {
       fileSize: '2.8 MB',
       language: 'English'
     },
-    {
-      id: 4,
+    { id: 4,
       title: 'Data-Driven Decision Making: Analytics for the Modern Enterprise',
       description: 'Explore how organizations can leverage data analytics to drive strategic decisions and improve business outcomes.',
       category: 'data',
@@ -90,8 +86,7 @@ export default function WhitePapers() {
       fileSize: '2.6 MB',
       language: 'English'
     },
-    {
-      id: 5,
+    { id: 5,
       title: 'Quantum Computing: Preparing for the Next Computing Revolution',
       description: 'Understanding quantum computing fundamentals and preparing organizations for quantum advantage.',
       category: 'emerging',
@@ -106,8 +101,7 @@ export default function WhitePapers() {
       fileSize: '3.5 MB',
       language: 'English'
     },
-    {
-      id: 6,
+    { id: 6,
       title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
       description: 'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
       category: 'strategy',
@@ -125,20 +119,17 @@ export default function WhitePapers() {
   ];
 
   const featuredInsights = [
-    {
-      title: 'AI Adoption Trends 2025',
+    { title: 'AI Adoption Trends 2025',
       description: 'Key insights from our latest research on enterprise AI adoption',
       icon: <TrendingUp className="w-6 h-6" />,
       link: '/insights/ai-adoption-2025'
     },
-    {
-      title: 'Cybersecurity Landscape Report',
+    { title: 'Cybersecurity Landscape Report',
       description: 'Current threats and emerging security challenges',
       icon: <Shield className="w-6 h-6" />,
       link: '/insights/cybersecurity-2025'
     },
-    {
-      title: 'Cloud Migration Success Stories',
+    { title: 'Cloud Migration Success Stories',
       description: 'Real-world examples of successful cloud transformations',
       icon: <Cloud className="w-6 h-6" />,
       link: '/insights/cloud-success-stories'
@@ -168,8 +159,7 @@ export default function WhitePapers() {
   });
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
+    return new Date(dateString).toLocaleDateString('en-US', { year: 'numeric',
       month: 'long',
       day: 'numeric'
     });
@@ -248,8 +238,7 @@ export default function WhitePapers() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {sortOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
@@ -283,8 +272,8 @@ export default function WhitePapers() {
               {categories.map((category) => (
                 <motion.button
                   key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
                     selectedCategory === category.id
@@ -314,15 +303,13 @@ export default function WhitePapers() {
             {featuredInsights.map((insight, index) => (
               <div
                 key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
+                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <div className="text-zion-cyan mb-4">{insight.icon}</div>
                 <h3 className="text-lg font-semibold text-white mb-2">{insight.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4">{insight.description}</p>
                 <a
                   href={insight.link}
-                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm"
-                >
+                  className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium text-sm">
                   Read More
                   <ArrowRight className="w-4 h-4" />
                 </a>
@@ -372,8 +359,7 @@ export default function WhitePapers() {
                     {paper.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full">
                         {tag}
                       </span>
                     ))}

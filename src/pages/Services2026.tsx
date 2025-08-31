@@ -115,7 +115,7 @@ const Services2026: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 2026 Services
@@ -182,8 +182,7 @@ const Services2026: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-slate-800/70 border border-slate-600/50 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none"
-              >
+                className="bg-slate-800/70 border border-slate-600/50 rounded-lg px-3 py-2 text-white focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none">
                 <option value="innovation">Innovation Level</option>
                 <option value="price">Price</option>
                 <option value="roi">ROI</option>
@@ -212,9 +211,8 @@ const Services2026: React.FC = () => {
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 rounded-3xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
-                >
+                  transition={{ duration: 0.6     }}
+                  className="group bg-gradient-to-br from-slate-900/80 to-slate-800/80 backdrop-blur border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 rounded-3xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-xs uppercase tracking-wide text-cyan-300/80 font-semibold">
                       {service.category}
@@ -251,8 +249,7 @@ const Services2026: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/services/${service.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline"
-                    >
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline">
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -286,9 +283,8 @@ const Services2026: React.FC = () => {
                 key={service.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/10"
-              >
+                transition={{ duration: 0.6     }}
+                className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:scale-105 hover:shadow-xl hover:shadow-cyan-400/10">
                 <div className="flex items-center justify-between mb-3">
                   <div className="text-xs uppercase tracking-wide text-cyan-300/70 font-semibold">
                     {service.category}
@@ -326,8 +322,7 @@ const Services2026: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <Link
                     to={`/services/${service.id}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline"
-                  >
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline">
                     View Details
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -359,8 +354,7 @@ const Services2026: React.FC = () => {
                 <p className="text-slate-300 text-sm mb-3">Speak directly with our experts</p>
                 <a 
                   href="tel:+13024640950" 
-                  className="text-cyan-400 hover:text-cyan-300 font-medium text-sm"
-                >
+                  className="text-cyan-400 hover:text-cyan-300 font-medium text-sm">
                   +1 302 464 0950
                 </a>
               </div>
@@ -373,8 +367,7 @@ const Services2026: React.FC = () => {
                 <p className="text-slate-300 text-sm mb-3">Get detailed information and quotes</p>
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
-                  className="text-blue-400 hover:text-blue-300 font-medium text-sm"
-                >
+                  className="text-blue-400 hover:text-blue-300 font-medium text-sm">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -430,16 +423,14 @@ const Services2026: React.FC = () => {
                 <div className="flex flex-wrap gap-4 justify-center">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
-                  >
+                    className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105">
                     Get Started
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Link>
                   
                   <Link
                     to="/request-quote"
-                    className="inline-flex items-center px-6 py-3 border border-cyan-400/40 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-200"
-                  >
+                    className="inline-flex items-center px-6 py-3 border border-cyan-400/40 text-cyan-300 font-semibold rounded-xl hover:bg-cyan-400/10 transition-all duration-200">
                     Request Quote
                   </Link>
                 </div>

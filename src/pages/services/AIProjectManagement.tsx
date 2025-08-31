@@ -27,33 +27,27 @@ import {
 
 export default function AIProjectManagement() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Planning",
       description: "Intelligent project planning with automated task breakdown and resource allocation."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Smart Goal Tracking",
       description: "AI-driven progress monitoring and milestone achievement tracking."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Team Collaboration",
       description: "Enhanced team communication and collaboration with AI insights."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Workflow Automation",
       description: "Intelligent automation of repetitive tasks and project workflows."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Performance Analytics",
       description: "Real-time project analytics and predictive performance insights."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Management",
       description: "AI-powered time tracking and productivity optimization."
     }
@@ -69,57 +63,46 @@ export default function AIProjectManagement() {
   ];
 
   const projectPhases = [
-    {
-      phase: "Initiation",
+    { phase: "Initiation",
       description: "AI-powered project scoping, stakeholder analysis, and feasibility assessment",
       icon: Target
     },
-    {
-      phase: "Planning",
+    { phase: "Planning",
       description: "Intelligent project planning, resource allocation, and timeline optimization",
       icon: Calendar
     },
-    {
-      phase: "Execution",
+    { phase: "Execution",
       description: "Automated task management, progress tracking, and team coordination",
       icon: Workflow
     },
-    {
-      phase: "Monitoring",
+    { phase: "Monitoring",
       description: "Real-time performance monitoring, risk assessment, and issue resolution",
       icon: Eye
     },
-    {
-      phase: "Control",
+    { phase: "Control",
       description: "AI-driven change management and project adjustment recommendations",
       icon: TrendingUp
     },
-    {
-      phase: "Closure",
+    { phase: "Closure",
       description: "Automated project documentation, lessons learned, and knowledge transfer",
       icon: CheckCircle
     }
   ];
 
   const useCases = [
-    {
-      industry: "Software Development",
+    { industry: "Software Development",
       description: "Agile project management, sprint planning, and development workflow automation"
     },
-    {
-      industry: "Construction",
+    { industry: "Construction",
       description: "Project scheduling, resource management, and timeline optimization"
     },
-    {
-      industry: "Marketing",
+    { industry: "Marketing",
       description: "Campaign management, content planning, and performance tracking"
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Clinical trial management, patient care coordination, and facility projects"
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Production planning, quality control, and supply chain optimization"
     }
   ];
@@ -138,9 +121,8 @@ export default function AIProjectManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-full border border-teal-400/30 mb-6">
               <Target className="w-5 h-5 text-teal-400 mr-2" />
               <span className="text-teal-300 font-medium">AI Project Management</span>
@@ -160,17 +142,15 @@ export default function AIProjectManagement() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-teal-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-teal-500/25">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-teal-400/30 text-teal-300 font-semibold rounded-lg hover:bg-teal-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-teal-400/30 text-teal-300 font-semibold rounded-lg hover:bg-teal-400/10 transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>
@@ -184,9 +164,8 @@ export default function AIProjectManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Advanced Project Management Features
             </h2>
@@ -203,8 +182,7 @@ export default function AIProjectManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-teal-400/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-teal-400/30 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-teal-400" />
                 </div>
@@ -222,9 +200,8 @@ export default function AIProjectManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Measurable Project Impact
             </h2>
@@ -244,8 +221,7 @@ export default function AIProjectManagement() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
-                  >
+                    className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-teal-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </motion.div>
@@ -288,9 +264,8 @@ export default function AIProjectManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               End-to-End Project Lifecycle
             </h2>
@@ -307,8 +282,7 @@ export default function AIProjectManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-teal-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-teal-400/30 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
                     <phase.icon className="w-5 h-5 text-teal-400" />
@@ -328,9 +302,8 @@ export default function AIProjectManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -347,8 +320,7 @@ export default function AIProjectManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-teal-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-teal-400/30 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-teal-400/20 to-cyan-500/20 rounded-lg flex items-center justify-center">
                     <Globe className="w-5 h-5 text-teal-400" />
@@ -368,9 +340,8 @@ export default function AIProjectManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-500/10 p-12 rounded-2xl border border-teal-400/20 text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="bg-gradient-to-r from-teal-500/10 via-cyan-500/10 to-blue-500/10 p-12 rounded-2xl border border-teal-400/20 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Projects?
             </h2>
@@ -380,17 +351,15 @@ export default function AIProjectManagement() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-teal-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-teal-500/25">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-teal-400/30 text-teal-300 font-semibold rounded-lg hover:bg-teal-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-teal-400/30 text-teal-300 font-semibold rounded-lg hover:bg-teal-400/10 transition-all duration-300">
                 Contact Sales
               </motion.button>
             </div>

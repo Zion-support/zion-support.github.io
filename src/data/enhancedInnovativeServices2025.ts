@@ -3,7 +3,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 export interface MicroSaasService {
   id: number;
   name: string;
@@ -25,7 +25,7 @@ export interface MicroSaasService {
   integrations: string[];
   freeTier: boolean;
   trialPeriod: string;
-}
+    }
 export interface ITService {
   id: number;
   name: string;
@@ -44,7 +44,7 @@ export interface ITService {
   certifications: string[];
   deliveryTime: string;
   support: string;
-}
+    }
 export interface AIService {
   id: number;
   name: string;
@@ -65,11 +65,10 @@ export interface AIService {
   compliance: string[];
   aiScore: number;
   useCases: string[];
-}
+    }
 export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
-  {
-    id: "quantum-ai-processor",
+  { id: "quantum-ai-processor",
     title: "Quantum AI Processor Pro",
     description: "Next-generation quantum-inspired AI processing platform that accelerates machine learning workloads by 1000x using quantum algorithms and hybrid classical-quantum computing.",
     category: "Quantum AI Services",
@@ -105,8 +104,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Limited Availability",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -120,8 +118,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["1000x faster ML training", "90% cost reduction", "3x faster time-to-market"]
   },
   // Blockchain & Web3 Solutions
-  {
-    id: "decentralized-identity-platform",
+  { id: "decentralized-identity-platform",
     title: "Decentralized Identity Platform",
     description: "Self-sovereign identity solution using blockchain technology for secure, privacy-preserving digital identity management with zero-knowledge proofs.",
     category: "Blockchain & Web3",
@@ -157,8 +154,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -172,8 +168,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["99% fraud reduction", "80% compliance cost savings", "60% faster onboarding"]
   },
   // IoT & Edge Computing Services
-  {
-    id: "smart-city-iot-platform",
+  { id: "smart-city-iot-platform",
     title: "Smart City IoT Platform",
     description: "Comprehensive IoT platform for smart city management with real-time monitoring, predictive analytics, and automated response systems for urban infrastructure.",
     category: "IoT & Edge Computing",
@@ -209,8 +204,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -224,8 +218,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["30% infrastructure cost reduction", "25% energy savings", "40% faster emergency response"]
   },
   // Advanced Cybersecurity Solutions
-  {
-    id: "ai-threat-hunting-platform",
+  { id: "ai-threat-hunting-platform",
     title: "AI Threat Hunting Platform",
     description: "Advanced AI-powered cybersecurity platform that proactively hunts for threats using behavioral analysis, machine learning, and automated response capabilities.",
     category: "Cybersecurity",
@@ -261,8 +254,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -276,8 +268,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["10x faster threat detection", "80% false positive reduction", "60% incident response time improvement"]
   },
   // Green Tech & Sustainability Services
-  {
-    id: "carbon-footprint-tracker",
+  { id: "carbon-footprint-tracker",
     title: "Carbon Footprint Tracker Pro",
     description: "Comprehensive carbon footprint tracking and reduction platform for businesses with AI-powered optimization recommendations and sustainability reporting.",
     category: "Green Tech & Sustainability",
@@ -313,8 +304,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -328,8 +318,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["25-40% carbon footprint reduction", "15% operational cost savings", "20% brand value increase"]
   },
   // Healthcare Tech Solutions
-  {
-    id: "ai-medical-diagnosis-platform",
+  { id: "ai-medical-diagnosis-platform",
     title: "AI Medical Diagnosis Platform",
     description: "Advanced AI-powered medical diagnosis platform using deep learning algorithms for early disease detection, medical imaging analysis, and treatment recommendations.",
     category: "Healthcare Technology",
@@ -365,8 +354,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Limited Availability",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -380,8 +368,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["30% diagnostic accuracy improvement", "50% faster diagnosis", "25% healthcare cost reduction"]
   },
   // FinTech & RegTech Services
-  {
-    id: "ai-fraud-detection-engine",
+  { id: "ai-fraud-detection-engine",
     title: "AI Fraud Detection Engine",
     description: "Real-time AI-powered fraud detection system for financial transactions with machine learning algorithms and behavioral analysis for comprehensive fraud prevention.",
     category: "FinTech & RegTech",
@@ -417,8 +404,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -432,8 +418,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["90% fraud loss reduction", "99.9% fraud detection accuracy", "60% compliance cost savings"]
   },
   // AR/VR & Metaverse Solutions
-  {
-    id: "enterprise-ar-platform",
+  { id: "enterprise-ar-platform",
     title: "Enterprise AR Platform",
     description: "Comprehensive augmented reality platform for enterprise applications including training, maintenance, design collaboration, and remote assistance.",
     category: "AR/VR & Metaverse",
@@ -469,8 +454,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -484,8 +468,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     roiMetrics: ["40% training cost reduction", "30% maintenance efficiency improvement", "50% collaboration enhancement"]
   },
   // Advanced Analytics & Business Intelligence
-  {
-    id: "predictive-analytics-platform",
+  { id: "predictive-analytics-platform",
     title: "Predictive Analytics Platform",
     description: "Advanced predictive analytics platform using machine learning and AI to forecast business trends, customer behavior, and market opportunities.",
     category: "Advanced Analytics & BI",
@@ -514,8 +497,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Enterprise", "Data analysts", "Business leaders", "Consultants"],
     tags: ["Analytics", "Business Intelligence", "Quantum", "AI", "Predictive"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantumflow-analytics",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -528,8 +510,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: false,
     trialPeriod: "30 days"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "CyberShield Pro",
     category: "Cybersecurity",
     pricing: "Subscription",
@@ -557,8 +538,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Enterprises", "Financial institutions", "Healthcare", "Government"],
     tags: ["Cybersecurity", "AI", "Threat Detection", "Compliance", "Automation"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cybershield-pro",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -571,8 +551,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: false,
     trialPeriod: "14 days"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "CloudMatrix Orchestrator",
     category: "Cloud Management",
     pricing: "Usage-based",
@@ -600,8 +579,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["DevOps teams", "Cloud architects", "IT managers", "Startups"],
     tags: ["Cloud", "DevOps", "Automation", "Cost Management", "Monitoring"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cloudmatrix-orchestrator",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -614,8 +592,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: true,
     trialPeriod: "21 days"
   },
-  {
-    id: 4,
+  { id: 4,
     name: "DataVault Enterprise",
     category: "Data Management",
     pricing: "Tiered",
@@ -643,8 +620,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Data scientists", "Compliance officers", "IT leaders", "Analysts"],
     tags: ["Data Management", "Governance", "Compliance", "AI", "Analytics"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/datavault-enterprise",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -657,8 +633,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: false,
     trialPeriod: "30 days"
   },
-  {
-    id: 5,
+  { id: 5,
     name: "AIStudio Creator",
     category: "AI Development",
     pricing: "Freemium",
@@ -686,8 +661,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Business users", "Data scientists", "Developers", "Consultants"],
     tags: ["AI", "No-code", "Machine Learning", "Development", "Automation"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/aistudio-creator",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -700,8 +674,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: true,
     trialPeriod: "14 days"
   },
-  {
-    id: 6,
+  { id: 6,
     name: "GreenTech Carbon Tracker",
     category: "Sustainability",
     pricing: "Tiered",
@@ -729,8 +702,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Corporations", "Manufacturing", "Retail", "Government", "NGOs"],
     tags: ["Sustainability", "ESG", "Carbon Tracking", "AI", "Compliance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/greentech-carbon-tracker",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -743,8 +715,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: true,
     trialPeriod: "30 days"
   },
-  {
-    id: 7,
+  { id: 7,
     name: "EdgeAI IoT Platform",
     category: "IoT & Edge Computing",
     pricing: "Usage-based",
@@ -772,8 +743,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Manufacturing", "Smart cities", "Energy companies", "Transportation", "Healthcare"],
     tags: ["IoT", "Edge Computing", "AI", "Real-time Analytics", "Predictive Maintenance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edgeai-iot-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -786,8 +756,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: true,
     trialPeriod: "21 days"
   },
-  {
-    id: 8,
+  { id: 8,
     name: "Blockchain Supply Chain Tracker",
     category: "Blockchain & Supply Chain",
     pricing: "Transaction-based",
@@ -815,8 +784,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Manufacturing", "Retail", "Food & Beverage", "Pharmaceuticals", "Luxury goods"],
     tags: ["Blockchain", "Supply Chain", "Transparency", "Smart Contracts", "Traceability"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/blockchain-supply-chain",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -829,8 +797,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: false,
     trialPeriod: "1000 transactions"
   },
-  {
-    id: 9,
+  { id: 9,
     name: "AR/VR Training Simulator",
     category: "Immersive Technology",
     pricing: "Subscription",
@@ -858,8 +825,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Corporate training", "Healthcare", "Manufacturing", "Education", "Military"],
     tags: ["AR/VR", "Training", "Simulation", "Immersive Learning", "3D"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ar-vr-training-simulator",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -872,8 +838,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     freeTier: true,
     trialPeriod: "14 days"
   },
-  {
-    id: 10,
+  { id: 10,
     name: "Quantum Cryptography Platform",
     category: "Quantum Security",
     pricing: "Enterprise",
@@ -901,8 +866,7 @@ export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
     ],
     targetAudience: ["Financial services", "Government", "Healthcare", "Defense", "Critical infrastructure"],
     tags: ["Quantum Security", "Cryptography", "Post-Quantum", "Encryption", "Compliance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-cryptography",
       address: "364 E Main St STE 1008 Middletown DE 19709"

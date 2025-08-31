@@ -17,26 +17,24 @@ export interface CuttingEdgeAIService2026 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   // AI-Powered Autonomous Business Operations
-  {
-    id: "ai-autonomous-business-operations-2026",
+  { id: "ai-autonomous-business-operations-2026",
     title: "AI Autonomous Business Operations 2026",
     description: "Fully autonomous AI system that manages business operations, makes decisions, and optimizes processes without human intervention using advanced machine learning and decision-making algorithms.",
     category: "AI & Automation",
@@ -83,13 +81,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$4,999 - $15,000/month",
     roi: "300-500%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "Kubernetes", "PostgreSQL", "Redis"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "Kubernetes", "PostgreSQL", "Redis"],
       integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "AWS", "Azure"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -100,8 +96,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // Quantum-Enhanced AI Analytics Platform
-  {
-    id: "quantum-ai-analytics-platform-2026",
+  { id: "quantum-ai-analytics-platform-2026",
     title: "Quantum-Enhanced AI Analytics Platform 2026",
     description: "Next-generation analytics platform that combines quantum computing algorithms with AI to solve complex optimization problems, perform advanced simulations, and provide unprecedented insights.",
     category: "Quantum Computing",
@@ -148,13 +143,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$8,999 - $25,000/month",
     roi: "400-700%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "CUDA"],
+    technicalSpecs: { technology: ["Qiskit", "Cirq", "PennyLane", "Python", "C++", "CUDA"],
       integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum"],
       apiEndpoints: 200,
       uptime: "99.95%",
@@ -165,8 +158,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // Blockchain-Powered Supply Chain Transparency
-  {
-    id: "blockchain-supply-chain-transparency-2026",
+  { id: "blockchain-supply-chain-transparency-2026",
     title: "Blockchain Supply Chain Transparency Platform 2026",
     description: "End-to-end supply chain visibility platform using blockchain technology to provide real-time tracking, authentication, and transparency across the entire supply chain ecosystem.",
     category: "Blockchain",
@@ -213,13 +205,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$2,999 - $8,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Ethereum", "Hyperledger Fabric", "IPFS", "Node.js", "React", "MongoDB"],
+    technicalSpecs: { technology: ["Ethereum", "Hyperledger Fabric", "IPFS", "Node.js", "React", "MongoDB"],
       integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -230,8 +220,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // AI-Powered Cybersecurity Threat Intelligence
-  {
-    id: "ai-cybersecurity-threat-intelligence-2026",
+  { id: "ai-cybersecurity-threat-intelligence-2026",
     title: "AI-Powered Cybersecurity Threat Intelligence Platform 2026",
     description: "Advanced cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time, providing proactive protection against evolving security risks.",
     category: "Cybersecurity",
@@ -278,13 +267,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$3,999 - $12,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker", "Kubernetes"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker", "Kubernetes"],
       integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers"],
       apiEndpoints: 400,
       uptime: "99.99%",
@@ -295,8 +282,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // IoT Edge Computing Analytics Platform
-  {
-    id: "iot-edge-computing-analytics-2026",
+  { id: "iot-edge-computing-analytics-2026",
     title: "IoT Edge Computing Analytics Platform 2026",
     description: "Distributed analytics platform that processes IoT data at the edge, providing real-time insights, local decision-making, and reduced latency for critical IoT applications.",
     category: "IoT",
@@ -343,13 +329,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$2,499 - $7,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Docker", "Kubernetes", "Apache Kafka", "InfluxDB", "Grafana", "Python"],
+    technicalSpecs: { technology: ["Docker", "Kubernetes", "Apache Kafka", "InfluxDB", "Grafana", "Python"],
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "OPC UA"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -360,8 +344,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // AI-Powered Content Generation Suite
-  {
-    id: "ai-content-generation-suite-2026",
+  { id: "ai-content-generation-suite-2026",
     title: "AI-Powered Content Generation Suite 2026",
     description: "Comprehensive content creation platform that generates high-quality, engaging content across multiple formats using advanced AI models, including text, images, videos, and interactive content.",
     category: "AI & Content",
@@ -408,13 +391,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$1,999 - $5,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["GPT-4", "DALL-E", "Stable Diffusion", "React", "Node.js", "PostgreSQL"],
       integrations: ["WordPress", "Shopify", "HubSpot", "Mailchimp", "Social media platforms"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -425,8 +406,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // Autonomous DevOps Platform
-  {
-    id: "autonomous-devops-platform-2026",
+  { id: "autonomous-devops-platform-2026",
     title: "Autonomous DevOps Platform 2026",
     description: "Self-managing DevOps platform that automatically optimizes deployment pipelines, monitors system health, and implements best practices without human intervention.",
     category: "DevOps",
@@ -473,13 +453,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$3,499 - $10,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Kubernetes", "Docker", "Jenkins", "Prometheus", "Grafana", "Terraform"],
+    technicalSpecs: { technology: ["Kubernetes", "Docker", "Jenkins", "Prometheus", "Grafana", "Terraform"],
       integrations: ["AWS", "Azure", "Google Cloud", "GitHub", "GitLab", "Jira"],
       apiEndpoints: 300,
       uptime: "99.99%",
@@ -490,8 +468,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // Quantum-Safe Cryptography Platform
-  {
-    id: "quantum-safe-cryptography-platform-2026",
+  { id: "quantum-safe-cryptography-platform-2026",
     title: "Quantum-Safe Cryptography Platform 2026",
     description: "Future-proof cryptographic platform that implements post-quantum cryptography algorithms to protect data and communications against quantum computing threats.",
     category: "Cybersecurity",
@@ -538,13 +515,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$5,999 - $18,000/month",
     roi: "400-600%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Post-quantum algorithms", "C++", "Python", "OpenSSL", "Hardware security modules"],
+    technicalSpecs: { technology: ["Post-quantum algorithms", "C++", "Python", "OpenSSL", "Hardware security modules"],
       integrations: ["PKI systems", "TLS/SSL", "VPN solutions", "Identity providers"],
       apiEndpoints: 150,
       uptime: "99.99%",
@@ -555,8 +530,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // AI-Powered Financial Trading Platform
-  {
-    id: "ai-financial-trading-platform-2026",
+  { id: "ai-financial-trading-platform-2026",
     title: "AI-Powered Financial Trading Platform 2026",
     description: "Intelligent trading platform that uses AI and machine learning to analyze market data, predict trends, and execute trades automatically with advanced risk management.",
     category: "Finance",
@@ -603,13 +577,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$7,999 - $25,000/month",
     roi: "500-800%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "Kafka", "Redis", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "Kafka", "Redis", "PostgreSQL"],
       integrations: ["Bloomberg", "Reuters", "Trading platforms", "Broker APIs"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -620,8 +592,7 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
   },
 
   // Sustainable Technology Solutions Platform
-  {
-    id: "sustainable-technology-solutions-2026",
+  { id: "sustainable-technology-solutions-2026",
     title: "Sustainable Technology Solutions Platform 2026",
     description: "Comprehensive platform that helps organizations measure, reduce, and offset their carbon footprint through technology optimization, renewable energy integration, and sustainability analytics.",
     category: "Sustainability",
@@ -668,13 +639,11 @@ export const CUTTING_EDGE_AI_SERVICES_2026: CuttingEdgeAIService2026[] = [
     marketPrice: "$1,999 - $6,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["IoT sensors", "Machine learning", "Blockchain", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["IoT sensors", "Machine learning", "Blockchain", "React", "Node.js", "MongoDB"],
       integrations: ["Energy management systems", "Building automation", "ERP systems", "Sustainability platforms"],
       apiEndpoints: 200,
       uptime: "99.9%",

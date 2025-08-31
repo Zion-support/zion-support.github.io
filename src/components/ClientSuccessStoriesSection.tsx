@@ -2,8 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const successStories = [
-  {
-    id: 1,
+  { id: 1,
     client: "TechCorp Solutions",
     industry: "Technology",
     challenge: "Legacy systems causing 40% productivity loss",
@@ -19,8 +18,7 @@ const successStories = [
     rating: 5,
     image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
   },
-  {
-    id: 2,
+  { id: 2,
     client: "Global Finance Ltd",
     industry: "Financial Services",
     challenge: "Security vulnerabilities and compliance issues",
@@ -36,8 +34,7 @@ const successStories = [
     rating: 5,
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400"
   },
-  {
-    id: 3,
+  { id: 3,
     client: "HealthTech Innovations",
     industry: "Healthcare",
     challenge: "Patient data management inefficiencies",
@@ -63,8 +60,8 @@ export function ClientSuccessStoriesSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Client Success Stories
@@ -81,7 +78,7 @@ export function ClientSuccessStoriesSection() {
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="relative">
@@ -157,7 +154,7 @@ export function ClientSuccessStoriesSection() {
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
@@ -190,7 +187,7 @@ export function ClientSuccessStoriesSection() {
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

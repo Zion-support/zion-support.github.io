@@ -145,8 +145,7 @@ export default function ServicesPricingPage() {
                   </div>
                   <Button 
                     className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-dark text-white"
-                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}
-                  >
+                    onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Pricing Inquiry', '_blank')}>
                     Get Custom Quote
                   </Button>
                 </CardContent>
@@ -248,8 +247,7 @@ export default function ServicesPricingPage() {
                           <Button 
                             variant="outline" 
                             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
-                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
-                          >
+                            onClick={() => window.open('https://ziontechgroup.com', '_blank')}>
                             <ExternalLink className="h-4 w-4" />
                           </Button>
                         </div>
@@ -337,8 +335,7 @@ export default function ServicesPricingPage() {
             <Button 
               size="lg"
               className="bg-white text-zion-purple hover:bg-zion-cyan-light"
-              onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}
-            >
+              onClick={() => window.open(`mailto:kleber@ziontechgroup.com?subject=Service Consultation`, '_blank')}>
               <Mail className="h-5 w-5 mr-2" />
               Schedule Consultation
             </Button>
@@ -346,8 +343,7 @@ export default function ServicesPricingPage() {
               size="lg"
               variant="outline"
               className="border-white text-white hover:bg-white/10"
-              onClick={() => window.open('tel:+13024640950', '_blank')}
-            >
+              onClick={() => window.open('tel:+13024640950', '_blank')}>
               <Phone className="h-5 w-5 mr-2" />
               Call Now
             </Button>

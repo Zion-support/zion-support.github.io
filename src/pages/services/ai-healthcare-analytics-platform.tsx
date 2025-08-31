@@ -26,41 +26,34 @@ import {
 
 export default function AIHealthcareAnalyticsPlatform() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Diagnosis Support',
       description: 'Advanced machine learning algorithms assist doctors with accurate diagnosis and treatment recommendations'
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: 'Predictive Health Analytics',
       description: 'AI predicts health risks and disease progression based on patient data and medical history'
     },
-    {
-      icon: Heart,
+    { icon: Heart,
       title: 'Patient Outcome Prediction',
       description: 'Machine learning models forecast treatment outcomes and recovery probabilities'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Drug Interaction Analysis',
       description: 'AI identifies potential drug interactions and adverse effects in real-time'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Real-Time Monitoring',
       description: 'Continuous patient monitoring with instant alerts for critical health changes'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Medical Image Analysis',
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'
     }
   ];
 
   const pricingPlans = [
-    {
-      name: 'Clinic',
+    { name: 'Clinic',
       price: '$799',
       period: '/month',
       description: 'Perfect for small medical practices',
@@ -75,8 +68,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       ],
       popular: false
     },
-    {
-      name: 'Hospital',
+    { name: 'Hospital',
       price: '$2,499',
       period: '/month',
       description: 'Ideal for hospitals and large practices',
@@ -92,8 +84,7 @@ export default function AIHealthcareAnalyticsPlatform() {
       ],
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$5,999',
       period: '/month',
       description: 'For healthcare systems and networks',
@@ -112,46 +103,38 @@ export default function AIHealthcareAnalyticsPlatform() {
   ];
 
   const benefits = [
-    {
-      icon: Heart,
+    { icon: Heart,
       title: '30% Faster Diagnosis',
       description: 'AI assistance reduces diagnosis time and improves accuracy'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: '95% Accuracy Rate',
       description: 'Advanced algorithms provide highly accurate medical insights'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: '24/7 Patient Monitoring',
       description: 'Continuous monitoring ensures patient safety around the clock'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: '40% Cost Reduction',
       description: 'AI optimization reduces healthcare costs and improves efficiency'
     }
   ];
 
   const useCases = [
-    {
-      title: 'Diagnostic Imaging',
+    { title: 'Diagnostic Imaging',
       description: 'AI analyzes medical images to detect abnormalities and assist radiologists',
       icon: Eye
     },
-    {
-      title: 'Patient Risk Assessment',
+    { title: 'Patient Risk Assessment',
       description: 'Predictive models identify high-risk patients for proactive care',
       icon: AlertTriangle
     },
-    {
-      title: 'Treatment Optimization',
+    { title: 'Treatment Optimization',
       description: 'AI recommends optimal treatment plans based on patient data and outcomes',
       icon: Heart
     },
-    {
-      title: 'Drug Safety Monitoring',
+    { title: 'Drug Safety Monitoring',
       description: 'Real-time monitoring of drug interactions and adverse effects',
       icon: Shield
     }
@@ -179,7 +162,7 @@ export default function AIHealthcareAnalyticsPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6">
               <Heart className="w-4 h-4 mr-2" />
@@ -214,10 +197,9 @@ export default function AIHealthcareAnalyticsPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -233,9 +215,8 @@ export default function AIHealthcareAnalyticsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -253,10 +234,9 @@ export default function AIHealthcareAnalyticsPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -272,9 +252,8 @@ export default function AIHealthcareAnalyticsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -292,10 +271,9 @@ export default function AIHealthcareAnalyticsPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Healthcare Solutions
             </h2>
@@ -311,9 +289,8 @@ export default function AIHealthcareAnalyticsPlatform() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -331,10 +308,9 @@ export default function AIHealthcareAnalyticsPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Compliance & Certifications
             </h2>
@@ -350,9 +326,8 @@ export default function AIHealthcareAnalyticsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-blue-500 transition-all duration-300">
                 <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
                 <p className="text-white font-medium text-sm">{standard}</p>
               </motion.div>
@@ -367,10 +342,9 @@ export default function AIHealthcareAnalyticsPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Healthcare Plan
             </h2>
@@ -386,7 +360,7 @@ export default function AIHealthcareAnalyticsPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-blue-500 ring-2 ring-blue-500/20' 
@@ -438,8 +412,8 @@ export default function AIHealthcareAnalyticsPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Healthcare?

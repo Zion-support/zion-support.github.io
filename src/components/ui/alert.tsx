@@ -1,13 +1,11 @@
 import React from 'react.ts';
 
-interface AlertProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
+interface AlertProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
   className?: string;
 
-}
+    }
 
-export function Alert(...args: any[]): any {
+export function Alert(...args: []):  {
   return (
     <div className={`relative w-full rounded-lg border p-4 ${className}`}>
       {children}
@@ -15,14 +13,12 @@ export function Alert(...args: any[]): any {
   );
 }
 
-interface AlertDescriptionProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
+interface AlertDescriptionProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
   className?: string;
 
-}
+    }
 
-export function AlertDescription(...args: any[]): any {
+export function AlertDescription(...args: []):  {
   return (
     <div className={`text-sm ${className}`}>
       {children}

@@ -39,13 +39,13 @@ import {
 
 interface SidebarItem {
   title: string;
-  icon: React.ComponentType<any>;
-  items: {
+  icon: React.ComponentType<>;
+  items: {  
     name: string;
     path: string;
-    icon: React.ComponentType<any>;
-    description: string;
-  }[];
+    icon: React.ComponentType<>
+    description: string
+      }[];
 }
 
 export const Sidebar: React.FC = () => {
@@ -54,20 +54,18 @@ export const Sidebar: React.FC = () => {
   const location = useLocation();
 
   const navigation: SidebarItem[] = [
-    {
-      title: 'Main Navigation',
+    { title: 'Main Navigation',
       icon: Home,
       items: [
         { name: 'Home', path: '/', icon: Home, description: 'Welcome to Zion Tech Group' },
         { name: 'Services Overview', path: '/services', icon: Briefcase, description: 'All our services' },
         { name: 'Solutions', path: '/solutions', icon: Rocket, description: 'Industry solutions' },
         { name: 'Resources', path: '/resources', icon: BookOpen, description: 'Knowledge and insights' },
-        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our company' },
+        { name: 'About Us', path: '/about', icon: Users, description: 'Learn about our comp' },
         { name: 'Contact', path: '/contact', icon: Phone, description: 'Get in touch with us' }
       ]
     },
-    {
-      title: 'AI & Analytics Services',
+    { title: 'AI & Analytics Services',
       icon: Brain,
       items: [
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
@@ -77,8 +75,7 @@ export const Sidebar: React.FC = () => {
         { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Brain, description: 'Supply Chain AI' }
       ]
     },
-    {
-      title: 'Cloud & Infrastructure',
+    { title: 'Cloud & Infrastructure',
       icon: Cloud,
       items: [
         { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud, description: 'Cloud migration and DevOps' },
@@ -87,24 +84,21 @@ export const Sidebar: React.FC = () => {
         { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Cpu, description: 'IoT & real-time processing' }
       ]
     },
-    {
-      title: 'Cybersecurity & Compliance',
+    { title: 'Cybersecurity & Compliance',
       icon: Shield,
       items: [
         { name: 'Cybersecurity', path: '/services/cybersecurity', icon: Shield, description: 'AI-Powered Security' },
         { name: 'Zero Trust Security', path: '/services/zero-trust-network-access', icon: Shield, description: 'Advanced security framework' }
       ]
     },
-    {
-      title: 'Data & Analytics',
+    { title: 'Data & Analytics',
       icon: Database,
       items: [
         { name: 'Data Analytics', path: '/services/data-analytics', icon: BarChart3, description: 'Transform data into insights' },
         { name: 'Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp, description: 'Data-driven decisions' }
       ]
     },
-    {
-      title: 'Innovative Services',
+    { title: 'Innovative Services',
       icon: Rocket,
       items: [
         { name: 'Micro SaaS Products', path: '/services/micro-saas', icon: ShoppingCart, description: 'AI automations with transparent pricing' },
@@ -112,8 +106,7 @@ export const Sidebar: React.FC = () => {
         { name: 'Revolutionary Services 2030', path: '/revolutionary-services-2030', icon: Rocket, description: 'Future technology solutions' }
       ]
     },
-    {
-      title: 'Resources & Insights',
+    { title: 'Resources & Insights',
       icon: FileText,
       items: [
         { name: 'Blog', path: '/blog', icon: FileText, description: 'Latest insights and news' },
@@ -125,8 +118,7 @@ export const Sidebar: React.FC = () => {
         { name: 'Pricing Guide 2025', path: '/pricing-guide-2025', icon: DollarSign, description: 'Complete pricing information' }
       ]
     },
-    {
-      title: 'Company & Team',
+    { title: 'Comp & Team',
       icon: Users,
       items: [
         { name: 'About Us', path: '/about', icon: Users, description: 'Our story and mission' },
@@ -179,9 +171,8 @@ export const Sidebar: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="ml-4 mt-2 space-y-1"
-          >
+            transition={{ duration: 0.2     }}
+            className="ml-4 mt-2 space-y-1">
             {item.items.map(child => (
               <Link
                 key={child.name}
@@ -191,8 +182,7 @@ export const Sidebar: React.FC = () => {
                     ? 'bg-cyan-500/10 text-cyan-300 border border-cyan-400/20'
                     : 'text-slate-400 hover:text-white hover:bg-slate-700/30'
                 }`}
-                onClick={() => setIsOpen(false)}
-              >
+                onClick={() => setIsOpen(false)}>
                 <child.icon className="w-4 h-4 mr-3 flex-shrink-0" />
                 <span>{child.name}</span>
               </Link>
@@ -208,8 +198,7 @@ export const Sidebar: React.FC = () => {
       {/* Mobile menu button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors"
-      >
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-md bg-slate-800/80 text-slate-300 hover:text-white hover:bg-slate-700/80 transition-colors">
         <Menu className="w-6 h-6" />
       </button>
 
@@ -217,11 +206,10 @@ export const Sidebar: React.FC = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 lg:hidden"
-          >
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
+            exit={{ opacity: 0     }}
+            className="fixed inset-0 z-50 lg:hidden">
             {/* Backdrop */}
             <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -230,19 +218,17 @@ export const Sidebar: React.FC = () => {
             
             {/* Sidebar */}
             <motion.div
-              initial={{ x: '-100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
+              initial={{ x: '-100%'     }}
+              animate={{ x: 0     }}
+              exit={{ x: '-100%'     }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="absolute left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl"
-            >
+              className="absolute left-0 top-0 h-full w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl">
               {/* Header */}
               <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
                 <h2 className="text-lg font-semibold text-white">Navigation</h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-                >
+                  className="p-2 rounded-md text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
                   <X className="w-5 h-5" />
                 </button>
               </div>
@@ -258,8 +244,7 @@ export const Sidebar: React.FC = () => {
                   <Link
                     to="/contact"
                     className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-                    onClick={() => setIsOpen(false)}
-                  >
+                    onClick={() => setIsOpen(false)}>
                     Get Started
                   </Link>
                 </div>
@@ -296,8 +281,7 @@ export const Sidebar: React.FC = () => {
           <div className="text-center">
             <Link
               to="/contact"
-              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-            >
+              className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
               Get Started
             </Link>
           </div>

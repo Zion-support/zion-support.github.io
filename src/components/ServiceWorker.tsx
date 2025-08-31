@@ -7,11 +7,10 @@ interface ServiceWorkerState {
   isOnline: boolean;
   hasUpdate: boolean;
   isInstalling: boolean;
-}
+    }
 
 export function ServiceWorker() {
-  const [swState, setSwState] = useState<ServiceWorkerState>({
-    isInstalled: false,
+  const [swState, setSwState] = useState<ServiceWorkerState>({ isInstalled: false,
     isOnline: navigator.onLine,
     hasUpdate: false,
     isInstalling: false
@@ -71,7 +70,7 @@ export function ServiceWorker() {
   const handleUpdate = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.ready.then((registration) => {
-        registration.waiting?.postMessage({ type: 'SKIP_WAITING' });
+        registration.waiting?.postMessage({ type: 'SKIP_WAITING'     });
       });
     }
   };
@@ -85,8 +84,7 @@ export function ServiceWorker() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -50 }}
-          className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm"
-        >
+          className="fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-4 max-w-sm">
           <div className="flex items-center space-x-3">
             <div className="flex-shrink-0">
               {swState.isOnline ? (
@@ -106,8 +104,7 @@ export function ServiceWorker() {
             {swState.hasUpdate && (
               <button
                 onClick={handleUpdate}
-                className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors"
-              >
+                className="flex-shrink-0 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors">
                 Update
               </button>
             )}

@@ -17,26 +17,24 @@ export interface SpecializedITInfrastructureService2031 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastructureService2031[] = [
   // Cloud & DevOps Services
-  {
-    id: "cloud-native-transformation",
+  { id: "cloud-native-transformation",
     title: "Cloud-Native Transformation & Migration",
     description: "End-to-end cloud transformation services that modernize legacy applications and infrastructure for optimal cloud-native performance.",
     category: "Cloud & DevOps",
@@ -83,13 +81,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$25,000 - $150,000",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
+    technicalSpecs: { technology: ["AWS", "Azure", "Google Cloud", "Kubernetes", "Docker", "Terraform"],
       integrations: ["Jenkins", "GitLab", "Prometheus", "Grafana", "ELK Stack"],
       apiEndpoints: 1000,
       uptime: "99.9%",
@@ -98,8 +94,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["Accenture", "Deloitte", "IBM", "Capgemini"],
     marketSize: "$89.4 billion by 2031"
   },
-  {
-    id: "zero-trust-security-implementation",
+  { id: "zero-trust-security-implementation",
     title: "Zero Trust Security Implementation",
     description: "Comprehensive zero trust security implementation that provides continuous verification and least-privilege access across all systems.",
     category: "Cybersecurity",
@@ -146,13 +141,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$35,000 - $200,000",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Okta", "Ping Identity", "CrowdStrike", "Palo Alto Networks", "Cisco"],
+    technicalSpecs: { technology: ["Okta", "Ping Identity", "CrowdStrike", "Palo Alto Networks", "Cisco"],
       integrations: ["Active Directory", "LDAP", "SAML", "OAuth", "SIEM Systems"],
       apiEndpoints: 800,
       uptime: "99.99%",
@@ -161,8 +154,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["Palo Alto Networks", "Cisco", "Fortinet", "Check Point"],
     marketSize: "$45.2 billion by 2031"
   },
-  {
-    id: "data-platform-modernization",
+  { id: "data-platform-modernization",
     title: "Data Platform Modernization",
     description: "Comprehensive data platform modernization that transforms legacy data systems into modern, scalable, and AI-ready data architectures.",
     category: "Data & Analytics",
@@ -209,13 +201,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$40,000 - $250,000",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Snowflake", "Databricks", "AWS Redshift", "Azure Synapse", "Google BigQuery"],
+    technicalSpecs: { technology: ["Snowflake", "Databricks", "AWS Redshift", "Azure Synapse", "Google BigQuery"],
       integrations: ["Tableau", "Power BI", "Looker", "Python", "R", "SQL"],
       apiEndpoints: 1200,
       uptime: "99.9%",
@@ -224,8 +214,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["Accenture", "Deloitte", "IBM", "Capgemini"],
     marketSize: "$67.8 billion by 2031"
   },
-  {
-    id: "edge-computing-infrastructure",
+  { id: "edge-computing-infrastructure",
     title: "Edge Computing Infrastructure Implementation",
     description: "Edge computing infrastructure that brings computation and data storage closer to data sources for improved performance and reduced latency.",
     category: "Edge Computing",
@@ -272,13 +261,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$30,000 - $180,000",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Kubernetes", "Docker"],
+    technicalSpecs: { technology: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Kubernetes", "Docker"],
       integrations: ["IoT Platforms", "Cloud Services", "Monitoring Tools", "Security Systems"],
       apiEndpoints: 600,
       uptime: "99.9%",
@@ -287,8 +274,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["AWS", "Microsoft", "Google", "IBM", "Cisco"],
     marketSize: "$34.2 billion by 2031"
   },
-  {
-    id: "quantum-computing-infrastructure",
+  { id: "quantum-computing-infrastructure",
     title: "Quantum Computing Infrastructure & Integration",
     description: "Quantum computing infrastructure setup and integration services that enable organizations to leverage quantum advantage for complex problem solving.",
     category: "Quantum Computing",
@@ -335,13 +321,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$50,000 - $300,000",
     roi: "150-300%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Microsoft Azure Quantum", "Qiskit"],
+    technicalSpecs: { technology: ["IBM Quantum", "Google Quantum", "Amazon Braket", "Microsoft Azure Quantum", "Qiskit"],
       integrations: ["Classical Computing Systems", "Data Sources", "Analytics Platforms", "Research Tools"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -350,8 +334,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["IBM", "Google", "Microsoft", "Amazon", "D-Wave"],
     marketSize: "$8.9 billion by 2031"
   },
-  {
-    id: "ai-infrastructure-optimization",
+  { id: "ai-infrastructure-optimization",
     title: "AI Infrastructure Optimization & Scaling",
     description: "AI infrastructure optimization services that ensure your AI workloads run efficiently, scale seamlessly, and deliver optimal performance.",
     category: "AI & Infrastructure",
@@ -398,13 +381,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$25,000 - $150,000",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "AWS", "Azure", "Google Cloud"],
+    technicalSpecs: { technology: ["TensorFlow", "PyTorch", "Kubernetes", "Docker", "AWS", "Azure", "Google Cloud"],
       integrations: ["MLOps Platforms", "Monitoring Tools", "Data Platforms", "CI/CD Systems"],
       apiEndpoints: 800,
       uptime: "99.9%",
@@ -413,8 +394,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["DataRobot", "H2O.ai", "Dataiku", "Alteryx"],
     marketSize: "$42.3 billion by 2031"
   },
-  {
-    id: "blockchain-infrastructure",
+  { id: "blockchain-infrastructure",
     title: "Blockchain Infrastructure & Smart Contract Development",
     description: "Enterprise blockchain infrastructure and smart contract development services that enable secure, transparent, and efficient business processes.",
     category: "Blockchain",
@@ -461,13 +441,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$35,000 - $200,000",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Ethereum", "Hyperledger", "Corda", "Solana", "Polygon", "Web3"],
+    technicalSpecs: { technology: ["Ethereum", "Hyperledger", "Corda", "Solana", "Polygon", "Web3"],
       integrations: ["Enterprise Systems", "Cloud Platforms", "Payment Systems", "Identity Providers"],
       apiEndpoints: 400,
       uptime: "99.9%",
@@ -476,8 +454,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["IBM", "Microsoft", "Amazon", "ConsenSys", "R3"],
     marketSize: "$23.4 billion by 2031"
   },
-  {
-    id: "sustainable-tech-infrastructure",
+  { id: "sustainable-tech-infrastructure",
     title: "Sustainable Technology Infrastructure",
     description: "Green technology infrastructure solutions that reduce environmental impact while maintaining high performance and reliability.",
     category: "Sustainability",
@@ -524,13 +501,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$30,000 - $180,000",
     roi: "150-300%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Energy Management Systems", "IoT Sensors", "Renewable Energy", "Smart Grid", "Analytics"],
+    technicalSpecs: { technology: ["Energy Management Systems", "IoT Sensors", "Renewable Energy", "Smart Grid", "Analytics"],
       integrations: ["Building Management Systems", "Energy Providers", "Monitoring Platforms", "Reporting Tools"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -539,8 +514,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["Schneider Electric", "Siemens", "Honeywell", "Johnson Controls"],
     marketSize: "$28.7 billion by 2031"
   },
-  {
-    id: "managed-it-services",
+  { id: "managed-it-services",
     title: "Comprehensive Managed IT Services",
     description: "End-to-end managed IT services that provide proactive monitoring, maintenance, and support for your entire technology infrastructure.",
     category: "Managed Services",
@@ -587,13 +561,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$5,000 - $25,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Monitoring Tools", "Help Desk Systems", "Security Platforms", "Backup Solutions", "Analytics"],
+    technicalSpecs: { technology: ["Monitoring Tools", "Help Desk Systems", "Security Platforms", "Backup Solutions", "Analytics"],
       integrations: ["IT Infrastructure", "Cloud Platforms", "Security Systems", "Communication Tools"],
       apiEndpoints: 500,
       uptime: "99.9%",
@@ -602,8 +574,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     competitors: ["IBM", "Deloitte", "Accenture", "Cognizant", "Infosys"],
     marketSize: "$356.2 billion by 2031"
   },
-  {
-    id: "digital-workplace-transformation",
+  { id: "digital-workplace-transformation",
     title: "Digital Workplace Transformation",
     description: "Comprehensive digital workplace transformation that modernizes collaboration, communication, and productivity tools for the hybrid workforce.",
     category: "Digital Transformation",
@@ -650,13 +621,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031: SpecializedITInfrastru
     marketPrice: "$40,000 - $250,000",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Microsoft 365", "Google Workspace", "Slack", "Teams", "Zoom", "Asana"],
+    technicalSpecs: { technology: ["Microsoft 365", "Google Workspace", "Slack", "Teams", "Zoom", "Asana"],
       integrations: ["HR Systems", "IT Infrastructure", "Security Platforms", "Analytics Tools"],
       apiEndpoints: 600,
       uptime: "99.9%",

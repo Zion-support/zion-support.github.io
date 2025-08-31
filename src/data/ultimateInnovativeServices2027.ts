@@ -17,37 +17,34 @@ export interface UltimateInnovativeService2027 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    website: string
+    address: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
     uptime: string;
-    security: string[];
-    compliance: string[];
-  };
+    security: string[]
+    compliance: string[]
+      };
   competitors: string[];
   marketTrend: string;
   aiModel?: string;
   trainingData?: string;
-  marketingContent: {
-    headline: string;
+  marketingContent: { headline: string;
     valueProposition: string;
     keyFeatures: string[];
     competitiveAdvantages: string[];
-    testimonials?: string[];
-    caseStudies?: string[];
-  };
+    testimonials?: string[]
+    caseStudies?: string[]
+      };
 }
 export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] = [
   // AI-Powered Quantum Computing Platform
-  {
-    id: "ai-quantum-computing-platform",
+  { id: "ai-quantum-computing-platform",
     title: "AI-Powered Quantum Computing Platform",
     description: "Revolutionary quantum computing platform that leverages AI to solve complex problems in cryptography, drug discovery, financial modeling, and climate science with unprecedented speed and accuracy.",
     category: "AI & Quantum Computing",
@@ -94,14 +91,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$15,999 - $99,999/month",
     roi: "800-1500%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ai-business",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Quantum Computing", "GPT-5", "Quantum Neural Networks", "Quantum Cryptography", "Advanced AI"],
+    technicalSpecs: { technology: ["Quantum Computing", "GPT-5", "Quantum Neural Networks", "Quantum Cryptography", "Advanced AI"],
       integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Custom APIs"],
       apiEndpoints: 1000,
       uptime: "99.999%",
@@ -114,8 +109,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "Multi-domain business data + Quantum simulations"
   },
   // AI-Powered Autonomous Cybersecurity Defense
-  {
-    id: "ai-autonomous-cybersecurity-defense",
+  { id: "ai-autonomous-cybersecurity-defense",
     title: "AI Autonomous Cybersecurity Defense System",
     description: "Next-generation autonomous cybersecurity platform that uses AI to predict, prevent, and respond to threats in real-time, with zero human intervention required.",
     category: "AI & Cybersecurity",
@@ -162,14 +156,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$8,999 - $49,999/month",
     roi: "600-1000%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-cybersecurity",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Advanced AI", "Machine Learning", "Quantum Cryptography", "Behavioral Analytics", "Threat Intelligence"],
+    technicalSpecs: { technology: ["Advanced AI", "Machine Learning", "Quantum Cryptography", "Behavioral Analytics", "Threat Intelligence"],
       integrations: ["SIEM Systems", "EDR Solutions", "Firewalls", "Identity Management", "Cloud Security"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -182,8 +174,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "Global threat intelligence + Behavioral patterns"
   },
   // Autonomous AI Research Platform
-  {
-    id: "autonomous-ai-research-platform",
+  { id: "autonomous-ai-research-platform",
     title: "Autonomous AI Research Platform",
     description: "Revolutionary AI platform that conducts autonomous scientific research, generates hypotheses, designs experiments, and produces peer-reviewed quality research papers.",
     category: "AI & Research",
@@ -230,14 +221,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$12,999 - $79,999/month",
     roi: "1000-2000%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-research",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Advanced AI", "Natural Language Processing", "Machine Learning", "Data Analytics", "Scientific Computing"],
+    technicalSpecs: { technology: ["Advanced AI", "Natural Language Processing", "Machine Learning", "Data Analytics", "Scientific Computing"],
       integrations: ["Research Databases", "Laboratory Systems", "Publication Platforms", "Patent Databases", "Collaboration Tools"],
       apiEndpoints: 800,
       uptime: "99.99%",
@@ -250,8 +239,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "Scientific literature + Research data + Peer-reviewed papers"
   },
   // Quantum Financial Trading Platform
-  {
-    id: "quantum-financial-trading-platform",
+  { id: "quantum-financial-trading-platform",
     title: "Quantum Financial Trading Platform",
     description: "Advanced quantum-powered trading platform that uses quantum computing and AI to execute high-frequency trades with predictive market analysis and autonomous risk management.",
     category: "Quantum AI & Financial Technology",
@@ -298,14 +286,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$19,999 - $149,999/month",
     roi: "1000-2000%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-trading",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Quantum Computing", "Advanced AI", "Machine Learning", "High-Frequency Computing", "Blockchain"],
+    technicalSpecs: { technology: ["Quantum Computing", "Advanced AI", "Machine Learning", "High-Frequency Computing", "Blockchain"],
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
       apiEndpoints: 1000,
       uptime: "99.999%",
@@ -318,8 +304,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "Market data + Trading patterns + Risk models"
   },
   // AI-Powered Autonomous Healthcare Platform
-  {
-    id: "ai-autonomous-healthcare-platform",
+  { id: "ai-autonomous-healthcare-platform",
     title: "AI Autonomous Healthcare Platform",
     description: "Revolutionary AI platform that autonomously diagnoses, treats, and manages patient care using advanced AI, machine learning, and real-time health monitoring.",
     category: "AI & Healthcare",
@@ -366,14 +351,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$15,999 - $99,999/month",
     roi: "800-1500%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-healthcare",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Advanced AI", "Machine Learning", "Medical Imaging AI", "Natural Language Processing", "IoT Health Devices"],
+    technicalSpecs: { technology: ["Advanced AI", "Machine Learning", "Medical Imaging AI", "Natural Language Processing", "IoT Health Devices"],
       integrations: ["EMR Systems", "Medical Devices", "Lab Systems", "Pharmacy Systems", "Insurance Systems"],
       apiEndpoints: 600,
       uptime: "99.99%",
@@ -386,8 +369,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "Medical records + Clinical data + Research papers"
   },
   // Autonomous AI Manufacturing Platform
-  {
-    id: "autonomous-ai-manufacturing-platform",
+  { id: "autonomous-ai-manufacturing-platform",
     title: "Autonomous AI Manufacturing Platform",
     description: "Revolutionary AI platform that autonomously manages entire manufacturing operations, from design to production, using AI, IoT, and advanced robotics.",
     category: "AI & Manufacturing",
@@ -434,14 +416,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$17,999 - $119,999/month",
     roi: "700-1200%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-manufacturing",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Advanced AI", "IoT", "Robotics", "Machine Learning", "Computer Vision"],
+    technicalSpecs: { technology: ["Advanced AI", "IoT", "Robotics", "Machine Learning", "Computer Vision"],
       integrations: ["ERP Systems", "MES Systems", "SCADA Systems", "Robotics", "Quality Control Systems"],
       apiEndpoints: 800,
       uptime: "99.99%",
@@ -454,10 +434,9 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "Manufacturing data + Quality metrics + Production patterns"
   },
   // Quantum Edge Computing Platform
-  {
-    id: "quantum-edge-computing-platform",
+  { id: "quantum-edge-computing-platform",
     title: "Quantum Edge Computing Platform",
-    description: "Revolutionary quantum-powered edge computing platform that brings quantum computing capabilities to edge devices, enabling real-time quantum processing anywhere.",
+    description: "Revolutionary quantum-powered edge computing platform that brings quantum computing capabilities to edge devices, enabling real-time quantum processing where.",
     category: "Quantum AI & Edge Computing",
     subcategory: "Quantum Edge Processing",
     price: 12999,
@@ -476,7 +455,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
       "24/7 autonomous operation"
     ],
     benefits: [
-      "Enable quantum computing anywhere",
+      "Enable quantum computing where",
       "Reduce latency by 99%",
       "Quantum security at edge",
       "Real-time quantum processing",
@@ -502,14 +481,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$12,999 - $79,999/month",
     roi: "800-1500%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-edge",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Quantum Computing", "Edge Computing", "IoT", "5G", "Advanced AI"],
+    technicalSpecs: { technology: ["Quantum Computing", "Edge Computing", "IoT", "5G", "Advanced AI"],
       integrations: ["IoT Platforms", "Edge Devices", "Cloud Platforms", "5G Networks", "AI Frameworks"],
       apiEndpoints: 600,
       uptime: "99.99%",
@@ -522,8 +499,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "IoT data + Edge computing patterns + Quantum algorithms"
   },
   // AI-Powered Autonomous Legal Platform
-  {
-    id: "ai-autonomous-legal-platform",
+  { id: "ai-autonomous-legal-platform",
     title: "AI Autonomous Legal Platform",
     description: "Revolutionary AI platform that autonomously handles legal research, document generation, contract analysis, and legal advice using advanced AI and natural language processing.",
     category: "AI & Legal Technology",
@@ -570,14 +546,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$15,999 - $49,999/month",
     roi: "1000-5000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Advanced AI", "Natural Language Processing", "Machine Learning", "Legal AI", "Document Analysis"],
+    technicalSpecs: { technology: ["Advanced AI", "Natural Language Processing", "Machine Learning", "Legal AI", "Document Analysis"],
       integrations: ["Legal Research Platforms", "Document Management Systems", "Case Management Systems", "Compliance Platforms"],
       apiEndpoints: 400,
       uptime: "99.99%",
@@ -590,8 +564,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     trainingData: "Legal documents + Case law + Regulations + Contracts"
   },
   // Autonomous AI Education Platform
-  {
-    id: "autonomous-ai-education-platform",
+  { id: "autonomous-ai-education-platform",
     title: "Autonomous AI Education Platform",
     description: "Revolutionary AI platform that autonomously creates personalized learning experiences, generates educational content, and provides 24/7 intelligent tutoring.",
     category: "AI & Education",
@@ -638,14 +611,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$7,999 - $49,999/month",
     roi: "500-800%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-education",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Advanced AI", "Natural Language Processing", "Machine Learning", "Educational AI", "Learning Analytics"],
+    technicalSpecs: { technology: ["Advanced AI", "Natural Language Processing", "Machine Learning", "Educational AI", "Learning Analytics"],
       integrations: ["LMS Systems", "Content Management", "Assessment Platforms", "Analytics Tools", "Communication Tools"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -656,8 +627,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketTrend: "Explosive Growth",
     aiModel: "GPT-5 + Quantum Neural Networks",
     trainingData: "Multi-domain scientific datasets",
-    marketingContent: {
-      headline: "Revolutionize Problem-Solving with AI-Powered Quantum Computing",
+    marketingContent: { headline: "Revolutionize Problem-Solving with AI-Powered Quantum Computing",
       valueProposition: "Unlock the power of quantum computing combined with AI to solve previously impossible problems in science, finance, and technology.",
       keyFeatures: [
         "AI-optimized quantum algorithms for maximum efficiency",
@@ -676,8 +646,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     }
   },
   // Quantum AI Content Creation Platform
-  {
-    id: "autonomous-ai-business-platform",
+  { id: "autonomous-ai-business-platform",
     title: "Autonomous AI Business Platform",
     description: "Complete business automation platform that uses advanced AI to autonomously manage all aspects of business operations, from customer service to strategic decision-making, without human intervention.",
     category: "AI & Business Automation",
@@ -727,14 +696,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$8,999 - $29,999/month",
     roi: "500-1000%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["GPT-5", "Claude 3", "BERT", "TensorFlow", "PyTorch"],
+    technicalSpecs: { technology: ["GPT-5", "Claude 3", "BERT", "TensorFlow", "PyTorch"],
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Shopify", "Stripe"],
       apiEndpoints: 300,
       uptime: "99.99%",
@@ -745,8 +712,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketTrend: "High Growth",
     aiModel: "Multi-modal AI ensemble",
     trainingData: "Business operations datasets",
-    marketingContent: {
-      headline: "Transform Your Business with Autonomous AI Operations",
+    marketingContent: { headline: "Transform Your Business with Autonomous AI Operations",
       valueProposition: "Let AI run your business autonomously while you focus on innovation and growth. Achieve 95% cost reduction and 24/7 operations.",
       keyFeatures: [
         "Complete business process automation with AI intelligence",
@@ -765,8 +731,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     }
   },
   // Next-Gen Cybersecurity AI Platform
-  {
-    id: "nextgen-cybersecurity-ai-platform",
+  { id: "nextgen-cybersecurity-ai-platform",
     title: "Next-Gen Cybersecurity AI Platform",
     description: "Advanced AI-powered cybersecurity platform that provides real-time threat detection, autonomous incident response, and predictive security analytics to protect against evolving cyber threats.",
     category: "AI & Cybersecurity",
@@ -816,14 +781,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$6,999 - $19,999/month",
     roi: "400-800%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["GPT-5", "Deep Learning", "Machine Learning", "NLP", "Computer Vision"],
+    technicalSpecs: { technology: ["GPT-5", "Deep Learning", "Machine Learning", "NLP", "Computer Vision"],
       integrations: ["SIEM", "EDR", "Firewalls", "IDS/IPS", "Cloud platforms"],
       apiEndpoints: 250,
       uptime: "99.99%",
@@ -834,8 +797,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketTrend: "High Growth",
     aiModel: "Multi-modal security AI",
     trainingData: "Global threat intelligence",
-    marketingContent: {
-      headline: "Revolutionize Your Security with AI-Powered Cyber Defense",
+    marketingContent: { headline: "Revolutionize Your Security with AI-Powered Cyber Defense",
       valueProposition: "Stay ahead of cyber threats with our AI-powered security platform that provides 99.99% threat detection and autonomous incident response.",
       keyFeatures: [
         "AI-powered real-time threat detection and analysis",
@@ -854,8 +816,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     }
   },
   // Hyper-Intelligent Data Analytics Platform
-  {
-    id: "hyper-intelligent-data-analytics-platform",
+  { id: "hyper-intelligent-data-analytics-platform",
     title: "Hyper-Intelligent Data Analytics Platform",
     description: "Revolutionary data analytics platform that combines AI, machine learning, and advanced algorithms to provide unprecedented insights, predictions, and business intelligence from complex data sets.",
     category: "AI & Data Analytics",
@@ -905,14 +866,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$5,999 - $15,999/month",
     roi: "300-600%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["GPT-5", "TensorFlow", "PyTorch", "Apache Spark", "Kubernetes"],
+    technicalSpecs: { technology: ["GPT-5", "TensorFlow", "PyTorch", "Apache Spark", "Kubernetes"],
       integrations: ["Snowflake", "Databricks", "Tableau", "Power BI", "AWS"],
       apiEndpoints: 200,
       uptime: "99.99%",
@@ -923,8 +882,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketTrend: "High Growth",
     aiModel: "Multi-modal AI analytics",
     trainingData: "Multi-domain datasets",
-    marketingContent: {
-      headline: "Unlock the Power of Your Data with Hyper-Intelligent Analytics",
+    marketingContent: { headline: "Unlock the Power of Your Data with Hyper-Intelligent Analytics",
       valueProposition: "Transform your data into actionable insights with our AI-powered analytics platform that provides 10x faster processing and automated intelligence generation.",
       keyFeatures: [
         "AI-powered data processing and analysis",
@@ -938,13 +896,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
         "Automated insight generation and recommendations",
         "Predictive business intelligence and forecasting",
         "Natural language interface for data exploration",
-        "Scalable analytics infrastructure for any data volume"
+        "Scalable analytics infrastructure for  data volume"
       ]
     }
   },
   // Autonomous IoT Edge Computing Platform
-  {
-    id: "autonomous-iot-edge-computing-platform",
+  { id: "autonomous-iot-edge-computing-platform",
     title: "Autonomous IoT Edge Computing Platform",
     description: "Revolutionary IoT platform that brings AI and computing power to the edge, enabling autonomous decision-making, real-time processing, and intelligent automation for connected devices and systems.",
     category: "IoT & Edge Computing",
@@ -994,14 +951,12 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketPrice: "$4,999 - $12,999/month",
     roi: "300-500%",
     innovationLevel: "Breakthrough",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes Edge", "5G", "LoRaWAN"],
+    technicalSpecs: { technology: ["TensorFlow Lite", "Edge TPU", "Kubernetes Edge", "5G", "LoRaWAN"],
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "MQTT", "CoAP"],
       apiEndpoints: 150,
       uptime: "99.95%",
@@ -1012,8 +967,7 @@ export const ULTIMATE_INNOVATIVE_SERVICES_2027: UltimateInnovativeService2027[] 
     marketTrend: "High Growth",
     aiModel: "Edge-optimized AI models",
     trainingData: "IoT sensor data",
-    marketingContent: {
-      headline: "Revolutionize IoT with Autonomous Edge Computing",
+    marketingContent: { headline: "Revolutionize IoT with Autonomous Edge Computing",
       valueProposition: "Bring AI to the edge with our autonomous IoT platform that enables real-time decision-making and intelligent automation for connected devices.",
       keyFeatures: [
         "Edge AI processing for real-time decision making",

@@ -25,20 +25,17 @@ export default function AIProjectManager() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
+    { name: 'Starter', 
       price: '$99/mo', 
       features: ['Up to 10 projects', '5 team members', 'Basic AI insights', 'Email support'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$299/mo', 
       features: ['Up to 50 projects', '25 team members', 'Advanced AI analytics', 'Priority support', 'Custom integrations'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$799/mo', 
       features: ['Unlimited projects', 'Unlimited team members', 'Full AI suite', 'Dedicated support', 'Custom AI training', 'SAML/SSO'],
       popular: false
@@ -61,9 +58,8 @@ export default function AIProjectManager() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 AI Project Manager
               </h1>
@@ -89,9 +85,8 @@ export default function AIProjectManager() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Powerful Features
               </h2>
@@ -107,8 +102,7 @@ export default function AIProjectManager() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-glass-dark rounded-xl p-6 border border-slate-700/50 text-center"
-                >
+                  className="bg-glass-dark rounded-xl p-6 border border-slate-700/50 text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
@@ -125,9 +119,8 @@ export default function AIProjectManager() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Why Choose AI Project Manager?
               </h2>
@@ -143,8 +136,7 @@ export default function AIProjectManager() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-glass-dark rounded-xl p-6 border border-slate-700/50"
-                >
+                  className="bg-glass-dark rounded-xl p-6 border border-slate-700/50">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mb-4">
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
@@ -161,9 +153,8 @@ export default function AIProjectManager() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Simple, Transparent Pricing
               </h2>
@@ -226,7 +217,7 @@ export default function AIProjectManager() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Project Management?

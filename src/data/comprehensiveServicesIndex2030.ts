@@ -42,8 +42,7 @@ export const SERVICE_CATEGORIES_2030 = [
 ];
 
 // Service Statistics
-export const SERVICE_STATISTICS_2030 = {
-  totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
+export const SERVICE_STATISTICS_2030 = { totalServices: COMPREHENSIVE_SERVICES_INDEX_2030.length,
   totalCategories: SERVICE_CATEGORIES_2030.length,
   averagePrice: Math.round(
     COMPREHENSIVE_SERVICES_INDEX_2030.reduce((sum, service) => sum + service.price, 0) / 

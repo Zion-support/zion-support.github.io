@@ -33,18 +33,15 @@ export default function AIIoTEdgeComputing() {
   ];
 
   const tiers = [
-    { 
-      name: 'Edge Starter', 
+    { name: 'Edge Starter', 
       price: '$499/mo', 
       details: ['Up to 100 devices', 'Basic AI processing', 'Standard monitoring', 'Email support'] 
     },
-    { 
-      name: 'Edge Professional', 
+    { name: 'Edge Professional', 
       price: '$1,299/mo', 
       details: ['Up to 1,000 devices', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Edge', 
+    { name: 'Enterprise Edge', 
       price: '$3,999/mo', 
       details: ['Unlimited devices', 'Full AI suite', 'White-label options', '24/7 support'] 
     },

@@ -5,26 +5,22 @@ import { Code, Terminal, BookOpen, Download, Play, Users, Cpu, Network, BarChart
 
 const DeveloperPortal: React.FC = () => {
   const tools = [
-    {
-      icon: Code,
+    { icon: Code,
       title: 'Code Examples',
       description: 'Ready-to-use code snippets in multiple languages',
       category: 'Development'
     },
-    {
-      icon: Terminal,
+    { icon: Terminal,
       title: 'API Playground',
       description: 'Test APIs directly in your browser',
       category: 'Testing'
     },
-    {
-      icon: BookOpen,
+    { icon: BookOpen,
       title: 'Documentation',
       description: 'Comprehensive guides and tutorials',
       category: 'Learning'
     },
-    {
-      icon: Download,
+    { icon: Download,
       title: 'SDKs & Libraries',
       description: 'Official client libraries for all platforms',
       category: 'Integration'
@@ -32,26 +28,22 @@ const DeveloperPortal: React.FC = () => {
   ];
 
   const resources = [
-    {
-      title: 'Getting Started Guide',
+    { title: 'Getting Started Guide',
       description: 'Quick start tutorial for new developers',
       icon: '🚀',
       difficulty: 'Beginner'
     },
-    {
-      title: 'API Reference',
+    { title: 'API Reference',
       description: 'Complete endpoint documentation',
       icon: '📚',
       difficulty: 'All Levels'
     },
-    {
-      title: 'Best Practices',
+    { title: 'Best Practices',
       description: 'Development guidelines and patterns',
       icon: '⭐',
       difficulty: 'Intermediate'
     },
-    {
-      title: 'Code Samples',
+    { title: 'Code Samples',
       description: 'Real-world implementation examples',
       icon: '💻',
       difficulty: 'All Levels'
@@ -59,26 +51,22 @@ const DeveloperPortal: React.FC = () => {
   ];
 
   const community = [
-    {
-      name: 'Developer Forum',
+    { name: 'Developer Forum',
       description: 'Get help from our community',
       members: '2.5K+',
       icon: '💬'
     },
-    {
-      name: 'GitHub Discussions',
+    { name: 'GitHub Discussions',
       description: 'Open source collaboration',
       members: '1.8K+',
       icon: '🐙'
     },
-    {
-      name: 'Discord Server',
+    { name: 'Discord Server',
       description: 'Real-time developer chat',
       members: '3.2K+',
       icon: '🎮'
     },
-    {
-      name: 'Stack Overflow',
+    { name: 'Stack Overflow',
       description: 'Q&A platform integration',
       members: '5K+',
       icon: '📝'
@@ -98,9 +86,8 @@ const DeveloperPortal: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full border border-green-400/30 mb-6">
               <Terminal className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">Developer Portal</span>
@@ -136,9 +123,8 @@ const DeveloperPortal: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Developer Tools
             </h2>
@@ -154,8 +140,7 @@ const DeveloperPortal: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4">
                   <tool.icon className="w-6 h-6 text-green-400" />
                 </div>
@@ -176,9 +161,8 @@ const DeveloperPortal: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Learning Resources
             </h2>
@@ -194,8 +178,7 @@ const DeveloperPortal: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{resource.icon}</div>
                   <div className="flex-1">
@@ -224,9 +207,8 @@ const DeveloperPortal: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Developer Community
             </h2>
@@ -242,8 +224,7 @@ const DeveloperPortal: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105">
                 <div className="text-4xl mb-4">{platform.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{platform.name}</h3>
                 <p className="text-gray-300 mb-4">{platform.description}</p>
@@ -265,9 +246,8 @@ const DeveloperPortal: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               Quick Start
             </h2>
@@ -280,8 +260,7 @@ const DeveloperPortal: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-          >
+            className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
@@ -321,7 +300,7 @@ const DeveloperPortal: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Build?

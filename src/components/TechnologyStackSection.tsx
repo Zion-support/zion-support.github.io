@@ -2,8 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const technologyCategories = [
-  {
-    category: "Frontend Technologies",
+  { category: "Frontend Technologies",
     technologies: [
       { name: "React", icon: "⚛️", proficiency: 95 },
       { name: "Vue.js", icon: "💚", proficiency: 90 },
@@ -13,8 +12,7 @@ const technologyCategories = [
     ],
     color: "from-blue-500 to-cyan-500"
   },
-  {
-    category: "Backend Technologies",
+  { category: "Backend Technologies",
     technologies: [
       { name: "Node.js", icon: "🟢", proficiency: 95 },
       { name: "Python", icon: "🐍", proficiency: 90 },
@@ -24,8 +22,7 @@ const technologyCategories = [
     ],
     color: "from-green-500 to-emerald-500"
   },
-  {
-    category: "AI & Machine Learning",
+  { category: "AI & Machine Learning",
     technologies: [
       { name: "TensorFlow", icon: "🧠", proficiency: 90 },
       { name: "PyTorch", icon: "🔥", proficiency: 85 },
@@ -35,8 +32,7 @@ const technologyCategories = [
     ],
     color: "from-purple-500 to-pink-500"
   },
-  {
-    category: "Cloud & DevOps",
+  { category: "Cloud & DevOps",
     technologies: [
       { name: "AWS", icon: "☁️", proficiency: 90 },
       { name: "Azure", icon: "🔷", proficiency: 85 },
@@ -65,8 +61,8 @@ export function TechnologyStackSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Technology Stack
@@ -84,7 +80,7 @@ export function TechnologyStackSection() {
               className="bg-slate-800 border border-slate-700 rounded-xl p-6"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
@@ -106,9 +102,9 @@ export function TechnologyStackSection() {
                       <div className="w-20 bg-slate-700 rounded-full h-2">
                         <motion.div
                           className={`h-2 bg-gradient-to-r ${category.color} rounded-full`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${tech.proficiency}%` }}
-                          viewport={{ once: true }}
+                          initial={{ width: 0     }}
+                          whileInView={{ width: `${tech.proficiency    }%` }}
+                          viewport={{ once: true     }}
                           transition={{ duration: 1, delay: 0.8 + techIndex * 0.1 }}
                         />
                       </div>
@@ -128,7 +124,7 @@ export function TechnologyStackSection() {
           className="mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
@@ -142,7 +138,7 @@ export function TechnologyStackSection() {
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -169,7 +165,7 @@ export function TechnologyStackSection() {
           className="mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.8 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
@@ -209,7 +205,7 @@ export function TechnologyStackSection() {
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 1.0 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

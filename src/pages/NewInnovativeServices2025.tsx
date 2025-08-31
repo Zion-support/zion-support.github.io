@@ -119,8 +119,7 @@ import {
 
 export default function NewInnovativeServices2025() {
   const featuredServices = [
-    {
-      title: "AI Workflow Orchestrator",
+    { title: "AI Workflow Orchestrator",
       description: "Transform business processes with AI-powered workflow automation and intelligent orchestration",
       icon: WorkflowIcon,
       category: "AI & Automation",
@@ -130,8 +129,7 @@ export default function NewInnovativeServices2025() {
       color: "from-zion-cyan to-zion-purple",
       popular: true
     },
-    {
-      title: "AI Data Governance Platform",
+    { title: "AI Data Governance Platform",
       description: "Secure, govern, and manage data with AI-powered compliance automation and intelligent protection",
       icon: Shield,
       category: "Data & Security",
@@ -141,8 +139,7 @@ export default function NewInnovativeServices2025() {
       color: "from-zion-purple to-zion-cyan",
       popular: false
     },
-    {
-      title: "AI Customer Experience Analytics",
+    { title: "AI Customer Experience Analytics",
       description: "Transform customer insights into actionable intelligence with AI-powered analytics and personalization",
       icon: Brain,
       category: "Customer Experience",
@@ -155,8 +152,7 @@ export default function NewInnovativeServices2025() {
   ];
 
   const serviceCategories = [
-    {
-      name: "AI & Machine Learning",
+    { name: "AI & Machine Learning",
       icon: Brain,
       description: "Cutting-edge AI solutions for business transformation",
       services: [
@@ -168,8 +164,7 @@ export default function NewInnovativeServices2025() {
       ],
       color: "from-zion-cyan to-zion-purple"
     },
-    {
-      name: "Data & Analytics",
+    { name: "Data & Analytics",
       icon: BarChart3,
       description: "Advanced data solutions for informed decision-making",
       services: [
@@ -181,8 +176,7 @@ export default function NewInnovativeServices2025() {
       ],
       color: "from-zion-purple to-zion-cyan"
     },
-    {
-      name: "Security & Compliance",
+    { name: "Security & Compliance",
       icon: Shield,
       description: "Enterprise-grade security and compliance solutions",
       services: [
@@ -194,8 +188,7 @@ export default function NewInnovativeServices2025() {
       ],
       color: "from-zion-cyan to-zion-green"
     },
-    {
-      name: "Business Process Automation",
+    { name: "Business Process Automation",
       icon: WorkflowIcon,
       description: "Streamline operations with intelligent automation",
       services: [
@@ -210,23 +203,19 @@ export default function NewInnovativeServices2025() {
   ];
 
   const benefits = [
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Increased Efficiency",
       description: "Automate repetitive tasks and optimize workflows for 30-90% efficiency gains"
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: "Cost Reduction",
       description: "Reduce operational costs through intelligent automation and process optimization"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Enhanced Customer Experience",
       description: "Deliver personalized, responsive experiences that increase customer satisfaction and loyalty"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Improved Security",
       description: "Advanced security measures and compliance automation protect your business and data"
     }
@@ -247,7 +236,7 @@ export default function NewInnovativeServices2025() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">
                 <Sparkles className="w-4 h-4 mr-2" />
@@ -265,18 +254,16 @@ export default function NewInnovativeServices2025() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center">
                   <Play className="w-5 h-5 mr-2" />
                   Explore Services
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Contact Sales
                 </motion.button>
@@ -291,10 +278,9 @@ export default function NewInnovativeServices2025() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured Innovative Services
               </h2>
@@ -310,7 +296,7 @@ export default function NewInnovativeServices2025() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
                     service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'
                   }`}
@@ -346,8 +332,8 @@ export default function NewInnovativeServices2025() {
                   
                   <Link to={service.link}>
                     <motion.button
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{ scale: 1.02     }}
+                      whileTap={{ scale: 0.98     }}
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                         service.popular
                           ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
@@ -369,10 +355,9 @@ export default function NewInnovativeServices2025() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Comprehensive Service Categories
               </h2>
@@ -388,9 +373,8 @@ export default function NewInnovativeServices2025() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-600/50 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-600/50 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
                       <category.icon className="w-6 h-6 text-white" />
@@ -421,10 +405,9 @@ export default function NewInnovativeServices2025() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our Services?
               </h2>
@@ -440,9 +423,8 @@ export default function NewInnovativeServices2025() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
@@ -460,8 +442,8 @@ export default function NewInnovativeServices2025() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -473,18 +455,16 @@ export default function NewInnovativeServices2025() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center">
                   <Rocket className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </motion.button>

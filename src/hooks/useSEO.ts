@@ -10,7 +10,7 @@ interface SEOData {
   twitterCard?: string;
   noindex?: boolean;
   structuredData?: object;
-}
+    }
 
 interface UseSEOOptions {
   enableAutoTitle?: boolean;
@@ -183,7 +183,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
       email: 'kleber@ziontechgroup.com'
     },
     sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group',
+      'https://www.linkedin.com/comp/zion-tech-group',
       'https://twitter.com/ziontechgroup',
       'https://www.facebook.com/ziontechgroup'
     ]
@@ -195,8 +195,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
     // Google Analytics
     if (window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: pageData.title,
+      window.gtag('config', 'GA_MEASUREMENT_ID', { page_title: pageData.title,
         page_location: canonicalUrl,
         page_path: window.location.pathname
       });
@@ -204,8 +203,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 
     // Custom analytics
     if (window.dataLayer) {
-      window.dataLayer.push({
-        event: 'page_view',
+      window.dataLayer.push({ event: 'page_view',
         page_title: pageData.title,
         page_url: canonicalUrl,
         page_type: pageData.ogType || 'website'
@@ -239,8 +237,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
     if ('performance' in window) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigation) {
-        const metrics = {
-          dns: navigation.domainLookupEnd - navigation.domainLookupStart,
+        const metrics = { dns: navigation.domainLookupEnd - navigation.domainLookupStart,
           tcp: navigation.connectEnd - navigation.connectStart,
           ttfb: navigation.responseStart - navigation.requestStart,
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
@@ -250,8 +247,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
         // Track to analytics
         if (window.gtag) {
           Object.entries(metrics).forEach(([key, value]) => {
-            window.gtag('event', 'performance_metric', {
-              event_category: 'performance',
+            window.gtag('event', 'performance_metric', { event_category: 'performance',
               event_label: key,
               value: Math.round(value)
             });
@@ -328,7 +324,7 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {
 // Type declarations
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
+    gtag?: (...args: []) => void;
+    dataLayer?: [];
   }
 }

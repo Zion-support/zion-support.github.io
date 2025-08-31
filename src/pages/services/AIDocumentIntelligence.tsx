@@ -13,18 +13,15 @@ export default function AIDocumentIntelligence() {
   ];
 
   const tiers = [
-    { 
-      name: 'Basic', 
+    { name: 'Basic', 
       price: '$149/mo', 
       details: ['Up to 1,000 pages/month', '5 user accounts', 'Basic OCR & extraction', 'Email support'] 
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$399/mo', 
       details: ['Up to 10,000 pages/month', '25 user accounts', 'Advanced AI features', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$999/mo', 
       details: ['Unlimited pages', 'Unlimited users', 'Custom AI models', '24/7 dedicated support'] 
     },

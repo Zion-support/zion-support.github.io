@@ -25,8 +25,7 @@ import {
 } from 'lucide-react';
 
 const events = [
-  {
-    id: 1,
+  { id: 1,
     title: "AI & Machine Learning Summit 2027",
     type: "Conference",
     date: "2027-03-15",
@@ -46,8 +45,7 @@ const events = [
     ],
     image: "/images/ai-summit-2027.jpg"
   },
-  {
-    id: 2,
+  { id: 2,
     title: "Cybersecurity Best Practices Workshop",
     type: "Workshop",
     date: "2027-02-28",
@@ -67,8 +65,7 @@ const events = [
     ],
     image: "/images/cybersecurity-workshop.jpg"
   },
-  {
-    id: 3,
+  { id: 3,
     title: "Cloud Computing & DevOps Conference",
     type: "Conference",
     date: "2027-01-20",
@@ -88,8 +85,7 @@ const events = [
     ],
     image: "/images/cloud-devops-conference.jpg"
   },
-  {
-    id: 4,
+  { id: 4,
     title: "Data Analytics & Business Intelligence",
     type: "Webinar",
     date: "2027-01-10",
@@ -109,8 +105,7 @@ const events = [
     ],
     image: "/images/data-analytics-webinar.jpg"
   },
-  {
-    id: 5,
+  { id: 5,
     title: "IoT & Edge Computing Symposium",
     type: "Symposium",
     date: "2026-12-15",
@@ -130,8 +125,7 @@ const events = [
     ],
     image: "/images/iot-symposium.jpg"
   },
-  {
-    id: 6,
+  { id: 6,
     title: "Digital Transformation Summit",
     type: "Conference",
     date: "2026-11-30",
@@ -179,8 +173,7 @@ export default function Events() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-      weekday: 'long',
+    return date.toLocaleDateString('en-US', { weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -215,9 +208,8 @@ export default function Events() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Calendar className="w-5 h-5" />
               <span className="font-medium">Events & Webinars</span>
@@ -257,8 +249,7 @@ export default function Events() {
                 <select
                   value={selectedType}
                   onChange={(e) => setSelectedType(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {eventTypes.map(type => (
                     <option key={type} value={type}>{type}</option>
                   ))}
@@ -270,8 +261,7 @@ export default function Events() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -283,8 +273,7 @@ export default function Events() {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {statuses.map(status => (
                     <option key={status} value={status}>
                       {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
@@ -304,10 +293,9 @@ export default function Events() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
+              className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>
             </motion.div>
@@ -321,9 +309,8 @@ export default function Events() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                  >
+                    viewport={{ once: true     }}
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -396,8 +383,7 @@ export default function Events() {
                     <div className="flex items-center justify-between">
                       <Link
                         href={`/events/${event.id}`}
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >
+                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -421,10 +407,9 @@ export default function Events() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="mb-12"
-            >
+              transition={{ duration: 0.6     }}
+              viewport={{ once: true     }}
+              className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>
             </motion.div>
@@ -438,9 +423,8 @@ export default function Events() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75"
-                  >
+                    viewport={{ once: true     }}
+                    className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 opacity-75">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -476,8 +460,7 @@ export default function Events() {
                     <div className="flex items-center justify-between">
                       <Link
                         href={`/events/${event.id}`}
-                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                      >
+                        className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                         View Event Details
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -500,10 +483,9 @@ export default function Events() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Want to Host an Event?
             </h2>
@@ -514,15 +496,13 @@ export default function Events() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg">
                 Partner With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg">
                 View Our Services
               </Link>
             </div>

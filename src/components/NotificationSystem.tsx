@@ -18,19 +18,18 @@ import { CheckCircle,
 export type NotificationType = 'success' | 'warning' | 'error' | 'info' | 'achievement';
 
 export interface Notification {
-
-  id: anystring;
+  id: string;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
   timestamp: Date;
   read: boolean;
-action?: {;
-    label: string;
-    onClick: ()  => void;
+action?: {  
+    label: string
+    onClick: ()  => void
   
-};
+    };
   priority: 'low' | 'medium' | 'high';
   category?: string;
   icon?: React.ReactNode;
@@ -48,7 +47,6 @@ interface NotificationSystemProps extends React.PropsWithChildren<{}> {
 }
 
 interface NotificationSettings {
-
   sound: boolean;
   vibration: boolean;
   autoDismiss: boolean;
@@ -56,9 +54,9 @@ interface NotificationSettings {
   maxNotifications: number;
   defaultDuration: number;
 
-}
+    }
 
-export const NotificationSystem: React.FC<NotificationSystemProps> = ({
+export const NotificationSystem: React.FC = ({
   maxNotifications = 5,
   position = 'top-right',
   enableSound = true,
@@ -67,8 +65,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   defaultDuration = 5000
 }) => {
   const [notifications, setNotifications] = useState<any>([]);
-  const [settings, setSettings] = useState<any>({
-    sound: enableSound,
+  const [settings, setSettings] = useState<any>({ sound: enableSound,
     vibration: enableVibration,
     autoDismiss: autoDismiss,
     position,
@@ -138,10 +135,10 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [settings.vibration]);
 
   // Add notification
-  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)  => {
+  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>)  => {
     const newNotification: Notification = {
       ...notification,
-      id: any`notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+      id: `notification-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
       timestamp: new Date(),
       read: false,
       duration: notification.duration ?? settings.defaultDuration
@@ -158,12 +155,12 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, [settings.maxNotifications, settings.defaultDuration, playSound, triggerVibration]);
 
   // Dismiss notification
-  const dismissNotification = useCallback((id: anystring)  => {
+  const dismissNotification = useCallback((id: string)  => {
     setNotifications(prev => prev.filter(n => n.id !== id));
   }, []);
 
   // Mark notification as read
-  const markAsRead = useCallback((id: anystring)  => {
+  const markAsRead = useCallback((id: string)  => {
     setNotifications(prev => 
       prev.map(n => n.id === id ? { ...n, read: true } : n)
     );
@@ -180,8 +177,8 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   }, []);
 
   // Get notification icon
-  const getNotificationIcon = (type: anyNotificationType, priority: string)  => {
-    const iconProps = { className: "w-5 h-5" };
+  const getNotificationIcon = (type: NotificationType, priority: string)  => {
+    const iconProps = { className: "w-5 h-5"     };
     
     switch (type) {
       case 'success':
@@ -200,7 +197,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
   // Get notification styles
-  const getNotificationStyles = (type: anyNotificationType, priority: string)  => {
+  const getNotificationStyles = (type: NotificationType, priority: string)  => {
     const baseStyles = "border-l-4 ";
     
     switch (type) {
@@ -236,15 +233,15 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
   };
 
   // Update settings
-  const updateSettings = useCallback((newSettings: anyPartial<NotificationSettings>)  => {
+  const updateSettings = useCallback((newSettings: Partial<NotificationSettings>)  => {
     setSettings(prev => ({ ...prev, ...newSettings }));
   }, []);
 
   // Expose addNotification method globally for external use
   useEffect(() => {
-    (window as any).addNotification = addNotification;
+    (window as ).addNotification = addNotification;
     return () => {
-      delete (window as any).addNotification;
+      delete (window as ).addNotification;
     };
   }, [addNotification]);
 
@@ -262,10 +259,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
           {/* Unread count badge */}
           {unreadCount > 0 && (
             <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center"
-            >
+              initial={{ scale: 0     }}
+              animate={{ scale: 1     }}
+              className="absolute -top-1 -right-1 w-6 h-6 bg-gradient-to-r from-zion-cyan to-zion-blue text-white text-xs font-bold rounded-full flex items-center justify-center">
               {unreadCount > 99 ? '99+' : unreadCount}
             </motion.div>
           )}
@@ -296,7 +292,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Sound</span>
                 <button
-                  onClick={() => updateSettings({ sound: !settings.sound })}
+                  onClick={() => updateSettings({ sound: !settings.sound     })}
                   className={`p-2 rounded-lg transition-colors ${
                     settings.sound ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
@@ -308,7 +304,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Vibration</span>
                 <button
-                  onClick={() => updateSettings({ vibration: !settings.vibration })}
+                  onClick={() => updateSettings({ vibration: !settings.vibration     })}
                   className={`p-2 rounded-lg transition-colors ${
                     settings.vibration ? 'bg-blue-100 text-blue-600' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
@@ -320,7 +316,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <div className="flex items-center justify-between">
                 <span className="text-sm text-zion-slate">Auto-dismiss</span>
                 <button
-                  onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss })}
+                  onClick={() => updateSettings({ autoDismiss: !settings.autoDismiss     })}
                   className={`p-2 rounded-lg transition-colors ${
                     settings.autoDismiss ? 'bg-green-100 text-green-600' : 'bg-zion-slate/10 text-zion-slate'
                   }`}
@@ -332,8 +328,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <div className="pt-4 border-t border-zion-slate/20">
                 <button
                   onClick={markAllAsRead}
-                  className="w-full px-4 py-2 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm"
-                >
+                  className="w-full px-4 py-2 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded-lg transition-colors text-sm">
                   Mark all as read
                 </button>
               </div>
@@ -341,8 +336,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <div className="pt-2">
                 <button
                   onClick={clearAll}
-                  className="w-full px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-colors text-sm"
-                >
+                  className="w-full px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 rounded-lg transition-colors text-sm">
                   Clear all notifications
                 </button>
               </div>
@@ -365,8 +359,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <h3 className="text-lg font-semibold text-zion-slate-dark">Notifications</h3>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1 hover:bg-zion-slate/10 rounded-lg transition-colors"
-              >
+                className="p-1 hover:bg-zion-slate/10 rounded-lg transition-colors">
                 <X className="w-4 h-4 text-zion-slate" />
               </button>
             </div>
@@ -376,10 +369,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               <AnimatePresence>
                 {notifications.length === 0 ? (
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    className="text-center py-8 text-zion-slate/60"
-                  >
+                    initial={{ opacity: 0     }}
+                    animate={{ opacity: 1     }}
+                    className="text-center py-8 text-zion-slate/60">
                     <Bell className="w-12 h-12 mx-auto mb-2 opacity-50" />
                     <p>No notifications yet</p>
                     <p className="text-sm">We'll notify you when something important happens</p>
@@ -410,8 +402,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                             </h4>
                             <button
                               onClick={() => dismissNotification(notification.id)}
-                              className="p-1 hover:bg-zion-slate/10 rounded transition-colors"
-                            >
+                              className="p-1 hover:bg-zion-slate/10 rounded transition-colors">
                               <X className="w-3 h-3 text-zion-slate/60" />
                             </button>
                           </div>
@@ -434,8 +425,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                                     notification.action!.onClick();
                                     markAsRead(notification.id);
                                   }}
-                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors"
-                                >
+                                  className="text-xs px-2 py-1 bg-zion-cyan/10 hover:bg-zion-cyan/20 text-zion-cyan rounded transition-colors">
                                   {notification.action.label}
                                 </button>
                               )}
@@ -443,8 +433,7 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
                               {!notification.read && (
                                 <button
                                   onClick={() => markAsRead(notification.id)}
-                                  className="text-xs px-2 py-1 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate rounded transition-colors"
-                                >
+                                  className="text-xs px-2 py-1 bg-zion-slate/10 hover:bg-zion-slate/20 text-zion-slate rounded transition-colors">
                                   Mark read
                                 </button>
                               )}
@@ -466,9 +455,9 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
 
 // Hook for using notifications in components
 export const useNotifications = () => {
-  const addNotification = useCallback((notification: anyOmit<Notification, 'id' | 'timestamp' | 'read'>)  => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification(notification);
+  const addNotification = useCallback((notification: Omit<Notification, 'id' | 'timestamp' | 'read'>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification(notification);
     }
   }, []);
 
@@ -476,11 +465,9 @@ export const useNotifications = () => {
 };
 
 // Utility functions for common notification types
-export const notificationUtils = {
-  success: any(title: string, message: string, options?: Partial<Notification>)  => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
-        type: any'success',
+export const notificationUtils = { success: (title: string, message: string, options?: Partial<Notification>)  => {
+    if ((window as ).addNotification) {
+      (window as ).addNotification({ type: 'success',
         title,
         message,
         priority: 'medium',
@@ -490,9 +477,8 @@ export const notificationUtils = {
   },
 
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
-        type: any'warning',
+    if ((window as ).addNotification) {
+      (window as ).addNotification({ type: 'warning',
         title,
         message,
         priority: 'medium',
@@ -502,9 +488,8 @@ export const notificationUtils = {
   },
 
   error: (title: string, message: string, options?: Partial<Notification>)  => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
-        type: any'error',
+    if ((window as ).addNotification) {
+      (window as ).addNotification({ type: 'error',
         title,
         message,
         priority: 'high',
@@ -514,9 +499,8 @@ export const notificationUtils = {
   },
 
   info: (title: string, message: string, options?: Partial<Notification>)  => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
-        type: any'info',
+    if ((window as ).addNotification) {
+      (window as ).addNotification({ type: 'info',
         title,
         message,
         priority: 'low',
@@ -526,9 +510,8 @@ export const notificationUtils = {
   },
 
   achievement: (title: string, message: string, options?: Partial<Notification>)  => {
-    if ((window as any).addNotification) {
-      (window as any).addNotification({
-        type: 'achievement',
+    if ((window as ).addNotification) {
+      (window as ).addNotification({ type: 'achievement',
         title,
         message,
         priority: 'high',

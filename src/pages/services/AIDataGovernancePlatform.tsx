@@ -33,18 +33,15 @@ export default function AIDataGovernancePlatform() {
   ];
 
   const tiers = [
-    { 
-      name: 'Compliance Starter', 
+    { name: 'Compliance Starter', 
       price: '$499/mo', 
       details: ['Up to 1TB data', 'Basic AI governance', 'Standard compliance', 'Email support'] 
     },
-    { 
-      name: 'Enterprise Governance', 
+    { name: 'Enterprise Governance', 
       price: '$1,299/mo', 
       details: ['Up to 10TB data', 'Advanced AI features', 'Full compliance suite', 'Priority support'] 
     },
-    { 
-      name: 'Global Compliance', 
+    { name: 'Global Compliance', 
       price: '$3,999/mo', 
       details: ['Unlimited data', 'AI-powered governance', 'Global compliance', '24/7 support'] 
     },

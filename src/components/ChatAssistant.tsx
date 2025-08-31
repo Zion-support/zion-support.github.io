@@ -42,11 +42,11 @@ interface Message {
     url: string;
     name: string;
     size?: string;
-  }>;
-  metadata?: {
+      }>;
+  metadata?: {  
     confidence?: number;
-    sources?: string[];
-    suggestions?: string[];
+    sources?: string[]
+    suggestions?: string[]
   };
 }
 
@@ -77,24 +77,24 @@ export function ChatAssistant({
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<any>(null);
+  const recognitionRef = useRef<>(null);
 
   // Initialize speech recognition
   useEffect(() => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+      const SpeechRecognition = (window as ).SpeechRecognition || (window as ).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = language;
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: ) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
+      recognitionRef.current.onerror = (event: ) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -104,13 +104,11 @@ export function ChatAssistant({
   // Initialize with welcome message
   useEffect(() => {
     if (enabled && messages.length === 0) {
-      const welcomeMessage: Message = {
-        id: 'welcome',
+      const welcomeMessage: Message = { id: 'welcome',
         type: 'assistant',
         content: `Hello! I'm your AI assistant from Zion Tech Group. I can help you with:\n\n• AI and technology questions\n• Business solutions\n• Technical support\n• Product information\n\nHow can I assist you today?`,
         timestamp: new Date(),
-        metadata: {
-          suggestions: [
+        metadata: { suggestions: [
             'Tell me about your AI solutions',
             'What quantum computing services do you offer?',
             'How can I get started with your platform?',
@@ -125,7 +123,7 @@ export function ChatAssistant({
 
   // Auto-scroll to bottom
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'     });
   }, [messages]);
 
   // Handle input change
@@ -137,8 +135,7 @@ export function ChatAssistant({
   const handleSendMessage = useCallback(async () => {
     if (!inputValue.trim() || isProcessing) return;
 
-    const userMessage: Message = {
-      id: `user-${Date.now()}`,
+    const userMessage: Message = { id: `user-${Date.now()    }`,
       type: 'user',
       content: inputValue.trim(),
       timestamp: new Date()
@@ -153,8 +150,7 @@ export function ChatAssistant({
     // Simulate AI response
     setTimeout(() => {
       const aiResponse = generateAIResponse(inputValue.trim());
-      const assistantMessage: Message = {
-        id: `assistant-${Date.now()}`,
+      const assistantMessage: Message = { id: `assistant-${Date.now()    }`,
         type: 'assistant',
         content: aiResponse.content,
         timestamp: new Date(),
@@ -170,15 +166,13 @@ export function ChatAssistant({
   }, [inputValue, isProcessing]);
 
   // Generate AI response
-  const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
+  const generateAIResponse = (userInput: string): { content: string metadata:      } => {
     const input = userInput.toLowerCase();
     
     // AI response logic based on user input
     if (input.includes('ai') || input.includes('artificial intelligence')) {
-      return {
-        content: `At Zion Tech Group, we offer cutting-edge AI solutions including:\n\n🤖 **AI Autonomous Research Assistant** - Automates research tasks\n📊 **AI Business Intelligence** - Data-driven insights\n🔄 **AI Process Automation** - Streamline operations\n🎯 **AI Predictive Analytics** - Future-proof decisions\n\nOur AI solutions are designed to transform your business operations and drive innovation. Would you like to learn more about any specific AI service?`,
-        metadata: {
-          confidence: 0.95,
+      return { content: `At Zion Tech Group, we offer cutting-edge AI solutions including:\n\n🤖 **AI Autonomous Research Assistant** - Automates research tasks\n📊 **AI Business Intelligence** - Data-driven insights\n🔄 **AI Process Automation** - Streamline operations\n🎯 **AI Predictive Analytics** - Future-proof decisions\n\nOur AI solutions are designed to transform your business operations and drive innovation. Would you like to learn more about  specific AI service?`,
+        metadata: { confidence: 0.95,
           sources: ['AI Solutions Catalog', 'Case Studies'],
           suggestions: [
             'Tell me about your AI pricing',
@@ -189,10 +183,8 @@ export function ChatAssistant({
         }
       };
     } else if (input.includes('quantum') || input.includes('computing')) {
-      return {
-        content: `Our quantum computing services are at the forefront of innovation:\n\n⚛️ **Quantum Machine Learning** - Next-gen AI algorithms\n🔐 **Quantum Cryptography** - Unbreakable security\n🧮 **Quantum Optimization** - Solve complex problems\n🌐 **Quantum Cloud Platform** - Access quantum power\n\nWe're working with leading quantum hardware providers to bring these capabilities to businesses like yours.`,
-        metadata: {
-          confidence: 0.92,
+      return { content: `Our quantum computing services are at the forefront of innovation:\n\n⚛️ **Quantum Machine Learning** - Next-gen AI algorithms\n🔐 **Quantum Cryptography** - Unbreakable security\n🧮 **Quantum Optimization** - Solve complex problems\n🌐 **Quantum Cloud Platform** - Access quantum power\n\nWe're working with leading quantum hardware providers to bring these capabilities to businesses like yours.`,
+        metadata: { confidence: 0.92,
           sources: ['Quantum Computing Research', 'Partnerships'],
           suggestions: [
             'What quantum problems can you solve?',
@@ -203,10 +195,8 @@ export function ChatAssistant({
         }
       };
     } else if (input.includes('saas') || input.includes('software')) {
-      return {
-        content: `Our micro SAAS solutions are designed for modern businesses:\n\n💼 **AI Sales Copilot** - Boost sales performance\n📈 **AI Marketing Automation** - Scale your marketing\n👥 **AI HR Platform** - Streamline HR processes\n📊 **AI Analytics Dashboard** - Real-time insights\n\nEach solution is modular, scalable, and designed to integrate seamlessly with your existing systems.`,
-        metadata: {
-          confidence: 0.88,
+      return { content: `Our micro SAAS solutions are designed for modern businesses:\n\n💼 **AI Sales Copilot** - Boost sales performance\n📈 **AI Marketing Automation** - Scale your marketing\n👥 **AI HR Platform** - Streamline HR processes\n📊 **AI Analytics Dashboard** - Real-time insights\n\nEach solution is modular, scalable, and designed to integrate seamlessly with your existing systems.`,
+        metadata: { confidence: 0.88,
           sources: ['SAAS Portfolio', 'Integration Guide'],
           suggestions: [
             'What are your SAAS pricing tiers?',
@@ -217,10 +207,8 @@ export function ChatAssistant({
         }
       };
     } else if (input.includes('pricing') || input.includes('cost') || input.includes('price')) {
-      return {
-        content: `We offer flexible pricing to meet your business needs:\n\n🚀 **Starter Plan** - $99/month\n   • Basic AI features\n   • Email support\n   • 5 user licenses\n\n💎 **Professional Plan** - $299/month\n   • Advanced AI capabilities\n   • Priority support\n   • Unlimited users\n   • Custom integrations\n\n🏢 **Enterprise Plan** - Custom pricing\n   • Full AI suite\n   • Dedicated support\n   • Custom development\n   • SLA guarantees\n\nWould you like me to connect you with our sales team for a personalized quote?`,
-        metadata: {
-          confidence: 0.90,
+      return { content: `We offer flexible pricing to meet your business needs:\n\n🚀 **Starter Plan** - $99/month\n   • Basic AI features\n   • Email support\n   • 5 user licenses\n\n💎 **Professional Plan** - $299/month\n   • Advanced AI capabilities\n   • Priority support\n   • Unlimited users\n   • Custom integrations\n\n🏢 **Enterprise Plan** - Custom pricing\n   • Full AI suite\n   • Dedicated support\n   • Custom development\n   • SLA guarantees\n\nWould you like me to connect you with our sales team for a personalized quote?`,
+        metadata: { confidence: 0.90,
           sources: ['Pricing Guide', 'Sales Team'],
           suggestions: [
             'Schedule a demo',
@@ -231,10 +219,8 @@ export function ChatAssistant({
         }
       };
     } else if (input.includes('demo') || input.includes('trial')) {
-      return {
-        content: `Great choice! Here's how to get started:\n\n📅 **Free Demo** - 30-minute personalized walkthrough\n🎯 **Free Trial** - 14 days with full features\n👨‍💼 **Consultation** - Free strategy session\n\nI can help you schedule any of these options. What would you prefer?`,
-        metadata: {
-          confidence: 0.85,
+      return { content: `Great choice! Here's how to get started:\n\n📅 **Free Demo** - 30-minute personalized walkthrough\n🎯 **Free Trial** - 14 days with full features\n👨‍💼 **Consultation** - Free strategy session\n\nI can help you schedule  of these options. What would you prefer?`,
+        metadata: { confidence: 0.85,
           suggestions: [
             'Schedule a demo',
             'Start free trial',
@@ -244,10 +230,8 @@ export function ChatAssistant({
         }
       };
     } else {
-      return {
-        content: `I understand you're asking about "${userInput}". While I'm a specialized AI assistant for Zion Tech Group, I'd be happy to help you with:\n\n• Our AI and technology services\n• Business solutions and consulting\n• Product information and demos\n• Technical support and guidance\n\nCould you rephrase your question or ask about our specific services?`,
-        metadata: {
-          confidence: 0.75,
+      return { content: `I understand you're asking about "${userInput    }". While I'm a specialized AI assistant for Zion Tech Group, I'd be happy to help you with:\n\n• Our AI and technology services\n• Business solutions and consulting\n• Product information and demos\n• Technical support and guidance\n\nCould you rephrase your question or ask about our specific services?`,
+        metadata: { confidence: 0.75,
           suggestions: [
             'What services do you offer?',
             'Tell me about Zion Tech Group',
@@ -262,19 +246,19 @@ export function ChatAssistant({
   // Voice recognition setup
   useEffect(() => {
     if (enabled && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as any).webkitSpeechRecognition;
+      const SpeechRecognition = (window as ).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: any) => {
+      recognitionRef.current.onresult = (event: ) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
+      recognitionRef.current.onerror = (event: ) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -284,13 +268,11 @@ export function ChatAssistant({
   // Initialize with welcome message
   useEffect(() => {
     if (enabled && messages.length === 0) {
-      const welcomeMessage: Message = {
-        id: 'welcome',
+      const welcomeMessage: Message = { id: 'welcome',
         type: 'assistant',
         content: 'Hello! I\'m your AI assistant. How can I help you today?',
         timestamp: new Date(),
-        metadata: {
-          suggestions: [
+        metadata: { suggestions: [
             'Tell me about your services',
             'Help me with pricing',
             'Schedule a consultation',
@@ -319,8 +301,7 @@ export function ChatAssistant({
   const sendMessage = useCallback(async (content: string) => {
     if (!content.trim()) return;
 
-    const userMessage: Message = {
-      id: Date.now().toString(),
+    const userMessage: Message = { id: Date.now().toString(),
       type: 'user',
       content: content.trim(),
       timestamp: new Date(),
@@ -335,13 +316,11 @@ export function ChatAssistant({
       // Simulate AI response (replace with actual API call)
       await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
       
-      const aiResponse: Message = {
-        id: (Date.now() + 1).toString(),
+      const aiResponse: Message = { id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: generateAIResponse(content).content,
         timestamp: new Date(),
-        metadata: {
-          confidence: 0.95,
+        metadata: { confidence: 0.95,
           suggestions: generateSuggestions(content),
         }
       };
@@ -350,8 +329,7 @@ export function ChatAssistant({
     } catch (error) {
       console.error('Error sending message:', error);
       
-      const errorMessage: Message = {
-        id: (Date.now() + 1).toString(),
+      const errorMessage: Message = { id: (Date.now() + 1).toString(),
         type: 'assistant',
         content: 'Sorry, I encountered an error. Please try again.',
         timestamp: new Date(),
@@ -406,13 +384,12 @@ export function ChatAssistant({
 
   // Export chat
   const exportChat = useCallback(() => {
-    const chatData = messages.map(msg => ({
-      type: msg.type,
+    const chatData = messages.map(msg => ({ type: msg.type,
       content: msg.content,
       timestamp: msg.timestamp.toISOString(),
     }));
     
-    const blob = new Blob([JSON.stringify(chatData, null, 2)], { type: 'application/json' });
+    const blob = new Blob([JSON.stringify(chatData, null, 2)], { type: 'application/json'     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -430,8 +407,7 @@ export function ChatAssistant({
     'top-left': 'top-4 left-4',
   };
 
-  const themeClasses = {
-    light: 'bg-white text-gray-900 border-gray-200',
+  const themeClasses = { light: 'bg-white text-gray-900 border-gray-200',
     dark: 'bg-gray-900 text-white border-gray-700',
   };
 
@@ -440,8 +416,8 @@ export function ChatAssistant({
       <motion.button
         onClick={() => setIsOpen(true)}
         className={`fixed ${positionClasses[position]} z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group`}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.1     }}
+        whileTap={{ scale: 0.9     }}
         title="Chat with AI Assistant"
         aria-label="Open AI chat assistant"
       >
@@ -567,8 +543,8 @@ export function ChatAssistant({
                         <Bot className="w-4 h-4 text-blue-500" />
                         <div className="flex space-x-1">
                           <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s'     }} />
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s'     }} />
                         </div>
                       </div>
                     </div>
@@ -587,8 +563,8 @@ export function ChatAssistant({
                         key={index}
                         onClick={() => handleSuggestionClick(suggestion)}
                         className="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs rounded-full hover:bg-blue-100 transition-colors border border-blue-200"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05     }}
+                        whileTap={{ scale: 0.95     }}
                       >
                         {suggestion}
                       </motion.button>
@@ -673,14 +649,12 @@ export function ChatAssistant({
                   <div className="flex items-center space-x-4">
                     <button
                       onClick={clearChat}
-                      className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
-                    >
+                      className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
                       Clear chat
                     </button>
                     <button
                       onClick={exportChat}
-                      className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
-                    >
+                      className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
                       Export
                     </button>
                   </div>
@@ -689,8 +663,7 @@ export function ChatAssistant({
                   {/* {showSuggestions && (
                     <button
                       onClick={() => setShowSuggestions(!showSuggestions)}
-                      className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors"
-                    >
+                      className="hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
                       {showSuggestions ? 'Hide' : 'Show'} suggestions
                     </button>
                   )} */}
@@ -707,15 +680,13 @@ export function ChatAssistant({
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              className="border-b border-gray-200 p-4 bg-gray-50"
-            >
+              className="border-b border-gray-200 p-4 bg-gray-50">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-700">Clear chat history</span>
                   <button
                     onClick={clearChat}
-                    className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors"
-                  >
+                    className="px-3 py-1 bg-red-100 text-red-700 text-xs rounded-lg hover:bg-red-200 transition-colors">
                     Clear
                   </button>
                 </div>
@@ -724,8 +695,7 @@ export function ChatAssistant({
                   <span className="text-sm text-gray-700">Export chat</span>
                   <button
                     onClick={exportChat}
-                    className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors"
-                  >
+                    className="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-lg hover:bg-blue-200 transition-colors">
                     Export
                   </button>
                 </div>
@@ -785,8 +755,7 @@ export function ChatAssistant({
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex justify-start"
-                >
+                  className="flex justify-start">
                   <div className="max-w-[80%]">
                     <div className="p-3 rounded-2xl bg-gray-100 text-gray-800">
                       <div className="flex items-center gap-2">
@@ -795,8 +764,8 @@ export function ChatAssistant({
                         </div>
                         <div className="flex items-center gap-1">
                           <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s'     }} />
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s'     }} />
                         </div>
                       </div>
                     </div>
@@ -816,8 +785,8 @@ export function ChatAssistant({
                       key={index}
                       onClick={() => handleSuggestionClick(suggestion)}
                       className="px-3 py-1.5 bg-blue-50 text-blue-700 text-xs rounded-full hover:bg-blue-100 transition-colors border border-blue-200"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05     }}
+                      whileTap={{ scale: 0.95     }}
                     >
                       {suggestion}
                     </motion.button>

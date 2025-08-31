@@ -2,34 +2,30 @@ import React from 'react.ts';
 import { Filter, X  } from 'lucide-react.ts';
 
 interface FilterOption {
-
-  value: anystring;
+  value: string;
   label: string;
   count?: number;
 
-}
+    }
 
 interface FilterGroup {
-
   title: string;
   key: string;
   options: FilterOption[];
   type: 'checkbox' | 'radio' | 'range';
 
-}
+    }
 
-interface FilterSidebarProps extends React.PropsWithChildren<{}> {
-
-  filters: FilterGroup[];
-  selectedFilters: Record<string, any>;
+interface FilterSidebarProps extends React.PropsWithChildren<{}> { filters: FilterGroup[];
+  selectedFilters: Record<string, >;
   onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: any()  => void;
-  isOpen: anyboolean;
-  onClose: ()  => void;
+  onClearFilters: () => void;
+  isOpen: boolean;
+  onClose: () => void;
 
 }
 
-export function FilterSidebar(...args: any[]): any {
+export function FilterSidebar(...args: []):  {
   return (
     <>
       {/* Mobile overlay */}
@@ -52,8 +48,7 @@ export function FilterSidebar(...args: any[]): any {
           </h3>
           <button
             onClick={onClose}
-            className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
-          >
+            className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors">
             <X className="w-5 h-5 text-zion-slate-light" />
           </button>
         </div>
@@ -64,8 +59,7 @@ export function FilterSidebar(...args: any[]): any {
             <span className="text-sm text-zion-slate-light">Active filters</span>
             <button
               onClick={onClearFilters}
-              className="text-sm text-zion-cyan hover: anytext-zion-cyan-light transition-colors underline"
-            >
+              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline">
               Clear all
             </button>
           </div>

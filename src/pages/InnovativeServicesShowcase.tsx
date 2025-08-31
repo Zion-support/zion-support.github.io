@@ -69,7 +69,7 @@ const InnovativeServicesShowcase: React.FC = () => {
     return filtered;
   }, [searchTerm, selectedCategory, priceRange, sortBy]);
 
-  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
+  const ServiceCard: React.FC = ({ service }) => (
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-start justify-between mb-4">
         <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -208,8 +208,7 @@ const InnovativeServicesShowcase: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 {categories.map(category => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category}
@@ -223,8 +222,7 @@ const InnovativeServicesShowcase: React.FC = () => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 {priceRanges.map(range => (
                   <option key={range.value} value={range.value}>{range.label}</option>
                 ))}
@@ -236,8 +234,7 @@ const InnovativeServicesShowcase: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              >
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
                 {sortOptions.map(option => (
                   <option key={option.value} value={option.value}>{option.label}</option>
                 ))}

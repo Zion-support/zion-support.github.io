@@ -29,33 +29,27 @@ import {
 
 export default function AIContentCreation() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Writing",
       description: "Intelligent content generation with natural language processing and creative assistance."
     },
-    {
-      icon: PenTool,
+    { icon: PenTool,
       title: "Multi-Format Content",
       description: "Create blogs, articles, social media posts, emails, and marketing copy with AI."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Audience Optimization",
       description: "AI-driven content optimization for specific audiences and engagement goals."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Content Automation",
       description: "Automated content workflows and intelligent content scheduling."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Performance Analytics",
       description: "Content performance tracking and optimization recommendations."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Quality Assurance",
       description: "AI-powered grammar checking, plagiarism detection, and content validation."
     }
@@ -71,57 +65,46 @@ export default function AIContentCreation() {
   ];
 
   const contentTypes = [
-    {
-      type: "Blog Posts & Articles",
+    { type: "Blog Posts & Articles",
       description: "Long-form content creation with SEO optimization and audience targeting",
       icon: FileText
     },
-    {
-      type: "Social Media Content",
+    { type: "Social Media Content",
       description: "Platform-specific content for Facebook, Twitter, LinkedIn, and Instagram",
       icon: MessageSquare
     },
-    {
-      type: "Email Marketing",
+    { type: "Email Marketing",
       description: "Personalized email campaigns, newsletters, and automated sequences",
       icon: Mail
     },
-    {
-      type: "Marketing Copy",
+    { type: "Marketing Copy",
       description: "Ad copy, landing pages, product descriptions, and promotional content",
       icon: Target
     },
-    {
-      type: "Visual Content",
+    { type: "Visual Content",
       description: "AI-generated images, infographics, and visual storytelling elements",
       icon: Image
     },
-    {
-      type: "Video Scripts",
+    { type: "Video Scripts",
       description: "Video content planning, scripting, and storyboard creation",
       icon: Video
     }
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Product descriptions, marketing campaigns, and customer engagement content"
     },
-    {
-      industry: "B2B Marketing",
+    { industry: "B2B Marketing",
       description: "Thought leadership content, case studies, and industry insights"
     },
-    {
-      industry: "Digital Agencies",
+    { industry: "Digital Agencies",
       description: "Client content creation, social media management, and campaign content"
     },
-    {
-      industry: "Publishing",
+    { industry: "Publishing",
       description: "Article generation, content curation, and editorial assistance"
     },
-    {
-      industry: "Education",
+    { industry: "Education",
       description: "Course content, learning materials, and educational resources"
     }
   ];
@@ -140,9 +123,8 @@ export default function AIContentCreation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-full border border-pink-400/30 mb-6">
               <PenTool className="w-5 h-5 text-pink-400 mr-2" />
               <span className="text-pink-300 font-medium">AI Content Creation</span>
@@ -162,17 +144,15 @@ export default function AIContentCreation() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-pink-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-pink-500/25">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hover:bg-pink-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hover:bg-pink-400/10 transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>
@@ -186,9 +166,8 @@ export default function AIContentCreation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Advanced Content Creation Features
             </h2>
@@ -205,8 +184,7 @@ export default function AIContentCreation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-pink-400/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-pink-400/30 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-400/20 to-rose-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-pink-400" />
                 </div>
@@ -224,9 +202,8 @@ export default function AIContentCreation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Measurable Content Impact
             </h2>
@@ -246,8 +223,7 @@ export default function AIContentCreation() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
-                  >
+                    className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-pink-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </motion.div>
@@ -290,9 +266,8 @@ export default function AIContentCreation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Comprehensive Content Types
             </h2>
@@ -309,8 +284,7 @@ export default function AIContentCreation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-pink-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-pink-400/30 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-pink-400/20 to-rose-500/20 rounded-lg flex items-center justify-center">
                     <contentType.icon className="w-5 h-5 text-pink-400" />
@@ -330,9 +304,8 @@ export default function AIContentCreation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -349,8 +322,7 @@ export default function AIContentCreation() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-pink-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-pink-400/30 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-pink-400/20 to-rose-500/20 rounded-lg flex items-center justify-center">
                     <Globe className="w-5 h-5 text-pink-400" />
@@ -370,9 +342,8 @@ export default function AIContentCreation() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-pink-500/10 via-rose-500/10 to-red-500/10 p-12 rounded-2xl border border-pink-400/20 text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="bg-gradient-to-r from-pink-500/10 via-rose-500/10 to-red-500/10 p-12 rounded-2xl border border-pink-400/20 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Scale Your Content?
             </h2>
@@ -382,17 +353,15 @@ export default function AIContentCreation() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-pink-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all duration-300 shadow-lg hover:shadow-pink-500/25">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hover:bg-pink-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-pink-400/30 text-pink-300 font-semibold rounded-lg hover:bg-pink-400/10 transition-all duration-300">
                 Contact Sales
               </motion.button>
             </div>

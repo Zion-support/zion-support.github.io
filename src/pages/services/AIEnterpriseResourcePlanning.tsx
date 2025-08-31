@@ -21,41 +21,34 @@ import { SEO } from '../../components/SEO';
 
 const AIEnterpriseResourcePlanning = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Forecasting",
       description: "Advanced machine learning algorithms predict demand, optimize inventory, and forecast market trends with 95% accuracy"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Real-Time Data Integration",
       description: "Seamlessly connect all business systems for instant data synchronization and unified reporting"
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Intelligent Analytics",
       description: "AI-driven insights that identify optimization opportunities and predict business outcomes"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Collaborative Workflows",
       description: "Streamlined processes that enhance team productivity and cross-departmental coordination"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security with role-based access control and comprehensive audit trails"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Automated Operations",
       description: "Reduce manual tasks by 80% with intelligent automation and workflow optimization"
     }
   ];
 
   const services = [
-    {
-      name: "Starter Plan",
+    { name: "Starter Plan",
       price: "$2,999",
       period: "/month",
       features: [
@@ -67,8 +60,7 @@ const AIEnterpriseResourcePlanning = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional Plan",
+    { name: "Professional Plan",
       price: "$5,999",
       period: "/month",
       features: [
@@ -81,8 +73,7 @@ const AIEnterpriseResourcePlanning = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise Plan",
+    { name: "Enterprise Plan",
       price: "$12,999",
       period: "/month",
       features: [
@@ -98,23 +89,19 @@ const AIEnterpriseResourcePlanning = () => {
   ];
 
   const useCases = [
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Optimize production planning, inventory management, and supply chain operations with AI-driven insights",
       benefits: ["30% reduction in inventory costs", "25% improvement in production efficiency", "40% faster decision-making"]
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       description: "Streamline operations from procurement to customer service with intelligent automation and analytics",
       benefits: ["20% increase in customer satisfaction", "35% reduction in operational costs", "50% faster market response"]
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Enhance patient care coordination, resource management, and administrative efficiency",
       benefits: ["Improved patient outcomes", "25% reduction in administrative overhead", "Better resource utilization"]
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       description: "Optimize risk management, compliance, and customer relationship management",
       benefits: ["Enhanced risk assessment", "Improved regulatory compliance", "Better customer insights"]
     }
@@ -146,9 +133,8 @@ const AIEnterpriseResourcePlanning = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Enterprise Resource Planning
             </h1>
@@ -158,8 +144,7 @@ const AIEnterpriseResourcePlanning = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1">
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -177,10 +162,9 @@ const AIEnterpriseResourcePlanning = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Intelligent Features That Drive Results
             </h2>
@@ -195,10 +179,9 @@ const AIEnterpriseResourcePlanning = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -216,10 +199,9 @@ const AIEnterpriseResourcePlanning = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
@@ -234,7 +216,7 @@ const AIEnterpriseResourcePlanning = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   service.popular 
@@ -290,10 +272,9 @@ const AIEnterpriseResourcePlanning = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Solutions
             </h2>
@@ -308,10 +289,9 @@ const AIEnterpriseResourcePlanning = () => {
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8">
                 <div className="flex items-center mb-6">
                   <Target className="w-8 h-8 text-zion-cyan mr-3" />
                   <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
@@ -337,10 +317,9 @@ const AIEnterpriseResourcePlanning = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge Technologies
             </h2>
@@ -355,10 +334,9 @@ const AIEnterpriseResourcePlanning = () => {
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Activity className="w-6 h-6 text-white" />
                 </div>
@@ -375,10 +353,9 @@ const AIEnterpriseResourcePlanning = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-12 max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -389,8 +366,7 @@ const AIEnterpriseResourcePlanning = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1">
                   Start Your Transformation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>

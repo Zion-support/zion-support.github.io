@@ -11,11 +11,10 @@ export interface NewService {
   benefits: string[];
   tags: string[];
   marketPrice: string;
-}
+    }
 
 export const NEW_SERVICES_2025: NewService[] = [
-  {
-    id: 'rag-docs-chatbot',
+  { id: 'rag-docs-chatbot',
     title: 'RAG Chatbot for Your Docs',
     description: 'Deploy a secure Retrieval-Augmented Generation chatbot over your knowledge base (PDFs, sites, Confluence).',
     category: 'AI & Automation',
@@ -38,8 +37,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     tags: ['RAG', 'Chatbot', 'Docs', 'Embeddings'],
     marketPrice: '$299–$999/mo + setup $2k–$10k',
   },
-  {
-    id: 'ai-lead-scoring',
+  { id: 'ai-lead-scoring',
     title: 'AI Lead Scoring for CRM',
     description: 'Machine learning scoring on contacts and opportunities for Salesforce/HubSpot/Pipedrive.',
     category: 'Sales AI',
@@ -57,8 +55,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     tags: ['Sales', 'CRM', 'ML'],
     marketPrice: '$249–$1,499/mo + setup $3k–$15k',
   },
-  {
-    id: 'etl-pipeline-starter',
+  { id: 'etl-pipeline-starter',
     title: 'ETL Pipeline Starter Kit',
     description: 'Production-ready ELT/ETL template with orchestrator, dbt models, and observability.',
     category: 'Data & Analytics',
@@ -76,8 +73,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     tags: ['ETL', 'dbt', 'Airflow', 'Observability'],
     marketPrice: '$5k–$25k fixed + support $1k/mo',
   },
-  {
-    id: 'seo-technical-auditor',
+  { id: 'seo-technical-auditor',
     title: 'AI Technical SEO Auditor',
     description: 'Crawls your site and generates prioritized technical SEO fixes with AI explanations.',
     category: 'Growth',
@@ -90,8 +86,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     tags: ['SEO', 'CWV', 'Crawler'],
     marketPrice: '$99–$499/mo',
   },
-  {
-    id: 'gdpr-dsar-portal',
+  { id: 'gdpr-dsar-portal',
     title: 'GDPR/CCPA DSAR Portal',
     description: 'Hosted portal to intake, verify, and fulfill data subject access requests with audit trails.',
     category: 'Compliance',
@@ -104,8 +99,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     tags: ['GDPR', 'CCPA', 'Privacy'],
     marketPrice: '$399–$1,499/mo',
   },
-  {
-    id: 'statuspage-saas',
+  { id: 'statuspage-saas',
     title: 'White‑Label Status Page',
     description: 'Custom-branded status page with incident comms and SLA analytics.',
     category: 'DevOps',
@@ -118,8 +112,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     tags: ['Status', 'SRE'],
     marketPrice: '$49–$299/mo',
   },
-  {
-    id: 'uptime-monitor',
+  { id: 'uptime-monitor',
     title: 'Global Uptime & API Monitor',
     description: 'Multi-region uptime checks, API assertions, and alerting with runbooks.',
     category: 'DevOps',
@@ -132,8 +125,7 @@ export const NEW_SERVICES_2025: NewService[] = [
     tags: ['Uptime', 'Monitoring', 'Synthetics'],
     marketPrice: '$29–$299/mo',
   },
-  {
-    id: 'invoice-ocr',
+  { id: 'invoice-ocr',
     title: 'Invoice OCR & AP Automation',
     description: 'Extract fields from invoices and sync to your accounting system with approvals.',
     category: 'Operations',

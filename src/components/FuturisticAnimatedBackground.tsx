@@ -23,8 +23,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
     let time = 0;
 
     // Particle system
-    const particles: Array<{
-      x: number;
+    const particles: Array<{ x: number;
       y: number;
       vx: number;
       vy: number;
@@ -32,7 +31,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       color: string;
       life: number;
       maxLife: number;
-    }> = [];
+        }> = [];
 
     // Create particles
     const createParticle = () => {

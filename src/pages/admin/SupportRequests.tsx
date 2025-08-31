@@ -12,8 +12,7 @@ import { SEO } from "@/components/SEO";
 
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
-  {
-    id: "SR-1001",
+  { id: "SR-1001",
     user: "john.doe@example.com",
     userId: "user-123",
     issue: "Cannot access account after password reset",
@@ -23,9 +22,8 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T15:45:00Z",
     category: "authentication"
   },
-  {
-    id: "SR-1002",
-    user: "sarah.smith@company.co",
+  { id: "SR-1002",
+    user: "sarah.smith@comp.co",
     userId: "user-456",
     issue: "Payment failed but funds were deducted",
     status: "in-progress",
@@ -34,8 +32,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T13:20:00Z",
     category: "billing"
   },
-  {
-    id: "SR-1003",
+  { id: "SR-1003",
     user: "tech.guru@startup.io",
     userId: "user-789",
     issue: "Unable to download invoice PDF",
@@ -45,8 +42,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T11:00:00Z",
     category: "billing"
   },
-  {
-    id: "SR-1004",
+  { id: "SR-1004",
     user: "developer@codelab.dev",
     userId: "user-235",
     issue: "API integration documentation is outdated",
@@ -56,8 +52,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T16:45:00Z",
     category: "api"
   },
-  {
-    id: "SR-1005",
+  { id: "SR-1005",
     user: "maria.rodriguez@design.co",
     userId: "user-567",
     issue: "Dispute with freelancer over delivered work quality",
@@ -67,9 +62,8 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T09:15:00Z",
     category: "disputes"
   },
-  {
-    id: "SR-1006",
-    user: "alex.wong@datacompany.com",
+  { id: "SR-1006",
+    user: "alex.wong@datacomp.com",
     userId: "user-890",
     issue: "Profile verification pending for over 7 days",
     status: "resolved",
@@ -78,8 +72,7 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-15T08:30:00Z",
     category: "verification"
   },
-  {
-    id: "SR-1007",
+  { id: "SR-1007",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
     issue: "Cannot upload portfolio images",
@@ -209,7 +202,7 @@ export default function SupportRequests() {
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
-                  onChange={(e: any) => setSearchQuery(e.target.value)}
+                  onChange={(e: ) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>

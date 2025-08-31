@@ -27,12 +27,11 @@ export default function News() {
     { id: 'cloud', name: 'Cloud & Infrastructure', count: 0 },
     { id: 'security', name: 'Security & Compliance', count: 0 },
     { id: 'quantum', name: 'Quantum Computing', count: 0 },
-    { id: 'company', name: 'Company Updates', count: 0 }
+    { id: 'comp', name: 'Comp Updates', count: 0 }
   ];
 
   const newsArticles = [
-    {
-      id: 1,
+    { id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Business Intelligence Platform',
       excerpt: 'Our new AI-powered BI solution transforms how enterprises analyze data and make decisions, featuring advanced machine learning algorithms and real-time insights.',
       category: 'ai',
@@ -42,8 +41,7 @@ export default function News() {
       featured: true,
       tags: ['AI', 'Business Intelligence', 'Launch', 'Enterprise']
     },
-    {
-      id: 2,
+    { id: 2,
       title: 'Quantum Computing Breakthrough: Zion Tech Achieves 1000+ Qubit Milestone',
       excerpt: 'Our quantum research team has successfully demonstrated a 1000+ qubit quantum processor, marking a significant advancement in quantum computing capabilities.',
       category: 'quantum',
@@ -53,8 +51,7 @@ export default function News() {
       featured: true,
       tags: ['Quantum Computing', 'Research', 'Breakthrough', 'Innovation']
     },
-    {
-      id: 3,
+    { id: 3,
       title: 'New Cloud Security Framework Addresses Zero-Day Vulnerabilities',
       excerpt: 'Zion Tech introduces an advanced cloud security framework that proactively identifies and mitigates zero-day vulnerabilities before they can be exploited.',
       category: 'security',
@@ -64,19 +61,17 @@ export default function News() {
       featured: false,
       tags: ['Security', 'Cloud', 'Zero-Day', 'Framework']
     },
-    {
-      id: 4,
+    { id: 4,
       title: 'Partnership with Microsoft Azure Expands Cloud Capabilities',
       excerpt: 'Strategic partnership announcement with Microsoft Azure to deliver enhanced cloud solutions and AI services to enterprise customers worldwide.',
-      category: 'company',
+      category: 'comp',
       author: 'Jennifer Lee',
       date: '2024-11-22',
       readTime: '4 min read',
       featured: false,
       tags: ['Partnership', 'Microsoft', 'Azure', 'Cloud']
     },
-    {
-      id: 5,
+    { id: 5,
       title: 'AI Ethics Guidelines: Setting Industry Standards for Responsible AI',
       excerpt: 'Zion Tech publishes comprehensive AI ethics guidelines, establishing new industry standards for responsible artificial intelligence development and deployment.',
       category: 'ai',
@@ -86,8 +81,7 @@ export default function News() {
       featured: false,
       tags: ['AI Ethics', 'Guidelines', 'Responsible AI', 'Standards']
     },
-    {
-      id: 6,
+    { id: 6,
       title: 'Edge Computing Solutions for IoT Deployments',
       excerpt: 'New edge computing platform enables real-time processing for IoT devices, reducing latency and improving performance in industrial applications.',
       category: 'cloud',
@@ -125,14 +119,14 @@ export default function News() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5     }}
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
                 <Newspaper className="h-10 w-10 text-white" />
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-4">Latest News & Updates</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Stay informed about the latest developments in AI, quantum computing, cloud technology, and company updates from Zion Tech Group.
+                Stay informed about the latest developments in AI, quantum computing, cloud technology, and comp updates from Zion Tech Group.
               </p>
             </motion.div>
           </div>
@@ -159,8 +153,7 @@ export default function News() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              >
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
                 {categories.map(category => (
                   <option key={category.id} value={category.id}>
                     {category.name} ({category.count})
@@ -181,9 +174,8 @@ export default function News() {
                   key={article.id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow"
-                >
+                  transition={{ delay: index * 0.1     }}
+                  className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
                   <div className="p-6">
                     <div className="flex items-center space-x-2 mb-3">
                       <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-medium">
@@ -218,16 +210,14 @@ export default function News() {
                         {article.tags.slice(0, 3).map(tag => (
                           <span
                             key={tag}
-                            className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
-                          >
+                            className="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded-full">
                             {tag}
                           </span>
                         ))}
                       </div>
                       <a
                         href={`/news/${article.id}`}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                      >
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
                         Read More
                         <ArrowRight className="ml-1 h-4 w-4" />
                       </a>
@@ -250,9 +240,8 @@ export default function News() {
                 key={article.id}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-              >
+                transition={{ delay: index * 0.1     }}
+                className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-start space-x-4">
                   <div className="flex-1">
                     <div className="flex items-center space-x-2 mb-2">
@@ -287,8 +276,7 @@ export default function News() {
                         </button>
                         <a
                           href={`/news/${article.id}`}
-                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                        >
+                          className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
                           Read More
                           <ArrowRight className="ml-1 h-4 w-4" />
                         </a>
@@ -313,9 +301,8 @@ export default function News() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="mt-16 text-center"
-        >
+          transition={{ delay: 0.5     }}
+          className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">Stay Updated</h2>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">

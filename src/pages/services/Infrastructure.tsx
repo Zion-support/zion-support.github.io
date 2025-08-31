@@ -3,22 +3,19 @@ import { Server, Network, Database, Shield, Cpu, HardDrive, Zap, BarChart3 } fro
 
 const InfrastructureServices = () => {
   const infrastructureServices = [
-    {
-      title: "Network Design & Management",
+    { title: "Network Design & Management",
       description: "Scalable network architecture and optimization for enterprise needs.",
       price: "From $5,000/month",
       features: ["Network architecture design", "Performance optimization", "Security implementation", "24/7 monitoring"],
       icon: Network
     },
-    {
-      title: "System Administration",
+    { title: "System Administration",
       description: "Comprehensive system management and maintenance services.",
       price: "From $3,500/month",
       features: ["Server management", "Performance tuning", "Backup & recovery", "Security updates"],
       icon: Server
     },
-    {
-      title: "Data Center Solutions",
+    { title: "Data Center Solutions",
       description: "Reliable hosting, colocation, and data center management.",
       price: "From $8,000/month",
       features: ["Colocation services", "Managed hosting", "Disaster recovery", "Compliance support"],
@@ -27,20 +24,17 @@ const InfrastructureServices = () => {
   ];
 
   const technologies = [
-    {
-      name: "Virtualization",
+    { name: "Virtualization",
       description: "VMware, Hyper-V, and container solutions",
       icon: Cpu,
       features: ["VMware vSphere", "Docker containers", "Kubernetes orchestration", "Resource optimization"]
     },
-    {
-      name: "Storage Solutions",
+    { name: "Storage Solutions",
       description: "Enterprise storage and backup systems",
       icon: HardDrive,
       features: ["SAN/NAS systems", "Backup solutions", "Data replication", "Disaster recovery"]
     },
-    {
-      name: "Network Security",
+    { name: "Network Security",
       description: "Advanced network protection and monitoring",
       icon: Shield,
       features: ["Firewall management", "Intrusion detection", "VPN solutions", "Security monitoring"]

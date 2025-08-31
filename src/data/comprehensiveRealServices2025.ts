@@ -17,18 +17,17 @@ export interface ComprehensiveRealService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
   demoUrl?: string;
@@ -37,8 +36,7 @@ export interface ComprehensiveRealService {
 
 export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   // AI-Powered Business Intelligence & Analytics
-  {
-    id: "ai-business-intelligence-platform",
+  { id: "ai-business-intelligence-platform",
     title: "AI Business Intelligence Platform",
     description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
     category: "AI & Analytics",
@@ -85,13 +83,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$2,999 - $8,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -104,8 +100,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // AI-Powered Content Creation Suite
-  {
-    id: "ai-content-creation-suite",
+  { id: "ai-content-creation-suite",
     title: "AI Content Creation Suite",
     description: "Comprehensive AI-powered content creation platform that generates high-quality, SEO-optimized content across multiple formats and channels.",
     category: "AI & Marketing",
@@ -152,13 +147,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$899 - $2,499/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["GPT-4", "BERT", "React", "Node.js", "MongoDB"],
       integrations: ["WordPress", "Shopify", "Mailchimp", "Hootsuite", "Google Analytics"],
       apiEndpoints: 75,
       uptime: "99.8%",
@@ -171,8 +164,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // AI-Powered Customer Support Platform
-  {
-    id: "ai-customer-support-platform",
+  { id: "ai-customer-support-platform",
     title: "AI Customer Support Platform",
     description: "Intelligent customer support solution that provides instant responses, ticket routing, and customer satisfaction optimization using advanced AI.",
     category: "AI & Support",
@@ -219,13 +211,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$699 - $1,999/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["NLP", "Machine Learning", "React", "Node.js", "Redis"],
+    technicalSpecs: { technology: ["NLP", "Machine Learning", "React", "Node.js", "Redis"],
       integrations: ["Zendesk", "Intercom", "Salesforce", "Shopify", "Slack"],
       apiEndpoints: 100,
       uptime: "99.9%",
@@ -238,8 +228,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // AI-Powered Sales Copilot
-  {
-    id: "ai-sales-copilot",
+  { id: "ai-sales-copilot",
     title: "AI Sales Copilot",
     description: "Intelligent sales assistant that automates lead qualification, follow-ups, and sales process optimization using advanced AI.",
     category: "AI & Sales",
@@ -286,13 +275,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$1,199 - $3,499/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "NLP", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Machine Learning", "NLP", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "Pipedrive", "Outreach", "LinkedIn"],
       apiEndpoints: 120,
       uptime: "99.9%",
@@ -305,8 +292,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // AI-Powered Cybersecurity Suite
-  {
-    id: "ai-cybersecurity-suite",
+  { id: "ai-cybersecurity-suite",
     title: "AI-Powered Cybersecurity Suite",
     description: "Comprehensive cybersecurity solution that uses artificial intelligence to detect, prevent, and respond to threats in real-time.",
     category: "AI & Security",
@@ -353,13 +339,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$1,899 - $5,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "Deep Learning", "Python", "React", "Elasticsearch"],
+    technicalSpecs: { technology: ["Machine Learning", "Deep Learning", "Python", "React", "Elasticsearch"],
       integrations: ["SIEM", "EDR", "Firewall", "Cloud platforms", "Identity providers"],
       apiEndpoints: 200,
       uptime: "99.99%",
@@ -372,8 +356,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // AI-Powered Data Analytics & BI
-  {
-    id: "ai-data-analytics-bi",
+  { id: "ai-data-analytics-bi",
     title: "AI Data Analytics & BI",
     description: "Advanced business intelligence platform that uses AI to transform raw data into actionable insights and predictive analytics.",
     category: "AI & Analytics",
@@ -420,13 +403,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$1,499 - $4,499/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "Apache Spark"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "Apache Spark"],
       integrations: ["Databases", "Cloud platforms", "CRM systems", "ERP systems", "APIs"],
       apiEndpoints: 180,
       uptime: "99.9%",
@@ -439,8 +420,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Cloud Infrastructure & DevOps
-  {
-    id: "cloud-infrastructure-devops",
+  { id: "cloud-infrastructure-devops",
     title: "Cloud Infrastructure & DevOps",
     description: "Enterprise-grade cloud infrastructure with automated DevOps pipelines for scalable, reliable, and secure applications.",
     category: "IT & Infrastructure",
@@ -487,13 +467,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$2,999 - $9,999/month",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
+    technicalSpecs: { technology: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "Terraform"],
       integrations: ["GitHub", "GitLab", "Jenkins", "Prometheus", "Grafana"],
       apiEndpoints: 250,
       uptime: "99.99%",
@@ -506,8 +484,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Cybersecurity & Compliance
-  {
-    id: "cybersecurity-compliance",
+  { id: "cybersecurity-compliance",
     title: "Cybersecurity & Compliance",
     description: "Comprehensive cybersecurity services including threat detection, vulnerability assessment, and compliance management.",
     category: "IT & Security",
@@ -554,13 +531,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$2,199 - $6,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners"],
+    technicalSpecs: { technology: ["SIEM", "EDR", "Firewall", "IDS/IPS", "Vulnerability scanners"],
       integrations: ["Active Directory", "Cloud platforms", "SIEM systems", "Ticketing systems"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -573,8 +548,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Quantum Computing Services
-  {
-    id: "quantum-computing-services",
+  { id: "quantum-computing-services",
     title: "Quantum Computing Services",
     description: "Cutting-edge quantum computing solutions for complex problem-solving, optimization, and research applications.",
     category: "Emerging Technology",
@@ -621,13 +595,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$4,999 - $15,999/month",
     roi: "400-800%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators"],
+    technicalSpecs: { technology: ["Qiskit", "Cirq", "PennyLane", "Python", "Quantum simulators"],
       integrations: ["Cloud quantum platforms", "Research tools", "Data analysis platforms"],
       apiEndpoints: 50,
       uptime: "99.5%",
@@ -640,8 +612,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Blockchain & Web3 Solutions
-  {
-    id: "blockchain-web3-solutions",
+  { id: "blockchain-web3-solutions",
     title: "Blockchain & Web3 Solutions",
     description: "Comprehensive blockchain and Web3 development services for decentralized applications, smart contracts, and digital assets.",
     category: "Emerging Technology",
@@ -688,13 +659,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$3,999 - $12,999/month",
     roi: "300-600%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Ethereum", "Solana", "Polygon", "Solidity", "Web3.js"],
+    technicalSpecs: { technology: ["Ethereum", "Solana", "Polygon", "Solidity", "Web3.js"],
       integrations: ["MetaMask", "WalletConnect", "IPFS", "The Graph", "Chainlink"],
       apiEndpoints: 100,
       uptime: "99.8%",
@@ -707,8 +676,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // IoT & Edge Computing Services
-  {
-    id: "iot-edge-computing-services",
+  { id: "iot-edge-computing-services",
     title: "IoT & Edge Computing Services",
     description: "Comprehensive IoT and edge computing solutions for connected devices, real-time processing, and intelligent automation.",
     category: "Emerging Technology",
@@ -755,13 +723,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$2,499 - $7,999/month",
     roi: "250-450%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["MQTT", "CoAP", "Kubernetes", "Docker", "TensorFlow Lite"],
+    technicalSpecs: { technology: ["MQTT", "CoAP", "Kubernetes", "Docker", "TensorFlow Lite"],
       integrations: ["Cloud platforms", "Database systems", "Analytics tools", "Security systems"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -774,8 +740,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Digital Twin Solutions
-  {
-    id: "digital-twin-solutions",
+  { id: "digital-twin-solutions",
     title: "Digital Twin Solutions",
     description: "Advanced digital twin technology for creating virtual replicas of physical systems, enabling real-time monitoring and predictive analytics.",
     category: "Emerging Technology",
@@ -822,13 +787,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$3,499 - $10,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Unity3D", "Unreal Engine", "Three.js", "WebGL", "Python"],
+    technicalSpecs: { technology: ["Unity3D", "Unreal Engine", "Three.js", "WebGL", "Python"],
       integrations: ["IoT platforms", "CAD systems", "PLM systems", "Analytics platforms"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -841,8 +804,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Space Technology Solutions
-  {
-    id: "space-technology-solutions",
+  { id: "space-technology-solutions",
     title: "Space Technology Solutions",
     description: "Innovative space technology services including satellite data analysis, space mission planning, and aerospace software development.",
     category: "Emerging Technology",
@@ -889,13 +851,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$5,999 - $19,999/month",
     roi: "500-1000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "C++", "MATLAB", "STK", "Space simulation tools"],
+    technicalSpecs: { technology: ["Python", "C++", "MATLAB", "STK", "Space simulation tools"],
       integrations: ["Satellite data providers", "Ground stations", "Mission control systems"],
       apiEndpoints: 75,
       uptime: "99.5%",
@@ -908,8 +868,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Green IT Solutions
-  {
-    id: "green-it-solutions",
+  { id: "green-it-solutions",
     title: "Green IT Solutions",
     description: "Sustainable technology solutions that reduce environmental impact while improving operational efficiency and cost savings.",
     category: "Sustainability",
@@ -956,13 +915,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$1,799 - $5,999/month",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Energy monitoring tools", "Sustainability platforms", "Green software frameworks"],
+    technicalSpecs: { technology: ["Energy monitoring tools", "Sustainability platforms", "Green software frameworks"],
       integrations: ["Energy management systems", "Building management systems", "Reporting platforms"],
       apiEndpoints: 100,
       uptime: "99.8%",
@@ -975,8 +932,7 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
   },
 
   // Zero Trust Network Architecture
-  {
-    id: "zero-trust-network-architecture",
+  { id: "zero-trust-network-architecture",
     title: "Zero Trust Network Architecture",
     description: "Advanced zero trust security framework that provides comprehensive network protection through continuous verification and least-privilege access.",
     category: "IT & Security",
@@ -1023,13 +979,11 @@ export const COMPREHENSIVE_REAL_SERVICES_2025: ComprehensiveRealService[] = [
     marketPrice: "$2,599 - $8,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Identity providers", "Network segmentation", "Security monitoring", "Access management"],
+    technicalSpecs: { technology: ["Identity providers", "Network segmentation", "Security monitoring", "Access management"],
       integrations: ["Active Directory", "Cloud platforms", "SIEM systems", "Identity providers"],
       apiEndpoints: 200,
       uptime: "99.99%",

@@ -123,14 +123,12 @@ import { INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025 } from '../data/innovativeBloc
 
 export default function ComprehensivePricingGuide2027() {
   const serviceCategories = [
-    {
-      name: "AI & Machine Learning Services",
+    { name: "AI & Machine Learning Services",
       icon: Brain,
       description: "Cutting-edge AI solutions for business transformation",
       color: "from-zion-cyan to-zion-purple",
       services: [
-        {
-          name: "AI Workflow Orchestrator",
+        { name: "AI Workflow Orchestrator",
           description: "Transform business processes with AI-powered workflow automation",
           price: "$299",
           period: "/month",
@@ -138,8 +136,7 @@ export default function ComprehensivePricingGuide2027() {
           popular: true,
           link: "/services/ai-workflow-orchestrator"
         },
-        {
-          name: "AI Data Governance Platform",
+        { name: "AI Data Governance Platform",
           description: "Secure, govern, and manage data with AI-powered compliance automation",
           price: "$499",
           period: "/month",
@@ -147,8 +144,7 @@ export default function ComprehensivePricingGuide2027() {
           popular: false,
           link: "/services/ai-data-governance-platform"
         },
-        {
-          name: "AI Customer Experience Analytics",
+        { name: "AI Customer Experience Analytics",
           description: "Transform customer insights into actionable intelligence with AI-powered analytics",
           price: "$399",
           period: "/month",
@@ -158,14 +154,12 @@ export default function ComprehensivePricingGuide2027() {
         }
       ]
     },
-    {
-      name: "Cloud & DevOps Services",
+    { name: "Cloud & DevOps Services",
       icon: Network,
       description: "Scalable cloud infrastructure and development operations",
       color: "from-zion-blue to-zion-cyan",
       services: [
-        {
-          name: "Cloud DevOps",
+        { name: "Cloud DevOps",
           description: "Infrastructure automation and scaling solutions",
           price: "$599",
           period: "/month",
@@ -173,8 +167,7 @@ export default function ComprehensivePricingGuide2027() {
           popular: false,
           link: "/services/cloud-devops"
         },
-        {
-          name: "IT Infrastructure",
+        { name: "IT Infrastructure",
           description: "Enterprise-grade infrastructure solutions",
           price: "$799",
           period: "/month",
@@ -184,14 +177,12 @@ export default function ComprehensivePricingGuide2027() {
         }
       ]
     },
-    {
-      name: "Security & Compliance Services",
+    { name: "Security & Compliance Services",
       icon: Shield,
       description: "Enterprise-grade security and compliance solutions",
       color: "from-zion-red to-zion-orange",
       services: [
-        {
-          name: "Zero Trust Network Access",
+        { name: "Zero Trust Network Access",
           description: "Modern security architecture for enterprise networks",
           price: "$899",
           period: "/month",
@@ -199,8 +190,7 @@ export default function ComprehensivePricingGuide2027() {
           popular: false,
           link: "/services/zero-trust-network-access"
         },
-        {
-          name: "Security Headers & CSP",
+        { name: "Security Headers & CSP",
           description: "Web security hardening and content security policies",
           price: "$299",
           period: "/month",
@@ -210,14 +200,12 @@ export default function ComprehensivePricingGuide2027() {
         }
       ]
     },
-    {
-      name: "Business Process Automation",
+    { name: "Business Process Automation",
               icon: WorkflowIcon,
       description: "Streamline operations with intelligent automation",
       color: "from-zion-purple to-zion-pink",
       services: [
-        {
-          name: "AI Project Management",
+        { name: "AI Project Management",
           description: "AI-driven project optimization and management",
           price: "$449",
           period: "/month",
@@ -225,8 +213,7 @@ export default function ComprehensivePricingGuide2027() {
           popular: false,
           link: "/services/ai-project-management"
         },
-        {
-          name: "AI Customer Support Automation",
+        { name: "AI Customer Support Automation",
           description: "Intelligent customer support with AI automation",
           price: "$349",
           period: "/month",
@@ -239,8 +226,7 @@ export default function ComprehensivePricingGuide2027() {
   };
 
   const enterprisePackages = [
-    {
-      name: "Starter Enterprise",
+    { name: "Starter Enterprise",
       price: "$2,999",
       period: "/month",
       description: "Perfect for growing enterprises with comprehensive needs",
@@ -254,8 +240,7 @@ export default function ComprehensivePricingGuide2027() {
       ],
       popular: false
     },
-    {
-      name: "Professional Enterprise",
+    { name: "Professional Enterprise",
       price: "$5,999",
       period: "/month",
       description: "For established enterprises requiring advanced capabilities",
@@ -270,8 +255,7 @@ export default function ComprehensivePricingGuide2027() {
       ],
       popular: true
     },
-    {
-      name: "Ultimate Enterprise",
+    { name: "Ultimate Enterprise",
       price: "$12,999",
       period: "/month",
       description: "For large organizations with complex requirements",
@@ -290,29 +274,25 @@ export default function ComprehensivePricingGuide2027() {
   ];
 
   const marketComparison = [
-    {
-      feature: "AI Workflow Automation",
+    { feature: "AI Workflow Automation",
       zion: "$299/month",
       competitor1: "$599/month",
       competitor2: "$799/month",
       savings: "50-62%"
     },
-    {
-      feature: "Data Governance Platform",
+    { feature: "Data Governance Platform",
       zion: "$499/month",
       competitor1: "$1,299/month",
       competitor2: "$1,999/month",
       savings: "61-75%"
     },
-    {
-      feature: "Customer Experience Analytics",
+    { feature: "Customer Experience Analytics",
       zion: "$399/month",
       competitor1: "$899/month",
       competitor2: "$1,299/month",
       savings: "56-69%"
     },
-    {
-      feature: "Cloud DevOps",
+    { feature: "Cloud DevOps",
       zion: "$599/month",
       competitor1: "$1,199/month",
       competitor2: "$1,599/month",
@@ -335,7 +315,7 @@ export default function ComprehensivePricingGuide2027() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-cyan/10 border border-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8">
                 <DollarSign className="w-4 h-4 mr-2" />
@@ -353,18 +333,16 @@ export default function ComprehensivePricingGuide2027() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center">
                   <Play className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Contact Sales
                 </motion.button>
@@ -379,10 +357,9 @@ export default function ComprehensivePricingGuide2027() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Service Category Pricing
               </h2>
@@ -398,9 +375,8 @@ export default function ComprehensivePricingGuide2027() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.1 }}
-                viewport={{ once: true }}
-                className="mb-16"
-              >
+                viewport={{ once: true     }}
+                className="mb-16">
                 <div className="text-center mb-12">
                   <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-6`}>
                     <category.icon className="w-10 h-10 text-white" />
@@ -416,7 +392,7 @@ export default function ComprehensivePricingGuide2027() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true     }}
                       className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
                         service.popular ? 'border-zion-cyan/50 bg-zion-cyan/5' : 'border-zion-slate-600/50'
                       }`}
@@ -447,8 +423,8 @@ export default function ComprehensivePricingGuide2027() {
                       
                       <Link to={service.link}>
                         <motion.button
-                          whileHover={{ scale: 1.02 }}
-                          whileTap={{ scale: 0.98 }}
+                          whileHover={{ scale: 1.02     }}
+                          whileTap={{ scale: 0.98     }}
                           className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                             service.popular
                               ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
@@ -472,10 +448,9 @@ export default function ComprehensivePricingGuide2027() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Enterprise Packages
               </h2>
@@ -491,7 +466,7 @@ export default function ComprehensivePricingGuide2027() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                     pkg.popular 
                       ? 'border-zion-cyan/50 bg-zion-cyan/5' 
@@ -525,8 +500,8 @@ export default function ComprehensivePricingGuide2027() {
                   </ul>
                   
                   <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    whileHover={{ scale: 1.02     }}
+                    whileTap={{ scale: 0.98     }}
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       pkg.popular
                         ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'
@@ -547,10 +522,9 @@ export default function ComprehensivePricingGuide2027() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Market Price Comparison
               </h2>
@@ -594,8 +568,8 @@ export default function ComprehensivePricingGuide2027() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Save on Premium Services?
@@ -607,18 +581,16 @@ export default function ComprehensivePricingGuide2027() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center">
                   <Rocket className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </motion.button>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center">
                   <MessageCircle className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </motion.button>

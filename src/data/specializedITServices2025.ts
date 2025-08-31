@@ -17,26 +17,24 @@ export interface SpecializedITService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   // Zero Trust Network Architecture
-  {
-    id: "zero-trust-network-architecture",
+  { id: "zero-trust-network-architecture",
     title: "Zero Trust Network Architecture",
     description: "Comprehensive zero trust security implementation with continuous verification, micro-segmentation, and adaptive access control for modern enterprise networks.",
     category: "Cybersecurity",
@@ -83,13 +81,11 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     marketPrice: "$15,000 - $50,000/project",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Cisco", "Palo Alto", "Fortinet", "VMware", "Microsoft"],
+    technicalSpecs: { technology: ["Cisco", "Palo Alto", "Fortinet", "VMware", "Microsoft"],
       integrations: ["Active Directory", "SIEM systems", "Firewalls", "VPN solutions", "Cloud platforms"],
       apiEndpoints: 100,
       uptime: "99.9%",
@@ -100,8 +96,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   },
 
   // 5G Enterprise Network Solutions
-  {
-    id: "five-g-enterprise-network",
+  { id: "five-g-enterprise-network",
     title: "5G Enterprise Network Solutions",
     description: "Custom 5G network infrastructure for enterprises with ultra-low latency, massive IoT connectivity, and private network capabilities.",
     category: "Network Infrastructure",
@@ -148,13 +143,11 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     marketPrice: "$25,000 - $100,000/project",
     roi: "400-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["5G Core", "RAN equipment", "Edge computing", "Network slicing", "IoT platforms"],
+    technicalSpecs: { technology: ["5G Core", "RAN equipment", "Edge computing", "Network slicing", "IoT platforms"],
       integrations: ["Existing network infrastructure", "Cloud platforms", "IoT devices", "Enterprise applications"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -165,8 +158,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   },
 
   // Cloud-Native Application Development
-  {
-    id: "cloud-native-app-development",
+  { id: "cloud-native-app-development",
     title: "Cloud-Native Application Development",
     description: "Modern application development using cloud-native technologies, microservices architecture, and DevOps practices for scalable, resilient applications.",
     category: "Application Development",
@@ -213,13 +205,11 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     marketPrice: "$8,000 - $25,000/project",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Kubernetes", "Docker", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Kubernetes", "Docker", "React", "Node.js", "PostgreSQL"],
       integrations: ["AWS", "Azure", "GCP", "GitHub", "CI/CD tools"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -230,8 +220,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   },
 
   // Data Center Modernization
-  {
-    id: "data-center-modernization",
+  { id: "data-center-modernization",
     title: "Data Center Modernization",
     description: "Comprehensive data center transformation including infrastructure upgrades, virtualization, automation, and cloud integration for improved efficiency and performance.",
     category: "Infrastructure",
@@ -278,13 +267,11 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     marketPrice: "$35,000 - $150,000/project",
     roi: "400-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["VMware", "Hyper-V", "Storage solutions", "Network equipment", "Automation tools"],
+    technicalSpecs: { technology: ["VMware", "Hyper-V", "Storage solutions", "Network equipment", "Automation tools"],
       integrations: ["Existing infrastructure", "Cloud platforms", "Management tools", "Monitoring systems"],
       apiEndpoints: 100,
       uptime: "99.9%",
@@ -295,8 +282,7 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
   },
 
   // IoT Edge Computing Platform
-  {
-    id: "iot-edge-computing-platform",
+  { id: "iot-edge-computing-platform",
     title: "IoT Edge Computing Platform",
     description: "Comprehensive IoT edge computing solution that processes data locally, reduces latency, and enables real-time decision making for IoT applications.",
     category: "IoT & Edge Computing",
@@ -343,13 +329,11 @@ export const SPECIALIZED_IT_SERVICES_2025: SpecializedITService[] = [
     marketPrice: "$12,000 - $40,000/project",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Edge computing platforms", "IoT protocols", "AI/ML frameworks", "Real-time databases", "Security protocols"],
+    technicalSpecs: { technology: ["Edge computing platforms", "IoT protocols", "AI/ML frameworks", "Real-time databases", "Security protocols"],
       integrations: ["IoT devices", "Cloud platforms", "Enterprise systems", "Analytics tools"],
       apiEndpoints: 300,
       uptime: "99.9%",

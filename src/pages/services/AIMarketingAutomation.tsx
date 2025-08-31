@@ -23,22 +23,19 @@ export default function AIMarketingAutomation() {
   ];
 
   const pricingTiers = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$99',
       period: '/mo',
       contacts: 'Up to 5,000 contacts',
       features: ['Basic AI segmentation', '5 email campaigns', 'Standard analytics', 'Email support', 'Basic automation']
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$299',
       period: '/mo',
       contacts: 'Up to 25,000 contacts',
       features: ['Advanced AI insights', 'Unlimited campaigns', 'Custom automation', 'Priority support', 'Advanced analytics', 'Multi-channel campaigns']
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$799',
       period: '/mo',
       contacts: 'Unlimited contacts',
@@ -86,14 +83,12 @@ export default function AIMarketingAutomation() {
               href="https://ziontechgroup.com/contact" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-flex items-center">
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
               href="tel:+13024640950" 
-              className="px-8 py-4 border border-purple-400/30 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 border border-purple-400/30 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center">
               <Phone className="w-5 h-5 mr-2" /> Call Now
             </a>
           </div>
@@ -331,14 +326,12 @@ export default function AIMarketingAutomation() {
               href="https://ziontechgroup.com/contact" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 inline-flex items-center">
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
               href="mailto:kleber@ziontechgroup.com" 
-              className="px-8 py-4 border border-purple-400/30 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 border border-purple-400/30 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300 inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" /> Schedule Demo
             </a>
           </div>
@@ -371,8 +364,7 @@ export default function AIMarketingAutomation() {
                   href="https://ziontechgroup.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-purple-400 inline-flex items-center"
-                >
+                  className="text-slate-300 hover:text-purple-400 inline-flex items-center">
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>

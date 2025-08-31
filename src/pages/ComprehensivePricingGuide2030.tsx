@@ -114,8 +114,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   };
 
   const pricingTiers = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       description: 'Perfect for small businesses and startups',
       price: 299,
       features: [
@@ -131,8 +130,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       popular: false,
       bestFor: 'Small businesses, startups, individual professionals'
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       description: 'Ideal for growing businesses and teams',
       price: 999,
       features: [
@@ -150,8 +148,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
       popular: true,
       bestFor: 'Growing businesses, mid-size companies, agencies'
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       description: 'For large organizations with complex needs',
       price: 2999,
       features: [
@@ -173,29 +170,25 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   ];
 
   const marketInsights = [
-    {
-      title: 'AI Services Market',
+    { title: 'AI Services Market',
       value: '$29.9B',
       growth: '+32.4%',
       description: 'Expected market size by 2025',
       color: 'from-purple-500 to-pink-600'
     },
-    {
-      title: 'Cloud Services Market',
+    { title: 'Cloud Services Market',
       value: '$832.1B',
       growth: '+17.5%',
       description: 'Global cloud market value',
       color: 'from-blue-500 to-cyan-600'
     },
-    {
-      title: 'IoT Market',
+    { title: 'IoT Market',
       value: '$1.1T',
       growth: '+25.7%',
       description: 'IoT market by 2027',
       color: 'from-green-500 to-emerald-600'
     },
-    {
-      title: 'Quantum Computing',
+    { title: 'Quantum Computing',
       value: '$65.0B',
       growth: '+48.2%',
       description: 'Quantum market by 2030',
@@ -218,9 +211,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <motion.h1 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Pricing Guide
               </span>
@@ -231,8 +223,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
-            >
+              className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Transparent pricing for cutting-edge technology solutions. 
               Compare market rates, calculate ROI, and choose the perfect plan for your business.
             </motion.p>
@@ -240,19 +231,16 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
+              className="flex flex-wrap justify-center gap-4">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-              >
+                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity">
                 Get Custom Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
                 to="/innovative-services-showcase-2025" 
-                className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors">
                 View All Services
               </Link>
             </motion.div>
@@ -266,9 +254,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl font-bold text-center mb-12"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-3xl font-bold text-center mb-12">
             Market Insights & Trends
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -278,8 +265,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
-              >
+                className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center">
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
@@ -299,9 +285,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl font-bold text-center mb-12"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-3xl font-bold text-center mb-12">
             Flexible Pricing Tiers
           </motion.h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -366,9 +351,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl font-bold text-center mb-12"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-3xl font-bold text-center mb-12">
             Service Pricing Details
           </motion.h2>
 
@@ -377,8 +361,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-            >
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white">
               {categories.map(category => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
@@ -388,8 +371,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
-            >
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white">
               {pricingModels.map(model => (
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
@@ -410,8 +392,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
-                >
+                  className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${categoryColor} flex items-center justify-center`}>
@@ -473,15 +454,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/services/${service.id}`}
-                      className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
+                      className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors">
                       Learn More
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                     <Link
                       to="/contact"
-                      className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
-                    >
+                      className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity">
                       Get Quote
                     </Link>
                   </div>
@@ -498,8 +477,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                   setSelectedCategory('all');
                   setSelectedPricingModel('all');
                 }}
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
+                className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 Clear all filters
               </button>
             </div>
@@ -514,17 +492,15 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-3xl font-bold mb-6"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-3xl font-bold mb-6">
               Calculate Your ROI
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-slate-300 mb-8"
-            >
+              className="text-xl text-slate-300 mb-8">
               Use our ROI calculator to estimate the return on investment for our services. 
               Most clients see returns within 3-6 months.
             </motion.p>
@@ -533,8 +509,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8"
-            >
+              className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">3-6</div>
@@ -552,8 +527,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               
               <Link 
                 to="/contact" 
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-              >
+                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity">
                 Get Personalized ROI Analysis
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -569,17 +543,15 @@ const ComprehensivePricingGuide2030: React.FC = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-white mb-6"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </motion.h2>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-slate-300 mb-8"
-            >
+              className="text-xl text-slate-300 mb-8">
               Our team of experts is ready to help you choose the right services and pricing plan. 
               Get in touch today for a personalized consultation.
             </motion.p>
@@ -588,15 +560,13 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="grid md:grid-cols-3 gap-8 mb-12"
-            >
+              className="grid md:grid-cols-3 gap-8 mb-12">
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Call Us</div>
                 <a 
                   href="tel:+13024640950" 
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
@@ -605,8 +575,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 <div className="text-white font-semibold mb-2">Email Us</div>
                 <a 
                   href="mailto:kleber@ziontechgroup.com" 
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -624,19 +593,16 @@ const ComprehensivePricingGuide2030: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
+              className="flex flex-wrap justify-center gap-4">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-              >
+                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link 
                 to="/request-quote" 
-                className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors">
                 Request a Quote
               </Link>
             </motion.div>
@@ -655,8 +621,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
-              >
+                className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ziontechgroup.com
               </a>
               {' '}to explore our full range of services and solutions.

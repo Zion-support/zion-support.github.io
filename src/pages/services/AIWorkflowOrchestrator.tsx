@@ -34,18 +34,15 @@ export default function AIWorkflowOrchestrator() {
   ];
 
   const tiers = [
-    { 
-      name: 'Workflow Starter', 
+    { name: 'Workflow Starter', 
       price: '$499/mo', 
       details: ['Up to 100 workflows', 'Basic AI orchestration', 'Standard reporting', 'Email support'] 
     },
-    { 
-      name: 'Workflow Professional', 
+    { name: 'Workflow Professional', 
       price: '$1,299/mo', 
       details: ['Up to 500 workflows', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Workflow Enterprise', 
+    { name: 'Workflow Enterprise', 
       price: '$3,999/mo', 
       details: ['Unlimited workflows', 'Full AI suite', 'White-label options', '24/7 support'] 
     },

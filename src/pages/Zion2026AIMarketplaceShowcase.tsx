@@ -66,7 +66,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Zion AI Marketplace
@@ -80,17 +80,15 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300">
                 Explore Services
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-300">
                 Learn More
               </motion.button>
             </div>
@@ -142,8 +140,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
+                  className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                   {categories.map(category => (
                     <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
@@ -210,9 +207,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
                   <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>
                     <div className="flex items-center justify-between mb-4">
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(service.category)}`}>
-                        {React.createElement(getCategoryIcon(service.category), { 
-                          className: 'w-6 h-6 text-white' 
-                        })}
+                        {React.createElement(getCategoryIcon(service.category), { className: 'w-6 h-6 text-white' 
+                            })}
                       </div>
                       <span className="text-sm text-gray-400 font-medium">{service.category}</span>
                     </div>
@@ -282,8 +278,8 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
@@ -294,18 +290,16 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center space-x-2">
                 <Phone className="w-5 h-5" />
                 <span>Call Now: +1 302 464 0950</span>
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-300 flex items-center justify-center space-x-2">
                 <Mail className="w-5 h-5" />
                 <span>Email Us</span>
               </motion.button>
@@ -315,8 +309,7 @@ const Zion2026AIMarketplaceShowcase: React.FC = () => {
                 href="https://ziontechgroup.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300"
-              >
+                className="inline-flex items-center space-x-2 text-blue-400 hover:text-blue-300 transition-colors duration-300">
                 <span>Visit our website</span>
                 <ExternalLink className="w-4 h-4" />
               </a>

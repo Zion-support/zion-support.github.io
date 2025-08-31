@@ -5,46 +5,38 @@ import { PenTool, Brain, Image, Video, FileText, Globe, Users, Target, CheckCirc
 
 const AIContentCreation: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI Writing Assistant',
       description: 'Generate high-quality content with intelligent assistance'
     },
-    {
-      icon: Image,
+    { icon: Image,
       title: 'AI Image Generation',
       description: 'Create stunning visuals from text descriptions'
     },
-    {
-      icon: Video,
+    { icon: Video,
       title: 'AI Video Creation',
       description: 'Produce engaging video content automatically'
     },
-    {
-      icon: PenTool,
+    { icon: PenTool,
       title: 'Creative Design',
       description: 'AI-powered design tools and templates'
     }
   ];
 
   const contentTypes = [
-    {
-      title: 'Blog Posts & Articles',
+    { title: 'Blog Posts & Articles',
       description: 'SEO-optimized content for your website',
       icon: '📝'
     },
-    {
-      title: 'Social Media Content',
+    { title: 'Social Media Content',
       description: 'Engaging posts for all platforms',
       icon: '📱'
     },
-    {
-      title: 'Marketing Materials',
+    { title: 'Marketing Materials',
       description: 'Brochures, flyers, and promotional content',
       icon: '📊'
     },
-    {
-      title: 'Product Descriptions',
+    { title: 'Product Descriptions',
       description: 'Compelling product copy and descriptions',
       icon: '🛍️'
     }
@@ -72,9 +64,8 @@ const AIContentCreation: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full border border-pink-400/30 mb-6">
               <PenTool className="w-5 h-5 text-pink-400 mr-2" />
               <span className="text-pink-300 font-medium">AI Content Creation</span>
@@ -110,9 +101,8 @@ const AIContentCreation: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               AI Content Creation Features
             </h2>
@@ -128,8 +118,7 @@ const AIContentCreation: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/30 transition-all duration-200 hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/30 transition-all duration-200 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-pink-400" />
                 </div>
@@ -147,9 +136,8 @@ const AIContentCreation: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Content Types We Create
             </h2>
@@ -165,8 +153,7 @@ const AIContentCreation: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{contentType.icon}</div>
                   <div>
@@ -186,9 +173,8 @@ const AIContentCreation: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI Content Creation?
             </h2>
@@ -201,9 +187,8 @@ const AIContentCreation: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-            >
+              transition={{ duration: 0.6     }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => (
@@ -218,9 +203,8 @@ const AIContentCreation: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-400/30 rounded-xl p-8"
-            >
+              transition={{ duration: 0.6     }}
+              className="bg-gradient-to-br from-pink-500/20 to-purple-500/20 border border-pink-400/30 rounded-xl p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
               <p className="text-gray-300 mb-6">
                 Ready to revolutionize your content creation? Our AI content experts can help you 
@@ -240,7 +224,7 @@ const AIContentCreation: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Create Amazing Content?

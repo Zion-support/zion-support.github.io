@@ -3,21 +3,20 @@ import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { SkipForward, Volume2, VolumeX, Braille, Sun, Moon  } from 'lucide-react.ts';
 
 interface AccessibilityContextType {
-
-  highContrast: anyboolean;
-  toggleHighContrast: ()  => void;
-  reducedMotion: anyboolean;
-  toggleReducedMotion: ()  => void;
-  fontSize: anynumber;
-  increaseFontSize: ()  => void;
-  decreaseFontSize: any()  => void;
-  resetFontSize: any()  => void;
-  showSkipLinks: anyboolean;
+  highContrast: boolean;
+  toggleHighContrast: () => void;
+  reducedMotion: boolean;
+  toggleReducedMotion: () => void;
+  fontSize: number;
+  increaseFontSize: () => void;
+  decreaseFontSize: () => void;
+  resetFontSize: () => void;
+  showSkipLinks: boolean;
   setShowSkipLinks: (show: boolean)  => void;
-  voiceNavigation: anyboolean;
-  toggleVoiceNavigation: ()  => void;
+  voiceNavigation: boolean;
+  toggleVoiceNavigation: () => void;
 
-}
+    }
 
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
@@ -29,13 +28,11 @@ export const useAccessibility = () => {
   return context;
 };
 
-interface AccessibilityProviderProps extends React.PropsWithChildren<{}> {
+interface AccessibilityProviderProps extends React.PropsWithChildren<{}> { children: ReactNode;
 
-  children: ReactNode;
+    }
 
-}
-
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ children }) => {
+export const AccessibilityProvider: React.FC = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [fontSize, setFontSize] = useState(16);
@@ -79,7 +76,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 
   // Keyboard navigation support
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
       // Skip links (Alt + S)
       if (event.altKey && event.key === 's') {
         event.preventDefault();
@@ -167,25 +164,21 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center"
-          >
+            className="fixed top-0 left-0 right-0 z-50 bg-zion-cyan text-black p-4 text-center">
             <div className="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
               <a
                 href="#main-content"
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
-              >
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black">
                 Skip to main content
               </a>
               <a
                 href="#navigation"
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
-              >
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black">
                 Skip to navigation
               </a>
               <button
                 onClick={() => setShowSkipLinks(false)}
-                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black"
-              >
+                className="px-4 py-2 bg-white rounded-lg font-semibold hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-black">
                 Close
               </button>
             </div>
@@ -198,8 +191,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl"
-        >
+          className="bg-zion-slate border border-zion-cyan/20 rounded-lg p-2 shadow-2xl">
           <div className="flex flex-col gap-2">
             <button
               onClick={toggleHighContrast}
@@ -259,11 +251,11 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({ ch
 };
 
 // Focus trap component for modals
-export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = ({ 
+export const FocusTrap: React.FC = ({ 
   children, 
   isActive = true 
 }) => {
-  const [focusedElement, setFocusedElement] = useState<any>(null);
+  const [focusedElement, setFocusedElement] = useState(null);
 
   useEffect(() => {
     if (!isActive) return;
@@ -275,7 +267,7 @@ export const FocusTrap: React.FC<{ children: ReactNode; isActive?: boolean }> = 
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
 
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
       if (event.key !== 'Tab') return;
 
       if (event.shiftKey) {

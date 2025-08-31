@@ -25,20 +25,19 @@ export interface MicroSaasService {
   featured: boolean;
   location: string;
   availability: string;
-  author: {
+  author: {  
     name: string;
     id: string;
-    avatarUrl?: string;
-    verified: boolean;
-  };
+    avatarUrl?: string
+    verified: boolean
+      };
   images: string[];
   createdAt: string;
 }
 
 export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
   // AI & Machine Learning Services
-  {
-    id: "ai-chatbot-builder",
+  { id: "ai-chatbot-builder",
     title: "AI Chatbot Builder Pro",
     description: "No-code AI chatbot creation platform with advanced NLP, multi-language support, and seamless integrations. Perfect for customer service, sales, and support automation.",
     category: "AI Services",
@@ -85,8 +84,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -94,8 +92,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
   },
-  {
-    id: "ai-content-generator",
+  { id: "ai-content-generator",
     title: "AI Content Generator Suite",
     description: "Advanced AI-powered content creation platform for blogs, social media, marketing copy, and product descriptions. Includes SEO optimization and brand voice customization.",
     category: "AI Services",
@@ -130,8 +127,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -139,8 +135,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     images: ["https://images.unsplash.com/photo-1633412802994-5c058f151b66?auto=format&fit=crop&w=800&h=500"],
     createdAt: "2024-01-15T10:00:00.000Z"
   },
-  {
-    id: "ai-customer-service",
+  { id: "ai-customer-service",
     title: "AI Customer Service Platform",
     description: "Intelligent customer service automation with AI-powered ticket routing, sentiment analysis, and automated responses for 24/7 support.",
     category: "AI Services",
@@ -182,8 +177,7 @@ export const MICRO_SAAS_SERVICES: MicroSaasService[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true

@@ -39,90 +39,78 @@ export function AppHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'Services', href: '/services-overview', current: false, hasDropdown: true },
     { name: 'Solutions', href: '/ai-services', current: false, hasDropdown: true },
-    { name: 'Company', href: '/about', current: false, hasDropdown: true },
+    { name: 'Comp', href: '/about', current: false, hasDropdown: true },
     { name: 'Support', href: '/help', current: false, hasDropdown: true },
     { name: 'Contact', href: '/contact', current: false },
   ];
 
   // Organized Services Categories
   const servicesCategories = [
-    {
-      title: 'AI & Machine Learning',
+    { title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-purple-500 to-cyan-500',
       services: [
-        { 
-          name: 'AI Business Intelligence', 
+        { name: 'AI Business Intelligence', 
           href: '/services/ai-business-intelligence', 
           icon: Brain, 
           description: 'Machine Learning & Data Science',
           featured: true
         },
-        { 
-          name: 'AI Healthcare Analytics', 
+        { name: 'AI Healthcare Analytics', 
           href: '/services/ai-healthcare-analytics', 
           icon: Heart, 
           description: 'Medical AI & Diagnostics',
           featured: true
         },
-        { 
-          name: 'AI Legal Document Analysis', 
+        { name: 'AI Legal Document Analysis', 
           href: '/services/ai-legal-document-analysis', 
           icon: FileText, 
           description: 'Legal Tech Platform',
           featured: true
         },
-        { 
-          name: 'AI Financial Trading', 
+        { name: 'AI Financial Trading', 
           href: '/services/ai-financial-trading', 
           icon: TrendingUp, 
           description: 'FinTech AI Solutions',
           featured: true
         },
-        { 
-          name: 'AI Supply Chain Optimization', 
+        { name: 'AI Supply Chain Optimization', 
           href: '/services/ai-supply-chain-optimization', 
           icon: Workflow, 
           description: 'Supply Chain AI',
           featured: true
         },
-        { 
-          name: 'AI Content Creation', 
+        { name: 'AI Content Creation', 
           href: '/services/ai-content-creation', 
           icon: PenTool, 
           description: 'AI-Powered Content Generation',
           featured: true
         },
-        { 
-          name: 'AI HR Platform', 
+        { name: 'AI HR Platform', 
           href: '/services/ai-hr-platform', 
           icon: Users, 
           description: 'Human Resources Automation',
           featured: true
         },
-        { 
-          name: 'AI Marketing Automation', 
+        { name: 'AI Marketing Automation', 
           href: '/services/ai-marketing-automation', 
           icon: Target, 
           description: 'Intelligent Marketing Solutions',
           featured: true
         },
-        { 
-          name: 'AI Quantum Hybrid Platform', 
+        { name: 'AI Quantum Hybrid Platform', 
           href: '/services/ai-quantum-hybrid-platform', 
           icon: Atom, 
           description: 'Quantum-AI Integration',
           featured: true
         },
-        { 
-          name: 'AI Autonomous Research Assistant', 
+        { name: 'AI Autonomous Research Assistant', 
           href: '/services/ai-autonomous-research-assistant', 
           icon: Search, 
           description: 'Research Automation',
           featured: true
         },
-        { 
-          name: 'AI Cybersecurity Threat Intelligence', 
+        { name: 'AI Cybersecurity Threat Intelligence', 
           href: '/services/ai-cybersecurity-threat-intelligence', 
           icon: Shield, 
           description: 'AI-Powered Security',
@@ -130,41 +118,35 @@ export function AppHeader() {
         }
       ]
     },
-    {
-      title: 'Cloud & Infrastructure',
+    { title: 'Cloud & Infrastructure',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       services: [
-        { 
-          name: 'Cloud & DevOps', 
+        { name: 'Cloud & DevOps', 
           href: '/services/cloud-devops', 
           icon: Cloud, 
           description: 'DevOps & Infrastructure',
           featured: true
         },
-        { 
-          name: 'IT Infrastructure', 
+        { name: 'IT Infrastructure', 
           href: '/services/it-infrastructure', 
           icon: Building, 
           description: 'Enterprise Infrastructure',
           featured: true
         },
-        { 
-          name: 'Digital Twin Platform', 
+        { name: 'Digital Twin Platform', 
           href: '/services/digital-twin', 
           icon: Globe, 
           description: 'Virtual Replicas & Simulation',
           featured: true
         },
-        { 
-          name: 'IoT Edge Computing', 
+        { name: 'IoT Edge Computing', 
           href: '/services/iot-edge-computing', 
           icon: Wifi, 
           description: 'Smart Device Networks',
           featured: true
         },
-        { 
-          name: 'Data Analytics', 
+        { name: 'Data Analytics', 
           href: '/services/data-analytics', 
           icon: BarChart3, 
           description: 'Business Intelligence & Insights',
@@ -172,34 +154,29 @@ export function AppHeader() {
         }
       ]
     },
-    {
-      title: 'Security & Compliance',
+    { title: 'Security & Compliance',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: [
-        { 
-          name: 'AI Cybersecurity Suite', 
+        { name: 'AI Cybersecurity Suite', 
           href: '/services/ai-cybersecurity-suite', 
           icon: Shield, 
           description: 'Advanced AI Security',
           featured: true
         },
-        { 
-          name: 'Zero Trust Network Access', 
+        { name: 'Zero Trust Network Access', 
           href: '/services/zero-trust-network-access', 
           icon: Lock, 
           description: 'Modern Security Architecture',
           featured: true
         },
-        { 
-          name: 'Security Headers & CSP', 
+        { name: 'Security Headers & CSP', 
           href: '/services/security-headers-csp', 
           icon: Shield, 
           description: 'Web Security Hardening',
           featured: true
         },
-        { 
-          name: 'DSR Privacy Portal', 
+        { name: 'DSR Privacy Portal', 
           href: '/services/dsr-portal', 
           icon: Lock, 
           description: 'GDPR/CCPA Compliance',
@@ -207,34 +184,29 @@ export function AppHeader() {
         }
       ]
     },
-    {
-      title: 'Emerging Technologies',
+    { title: 'Emerging Technologies',
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
       services: [
-        { 
-          name: 'Quantum Computing', 
+        { name: 'Quantum Computing', 
           href: '/services/quantum-computing', 
           icon: Atom, 
           description: 'Next-Gen Computational Power',
           featured: true
         },
-        { 
-          name: 'AI Quantum Hybrid Platform', 
+        { name: 'AI Quantum Hybrid Platform', 
           href: '/services/ai-quantum-hybrid-platform', 
           icon: Atom, 
           description: 'Quantum-AI Integration',
           featured: true
         },
-        { 
-          name: 'Space Technology', 
+        { name: 'Space Technology', 
           href: '/services/space-tech', 
           icon: Rocket, 
           description: 'Space-Based Solutions',
           featured: true
         },
-        { 
-          name: 'Sustainable Technology', 
+        { name: 'Sustainable Technology', 
           href: '/services/sustainable-technology', 
           icon: Leaf, 
           description: 'Green Technology Solutions',
@@ -242,34 +214,29 @@ export function AppHeader() {
         }
       ]
     },
-    {
-      title: 'Micro SaaS Solutions',
+    { title: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       color: 'from-orange-500 to-red-500',
       services: [
-        { 
-          name: 'Micro SaaS Products', 
+        { name: 'Micro SaaS Products', 
           href: '/services/micro-saas', 
           icon: ShoppingCart, 
           description: 'AI automations with transparent pricing',
           featured: true
         },
-        { 
-          name: 'Micro CRM', 
+        { name: 'Micro CRM', 
           href: '/services/micro-crm', 
           icon: Users, 
           description: 'Customer Relationship Management',
           featured: true
         },
-        { 
-          name: 'Helpdesk Platform', 
+        { name: 'Helpdesk Platform', 
           href: '/services/helpdesk', 
           icon: HelpCircle, 
           description: 'Customer Support System',
           featured: true
         },
-        { 
-          name: 'Website Analytics', 
+        { name: 'Website Analytics', 
           href: '/services/website-analytics', 
           icon: BarChart3, 
           description: 'Performance Tracking & Insights',
@@ -280,57 +247,49 @@ export function AppHeader() {
   ];
 
   const solutions = [
-    {
-      name: 'Enterprise Solutions',
+    { name: 'Enterprise Solutions',
       href: '/solutions/enterprise',
       icon: Building2,
       description: 'Large-scale business transformations',
       featured: true
     },
-    {
-      name: 'Healthcare Solutions',
+    { name: 'Healthcare Solutions',
       href: '/solutions/healthcare',
       icon: Heart,
       description: 'Digital health transformation',
       featured: true
     },
-    {
-      name: 'Financial Solutions',
+    { name: 'Financial Solutions',
       href: '/solutions/financial',
       icon: TrendingUp,
       description: 'Fintech innovation & compliance',
       featured: true
     },
-    {
-      name: 'Government Solutions',
+    { name: 'Government Solutions',
       href: '/solutions/government',
       icon: Shield,
       description: 'Public sector innovation',
       featured: false
     },
-    {
-      name: 'SMB Solutions',
+    { name: 'SMB Solutions',
       href: '/solutions/smb',
       icon: Building,
       description: 'Small to medium business growth',
       featured: false
     },
-    {
-      name: 'Startup Solutions',
+    { name: 'Startup Solutions',
       href: '/solutions/startup',
       icon: Rocket,
       description: 'Accelerate your startup growth',
       featured: false
     },
-    {
-      name: 'Manufacturing Solutions',
+    { name: 'Manufacturing Solutions',
       href: '/solutions/manufacturing',
       icon: Factory,
       description: 'Industry 4.0 & Smart Manufacturing',
       featured: false
     },
-    {
-      name: 'Retail Solutions',
+    { name: 'Retail Solutions',
       href: '/solutions/retail',
       icon: ShoppingCart,
       description: 'E-commerce & Retail Innovation',
@@ -339,71 +298,61 @@ export function AppHeader() {
   ];
 
   const resources = [
-    {
-      name: 'Blog & Insights',
+    { name: 'Blog & Insights',
       href: '/blog',
       icon: BookOpenIcon,
       description: 'Latest industry trends and insights',
       featured: true
     },
-    {
-      name: 'Case Studies',
+    { name: 'Case Studies',
       href: '/case-studies',
       icon: Target,
       description: 'Real-world success stories',
       featured: true
     },
-    {
-      name: 'White Papers',
+    { name: 'White Papers',
       href: '/white-papers',
       icon: FileTextIcon,
       description: 'In-depth research and analysis',
       featured: true
     },
-    {
-      name: 'Webinars',
+    { name: 'Webinars',
       href: '/webinars',
       icon: UsersIcon,
       description: 'Expert-led learning sessions',
       featured: true
     },
-    {
-      name: 'Documentation',
+    { name: 'Documentation',
       href: '/docs',
       icon: CodeIcon,
       description: 'Technical guides and APIs',
       featured: true
     },
-    {
-      name: 'FAQ & Support',
+    { name: 'FAQ & Support',
       href: '/faq',
       icon: HelpCircleIcon,
       description: 'Get help and answers',
       featured: true
     },
-    {
-      name: 'Pricing Guide 2025',
+    { name: 'Pricing Guide 2025',
       href: '/pricing-guide-2025',
       icon: DollarSignIcon,
       description: 'Complete pricing information',
       featured: true
     },
-    {
-      name: 'Community',
+    { name: 'Community',
       href: '/community',
       icon: UsersIcon2,
       description: 'Join our community',
       featured: false
     },
-    {
-      name: 'Developers',
+    { name: 'Developers',
       href: '/developers',
       icon: CodeIcon,
       description: 'Developer resources',
       featured: false
     },
-    {
-      name: 'Training & Certification',
+    { name: 'Training & Certification',
       href: '/training',
       icon: Award,
       description: 'Professional development',
@@ -424,8 +373,7 @@ export function AppHeader() {
     { name: 'Terms', href: '/terms', icon: BookOpenIcon2 },
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
@@ -478,8 +426,7 @@ export function AppHeader() {
                             setSolutionsDropdownOpen(false);
                           }
                         }}
-                        className="flex items-center space-x-1 text-slate-300 hover:text-cyan-400 transition-colors duration-200 group"
-                      >
+                        className="flex items-center space-x-1 text-slate-300 hover:text-cyan-400 transition-colors duration-200 group">
                         <span className="font-medium">{item.name}</span>
                         <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-200" />
                       </button>
@@ -501,8 +448,7 @@ export function AppHeader() {
                                     <Link
                                       key={service.name}
                                       to={service.href}
-                                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-                                    >
+                                      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group">
                                       <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
                                         <service.icon className="w-4 h-4 text-cyan-400" />
                                       </div>
@@ -525,15 +471,13 @@ export function AppHeader() {
                             <div className="flex items-center justify-between">
                               <Link
                                 to="/services"
-                                className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                              >
+                                className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
                                 <span>View All Services</span>
                                 <ArrowRight className="w-4 h-4" />
                               </Link>
                               <Link
                                 to="/pricing"
-                                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200"
-                              >
+                                className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
                                 View Pricing
                               </Link>
                             </div>
@@ -550,8 +494,7 @@ export function AppHeader() {
                               <Link
                                 key={solution.name}
                                 to={solution.href}
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-                              >
+                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group">
                                 <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
                                   <solution.icon className="w-4 h-4 text-cyan-400" />
                                 </div>
@@ -570,8 +513,7 @@ export function AppHeader() {
                           <div className="mt-6 pt-6 border-t border-slate-700">
                             <Link
                               to="/solutions"
-                              className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                            >
+                              className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
                               <span>View All Solutions</span>
                               <ArrowRight className="w-4 h-4" />
                             </Link>
@@ -588,8 +530,7 @@ export function AppHeader() {
                               <Link
                                 key={resource.name}
                                 to={resource.href}
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group"
-                              >
+                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-800/50 transition-colors duration-200 group">
                                 <div className="w-8 h-8 bg-slate-800 rounded-lg flex items-center justify-center group-hover:bg-slate-700 transition-colors">
                                   <resource.icon className="w-4 h-4 text-cyan-400" />
                                 </div>
@@ -608,8 +549,7 @@ export function AppHeader() {
                           <div className="mt-6 pt-6 border-t border-slate-700">
                             <Link
                               to="/resources"
-                              className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                            >
+                              className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
                               <span>View All Resources</span>
                               <ArrowRight className="w-4 h-4" />
                             </Link>
@@ -620,8 +560,7 @@ export function AppHeader() {
                   ) : (
                     <Link
                       to={item.href}
-                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                    >
+                      className="text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
                       {item.name}
                     </Link>
                   )}
@@ -643,8 +582,7 @@ export function AppHeader() {
                 <button
                   type="submit"
                   disabled={isSearching}
-                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400 transition-colors"
-                >
+                  className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400 transition-colors">
                   {isSearching ? (
                     <div className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
                   ) : (
@@ -659,8 +597,7 @@ export function AppHeader() {
               {/* CTA Button */}
               <Link
                 to="/contact"
-                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
-              >
+                className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium">
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
@@ -669,8 +606,7 @@ export function AppHeader() {
             <div className="lg:hidden">
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-slate-300 hover:text-cyan-400 transition-colors"
-              >
+                className="p-2 text-slate-300 hover:text-cyan-400 transition-colors">
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
@@ -694,8 +630,7 @@ export function AppHeader() {
                   <button
                     type="submit"
                     disabled={isSearching}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400 transition-colors"
-                  >
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 text-slate-400 hover:text-cyan-400 transition-colors">
                     {isSearching ? (
                       <div className="w-4 h-4 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
                     ) : (
@@ -711,8 +646,7 @@ export function AppHeader() {
                       <Link
                         to={item.href}
                         className="block text-slate-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
+                        onClick={() => setMobileMenuOpen(false)}>
                         {item.name}
                       </Link>
                     </div>
@@ -728,8 +662,7 @@ export function AppHeader() {
                         key={link.name}
                         to={link.href}
                         className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
+                        onClick={() => setMobileMenuOpen(false)}>
                         <link.icon className="w-4 h-4" />
                         <span className="text-sm">{link.name}</span>
                       </Link>
@@ -756,8 +689,7 @@ export function AppHeader() {
                 <Link
                   to="/contact"
                   className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium text-center"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
+                  onClick={() => setMobileMenuOpen(false)}>
                   Get Started
                 </Link>
               </div>

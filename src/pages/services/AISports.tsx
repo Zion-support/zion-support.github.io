@@ -13,18 +13,15 @@ export default function AISports() {
   ];
 
   const tiers = [
-    { 
-      name: 'Amateur Team', 
+    { name: 'Amateur Team', 
       price: '$199/mo', 
       details: ['Up to 25 players', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
-    { 
-      name: 'Professional Team', 
+    { name: 'Professional Team', 
       price: '$599/mo', 
       details: ['Up to 100 players', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Major League', 
+    { name: 'Major League', 
       price: '$1,499/mo', 
       details: ['Unlimited players', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
     },

@@ -34,18 +34,15 @@ export default function AIHRTalentAcquisition() {
   ];
 
   const tiers = [
-    { 
-      name: 'Talent Starter', 
+    { name: 'Talent Starter', 
       price: '$299/mo', 
       details: ['Up to 50 job postings', 'Basic AI matching', 'Standard reporting', 'Email support'] 
     },
-    { 
-      name: 'Talent Professional', 
+    { name: 'Talent Professional', 
       price: '$799/mo', 
       details: ['Up to 200 job postings', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Talent', 
+    { name: 'Enterprise Talent', 
       price: '$2,499/mo', 
       details: ['Unlimited job postings', 'Full AI suite', 'White-label options', '24/7 support'] 
     },

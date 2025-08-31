@@ -8,41 +8,34 @@ import { CheckCircle, Truck, Globe, TrendingUp, Zap, Shield, Users, Clock, BarCh
 
 const AISupplyChainOptimizationPlatform: React.FC = () => {
   const features = [
-    {
-      icon: <Truck className="h-6 w-6 text-blue-500" />,
+    { icon: <Truck className="h-6 w-6 text-blue-500" />,
       title: "Smart Logistics",
       description: "AI-powered route optimization and real-time tracking for maximum efficiency"
     },
-    {
-      icon: <Globe className="h-6 w-6 text-green-500" />,
+    { icon: <Globe className="h-6 w-6 text-green-500" />,
       title: "Global Supply Chain",
       description: "Manage complex international supply chains with intelligent risk assessment"
     },
-    {
-      icon: <TrendingUp className="h-6 w-6 text-purple-500" />,
+    { icon: <TrendingUp className="h-6 w-6 text-purple-500" />,
       title: "Predictive Analytics",
       description: "Forecast demand, optimize inventory, and prevent supply chain disruptions"
     },
-    {
-      icon: <Zap className="h-6 w-6 text-yellow-500" />,
+    { icon: <Zap className="h-6 w-6 text-yellow-500" />,
       title: "Real-time Monitoring",
       description: "Track shipments, inventory levels, and supplier performance in real-time"
     },
-    {
-      icon: <Shield className="h-6 w-6 text-red-500" />,
+    { icon: <Shield className="h-6 w-6 text-red-500" />,
       title: "Risk Management",
       description: "Identify and mitigate supply chain risks with AI-powered insights"
     },
-    {
-      icon: <BarChart3 className="h-6 w-6 text-cyan-500" />,
+    { icon: <BarChart3 className="h-6 w-6 text-cyan-500" />,
       title: "Performance Analytics",
       description: "Comprehensive reporting and analytics for continuous improvement"
     }
   ];
 
   const pricingTiers = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$399",
       period: "/month",
       description: "Perfect for small businesses optimizing their supply chain",
@@ -56,8 +49,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$999",
       period: "/month",
       description: "Ideal for growing businesses with complex supply chain needs",
@@ -73,8 +65,7 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$2,499",
       period: "/month",
       description: "For large enterprises with global supply chain operations",
@@ -94,39 +85,31 @@ const AISupplyChainOptimizationPlatform: React.FC = () => {
   ];
 
   const benefits = [
-    {
-      metric: "35%",
+    { metric: "35%",
       description: "Reduction in logistics costs through route optimization"
     },
-    {
-      metric: "50%",
+    { metric: "50%",
       description: "Improvement in delivery times and customer satisfaction"
     },
-    {
-      metric: "40%",
+    { metric: "40%",
       description: "Reduction in inventory carrying costs"
     },
-    {
-      metric: "90%",
+    { metric: "90%",
       description: "Faster response to supply chain disruptions"
     }
   ];
 
   const useCases = [
-    {
-      title: "E-commerce Fulfillment",
+    { title: "E-commerce Fulfillment",
       description: "Optimize warehouse operations and last-mile delivery for online retailers"
     },
-    {
-      title: "Manufacturing",
+    { title: "Manufacturing",
       description: "Streamline raw material procurement and production scheduling"
     },
-    {
-      title: "Retail Distribution",
+    { title: "Retail Distribution",
       description: "Optimize store replenishment and cross-docking operations"
     },
-    {
-      title: "Healthcare Supply Chain",
+    { title: "Healthcare Supply Chain",
       description: "Ensure critical medical supplies reach their destination on time"
     }
   ];

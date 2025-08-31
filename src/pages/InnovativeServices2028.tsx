@@ -61,7 +61,7 @@ export default function InnovativeServices2028() {
     const category = serviceCategories.find(cat => cat.name === categoryName);
     if (!category) return Brain;
     
-    const iconMap: { [key: string]: any } = {
+    const iconMap: { [key: string]:  } = {
       'Brain': Brain,
       'Zap': Zap,
       'Lock': Lock,
@@ -103,9 +103,8 @@ export default function InnovativeServices2028() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-6xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="max-w-6xl mx-auto">
             <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative Services 2028
             </h1>
@@ -155,8 +154,7 @@ export default function InnovativeServices2028() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-                >
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none">
                   <option value="all">All Categories</option>
                   {serviceCategories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -172,8 +170,7 @@ export default function InnovativeServices2028() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none"
-                >
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
                   <option value="roi">Sort by ROI</option>
@@ -195,8 +192,7 @@ export default function InnovativeServices2028() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative"
-              >
+                className="group relative">
                 {/* Background glow */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300`}></div>
                 
@@ -205,7 +201,7 @@ export default function InnovativeServices2028() {
                   {/* Header */}
                   <div className="flex items-start justify-between mb-6">
                     <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${getCategoryColor(service.category)} group-hover:scale-110 transition-transform duration-300`}>
-                      {React.createElement(getCategoryIcon(service.category), { className: "w-8 h-8 text-white" })}
+                      {React.createElement(getCategoryIcon(service.category), { className: "w-8 h-8 text-white"     })}
                     </div>
                     <div className="text-right">
                       <div className="text-2xl font-bold text-cyan-400">${service.price.toLocaleString()}</div>
@@ -254,9 +250,8 @@ export default function InnovativeServices2028() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="mb-6 overflow-hidden"
-                      >
+                        transition={{ duration: 0.3     }}
+                        className="mb-6 overflow-hidden">
                         <div className="space-y-2">
                           {service.features.slice(3).map((feature, idx) => (
                             <div key={idx} className="flex items-center text-gray-400 text-sm">
@@ -298,14 +293,12 @@ export default function InnovativeServices2028() {
                   <div className="flex space-x-3">
                     <button
                       onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`, '_blank')}
-                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-                    >
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-3 rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                       Get Started
                     </button>
                     <button
                       onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                      className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-                    >
+                      className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
                       {expandedService === service.id ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
                     </button>
                   </div>
@@ -336,10 +329,9 @@ export default function InnovativeServices2028() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Flexible Pricing Plans
             </h2>
@@ -355,7 +347,7 @@ export default function InnovativeServices2028() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative p-8 rounded-2xl border-2 transition-all duration-300 ${
                   tier.recommended
                     ? 'bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border-cyan-500/50 scale-105'
@@ -411,8 +403,8 @@ export default function InnovativeServices2028() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
                 Ready to Transform Your Business?
@@ -442,14 +434,12 @@ export default function InnovativeServices2028() {
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <button
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Inquiry`, '_blank')}
-                  className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+                  className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                   Start Your Journey
                 </button>
                 <button
                   onClick={() => window.open(`tel:${contactInfo.phone}`, '_blank')}
-                  className="px-10 py-5 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105"
-                >
+                  className="px-10 py-5 border-2 border-cyan-500 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105">
                   Schedule a Call
                 </button>
               </div>

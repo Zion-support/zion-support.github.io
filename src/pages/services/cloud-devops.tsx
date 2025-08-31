@@ -36,8 +36,7 @@ export default function CloudDevOps() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function CloudDevOps() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: GitBranch,
+                { icon: GitBranch,
                   title: "CI/CD Pipelines",
                   description: "Automated build, test, and deployment pipelines for rapid delivery."
                 },
-                {
-                  icon: Cloud,
+                { icon: Cloud,
                   title: "Cloud Infrastructure",
                   description: "Scalable cloud infrastructure with infrastructure as code (IaC)."
                 },
-                {
-                  icon: Settings,
+                { icon: Settings,
                   title: "Automation",
                   description: "Comprehensive automation of development and operations processes."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Team Collaboration",
                   description: "Enhanced collaboration between development and operations teams."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Security & Compliance",
                   description: "Built-in security and compliance for cloud-native applications."
                 },
-                {
-                  icon: TrendingUp,
+                { icon: TrendingUp,
                   title: "Monitoring & Analytics",
                   description: "Real-time monitoring and analytics for application performance."
                 }
@@ -122,38 +115,32 @@ export default function CloudDevOps() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Continuous Integration",
+                { title: "Continuous Integration",
                   description: "Automated code integration and testing workflows.",
                   icon: GitBranch,
                   benefits: ["Automated builds", "Code quality checks", "Test automation"]
                 },
-                {
-                  title: "Continuous Deployment",
+                { title: "Continuous Deployment",
                   description: "Automated deployment to production environments.",
                   icon: Server,
                   benefits: ["Blue-green deployments", "Rollback capabilities", "Environment management"]
                 },
-                {
-                  title: "Infrastructure as Code",
+                { title: "Infrastructure as Code",
                   description: "Manage infrastructure through code and automation.",
                   icon: Cpu,
                   benefits: ["Terraform", "CloudFormation", "Ansible automation"]
                 },
-                {
-                  title: "Containerization",
+                { title: "Containerization",
                   description: "Container-based application deployment and management.",
                   icon: Cloud,
                   benefits: ["Docker containers", "Kubernetes orchestration", "Microservices"]
                 },
-                {
-                  title: "Monitoring & Observability",
+                { title: "Monitoring & Observability",
                   description: "Comprehensive application and infrastructure monitoring.",
                   icon: BarChart3,
                   benefits: ["Real-time metrics", "Log aggregation", "Alert management"]
                 },
-                {
-                  title: "Security & Compliance",
+                { title: "Security & Compliance",
                   description: "Built-in security scanning and compliance automation.",
                   icon: Shield,
                   benefits: ["Vulnerability scanning", "Compliance checks", "Security policies"]
@@ -193,38 +180,32 @@ export default function CloudDevOps() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "CI/CD Tools",
+                { title: "CI/CD Tools",
                   description: "Jenkins, GitLab CI, GitHub Actions, and Azure DevOps.",
                   icon: GitBranch,
                   features: ["Pipeline automation", "Build automation", "Deployment automation"]
                 },
-                {
-                  title: "Container Platforms",
+                { title: "Container Platforms",
                   description: "Docker, Kubernetes, and container orchestration tools.",
                   icon: Cloud,
                   features: ["Container management", "Orchestration", "Service mesh"]
                 },
-                {
-                  title: "Infrastructure Tools",
+                { title: "Infrastructure Tools",
                   description: "Terraform, CloudFormation, and Ansible for IaC.",
                   icon: Cpu,
                   features: ["Infrastructure automation", "Configuration management", "Provisioning"]
                 },
-                {
-                  title: "Cloud Platforms",
+                { title: "Cloud Platforms",
                   description: "AWS, Azure, Google Cloud, and multi-cloud solutions.",
                   icon: Server,
                   features: ["Multi-cloud strategy", "Cloud-native services", "Scalability"]
                 },
-                {
-                  title: "Monitoring Tools",
+                { title: "Monitoring Tools",
                   description: "Prometheus, Grafana, and ELK stack for observability.",
                   icon: BarChart3,
                   features: ["Metrics collection", "Log aggregation", "Visualization"]
                 },
-                {
-                  title: "Security Tools",
+                { title: "Security Tools",
                   description: "Security scanning, compliance, and vulnerability management.",
                   icon: Shield,
                   features: ["Vulnerability scanning", "Compliance automation", "Security policies"]
@@ -316,23 +297,19 @@ export default function CloudDevOps() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Assessment",
                   description: "Evaluate current development and operations processes."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "Strategy",
                   description: "Develop comprehensive DevOps strategy and roadmap."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Implementation",
                   description: "Implement DevOps tools and establish new workflows."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve processes."
                 }
@@ -361,15 +338,13 @@ export default function CloudDevOps() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

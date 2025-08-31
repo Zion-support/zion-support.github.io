@@ -129,8 +129,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
-    {
-      title: 'AI & Machine Learning Services',
+    { title: 'AI & Machine Learning Services',
       featured: true,
       icon: Brain,
       color: 'from-purple-500 to-cyan-500',
@@ -149,8 +148,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true }
       ]
     },
-    {
-      title: 'Cloud & Infrastructure',
+    { title: 'Cloud & Infrastructure',
       featured: true,
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
@@ -167,8 +165,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'IT Helpdesk', href: '/services/it-helpdesk', featured: true }
       ]
     },
-    {
-      title: 'Security & Compliance',
+    { title: 'Security & Compliance',
       featured: true,
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -183,8 +180,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'GDPR Cookie Compliance', href: '/services/gdpr-cookie-compliance', featured: true }
       ]
     },
-    {
-      title: 'Emerging Technologies',
+    { title: 'Emerging Technologies',
       featured: true,
       icon: Atom,
       color: 'from-indigo-500 to-purple-500',
@@ -199,8 +195,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'Quantum Financial Trading', href: '/services/quantum-financial-trading', featured: true }
       ]
     },
-    {
-      title: 'Industry Solutions',
+    { title: 'Industry Solutions',
       featured: false,
       icon: Building,
       color: 'from-green-500 to-emerald-500',
@@ -217,8 +212,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'Energy Solutions', href: '/solutions/energy', featured: false }
       ]
     },
-    {
-      title: 'Resources & Support',
+    { title: 'Resources & Support',
       featured: false,
       icon: BookOpen,
       color: 'from-orange-500 to-red-500',
@@ -237,8 +231,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
         { name: 'FAQ & Help Center', href: '/faq', featured: false }
       ]
     },
-    {
-      title: 'Company & Contact',
+    { title: 'Comp & Contact',
       featured: false,
       icon: Users,
       color: 'from-slate-500 to-gray-500',
@@ -259,14 +252,13 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/comp/zion-tech-group', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-400' },
@@ -300,15 +292,14 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
   ];
 
   // Create missing pages for broken links
-  const createMissingPage = (name: anystring, href: string)  => {
+  const createMissingPage = (name: string, href: string)  => {
     // For now, we'll create placeholder pages for missing routes
     // These will be created as separate components
     return (
       <Link
         key={name}
         to={href}
-        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors"
-      >
+        className="block text-sm text-slate-300 hover:text-cyan-400 transition-colors">
         {name}
       </Link>
     );
@@ -329,9 +320,8 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="flex items-center justify-center space-x-3 mb-6"
-            >
+              transition={{ duration: 0.6     }}
+              className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-xl flex items-center justify-center">
                 <Zap className="w-6 h-6 text-white" />
               </div>
@@ -343,8 +333,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-slate-300 max-w-3xl mx-auto"
-            >
+              className="text-xl text-slate-300 max-w-3xl mx-auto">
               Revolutionizing business through cutting-edge AI, quantum computing, and innovative technology solutions.
             </motion.p>
           </div>
@@ -354,8 +343,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
-          >
+            className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
             {quickActions.map((action, index) => (
               <Link
                 key={action.name}
@@ -380,8 +368,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="space-y-4"
-              >
+                className="space-y-4">
                 <div className="flex items-center space-x-2">
                   <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>
                     <section.icon className="w-4 h-4 text-white" />
@@ -395,8 +382,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
                     <Link
                       key={link.name}
                       to={link.href}
-                      className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200 group"
-                    >
+                      className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors duration-200 group">
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
                       <span className="text-sm">{link.name}</span>
                       {link.featured && (
@@ -414,8 +400,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-          >
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Contact Information */}
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
@@ -482,8 +467,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
                 />
                 <button
                   type="submit"
-                  className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium"
-                >
+                  className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 font-medium">
                   Subscribe
                 </button>
               </form>
@@ -495,8 +479,7 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
-            className="border-t border-slate-700/50 pt-8"
-          >
+            className="border-t border-slate-700/50 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
               <div className="flex items-center space-x-4 text-sm text-slate-400">
                 <span>&copy; {currentYear} Zion Tech Group. All rights reserved.</span>

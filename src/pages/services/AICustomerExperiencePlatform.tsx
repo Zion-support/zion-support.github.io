@@ -13,18 +13,15 @@ export default function AICustomerExperiencePlatform() {
   ];
 
   const tiers = [
-    { 
-      name: 'Growth', 
+    { name: 'Growth', 
       price: '$399/mo', 
       details: ['Up to 10,000 interactions/month', '5 team members', 'Basic AI features', 'Email support'] 
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$899/mo', 
       details: ['Up to 100,000 interactions/month', '25 team members', 'Advanced AI features', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$2,499/mo', 
       details: ['Unlimited interactions', 'Unlimited team members', 'Custom AI models', '24/7 dedicated support'] 
     },

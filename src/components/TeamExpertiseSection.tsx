@@ -2,38 +2,32 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const teamExpertise = [
-  {
-    icon: "🎓",
+  { icon: "🎓",
     title: "Advanced Degrees",
     description: "Our team holds advanced degrees in Computer Science, AI, and Engineering from top universities",
     count: "95%"
   },
-  {
-    icon: "🏆",
+  { icon: "🏆",
     title: "Industry Certifications",
     description: "Certified professionals in AWS, Azure, Google Cloud, and specialized AI technologies",
     count: "50+"
   },
-  {
-    icon: "🌍",
+  { icon: "🌍",
     title: "Global Experience",
     description: "Team members with experience working across 25+ countries and diverse industries",
     count: "25+"
   },
-  {
-    icon: "⚡",
+  { icon: "⚡",
     title: "Years of Experience",
     description: "Combined experience of over 200 years in technology and business solutions",
     count: "200+"
   },
-  {
-    icon: "🔬",
+  { icon: "🔬",
     title: "Research Publications",
     description: "Published research in leading AI, quantum computing, and blockchain journals",
     count: "30+"
   },
-  {
-    icon: "🚀",
+  { icon: "🚀",
     title: "Successful Projects",
     description: "Successfully delivered complex technology solutions for Fortune 500 companies",
     count: "500+"
@@ -59,8 +53,8 @@ export function TeamExpertiseSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Team Expertise
@@ -77,7 +71,7 @@ export function TeamExpertiseSection() {
               className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -103,7 +97,7 @@ export function TeamExpertiseSection() {
           className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <h3 className="text-3xl font-bold text-white mb-6">
@@ -121,7 +115,7 @@ export function TeamExpertiseSection() {
               className="bg-slate-800 border border-slate-700 rounded-lg p-4 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <span className="text-white font-medium text-sm">{skill}</span>
@@ -133,7 +127,7 @@ export function TeamExpertiseSection() {
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

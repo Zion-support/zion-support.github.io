@@ -7,13 +7,13 @@ interface DemoService {
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: ;
   color: string;
   demoUrl: string;
   features: string[];
   pricing: string;
   status: 'live' | 'beta' | 'coming-soon';
-}
+    }
 
 interface DemoResult {
   id: string;
@@ -21,7 +21,7 @@ interface DemoResult {
   output: string;
   timestamp: string;
   service: string;
-}
+    }
 
 const Demo: React.FC = () => {
   const [activeDemo, setActiveDemo] = useState<string | null>(null);
@@ -31,8 +31,7 @@ const Demo: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const demoServices: DemoService[] = [
-    {
-      id: 'ai-content-creation',
+    { id: 'ai-content-creation',
       name: 'AI Content Creation',
       description: 'Generate high-quality content using advanced AI models',
       icon: Brain,
@@ -42,8 +41,7 @@ const Demo: React.FC = () => {
       pricing: 'Starting at $29/month',
       status: 'live'
     },
-    {
-      id: 'ai-business-intelligence',
+    { id: 'ai-business-intelligence',
       name: 'AI Business Intelligence',
       description: 'Transform your data into actionable insights',
       icon: BarChart3,
@@ -53,8 +51,7 @@ const Demo: React.FC = () => {
       pricing: 'Starting at $99/month',
       status: 'live'
     },
-    {
-      id: 'ai-cybersecurity',
+    { id: 'ai-cybersecurity',
       name: 'AI Cybersecurity',
       description: 'Advanced threat detection and security automation',
       icon: Shield,
@@ -64,8 +61,7 @@ const Demo: React.FC = () => {
       pricing: 'Starting at $149/month',
       status: 'beta'
     },
-    {
-      id: 'cloud-devops',
+    { id: 'cloud-devops',
       name: 'Cloud & DevOps',
       description: 'Streamline your cloud infrastructure and deployment',
       icon: Cloud,
@@ -75,8 +71,7 @@ const Demo: React.FC = () => {
       pricing: 'Starting at $79/month',
       status: 'live'
     },
-    {
-      id: 'micro-crm',
+    { id: 'micro-crm',
       name: 'Micro CRM',
       description: 'Lightweight customer relationship management solution',
       icon: Users,
@@ -86,8 +81,7 @@ const Demo: React.FC = () => {
       pricing: 'Starting at $19/month',
       status: 'live'
     },
-    {
-      id: 'ai-marketing-automation',
+    { id: 'ai-marketing-automation',
       name: 'AI Marketing Automation',
       description: 'Intelligent marketing campaigns and personalization',
       icon: Zap,
@@ -109,8 +103,7 @@ const Demo: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve, 2000));
     
     const service = demoServices.find(s => s.id === serviceId);
-    const newResult: DemoResult = {
-      id: Date.now().toString(),
+    const newResult: DemoResult = { id: Date.now().toString(),
       input: currentInput,
       output: generateDemoOutput(serviceId, currentInput),
       timestamp: new Date().toLocaleTimeString(),
@@ -170,9 +163,8 @@ const Demo: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Play className="w-10 h-10 text-white" />
             </div>
@@ -197,8 +189,7 @@ const Demo: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-colors cursor-pointer"
-              onClick={() => setActiveDemo(service.id)}
-            >
+              onClick={() => setActiveDemo(service.id)}>
               <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mb-4`}>
                 <service.icon className="w-6 h-6 text-white" />
               </div>
@@ -234,9 +225,8 @@ const Demo: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8"
-          >
+            transition={{ duration: 0.5     }}
+            className="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-2xl font-bold text-white">
                 {demoServices.find(s => s.id === activeDemo)?.name} Demo
@@ -244,16 +234,14 @@ const Demo: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <button
                   onClick={resetDemo}
-                  className="flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg transition-colors"
-                >
+                  className="flex items-center px-4 py-2 bg-gray-600 hover:bg-gray-700 text-white text-sm font-medium rounded-lg transition-colors">
                   <RotateCcw className="w-4 h-4 mr-2" />
                   Reset
                 </button>
                 {isRunning ? (
                   <button
                     onClick={stopDemo}
-                    className="flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors"
-                  >
+                    className="flex items-center px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-lg transition-colors">
                     <Pause className="w-4 h-4 mr-2" />
                     Stop
                   </button>
@@ -261,8 +249,7 @@ const Demo: React.FC = () => {
                   <button
                     onClick={() => runDemo(activeDemo)}
                     disabled={!currentInput.trim() || isLoading}
-                    className="flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-600 text-white text-sm font-medium rounded-lg transition-colors"
-                  >
+                    className="flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-600 text-white text-sm font-medium rounded-lg transition-colors">
                     {isLoading ? (
                       <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                     ) : (
@@ -390,15 +377,13 @@ const Demo: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/schedule-demo"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">
               <MessageCircle className="w-5 h-5 mr-2" />
               Schedule Full Demo
             </Link>
             <Link
               to="/pricing"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors">
               <ShoppingCart className="w-5 h-5 mr-2" />
               View Pricing
             </Link>

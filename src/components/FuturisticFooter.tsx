@@ -30,8 +30,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
   };
   const currentYear = new Date().getFullYear();
   const footerSections = [
-    {
-      title: "Services",
+    { title: "Services",
       links: [
         { name: "AI & Machine Learning", href: "/ai-services" },
         { name: "Micro SAAS Solutions", href: "/micro-saas" },
@@ -43,8 +42,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
         { name: "Data Management", href: "/it-services/data" }
       ]
     },
-    {
-      title: "Solutions",
+    { title: "Solutions",
       links: [
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
@@ -56,8 +54,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
     },
-    {
-      title: "Company",
+    { title: "Comp",
       links: [
         { name: "About Us", href: "/about" },
         { name: "Our Team", href: "/about#team" },
@@ -69,8 +66,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
         { name: "Sustainability", href: "/sustainability" }
       ]
     },
-    {
-      title: "Resources",
+    { title: "Resources",
       links: [
         { name: "Documentation", href: "/docs" },
         { name: "API Reference", href: "/api" },
@@ -84,7 +80,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
     }
   ];
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "LinkedIn", href: "https://linkedin.com/comp/ziontechgroup", icon: Linkedin },
     { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
     { name: "Facebook", href: "https://facebook.com/ziontechgroup", icon: Facebook },
     { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
@@ -97,13 +93,13 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                viewport={{ once: true     }}
+                transition={{ duration: 0.6     }}
               >
                 <div className="flex items-center space-x-3 mb-6">
                   <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center">
@@ -145,13 +141,13 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                 >
                   <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
                     {section.title === "Services" && <Brain className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title === "Solutions" && <Rocket className="w-5 h-5 mr-2 text-zion-purple" />}
-                    {section.title === "Company" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
+                    {section.title === "Comp" && <Users className="w-5 h-5 mr-2 text-zion-blue" />}
                     {section.title === "Resources" && <FileText className="w-5 h-5 mr-2 text-zion-cyan" />}
                     {section.title}
                   </h3>
@@ -160,8 +156,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
                       <li key={link.name}>
                         <Link
                           to={link.href}
-                          className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                        >
+                          className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block">
                           {link.name}
                         </Link>
                       </li>
@@ -175,10 +170,9 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="border-t border-zion-slate/30 mt-12 pt-8"
-          >
+            className="border-t border-zion-slate/30 mt-12 pt-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
@@ -189,32 +183,28 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
                   <li>
                     <Link
                       to="/request-quote"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block">
                       Request Quote
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/demo"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block">
                       Book Demo
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/support"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block">
                       Get Support
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/status"
-                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                    >
+                      className="text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 text-sm hover:translate-x-1 inline-block">
                       System Status
                     </Link>
                   </li>
@@ -226,10 +216,9 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="border-t border-zion-slate/30 mt-12 pt-8"
-          >
+            className="border-t border-zion-slate/30 mt-12 pt-8">
             <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
               {/* Copyright */}
               <div className="text-zion-slate-light text-sm">
@@ -246,8 +235,7 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300"
-                  >
+                    className="w-10 h-10 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg flex items-center justify-center text-zion-slate-light hover:text-zion-cyan hover:border-zion-cyan/50 hover:bg-zion-cyan/10 transition-all duration-300">
                     <social.icon className="w-5 h-5" />
                   </a>
                 ))}
@@ -271,8 +259,8 @@ export const FuturisticFooter: React.FC = (): JSX.Element => {
         <motion.button
           onClick={scrollToTop}
           className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-full shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300 z-50 flex items-center justify-center group"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1     }}
+          whileTap={{ scale: 0.9     }}
         >
           <ArrowUp className="w-6 h-6 group-hover:-translate-y-0.5 transition-transform duration-300" />
         </motion.button>

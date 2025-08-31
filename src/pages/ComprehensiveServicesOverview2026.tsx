@@ -90,8 +90,7 @@ export default function ComprehensiveServicesOverview2026() {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const serviceCategories = [
-    {
-      id: 'quantum-ai',
+    { id: 'quantum-ai',
       name: 'Quantum AI & Computing',
       description: 'Revolutionary quantum computing solutions combined with artificial intelligence',
       icon: AtomIcon,
@@ -101,8 +100,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '500-2000%',
       innovationLevel: 'Revolutionary'
     },
-    {
-      id: 'neuromorphic-ai',
+    { id: 'neuromorphic-ai',
       name: 'Neuromorphic AI',
       description: 'Brain-inspired computing systems that mimic human neural networks',
       icon: BrainIcon2,
@@ -112,8 +110,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '300-800%',
       innovationLevel: 'Cutting-edge'
     },
-    {
-      id: 'synthetic-biology',
+    { id: 'synthetic-biology',
       name: 'Synthetic Biology AI',
       description: 'AI-powered design and engineering of biological systems',
       icon: DnaIcon,
@@ -123,8 +120,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '400-1200%',
       innovationLevel: 'Revolutionary'
     },
-    {
-      id: 'space-technology',
+    { id: 'space-technology',
       name: 'Space Technology AI',
       description: 'Autonomous space operations and satellite management systems',
       icon: SatelliteIcon,
@@ -134,8 +130,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '600-2000%',
       innovationLevel: 'Revolutionary'
     },
-    {
-      id: 'advanced-materials',
+    { id: 'advanced-materials',
       name: 'Advanced Materials AI',
       description: 'AI-powered discovery and design of next-generation materials',
       icon: LayersIcon,
@@ -145,8 +140,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '500-1500%',
       innovationLevel: 'Cutting-edge'
     },
-    {
-      id: 'brain-computer-interface',
+    { id: 'brain-computer-interface',
       name: 'Brain-Computer Interface',
       description: 'Direct neural communication between human brain and computers',
       icon: MonitorIcon2,
@@ -156,8 +150,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '800-3000%',
       innovationLevel: 'Revolutionary'
     },
-    {
-      id: 'digital-twin',
+    { id: 'digital-twin',
       name: 'Digital Twin AI',
       description: 'Virtual replicas of physical systems with real-time monitoring',
       icon: GlobeIcon3,
@@ -167,8 +160,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
-    {
-      id: 'extended-reality',
+    { id: 'extended-reality',
       name: 'Extended Reality AI',
       description: 'Immersive VR, AR, and MR experiences powered by AI',
       icon: SmartphoneIcon2,
@@ -178,8 +170,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
-    {
-      id: 'edge-ai',
+    { id: 'edge-ai',
       name: 'Edge AI Intelligence',
       description: 'AI processing at the edge of networks for real-time decision making',
       icon: CpuIcon2,
@@ -189,8 +180,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '400-1200%',
       innovationLevel: 'Advanced'
     },
-    {
-      id: 'federated-learning',
+    { id: 'federated-learning',
       name: 'Federated Learning AI',
       description: 'Collaborative AI training across distributed data sources',
       icon: NetworkIcon,
@@ -200,8 +190,7 @@ export default function ComprehensiveServicesOverview2026() {
       avgROI: '500-1500%',
       innovationLevel: 'Advanced'
     },
-    {
-      id: 'sustainable-technology',
+    { id: 'sustainable-technology',
       name: 'Sustainable Technology AI',
       description: 'AI solutions for environmental sustainability and green innovation',
       icon: LeafIcon,
@@ -240,7 +229,7 @@ export default function ComprehensiveServicesOverview2026() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Comprehensive Services
@@ -256,23 +245,20 @@ export default function ComprehensiveServicesOverview2026() {
             {/* Stats Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-              >
+                whileHover={{ scale: 1.05     }}
+                className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-4xl font-bold text-white mb-2">{totalServices}</div>
                 <div className="text-white/80">Revolutionary Services</div>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-              >
+                whileHover={{ scale: 1.05     }}
+                className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-4xl font-bold text-white mb-2">{totalMarketSize}</div>
                 <div className="text-white/80">Total Market Size</div>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                className="bg-white/20 backdrop-blur-sm rounded-xl p-6"
-              >
+                whileHover={{ scale: 1.05     }}
+                className="bg-white/20 backdrop-blur-sm rounded-xl p-6">
                 <div className="text-4xl font-bold text-white mb-2">{avgROI}</div>
                 <div className="text-white/80">Average ROI</div>
               </motion.div>
@@ -338,8 +324,7 @@ export default function ComprehensiveServicesOverview2026() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6"
-                >
+                  className="bg-white/5 backdrop-blur-sm border border-zion-slate-300/20 rounded-2xl p-6">
                   {/* Category Header */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center gap-4">
@@ -402,8 +387,7 @@ export default function ComprehensiveServicesOverview2026() {
                   {/* Expand/Collapse Button */}
                   <button
                     onClick={() => toggleCategoryExpansion(category.id)}
-                    className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30"
-                  >
+                    className="w-full flex items-center justify-center gap-2 py-3 text-zion-cyan hover:text-white transition-colors border-t border-zion-slate-600/30">
                     {expandedCategory === category.id ? (
                       <>
                         <EyeOff className="w-4 h-4" />
@@ -424,9 +408,8 @@ export default function ComprehensiveServicesOverview2026() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="mt-6 pt-6 border-t border-zion-slate-600/30"
-                      >
+                        transition={{ duration: 0.3     }}
+                        className="mt-6 pt-6 border-t border-zion-slate-600/30">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                           {category.services.map((service, serviceIndex) => (
                             <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
@@ -463,8 +446,7 @@ export default function ComprehensiveServicesOverview2026() {
                                 {service.tags.slice(0, 3).map((tag, tagIndex) => (
                                   <span
                                     key={tagIndex}
-                                    className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
-                                  >
+                                    className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md">
                                     {tag}
                                   </span>
                                 ))}
@@ -472,8 +454,7 @@ export default function ComprehensiveServicesOverview2026() {
                               
                               <Link
                                 to="/contact"
-                                className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
-                              >
+                                className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm">
                                 <MessageCircle className="w-4 h-4" />
                                 Get Started
                               </Link>
@@ -496,8 +477,8 @@ export default function ComprehensiveServicesOverview2026() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Explore the Future?
@@ -509,15 +490,13 @@ export default function ComprehensiveServicesOverview2026() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg"
-              >
+                className="flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-lg">
                 <MessageCircle className="w-5 h-5" />
                 Start Your Journey
               </Link>
               <a
                 href="tel:+13024640950"
-                className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg"
-              >
+                className="flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-zion-slate-300 text-white rounded-lg hover:bg-white/20 transition-all duration-200 font-semibold text-lg">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>

@@ -84,7 +84,7 @@ const EmergingTechShowcase2025: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Emerging Tech
@@ -99,18 +99,16 @@ const EmergingTechShowcase2025: React.FC = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white hover:bg-white/20 transition-all"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white hover:bg-white/20 transition-all">
                 <Phone className="w-5 h-5" />
                 <span>+1 302 464 0950</span>
               </motion.div>
               <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white hover:bg-white/20 transition-all"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-white hover:bg-white/20 transition-all">
                 <Mail className="w-5 h-5" />
                 <span>kleber@ziontechgroup.com</span>
               </motion.div>
@@ -126,8 +124,8 @@ const EmergingTechShowcase2025: React.FC = () => {
             {categories.map((category) => (
               <motion.button
                 key={category.id}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center gap-2 px-6 py-3 rounded-full transition-all ${
                   selectedCategory === category.id
@@ -156,14 +154,12 @@ const EmergingTechShowcase2025: React.FC = () => {
               <div className="flex gap-4">
                 <button
                   onClick={() => setAutoPlay(!autoPlay)}
-                  className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
-                >
+                  className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all">
                   {autoPlay ? <Pause className="w-6 h-6 text-white" /> : <Play className="w-6 h-6 text-white" />}
                 </button>
                 <button
                   onClick={() => setCurrentSlide(0)}
-                  className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all"
-                >
+                  className="p-3 bg-white/10 rounded-full hover:bg-white/20 transition-all">
                   <RotateCcw className="w-6 h-6 text-white" />
                 </button>
               </div>
@@ -175,14 +171,13 @@ const EmergingTechShowcase2025: React.FC = () => {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12"
-              >
+                transition={{ duration: 0.5     }}
+                className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="flex items-center gap-2 mb-4">
                       <div className={`p-2 rounded-lg bg-gradient-to-r ${getCategoryColor(filteredServices[currentSlide]?.category)}`}>
-                        {React.createElement(getCategoryIcon(filteredServices[currentSlide]?.category), { className: "w-6 h-6 text-white" })}
+                        {React.createElement(getCategoryIcon(filteredServices[currentSlide]?.category), { className: "w-6 h-6 text-white"     })}
                       </div>
                       <span className="text-sm text-gray-400 uppercase tracking-wider">
                         {filteredServices[currentSlide]?.category}
@@ -203,10 +198,9 @@ const EmergingTechShowcase2025: React.FC = () => {
                       </div>
                     </div>
                     <motion.button
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all"
-                    >
+                      whileHover={{ scale: 1.05     }}
+                      whileTap={{ scale: 0.95     }}
+                      className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all">
                       {filteredServices[currentSlide]?.ctaLabel}
                     </motion.button>
                   </div>
@@ -265,13 +259,12 @@ const EmergingTechShowcase2025: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -10     }}
                 className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 hover:shadow-2xl transition-all cursor-pointer"
-                onClick={() => setSelectedService(service.id)}
-              >
+                onClick={() => setSelectedService(service.id)}>
                 <div className="flex items-center gap-3 mb-4">
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)}`}>
-                    {React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
+                    {React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white"     })}
                   </div>
                   <div>
                     <span className="text-sm text-gray-400 uppercase tracking-wider">
@@ -300,10 +293,9 @@ const EmergingTechShowcase2025: React.FC = () => {
                 </div>
                 
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all">
                   {service.ctaLabel}
                 </motion.button>
               </motion.div>
@@ -353,10 +345,9 @@ const EmergingTechShowcase2025: React.FC = () => {
           </div>
           
           <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all"
-          >
+            whileHover={{ scale: 1.05     }}
+            whileTap={{ scale: 0.95     }}
+            className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg transition-all">
             Get Started Today
           </motion.button>
         </div>
@@ -366,19 +357,17 @@ const EmergingTechShowcase2025: React.FC = () => {
       <AnimatePresence>
         {selectedService && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
+            exit={{ opacity: 0     }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedService(null)}
-          >
+            onClick={() => setSelectedService(null)}>
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
+              onClick={(e) => e.stopPropagation()}>
               {(() => {
                 const service = EMERGING_TECH_SERVICES_2025.find(s => s.id === selectedService);
                 if (!service) return null;
@@ -388,7 +377,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center gap-3">
                         <div className={`p-3 rounded-xl bg-gradient-to-r ${getCategoryColor(service.category)}`}>
-                          {React.createElement(getCategoryIcon(service.category), { className: "w-8 h-8 text-white" })}
+                          {React.createElement(getCategoryIcon(service.category), { className: "w-8 h-8 text-white"     })}
                         </div>
                         <div>
                           <span className="text-sm text-gray-400 uppercase tracking-wider">
@@ -398,8 +387,7 @@ const EmergingTechShowcase2025: React.FC = () => {
                       </div>
                       <button
                         onClick={() => setSelectedService(null)}
-                        className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all"
-                      >
+                        className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-all">
                         <ChevronLeft className="w-6 h-6 text-white" />
                       </button>
                     </div>
@@ -453,18 +441,16 @@ const EmergingTechShowcase2025: React.FC = () => {
                     
                     <div className="flex gap-4">
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
-                      >
+                        whileHover={{ scale: 1.05     }}
+                        whileTap={{ scale: 0.95     }}
+                        className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg transition-all">
                         {service.ctaLabel}
                       </motion.button>
                       <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={{ scale: 1.05     }}
+                        whileTap={{ scale: 0.95     }}
                         onClick={() => setSelectedService(null)}
-                        className="px-8 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all"
-                      >
+                        className="px-8 py-3 border border-white/20 text-white rounded-xl hover:bg-white/10 transition-all">
                         Close
                       </motion.button>
                     </div>

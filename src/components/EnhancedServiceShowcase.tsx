@@ -20,12 +20,11 @@ import { Brain,
  } from 'lucide-react.ts';
 
 interface Service {
-
   id: string;
   title: string;
   description: string;
 icon: React.ComponentType<{ className?: string;
-}>;
+    }>;
   category: string;
   features: string[];
   pricing: string;
@@ -37,8 +36,7 @@ icon: React.ComponentType<{ className?: string;
 }
 
 const services: Service[] = [
-  {
-    id: 'ai-business-intelligence',
+  { id: 'ai-business-intelligence',
     title: 'AI Business Intelligence Platform',
     description: 'Advanced analytics with AI-powered insights and predictive modeling',
     icon: Brain,
@@ -51,8 +49,7 @@ const services: Service[] = [
     popular: true,
     link: '/ai-services/business-intelligence'
   },
-  {
-    id: 'quantum-computing-suite',
+  { id: 'quantum-computing-suite',
     title: 'Quantum Computing Suite',
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: Rocket,
@@ -64,8 +61,7 @@ const services: Service[] = [
     color: 'from-purple-500 to-pink-500',
     link: '/emerging-tech/quantum-computing'
   },
-  {
-    id: 'cybersecurity-platform',
+  { id: 'cybersecurity-platform',
     title: 'AI-Powered Cybersecurity Platform',
     description: 'Intelligent threat detection and response with zero-trust architecture',
     icon: Shield,
@@ -78,8 +74,7 @@ const services: Service[] = [
     popular: true,
     link: '/it-services/cybersecurity'
   },
-  {
-    id: 'cloud-devops-automation',
+  { id: 'cloud-devops-automation',
     title: 'Cloud & DevOps Automation',
     description: 'Scalable cloud infrastructure with intelligent automation',
     icon: Cloud,
@@ -91,8 +86,7 @@ const services: Service[] = [
     color: 'from-green-500 to-emerald-500',
     link: '/it-services/cloud-devops'
   },
-  {
-    id: 'blockchain-defi-platform',
+  { id: 'blockchain-defi-platform',
     title: 'Blockchain & DeFi Platform',
     description: 'Decentralized finance solutions with advanced blockchain technology',
     icon: Globe,
@@ -104,8 +98,7 @@ const services: Service[] = [
     color: 'from-yellow-500 to-orange-500',
     link: '/emerging-tech/blockchain-defi'
   },
-  {
-    id: 'digital-transformation',
+  { id: 'digital-transformation',
     title: 'Digital Transformation Consulting',
     description: 'End-to-end business transformation with cutting-edge technology',
     icon: TrendingUp,
@@ -117,8 +110,7 @@ const services: Service[] = [
     color: 'from-indigo-500 to-purple-500',
     link: '/services/digital-transformation'
   },
-  {
-    id: 'micro-saas-platform',
+  { id: 'micro-saas-platform',
     title: 'Micro SaaS Development Platform',
     description: 'Rapid development and deployment of SaaS applications',
     icon: Code,
@@ -130,8 +122,7 @@ const services: Service[] = [
     color: 'from-cyan-500 to-blue-500',
     link: '/micro-saas/development-platform'
   },
-  {
-    id: 'healthcare-ai',
+  { id: 'healthcare-ai',
     title: 'Healthcare AI Solutions',
     description: 'AI-powered diagnostic and patient care optimization',
     icon: Users,
@@ -159,7 +150,7 @@ const categories = [
 
 export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<any>(null);
+  const [hoveredService, setHoveredService] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -169,7 +160,7 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1     }
     );
 
     const element = document.getElementById('service-showcase');
@@ -181,10 +172,10 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
   }, []);
 
   const filteredServices = selectedCategory === 'All Services' 
-    ? services: anyservices.filter(service  => service.category === selectedCategory);
+    ? services: services.filter(service  => service.category === selectedCategory);
 
-  const renderStars = (rating: anynumber)  => {
-    return Array.from({ length: any5 }, (_, i)  => (
+  const renderStars = (rating: number)  => {
+    return Array.from({ length: 5     }, (_, i)  => (
       <Star
         key={i}
         className={`w-4 h-4 ${
@@ -203,9 +194,8 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+          transition={{ duration: 0.6     }}
+          className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">
               Services
@@ -222,8 +212,7 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center gap-3 mb-12"
-        >
+          className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category, index) => (
             <button
               key={category}
@@ -241,11 +230,10 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
 
         {/* Services Grid */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+          initial={{ opacity: 0     }}
+          animate={isVisible ? { opacity: 1     } : { opacity: 0     }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence mode="wait">
             {filteredServices.map((service, index) => (
               <motion.div
@@ -253,17 +241,15 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ 
-                  duration: 0.6, 
+                transition={{ duration: 0.6, 
                   delay: index * 0.1,
                   type: "spring",
                   stiffness: 100
                 }}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -10     }}
                 onHoverStart={() => setHoveredService(service.id)}
                 onHoverEnd={() => setHoveredService(null)}
-                className="relative group"
-              >
+                className="relative group">
                 <Link to={service.link}>
                   <div className="bg-gradient-to-br from-zion-slate to-zion-slate-light p-8 rounded-2xl border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/10 h-full">
                     {/* Popular Badge */}
@@ -336,8 +322,7 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-16"
-        >
+          className="text-center mt-16">
           <div className="bg-gradient-to-r from-zion-slate to-zion-slate-light border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -349,15 +334,13 @@ export const EnhancedServiceShowcase: React.FC = (): JSX.Element => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg font-semibold hover:from-zion-cyan-dark hover:to-zion-blue-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-zion-cyan/25">
                 <Play className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <Link
                 to="/enhanced-services"
-                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>

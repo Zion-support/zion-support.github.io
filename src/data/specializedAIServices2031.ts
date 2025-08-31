@@ -17,26 +17,24 @@ export interface SpecializedAIService2031 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
   // AI Strategy & Consulting
-  {
-    id: "ai-strategy-consulting",
+  { id: "ai-strategy-consulting",
     title: "AI Strategy & Digital Transformation Consulting",
     description: "Comprehensive AI strategy consulting that helps organizations identify opportunities, develop roadmaps, and implement AI-driven transformation initiatives.",
     category: "AI Strategy",
@@ -83,13 +81,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$15,000 - $100,000",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Strategic Frameworks", "Analytics Tools", "ROI Models", "Project Management", "Communication Platforms"],
+    technicalSpecs: { technology: ["Strategic Frameworks", "Analytics Tools", "ROI Models", "Project Management", "Communication Platforms"],
       integrations: ["Business Systems", "Analytics Platforms", "Project Management Tools", "Communication Systems"],
       apiEndpoints: 100,
       uptime: "99.9%",
@@ -98,8 +94,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["McKinsey", "BCG", "Bain", "Deloitte", "Accenture"],
     marketSize: "$156.7 billion by 2031"
   },
-  {
-    id: "ai-ethics-governance",
+  { id: "ai-ethics-governance",
     title: "AI Ethics & Governance Framework",
     description: "Comprehensive AI ethics and governance framework that ensures responsible AI development and deployment while maintaining compliance with regulations.",
     category: "AI Governance",
@@ -146,13 +141,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$20,000 - $120,000",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AI Ethics Tools", "Bias Detection", "Explainability Platforms", "Compliance Monitoring", "Audit Systems"],
+    technicalSpecs: { technology: ["AI Ethics Tools", "Bias Detection", "Explainability Platforms", "Compliance Monitoring", "Audit Systems"],
       integrations: ["AI Platforms", "Compliance Systems", "Risk Management Tools", "Reporting Platforms"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -161,8 +154,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["PwC", "Deloitte", "EY", "KPMG", "Accenture"],
     marketSize: "$23.4 billion by 2031"
   },
-  {
-    id: "ai-talent-acquisition",
+  { id: "ai-talent-acquisition",
     title: "AI Talent Acquisition & Development",
     description: "Comprehensive AI talent acquisition and development services that help organizations build and retain world-class AI teams.",
     category: "AI Talent",
@@ -209,13 +201,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$12,000 - $80,000",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AI Assessment Tools", "Recruitment Platforms", "Learning Management Systems", "Performance Analytics", "Communication Tools"],
+    technicalSpecs: { technology: ["AI Assessment Tools", "Recruitment Platforms", "Learning Management Systems", "Performance Analytics", "Communication Tools"],
       integrations: ["HR Systems", "Job Boards", "Social Media", "Learning Platforms", "Analytics Tools"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -224,8 +214,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["Hired", "Toptal", "Upwork", "Fiverr", "LinkedIn"],
     marketSize: "$45.2 billion by 2031"
   },
-  {
-    id: "ai-research-development",
+  { id: "ai-research-development",
     title: "AI Research & Development Services",
     description: "Cutting-edge AI research and development services that push the boundaries of what's possible and create breakthrough innovations.",
     category: "AI R&D",
@@ -272,13 +261,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$50,000 - $300,000",
     roi: "150-300%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Advanced AI Frameworks", "Research Tools", "Computing Infrastructure", "Data Platforms", "Collaboration Tools"],
+    technicalSpecs: { technology: ["Advanced AI Frameworks", "Research Tools", "Computing Infrastructure", "Data Platforms", "Collaboration Tools"],
       integrations: ["Research Databases", "Computing Resources", "Collaboration Platforms", "Publication Systems"],
       apiEndpoints: 100,
       uptime: "99.9%",
@@ -287,8 +274,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["OpenAI", "DeepMind", "Anthropic", "Google Research", "Microsoft Research"],
     marketSize: "$18.7 billion by 2031"
   },
-  {
-    id: "ai-mlops-platform",
+  { id: "ai-mlops-platform",
     title: "AI/ML Operations (MLOps) Platform",
     description: "Comprehensive MLOps platform that streamlines the entire machine learning lifecycle from development to production deployment.",
     category: "AI Operations",
@@ -335,13 +321,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$800 - $5,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Kubernetes", "Docker", "TensorFlow", "PyTorch", "MLflow", "Kubeflow"],
+    technicalSpecs: { technology: ["Kubernetes", "Docker", "TensorFlow", "PyTorch", "MLflow", "Kubeflow"],
       integrations: ["Cloud Platforms", "Data Platforms", "Monitoring Tools", "CI/CD Systems"],
       apiEndpoints: 500,
       uptime: "99.9%",
@@ -350,8 +334,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["DataRobot", "H2O.ai", "Dataiku", "Alteryx", "MLflow"],
     marketSize: "$42.3 billion by 2031"
   },
-  {
-    id: "ai-computer-vision",
+  { id: "ai-computer-vision",
     title: "AI Computer Vision & Image Recognition",
     description: "Advanced computer vision solutions that enable machines to see, understand, and interpret visual information for various applications.",
     category: "AI Vision",
@@ -398,13 +381,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$1,200 - $8,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow", "PyTorch", "OpenCV", "CUDA", "GPU Computing", "Cloud Vision APIs"],
+    technicalSpecs: { technology: ["TensorFlow", "PyTorch", "OpenCV", "CUDA", "GPU Computing", "Cloud Vision APIs"],
       integrations: ["Camera Systems", "Image Databases", "Cloud Platforms", "Analytics Tools"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -413,8 +394,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["Google Cloud Vision", "AWS Rekognition", "Azure Computer Vision", "Clarifai", "Roboflow"],
     marketSize: "$34.2 billion by 2031"
   },
-  {
-    id: "ai-natural-language-processing",
+  { id: "ai-natural-language-processing",
     title: "AI Natural Language Processing (NLP) Platform",
     description: "Advanced NLP platform that enables machines to understand, interpret, and generate human language for various applications.",
     category: "AI Language",
@@ -461,13 +441,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$1,000 - $6,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["OpenAI GPT", "BERT", "Transformers", "TensorFlow", "PyTorch", "Hugging Face"],
+    technicalSpecs: { technology: ["OpenAI GPT", "BERT", "Transformers", "TensorFlow", "PyTorch", "Hugging Face"],
       integrations: ["Chat Platforms", "CRM Systems", "Content Management", "Analytics Tools"],
       apiEndpoints: 400,
       uptime: "99.9%",
@@ -476,8 +454,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["OpenAI", "Google", "Microsoft", "Hugging Face", "Cohere"],
     marketSize: "$28.7 billion by 2031"
   },
-  {
-    id: "ai-predictive-analytics",
+  { id: "ai-predictive-analytics",
     title: "AI Predictive Analytics & Forecasting",
     description: "Advanced predictive analytics platform that uses AI to forecast future trends, behaviors, and outcomes with high accuracy.",
     category: "AI Analytics",
@@ -524,13 +501,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$1,500 - $10,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow", "PyTorch", "Scikit-learn", "Prophet", "ARIMA", "LSTM"],
+    technicalSpecs: { technology: ["TensorFlow", "PyTorch", "Scikit-learn", "Prophet", "ARIMA", "LSTM"],
       integrations: ["Data Platforms", "BI Tools", "Business Systems", "Analytics Platforms"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -539,8 +514,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["SAS", "IBM SPSS", "RapidMiner", "KNIME", "Alteryx"],
     marketSize: "$38.9 billion by 2031"
   },
-  {
-    id: "ai-autonomous-systems",
+  { id: "ai-autonomous-systems",
     title: "AI Autonomous Systems & Robotics",
     description: "Advanced autonomous systems and robotics solutions that enable machines to operate independently and make intelligent decisions.",
     category: "AI Robotics",
@@ -587,13 +561,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$2,500 - $15,000/month",
     roi: "200-400%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["ROS", "TensorFlow", "PyTorch", "Computer Vision", "Sensor Fusion", "Control Systems"],
+    technicalSpecs: { technology: ["ROS", "TensorFlow", "PyTorch", "Computer Vision", "Sensor Fusion", "Control Systems"],
       integrations: ["Robotic Systems", "IoT Platforms", "Cloud Services", "Monitoring Tools"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -602,8 +574,7 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     competitors: ["Boston Dynamics", "ABB", "KUKA", "FANUC", "Universal Robots"],
     marketSize: "$67.8 billion by 2031"
   },
-  {
-    id: "ai-edge-intelligence",
+  { id: "ai-edge-intelligence",
     title: "AI Edge Intelligence & IoT",
     description: "Edge AI solutions that bring intelligence to IoT devices, enabling real-time processing and decision making at the edge.",
     category: "AI Edge",
@@ -650,13 +621,11 @@ export const SPECIALIZED_AI_SERVICES_2031: SpecializedAIService2031[] = [
     marketPrice: "$800 - $5,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow Lite", "ONNX Runtime", "Edge TPU", "NVIDIA Jetson", "Intel Neural Compute Stick"],
+    technicalSpecs: { technology: ["TensorFlow Lite", "ONNX Runtime", "Edge TPU", "NVIDIA Jetson", "Intel Neural Compute Stick"],
       integrations: ["IoT Platforms", "Cloud Services", "Device Management", "Analytics Tools"],
       apiEndpoints: 250,
       uptime: "99.9%",

@@ -33,18 +33,15 @@ export default function AIQuantumMachineLearning() {
   ];
 
   const tiers = [
-    { 
-      name: 'Quantum Starter', 
+    { name: 'Quantum Starter', 
       price: '$1,999/mo', 
       details: ['Up to 100 quantum operations', 'Basic quantum algorithms', 'Standard support', 'Email support'] 
     },
-    { 
-      name: 'Quantum Professional', 
+    { name: 'Quantum Professional', 
       price: '$4,999/mo', 
       details: ['Up to 1,000 quantum operations', 'Advanced quantum features', 'Custom algorithms', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Quantum', 
+    { name: 'Enterprise Quantum', 
       price: '$12,999/mo', 
       details: ['Unlimited quantum operations', 'Full quantum suite', 'White-label options', '24/7 support'] 
     },

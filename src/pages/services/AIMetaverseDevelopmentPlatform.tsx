@@ -13,8 +13,7 @@ export default function AIMetaverseDevelopmentPlatform() {
   ];
 
   const tiers = [
-    {
-      name: 'Developer',
+    { name: 'Developer',
       price: '$1,799/mo',
       description: 'Perfect for indie developers and small studios',
       details: [
@@ -26,8 +25,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Basic 3D asset library'
       ]
     },
-    {
-      name: 'Business',
+    { name: 'Business',
       price: '$4,499/mo',
       description: 'Ideal for growing metaverse companies',
       details: [
@@ -40,8 +38,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Multi-user collaboration tools'
       ]
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$11,999/mo',
       description: 'Full-scale metaverse development platform',
       details: [
@@ -109,15 +106,13 @@ export default function AIMetaverseDevelopmentPlatform() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a 
                 href="#pricing"
-                className="inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 border border-indigo-400 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-400 hover:text-white transition-all duration-200">
                 View Pricing
               </a>
             </div>
@@ -182,8 +177,7 @@ export default function AIMetaverseDevelopmentPlatform() {
                   </ul>
                   <a 
                     href="https://ziontechgroup.com/contact"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-                  >
+                    className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200">
                     Get Started
                   </a>
                 </div>
@@ -300,8 +294,7 @@ export default function AIMetaverseDevelopmentPlatform() {
             </div>
             <a 
               href="https://ziontechgroup.com/contact"
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-            >
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200">
               Get Started Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>

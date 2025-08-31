@@ -21,7 +21,6 @@ import { User,
  } from 'lucide-react.ts';
 
 interface UserPreference {
-
   id: string;
   name: string;
   value: string | boolean | number;
@@ -30,10 +29,9 @@ interface UserPreference {
   category: 'appearance' | 'accessibility' | 'performance' | 'language';
   description: string;
 
-}
+    }
 
 interface UserActivity {
-
   id: string;
   action: string;
   timestamp: Date;
@@ -41,17 +39,16 @@ interface UserActivity {
   success: boolean;
   category: 'navigation' | 'interaction' | 'search' | 'purchase';
 
-}
+    }
 
 interface AccessibilityFeature {
-
   id: string;
   name: string;
   enabled: boolean;
   description: string;
   impact: 'high' | 'medium' | 'low';
 
-}
+    }
 
 const InteractiveUserExperience: React.FC = (): JSX.Element => {
   const [preferences, setPreferences] = useState<any>([]);
@@ -65,8 +62,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
   // Initialize user preferences
   useEffect(() => {
     const initialPreferences: UserPreference[] = [
-      {
-        id: any'1',
+      { id: '1',
         name: 'Theme',
         value: 'light',
         type: 'select',
@@ -74,32 +70,28 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         category: 'appearance',
         description: 'Choose your preferred color theme'
       },
-      {
-        id: '2',
+      { id: '2',
         name: 'Font Size',
         value: 16,
         type: 'number',
         category: 'accessibility',
         description: 'Adjust text size for better readability'
       },
-      {
-        id: '3',
+      { id: '3',
         name: 'High Contrast',
         value: false,
         type: 'boolean',
         category: 'accessibility',
         description: 'Enable high contrast mode for better visibility'
       },
-      {
-        id: '4',
+      { id: '4',
         name: 'Reduced Motion',
         value: false,
         type: 'boolean',
         category: 'accessibility',
         description: 'Reduce animations for users with motion sensitivity'
       },
-      {
-        id: '5',
+      { id: '5',
         name: 'Language',
         value: 'en',
         type: 'select',
@@ -107,8 +99,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
         category: 'language',
         description: 'Select your preferred language'
       },
-      {
-        id: '6',
+      { id: '6',
         name: 'Auto-save',
         value: true,
         type: 'boolean',
@@ -121,38 +112,33 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
   }, []);
 
   // Initialize accessibility features
-  useEffect(()  => {
+  useEffect(() => {
     const features: AccessibilityFeature[] = [
-      {
-        id: any'1',
+      { id: '1',
         name: 'Screen Reader Support',
         enabled: true,
         description: 'Full compatibility with screen readers and assistive technologies',
         impact: 'high'
       },
-      {
-        id: '2',
+      { id: '2',
         name: 'Keyboard Navigation',
         enabled: true,
         description: 'Complete keyboard accessibility for all interactive elements',
         impact: 'high'
       },
-      {
-        id: '3',
+      { id: '3',
         name: 'Focus Indicators',
         enabled: true,
         description: 'Clear visual indicators for keyboard focus',
         impact: 'medium'
       },
-      {
-        id: '4',
+      { id: '4',
         name: 'Color Blind Support',
         enabled: true,
         description: 'Alternative color schemes and patterns for color-blind users',
         impact: 'medium'
       },
-      {
-        id: '5',
+      { id: '5',
         name: 'Voice Commands',
         enabled: false,
         description: 'Voice-activated navigation and controls',
@@ -164,34 +150,30 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
   }, []);
 
   // Simulate user activities
-  useEffect(()  => {
+  useEffect(() => {
     const activities: UserActivity[] = [
-      {
-        id: '1',
+      { id: '1',
         action: 'Visited Services Page',
         timestamp: new Date(Date.now() - 300000),
         duration: 45,
         success: true,
         category: 'navigation'
       },
-      {
-        id: '2',
+      { id: '2',
         action: 'Searched for AI Services',
         timestamp: new Date(Date.now() - 600000),
         duration: 12,
         success: true,
         category: 'search'
       },
-      {
-        id: '3',
+      { id: '3',
         action: 'Contacted Support',
         timestamp: new Date(Date.now() - 900000),
         duration: 180,
         success: true,
         category: 'interaction'
       },
-      {
-        id: '4',
+      { id: '4',
         action: 'Downloaded Whitepaper',
         timestamp: new Date(Date.now() - 1200000),
         duration: 8,
@@ -203,7 +185,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     setUserActivities(activities);
   }, []);
 
-  const updatePreference = useCallback((id: anystring, value: string | boolean | number)  => {
+  const updatePreference = useCallback((id: string, value: string | boolean | number)  => {
     setPreferences(prev => prev.map(pref => 
       pref.id === id ? { ...pref, value } : pref
     ));
@@ -232,13 +214,13 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     }
   }, [preferences]);
 
-  const toggleAccessibilityFeature = useCallback((id: anystring)  => {
+  const toggleAccessibilityFeature = useCallback((id: string)  => {
     setAccessibilityFeatures(prev => prev.map(feature => 
       feature.id === id ? { ...feature, enabled: !feature.enabled } : feature
     ));
   }, []);
 
-  const getActivityIcon = (category: anyUserActivity['category'])  => {
+  const getActivityIcon = (category: UserActivity['category'])  => {
     switch (category) {
       case 'navigation': return <MousePointer className="h-4 w-4" />;
       case 'interaction': return <User className="h-4 w-4" />;
@@ -248,7 +230,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
     }
   };
 
-  const getImpactColor = (impact: anyAccessibilityFeature['impact'])  => {
+  const getImpactColor = (impact: AccessibilityFeature['impact'])  => {
     switch (impact) {
       case 'high': return 'bg-red-500';
       case 'medium': return 'bg-yellow-500';
@@ -330,8 +312,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                           <select
                             value={preference.value as string}
                             onChange={(e) => updatePreference(preference.id, e.target.value)}
-                            className="border rounded px-3 py-2 text-sm"
-                          >
+                            className="border rounded px-3 py-2 text-sm">
                             {preference.options.map((option) => (
                               <option key={option} value={option}>
                                 {option.charAt(0).toUpperCase() + option.slice(1)}
@@ -387,8 +368,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
                         variant={feature.enabled ? 'default' : 'outline'}
                         onClick={() => toggleAccessibilityFeature(feature.id)}
                         size="sm"
-                        className="ml-4"
-                      >
+                        className="ml-4">
                         {feature.enabled ? 'Enabled' : 'Disabled'}
                       </Button>
                     </div>
@@ -558,7 +538,7 @@ const InteractiveUserExperience: React.FC = (): JSX.Element => {
 };
 
 // Add missing Tablet icon component
-const Tablet: React.FC<{ className?: string }> = ({ className }) => (
+const Tablet: React.FC = ({ className }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
   </svg>

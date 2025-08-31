@@ -8,12 +8,12 @@ export interface Listing {
   subcategory?: string;
   tags: string[];
   images: string[];
-  seller: {
+  seller: {  
     id: string;
     name: string;
-    rating: number;
-    reviews: number;
-  };
+    rating: number
+    reviews: number
+      };
   location: string;
   createdAt: string;
   updatedAt: string;
@@ -28,24 +28,21 @@ export interface ProductListing extends Listing {
   model?: string;
   condition: 'new' | 'used' | 'refurbished';
   warranty?: string;
-  shipping: {
-    cost: number;
-    method: string;
-    estimatedDays: number;
-  };
+  shipping: { cost: number;
+    method: string
+    estimatedDays: number
+      };
 }
 
-export interface ServiceListing extends Listing {
-  serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
+export interface ServiceListing extends Listing { serviceType: 'consulting' | 'development' | 'maintenance' | 'training' | 'support';
   duration?: string;
   availability: string[];
   experience: number;
   certifications: string[];
   portfolio?: string[];
-}
+    }
 
-export interface TalentListing extends Listing {
-  skills: string[];
+export interface TalentListing extends Listing { skills: string[];
   experience: number;
   education: string[];
   certifications: string[];
@@ -54,7 +51,7 @@ export interface TalentListing extends Listing {
   hourlyRate: number;
   portfolio?: string[];
   references?: string[];
-}
+    }
 
 export interface CartItem {
   id: string;
@@ -63,7 +60,7 @@ export interface CartItem {
   quantity: number;
   type: 'product' | 'service' | 'talent';
   image?: string;
-}
+    }
 
 export interface WishlistItem {
   id: string;
@@ -71,4 +68,4 @@ export interface WishlistItem {
   listingId: string;
   type: 'product' | 'service' | 'talent';
   addedAt: string;
-}
+    }

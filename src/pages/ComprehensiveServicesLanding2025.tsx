@@ -125,9 +125,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full border border-blue-400/30 mb-6">
               <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
               <span className="text-blue-300 font-medium">Comprehensive Services 2025</span>
@@ -164,14 +163,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/innovative-services-showcase-2025"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Explore All Services
               </Link>
               <Link
                 to="/comprehensive-pricing-guide-2027"
-                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
-              >
+                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 View Pricing Guide
               </Link>
             </div>
@@ -198,12 +195,10 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <Link
                   to="/innovative-services-showcase-2025"
-                  className="block bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 h-full"
-                >
+                  className="block bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 h-full">
                   <div className="text-center">
                     <div className={`inline-flex p-4 bg-gradient-to-r ${categoryData.color}/20 rounded-2xl border border-${categoryData.color.split('-')[1]}-400/30 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       <div className={`text-${categoryData.color.split('-')[1]}-400`}>
@@ -264,8 +259,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 group"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 group">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <div className="p-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-400/30">
@@ -313,8 +307,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
 
                 <Link
                   to="/innovative-services-showcase-2025"
-                  className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 text-center block"
-                >
+                  className="w-full py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/30 text-center block">
                   <span className="flex items-center justify-center">
                     Learn More
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -327,8 +320,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               to="/innovative-services-showcase-2025"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
-            >
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
               View All Services
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
@@ -351,23 +343,19 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                icon: <Sparkles className="w-8 h-8" />,
+              { icon: <Sparkles className="w-8 h-8" />,
                 title: 'Innovation First',
                 description: 'Leading-edge technology solutions that keep you ahead of the competition'
               },
-              {
-                icon: <Target className="w-8 h-8" />,
+              { icon: <Target className="w-8 h-8" />,
                 title: 'Proven ROI',
                 description: 'Measurable business outcomes with transparent ROI projections'
               },
-              {
-                icon: <Users className="w-8 h-8" />,
+              { icon: <Users className="w-8 h-8" />,
                 title: 'Expert Support',
                 description: '24/7 technical support and dedicated account management'
               },
-              {
-                icon: <Shield className="w-8 h-8" />,
+              { icon: <Shield className="w-8 h-8" />,
                 title: 'Enterprise Security',
                 description: 'Bank-grade security with compliance certifications and best practices'
               }
@@ -377,8 +365,7 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="inline-flex p-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-2xl border border-blue-400/30 mb-6">
                   <div className="text-blue-400">{feature.icon}</div>
                 </div>
@@ -396,9 +383,8 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -425,14 +411,12 @@ const ComprehensiveServicesLanding2025: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-blue-500/20">
                 Call Sales Team
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200"
-              >
+                className="px-8 py-4 border border-blue-400/30 text-blue-300 font-semibold rounded-lg hover:bg-blue-400/10 transition-all duration-200">
                 Email Sales
               </a>
             </div>

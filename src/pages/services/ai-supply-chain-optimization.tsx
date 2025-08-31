@@ -36,8 +36,7 @@ export default function AISupplyChainOptimization() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function AISupplyChainOptimization() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Brain,
+                { icon: Brain,
                   title: "AI-Powered Forecasting",
                   description: "Predict demand patterns and optimize inventory levels with machine learning."
                 },
-                {
-                  icon: TrendingUp,
+                { icon: TrendingUp,
                   title: "Route Optimization",
                   description: "Optimize delivery routes and reduce transportation costs with AI algorithms."
                 },
-                {
-                  icon: BarChart3,
+                { icon: BarChart3,
                   title: "Real-time Analytics",
                   description: "Monitor supply chain performance with live dashboards and insights."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Supplier Management",
                   description: "Manage supplier relationships and performance with intelligent scoring."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Risk Management",
                   description: "Identify and mitigate supply chain risks with predictive analytics."
                 },
-                {
-                  icon: Database,
+                { icon: Database,
                   title: "Inventory Optimization",
                   description: "Optimize stock levels and reduce carrying costs with AI insights."
                 }
@@ -122,38 +115,32 @@ export default function AISupplyChainOptimization() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Demand Forecasting",
+                { title: "Demand Forecasting",
                   description: "AI-powered demand prediction and planning optimization.",
                   icon: Brain,
                   benefits: ["Machine learning models", "Seasonal analysis", "Trend prediction"]
                 },
-                {
-                  title: "Inventory Management",
+                { title: "Inventory Management",
                   description: "Smart inventory optimization and stock level management.",
                   icon: Database,
                   benefits: ["Safety stock optimization", "Reorder point calculation", "ABC analysis"]
                 },
-                {
-                  title: "Transportation",
+                { title: "Transportation",
                   description: "Route optimization and transportation cost reduction.",
                   icon: Truck,
                   benefits: ["Route planning", "Load optimization", "Cost reduction"]
                 },
-                {
-                  title: "Supplier Optimization",
+                { title: "Supplier Optimization",
                   description: "Supplier performance management and selection optimization.",
                   icon: Users,
                   benefits: ["Performance scoring", "Risk assessment", "Cost optimization"]
                 },
-                {
-                  title: "Warehouse Operations",
+                { title: "Warehouse Operations",
                   description: "Warehouse layout and process optimization.",
                   icon: Settings,
                   benefits: ["Layout optimization", "Process automation", "Space utilization"]
                 },
-                {
-                  title: "Risk Management",
+                { title: "Risk Management",
                   description: "Supply chain risk identification and mitigation strategies.",
                   icon: Shield,
                   benefits: ["Risk assessment", "Mitigation planning", "Contingency strategies"]
@@ -193,38 +180,32 @@ export default function AISupplyChainOptimization() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Machine Learning",
+                { title: "Machine Learning",
                   description: "Advanced ML algorithms for pattern recognition and prediction.",
                   icon: Brain,
                   features: ["Pattern recognition", "Predictive modeling", "Continuous learning"]
                 },
-                {
-                  title: "Predictive Analytics",
+                { title: "Predictive Analytics",
                   description: "Forecast future trends and optimize decision-making.",
                   icon: TrendingUp,
                   features: ["Trend analysis", "Scenario planning", "Risk prediction"]
                 },
-                {
-                  title: "Real-time Processing",
+                { title: "Real-time Processing",
                   description: "Instant data processing and decision-making capabilities.",
                   icon: Zap,
                   features: ["Live data streams", "Instant insights", "Real-time optimization"]
                 },
-                {
-                  title: "Natural Language Processing",
+                { title: "Natural Language Processing",
                   description: "Process and analyze unstructured supply chain data.",
                   icon: Eye,
                   features: ["Document analysis", "Sentiment analysis", "Data extraction"]
                 },
-                {
-                  title: "Computer Vision",
+                { title: "Computer Vision",
                   description: "Visual inspection and quality control automation.",
                   icon: Eye,
                   features: ["Quality inspection", "Damage detection", "Process monitoring"]
                 },
-                {
-                  title: "Optimization Algorithms",
+                { title: "Optimization Algorithms",
                   description: "Advanced algorithms for complex optimization problems.",
                   icon: Calculator,
                   features: ["Linear programming", "Genetic algorithms", "Heuristic optimization"]
@@ -316,23 +297,19 @@ export default function AISupplyChainOptimization() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Assessment",
                   description: "Evaluate current supply chain performance and identify optimization opportunities."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "Strategy",
                   description: "Develop comprehensive AI optimization strategy and implementation roadmap."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Implementation",
                   description: "Deploy AI tools and establish optimization processes and workflows."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and improve supply chain performance."
                 }
@@ -361,15 +338,13 @@ export default function AISupplyChainOptimization() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

@@ -30,8 +30,7 @@ const BlockchainServicesPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const blockchainServices = [
-    {
-      id: "smart-contracts",
+    { id: "smart-contracts",
       title: "Smart Contract Development",
       description: "Custom smart contract development for DeFi, NFTs, and enterprise blockchain solutions with comprehensive auditing.",
       price: 3500,
@@ -50,8 +49,7 @@ const BlockchainServicesPage = () => {
       badge: "Popular",
       image: "https://images.unsplash.com/photo-1639762681057-408e52192e55?auto=format&fit=crop&w=800&h=500"
     },
-    {
-      id: "defi-platform",
+    { id: "defi-platform",
       title: "DeFi Platform Development",
       description: "Complete DeFi platform development including DEX, lending protocols, yield farming, and liquidity management.",
       price: 15000,
@@ -70,8 +68,7 @@ const BlockchainServicesPage = () => {
       badge: "Enterprise",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     },
-    {
-      id: "nft-marketplace",
+    { id: "nft-marketplace",
       title: "NFT Marketplace Development",
       description: "Custom NFT marketplace with minting, trading, auctions, and royalty distribution systems.",
       price: 8000,
@@ -90,8 +87,7 @@ const BlockchainServicesPage = () => {
       badge: "Featured",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     },
-    {
-      id: "enterprise-blockchain",
+    { id: "enterprise-blockchain",
       title: "Enterprise Blockchain Solutions",
       description: "Private blockchain networks for enterprise use cases including supply chain, identity management, and asset tracking.",
       price: 25000,
@@ -110,8 +106,7 @@ const BlockchainServicesPage = () => {
       badge: "Custom",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     },
-    {
-      id: "blockchain-security",
+    { id: "blockchain-security",
       title: "Blockchain Security & Auditing",
       description: "Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications.",
       price: 5000,
@@ -130,8 +125,7 @@ const BlockchainServicesPage = () => {
       badge: "Essential",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&h=500"
     },
-    {
-      id: "cross-chain",
+    { id: "cross-chain",
       title: "Cross-Chain Solutions",
       description: "Interoperability solutions enabling seamless asset and data transfer across different blockchain networks.",
       price: 12000,
@@ -250,8 +244,7 @@ const BlockchainServicesPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group">
                 {/* Service Image */}
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center relative overflow-hidden">
                   <service.icon className="w-16 h-16 text-zion-cyan z-10" />
@@ -337,33 +330,27 @@ const BlockchainServicesPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              {
-                icon: Shield,
+              { icon: Shield,
                 title: "Security First",
                 description: "Enterprise-grade security with comprehensive auditing and testing protocols."
               },
-              {
-                icon: Rocket,
+              { icon: Rocket,
                 title: "Scalable Solutions",
                 description: "Built for growth with architecture that scales with your business needs."
               },
-              {
-                icon: Users,
+              { icon: Users,
                 title: "Expert Team",
                 description: "Blockchain specialists with years of experience in DeFi, NFTs, and enterprise solutions."
               },
-              {
-                icon: Clock,
+              { icon: Clock,
                 title: "Fast Delivery",
                 description: "Agile development process ensuring rapid delivery without compromising quality."
               },
-              {
-                icon: CheckCircle,
+              { icon: CheckCircle,
                 title: "Proven Track Record",
                 description: "Successfully delivered blockchain solutions for companies across industries."
               },
-              {
-                icon: Globe,
+              { icon: Globe,
                 title: "Multi-Chain Support",
                 description: "Experience with Ethereum, Polygon, Solana, and other leading blockchain networks."
               }
@@ -373,8 +360,7 @@ const BlockchainServicesPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>

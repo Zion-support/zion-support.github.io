@@ -16,9 +16,8 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-8"
-        >
+          transition={{ duration: 0.8     }}
+          className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Zion Tech Group
@@ -39,19 +38,16 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
-        >
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
           <Link
             to="/services"
-            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-          >
+            className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
             Explore Services
           </Link>
           
           <Link
             to="/contact"
-            className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 hover:scale-105"
-          >
+            className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 hover:scale-105">
             Get Started
           </Link>
         </motion.div>
@@ -60,8 +56,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
-        >
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-3xl font-bold text-cyan-400 mb-2">500+</div>
             <div className="text-gray-400 text-sm">Projects Delivered</div>
@@ -83,17 +78,15 @@ export function HeroSection() {
 
       {/* Scroll Indicator */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0     }}
+        animate={{ opacity: 1     }}
         transition={{ duration: 1, delay: 1 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-      >
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <motion.div
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1 h-3 bg-gray-400 rounded-full mt-2"
-          ></motion.div>
+            className="w-1 h-3 bg-gray-400 rounded-full mt-2"></motion.div>
         </div>
       </motion.div>
     </section>

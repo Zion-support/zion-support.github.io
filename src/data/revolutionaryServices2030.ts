@@ -4,14 +4,14 @@ export interface RevolutionaryService2030 {
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+  pricing: {  
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
-    pricingModel: string;
-    marketPrice: string;
-  };
+    pricingModel: string
+    marketPrice: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -53,14 +53,12 @@ export interface RevolutionaryService2030 {
 
 export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   // 1. Quantum AI-Powered Drug Discovery Platform
-  {
-    id: "quantum-ai-drug-discovery",
+  { id: "quantum-ai-drug-discovery",
     title: "Zion Quantum AI Drug Discovery Platform",
     description: "Revolutionary quantum AI platform that accelerates drug discovery by 1000x using quantum machine learning, molecular simulation, and predictive analytics to identify breakthrough treatments for complex diseases.",
     category: "AI Services",
     subcategory: "Healthcare & Drug Discovery",
-    pricing: {
-      monthly: 15999,
+    pricing: { monthly: 15999,
       yearly: 159990,
       custom: "Enterprise quantum AI drug discovery solutions",
       currency: "$",
@@ -153,14 +151,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 2. Autonomous AI-Powered Financial Trading System
-  {
-    id: "autonomous-ai-trading",
+  { id: "autonomous-ai-trading",
     title: "Zion Autonomous AI Financial Trading System",
     description: "Next-generation autonomous AI trading system that combines quantum computing, machine learning, and real-time market analysis to execute profitable trades with zero human intervention and maximum risk management.",
     category: "AI Services",
     subcategory: "Financial Technology",
-    pricing: {
-      monthly: 8999,
+    pricing: { monthly: 8999,
       yearly: 89990,
       custom: "Enterprise autonomous trading solutions",
       currency: "$",
@@ -253,14 +249,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 3. Brain-Computer Interface AI Platform
-  {
-    id: "brain-computer-interface-ai",
+  { id: "brain-computer-interface-ai",
     title: "Zion Brain-Computer Interface AI Platform",
     description: "Revolutionary brain-computer interface platform that enables direct communication between the human brain and AI systems, opening new possibilities for accessibility, medical treatment, and human-AI collaboration.",
     category: "AI Services",
     subcategory: "Neural Technology",
-    pricing: {
-      monthly: 12999,
+    pricing: { monthly: 12999,
       yearly: 129990,
       custom: "Enterprise BCI AI solutions",
       currency: "$",
@@ -348,14 +342,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 4. Quantum-Secure Blockchain Infrastructure
-  {
-    id: "quantum-secure-blockchain",
+  { id: "quantum-secure-blockchain",
     title: "Zion Quantum-Secure Blockchain Infrastructure",
     description: "Future-proof blockchain infrastructure that combines quantum-resistant cryptography with advanced blockchain technology to create the most secure and scalable distributed systems for enterprise applications.",
     category: "Blockchain Services",
     subcategory: "Infrastructure & Security",
-    pricing: {
-      monthly: 5999,
+    pricing: { monthly: 5999,
       yearly: 59990,
       custom: "Enterprise quantum blockchain solutions",
       currency: "$",
@@ -452,14 +444,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 5. Autonomous AI-Powered Manufacturing System
-  {
-    id: "autonomous-ai-manufacturing",
+  { id: "autonomous-ai-manufacturing",
     title: "Zion Autonomous AI Manufacturing System",
     description: "Revolutionary autonomous manufacturing system that combines AI, robotics, and IoT to create self-optimizing factories with zero downtime, maximum efficiency, and predictive maintenance capabilities.",
     category: "AI Services",
     subcategory: "Manufacturing & Industry 4.0",
-    pricing: {
-      monthly: 19999,
+    pricing: { monthly: 19999,
       yearly: 199990,
       custom: "Enterprise autonomous manufacturing solutions",
       currency: "$",
@@ -551,14 +541,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 6. Quantum AI-Powered Climate Modeling Platform
-  {
-    id: "quantum-ai-climate-modeling",
+  { id: "quantum-ai-climate-modeling",
     title: "Zion Quantum AI Climate Modeling Platform",
     description: "Revolutionary quantum AI platform that provides unprecedented accuracy in climate prediction, enabling governments and organizations to make informed decisions about climate change mitigation and adaptation strategies.",
     category: "AI Services",
     subcategory: "Climate Science & Sustainability",
-    pricing: {
-      monthly: 7999,
+    pricing: { monthly: 7999,
       yearly: 79990,
       custom: "Enterprise climate modeling solutions",
       currency: "$",
@@ -651,14 +639,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 7. Autonomous AI-Powered Space Exploration System
-  {
-    id: "autonomous-ai-space-exploration",
+  { id: "autonomous-ai-space-exploration",
     title: "Zion Autonomous AI Space Exploration System",
     description: "Revolutionary autonomous AI system for space exploration that enables unmanned missions, autonomous satellite operations, and intelligent space resource discovery with minimal human intervention.",
     category: "AI Services",
     subcategory: "Space Technology & Exploration",
-    pricing: {
-      monthly: 29999,
+    pricing: { monthly: 29999,
       yearly: 299990,
       custom: "Enterprise space exploration solutions",
       currency: "$",
@@ -750,14 +736,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 8. Quantum AI-Powered Cybersecurity Platform
-  {
-    id: "quantum-ai-cybersecurity",
+  { id: "quantum-ai-cybersecurity",
     title: "Zion Quantum AI Cybersecurity Platform",
     description: "Revolutionary quantum AI cybersecurity platform that provides impenetrable protection against current and future cyber threats using quantum-resistant encryption, AI-powered threat detection, and autonomous response systems.",
     category: "Cybersecurity Services",
     subcategory: "AI-Powered Protection",
-    pricing: {
-      monthly: 3999,
+    pricing: { monthly: 3999,
       yearly: 39990,
       custom: "Enterprise quantum cybersecurity solutions",
       currency: "$",
@@ -850,14 +834,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 9. Autonomous AI-Powered Healthcare System
-  {
-    id: "autonomous-ai-healthcare",
+  { id: "autonomous-ai-healthcare",
     title: "Zion Autonomous AI Healthcare System",
     description: "Revolutionary autonomous AI healthcare system that provides 24/7 medical monitoring, diagnosis, treatment recommendations, and emergency response with human-level accuracy and continuous learning capabilities.",
     category: "AI Services",
     subcategory: "Healthcare & Medical",
-    pricing: {
-      monthly: 15999,
+    pricing: { monthly: 15999,
       yearly: 159990,
       custom: "Enterprise autonomous healthcare solutions",
       currency: "$",
@@ -949,14 +931,12 @@ export const REVOLUTIONARY_SERVICES_2030: RevolutionaryService2030[] = [
   },
 
   // 10. Quantum AI-Powered Education Platform
-  {
-    id: "quantum-ai-education",
+  { id: "quantum-ai-education",
     title: "Zion Quantum AI Education Platform",
     description: "Revolutionary quantum AI education platform that personalizes learning experiences, provides real-time feedback, and adapts to individual student needs using advanced AI algorithms and quantum computing capabilities.",
     category: "AI Services",
     subcategory: "Education & Learning",
-    pricing: {
-      monthly: 1999,
+    pricing: { monthly: 1999,
       yearly: 19990,
       custom: "Enterprise education AI solutions",
       currency: "$",

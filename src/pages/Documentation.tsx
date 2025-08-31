@@ -7,10 +7,10 @@ interface DocSection {
   id: string;
   title: string;
   description: string;
-  icon: any;
+  icon: ;
   color: string;
   items: DocItem[];
-}
+    }
 
 interface DocItem {
   title: string;
@@ -18,43 +18,38 @@ interface DocItem {
   href: string;
   type: 'api' | 'guide' | 'tutorial' | 'reference';
   difficulty: 'beginner' | 'intermediate' | 'advanced';
-}
+    }
 
 const Documentation: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   const documentationSections: DocSection[] = [
-    {
-      id: 'getting-started',
+    { id: 'getting-started',
       title: 'Getting Started',
       description: 'Quick start guides and tutorials for new users',
       icon: BookOpen,
       color: 'from-blue-500 to-cyan-500',
       items: [
-        {
-          title: 'Quick Start Guide',
+        { title: 'Quick Start Guide',
           description: 'Get up and running with Zion Tech Group services in minutes',
           href: '/docs/quick-start',
           type: 'guide',
           difficulty: 'beginner'
         },
-        {
-          title: 'Installation Guide',
+        { title: 'Installation Guide',
           description: 'Step-by-step installation instructions for all platforms',
           href: '/docs/installation',
           type: 'guide',
           difficulty: 'beginner'
         },
-        {
-          title: 'First Project Tutorial',
+        { title: 'First Project Tutorial',
           description: 'Build your first AI-powered application',
           href: '/docs/first-project',
           type: 'tutorial',
           difficulty: 'beginner'
         },
-        {
-          title: 'Environment Setup',
+        { title: 'Environment Setup',
           description: 'Configure your development environment',
           href: '/docs/environment-setup',
           type: 'guide',
@@ -62,36 +57,31 @@ const Documentation: React.FC = () => {
         }
       ]
     },
-    {
-      id: 'ai-services',
+    { id: 'ai-services',
       title: 'AI Services',
       description: 'Comprehensive guides for AI and machine learning services',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       items: [
-        {
-          title: 'AI Business Intelligence API',
+        { title: 'AI Business Intelligence API',
           description: 'Integrate AI-powered business analytics into your applications',
           href: '/docs/ai-business-intelligence',
           type: 'api',
           difficulty: 'intermediate'
         },
-        {
-          title: 'AI Content Creation Guide',
+        { title: 'AI Content Creation Guide',
           description: 'Generate high-quality content using our AI platform',
           href: '/docs/ai-content-creation',
           type: 'guide',
           difficulty: 'intermediate'
         },
-        {
-          title: 'AI Cybersecurity Integration',
+        { title: 'AI Cybersecurity Integration',
           description: 'Implement AI-powered security solutions',
           href: '/docs/ai-cybersecurity',
           type: 'guide',
           difficulty: 'advanced'
         },
-        {
-          title: 'Machine Learning Models',
+        { title: 'Machine Learning Models',
           description: 'Access and customize pre-trained ML models',
           href: '/docs/ml-models',
           type: 'reference',
@@ -99,36 +89,31 @@ const Documentation: React.FC = () => {
         }
       ]
     },
-    {
-      id: 'cloud-infrastructure',
+    { id: 'cloud-infrastructure',
       title: 'Cloud & Infrastructure',
       description: 'Cloud deployment and infrastructure management',
       icon: Cloud,
       color: 'from-green-500 to-blue-500',
       items: [
-        {
-          title: 'Cloud DevOps Guide',
+        { title: 'Cloud DevOps Guide',
           description: 'Deploy and manage applications in the cloud',
           href: '/docs/cloud-devops',
           type: 'guide',
           difficulty: 'intermediate'
         },
-        {
-          title: 'Digital Twin API',
+        { title: 'Digital Twin API',
           description: 'Create and manage digital twin simulations',
           href: '/docs/digital-twin',
           type: 'api',
           difficulty: 'advanced'
         },
-        {
-          title: 'IoT Edge Computing',
+        { title: 'IoT Edge Computing',
           description: 'Deploy applications to edge devices',
           href: '/docs/iot-edge',
           type: 'guide',
           difficulty: 'advanced'
         },
-        {
-          title: 'Data Analytics Platform',
+        { title: 'Data Analytics Platform',
           description: 'Integrate with our data analytics services',
           href: '/docs/data-analytics',
           type: 'api',
@@ -136,36 +121,31 @@ const Documentation: React.FC = () => {
         }
       ]
     },
-    {
-      id: 'security-compliance',
+    { id: 'security-compliance',
       title: 'Security & Compliance',
       description: 'Security best practices and compliance guidelines',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       items: [
-        {
-          title: 'Zero Trust Architecture',
+        { title: 'Zero Trust Architecture',
           description: 'Implement zero trust security principles',
           href: '/docs/zero-trust',
           type: 'guide',
           difficulty: 'advanced'
         },
-        {
-          title: 'Security Headers & CSP',
+        { title: 'Security Headers & CSP',
           description: 'Configure security headers and content security policies',
           href: '/docs/security-headers',
           type: 'guide',
           difficulty: 'intermediate'
         },
-        {
-          title: 'DSR Portal Integration',
+        { title: 'DSR Portal Integration',
           description: 'Implement data subject rights compliance',
           href: '/docs/dsr-portal',
           type: 'api',
           difficulty: 'intermediate'
         },
-        {
-          title: 'Compliance Automation',
+        { title: 'Compliance Automation',
           description: 'Automate compliance monitoring and reporting',
           href: '/docs/compliance-automation',
           type: 'guide',
@@ -173,36 +153,31 @@ const Documentation: React.FC = () => {
         }
       ]
     },
-    {
-      id: 'micro-saas',
+    { id: 'micro-saas',
       title: 'Micro SaaS Solutions',
       description: 'Integration guides for our micro SaaS products',
       icon: Zap,
       color: 'from-yellow-500 to-orange-500',
       items: [
-        {
-          title: 'Micro CRM API',
+        { title: 'Micro CRM API',
           description: 'Integrate customer relationship management features',
           href: '/docs/micro-crm',
           type: 'api',
           difficulty: 'intermediate'
         },
-        {
-          title: 'Helpdesk Platform',
+        { title: 'Helpdesk Platform',
           description: 'Add customer support capabilities to your app',
           href: '/docs/helpdesk',
           type: 'api',
           difficulty: 'intermediate'
         },
-        {
-          title: 'Website Analytics',
+        { title: 'Website Analytics',
           description: 'Track and analyze website performance',
           href: '/docs/website-analytics',
           type: 'api',
           difficulty: 'beginner'
         },
-        {
-          title: 'Affiliate Tracking',
+        { title: 'Affiliate Tracking',
           description: 'Implement affiliate marketing tracking',
           href: '/docs/affiliate-tracking',
           type: 'api',
@@ -210,36 +185,31 @@ const Documentation: React.FC = () => {
         }
       ]
     },
-    {
-      id: 'api-reference',
+    { id: 'api-reference',
       title: 'API Reference',
       description: 'Complete API documentation and reference',
       icon: Code, // Changed from Api to Code as Api was removed
       color: 'from-indigo-500 to-purple-500',
       items: [
-        {
-          title: 'REST API Reference',
+        { title: 'REST API Reference',
           description: 'Complete REST API endpoint documentation',
           href: '/docs/api/rest',
           type: 'reference',
           difficulty: 'intermediate'
         },
-        {
-          title: 'GraphQL API',
+        { title: 'GraphQL API',
           description: 'GraphQL schema and query documentation',
           href: '/docs/api/graphql',
           type: 'reference',
           difficulty: 'advanced'
         },
-        {
-          title: 'WebSocket API',
+        { title: 'WebSocket API',
           description: 'Real-time communication API documentation',
           href: '/docs/api/websocket',
           type: 'reference',
           difficulty: 'advanced'
         },
-        {
-          title: 'SDK Downloads',
+        { title: 'SDK Downloads',
           description: 'Download SDKs for various programming languages',
           href: '/docs/sdks',
           type: 'reference',
@@ -309,9 +279,8 @@ const Documentation: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <BookOpen className="w-10 h-10 text-white" />
             </div>
@@ -349,8 +318,7 @@ const Documentation: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 {categories.map((category) => (
                   <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                     {category.name}
@@ -369,8 +337,7 @@ const Documentation: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6"
-            >
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
               <div className="flex items-center mb-6">
                 <div className={`w-12 h-12 bg-gradient-to-r ${section.color} rounded-xl flex items-center justify-center mr-4`}>
                   <section.icon className="w-6 h-6 text-white" />
@@ -388,8 +355,7 @@ const Documentation: React.FC = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: itemIndex * 0.1 }}
-                    className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group"
-                  >
+                    className="bg-white/5 hover:bg-white/10 rounded-xl p-4 transition-colors group">
                     <div className="flex items-start justify-between mb-3">
                       <div className="flex items-center space-x-2">
                         {getTypeIcon(item.type)}
@@ -410,8 +376,7 @@ const Documentation: React.FC = () => {
                     
                     <Link
                       to={item.href}
-                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors"
-                    >
+                      className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors">
                       Read More
                       <ChevronRight className="w-4 h-4 ml-1" />
                     </Link>
@@ -446,8 +411,7 @@ const Documentation: React.FC = () => {
               <p className="text-gray-300 mb-4">Join our developer community for support and collaboration</p>
               <Link
                 to="/community"
-                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
                 Join Community
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Link>
@@ -459,8 +423,7 @@ const Documentation: React.FC = () => {
               <p className="text-gray-300 mb-4">Download SDKs and libraries for your preferred language</p>
               <Link
                 to="/docs/sdks"
-                className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg transition-colors">
                 Download SDKs
                 <Download className="w-4 h-4 ml-2" />
               </Link>
@@ -472,8 +435,7 @@ const Documentation: React.FC = () => {
               <p className="text-gray-300 mb-4">Check the status of our APIs and services</p>
               <Link
                 to="/status"
-                className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg transition-colors">
                 Check Status
                 <ExternalLink className="w-4 h-4 ml-2" />
               </Link>
@@ -489,22 +451,20 @@ const Documentation: React.FC = () => {
             Need Help with Documentation?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our technical support team is here to help you with any questions about 
+            Our technical support team is here to help you with  questions about 
             our documentation, APIs, or integration process.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">
               <Users className="w-5 h-5 mr-2" />
               Contact Support
             </Link>
             <Link
               to="/schedule-demo"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors">
               <Code className="w-5 h-5 mr-2" />
               Schedule Technical Demo
             </Link>

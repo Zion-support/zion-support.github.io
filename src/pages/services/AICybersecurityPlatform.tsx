@@ -47,49 +47,41 @@ import { SEO } from '../../components/SEO';
 
 export default function AICybersecurityPlatform() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms that detect and respond to cyber threats in real-time with 99.7% accuracy, reducing false positives by 85%.'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Zero-Day Attack Prevention',
       description: 'Behavioral analysis and anomaly detection that identifies and blocks previously unknown threats before they can compromise your systems.'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Automated Incident Response',
       description: 'Intelligent automation that responds to security incidents within seconds, containing threats and minimizing potential damage automatically.'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: '360° Security Visibility',
       description: 'Comprehensive monitoring across all endpoints, networks, and cloud environments with unified threat intelligence and real-time dashboards.'
     }
   ];
 
   const capabilities = [
-    {
-      title: 'Threat Intelligence',
+    { title: 'Threat Intelligence',
       description: 'Real-time threat feeds and AI-powered analysis of global security trends',
       icon: Brain,
       benefits: ['Real-time updates', 'Global threat monitoring', 'Predictive analysis', 'Custom intelligence']
     },
-    {
-      title: 'Endpoint Protection',
+    { title: 'Endpoint Protection',
       description: 'Advanced endpoint detection and response across all devices and platforms',
       icon: Laptop,
       benefits: ['Malware prevention', 'Behavioral analysis', 'Automated response', 'Cross-platform support']
     },
-    {
-      title: 'Network Security',
+    { title: 'Network Security',
       description: 'Intelligent network monitoring and intrusion prevention systems',
       icon: Network,
       benefits: ['Traffic analysis', 'Anomaly detection', 'DDoS protection', 'VPN management']
     },
-    {
-      title: 'Cloud Security',
+    { title: 'Cloud Security',
       description: 'Comprehensive cloud infrastructure protection and compliance monitoring',
       icon: Cloud,
       benefits: ['Multi-cloud support', 'Compliance monitoring', 'Access control', 'Data protection']
@@ -97,26 +89,22 @@ export default function AICybersecurityPlatform() {
   ];
 
   const useCases = [
-    {
-      industry: 'Financial Services',
+    { industry: 'Financial Services',
       description: 'Protect sensitive financial data, ensure regulatory compliance, and prevent sophisticated cyber attacks with AI-powered security',
       icon: Shield,
       metrics: ['Threat Detection Rate', 'Compliance Score', 'Incident Response Time', 'Data Protection Level']
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       description: 'Secure patient data, protect medical devices, and maintain HIPAA compliance with intelligent cybersecurity solutions',
       icon: Activity,
       metrics: ['HIPAA Compliance', 'Device Security', 'Data Breach Prevention', 'Patient Privacy']
     },
-    {
-      industry: 'Manufacturing',
+    { industry: 'Manufacturing',
       description: 'Protect industrial control systems, secure supply chains, and prevent operational disruption from cyber threats',
       icon: Cpu,
       metrics: ['OT Security', 'Supply Chain Protection', 'Operational Continuity', 'Threat Prevention']
     },
-    {
-      industry: 'Government',
+    { industry: 'Government',
       description: 'Secure critical infrastructure, protect classified information, and ensure national security with advanced AI cybersecurity',
       icon: Globe,
       metrics: ['Infrastructure Security', 'Data Classification', 'Threat Intelligence', 'National Security']
@@ -124,31 +112,26 @@ export default function AICybersecurityPlatform() {
   ];
 
   const benefits = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Enhanced Threat Protection',
       description: 'Detect and prevent 99.7% of cyber threats with AI-powered intelligence and automated response.'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Faster Incident Response',
       description: 'Reduce incident response time from hours to seconds with intelligent automation and real-time monitoring.'
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: 'Reduced Security Costs',
       description: 'Lower total cost of ownership by 40-60% through automation and reduced manual security operations.'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Improved Compliance',
       description: 'Maintain 100% compliance with industry regulations and standards through automated monitoring and reporting.'
     }
   ];
 
   const pricing = [
-    {
-      name: 'Essential',
+    { name: 'Essential',
       price: '$799',
       period: '/month',
       description: 'Perfect for small businesses',
@@ -162,8 +145,7 @@ export default function AICybersecurityPlatform() {
       cta: 'Start Free Trial',
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$1,999',
       period: '/month',
       description: 'Ideal for growing companies',
@@ -178,8 +160,7 @@ export default function AICybersecurityPlatform() {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$4,999',
       period: '/month',
       description: 'For large organizations',
@@ -211,7 +192,7 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               AI Cybersecurity Platform
@@ -238,9 +219,8 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Advanced AI-Powered Security Features
             </h2>
@@ -257,8 +237,7 @@ export default function AICybersecurityPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-red-400" />
                 </div>
@@ -276,9 +255,8 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Comprehensive Security Capabilities
             </h2>
@@ -295,8 +273,7 @@ export default function AICybersecurityPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-red-400" />
@@ -324,9 +301,8 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -343,8 +319,7 @@ export default function AICybersecurityPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-red-400" />
@@ -372,9 +347,8 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -391,8 +365,7 @@ export default function AICybersecurityPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105 text-center"
-              >
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-red-400/50 transition-all duration-300 hover:scale-105 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-400/20 to-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-red-400" />
                 </div>
@@ -410,9 +383,8 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -480,9 +452,8 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -494,23 +465,19 @@ export default function AICybersecurityPlatform() {
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              {
-                step: '01',
+              { step: '01',
                 title: 'Security Assessment',
                 description: 'Evaluate your current security posture and identify vulnerabilities and risks'
               },
-              {
-                step: '02',
+              { step: '02',
                 title: 'Platform Deployment',
                 description: 'Deploy AI cybersecurity agents across your infrastructure and configure policies'
               },
-              {
-                step: '03',
+              { step: '03',
                 title: 'Team Training',
                 description: 'Train your security team on the platform and incident response procedures'
               },
-              {
-                step: '04',
+              { step: '04',
                 title: 'Go Live',
                 description: 'Activate full protection with continuous monitoring and ongoing support'
               }
@@ -520,8 +487,7 @@ export default function AICybersecurityPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-red-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -539,7 +505,7 @@ export default function AICybersecurityPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Organization?

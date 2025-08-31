@@ -13,18 +13,15 @@ export default function AISecurityForensics() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$799/mo', 
       details: ['Up to 10 investigations/month', 'Basic AI features', 'Standard forensics', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,999/mo', 
       details: ['Up to 50 investigations/month', 'Advanced AI features', 'Enhanced forensics', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$4,999/mo', 
       details: ['Unlimited investigations', 'Custom AI models', 'Full forensics suite', '24/7 dedicated support'] 
     },

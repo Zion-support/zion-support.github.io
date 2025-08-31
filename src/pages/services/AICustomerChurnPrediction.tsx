@@ -18,23 +18,19 @@ import {
 
 const AICustomerChurnPrediction: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Predictions",
       description: "Advanced machine learning models that predict customer churn with 95%+ accuracy using behavioral patterns and engagement metrics."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Real-time Analytics",
       description: "Live dashboards showing customer health scores, risk factors, and predictive insights updated every 15 minutes."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Proactive Interventions",
       description: "Automated alerts and recommended actions to prevent churn before it happens, with success rate tracking."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Customer Segmentation",
       description: "Intelligent clustering of customers by risk level, value, and behavior patterns for targeted retention strategies."
     }
@@ -57,22 +53,19 @@ const AICustomerChurnPrediction: React.FC = () => {
   ];
 
   const pricing = [
-    {
-      plan: "Starter",
+    { plan: "Starter",
       price: "$299",
       period: "/month",
       features: ["Up to 1,000 customers", "Basic churn predictions", "Email alerts", "Standard support"],
       popular: false
     },
-    {
-      plan: "Growth",
+    { plan: "Growth",
       price: "$799",
       period: "/month",
       features: ["Up to 10,000 customers", "Advanced ML models", "Custom dashboards", "Priority support", "API access"],
       popular: true
     },
-    {
-      plan: "Enterprise",
+    { plan: "Enterprise",
       price: "Custom",
       period: "",
       features: ["Unlimited customers", "Custom ML models", "White-label solution", "Dedicated support", "SLA guarantees"],
@@ -96,9 +89,8 @@ const AICustomerChurnPrediction: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+            transition={{ duration: 0.8     }}
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
               <TrendingDown className="w-4 h-4 mr-2" />
               Churn Prevention Platform
@@ -133,10 +125,9 @@ const AICustomerChurnPrediction: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
               Powerful Features
             </h2>
@@ -151,10 +142,9 @@ const AICustomerChurnPrediction: React.FC = () => {
                 key={feature.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -172,10 +162,9 @@ const AICustomerChurnPrediction: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               Proven Results
             </h2>
@@ -190,10 +179,9 @@ const AICustomerChurnPrediction: React.FC = () => {
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -210,10 +198,9 @@ const AICustomerChurnPrediction: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Seamless Integrations
             </h2>
@@ -228,10 +215,9 @@ const AICustomerChurnPrediction: React.FC = () => {
                 key={integration}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-blue-500 transition-colors"
-              >
+                className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-blue-500 transition-colors">
                 <p className="text-slate-300 text-sm font-medium">{integration}</p>
               </motion.div>
             ))}
@@ -245,10 +231,9 @@ const AICustomerChurnPrediction: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
               Transparent Pricing
             </h2>
@@ -263,7 +248,7 @@ const AICustomerChurnPrediction: React.FC = () => {
                 key={plan.plan}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
                   plan.popular 
@@ -315,8 +300,8 @@ const AICustomerChurnPrediction: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Ready to Stop Customer Churn?
@@ -327,15 +312,13 @@ const AICustomerChurnPrediction: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
                 Schedule Demo
               </a>
             </div>
@@ -352,7 +335,7 @@ const AICustomerChurnPrediction: React.FC = () => {
               <div>
                 <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                 <p className="font-semibold">Starting at $299/month</p>
-                <p className="text-sm">No setup fees, cancel anytime</p>
+                <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>
                 <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />

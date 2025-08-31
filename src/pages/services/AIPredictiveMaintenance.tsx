@@ -33,18 +33,15 @@ export default function AIPredictiveMaintenance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Maintenance Starter', 
+    { name: 'Maintenance Starter', 
       price: '$399/mo', 
       details: ['Up to 50 assets', 'Basic AI prediction', 'Standard monitoring', 'Email support'] 
     },
-    { 
-      name: 'Maintenance Professional', 
+    { name: 'Maintenance Professional', 
       price: '$999/mo', 
       details: ['Up to 500 assets', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Maintenance', 
+    { name: 'Enterprise Maintenance', 
       price: '$2,999/mo', 
       details: ['Unlimited assets', 'Full AI suite', 'White-label options', '24/7 support'] 
     },

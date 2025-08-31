@@ -13,18 +13,15 @@ export default function AIMetaverse() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$499/mo', 
       details: ['Up to 100GB storage', 'Basic AI features', 'Standard monitoring', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,299/mo', 
       details: ['Up to 1TB storage', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,499/mo', 
       details: ['Unlimited storage', 'Custom AI models', 'Full metaverse suite', '24/7 dedicated support'] 
     },

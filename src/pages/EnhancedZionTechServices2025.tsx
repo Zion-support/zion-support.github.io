@@ -111,8 +111,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               {categories.map(category => (
                 <option key={category} value={category}>{category}</option>
               ))}
@@ -120,8 +119,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
               <option value="name">Sort by Name</option>
               <option value="price">Sort by Price</option>
               <option value="rating">Sort by Rating</option>
@@ -158,7 +156,7 @@ const EnhancedZionTechServices2025: React.FC = () => {
                 <div className="w-full bg-gray-700 rounded-full h-2">
                   <div 
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full transition-all duration-300"
-                    style={{ width: `${service.aiScore}%` }}
+                    style={{ width: `${service.aiScore    }%` }}
                   ></div>
                 </div>
               </div>
@@ -219,15 +217,13 @@ const EnhancedZionTechServices2025: React.FC = () => {
                   href={service.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-                >
+                  className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold">
                   Learn More
                 </a>
                 <div className="text-center">
                   <a
                     href={`mailto:${service.contactInfo.email}`}
-                    className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-                  >
+                    className="text-sm text-blue-400 hover:text-blue-300 transition-colors">
                     Contact Sales
                   </a>
                 </div>

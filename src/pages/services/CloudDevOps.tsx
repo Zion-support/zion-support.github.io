@@ -43,33 +43,27 @@ import {
 
 const CloudDevOps = () => {
   const features = [
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: 'Cloud Infrastructure',
       description: 'Design and implement scalable cloud architectures on AWS, Azure, and GCP'
     },
-    {
-      icon: Code,
+    { icon: Code,
       title: 'CI/CD Pipelines',
       description: 'Automated build, test, and deployment pipelines for rapid delivery'
     },
-    {
-      icon: Docker,
+    { icon: Docker,
       title: 'Containerization',
       description: 'Docker and Kubernetes implementation for scalable application deployment'
     },
-    {
-      icon: GitBranch,
+    { icon: GitBranch,
       title: 'GitOps Workflows',
       description: 'Infrastructure as code and automated deployment management'
     },
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: 'Monitoring & Logging',
       description: 'Comprehensive monitoring, alerting, and centralized logging solutions'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Security & Compliance',
       description: 'DevSecOps practices and compliance automation for cloud environments'
     }
@@ -85,43 +79,35 @@ const CloudDevOps = () => {
   ];
 
   const services = [
-    {
-      icon: Server,
+    { icon: Server,
       title: 'Infrastructure as Code',
       description: 'Terraform, CloudFormation, and ARM templates for automated infrastructure'
     },
-    {
-      icon: Workflow,
+    { icon: Workflow,
       title: 'CI/CD Automation',
       description: 'Jenkins, GitHub Actions, and GitLab CI for seamless deployments'
     },
-    {
-      icon: Kubernetes,
+    { icon: Kubernetes,
       title: 'Container Orchestration',
       description: 'Kubernetes clusters with Helm charts and automated scaling'
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: 'Database Management',
       description: 'Automated database provisioning, backups, and scaling'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'E-commerce',
+    { industry: 'E-commerce',
       description: 'Scalable infrastructure for high-traffic online stores'
     },
-    {
-      industry: 'SaaS Platforms',
+    { industry: 'SaaS Platforms',
       description: 'Multi-tenant applications with automated scaling'
     },
-    {
-      industry: 'Financial Services',
+    { industry: 'Financial Services',
       description: 'Secure, compliant cloud infrastructure for banking applications'
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       description: 'HIPAA-compliant cloud solutions for medical applications'
     }
   ];
@@ -135,9 +121,8 @@ const CloudDevOps = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Cloud className="w-4 h-4 mr-2" />
               Cloud & DevOps Solutions
@@ -173,9 +158,8 @@ const CloudDevOps = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive DevOps Features
             </h2>
@@ -192,8 +176,7 @@ const CloudDevOps = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -211,9 +194,8 @@ const CloudDevOps = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core DevOps Services
             </h2>
@@ -230,8 +212,7 @@ const CloudDevOps = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -253,9 +234,8 @@ const CloudDevOps = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Operations
             </h2>
@@ -272,8 +252,7 @@ const CloudDevOps = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -286,8 +265,7 @@ const CloudDevOps = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -303,9 +281,8 @@ const CloudDevOps = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -322,8 +299,7 @@ const CloudDevOps = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -341,7 +317,7 @@ const CloudDevOps = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your DevOps Journey Today

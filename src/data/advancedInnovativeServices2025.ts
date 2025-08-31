@@ -1,5 +1,4 @@
-export type AdvancedServiceItem = {
-  id: string;
+export type AdvancedServiceItem = { id: string;
   title: string;
   description: string;
   category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Industry Solutions';
@@ -19,23 +18,20 @@ export type AdvancedServiceItem = {
   deploymentOptions: string[];
   scalability: string;
   securityFeatures: string[];
-};
+    };
 
-export type AdvancedServiceCategory = {
-  name: string;
+export type AdvancedServiceCategory = { name: string;
   slug: string;
   description: string;
   items: AdvancedServiceItem[];
-};
+    };
 
 export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
-  {
-    name: 'AI-Powered Business Intelligence',
+  { name: 'AI-Powered Business Intelligence',
     slug: 'ai-business-intelligence',
     description: 'Next-generation AI-driven business intelligence solutions that transform data into actionable insights',
     items: [
-      {
-        id: 'ai-predictive-analytics-engine',
+      { id: 'ai-predictive-analytics-engine',
         title: 'AI Predictive Analytics Engine',
         description: 'Advanced predictive analytics platform using machine learning to forecast business trends, customer behavior, and market opportunities with 95%+ accuracy.',
         category: 'AI Solutions',
@@ -75,8 +71,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         scalability: 'Handles 1M+ data points per second with linear scaling',
         securityFeatures: ['End-to-end encryption', 'Zero-trust architecture', 'Regular security audits', 'Compliance monitoring']
       },
-      {
-        id: 'ai-customer-intelligence-platform',
+      { id: 'ai-customer-intelligence-platform',
         title: 'AI Customer Intelligence Platform',
         description: 'Comprehensive customer intelligence solution that combines behavioral analysis, sentiment analysis, and predictive modeling to deliver 360-degree customer insights.',
         category: 'AI Solutions',
@@ -118,13 +113,11 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
       }
     ]
   },
-  {
-    name: 'Advanced Cybersecurity Solutions',
+  { name: 'Advanced Cybersecurity Solutions',
     slug: 'advanced-cybersecurity',
     description: 'Next-generation cybersecurity solutions powered by AI and machine learning',
     items: [
-      {
-        id: 'ai-threat-hunting-platform',
+      { id: 'ai-threat-hunting-platform',
         title: 'AI Threat Hunting Platform',
         description: 'Proactive threat hunting platform that uses AI to detect, analyze, and respond to advanced cyber threats before they cause damage.',
         category: 'Cybersecurity',
@@ -164,8 +157,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         scalability: 'Monitors 1M+ endpoints with sub-second response times',
         securityFeatures: ['Zero-trust architecture', 'Encrypted communications', 'Multi-factor authentication', 'Regular penetration testing']
       },
-      {
-        id: 'quantum-resistant-cryptography',
+      { id: 'quantum-resistant-cryptography',
         title: 'Quantum-Resistant Cryptography Suite',
         description: 'Future-proof cryptographic solutions designed to withstand quantum computing attacks while maintaining high performance and compatibility.',
         category: 'Cybersecurity',
@@ -207,13 +199,11 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
       }
     ]
   },
-  {
-    name: 'Next-Generation Cloud Services',
+  { name: 'Next-Generation Cloud Services',
     slug: 'next-gen-cloud',
     description: 'Revolutionary cloud computing solutions with AI optimization and edge computing capabilities',
     items: [
-      {
-        id: 'ai-optimized-cloud-platform',
+      { id: 'ai-optimized-cloud-platform',
         title: 'AI-Optimized Cloud Platform',
         description: 'Intelligent cloud platform that automatically optimizes resource allocation, costs, and performance using advanced AI algorithms.',
         category: 'Cloud & DevOps',
@@ -253,8 +243,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         scalability: 'Manages 100K+ resources across multiple cloud providers',
         securityFeatures: ['Zero-trust security', 'Encrypted data transmission', 'Regular security audits', 'Compliance monitoring']
       },
-      {
-        id: 'edge-computing-orchestrator',
+      { id: 'edge-computing-orchestrator',
         title: 'Edge Computing Orchestrator',
         description: 'Intelligent edge computing platform that optimizes application deployment and data processing at the network edge.',
         category: 'Cloud & DevOps',
@@ -296,13 +285,11 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
       }
     ]
   },
-  {
-    name: 'Emerging Technology Services',
+  { name: 'Emerging Technology Services',
     slug: 'emerging-tech',
     description: 'Cutting-edge solutions in quantum computing, blockchain, and advanced technologies',
     items: [
-      {
-        id: 'quantum-computing-as-a-service',
+      { id: 'quantum-computing-as-a-service',
         title: 'Quantum Computing as a Service',
         description: 'Access to quantum computing resources and algorithms for solving complex computational problems.',
         category: 'Quantum Computing',
@@ -342,8 +329,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         scalability: 'Supports multiple quantum processors and algorithms',
         securityFeatures: ['Quantum-safe communications', 'Secure access controls', 'Data protection', 'Research confidentiality']
       },
-      {
-        id: 'blockchain-enterprise-platform',
+      { id: 'blockchain-enterprise-platform',
         title: 'Blockchain Enterprise Platform',
         description: 'Enterprise-grade blockchain platform with advanced features for business applications and digital asset management.',
         category: 'Blockchain & Web3',
@@ -385,13 +371,11 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
       }
     ]
   },
-  {
-    name: 'Industry-Specific AI Solutions',
+  { name: 'Industry-Specific AI Solutions',
     slug: 'industry-ai',
     description: 'Specialized AI solutions designed for specific industries and use cases',
     items: [
-      {
-        id: 'ai-healthcare-diagnostics',
+      { id: 'ai-healthcare-diagnostics',
         title: 'AI Healthcare Diagnostics Platform',
         description: 'Advanced AI-powered healthcare diagnostics platform that provides accurate medical imaging analysis and diagnostic support.',
         category: 'BioTech & Health',
@@ -431,8 +415,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         scalability: 'Processes 10K+ medical images daily',
         securityFeatures: ['HIPAA compliance', 'Data encryption', 'Access controls', 'Audit logging', 'Patient privacy protection']
       },
-      {
-        id: 'ai-financial-trading',
+      { id: 'ai-financial-trading',
         title: 'AI Financial Trading Platform',
         description: 'Intelligent financial trading platform that uses AI to analyze market data and execute trades with optimal timing and risk management.',
         category: 'FinTech & DeFi',
@@ -474,13 +457,11 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
       }
     ]
   },
-  {
-    name: 'Advanced Data Management',
+  { name: 'Advanced Data Management',
     slug: 'advanced-data',
     description: 'Next-generation data management and governance solutions',
     items: [
-      {
-        id: 'ai-data-governance-platform',
+      { id: 'ai-data-governance-platform',
         title: 'AI Data Governance Platform',
         description: 'Intelligent data governance platform that automatically discovers, classifies, and manages data across the enterprise.',
         category: 'Data & Analytics',
@@ -520,8 +501,7 @@ export const advancedInnovativeServices2025: AdvancedServiceCategory[] = [
         scalability: 'Manages 100PB+ of data across multiple systems',
         securityFeatures: ['Data encryption', 'Access controls', 'Audit logging', 'Privacy protection', 'Compliance monitoring']
       },
-      {
-        id: 'real-time-data-streaming',
+      { id: 'real-time-data-streaming',
         title: 'Real-Time Data Streaming Platform',
         description: 'High-performance real-time data streaming platform that processes and analyzes data streams with sub-millisecond latency.',
         category: 'Data & Analytics',

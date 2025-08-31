@@ -28,8 +28,7 @@ export default function Search() {
 
   // Mock search results - in a real app, this would come from an API
   const mockResults = [
-    {
-      id: 1,
+    { id: 1,
       type: 'service',
       title: 'AI-Powered Business Intelligence Platform',
       description: 'Advanced analytics platform with machine learning capabilities for business insights',
@@ -38,12 +37,11 @@ export default function Search() {
       reviews: 127,
       price: '$2,500/month',
       location: 'Remote',
-      company: 'Zion Tech Group',
+      comp: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Machine Learning', 'Business Intelligence'],
       featured: true
     },
-    {
-      id: 2,
+    { id: 2,
       type: 'talent',
       title: 'Senior AI Engineer',
       description: 'Experienced AI engineer specializing in machine learning and neural networks',
@@ -52,12 +50,11 @@ export default function Search() {
       reviews: 89,
       price: '$150/hour',
       location: 'San Francisco, CA',
-      company: 'Tech Solutions Inc',
+      comp: 'Tech Solutions Inc',
       tags: ['AI', 'Machine Learning', 'Python', 'TensorFlow'],
       featured: false
     },
-    {
-      id: 3,
+    { id: 3,
       type: 'equipment',
       title: 'High-Performance GPU Cluster',
       description: 'Enterprise-grade GPU cluster for AI training and inference workloads',
@@ -66,12 +63,11 @@ export default function Search() {
       reviews: 45,
       price: '$15,000/month',
       location: 'New York, NY',
-      company: 'Cloud Computing Corp',
+      comp: 'Cloud Computing Corp',
       tags: ['GPU', 'AI Training', 'High Performance', 'Enterprise'],
       featured: true
     },
-    {
-      id: 4,
+    { id: 4,
       type: 'service',
       title: 'Cloud Migration Consulting',
       description: 'Expert consulting services for migrating legacy systems to cloud infrastructure',
@@ -80,7 +76,7 @@ export default function Search() {
       reviews: 203,
       price: '$300/hour',
       location: 'Remote',
-      company: 'Zion Tech Group',
+      comp: 'Zion Tech Group',
       tags: ['Cloud', 'Migration', 'Consulting', 'Infrastructure'],
       featured: false
     }
@@ -131,7 +127,7 @@ export default function Search() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      setSearchParams({ q: searchQuery.trim() });
+      setSearchParams({ q: searchQuery.trim()     });
     }
   };
 
@@ -183,8 +179,7 @@ export default function Search() {
               />
               <button
                 type="submit"
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-md font-semibold hover:bg-zion-cyan-light transition-colors"
-              >
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-zion-cyan text-zion-slate-dark px-6 py-2 rounded-md font-semibold hover:bg-zion-cyan-light transition-colors">
                 Search
               </button>
             </div>
@@ -224,8 +219,7 @@ export default function Search() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-              >
+                className="bg-zion-slate border border-zion-slate-light rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                 {sortOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
@@ -276,8 +270,7 @@ export default function Search() {
                     {result.tags.map((tag, index) => (
                       <span
                         key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-                      >
+                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full">
                         {tag}
                       </span>
                     ))}
@@ -291,7 +284,7 @@ export default function Search() {
                       </div>
                       <div className="flex items-center gap-1">
                         <Building className="w-4 h-4" />
-                        {result.company}
+                        {result.comp}
                       </div>
                       <div className="text-zion-cyan font-medium">{result.price}</div>
                     </div>
@@ -316,8 +309,7 @@ export default function Search() {
                   <button
                     key={category.id}
                     onClick={() => setActiveCategory(category.id)}
-                    className="px-4 py-2 bg-zion-slate border border-zion-slate-light rounded-lg text-zion-slate-light hover:bg-zion-slate-light hover:text-white transition-colors"
-                  >
+                    className="px-4 py-2 bg-zion-slate border border-zion-slate-light rounded-lg text-zion-slate-light hover:bg-zion-slate-light hover:text-white transition-colors">
                     Browse {category.name}
                   </button>
                 ))}

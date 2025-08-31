@@ -35,74 +35,61 @@ import {
 
 export default function AICustomerFeedbackAnalytics() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI Sentiment Analysis",
       description: "Advanced NLP algorithms analyze customer emotions, intent, and satisfaction levels across all feedback channels."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Real-time Analytics Dashboard",
       description: "Live insights into customer satisfaction trends, sentiment scores, and feedback patterns with customizable metrics."
     },
-    {
-      icon: MessageSquare,
+    { icon: MessageSquare,
       title: "Multi-Channel Integration",
       description: "Seamlessly collect and analyze feedback from surveys, reviews, social media, support tickets, and more."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Predictive Customer Insights",
       description: "AI-powered predictions for customer churn, satisfaction trends, and actionable recommendations."
     },
-    {
-      icon: PieChart,
+    { icon: PieChart,
       title: "Advanced Segmentation",
       description: "Segment customers by demographics, behavior, satisfaction levels, and create targeted improvement strategies."
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: "Automated Reporting",
       description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Improved Customer Retention",
       description: "Identify at-risk customers early and implement proactive retention strategies."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Enhanced Customer Experience",
       description: "Understand customer pain points and optimize touchpoints across the entire customer journey."
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Data Security & Privacy",
       description: "Enterprise-grade security with GDPR/CCPA compliance and data encryption at rest and in transit."
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Actionable Insights",
       description: "Transform raw feedback into actionable business intelligence with AI-powered recommendations."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Increased Revenue",
       description: "Improve customer satisfaction scores leading to higher retention rates and increased lifetime value."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Savings",
       description: "Automate feedback analysis and reporting, saving hours of manual work each week."
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses starting their feedback analytics journey",
@@ -117,8 +104,7 @@ export default function AICustomerFeedbackAnalytics() {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$799",
       period: "/month",
       description: "Ideal for growing companies with advanced analytics needs",
@@ -135,8 +121,7 @@ export default function AICustomerFeedbackAnalytics() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$2,499",
       period: "/month",
       description: "For large organizations requiring enterprise-grade solutions",
@@ -156,61 +141,49 @@ export default function AICustomerFeedbackAnalytics() {
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Analyze product reviews, customer service feedback, and shopping experience to optimize conversion rates",
       icon: ShoppingCart
     },
-    {
-      industry: "SaaS",
+    { industry: "SaaS",
       description: "Monitor user satisfaction, feature requests, and churn indicators to improve product-market fit",
       icon: Cpu
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Track patient satisfaction, service quality feedback, and improve healthcare delivery",
       icon: Users
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       description: "Monitor customer satisfaction with banking services, investment products, and support quality",
       icon: Shield
     },
-    {
-      industry: "Education",
+    { industry: "Education",
       description: "Analyze student feedback, course satisfaction, and institutional improvement opportunities",
       icon: Award
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Track customer satisfaction with products, service quality, and identify improvement areas",
       icon: Settings
     }
   ];
 
   const integrations = [
-    {
-      name: "Survey Platforms",
+    { name: "Survey Platforms",
       platforms: ["SurveyMonkey", "Typeform", "Google Forms", "Qualtrics"]
     },
-    {
-      name: "CRM Systems",
+    { name: "CRM Systems",
       platforms: ["Salesforce", "HubSpot", "Pipedrive", "Zoho"]
     },
-    {
-      name: "Support Platforms",
+    { name: "Support Platforms",
       platforms: ["Zendesk", "Intercom", "Freshdesk", "HelpScout"]
     },
-    {
-      name: "Social Media",
+    { name: "Social Media",
       platforms: ["Twitter", "Facebook", "Instagram", "LinkedIn"]
     },
-    {
-      name: "Review Platforms",
+    { name: "Review Platforms",
       platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]
     },
-    {
-      name: "Analytics Tools",
+    { name: "Analytics Tools",
       platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]
     }
   ];
@@ -230,7 +203,7 @@ export default function AICustomerFeedbackAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
@@ -266,10 +239,9 @@ export default function AICustomerFeedbackAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Powerful Features
             </h2>
@@ -285,9 +257,8 @@ export default function AICustomerFeedbackAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -319,10 +290,9 @@ export default function AICustomerFeedbackAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -338,9 +308,8 @@ export default function AICustomerFeedbackAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -372,10 +341,9 @@ export default function AICustomerFeedbackAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -391,7 +359,7 @@ export default function AICustomerFeedbackAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' 
@@ -443,10 +411,9 @@ export default function AICustomerFeedbackAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -462,9 +429,8 @@ export default function AICustomerFeedbackAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -496,10 +462,9 @@ export default function AICustomerFeedbackAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
@@ -515,9 +480,8 @@ export default function AICustomerFeedbackAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
                   {integration.name}
                 </h3>
@@ -525,8 +489,7 @@ export default function AICustomerFeedbackAnalytics() {
                   {integration.platforms.map((platform, platformIndex) => (
                     <span
                       key={platformIndex}
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
-                    >
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">
                       {platform}
                     </span>
                   ))}
@@ -543,8 +506,8 @@ export default function AICustomerFeedbackAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Customer Feedback?

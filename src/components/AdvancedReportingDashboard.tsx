@@ -21,7 +21,6 @@ import {
 } from 'lucide-react';
 
 interface ReportData {
-
   id: string;
   title: string;
   type: 'financial' | 'operational' | 'performance' | 'security' | 'customer' | 'technical';
@@ -37,10 +36,9 @@ interface ReportData {
   downloads: number;
   rating: number;
 
-}
+    }
 
 interface ReportMetrics {
-
   totalReports: number;
   activeReports: number;
   totalViews: number;
@@ -48,7 +46,7 @@ interface ReportMetrics {
   averageRating: number;
   topCategories: Array<any>;
   recentActivity: Array<any>;
-}
+    }
 
 interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
 
@@ -58,7 +56,7 @@ interface AdvancedReportingDashboardProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProps> = ({
+export const AdvancedReportingDashboard: React.FC = ({
   showMetrics = true,
   showFilters = true,
   showCharts = true,
@@ -72,7 +70,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('grid');
   const [showReportForm, setShowReportForm] = useState(false);
-  const [selectedReport, setSelectedReport] = useState<any>(null);
+  const [selectedReport, setSelectedReport] = useState(null);
   const [showReportDetails, setShowReportDetails] = useState(false);
   const [sortBy, setSortBy] = useState<any>('date');
   const [sortOrder, setSortOrder] = useState<any>('desc');
@@ -80,13 +78,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   // Sample report data
   useEffect(() => {
     const sampleReports: ReportData[] = [
-      {
-        id: any'1',
+      { id: '1',
         title: 'Q4 Financial Performance Analysis',
         type: 'financial',
         category: 'Financial Reports',
-        data: {
-          revenue: 2500000,
+        data: { revenue: 2500000,
           expenses: 1800000,
           profit: 700000,
           growth: 15.5,
@@ -102,13 +98,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         downloads: 89,
         rating: 4.8
       },
-      {
-        id: '2',
+      { id: '2',
         title: 'AI Services Performance Metrics',
         type: 'performance',
         category: 'Performance Reports',
-        data: {
-          accuracy: 94.2,
+        data: { accuracy: 94.2,
           responseTime: 1.8,
           uptime: 99.9,
           userSatisfaction: 4.6,
@@ -124,13 +118,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         downloads: 67,
         rating: 4.9
       },
-      {
-        id: '3',
+      { id: '3',
         title: 'Cybersecurity Threat Assessment',
         type: 'security',
         category: 'Security Reports',
-        data: {
-          threatsDetected: 156,
+        data: { threatsDetected: 156,
           incidentsResolved: 154,
           responseTime: 2.3,
           riskLevel: 'Medium',
@@ -146,13 +138,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         downloads: 134,
         rating: 4.7
       },
-      {
-        id: '4',
+      { id: '4',
         title: 'Cloud Infrastructure Utilization',
         type: 'operational',
         category: 'Operational Reports',
-        data: {
-          cpuUtilization: 78.5,
+        data: { cpuUtilization: 78.5,
           memoryUsage: 82.3,
           storageUsage: 65.8,
           networkTraffic: 45.2,
@@ -168,13 +158,11 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
         downloads: 56,
         rating: 4.5
       },
-      {
-        id: '5',
+      { id: '5',
         title: 'Customer Satisfaction Survey Results',
         type: 'customer',
         category: 'Customer Reports',
-        data: {
-          overallSatisfaction: 4.6,
+        data: { overallSatisfaction: 4.6,
           netPromoterScore: 72,
           responseRate: 89.5,
           topConcerns: ['Response Time', 'Documentation', 'Support Quality'],
@@ -197,7 +185,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   }, []);
 
   // Filter and sort reports
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = reports;
 
     if (selectedType !== 'all') {
@@ -222,7 +210,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
 
     // Sort reports
     filtered.sort((a, b) => {
-      let aValue: any, bValue: any;
+      let aValue: , bValue: ;
       
       switch (sortBy) {
         case 'date':
@@ -262,23 +250,22 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   }, [reports, selectedType, selectedCategory, selectedStatus, searchQuery, sortBy, sortOrder, maxReports]);
 
   // Calculate report metrics
-  const reportMetrics = {
-    totalReports: anyreports.length,
+  const reportMetrics = { totalReports: reports.length,
     activeReports: reports.filter(r  => r.status === 'active').length,
-    totalViews: anyreports.reduce((sum, r)  => sum + r.views, 0),
-    totalDownloads: anyreports.reduce((sum, r)  => sum + r.downloads, 0),
-    averageRating: anyreports.reduce((sum, r)  => sum + r.rating, 0) / reports.length || 0,
-    topCategories: any(()  => {
+    totalViews: reports.reduce((sum, r)  => sum + r.views, 0),
+    totalDownloads: reports.reduce((sum, r)  => sum + r.downloads, 0),
+    averageRating: reports.reduce((sum, r)  => sum + r.rating, 0) / reports.length || 0,
+    topCategories: (() => {
       const catCounts = reports.reduce((acc, r) => {
         acc[r.category] = (acc[r.category] || 0) + 1;
         return acc;
-      }, {} as Record<string, any>);
+      }, {} as Record<string, >);
 
       return Object.entries(catCounts)
         .map(([name, count]) => ({
           name,
           count,
-          percentage: any(count / reports.length) * 100
+          percentage: (count / reports.length) * 100
         }))
         .sort((a, b)  => b.count - a.count)
         .slice(0, 5);
@@ -292,9 +279,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get type icon and color
-  const getTypeDisplay = (type: anystring)  => {
-    const types = {
-      financial: { icon: <DollarSign className="w-4 h-4" />, color: 'text-green-400 bg-green-400/20' },
+  const getTypeDisplay = (type: string)  => {
+    const types = { financial: { icon: <DollarSign className="w-4 h-4" />, color: 'text-green-400 bg-green-400/20' },
       operational: { icon: <Activity className="w-4 h-4" />, color: 'text-blue-400 bg-blue-400/20' },
       performance: { icon: <TrendingUp className="w-4 h-4" />, color: 'text-purple-400 bg-purple-400/20' },
       security: { icon: <Shield className="w-4 h-4" />, color: 'text-red-400 bg-red-400/20' },
@@ -305,7 +291,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -316,7 +302,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Get status color
-  const getStatusColor = (status: anystring)  => {
+  const getStatusColor = (status: string)  => {
     switch (status) {
       case 'active': return 'text-green-400 bg-green-400/20';
       case 'archived': return 'text-zinc-400 bg-zinc-400/20';
@@ -326,7 +312,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Handle report actions
-  const handleReportAction = (reportId: anystring, action: 'view' | 'download' | 'share' | 'print')  => {
+  const handleReportAction = (reportId: string, action: 'view' | 'download' | 'share' | 'print')  => {
     const report = reports.find(r => r.id === reportId);
     if (report) {
       switch (action) {
@@ -351,7 +337,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   };
 
   // Export report data
-  const exportReport = (report: anyReportData, format: 'pdf' | 'excel' | 'csv')  => {
+  const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv')  => {
     console.log(`Exporting ${report.title} as ${format}`);
     // In a real implementation, this would generate and download the file
   };
@@ -375,7 +361,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
@@ -391,8 +377,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           {/* Create Report Button */}
           <button
             onClick={() => setShowReportDetails(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
-          >
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">
             <FileText className="w-4 h-4" />
             Create Report
           </button>
@@ -405,8 +390,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-3xl font-bold text-white mb-2">{reportMetrics.totalReports}</div>
             <div className="text-zinc-400">Total Reports</div>
           </motion.div>
@@ -414,9 +398,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.1     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-3xl font-bold text-green-400 mb-2">{reportMetrics.totalViews.toLocaleString()}</div>
             <div className="text-zinc-400">Total Views</div>
           </motion.div>
@@ -424,9 +407,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.2     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-3xl font-bold text-blue-400 mb-2">{reportMetrics.totalDownloads.toLocaleString()}</div>
             <div className="text-zinc-400">Total Downloads</div>
           </motion.div>
@@ -434,9 +416,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.3     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-3xl font-bold text-zion-cyan mb-2">{reportMetrics.averageRating.toFixed(1)}</div>
             <div className="text-zinc-400">Average Rating</div>
           </motion.div>
@@ -449,9 +430,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
-          >
+            transition={{ delay: 0.4     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
             <h3 className="text-lg font-semibold text-white mb-4">Top Categories</h3>
             <div className="space-y-3">
               {reportMetrics.topCategories.map((category, index) => (
@@ -460,8 +440,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
                   <div className="flex items-center gap-2">
                     <div className="w-20 bg-zinc-700 rounded-full h-2">
                       <motion.div
-                        initial={{ width: 0 }}
-                        animate={{ width: `${category.percentage}%` }}
+                        initial={{ width: 0     }}
+                        animate={{ width: `${category.percentage    }%` }}
                         transition={{ delay: index * 0.1, duration: 0.8 }}
                         className="h-2 bg-zion-cyan rounded-full"
                       />
@@ -476,9 +456,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
-          >
+            transition={{ delay: 0.5     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
             <h3 className="text-lg font-semibold text-white mb-4">Recent Activity</h3>
             <div className="space-y-3">
               {reportMetrics.recentActivity.map((activity, index) => (
@@ -496,9 +475,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl"
-          >
+            transition={{ delay: 0.6     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl">
             <h3 className="text-lg font-semibold text-white mb-4">Quick Actions</h3>
             <div className="space-y-2">
               <button className="w-full px-4 py-2 bg-zion-cyan/20 text-zion-cyan rounded-lg hover:bg-zion-cyan/30 transition-colors text-sm">
@@ -522,8 +500,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <select
             value={selectedType}
             onChange={(e) => setSelectedType(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
             <option value="all">All Types</option>
             <option value="financial">Financial</option>
             <option value="operational">Operational</option>
@@ -537,8 +514,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <select
             value={selectedCategory}
             onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
             <option value="all">All Categories</option>
             <option value="Financial Reports">Financial Reports</option>
             <option value="Performance Reports">Performance Reports</option>
@@ -551,8 +527,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
             <option value="all">All Statuses</option>
             <option value="active">Active</option>
             <option value="archived">Archived</option>
@@ -562,9 +537,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           {/* Sort Options */}
           <select
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as any)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+            onChange={(e) => setSortBy(e.target.value as )}
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
             <option value="date">Sort by Date</option>
             <option value="views">Sort by Views</option>
             <option value="rating">Sort by Rating</option>
@@ -575,8 +549,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           {/* Sort Order */}
           <button
             onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
-            className="p-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-zinc-400 hover:text-white transition-colors"
-          >
+            className="p-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-zinc-400 hover:text-white transition-colors">
             {sortOrder === 'asc' ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>
 
@@ -601,9 +574,8 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
             key={report.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-          >
+            transition={{ delay: index * 0.1     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300">
             {/* Report Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
@@ -636,20 +608,17 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
               <div className="flex items-center gap-2 ml-4">
                 <button 
                   onClick={() => handleReportAction(report.id, 'view')}
-                  className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                >
+                  className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
                   <Eye className="w-4 h-4" />
                 </button>
                 <button 
                   onClick={() => handleReportAction(report.id, 'download')}
-                  className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
-                >
+                  className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                   <Download className="w-4 h-4" />
                 </button>
                 <button 
                   onClick={() => handleReportAction(report.id, 'share')}
-                  className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors"
-                >
+                  className="p-2 text-zinc-400 hover:text-zion-cyan hover:bg-zion-cyan/20 rounded-lg transition-colors">
                   <Share2 className="w-4 h-4" />
                 </button>
               </div>
@@ -695,8 +664,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
               {report.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                >
+                  className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full">
                   {tag}
                 </span>
               ))}
@@ -718,20 +686,17 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
               <div className="flex items-center gap-2">
                 <button 
                   onClick={() => exportReport(report, 'pdf')}
-                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
-                >
+                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors">
                   PDF
                 </button>
                 <button 
                   onClick={() => exportReport(report, 'excel')}
-                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
-                >
+                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors">
                   Excel
                 </button>
                 <button 
                   onClick={() => exportReport(report, 'csv')}
-                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors"
-                >
+                  className="px-3 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-lg hover:bg-zinc-700/50 transition-colors">
                   CSV
                 </button>
               </div>
@@ -743,10 +708,9 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       {/* No Results */}
       {filteredReports.length === 0 && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-12"
-        >
+          initial={{ opacity: 0     }}
+          animate={{ opacity: 1     }}
+          className="text-center py-12">
           <FileText className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No reports found</h3>
           <p className="text-zinc-400 mb-4">
@@ -754,8 +718,7 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
           </p>
           <button
             onClick={() => setShowReportDetails(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
-          >
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
             Create Report
           </button>
         </motion.div>
@@ -765,25 +728,22 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
       <AnimatePresence>
         {showReportDetails && selectedReport && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
+            exit={{ opacity: 0     }}
             className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            onClick={() => setShowReportDetails(false)}
-          >
+            onClick={() => setShowReportDetails(false)}>
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-zinc-900 border border-zinc-700 rounded-xl p-6 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-              onClick={(e) => e.stopPropagation()}
-            >
+              onClick={(e) => e.stopPropagation()}>
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-2xl font-bold text-white">{selectedReport.title}</h2>
                 <button
                   onClick={() => setShowReportDetails(false)}
-                  className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
-                >
+                  className="p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors">
                   <X className="w-6 h-6" />
                 </button>
               </div>

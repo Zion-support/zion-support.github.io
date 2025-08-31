@@ -106,8 +106,7 @@ export function EnhancedHeader() {
   // Enhanced services by category with better organization
   const services = [
     // Featured & New Services
-    { 
-      name: '2025 Services Overview', 
+    { name: '2025 Services Overview', 
       href: '/ultimate-services-showcase-2025', 
       icon: Star, 
       description: 'Revolutionary AI & Quantum Solutions', 
@@ -116,8 +115,7 @@ export function EnhancedHeader() {
       color: 'from-yellow-500 to-orange-500',
       badge: 'New'
     },
-    { 
-      name: '2026 Services Overview', 
+    { name: '2026 Services Overview', 
       href: '/ultimate-services-showcase-2026', 
       icon: Star, 
       description: 'Cutting-edge Innovation & Emerging Tech', 
@@ -126,8 +124,7 @@ export function EnhancedHeader() {
       color: 'from-purple-500 to-pink-500',
       badge: 'Featured'
     },
-    { 
-      name: '2029 Cutting-Edge Services', 
+    { name: '2029 Cutting-Edge Services', 
       href: '/zion-cutting-edge-services-2029', 
       icon: Star, 
       description: 'Future-ready Technology Solutions', 
@@ -138,8 +135,7 @@ export function EnhancedHeader() {
     },
     
     // AI & Machine Learning
-    { 
-      name: 'AI Autonomous Business Manager', 
+    { name: 'AI Autonomous Business Manager', 
       href: '/services/ai-autonomous-business-manager', 
       icon: Brain, 
       description: 'Fully autonomous business operations', 
@@ -147,8 +143,7 @@ export function EnhancedHeader() {
       color: 'from-purple-600 to-indigo-700',
       badge: 'Popular'
     },
-    { 
-      name: 'AI Quantum Hybrid Platform', 
+    { name: 'AI Quantum Hybrid Platform', 
       href: '/services/ai-quantum-hybrid-platform', 
       icon: Atom, 
       description: 'Quantum-AI integration platform', 
@@ -156,8 +151,7 @@ export function EnhancedHeader() {
       color: 'from-indigo-600 to-purple-700',
       badge: 'New'
     },
-    { 
-      name: 'AI Consciousness Simulation', 
+    { name: 'AI Consciousness Simulation', 
       href: '/services/ai-consciousness-simulation', 
       icon: Brain, 
       description: 'Advanced AI consciousness research', 
@@ -167,8 +161,7 @@ export function EnhancedHeader() {
     },
     
     // Micro SaaS
-    { 
-      name: 'Autonomous DevOps Platform', 
+    { name: 'Autonomous DevOps Platform', 
       href: '/services/autonomous-devops-platform', 
       icon: Rocket, 
       description: 'Self-healing infrastructure', 
@@ -176,8 +169,7 @@ export function EnhancedHeader() {
       color: 'from-blue-600 to-cyan-700',
       badge: 'Popular'
     },
-    { 
-      name: 'AI-Powered SEO Revolution', 
+    { name: 'AI-Powered SEO Revolution', 
       href: '/services/ai-powered-seo-revolution', 
       icon: TrendingUp, 
       description: 'Machine learning SEO optimization', 
@@ -185,8 +177,7 @@ export function EnhancedHeader() {
       color: 'from-green-600 to-emerald-700',
       badge: 'Popular'
     },
-    { 
-      name: 'Quantum Neural Network Platform', 
+    { name: 'Quantum Neural Network Platform', 
       href: '/services/quantum-neural-network-platform', 
       icon: Brain, 
       description: 'Quantum-enhanced neural networks', 
@@ -196,8 +187,7 @@ export function EnhancedHeader() {
     },
     
     // IT Services
-    { 
-      name: 'Zero Trust Network Architecture', 
+    { name: 'Zero Trust Network Architecture', 
       href: '/services/zero-trust-network-architecture', 
       icon: Shield, 
       description: 'Next-generation security architecture', 
@@ -205,8 +195,7 @@ export function EnhancedHeader() {
       color: 'from-red-600 to-orange-700',
       badge: 'Popular'
     },
-    { 
-      name: 'Quantum Edge Computing Platform', 
+    { name: 'Quantum Edge Computing Platform', 
       href: '/services/quantum-edge-computing-platform', 
       icon: Globe, 
       description: 'Quantum-enhanced edge computing', 
@@ -216,8 +205,7 @@ export function EnhancedHeader() {
     },
     
     // Emerging Technologies
-    { 
-      name: 'Space Technology Solutions', 
+    { name: 'Space Technology Solutions', 
       href: '/services/space-technology-solutions', 
       icon: Satellite, 
       description: 'Space tech for terrestrial use', 
@@ -225,8 +213,7 @@ export function EnhancedHeader() {
       color: 'from-slate-600 to-gray-700',
       badge: 'Featured'
     },
-    { 
-      name: 'Biotech AI Drug Discovery', 
+    { name: 'Biotech AI Drug Discovery', 
       href: '/services/biotech-ai-drug-discovery', 
       icon: Heart, 
       description: 'AI-powered drug discovery', 
@@ -248,8 +235,8 @@ export function EnhancedHeader() {
             ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl' 
             : 'bg-transparent'
         }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        initial={{ y: -100     }}
+        animate={{ y: 0     }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <div className="container mx-auto px-4">
@@ -259,7 +246,7 @@ export function EnhancedHeader() {
               <motion.div
                 className="relative"
                 whileHover={{ scale: 1.05, rotate: 5 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95     }}
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
                   <Zap className="w-7 h-7 text-white" />
@@ -310,7 +297,7 @@ export function EnhancedHeader() {
                       initial={{ opacity: 0, y: -20, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -20, scale: 0.95 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.3     }}
                       onMouseEnter={() => setServicesDropdownOpen(true)}
                       onMouseLeave={() => setServicesDropdownOpen(false)}
                     >
@@ -322,8 +309,7 @@ export function EnhancedHeader() {
                             <Link
                               key={service.name}
                               to={service.href}
-                              className="group p-4 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70"
-                            >
+                              className="group p-4 rounded-xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 hover:bg-gray-800/70">
                               <div className="flex items-center space-x-3 mb-2">
                                 <service.icon className="w-5 h-5 text-cyan-400" />
                                 <span className="text-sm font-medium text-white group-hover:text-cyan-400 transition-colors">
@@ -363,8 +349,7 @@ export function EnhancedHeader() {
                                   <Link
                                     key={service.name}
                                     to={service.href}
-                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 transition-colors group"
-                                  >
+                                    className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-800/50 transition-colors group">
                                     <service.icon className="w-4 h-4 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
                                     <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
                                       {service.name}
@@ -380,8 +365,7 @@ export function EnhancedHeader() {
                       <div className="mt-6 pt-4 border-t border-gray-700">
                         <Link
                           to="/services"
-                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group"
-                        >
+                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group">
                           View All Services
                           <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </Link>
@@ -432,14 +416,12 @@ export function EnhancedHeader() {
               <div className="flex items-center space-x-4">
                 <Link
                   to="/contact"
-                  className="btn-neon-cyan text-sm"
-                >
+                  className="btn-neon-cyan text-sm">
                   Get Started
                 </Link>
                 <Link
                   to="/login"
-                  className="text-gray-300 hover:text-cyan-400 transition-colors"
-                >
+                  className="text-gray-300 hover:text-cyan-400 transition-colors">
                   <User className="w-5 h-5" />
                 </Link>
               </div>
@@ -448,8 +430,7 @@ export function EnhancedHeader() {
             {/* Mobile Menu Button */}
             <button
               className="xl:hidden p-2 text-gray-300 hover:text-cyan-400 transition-colors"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
@@ -463,7 +444,7 @@ export function EnhancedHeader() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.3     }}
             >
               <div className="container mx-auto px-4 py-6">
                 <div className="grid grid-cols-1 gap-6">
@@ -490,8 +471,7 @@ export function EnhancedHeader() {
                             ? 'text-cyan-400 border-l-4 border-cyan-400 pl-4' 
                             : 'text-gray-300 hover:text-cyan-400 pl-4'
                         }`}
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
+                        onClick={() => setMobileMenuOpen(false)}>
                         {item.name}
                       </Link>
                     ))}
@@ -506,8 +486,7 @@ export function EnhancedHeader() {
                           key={service.name}
                           to={service.href}
                           className="flex items-center space-x-3 p-3 rounded-lg bg-gray-900/50 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
+                          onClick={() => setMobileMenuOpen(false)}>
                           <service.icon className="w-5 h-5 text-cyan-400" />
                           <div>
                             <span className="text-white font-medium">{service.name}</span>
@@ -523,8 +502,7 @@ export function EnhancedHeader() {
                     <Link
                       to="/contact"
                       className="btn-neon-cyan w-full text-center"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
+                      onClick={() => setMobileMenuOpen(false)}>
                       Get Started Today
                     </Link>
                   </div>

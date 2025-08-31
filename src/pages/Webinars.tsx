@@ -27,8 +27,7 @@ export default function Webinars() {
   ];
 
   const upcomingWebinars = [
-    {
-      id: 1,
+    { id: 1,
       title: 'AI-Powered Business Transformation: Real-World Success Stories',
       description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
       category: 'ai-ml',
@@ -44,8 +43,7 @@ export default function Webinars() {
       registrationRequired: true,
       recordingAvailable: false
     },
-    {
-      id: 2,
+    { id: 2,
       title: 'Zero-Trust Security: Implementation Strategies for 2025',
       description: 'Learn practical strategies for implementing zero-trust security architecture in your organization.',
       category: 'security',
@@ -90,8 +88,7 @@ export default function Webinars() {
   });
 
   const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      weekday: 'long',
+    return new Date(dateString).toLocaleDateString('en-US', { weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
@@ -115,8 +112,7 @@ export default function Webinars() {
     return categories.find(c => c.id === categoryId)?.icon || <Video className="w-5 h-5" />;
   };
 
-  const contactInfo = {
-    email: 'webinars@ziontechgroup.com',
+  const contactInfo = { email: 'webinars@ziontechgroup.com',
     phone: '+1 302 464 0950',
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
@@ -129,8 +125,8 @@ export default function Webinars() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Informed and Inspired
@@ -144,8 +140,8 @@ export default function Webinars() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 Subscribe to Webinars
               </motion.button>
@@ -227,8 +223,7 @@ export default function Webinars() {
                     setActiveCategory('all');
                     setFilterType('all');
                   }}
-                  className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
-                >
+                  className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors">
                   Clear Filters
                 </button>
               </div>
@@ -239,10 +234,9 @@ export default function Webinars() {
                     key={webinar.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
-                    viewport={{ once: true }}
-                    className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25"
-                  >
+                    transition={{ duration: 0.6     }}
+                    viewport={{ once: true     }}
+                    className="bg-zion-slate-dark rounded-2xl overflow-hidden border border-zion-slate-light/20 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/25">
                     {/* Thumbnail */}
                     <div className="relative h-48 bg-gradient-to-br from-zion-slate to-zion-slate-light">
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -293,8 +287,7 @@ export default function Webinars() {
                         {webinar.tags.slice(0, 3).map((tag, index) => (
                           <span
                             key={index}
-                            className="px-2 py-1 bg-zion-slate text-zion-slate-light text-xs rounded"
-                          >
+                            className="px-2 py-1 bg-zion-slate text-zion-slate-light text-xs rounded">
                             {tag}
                           </span>
                         ))}

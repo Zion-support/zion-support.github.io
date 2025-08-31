@@ -3,43 +3,37 @@ import { Package, Zap, Users, Globe, Cpu, Database, Shield, Target, TrendingUp, 
 
 const MicroSAAS = () => {
   const microsaasServices = [
-    {
-      icon: Package,
+    { icon: Package,
       title: "SAAS Development",
       description: "End-to-end development of scalable software-as-a-service applications",
       price: "From $25,000/project",
       features: ["Custom SAAS platforms", "Multi-tenant architecture", "Subscription management", "API development"]
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Rapid Prototyping",
       description: "Quick development of MVPs and prototypes to validate business ideas",
       price: "From $15,000/project",
       features: ["MVP development", "Proof of concept", "User testing", "Iterative design"]
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "User Management",
       description: "Comprehensive user authentication, authorization, and management systems",
       price: "From $8,500/month",
       features: ["User registration", "Role-based access", "Single sign-on", "User analytics"]
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Data Management",
       description: "Scalable database design and data processing solutions",
       price: "From $12,000/month",
       features: ["Database architecture", "Data migration", "Backup strategies", "Performance optimization"]
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Security & Compliance",
       description: "Enterprise-grade security and compliance for SAAS applications",
       price: "From $18,000/month",
       features: ["Data encryption", "GDPR compliance", "SOC 2 certification", "Security auditing"]
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Cloud Deployment",
       description: "Scalable cloud infrastructure and deployment solutions",
       price: "From $15,000/month",
@@ -57,20 +51,17 @@ const MicroSAAS = () => {
   ];
 
   const technologies = [
-    {
-      name: "Frontend",
+    { name: "Frontend",
       description: "React, Vue.js, Angular with modern UI frameworks",
       icon: Cpu,
       features: ["Modern frameworks", "Responsive design", "Component architecture", "State management"]
     },
-    {
-      name: "Backend",
+    { name: "Backend",
       description: "Node.js, Python, Java with microservices architecture",
       icon: Database,
       features: ["Microservices", "API development", "Scalable architecture", "Performance optimization"]
     },
-    {
-      name: "Cloud",
+    { name: "Cloud",
       description: "AWS, Azure, GCP with containerization and orchestration",
       icon: Globe,
       features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]
@@ -78,23 +69,19 @@ const MicroSAAS = () => {
   ];
 
   const industries = [
-    {
-      title: "Healthcare",
+    { title: "Healthcare",
       description: "HIPAA-compliant patient management and telemedicine platforms",
       icon: Shield
     },
-    {
-      title: "Finance",
+    { title: "Finance",
       description: "Secure financial planning and investment management tools",
       icon: TrendingUp
     },
-    {
-      title: "Education",
+    { title: "Education",
       description: "Learning management systems and educational technology platforms",
       icon: Users
     },
-    {
-      title: "E-commerce",
+    { title: "E-commerce",
       description: "Online marketplace and retail management solutions",
       icon: Package
     }

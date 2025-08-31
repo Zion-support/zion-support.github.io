@@ -8,7 +8,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
   const location = useLocation();
 
-  const toggleSection = (section: anystring)  => {
+  const toggleSection = (section: string)  => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section);
@@ -18,11 +18,10 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     setExpandedSections(newExpanded);
   };
 
-  const isActive = (path: anystring)  => location.pathname === path;
+  const isActive = (path: string)  => location.pathname === path;
 
   const navigationSections = [
-    {
-      title: "Main",
+    { title: "Main",
       icon: Home,
       items: [
         { name: "Home", href: "/", icon: Home },
@@ -32,8 +31,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
         { name: "Careers", href: "/careers", icon: Briefcase }
       ]
     },
-    {
-      title: "Services",
+    { title: "Services",
       icon: Zap,
       items: [
         { name: "AI & Machine Learning", href: "/ai-services", icon: Brain },
@@ -42,8 +40,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
         { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
       ]
     },
-    {
-      title: "Solutions",
+    { title: "Solutions",
       icon: Target,
       items: [
         { name: "Quantum Computing", href: "/emerging-tech/quantum", icon: Rocket },
@@ -52,8 +49,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
         { name: "IoT Solutions", href: "/emerging-tech/iot", icon: Brain }
       ]
     },
-    {
-      title: "Resources",
+    { title: "Resources",
       icon: BookOpen,
       items: [
         { name: "Documentation", href: "/docs", icon: FileText },
@@ -74,11 +70,10 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
     <>
       {/* Mobile Menu Button */}
       <motion.button
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
+        whileHover={{ scale: 1.05     }}
+        whileTap={{ scale: 0.95     }}
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-      >
+        className="lg:hidden p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300">
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </motion.button>
 
@@ -88,22 +83,21 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
           <>
             {/* Backdrop */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              exit={{ opacity: 0     }}
+              transition={{ duration: 0.3     }}
               className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
               onClick={() => setIsOpen(false)}
             />
 
             {/* Mobile Sidebar */}
             <motion.div
-              initial={{ x: '-100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '-100%' }}
+              initial={{ x: '-100%'     }}
+              animate={{ x: 0     }}
+              exit={{ x: '-100%'     }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto"
-            >
+              className="fixed left-0 top-0 h-full w-80 bg-zion-slate-dark/95 backdrop-blur-xl border-r border-zion-cyan/20 z-50 lg:hidden overflow-y-auto">
               <div className="p-6">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-8">
@@ -120,8 +114,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-                  >
+                    className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300">
                     <X className="w-5 h-5" />
                   </button>
                 </div>
@@ -165,8 +158,7 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                     >
                       <button
                         onClick={() => toggleSection(section.title)}
-                        className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group"
-                      >
+                        className="flex items-center justify-between w-full p-3 text-left text-zion-slate-light hover:text-white hover:bg-zion-cyan/10 rounded-lg transition-all duration-300 group">
                         <div className="flex items-center space-x-3">
                           <section.icon className="w-4 h-4 group-hover:text-zion-cyan transition-colors duration-300" />
                           <span className="font-medium">{section.title}</span>
@@ -184,9 +176,8 @@ export const MobileSidebarToggle: React.FC = (): JSX.Element => {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
-                            className="ml-7 mt-2 space-y-1"
-                          >
+                            transition={{ duration: 0.3     }}
+                            className="ml-7 mt-2 space-y-1">
                             {section.items.map((item, itemIndex) => (
                               <motion.div
                                 key={item.name}

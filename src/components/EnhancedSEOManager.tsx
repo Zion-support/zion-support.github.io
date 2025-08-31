@@ -9,14 +9,14 @@ interface SEOData {
   ogType?: string;
   canonicalUrl?: string;
   structuredData?: object;
-}
+    }
 
 interface EnhancedSEOManagerProps {
   seoData: SEOData;
   children: React.ReactNode;
-}
+    }
 
-const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
+const EnhancedSEOManager: React.FC = ({ seoData, children }) => {
   useEffect(() => {
     // Update meta tags dynamically
     const updateMetaTags = () => {

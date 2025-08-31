@@ -13,15 +13,14 @@ import { Mail,
  } from 'lucide-react.ts';
 
 interface ContactFormData {
-
   name: string;
   email: string;
   phone: string;
-  company: string;
+  comp: string;
   service: string;
   message: string;
 
-}
+    }
 
 interface ContactFormErrors {
 
@@ -29,12 +28,11 @@ interface ContactFormErrors {
 
 }
 
-export function EnhancedContact(...args: any[]): any {
-  const [formData, setFormData] = useState<any>({
-    name: '',
+export function EnhancedContact(...args: []):  {
+  const [formData, setFormData] = useState<any>({ name: '',
     email: '',
     phone: '',
-    company: '',
+    comp: '',
     service: 'general',
     message: ''
   });
@@ -77,7 +75,7 @@ export function EnhancedContact(...args: any[]): any {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleInputChange = (field: anykeyof ContactFormData, value: string)  => {
+  const handleInputChange = (field: keyof ContactFormData, value: string)  => {
     setFormData(prev => ({ ...prev, [field]: value }));
     
     // Clear error when user starts typing
@@ -86,7 +84,7 @@ export function EnhancedContact(...args: any[]): any {
     }
   };
 
-  const handleSubmit = async (e: anyReact.FormEvent)  => {
+  const handleSubmit = async (e: React.FormEvent)  => {
     e.preventDefault();
     
     if (!validateForm()) {
@@ -100,11 +98,10 @@ export function EnhancedContact(...args: any[]): any {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       setIsSubmitted(true);
-      setFormData({
-        name: '',
+      setFormData({ name: '',
         email: '',
         phone: '',
-        company: '',
+        comp: '',
         service: 'general',
         message: ''
       });
@@ -116,26 +113,22 @@ export function EnhancedContact(...args: any[]): any {
   };
 
   const contactInfo = [
-    {
-      icon: Mail,
+    { icon: Mail,
       title: 'Email',
       value: 'kleber@ziontechgroup.com',
       description: 'Get in touch via email'
     },
-    {
-      icon: Phone,
+    { icon: Phone,
       title: 'Phone',
       value: '+1 (302) 464-0950',
       description: 'Call us directly'
     },
-    {
-      icon: MapPin,
+    { icon: MapPin,
       title: 'Address',
       value: '364 E Main St STE 1008, Middletown, DE 19709',
       description: 'Visit our office'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Business Hours',
       value: 'Mon-Fri: 9AM-6PM EST',
       description: 'Available during these hours'
@@ -147,43 +140,38 @@ export function EnhancedContact(...args: any[]): any {
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20"
-      >
+        className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center py-20">
         <div className="max-w-md mx-auto text-center">
           <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
+            initial={{ scale: 0     }}
+            animate={{ scale: 1     }}
             transition={{ delay: 0.2, type: "spring" }}
-            className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"
-          >
+            className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-10 h-10 text-white" />
           </motion.div>
           
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="text-3xl font-bold text-white mb-4"
-          >
+            transition={{ delay: 0.3     }}
+            className="text-3xl font-bold text-white mb-4">
             Message Sent Successfully!
           </motion.h2>
           
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-zion-slate-light mb-8"
-          >
+            transition={{ delay: 0.4     }}
+            className="text-zion-slate-light mb-8">
             Thank you for reaching out to us. We'll get back to you within 24 hours.
           </motion.p>
           
           <motion.button
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.5     }}
             onClick={() => setIsSubmitted(false)}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium"
-          >
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-3 rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 font-medium">
             Send Another Message
           </motion.button>
         </div>
@@ -198,8 +186,7 @@ export function EnhancedContact(...args: any[]): any {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Get in Touch
           </h1>
@@ -214,7 +201,7 @@ export function EnhancedContact(...args: any[]): any {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.2     }}
           >
             <h2 className="text-2xl font-bold text-white mb-8">Contact Information</h2>
             
@@ -224,9 +211,8 @@ export function EnhancedContact(...args: any[]): any {
                   key={info.title}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
+                  transition={{ delay: 0.3 + index * 0.1     }}
+                  className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <info.icon className="w-6 h-6 text-zion-cyan" />
                   </div>
@@ -239,13 +225,12 @@ export function EnhancedContact(...args: any[]): any {
               ))}
             </div>
 
-            {/* Company Stats */}
+            {/* Comp Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-              className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20"
-            >
+              transition={{ delay: 0.6     }}
+              className="mt-12 p-6 bg-zion-blue-light/10 rounded-xl border border-zion-blue-light/20">
               <h3 className="text-xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
@@ -272,9 +257,8 @@ export function EnhancedContact(...args: any[]): any {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20"
-          >
+            transition={{ delay: 0.3     }}
+            className="bg-zion-blue-light/10 rounded-xl p-8 border border-zion-blue-light/20">
             <h2 className="text-2xl font-bold text-white mb-6">Send us a Message</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -301,8 +285,7 @@ export function EnhancedContact(...args: any[]): any {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="text-red-400 text-sm mt-1 flex items-center"
-                    >
+                      className="text-red-400 text-sm mt-1 flex items-center">
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors.name}
                     </motion.p>
@@ -333,8 +316,7 @@ export function EnhancedContact(...args: any[]): any {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="text-red-400 text-sm mt-1 flex items-center"
-                    >
+                      className="text-red-400 text-sm mt-1 flex items-center">
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors.email}
                     </motion.p>
@@ -342,7 +324,7 @@ export function EnhancedContact(...args: any[]): any {
                 </AnimatePresence>
               </div>
 
-              {/* Phone and Company */}
+              {/* Phone and Comp */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-white mb-2">
@@ -358,16 +340,16 @@ export function EnhancedContact(...args: any[]): any {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-white mb-2">
-                    Company
+                  <label htmlFor="comp" className="block text-sm font-medium text-white mb-2">
+                    Comp
                   </label>
                   <input
                     type="text"
-                    id="company"
-                    value={formData.company}
-                    onChange={(e) => handleInputChange('company', e.target.value)}
+                    id="comp"
+                    value={formData.comp}
+                    onChange={(e) => handleInputChange('comp', e.target.value)}
                     className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light"
-                    placeholder="Enter your company name"
+                    placeholder="Enter your comp name"
                   />
                 </div>
               </div>
@@ -381,8 +363,7 @@ export function EnhancedContact(...args: any[]): any {
                   id="service"
                   value={formData.service}
                   onChange={(e) => handleInputChange('service', e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: anyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white"
-                >
+                  className="w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus: outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white">
                   {services.map(service  => (
                     <option key={service.value} value={service.value}>
                       {service.label}
@@ -414,8 +395,7 @@ export function EnhancedContact(...args: any[]): any {
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="text-red-400 text-sm mt-1 flex items-center"
-                    >
+                      className="text-red-400 text-sm mt-1 flex items-center">
                       <AlertCircle className="w-4 h-4 mr-1" />
                       {errors.message}
                     </motion.p>
@@ -427,10 +407,9 @@ export function EnhancedContact(...args: any[]): any {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 hover:from-zion-cyan-dark hover:to-zion-purple-dark disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
-              >
+                whileHover={{ scale: 1.02     }}
+                whileTap={{ scale: 0.98     }}
+                className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 rounded-lg font-medium transition-all duration-300 hover:from-zion-cyan-dark hover:to-zion-purple-dark disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2">
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

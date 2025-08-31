@@ -24,20 +24,17 @@ export default function AISupplyChainRiskManagement() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
+    { name: 'Starter', 
       price: '$299/mo', 
       features: ['Up to 100 suppliers', 'Basic risk scoring', 'Standard alerts', 'Email support', 'Monthly reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$799/mo', 
       features: ['Up to 500 suppliers', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$2,499/mo', 
       features: ['Unlimited suppliers', 'Full AI suite', 'Custom risk models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
@@ -289,8 +286,7 @@ export default function AISupplyChainRiskManagement() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold"
-          >
+            className="inline-flex items-center text-red-600 hover:text-red-700 font-semibold">
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>

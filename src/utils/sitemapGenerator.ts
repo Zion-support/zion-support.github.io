@@ -3,13 +3,13 @@ interface SitemapUrl {
   lastmod?: string;
   changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
   priority?: number;
-}
+    }
 
 interface SitemapConfig {
   baseUrl: string;
   urls: SitemapUrl[];
   outputPath?: string;
-}
+    }
 
 export class SitemapGenerator {
   private config: SitemapConfig;
@@ -114,7 +114,7 @@ ${sitemapEntries}
         "query-input": "required name=search_term_string"
       },
       "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
+        "https://linkedin.com/comp/zion-tech-group",
         "https://twitter.com/ziontechgroup"
       ]
     };
@@ -124,8 +124,7 @@ ${sitemapEntries}
 }
 
 // Default sitemap configuration for Zion Tech Group
-export const defaultSitemapConfig: SitemapConfig = {
-  baseUrl: 'https://ziontechgroup.com',
+export const defaultSitemapConfig: SitemapConfig = { baseUrl: 'https://ziontechgroup.com',
   urls: [
     // Main pages
     { url: '/', priority: 1.0, changefreq: 'daily' },

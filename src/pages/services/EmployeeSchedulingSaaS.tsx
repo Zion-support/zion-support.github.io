@@ -6,74 +6,61 @@ import { SEO } from '@/components/SEO';
 
 export default function EmployeeSchedulingSaaS() {
   const features = [
-    {
-      icon: Calendar,
+    { icon: Calendar,
       title: "Smart Scheduling",
       description: "AI-powered scheduling that automatically creates optimal shifts based on availability, skills, and business needs."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Employee Management",
       description: "Complete employee profiles with skills, availability, preferences, and performance tracking."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Tracking",
       description: "Accurate time tracking with clock-in/out, break management, and overtime calculation."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Analytics & Reporting",
       description: "Comprehensive insights into labor costs, productivity, and scheduling efficiency."
     },
-    {
-      icon: Smartphone,
+    { icon: Smartphone,
       title: "Mobile App",
       description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Multi-location Support",
       description: "Manage schedules across multiple locations, departments, and time zones seamlessly."
     }
   ];
 
   const schedulingCapabilities = [
-    {
-      icon: Calendar,
+    { icon: Calendar,
       title: "Automated Scheduling",
       description: "AI algorithms create optimal schedules considering availability, skills, and business rules"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Shift Management",
       description: "Easy shift creation, editing, and assignment with drag-and-drop interface"
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Off Management",
       description: "Streamlined PTO requests, approvals, and calendar integration"
     },
-    {
-      icon: Bell,
+    { icon: Bell,
       title: "Notifications",
       description: "Automated reminders for shift changes, time off approvals, and schedule updates"
     },
-    {
-      icon: Settings,
+    { icon: Settings,
       title: "Custom Rules",
       description: "Configurable business rules for scheduling, overtime, and compliance"
     },
-    {
-      icon: FileText,
+    { icon: FileText,
       title: "Compliance Tracking",
       description: "Ensure compliance with labor laws, break requirements, and overtime regulations"
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$49",
       period: "/month",
       description: "Perfect for small businesses with basic scheduling needs",
@@ -87,8 +74,7 @@ export default function EmployeeSchedulingSaaS() {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$129",
       period: "/month",
       description: "Ideal for growing businesses with advanced scheduling requirements",
@@ -103,8 +89,7 @@ export default function EmployeeSchedulingSaaS() {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$299",
       period: "/month",
       description: "For large organizations with complex scheduling needs",
@@ -122,56 +107,46 @@ export default function EmployeeSchedulingSaaS() {
   ];
 
   const benefits = [
-    {
-      title: "Reduce Scheduling Time",
+    { title: "Reduce Scheduling Time",
       description: "Cut scheduling time by up to 80% with AI-powered automation and smart tools.",
       icon: Clock
     },
-    {
-      title: "Improve Employee Satisfaction",
+    { title: "Improve Employee Satisfaction",
       description: "Give employees control over their schedules and improve work-life balance.",
       icon: Users
     },
-    {
-      title: "Optimize Labor Costs",
+    { title: "Optimize Labor Costs",
       description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
       icon: TrendingUp
     },
-    {
-      title: "Ensure Compliance",
+    { title: "Ensure Compliance",
       description: "Automatically comply with labor laws and avoid costly violations.",
       icon: Shield
     }
   ];
 
   const industries = [
-    {
-      icon: Users,
+    { icon: Users,
       title: "Retail",
       description: "Manage complex retail schedules with seasonal demands and part-time workers"
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Healthcare",
       description: "Ensure proper staffing for patient care with 24/7 scheduling requirements"
     },
-    {
-      icon: Calendar,
+    { icon: Calendar,
       title: "Manufacturing",
       description: "Optimize production schedules with shift rotations and skill requirements"
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Hospitality",
       description: "Handle dynamic scheduling needs for hotels, restaurants, and events"
     },
-    {
-      icon: Settings,
+    { icon: Settings,
       title: "Services",
       description: "Manage appointment-based scheduling for professional services"
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Construction",
       description: "Coordinate complex project schedules with multiple teams and locations"
     }
@@ -194,7 +169,7 @@ export default function EmployeeSchedulingSaaS() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6     }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-400 bg-clip-text text-transparent">
@@ -208,14 +183,12 @@ export default function EmployeeSchedulingSaaS() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/request-quote"
-                    className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                  >
+                    className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
                     Start Free Trial
                   </Link>
                   <Link 
                     to="/contact"
-                    className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
-                  >
+                    className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
                     Schedule Demo
                   </Link>
                 </div>
@@ -243,8 +216,7 @@ export default function EmployeeSchedulingSaaS() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -275,8 +247,7 @@ export default function EmployeeSchedulingSaaS() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
@@ -307,8 +278,7 @@ export default function EmployeeSchedulingSaaS() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                     <industry.icon className="w-6 h-6 text-white" />
                   </div>
@@ -339,8 +309,7 @@ export default function EmployeeSchedulingSaaS() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
+                  className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -427,7 +396,7 @@ export default function EmployeeSchedulingSaaS() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Scheduling?
@@ -438,14 +407,12 @@ export default function EmployeeSchedulingSaaS() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/contact"
-                  className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
-                >
+                  className="px-8 py-4 border-2 border-orange-500 text-orange-400 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
                   Contact Sales
                 </Link>
               </div>

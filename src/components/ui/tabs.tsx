@@ -1,31 +1,28 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
 
 interface TabsContextType {
-
-  activeTab: anystring;
+  activeTab: string;
   setActiveTab: (tab: string)  => void;
 
-}
+    }
 
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 
-interface TabsProps extends React.PropsWithChildren<{}> {
-
-  children: anyReactNode;
+interface TabsProps extends React.PropsWithChildren<{}> { children: ReactNode;
   defaultValue?: string;
   value?: string;
   onValueChange?: (value: string)  => void;
   className?: string;
 
-}
+    }
 
-export function Tabs(...args: any[]): any {
+export function Tabs() {  
   const [activeTab, setActiveTab] = useState(value || defaultValue || '');
 
-  const handleTabChange = (tab: anystring)  => {
-    setActiveTab(tab);
+  const handleTabChange = (tab: string)  => {
+    setActiveTab(tab)
     if (onValueChange) {
-      onValueChange(tab);
+      onValueChange(tab)
     }
   };
 
@@ -38,14 +35,12 @@ export function Tabs(...args: any[]): any {
   );
 }
 
-interface TabsListProps extends React.PropsWithChildren<{}> {
-
-  children: ReactNode;
+interface TabsListProps extends React.PropsWithChildren<{}> { children: ReactNode;
   className?: string;
 
-}
+    }
 
-export function TabsList(...args: any[]): any {
+export function TabsList(...args: []):  {
   return (
     <div className={`flex border-b border-gray-200 ${className}`}>
       {children}
@@ -53,19 +48,17 @@ export function TabsList(...args: any[]): any {
   );
 }
 
-interface TabsTriggerProps extends React.PropsWithChildren<{}> {
-
-  children: ReactNode;
+interface TabsTriggerProps extends React.PropsWithChildren<{}> { children: ReactNode;
   value: string;
   className?: string;
 
-}
+    }
 
-export function TabsTrigger(...args: any[]): any {
+export function TabsTrigger() {  
   const context = useContext(TabsContext);
-  if (!context) throw new Error('TabsTrigger must be used within Tabs');
+  if (!context) throw new Error('TabsTrigger must be used within Tabs')
 
-  const isActive = context.activeTab === value;
+  const isActive = context.activeTab === value
 
   return (
     <button
@@ -74,27 +67,24 @@ export function TabsTrigger(...args: any[]): any {
           ? 'border-b-2 border-blue-500 text-blue-600'
           : 'text-gray-500 hover:text-gray-700 hover:border-b-2 hover:border-gray-300'
       } ${className}`}
-      onClick={() => context.setActiveTab(value)}
-    >
+      onClick={() => context.setActiveTab(value)}>
       {children}
     </button>
   );
 }
 
-interface TabsContentProps extends React.PropsWithChildren<{}> {
-
-  children: ReactNode;
+interface TabsContentProps extends React.PropsWithChildren<{}> { children: ReactNode;
   value: string;
   className?: string;
 
-}
+    }
 
-export function TabsContent(...args: any[]): any {
+export function TabsContent() {  
   const context = useContext(TabsContext);
-  if (!context) throw new Error('TabsContent must be used within Tabs');
+  if (!context) throw new Error('TabsContent must be used within Tabs')
 
   if (context.activeTab !== value) {
-    return null;
+    return null
   }
 
   return (

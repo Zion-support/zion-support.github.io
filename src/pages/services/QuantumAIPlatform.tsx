@@ -26,26 +26,22 @@ import { SEO } from '@/components/SEO';
 
 const QuantumAIPlatform = () => {
   const features = [
-    {
-      icon: Atom,
+    { icon: Atom,
       title: "Quantum Algorithm Library",
       description: "Comprehensive collection of quantum algorithms for optimization, machine learning, cryptography, and scientific computing.",
       benefits: ["Access to cutting-edge quantum algorithms", "Optimized for current quantum hardware", "Continuous algorithm updates"]
     },
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "Hybrid Quantum-Classical Computing",
       description: "Seamless integration of quantum and classical computing resources for optimal performance and practical applications.",
       benefits: ["Best of both worlds", "Practical quantum advantage", "Scalable solutions"]
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Optimization Solvers",
       description: "Quantum-powered optimization for complex problems in logistics, finance, manufacturing, and research.",
       benefits: ["Solve previously intractable problems", "Faster optimization", "Better solutions"]
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Quantum Machine Learning",
       description: "Advanced quantum machine learning models for pattern recognition, classification, and predictive analytics.",
       benefits: ["Quantum advantage in ML", "Enhanced pattern recognition", "Improved predictions"]
@@ -53,38 +49,32 @@ const QuantumAIPlatform = () => {
   ];
 
   const useCases = [
-    {
-      name: "Financial Services",
+    { name: "Financial Services",
       description: "Portfolio optimization, risk assessment, and algorithmic trading with quantum advantage",
       icon: DollarSign,
       examples: ["Portfolio optimization", "Risk modeling", "Option pricing", "Fraud detection"]
     },
-    {
-      name: "Pharmaceutical Research",
+    { name: "Pharmaceutical Research",
       description: "Drug discovery, molecular modeling, and protein folding simulations",
       icon: Atom,
       examples: ["Drug discovery", "Molecular dynamics", "Protein folding", "Chemical reactions"]
     },
-    {
-      name: "Logistics & Supply Chain",
+    { name: "Logistics & Supply Chain",
       description: "Route optimization, inventory management, and supply chain optimization",
       icon: Network,
       examples: ["Route optimization", "Inventory management", "Supply chain optimization", "Scheduling"]
     },
-    {
-      name: "Artificial Intelligence",
+    { name: "Artificial Intelligence",
       description: "Quantum-enhanced machine learning, neural networks, and AI algorithms",
       icon: Brain,
       examples: ["Quantum neural networks", "Enhanced ML algorithms", "Pattern recognition", "AI optimization"]
     },
-    {
-      name: "Cryptography",
+    { name: "Cryptography",
       description: "Quantum-resistant cryptography and secure communication protocols",
       icon: Lock,
       examples: ["Post-quantum cryptography", "Secure communication", "Key distribution", "Encryption"]
     },
-    {
-      name: "Scientific Research",
+    { name: "Scientific Research",
       description: "Physics simulations, climate modeling, and computational chemistry",
       icon: Globe,
       examples: ["Physics simulations", "Climate modeling", "Computational chemistry", "Material science"]
@@ -92,8 +82,7 @@ const QuantumAIPlatform = () => {
   ];
 
   const pricingTiers = [
-    {
-      name: "Research",
+    { name: "Research",
       price: 999,
       period: "month",
       description: "For academic and research institutions",
@@ -107,8 +96,7 @@ const QuantumAIPlatform = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: 2499,
       period: "month",
       description: "For growing businesses and research teams",
@@ -123,8 +111,7 @@ const QuantumAIPlatform = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: 4999,
       period: "month",
       description: "For large organizations with complex quantum needs",
@@ -143,24 +130,21 @@ const QuantumAIPlatform = () => {
   ];
 
   const testimonials = [
-    {
-      name: "Dr. Sarah Williams",
+    { name: "Dr. Sarah Williams",
       role: "Research Director",
-      company: "Quantum Research Institute",
+      comp: "Quantum Research Institute",
       content: "The Quantum AI Platform has accelerated our research by orders of magnitude. We're solving problems that were previously impossible.",
       rating: 5
     },
-    {
-      name: "Michael Chen",
+    { name: "Michael Chen",
       role: "CTO",
-      company: "Quantum Finance Corp",
+      comp: "Quantum Finance Corp",
       content: "Our portfolio optimization algorithms now run 100x faster with quantum enhancement. The ROI has been incredible.",
       rating: 5
     },
-    {
-      name: "Dr. Robert Johnson",
+    { name: "Dr. Robert Johnson",
       role: "Lead Scientist",
-      company: "PharmaTech Solutions",
+      comp: "PharmaTech Solutions",
       content: "Quantum machine learning has revolutionized our drug discovery process. We're finding new compounds in weeks instead of months.",
       rating: 5
     }
@@ -203,14 +187,12 @@ const QuantumAIPlatform = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950" 
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-              >
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105">
                 📞 Call +1 (302) 464-0950
               </a>
               <a 
                 href="/request-quote" 
-                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-              >
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all">
                 Get Quantum Access
               </a>
             </div>
@@ -397,7 +379,7 @@ const QuantumAIPlatform = () => {
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
                 <div>
                   <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
+                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.comp}</p>
                 </div>
               </div>
             ))}
@@ -416,14 +398,12 @@ const QuantumAIPlatform = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+13024640950" 
-              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
-            >
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105">
               📞 Call +1 (302) 464-0950
             </a>
             <a 
               href="mailto:kleber@ziontechgroup.com" 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
-            >
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all">
               ✉️ Email Us
             </a>
           </div>

@@ -28,33 +28,27 @@ import { Badge } from '@/components/ui/badge';
 
 export default function AIBusinessIntelligencePlatform() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Analytics",
       description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Real-time Monitoring",
       description: "Live dashboards and alerts that keep you informed of critical business metrics and performance indicators."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Predictive Modeling",
       description: "Forecast future trends and outcomes using historical data and advanced statistical models."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Automated Reporting",
       description: "Generate comprehensive reports automatically, saving hours of manual work each week."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Data Security",
       description: "Enterprise-grade security with role-based access control and data encryption at rest and in transit."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Collaborative Insights",
       description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."
     }
@@ -70,8 +64,7 @@ export default function AIBusinessIntelligencePlatform() {
   ];
 
   const pricingTiers = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: 199,
       period: "month",
       description: "Perfect for small businesses getting started with AI analytics",
@@ -85,8 +78,7 @@ export default function AIBusinessIntelligencePlatform() {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: 499,
       period: "month",
       description: "Ideal for growing businesses with advanced analytics needs",
@@ -102,8 +94,7 @@ export default function AIBusinessIntelligencePlatform() {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: 1299,
       period: "month",
       description: "For large organizations with complex data analytics requirements",
@@ -122,24 +113,19 @@ export default function AIBusinessIntelligencePlatform() {
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Customer behavior analysis, inventory optimization, and sales forecasting"
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Patient outcome prediction, resource optimization, and clinical analytics"
     },
-    {
-      industry: "Finance",
+    { industry: "Finance",
       description: "Risk assessment, fraud detection, and portfolio optimization"
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       description: "Demand forecasting, customer segmentation, and store performance analysis"
     }
   ];
@@ -157,7 +143,7 @@ export default function AIBusinessIntelligencePlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0">
               AI-Powered Business Intelligence
@@ -189,10 +175,9 @@ export default function AIBusinessIntelligencePlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Businesses
             </h2>
@@ -209,9 +194,8 @@ export default function AIBusinessIntelligencePlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
@@ -229,10 +213,9 @@ export default function AIBusinessIntelligencePlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transform Your Business Performance
             </h2>
@@ -248,9 +231,8 @@ export default function AIBusinessIntelligencePlatform() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-3"
-              >
+                viewport={{ once: true     }}
+                className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-cyan-500 mt-1 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </motion.div>
@@ -265,10 +247,9 @@ export default function AIBusinessIntelligencePlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -284,7 +265,7 @@ export default function AIBusinessIntelligencePlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   tier.popular 
                     ? 'border-cyan-500/50 ring-2 ring-cyan-500/20' 
@@ -338,10 +319,9 @@ export default function AIBusinessIntelligencePlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -357,9 +337,8 @@ export default function AIBusinessIntelligencePlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
@@ -374,8 +353,8 @@ export default function AIBusinessIntelligencePlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business Intelligence?
@@ -402,8 +381,8 @@ export default function AIBusinessIntelligencePlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Get in Touch

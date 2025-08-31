@@ -28,33 +28,27 @@ import {
 
 export default function AIDataAnalytics() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Insights",
       description: "Intelligent data analysis with machine learning algorithms and predictive modeling."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive business intelligence with real-time dashboards and reporting."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Predictive Analytics",
       description: "Forecast trends, identify patterns, and make data-driven decisions with AI."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Real-Time Processing",
       description: "Instant data processing and analysis for immediate business insights."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Performance Tracking",
       description: "Monitor KPIs and track business performance with intelligent alerts."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Data Security",
       description: "Enterprise-grade security with data encryption and compliance features."
     }
@@ -70,57 +64,46 @@ export default function AIDataAnalytics() {
   ];
 
   const analyticsTypes = [
-    {
-      type: "Descriptive Analytics",
+    { type: "Descriptive Analytics",
       description: "Historical data analysis, reporting, and performance measurement",
       icon: BarChart3
     },
-    {
-      type: "Diagnostic Analytics",
+    { type: "Diagnostic Analytics",
       description: "Root cause analysis and why events occurred investigation",
       icon: Search
     },
-    {
-      type: "Predictive Analytics",
+    { type: "Predictive Analytics",
       description: "Future trend forecasting and probability modeling",
       icon: TrendingUp
     },
-    {
-      type: "Prescriptive Analytics",
+    { type: "Prescriptive Analytics",
       description: "Actionable recommendations and optimization suggestions",
       icon: Target
     },
-    {
-      type: "Real-Time Analytics",
+    { type: "Real-Time Analytics",
       description: "Live data processing and instant insights delivery",
       icon: Activity
     },
-    {
-      type: "Big Data Analytics",
+    { type: "Big Data Analytics",
       description: "Large-scale data processing and complex pattern analysis",
       icon: Database
     }
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Customer behavior analysis, inventory optimization, and sales forecasting"
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Patient outcome prediction, treatment optimization, and resource planning"
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Predictive maintenance, quality control, and supply chain optimization"
     },
-    {
-      industry: "Marketing",
+    { industry: "Marketing",
       description: "Campaign performance analysis, customer segmentation, and ROI optimization"
     }
   ];
@@ -139,9 +122,8 @@ export default function AIDataAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-full border border-violet-400/30 mb-6">
               <BarChart3 className="w-5 h-5 text-violet-400 mr-2" />
               <span className="text-violet-300 font-medium">AI Data Analytics</span>
@@ -161,17 +143,15 @@ export default function AIDataAnalytics() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-violet-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-violet-500/25">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>
@@ -185,9 +165,8 @@ export default function AIDataAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Advanced Analytics Features
             </h2>
@@ -204,8 +183,7 @@ export default function AIDataAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-violet-400/30 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                className="bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-violet-400/30 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-br from-violet-400/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-violet-400" />
                 </div>
@@ -223,9 +201,8 @@ export default function AIDataAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Measurable Analytics Impact
             </h2>
@@ -245,8 +222,7 @@ export default function AIDataAnalytics() {
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="flex items-start space-x-3"
-                  >
+                    className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-violet-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{benefit}</span>
                   </motion.div>
@@ -289,9 +265,8 @@ export default function AIDataAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Comprehensive Analytics Types
             </h2>
@@ -308,8 +283,7 @@ export default function AIDataAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-violet-400/20 to-purple-500/20 rounded-lg flex items-center justify-center">
                     <analyticsType.icon className="w-5 h-5 text-violet-400" />
@@ -329,9 +303,8 @@ export default function AIDataAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -348,8 +321,7 @@ export default function AIDataAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-violet-400/30 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-10 h-10 bg-gradient-to-br from-violet-400/20 to-purple-500/20 rounded-lg flex items-center justify-center">
                     <Globe className="w-5 h-5 text-violet-400" />
@@ -369,9 +341,8 @@ export default function AIDataAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10 p-12 rounded-2xl border border-violet-400/20 text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="bg-gradient-to-r from-violet-500/10 via-purple-500/10 to-indigo-500/10 p-12 rounded-2xl border border-violet-400/20 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Data?
             </h2>
@@ -381,17 +352,15 @@ export default function AIDataAnalytics() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-violet-500/25"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-500 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-violet-500/25">
                 Start Free Trial
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-violet-400/30 text-violet-300 font-semibold rounded-lg hover:bg-violet-400/10 transition-all duration-300">
                 Contact Sales
               </motion.button>
             </div>

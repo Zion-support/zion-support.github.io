@@ -11,14 +11,14 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
     selectedCategory === 'All' || service.category === selectedCategory
   );
 
-  const getPrice = (service: any) => {
+  const getPrice = (service: ) => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return service.pricing.yearly;
     }
     return service.price;
   };
 
-  const getSavings = (service: any) => {
+  const getSavings = (service: ) => {
     if (billingCycle === 'yearly' && service.pricing?.yearly) {
       return (service.price * 12 - service.pricing.yearly).toLocaleString();
     }
@@ -144,7 +144,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                 <div className="w-full bg-gray-700 rounded-full h-3">
                   <div 
                     className="bg-gradient-to-r from-green-400 to-blue-500 h-3 rounded-full transition-all duration-300"
-                    style={{ width: `${service.aiScore}%` }}
+                    style={{ width: `${service.aiScore    }%` }}
                   ></div>
                 </div>
               </div>
@@ -216,14 +216,12 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
                   href={service.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold"
-                >
+                  className="block w-full text-center px-4 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold">
                   Get Started
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.title}`}
-                  className="block w-full text-center px-4 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300"
-                >
+                  className="block w-full text-center px-4 py-3 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-all duration-300">
                   Contact Sales
                 </a>
               </div>
@@ -269,7 +267,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact our sales team to discuss your needs, get a custom quote, or schedule a demo of any service.
+            Contact our sales team to discuss your needs, get a custom quote, or schedule a demo of  service.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-12">
@@ -297,8 +295,7 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
             </p>
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Custom Quote Request"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg"
-            >
+              className="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 font-semibold text-lg">
               Request Quote
             </a>
           </div>
@@ -318,13 +315,13 @@ const ComprehensiveZionTechPricing2025: React.FC = () => {
           </div>
           
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-            <h3 className="text-xl font-bold text-white mb-3">Can I cancel my subscription at any time?</h3>
-            <p className="text-gray-300">Yes, all subscriptions can be cancelled at any time with no penalties. We offer month-to-month and annual billing options.</p>
+            <h3 className="text-xl font-bold text-white mb-3">Can I cancel my subscription at  time?</h3>
+            <p className="text-gray-300">Yes, all subscriptions can be cancelled at  time with no penalties. We offer month-to-month and annual billing options.</p>
           </div>
           
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
             <h3 className="text-xl font-bold text-white mb-3">Do you offer free trials?</h3>
-            <p className="text-gray-300">Yes, most services offer a 14-day free trial. Contact us to arrange a trial period for any service.</p>
+            <p className="text-gray-300">Yes, most services offer a 14-day free trial. Contact us to arrange a trial period for  service.</p>
           </div>
           
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">

@@ -74,24 +74,18 @@ const InnovativeServicesShowcase2028: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
+  const itemVariants = { hidden: { y: 20, opacity: 0 },
+    visible: { y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5
+          }
     }
   };
 
@@ -103,7 +97,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -117,15 +111,13 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
-              >
+                className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <Mail className="w-5 h-5 mr-2" />
                 Get Quote
               </a>
@@ -200,14 +192,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105"
-              >
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300 transform hover:scale-105">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
@@ -240,8 +230,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                   {service.tags.slice(0, 3).map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-1 bg-white/10 text-white text-xs rounded-full"
-                    >
+                      className="px-2 py-1 bg-white/10 text-white text-xs rounded-full">
                       {tag}
                     </span>
                   ))}
@@ -250,14 +239,12 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                 <div className="flex space-x-2">
                   <a
                     href={`tel:+13024640950`}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium"
-                  >
+                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-2 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-sm font-medium">
                     Get Started
                   </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
-                    className="px-4 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300"
-                  >
+                    className="px-4 py-2 border border-white/20 text-white rounded-lg hover:bg-white/10 transition-all duration-300">
                     <Mail className="w-4 h-4" />
                   </a>
                 </div>
@@ -273,10 +260,9 @@ const InnovativeServicesShowcase2028: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Market Insights & Competitive Analysis
             </h2>
@@ -292,9 +278,8 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
                 <h3 className="text-xl font-semibold text-white mb-4">{item.title}</h3>
                 
                 <div className="space-y-4 mb-6">
@@ -322,8 +307,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
                     {item.marketInfo.competitors.slice(0, 3).map((competitor) => (
                       <span
                         key={competitor}
-                        className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full"
-                      >
+                        className="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded-full">
                         {competitor}
                       </span>
                     ))}
@@ -332,8 +316,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
 
                 <a
                   href={`mailto:kleber@ziontechgroup.com?subject=Detailed pricing for ${item.title}`}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium"
-                >
+                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center py-3 px-4 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-medium">
                   Get Detailed Pricing
                 </a>
               </motion.div>
@@ -348,8 +331,8 @@ const InnovativeServicesShowcase2028: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -386,15 +369,13 @@ const InnovativeServicesShowcase2028: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20"
-              >
+                className="inline-flex items-center px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20">
                 <Mail className="w-5 h-5 mr-2" />
                 Schedule Demo
               </a>
@@ -444,8 +425,7 @@ const InnovativeServicesShowcase2028: React.FC = () => {
               <div className="flex space-x-4">
                 <a
                   href="https://ziontechgroup.com"
-                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                >
+                  className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors">
                   <ExternalLink className="w-5 h-5" />
                 </a>
               </div>

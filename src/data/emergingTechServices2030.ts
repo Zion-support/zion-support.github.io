@@ -4,14 +4,14 @@ export interface EmergingTechService2030 {
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+  pricing: {  
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
-    pricingModel: string;
-    marketPrice: string;
-  };
+    pricingModel: string
+    marketPrice: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -53,14 +53,12 @@ export interface EmergingTechService2030 {
 
 export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   // 1. Neuromorphic Computing AI Platform
-  {
-    id: "neuromorphic-computing-ai",
+  { id: "neuromorphic-computing-ai",
     title: "Zion Neuromorphic Computing AI Platform",
     description: "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing for edge devices and IoT applications.",
     category: "AI Services",
     subcategory: "Neuromorphic Computing",
-    pricing: {
-      monthly: 12999,
+    pricing: { monthly: 12999,
       yearly: 129990,
       custom: "Enterprise neuromorphic AI solutions",
       currency: "$",
@@ -152,14 +150,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 2. Synthetic Biology AI Platform
-  {
-    id: "synthetic-biology-ai",
+  { id: "synthetic-biology-ai",
     title: "Zion Synthetic Biology AI Platform",
     description: "Revolutionary synthetic biology platform that combines AI, machine learning, and genetic engineering to design, build, and test new biological systems for healthcare, agriculture, and industrial applications.",
     category: "AI Services",
     subcategory: "Synthetic Biology",
-    pricing: {
-      monthly: 18999,
+    pricing: { monthly: 18999,
       yearly: 189990,
       custom: "Enterprise synthetic biology solutions",
       currency: "$",
@@ -247,14 +243,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 3. Advanced Robotics AI Platform
-  {
-    id: "advanced-robotics-ai",
+  { id: "advanced-robotics-ai",
     title: "Zion Advanced Robotics AI Platform",
     description: "Revolutionary advanced robotics platform that combines AI, computer vision, and autonomous systems to create intelligent robots capable of complex tasks, human-like dexterity, and collaborative work environments.",
     category: "AI Services",
     subcategory: "Advanced Robotics",
-    pricing: {
-      monthly: 24999,
+    pricing: { monthly: 24999,
       yearly: 249990,
       custom: "Enterprise robotics AI solutions",
       currency: "$",
@@ -346,14 +340,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 4. Advanced Materials AI Platform
-  {
-    id: "advanced-materials-ai",
+  { id: "advanced-materials-ai",
     title: "Zion Advanced Materials AI Platform",
     description: "Revolutionary advanced materials platform that uses AI and machine learning to discover, design, and optimize new materials with unprecedented properties for aerospace, automotive, electronics, and energy applications.",
     category: "AI Services",
     subcategory: "Advanced Materials",
-    pricing: {
-      monthly: 15999,
+    pricing: { monthly: 15999,
       yearly: 159990,
       custom: "Enterprise materials AI solutions",
       currency: "$",
@@ -441,14 +433,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 5. Advanced Energy AI Platform
-  {
-    id: "advanced-energy-ai",
+  { id: "advanced-energy-ai",
     title: "Zion Advanced Energy AI Platform",
     description: "Revolutionary advanced energy platform that uses AI and machine learning to optimize energy generation, storage, distribution, and consumption for maximum efficiency, sustainability, and cost-effectiveness.",
     category: "AI Services",
     subcategory: "Advanced Energy",
-    pricing: {
-      monthly: 11999,
+    pricing: { monthly: 11999,
       yearly: 119990,
       custom: "Enterprise energy AI solutions",
       currency: "$",
@@ -540,14 +530,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 6. Advanced Transportation AI Platform
-  {
-    id: "advanced-transportation-ai",
+  { id: "advanced-transportation-ai",
     title: "Zion Advanced Transportation AI Platform",
     description: "Revolutionary advanced transportation platform that uses AI and autonomous systems to optimize traffic flow, enable autonomous vehicles, and create intelligent transportation networks for smart cities and efficient mobility.",
     category: "AI Services",
     subcategory: "Advanced Transportation",
-    pricing: {
-      monthly: 17999,
+    pricing: { monthly: 17999,
       yearly: 179990,
       custom: "Enterprise transportation AI solutions",
       currency: "$",
@@ -639,14 +627,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 7. Advanced Communication AI Platform
-  {
-    id: "advanced-communication-ai",
+  { id: "advanced-communication-ai",
     title: "Zion Advanced Communication AI Platform",
     description: "Revolutionary advanced communication platform that uses AI and quantum technologies to enable ultra-secure, high-speed, and intelligent communication networks for enterprise, government, and critical infrastructure applications.",
     category: "AI Services",
     subcategory: "Advanced Communication",
-    pricing: {
-      monthly: 13999,
+    pricing: { monthly: 13999,
       yearly: 139990,
       custom: "Enterprise communication AI solutions",
       currency: "$",
@@ -743,14 +729,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 8. Advanced Manufacturing AI Platform
-  {
-    id: "advanced-manufacturing-ai",
+  { id: "advanced-manufacturing-ai",
     title: "Zion Advanced Manufacturing AI Platform",
     description: "Revolutionary advanced manufacturing platform that uses AI, 3D printing, and autonomous systems to enable mass customization, rapid prototyping, and intelligent manufacturing processes for next-generation production.",
     category: "AI Services",
     subcategory: "Advanced Manufacturing",
-    pricing: {
-      monthly: 21999,
+    pricing: { monthly: 21999,
       yearly: 219990,
       custom: "Enterprise manufacturing AI solutions",
       currency: "$",
@@ -842,14 +826,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 9. Advanced Gaming AI Platform
-  {
-    id: "advanced-gaming-ai",
+  { id: "advanced-gaming-ai",
     title: "Zion Advanced Gaming AI Platform",
     description: "Revolutionary advanced gaming platform that uses AI and machine learning to create immersive, adaptive, and intelligent gaming experiences with realistic NPCs, dynamic storytelling, and personalized gameplay.",
     category: "AI Services",
     subcategory: "Advanced Gaming",
-    pricing: {
-      monthly: 7999,
+    pricing: { monthly: 7999,
       yearly: 79990,
       custom: "Enterprise gaming AI solutions",
       currency: "$",
@@ -937,14 +919,12 @@ export const EMERGING_TECH_SERVICES_2030: EmergingTechService2030[] = [
   },
 
   // 10. Advanced Entertainment AI Platform
-  {
-    id: "advanced-entertainment-ai",
+  { id: "advanced-entertainment-ai",
     title: "Zion Advanced Entertainment AI Platform",
     description: "Revolutionary advanced entertainment platform that uses AI and machine learning to create personalized, interactive, and immersive entertainment experiences across movies, music, art, and digital content.",
     category: "AI Services",
     subcategory: "Advanced Entertainment",
-    pricing: {
-      monthly: 9999,
+    pricing: { monthly: 9999,
       yearly: 99990,
       custom: "Enterprise entertainment AI solutions",
       currency: "$",

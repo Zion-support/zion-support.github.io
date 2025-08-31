@@ -94,8 +94,7 @@ import { Badge } from '@/components/ui/badge';
 
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
-  {
-    id: 'micro-crm',
+  { id: 'micro-crm',
     title: 'Micro CRM',
     description: 'Lightweight customer relationship management for small businesses',
     category: 'Business Tools',
@@ -111,8 +110,7 @@ const MICRO_SAAS_SERVICES = [
     tags: ['CRM', 'Business', 'Automation'],
     images: ['/images/micro-crm.jpg']
   },
-  {
-    id: 'helpdesk-platform',
+  { id: 'helpdesk-platform',
     title: 'Helpdesk Platform',
     description: 'Streamlined customer support and ticket management system',
     category: 'Customer Support',
@@ -128,8 +126,7 @@ const MICRO_SAAS_SERVICES = [
     tags: ['Support', 'Helpdesk', 'Customer Service'],
     images: ['/images/helpdesk.jpg']
   },
-  {
-    id: 'website-analytics',
+  { id: 'website-analytics',
     title: 'Website Analytics',
     description: 'Comprehensive website performance and user behavior analytics',
     category: 'Analytics',
@@ -205,13 +202,12 @@ export default function ComprehensiveServicesOverview2027() {
     setFilteredServices(filtered);
   }, [selectedCategory, selectedPricing, searchQuery, sortBy]);
 
-  const ServiceCard = ({ service }: { service: any }) => (
+  const ServiceCard = ({ service }: { service:   }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
-      className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
-    >
+      transition={{ duration: 0.5     }}
+      className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20">
       {service.featured && (
         <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-purple to-zion-cyan text-white text-xs font-bold px-3 py-1 rounded-full">
           Featured
@@ -268,8 +264,7 @@ export default function ComprehensiveServicesOverview2027() {
         </div>
         <Button 
           asChild 
-          className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light"
-        >
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light">
           <Link to={service.href}>
             Learn More
             <ArrowRight className="ml-2 w-4 h-4" />
@@ -287,9 +282,8 @@ export default function ComprehensiveServicesOverview2027() {
           <motion.h1 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-4xl md:text-6xl font-bold text-white mb-6">
             Comprehensive Services Overview
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
               2027 Edition
@@ -299,8 +293,7 @@ export default function ComprehensiveServicesOverview2027() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-zion-slate-light max-w-3xl mx-auto"
-          >
+            className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
           </motion.p>
         </div>
@@ -339,9 +332,8 @@ export default function ComprehensiveServicesOverview2027() {
               </div>
               <select
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
-                className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
-              >
+                onChange={(e) => setSortBy(e.target.value as )}
+                className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2">
                 <option value="rating">Sort by Rating</option>
                 <option value="price">Sort by Price</option>
                 <option value="aiScore">Sort by AI Score</option>
@@ -397,8 +389,7 @@ export default function ComprehensiveServicesOverview2027() {
                 setSelectedPricing('all');
                 setSearchQuery('');
               }}
-              className="bg-zion-cyan hover:bg-zion-cyan-light"
-            >
+              className="bg-zion-cyan hover:bg-zion-cyan-light">
               Clear Filters
             </Button>
           </div>

@@ -28,132 +28,108 @@ import {
 
 export default function InterviewAssessmentAI() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Assessment",
       description: "Intelligent evaluation of candidate skills, personality, and cultural fit."
     },
-    {
-      icon: Video,
+    { icon: Video,
       title: "Video Interview Analysis",
       description: "Advanced video processing for facial expressions, tone, and communication skills."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Skills Evaluation",
       description: "Comprehensive assessment of technical and soft skills through AI analysis."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Performance Analytics",
       description: "Detailed insights and scoring with automated feedback generation."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Candidate Matching",
       description: "AI-driven candidate-job fit analysis and recommendation engine."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Automated Scheduling",
       description: "Intelligent interview scheduling and coordination across teams."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Faster Hiring",
       description: "Reduce time-to-hire by 60% with AI-powered assessment automation."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Bias Elimination",
       description: "Ensure fair and consistent evaluation standards across all candidates."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Better Decisions",
       description: "Make data-driven hiring decisions with comprehensive candidate insights."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Cost Reduction",
       description: "Lower recruitment costs through automated screening and assessment."
     },
-    {
-      icon: Star,
+    { icon: Star,
       title: "Quality Hires",
       description: "Improve hire quality and retention with better candidate-job matching."
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Compliance",
       description: "Maintain hiring compliance and audit trails for regulatory requirements."
     }
   ];
 
   const assessmentTypes = [
-    {
-      type: "Technical Skills",
+    { type: "Technical Skills",
       description: "Evaluate coding, problem-solving, and domain-specific technical abilities",
       icon: Cpu
     },
-    {
-      type: "Soft Skills",
+    { type: "Soft Skills",
       description: "Assess communication, leadership, teamwork, and emotional intelligence",
       icon: Users
     },
-    {
-      type: "Cultural Fit",
+    { type: "Cultural Fit",
       description: "Analyze values alignment and organizational culture compatibility",
       icon: Globe
     },
-    {
-      type: "Personality Assessment",
+    { type: "Personality Assessment",
       description: "Evaluate personality traits and work style preferences",
       icon: Brain
     },
-    {
-      type: "Behavioral Analysis",
+    { type: "Behavioral Analysis",
       description: "Assess past behavior patterns and situational responses",
       icon: TrendingUp
     },
-    {
-      type: "Cognitive Ability",
+    { type: "Cognitive Ability",
       description: "Measure problem-solving, reasoning, and learning capabilities",
       icon: Target
     }
   ];
 
   const useCases = [
-    {
-      industry: "Technology",
+    { industry: "Technology",
       description: "Software engineering, data science, and technical role assessments",
       icon: Cpu
     },
-    {
-      industry: "Finance",
+    { industry: "Finance",
       description: "Risk assessment, compliance, and financial analysis role evaluations",
       icon: DollarSign
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Medical professional, nursing, and healthcare administration assessments",
       icon: Heart
     },
-    {
-      industry: "Sales & Marketing",
+    { industry: "Sales & Marketing",
       description: "Sales performance, customer relationship, and marketing role evaluations",
       icon: TrendingUp
     },
-    {
-      industry: "Education",
+    { industry: "Education",
       description: "Teaching, administration, and educational leadership assessments",
       icon: GraduationCap
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Production, quality control, and operational role assessments",
       icon: Settings
     }
@@ -174,7 +150,7 @@ export default function InterviewAssessmentAI() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-emerald-600/20 text-emerald-400 rounded-full text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
@@ -210,10 +186,9 @@ export default function InterviewAssessmentAI() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -230,9 +205,8 @@ export default function InterviewAssessmentAI() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -264,10 +238,9 @@ export default function InterviewAssessmentAI() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Benefits
             </h2>
@@ -284,9 +257,8 @@ export default function InterviewAssessmentAI() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -318,10 +290,9 @@ export default function InterviewAssessmentAI() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Assessment Types
             </h2>
@@ -338,9 +309,8 @@ export default function InterviewAssessmentAI() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -372,10 +342,9 @@ export default function InterviewAssessmentAI() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -392,9 +361,8 @@ export default function InterviewAssessmentAI() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-emerald-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -426,8 +394,8 @@ export default function InterviewAssessmentAI() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Hiring?

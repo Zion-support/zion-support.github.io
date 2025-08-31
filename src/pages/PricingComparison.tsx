@@ -7,15 +7,12 @@ const PricingComparison: React.FC = () => {
   const [selectedPlan, setSelectedPlan] = useState('monthly');
 
   const pricingData = [
-    {
-      category: "AI-Powered Micro SAAS Services",
+    { category: "AI-Powered Micro SAAS Services",
       services: [
-        {
-          name: "AI Code Review & Security",
+        { name: "AI Code Review & Security",
           description: "Advanced vulnerability detection with AI-powered analysis",
           plans: [
-            {
-              name: "Starter",
+            { name: "Starter",
               price: { monthly: 49, yearly: 39 },
               features: [
                 "Up to 10,000 lines/month",
@@ -26,8 +23,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: false
             },
-            {
-              name: "Professional",
+            { name: "Professional",
               price: { monthly: 199, yearly: 159 },
               features: [
                 "Up to 100,000 lines/month",
@@ -40,8 +36,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: true
             },
-            {
-              name: "Enterprise",
+            { name: "Enterprise",
               price: { monthly: 799, yearly: 639 },
               features: [
                 "Unlimited lines/month",
@@ -56,12 +51,10 @@ const PricingComparison: React.FC = () => {
             }
           ]
         },
-        {
-          name: "AI Customer Experience Analytics",
+        { name: "AI Customer Experience Analytics",
           description: "Transform customer insights into actionable intelligence",
           plans: [
-            {
-              name: "Basic",
+            { name: "Basic",
               price: { monthly: 299, yearly: 239 },
               features: [
                 "Up to 10,000 interactions/month",
@@ -72,8 +65,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: false
             },
-            {
-              name: "Advanced",
+            { name: "Advanced",
               price: { monthly: 799, yearly: 639 },
               features: [
                 "Up to 100,000 interactions/month",
@@ -86,8 +78,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: true
             },
-            {
-              name: "Enterprise",
+            { name: "Enterprise",
               price: { monthly: 1999, yearly: 1599 },
               features: [
                 "Unlimited interactions/month",
@@ -102,12 +93,10 @@ const PricingComparison: React.FC = () => {
             }
           ]
         },
-        {
-          name: "AI DevOps Automation Platform",
+        { name: "AI DevOps Automation Platform",
           description: "Revolutionize DevOps workflow with AI-powered automation",
           plans: [
-            {
-              name: "Starter",
+            { name: "Starter",
               price: { monthly: 199, yearly: 159 },
               features: [
                 "Up to 5 projects",
@@ -118,8 +107,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: false
             },
-            {
-              name: "Professional",
+            { name: "Professional",
               price: { monthly: 599, yearly: 479 },
               features: [
                 "Up to 25 projects",
@@ -132,8 +120,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: true
             },
-            {
-              name: "Enterprise",
+            { name: "Enterprise",
               price: { monthly: 1499, yearly: 1199 },
               features: [
                 "Unlimited projects",
@@ -148,12 +135,10 @@ const PricingComparison: React.FC = () => {
             }
           ]
         },
-        {
-          name: "AI IoT Edge Computing Platform",
+        { name: "AI IoT Edge Computing Platform",
           description: "Revolutionize IoT with AI-powered edge computing",
           plans: [
-            {
-              name: "Basic",
+            { name: "Basic",
               price: { monthly: 299, yearly: 239 },
               features: [
                 "Up to 100 devices",
@@ -164,8 +149,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: false
             },
-            {
-              name: "Professional",
+            { name: "Professional",
               price: { monthly: 999, yearly: 799 },
               features: [
                 "Up to 1,000 devices",
@@ -178,8 +162,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: true
             },
-            {
-              name: "Enterprise",
+            { name: "Enterprise",
               price: { monthly: 2499, yearly: 1999 },
               features: [
                 "Unlimited devices",
@@ -196,15 +179,12 @@ const PricingComparison: React.FC = () => {
         }
       ]
     },
-    {
-      category: "Enterprise Services",
+    { category: "Enterprise Services",
       services: [
-        {
-          name: "Cloud & Infrastructure",
+        { name: "Cloud & Infrastructure",
           description: "Enterprise-grade cloud and infrastructure solutions",
           plans: [
-            {
-              name: "Consultation",
+            { name: "Consultation",
               price: { monthly: 5000, yearly: 50000 },
               features: [
                 "Infrastructure assessment",
@@ -215,8 +195,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: false
             },
-            {
-              name: "Implementation",
+            { name: "Implementation",
               price: { monthly: 15000, yearly: 150000 },
               features: [
                 "Full infrastructure setup",
@@ -227,8 +206,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: true
             },
-            {
-              name: "Managed Services",
+            { name: "Managed Services",
               price: { monthly: 25000, yearly: 250000 },
               features: [
                 "24/7 monitoring",
@@ -241,12 +219,10 @@ const PricingComparison: React.FC = () => {
             }
           ]
         },
-        {
-          name: "Data & Analytics",
+        { name: "Data & Analytics",
           description: "Comprehensive data analytics and business intelligence",
           plans: [
-            {
-              name: "Assessment",
+            { name: "Assessment",
               price: { monthly: 3000, yearly: 30000 },
               features: [
                 "Data audit",
@@ -257,8 +233,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: false
             },
-            {
-              name: "Implementation",
+            { name: "Implementation",
               price: { monthly: 10000, yearly: 100000 },
               features: [
                 "Data platform setup",
@@ -269,8 +244,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: true
             },
-            {
-              name: "Managed Analytics",
+            { name: "Managed Analytics",
               price: { monthly: 20000, yearly: 200000 },
               features: [
                 "Continuous optimization",
@@ -283,12 +257,10 @@ const PricingComparison: React.FC = () => {
             }
           ]
         },
-        {
-          name: "Security & Compliance",
+        { name: "Security & Compliance",
           description: "Enterprise-grade security and compliance solutions",
           plans: [
-            {
-              name: "Assessment",
+            { name: "Assessment",
               price: { monthly: 4000, yearly: 40000 },
               features: [
                 "Security audit",
@@ -299,8 +271,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: false
             },
-            {
-              name: "Implementation",
+            { name: "Implementation",
               price: { monthly: 12000, yearly: 120000 },
               features: [
                 "Security implementation",
@@ -311,8 +282,7 @@ const PricingComparison: React.FC = () => {
               ],
               popular: true
             },
-            {
-              name: "Managed Security",
+            { name: "Managed Security",
               price: { monthly: 25000, yearly: 250000 },
               features: [
                 "24/7 monitoring",
@@ -353,7 +323,7 @@ const PricingComparison: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Transparent Pricing
@@ -370,12 +340,11 @@ const PricingComparison: React.FC = () => {
                 </span>
                 <button
                   onClick={() => setSelectedPlan(selectedPlan === 'monthly' ? 'yearly' : 'monthly')}
-                  className="relative w-16 h-8 bg-gray-600 rounded-full p-1 transition-colors duration-300"
-                >
+                  className="relative w-16 h-8 bg-gray-600 rounded-full p-1 transition-colors duration-300">
                   <motion.div
                     className="w-6 h-6 bg-white rounded-full shadow-md"
-                    animate={{ x: selectedPlan === 'yearly' ? 32 : 0 }}
-                    transition={{ duration: 0.3 }}
+                    animate={{ x: selectedPlan === 'yearly' ? 32 : 0     }}
+                    transition={{ duration: 0.3     }}
                   />
                 </button>
                 <span className={`text-lg ${selectedPlan === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
@@ -398,7 +367,7 @@ const PricingComparison: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
               >
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -416,7 +385,7 @@ const PricingComparison: React.FC = () => {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true     }}
                     >
                       <div className="text-center mb-12">
                         <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
@@ -436,7 +405,7 @@ const PricingComparison: React.FC = () => {
                               initial={{ opacity: 0, scale: 0.9 }}
                               whileInView={{ opacity: 1, scale: 1 }}
                               transition={{ duration: 0.5, delay: planIndex * 0.1 }}
-                              viewport={{ once: true }}
+                              viewport={{ once: true     }}
                               className={`relative rounded-xl p-8 transition-all duration-300 ${
                                 plan.popular
                                   ? 'bg-gradient-to-br from-blue-600/20 to-purple-600/20 border-2 border-blue-500/50 scale-105'
@@ -488,8 +457,7 @@ const PricingComparison: React.FC = () => {
                                 </Link>
                                 <Link
                                   to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                                  className="block w-full py-2 px-6 rounded-lg text-center text-gray-300 hover:text-white transition-colors duration-300"
-                                >
+                                  className="block w-full py-2 px-6 rounded-lg text-center text-gray-300 hover:text-white transition-colors duration-300">
                                   Learn More
                                 </Link>
                               </div>
@@ -511,8 +479,8 @@ const PricingComparison: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
@@ -525,7 +493,7 @@ const PricingComparison: React.FC = () => {
                 <div className="text-center">
                   <div className="text-4xl mb-4">🚀</div>
                   <h3 className="text-xl font-semibold text-white mb-3">14-Day Free Trial</h3>
-                  <p className="text-gray-300">Try any service risk-free with our comprehensive trial period</p>
+                  <p className="text-gray-300">Try  service risk-free with our comprehensive trial period</p>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl mb-4">💰</div>
@@ -547,14 +515,12 @@ const PricingComparison: React.FC = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
-                  >
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300">
                     Contact Sales
                   </Link>
                   <Link
                     to="/all-services"
-                    className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                  >
+                    className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
                     View All Services
                   </Link>
                 </div>
@@ -569,8 +535,8 @@ const PricingComparison: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Get Started?

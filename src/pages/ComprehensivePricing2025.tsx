@@ -33,8 +33,7 @@ const ComprehensivePricing2025: React.FC = () => {
   const industries = ['all', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Technology'];
 
   const services = [
-    {
-      id: 1,
+    { id: 1,
       name: 'AI Workflow Automation',
       description: 'Intelligent automation platform that streamlines business processes',
       category: 'AI Services',
@@ -55,8 +54,7 @@ const ComprehensivePricing2025: React.FC = () => {
       roi: '300%',
       delivery: '2-4 weeks'
     },
-    {
-      id: 2,
+    { id: 2,
       name: 'AI Customer Experience Platform',
       description: 'Personalized customer engagement powered by artificial intelligence',
       category: 'AI Services',
@@ -77,8 +75,7 @@ const ComprehensivePricing2025: React.FC = () => {
       roi: '250%',
       delivery: '3-5 weeks'
     },
-    {
-      id: 3,
+    { id: 3,
       name: 'AI Supply Chain Optimization',
       description: 'End-to-end supply chain management with AI-driven insights',
       category: 'AI Services',
@@ -99,8 +96,7 @@ const ComprehensivePricing2025: React.FC = () => {
       roi: '400%',
       delivery: '4-6 weeks'
     },
-    {
-      id: 4,
+    { id: 4,
       name: 'AI Cybersecurity Suite',
       description: 'Advanced threat detection and response using machine learning',
       category: 'Cybersecurity',
@@ -121,8 +117,7 @@ const ComprehensivePricing2025: React.FC = () => {
       roi: '350%',
       delivery: '2-3 weeks'
     },
-    {
-      id: 5,
+    { id: 5,
       name: 'Cloud & DevOps Solutions',
       description: 'Scalable cloud infrastructure and automated deployment',
       category: 'Cloud Services',
@@ -143,8 +138,7 @@ const ComprehensivePricing2025: React.FC = () => {
       roi: '280%',
       delivery: '3-4 weeks'
     },
-    {
-      id: 6,
+    { id: 6,
       name: 'AI Data Governance',
       description: 'Comprehensive data protection and compliance management',
       category: 'Data Analytics',
@@ -211,7 +205,7 @@ const ComprehensivePricing2025: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 Transparent
@@ -226,18 +220,16 @@ const ComprehensivePricing2025: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <motion.button 
-                  whileHover={{ scale: 1.05 }} 
-                  whileTap={{ scale: 0.95 }} 
-                  className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:from-green-400 hover:to-blue-400 transition-all duration-300"
-                >
+                  whileHover={{ scale: 1.05     }} 
+                  whileTap={{ scale: 0.95     }} 
+                  className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:from-green-400 hover:to-blue-400 transition-all duration-300">
                   <Download className="w-5 h-5"/>
                   Download Pricing Guide
                 </motion.button>
                 <motion.button 
-                  whileHover={{ scale: 1.05 }} 
-                  whileTap={{ scale: 0.95 }} 
-                  className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
+                  whileHover={{ scale: 1.05     }} 
+                  whileTap={{ scale: 0.95     }} 
+                  className="border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 hover:bg-blue-400 hover:text-white transition-all duration-300">
                   <Play className="w-5 h-5"/>
                   Schedule Demo
                 </motion.button>
@@ -306,8 +298,7 @@ const ComprehensivePricing2025: React.FC = () => {
               <select 
                 value={selectedCategory} 
                 onChange={(e) => setSelectedCategory(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"
-              >
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
                 {categories.map(category => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
@@ -317,8 +308,7 @@ const ComprehensivePricing2025: React.FC = () => {
               <select 
                 value={selectedIndustry} 
                 onChange={(e) => setSelectedIndustry(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"
-              >
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
                 {industries.map(industry => (
                   <option key={industry} value={industry} className="bg-slate-800 text-white">
                     {industry === 'all' ? 'All Industries' : industry}
@@ -328,8 +318,7 @@ const ComprehensivePricing2025: React.FC = () => {
               <select 
                 value={sortBy} 
                 onChange={(e) => setSortBy(e.target.value)} 
-                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400"
-              >
+                className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-green-400">
                 <option value="price" className="bg-slate-800 text-white">Price: Low to High</option>
                 <option value="price-desc" className="bg-slate-800 text-white">Price: High to Low</option>
                 <option value="roi" className="bg-slate-800 text-white">ROI: High to Low</option>

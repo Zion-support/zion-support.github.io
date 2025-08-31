@@ -26,32 +26,27 @@ import {
 
 export default function MicroSAASSolutions() {
   const services = [
-    {
-      title: "Custom SAAS Development",
+    { title: "Custom SAAS Development",
       description: "Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.",
       icon: Code,
       features: ["Custom workflows", "API integration", "User management", "Scalable architecture"]
     },
-    {
-      title: "Multi-tenant Architecture",
+    { title: "Multi-tenant Architecture",
       description: "Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.",
       icon: Users,
       features: ["Data isolation", "Resource sharing", "Customization options", "Performance optimization"]
     },
-    {
-      title: "Subscription Management",
+    { title: "Subscription Management",
       description: "Comprehensive billing and subscription systems with flexible pricing models and automated renewals.",
       icon: BarChart3,
       features: ["Flexible pricing", "Automated billing", "Usage tracking", "Payment processing"]
     },
-    {
-      title: "API Development & Integration",
+    { title: "API Development & Integration",
       description: "Robust APIs that enable seamless integration with existing systems and third-party applications.",
       icon: Cpu,
       features: ["RESTful APIs", "GraphQL support", "Webhook integration", "API documentation"]
     },
-    {
-      title: "Analytics & Reporting",
+    { title: "Analytics & Reporting",
       description: "Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.",
       icon: TrendingUp,
       features: ["Real-time metrics", "Custom reports", "Data visualization", "Export capabilities"]
@@ -59,85 +54,71 @@ export default function MicroSAASSolutions() {
   ];
 
   const benefits = [
-    {
-      title: "Rapid Deployment",
+    { title: "Rapid Deployment",
       description: "Quick time-to-market with agile development methodologies",
       icon: Zap
     },
-    {
-      title: "Scalability",
+    { title: "Scalability",
       description: "Built to grow with your business from day one",
       icon: TrendingUp
     },
-    {
-      title: "Cost Efficiency",
+    { title: "Cost Efficiency",
       description: "Reduced infrastructure costs with cloud-native solutions",
       icon: BarChart3
     },
-    {
-      title: "Security",
+    { title: "Security",
       description: "Enterprise-grade security and compliance standards",
       icon: Shield
     }
   ];
 
   const industries = [
-    {
-      name: "Healthcare",
+    { name: "Healthcare",
       description: "HIPAA-compliant patient management systems",
       icon: Building
     },
-    {
-      name: "Finance",
+    { name: "Finance",
       description: "Regulatory-compliant financial tools",
       icon: Building
     },
-    {
-      name: "Education",
+    { name: "Education",
       description: "Learning management and student tracking",
       icon: Building
     },
-    {
-      name: "Manufacturing",
+    { name: "Manufacturing",
       description: "Production planning and inventory management",
       icon: Building
     },
-    {
-      name: "Retail",
+    { name: "Retail",
       description: "E-commerce and point-of-sale solutions",
       icon: Building
     },
-    {
-      name: "Real Estate",
+    { name: "Real Estate",
       description: "Property management and client portals",
       icon: Building
     }
   ];
 
   const processSteps = [
-    {
-      step: 1,
+    { step: 1,
       title: "Discovery & Planning",
       description: "Understanding your business requirements and creating a comprehensive project plan",
       icon: Target,
       duration: "1-2 weeks"
     },
-    {
-      step: 2,
+    { step: 2,
       title: "Design & Architecture",
       description: "Creating the system architecture and user interface designs",
       icon: Code,
       duration: "2-4 weeks"
     },
-    {
-      step: 3,
+    { step: 3,
       title: "Development",
       description: "Building the core application with iterative development cycles",
       icon: Cpu,
       duration: "8-16 weeks"
     },
-    {
-      step: 4,
+    { step: 4,
       title: "Testing & Deployment",
       description: "Comprehensive testing and production deployment",
       icon: Rocket,
@@ -210,8 +191,7 @@ export default function MicroSAASSolutions() {
               {services.map((service, index) => (
                 <div
                   key={service.title}
-                  className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+                  className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
@@ -247,8 +227,7 @@ export default function MicroSAASSolutions() {
               {benefits.map((benefit, index) => (
                 <div
                   key={benefit.title}
-                  className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+                  className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
@@ -275,8 +254,7 @@ export default function MicroSAASSolutions() {
               {industries.map((industry, index) => (
                 <div
                   key={industry.name}
-                  className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-                >
+                  className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                     <industry.icon className="w-8 h-8 text-white" />
                   </div>
@@ -335,14 +313,12 @@ export default function MicroSAASSolutions() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
                   Start Your Project
                 </a>
                 <a
                   href="/contact"
-                  className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-                >
+                  className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                   Get Consultation
                 </a>
               </div>

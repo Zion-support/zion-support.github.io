@@ -1,5 +1,4 @@
-export type InnovativeService = {
-  id: string;
+export type InnovativeService = { id: string;
   title: string;
   description: string;
   category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation';
@@ -24,12 +23,11 @@ export type InnovativeService = {
   enterprise?: boolean;
   startup?: boolean;
   smb?: boolean;
-};
+    };
 
 export const innovativeServices2026: InnovativeService[] = [
   // MICRO SAAS SERVICES
-  {
-    id: 'ai-powered-customer-churn-predictor',
+  { id: 'ai-powered-customer-churn-predictor',
     title: 'AI-Powered Customer Churn Predictor',
     description: 'Predict customer churn with 95% accuracy using machine learning algorithms and behavioral analysis.',
     category: 'Micro SaaS',
@@ -72,8 +70,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-  {
-    id: 'intelligent-inventory-optimization',
+  { id: 'intelligent-inventory-optimization',
     title: 'Intelligent Inventory Optimization',
     description: 'AI-driven inventory management that reduces stockouts by 60% and optimizes warehouse space utilization.',
     category: 'Micro SaaS',
@@ -116,8 +113,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: false,
     smb: true
   },
-  {
-    id: 'smart-energy-consumption-monitor',
+  { id: 'smart-energy-consumption-monitor',
     title: 'Smart Energy Consumption Monitor',
     description: 'IoT-powered energy monitoring system that helps businesses reduce energy costs by up to 35%.',
     category: 'Micro SaaS',
@@ -160,8 +156,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-  {
-    id: 'automated-compliance-monitor',
+  { id: 'automated-compliance-monitor',
     title: 'Automated Compliance Monitor',
     description: 'Continuous compliance monitoring for GDPR, HIPAA, SOC 2, and other regulatory frameworks with automated reporting.',
     category: 'Micro SaaS',
@@ -206,8 +201,7 @@ export const innovativeServices2026: InnovativeService[] = [
   },
 
   // AI SOLUTIONS
-  {
-    id: 'autonomous-customer-service-agent',
+  { id: 'autonomous-customer-service-agent',
     title: 'Autonomous Customer Service Agent',
     description: 'AI-powered customer service that handles 80% of inquiries autonomously with human-like conversation capabilities.',
     category: 'AI Solutions',
@@ -250,8 +244,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-  {
-    id: 'predictive-maintenance-platform',
+  { id: 'predictive-maintenance-platform',
     title: 'Predictive Maintenance Platform',
     description: 'IoT and AI-powered predictive maintenance that reduces equipment downtime by 70% and extends asset lifespan.',
     category: 'AI Solutions',
@@ -294,8 +287,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: false,
     smb: true
   },
-  {
-    id: 'ai-powered-fraud-detection',
+  { id: 'ai-powered-fraud-detection',
     title: 'AI-Powered Fraud Detection',
     description: 'Real-time fraud detection system that identifies fraudulent transactions with 99.5% accuracy using advanced machine learning.',
     category: 'AI Solutions',
@@ -340,8 +332,7 @@ export const innovativeServices2026: InnovativeService[] = [
   },
 
   // IT SERVICES
-  {
-    id: 'cloud-migration-accelerator',
+  { id: 'cloud-migration-accelerator',
     title: 'Cloud Migration Accelerator',
     description: 'End-to-end cloud migration service that reduces migration time by 50% and ensures zero downtime.',
     category: 'IT Services',
@@ -384,8 +375,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: false,
     smb: true
   },
-  {
-    id: 'cybersecurity-posture-assessment',
+  { id: 'cybersecurity-posture-assessment',
     title: 'Cybersecurity Posture Assessment',
     description: 'Comprehensive security assessment that identifies vulnerabilities and provides actionable remediation roadmap.',
     category: 'IT Services',
@@ -428,8 +418,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-  {
-    id: 'digital-transformation-consulting',
+  { id: 'digital-transformation-consulting',
     title: 'Digital Transformation Consulting',
     description: 'Strategic consulting to help organizations navigate digital transformation with proven methodologies and best practices.',
     category: 'IT Services',
@@ -474,8 +463,7 @@ export const innovativeServices2026: InnovativeService[] = [
   },
 
   // EMERGING TECHNOLOGIES
-  {
-    id: 'quantum-computing-as-a-service',
+  { id: 'quantum-computing-as-a-service',
     title: 'Quantum Computing as a Service',
     description: 'Access to quantum computing resources for complex optimization problems and scientific research.',
     category: 'Quantum Computing',
@@ -518,8 +506,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: false,
     smb: false
   },
-  {
-    id: 'blockchain-supply-chain-tracking',
+  { id: 'blockchain-supply-chain-tracking',
     title: 'Blockchain Supply Chain Tracking',
     description: 'End-to-end supply chain transparency using blockchain technology for traceability and compliance.',
     category: 'Blockchain & Web3',
@@ -562,8 +549,7 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-  {
-    id: 'metaverse-commerce-platform',
+  { id: 'metaverse-commerce-platform',
     title: 'Metaverse Commerce Platform',
     description: 'Complete metaverse commerce solution for virtual shopping experiences and digital asset trading.',
     category: 'Metaverse & AR/VR',
@@ -609,23 +595,19 @@ export const innovativeServices2026: InnovativeService[] = [
 ];
 
 export const serviceCategories = [
-  {
-    name: 'Micro SaaS',
+  { name: 'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
     services: innovativeServices2026.filter(s => s.category === 'Micro SaaS')
   },
-  {
-    name: 'AI Solutions',
+  { name: 'AI Solutions',
     description: 'Advanced artificial intelligence and machine learning solutions',
     services: innovativeServices2026.filter(s => s.category === 'AI Solutions')
   },
-  {
-    name: 'IT Services',
+  { name: 'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
     services: innovativeServices2026.filter(s => s.category === 'IT Services')
   },
-  {
-    name: 'Emerging Technologies',
+  { name: 'Emerging Technologies',
     description: 'Cutting-edge technologies shaping the future',
     services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
   }

@@ -7,14 +7,14 @@ export interface AIService {
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+  pricing: {  
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
-    pricingModel: string;
-    marketPrice: string;
-  };
+    pricingModel: string
+    marketPrice: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -52,22 +52,19 @@ export interface AIService {
 }
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
+const zionContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
 export const innovativeAIServices2030: AIService[] = [
-  {
-    id: "ai-voice-cloning-platform",
+  { id: "ai-voice-cloning-platform",
     title: "Zion AI Voice Cloning Platform",
     description: "Advanced AI-powered voice cloning platform for businesses, content creators, and accessibility services with natural-sounding voice synthesis and multi-language support.",
     category: "AI Services",
     subcategory: "Voice & Audio",
-    pricing: {
-      monthly: 299,
+    pricing: { monthly: 299,
       yearly: 2990,
       custom: "Enterprise voice cloning solutions",
       currency: "$",
@@ -154,14 +151,12 @@ export const innovativeAIServices2030: AIService[] = [
     trending: true
   },
 
-  {
-    id: "ai-code-review-assistant",
+  { id: "ai-code-review-assistant",
     title: "Zion AI Code Review Assistant",
     description: "Intelligent AI-powered code review platform that automatically analyzes code quality, identifies bugs, suggests improvements, and ensures coding standards compliance.",
     category: "AI Services",
     subcategory: "Software Development",
-    pricing: {
-      monthly: 199,
+    pricing: { monthly: 199,
       yearly: 1990,
       custom: "Enterprise development teams",
       currency: "$",
@@ -248,14 +243,12 @@ export const innovativeAIServices2030: AIService[] = [
     trending: true
   },
 
-  {
-    id: "ai-customer-sentiment-analyzer",
+  { id: "ai-customer-sentiment-analyzer",
     title: "Zion AI Customer Sentiment Analyzer",
     description: "Advanced AI-powered sentiment analysis platform that monitors customer feedback, social media, and support interactions to provide real-time insights into customer satisfaction and brand perception.",
     category: "AI Services",
     subcategory: "Customer Analytics",
-    pricing: {
-      monthly: 399,
+    pricing: { monthly: 399,
       yearly: 3990,
       custom: "Enterprise customer analytics",
       currency: "$",
@@ -342,14 +335,12 @@ export const innovativeAIServices2030: AIService[] = [
     trending: true
   },
 
-  {
-    id: "ai-predictive-inventory-management",
+  { id: "ai-predictive-inventory-management",
     title: "Zion AI Predictive Inventory Management",
     description: "Intelligent AI-powered inventory management system that predicts demand, optimizes stock levels, reduces waste, and automates reordering processes for retail and manufacturing businesses.",
     category: "AI Services",
     subcategory: "Supply Chain & Inventory",
-    pricing: {
-      monthly: 599,
+    pricing: { monthly: 599,
       yearly: 5990,
       custom: "Enterprise inventory solutions",
       currency: "$",
@@ -436,14 +427,12 @@ export const innovativeAIServices2030: AIService[] = [
     trending: true
   },
 
-  {
-    id: "ai-personalized-learning-platform",
+  { id: "ai-personalized-learning-platform",
     title: "Zion AI Personalized Learning Platform",
     description: "Revolutionary AI-powered learning platform that creates personalized educational experiences, adapts to individual learning styles, and provides real-time feedback for optimal knowledge retention.",
     category: "AI Services",
     subcategory: "Education & Training",
-    pricing: {
-      monthly: 299,
+    pricing: { monthly: 299,
       yearly: 2990,
       custom: "Enterprise learning solutions",
       currency: "$",

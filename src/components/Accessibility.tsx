@@ -21,12 +21,11 @@ interface AccessibilitySettings {
   reducedMotion: boolean;
   soundEnabled: boolean;
   theme: 'light' | 'dark' | 'auto';
-}
+    }
 
 export function Accessibility() {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    fontSize: 16,
+  const [settings, setSettings] = useState<AccessibilitySettings>({ fontSize: 16,
     highContrast: false,
     reducedMotion: false,
     soundEnabled: true,
@@ -119,8 +118,7 @@ export function Accessibility() {
   };
 
   const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
-      fontSize: 16,
+    const defaultSettings: AccessibilitySettings = { fontSize: 16,
       highContrast: false,
       reducedMotion: false,
       soundEnabled: true,
@@ -151,8 +149,7 @@ export function Accessibility() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -400 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
-            className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl"
-          >
+            className="fixed left-4 bottom-20 z-50 w-80 bg-slate-900 border border-cyan-400/20 rounded-lg shadow-2xl backdrop-blur-xl">
             <div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
@@ -317,8 +314,7 @@ export function Accessibility() {
               {/* Reset Button */}
               <button
                 onClick={resetSettings}
-                className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
-              >
+                className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium">
                 Reset to Defaults
               </button>
             </div>

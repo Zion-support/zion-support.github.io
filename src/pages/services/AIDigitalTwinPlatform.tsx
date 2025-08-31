@@ -24,20 +24,17 @@ export default function AIDigitalTwinPlatform() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
+    { name: 'Starter', 
       price: '$599/mo', 
       features: ['Up to 10 digital twins', 'Basic monitoring', 'Standard dashboards', 'Email support', 'Monthly reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$1,299/mo', 
       features: ['Up to 50 digital twins', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,999/mo', 
       features: ['Unlimited digital twins', 'Full AI suite', 'Custom models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
@@ -287,8 +284,7 @@ export default function AIDigitalTwinPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
-          >
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold">
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>

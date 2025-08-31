@@ -25,23 +25,18 @@ const UltimateZionServicesShowcase: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1,
         delayChildren: 0.2
       }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: { duration: 0.5 }
+      transition: { duration: 0.5     }
     }
   };
 
@@ -54,7 +49,7 @@ const UltimateZionServicesShowcase: React.FC = () => {
             className="text-4xl md:text-6xl font-bold mb-6" 
             initial={{ opacity: 0, y: 20 }} 
             whileInView={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             Ultimate
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -158,14 +153,13 @@ const UltimateZionServicesShowcase: React.FC = () => {
             variants={containerVariants} 
             initial="hidden" 
             whileInView="visible" 
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {filteredServices.map((service, index) => (
               <motion.div 
                 key={service.id} 
                 variants={itemVariants} 
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
-              >
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group">
                 {/* Service Header */}
                 <div className="text-center mb-6">
                   <div className={`text-6xl mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -299,7 +293,7 @@ const UltimateZionServicesShowcase: React.FC = () => {
             className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
               Ready to Lead the Future?

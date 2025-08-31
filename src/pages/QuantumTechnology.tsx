@@ -31,43 +31,37 @@ export default function QuantumTechnology() {
   const [activeTab, setActiveTab] = useState('overview');
 
   const quantumServices = [
-    {
-      icon: Atom,
+    { icon: Atom,
       title: "Quantum Computing",
       description: "Leverage quantum algorithms for complex computational problems",
       features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Machine Learning"],
       color: "from-zion-cyan to-zion-blue"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution",
       features: ["Quantum Key Distribution", "Secure Communication", "Post-Quantum Security", "Quantum Networks"],
       color: "from-zion-purple to-zion-pink"
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: "Quantum Networks",
       description: "Quantum internet infrastructure for secure data transmission",
       features: ["Quantum Repeaters", "Entanglement Distribution", "Quantum Routing", "Network Security"],
       color: "from-zion-green to-zion-emerald"
     },
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "Quantum Machine Learning",
       description: "AI algorithms enhanced with quantum computing capabilities",
       features: ["Quantum Neural Networks", "Feature Selection", "Pattern Recognition", "Optimization"],
       color: "from-zion-yellow to-zion-orange"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Quantum Databases",
       description: "Quantum-enhanced data storage and retrieval systems",
       features: ["Quantum Search", "Data Compression", "Quantum Memory", "Fast Retrieval"],
       color: "from-zion-red to-zion-pink"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Quantum Sensors",
       description: "Ultra-sensitive detection using quantum phenomena",
       features: ["Magnetic Sensing", "Gravitational Detection", "Precision Measurement", "Environmental Monitoring"],
@@ -85,43 +79,37 @@ export default function QuantumTechnology() {
   ];
 
   const quantumApplications = [
-    {
-      title: "Portfolio Optimization",
+    { title: "Portfolio Optimization",
       description: "Quantum algorithms for optimal investment portfolio management",
       category: "finance",
       benefits: ["Risk Reduction", "Return Maximization", "Real-time Optimization", "Multi-Asset Management"],
       icon: BarChart3
     },
-    {
-      title: "Drug Discovery",
+    { title: "Drug Discovery",
       description: "Quantum simulation for molecular modeling and drug development",
       category: "healthcare",
       benefits: ["Faster Discovery", "Accurate Modeling", "Cost Reduction", "Better Efficacy"],
       icon: Monitor
     },
-    {
-      title: "Supply Chain Optimization",
+    { title: "Supply Chain Optimization",
       description: "Quantum optimization for logistics and supply chain management",
       category: "logistics",
       benefits: ["Route Optimization", "Cost Reduction", "Efficiency", "Real-time Adaptation"],
       icon: Network
     },
-    {
-      title: "Cryptographic Security",
+    { title: "Cryptographic Security",
       description: "Quantum-resistant encryption and secure communication",
       category: "cybersecurity",
       benefits: ["Unbreakable Encryption", "Future-Proof Security", "Quantum Networks", "Secure Communication"],
       icon: Shield
     },
-    {
-      title: "Climate Modeling",
+    { title: "Climate Modeling",
       description: "Quantum computing for complex climate simulations",
       category: "research",
       benefits: ["Accurate Predictions", "Complex Modeling", "Faster Simulations", "Better Understanding"],
       icon: Lightbulb
     },
-    {
-      title: "AI Training",
+    { title: "AI Training",
       description: "Quantum-enhanced machine learning and neural networks",
       category: "research",
       benefits: ["Faster Training", "Better Accuracy", "Complex Patterns", "Efficient Learning"],
@@ -130,38 +118,32 @@ export default function QuantumTechnology() {
   ];
 
   const quantumTechnologies = [
-    {
-      name: "Superconducting Qubits",
+    { name: "Superconducting Qubits",
       description: "Quantum bits using superconducting circuits for computation",
       advantages: ["Scalability", "Fast Operations", "Error Correction", "Commercial Viability"],
       icon: Cpu
     },
-    {
-      name: "Trapped Ions",
+    { name: "Trapped Ions",
       description: "Quantum bits using individual ions for precise control",
       advantages: ["High Fidelity", "Long Coherence", "Precise Control", "Low Error Rates"],
       icon: Atom
     },
-    {
-      name: "Topological Qubits",
+    { name: "Topological Qubits",
       description: "Quantum bits with inherent error protection",
       advantages: ["Error Protection", "Stability", "Fault Tolerance", "Long Coherence"],
       icon: Shield
     },
-    {
-      name: "Photonic Qubits",
+    { name: "Photonic Qubits",
       description: "Quantum bits using light particles for communication",
       advantages: ["Room Temperature", "Fast Transmission", "Low Loss", "Network Ready"],
       icon: Network
     },
-    {
-      name: "Silicon Qubits",
+    { name: "Silicon Qubits",
       description: "Quantum bits using semiconductor technology",
       advantages: ["Manufacturing", "Scalability", "Integration", "Cost Effective"],
       icon: Server
     },
-    {
-      name: "Neutral Atoms",
+    { name: "Neutral Atoms",
       description: "Quantum bits using neutral atoms for computation",
       advantages: ["Scalability", "Parallel Operations", "High Fidelity", "Flexible Architecture"],
       icon: Atom
@@ -175,22 +157,17 @@ export default function QuantumTechnology() {
     { metric: "24/7", label: "Availability", description: "Continuous quantum computing access" }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.6     }
     }
   };
 
@@ -211,7 +188,7 @@ export default function QuantumTechnology() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-purple to-zion-pink rounded-2xl flex items-center justify-center">
@@ -233,8 +210,8 @@ export default function QuantumTechnology() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-purple/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 Quantum Consultation
               </motion.button>
@@ -253,8 +230,8 @@ export default function QuantumTechnology() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Technology Services
@@ -270,7 +247,7 @@ export default function QuantumTechnology() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {quantumServices.map((service, index) => (
               <motion.div 
@@ -307,8 +284,8 @@ export default function QuantumTechnology() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Applications by Industry
@@ -324,8 +301,8 @@ export default function QuantumTechnology() {
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             {applications.map((app) => {
               const Icon = app.icon;
@@ -352,7 +329,7 @@ export default function QuantumTechnology() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {filteredApplications.map((app, index) => (
               <motion.div 
@@ -394,8 +371,8 @@ export default function QuantumTechnology() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Computing Technologies
@@ -411,7 +388,7 @@ export default function QuantumTechnology() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {quantumTechnologies.map((tech, index) => (
               <motion.div 
@@ -451,8 +428,8 @@ export default function QuantumTechnology() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Computing Advantages
@@ -468,7 +445,7 @@ export default function QuantumTechnology() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {quantumAdvantages.map((advantage, index) => (
               <motion.div 
@@ -494,8 +471,8 @@ export default function QuantumTechnology() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Quantum Technology Implementation
@@ -511,29 +488,25 @@ export default function QuantumTechnology() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {[
-              {
-                step: "01",
+              { step: "01",
                 title: "Quantum Assessment",
                 description: "Evaluate quantum readiness and identify opportunities",
                 icon: Eye
               },
-              {
-                step: "02",
+              { step: "02",
                 title: "Strategy Development",
                 description: "Design quantum roadmap and implementation plan",
                 icon: Target
               },
-              {
-                step: "03",
+              { step: "03",
                 title: "Technology Selection",
                 description: "Choose optimal quantum platforms and solutions",
                 icon: Cpu
               },
-              {
-                step: "04",
+              { step: "04",
                 title: "Deployment & Optimization",
                 description: "Implement and continuously improve quantum solutions",
                 icon: Rocket
@@ -570,8 +543,8 @@ export default function QuantumTechnology() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Explore Quantum Technology?
@@ -584,8 +557,8 @@ export default function QuantumTechnology() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-pink text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-purple/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 Start Quantum Journey
               </motion.button>

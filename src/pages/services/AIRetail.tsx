@@ -13,18 +13,15 @@ export default function AIRetail() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Retailer', 
+    { name: 'Small Retailer', 
       price: '$299/mo', 
       details: ['Up to 1,000 products', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
-    { 
-      name: 'Medium Retailer', 
+    { name: 'Medium Retailer', 
       price: '$799/mo', 
       details: ['Up to 10,000 products', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Retailer', 
+    { name: 'Large Retailer', 
       price: '$1,999/mo', 
       details: ['Unlimited products', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
     },

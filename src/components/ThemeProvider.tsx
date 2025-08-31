@@ -3,12 +3,11 @@ import React, { createContext, useContext, useEffect, useState } from 'react.ts'
 type Theme = 'light' | 'dark' | 'system';
 
 interface ThemeContextType {
-
-  theme: anyTheme;
+  theme: Theme;
   setTheme: (theme: Theme)  => void;
   isDark: boolean;
 
-}
+    }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
@@ -20,13 +19,11 @@ export const useTheme = () => {
   return context;
 };
 
-interface ThemeProviderProps extends React.PropsWithChildren<{}> {
+interface ThemeProviderProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
 
-  children: React.ReactNode;
+    }
 
-}
-
-export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
+export const ThemeProvider: React.FC = ({ children }) => {
   const [theme, setTheme] = useState<any>(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('theme') as Theme;
@@ -65,7 +62,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     updateTheme();
     
     if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: anydark)');
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       mediaQuery.addEventListener('change', updateTheme);
       return ()  => mediaQuery.removeEventListener('change', updateTheme);
     }

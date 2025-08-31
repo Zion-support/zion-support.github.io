@@ -26,41 +26,34 @@ import {
 
 export default function AIProjectManagementPlatform() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Task Prioritization',
       description: 'Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Smart Team Collaboration',
       description: 'AI-driven team matching and workload balancing for optimal project execution'
     },
-    {
-      icon: Calendar,
+    { icon: Calendar,
       title: 'Predictive Timeline Management',
       description: 'Machine learning models predict project delays and suggest mitigation strategies'
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: 'Performance Analytics',
       description: 'Real-time insights into team productivity, project health, and resource utilization'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Risk Assessment & Mitigation',
       description: 'AI continuously monitors project risks and provides proactive recommendations'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Automated Reporting',
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates'
     }
   ];
 
   const pricingPlans = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small teams and startups',
@@ -74,8 +67,7 @@ export default function AIProjectManagementPlatform() {
       ],
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$599',
       period: '/month',
       description: 'Ideal for growing businesses',
@@ -91,8 +83,7 @@ export default function AIProjectManagementPlatform() {
       ],
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$1,299',
       period: '/month',
       description: 'For large organizations',
@@ -111,46 +102,38 @@ export default function AIProjectManagementPlatform() {
   ];
 
   const benefits = [
-    {
-      icon: Clock,
+    { icon: Clock,
       title: '30% Faster Project Delivery',
       description: 'AI optimization reduces project timelines through intelligent resource allocation'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: '95% On-Time Completion',
       description: 'Predictive analytics help teams meet deadlines consistently'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: '40% Cost Reduction',
       description: 'Eliminate waste through AI-driven efficiency improvements'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Enhanced Team Productivity',
       description: 'Automated workflows free up time for strategic work'
     }
   ];
 
   const useCases = [
-    {
-      title: 'Software Development',
+    { title: 'Software Development',
       description: 'Manage complex development cycles with AI-powered sprint planning and resource allocation',
       icon: GitBranch
     },
-    {
-      title: 'Marketing Campaigns',
+    { title: 'Marketing Campaigns',
       description: 'Coordinate multi-channel campaigns with intelligent timeline optimization',
       icon: MessageSquare
     },
-    {
-      title: 'Construction Projects',
+    { title: 'Construction Projects',
       description: 'Track progress and manage resources across multiple sites with predictive analytics',
       icon: Building
     },
-    {
-      title: 'Event Planning',
+    { title: 'Event Planning',
       description: 'Streamline event coordination with AI-driven task management and vendor coordination',
       icon: Calendar
     }
@@ -169,7 +152,7 @@ export default function AIProjectManagementPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
@@ -204,10 +187,9 @@ export default function AIProjectManagementPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -223,9 +205,8 @@ export default function AIProjectManagementPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -243,10 +224,9 @@ export default function AIProjectManagementPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -262,9 +242,8 @@ export default function AIProjectManagementPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -282,10 +261,9 @@ export default function AIProjectManagementPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Industry
             </h2>
@@ -301,9 +279,8 @@ export default function AIProjectManagementPlatform() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -321,10 +298,9 @@ export default function AIProjectManagementPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -340,7 +316,7 @@ export default function AIProjectManagementPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-purple-500 ring-2 ring-purple-500/20' 
@@ -392,8 +368,8 @@ export default function AIProjectManagementPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Project Management?
@@ -412,7 +388,7 @@ export default function AIProjectManagementPlatform() {
             </div>
             
             <p className="text-gray-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>

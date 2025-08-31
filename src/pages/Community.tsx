@@ -7,12 +7,12 @@ interface CommunityPost {
   id: string;
   title: string;
   content: string;
-  author: {
+  author: {  
     name: string;
     avatar: string;
-    role: string;
-    verified: boolean;
-  };
+    role: string
+    verified: boolean
+      };
   category: string;
   tags: string[];
   likes: number;
@@ -27,11 +27,11 @@ interface CommunityCategory {
   id: string;
   name: string;
   description: string;
-  icon: any;
+  icon: ;
   color: string;
   postCount: number;
   topics: string[];
-}
+    }
 
 const Community: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -39,17 +39,15 @@ const Community: React.FC = () => {
   const [sortBy, setSortBy] = useState<string>('latest');
 
   const communityCategories: CommunityCategory[] = [
-    {
-      id: 'general',
+    { id: 'general',
       name: 'General Discussion',
       description: 'General topics about Zion Tech Group and technology',
       icon: Users,
       color: 'from-blue-500 to-cyan-500',
       postCount: 1247,
-      topics: ['Company News', 'Technology Trends', 'Industry Updates']
+      topics: ['Comp News', 'Technology Trends', 'Industry Updates']
     },
-    {
-      id: 'ai-services',
+    { id: 'ai-services',
       name: 'AI Services',
       description: 'Discussions about our AI and machine learning services',
       icon: TrendingUp,
@@ -57,8 +55,7 @@ const Community: React.FC = () => {
       postCount: 892,
       topics: ['AI Integration', 'Machine Learning', 'AI Best Practices']
     },
-    {
-      id: 'cloud-infrastructure',
+    { id: 'cloud-infrastructure',
       name: 'Cloud & Infrastructure',
       description: 'Cloud computing, DevOps, and infrastructure topics',
       icon: TrendingUp,
@@ -66,8 +63,7 @@ const Community: React.FC = () => {
       postCount: 654,
       topics: ['Cloud Migration', 'DevOps', 'Infrastructure Management']
     },
-    {
-      id: 'security-compliance',
+    { id: 'security-compliance',
       name: 'Security & Compliance',
       description: 'Cybersecurity, compliance, and data protection',
       icon: TrendingUp,
@@ -75,8 +71,7 @@ const Community: React.FC = () => {
       postCount: 456,
       topics: ['Cybersecurity', 'Compliance', 'Data Protection']
     },
-    {
-      id: 'micro-saas',
+    { id: 'micro-saas',
       name: 'Micro SaaS Solutions',
       description: 'Our micro SaaS products and integrations',
       icon: TrendingUp,
@@ -84,8 +79,7 @@ const Community: React.FC = () => {
       postCount: 789,
       topics: ['Product Updates', 'Integration Guides', 'Best Practices']
     },
-    {
-      id: 'support',
+    { id: 'support',
       name: 'Support & Help',
       description: 'Get help and support from the community',
       icon: MessageCircle,
@@ -96,12 +90,10 @@ const Community: React.FC = () => {
   ];
 
   const communityPosts: CommunityPost[] = [
-    {
-      id: '1',
+    { id: '1',
       title: 'Getting Started with AI Business Intelligence - Best Practices',
       content: 'I\'ve been using Zion Tech Group\'s AI Business Intelligence service for the past month and wanted to share some best practices I\'ve learned...',
-      author: {
-        name: 'Sarah Chen',
+      author: { name: 'Sarah Chen',
         avatar: '/avatars/sarah.jpg',
         role: 'Senior Data Scientist',
         verified: true
@@ -115,12 +107,10 @@ const Community: React.FC = () => {
       isPinned: true,
       isFeatured: true
     },
-    {
-      id: '2',
+    { id: '2',
       title: 'Cloud Migration Success Story: From On-Prem to Multi-Cloud',
       content: 'Just completed our migration to Zion Tech Group\'s cloud infrastructure. Here\'s our journey and lessons learned...',
-      author: {
-        name: 'Michael Rodriguez',
+      author: { name: 'Michael Rodriguez',
         avatar: '/avatars/michael.jpg',
         role: 'DevOps Engineer',
         verified: true
@@ -134,12 +124,10 @@ const Community: React.FC = () => {
       isPinned: false,
       isFeatured: true
     },
-    {
-      id: '3',
+    { id: '3',
       title: 'Zero Trust Security Implementation Guide',
       content: 'Comprehensive guide on implementing zero trust security using Zion Tech Group\'s security services...',
-      author: {
-        name: 'Alex Thompson',
+      author: { name: 'Alex Thompson',
         avatar: '/avatars/alex.jpg',
         role: 'Security Architect',
         verified: true
@@ -153,12 +141,10 @@ const Community: React.FC = () => {
       isPinned: false,
       isFeatured: false
     },
-    {
-      id: '4',
+    { id: '4',
       title: 'Micro CRM Integration with Salesforce - Step by Step',
       content: 'Detailed walkthrough of integrating our Micro CRM with Salesforce. Includes code examples and troubleshooting tips...',
-      author: {
-        name: 'Jennifer Lee',
+      author: { name: 'Jennifer Lee',
         avatar: '/avatars/jennifer.jpg',
         role: 'Integration Specialist',
         verified: false
@@ -172,12 +158,10 @@ const Community: React.FC = () => {
       isPinned: false,
       isFeatured: false
     },
-    {
-      id: '5',
+    { id: '5',
       title: 'AI Content Creation API Performance Optimization',
       content: 'Tips and tricks for optimizing performance when using the AI Content Creation API at scale...',
-      author: {
-        name: 'David Kim',
+      author: { name: 'David Kim',
         avatar: '/avatars/david.jpg',
         role: 'Software Engineer',
         verified: true
@@ -235,9 +219,8 @@ const Community: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Users className="w-10 h-10 text-white" />
             </div>
@@ -275,8 +258,7 @@ const Community: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="all" className="bg-slate-800 text-white">All Categories</option>
                 {communityCategories.map((category) => (
                   <option key={category.id} value={category.id} className="bg-slate-800 text-white">
@@ -291,8 +273,7 @@ const Community: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="latest" className="bg-slate-800 text-white">Latest</option>
                 <option value="popular" className="bg-slate-800 text-white">Most Popular</option>
                 <option value="most-replied" className="bg-slate-800 text-white">Most Replied</option>
@@ -311,8 +292,7 @@ const Community: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-colors cursor-pointer"
-              onClick={() => setSelectedCategory(category.id)}
-            >
+              onClick={() => setSelectedCategory(category.id)}>
               <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mb-4`}>
                 <category.icon className="w-6 h-6 text-white" />
               </div>
@@ -324,8 +304,7 @@ const Community: React.FC = () => {
                   {category.topics.slice(0, 2).map((topic, topicIndex) => (
                     <span
                       key={topicIndex}
-                      className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full"
-                    >
+                      className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
                       {topic}
                     </span>
                   ))}
@@ -343,8 +322,7 @@ const Community: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-colors"
-            >
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-colors">
               <div className="flex items-start space-x-4">
                 {/* Author Avatar */}
                 <div className="flex-shrink-0">
@@ -383,8 +361,7 @@ const Community: React.FC = () => {
                     {post.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
-                        className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full hover:bg-white/20 transition-colors cursor-pointer"
-                      >
+                        className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full hover:bg-white/20 transition-colors cursor-pointer">
                         {tag}
                       </span>
                     ))}
@@ -469,8 +446,7 @@ const Community: React.FC = () => {
             </button>
             <Link
               to="/community-guidelines"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors">
               <MessageCircle className="w-5 h-5 mr-2" />
               Community Guidelines
             </Link>

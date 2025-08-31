@@ -27,41 +27,34 @@ import { SEO } from '../../components/SEO';
 
 export default function AIQuantumHybridPlatform() {
   const features = [
-    {
-      icon: Atom,
+    { icon: Atom,
       title: "Quantum-Classical Hybrid Processing",
       description: "Seamlessly integrate quantum algorithms with classical computing for optimal performance"
     },
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Quantum Algorithm Optimization",
       description: "Machine learning algorithms that automatically optimize quantum circuit designs"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Real-time Quantum Error Correction",
       description: "Advanced error correction algorithms for reliable quantum computations"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Quantum-Safe Cryptography",
       description: "Post-quantum cryptographic solutions for future-proof security"
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Quantum Machine Learning",
       description: "Quantum neural networks and quantum-enhanced ML algorithms"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Quantum Database Optimization",
       description: "Quantum algorithms for database search and optimization problems"
     }
   ];
 
   const pricingTiers = [
-    {
-      name: "Quantum Starter",
+    { name: "Quantum Starter",
       price: "$2,999",
       period: "monthly",
       description: "Perfect for research institutions and quantum startups",
@@ -74,8 +67,7 @@ export default function AIQuantumHybridPlatform() {
       ],
       bestFor: "Research institutions, quantum startups, educational organizations"
     },
-    {
-      name: "Quantum Professional",
+    { name: "Quantum Professional",
       price: "$7,999",
       period: "monthly",
       description: "Advanced features for growing quantum computing companies",
@@ -90,8 +82,7 @@ export default function AIQuantumHybridPlatform() {
       ],
       bestFor: "Quantum computing companies, research labs, enterprise R&D"
     },
-    {
-      name: "Quantum Enterprise",
+    { name: "Quantum Enterprise",
       price: "$19,999",
       period: "monthly",
       description: "Full-scale quantum computing platform for large enterprises",
@@ -110,33 +101,27 @@ export default function AIQuantumHybridPlatform() {
   ];
 
   const useCases = [
-    {
-      title: "Financial Modeling",
+    { title: "Financial Modeling",
       description: "Quantum algorithms for portfolio optimization, risk assessment, and derivative pricing",
       icon: TrendingUp
     },
-    {
-      title: "Drug Discovery",
+    { title: "Drug Discovery",
       description: "Quantum chemistry simulations for pharmaceutical research and molecular modeling",
       icon: Atom
     },
-    {
-      title: "Logistics Optimization",
+    { title: "Logistics Optimization",
       description: "Quantum algorithms for supply chain optimization and route planning",
       icon: Workflow
     },
-    {
-      title: "Cryptography",
+    { title: "Cryptography",
       description: "Quantum-safe encryption and post-quantum cryptographic solutions",
       icon: Lock
     },
-    {
-      title: "Machine Learning",
+    { title: "Machine Learning",
       description: "Quantum-enhanced neural networks and pattern recognition",
       icon: Brain
     },
-    {
-      title: "Climate Modeling",
+    { title: "Climate Modeling",
       description: "Complex climate simulations using quantum computing power",
       icon: Globe
     }
@@ -165,9 +150,8 @@ export default function AIQuantumHybridPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+            transition={{ duration: 0.8     }}
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 text-purple-300 text-sm font-medium mb-6">
               <Atom className="w-4 h-4 mr-2" />
               Revolutionary Quantum-AI Technology
@@ -185,19 +169,16 @@ export default function AIQuantumHybridPlatform() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
-            >
+              className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors">
               Get Started
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="#demo"
-              className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
-            >
+              className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors">
               Request Demo
             </a>
           </motion.div>
@@ -210,10 +191,9 @@ export default function AIQuantumHybridPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Revolutionary Quantum-AI Features
             </h2>
@@ -230,9 +210,8 @@ export default function AIQuantumHybridPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>
@@ -250,10 +229,9 @@ export default function AIQuantumHybridPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Transparent Quantum Computing Pricing
             </h2>
@@ -270,7 +248,7 @@ export default function AIQuantumHybridPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   index === 1 ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
                 } hover:border-purple-500/50 transition-all`}
@@ -324,10 +302,9 @@ export default function AIQuantumHybridPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Revolutionary Use Cases
             </h2>
@@ -344,9 +321,8 @@ export default function AIQuantumHybridPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
                 <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-purple-400" />
                 </div>
@@ -364,10 +340,9 @@ export default function AIQuantumHybridPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Why Choose Our AI-Quantum Platform?
             </h2>
@@ -384,9 +359,8 @@ export default function AIQuantumHybridPlatform() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
+                viewport={{ once: true     }}
+                className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                   <CheckCircle className="w-5 h-5 text-purple-400" />
                 </div>
@@ -403,8 +377,8 @@ export default function AIQuantumHybridPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Experience Quantum Computing?
@@ -416,15 +390,13 @@ export default function AIQuantumHybridPlatform() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors">
                 Start Your Quantum Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors">
                 <Phone className="mr-2 w-5 h-5" />
                 Call +1 302 464 0950
               </a>

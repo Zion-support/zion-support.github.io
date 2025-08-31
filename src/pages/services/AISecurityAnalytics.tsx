@@ -13,18 +13,15 @@ export default function AISecurityAnalytics() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$499/mo', 
       details: ['Up to 100GB data/month', 'Basic AI features', 'Standard analytics', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,299/mo', 
       details: ['Up to 1TB data/month', 'Advanced AI features', 'Enhanced analytics', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,499/mo', 
       details: ['Unlimited data', 'Custom AI models', 'Full analytics suite', '24/7 dedicated support'] 
     },

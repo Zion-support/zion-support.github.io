@@ -21,18 +21,17 @@ export interface ComprehensiveService2025 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
   launchDate?: string;
@@ -111,8 +110,7 @@ export const SUPPORT_LEVELS = [
 
 // Calculate counts for each category
 export const calculateServiceStats = () => {
-  const stats = {
-    totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
+  const stats = { totalServices: COMPREHENSIVE_SERVICES_CATALOG_2025.length,
     categories: SERVICE_CATEGORIES.length,
     pricingTiers: PRICING_TIERS.map(tier => ({
       ...tier,
@@ -227,11 +225,11 @@ export const getServicesByIndustry = (industry: string) => {
 };
 
 // Get service recommendations based on user preferences
-export const getServiceRecommendations = (preferences: {
+export const getServiceRecommendations = (preferences: {  
   industry?: string;
   budget?: number;
-  innovationLevel?: string;
-  supportLevel?: string;
+  innovationLevel?: string
+  supportLevel?: string
 }) => {
   let recommendations = COMPREHENSIVE_SERVICES_CATALOG_2025;
   

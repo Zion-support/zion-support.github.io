@@ -38,41 +38,34 @@ import { SEO } from '../../components/SEO';
 
 export default function AICybersecurityThreatIntelligence() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Threat Detection",
       description: "Advanced machine learning algorithms that identify and analyze cyber threats in real-time"
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "24/7 Threat Monitoring",
       description: "Continuous monitoring of network traffic, endpoints, and cloud environments for suspicious activities"
     },
-    {
-      icon: AlertTriangle,
+    { icon: AlertTriangle,
       title: "Predictive Threat Intelligence",
       description: "AI algorithms that predict potential threats before they materialize using behavioral analysis"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Automated Incident Response",
       description: "Intelligent automation that responds to threats instantly, minimizing damage and recovery time"
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: "Threat Hunting & Analysis",
       description: "Proactive threat hunting using AI to identify hidden threats and attack patterns"
     },
-    {
-      icon: Workflow,
+    { icon: Workflow,
       title: "Security Orchestration",
       description: "Automated security workflows that coordinate responses across multiple security tools"
     }
   ];
 
   const pricingTiers = [
-    {
-      name: "Threat Intelligence Starter",
+    { name: "Threat Intelligence Starter",
       price: "$599",
       period: "monthly",
       description: "Perfect for small businesses and startups",
@@ -86,8 +79,7 @@ export default function AICybersecurityThreatIntelligence() {
       ],
       bestFor: "Small businesses, startups, small IT teams"
     },
-    {
-      name: "Threat Intelligence Professional",
+    { name: "Threat Intelligence Professional",
       price: "$1,499",
       period: "monthly",
       description: "Advanced features for growing organizations",
@@ -103,8 +95,7 @@ export default function AICybersecurityThreatIntelligence() {
       ],
       bestFor: "Medium businesses, growing companies, security teams"
     },
-    {
-      name: "Threat Intelligence Enterprise",
+    { name: "Threat Intelligence Enterprise",
       price: "$3,999",
       period: "monthly",
       description: "Full-scale threat intelligence platform for large enterprises",
@@ -123,33 +114,27 @@ export default function AICybersecurityThreatIntelligence() {
   ];
 
   const useCases = [
-    {
-      title: "Financial Services",
+    { title: "Financial Services",
       description: "Protect financial data, prevent fraud, and ensure regulatory compliance",
       icon: DollarSign
     },
-    {
-      title: "Healthcare",
+    { title: "Healthcare",
       description: "Secure patient data, protect medical devices, and ensure HIPAA compliance",
       icon: Users
     },
-    {
-      title: "Government",
+    { title: "Government",
       description: "National security, critical infrastructure protection, and classified data security",
       icon: Shield
     },
-    {
-      title: "Manufacturing",
+    { title: "Manufacturing",
       description: "Industrial control system security and supply chain protection",
       icon: Factory
     },
-    {
-      title: "Retail & E-commerce",
+    { title: "Retail & E-commerce",
       description: "Customer data protection, payment security, and fraud prevention",
       icon: ShoppingCart
     },
-    {
-      title: "Education",
+    { title: "Education",
       description: "Student data protection, research security, and academic integrity",
       icon: BookOpen
     }
@@ -165,66 +150,54 @@ export default function AICybersecurityThreatIntelligence() {
   ];
 
   const securityCapabilities = [
-    {
-      title: "Machine Learning Detection",
+    { title: "Machine Learning Detection",
       description: "Advanced ML algorithms that learn from threats and improve detection over time",
       icon: Brain
     },
-    {
-      title: "Behavioral Analysis",
+    { title: "Behavioral Analysis",
       description: "AI-powered analysis of user and system behavior to identify anomalies",
       icon: Activity
     },
-    {
-      title: "Threat Intelligence Feeds",
+    { title: "Threat Intelligence Feeds",
       description: "Real-time feeds from global threat intelligence sources and security researchers",
       icon: Globe
     },
-    {
-      title: "Vulnerability Assessment",
+    { title: "Vulnerability Assessment",
       description: "Automated scanning and assessment of system vulnerabilities",
       icon: Eye
     },
-    {
-      title: "Incident Response Automation",
+    { title: "Incident Response Automation",
       description: "Automated response workflows that minimize threat impact and recovery time",
       icon: Zap
     },
-    {
-      title: "Compliance Reporting",
+    { title: "Compliance Reporting",
       description: "Automated compliance reports for SOC 2, ISO 27001, GDPR, and other standards",
       icon: FileText
     }
   ];
 
   const threatTypes = [
-    {
-      title: "Ransomware Attacks",
+    { title: "Ransomware Attacks",
       description: "AI detection and prevention of ransomware before encryption occurs",
       icon: Lock
     },
-    {
-      title: "Phishing Campaigns",
+    { title: "Phishing Campaigns",
       description: "Advanced detection of sophisticated phishing attempts and social engineering",
       icon: Mail
     },
-    {
-      title: "DDoS Attacks",
+    { title: "DDoS Attacks",
       description: "Real-time detection and mitigation of distributed denial of service attacks",
       icon: Network
     },
-    {
-      title: "Insider Threats",
+    { title: "Insider Threats",
       description: "Behavioral analysis to identify malicious insider activities",
       icon: Users
     },
-    {
-      title: "Zero-Day Exploits",
+    { title: "Zero-Day Exploits",
       description: "AI-powered detection of previously unknown vulnerabilities and exploits",
       icon: AlertTriangle
     },
-    {
-      title: "Advanced Persistent Threats",
+    { title: "Advanced Persistent Threats",
       description: "Long-term threat detection and response for sophisticated attackers",
       icon: Target
     }
@@ -244,9 +217,8 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+            transition={{ duration: 0.8     }}
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               Revolutionary AI Cybersecurity Technology
@@ -264,19 +236,16 @@ export default function AICybersecurityThreatIntelligence() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
-            >
+              className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors">
               Secure Your Organization
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="#demo"
-              className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors"
-            >
+              className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors">
               Request Demo
             </a>
           </motion.div>
@@ -289,10 +258,9 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Revolutionary AI Cybersecurity Features
             </h2>
@@ -309,9 +277,8 @@ export default function AICybersecurityThreatIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all">
                 <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-red-400" />
                 </div>
@@ -329,10 +296,9 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Advanced Security Capabilities
             </h2>
@@ -348,9 +314,8 @@ export default function AICybersecurityThreatIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all">
                 <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
                   <capability.icon className="w-6 h-6 text-red-400" />
                 </div>
@@ -368,10 +333,9 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Comprehensive Threat Protection
             </h2>
@@ -387,9 +351,8 @@ export default function AICybersecurityThreatIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all">
                 <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
                   <threat.icon className="w-6 h-6 text-red-400" />
                 </div>
@@ -407,10 +370,9 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Transparent Cybersecurity Pricing
             </h2>
@@ -427,7 +389,7 @@ export default function AICybersecurityThreatIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   index === 1 ? 'border-red-500/50 bg-red-500/10' : 'border-white/10'
                 } hover:border-red-500/50 transition-all`}
@@ -481,10 +443,9 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Industry-Specific Security Solutions
             </h2>
@@ -501,9 +462,8 @@ export default function AICybersecurityThreatIntelligence() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-red-500/50 transition-all">
                 <div className="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center mb-4">
                   <useCase.icon className="w-6 h-6 text-red-400" />
                 </div>
@@ -521,10 +481,9 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Why Choose Our AI Cybersecurity Platform?
             </h2>
@@ -541,9 +500,8 @@ export default function AICybersecurityThreatIntelligence() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
+                viewport={{ once: true     }}
+                className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-red-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                   <CheckCircle className="w-5 h-5 text-red-400" />
                 </div>
@@ -560,8 +518,8 @@ export default function AICybersecurityThreatIntelligence() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Organization?
@@ -573,15 +531,13 @@ export default function AICybersecurityThreatIntelligence() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-lg transition-colors">
                 Secure Your Organization
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 border border-red-500 text-red-300 hover:bg-red-500/20 font-semibold rounded-lg transition-colors">
                 <Phone className="mr-2 w-5 h-5" />
                 Call +1 302 464 0950
               </a>

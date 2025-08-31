@@ -7,16 +7,14 @@ import { specializedInnovativeServices2027 } from '../../data/2027-specialized-i
 import { Star, CheckCircle, Phone, Mail, MapPin, ArrowRight, TrendingUp, Users, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = { mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
 const pricingTiers = [
-  {
-    name: 'Starter',
+  { name: 'Starter',
     price: '$999',
     period: '/month',
     description: 'Perfect for small businesses and startups',
@@ -29,8 +27,7 @@ const pricingTiers = [
     ],
     popular: false
   },
-  {
-    name: 'Professional',
+  { name: 'Professional',
     price: '$2,999',
     period: '/month',
     description: 'Ideal for growing businesses',
@@ -44,8 +41,7 @@ const pricingTiers = [
     ],
     popular: true
   },
-  {
-    name: 'Enterprise',
+  { name: 'Enterprise',
     price: '$7,999',
     period: '/month',
     description: 'For large organizations',
@@ -313,8 +309,7 @@ export default function ComprehensivePricing() {
                   setSelectedCategory('all');
                   setSelectedPriceRange('all');
                 }}
-                className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark"
-              >
+                className="mt-4 bg-zion-cyan text-white hover:bg-zion-cyan-dark">
                 Clear Filters
               </Button>
             </div>

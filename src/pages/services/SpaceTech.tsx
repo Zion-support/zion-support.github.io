@@ -78,33 +78,27 @@ import {
 
 const SpaceTech = () => {
   const features = [
-    {
-      icon: Satellite,
+    { icon: Satellite,
       title: 'Satellite Technology',
       description: 'Advanced satellite design, deployment, and management solutions'
     },
-    {
-      icon: Orbit,
+    { icon: Orbit,
       title: 'Orbital Mechanics',
       description: 'Precise orbital calculations and trajectory optimization'
     },
-    {
-      icon: Antenna,
+    { icon: Antenna,
       title: 'Ground Station Systems',
       description: 'Earth-based communication and control infrastructure'
     },
-    {
-      icon: Signal,
+    { icon: Signal,
       title: 'Space Communications',
       description: 'Reliable data transmission between space and ground'
     },
-    {
-      icon: Navigation,
+    { icon: Navigation,
       title: 'Space Navigation',
       description: 'Advanced positioning and navigation systems for space missions'
     },
-    {
-      icon: Telescope,
+    { icon: Telescope,
       title: 'Space Observation',
       description: 'Earth observation and space monitoring capabilities'
     }
@@ -120,43 +114,35 @@ const SpaceTech = () => {
   ];
 
   const services = [
-    {
-      icon: Rocket,
+    { icon: Rocket,
       title: 'Launch Services',
       description: 'Satellite launch coordination and mission planning'
     },
-    {
-      icon: Planet,
+    { icon: Planet,
       title: 'Earth Observation',
       description: 'Satellite imagery and environmental monitoring'
     },
-    {
-      icon: Star,
+    { icon: Star,
       title: 'Space Research',
       description: 'Scientific research and space exploration support'
     },
-    {
-      icon: Globe2,
+    { icon: Globe2,
       title: 'Global Communications',
       description: 'Satellite communications and internet services'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Telecommunications',
+    { industry: 'Telecommunications',
       description: 'Global satellite communications and internet services'
     },
-    {
-      industry: 'Environmental Monitoring',
+    { industry: 'Environmental Monitoring',
       description: 'Climate change tracking and natural disaster monitoring'
     },
-    {
-      industry: 'Agriculture',
+    { industry: 'Agriculture',
       description: 'Crop monitoring and precision agriculture support'
     },
-    {
-      industry: 'Defense & Security',
+    { industry: 'Defense & Security',
       description: 'Surveillance and national security applications'
     }
   ];
@@ -170,9 +156,8 @@ const SpaceTech = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
               Space Technology Solutions
@@ -207,9 +192,8 @@ const SpaceTech = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Space Technology Features
             </h2>
@@ -226,8 +210,7 @@ const SpaceTech = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -245,9 +228,8 @@ const SpaceTech = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Space Technology Services
             </h2>
@@ -264,8 +246,7 @@ const SpaceTech = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -287,9 +268,8 @@ const SpaceTech = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Space Technology Benefits
             </h2>
@@ -306,8 +286,7 @@ const SpaceTech = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -320,8 +299,7 @@ const SpaceTech = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -337,9 +315,8 @@ const SpaceTech = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -356,8 +333,7 @@ const SpaceTech = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -415,7 +391,7 @@ const SpaceTech = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Launch Your Space Project Today

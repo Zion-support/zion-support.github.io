@@ -92,20 +92,19 @@ export default function EnhancedServicesShowcase2025() {
       });
   }, [searchTerm, selectedCategory, sortBy]);
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  const ServiceCard = ({ service }: { service: EnhancedService }) => (
+  const ServiceCard = ({ service }: { service: EnhancedService     }) => (
     <motion.div
       key={service.id}
       className="neon-card hover:scale-105 transition-all duration-300 cursor-pointer group"
-      whileHover={{ y: -10 }}
+      whileHover={{ y: -10     }}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5     }}
     >
       {/* Service Header */}
       <div className="flex items-start justify-between mb-4">
@@ -213,14 +212,12 @@ export default function EnhancedServicesShowcase2025() {
         <div className="flex space-x-3 pt-4">
           <Link
             to={service.link}
-            className="flex-1 btn-neon text-center text-sm py-2"
-          >
+            className="flex-1 btn-neon text-center text-sm py-2">
             Learn More
           </Link>
           <Link
             to="/contact"
-            className="flex-1 btn-neon-cyan text-center text-sm py-2"
-          >
+            className="flex-1 btn-neon-cyan text-center text-sm py-2">
             Get Started
           </Link>
         </div>
@@ -228,14 +225,14 @@ export default function EnhancedServicesShowcase2025() {
     </motion.div>
   );
 
-  const ServiceList = ({ service }: { service: EnhancedService }) => (
+  const ServiceList = ({ service }: { service: EnhancedService     }) => (
     <motion.div
       key={service.id}
       className="neon-card p-6 hover:scale-[1.02] transition-all duration-300 cursor-pointer group"
-      whileHover={{ x: 10 }}
+      whileHover={{ x: 10     }}
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5     }}
     >
       <div className="flex items-center space-x-6">
         <div className="text-4xl">{service.icon}</div>
@@ -293,14 +290,12 @@ export default function EnhancedServicesShowcase2025() {
         <div className="flex flex-col space-y-3">
           <Link
             to={service.link}
-            className="btn-neon text-sm py-2 px-4"
-          >
+            className="btn-neon text-sm py-2 px-4">
             Learn More
           </Link>
           <Link
             to="/contact"
-            className="btn-neon-cyan text-sm py-2 px-4"
-          >
+            className="btn-neon-cyan text-sm py-2 px-4">
             Get Started
           </Link>
         </div>
@@ -323,7 +318,7 @@ export default function EnhancedServicesShowcase2025() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold font-orbitron mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -362,14 +357,12 @@ export default function EnhancedServicesShowcase2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="btn-neon-cyan text-lg px-8 py-4"
-              >
+                className="btn-neon-cyan text-lg px-8 py-4">
                 Get Started Today
               </Link>
               <Link
                 to="/about"
-                className="btn-neon text-lg px-8 py-4"
-              >
+                className="btn-neon text-lg px-8 py-4">
                 Learn More
               </Link>
             </div>
@@ -400,8 +393,7 @@ export default function EnhancedServicesShowcase2025() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                >
+                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20">
                   {categories.map(category => (
                     <option key={category} value={category}>
                       {category === 'all' ? 'All Categories' : category}
@@ -415,8 +407,7 @@ export default function EnhancedServicesShowcase2025() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
-                >
+                  className="px-3 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20">
                   <option value="featured">Featured</option>
                   <option value="popular">Popular</option>
                   <option value="new">New</option>
@@ -482,17 +473,16 @@ export default function EnhancedServicesShowcase2025() {
             ) : (
               <motion.div
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                transition={{ duration: 0.5     }}
               >
                 <Search className="w-16 h-16 text-gray-500 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-400 mb-2">No services found</h3>
                 <p className="text-gray-500">Try adjusting your search criteria or browse all services.</p>
                 <Link
                   to="/services"
-                  className="btn-neon-cyan mt-4 inline-block"
-                >
+                  className="btn-neon-cyan mt-4 inline-block">
                   Browse All Services
                 </Link>
               </motion.div>
@@ -507,8 +497,8 @@ export default function EnhancedServicesShowcase2025() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold font-orbitron mb-6">
               Ready to Transform Your Business?
@@ -535,14 +525,12 @@ export default function EnhancedServicesShowcase2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="btn-neon-cyan text-lg px-8 py-4"
-              >
+                className="btn-neon-cyan text-lg px-8 py-4">
                 Schedule a Consultation
               </Link>
               <Link
                 to="/pricing"
-                className="btn-neon text-lg px-8 py-4"
-              >
+                className="btn-neon text-lg px-8 py-4">
                 View Pricing
               </Link>
             </div>

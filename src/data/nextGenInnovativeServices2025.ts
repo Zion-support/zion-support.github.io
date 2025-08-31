@@ -17,18 +17,17 @@ export interface NextGenInnovativeService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
   demoUrl?: string;
@@ -37,8 +36,7 @@ export interface NextGenInnovativeService {
 
 export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   // Quantum Computing Solutions
-  {
-    id: "quantum-ai-orchestrator",
+  { id: "quantum-ai-orchestrator",
     title: "Quantum AI Orchestrator",
     description: "Revolutionary quantum computing platform that orchestrates AI workloads across quantum and classical computing resources for unprecedented performance.",
     category: "Quantum Computing",
@@ -85,13 +83,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$15,999 - $49,999/month",
     roi: "500-1000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Qiskit", "Cirq", "PennyLane", "Python", "CUDA"],
+    technicalSpecs: { technology: ["Qiskit", "Cirq", "PennyLane", "Python", "CUDA"],
       integrations: ["AWS Braket", "Azure Quantum", "Google Quantum", "IBM Quantum", "D-Wave"],
       apiEndpoints: 500,
       uptime: "99.95%",
@@ -104,8 +100,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Autonomous AI Agents
-  {
-    id: "autonomous-ai-agent-framework",
+  { id: "autonomous-ai-agent-framework",
     title: "Autonomous AI Agent Framework",
     description: "Next-generation framework for building, deploying, and managing autonomous AI agents that can operate independently across complex business environments.",
     category: "AI & Automation",
@@ -152,13 +147,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$4,999 - $19,999/month",
     roi: "300-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "Zapier", "Slack", "Microsoft Teams", "Slack"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -171,8 +164,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Edge AI Computing Platform
-  {
-    id: "edge-ai-computing-platform",
+  { id: "edge-ai-computing-platform",
     title: "Edge AI Computing Platform",
     description: "Revolutionary edge computing platform that brings AI processing to the edge, enabling real-time decision making in IoT devices and edge locations.",
     category: "Edge Computing",
@@ -219,13 +211,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$7,999 - $24,999/month",
     roi: "400-800%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow Lite", "ONNX Runtime", "Docker", "Kubernetes", "MQTT", "WebRTC"],
+    technicalSpecs: { technology: ["TensorFlow Lite", "ONNX Runtime", "Docker", "Kubernetes", "MQTT", "WebRTC"],
       integrations: ["AWS IoT", "Azure IoT", "Google Cloud IoT", "IBM Watson IoT", "Cisco IoT"],
       apiEndpoints: 300,
       uptime: "99.95%",
@@ -238,8 +228,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Blockchain AI Integration Platform
-  {
-    id: "blockchain-ai-integration-platform",
+  { id: "blockchain-ai-integration-platform",
     title: "Blockchain AI Integration Platform",
     description: "Innovative platform that seamlessly integrates AI capabilities with blockchain technology for secure, transparent, and intelligent decentralized applications.",
     category: "Blockchain & AI",
@@ -286,13 +275,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$12,999 - $39,999/month",
     roi: "600-1200%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Ethereum", "Solana", "Polygon", "TensorFlow", "PyTorch", "Web3.js"],
+    technicalSpecs: { technology: ["Ethereum", "Solana", "Polygon", "TensorFlow", "PyTorch", "Web3.js"],
       integrations: ["MetaMask", "WalletConnect", "Uniswap", "OpenSea", "Chainlink"],
       apiEndpoints: 400,
       uptime: "99.9%",
@@ -305,8 +292,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Cybersecurity AI Platform
-  {
-    id: "cybersecurity-ai-platform",
+  { id: "cybersecurity-ai-platform",
     title: "Cybersecurity AI Platform",
     description: "Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.",
     category: "Cybersecurity",
@@ -353,13 +339,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$9,999 - $29,999/month",
     roi: "500-1000%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker", "Kubernetes"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker", "Kubernetes"],
       integrations: ["SIEM systems", "EDR solutions", "Firewalls", "Identity providers", "Cloud platforms"],
       apiEndpoints: 250,
       uptime: "99.99%",
@@ -372,8 +356,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Healthcare AI Platform
-  {
-    id: "healthcare-ai-platform",
+  { id: "healthcare-ai-platform",
     title: "Healthcare AI Platform",
     description: "Comprehensive AI platform designed specifically for healthcare, offering diagnostic assistance, patient monitoring, and predictive analytics.",
     category: "Healthcare",
@@ -420,13 +403,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$14,999 - $49,999/month",
     roi: "800-1500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "Python", "React"],
+    technicalSpecs: { technology: ["TensorFlow", "PyTorch", "DICOM", "HL7 FHIR", "Python", "React"],
       integrations: ["PACS systems", "EHR platforms", "Medical devices", "Telemedicine platforms", "Lab systems"],
       apiEndpoints: 300,
       uptime: "99.99%",
@@ -439,8 +420,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Financial AI Trading Platform
-  {
-    id: "financial-ai-trading-platform",
+  { id: "financial-ai-trading-platform",
     title: "Financial AI Trading Platform",
     description: "Advanced AI-powered trading platform that provides algorithmic trading, risk management, and market prediction capabilities for financial institutions.",
     category: "Financial Services",
@@ -487,13 +467,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$19,999 - $59,999/month",
     roi: "1000-2000%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Kafka"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "Redis", "PostgreSQL", "Kafka"],
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -506,8 +484,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Manufacturing AI Platform
-  {
-    id: "manufacturing-ai-platform",
+  { id: "manufacturing-ai-platform",
     title: "Manufacturing AI Platform",
     description: "Comprehensive AI platform for manufacturing optimization, predictive maintenance, quality control, and supply chain management.",
     category: "Manufacturing",
@@ -554,13 +531,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$11,999 - $34,999/month",
     roi: "600-1200%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "OPC UA", "MQTT", "PLC integration"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "OPC UA", "MQTT", "PLC integration"],
       integrations: ["SAP", "Oracle", "Siemens", "Rockwell", "ABB", "Schneider Electric"],
       apiEndpoints: 400,
       uptime: "99.95%",
@@ -573,8 +548,7 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
   },
 
   // Retail AI Platform
-  {
-    id: "retail-ai-platform",
+  { id: "retail-ai-platform",
     title: "Retail AI Platform",
     description: "AI-powered retail platform offering personalized recommendations, inventory optimization, customer analytics, and omnichannel experiences.",
     category: "Retail",
@@ -621,13 +595,11 @@ export const NEXT_GEN_INNOVATIVE_SERVICES_2025: NextGenInnovativeService[] = [
     marketPrice: "$8,999 - $24,999/month",
     roi: "400-800%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL", "Redis"],
       integrations: ["Shopify", "WooCommerce", "Magento", "Salesforce", "HubSpot", "Google Analytics"],
       apiEndpoints: 300,
       uptime: "99.9%",

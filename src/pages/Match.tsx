@@ -55,8 +55,7 @@ const Match: React.FC = () => {
   ];
 
   const matchedServices = [
-    {
-      id: 1,
+    { id: 1,
       name: "AI Business Intelligence",
       category: "ai",
       description: "Transform raw data into actionable insights with our advanced AI-powered analytics platform.",
@@ -68,8 +67,7 @@ const Match: React.FC = () => {
       icon: Brain,
       featured: true
     },
-    {
-      id: 2,
+    { id: 2,
       name: "Cloud DevOps Automation",
       category: "cloud",
       description: "Streamline your development and operations with intelligent automation and CI/CD pipelines.",
@@ -81,8 +79,7 @@ const Match: React.FC = () => {
       icon: Cloud,
       featured: false
     },
-    {
-      id: 3,
+    { id: 3,
       name: "AI Cybersecurity Platform",
       category: "security",
       description: "Protect your digital assets with AI-powered threat detection and response systems.",
@@ -94,8 +91,7 @@ const Match: React.FC = () => {
       icon: Shield,
       featured: true
     },
-    {
-      id: 4,
+    { id: 4,
       name: "Data Analytics Suite",
       category: "data",
       description: "Unlock the full potential of your data with advanced analytics and business intelligence.",
@@ -107,8 +103,7 @@ const Match: React.FC = () => {
       icon: Database,
       featured: false
     },
-    {
-      id: 5,
+    { id: 5,
       name: "IoT Edge Computing",
       category: "iot",
       description: "Build and deploy intelligent IoT solutions with edge computing capabilities.",
@@ -120,8 +115,7 @@ const Match: React.FC = () => {
       icon: Cpu,
       featured: false
     },
-    {
-      id: 6,
+    { id: 6,
       name: "AI Workflow Automation",
       category: "ai",
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
@@ -157,9 +151,8 @@ const Match: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
                 <Sparkles className="w-8 h-8 text-white" />
@@ -182,15 +175,13 @@ const Match: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Get Matched
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                 Browse All Services
               </Link>
             </div>
@@ -244,9 +235,8 @@ const Match: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Your <span className="text-cyan-400">Perfect Matches</span>
             </h2>
@@ -321,14 +311,12 @@ const Match: React.FC = () => {
                 <div className="flex gap-2">
                   <Link
                     to={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"
-                  >
+                    className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
                     Learn More
                   </Link>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-                  >
+                    className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                     Contact
                   </Link>
                 </div>
@@ -338,10 +326,9 @@ const Match: React.FC = () => {
 
           {filteredServices.length === 0 && (
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-center py-16"
-            >
+              initial={{ opacity: 0     }}
+              animate={{ opacity: 1     }}
+              className="text-center py-16">
               <div className="w-24 h-24 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-12 h-12 text-slate-400" />
               </div>
@@ -351,8 +338,7 @@ const Match: React.FC = () => {
               </p>
               <Link
                 to="/services"
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover:bg-cyan-400 transition-all duration-200"
-              >
+                className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover:bg-cyan-400 transition-all duration-200">
                 Browse All Services
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -367,9 +353,8 @@ const Match: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               How Our <span className="text-cyan-400">AI Matcher</span> Works
             </h2>
@@ -381,20 +366,17 @@ const Match: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {[
-              {
-                step: "01",
+              { step: "01",
                 title: "Analyze Your Needs",
                 description: "Our AI analyzes your business profile, industry, and specific requirements.",
                 icon: Brain
               },
-              {
-                step: "02",
+              { step: "02",
                 title: "Match with Services",
                 description: "We match you with services that best fit your needs and budget.",
                 icon: Target
               },
-              {
-                step: "03",
+              { step: "03",
                 title: "Get Recommendations",
                 description: "Receive personalized recommendations with match scores and detailed analysis.",
                 icon: Sparkles
@@ -405,8 +387,7 @@ const Match: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <step.icon className="w-10 h-10 text-cyan-400" />
                 </div>
@@ -425,7 +406,7 @@ const Match: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Find Your Perfect Match?
@@ -438,15 +419,13 @@ const Match: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Matching
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                 Browse All Services
               </Link>
             </div>

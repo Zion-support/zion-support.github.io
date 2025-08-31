@@ -5,43 +5,37 @@ export default function Categories() {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const mainCategories = [
-    {
-      id: 'all',
+    { id: 'all',
       name: 'All Categories',
       icon: <Globe className="w-8 h-8" />,
       color: 'from-zion-cyan to-zion-blue',
       count: 0
     },
-    {
-      id: 'ai-ml',
+    { id: 'ai-ml',
       name: 'AI & Machine Learning',
       icon: <Brain className="w-8 h-8" />,
       color: 'from-zion-purple to-zion-pink',
       count: 45
     },
-    {
-      id: 'cloud',
+    { id: 'cloud',
       name: 'Cloud & Infrastructure',
       icon: <Cloud className="w-8 h-8" />,
       color: 'from-zion-blue to-zion-cyan',
       count: 32
     },
-    {
-      id: 'cybersecurity',
+    { id: 'cybersecurity',
       name: 'Cybersecurity',
       icon: <Shield className="w-8 h-8" />,
       color: 'from-zion-red to-zion-orange',
       count: 28
     },
-    {
-      id: 'data',
+    { id: 'data',
       name: 'Data & Analytics',
       icon: <BarChart3 className="w-8 h-8" />,
       color: 'from-zion-green to-zion-emerald',
       count: 36
     },
-    {
-      id: 'development',
+    { id: 'development',
       name: 'Development',
       icon: <Code className="w-8 h-8" />,
       color: 'from-zion-indigo to-zion-purple',
@@ -51,32 +45,28 @@ export default function Categories() {
 
   const subCategories = {
     'ai-ml': [
-      {
-        name: 'Natural Language Processing',
+      { name: 'Natural Language Processing',
         description: 'Text analysis, language models, and conversational AI',
         icon: <Brain className="w-6 h-6" />,
         services: 12,
         talent: 8,
         equipment: 3
       },
-      {
-        name: 'Computer Vision',
+      { name: 'Computer Vision',
         description: 'Image recognition, object detection, and visual AI',
         icon: <Eye className="w-6 h-6" />,
         services: 9,
         talent: 6,
         equipment: 4
       },
-      {
-        name: 'Machine Learning Platforms',
+      { name: 'Machine Learning Platforms',
         description: 'ML model training, deployment, and management',
         icon: <Cpu className="w-6 h-6" />,
         services: 15,
         talent: 12,
         equipment: 7
       },
-      {
-        name: 'AI Consulting',
+      { name: 'AI Consulting',
         description: 'Strategic AI implementation and optimization',
         icon: <Target className="w-6 h-6" />,
         services: 8,
@@ -85,24 +75,21 @@ export default function Categories() {
       }
     ],
     'cloud': [
-      {
-        name: 'Cloud Migration',
+      { name: 'Cloud Migration',
         description: 'Legacy system migration and cloud transformation',
         icon: <Rocket className="w-6 h-6" />,
         services: 11,
         talent: 7,
         equipment: 2
       },
-      {
-        name: 'DevOps & CI/CD',
+      { name: 'DevOps & CI/CD',
         description: 'Automated deployment and infrastructure management',
         icon: <Zap className="w-6 h-6" />,
         services: 14,
         talent: 9,
         equipment: 3
       },
-      {
-        name: 'Serverless Computing',
+      { name: 'Serverless Computing',
         description: 'Event-driven and serverless architecture',
         icon: <Cloud className="w-6 h-6" />,
         services: 7,
@@ -111,24 +98,21 @@ export default function Categories() {
       }
     ],
     'cybersecurity': [
-      {
-        name: 'Threat Detection',
+      { name: 'Threat Detection',
         description: 'Advanced threat detection and response systems',
         icon: <Shield className="w-6 h-6" />,
         services: 13,
         talent: 8,
         equipment: 5
       },
-      {
-        name: 'Compliance & Governance',
+      { name: 'Compliance & Governance',
         description: 'Security compliance and policy management',
         icon: <Lock className="w-6 h-6" />,
         services: 9,
         talent: 6,
         equipment: 2
       },
-      {
-        name: 'Penetration Testing',
+      { name: 'Penetration Testing',
         description: 'Security assessment and vulnerability testing',
         icon: <Target className="w-6 h-6" />,
         services: 6,
@@ -137,24 +121,21 @@ export default function Categories() {
       }
     ],
     'data': [
-      {
-        name: 'Business Intelligence',
+      { name: 'Business Intelligence',
         description: 'Data visualization and business analytics',
         icon: <BarChart3 className="w-6 h-6" />,
         services: 18,
         talent: 11,
         equipment: 4
       },
-      {
-        name: 'Big Data Processing',
+      { name: 'Big Data Processing',
         description: 'Large-scale data processing and analytics',
         icon: <Database className="w-6 h-6" />,
         services: 12,
         talent: 8,
         equipment: 6
       },
-      {
-        name: 'Data Engineering',
+      { name: 'Data Engineering',
         description: 'Data pipeline development and ETL processes',
         icon: <Network className="w-6 h-6" />,
         services: 6,
@@ -163,24 +144,21 @@ export default function Categories() {
       }
     ],
     'development': [
-      {
-        name: 'Web Development',
+      { name: 'Web Development',
         description: 'Frontend and backend web applications',
         icon: <Code className="w-6 h-6" />,
         services: 22,
         talent: 15,
         equipment: 3
       },
-      {
-        name: 'Mobile Development',
+      { name: 'Mobile Development',
         description: 'iOS and Android mobile applications',
         icon: <Smartphone className="w-6 h-6" />,
         services: 16,
         talent: 12,
         equipment: 2
       },
-      {
-        name: 'API Development',
+      { name: 'API Development',
         description: 'RESTful APIs and microservices',
         icon: <Network className="w-6 h-6" />,
         services: 13,
@@ -191,24 +169,21 @@ export default function Categories() {
   };
 
   const featuredItems = [
-    {
-      type: 'service',
+    { type: 'service',
       title: 'AI-Powered Business Intelligence Platform',
       category: 'AI & Machine Learning',
       rating: 4.9,
       price: '$2,500/month',
       featured: true
     },
-    {
-      type: 'talent',
+    { type: 'talent',
       title: 'Senior AI Engineer',
       category: 'AI & Machine Learning',
       rating: 4.8,
       price: '$150/hour',
       featured: true
     },
-    {
-      type: 'equipment',
+    { type: 'equipment',
       title: 'High-Performance GPU Cluster',
       category: 'AI & Machine Learning',
       rating: 4.7,
@@ -292,8 +267,7 @@ export default function Categories() {
               {subCategories[activeCategory].map((subCategory, index) => (
                 <div
                   key={index}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-                >
+                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow">
                   <div className="text-zion-cyan mb-4">{subCategory.icon}</div>
                   <h3 className="text-lg font-semibold text-white mb-2">{subCategory.name}</h3>
                   <p className="text-zion-slate-light text-sm mb-4">{subCategory.description}</p>
@@ -329,8 +303,7 @@ export default function Categories() {
             {featuredItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
+                className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow">
                 {item.featured && (
                   <div className="inline-block bg-zion-cyan text-zion-slate-dark px-3 py-1 rounded-full text-xs font-medium mb-4">
                     Featured
@@ -368,14 +341,12 @@ export default function Categories() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="/search"
-              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
-            >
+              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
               Advanced Search
             </a>
             <a 
               href="/contact"
-              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors"
-            >
+              className="border border-zion-cyan text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan hover:text-zion-slate-dark transition-colors">
               Contact Us
             </a>
           </div>

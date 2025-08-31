@@ -85,8 +85,7 @@ import { SEO } from '../components/SEO';
 
 export default function ComprehensiveServicesShowcase2031() {
   const featuredServices = [
-    {
-      id: "ai-quantum-hybrid-platform",
+    { id: "ai-quantum-hybrid-platform",
       name: "AI Quantum Hybrid Platform",
       description: "Revolutionary AI-Quantum hybrid computing platform combining quantum computing with artificial intelligence",
       icon: Atom,
@@ -97,8 +96,7 @@ export default function ComprehensiveServicesShowcase2031() {
       category: "AI & Quantum Computing",
       featured: true
     },
-    {
-      id: "ai-autonomous-research-assistant",
+    { id: "ai-autonomous-research-assistant",
       name: "AI Autonomous Research Assistant",
       description: "AI-powered research automation platform that discovers, analyzes, and synthesizes research autonomously",
       icon: Search,
@@ -109,8 +107,7 @@ export default function ComprehensiveServicesShowcase2031() {
       category: "AI & Research",
       featured: true
     },
-    {
-      id: "ai-cybersecurity-threat-intelligence",
+    { id: "ai-cybersecurity-threat-intelligence",
       name: "AI Cybersecurity Threat Intelligence",
       description: "Revolutionary AI-powered cybersecurity platform that detects, analyzes, and responds to cyber threats in real-time",
       icon: Shield,
@@ -121,8 +118,7 @@ export default function ComprehensiveServicesShowcase2031() {
       category: "AI & Cybersecurity",
       featured: true
     },
-    {
-      id: "ai-business-intelligence",
+    { id: "ai-business-intelligence",
       name: "AI Business Intelligence",
       description: "Advanced AI-powered business intelligence and analytics platform for data-driven decision making",
       icon: Brain,
@@ -133,8 +129,7 @@ export default function ComprehensiveServicesShowcase2031() {
       category: "AI & Analytics",
       featured: true
     },
-    {
-      id: "ai-financial-analytics",
+    { id: "ai-financial-analytics",
       name: "AI Financial Analytics",
       description: "Intelligent financial analysis and forecasting platform powered by advanced AI algorithms",
       icon: TrendingUp,
@@ -145,8 +140,7 @@ export default function ComprehensiveServicesShowcase2031() {
       category: "AI & Finance",
       featured: true
     },
-    {
-      id: "ai-marketing-automation",
+    { id: "ai-marketing-automation",
       name: "AI Marketing Automation",
       description: "Intelligent marketing automation platform that personalizes campaigns and optimizes ROI",
       icon: Target,
@@ -160,8 +154,7 @@ export default function ComprehensiveServicesShowcase2031() {
   ];
 
   const serviceCategories = [
-    {
-      title: "AI & Machine Learning",
+    { title: "AI & Machine Learning",
       icon: Brain,
       color: "from-purple-500 to-cyan-500",
       services: [
@@ -173,8 +166,7 @@ export default function ComprehensiveServicesShowcase2031() {
         "AI HR Platform"
       ]
     },
-    {
-      title: "Quantum Computing",
+    { title: "Quantum Computing",
       icon: Atom,
       color: "from-indigo-500 to-purple-500",
       services: [
@@ -184,8 +176,7 @@ export default function ComprehensiveServicesShowcase2031() {
         "Quantum Cryptography"
       ]
     },
-    {
-      title: "Cybersecurity",
+    { title: "Cybersecurity",
       icon: Shield,
       color: "from-red-500 to-orange-500",
       services: [
@@ -195,8 +186,7 @@ export default function ComprehensiveServicesShowcase2031() {
         "DSR Privacy Portal"
       ]
     },
-    {
-      title: "Research & Analytics",
+    { title: "Research & Analytics",
       icon: Search,
       color: "from-blue-500 to-cyan-500",
       services: [
@@ -206,8 +196,7 @@ export default function ComprehensiveServicesShowcase2031() {
         "Predictive Analytics"
       ]
     },
-    {
-      title: "Cloud & Infrastructure",
+    { title: "Cloud & Infrastructure",
       icon: Cloud,
       color: "from-cyan-500 to-blue-500",
       services: [
@@ -217,8 +206,7 @@ export default function ComprehensiveServicesShowcase2031() {
         "IoT Edge Computing"
       ]
     },
-    {
-      title: "Micro SaaS Solutions",
+    { title: "Micro SaaS Solutions",
       icon: ShoppingCart,
       color: "from-orange-500 to-red-500",
       services: [
@@ -240,8 +228,7 @@ export default function ComprehensiveServicesShowcase2031() {
   ];
 
   const pricingTiers = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$299",
       period: "monthly",
       description: "Perfect for small businesses and startups",
@@ -252,8 +239,7 @@ export default function ComprehensiveServicesShowcase2031() {
         "Basic analytics"
       ]
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$799",
       period: "monthly",
       description: "Advanced features for growing organizations",
@@ -265,8 +251,7 @@ export default function ComprehensiveServicesShowcase2031() {
         "API access"
       ]
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$1,999",
       period: "monthly",
       description: "Full-scale solutions for large enterprises",
@@ -294,9 +279,8 @@ export default function ComprehensiveServicesShowcase2031() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+            transition={{ duration: 0.8     }}
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 text-purple-300 text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2" />
               Revolutionary Technology Solutions 2031
@@ -315,19 +299,16 @@ export default function ComprehensiveServicesShowcase2031() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
-            >
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all">
               Get Started Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a
               href="#pricing"
-              className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
-            >
+              className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors">
               View Pricing
             </a>
           </motion.div>
@@ -340,10 +321,9 @@ export default function ComprehensiveServicesShowcase2031() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Revolutionary Featured Services
             </h2>
@@ -360,9 +340,8 @@ export default function ComprehensiveServicesShowcase2031() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all group"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all group">
                 <div className="flex items-center justify-between mb-4">
                   <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center`}>
                     <service.icon className="w-6 h-6 text-white" />
@@ -400,8 +379,7 @@ export default function ComprehensiveServicesShowcase2031() {
                 
                 <a
                   href={service.href}
-                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all group-hover:scale-105"
-                >
+                  className="w-full inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-medium rounded-lg transition-all group-hover:scale-105">
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </a>
@@ -417,10 +395,9 @@ export default function ComprehensiveServicesShowcase2031() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Comprehensive Service Categories
             </h2>
@@ -437,9 +414,8 @@ export default function ComprehensiveServicesShowcase2031() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all">
                 <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mb-4`}>
                   <category.icon className="w-6 h-6 text-white" />
                 </div>
@@ -464,10 +440,9 @@ export default function ComprehensiveServicesShowcase2031() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Transparent Pricing Plans
             </h2>
@@ -484,7 +459,7 @@ export default function ComprehensiveServicesShowcase2031() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
                   index === 1 ? 'border-purple-500/50 bg-purple-500/10' : 'border-white/10'
                 } hover:border-purple-500/50 transition-all`}
@@ -534,10 +509,9 @@ export default function ComprehensiveServicesShowcase2031() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
@@ -554,9 +528,8 @@ export default function ComprehensiveServicesShowcase2031() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
+                viewport={{ once: true     }}
+                className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">
                   <CheckCircle className="w-5 h-5 text-purple-400" />
                 </div>
@@ -573,8 +546,8 @@ export default function ComprehensiveServicesShowcase2031() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -586,15 +559,13 @@ export default function ComprehensiveServicesShowcase2031() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-semibold rounded-lg transition-all">
                 Start Your Transformation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
-              >
+                className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors">
                 <Phone className="mr-2 w-5 h-5" />
                 Call +1 302 464 0950
               </a>

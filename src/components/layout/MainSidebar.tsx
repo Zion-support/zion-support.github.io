@@ -233,19 +233,16 @@ import { Home,
   RefreshCw
  } from 'lucide-react.ts';
 
-interface MainSidebarProps extends React.PropsWithChildren<{}> {
+interface MainSidebarProps extends React.PropsWithChildren<{}> { isOpen: boolean;
+  onClose: () => void;
 
-  isOpen: anyboolean;
-  onClose: ()  => void;
+    }
 
-}
-
-export function MainSidebar(...args: any[]): any {
-  const location = useLocation();
+export function MainSidebar() { 
+  const location = useLocation()
 
   const navigationItems = [
-    {
-      title: 'Main',
+    { title: 'Main',
       items: [
         { name: 'Home', href: '/', icon: Home },
         { name: 'About', href: '/about', icon: Building },
@@ -260,8 +257,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Blog', href: '/blog', icon: FileText },
       ]
     },
-    {
-      title: 'AI & Innovation Services',
+    { title: 'AI & Innovation Services',
       items: [
         { name: 'AI & Automation', href: '/services/ai-automation', icon: Brain },
         { name: 'AI & Healthcare', href: '/services/ai-healthcare', icon: BrainIcon },
@@ -271,8 +267,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Natural Language Processing', href: '/services/nlp', icon: MessageSquare },
       ]
     },
-    {
-      title: 'Quantum & Advanced Computing',
+    { title: 'Quantum & Advanced Computing',
       items: [
         { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Edge Computing', href: '/services/edge-computing', icon: Server },
@@ -281,8 +276,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Parallel Processing', href: '/services/parallel-processing', icon: Layers },
       ]
     },
-    {
-      title: 'Blockchain & Security',
+    { title: 'Blockchain & Security',
       items: [
         { name: 'Blockchain Solutions', href: '/services/blockchain', icon: LinkIcon },
         { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield },
@@ -292,8 +286,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Compliance Management', href: '/services/compliance', icon: Award },
       ]
     },
-    {
-      title: 'Emerging Technologies',
+    { title: 'Emerging Technologies',
       items: [
         { name: 'Metaverse Solutions', href: '/services/metaverse', icon: Globe },
         { name: 'IoT Platforms', href: '/services/iot', icon: Wifi },
@@ -303,8 +296,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Space Technology', href: '/services/space-tech', icon: Satellite },
       ]
     },
-    {
-      title: 'Enterprise Solutions',
+    { title: 'Enterprise Solutions',
       items: [
         { name: 'Digital Transformation', href: '/services/digital-transformation', icon: Rocket },
         { name: 'Cloud Infrastructure', href: '/services/cloud', icon: Cloud },
@@ -314,8 +306,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Legacy Modernization', href: '/services/legacy-modernization', icon: RefreshCw },
       ]
     },
-    {
-      title: 'Hardware & Equipment',
+    { title: 'Hardware & Equipment',
       items: [
         { name: 'Computers & Laptops', href: '/equipment/computers', icon: Laptop },
         { name: 'Mobile Devices', href: '/equipment/mobile', icon: Smartphone },
@@ -325,8 +316,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Peripherals', href: '/equipment/peripherals', icon: Printer },
       ]
     },
-    {
-      title: 'Talent & Community',
+    { title: 'Talent & Community',
       items: [
         { name: 'Find Talent', href: '/talent', icon: Users },
         { name: 'AI Hiring Platform', href: '/zion-hire-ai', icon: Brain },
@@ -336,8 +326,7 @@ export function MainSidebar(...args: any[]): any {
         { name: 'Certifications', href: '/certifications', icon: Award },
       ]
     },
-    {
-      title: 'Resources & Support',
+    { title: 'Resources & Support',
       items: [
         { name: 'Help Center', href: '/help', icon: HelpCircle },
         { name: 'Developer Portal', href: '/developers', icon: Code },
@@ -350,20 +339,17 @@ export function MainSidebar(...args: any[]): any {
   ];
 
   const contactInfo = [
-    { 
-      icon: Phone, 
+    { icon: Phone, 
       text: '+1 302 464 0950', 
       href: 'tel:+13024640950',
-      description: 'Call us anytime'
+      description: 'Call us time'
     },
-    { 
-      icon: Mail, 
+    { icon: Mail, 
       text: 'kleber@ziontechgroup.com', 
       href: 'mailto:kleber@ziontechgroup.com',
       description: 'Email us for support'
     },
-    { 
-      icon: MapPin, 
+    { icon: MapPin, 
       text: '364 E Main St STE 1008 Middletown DE 19709', 
       href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
       description: 'Headquarters location'
@@ -408,8 +394,7 @@ export function MainSidebar(...args: any[]): any {
             </div>
             <button
               onClick={onClose}
-              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-            >
+              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
@@ -482,8 +467,7 @@ export function MainSidebar(...args: any[]): any {
                     href={contact.href}
                     target={contact.href.startsWith('http') ? '_blank' : undefined}
                     rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="flex items-start gap-3 p-3 glass rounded-lg border border-white/20 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-200 group"
-                  >
+                    className="flex items-start gap-3 p-3 glass rounded-lg border border-white/20 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-200 group">
                     <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
                       <IconComponent className="w-4 h-4 text-white" />
                     </div>
@@ -506,8 +490,7 @@ export function MainSidebar(...args: any[]): any {
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-200 transform hover:scale-105"
-              >
+                className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-200 transform hover:scale-105">
                 <Globe className="w-4 h-4" />
                 Visit Website
               </a>

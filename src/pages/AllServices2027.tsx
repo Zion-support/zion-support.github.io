@@ -44,38 +44,30 @@ const AllServices2027: React.FC = () => {
 
   const getCategoryStats = (categoryId: string) => {
     if (categoryId === 'All') {
-      return {
-              count: innovativeServices2027.length,
+      return { count: innovativeServices2027.length,
       avgPrice: Math.round(innovativeServices2027.reduce((sum, s) => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / innovativeServices2027.length),
       avgRating: Math.round((innovativeServices2027.reduce((sum, s) => sum + s.rating, 0) / innovativeServices2027.length) * 10) / 10
       };
     }
     const services = innovativeServices2027.filter(s => s.category === categoryId);
-          return {
-        count: services.length,
+          return { count: services.length,
         avgPrice: Math.round(services.reduce((sum, s) => sum + parseInt(s.price.replace(/[$,]/g, '').split('/')[0]), 0) / services.length),
         avgRating: Math.round((services.reduce((sum, s) => sum + s.rating, 0) / services.length) * 10) / 10
       };
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
+  const itemVariants = { hidden: { y: 20, opacity: 0 },
+    visible: { y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5
+          }
     }
   };
 
@@ -96,7 +88,7 @@ const AllServices2027: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               All Services 2027
@@ -108,14 +100,12 @@ const AllServices2027: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/comprehensive-pricing-2027" 
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 View Pricing
               </Link>
               <Link 
                 to="/contact" 
-                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 Get Started
               </Link>
             </div>
@@ -166,8 +156,7 @@ const AllServices2027: React.FC = () => {
                   className={`bg-zion-slate-dark border border-zion-slate-light rounded-xl p-6 hover:border-cyan-500 transition-all duration-300 cursor-pointer ${
                     selectedCategory === category.id ? 'border-cyan-500 bg-zion-slate' : ''
                   }`}
-                  onClick={() => setSelectedCategory(category.id)}
-                >
+                  onClick={() => setSelectedCategory(category.id)}>
                   <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -209,8 +198,7 @@ const AllServices2027: React.FC = () => {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (
               <ServiceCard key={service.id} service={service} />
             ))}
@@ -242,8 +230,7 @@ const AllServices2027: React.FC = () => {
             {/* AI Services */}
             <motion.div
               variants={itemVariants}
-              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
-            >
+              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
                   <Brain className="w-6 h-6 text-white" />
@@ -273,8 +260,7 @@ const AllServices2027: React.FC = () => {
             {/* Cybersecurity */}
             <motion.div
               variants={itemVariants}
-              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light"
-            >
+              className="bg-zion-slate-dark rounded-xl p-8 border border-zion-slate-light">
               <div className="flex items-center space-x-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center">
                   <Shield className="w-6 h-6 text-white" />
@@ -317,15 +303,13 @@ const AllServices2027: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-4 bg-white text-cyan-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
               <span>Get Started Today</span>
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <a
               href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300"
-            >
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-cyan-600 transition-all duration-300">
               <Phone className="w-5 h-5 mr-2" />
               Call Now
             </a>
@@ -337,7 +321,7 @@ const AllServices2027: React.FC = () => {
 };
 
 // Service Card Component
-const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
+const ServiceCard: React.FC = ({ service }) => {
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI Services':
@@ -358,8 +342,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
   return (
     <motion.div
       variants={itemVariants}
-      className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden hover:border-cyan-500 transition-all duration-300"
-    >
+      className="bg-zion-slate border border-zion-slate-light rounded-xl overflow-hidden hover:border-cyan-500 transition-all duration-300">
       {/* Service Image */}
       <div className="relative h-48 overflow-hidden">
         <img
@@ -392,8 +375,7 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
             {service.features.slice(0, 2).map((feature: string, index: number) => (
               <span
                 key={index}
-                className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300"
-              >
+                className="inline-flex items-center space-x-1 bg-zion-slate-dark px-2 py-1 rounded text-xs text-cyan-300">
                 <CheckCircle className="w-3 h-3" />
                 <span>{feature}</span>
               </span>
@@ -416,15 +398,13 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
         <div className="flex space-x-3">
           <Link
             to={service.website}
-            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
-          >
+            className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center py-3 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2">
             <span>Learn More</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             to="/contact"
-            className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300"
-          >
+            className="px-4 py-3 border border-cyan-500 text-cyan-400 rounded-lg font-medium hover:bg-cyan-500 hover:text-white transition-all duration-300">
             Contact
           </Link>
         </div>

@@ -8,27 +8,24 @@ interface PerformanceMetrics {
   cls: number | null; // Cumulative Layout Shift
   ttfb: number | null; // Time to First Byte
   fmp: number | null; // First Meaningful Paint
-}
+    }
 
 interface PerformanceScore {
   score: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   color: string;
-}
+    }
 
 const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-    fmp: null
-  });
+    fmp: null});
 
   const [isVisible, setIsVisible] = useState(false);
-  const [overallScore, setOverallScore] = useState<PerformanceScore>({
-    score: 0,
+  const [overallScore, setOverallScore] = useState<PerformanceScore>({ score: 0,
     rating: 'good',
     color: 'text-green-500'
   });
@@ -100,7 +97,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ entryTypes: ['paint']     });
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
@@ -110,7 +107,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         }
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint']     });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
@@ -122,7 +119,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           }
         });
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input']     });
 
       // Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
@@ -134,7 +131,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         });
         setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift']     });
 
       return () => {
         fcpObserver.disconnect();
@@ -210,8 +207,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         </h3>
         <button
           onClick={() => setIsVisible(false)}
-          className="text-zion-slate-light hover:text-white transition-colors"
-        >
+          className="text-zion-slate-light hover:text-white transition-colors">
           ×
         </button>
       </div>

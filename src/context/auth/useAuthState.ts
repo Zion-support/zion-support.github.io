@@ -1,7 +1,6 @@
 import { useState, useEffect  } from 'react.ts';
 
 interface User {
-
   id: string;
   email: string;
   displayName?: string;
@@ -11,25 +10,22 @@ interface User {
   createdAt?: string;
   updatedAt?: string;
 
-}
+    }
 
 interface AuthTokens {
-
   accessToken: string | null;
   refreshToken: string | null;
 
-}
+    }
 
-export const useAuthState: [any, React.Dispatch<React.SetStateAction<any>>] = () => {
-  const [user, setUser] = useState<any>(null);
+export const useAuthState: [, React.Dispatch<React.SetStateAction<>>] = () => {
+  const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
-  const [tokens, setTokens] = useState<any>({
-    accessToken: anynull,
-    refreshToken: null
-  });
+  const [tokens, setTokens] = useState<any>({ accessToken: null,
+    refreshToken: null});
 
-  useEffect(()  => {
+  useEffect(() => {
     // Check for existing auth state on mount
     const checkAuthState = async () => {
       try {
@@ -39,8 +35,7 @@ export const useAuthState: [any, React.Dispatch<React.SetStateAction<any>>] = ()
             const parsed = JSON.parse(auth);
             if (parsed.user && parsed.token) {
               setUser(parsed.user);
-              setTokens({
-                accessToken: parsed.token,
+              setTokens({ accessToken: parsed.token,
                 refreshToken: parsed.refreshToken || null
               });
             }

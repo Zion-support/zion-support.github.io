@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface MicroSaasService {
   id: number;
@@ -35,11 +35,10 @@ export interface MicroSaasService {
   useCases: string[];
   technologies: string[];
   compliance: string[];
-}
+    }
 
 // Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
+const zionContact: ServiceContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -47,8 +46,7 @@ const zionContact: ServiceContact = {
 
 // Innovative Micro SAAS Services 2030
 export const innovativeMicroSaasServices2030: MicroSaasService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "AI-Powered Legal Document Analysis Platform",
     category: "Legal Technology",
     pricing: "Professional",
@@ -103,8 +101,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["GDPR", "SOC 2", "HIPAA", "ISO 27001"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Quantum-Secure Supply Chain Optimization",
     category: "Supply Chain Management",
     pricing: "Enterprise",
@@ -159,8 +156,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["ISO 28000", "C-TPAT", "GDPR", "SOC 2"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "AI-Powered Healthcare Analytics Platform",
     category: "Healthcare Technology",
     pricing: "Premium",
@@ -215,8 +211,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["HIPAA", "HITECH", "SOC 2", "ISO 27001", "GDPR"]
   },
-  {
-    id: 4,
+  { id: 4,
     name: "AI-Driven Financial Trading Intelligence",
     category: "Financial Technology",
     pricing: "Enterprise",
@@ -271,8 +266,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["SEC", "FINRA", "SOX", "GDPR", "SOC 2"]
   },
-  {
-    id: 5,
+  { id: 5,
     name: "Sustainable Technology Optimization Platform",
     category: "Green Technology",
     pricing: "Professional",
@@ -327,8 +321,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["ISO 14001", "LEED", "BREEAM", "GRI", "SASB"]
   },
-  {
-    id: 6,
+  { id: 6,
     name: "Space Technology Analytics Platform",
     category: "Aerospace Technology",
     pricing: "Premium",
@@ -383,8 +376,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["ITAR", "EAR", "ISO 27001", "SOC 2"]
   },
-  {
-    id: 7,
+  { id: 7,
     name: "Quantum Machine Learning Platform",
     category: "Quantum Computing",
     pricing: "Enterprise",
@@ -439,8 +431,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["ISO 27001", "SOC 2", "Research ethics", "Data privacy"]
   },
-  {
-    id: 8,
+  { id: 8,
     name: "AI-Powered Cybersecurity Intelligence",
     category: "Cybersecurity",
     pricing: "Professional",
@@ -495,8 +486,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA"]
   },
-  {
-    id: 9,
+  { id: 9,
     name: "Autonomous Research Assistant Platform",
     category: "Research Automation",
     pricing: "Premium",
@@ -551,8 +541,7 @@ export const innovativeMicroSaasServices2030: MicroSaasService[] = [
     ],
     compliance: ["Research ethics", "Data privacy", "Academic standards", "Open access"]
   },
-  {
-    id: 10,
+  { id: 10,
     name: "IoT Edge Computing Intelligence Platform",
     category: "Internet of Things",
     pricing: "Enterprise",

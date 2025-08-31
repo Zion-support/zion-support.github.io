@@ -1,8 +1,7 @@
 // Innovative Micro SAAS Services for 2028 - Zion Tech Group
 export const innovativeServices2028 = [
   // AI-Powered Business Intelligence Services
-  {
-    id: 1,
+  { id: 1,
     name: "AI Business Intelligence Elite",
     category: "AI & Analytics",
     pricing: "Enterprise",
@@ -30,8 +29,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Enterprise companies", "Data-driven organizations", "C-level executives", "Business analysts"],
     tags: ["AI", "Business Intelligence", "Analytics", "Machine Learning", "Predictive Analytics"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-business-intelligence",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -46,8 +44,7 @@ export const innovativeServices2028 = [
   },
 
   // Autonomous AI Research Platform
-  {
-    id: 2,
+  { id: 2,
     name: "AI Autonomous Research Platform",
     category: "AI Research",
     pricing: "Research",
@@ -75,8 +72,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Research institutions", "Pharmaceutical companies", "Universities", "R&D departments"],
     tags: ["AI Research", "Autonomous Systems", "Scientific Discovery", "Machine Learning", "Research Automation"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-autonomous-research",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -91,8 +87,7 @@ export const innovativeServices2028 = [
   },
 
   // Quantum Computing Solutions
-  {
-    id: 3,
+  { id: 3,
     name: "Quantum Computing Solutions",
     category: "Quantum Technology",
     pricing: "Enterprise",
@@ -120,8 +115,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Financial institutions", "Pharmaceutical companies", "Logistics companies", "Government agencies"],
     tags: ["Quantum Computing", "Optimization", "Cryptography", "Machine Learning", "Innovation"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-computing",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -136,8 +130,7 @@ export const innovativeServices2028 = [
   },
 
   // Blockchain & Web3 Solutions
-  {
-    id: 4,
+  { id: 4,
     name: "Blockchain & Web3 Solutions",
     category: "Blockchain",
     pricing: "Custom",
@@ -165,8 +158,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Startups", "Financial institutions", "Gaming companies", "Art organizations"],
     tags: ["Blockchain", "Web3", "DeFi", "NFTs", "Smart Contracts", "DApps"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/blockchain-web3",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -181,8 +173,7 @@ export const innovativeServices2028 = [
   },
 
   // IoT & Edge Computing Platform
-  {
-    id: 5,
+  { id: 5,
     name: "IoT & Edge Computing Platform",
     category: "IoT & Edge",
     pricing: "Scalable",
@@ -210,8 +201,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Manufacturing companies", "Smart cities", "Healthcare providers", "Retail chains"],
     tags: ["IoT", "Edge Computing", "Real-time Analytics", "Device Management", "Predictive Maintenance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/iot-edge-computing",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -226,8 +216,7 @@ export const innovativeServices2028 = [
   },
 
   // Cybersecurity & Zero Trust Platform
-  {
-    id: 6,
+  { id: 6,
     name: "Cybersecurity Zero Trust Platform",
     category: "Cybersecurity",
     pricing: "Enterprise",
@@ -255,8 +244,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Financial institutions", "Healthcare providers", "Government agencies", "Enterprise companies"],
     tags: ["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cybersecurity-zero-trust",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -271,8 +259,7 @@ export const innovativeServices2028 = [
   },
 
   // AR/VR Development Platform
-  {
-    id: 7,
+  { id: 7,
     name: "AR/VR Development Platform",
     category: "AR/VR",
     pricing: "Custom",
@@ -300,8 +287,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Gaming companies", "Training organizations", "Real estate", "Healthcare providers"],
     tags: ["AR/VR", "3D Modeling", "Interactive Design", "Immersive Technology", "Virtual Training"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ar-vr-development",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -316,8 +302,7 @@ export const innovativeServices2028 = [
   },
 
   // FinTech Solutions Platform
-  {
-    id: 8,
+  { id: 8,
     name: "FinTech Solutions Platform",
     category: "FinTech",
     pricing: "Enterprise",
@@ -345,8 +330,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Banks", "Credit unions", "Investment firms", "FinTech startups"],
     tags: ["FinTech", "Payments", "Lending", "Investments", "Financial Analytics"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/fintech-solutions",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -361,8 +345,7 @@ export const innovativeServices2028 = [
   },
 
   // Green Technology Solutions
-  {
-    id: 9,
+  { id: 9,
     name: "Green Technology Solutions",
     category: "Green Tech",
     pricing: "Custom",
@@ -390,8 +373,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Manufacturing companies", "Energy providers", "Retail chains", "Government agencies"],
     tags: ["Green Technology", "Sustainability", "Energy Optimization", "Carbon Tracking", "Environmental Impact"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/green-technology",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -406,8 +388,7 @@ export const innovativeServices2028 = [
   },
 
   // 5G Network Optimization
-  {
-    id: 10,
+  { id: 10,
     name: "5G Network Optimization",
     category: "5G & Networking",
     pricing: "Enterprise",
@@ -435,8 +416,7 @@ export const innovativeServices2028 = [
     ],
     targetAudience: ["Telecom companies", "Enterprises", "Smart cities", "Industrial facilities"],
     tags: ["5G", "Network Optimization", "Telecommunications", "Smart Cities", "Network Performance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/5g-network-optimization",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -453,72 +433,63 @@ export const innovativeServices2028 = [
 
 // Service Categories for Navigation
 export const serviceCategories = [
-  {
-    id: "ai-ml",
+  { id: "ai-ml",
     name: "AI & Machine Learning",
     description: "Cutting-edge artificial intelligence and machine learning solutions",
     icon: "Brain",
     color: "from-purple-500 to-pink-500",
     services: [1, 2]
   },
-  {
-    id: "quantum",
+  { id: "quantum",
     name: "Quantum Technology",
     description: "Next-generation quantum computing solutions",
     icon: "Zap",
     color: "from-blue-500 to-cyan-500",
     services: [3]
   },
-  {
-    id: "blockchain",
+  { id: "blockchain",
     name: "Blockchain & Web3",
     description: "Decentralized solutions and blockchain technology",
     icon: "Lock",
     color: "from-green-500 to-emerald-500",
     services: [4]
   },
-  {
-    id: "iot",
+  { id: "iot",
     name: "IoT & Edge Computing",
     description: "Internet of Things and edge computing solutions",
     icon: "Cloud",
     color: "from-orange-500 to-red-500",
     services: [5]
   },
-  {
-    id: "cybersecurity",
+  { id: "cybersecurity",
     name: "Cybersecurity",
     description: "Advanced security and zero-trust solutions",
     icon: "Shield",
     color: "from-red-500 to-pink-500",
     services: [6]
   },
-  {
-    id: "ar-vr",
+  { id: "ar-vr",
     name: "AR/VR Development",
     description: "Immersive technology and virtual experiences",
     icon: "Users",
     color: "from-indigo-500 to-purple-500",
     services: [7]
   },
-  {
-    id: "fintech",
+  { id: "fintech",
     name: "FinTech Solutions",
     description: "Financial technology and digital banking",
     icon: "Database",
     color: "from-yellow-500 to-orange-500",
     services: [8]
   },
-  {
-    id: "green-tech",
+  { id: "green-tech",
     name: "Green Technology",
     description: "Sustainable and environmental solutions",
     icon: "Shield",
     color: "from-green-400 to-teal-500",
     services: [9]
   },
-  {
-    id: "5g-networking",
+  { id: "5g-networking",
     name: "5G & Networking",
     description: "Next-generation network optimization",
     icon: "Network",
@@ -529,8 +500,7 @@ export const serviceCategories = [
 
 // Pricing Tiers
 export const pricingTiers = [
-  {
-    name: "Starter",
+  { name: "Starter",
     price: "$999",
     period: "month",
     description: "Perfect for small businesses and startups",
@@ -542,8 +512,7 @@ export const pricingTiers = [
     ],
     recommended: false
   },
-  {
-    name: "Professional",
+  { name: "Professional",
     price: "$2,999",
     period: "month",
     description: "Ideal for growing businesses",
@@ -556,8 +525,7 @@ export const pricingTiers = [
     ],
     recommended: true
   },
-  {
-    name: "Enterprise",
+  { name: "Enterprise",
     price: "Custom",
     period: "month",
     description: "For large organizations with complex needs",
@@ -574,14 +542,12 @@ export const pricingTiers = [
 ];
 
 // Contact Information
-export const contactInfo = {
-  phone: "+1 302 464 0950",
+export const contactInfo = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",
-  social: {
-    twitter: "https://twitter.com/ziontechgroup",
-    linkedin: "https://www.linkedin.com/company/zion-tech-group",
+  social: { twitter: "https://twitter.com/ziontechgroup",
+    linkedin: "https://www.linkedin.com/comp/zion-tech-group",
     facebook: "https://www.facebook.com/ziontechgroup",
     instagram: "https://www.instagram.com/ziontechgroup"
   }

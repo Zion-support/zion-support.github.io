@@ -7,53 +7,44 @@ import { Link } from 'react-router-dom';
 
 export default function DigitalTwin() {
   const features = [
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of physical assets with instant alerts and notifications"
     },
-    {
-      icon: Server,
+    { icon: Server,
       title: "3D Visualization",
       description: "Interactive 3D models for immersive asset management and analysis"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Predictive Analytics",
       description: "AI-powered predictions for maintenance, performance, and optimization"
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "IoT Integration",
       description: "Seamless connectivity with sensors, devices, and existing systems"
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Data Synchronization",
       description: "Real-time data sync between physical and digital representations"
     },
-    {
-      icon: Cpu,
+    { icon: Cpu,
       title: "Security & Compliance",
       description: "Enterprise-grade security with industry compliance standards"
     }
   ];
 
   const useCases = [
-    {
-      icon: Server,
+    { icon: Server,
       title: "Manufacturing",
       description: "Optimize production lines, predict equipment failures, and improve quality control",
       benefits: ["Predictive maintenance", "Quality optimization", "Production efficiency"]
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Smart Cities",
       description: "Monitor infrastructure, traffic patterns, and environmental conditions",
       benefits: ["Traffic optimization", "Infrastructure monitoring", "Environmental tracking"]
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: "Healthcare",
       description: "Patient monitoring, medical device management, and facility optimization",
       benefits: ["Patient care", "Equipment tracking", "Resource optimization"]
@@ -72,8 +63,7 @@ export default function DigitalTwin() {
   ];
 
   const pricing = [
-    {
-      name: "Basic",
+    { name: "Basic",
       price: "$499",
       period: "/month",
       description: "Perfect for small-scale operations",
@@ -87,8 +77,7 @@ export default function DigitalTwin() {
       cta: "Get Started",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$1,299",
       period: "/month",
       description: "Ideal for growing businesses",
@@ -103,8 +92,7 @@ export default function DigitalTwin() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$2,999",
       period: "/month",
       description: "For large-scale operations",
@@ -122,23 +110,19 @@ export default function DigitalTwin() {
   ];
 
   const benefits = [
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Operational Efficiency",
       description: "Streamline operations and reduce manual intervention by up to 60%"
     },
-    {
-      icon: Server,
+    { icon: Server,
       title: "Predictive Maintenance",
       description: "Prevent costly downtime with AI-powered failure predictions"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Cost Reduction",
       description: "Reduce operational costs by 30-40% through intelligent optimization"
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Better Decision Making",
       description: "Make data-driven decisions with real-time insights and analytics"
     }
@@ -160,9 +144,8 @@ export default function DigitalTwin() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center max-w-4xl mx-auto">
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">
                 <Eye className="w-4 h-4 mr-2" />
                 Digital Twin Technology
@@ -180,15 +163,13 @@ export default function DigitalTwin() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-                >
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
                   View All Services
                 </Link>
               </div>
@@ -202,10 +183,9 @@ export default function DigitalTwin() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose Our Digital Twin Solutions?
               </h2>
@@ -222,9 +202,8 @@ export default function DigitalTwin() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group hover:scale-105"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group hover:scale-105">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-500/40 group-hover:to-blue-500/40 transition-all duration-300">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
                   </div>
@@ -242,10 +221,9 @@ export default function DigitalTwin() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Industry Applications
               </h2>
@@ -262,9 +240,8 @@ export default function DigitalTwin() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300">
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mr-4">
                       <useCase.icon className="w-6 h-6 text-cyan-400" />
@@ -292,10 +269,9 @@ export default function DigitalTwin() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Transparent Pricing
               </h2>
@@ -311,7 +287,7 @@ export default function DigitalTwin() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   className={`relative bg-slate-800/50 border rounded-xl p-8 ${
                     plan.popular 
                       ? 'border-cyan-400/50 bg-slate-800/70' 
@@ -366,10 +342,9 @@ export default function DigitalTwin() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Business Benefits
               </h2>
@@ -386,9 +361,8 @@ export default function DigitalTwin() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
-                >
+                  viewport={{ once: true     }}
+                  className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:from-cyan-500/40 group-hover:to-blue-500/40 transition-all duration-300">
                     <benefit.icon className="w-8 h-8 text-cyan-400" />
                   </div>
@@ -406,10 +380,9 @@ export default function DigitalTwin() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Technologies We Use
               </h2>
@@ -426,9 +399,8 @@ export default function DigitalTwin() {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center group"
-                >
+                  viewport={{ once: true     }}
+                  className="text-center group">
                   <div className="w-20 h-20 bg-slate-800/50 border border-slate-700/50 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:border-cyan-400/30 transition-all duration-300">
                     <span className="text-3xl">{tech.icon}</span>
                   </div>
@@ -446,10 +418,9 @@ export default function DigitalTwin() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Create Your Digital Twin?
               </h2>
@@ -460,15 +431,13 @@ export default function DigitalTwin() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300"
-                >
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-300">
                   Explore Services
                 </Link>
               </div>

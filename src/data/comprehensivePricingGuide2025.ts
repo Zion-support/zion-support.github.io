@@ -1,5 +1,4 @@
-export type PricingTier = {
-  name: string;
+export type PricingTier = { name: string;
   price: string;
   billing: 'month' | 'year' | 'project' | 'hour';
   description: string;
@@ -7,41 +6,37 @@ export type PricingTier = {
   benefits: string[];
   bestFor: string[];
   popular?: boolean;
-};
+    };
 
-export type ServicePricing = {
-  id: string;
+export type ServicePricing = { id: string;
   title: string;
   description: string;
   category: string;
   pricingTiers: PricingTier[];
-  marketComparison: {
+  marketComparison: {  
     averageMarketPrice: string;
     ourPrice: string;
-    savings: string;
-    valueProposition: string;
-  };
+    savings: string
+    valueProposition: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];
-  contactInfo: {
-    mobile: string;
+  contactInfo: { mobile: string;
     email: string;
     address: string;
-    website: string;
-    address: string;
-  };
+    website: string
+    address: string
+      };
 };
 
 export const comprehensivePricingGuide2025: ServicePricing[] = [
-  {
-    id: 'ai-autonomous-business-manager',
+  { id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
     description: 'Complete business automation platform that manages operations, decision-making, and strategic planning autonomously using advanced AI algorithms.',
     category: 'AI Solutions',
     pricingTiers: [
-      {
-        name: 'Starter',
+      { name: 'Starter',
         price: '$1,999',
         billing: 'month',
         description: 'Perfect for small to medium businesses starting their AI journey',
@@ -65,8 +60,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Basic process optimization needs'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$2,999',
         billing: 'month',
         description: 'Advanced features for growing businesses with complex operations',
@@ -94,8 +88,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$4,999',
         billing: 'month',
         description: 'Full-scale enterprise solution with custom AI models and dedicated support',
@@ -124,8 +117,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$5,000 - $15,000',
+    marketComparison: { averageMarketPrice: '$5,000 - $15,000',
       ourPrice: '$2,999',
       savings: '40-80%',
       valueProposition: 'Most comprehensive AI business management solution at competitive pricing'
@@ -154,21 +146,18 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       'Financial planning and analysis',
       'Strategic planning and execution'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'ai-content-optimization-suite',
+  { id: 'ai-content-optimization-suite',
     title: 'AI Content Optimization Suite Pro',
     description: 'Comprehensive content optimization platform using advanced AI to improve SEO, readability, engagement, and conversion across all digital platforms.',
     category: 'Micro SaaS',
     pricingTiers: [
-      {
-        name: 'Basic',
+      { name: 'Basic',
         price: '$99',
         billing: 'month',
         description: 'Essential content optimization for small content creators',
@@ -191,8 +180,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Basic content marketing needs'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$299',
         billing: 'month',
         description: 'Advanced features for growing businesses and marketing teams',
@@ -223,8 +211,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$799',
         billing: 'month',
         description: 'Full-scale enterprise solution with custom AI models and team collaboration',
@@ -254,8 +241,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$200 - $800',
+    marketComparison: { averageMarketPrice: '$200 - $800',
       ourPrice: '$299',
       savings: '25-60%',
       valueProposition: 'Most comprehensive AI content optimization solution with advanced features'
@@ -284,21 +270,18 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       'B2B marketing teams',
       'Educational institutions'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'zero-trust-network-architecture',
+  { id: 'zero-trust-network-architecture',
     title: 'Zero Trust Network Architecture',
     description: 'Comprehensive zero trust security implementation with continuous verification, adaptive access control, and advanced threat detection.',
     category: 'Cybersecurity',
     pricingTiers: [
-      {
-        name: 'Assessment',
+      { name: 'Assessment',
         price: '$5,000',
         billing: 'project',
         description: 'Comprehensive security assessment and zero trust planning',
@@ -322,8 +305,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Compliance requirements'
         ]
       },
-      {
-        name: 'Implementation',
+      { name: 'Implementation',
         price: '$15,000',
         billing: 'project',
         description: 'Full zero trust implementation with ongoing support',
@@ -350,8 +332,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$25,000',
         billing: 'project',
         description: 'Enterprise-grade solution with custom features and extended support',
@@ -378,8 +359,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$20,000 - $50,000',
+    marketComparison: { averageMarketPrice: '$20,000 - $50,000',
       ourPrice: '$15,000',
       savings: '25-70%',
       valueProposition: 'Comprehensive zero trust implementation at competitive enterprise pricing'
@@ -408,21 +388,18 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       'Enterprise corporations',
       'Educational institutions'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'cloud-finops-optimizer',
+  { id: 'cloud-finops-optimizer',
     title: 'Cloud FinOps Optimizer',
     description: 'Intelligent cloud cost optimization platform that automates financial operations, cost allocation, and resource optimization across multi-cloud environments.',
     category: 'Cloud & DevOps',
     pricingTiers: [
-      {
-        name: 'Starter',
+      { name: 'Starter',
         price: '$299',
         billing: 'month',
         description: 'Basic cloud cost optimization for small cloud users',
@@ -445,8 +422,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
           'Basic cost optimization needs'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$799',
         billing: 'month',
         description: 'Advanced features for growing businesses with multi-cloud environments',
@@ -473,8 +449,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$1,999',
         billing: 'month',
         description: 'Full-scale enterprise solution with custom features and dedicated support',
@@ -501,8 +476,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$500 - $2,500',
+    marketComparison: { averageMarketPrice: '$500 - $2,500',
       ourPrice: '$799',
       savings: '20-70%',
       valueProposition: 'Most comprehensive cloud cost optimization solution with advanced multi-cloud support'
@@ -531,8 +505,7 @@ export const comprehensivePricingGuide2025: ServicePricing[] = [
       'Financial operations teams',
       'Cloud architects'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'

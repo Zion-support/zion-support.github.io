@@ -14,28 +14,24 @@ import {
   CheckCircle
 } from 'lucide-react';
 
-interface Props extends React.PropsWithChildren<{}> {
-
-  children: anyReactNode;
+interface Props extends React.PropsWithChildren<{}> { children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo)  => void;
 
 }
 
 interface State {
-
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   showStack: boolean;
   errorId: string;
-}
+    }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
+    this.state = { hasError: false,
       error: null,
       errorInfo: null,
       showStack: false,
@@ -44,8 +40,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
+    return { hasError: true,
       error,
       errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     };
@@ -71,15 +66,14 @@ export class ErrorBoundary extends Component<Props, State> {
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     try {
       // Example: Send to error logging service
-      const errorData = {
-        id: this.state.errorId,
+      const errorData = { id: this.state.errorId,
         message: error.message,
         stack: error.stack,
         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href,
-        // Add any other relevant information
+        // Add  other relevant information
       };
 
       // You can send this to your error logging service
@@ -97,8 +91,7 @@ export class ErrorBoundary extends Component<Props, State> {
   };
 
   private handleRetry = () => {
-    this.setState({
-      hasError: false,
+    this.setState({ hasError: false,
       error: null,
       errorInfo: null,
       showStack: false
@@ -147,7 +140,7 @@ User Agent: ${navigator.userAgent}
   };
 
   private toggleStack = () => {
-    this.setState(prev => ({ showStack: !prev.showStack }));
+    this.setState(prev => ({ showStack: !prev.showStack     }));
   };
 
   render() {
@@ -162,8 +155,7 @@ User Agent: ${navigator.userAgent}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4"
-        >
+          className="min-h-screen bg-gradient-to-br from-red-50 to-orange-50 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white rounded-2xl shadow-2xl border border-red-200 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-red-500 to-orange-500 p-6 text-white">
@@ -222,8 +214,7 @@ User Agent: ${navigator.userAgent}
                   <div className="border border-gray-200 rounded-lg overflow-hidden">
                     <button
                       onClick={this.toggleStack}
-                      className="w-full p-4 bg-gray-50 hover:bg-gray-100 transition-colors flex items-center justify-between text-left"
-                    >
+                      className="w-full p-4 bg-gray-50 hover:bg-gray-100 transition-colors flex items-center justify-between text-left">
                       <div className="flex items-center gap-2">
                         <FileText className="w-4 h-4 text-gray-500" />
                         <span className="font-medium text-gray-700">
@@ -231,8 +222,8 @@ User Agent: ${navigator.userAgent}
                         </span>
                       </div>
                       <motion.div
-                        animate={{ rotate: this.state.showStack ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
+                        animate={{ rotate: this.state.showStack ? 180 : 0     }}
+                        transition={{ duration: 0.2     }}
                       >
                         <X className="w-4 h-4 text-gray-500" />
                       </motion.div>
@@ -243,8 +234,7 @@ User Agent: ${navigator.userAgent}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
-                        className="border-t border-gray-200 p-4 bg-gray-900 text-green-400 font-mono text-xs overflow-x-auto"
-                      >
+                        className="border-t border-gray-200 p-4 bg-gray-900 text-green-400 font-mono text-xs overflow-x-auto">
                         <div className="space-y-2">
                           <div>
                             <span className="text-yellow-400">Component Stack:</span>
@@ -287,16 +277,14 @@ User Agent: ${navigator.userAgent}
               <div className="flex flex-col sm:flex-row gap-3 mt-6">
                 <button
                   onClick={this.handleRetry}
-                  className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                >
+                  className="flex-1 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-blue-600 hover:to-blue-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                   <RefreshCw className="w-4 h-4" />
                   Try Again
                 </button>
                 
                 <button
                   onClick={this.handleGoHome}
-                  className="flex-1 bg-gradient-to-r from-gray-500 to-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:from-gray-600 hover:to-gray-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
-                >
+                  className="flex-1 bg-gradient-to-r from-gray-500 to-gray-600 text-white px-6 py-3 rounded-lg font-medium hover:from-gray-600 hover:to-gray-700 transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl">
                   <Home className="w-4 h-4" />
                   Go Home
                 </button>
@@ -307,16 +295,14 @@ User Agent: ${navigator.userAgent}
                 <button
                   onClick={this.handleCopyError}
                   data-copy-button
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                >
+                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">
                   <Copy className="w-4 h-4" />
                   Copy Error Details
                 </button>
                 
                 <button
                   onClick={() => window.location.reload()}
-                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors"
-                >
+                  className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">
                   <Zap className="w-4 h-4" />
                   Hard Refresh
                 </button>

@@ -118,9 +118,8 @@ export default function Dashboard() {
               key={stat.name}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
-            >
+              transition={{ delay: index * 0.1     }}
+              className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm font-medium text-gray-600">{stat.name}</p>
@@ -157,9 +156,8 @@ export default function Dashboard() {
                     key={service.name}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-center p-4 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
-                  >
+                    transition={{ delay: index * 0.1     }}
+                    className="flex items-center p-4 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors">
                     <div className={`p-2 rounded-lg bg-gradient-to-r ${service.color} mr-4`}>
                       <service.icon className="h-5 w-5 text-white" />
                     </div>
@@ -178,7 +176,7 @@ export default function Dashboard() {
                       <div className="w-20 bg-gray-200 rounded-full h-2 mt-1">
                         <div 
                           className="bg-gradient-to-r from-blue-500 to-purple-500 h-2 rounded-full"
-                          style={{ width: service.usage }}
+                          style={{ width: service.usage     }}
                         ></div>
                       </div>
                     </div>
@@ -199,7 +197,7 @@ export default function Dashboard() {
                     key={action.name}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.1     }}
                     className={`p-3 rounded-lg bg-gradient-to-r ${action.color} text-white text-sm font-medium hover:shadow-lg transition-shadow flex flex-col items-center`}
                   >
                     <action.icon className="h-5 w-5 mb-1" />
@@ -218,9 +216,8 @@ export default function Dashboard() {
                     key={event.title}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-start p-3 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
-                  >
+                    transition={{ delay: index * 0.1     }}
+                    className="flex items-start p-3 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors">
                     <div className="p-2 rounded-lg bg-blue-100 mr-3">
                       <event.icon className="h-4 w-4 text-blue-600" />
                     </div>

@@ -140,43 +140,37 @@ const Home2026: React.FC = () => {
   const featuredServices = INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.innovationLevel === 'Revolutionary').slice(0, 6);
   
   const serviceCategories = [
-    {
-      title: "AI & Analytics",
+    { title: "AI & Analytics",
       icon: Brain,
       description: "Revolutionary AI-powered business intelligence and analytics platforms",
       color: "from-cyan-500 to-blue-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'AI & Analytics').length
     },
-    {
-      title: "Quantum Computing",
+    { title: "Quantum Computing",
       icon: Zap,
       description: "Next-generation quantum computing solutions for complex problems",
       color: "from-purple-500 to-pink-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Quantum Computing').length
     },
-    {
-      title: "Cybersecurity",
+    { title: "Cybersecurity",
       icon: Shield,
       description: "AI-powered cybersecurity with zero false positives",
       color: "from-red-500 to-orange-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Cybersecurity').length
     },
-    {
-      title: "IoT & Edge",
+    { title: "IoT & Edge",
       icon: Cpu,
       description: "Real-time edge computing and IoT solutions",
       color: "from-green-500 to-emerald-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'IoT & Edge Computing').length
     },
-    {
-      title: "Digital Twin",
+    { title: "Digital Twin",
       icon: Rocket,
       description: "3D digital twin platforms for asset optimization",
       color: "from-yellow-500 to-amber-600",
       services: INNOVATIVE_MICRO_SAAS_SERVICES_2026.filter(s => s.category === 'Digital Twin').length
     },
-    {
-      title: "Sustainability",
+    { title: "Sustainability",
       icon: Heart,
       description: "Green technology and ESG compliance solutions",
       color: "from-teal-500 to-cyan-600",
@@ -221,25 +215,22 @@ const Home2026: React.FC = () => {
             <motion.div
               key={i}
               className="absolute text-cyan-400/20"
-              style={{
-                left: `${Math.random() * 100}%`,
+              style={{ left: `${Math.random() * 100    }%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${3 + Math.random() * 4}s`
               }}
-              animate={{
-                y: [0, -20, 0],
+              animate={{ y: [0, -20, 0],
                 opacity: [0.2, 0.5, 0.2],
                 rotate: [0, 360]
               }}
-              transition={{
-                duration: 4,
+              transition={{ duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
             >
               {[Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8] && 
-                React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 24 })
+                React.createElement([Brain, Zap, Shield, Cloud, Cpu, Rocket, Heart, Users][i % 8], { size: 24     })
               }
             </motion.div>
           ))}
@@ -249,9 +240,9 @@ const Home2026: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1     }}
           >
-            {/* Logo and Company Name */}
+            {/* Logo and Comp Name */}
             <div className="mb-8">
               <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl mb-6 shadow-2xl shadow-cyan-400/30">
                 <Zap className="w-12 h-12 text-white" />
@@ -288,16 +279,14 @@ const Home2026: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-6 mb-16">
               <Link
                 to="/services2026"
-                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30"
-              >
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30">
                 Explore Services
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
               
               <Link
                 to="/contact"
-                className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105"
-              >
+                className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
                 Get Started
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -351,8 +340,7 @@ const Home2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -370,9 +358,8 @@ const Home2026: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
             </h2>
@@ -388,8 +375,7 @@ const Home2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20"
-              >
+                className="group bg-slate-900/60 backdrop-blur border border-slate-700/50 hover:border-cyan-400/40 rounded-3xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-400/20">
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <category.icon className="w-8 h-8 text-white" />
                 </div>
@@ -409,8 +395,7 @@ const Home2026: React.FC = () => {
                   
                   <Link
                     to="/services2026"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:underline"
-                  >
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:underline">
                     Explore
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -427,9 +412,8 @@ const Home2026: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Revolutionary Services
             </h2>
@@ -486,8 +470,7 @@ const Home2026: React.FC = () => {
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/services/${service.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline"
-                    >
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium text-sm group-hover:underline">
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
@@ -509,51 +492,44 @@ const Home2026: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              We're not just a technology company – we're your innovation partner for the future
+              We're not just a technology comp – we're your innovation partner for the future
             </p>
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
-              {
-                icon: Star,
+              { icon: Star,
                 title: "Revolutionary Innovation",
-                description: "Leading the charge with cutting-edge AI, quantum computing, and next-generation technologies that don't exist anywhere else.",
+                description: "Leading the charge with cutting-edge AI, quantum computing, and next-generation technologies that don't exist where else.",
                 color: "from-yellow-500 to-orange-600"
               },
-              {
-                icon: Award,
+              { icon: Award,
                 title: "Proven Excellence",
                 description: "Track record of delivering transformative solutions with 99.9% success rate and 98% client satisfaction.",
                 color: "from-blue-500 to-cyan-600"
               },
-              {
-                icon: Target,
+              { icon: Target,
                 title: "Future-Focused",
                 description: "We don't just solve today's problems – we anticipate tomorrow's challenges and build solutions for the future.",
                 color: "from-green-500 to-emerald-600"
               },
-              {
-                icon: Users,
+              { icon: Users,
                 title: "Expert Team",
                 description: "World-class engineers, scientists, and innovators with deep expertise in AI, quantum computing, and emerging technologies.",
                 color: "from-purple-500 to-pink-600"
               },
-              {
-                icon: Globe,
+              { icon: Globe,
                 title: "Global Impact",
                 description: "Our solutions are transforming industries worldwide, from healthcare to finance, manufacturing to sustainability.",
                 color: "from-indigo-500 to-purple-600"
               },
-              {
-                icon: TrendingUp,
+              { icon: TrendingUp,
                 title: "Continuous Growth",
                 description: "We never stop innovating. Our R&D team is constantly pushing the boundaries of what's possible.",
                 color: "from-red-500 to-pink-600"
@@ -564,8 +540,7 @@ const Home2026: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
+                className="text-center group">
                 <div className={`w-20 h-20 bg-gradient-to-br ${feature.color} rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                   <feature.icon className="w-10 h-10 text-white" />
                 </div>
@@ -589,9 +564,8 @@ const Home2026: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="max-w-4xl mx-auto text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -602,16 +576,14 @@ const Home2026: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-6 mb-12">
               <Link
                 to="/services2026"
-                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30"
-              >
+                className="group inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-2xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30">
                 Explore All Services
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
               
               <Link
                 to="/contact"
-                className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105"
-              >
+                className="group inline-flex items-center px-8 py-4 border-2 border-cyan-400/40 text-cyan-300 font-bold text-lg rounded-2xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300 hover:scale-105">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>

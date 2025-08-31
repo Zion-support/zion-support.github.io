@@ -25,26 +25,22 @@ import {
 
 const AIAutonomousCodeReviewer: React.FC = () => {
   const features = [
-    {
-      icon: Code,
+    { icon: Code,
       title: "Automated Code Review",
       description: "AI-powered analysis of code quality, security vulnerabilities, and performance issues across multiple programming languages.",
       benefits: ["Reduce review time by 70%", "Consistent code standards", "24/7 availability"]
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Security Analysis",
       description: "Advanced security scanning to detect vulnerabilities, security anti-patterns, and compliance issues in real-time.",
       benefits: ["Early vulnerability detection", "Security best practices", "Compliance checking"]
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Performance Optimization",
       description: "Intelligent suggestions for code optimization, memory management, and performance improvements.",
       benefits: ["Performance insights", "Memory leak detection", "Optimization recommendations"]
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Quality Metrics",
       description: "Comprehensive code quality metrics, technical debt analysis, and improvement recommendations.",
       benefits: ["Quality scoring", "Technical debt tracking", "Improvement roadmaps"]
@@ -63,8 +59,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$199",
       period: "/month",
       description: "Perfect for small development teams",
@@ -78,8 +73,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       cta: "Get Started",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$399",
       period: "/month",
       description: "Ideal for growing development teams",
@@ -94,8 +88,7 @@ const AIAutonomousCodeReviewer: React.FC = () => {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$599",
       period: "/month",
       description: "For large organizations and enterprises",
@@ -114,23 +107,19 @@ const AIAutonomousCodeReviewer: React.FC = () => {
   ];
 
   const useCases = [
-    {
-      title: "Software Development Teams",
+    { title: "Software Development Teams",
       description: "Automate code reviews and maintain consistent quality standards across development teams.",
       icon: Users
     },
-    {
-      title: "Code Quality Assurance",
+    { title: "Code Quality Assurance",
       description: "Ensure high code quality and reduce technical debt through automated analysis.",
       icon: CheckCircle
     },
-    {
-      title: "Security Compliance",
+    { title: "Security Compliance",
       description: "Meet security requirements and compliance standards with automated security scanning.",
       icon: Shield
     },
-    {
-      title: "Performance Optimization",
+    { title: "Performance Optimization",
       description: "Identify and fix performance bottlenecks through intelligent code analysis.",
       icon: Zap
     }

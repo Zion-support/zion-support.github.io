@@ -27,8 +27,7 @@ const Careers = () => {
 
   // Sample job listings
   const jobListings = [
-    {
-      id: 1,
+    { id: 1,
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",
       location: "Remote / San Francisco, CA",
@@ -45,8 +44,7 @@ const Careers = () => {
       benefits: ["Competitive salary", "Health insurance", "Remote work", "Professional development"],
       category: "ai"
     },
-    {
-      id: 2,
+    { id: 2,
       title: "Cybersecurity Specialist",
       department: "Security",
       location: "New York, NY",
@@ -63,8 +61,7 @@ const Careers = () => {
       benefits: ["Competitive salary", "Health insurance", "Flexible hours", "Security training"],
       category: "security"
     },
-    {
-      id: 3,
+    { id: 3,
       title: "Cloud DevOps Engineer",
       department: "Cloud & Infrastructure",
       location: "Remote / Austin, TX",
@@ -81,8 +78,7 @@ const Careers = () => {
       benefits: ["Competitive salary", "Health insurance", "Remote work", "Cloud certifications"],
       category: "cloud"
     },
-    {
-      id: 4,
+    { id: 4,
       title: "Frontend Developer",
       department: "Engineering",
       location: "Remote / Seattle, WA",
@@ -99,8 +95,7 @@ const Careers = () => {
       benefits: ["Competitive salary", "Health insurance", "Remote work", "Latest equipment"],
       category: "engineering"
     },
-    {
-      id: 5,
+    { id: 5,
       title: "Data Scientist",
       department: "Data & Analytics",
       location: "Remote / Boston, MA",
@@ -117,8 +112,7 @@ const Careers = () => {
       benefits: ["Competitive salary", "Health insurance", "Remote work", "Conference attendance"],
       category: "data"
     },
-    {
-      id: 6,
+    { id: 6,
       title: "Product Manager",
       department: "Product",
       location: "San Francisco, CA",
@@ -151,24 +145,20 @@ const Careers = () => {
     ? jobListings 
     : jobListings.filter(job => job.category === selectedCategory);
 
-  const companyValues = [
-    {
-      icon: Brain,
+  const compValues = [
+    { icon: Brain,
       title: "Innovation First",
       description: "We push the boundaries of what's possible in technology"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Security & Trust",
       description: "Building secure solutions that our clients can rely on"
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: "Scalable Solutions",
       description: "Creating technology that grows with our clients' needs"
     },
-    {
-      icon: Code,
+    { icon: Code,
       title: "Quality Code",
       description: "Writing clean, maintainable, and efficient code"
     }
@@ -200,9 +190,8 @@ const Careers = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
+              transition={{ duration: 0.6     }}
+              className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6">
                 Join Our Innovation Team
               </h1>
@@ -223,7 +212,7 @@ const Careers = () => {
           </div>
         </section>
 
-        {/* Company Values Section */}
+        {/* Comp Values Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -236,14 +225,13 @@ const Careers = () => {
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {companyValues.map((value, index) => (
+                {compValues.map((value, index) => (
                   <motion.div
                     key={value.title}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="text-center"
-                  >
+                    className="text-center">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <value.icon className="w-8 h-8 text-blue-600" />
                     </div>
@@ -275,8 +263,7 @@ const Careers = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.05 * index }}
-                    className="flex items-center gap-3"
-                  >
+                    className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                     <span className="text-slate-700">{benefit}</span>
                   </motion.div>
@@ -323,8 +310,7 @@ const Careers = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 p-6"
-                  >
+                    className="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900 mb-2">{job.title}</h3>

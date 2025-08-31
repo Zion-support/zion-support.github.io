@@ -25,8 +25,7 @@ import { SEO } from '../components/SEO';
 
 export default function Leadership() {
   const leadershipTeam = [
-    {
-      name: 'Kleber Santos',
+    { name: 'Kleber Santos',
       title: 'Founder & CEO',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop',
       bio: 'Visionary leader with over 15 years of experience in technology innovation and business transformation. Passionate about leveraging AI and emerging technologies to solve complex business challenges.',
@@ -35,8 +34,7 @@ export default function Leadership() {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950'
     },
-    {
-      name: 'Dr. Sarah Chen',
+    { name: 'Dr. Sarah Chen',
       title: 'Chief Technology Officer',
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop',
       bio: 'PhD in Computer Science with expertise in artificial intelligence, quantum computing, and emerging technologies. Leads our R&D initiatives and technology strategy.',
@@ -45,8 +43,7 @@ export default function Leadership() {
       email: 'sarah@ziontechgroup.com',
       phone: '+1 302 464 0951'
     },
-    {
-      name: 'Michael Rodriguez',
+    { name: 'Michael Rodriguez',
       title: 'Chief Operations Officer',
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
       bio: 'Operations expert with deep experience in scaling technology companies and optimizing business processes. Ensures seamless delivery of our innovative solutions.',
@@ -55,8 +52,7 @@ export default function Leadership() {
       email: 'michael@ziontechgroup.com',
       phone: '+1 302 464 0952'
     },
-    {
-      name: 'Dr. Emily Watson',
+    { name: 'Dr. Emily Watson',
       title: 'Head of AI Research',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop',
       bio: 'Leading researcher in artificial intelligence and machine learning. Drives innovation in our AI solutions and maintains our position at the cutting edge of technology.',
@@ -68,46 +64,38 @@ export default function Leadership() {
   ];
 
   const values = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with cutting-edge technology and creative problem-solving.'
     },
-    {
-      icon: Heart,
+    { icon: Heart,
       title: 'Client Success',
       description: 'Your success is our success. We\'re committed to delivering solutions that drive real business value.'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Trust & Security',
       description: 'We maintain the highest standards of security and ethical AI practices in everything we do.'
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: 'Global Impact',
       description: 'We believe technology should make the world better for everyone, everywhere.'
     }
   ];
 
   const achievements = [
-    {
-      metric: '500+',
+    { metric: '500+',
       label: 'AI Solutions Deployed',
       description: 'Successfully implemented AI solutions across diverse industries'
     },
-    {
-      metric: '50+',
+    { metric: '50+',
       label: 'Enterprise Clients',
       description: 'Trusted by leading companies worldwide'
     },
-    {
-      metric: '95%',
+    { metric: '95%',
       label: 'Client Satisfaction',
       description: 'Consistently high satisfaction ratings from our clients'
     },
-    {
-      metric: '25+',
+    { metric: '25+',
       label: 'Industry Awards',
       description: 'Recognition for innovation and excellence in technology'
     }
@@ -171,8 +159,7 @@ export default function Leadership() {
                         {leader.expertise.map((skill, skillIndex) => (
                           <span 
                             key={skillIndex}
-                            className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20"
-                          >
+                            className="px-3 py-1 bg-cyan-400/10 text-cyan-400 text-sm rounded-full border border-cyan-400/20">
                             {skill}
                           </span>
                         ))}
@@ -184,22 +171,19 @@ export default function Leadership() {
                         href={leader.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-                      >
+                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
                         <Linkedin className="w-5 h-5" />
                         <span>LinkedIn</span>
                       </a>
                       <a
                         href={`mailto:${leader.email}`}
-                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-                      >
+                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
                         <Mail className="w-5 h-5" />
                         <span>Email</span>
                       </a>
                       <a
                         href={`tel:${leader.phone}`}
-                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors"
-                      >
+                        className="flex items-center space-x-2 text-slate-300 hover:text-cyan-400 transition-colors">
                         <Phone className="w-5 h-5" />
                         <span>Call</span>
                       </a>
@@ -212,7 +196,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Company Values */}
+      {/* Comp Values */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -220,7 +204,7 @@ export default function Leadership() {
               Our Core Values
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our company culture.
+              The principles that guide everything we do and shape our comp culture.
             </p>
           </div>
 
@@ -262,7 +246,7 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Company Culture */}
+      {/* Comp Culture */}
       <section className="py-16 bg-slate-800/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -276,15 +260,13 @@ export default function Leadership() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/careers"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
                 View Open Positions
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                 Get in Touch
               </Link>
             </div>

@@ -74,15 +74,13 @@ export default function UltimateServicesShowcase2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 <Rocket className="w-5 h-5 mr-2" />
                 Get Started Today
               </Link>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
               </a>
@@ -151,8 +149,7 @@ export default function UltimateServicesShowcase2025() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
-              >
+                className="w-full px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent">
                 {categories.map(category => (
                   <option key={category} value={category} className="bg-slate-800 text-white">
                     {category === 'all' ? 'All Categories' : category}
@@ -239,8 +236,7 @@ export default function UltimateServicesShowcase2025() {
                 </ul>
                 <Link
                   to="/contact"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-                >
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300">
                   Get Started
                 </Link>
               </div>
@@ -255,8 +251,7 @@ export default function UltimateServicesShowcase2025() {
           {filteredServices.map((service) => (
             <div
               key={service.id}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group"
-            >
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105 group">
               {/* Service Header */}
               <div className="flex items-start justify-between mb-6">
                 <div className="flex items-center space-x-3">
@@ -288,8 +283,7 @@ export default function UltimateServicesShowcase2025() {
                   {service.tags.slice(0, 4).map((tag, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30"
-                    >
+                      className="px-2 py-1 bg-blue-500/20 text-blue-300 text-xs rounded-md border border-blue-400/30">
                       {tag}
                     </span>
                   ))}
@@ -320,8 +314,7 @@ export default function UltimateServicesShowcase2025() {
                   {service.integrations.slice(0, 4).map((integration, index) => (
                     <span
                       key={index}
-                      className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30"
-                    >
+                      className="px-2 py-1 bg-green-500/20 text-green-300 text-xs rounded-md border border-green-400/30">
                       {integration}
                     </span>
                   ))}
@@ -351,8 +344,7 @@ export default function UltimateServicesShowcase2025() {
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
                   to={`/services/${service.id}`}
-                  className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group"
-                >
+                  className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 group">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -360,8 +352,7 @@ export default function UltimateServicesShowcase2025() {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
+                  className="inline-flex items-center justify-center px-4 py-3 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -373,15 +364,13 @@ export default function UltimateServicesShowcase2025() {
                   <div className="flex flex-col sm:flex-row gap-2 text-sm">
                     <a
                       href="tel:+13024640950"
-                      className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 rounded-md border border-green-400/30 hover:bg-green-600/30 transition-colors"
-                    >
+                      className="inline-flex items-center justify-center px-3 py-2 bg-green-600/20 text-green-300 rounded-md border border-green-400/30 hover:bg-green-600/30 transition-colors">
                       <Phone className="w-3 h-3 mr-1" />
                       Call Now
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
-                      className="inline-flex items-center justify-center px-3 py-2 bg-blue-600/20 text-blue-300 rounded-md border border-blue-400/30 hover:bg-blue-600/30 transition-colors"
-                    >
+                      className="inline-flex items-center justify-center px-3 py-2 bg-blue-600/20 text-blue-300 rounded-md border border-blue-400/30 hover:bg-blue-600/30 transition-colors">
                       <Mail className="w-3 h-3 mr-1" />
                       Email Us
                     </a>
@@ -403,8 +392,7 @@ export default function UltimateServicesShowcase2025() {
                 setSearchTerm('');
                 setSelectedCategory('all');
               }}
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-            >
+              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
               Clear Filters
             </button>
           </div>
@@ -425,15 +413,13 @@ export default function UltimateServicesShowcase2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                 <Rocket className="w-5 h-5 mr-2" />
                 Start Your Transformation
               </Link>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                 <Phone className="w-5 h-5 mr-2" />
                 Speak with an Expert
               </a>
@@ -446,7 +432,7 @@ export default function UltimateServicesShowcase2025() {
       <div className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-400/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <h3 className="text-2xl font-bold text-white mb-4">Zion Tech Group</h3>
               <p className="text-gray-300 mb-6 max-w-md">

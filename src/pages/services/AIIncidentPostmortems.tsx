@@ -29,41 +29,34 @@ import {
 import { SEO } from '../../components/SEO';
 
 export default function AIIncidentPostmortems() {
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
   const features = [
-    {
-      icon: AlertTriangle,
+    { icon: AlertTriangle,
       title: 'AI-Powered Root Cause Analysis',
       description: 'Advanced machine learning algorithms automatically identify the root causes of incidents with 95% accuracy'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Real-time Incident Tracking',
       description: 'Monitor incidents in real-time with automated alerts and escalation workflows'
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: 'Predictive Incident Prevention',
       description: 'Predict potential incidents before they occur using historical data and AI analytics'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Automated Documentation',
       description: 'Generate comprehensive incident reports automatically with AI-powered insights'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Team Collaboration Tools',
       description: 'Built-in communication and collaboration features for incident response teams'
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: 'Centralized Knowledge Base',
       description: 'Maintain a searchable repository of all incidents and resolutions'
     }
@@ -79,8 +72,7 @@ export default function AIIncidentPostmortems() {
   ];
 
   const pricingPlans = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small teams and startups',
@@ -95,8 +87,7 @@ export default function AIIncidentPostmortems() {
       cta: 'Start Free Trial',
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$599',
       period: '/month',
       description: 'Ideal for growing organizations',
@@ -113,8 +104,7 @@ export default function AIIncidentPostmortems() {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$1,299',
       period: '/month',
       description: 'For large enterprises with complex needs',
@@ -136,23 +126,19 @@ export default function AIIncidentPostmortems() {
   ];
 
   const useCases = [
-    {
-      title: 'IT Operations',
+    { title: 'IT Operations',
       description: 'Streamline incident management for IT teams with automated workflows and AI insights',
       icon: Server
     },
-    {
-      title: 'DevOps',
+    { title: 'DevOps',
       description: 'Integrate with CI/CD pipelines for automated incident detection and response',
       icon: Zap
     },
-    {
-      title: 'Security Teams',
+    { title: 'Security Teams',
       description: 'Enhance security incident response with AI-powered threat analysis',
       icon: Shield
     },
-    {
-      title: 'Customer Support',
+    { title: 'Customer Support',
       description: 'Improve customer experience with faster incident resolution and communication',
       icon: MessageSquare
     }
@@ -172,7 +158,7 @@ export default function AIIncidentPostmortems() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100/10 border border-purple-200/20 text-purple-200 text-sm font-medium mb-6">
               <AlertTriangle className="w-4 h-4 mr-2" />
@@ -209,10 +195,9 @@ export default function AIIncidentPostmortems() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Features for Modern Teams
             </h2>
@@ -228,9 +213,8 @@ export default function AIIncidentPostmortems() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -248,10 +232,9 @@ export default function AIIncidentPostmortems() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose AI Incident Postmortems?
             </h2>
@@ -267,9 +250,8 @@ export default function AIIncidentPostmortems() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-3"
-              >
+                viewport={{ once: true     }}
+                className="flex items-start space-x-3">
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                 <span className="text-slate-300 text-lg">{benefit}</span>
               </motion.div>
@@ -284,10 +266,9 @@ export default function AIIncidentPostmortems() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
@@ -303,7 +284,7 @@ export default function AIIncidentPostmortems() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   plan.popular 
                     ? 'border-purple-500/50 bg-gradient-to-br from-purple-900/20 to-pink-900/20' 
@@ -355,10 +336,9 @@ export default function AIIncidentPostmortems() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Team
             </h2>
@@ -374,9 +354,8 @@ export default function AIIncidentPostmortems() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <useCase.icon className="w-8 h-8 text-white" />
                 </div>
@@ -394,8 +373,8 @@ export default function AIIncidentPostmortems() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Incident Management?
@@ -414,7 +393,7 @@ export default function AIIncidentPostmortems() {
             </div>
             
             <p className="text-slate-400 mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
+              No credit card required • 14-day free trial • Cancel time
             </p>
           </motion.div>
         </div>
@@ -426,14 +405,14 @@ export default function AIIncidentPostmortems() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Have Questions?
             </h2>
             <p className="text-xl text-slate-300 mb-8">
-              Our team is here to help you get started and answer any questions
+              Our team is here to help you get started and answer  questions
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -456,8 +435,7 @@ export default function AIIncidentPostmortems() {
             
             <a
               href={`mailto:${contactInfo.email}`}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-            >
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">
               Get in Touch
               <ArrowRight className="w-5 h-5 ml-2" />
             </a>

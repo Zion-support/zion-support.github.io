@@ -19,7 +19,7 @@ export default function MobileSurvey() {
       <section className="bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white">
         <div className="max-w-5xl mx-auto px-6">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6">
-            <Smartphone className="w-4 h-4 mr-2"/> Capture feedback anywhere, anytime
+            <Smartphone className="w-4 h-4 mr-2"/> Capture feedback where, time
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Mobile Feedback Surveys</h1>
           <p className="text-white/90 text-xl">Modern, fast surveys with AI insights to improve customer experience.</p>
@@ -52,7 +52,7 @@ export default function MobileSurvey() {
       </section>
       <section className="pb-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-6">
-          {[{icon: MessageSquare, t: 'Conversational UX'}, {icon: Users, t: 'High Completion'}, {icon: BarChart2, t: 'AI Insights'}].map((c) => (
+          {[{ icon: MessageSquare, t: 'Conversational UX'}, { icon: Users, t: 'High Completion'}, { icon: BarChart2, t: 'AI Insights'}].map((c) => (
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>

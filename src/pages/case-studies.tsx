@@ -19,10 +19,9 @@ import {
 } from 'lucide-react';
 
 const caseStudies = [
-  {
-    id: 1,
+  { id: 1,
     title: "AI-Powered Customer Service Transformation",
-    company: "TechCorp Solutions",
+    comp: "TechCorp Solutions",
     industry: "Technology",
     challenge: "High customer service costs and long response times",
     solution: "Implemented AI chatbot with natural language processing",
@@ -32,8 +31,7 @@ const caseStudies = [
       "95% customer satisfaction rate",
       "24/7 automated support"
     ],
-    metrics: {
-      costReduction: "40%",
+    metrics: { costReduction: "40%",
       responseTime: "85% faster",
       satisfaction: "95%",
       availability: "24/7"
@@ -43,10 +41,9 @@ const caseStudies = [
     roi: "300%",
     image: "/images/case-study-1.jpg"
   },
-  {
-    id: 2,
+  { id: 2,
     title: "Cloud Migration & DevOps Automation",
-    company: "InnovateLab Inc",
+    comp: "InnovateLab Inc",
     industry: "Healthcare",
     challenge: "Legacy infrastructure causing downtime and security risks",
     solution: "Complete cloud migration with CI/CD pipeline implementation",
@@ -56,8 +53,7 @@ const caseStudies = [
       "Enhanced security compliance",
       "Scalable infrastructure"
     ],
-    metrics: {
-      uptime: "99.9%",
+    metrics: { uptime: "99.9%",
       deploymentTime: "60% faster",
       securityScore: "A+",
       scalability: "10x"
@@ -67,10 +63,9 @@ const caseStudies = [
     roi: "250%",
     image: "/images/case-study-2.jpg"
   },
-  {
-    id: 3,
+  { id: 3,
     title: "Data Analytics & Business Intelligence Platform",
-    company: "DataFlow Analytics",
+    comp: "DataFlow Analytics",
     industry: "Finance",
     challenge: "Scattered data sources and lack of real-time insights",
     solution: "Centralized data warehouse with real-time analytics dashboard",
@@ -80,8 +75,7 @@ const caseStudies = [
       "Automated reporting system",
       "Predictive analytics capabilities"
     ],
-    metrics: {
-      dataProcessing: "Real-time",
+    metrics: { dataProcessing: "Real-time",
       decisionMaking: "30% better",
       reporting: "Automated",
       predictions: "90% accuracy"
@@ -91,10 +85,9 @@ const caseStudies = [
     roi: "400%",
     image: "/images/case-study-3.jpg"
   },
-  {
-    id: 4,
+  { id: 4,
     title: "Cybersecurity & Compliance Implementation",
-    company: "SecureBank Ltd",
+    comp: "SecureBank Ltd",
     industry: "Banking",
     challenge: "Increasing cyber threats and regulatory compliance requirements",
     solution: "Comprehensive security framework with SOC2 compliance",
@@ -104,8 +97,7 @@ const caseStudies = [
       "Advanced threat detection",
       "Employee security training"
     ],
-    metrics: {
-      breaches: "0",
+    metrics: { breaches: "0",
       compliance: "SOC2 Type II",
       threatDetection: "99.9%",
       training: "100% staff"
@@ -115,10 +107,9 @@ const caseStudies = [
     roi: "200%",
     image: "/images/case-study-4.jpg"
   },
-  {
-    id: 5,
+  { id: 5,
     title: "IoT & Edge Computing Solution",
-    company: "SmartManufacturing Co",
+    comp: "SmartManufacturing Co",
     industry: "Manufacturing",
     challenge: "Inefficient production monitoring and quality control",
     solution: "IoT sensors with edge computing for real-time monitoring",
@@ -128,8 +119,7 @@ const caseStudies = [
       "Predictive maintenance",
       "Real-time monitoring"
     ],
-    metrics: {
-      efficiency: "25% increase",
+    metrics: { efficiency: "25% increase",
       qualityIssues: "90% reduction",
       maintenance: "Predictive",
       monitoring: "Real-time"
@@ -139,10 +129,9 @@ const caseStudies = [
     roi: "350%",
     image: "/images/case-study-5.jpg"
   },
-  {
-    id: 6,
+  { id: 6,
     title: "Digital Transformation & Legacy Modernization",
-    company: "LegacyCorp Enterprises",
+    comp: "LegacyCorp Enterprises",
     industry: "Retail",
     challenge: "Outdated systems limiting growth and customer experience",
     solution: "Complete digital transformation with modern tech stack",
@@ -152,8 +141,7 @@ const caseStudies = [
       "Streamlined operations",
       "Mobile-first approach"
     ],
-    metrics: {
-      onlineSales: "50% increase",
+    metrics: { onlineSales: "50% increase",
       customerExperience: "Enhanced",
       operations: "Streamlined",
       mobile: "First priority"
@@ -178,7 +166,7 @@ export default function CaseStudies() {
     const matchesTechnology = selectedTechnology === 'All' || 
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         study.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
     
     return matchesIndustry && matchesTechnology && matchesSearch;
@@ -192,9 +180,8 @@ export default function CaseStudies() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Award className="w-5 h-5" />
               <span className="font-medium">Success Stories</span>
@@ -234,8 +221,7 @@ export default function CaseStudies() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {industries.map(industry => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
@@ -247,8 +233,7 @@ export default function CaseStudies() {
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {technologies.map(tech => (
                     <option key={tech} value={tech}>{tech}</option>
                   ))}
@@ -269,8 +254,7 @@ export default function CaseStudies() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-              >
+                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div>
@@ -278,7 +262,7 @@ export default function CaseStudies() {
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">
                       <span className="flex items-center gap-1">
                         <Users className="w-4 h-4" />
-                        {study.company}
+                        {study.comp}
                       </span>
                       <span className="flex items-center gap-1">
                         <Globe className="w-4 h-4" />
@@ -351,8 +335,7 @@ export default function CaseStudies() {
                 <div className="flex items-center justify-between">
                   <Link
                     href={`/case-studies/${study.id}`}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                  >
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                     Read Full Case Study
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -373,10 +356,9 @@ export default function CaseStudies() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Create Your Success Story?
             </h2>
@@ -387,15 +369,13 @@ export default function CaseStudies() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg">
                 View Our Services
               </Link>
             </div>

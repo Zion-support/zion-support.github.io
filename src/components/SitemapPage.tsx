@@ -3,8 +3,7 @@ import { SEO } from '@/components/SEO';
 
 export function SitemapPage() {
   const sitemapData = [
-    {
-      title: 'Main Pages',
+    { title: 'Main Pages',
       links: [
         { name: 'Home', url: '/' },
         { name: 'About', url: '/about' },
@@ -14,8 +13,7 @@ export function SitemapPage() {
         { name: 'Careers', url: '/careers' },
       ]
     },
-    {
-      title: 'Services',
+    { title: 'Services',
       links: [
         { name: 'AI Services', url: '/services/ai' },
         { name: 'IT Services', url: '/services/it' },
@@ -24,8 +22,7 @@ export function SitemapPage() {
         { name: 'Digital Transformation', url: '/services/digital-transformation' },
       ]
     },
-    {
-      title: 'Solutions',
+    { title: 'Solutions',
       links: [
         { name: 'Enterprise', url: '/solutions/enterprise' },
         { name: 'Healthcare', url: '/solutions/healthcare' },
@@ -33,8 +30,7 @@ export function SitemapPage() {
         { name: 'Manufacturing', url: '/solutions/manufacturing' },
       ]
     },
-    {
-      title: 'Resources',
+    { title: 'Resources',
       links: [
         { name: 'Case Studies', url: '/case-studies' },
         { name: 'White Papers', url: '/white-papers' },
@@ -73,8 +69,7 @@ export function SitemapPage() {
                   <li key={linkIndex}>
                     <a 
                       href={link.url}
-                      className="text-zinc-300 hover:text-cyan-400 transition-colors duration-200 block py-1"
-                    >
+                      className="text-zinc-300 hover:text-cyan-400 transition-colors duration-200 block py-1">
                       {link.name}
                     </a>
                   </li>

@@ -26,41 +26,34 @@ import {
 
 export default function AICybersecurityThreatDetection() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Threat Detection',
       description: 'Advanced machine learning algorithms detect and analyze threats in real-time with 99.9% accuracy'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: '24/7 Network Monitoring',
       description: 'Continuous surveillance of your entire network infrastructure with instant alert systems'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Zero-Day Attack Prevention',
       description: 'Predictive AI models identify and block unknown threats before they can cause damage'
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: 'Behavioral Analysis',
       description: 'AI learns normal user patterns and flags suspicious activities automatically'
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: 'Automated Response',
       description: 'Instant threat containment and remediation without human intervention'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Real-Time Intelligence',
       description: 'Live threat intelligence feeds and global attack pattern recognition'
     }
   ];
 
   const pricingPlans = [
-    {
-      name: 'Essential',
+    { name: 'Essential',
       price: '$499',
       period: '/month',
       description: 'Perfect for small businesses',
@@ -75,8 +68,7 @@ export default function AICybersecurityThreatDetection() {
       ],
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$1,299',
       period: '/month',
       description: 'Ideal for growing organizations',
@@ -92,8 +84,7 @@ export default function AICybersecurityThreatDetection() {
       ],
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$2,999',
       period: '/month',
       description: 'For large enterprises',
@@ -112,46 +103,38 @@ export default function AICybersecurityThreatDetection() {
   ];
 
   const benefits = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: '99.9% Threat Detection Rate',
       description: 'AI algorithms catch threats that traditional security tools miss'
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Real-Time Response',
       description: 'Threats are neutralized within seconds, not hours or days'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Zero False Positives',
       description: 'Advanced AI reduces alert fatigue with intelligent filtering'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: '60% Cost Reduction',
       description: 'Automated security reduces manual intervention and operational costs'
     }
   ];
 
   const threatTypes = [
-    {
-      title: 'Ransomware Attacks',
+    { title: 'Ransomware Attacks',
       description: 'AI detects encryption patterns and blocks ransomware before it can encrypt files',
       icon: Lock
     },
-    {
-      title: 'Phishing Attempts',
+    { title: 'Phishing Attempts',
       description: 'Machine learning identifies suspicious emails and URLs in real-time',
       icon: Eye
     },
-    {
-      title: 'DDoS Attacks',
+    { title: 'DDoS Attacks',
       description: 'Predictive AI blocks distributed attacks before they impact services',
       icon: Network
     },
-    {
-      title: 'Insider Threats',
+    { title: 'Insider Threats',
       description: 'Behavioral analysis detects unusual user activities and data access patterns',
       icon: Users
     }
@@ -179,7 +162,7 @@ export default function AICybersecurityThreatDetection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
@@ -214,10 +197,9 @@ export default function AICybersecurityThreatDetection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powered by Advanced AI
             </h2>
@@ -233,9 +215,8 @@ export default function AICybersecurityThreatDetection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -253,10 +234,9 @@ export default function AICybersecurityThreatDetection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Proven Results
             </h2>
@@ -272,9 +252,8 @@ export default function AICybersecurityThreatDetection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -292,10 +271,9 @@ export default function AICybersecurityThreatDetection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Comprehensive Threat Protection
             </h2>
@@ -311,9 +289,8 @@ export default function AICybersecurityThreatDetection() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
                 <div className="w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-6">
                   <threat.icon className="w-8 h-8 text-white" />
                 </div>
@@ -331,10 +308,9 @@ export default function AICybersecurityThreatDetection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Compliance & Certifications
             </h2>
@@ -350,9 +326,8 @@ export default function AICybersecurityThreatDetection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700 text-center hover:border-red-500 transition-all duration-300">
                 <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
                 <p className="text-white font-medium text-sm">{framework}</p>
               </motion.div>
@@ -367,10 +342,9 @@ export default function AICybersecurityThreatDetection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Choose Your Security Level
             </h2>
@@ -386,7 +360,7 @@ export default function AICybersecurityThreatDetection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
                     ? 'border-red-500 ring-2 ring-red-500/20' 
@@ -438,8 +412,8 @@ export default function AICybersecurityThreatDetection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?

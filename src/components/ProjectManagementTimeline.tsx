@@ -26,7 +26,6 @@ import { Calendar,
  } from 'lucide-react.ts';
 
 interface Project {
-
   id: string;
   name: string;
   description: string;
@@ -41,10 +40,9 @@ interface Project {
   tags: string[];
   milestones: Milestone[];
 
-}
+    }
 
 interface Milestone {
-
   id: string;
   title: string;
   description: string;
@@ -53,7 +51,7 @@ interface Milestone {
   assignee: string;
   priority: 'low' | 'medium' | 'high';
 
-}
+    }
 
 interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
 
@@ -63,7 +61,7 @@ interface ProjectManagementTimelineProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps> = ({
+export const ProjectManagementTimeline: React.FC = ({
   showFilters = true,
   showStats = true,
   maxProjects = 10
@@ -75,13 +73,12 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const [searchQuery, setSearchQuery] = useState('');
   const [viewMode, setViewMode] = useState<any>('timeline');
   const [showProjectForm, setShowProjectForm] = useState(false);
-  const [editingProject, setEditingProject] = useState<any>(null);
+  const [editingProject, setEditingProject] = useState(null);
 
   // Sample project data
   useEffect(() => {
     const sampleProjects: Project[] = [
-      {
-        id: any'1',
+      { id: '1',
         name: 'AI-Powered Customer Analytics Platform',
         description: 'Develop a comprehensive customer analytics platform using machine learning and AI to provide real-time insights and predictive analytics.',
         status: 'active',
@@ -94,8 +91,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         budget: 250000,
         tags: ['AI', 'Machine Learning', 'Analytics', 'Platform'],
         milestones: [
-          {
-            id: 'm1',
+          { id: 'm1',
             title: 'Requirements Analysis',
             description: 'Complete stakeholder interviews and document requirements',
             dueDate: '2024-01-15',
@@ -103,8 +99,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             assignee: 'Sarah Johnson',
             priority: 'high'
           },
-          {
-            id: 'm2',
+          { id: 'm2',
             title: 'System Architecture Design',
             description: 'Design system architecture and database schema',
             dueDate: '2024-02-15',
@@ -112,8 +107,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             assignee: 'Michael Chen',
             priority: 'high'
           },
-          {
-            id: 'm3',
+          { id: 'm3',
             title: 'Core Development',
             description: 'Develop core platform features and API endpoints',
             dueDate: '2024-04-15',
@@ -121,8 +115,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             assignee: 'Emily Rodriguez',
             priority: 'high'
           },
-          {
-            id: 'm4',
+          { id: 'm4',
             title: 'Testing & QA',
             description: 'Comprehensive testing and quality assurance',
             dueDate: '2024-05-15',
@@ -132,8 +125,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           }
         ]
       },
-      {
-        id: '2',
+      { id: '2',
         name: 'Cloud Migration & Infrastructure Modernization',
         description: 'Migrate legacy systems to cloud infrastructure and modernize the technology stack for improved scalability and performance.',
         status: 'active',
@@ -146,8 +138,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         budget: 500000,
         tags: ['Cloud', 'Migration', 'Infrastructure', 'DevOps'],
         milestones: [
-          {
-            id: 'm5',
+          { id: 'm5',
             title: 'Infrastructure Assessment',
             description: 'Assess current infrastructure and plan migration strategy',
             dueDate: '2024-02-28',
@@ -155,8 +146,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             assignee: 'David Kim',
             priority: 'critical'
           },
-          {
-            id: 'm6',
+          { id: 'm6',
             title: 'Cloud Setup',
             description: 'Set up cloud infrastructure and security configurations',
             dueDate: '2024-04-15',
@@ -166,8 +156,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           }
         ]
       },
-      {
-        id: '3',
+      { id: '3',
         name: 'Cybersecurity Enhancement Program',
         description: 'Implement comprehensive cybersecurity measures including threat detection, incident response, and security awareness training.',
         status: 'planning',
@@ -180,8 +169,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
         budget: 300000,
         tags: ['Cybersecurity', 'Threat Detection', 'Training', 'Compliance'],
         milestones: [
-          {
-            id: 'm7',
+          { id: 'm7',
             title: 'Security Assessment',
             description: 'Conduct comprehensive security audit and vulnerability assessment',
             dueDate: '2024-03-31',
@@ -198,7 +186,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   }, []);
 
   // Filter projects
-  useEffect(()  => {
+  useEffect(() => {
     let filtered = projects;
 
     if (selectedStatus !== 'all') {
@@ -222,17 +210,16 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   }, [projects, selectedStatus, selectedPriority, searchQuery, maxProjects]);
 
   // Calculate project stats
-  const projectStats = {
-    total: anyprojects.length,
+  const projectStats = { total: projects.length,
     active: projects.filter(p  => p.status === 'active').length,
-    completed: anyprojects.filter(p  => p.status === 'completed').length,
-    onHold: anyprojects.filter(p  => p.status === 'on-hold').length,
-    totalBudget: anyprojects.reduce((sum, p)  => sum + p.budget, 0),
-    averageProgress: anyprojects.reduce((sum, p)  => sum + p.progress, 0) / projects.length || 0
+    completed: projects.filter(p  => p.status === 'completed').length,
+    onHold: projects.filter(p  => p.status === 'on-hold').length,
+    totalBudget: projects.reduce((sum, p)  => sum + p.budget, 0),
+    averageProgress: projects.reduce((sum, p)  => sum + p.progress, 0) / projects.length || 0
   };
 
   // Get status color and icon
-  const getStatusDisplay = (status: anystring)  => {
+  const getStatusDisplay = (status: string)  => {
     switch (status) {
       case 'planning':
         return { color: 'text-blue-400 bg-blue-400/20', icon: <Circle className="w-4 h-4" /> };
@@ -250,7 +237,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get priority color
-  const getPriorityColor = (priority: anystring)  => {
+  const getPriorityColor = (priority: string)  => {
     switch (priority) {
       case 'low': return 'text-green-400 bg-green-400/20';
       case 'medium': return 'text-yellow-400 bg-yellow-400/20';
@@ -261,7 +248,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Get milestone status color
-  const getMilestoneStatusColor = (status: anystring)  => {
+  const getMilestoneStatusColor = (status: string)  => {
     switch (status) {
       case 'pending': return 'text-zinc-400 bg-zinc-400/20';
       case 'in-progress': return 'text-blue-400 bg-blue-400/20';
@@ -272,9 +259,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Format currency
-  const formatCurrency = (amount: anynumber)  => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
+  const formatCurrency = (amount: number)  => {
+    return new Intl.NumberFormat('en-US', { style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
       maximumFractionDigits: 0
@@ -282,7 +268,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   };
 
   // Calculate days remaining
-  const getDaysRemaining = (endDate: anystring)  => {
+  const getDaysRemaining = (endDate: string)  => {
     const end = new Date(endDate);
     const today = new Date();
     const diffTime = end.getTime() - today.getTime();
@@ -309,7 +295,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             ].map((mode) => (
               <button
                 key={mode.id}
-                onClick={() => setViewMode(mode.id as any)}
+                onClick={() => setViewMode(mode.id as )}
                 className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 ${
                   viewMode === mode.id
                     ? 'bg-zion-cyan text-white'
@@ -325,8 +311,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           {/* Add Project Button */}
           <button
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2"
-          >
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors flex items-center gap-2">
             <Plus className="w-4 h-4" />
             Add Project
           </button>
@@ -339,8 +324,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-2xl font-bold text-white mb-1">{projectStats.total}</div>
             <div className="text-zinc-400 text-sm">Total Projects</div>
           </motion.div>
@@ -348,9 +332,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.1     }}
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-2xl font-bold text-green-400 mb-1">{projectStats.active}</div>
             <div className="text-zinc-400 text-sm">Active</div>
           </motion.div>
@@ -358,9 +341,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.2     }}
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-2xl font-bold text-purple-400 mb-1">{projectStats.completed}</div>
             <div className="text-zinc-400 text-sm">Completed</div>
           </motion.div>
@@ -368,9 +350,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.3     }}
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-2xl font-bold text-yellow-400 mb-1">{projectStats.onHold}</div>
             <div className="text-zinc-400 text-sm">On Hold</div>
           </motion.div>
@@ -378,9 +359,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.4     }}
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-2xl font-bold text-zion-cyan mb-1">{formatCurrency(projectStats.totalBudget)}</div>
             <div className="text-zinc-400 text-sm">Total Budget</div>
           </motion.div>
@@ -388,9 +368,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center"
-          >
+            transition={{ delay: 0.5     }}
+            className="p-4 bg-zinc-900/30 border border-zinc-700/50 rounded-xl text-center">
             <div className="text-2xl font-bold text-white mb-1">{projectStats.averageProgress.toFixed(0)}%</div>
             <div className="text-zinc-400 text-sm">Avg Progress</div>
           </motion.div>
@@ -404,8 +383,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
             <option value="all">All Statuses</option>
             <option value="planning">Planning</option>
             <option value="active">Active</option>
@@ -418,8 +396,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           <select
             value={selectedPriority}
             onChange={(e) => setSelectedPriority(e.target.value)}
-            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-          >
+            className="px-4 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
             <option value="all">All Priorities</option>
             <option value="low">Low</option>
             <option value="medium">Medium</option>
@@ -448,9 +425,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
             key={project.id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-          >
+            transition={{ delay: index * 0.1     }}
+            className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300">
             {/* Project Header */}
             <div className="flex items-start justify-between mb-4">
               <div className="flex-1">
@@ -514,8 +490,8 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
               </div>
               <div className="w-full bg-zinc-700 rounded-full h-2">
                 <motion.div
-                  initial={{ width: 0 }}
-                  animate={{ width: `${project.progress}%` }}
+                  initial={{ width: 0     }}
+                  animate={{ width: `${project.progress    }%` }}
                   transition={{ duration: 1, delay: index * 0.1 }}
                   className="h-2 bg-gradient-to-r from-zion-cyan to-blue-500 rounded-full"
                 />
@@ -527,8 +503,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full"
-                >
+                  className="px-2 py-1 bg-zinc-800/50 text-zinc-300 text-xs rounded-full">
                   {tag}
                 </span>
               ))}
@@ -541,8 +516,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
                 {project.milestones.map((milestone) => (
                   <div
                     key={milestone.id}
-                    className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg"
-                  >
+                    className="flex items-center justify-between p-3 bg-zinc-800/30 rounded-lg">
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
                         <h5 className="text-sm font-medium text-white">{milestone.title}</h5>
@@ -570,10 +544,9 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
       {/* No Results */}
       {filteredProjects.length === 0 && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          className="text-center py-12"
-        >
+          initial={{ opacity: 0     }}
+          animate={{ opacity: 1     }}
+          className="text-center py-12">
           <Target className="w-16 h-16 text-zinc-600 mx-auto mb-4" />
           <h3 className="text-xl font-medium text-zinc-300 mb-2">No projects found</h3>
           <p className="text-zinc-400 mb-4">
@@ -581,8 +554,7 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
           </p>
           <button
             onClick={() => setShowProjectForm(true)}
-            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors"
-          >
+            className="px-6 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors">
             Create Project
           </button>
         </motion.div>

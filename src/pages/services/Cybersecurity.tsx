@@ -25,8 +25,7 @@ import {
 } from 'lucide-react';
 export default function CybersecurityServices() {
   const cyberServices = [
-    {
-      name: "Security Assessment & Auditing",
+    { name: "Security Assessment & Auditing",
       description: "Comprehensive security evaluation and compliance auditing",
       icon: Eye,
       features: [
@@ -38,8 +37,7 @@ export default function CybersecurityServices() {
       price: "From $3,500",
       duration: "2-6 weeks"
     },
-    {
-      name: "Threat Detection & Response",
+    { name: "Threat Detection & Response",
       description: "Advanced threat monitoring and incident response",
       icon: AlertTriangle,
       features: [
@@ -51,8 +49,7 @@ export default function CybersecurityServices() {
       price: "From $5,000/month",
       duration: "Ongoing"
     },
-    {
-      name: "Identity & Access Management",
+    { name: "Identity & Access Management",
       description: "Secure user authentication and authorization systems",
       icon: Key,
       features: [
@@ -64,8 +61,7 @@ export default function CybersecurityServices() {
       price: "From $4,200",
       duration: "4-8 weeks"
     },
-    {
-      name: "Data Protection & Encryption",
+    { name: "Data Protection & Encryption",
       description: "Comprehensive data security and encryption solutions",
       icon: Lock,
       features: [
@@ -87,38 +83,32 @@ export default function CybersecurityServices() {
     { name: "IAM", description: "Identity and Access Management", icon: Key }
   ];
   const complianceFrameworks = [
-    {
-      name: "SOC 2",
+    { name: "SOC 2",
       description: "Service Organization Control 2 compliance",
       icon: Shield,
       color: "from-green-500 to-emerald-600"
     },
-    {
-      name: "ISO 27001",
+    { name: "ISO 27001",
       description: "Information Security Management System",
       icon: Lock,
       color: "from-blue-500 to-indigo-600"
     },
-    {
-      name: "GDPR",
+    { name: "GDPR",
       description: "General Data Protection Regulation",
       icon: Eye,
       color: "from-purple-500 to-violet-600"
     },
-    {
-      name: "HIPAA",
+    { name: "HIPAA",
       description: "Health Insurance Portability and Accountability Act",
       icon: Users,
       color: "from-red-500 to-pink-600"
     },
-    {
-      name: "PCI DSS",
+    { name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard",
       icon: CreditCard,
       color: "from-orange-500 to-amber-600"
     },
-    {
-      name: "NIST",
+    { name: "NIST",
       description: "National Institute of Standards and Technology",
       icon: Award,
       color: "from-cyan-500 to-blue-600"
@@ -133,7 +123,7 @@ export default function CybersecurityServices() {
             className="text-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity
@@ -148,8 +138,7 @@ export default function CybersecurityServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -182,8 +171,7 @@ export default function CybersecurityServices() {
             {cyberServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
                     <service.icon className="h-8 w-8 text-white" />
@@ -208,8 +196,7 @@ export default function CybersecurityServices() {
                   </div>
                   <Link
                     to="/contact"
-                    className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
-                  >
+                    className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200">
                     Get Quote
                   </Link>
                 </div>
@@ -233,8 +220,7 @@ export default function CybersecurityServices() {
             {securityTechnologies.map((tech, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
-              >
+                className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <tech.icon className="h-8 w-8 text-white" />
                 </div>
@@ -260,8 +246,7 @@ export default function CybersecurityServices() {
             {complianceFrameworks.map((framework, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                 <div className={`p-3 bg-gradient-to-r ${framework.color} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>
                   <framework.icon className="h-6 w-6 text-white" />
                 </div>
@@ -285,15 +270,13 @@ export default function CybersecurityServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Schedule Security Assessment
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

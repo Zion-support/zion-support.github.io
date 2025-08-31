@@ -17,26 +17,24 @@ export interface AdditionalInnovativeService2025 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService2025[] = [
   // AI-Powered Legal Document Automation
-  {
-    id: "ai-legal-document-automation",
+  { id: "ai-legal-document-automation",
     title: "AI Legal Document Automation Platform",
     description: "Intelligent legal document generation, review, and automation platform that uses AI to create, analyze, and optimize legal documents with 99.9% accuracy and compliance.",
     category: "AI & Legal Tech",
@@ -83,13 +81,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$1,899 - $4,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
       integrations: ["DocuSign", "Salesforce", "Microsoft Office", "Google Workspace", "Legal databases"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -100,8 +96,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Healthcare Analytics Platform
-  {
-    id: "ai-healthcare-analytics-platform",
+  { id: "ai-healthcare-analytics-platform",
     title: "AI Healthcare Analytics Platform",
     description: "Comprehensive healthcare analytics platform that uses AI to analyze patient data, predict outcomes, optimize treatment plans, and improve healthcare delivery efficiency.",
     category: "AI & Healthcare",
@@ -148,13 +143,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$2,499 - $6,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
       integrations: ["Epic", "Cerner", "HL7", "FHIR", "EMR systems"],
       apiEndpoints: 300,
       uptime: "99.99%",
@@ -165,8 +158,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Financial Trading Platform
-  {
-    id: "ai-financial-trading-platform",
+  { id: "ai-financial-trading-platform",
     title: "AI Financial Trading Platform",
     description: "Advanced AI-powered financial trading platform that uses machine learning algorithms to analyze market data, predict trends, and execute automated trading strategies with high accuracy.",
     category: "AI & FinTech",
@@ -213,13 +205,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$3,999 - $9,999/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "Redis"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "Redis"],
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
       apiEndpoints: 500,
       uptime: "99.99%",
@@ -230,8 +220,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Content Creation Suite
-  {
-    id: "ai-content-creation-suite",
+  { id: "ai-content-creation-suite",
     title: "AI Content Creation Suite",
     description: "Comprehensive AI-powered content creation platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.",
     category: "AI & Content Marketing",
@@ -278,13 +267,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$899 - $2,499/month",
     roi: "400-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "GPT", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "GPT", "React", "Node.js", "PostgreSQL"],
       integrations: ["WordPress", "HubSpot", "Mailchimp", "Hootsuite", "Canva"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -295,8 +282,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Supply Chain Optimization
-  {
-    id: "ai-supply-chain-optimization",
+  { id: "ai-supply-chain-optimization",
     title: "AI Supply Chain Optimization Platform",
     description: "Intelligent supply chain optimization platform that uses AI to predict demand, optimize inventory, reduce costs, and improve supply chain efficiency across global operations.",
     category: "AI & Supply Chain",
@@ -343,13 +329,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$2,999 - $7,999/month",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["SAP", "Oracle", "Salesforce", "Shopify", "WMS systems"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -360,8 +344,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Project Management Platform
-  {
-    id: "ai-project-management-platform",
+  { id: "ai-project-management-platform",
     title: "AI Project Management Platform",
     description: "Intelligent project management platform that uses AI to automate task allocation, predict project timelines, identify risks, and optimize team productivity for complex projects.",
     category: "AI & Project Management",
@@ -408,13 +391,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$1,299 - $3,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "React", "Node.js", "PostgreSQL", "Redis"],
+    technicalSpecs: { technology: ["Python", "React", "Node.js", "PostgreSQL", "Redis"],
       integrations: ["Slack", "Microsoft Teams", "Jira", "Asana", "Trello"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -425,8 +406,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Customer Support Automation
-  {
-    id: "ai-customer-support-automation",
+  { id: "ai-customer-support-automation",
     title: "AI Customer Support Automation Platform",
     description: "Intelligent customer support platform that uses AI to automate responses, route tickets, analyze sentiment, and provide personalized support experiences 24/7.",
     category: "AI & Customer Support",
@@ -473,13 +453,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$799 - $2,499/month",
     roi: "400-700%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
       integrations: ["Zendesk", "Intercom", "Freshdesk", "Help Scout", "Slack"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -490,8 +468,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Financial Analytics Platform
-  {
-    id: "ai-financial-analytics-platform",
+  { id: "ai-financial-analytics-platform",
     title: "AI Financial Analytics Platform",
     description: "Advanced financial analytics platform that uses AI to analyze financial data, predict market trends, optimize investments, and provide actionable financial insights for businesses and investors.",
     category: "AI & Financial Analytics",
@@ -538,13 +515,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$1,999 - $5,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["Bloomberg", "Reuters", "Yahoo Finance", "Alpha Vantage", "Financial APIs"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -555,8 +530,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Marketing Automation Platform
-  {
-    id: "ai-marketing-automation-platform",
+  { id: "ai-marketing-automation-platform",
     title: "AI Marketing Automation Platform",
     description: "Intelligent marketing automation platform that uses AI to personalize campaigns, optimize customer journeys, predict customer behavior, and maximize marketing ROI across all channels.",
     category: "AI & Marketing",
@@ -603,13 +577,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$1,499 - $4,999/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"],
       integrations: ["HubSpot", "Salesforce", "Mailchimp", "Facebook Ads", "Google Ads"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -620,8 +592,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Autonomous Research Assistant
-  {
-    id: "ai-autonomous-research-assistant",
+  { id: "ai-autonomous-research-assistant",
     title: "AI Autonomous Research Assistant",
     description: "Intelligent research assistant that autonomously conducts research, analyzes data, generates insights, and creates comprehensive reports across various domains using advanced AI and natural language processing.",
     category: "AI & Research",
@@ -668,13 +639,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$1,799 - $4,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "NLP", "React", "Node.js", "PostgreSQL"],
       integrations: ["Google Scholar", "PubMed", "Research databases", "Academic APIs", "Citation tools"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -685,8 +654,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Quantum Hybrid Platform
-  {
-    id: "ai-quantum-hybrid-platform",
+  { id: "ai-quantum-hybrid-platform",
     title: "AI Quantum Hybrid Platform",
     description: "Revolutionary hybrid platform that combines classical AI with quantum computing capabilities to solve complex optimization problems, accelerate machine learning, and enable breakthrough computational capabilities.",
     category: "AI & Quantum Computing",
@@ -733,13 +701,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$8,999 - $25,000/month",
     roi: "150-300%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "Qiskit", "React", "Node.js", "Quantum hardware"],
+    technicalSpecs: { technology: ["Python", "Qiskit", "React", "Node.js", "Quantum hardware"],
       integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum", "Quantum APIs"],
       apiEndpoints: 100,
       uptime: "99.5%",
@@ -750,8 +716,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Cybersecurity Platform
-  {
-    id: "ai-cybersecurity-platform",
+  { id: "ai-cybersecurity-platform",
     title: "AI Cybersecurity Platform",
     description: "Advanced cybersecurity platform that uses AI to detect, prevent, and respond to cyber threats in real-time, providing comprehensive protection for businesses and organizations.",
     category: "AI & Cybersecurity",
@@ -798,13 +763,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$2,499 - $7,999/month",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "Machine Learning", "React", "Node.js", "PostgreSQL"],
       integrations: ["SIEM systems", "Firewalls", "EDR solutions", "Cloud platforms", "Security tools"],
       apiEndpoints: 300,
       uptime: "99.99%",
@@ -815,8 +778,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // AI-Powered Healthcare Platform
-  {
-    id: "ai-healthcare-platform",
+  { id: "ai-healthcare-platform",
     title: "AI Healthcare Platform",
     description: "Comprehensive AI-powered healthcare platform that provides diagnostic assistance, treatment recommendations, patient monitoring, and healthcare analytics to improve patient outcomes and reduce costs.",
     category: "AI & Healthcare",
@@ -863,13 +825,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$3,999 - $12,999/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "MongoDB"],
       integrations: ["EMR systems", "HL7", "FHIR", "Medical devices", "Healthcare APIs"],
       apiEndpoints: 400,
       uptime: "99.99%",
@@ -880,8 +840,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // Digital Transformation Services
-  {
-    id: "digital-transformation-services",
+  { id: "digital-transformation-services",
     title: "Digital Transformation Services",
     description: "Comprehensive digital transformation consulting and implementation services that help businesses modernize their operations, adopt new technologies, and achieve digital excellence.",
     category: "Digital Transformation",
@@ -928,13 +887,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$4,999 - $15,000/month",
     roi: "200-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Various technologies", "Cloud platforms", "AI/ML", "IoT", "Blockchain"],
+    technicalSpecs: { technology: ["Various technologies", "Cloud platforms", "AI/ML", "IoT", "Blockchain"],
       integrations: ["Enterprise systems", "Cloud services", "Business tools", "Legacy systems", "Modern platforms"],
       apiEndpoints: 500,
       uptime: "99.9%",
@@ -945,8 +902,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // Data Analytics Services
-  {
-    id: "data-analytics-services",
+  { id: "data-analytics-services",
     title: "Data Analytics Services",
     description: "Comprehensive data analytics services that help businesses collect, analyze, and visualize data to gain insights, make informed decisions, and drive business growth.",
     category: "Data & Analytics",
@@ -993,13 +949,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$1,799 - $5,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "R", "SQL", "Tableau", "Power BI"],
+    technicalSpecs: { technology: ["Python", "R", "SQL", "Tableau", "Power BI"],
       integrations: ["Databases", "Cloud platforms", "Business tools", "APIs", "Data sources"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -1010,8 +964,7 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
   },
 
   // Digital Twin Services
-  {
-    id: "digital-twin-services",
+  { id: "digital-twin-services",
     title: "Digital Twin Services",
     description: "Advanced digital twin solutions that create virtual replicas of physical systems, enabling real-time monitoring, predictive maintenance, and optimization of complex operations.",
     category: "Digital Twin",
@@ -1058,13 +1011,11 @@ export const ADDITIONAL_INNOVATIVE_SERVICES_2025: AdditionalInnovativeService202
     marketPrice: "$3,499 - $9,999/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["3D modeling", "IoT sensors", "AI/ML", "Cloud computing", "Real-time processing"],
+    technicalSpecs: { technology: ["3D modeling", "IoT sensors", "AI/ML", "Cloud computing", "Real-time processing"],
       integrations: ["IoT platforms", "SCADA systems", "Enterprise systems", "Cloud services", "Data sources"],
       apiEndpoints: 300,
       uptime: "99.9%",

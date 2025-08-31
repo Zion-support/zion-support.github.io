@@ -5,8 +5,7 @@ import { ProductListing } from "@/types/listings";
 
 export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
   // AI-Powered Risk Assessment Platform
-  {
-    id: "ai-risk-assessment-platform",
+  { id: "ai-risk-assessment-platform",
     title: "AI Risk Assessment Platform",
     description: "Advanced AI-powered risk assessment platform that analyzes financial portfolios, predicts market risks, and provides real-time risk mitigation strategies. Reduces risk exposure by 40% and improves portfolio performance by 25%.",
     category: "AI & FinTech",
@@ -23,8 +22,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "8-10 Weeks",
     aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-risk-assessment",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -37,8 +35,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Fraud Detection System
-  {
-    id: "ai-fraud-detection-system",
+  { id: "ai-fraud-detection-system",
     title: "AI Fraud Detection System",
     description: "Revolutionary AI-powered fraud detection system that identifies fraudulent transactions in real-time using machine learning. Achieves 99.5% accuracy and reduces false positives by 80%.",
     category: "AI & FinTech",
@@ -55,8 +52,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-fraud-detection",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -69,8 +65,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Credit Scoring Platform
-  {
-    id: "ai-credit-scoring-platform",
+  { id: "ai-credit-scoring-platform",
     title: "AI Credit Scoring Platform",
     description: "Advanced AI-powered credit scoring platform that provides more accurate credit assessments using alternative data and machine learning. Improves credit prediction accuracy by 35% and reduces default rates by 25%.",
     category: "AI & FinTech",
@@ -87,8 +82,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "5-7 Weeks",
     aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-credit-scoring",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -101,8 +95,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Investment Advisory Platform
-  {
-    id: "ai-investment-advisory-platform",
+  { id: "ai-investment-advisory-platform",
     title: "AI Investment Advisory Platform",
     description: "Intelligent AI-powered investment advisory platform that provides personalized investment recommendations and portfolio optimization strategies. Achieves 20% better returns than traditional advisory services.",
     category: "AI & FinTech",
@@ -119,8 +112,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "7-9 Weeks",
     aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-investment-advisory",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -133,8 +125,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Regulatory Compliance Platform
-  {
-    id: "ai-regulatory-compliance-platform",
+  { id: "ai-regulatory-compliance-platform",
     title: "AI Regulatory Compliance Platform",
     description: "Advanced AI-powered regulatory compliance platform that automates compliance monitoring, reporting, and risk assessment. Reduces compliance costs by 50% and improves accuracy by 90%.",
     category: "AI & FinTech",
@@ -151,8 +142,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "10-12 Weeks",
     aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-compliance-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -165,8 +155,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Market Sentiment Analysis
-  {
-    id: "ai-market-sentiment-analysis",
+  { id: "ai-market-sentiment-analysis",
     title: "AI Market Sentiment Analysis",
     description: "Revolutionary AI-powered market sentiment analysis platform that analyzes social media, news, and market data to predict market movements. Provides real-time sentiment insights with 85% accuracy.",
     category: "AI & FinTech",
@@ -183,8 +172,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-sentiment-analysis",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -197,8 +185,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Insurance Underwriting Platform
-  {
-    id: "ai-insurance-underwriting-platform",
+  { id: "ai-insurance-underwriting-platform",
     title: "AI Insurance Underwriting Platform",
     description: "Advanced AI-powered insurance underwriting platform that automates risk assessment and policy pricing. Reduces underwriting time by 70% and improves accuracy by 40%.",
     category: "AI & FinTech",
@@ -215,8 +202,7 @@ export const SPECIALIZED_FINANCIAL_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "8-10 Weeks",
     aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-insurance-underwriting",
       address: "364 E Main St STE 1008 Middletown DE 19709"

@@ -61,8 +61,7 @@ import {
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() => 
-    [...Array(20)].map((_, i) => ({
-      id: i,
+    [...Array(20)].map((_, i) => ({ id: i,
       left: `${Math.random() * 100}%`,
       top: `${Math.random() * 100}%`,
       delay: i * 0.1,
@@ -80,20 +79,17 @@ const FuturisticBackground = React.memo(() => {
         <motion.div
           key={particle.id}
           className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-80 shadow-lg shadow-cyan-400/50"
-          animate={{
-            x: [0, 200, 0],
+          animate={{ x: [0, 200, 0],
             y: [0, -200, 0],
             opacity: [0.4, 1, 0.4],
             scale: [0.5, 1.2, 0.5],
           }}
-          transition={{
-            duration: particle.duration,
+          transition={{ duration: particle.duration,
             repeat: Infinity,
             delay: particle.delay,
             ease: "easeInOut"
           }}
-          style={{
-            left: particle.left,
+          style={{ left: particle.left,
             top: particle.top,
           }}
         />
@@ -105,30 +101,26 @@ const FuturisticBackground = React.memo(() => {
 FuturisticBackground.displayName = 'FuturisticBackground';
 
 // Enhanced hero section component
-const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) => {
+const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void     }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const heroSlides = useMemo(() => [
-    {
-      title: "AI-Powered Solutions",
+    { title: "AI-Powered Solutions",
       description: "Transform your business with cutting-edge artificial intelligence",
       icon: Brain,
       features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
     },
-    {
-      title: "Quantum Computing",
+    { title: "Quantum Computing",
       description: "Next-generation computing power for complex problem solving",
       icon: Atom,
       features: ["Quantum Algorithms", "Optimization", "Cryptography", "Simulation"]
     },
-    {
-      title: "Micro SAAS Services",
+    { title: "Micro SAAS Services",
       description: "Scalable software solutions tailored to your needs",
       icon: Zap,
       features: ["Cloud-Native", "API-First", "Scalable Architecture", "Real-time Analytics"]
     },
-    {
-      title: "Digital Transformation",
+    { title: "Digital Transformation",
       description: "Modernize your infrastructure for the future",
       icon: Rocket,
       features: ["Cloud Migration", "DevOps", "Security", "Compliance"]
@@ -155,9 +147,8 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="mb-12"
-        >
+          transition={{ duration: 0.8     }}
+          className="mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 mb-6">
             <Sparkles className="w-5 h-5 text-cyan-400 mr-2" />
             <span className="text-cyan-400 font-medium">2025 Innovation Hub</span>
@@ -197,8 +188,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-6xl mx-auto"
-        >
+          className="max-w-6xl mx-auto">
           <div className="relative">
             <AnimatePresence mode="wait">
               <motion.div
@@ -206,13 +196,12 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -50 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12"
-              >
+                transition={{ duration: 0.5     }}
+                className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-8 md:p-12">
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   <div className="flex-1 text-center md:text-left">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl mb-6">
-                      {React.createElement(heroSlides[currentSlide].icon, { className: "w-8 h-8 text-cyan-400" })}
+                      {React.createElement(heroSlides[currentSlide].icon, { className: "w-8 h-8 text-cyan-400"     })}
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                       {heroSlides[currentSlide].title}
@@ -292,9 +281,8 @@ const StatsSection = React.memo(() => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+              viewport={{ once: true     }}
+              className="text-center">
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                 <stat.icon className="w-8 h-8 text-white" />
               </div>
@@ -313,22 +301,19 @@ StatsSection.displayName = 'StatsSection';
 // Featured services section
 const FeaturedServices = React.memo(() => {
   const featuredServices = useMemo(() => [
-    {
-      title: "AI-Powered Analytics",
+    { title: "AI-Powered Analytics",
       description: "Advanced business intelligence with machine learning insights",
       icon: Brain,
       path: "/ai-services",
       features: ["Real-time Data Processing", "Predictive Analytics", "Custom Dashboards", "API Integration"]
     },
-    {
-      title: "Cloud Infrastructure",
+    { title: "Cloud Infrastructure",
       description: "Scalable cloud solutions for modern businesses",
       icon: Cloud,
       path: "/it-services",
       features: ["Multi-cloud Strategy", "DevOps Automation", "Security & Compliance", "24/7 Monitoring"]
     },
-    {
-      title: "Micro SAAS Solutions",
+    { title: "Micro SAAS Solutions",
       description: "Custom software solutions for specific business needs",
       icon: Zap,
       path: "/micro-saas",
@@ -342,10 +327,9 @@ const FeaturedServices = React.memo(() => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
+          transition={{ duration: 0.8     }}
+          viewport={{ once: true     }}
+          className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Featured Services
           </h2>
@@ -361,9 +345,8 @@ const FeaturedServices = React.memo(() => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group"
-            >
+              viewport={{ once: true     }}
+              className="bg-slate-800/50 rounded-xl p-6 border border-slate-600/30 hover:border-cyan-400/50 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-400/10 group">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
@@ -390,8 +373,7 @@ const FeaturedServices = React.memo(() => {
               
               <Link
                 to={service.path}
-                className="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200"
-              >
+                className="inline-flex items-center w-full justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
@@ -432,7 +414,7 @@ const Home = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -459,15 +441,13 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 text-lg"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-200 text-lg">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/pricing"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200 text-lg">
                 View Pricing
               </Link>
             </div>

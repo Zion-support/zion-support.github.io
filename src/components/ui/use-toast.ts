@@ -7,8 +7,8 @@ position?: "top-right" | "top-center" | "top-left" | "bottom-right" | "bottom-ce
 
 }
 
-export function useToast(...args: any[]): any {
-  const showToast = (message: anystring, options?: ToastOptions)  => {
+export function useToast(...args: []):  {
+  const showToast = (message: string, options?: ToastOptions)  => {
     return toast(message, options)
   }
 

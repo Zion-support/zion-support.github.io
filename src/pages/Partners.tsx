@@ -20,8 +20,7 @@ import {
 
 export default function Partners() {
   const partnerCategories = [
-    {
-      title: 'Technology Partners',
+    { title: 'Technology Partners',
       description: 'Leading technology companies that enhance our solutions',
       icon: Brain,
       partners: [
@@ -31,8 +30,7 @@ export default function Partners() {
         { name: 'IBM', logo: 'IBM', tier: 'Gold', category: 'Enterprise Solutions' }
       ]
     },
-    {
-      title: 'System Integrators',
+    { title: 'System Integrators',
       description: 'Partners who help implement our solutions worldwide',
       icon: Building,
       partners: [
@@ -41,8 +39,7 @@ export default function Partners() {
         { name: 'PwC', logo: 'P', tier: 'Gold', category: 'Advisory' }
       ]
     },
-    {
-      title: 'Channel Partners',
+    { title: 'Channel Partners',
       description: 'Resellers and distributors expanding our reach',
       icon: Globe,
       partners: [
@@ -68,7 +65,7 @@ export default function Partners() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.5     }}
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl mb-6">
                 <Users className="h-10 w-10 text-white" />
@@ -90,9 +87,8 @@ export default function Partners() {
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-sm border border-gray-200 p-8"
-            >
+              transition={{ delay: index * 0.1     }}
+              className="bg-white rounded-xl shadow-sm border border-gray-200 p-8">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
                   <category.icon className="h-6 w-6 text-white" />
@@ -109,9 +105,8 @@ export default function Partners() {
                     key={partner.name}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: (index * 0.1) + (partnerIndex * 0.05) }}
-                    className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors"
-                  >
+                    transition={{ delay: (index * 0.1) + (partnerIndex * 0.05)     }}
+                    className="text-center p-4 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg mx-auto mb-3">
                       {partner.logo}
                     </div>
@@ -135,9 +130,8 @@ export default function Partners() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 p-8"
-        >
+          transition={{ delay: 0.4     }}
+          className="mt-16 bg-white rounded-xl shadow-sm border border-gray-200 p-8">
           <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Partner Benefits</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
@@ -145,9 +139,8 @@ export default function Partners() {
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + index * 0.1 }}
-                className="text-center p-6"
-              >
+                transition={{ delay: 0.5 + index * 0.1     }}
+                className="text-center p-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl mb-4">
                   <benefit.icon className="h-8 w-8 text-white" />
                 </div>
@@ -162,9 +155,8 @@ export default function Partners() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 text-center"
-        >
+          transition={{ delay: 0.6     }}
+          className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">Ready to Partner With Us?</h2>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
@@ -173,15 +165,13 @@ export default function Partners() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors"
-              >
+                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-gray-50 transition-colors">
                 Become a Partner
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors"
-              >
+                className="inline-flex items-center px-6 py-3 border border-white/30 text-white font-medium rounded-lg hover:bg-white/10 transition-colors">
                 Contact Partnership Team
               </a>
             </div>

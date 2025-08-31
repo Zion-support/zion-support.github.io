@@ -68,33 +68,27 @@ import {
 
 const IoTEdgeComputing = () => {
   const features = [
-    {
-      icon: Chip,
+    { icon: Chip,
       title: 'Edge Processing',
       description: 'Local data processing and analytics at the device level'
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: 'IoT Connectivity',
       description: 'Multiple connectivity options for IoT devices'
     },
-    {
-      icon: Sensor,
+    { icon: Sensor,
       title: 'Sensor Integration',
       description: 'Comprehensive sensor data collection and processing'
     },
-    {
-      icon: Cpu,
+    { icon: Cpu,
       title: 'Real-time Analytics',
       description: 'Instant data analysis and decision making'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Edge Security',
       description: 'Advanced security for edge devices and data'
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: 'Cloud Integration',
       description: 'Seamless cloud-edge data synchronization'
     }
@@ -110,43 +104,35 @@ const IoTEdgeComputing = () => {
   ];
 
   const services = [
-    {
-      icon: Circuit,
+    { icon: Circuit,
       title: 'Edge Device Development',
       description: 'Custom IoT edge device design and development'
     },
-    {
-      icon: Wifi,
+    { icon: Wifi,
       title: 'Connectivity Solutions',
       description: 'WiFi, Bluetooth, LoRa, and cellular connectivity'
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: 'Edge Data Management',
       description: 'Local data storage and management solutions'
     },
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: 'Edge Monitoring',
       description: 'Real-time monitoring and alerting systems'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Manufacturing',
+    { industry: 'Manufacturing',
       description: 'Smart factory automation and predictive maintenance'
     },
-    {
-      industry: 'Smart Cities',
+    { industry: 'Smart Cities',
       description: 'Urban infrastructure monitoring and management'
     },
-    {
-      industry: 'Agriculture',
+    { industry: 'Agriculture',
       description: 'Precision farming and crop monitoring'
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       description: 'Remote patient monitoring and medical devices'
     }
   ];
@@ -160,9 +146,8 @@ const IoTEdgeComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-teal-500/10 border border-teal-500/20 rounded-full text-teal-400 text-sm font-medium mb-6">
               <Cpu className="w-4 h-4 mr-2" />
               IoT & Edge Computing
@@ -198,9 +183,8 @@ const IoTEdgeComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced IoT Edge Features
             </h2>
@@ -217,8 +201,7 @@ const IoTEdgeComputing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-teal-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-teal-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -236,9 +219,8 @@ const IoTEdgeComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core IoT Edge Services
             </h2>
@@ -255,8 +237,7 @@ const IoTEdgeComputing = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-teal-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-teal-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -278,9 +259,8 @@ const IoTEdgeComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               IoT Edge Computing Benefits
             </h2>
@@ -297,8 +277,7 @@ const IoTEdgeComputing = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-teal-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -311,8 +290,7 @@ const IoTEdgeComputing = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-teal-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -328,9 +306,8 @@ const IoTEdgeComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -347,8 +324,7 @@ const IoTEdgeComputing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-teal-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-teal-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -366,7 +342,7 @@ const IoTEdgeComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your IoT Edge Project Today

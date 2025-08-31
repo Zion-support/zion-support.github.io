@@ -26,8 +26,7 @@ import {
 
 export default function AIServices() {
   const aiServices = [
-    {
-      name: "AI Strategy & Consulting",
+    { name: "AI Strategy & Consulting",
       description: "Strategic guidance on implementing AI solutions across your organization",
       icon: Target,
       features: [
@@ -39,8 +38,7 @@ export default function AIServices() {
       price: "From $2,500",
       duration: "2-4 weeks"
     },
-    {
-      name: "Machine Learning Development",
+    { name: "Machine Learning Development",
       description: "Custom ML models and algorithms tailored to your specific business needs",
       icon: Brain,
       features: [
@@ -52,8 +50,7 @@ export default function AIServices() {
       price: "From $5,000",
       duration: "4-8 weeks"
     },
-    {
-      name: "AI-Powered Applications",
+    { name: "AI-Powered Applications",
       description: "Intelligent automation and insights through custom AI applications",
       icon: Zap,
       features: [
@@ -65,8 +62,7 @@ export default function AIServices() {
       price: "From $8,500",
       duration: "6-12 weeks"
     },
-    {
-      name: "AI Infrastructure & MLOps",
+    { name: "AI Infrastructure & MLOps",
       description: "Scalable AI infrastructure and machine learning operations",
       icon: Cloud,
       features: [
@@ -90,23 +86,19 @@ export default function AIServices() {
   ];
 
   const useCases = [
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       applications: ["Medical image analysis", "Drug discovery", "Patient risk prediction"],
       icon: Heart
     },
-    {
-      industry: "Finance",
+    { industry: "Finance",
       applications: ["Fraud detection", "Credit scoring", "Algorithmic trading"],
       icon: DollarSign
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       applications: ["Predictive maintenance", "Quality control", "Supply chain optimization"],
       icon: Factory
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],
       icon: ShoppingCart
     }
@@ -131,8 +123,7 @@ export default function AIServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -168,8 +159,7 @@ export default function AIServices() {
             {aiServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
                     <service.icon className="h-8 w-8 text-white" />
@@ -196,8 +186,7 @@ export default function AIServices() {
                   </div>
                   <Link
                     to="/contact"
-                    className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200"
-                  >
+                    className="px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors duration-200">
                     Get Quote
                   </Link>
                 </div>
@@ -223,8 +212,7 @@ export default function AIServices() {
             {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
-                className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300"
-              >
+                className="text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <tech.icon className="h-8 w-8 text-white" />
                 </div>
@@ -252,8 +240,7 @@ export default function AIServices() {
             {useCases.map((useCase, index) => (
               <div
                 key={index}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300">
                 <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center">
                   <useCase.icon className="h-6 w-6 text-white" />
                 </div>
@@ -285,15 +272,13 @@ export default function AIServices() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Schedule Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

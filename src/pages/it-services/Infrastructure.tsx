@@ -4,46 +4,38 @@ import { Server, Network, Shield, Zap, ArrowRight, Cloud, Database, Cpu, Users, 
 
 export default function Infrastructure() {
   const features = [
-    {
-      icon: Server,
+    { icon: Server,
       title: 'Scalable Infrastructure',
       description: 'Build robust systems that grow with your business'
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: 'Network Management',
       description: 'Optimize connectivity and performance'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Security First',
       description: 'Protect your infrastructure with enterprise-grade security'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast systems and applications'
     }
   ];
 
   const services = [
-    {
-      title: 'Server Management',
+    { title: 'Server Management',
       description: 'Comprehensive server administration and optimization',
       icon: Server
     },
-    {
-      title: 'Network Design',
+    { title: 'Network Design',
       description: 'Custom network architecture and implementation',
       icon: Network
     },
-    {
-      title: 'Cloud Migration',
+    { title: 'Cloud Migration',
       description: 'Seamless transition to cloud infrastructure',
       icon: Cloud
     },
-    {
-      title: 'Disaster Recovery',
+    { title: 'Disaster Recovery',
       description: 'Business continuity and backup solutions',
       icon: Shield
     }
@@ -58,9 +50,8 @@ export default function Infrastructure() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center space-x-2 bg-orange-500/10 border border-orange-500/20 rounded-full px-4 py-2 mb-6">
               <Server className="w-5 h-5 text-orange-400" />
               <span className="text-orange-400 font-medium">IT Infrastructure</span>
@@ -95,10 +86,9 @@ export default function Infrastructure() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Infrastructure Solutions?
             </h2>
@@ -114,9 +104,8 @@ export default function Infrastructure() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -134,10 +123,9 @@ export default function Infrastructure() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Infrastructure Services
             </h2>
@@ -153,9 +141,8 @@ export default function Infrastructure() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group">
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-8 h-8 text-white" />
@@ -177,10 +164,9 @@ export default function Infrastructure() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-orange-600 to-orange-700 rounded-3xl p-12 text-center relative overflow-hidden"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="bg-gradient-to-r from-orange-600 to-orange-700 rounded-3xl p-12 text-center relative overflow-hidden">
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative z-10">
               <h2 className="text-4xl font-bold text-white mb-6">

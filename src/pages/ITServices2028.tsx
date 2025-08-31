@@ -17,8 +17,7 @@ import {
 } from 'lucide-react';
 
 const itServices2028 = [
-  {
-    id: 'quantum-cloud-infrastructure',
+  { id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
     tagline: 'Next-generation quantum-ready cloud infrastructure',
     price: '$45,999',
@@ -47,8 +46,7 @@ const itServices2028 = [
     reviews: 89,
     customers: 45
   },
-  {
-    id: 'ai-powered-cybersecurity',
+  { id: 'ai-powered-cybersecurity',
     name: 'AI-Powered Cybersecurity Suite',
     tagline: 'Intelligent threat detection and response',
     price: '$32,999',
@@ -77,8 +75,7 @@ const itServices2028 = [
     reviews: 234,
     customers: 156
   },
-  {
-    id: 'quantum-database-platform',
+  { id: 'quantum-database-platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum-powered database management system',
     price: '$28,999',
@@ -107,8 +104,7 @@ const itServices2028 = [
     reviews: 123,
     customers: 67
   },
-  {
-    id: 'ai-network-optimization',
+  { id: 'ai-network-optimization',
     name: 'AI Network Optimization',
     tagline: 'Intelligent network performance and security',
     price: '$22,999',
@@ -137,8 +133,7 @@ const itServices2028 = [
     reviews: 189,
     customers: 98
   },
-  {
-    id: 'quantum-devops-automation',
+  { id: 'quantum-devops-automation',
     name: 'Quantum DevOps Automation',
     tagline: 'Next-generation development and operations automation',
     price: '$35,999',
@@ -167,8 +162,7 @@ const itServices2028 = [
     reviews: 267,
     customers: 134
   },
-  {
-    id: 'ai-data-analytics-platform',
+  { id: 'ai-data-analytics-platform',
     name: 'AI Data Analytics Platform',
     tagline: 'Intelligent business intelligence and analytics',
     price: '$25,999',
@@ -230,25 +224,22 @@ const ITServices2028: React.FC = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl font-bold mb-6 text-gradient"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-5xl md:text-7xl font-bold mb-6 text-gradient">
             IT Services 2028
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto"
-          >
+            className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto">
             Cutting-edge IT solutions powered by quantum computing and artificial intelligence
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
+            className="flex flex-wrap justify-center gap-4">
             <div className="bg-zion-cyan/20 backdrop-blur-sm border border-zion-cyan/30 rounded-full px-6 py-3 text-zion-cyan font-semibold">
               🚀 Quantum-Ready Infrastructure
             </div>
@@ -271,8 +262,8 @@ const ITServices2028: React.FC = () => {
               {categories.map((category) => (
                 <motion.button
                   key={category.id}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                     selectedCategory === category.id
@@ -311,8 +302,7 @@ const ITServices2028: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20"
-              >
+                className="group relative bg-zion-slate/30 backdrop-blur-sm border border-zion-slate/40 rounded-2xl p-6 hover:border-zion-cyan/50 transition-all duration-300 hover:shadow-2xl hover:shadow-zion-cyan/20">
                 {/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-3 -right-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
@@ -369,8 +359,7 @@ const ITServices2028: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   to={`/it-services/${service.id}`}
-                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-3 px-6 rounded-lg font-semibold text-center group-hover:shadow-lg group-hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -400,36 +389,31 @@ const ITServices2028: React.FC = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold mb-6 text-gradient"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-4xl md:text-5xl font-bold mb-6 text-gradient">
             Ready to Transform Your IT Infrastructure?
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto"
-          >
+            className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Contact our team of IT experts to discuss how our innovative services can revolutionize your technology infrastructure
           </motion.p>
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+            className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+13024640950"
-              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
               <Phone className="w-5 h-5" />
               +1 302 464 0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-            >
+              className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
               <Mail className="w-5 h-5" />
               kleber@ziontechgroup.com
             </a>

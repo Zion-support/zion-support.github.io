@@ -3,22 +3,19 @@ import { Cog, Wifi, Database, Shield, Zap, BarChart3, Activity, Globe } from 'lu
 
 const IoTServices = () => {
   const iotServices = [
-    {
-      title: "IoT Device Development",
+    { title: "IoT Device Development",
       description: "Custom IoT device design and development for your specific use case.",
       price: "From $15,000/project",
       features: ["Hardware design", "Firmware development", "Sensor integration", "Power management"],
       icon: Cog
     },
-    {
-      title: "IoT Connectivity Solutions",
+    { title: "IoT Connectivity Solutions",
       description: "Secure and reliable connectivity for your IoT ecosystem.",
       price: "From $8,000/month",
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
       icon: Wifi
     },
-    {
-      title: "IoT Data Management",
+    { title: "IoT Data Management",
       description: "Comprehensive data collection, processing, and analytics for IoT devices.",
       price: "From $6,500/month",
       features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],
@@ -27,20 +24,17 @@ const IoTServices = () => {
   ];
 
   const iotTechnologies = [
-    {
-      name: "Edge Computing",
+    { name: "Edge Computing",
       description: "Local data processing and decision making",
       icon: Activity,
       features: ["Local processing", "Reduced latency", "Bandwidth optimization", "Offline operation"]
     },
-    {
-      name: "Machine Learning",
+    { name: "Machine Learning",
       description: "AI-powered IoT intelligence and automation",
       icon: BarChart3,
       features: ["Predictive analytics", "Anomaly detection", "Automated responses", "Pattern recognition"]
     },
-    {
-      name: "Security & Privacy",
+    { name: "Security & Privacy",
       description: "Enterprise-grade IoT security solutions",
       icon: Shield,
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]

@@ -17,26 +17,24 @@ export interface InnovativeITInfrastructureService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureService[] = [
   // Next-Generation Cloud Infrastructure
-  {
-    id: "next-gen-cloud-infrastructure",
+  { id: "next-gen-cloud-infrastructure",
     title: "Next-Generation Cloud Infrastructure Platform",
     description: "Revolutionary cloud infrastructure platform that combines multi-cloud orchestration, serverless computing, and AI-powered resource optimization for unprecedented scalability and performance.",
     category: "Cloud Computing",
@@ -83,13 +81,11 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     marketPrice: "$3,999 - $9,999/month",
     roi: "300-500%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Kubernetes", "Docker", "Terraform", "Python", "React"],
+    technicalSpecs: { technology: ["Kubernetes", "Docker", "Terraform", "Python", "React"],
       integrations: ["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"],
       apiEndpoints: 400,
       uptime: "99.99%",
@@ -100,8 +96,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
   },
 
   // Edge Computing & IoT Platform
-  {
-    id: "edge-computing-iot-platform",
+  { id: "edge-computing-iot-platform",
     title: "Edge Computing & IoT Platform Enterprise",
     description: "Advanced edge computing platform that brings computation and data storage closer to IoT devices, enabling real-time processing, reduced latency, and enhanced security.",
     category: "Edge Computing",
@@ -148,13 +143,11 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     marketPrice: "$2,799 - $6,799/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Kubernetes Edge", "Docker Edge", "MQTT", "WebRTC", "Node.js"],
+    technicalSpecs: { technology: ["Kubernetes Edge", "Docker Edge", "MQTT", "WebRTC", "Node.js"],
       integrations: ["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -165,8 +158,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
   },
 
   // Quantum-Ready Network Infrastructure
-  {
-    id: "quantum-ready-network-infrastructure",
+  { id: "quantum-ready-network-infrastructure",
     title: "Quantum-Ready Network Infrastructure",
     description: "Future-proof network infrastructure designed to support quantum computing, quantum key distribution, and post-quantum cryptography for ultra-secure communications.",
     category: "Quantum Computing",
@@ -213,13 +205,11 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     marketPrice: "$5,499 - $12,999/month",
     roi: "400-800%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Quantum protocols", "Post-quantum crypto", "Quantum networks", "Python", "C++"],
+    technicalSpecs: { technology: ["Quantum protocols", "Post-quantum crypto", "Quantum networks", "Python", "C++"],
       integrations: ["Quantum computers", "Classical networks", "Security systems", "Monitoring tools", "Research platforms"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -230,8 +220,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
   },
 
   // AI-Powered Data Center Management
-  {
-    id: "ai-powered-data-center-management",
+  { id: "ai-powered-data-center-management",
     title: "AI-Powered Data Center Management Platform",
     description: "Intelligent data center management platform that uses AI to optimize cooling, power consumption, server utilization, and predictive maintenance for maximum efficiency.",
     category: "Data Center Management",
@@ -278,13 +267,11 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     marketPrice: "$2,299 - $5,299/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "IoT sensors", "Machine Learning", "React"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "IoT sensors", "Machine Learning", "React"],
       integrations: ["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -295,8 +282,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
   },
 
   // 5G & 6G Network Infrastructure
-  {
-    id: "5g-6g-network-infrastructure",
+  { id: "5g-6g-network-infrastructure",
     title: "5G & 6G Network Infrastructure Solutions",
     description: "Advanced 5G and future 6G network infrastructure that provides ultra-fast connectivity, low latency, massive IoT support, and network slicing capabilities.",
     category: "Network Infrastructure",
@@ -343,13 +329,11 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     marketPrice: "$3,499 - $8,499/month",
     roi: "300-600%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["5G NR", "Network slicing", "Edge computing", "AI/ML", "Python"],
+    technicalSpecs: { technology: ["5G NR", "Network slicing", "Edge computing", "AI/ML", "Python"],
       integrations: ["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"],
       apiEndpoints: 500,
       uptime: "99.99%",

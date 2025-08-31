@@ -1,23 +1,21 @@
 import React, { useState } from 'react.ts';
 import { ChevronDown  } from 'lucide-react.ts';
 
-interface AccordionProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
+interface AccordionProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
   className?: string;
   type?: 'single' | 'multiple';
   defaultValue?: string | string[];
 
-}
+    }
 
-export function Accordion(...args: any[]): any {
+export function Accordion() {  
   const [openItems, setOpenItems] = useState<any>(
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : []
-  );
+  )
 
-  const handleToggle = (value: anystring)  => {
+  const handleToggle = (value: string)  => {
     if (type === 'single') {
-      setOpenItems(openItems.includes(value) ? [] : [value]);
+      setOpenItems(openItems.includes(value) ? [] : [value])
     } else {
       setOpenItems(prev => 
         prev.includes(value) 
@@ -31,8 +29,7 @@ export function Accordion(...args: any[]): any {
     <div className={`space-y-1 ${className}`}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child)) {
-          return React.cloneElement(child, { 
-            isOpen: anyopenItems.includes(child.props.value),
+          return React.cloneElement(child, { isOpen: openItems.includes(child.props.value),
             onToggle: ()  => handleToggle(child.props.value)
           });
         }
@@ -42,17 +39,15 @@ export function Accordion(...args: any[]): any {
   );
 }
 
-interface AccordionItemProps extends React.PropsWithChildren<{}> {
-
-  children: anyReact.ReactNode;
+interface AccordionItemProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
   value: string;
   className?: string;
   isOpen?: boolean;
-  onToggle?: ()  => void;
+  onToggle?: () => void;
 
-}
+    }
 
-export function AccordionItem(...args: any[]): any {
+export function AccordionItem(...args: []):  {
   return (
     <div className={`border-b border-gray-200 ${className}`}>
       {React.Children.map(children, (child) => {
@@ -65,21 +60,18 @@ export function AccordionItem(...args: any[]): any {
   );
 }
 
-interface AccordionTriggerProps extends React.PropsWithChildren<{}> {
-
-  children: anyReact.ReactNode;
+interface AccordionTriggerProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
-  onToggle?: ()  => void;
+  onToggle?: () => void;
 
-}
+    }
 
-export function AccordionTrigger(...args: any[]): any {
+export function AccordionTrigger(...args: []):  {
   return (
     <button
       className={`flex w-full items-center justify-between py-4 font-medium transition-all hover:underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${className}`}
-      onClick={onToggle}
-    >
+      onClick={onToggle}>
       {children}
       <ChevronDown 
         className={`h-4 w-4 shrink-0 transition-transform duration-200 ${
@@ -90,16 +82,14 @@ export function AccordionTrigger(...args: any[]): any {
   );
 }
 
-interface AccordionContentProps extends React.PropsWithChildren<{}> {
-
-  children: React.ReactNode;
+interface AccordionContentProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
   className?: string;
   isOpen?: boolean;
 
-}
+    }
 
-export function AccordionContent(...args: any[]): any {
-  if (!isOpen) return null;
+export function AccordionContent() { 
+  if (!isOpen) return null
 
   return (
     <div className={`overflow-hidden text-sm transition-all pb-4 pt-0 ${className}`}>

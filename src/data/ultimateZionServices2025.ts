@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface MicroSaasService {
   id: number;
@@ -34,7 +34,7 @@ export interface MicroSaasService {
   growthRate: string;
   useCases: string[];
   technologies: string[];
-}
+    }
 
 export interface ITService {
   id: number;
@@ -59,7 +59,7 @@ export interface ITService {
   compliance: string[];
   useCases: string[];
   technologies: string[];
-}
+    }
 
 export interface AIService {
   id: number;
@@ -85,11 +85,10 @@ export interface AIService {
   marketSize: string;
   ethicalAI: string[];
   technologies: string[];
-}
+    }
 
 // Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
+const zionContact: ServiceContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -97,8 +96,7 @@ const zionContact: ServiceContact = {
 
 // Ultimate Micro SAAS Services 2025
 export const ultimateMicroSaasServices2025: MicroSaasService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "NeuralFlow Enterprise",
     category: "AI-Powered Workflow Automation",
     pricing: "Enterprise",
@@ -145,8 +143,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     ],
     technologies: ["Neural Networks", "Machine Learning", "Quantum Computing", "API Integration"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "QuantumSync Pro",
     category: "Quantum Computing Integration",
     pricing: "Premium",
@@ -193,8 +190,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     ],
     technologies: ["Quantum Computing", "Quantum Algorithms", "Hybrid Systems", "Cloud Integration"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "BioTech AI Platform",
     category: "Biotechnology AI Solutions",
     pricing: "Enterprise",
@@ -241,8 +237,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     ],
     technologies: ["Machine Learning", "Deep Learning", "Genomics", "Bioinformatics"]
   },
-  {
-    id: 4,
+  { id: 4,
     name: "SpaceTech Analytics",
     category: "Space Technology Solutions",
     pricing: "Premium",
@@ -289,8 +284,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     ],
     technologies: ["Satellite Data Processing", "Mission Planning", "Space Analytics", "Aerospace Systems"]
   },
-  {
-    id: 5,
+  { id: 5,
     name: "GreenTech Optimizer",
     category: "Sustainable Technology",
     pricing: "Professional",
@@ -337,8 +331,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     ],
     technologies: ["IoT Sensors", "Data Analytics", "Machine Learning", "Sustainability Metrics"]
   },
-  {
-    id: 6,
+  { id: 6,
     name: "CyberShield Pro",
     category: "Advanced Cybersecurity",
     pricing: "Enterprise",
@@ -385,8 +378,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     ],
     technologies: ["AI/ML", "Zero Trust Architecture", "Behavioral Analytics", "Security Orchestration"]
   },
-  {
-    id: 7,
+  { id: 7,
     name: "DataVault Enterprise",
     category: "Data Management & Analytics",
     pricing: "Enterprise",
@@ -433,8 +425,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     ],
     technologies: ["Cloud Computing", "AI/ML", "Big Data", "Data Governance"]
   },
-  {
-    id: 8,
+  { id: 8,
     name: "CloudOps Pro",
     category: "Cloud Operations & DevOps",
     pricing: "Professional",
@@ -485,8 +476,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
 
 // Ultimate IT Infrastructure Services 2025
 export const ultimateITInfrastructureServices2025: ITService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Enterprise Network Architecture",
     category: "Network Infrastructure",
     description: "Comprehensive enterprise network design, implementation, and optimization services with next-generation technologies",
@@ -530,8 +520,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     ],
     technologies: ["SD-WAN", "Network Security", "Cloud Networking", "5G Integration"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Data Center Modernization",
     category: "Data Center Services",
     description: "Comprehensive data center modernization services including design, migration, and optimization for hybrid cloud environments",
@@ -575,8 +564,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     ],
     technologies: ["Hyperconverged Infrastructure", "Software-Defined Storage", "AI-Powered Management", "Green Computing"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "Cybersecurity Infrastructure",
     category: "Security Services",
     description: "Comprehensive cybersecurity infrastructure design, implementation, and management services with advanced threat protection",
@@ -624,8 +612,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
 
 // Ultimate AI Services 2025
 export const ultimateAIServices2025: AIService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Enterprise AI Platform",
     category: "AI Platform Services",
     description: "Comprehensive enterprise AI platform with custom model development, deployment, and management capabilities",
@@ -670,8 +657,7 @@ export const ultimateAIServices2025: AIService[] = [
     ethicalAI: ["Bias detection", "Fairness metrics", "Transparency", "Accountability"],
     technologies: ["Deep Learning", "NLP", "Computer Vision", "AutoML"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "AI-Powered Analytics",
     category: "Analytics Services",
     description: "Advanced AI-powered analytics platform with real-time insights, predictive modeling, and automated reporting",
@@ -716,8 +702,7 @@ export const ultimateAIServices2025: AIService[] = [
     ethicalAI: ["Data privacy", "Transparency", "Bias mitigation"],
     technologies: ["Machine Learning", "Real-time Processing", "Data Visualization", "Natural Language Processing"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "AI Content Generation",
     category: "Content Services",
     description: "Advanced AI-powered content generation platform for marketing, documentation, and creative content creation",

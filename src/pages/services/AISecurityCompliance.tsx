@@ -13,18 +13,15 @@ export default function AISecurityCompliance() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$399/mo', 
       details: ['Up to 5 compliance frameworks', 'Basic AI features', 'Standard compliance', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$999/mo', 
       details: ['Up to 20 compliance frameworks', 'Advanced AI features', 'Enhanced compliance', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$2,499/mo', 
       details: ['Unlimited compliance frameworks', 'Custom AI models', 'Full compliance suite', '24/7 dedicated support'] 
     },

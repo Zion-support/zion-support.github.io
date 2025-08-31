@@ -8,24 +8,22 @@ interface PerformanceMetrics {
   fid: number | null;
   cls: number | null;
   ttfb: number | null;
-}
+    }
 
 interface PerformanceMonitorProps {
   className?: string;
   showDetails?: boolean;
 }
 
-export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+export const PerformanceMonitor: React.FC = ({ 
   className = '',
   showDetails = false 
 }) => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null,
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null
-  });
+    ttfb: null});
   const [isVisible, setIsVisible] = useState(false);
   const [performanceScore, setPerformanceScore] = useState<number>(0);
 
@@ -90,15 +88,13 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     return <AlertTriangle className="w-5 h-5 text-red-400" />;
   };
 
-  const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null): {
-    status: 'good' | 'needs-improvement' | 'poor';
-    color: string;
-    icon: React.ReactNode;
-  } => {
+  const getMetricStatus = (metric: keyof PerformanceMetrics, value: number | null): { status: 'good' | 'needs-improvement' | 'poor';
+    color: string
+    icon: React.ReactNode
+      } => {
     if (value === null) return { status: 'poor', color: 'text-gray-400', icon: <Clock className="w-4 h-4" /> };
 
-    const thresholds = {
-      fcp: { good: 1800, needsImprovement: 3000 },
+    const thresholds = { fcp: { good: 1800, needsImprovement: 3000 },
       lcp: { good: 2500, needsImprovement: 4000 },
       fid: { good: 100, needsImprovement: 300 },
       cls: { good: 0.1, needsImprovement: 0.25 },
@@ -125,7 +121,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
         }
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ entryTypes: ['paint']     });
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
@@ -135,7 +131,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, lcp: lcpEntry.startTime }));
         }
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint']     });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
@@ -145,19 +141,19 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           setMetrics(prev => ({ ...prev, fid: fidEntry.processingStart - fidEntry.startTime }));
         }
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input']     });
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as ).value;
           }
         }
         setMetrics(prev => ({ ...prev, cls: clsValue }));
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift']     });
 
       // Time to First Byte
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -191,7 +187,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       className={`bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-2xl p-4 ${className}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5     }}
     >
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-2">
@@ -210,8 +206,7 @@ export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         <div className="space-y-3">
           {Object.entries(metrics).map(([key, value]) => {
             const status = getMetricStatus(key as keyof PerformanceMetrics, value);
-            const label = {
-              fcp: 'First Contentful Paint',
+            const label = { fcp: 'First Contentful Paint',
               lcp: 'Largest Contentful Paint',
               fid: 'First Input Delay',
               cls: 'Cumulative Layout Shift',

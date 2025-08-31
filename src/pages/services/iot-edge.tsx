@@ -36,8 +36,7 @@ export default function IoTEdge() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function IoTEdge() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Cpu,
+                { icon: Cpu,
                   title: "Edge Processing",
                   description: "Process data locally on IoT devices for reduced latency and improved performance."
                 },
-                {
-                  icon: Wifi,
+                { icon: Wifi,
                   title: "Device Connectivity",
                   description: "Seamless connectivity across multiple protocols and network types."
                 },
-                {
-                  icon: Zap,
+                { icon: Zap,
                   title: "Real-time Analytics",
                   description: "Instant insights and decision-making with edge-based analytics."
                 },
-                {
-                  icon: Settings,
+                { icon: Settings,
                   title: "Device Management",
                   description: "Centralized management and monitoring of all IoT devices and sensors."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Smart Automation",
                   description: "Intelligent automation based on sensor data and predefined rules."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with encryption and access controls."
                 }
@@ -122,38 +115,32 @@ export default function IoTEdge() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Smart Manufacturing",
+                { title: "Smart Manufacturing",
                   description: "Monitor production equipment, predict maintenance, and optimize manufacturing processes.",
                   icon: Settings,
                   benefits: ["Predictive maintenance", "Quality control", "Production optimization"]
                 },
-                {
-                  title: "Smart Cities",
+                { title: "Smart Cities",
                   description: "Manage urban infrastructure, traffic systems, and public services efficiently.",
                   icon: Globe,
                   benefits: ["Traffic management", "Infrastructure monitoring", "Public safety"]
                 },
-                {
-                  title: "Healthcare IoT",
+                { title: "Healthcare IoT",
                   description: "Patient monitoring, medical device management, and remote healthcare delivery.",
                   icon: Users,
                   benefits: ["Patient monitoring", "Device management", "Remote care"]
                 },
-                {
-                  title: "Energy Management",
+                { title: "Energy Management",
                   description: "Smart grid monitoring, renewable energy optimization, and energy efficiency.",
                   icon: Zap,
                   benefits: ["Grid monitoring", "Energy optimization", "Efficiency management"]
                 },
-                {
-                  title: "Agriculture",
+                { title: "Agriculture",
                   description: "Precision farming, crop monitoring, and automated irrigation systems.",
                   icon: Target,
                   benefits: ["Crop monitoring", "Precision farming", "Automated irrigation"]
                 },
-                {
-                  title: "Retail & Logistics",
+                { title: "Retail & Logistics",
                   description: "Inventory management, supply chain optimization, and customer experience.",
                   icon: Activity,
                   benefits: ["Inventory tracking", "Supply chain", "Customer insights"]
@@ -244,20 +231,16 @@ export default function IoTEdge() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  title: "IoT Protocols",
+                { title: "IoT Protocols",
                   description: "Support for MQTT, CoAP, HTTP, and custom protocols"
                 },
-                {
-                  title: "Edge Computing",
+                { title: "Edge Computing",
                   description: "Docker containers, Kubernetes, and edge-native applications"
                 },
-                {
-                  title: "Data Processing",
+                { title: "Data Processing",
                   description: "Stream processing, real-time analytics, and machine learning"
                 },
-                {
-                  title: "Security",
+                { title: "Security",
                   description: "TLS encryption, device authentication, and secure communication"
                 }
               ].map((technology, index) => (
@@ -287,23 +270,19 @@ export default function IoTEdge() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Assessment",
                   description: "Evaluate current infrastructure and identify IoT opportunities."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "Design",
                   description: "Architect IoT solution with edge computing capabilities."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Implementation",
                   description: "Deploy IoT devices and edge computing infrastructure."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Optimization",
                   description: "Monitor performance and continuously optimize the system."
                 }
@@ -332,15 +311,13 @@ export default function IoTEdge() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-700 transition-all duration-200">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

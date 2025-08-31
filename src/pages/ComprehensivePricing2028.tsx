@@ -50,13 +50,11 @@ const ComprehensivePricing2028 = () => {
   ];
 
   const services = [
-    {
-      id: 'ai-autonomous-research-assistant',
+    { id: 'ai-autonomous-research-assistant',
       title: 'AI Autonomous Research Assistant',
       description: 'Transform your research process with AI that autonomously discovers, analyzes, and synthesizes information from thousands of sources in real-time.',
       category: 'AI & Research',
-      pricing: {
-        starter: { price: 99, period: 'month', features: ['AI-Powered Research', 'Multi-Source Analysis', 'Academic Integration', 'Trend Analysis', 'Real-time Updates', 'Data Security'] },
+      pricing: { starter: { price: 99, period: 'month', features: ['AI-Powered Research', 'Multi-Source Analysis', 'Academic Integration', 'Trend Analysis', 'Real-time Updates', 'Data Security'] },
         professional: { price: 299, period: 'month', features: ['Advanced Research Tools', 'Custom AI Models', 'Priority Support', 'Advanced Analytics', 'API Access', 'White-label Solutions'] },
         enterprise: { price: 799, period: 'month', features: ['Full Research Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions', 'On-premise Deployment'] }
       },
@@ -64,13 +62,11 @@ const ComprehensivePricing2028 = () => {
       useCases: ['Academic Research', 'Market Intelligence', 'Product Development', 'Policy Research'],
       color: 'blue'
     },
-    {
-      id: 'ai-supply-chain-optimization',
+    { id: 'ai-supply-chain-optimization',
       title: 'AI Supply Chain Optimization',
       description: 'Transform your supply chain with AI that predicts, optimizes, and automates every aspect of your operations for maximum efficiency and cost savings.',
       category: 'AI & Operations',
-      pricing: {
-        starter: { price: 199, period: 'month', features: ['End-to-End Visibility', 'Predictive Analytics', 'Inventory Optimization', 'Route Optimization', 'Warehouse Management', 'Global Supply Chain'] },
+      pricing: { starter: { price: 199, period: 'month', features: ['End-to-End Visibility', 'Predictive Analytics', 'Inventory Optimization', 'Route Optimization', 'Warehouse Management', 'Global Supply Chain'] },
         professional: { price: 499, period: 'month', features: ['Advanced Optimization', 'Custom AI Models', 'Priority Support', 'Advanced Analytics', 'API Access', 'White-label Solutions'] },
         enterprise: { price: 1299, period: 'month', features: ['Full Optimization Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions', 'On-premise Deployment'] }
       },
@@ -78,13 +74,11 @@ const ComprehensivePricing2028 = () => {
       useCases: ['Retail & E-commerce', 'Manufacturing', 'Logistics & Transportation', 'Healthcare & Pharmaceuticals'],
       color: 'green'
     },
-    {
-      id: 'ai-content-marketing-suite',
+    { id: 'ai-content-marketing-suite',
       title: 'AI Content Marketing Suite',
       description: 'Transform your content marketing with AI that creates, optimizes, and distributes engaging content across all channels. Boost engagement, drive conversions, and scale your content strategy effortlessly.',
       category: 'AI & Marketing',
-      pricing: {
-        starter: { price: 79, period: 'month', features: ['AI Content Creation', 'Audience Intelligence', 'Performance Optimization', 'Multi-Channel Distribution', 'Advanced Analytics', 'Automated Workflows'] },
+      pricing: { starter: { price: 79, period: 'month', features: ['AI Content Creation', 'Audience Intelligence', 'Performance Optimization', 'Multi-Channel Distribution', 'Advanced Analytics', 'Automated Workflows'] },
         professional: { price: 199, period: 'month', features: ['Advanced Content Tools', 'Custom AI Models', 'Priority Support', 'Advanced Analytics', 'API Access', 'White-label Solutions'] },
         enterprise: { price: 499, period: 'month', features: ['Full Content Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions', 'On-premise Deployment'] }
       },
@@ -92,13 +86,11 @@ const ComprehensivePricing2028 = () => {
       useCases: ['Blog Posts & Articles', 'Social Media Content', 'Email Marketing', 'Video & Multimedia'],
       color: 'purple'
     },
-    {
-      id: 'ai-quantum-hybrid-platform',
+    { id: 'ai-quantum-hybrid-platform',
       title: 'AI Quantum Hybrid Platform',
       description: 'Experience the future of computing with our revolutionary AI Quantum Hybrid Platform. Combining quantum computing power with advanced AI algorithms for unprecedented computational capabilities.',
       category: 'Quantum Technology',
-      pricing: {
-        starter: { price: 1999, period: 'month', features: ['Basic Quantum Access', 'AI Processing', 'Standard Support', 'Basic Analytics'] },
+      pricing: { starter: { price: 1999, period: 'month', features: ['Basic Quantum Access', 'AI Processing', 'Standard Support', 'Basic Analytics'] },
         professional: { price: 4999, period: 'month', features: ['Advanced Quantum Access', 'Full AI Suite', 'Priority Support', 'Advanced Analytics', 'Custom Integrations'] },
         enterprise: { price: 12999, period: 'month', features: ['Full Quantum Access', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions'] }
       },
@@ -106,13 +98,11 @@ const ComprehensivePricing2028 = () => {
       useCases: ['Financial Modeling', 'Drug Discovery', 'Climate Modeling', 'Logistics Optimization'],
       color: 'indigo'
     },
-    {
-      id: 'ai-cybersecurity-platform',
+    { id: 'ai-cybersecurity-platform',
       title: 'AI Cybersecurity Platform',
       description: 'Protect your digital assets with the most advanced AI-powered cybersecurity platform. Our intelligent security system detects, prevents, and responds to threats in real-time.',
       category: 'Cybersecurity',
-      pricing: {
-        starter: { price: 299, period: 'month', features: ['Basic Threat Protection', 'AI Monitoring', 'Email Support', 'Basic Reports'] },
+      pricing: { starter: { price: 299, period: 'month', features: ['Basic Threat Protection', 'AI Monitoring', 'Email Support', 'Basic Reports'] },
         professional: { price: 799, period: 'month', features: ['Advanced Threat Protection', 'Full AI Suite', 'Priority Support', 'Advanced Analytics', 'Custom Integrations'] },
         enterprise: { price: 1999, period: 'month', features: ['Complete Security Suite', 'Custom AI Models', '24/7 Dedicated Support', 'Custom Analytics', 'White-label Solutions'] }
       },
@@ -127,8 +117,7 @@ const ComprehensivePricing2028 = () => {
     : services.filter(service => service.category === selectedCategory);
 
   const getColorClasses = (color: string) => {
-    const colorMap: { [key: string]: string } = {
-      blue: 'from-blue-500 to-cyan-500',
+    const colorMap: { [key: string]: string } = { blue: 'from-blue-500 to-cyan-500',
       green: 'from-green-500 to-emerald-500',
       purple: 'from-purple-500 to-pink-500',
       cyan: 'from-cyan-500 to-blue-500',
@@ -139,8 +128,7 @@ const ComprehensivePricing2028 = () => {
   };
 
   const getBorderColor = (color: string) => {
-    const colorMap: { [key: string]: string } = {
-      blue: 'border-blue-500/30',
+    const colorMap: { [key: string]: string } = { blue: 'border-blue-500/30',
       green: 'border-green-500/30',
       purple: 'border-purple-500/30',
       cyan: 'border-cyan-500/30',
@@ -158,9 +146,8 @@ const ComprehensivePricing2028 = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+            transition={{ duration: 0.8     }}
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
               Comprehensive Pricing 2028
@@ -186,8 +173,8 @@ const ComprehensivePricing2028 = () => {
             {serviceCategories.map((category) => (
               <motion.button
                 key={category.id}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`flex items-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
@@ -260,8 +247,7 @@ const ComprehensivePricing2028 = () => {
                 <div className="border-t border-slate-700/50 pt-6">
                   <button
                     onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                    className="flex items-center justify-between w-full text-left"
-                  >
+                    className="flex items-center justify-between w-full text-left">
                     <span className="text-lg font-semibold text-white">View Details</span>
                     {expandedService === service.id ? (
                       <ChevronUp className="w-5 h-5 text-gray-400" />
@@ -275,9 +261,8 @@ const ComprehensivePricing2028 = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
-                      className="mt-4 space-y-4"
-                    >
+                      transition={{ duration: 0.3     }}
+                      className="mt-4 space-y-4">
                       <div>
                         <h5 className="text-md font-semibold text-white mb-2">Key Features</h5>
                         <div className="grid grid-cols-2 gap-2">
@@ -303,8 +288,7 @@ const ComprehensivePricing2028 = () => {
                           {service.useCases.map((useCase, useCaseIndex) => (
                             <span
                               key={useCaseIndex}
-                              className="text-xs text-gray-300 bg-slate-700/50 px-2 py-1 rounded-full"
-                            >
+                              className="text-xs text-gray-300 bg-slate-700/50 px-2 py-1 rounded-full">
                               {useCase}
                             </span>
                           ))}
@@ -335,9 +319,8 @@ const ComprehensivePricing2028 = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12"
-          >
+            transition={{ duration: 0.8     }}
+            className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
             <h2 className="text-4xl font-bold text-white mb-6">
               Need a Custom Solution?
             </h2>
@@ -346,17 +329,15 @@ const ComprehensivePricing2028 = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
                 Contact Sales
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>

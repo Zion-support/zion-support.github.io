@@ -42,74 +42,61 @@ import {
 
 export default function AIInventoryManagement() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI Demand Forecasting",
       description: "Predict future demand with 95% accuracy using machine learning algorithms and historical data analysis."
     },
-    {
-      icon: Package,
+    { icon: Package,
       title: "Real-time Inventory Tracking",
       description: "Monitor stock levels, locations, and movements across multiple warehouses and distribution centers."
     },
-    {
-      icon: AlertCircle,
+    { icon: AlertCircle,
       title: "Automated Reorder Alerts",
       description: "Smart notifications for low stock, overstock, and optimal reorder timing to prevent stockouts."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Optimization Algorithms",
       description: "AI-powered recommendations for optimal stock levels, reorder points, and warehouse layout."
     },
-    {
-      icon: PieChart,
+    { icon: PieChart,
       title: "Advanced Analytics Dashboard",
       description: "Comprehensive insights into inventory performance, turnover rates, and cost optimization opportunities."
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: "Supply Chain Integration",
       description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Reduced Stockouts",
       description: "Prevent lost sales and customer dissatisfaction with intelligent demand forecasting and automated reordering."
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: "Cost Optimization",
       description: "Minimize carrying costs, reduce excess inventory, and optimize storage space utilization."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Multi-location Management",
       description: "Centralized control over inventory across multiple warehouses, stores, and distribution centers."
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Data Security",
       description: "Enterprise-grade security with role-based access control and encrypted data transmission."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Improved Cash Flow",
       description: "Better inventory turnover rates and reduced capital tied up in excess stock."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Savings",
       description: "Automate routine inventory tasks and focus on strategic business decisions."
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$199",
       period: "/month",
       description: "Perfect for small businesses with basic inventory management needs",
@@ -125,8 +112,7 @@ export default function AIInventoryManagement() {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$599",
       period: "/month",
       description: "Ideal for growing businesses with advanced inventory requirements",
@@ -144,8 +130,7 @@ export default function AIInventoryManagement() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$1,999",
       period: "/month",
       description: "For large organizations requiring enterprise-grade inventory solutions",
@@ -166,83 +151,67 @@ export default function AIInventoryManagement() {
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Manage inventory across multiple sales channels, prevent stockouts, and optimize fulfillment",
       icon: ShoppingCart
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       description: "Track stock levels across multiple stores, manage seasonal inventory, and optimize shelf space",
       icon: Store
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Manage raw materials, work-in-progress, and finished goods with real-time tracking",
       icon: Settings
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Track medical supplies, pharmaceuticals, and equipment with compliance monitoring",
       icon: Shield
     },
-    {
-      industry: "Food & Beverage",
+    { industry: "Food & Beverage",
       description: "Manage perishable inventory, track expiration dates, and optimize food waste reduction",
       icon: Package
     },
-    {
-      industry: "Automotive",
+    { industry: "Automotive",
       description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",
       icon: Truck
     }
   ];
 
   const integrations = [
-    {
-      name: "E-commerce Platforms",
+    { name: "E-commerce Platforms",
       platforms: ["Shopify", "WooCommerce", "Magento", "BigCommerce"]
     },
-    {
-      name: "Accounting Software",
+    { name: "Accounting Software",
       platforms: ["QuickBooks", "Xero", "Sage", "NetSuite"]
     },
-    {
-      name: "Shipping & Logistics",
+    { name: "Shipping & Logistics",
       platforms: ["FedEx", "UPS", "DHL", "ShipStation"]
     },
-    {
-      name: "POS Systems",
+    { name: "POS Systems",
       platforms: ["Square", "Toast", "Lightspeed", "ShopKeep"]
     },
-    {
-      name: "ERP Systems",
+    { name: "ERP Systems",
       platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"]
     },
-    {
-      name: "Supplier Platforms",
+    { name: "Supplier Platforms",
       platforms: ["Alibaba", "Amazon Business", "ThomasNet", "Global Sources"]
     }
   ];
 
   const keyMetrics = [
-    {
-      metric: "95%",
+    { metric: "95%",
       label: "Forecast Accuracy",
       description: "AI-powered demand prediction accuracy"
     },
-    {
-      metric: "40%",
+    { metric: "40%",
       label: "Cost Reduction",
       description: "Average reduction in inventory carrying costs"
     },
-    {
-      metric: "60%",
+    { metric: "60%",
       label: "Stockout Reduction",
       description: "Decrease in stockout incidents"
     },
-    {
-      metric: "3x",
+    { metric: "3x",
       label: "Faster Processing",
       description: "Improved inventory processing speed"
     }
@@ -263,7 +232,7 @@ export default function AIInventoryManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6">
               <Package className="w-4 h-4 mr-2" />
@@ -303,9 +272,8 @@ export default function AIInventoryManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">
                   {metric.metric}
                 </div>
@@ -327,10 +295,9 @@ export default function AIInventoryManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Powerful Features
             </h2>
@@ -346,9 +313,8 @@ export default function AIInventoryManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -380,10 +346,9 @@ export default function AIInventoryManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -399,9 +364,8 @@ export default function AIInventoryManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -433,10 +397,9 @@ export default function AIInventoryManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -452,7 +415,7 @@ export default function AIInventoryManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-blue-500/10' 
@@ -504,10 +467,9 @@ export default function AIInventoryManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -523,9 +485,8 @@ export default function AIInventoryManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -557,10 +518,9 @@ export default function AIInventoryManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
@@ -576,9 +536,8 @@ export default function AIInventoryManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300">
                   {integration.name}
                 </h3>
@@ -586,8 +545,7 @@ export default function AIInventoryManagement() {
                   {integration.platforms.map((platform, platformIndex) => (
                     <span
                       key={platformIndex}
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
-                    >
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">
                       {platform}
                     </span>
                   ))}
@@ -604,8 +562,8 @@ export default function AIInventoryManagement() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Optimize Your Inventory?

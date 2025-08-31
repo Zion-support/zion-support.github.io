@@ -9,8 +9,7 @@ const AllServicesIndex: React.FC = () => {
 
   const allServices = [
     // AI-Powered Micro SAAS Services
-    {
-      id: 'ai-code-review-security',
+    { id: 'ai-code-review-security',
       title: 'AI Code Review & Security Analysis',
       description: 'Advanced vulnerability detection with 85% accuracy improvement',
       category: 'AI-Powered Micro SAAS',
@@ -20,8 +19,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['85% vulnerability reduction', '50+ programming languages', 'Real-time analysis'],
       benefits: ['Reduce security incidents by 60%', 'Faster code review process']
     },
-    {
-      id: 'ai-customer-experience-analytics',
+    { id: 'ai-customer-experience-analytics',
       title: 'AI Customer Experience Analytics',
       description: 'Transform customer insights into actionable intelligence',
       category: 'AI-Powered Micro SAAS',
@@ -31,8 +29,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['Real-time sentiment analysis', 'Customer journey tracking', 'Predictive analytics'],
       benefits: ['Increase satisfaction by 35%', 'Reduce churn by 25%']
     },
-    {
-      id: 'ai-devops-automation-platform',
+    { id: 'ai-devops-automation-platform',
       title: 'AI DevOps Automation Platform',
       description: 'Revolutionize DevOps workflow with AI-powered automation',
       category: 'AI-Powered Micro SAAS',
@@ -42,8 +39,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['AI pipeline optimization', 'Intelligent deployment', 'GitOps workflows'],
       benefits: ['Reduce deployment time by 80%', 'Decrease failures by 90%']
     },
-    {
-      id: 'ai-iot-edge-computing-platform',
+    { id: 'ai-iot-edge-computing-platform',
       title: 'AI IoT Edge Computing Platform',
       description: 'Revolutionize IoT with AI-powered edge computing',
       category: 'AI-Powered Micro SAAS',
@@ -55,8 +51,7 @@ const AllServicesIndex: React.FC = () => {
     },
     
     // Cloud & Infrastructure Services
-    {
-      id: 'cloud-devops',
+    { id: 'cloud-devops',
       title: 'Cloud DevOps',
       description: 'Streamlined cloud deployment and management',
       category: 'Cloud & Infrastructure',
@@ -66,8 +61,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['Multi-cloud deployment', 'Infrastructure as Code', 'Automated scaling'],
       benefits: ['Faster deployments', 'Cost optimization']
     },
-    {
-      id: 'it-infrastructure',
+    { id: 'it-infrastructure',
       title: 'IT Infrastructure',
       description: 'Enterprise-grade infrastructure solutions',
       category: 'Cloud & Infrastructure',
@@ -77,8 +71,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['Network design', 'Server management', 'Storage solutions'],
       benefits: ['Reliable infrastructure', 'Scalable solutions']
     },
-    {
-      id: 'digital-twin',
+    { id: 'digital-twin',
       title: 'Digital Twin',
       description: 'Virtual representation of physical systems',
       category: 'Cloud & Infrastructure',
@@ -90,8 +83,7 @@ const AllServicesIndex: React.FC = () => {
     },
     
     // Data & Analytics Services
-    {
-      id: 'data-analytics',
+    { id: 'data-analytics',
       title: 'Data Analytics',
       description: 'Comprehensive data analysis and visualization',
       category: 'Data & Analytics',
@@ -101,8 +93,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['Data visualization', 'Statistical analysis', 'Trend identification'],
       benefits: ['Better insights', 'Data-driven decisions']
     },
-    {
-      id: 'ai-business-intelligence',
+    { id: 'ai-business-intelligence',
       title: 'AI Business Intelligence',
       description: 'AI-powered business insights and reporting',
       category: 'Data & Analytics',
@@ -112,8 +103,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['Predictive analytics', 'Natural language queries', 'Automated insights'],
       benefits: ['Faster insights', 'Predictive capabilities']
     },
-    {
-      id: 'iot-edge',
+    { id: 'iot-edge',
       title: 'IoT Edge Computing',
       description: 'Real-time edge data processing',
       category: 'Data & Analytics',
@@ -125,8 +115,7 @@ const AllServicesIndex: React.FC = () => {
     },
     
     // Security & Compliance Services
-    {
-      id: 'zero-trust-network-architecture',
+    { id: 'zero-trust-network-architecture',
       title: 'Zero Trust Network Architecture',
       description: 'Modern security framework for enterprise',
       category: 'Security & Compliance',
@@ -136,8 +125,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring'],
       benefits: ['Enhanced security', 'Compliance ready']
     },
-    {
-      id: 'ai-cybersecurity-suite',
+    { id: 'ai-cybersecurity-suite',
       title: 'AI Cybersecurity Suite',
       description: 'Comprehensive security solutions',
       category: 'Security & Compliance',
@@ -147,8 +135,7 @@ const AllServicesIndex: React.FC = () => {
       features: ['Threat detection', 'Vulnerability assessment', 'Incident response'],
       benefits: ['Proactive security', 'Faster response']
     },
-    {
-      id: 'ai-compliance-assistant',
+    { id: 'ai-compliance-assistant',
       title: 'AI Compliance Assistant',
       description: 'AI-powered compliance management',
       category: 'Security & Compliance',
@@ -186,7 +173,7 @@ const AllServicesIndex: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Complete Services Directory
@@ -212,8 +199,7 @@ const AllServicesIndex: React.FC = () => {
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
+                      className="w-full px-6 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                       {categories.map(category => (
                         <option key={category} value={category} className="bg-gray-800 text-white">
                           {category === 'all' ? 'All Categories' : category}
@@ -253,10 +239,9 @@ const AllServicesIndex: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             {filteredServices.length === 0 ? (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="text-center py-20"
-              >
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
                 <p className="text-gray-300 mb-6">
@@ -267,8 +252,7 @@ const AllServicesIndex: React.FC = () => {
                     setSearchTerm('');
                     setSelectedCategory('all');
                   }}
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300"
-                >
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
                   Clear Filters
                 </button>
               </motion.div>
@@ -280,8 +264,7 @@ const AllServicesIndex: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
-                  >
+                    className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group">
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-4xl">{service.icon}</div>
                       <span className="text-sm bg-blue-600/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30">
@@ -329,14 +312,12 @@ const AllServicesIndex: React.FC = () => {
                     <div className="flex gap-3">
                       <Link
                         to={service.url}
-                        className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
-                      >
+                        className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center">
                         View Service
                       </Link>
                       <Link
                         to="/contact"
-                        className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center"
-                      >
+                        className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center">
                         Contact Sales
                       </Link>
                     </div>
@@ -353,8 +334,8 @@ const AllServicesIndex: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Need Help Choosing the Right Service?

@@ -18,8 +18,7 @@ import { Loader2 } from 'lucide-react';
 import { TeamRecommendationDisplay } from '@/components/team-builder/TeamRecommendationDisplay'; // New import
 
 // Define Zod schema for form validation
-const projectBriefSchema = z.object({
-  projectName: z.string().min(3, 'Project name must be at least 3 characters'),
+const projectBriefSchema = z.object({ projectName: z.string().min(3, 'Project name must be at least 3 characters'),
   goals: z.string().min(10, 'Goals/scope must be at least 10 characters'),
   timeline: z.string().min(2, 'Timeline is required'),
   budget: z.string().min(2, 'Budget is required'),
@@ -42,10 +41,8 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<ProjectBrief | null>(null);
 
 
-  const { control, handleSubmit, trigger, formState: { errors } } = useForm<ProjectBriefFormData>({
-    resolver: zodResolver(projectBriefSchema),
-    defaultValues: {
-      projectName: '',
+  const { control, handleSubmit, trigger, formState: { errors } } = useForm<ProjectBriefFormData>({ resolver: zodResolver(projectBriefSchema),
+    defaultValues: { projectName: '',
       goals: '',
       timeline: '',
       budget: '',
@@ -81,8 +78,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
     setIsLoading(true);
     setTeamRecommendation(null);
 
-    const projectBriefData: ProjectBrief = {
-      userId: 'current-user-id',
+    const projectBriefData: ProjectBrief = { userId: 'current-user-id',
       createdAt: new Date().toISOString(),
       ...data,
       techStack: data.techStack?.split(',').map(s => s.trim()).filter(s => s) || [],
@@ -94,8 +90,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
     setProjectBriefSubmitted(projectBriefData);
 
     try {
-      const response = await fetch('/api/team-builder/generate', {
-        method: 'POST',
+      const response = await fetch('/api/team-builder/generate', { method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(projectBriefData),
       });
@@ -109,7 +104,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
       // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
     } finally {
@@ -127,8 +122,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
     // For now, let's assume projectBriefSubmitted.id might be undefined if not saved.
     // The API and DB table are designed to handle nullable project_brief_id.
 
-    const invitePayload = {
-      talentId: talentId,
+    const invitePayload = { talentId: talentId,
       roleTitle: roleTitle,
       projectBriefId: projectBriefSubmitted.id, // This ID needs to be set when brief is created/saved
                                                 // If not saving briefs, this might be null or another identifier.
@@ -136,8 +130,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
     };
 
     try {
-      const response = await fetch('/api/team-builder/invite', {
-        method: 'POST',
+      const response = await fetch('/api/team-builder/invite', { method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(invitePayload),
       });
@@ -150,7 +143,7 @@ const TeamBuilderPage: React.FC = () => { // New, or remove type for inference
       const inviteResult = await response.json();
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card
-    } catch (error: any) {
+    } catch (error: ) {
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`);
     }

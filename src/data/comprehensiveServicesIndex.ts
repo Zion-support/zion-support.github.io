@@ -68,16 +68,14 @@ export const PRICING_MODELS = [
 ];
 
 // Contact Information
-export const CONTACT_INFO = {
-  phone: '+1 302 464 0950',
+export const CONTACT_INFO = { phone: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com',
   address: '364 E Main St STE 1008, Middletown DE 19709'
 };
 
 // Service Statistics
-export const SERVICE_STATS = {
-  totalServices: ALL_COMPREHENSIVE_SERVICES.length,
+export const SERVICE_STATS = { totalServices: ALL_COMPREHENSIVE_SERVICES.length,
   categories: SERVICE_CATEGORIES.length,
   innovationLevels: INNOVATION_LEVELS.length,
   supportLevels: SUPPORT_LEVELS.length,

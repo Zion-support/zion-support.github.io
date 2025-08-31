@@ -21,41 +21,34 @@ import { SEO } from '../../components/SEO';
 
 const AIHealthcareDiagnostics = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Diagnosis",
       description: "Advanced machine learning algorithms analyze medical images, lab results, and patient data for accurate diagnosis with 94% accuracy"
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: "Real-Time Monitoring",
       description: "Continuous patient monitoring with AI-driven alerts for early detection of critical health changes"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "HIPAA Compliant",
       description: "Bank-level security with full HIPAA compliance and comprehensive audit trails for patient data protection"
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "24/7 Availability",
       description: "Round-the-clock diagnostic support for healthcare providers and emergency situations"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Rapid Results",
       description: "Get diagnostic results in minutes instead of hours, enabling faster treatment decisions"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Collaborative Care",
       description: "Seamless integration with existing healthcare systems for coordinated patient care"
     }
   ];
 
   const services = [
-    {
-      name: "Basic Plan",
+    { name: "Basic Plan",
       price: "$3,999",
       period: "/month",
       features: [
@@ -67,8 +60,7 @@ const AIHealthcareDiagnostics = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional Plan",
+    { name: "Professional Plan",
       price: "$8,999",
       period: "/month",
       features: [
@@ -81,8 +73,7 @@ const AIHealthcareDiagnostics = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise Plan",
+    { name: "Enterprise Plan",
       price: "$19,999",
       period: "/month",
       features: [
@@ -98,23 +89,19 @@ const AIHealthcareDiagnostics = () => {
   ];
 
   const useCases = [
-    {
-      industry: "Hospitals",
+    { industry: "Hospitals",
       description: "Enhance diagnostic accuracy and reduce time to treatment with AI-powered analysis of medical images and patient data",
       benefits: ["30% faster diagnosis", "25% improvement in accuracy", "40% reduction in wait times"]
     },
-    {
-      industry: "Clinics",
+    { industry: "Clinics",
       description: "Provide advanced diagnostic capabilities to patients with limited access to specialists",
       benefits: ["Improved patient outcomes", "Better resource utilization", "Enhanced patient satisfaction"]
     },
-    {
-      industry: "Research Institutions",
+    { industry: "Research Institutions",
       description: "Accelerate medical research with AI-driven analysis of large datasets and clinical trials",
       benefits: ["Faster research cycles", "Better data insights", "Improved collaboration"]
     },
-    {
-      industry: "Telemedicine",
+    { industry: "Telemedicine",
       description: "Enable remote diagnosis and monitoring for patients in underserved areas",
       benefits: ["Increased access to care", "Reduced travel costs", "Better patient engagement"]
     }
@@ -146,9 +133,8 @@ const AIHealthcareDiagnostics = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI-Powered Healthcare Diagnostics
             </h1>
@@ -158,8 +144,7 @@ const AIHealthcareDiagnostics = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1">
                 Get Started Today
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
@@ -177,10 +162,9 @@ const AIHealthcareDiagnostics = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Advanced Healthcare Technology
             </h2>
@@ -195,10 +179,9 @@ const AIHealthcareDiagnostics = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -216,10 +199,9 @@ const AIHealthcareDiagnostics = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
@@ -234,7 +216,7 @@ const AIHealthcareDiagnostics = () => {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-zion-slate-dark/50 backdrop-blur-lg border rounded-2xl p-8 ${
                   service.popular 
@@ -290,10 +272,9 @@ const AIHealthcareDiagnostics = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Healthcare Solutions
             </h2>
@@ -308,10 +289,9 @@ const AIHealthcareDiagnostics = () => {
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8">
                 <div className="flex items-center mb-6">
                   <Target className="w-8 h-8 text-zion-cyan mr-3" />
                   <h3 className="text-2xl font-bold text-white">{useCase.industry}</h3>
@@ -337,10 +317,9 @@ const AIHealthcareDiagnostics = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge Technologies
             </h2>
@@ -355,10 +334,9 @@ const AIHealthcareDiagnostics = () => {
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Activity className="w-6 h-6 text-white" />
                 </div>
@@ -375,10 +353,9 @@ const AIHealthcareDiagnostics = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-12 max-w-4xl mx-auto">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Healthcare?
@@ -389,8 +366,7 @@ const AIHealthcareDiagnostics = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1">
                   Start Your Transformation
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>

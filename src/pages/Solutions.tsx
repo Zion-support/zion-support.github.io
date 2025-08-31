@@ -36,8 +36,7 @@ import {
 } from 'lucide-react';
 
 const solutionCategories = [
-  {
-    id: 'ai-ml',
+  { id: 'ai-ml',
     name: 'AI & Machine Learning',
     icon: Brain,
     description: 'Transform your business with intelligent automation and predictive insights',
@@ -51,8 +50,7 @@ const solutionCategories = [
       'Machine Learning Models'
     ]
   },
-  {
-    id: 'cybersecurity',
+  { id: 'cybersecurity',
     name: 'Cybersecurity',
     icon: Shield,
     description: 'Protect your digital assets with enterprise-grade security solutions',
@@ -66,8 +64,7 @@ const solutionCategories = [
       'Incident Response'
     ]
   },
-  {
-    id: 'cloud-computing',
+  { id: 'cloud-computing',
     name: 'Cloud Computing',
     icon: Cloud,
     description: 'Scale your infrastructure with flexible and cost-effective cloud solutions',
@@ -81,8 +78,7 @@ const solutionCategories = [
       'Cloud Security'
     ]
   },
-  {
-    id: 'data-analytics',
+  { id: 'data-analytics',
     name: 'Data Analytics',
     icon: TrendingUp,
     description: 'Turn your data into actionable insights for better decision making',
@@ -96,8 +92,7 @@ const solutionCategories = [
       'Big Data Processing'
     ]
   },
-  {
-    id: 'iot-edge',
+  { id: 'iot-edge',
     name: 'IoT & Edge Computing',
     icon: Zap,
     description: 'Connect devices and process data closer to the source for real-time insights',
@@ -111,8 +106,7 @@ const solutionCategories = [
       'Smart City Solutions'
     ]
   },
-  {
-    id: 'digital-transformation',
+  { id: 'digital-transformation',
     name: 'Digital Transformation',
     icon: Globe,
     description: 'Modernize your business processes and customer experience',
@@ -129,8 +123,7 @@ const solutionCategories = [
 ];
 
 const industrySolutions = [
-  {
-    industry: 'Healthcare',
+  { industry: 'Healthcare',
     icon: Heart,
     solutions: [
       'Electronic Health Records',
@@ -142,8 +135,7 @@ const industrySolutions = [
     ],
     color: 'from-pink-500 to-rose-600'
   },
-  {
-    industry: 'Finance',
+  { industry: 'Finance',
     icon: DollarSign,
     solutions: [
       'Fintech Applications',
@@ -155,8 +147,7 @@ const industrySolutions = [
     ],
     color: 'from-green-500 to-emerald-600'
   },
-  {
-    industry: 'Manufacturing',
+  { industry: 'Manufacturing',
     icon: Cpu,
     solutions: [
       'Smart Manufacturing',
@@ -168,8 +159,7 @@ const industrySolutions = [
     ],
     color: 'from-blue-500 to-cyan-600'
   },
-  {
-    industry: 'Retail',
+  { industry: 'Retail',
     icon: ShoppingCart,
     solutions: [
       'E-commerce Platforms',
@@ -181,8 +171,7 @@ const industrySolutions = [
     ],
     color: 'from-purple-500 to-indigo-600'
   },
-  {
-    industry: 'Education',
+  { industry: 'Education',
     icon: BookOpen,
     solutions: [
       'Learning Management Systems',
@@ -194,8 +183,7 @@ const industrySolutions = [
     ],
     color: 'from-yellow-500 to-orange-600'
   },
-  {
-    industry: 'Government',
+  { industry: 'Government',
     icon: Shield,
     solutions: [
       'Digital Services',
@@ -210,8 +198,7 @@ const industrySolutions = [
 ];
 
 const featuredSolutions = [
-  {
-    id: 1,
+  { id: 1,
     name: 'AI-Powered Business Intelligence',
     category: 'AI & ML',
     description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform. Get real-time dashboards, predictive modeling, and automated reporting.',
@@ -234,8 +221,7 @@ const featuredSolutions = [
     icon: Brain,
     color: 'from-purple-500 to-indigo-600'
   },
-  {
-    id: 2,
+  { id: 2,
     name: 'Zero-Trust Security Framework',
     category: 'Cybersecurity',
     description: 'Implement a comprehensive security framework that continuously verifies every user, device, and connection to protect your organization from modern threats.',
@@ -258,8 +244,7 @@ const featuredSolutions = [
     icon: Shield,
     color: 'from-red-500 to-pink-600'
   },
-  {
-    id: 3,
+  { id: 3,
     name: 'Cloud-Native Infrastructure',
     category: 'Cloud Computing',
     description: 'Build scalable, resilient, and cost-effective infrastructure using modern cloud-native technologies and best practices.',
@@ -308,9 +293,8 @@ export default function Solutions() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <Rocket className="w-5 h-5" />
               <span className="font-medium">Technology Solutions</span>
@@ -350,8 +334,7 @@ export default function Solutions() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -363,8 +346,7 @@ export default function Solutions() {
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {industries.map(industry => (
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
@@ -381,10 +363,9 @@ export default function Solutions() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>
           </motion.div>
@@ -398,9 +379,8 @@ export default function Solutions() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="group cursor-pointer"
-                >
+                  viewport={{ once: true     }}
+                  className="group cursor-pointer">
                   <Link to={`/solutions#${category.id}`}>
                     <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300 h-full">
                       <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -435,10 +415,9 @@ export default function Solutions() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry's unique challenges</p>
           </motion.div>
@@ -452,9 +431,8 @@ export default function Solutions() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${industry.color} rounded-2xl flex items-center justify-center mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -470,8 +448,7 @@ export default function Solutions() {
                   <div className="mt-4">
                     <Link
                       to={`/solutions/${industry.industry.toLowerCase()}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                       View {industry.industry} Solutions
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -489,10 +466,9 @@ export default function Solutions() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>
           </motion.div>
@@ -506,9 +482,8 @@ export default function Solutions() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -565,8 +540,7 @@ export default function Solutions() {
                     </div>
                     <Link
                       to={`/solutions/${solution.id}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -584,10 +558,9 @@ export default function Solutions() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h2>
@@ -598,15 +571,13 @@ export default function Solutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg">
                 Get Started Today
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/case-studies"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg">
                 View Case Studies
               </Link>
             </div>
@@ -623,8 +594,7 @@ export default function Solutions() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]"
-                >
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-2xl p-8 border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-[1.02]">
                   <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
                     <solution.icon className="w-8 h-8 text-blue-400" />
                   </div>
@@ -675,8 +645,7 @@ export default function Solutions() {
                     </div>
                     <Link
                       to={`/solutions/${solution.id}`}
-                      className="text-blue-400 hover:text-blue-300 text-sm font-medium"
-                    >
+                      className="text-blue-400 hover:text-blue-300 text-sm font-medium">
                       Learn More
                     </Link>
                   </div>
@@ -692,8 +661,8 @@ export default function Solutions() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -705,15 +674,13 @@ export default function Solutions() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-400 hover:to-cyan-400 transition-all duration-300 transform hover:scale-105">
                   Get Started Today
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
-                >
+                  className="inline-flex items-center justify-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
                   Request Quote
                 </Link>
               </div>

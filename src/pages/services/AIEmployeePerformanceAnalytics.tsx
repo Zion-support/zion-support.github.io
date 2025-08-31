@@ -42,74 +42,61 @@ import {
 
 export default function AIEmployeePerformanceAnalytics() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI Performance Scoring",
       description: "Advanced algorithms analyze multiple performance indicators to provide comprehensive employee scoring and insights."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Real-time Analytics Dashboard",
       description: "Live performance metrics, productivity trends, and engagement scores with customizable KPIs and reporting."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "360-Degree Feedback Analysis",
       description: "Comprehensive feedback collection and analysis from peers, managers, and self-assessments."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Goal Tracking & Alignment",
       description: "Monitor individual and team goal progress, identify alignment issues, and suggest performance improvements."
     },
-    {
-      icon: PieChart,
+    { icon: PieChart,
       title: "Predictive Performance Insights",
       description: "AI-powered predictions for employee potential, retention risk, and career development opportunities."
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: "Engagement & Wellness Monitoring",
       description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Improved Performance",
       description: "Identify performance gaps and provide targeted coaching to enhance individual and team productivity."
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: "Increased Retention",
       description: "Predict and prevent employee turnover by identifying at-risk employees and implementing retention strategies."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Data-Driven Decisions",
       description: "Make informed HR decisions based on comprehensive performance analytics and predictive insights."
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Privacy & Compliance",
       description: "Enterprise-grade security with GDPR compliance and role-based access control for sensitive performance data."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Enhanced Productivity",
       description: "Optimize team performance through data-driven insights and targeted development programs."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Savings",
       description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month."
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$399",
       period: "/month",
       description: "Perfect for small teams and startups beginning their performance analytics journey",
@@ -125,8 +112,7 @@ export default function AIEmployeePerformanceAnalytics() {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$999",
       period: "/month",
       description: "Ideal for growing companies with advanced performance management needs",
@@ -144,8 +130,7 @@ export default function AIEmployeePerformanceAnalytics() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$2,999",
       period: "/month",
       description: "For large organizations requiring enterprise-grade performance analytics",
@@ -166,103 +151,83 @@ export default function AIEmployeePerformanceAnalytics() {
   ];
 
   const useCases = [
-    {
-      industry: "Technology",
+    { industry: "Technology",
       description: "Track developer productivity, code quality metrics, and project completion rates for engineering teams",
       icon: Cpu
     },
-    {
-      industry: "Sales",
+    { industry: "Sales",
       description: "Monitor sales performance, conversion rates, and pipeline metrics to optimize revenue generation",
       icon: TrendingUp
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Track patient outcomes, clinical performance, and healthcare provider efficiency metrics",
       icon: Heart
     },
-    {
-      industry: "Education",
+    { industry: "Education",
       description: "Analyze teaching effectiveness, student outcomes, and educational program performance",
       icon: GraduationCap
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Monitor production efficiency, quality metrics, and operational performance across manufacturing teams",
       icon: Settings
     },
-    {
-      industry: "Finance",
+    { industry: "Finance",
       description: "Track financial advisor performance, client satisfaction, and investment portfolio management",
       icon: DollarSign
     }
   ];
 
   const integrations = [
-    {
-      name: "HRIS Systems",
+    { name: "HRIS Systems",
       platforms: ["Workday", "BambooHR", "ADP", "Paychex"]
     },
-    {
-      name: "Project Management",
+    { name: "Project Management",
       platforms: ["Jira", "Asana", "Trello", "Monday.com"]
     },
-    {
-      name: "Communication Tools",
+    { name: "Communication Tools",
       platforms: ["Slack", "Microsoft Teams", "Zoom", "Google Meet"]
     },
-    {
-      name: "CRM Systems",
+    { name: "CRM Systems",
       platforms: ["Salesforce", "HubSpot", "Pipedrive", "Zoho"]
     },
-    {
-      name: "Learning Platforms",
+    { name: "Learning Platforms",
       platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"]
     },
-    {
-      name: "Time Tracking",
+    { name: "Time Tracking",
       platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"]
     }
   ];
 
   const keyMetrics = [
-    {
-      metric: "85%",
+    { metric: "85%",
       label: "Performance Improvement",
       description: "Average improvement in employee performance scores"
     },
-    {
-      metric: "40%",
+    { metric: "40%",
       label: "Retention Increase",
       description: "Reduction in employee turnover rates"
     },
-    {
-      metric: "60%",
+    { metric: "60%",
       label: "Time Savings",
       description: "Reduction in manual performance review time"
     },
-    {
-      metric: "3.2x",
+    { metric: "3.2x",
       label: "ROI",
       description: "Return on investment for performance analytics"
     }
   ];
 
   const performanceIndicators = [
-    {
-      category: "Productivity Metrics",
+    { category: "Productivity Metrics",
       indicators: ["Tasks Completed", "Project Delivery", "Code Quality", "Sales Targets"]
     },
-    {
-      category: "Quality Metrics",
+    { category: "Quality Metrics",
       indicators: ["Error Rates", "Customer Satisfaction", "Code Reviews", "Quality Scores"]
     },
-    {
-      category: "Collaboration Metrics",
+    { category: "Collaboration Metrics",
       indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"]
     },
-    {
-      category: "Growth Metrics",
+    { category: "Growth Metrics",
       indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"]
     }
   ];
@@ -282,7 +247,7 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
@@ -322,9 +287,8 @@ export default function AIEmployeePerformanceAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
                   {metric.metric}
                 </div>
@@ -346,10 +310,9 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Powerful Features
             </h2>
@@ -365,9 +328,8 @@ export default function AIEmployeePerformanceAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -399,10 +361,9 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Performance Indicators
             </h2>
@@ -418,9 +379,8 @@ export default function AIEmployeePerformanceAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
                   {category.category}
                 </h3>
@@ -444,10 +404,9 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -463,9 +422,8 @@ export default function AIEmployeePerformanceAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -497,10 +455,9 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -516,7 +473,7 @@ export default function AIEmployeePerformanceAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-purple-500/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' 
@@ -568,10 +525,9 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -587,9 +543,8 @@ export default function AIEmployeePerformanceAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -621,10 +576,9 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
@@ -640,9 +594,8 @@ export default function AIEmployeePerformanceAnalytics() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
                   {integration.name}
                 </h3>
@@ -650,8 +603,7 @@ export default function AIEmployeePerformanceAnalytics() {
                   {integration.platforms.map((platform, platformIndex) => (
                     <span
                       key={platformIndex}
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
-                    >
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">
                       {platform}
                     </span>
                   ))}
@@ -668,8 +620,8 @@ export default function AIEmployeePerformanceAnalytics() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Employee Performance?

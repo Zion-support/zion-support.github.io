@@ -11,7 +11,6 @@ import { Sparkles,
  } from 'lucide-react.ts';
 
 interface UISettings {
-
   glassmorphism: boolean;
   particleEffects: boolean;
   smoothScrolling: boolean;
@@ -20,12 +19,11 @@ interface UISettings {
   colorThemes: boolean;
   depthLayers: boolean;
 
-}
+    }
 
 export const ModernUIEnhancer: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<any>({
-    glassmorphism: true,
+  const [settings, setSettings] = useState<any>({ glassmorphism: true,
     particleEffects: true,
     smoothScrolling: true,
     enhancedAnimations: true,
@@ -97,13 +95,12 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
       
-      .glass-effect {
-        background: var(--glass-bg);
+      .glass-effect { background: var(--glass-bg);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid var(--glass-border);
         box-shadow: var(--glass-shadow);
-      }
+          }
       
       .modern-shadow {
         box-shadow: var(--modern-shadow);
@@ -126,8 +123,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         scroll-behavior: smooth;
       }
       
-      .enhanced-animation {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      .enhanced-animation { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
     `;
     document.head.appendChild(style);
@@ -136,8 +132,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
   const addGlassmorphismStyles = () => {
     const style = document.createElement('style');
     style.textContent = `
-      .glass-card {
-        background: rgba(255, 255, 255, 0.1);
+      .glass-card { background: rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -146,15 +141,13 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         transition: all 0.3s ease;
       }
       
-      .glass-card:hover {
-        background: rgba(255, 255, 255, 0.15);
+      .glass-card:hover { background: rgba(255, 255, 255, 0.15);
         border-color: rgba(255, 255, 255, 0.3);
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
         transform: translateY(-2px);
       }
       
-      .glass-button {
-        background: rgba(6, 182, 212, 0.2);
+      .glass-button { background: rgba(6, 182, 212, 0.2);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(6, 182, 212, 0.3);
@@ -166,8 +159,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         cursor: pointer;
       }
       
-      .glass-button:hover {
-        background: rgba(6, 182, 212, 0.3);
+      .glass-button:hover { background: rgba(6, 182, 212, 0.3);
         border-color: rgba(6, 182, 212, 0.5);
         box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
         transform: translateY(-1px);
@@ -199,12 +191,10 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
       }
       
-      .hover-lift {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      .hover-lift { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
-      .hover-lift:hover {
-        transform: translateY(-4px);
+      .hover-lift:hover { transform: translateY(-4px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
       }
     `;
@@ -214,18 +204,15 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
   const addDepthLayerStyles = () => {
     const style = document.createElement('style');
     style.textContent = `
-      .depth-1 {
-        transform: translateZ(10px);
+      .depth-1 { transform: translateZ(10px);
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
       
-      .depth-2 {
-        transform: translateZ(20px);
+      .depth-2 { transform: translateZ(20px);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
       }
       
-      .depth-3 {
-        transform: translateZ(30px);
+      .depth-3 { transform: translateZ(30px);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
       }
       
@@ -234,13 +221,12 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         will-change: transform;
       }
       
-      .floating-element {
-        animation: float 6s ease-in-out infinite;
-      }
+      .floating-element { animation: float 6s ease-in-out infinite;
+          }
       
       @keyframes float {
-        0%, 100% { transform: translateY(0px) translateZ(0); }
-        50% { transform: translateY(-10px) translateZ(10px); }
+        0%, 100% { transform: translateY(0px) translateZ(0);     }
+        50% { transform: translateY(-10px) translateZ(10px);     }
       }
     `;
     document.head.appendChild(style);
@@ -298,8 +284,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     const newParticles = [];
     
     for (let i = 0; i < particleCount; i++) {
-      newParticles.push({
-        id: i,
+      newParticles.push({ id: i,
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         vx: (Math.random() - 0.5) * 0.5,
@@ -336,8 +321,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         const targetElement = document.getElementById(targetId || '');
         
         if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth',
+          targetElement.scrollIntoView({ behavior: 'smooth',
             block: 'start'
           });
         }
@@ -398,11 +382,11 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
     root.className = root.className.replace(/ui-enhanced|glassmorphism-enabled|enhanced-animations|modern-shadows|depth-layers|color-themes|theme-\w+/g, '');
   };
 
-  const toggleSetting = (setting: anykeyof UISettings)  => {
+  const toggleSetting = (setting: keyof UISettings)  => {
     setSettings(prev => ({ ...prev, [setting]: !prev[setting] }));
   };
 
-  const changeTheme = (theme: anystring)  => {
+  const changeTheme = (theme: string)  => {
     setActiveTheme(theme);
   };
 
@@ -411,7 +395,7 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
       {/* UI Enhancement Toggle Button */}
       <motion.button
         whileHover={{ scale: 1.05, rotate: 5 }}
-        whileTap={{ scale: 0.95 }}
+        whileTap={{ scale: 0.95     }}
         onClick={() => setIsOpen(!isOpen)}
         className="fixed bottom-4 left-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 z-50 glass-effect"
         aria-label="UI Enhancement settings"
@@ -611,16 +595,13 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
             <motion.div
               key={particle.id}
               className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
-              style={{
-                left: particle.x,
+              style={{ left: particle.x,
                 top: particle.y,
               }}
-              animate={{
-                scale: [1, 1.5, 1],
+              animate={{ scale: [1, 1.5, 1],
                 opacity: [0.6, 1, 0.6],
               }}
-              transition={{
-                duration: 3,
+              transition={{ duration: 3,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
@@ -634,12 +615,10 @@ export const ModernUIEnhancer: React.FC = (): JSX.Element => {
         <div className="fixed top-20 right-20 pointer-events-none z-30">
           <motion.div
             className="w-20 h-20 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20 floating-element"
-            animate={{
-              scale: [1, 1.2, 1],
+            animate={{ scale: [1, 1.2, 1],
               rotate: [0, 180, 360],
             }}
-            transition={{
-              duration: 8,
+            transition={{ duration: 8,
               repeat: Infinity,
               ease: "easeInOut"
             }}

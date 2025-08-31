@@ -34,18 +34,15 @@ export default function AICustomerExperienceAnalytics() {
   ];
 
   const tiers = [
-    { 
-      name: 'CX Starter', 
+    { name: 'CX Starter', 
       price: '$399/mo', 
       details: ['Up to 10K customers', 'Basic AI analytics', 'Standard reporting', 'Email support'] 
     },
-    { 
-      name: 'CX Professional', 
+    { name: 'CX Professional', 
       price: '$999/mo', 
       details: ['Up to 100K customers', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'CX Enterprise', 
+    { name: 'CX Enterprise', 
       price: '$2,999/mo', 
       details: ['Unlimited customers', 'Full AI suite', 'White-label options', '24/7 support'] 
     },

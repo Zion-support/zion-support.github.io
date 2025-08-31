@@ -34,26 +34,22 @@ import {
 
 export default function SmartContractRiskScanner() {
   const features = [
-    {
-      icon: Search,
+    { icon: Search,
       title: 'Automated Vulnerability Detection',
       description: 'AI-powered scanning for smart contract vulnerabilities and security risks',
       benefits: ['Zero-day exploit detection', 'Automated security audits', 'Real-time monitoring', 'Comprehensive reporting']
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Multi-Chain Security',
       description: 'Security scanning across Ethereum, Binance Smart Chain, Polygon, and other major networks',
       benefits: ['Cross-chain compatibility', 'Network-specific analysis', 'Unified security dashboard', 'Comprehensive coverage']
     },
-    {
-      icon: AlertTriangle,
+    { icon: AlertTriangle,
       title: 'Risk Assessment Engine',
       description: 'Advanced risk scoring and prioritization for identified vulnerabilities',
       benefits: ['Risk-based prioritization', 'Impact assessment', 'Remediation guidance', 'Compliance tracking']
     },
-    {
-      icon: Code,
+    { icon: Code,
       title: 'Smart Contract Analysis',
       description: 'Deep code analysis and optimization recommendations for smart contracts',
       benefits: ['Code quality metrics', 'Gas optimization', 'Best practices', 'Performance analysis']
@@ -61,26 +57,22 @@ export default function SmartContractRiskScanner() {
   ];
 
   const scanningCapabilities = [
-    {
-      title: 'Reentrancy Attacks',
+    { title: 'Reentrancy Attacks',
       description: 'Detect and prevent reentrancy vulnerabilities in smart contracts',
       icon: Bug,
       features: ['Call stack analysis', 'State variable tracking', 'External call monitoring', 'Attack simulation']
     },
-    {
-      title: 'Integer Overflow/Underflow',
+    { title: 'Integer Overflow/Underflow',
       description: 'Identify arithmetic vulnerabilities and overflow conditions',
       icon: AlertTriangle,
       features: ['Boundary checking', 'Safe math validation', 'Range analysis', 'Overflow prevention']
     },
-    {
-      title: 'Access Control Issues',
+    { title: 'Access Control Issues',
       description: 'Detect improper access control and permission vulnerabilities',
       icon: Lock,
       features: ['Role-based analysis', 'Permission validation', 'Admin function review', 'Access pattern analysis']
     },
-    {
-      title: 'Logic Vulnerabilities',
+    { title: 'Logic Vulnerabilities',
       description: 'Identify logical flaws and business logic vulnerabilities',
       icon: Lightbulb,
       features: ['Business logic analysis', 'State machine validation', 'Flow control analysis', 'Edge case testing']
@@ -88,8 +80,7 @@ export default function SmartContractRiskScanner() {
   ];
 
   const pricing = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$299',
       period: '/month',
       description: 'Perfect for small projects and individual developers',
@@ -104,8 +95,7 @@ export default function SmartContractRiskScanner() {
       cta: 'Get Started',
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$799',
       period: '/month',
       description: 'Ideal for growing DeFi projects and development teams',
@@ -122,8 +112,7 @@ export default function SmartContractRiskScanner() {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations and enterprises',
@@ -142,8 +131,7 @@ export default function SmartContractRiskScanner() {
     }
   ];
 
-  const marketInfo = {
-    marketSize: '$2.8 billion',
+  const marketInfo = { marketSize: '$2.8 billion',
     growthRate: '23.4% CAGR',
     averageMarketPrice: '$500-$2,000/month',
     setupTime: '1-2 weeks',
@@ -184,9 +172,8 @@ export default function SmartContractRiskScanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4" />
               <span>Blockchain Security Solution</span>
@@ -207,19 +194,17 @@ export default function SmartContractRiskScanner() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 flex items-center justify-center space-x-2">
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-red-400 hover:text-red-400 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:border-red-400 hover:text-red-400 transition-all duration-300">
                 Schedule Demo
               </motion.button>
             </div>
@@ -236,9 +221,8 @@ export default function SmartContractRiskScanner() {
                 key={key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center"
-              >
+                transition={{ duration: 0.6     }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center">
                 <div className="text-2xl font-bold text-red-400 mb-2">{value}</div>
                 <div className="text-sm text-gray-400 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
@@ -255,9 +239,8 @@ export default function SmartContractRiskScanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Advanced Security Features
             </h2>
@@ -274,8 +257,7 @@ export default function SmartContractRiskScanner() {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -305,9 +287,8 @@ export default function SmartContractRiskScanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Vulnerability Detection
             </h2>
@@ -324,8 +305,7 @@ export default function SmartContractRiskScanner() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300">
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center">
                     <capability.icon className="w-8 h-8 text-white" />
@@ -355,9 +335,8 @@ export default function SmartContractRiskScanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Multi-Chain Support
             </h2>
@@ -374,8 +353,7 @@ export default function SmartContractRiskScanner() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-6 h-6 text-white" />
                 </div>
@@ -392,9 +370,8 @@ export default function SmartContractRiskScanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry Security Standards
             </h2>
@@ -411,8 +388,7 @@ export default function SmartContractRiskScanner() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Award className="w-6 h-6 text-white" />
                 </div>
@@ -429,9 +405,8 @@ export default function SmartContractRiskScanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transparent Security Pricing
             </h2>
@@ -481,8 +456,8 @@ export default function SmartContractRiskScanner() {
                 </ul>
 
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ scale: 1.02     }}
+                  whileTap={{ scale: 0.98     }}
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover:from-red-700 hover:to-orange-700'
@@ -503,7 +478,7 @@ export default function SmartContractRiskScanner() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Smart Contracts?
@@ -515,18 +490,16 @@ export default function SmartContractRiskScanner() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300">
                 Start Free Trial
               </motion.button>
               
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
                 Contact Security Team
               </motion.button>
             </div>

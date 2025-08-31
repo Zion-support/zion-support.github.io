@@ -41,132 +41,108 @@ import {
 
 export default function SecurityHeadersCSP() {
   const features = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Security Headers Implementation",
       description: "Comprehensive implementation of all essential security headers for web applications."
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Content Security Policy",
       description: "Advanced CSP rules to prevent XSS, injection attacks, and data exfiltration."
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of security headers and policy violations."
     },
-    {
-      icon: Code,
+    { icon: Code,
       title: "Automated Testing",
       description: "Automated testing and validation of security headers across all endpoints."
     },
-    {
-      icon: FileText,
+    { icon: FileText,
       title: "Compliance Reporting",
       description: "Detailed compliance reports for security standards and regulations."
     },
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: "Threat Detection",
       description: "Advanced threat detection and automated response for policy violations."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Enhanced Security",
       description: "Protect against XSS, CSRF, clickjacking, and other web vulnerabilities."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Compliance Ready",
       description: "Meet security standards including OWASP, PCI DSS, and GDPR requirements."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Risk Reduction",
       description: "Significantly reduce security risks and potential data breaches."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Automated Protection",
       description: "Continuous security monitoring and automated threat response."
     },
-    {
-      icon: Star,
+    { icon: Star,
       title: "Trust Building",
       description: "Build customer trust with robust security measures and compliance."
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Cost Savings",
       description: "Prevent costly security incidents and reduce compliance costs."
     }
   ];
 
   const securityHeaders = [
-    {
-      header: "Content Security Policy (CSP)",
+    { header: "Content Security Policy (CSP)",
       description: "Prevent XSS attacks by controlling resource loading",
       icon: Shield
     },
-    {
-      header: "X-Frame-Options",
+    { header: "X-Frame-Options",
       description: "Protect against clickjacking attacks",
       icon: Lock
     },
-    {
-      header: "X-Content-Type-Options",
+    { header: "X-Content-Type-Options",
       description: "Prevent MIME type sniffing attacks",
       icon: Eye
     },
-    {
-      header: "Strict-Transport-Security (HSTS)",
+    { header: "Strict-Transport-Security (HSTS)",
       description: "Enforce HTTPS connections",
       icon: Key
     },
-    {
-      header: "Referrer Policy",
+    { header: "Referrer Policy",
       description: "Control referrer information leakage",
       icon: Network
     },
-    {
-      header: "Permissions Policy",
+    { header: "Permissions Policy",
       description: "Control browser feature access",
       icon: Fingerprint
     }
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Protect customer data and payment information in online stores",
       icon: ShoppingCart
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       description: "Secure banking and financial applications with strict security policies",
       icon: DollarSign
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Protect patient data and ensure HIPAA compliance",
       icon: Heart
     },
-    {
-      industry: "Government",
+    { industry: "Government",
       description: "Secure government websites and protect citizen information",
       icon: Building
     },
-    {
-      industry: "Education",
+    { industry: "Education",
       description: "Protect student data and educational platform security",
       icon: GraduationCap
     },
-    {
-      industry: "Technology",
+    { industry: "Technology",
       description: "Secure SaaS applications and web services",
       icon: Cpu
     }
@@ -187,7 +163,7 @@ export default function SecurityHeadersCSP() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-red-600/20 text-red-400 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
@@ -223,10 +199,9 @@ export default function SecurityHeadersCSP() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -243,9 +218,8 @@ export default function SecurityHeadersCSP() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -277,10 +251,9 @@ export default function SecurityHeadersCSP() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Benefits
             </h2>
@@ -297,9 +270,8 @@ export default function SecurityHeadersCSP() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -331,10 +303,9 @@ export default function SecurityHeadersCSP() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Security Headers Supported
             </h2>
@@ -351,9 +322,8 @@ export default function SecurityHeadersCSP() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -385,10 +355,9 @@ export default function SecurityHeadersCSP() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -405,9 +374,8 @@ export default function SecurityHeadersCSP() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-red-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -439,8 +407,8 @@ export default function SecurityHeadersCSP() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Applications?

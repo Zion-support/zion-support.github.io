@@ -7,7 +7,7 @@ import { specializedInnovativeServices2027  } from '../../data/2027-specialized-
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Rocket, Cpu, Database, Lock, Users, Building, Car, Leaf, Factory, Truck, BookOpen, Gavel, Home, Trophy, Film  } from 'lucide-react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-const categoryIcons: { [key: string]: React.ComponentType<any> } = {
+const categoryIcons: { [key: string]: React.ComponentType<> } = {
   'AI & Autonomous Systems': Brain,
   'Quantum Computing & AI': Cpu,
   'Blockchain & Web3': Database,
@@ -73,36 +73,31 @@ const features = [
 ];
 
 const benefits = [
-  {
-    icon: <Zap className="h-6 w-6"/>,
+  { icon: <Zap className="h-6 w-6"/>,
     title: "Immediate Deployment",
     description: "All services are ready for immediate deployment with no setup delays"
   },
-  {
-    icon: <Shield className="h-6 w-6"/>,
+  { icon: <Shield className="h-6 w-6"/>,
     title: "Enterprise Security",
     description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"
   },
-  {
-    icon: <TrendingUp className="h-6 w-6"/>,
+  { icon: <TrendingUp className="h-6 w-6"/>,
     title: "Proven ROI",
     description: "Average 300% ROI within 6 months of implementation"
   },
-  {
-    icon: <CheckCircle className="h-6 w-6"/>,
+  { icon: <CheckCircle className="h-6 w-6"/>,
     title: "Quality Guaranteed",
     description: "30-day money-back guarantee with free migration support"
   }
 ];
 
-const contactInfo = {
-  mobile: '+1 302 464 0950',
+const contactInfo = { mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
 
-export function ComprehensiveServicesShowcase2027(...args: any[]): any {
+export function ComprehensiveServicesShowcase2027() {  
   const [selectedCategory, setSelectedCategory] = useState<any>('all');
   const [searchQuery, setSearchQuery] = useState<any>('');
 
@@ -118,8 +113,8 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
     const matchesSearch = searchQuery === '' || 
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      service.category.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
+      service.category.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchesCategory && matchesSearch
   });
 
   const featuredServices = allServices.filter(service => service.popular).slice(0, 8);
@@ -199,7 +194,7 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
         {/* Featured Services */}
         <div className="mb-20">
           <h3 className="text-3xl font-bold text-white mb-8 text-center">Featured Services</h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service)  => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
@@ -257,7 +252,7 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
           <h3 className="text-3xl font-bold text-white mb-8 text-center">
             All Services ({filteredServices.length})
           </h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredServices.map((service)  => (
               <Card key={service.id} className="bg-zion-blue-dark border-zion-blue-light text-white hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
                 <CardHeader>
@@ -288,7 +283,7 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
                   
                   {/* Key Features */}
                   <div className="space-y-2 mb-4">
-                    <h4 className="font-semibold text-white text-sm">Key Features: any</h4>
+                    <h4 className="font-semibold text-white text-sm">Key Features: </h4>
                     {service.features.slice(0, 3).map((feature, index)  => (
                       <div key={index} className="flex items-center text-sm text-zion-slate-light">
                         <CheckCircle className="h-4 w-4 text-green-400 mr-2 flex-shrink-0"/>
@@ -349,7 +344,7 @@ export function ComprehensiveServicesShowcase2027(...args: any[]): any {
         {/* Benefits Section */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h3>
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index)  => (
               <div key={index} className="text-center">
                 <div className="mx-auto w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mb-4">

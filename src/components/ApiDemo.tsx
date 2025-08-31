@@ -6,7 +6,7 @@ interface User {
   name: string;
   email: string;
   createdAt?: string;
-}
+    }
 
 const ApiDemo: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -108,8 +108,7 @@ const ApiDemo: React.FC = () => {
             <button
               type="submit"
               disabled={loading}
-              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed">
               {loading ? 'Creating...' : 'Create User'}
             </button>
           </form>
@@ -129,8 +128,7 @@ const ApiDemo: React.FC = () => {
             <button
               onClick={fetchUsers}
               disabled={loading}
-              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50"
-            >
+              className="px-3 py-1 text-sm bg-gray-600 text-white rounded-md hover:bg-gray-700 disabled:opacity-50">
               {loading ? 'Loading...' : 'Refresh'}
             </button>
           </div>

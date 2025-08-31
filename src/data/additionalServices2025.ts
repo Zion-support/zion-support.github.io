@@ -15,16 +15,15 @@ export interface AdditionalService {
   marketPrice: string;
   roi?: string;
   innovationLevel?: string;
-  contactInfo?: {
+  contactInfo?: {  
     phone: string;
-    email: string;
-    website: string;
-  };
+    email: string
+    website: string
+      };
 }
 
 export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
-  {
-    id: "enterprise-rag-search",
+  { id: "enterprise-rag-search",
     title: "Enterprise RAG Search",
     description: "Retrieval-Augmented Generation search across docs, wikis, tickets, and code with secure multi-tenant embeddings and audit trails.",
     category: "AI & Analytics",
@@ -49,14 +48,12 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     marketPrice: "$1,500 - $4,000/month",
     roi: "180-300%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "ai-code-review-copilot",
+  { id: "ai-code-review-copilot",
     title: "AI Code Review Copilot",
     description: "Automated PR reviews, security linting, dependency risk scanning, and refactor suggestions wired to your CI.",
     category: "Developer Tools",
@@ -80,14 +77,12 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     marketPrice: "$800 - $2,500/month",
     roi: "150-250%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "mlops-observability-platform",
+  { id: "mlops-observability-platform",
     title: "MLOps Observability Platform",
     description: "Model monitoring for drift, bias, data quality, lineage, and rollback orchestration across environments.",
     category: "AI & MLOps",
@@ -111,14 +106,12 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     marketPrice: "$2,000 - $6,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "data-privacy-compliance-scanner",
+  { id: "data-privacy-compliance-scanner",
     title: "Data Privacy Compliance Scanner",
     description: "Continuous scanning for GDPR/CCPA/PCI/PHI across S3, SQL, logs, and SaaS with remediation workflows.",
     category: "Security & Compliance",
@@ -142,14 +135,12 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     marketPrice: "$1,300 - $3,500/month",
     roi: "160-240%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
   },
-  {
-    id: "iot-digital-twin-studio",
+  { id: "iot-digital-twin-studio",
     title: "IoT Digital Twin Studio",
     description: "Low-code digital twins for factories and buildings with real-time telemetry, anomaly alerts, and simulation.",
     category: "IoT & Edge",
@@ -173,8 +164,7 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
     marketPrice: "$1,800 - $5,000/month",
     roi: "170-260%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     }
@@ -182,24 +172,21 @@ export const ADDITIONAL_MICRO_SAAS_SERVICES_2025: AdditionalService[] = [
 ];
 
 export const ADDITIONAL_SPECIALIZED_SERVICES: AdditionalService[] = [
-  {
-    id: "ai-sales-outreach-accelerator",
+  { id: "ai-sales-outreach-accelerator",
     title: "AI Sales Outreach Accelerator",
     description: "Multi-channel AI outreach, persona targeting, cadence optimization, and reply classification.",
     category: "Revenue Ops",
     price: 899,
     marketPrice: "$900 - $2,200/month"
   },
-  {
-    id: "finops-cost-optimizer",
+  { id: "finops-cost-optimizer",
     title: "FinOps Cost Optimizer",
     description: "Automated cloud cost governance, rightsizing, and anomaly detection across AWS/Azure/GCP.",
     category: "Cloud & DevOps",
     price: 699,
     marketPrice: "$700 - $2,000/month"
   },
-  {
-    id: "genai-content-studio-pro",
+  { id: "genai-content-studio-pro",
     title: "GenAI Content Studio Pro",
     description: "Enterprise-grade LLM content workflows with guardrails, brand voice, and human-in-the-loop.",
     category: "AI & Content",

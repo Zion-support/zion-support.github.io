@@ -2,58 +2,53 @@ import React, { useState } from 'react.ts';
 import { motion, AnimatePresence  } from 'framer-motion.ts';
 import { Quote, Star, ChevronLeft, ChevronRight, User, Building, Globe  } from 'lucide-react.ts';
 const testimonials = [
-  {
-    id: 1,
+  { id: 1,
     name: "Sarah Chen",
     position: "CTO",
-    company: "TechFlow Solutions",
+    comp: "TechFlow Solutions",
     content: "Zion Tech Group transformed our entire infrastructure with their AI-powered solutions. Our operational efficiency increased by 300% within the first quarter.",
     rating: 5,
     industry: "FinTech",
     project: "AI-Powered Trading Platform"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Marcus Rodriguez",
     position: "VP of Engineering",
-    company: "Global Retail Corp",
+    comp: "Global Retail Corp",
     content: "The cybersecurity implementation by Zion Tech Group was seamless and comprehensive. We've had zero security breaches since deployment.",
     rating: 5,
     industry: "Retail",
     project: "Enterprise Security Overhaul"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "Dr. Emily Watson",
     position: "Research Director",
-    company: "Quantum Research Institute",
+    comp: "Quantum Research Institute",
     content: "Working with Zion Tech Group on our quantum computing project was revolutionary. Their expertise in emerging technologies is unmatched.",
     rating: 5,
     industry: "Research",
     project: "Quantum Computing Platform"
   },
-  {
-    id: 4,
+  { id: 4,
     name: "James Thompson",
     position: "CEO",
-    company: "Green Energy Co",
+    comp: "Green Energy Co",
     content: "Zion Tech Group's digital transformation services helped us modernize our entire operation. The results exceeded our expectations.",
     rating: 5,
     industry: "Energy",
     project: "Digital Transformation Initiative"
   },
-  {
-    id: 5,
+  { id: 5,
     name: "Lisa Park",
     position: "Head of IT",
-    company: "Healthcare Innovations",
+    comp: "Healthcare Innovations",
     content: "The cloud infrastructure solution provided by Zion Tech Group has dramatically improved our system reliability and scalability.",
     rating: 5,
     industry: "Healthcare",
     project: "Cloud Migration & Optimization"
   }
 ];
-export function TestimonialsSection(...args: any[]): any {
+export function TestimonialsSection(...args: []):  {
   return (
     <section className="py-20 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -65,12 +60,11 @@ export function TestimonialsSection(...args: any[]): any {
             Join thousands of satisfied professionals who trust Zion for their technology needs
           </p>
         </div>
-        <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index)  => (
             <div 
               key={index}
-              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group"
-            >
+              className="bg-zion-blue border border-zion-blue-light rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:transform hover:scale-105 group">
               {/* Quote icon */}
               <div className="mb-4">
                 <Quote className="w-8 h-8 text-zion-cyan opacity-60" />
@@ -93,7 +87,7 @@ export function TestimonialsSection(...args: any[]): any {
                 <div>
                   <div className="text-white font-semibold">{testimonial.name}</div>
                   <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
-                  <div className="text-zion-cyan text-sm">{testimonial.company}</div>
+                  <div className="text-zion-cyan text-sm">{testimonial.comp}</div>
                 </div>
               </div>
             </div>
@@ -123,9 +117,8 @@ export function TestimonialsSection(...args: any[]): any {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
+          viewport={{ once: true     }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">98%</div>
             <div className="text-zion-slate-light">Client Satisfaction</div>

@@ -24,38 +24,32 @@ import {
 
 const AIQuantumFinancialTrading = () => {
   const features = [
-    {
-      title: "Quantum-AI Algorithm Trading",
+    { title: "Quantum-AI Algorithm Trading",
       description: "Advanced quantum computing algorithms combined with AI for ultra-fast market analysis and execution",
       icon: Brain,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Real-time Market Prediction",
+    { title: "Real-time Market Prediction",
       description: "Machine learning models that predict market movements with 85%+ accuracy using quantum-enhanced analytics",
       icon: TrendingUp,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Risk Management System",
+    { title: "Risk Management System",
       description: "AI-powered risk assessment and portfolio optimization with quantum computing speed",
       icon: Shield,
       color: "from-red-500 to-orange-500"
     },
-    {
-      title: "Multi-Asset Trading",
+    { title: "Multi-Asset Trading",
       description: "Support for stocks, forex, crypto, commodities, and derivatives with unified interface",
       icon: BarChart3,
       color: "from-blue-500 to-indigo-500"
     },
-    {
-      title: "Regulatory Compliance",
+    { title: "Regulatory Compliance",
       description: "Automated compliance monitoring for SEC, FINRA, and international regulations",
       icon: Lock,
       color: "from-yellow-500 to-orange-500"
     },
-    {
-      title: "Portfolio Analytics",
+    { title: "Portfolio Analytics",
       description: "Advanced portfolio performance tracking with quantum-enhanced optimization",
       icon: Target,
       color: "from-cyan-500 to-blue-500"
@@ -63,8 +57,7 @@ const AIQuantumFinancialTrading = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$2,999",
       period: "/month",
       description: "Perfect for individual traders and small funds",
@@ -78,8 +71,7 @@ const AIQuantumFinancialTrading = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$7,999",
       period: "/month",
       description: "Ideal for professional traders and medium funds",
@@ -94,8 +86,7 @@ const AIQuantumFinancialTrading = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$19,999",
       period: "/month",
       description: "For large institutions and hedge funds",
@@ -113,23 +104,19 @@ const AIQuantumFinancialTrading = () => {
   ];
 
   const benefits = [
-    {
-      title: "Increased Trading Speed",
+    { title: "Increased Trading Speed",
       description: "Quantum computing reduces execution time from milliseconds to microseconds",
       metric: "1000x faster"
     },
-    {
-      title: "Higher Accuracy",
+    { title: "Higher Accuracy",
       description: "AI algorithms combined with quantum processing improve prediction accuracy",
       metric: "85%+ accuracy"
     },
-    {
-      title: "Risk Reduction",
+    { title: "Risk Reduction",
       description: "Advanced risk management reduces portfolio volatility and losses",
       metric: "40% less risk"
     },
-    {
-      title: "Cost Savings",
+    { title: "Cost Savings",
       description: "Automated trading reduces manual intervention and operational costs",
       metric: "60% cost reduction"
     }
@@ -144,7 +131,7 @@ const AIQuantumFinancialTrading = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="flex items-center justify-center mb-6">
               <Atom className="w-12 h-12 text-purple-400 mr-3" />
@@ -159,15 +146,13 @@ const AIQuantumFinancialTrading = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                 Start Trading Now
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#demo"
-                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
                 Watch Demo
               </a>
             </div>
@@ -181,10 +166,9 @@ const AIQuantumFinancialTrading = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Revolutionary Trading Technology
             </h2>
@@ -201,9 +185,8 @@ const AIQuantumFinancialTrading = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105"
-              >
+                viewport={{ once: true     }}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-purple-400 transition-all duration-300 hover:transform hover:scale-105">
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -221,10 +204,9 @@ const AIQuantumFinancialTrading = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Proven Results & Benefits
             </h2>
@@ -240,9 +222,8 @@ const AIQuantumFinancialTrading = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
@@ -258,10 +239,9 @@ const AIQuantumFinancialTrading = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Competitive Pricing Plans
             </h2>
@@ -277,7 +257,7 @@ const AIQuantumFinancialTrading = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border-2 ${
                   plan.popular 
                     ? 'border-purple-400 shadow-2xl shadow-purple-500/20' 
@@ -332,8 +312,8 @@ const AIQuantumFinancialTrading = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Trading?
@@ -344,15 +324,13 @@ const AIQuantumFinancialTrading = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now
               </a>

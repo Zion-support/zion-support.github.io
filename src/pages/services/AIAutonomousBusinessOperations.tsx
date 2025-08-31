@@ -174,38 +174,32 @@ import {
 
 const AIAutonomousBusinessOperations = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Decision Making",
       description: "Advanced machine learning algorithms that make intelligent business decisions in real-time",
       benefits: ["Automated risk assessment", "Predictive analytics", "Intelligent resource allocation", "Market trend analysis"]
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Process Automation",
       description: "End-to-end automation of complex business processes and workflows",
       benefits: ["Reduced manual errors", "Increased efficiency", "24/7 operation", "Scalable processes"]
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Performance Optimization",
       description: "Continuous monitoring and optimization of business performance metrics",
       benefits: ["Real-time insights", "Proactive improvements", "Cost optimization", "Revenue enhancement"]
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Intelligent Security",
       description: "AI-driven security monitoring and threat detection",
       benefits: ["Advanced threat detection", "Automated response", "Compliance monitoring", "Risk mitigation"]
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Team Collaboration",
       description: "Enhanced collaboration tools with AI-powered insights",
       benefits: ["Smart task allocation", "Performance tracking", "Communication optimization", "Knowledge sharing"]
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive business intelligence and reporting",
       benefits: ["Custom dashboards", "Predictive modeling", "Data visualization", "Actionable insights"]
@@ -213,41 +207,34 @@ const AIAutonomousBusinessOperations = () => {
   ];
 
   const useCases = [
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       applications: ["Risk management", "Fraud detection", "Portfolio optimization", "Compliance automation"],
       icon: DollarSign
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       applications: ["Patient care optimization", "Resource management", "Clinical decision support", "Administrative automation"],
       icon: Heart
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       applications: ["Supply chain optimization", "Quality control", "Predictive maintenance", "Production planning"],
       icon: Cog
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       applications: ["Inventory management", "Customer behavior analysis", "Pricing optimization", "Supply chain management"],
       icon: ShoppingCart
     },
-    {
-      industry: "Technology",
+    { industry: "Technology",
       applications: ["DevOps automation", "Performance monitoring", "Security operations", "Customer support"],
       icon: Cpu
     },
-    {
-      industry: "Consulting",
+    { industry: "Consulting",
       applications: ["Client management", "Project optimization", "Knowledge management", "Resource allocation"],
       icon: Briefcase
     }
   ];
 
   const pricingTiers = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$2,500",
       period: "/month",
       description: "Perfect for small businesses starting their automation journey",
@@ -260,8 +247,7 @@ const AIAutonomousBusinessOperations = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$8,500",
       period: "/month",
       description: "Ideal for growing businesses with complex operations",
@@ -276,8 +262,7 @@ const AIAutonomousBusinessOperations = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$25,000",
       period: "/month",
       description: "Comprehensive solution for large enterprises",
@@ -295,8 +280,7 @@ const AIAutonomousBusinessOperations = () => {
     }
   ];
 
-  const contactInfo = {
-    phone: "+1 302 464 0950",
+  const contactInfo = { phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709",
     website: "https://ziontechgroup.com"
@@ -317,7 +301,7 @@ const AIAutonomousBusinessOperations = () => {
             className="mb-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <span className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 text-sm font-semibold rounded-full border border-purple-500/30">
               <Bot className="w-4 h-4 mr-2" />
@@ -355,15 +339,13 @@ const AIAutonomousBusinessOperations = () => {
           >
             <Link
               to="/request-quote"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               <Rocket className="w-5 h-5 mr-2" />
               Get Started
             </Link>
             <Link
               to="#demo"
-              className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-            >
+              className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300">
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
             </Link>
@@ -378,8 +360,8 @@ const AIAutonomousBusinessOperations = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose AI Autonomous Operations?
@@ -391,33 +373,27 @@ const AIAutonomousBusinessOperations = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              {
-                icon: Clock,
+              { icon: Clock,
                 title: "24/7 Operation",
                 description: "Your business never sleeps with continuous AI monitoring and decision-making"
               },
-              {
-                icon: DollarSign,
+              { icon: DollarSign,
                 title: "Cost Reduction",
                 description: "Reduce operational costs by up to 40% through intelligent automation"
               },
-              {
-                icon: TrendingUp,
+              { icon: TrendingUp,
                 title: "Increased Efficiency",
                 description: "Boost productivity by 300% with AI-powered process optimization"
               },
-              {
-                icon: Shield,
+              { icon: Shield,
                 title: "Risk Mitigation",
                 description: "Proactively identify and address risks before they impact your business"
               },
-              {
-                icon: Users,
+              { icon: Users,
                 title: "Team Empowerment",
                 description: "Free your team to focus on strategic initiatives and innovation"
               },
-              {
-                icon: Target,
+              { icon: Target,
                 title: "Data-Driven Decisions",
                 description: "Make informed decisions based on real-time data and AI insights"
               }
@@ -427,7 +403,7 @@ const AIAutonomousBusinessOperations = () => {
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className="p-3 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg w-12 h-12 flex items-center justify-center mb-4">
@@ -448,8 +424,8 @@ const AIAutonomousBusinessOperations = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Platform Features
@@ -468,7 +444,7 @@ const AIAutonomousBusinessOperations = () => {
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className="flex-1">
@@ -508,8 +484,8 @@ const AIAutonomousBusinessOperations = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry Applications
@@ -526,7 +502,7 @@ const AIAutonomousBusinessOperations = () => {
                 className="bg-slate-800/50 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className="flex items-center mb-4">
@@ -556,8 +532,8 @@ const AIAutonomousBusinessOperations = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Pricing Plans
@@ -578,7 +554,7 @@ const AIAutonomousBusinessOperations = () => {
                 } hover:border-purple-400 transition-all duration-300`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 {tier.popular && (
@@ -631,8 +607,8 @@ const AIAutonomousBusinessOperations = () => {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -647,7 +623,7 @@ const AIAutonomousBusinessOperations = () => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
               <div className="p-4 bg-purple-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -661,7 +637,7 @@ const AIAutonomousBusinessOperations = () => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <div className="p-4 bg-blue-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -675,7 +651,7 @@ const AIAutonomousBusinessOperations = () => {
               className="text-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <div className="p-4 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -690,13 +666,12 @@ const AIAutonomousBusinessOperations = () => {
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Link
               to="/request-quote"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-            >
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               <Rocket className="w-5 h-5 mr-2" />
               Request Custom Demo
             </Link>

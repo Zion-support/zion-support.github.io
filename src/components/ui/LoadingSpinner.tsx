@@ -16,15 +16,13 @@ export default function LoadingSpinner({
   showText = false,
   text = 'Loading...'
 }: LoadingSpinnerProps) {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
+  const sizeClasses = { sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
 
-  const colorClasses = {
-    primary: 'border-cyan-400 border-t-transparent',
+  const colorClasses = { primary: 'border-cyan-400 border-t-transparent',
     white: 'border-white border-t-transparent',
     gray: 'border-gray-400 border-t-transparent'
   };
@@ -38,11 +36,10 @@ export default function LoadingSpinner({
       )} />
       {showText && (
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-          className="mt-2 text-sm text-gray-500"
-        >
+          initial={{ opacity: 0     }}
+          animate={{ opacity: 1     }}
+          transition={{ delay: 0.3     }}
+          className="mt-2 text-sm text-gray-500">
           {text}
         </motion.p>
       )}
@@ -51,14 +48,14 @@ export default function LoadingSpinner({
 }
 
 // Optimized skeleton loader
-export function SkeletonLoader(...args: any[]): any {
+export function SkeletonLoader(...args: []):  {
   return (
     <div className={`space-y-3 ${className}`}>
-      {Array.from({ length: anylines }).map((_, index)  => (
+      {Array.from({ length: lines     }).map((_, index)  => (
         <motion.div
           key={index}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0     }}
+          animate={{ opacity: 1     }}
           transition={{ delay: index * 0.1, duration: 0.3 }}
           className={`${height} bg-white/10 rounded-lg animate-pulse`}
         />
@@ -68,7 +65,7 @@ export function SkeletonLoader(...args: any[]): any {
 }
 
 // Button loading state
-export function ButtonLoader(...args: any[]): any {
+export function ButtonLoader(...args: []):  {
   return (
     <div className={cn('inline-flex items-center', className)}>
       <LoadingSpinner size={size} color="white" />
@@ -78,22 +75,20 @@ export function ButtonLoader(...args: any[]): any {
 }
 
 // Page loading overlay
-export function PageLoaderOverlay(...args: any[]): any {
+export function PageLoaderOverlay(...args: []):  {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center"
-    >
+      initial={{ opacity: 0     }}
+      animate={{ opacity: 1     }}
+      exit={{ opacity: 0     }}
+      className="fixed inset-0 bg-background/95 backdrop-blur-sm z-50 flex items-center justify-center">
       <div className="text-center">
         {showSpinner && <LoadingSpinner size="xl" color="primary" />}
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.3 }}
-          className="mt-4 text-lg text-gray-300 font-medium"
-        >
+          className="mt-4 text-lg text-gray-300 font-medium">
           {text}
         </motion.p>
       </div>
@@ -102,9 +97,8 @@ export function PageLoaderOverlay(...args: any[]): any {
 }
 
 // Content loading placeholder
-export function ContentPlaceholder(...args: any[]): any {
-  const variants = {
-    default: 'space-y-4',
+export function ContentPlaceholder(...args: []):  {
+  const variants = { default: 'space-y-4',
     card: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6',
     list: 'space-y-3',
     grid: 'grid grid-cols-2 md:grid-cols-4 gap-4'
@@ -114,14 +108,13 @@ export function ContentPlaceholder(...args: any[]): any {
     <div className={`${variants[variant]} ${className}`}>
       {variant === 'card' ? (
         // Card placeholders
-        Array.from({ length: any6 }).map((_, index)  => (
+        Array.from({ length: 6     }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="bg-white/5 rounded-lg p-6 border border-white/10"
-          >
+            transition={{ delay: index * 0.1     }}
+            className="bg-white/5 rounded-lg p-6 border border-white/10">
             <div className="h-4 bg-white/10 rounded mb-3 animate-pulse" />
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-3 bg-white/10 rounded w-2/3 animate-pulse" />
@@ -129,40 +122,38 @@ export function ContentPlaceholder(...args: any[]): any {
         ))
       ) : variant === 'list' ? (
         // List placeholders
-        Array.from({ length: any5 }).map((_, index)  => (
+        Array.from({ length: 5     }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-            className="flex items-center space-x-3"
-          >
+            transition={{ delay: index * 0.1     }}
+            className="flex items-center space-x-3">
             <div className="w-4 h-4 bg-white/10 rounded-full animate-pulse" />
             <div className="h-3 bg-white/10 rounded flex-1 animate-pulse" />
           </motion.div>
         ))
       ) : variant === 'grid' ? (
         // Grid placeholders
-        Array.from({ length: any8 }).map((_, index)  => (
+        Array.from({ length: 8     }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: index * 0.1 }}
-            className="bg-white/5 rounded-lg p-4 border border-white/10"
-          >
+            transition={{ delay: index * 0.1     }}
+            className="bg-white/5 rounded-lg p-4 border border-white/10">
             <div className="h-3 bg-white/10 rounded mb-2 animate-pulse" />
             <div className="h-2 bg-white/10 rounded w-3/4 animate-pulse" />
           </motion.div>
         ))
       ) : (
         // Default placeholders
-        Array.from({ length: any4 }).map((_, index)  => (
+        Array.from({ length: 4     }).map((_, index)  => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
+            transition={{ delay: index * 0.1     }}
             className="h-4 bg-white/10 rounded animate-pulse" />
         ))
       )}
@@ -181,7 +172,7 @@ export function AppLoadingSpinner() {
         <div className="w-32 h-32 border-4 border-slate-700 rounded-full relative">
           <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin"></div>
           <div className="absolute inset-0 border-4 border-transparent border-r-blue-500 rounded-full animate-spin" style={{ animationDirection: 'reverse', animationDuration: '1.5s' }}></div>
-          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s' }}></div>
+          <div className="absolute inset-0 border-4 border-transparent border-b-purple-500 rounded-full animate-spin" style={{ animationDuration: '2s'     }}></div>
         </div>
         
         {/* Floating icons */}
@@ -189,25 +180,21 @@ export function AppLoadingSpinner() {
           <motion.div
             key={index}
             className="absolute text-2xl"
-            style={{
-              top: '50%',
+            style={{ top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
             }}
-            animate={{
-              rotate: [0, 360],
+            animate={{ rotate: [0, 360],
               scale: [0.8, 1.2, 0.8],
             }}
-            transition={{
-              duration: 3,
+            transition={{ duration: 3,
               repeat: Infinity,
               delay: index * 0.5,
               ease: "easeInOut"
             }}
           >
             <span 
-              style={{
-                position: 'absolute',
+              style={{ position: 'absolute',
                 top: `${Math.cos(index * Math.PI / 2) * 60}px`,
                 left: `${Math.sin(index * Math.PI / 2) * 60}px`,
               }}
@@ -223,7 +210,7 @@ export function AppLoadingSpinner() {
         className="mt-8 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.5     }}
       >
         <h2 className="text-2xl font-bold text-white mb-2">Loading Zion Tech Group</h2>
         <p className="text-gray-400">Preparing your futuristic experience...</p>
@@ -235,12 +222,10 @@ export function AppLoadingSpinner() {
           <motion.div
             key={i}
             className="w-2 h-2 bg-cyan-400 rounded-full"
-            animate={{
-              scale: [1, 1.5, 1],
+            animate={{ scale: [1, 1.5, 1],
               opacity: [0.5, 1, 0.5],
             }}
-            transition={{
-              duration: 1.5,
+            transition={{ duration: 1.5,
               repeat: Infinity,
               delay: i * 0.2,
             }}

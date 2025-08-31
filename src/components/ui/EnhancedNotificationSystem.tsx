@@ -5,25 +5,22 @@ import { X, CheckCircle, AlertCircle, Info, AlertTriangle, Bell  } from 'lucide-
 export type NotificationType = 'success' | 'error' | 'warning' | 'info';
 
 export interface Notification {
-
-  id: anystring;
+  id: string;
   type: NotificationType;
   title: string;
   message: string;
   duration?: number;
-action?: {;
-    label: string;
-    onClick: ()  => void;
+action?: {  
+    label: string
+    onClick: ()  => void
   
-};
+    };
 }
 
-interface NotificationContextType {
-
-  notifications: anyNotification[];
+interface NotificationContextType { notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>)  => void;
-  removeNotification: any(id: string)  => void;
-  clearAll: any()  => void;
+  removeNotification: (id: string)  => void;
+  clearAll: () => void;
 
 }
 
@@ -37,16 +34,14 @@ export const useNotifications = () => {
   return context;
 };
 
-interface NotificationProviderProps extends React.PropsWithChildren<{}> {
+interface NotificationProviderProps extends React.PropsWithChildren<{}> { children: React.ReactNode;
 
-  children: React.ReactNode;
+    }
 
-}
-
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+export const NotificationProvider: React.FC = ({ children }) => {
   const [notifications, setNotifications] = useState<any>([]);
 
-  const addNotification = (notification: anyOmit<Notification, 'id'>)  => {
+  const addNotification = (notification: Omit<Notification, 'id'>)  => {
     const id = Math.random().toString(36).substr(2, 9);
     const newNotification = { ...notification, id };
     setNotifications(prev => [...prev, newNotification]);
@@ -59,7 +54,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
     }
   };
 
-  const removeNotification = (id: anystring)  => {
+  const removeNotification = (id: string)  => {
     setNotifications(prev => prev.filter(n => n.id !== id));
   };
 
@@ -89,14 +84,12 @@ const NotificationContainer: React.FC = (): JSX.Element => {
             initial={{ opacity: 0, x: 300, scale: 0.8 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
             exit={{ opacity: 0, x: 300, scale: 0.8 }}
-            transition={{ 
-              duration: 0.3, 
+            transition={{ duration: 0.3, 
               delay: index * 0.1,
               type: "spring",
               stiffness: 200
             }}
-            className="relative"
-          >
+            className="relative">
             <NotificationItem notification={notification} onRemove={removeNotification} />
           </motion.div>
         ))}
@@ -107,8 +100,7 @@ const NotificationContainer: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           onClick={clearAll}
-          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2"
-        >
+          className="w-full px-4 py-2 bg-zion-slate-dark/80 backdrop-blur-sm border border-white/20 rounded-lg text-white text-sm hover:bg-zion-slate-dark transition-colors duration-200 flex items-center justify-center space-x-2">
           <Bell className="w-4 h-4" />
           <span>Clear All</span>
         </motion.button>
@@ -117,15 +109,13 @@ const NotificationContainer: React.FC = (): JSX.Element => {
   );
 };
 
-interface NotificationItemProps extends React.PropsWithChildren<{}> {
-
-  notification: anyNotification;
+interface NotificationItemProps extends React.PropsWithChildren<{}> { notification: Notification;
   onRemove: (id: string)  => void;
 
-}
+    }
 
-const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRemove }) => {
-  const getIcon = (type: anyNotificationType)  => {
+const NotificationItem: React.FC = ({ notification, onRemove }) => {
+  const getIcon = (type: NotificationType)  => {
     switch (type) {
       case 'success':
         return <CheckCircle className="w-5 h-5 text-green-400" />;
@@ -138,7 +128,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     }
   };
 
-  const getBorderColor = (type: anyNotificationType)  => {
+  const getBorderColor = (type: NotificationType)  => {
     switch (type) {
       case 'success':
         return 'border-green-500/30';
@@ -151,7 +141,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
     }
   };
 
-  const getBackgroundColor = (type: anyNotificationType)  => {
+  const getBackgroundColor = (type: NotificationType)  => {
     switch (type) {
       case 'success':
         return 'bg-green-500/10';
@@ -185,8 +175,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
           {notification.action && (
             <button
               onClick={notification.action.onClick}
-              className="mt-2 text-xs font-medium text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200"
-            >
+              className="mt-2 text-xs font-medium text-zion-cyan hover:text-zion-cyan/80 transition-colors duration-200">
               {notification.action.label}
             </button>
           )}
@@ -194,8 +183,7 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
         
         <button
           onClick={() => onRemove(notification.id)}
-          className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200"
-        >
+          className="flex-shrink-0 text-gray-400 hover:text-white transition-colors duration-200">
           <X className="w-4 h-4" />
         </button>
       </div>
@@ -204,16 +192,15 @@ const NotificationItem: React.FC<NotificationItemProps> = ({ notification, onRem
 };
 
 // Utility functions for easy notification creation
-export const notify = {
-  success: any(title: string, message: string, options?: Partial<Notification>)  => {
+export const notify = { success: (title: string, message: string, options?: Partial<Notification>)  => {
     // This would be used with the context
-    console.log('Success notification: any', { title, message, ...options });
+    console.log('Success notification: ', { title, message, ...options });
   },
   error: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Error notification: any', { title, message, ...options });
+    console.log('Error notification: ', { title, message, ...options });
   },
   warning: (title: string, message: string, options?: Partial<Notification>)  => {
-    console.log('Warning notification: any', { title, message, ...options });
+    console.log('Warning notification: ', { title, message, ...options });
   },
   info: (title: string, message: string, options?: Partial<Notification>)  => {
     console.log('Info notification:', { title, message, ...options });

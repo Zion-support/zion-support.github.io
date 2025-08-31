@@ -5,30 +5,27 @@ interface User {
   email: string;
   name: string;
   avatar?: string;
-}
+    }
 
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
   isLoading: boolean;
   error: string | null;
-}
+    }
 
-const initialState: AuthState = {
-  user: null,
+const initialState: AuthState = { user: null,
   isAuthenticated: false,
   isLoading: false,
   error: null,
 };
 
-const authSlice = createSlice({
-  name: 'auth',
+const authSlice = createSlice({ name: 'auth',
   initialState,
-  reducers: {
-    setUser: (state, action: PayloadAction<User>) => {
+  reducers: { setUser: (state, action: PayloadAction<User>) => {
       state.user = action.payload;
-      state.isAuthenticated = true;
-      state.error = null;
+      state.isAuthenticated = true
+      state.error = null
     },
     clearUser: (state) => {
       state.user = null;

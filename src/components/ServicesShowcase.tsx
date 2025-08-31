@@ -20,160 +20,140 @@ import {
 
 export function ServicesShowcase() {
   const services = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI & Analytics",
       description: "Machine Learning & Data Science solutions",
       href: "/services/ai-business-intelligence",
       category: "AI",
       color: "from-purple-500 to-pink-600"
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: "Cloud & DevOps",
       description: "Infrastructure & Automation",
       href: "/services/cloud-devops",
       category: "Infrastructure",
       color: "from-blue-500 to-cyan-600"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Cybersecurity",
       description: "AI-Powered Security solutions",
       href: "/services",
       category: "Security",
       color: "from-red-500 to-orange-600"
     },
-    {
-      icon: Cpu,
+    { icon: Cpu,
       title: "IoT & Edge",
       description: "Smart Devices & Networks",
       href: "/services",
       category: "IoT",
       color: "from-green-500 to-emerald-600"
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Blockchain",
       description: "DeFi & Smart Contracts",
       href: "/services",
       category: "Blockchain",
       color: "from-yellow-500 to-orange-600"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Healthcare Tech",
       description: "AI Medicine & Diagnostics",
       href: "/services",
       category: "Healthcare",
       color: "from-pink-500 to-rose-600"
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Sustainability",
       description: "Green IT Solutions",
       href: "/services",
       category: "Green IT",
       color: "from-emerald-500 to-teal-600"
     },
-    {
-      icon: ShoppingCart,
+    { icon: ShoppingCart,
       title: "Micro SaaS",
       description: "Productized SaaS for niches",
       href: "/services/micro-saas-solutions",
       category: "SaaS",
       color: "from-indigo-500 to-purple-600"
     },
-    {
-      icon: MessageCircle,
+    { icon: MessageCircle,
       title: "AI Auto Email",
       description: "Faster replies, CRM logging",
       href: "/services/ai-auto-email-responder",
       category: "Automation",
       color: "from-cyan-500 to-blue-600"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Mobile Surveys",
       description: "NPS/CSAT with AI insights",
       href: "/services/mobile-survey",
       category: "Analytics",
       color: "from-teal-500 to-green-600"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Compliance Copilot",
       description: "SOC2/ISO evidence automation",
       href: "/services/ai-compliance-copilot",
       category: "Compliance",
       color: "from-orange-500 to-red-600"
     },
-    {
-      icon: BookOpen,
+    { icon: BookOpen,
       title: "LLM Content Studio",
       description: "On-brand AI content",
       href: "/services/llm-content-studio",
       category: "Content",
       color: "from-violet-500 to-purple-600"
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: "FinOps Advisor",
       description: "Cloud cost optimization",
       href: "/services/finops-advisor",
       category: "Finance",
       color: "from-emerald-500 to-green-600"
     },
-    {
-      icon: ShoppingCart,
+    { icon: ShoppingCart,
       title: "Returns Management",
       description: "E-commerce RMA automation",
       href: "/services/returns-management",
       category: "E-commerce",
       color: "from-rose-500 to-pink-600"
     },
-    {
-      icon: MessageCircle,
+    { icon: MessageCircle,
       title: "Email Sequencer",
       description: "Automated follow-ups",
       href: "/services/email-sequencer",
       category: "Marketing",
       color: "from-blue-500 to-indigo-600"
     },
-    {
-      icon: BookOpen,
+    { icon: BookOpen,
       title: "Podcast Transcription",
       description: "Transcripts & show notes",
       href: "/services/podcast-transcription",
       category: "Media",
       color: "from-purple-500 to-violet-600"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Micro CRM",
       description: "Local business CRM",
       href: "/services/micro-crm",
       category: "CRM",
       color: "from-cyan-500 to-teal-600"
     },
-    {
-      icon: Gauge,
+    { icon: Gauge,
       title: "Website Analytics",
       description: "Privacy-first SMB analytics",
       href: "/services/website-analytics",
       category: "Analytics",
       color: "from-blue-500 to-cyan-600"
     },
-    {
-      icon: HelpCircle,
+    { icon: HelpCircle,
       title: "IT Helpdesk",
       description: "Tickets, SLAs, portals",
       href: "/services/it-helpdesk",
       category: "Support",
       color: "from-orange-500 to-yellow-600"
     },
-    {
-      icon: ShoppingCart,
+    { icon: ShoppingCart,
       title: "Affiliate Tracking",
       description: "Partner revenue platform",
       href: "/services/affiliate-tracking",
@@ -182,24 +162,18 @@ export function ServicesShowcase() {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5
+          }
     }
   };
 
@@ -210,10 +184,9 @@ export function ServicesShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+          viewport={{ once: true     }}
+          transition={{ duration: 0.8     }}
+          className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Our Comprehensive
             <span className="bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent"> Services</span>
@@ -229,15 +202,13 @@ export function ServicesShowcase() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-        >
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group relative"
-            >
+              className="group relative">
               <Link to={service.href}>
                 <div className="relative overflow-hidden bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/10">
                   {/* Background Gradient */}
@@ -275,10 +246,9 @@ export function ServicesShowcase() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center mt-16"
-        >
+          className="text-center mt-16">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-md rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -289,14 +259,12 @@ export function ServicesShowcase() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
                 Get Started Today
               </Link>
               <Link
                 to="/services"
-                className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-3 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300">
                 View All Services
               </Link>
             </div>

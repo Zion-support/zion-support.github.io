@@ -36,48 +36,42 @@ const Support = () => {
   const [contactMethod, setContactMethod] = useState('email');
 
   const supportCategories = [
-    {
-      id: 'general',
+    { id: 'general',
       name: 'General Support',
       icon: HelpCircle,
       description: 'General questions about our services and platform',
       responseTime: 'Within 24 hours',
       availability: '24/7'
     },
-    {
-      id: 'technical',
+    { id: 'technical',
       name: 'Technical Support',
       icon: Brain,
       description: 'Technical issues, bugs, and system problems',
       responseTime: 'Within 4 hours',
       availability: '24/7'
     },
-    {
-      id: 'billing',
+    { id: 'billing',
       name: 'Billing & Account',
       icon: CheckCircle,
       description: 'Payment issues, account management, and billing questions',
       responseTime: 'Within 8 hours',
       availability: 'Mon-Fri 9AM-6PM EST'
     },
-    {
-      id: 'ai-services',
+    { id: 'ai-services',
       name: 'AI Services',
       icon: Brain,
       description: 'AI model issues, training problems, and performance optimization',
       responseTime: 'Within 2 hours',
       availability: '24/7'
     },
-    {
-      id: 'cloud-infrastructure',
+    { id: 'cloud-infrastructure',
       name: 'Cloud Infrastructure',
       icon: Cloud,
       description: 'Cloud deployment, scaling, and infrastructure issues',
       responseTime: 'Within 1 hour',
       availability: '24/7'
     },
-    {
-      id: 'security',
+    { id: 'security',
       name: 'Security & Compliance',
       icon: Shield,
       description: 'Security concerns, compliance questions, and access control',
@@ -87,8 +81,7 @@ const Support = () => {
   ];
 
   const supportMethods = [
-    {
-      id: 'email',
+    { id: 'email',
       name: 'Email Support',
       icon: Mail,
       description: 'Send us a detailed message and get a response within our guaranteed response time',
@@ -97,8 +90,7 @@ const Support = () => {
       action: 'Send Email',
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      id: 'chat',
+    { id: 'chat',
       name: 'Live Chat',
       icon: MessageCircle,
       description: 'Get instant help from our support team through real-time chat',
@@ -107,8 +99,7 @@ const Support = () => {
       action: 'Start Chat',
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      id: 'phone',
+    { id: 'phone',
       name: 'Phone Support',
       icon: Phone,
       description: 'Speak directly with our technical experts for complex issues',
@@ -117,8 +108,7 @@ const Support = () => {
       action: 'Call Now',
       color: 'from-purple-500 to-pink-500'
     },
-    {
-      id: 'ticket',
+    { id: 'ticket',
       name: 'Support Ticket',
       icon: Ticket,
       description: 'Create a detailed support ticket for tracking and follow-up',
@@ -130,29 +120,25 @@ const Support = () => {
   ];
 
   const quickActions = [
-    {
-      title: 'Knowledge Base',
+    { title: 'Knowledge Base',
       description: 'Browse our comprehensive documentation and guides',
       icon: BookOpen,
       action: 'Browse Docs',
       color: 'from-indigo-500 to-purple-500'
     },
-    {
-      title: 'Video Tutorials',
+    { title: 'Video Tutorials',
       description: 'Watch step-by-step video guides and tutorials',
       icon: Video,
       action: 'Watch Videos',
       color: 'from-pink-500 to-rose-500'
     },
-    {
-      title: 'Community Forum',
+    { title: 'Community Forum',
       description: 'Connect with other users and share solutions',
       icon: Users,
       action: 'Join Forum',
       color: 'from-teal-500 to-cyan-500'
     },
-    {
-      title: 'Status Page',
+    { title: 'Status Page',
       description: 'Check system status and maintenance schedules',
       icon: Globe,
       action: 'Check Status',
@@ -161,42 +147,35 @@ const Support = () => {
   ];
 
   const faqItems = [
-    {
-      question: 'How do I reset my password?',
+    { question: 'How do I reset my password?',
       answer: 'You can reset your password by clicking the "Forgot Password" link on the login page, or by contacting our support team.',
       category: 'general'
     },
-    {
-      question: 'What are your support hours?',
+    { question: 'What are your support hours?',
       answer: 'Our support team is available 24/7 for critical issues. General support is available 24/7, while phone support is available Monday-Friday 9AM-6PM EST.',
       category: 'general'
     },
-    {
-      question: 'How do I report a bug?',
+    { question: 'How do I report a bug?',
       answer: 'You can report bugs through our support ticket system, live chat, or by emailing support@ziontechgroup.com with detailed information about the issue.',
       category: 'technical'
     },
-    {
-      question: 'What is your response time guarantee?',
+    { question: 'What is your response time guarantee?',
       answer: 'Response times vary by support category. Critical security issues are addressed immediately, while general inquiries are responded to within 24 hours.',
       category: 'general'
     },
-    {
-      question: 'How do I upgrade my service plan?',
+    { question: 'How do I upgrade my service plan?',
       answer: 'You can upgrade your service plan through your account dashboard, or contact our billing team for assistance with custom enterprise plans.',
       category: 'billing'
     },
-    {
-      question: 'Do you offer training for new users?',
+    { question: 'Do you offer training for new users?',
       answer: 'Yes, we offer comprehensive onboarding and training programs for new users. Contact our customer success team to schedule a training session.',
       category: 'general'
     }
   ];
 
-  const contactForm = {
-    name: '',
+  const contactForm = { name: '',
     email: '',
-    company: '',
+    comp: '',
     category: 'general',
     priority: 'medium',
     subject: '',
@@ -218,9 +197,8 @@ const Support = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
+              transition={{ duration: 0.6     }}
+              className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Headphones className="w-10 h-10 text-white" />
               </div>
@@ -266,8 +244,7 @@ const Support = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
-                  >
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center">
                     <div className={`w-16 h-16 bg-gradient-to-r ${method.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <method.icon className="w-8 h-8 text-white" />
                     </div>
@@ -306,8 +283,7 @@ const Support = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center"
-                  >
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200 text-center">
                     <div className={`w-16 h-16 bg-gradient-to-r ${action.color} rounded-full flex items-center justify-center mx-auto mb-4`}>
                       <action.icon className="w-8 h-8 text-white" />
                     </div>
@@ -347,8 +323,7 @@ const Support = () => {
                         ? 'border-blue-500 bg-blue-50' 
                         : 'border-slate-100 hover:border-blue-200'
                     }`}
-                    onClick={() => setSelectedCategory(category.id)}
-                  >
+                    onClick={() => setSelectedCategory(category.id)}>
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <category.icon className="w-8 h-8 text-blue-600" />
                     </div>
@@ -395,18 +370,18 @@ const Support = () => {
                         type="email"
                         required
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="your.email@company.com"
+                        placeholder="your.email@comp.com"
                       />
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">Company</label>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">Comp</label>
                       <input
                         type="text"
                         className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Your company name"
+                        placeholder="Your comp name"
                       />
                     </div>
                     <div>
@@ -415,8 +390,7 @@ const Support = () => {
                         required
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}
-                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      >
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                         {supportCategories.map((category) => (
                           <option key={category.id} value={category.id}>
                             {category.name}
@@ -449,8 +423,7 @@ const Support = () => {
                   <div className="flex justify-center">
                     <button
                       type="submit"
-                      className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2"
-                    >
+                      className="px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2">
                       <Send className="w-5 h-5" />
                       Send Message
                     </button>
@@ -480,8 +453,7 @@ const Support = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-slate-50 rounded-lg p-6 border border-slate-200"
-                  >
+                    className="bg-slate-50 rounded-lg p-6 border border-slate-200">
                     <h3 className="text-lg font-semibold text-slate-900 mb-2">{item.question}</h3>
                     <p className="text-slate-600">{item.answer}</p>
                     <div className="mt-3">

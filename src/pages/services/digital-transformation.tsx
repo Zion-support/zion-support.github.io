@@ -36,8 +36,7 @@ export default function DigitalTransformation() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function DigitalTransformation() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Brain,
+                { icon: Brain,
                   title: "Digital Strategy",
                   description: "Develop comprehensive digital transformation roadmap and strategy."
                 },
-                {
-                  icon: Cloud,
+                { icon: Cloud,
                   title: "Cloud Migration",
                   description: "Migrate legacy systems to modern cloud infrastructure and platforms."
                 },
-                {
-                  icon: Settings,
+                { icon: Settings,
                   title: "Process Automation",
                   description: "Automate manual processes and workflows for improved efficiency."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Customer Experience",
                   description: "Enhance customer journey and digital touchpoints across all channels."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Digital Security",
                   description: "Implement robust cybersecurity and data protection measures."
                 },
-                {
-                  icon: TrendingUp,
+                { icon: TrendingUp,
                   title: "Data Analytics",
                   description: "Leverage data insights for informed decision-making and optimization."
                 }
@@ -122,38 +115,32 @@ export default function DigitalTransformation() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Technology Infrastructure",
+                { title: "Technology Infrastructure",
                   description: "Modernize IT infrastructure with cloud, automation, and scalability.",
                   icon: Cpu,
                   benefits: ["Cloud migration", "Infrastructure automation", "Scalability planning"]
                 },
-                {
-                  title: "Business Processes",
+                { title: "Business Processes",
                   description: "Streamline and automate business processes for efficiency gains.",
                   icon: Settings,
                   benefits: ["Process mapping", "Workflow automation", "Efficiency optimization"]
                 },
-                {
-                  title: "Customer Experience",
+                { title: "Customer Experience",
                   description: "Transform customer interactions and digital touchpoints.",
                   icon: Users,
                   benefits: ["Omnichannel strategy", "Digital touchpoints", "Customer journey mapping"]
                 },
-                {
-                  title: "Data & Analytics",
+                { title: "Data & Analytics",
                   description: "Implement data-driven decision making and analytics capabilities.",
                   icon: BarChart3,
                   benefits: ["Data strategy", "Analytics implementation", "Business intelligence"]
                 },
-                {
-                  title: "Digital Culture",
+                { title: "Digital Culture",
                   description: "Foster digital-first mindset and organizational change.",
                   icon: Brain,
                   benefits: ["Change management", "Digital literacy", "Innovation culture"]
                 },
-                {
-                  title: "Security & Compliance",
+                { title: "Security & Compliance",
                   description: "Ensure digital security and regulatory compliance.",
                   icon: Shield,
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
@@ -193,38 +180,32 @@ export default function DigitalTransformation() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Cloud Platforms",
+                { title: "Cloud Platforms",
                   description: "AWS, Azure, Google Cloud for scalable infrastructure.",
                   icon: Cloud,
                   features: ["Multi-cloud strategy", "Serverless computing", "Container orchestration"]
                 },
-                {
-                  title: "AI & Machine Learning",
+                { title: "AI & Machine Learning",
                   description: "Intelligent automation and predictive analytics.",
                   icon: Brain,
                   features: ["Predictive analytics", "Process automation", "Intelligent insights"]
                 },
-                {
-                  title: "Mobile & Web",
+                { title: "Mobile & Web",
                   description: "Modern web and mobile application development.",
                   icon: Smartphone,
                   features: ["Progressive web apps", "Native mobile apps", "Responsive design"]
                 },
-                {
-                  title: "Data & Analytics",
+                { title: "Data & Analytics",
                   description: "Big data processing and business intelligence tools.",
                   icon: BarChart3,
                   features: ["Data lakes", "Real-time analytics", "Business intelligence"]
                 },
-                {
-                  title: "DevOps & Automation",
+                { title: "DevOps & Automation",
                   description: "Continuous integration and deployment automation.",
                   icon: Settings,
                   features: ["CI/CD pipelines", "Infrastructure as code", "Automated testing"]
                 },
-                {
-                  title: "Security & Compliance",
+                { title: "Security & Compliance",
                   description: "Advanced cybersecurity and compliance solutions.",
                   icon: Shield,
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
@@ -316,23 +297,19 @@ export default function DigitalTransformation() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Assessment",
                   description: "Evaluate current state and identify transformation opportunities."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "Strategy",
                   description: "Develop comprehensive digital transformation roadmap and strategy."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Implementation",
                   description: "Execute transformation initiatives with agile methodology."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and scale digital capabilities."
                 }
@@ -361,15 +338,13 @@ export default function DigitalTransformation() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

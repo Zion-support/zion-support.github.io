@@ -21,15 +21,15 @@ interface PerformanceMetric {
   unit: string;
   trend: 'up' | 'down' | 'stable';
   status: 'good' | 'warning' | 'critical';
-  icon: React.ComponentType<any>;
-}
+  icon: React.ComponentType<>;
+    }
 
 interface PerformanceData {
   timestamp: number;
   metrics: PerformanceMetric[];
   alerts: string[];
   recommendations: string[];
-}
+    }
 
 const PerformanceAnalytics: React.FC = () => {
   const [performanceData, setPerformanceData] = useState<PerformanceData | null>(null);
@@ -40,48 +40,42 @@ const PerformanceAnalytics: React.FC = () => {
   const generateMockData = useCallback((): PerformanceData => {
     const now = Date.now();
     const metrics: PerformanceMetric[] = [
-      {
-        name: 'Page Load Time',
+      { name: 'Page Load Time',
         value: Math.random() * 2000 + 500,
         unit: 'ms',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : Math.random() > 0.4 ? 'warning' : 'critical',
         icon: Clock
       },
-      {
-        name: 'Memory Usage',
+      { name: 'Memory Usage',
         value: Math.random() * 40 + 60,
         unit: '%',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.6 ? 'good' : 'warning',
         icon: HardDrive
       },
-      {
-        name: 'CPU Usage',
+      { name: 'CPU Usage',
         value: Math.random() * 30 + 20,
         unit: '%',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.7 ? 'good' : 'warning',
         icon: Cpu
       },
-      {
-        name: 'Network Latency',
+      { name: 'Network Latency',
         value: Math.random() * 100 + 20,
         unit: 'ms',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.6 ? 'good' : 'warning',
         icon: Network
       },
-      {
-        name: 'Error Rate',
+      { name: 'Error Rate',
         value: Math.random() * 2,
         unit: '%',
         trend: Math.random() > 0.5 ? 'up' : 'down',
         status: Math.random() > 0.8 ? 'good' : Math.random() > 0.5 ? 'warning' : 'critical',
         icon: AlertTriangle
       },
-      {
-        name: 'Response Time',
+      { name: 'Response Time',
         value: Math.random() * 500 + 100,
         unit: 'ms',
         trend: Math.random() > 0.5 ? 'up' : 'down',
@@ -102,8 +96,7 @@ const PerformanceAnalytics: React.FC = () => {
       'Enable CDN for static assets delivery'
     ];
 
-    return {
-      timestamp: now,
+    return { timestamp: now,
       metrics,
       alerts,
       recommendations
@@ -162,8 +155,7 @@ const PerformanceAnalytics: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-12"
-        >
+          className="text-center mb-12">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             Performance Analytics
           </h1>
@@ -176,9 +168,8 @@ const PerformanceAnalytics: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
-        >
+          transition={{ delay: 0.2     }}
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
           <div className="flex gap-2">
             <button
               onClick={startMonitoring}
@@ -209,8 +200,7 @@ const PerformanceAnalytics: React.FC = () => {
           <select
             value={selectedTimeframe}
             onChange={(e) => setSelectedTimeframe(e.target.value as '1h' | '24h' | '7d' | '30d')}
-            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
+            className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
             <option value="1h">Last Hour</option>
             <option value="24h">Last 24 Hours</option>
             <option value="7d">Last 7 Days</option>
@@ -223,17 +213,15 @@ const PerformanceAnalytics: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
-          >
+            transition={{ delay: 0.3     }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {performanceData.metrics.map((metric, index) => (
               <motion.div
                 key={metric.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
-              >
+                transition={{ delay: 0.4 + index * 0.1     }}
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-3">
                     <div className={`p-2 rounded-lg ${getStatusBgColor(metric.status)}`}>
@@ -263,9 +251,8 @@ const PerformanceAnalytics: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
-          >
+            transition={{ delay: 0.5     }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
             {/* Alerts */}
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
@@ -304,9 +291,8 @@ const PerformanceAnalytics: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center"
-        >
+          transition={{ delay: 0.6     }}
+          className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 text-center">
           <BarChart3 className="w-16 h-16 text-gray-400 mx-auto mb-4" />
           <h3 className="text-xl font-semibold text-white mb-2">Performance Trends</h3>
           <p className="text-gray-400">
@@ -328,9 +314,8 @@ const PerformanceAnalytics: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7 }}
-            className="mt-8 text-center"
-          >
+            transition={{ delay: 0.7     }}
+            className="mt-8 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               <span className="text-sm text-gray-300">

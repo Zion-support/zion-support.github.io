@@ -15,11 +15,11 @@ export interface EnhancedService {
   growthRate: string;
   implementationTime: string;
   trialDays: number;
-  contactInfo: {
+  contactInfo: {  
     mobile: string;
-    email: string;
-    address: string;
-  };
+    email: string
+    address: string
+      };
   link: string;
   icon: string;
   color: string;
@@ -30,8 +30,7 @@ export interface EnhancedService {
 
 export const enhancedServicesCatalog2025: EnhancedService[] = [
   // AI & Machine Learning Services
-  {
-    id: 'ai-autonomous-business-manager',
+  { id: 'ai-autonomous-business-manager',
     name: 'AI Autonomous Business Manager',
     tagline: 'Fully autonomous business operations with AI decision-making',
     description: 'Revolutionary AI platform that autonomously manages business operations, makes strategic decisions, and optimizes processes in real-time without human intervention.',
@@ -63,8 +62,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '25% CAGR',
     implementationTime: '4-6 weeks',
     trialDays: 30,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -74,8 +72,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     popular: true,
     featured: true
   },
-  {
-    id: 'ai-quantum-hybrid-platform',
+  { id: 'ai-quantum-hybrid-platform',
     name: 'AI Quantum Hybrid Platform',
     tagline: 'Quantum-AI integration for unprecedented computational power',
     description: 'Breakthrough platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems in optimization, cryptography, and scientific research.',
@@ -106,8 +103,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '35% CAGR',
     implementationTime: '8-12 weeks',
     trialDays: 14,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -117,8 +113,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     new: true,
     featured: true
   },
-  {
-    id: 'ai-consciousness-simulation',
+  { id: 'ai-consciousness-simulation',
     name: 'AI Consciousness Simulation Platform',
     tagline: 'Advanced AI consciousness research and development',
     description: 'Cutting-edge platform for developing and testing AI consciousness models, enabling breakthroughs in artificial general intelligence and cognitive computing.',
@@ -149,8 +144,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '40% CAGR',
     implementationTime: '6-10 weeks',
     trialDays: 21,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -161,8 +155,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
   },
 
   // Micro SaaS Services
-  {
-    id: 'autonomous-devops-platform',
+  { id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     tagline: 'Self-healing infrastructure with zero human intervention',
     description: 'Revolutionary DevOps platform that autonomously manages, monitors, and optimizes infrastructure, automatically resolving issues and scaling resources as needed.',
@@ -193,8 +186,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '20% CAGR',
     implementationTime: '2-4 weeks',
     trialDays: 14,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -203,8 +195,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     color: 'from-blue-600 to-cyan-700',
     popular: true
   },
-  {
-    id: 'ai-powered-seo-revolution',
+  { id: 'ai-powered-seo-revolution',
     name: 'AI-Powered SEO Revolution',
     tagline: 'Machine learning SEO that adapts to algorithm changes in real-time',
     description: 'Next-generation SEO platform that uses advanced AI to automatically optimize content, adapt to search algorithm changes, and continuously improve rankings.',
@@ -235,8 +226,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '15% CAGR',
     implementationTime: '1-2 weeks',
     trialDays: 14,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -245,8 +235,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     color: 'from-green-600 to-emerald-700',
     popular: true
   },
-  {
-    id: 'quantum-neural-network-platform',
+  { id: 'quantum-neural-network-platform',
     name: 'Quantum Neural Network Platform',
     tagline: 'Quantum-enhanced neural networks for superior AI performance',
     description: 'Breakthrough platform that combines quantum computing principles with neural networks to create superior AI models with enhanced learning capabilities.',
@@ -277,8 +266,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '30% CAGR',
     implementationTime: '4-6 weeks',
     trialDays: 21,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -289,8 +277,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
   },
 
   // IT Services
-  {
-    id: 'zero-trust-network-architecture',
+  { id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Next-generation security architecture for modern enterprises',
     description: 'Comprehensive zero-trust security implementation that provides continuous verification, micro-segmentation, and advanced threat protection for enterprise networks.',
@@ -321,8 +308,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '18% CAGR',
     implementationTime: '8-16 weeks',
     trialDays: 0,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -331,8 +317,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     color: 'from-red-600 to-orange-700',
     popular: true
   },
-  {
-    id: 'quantum-edge-computing-platform',
+  { id: 'quantum-edge-computing-platform',
     name: 'Quantum Edge Computing Platform',
     tagline: 'Quantum-enhanced edge computing for superior performance',
     description: 'Revolutionary edge computing platform that integrates quantum computing principles to deliver superior performance, security, and efficiency at the network edge.',
@@ -363,8 +348,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '35% CAGR',
     implementationTime: '6-10 weeks',
     trialDays: 14,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -375,8 +359,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
   },
 
   // Emerging Technologies
-  {
-    id: 'space-technology-solutions',
+  { id: 'space-technology-solutions',
     name: 'Space Technology Solutions',
     tagline: 'Cutting-edge space technology for terrestrial applications',
     description: 'Innovative platform that adapts space technology for terrestrial use, including satellite communications, space-based analytics, and advanced positioning systems.',
@@ -407,8 +390,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '8% CAGR',
     implementationTime: '12-20 weeks',
     trialDays: 14,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },
@@ -417,8 +399,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     color: 'from-slate-600 to-gray-700',
     featured: true
   },
-  {
-    id: 'biotech-ai-drug-discovery',
+  { id: 'biotech-ai-drug-discovery',
     name: 'Biotech AI Drug Discovery Platform',
     tagline: 'AI-powered drug discovery with quantum computing enhancement',
     description: 'Revolutionary platform that combines AI and quantum computing to accelerate drug discovery, reduce development costs, and improve success rates in pharmaceutical research.',
@@ -449,8 +430,7 @@ export const enhancedServicesCatalog2025: EnhancedService[] = [
     growthRate: '12% CAGR',
     implementationTime: '16-24 weeks',
     trialDays: 30,
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     },

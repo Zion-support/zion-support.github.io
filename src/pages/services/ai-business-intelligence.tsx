@@ -36,8 +36,7 @@ export default function AIBusinessIntelligence() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function AIBusinessIntelligence() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Brain,
+                { icon: Brain,
                   title: "AI-Powered Analytics",
                   description: "Advanced machine learning algorithms analyze patterns and predict future trends."
                 },
-                {
-                  icon: BarChart3,
+                { icon: BarChart3,
                   title: "Interactive Dashboards",
                   description: "Real-time dashboards with customizable widgets and intuitive visualizations."
                 },
-                {
-                  icon: TrendingUp,
+                { icon: TrendingUp,
                   title: "Predictive Insights",
                   description: "Forecast business outcomes and identify opportunities before they arise."
                 },
-                {
-                  icon: Database,
+                { icon: Database,
                   title: "Data Integration",
                   description: "Seamlessly connect to multiple data sources and systems for unified insights."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Collaborative Reporting",
                   description: "Share insights across teams with role-based access and collaborative features."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Data Security",
                   description: "Enterprise-grade security with encryption, access controls, and compliance features."
                 }
@@ -175,38 +168,32 @@ export default function AIBusinessIntelligence() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Sales & Marketing",
+                { title: "Sales & Marketing",
                   description: "Track performance, predict customer behavior, and optimize campaigns with data-driven insights.",
                   icon: TrendingUp,
                   benefits: ["Lead scoring", "Customer segmentation", "Campaign optimization"]
                 },
-                {
-                  title: "Operations & Supply Chain",
+                { title: "Operations & Supply Chain",
                   description: "Monitor efficiency, predict demand, and optimize inventory with real-time analytics.",
                   icon: Globe,
                   benefits: ["Demand forecasting", "Inventory optimization", "Performance monitoring"]
                 },
-                {
-                  title: "Financial Analytics",
+                { title: "Financial Analytics",
                   description: "Track KPIs, identify trends, and make informed financial decisions with predictive insights.",
                   icon: PieChart,
                   benefits: ["Budget tracking", "Revenue forecasting", "Risk assessment"]
                 },
-                {
-                  title: "Human Resources",
+                { title: "Human Resources",
                   description: "Analyze workforce data, predict turnover, and optimize talent management strategies.",
                   icon: Users,
                   benefits: ["Turnover prediction", "Performance analytics", "Talent optimization"]
                 },
-                {
-                  title: "Customer Experience",
+                { title: "Customer Experience",
                   description: "Understand customer behavior, predict satisfaction, and improve service delivery.",
                   icon: Shield,
                   benefits: ["Sentiment analysis", "Churn prediction", "Service optimization"]
                 },
-                {
-                  title: "Product Development",
+                { title: "Product Development",
                   description: "Analyze usage patterns, predict feature adoption, and optimize product roadmaps.",
                   icon: Target,
                   benefits: ["Usage analytics", "Feature adoption", "Product optimization"]
@@ -244,15 +231,13 @@ export default function AIBusinessIntelligence() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200">
                 Schedule a Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

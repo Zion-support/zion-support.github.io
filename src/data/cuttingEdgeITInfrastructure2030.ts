@@ -5,8 +5,7 @@ import { ProductListing } from "@/types/listings";
 
 export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   // Zero-Trust Network Access Platform
-  {
-    id: "zero-trust-network-access-platform",
+  { id: "zero-trust-network-access-platform",
     title: "Zero-Trust Network Access Platform",
     description: "Revolutionary zero-trust network access platform that provides secure, identity-based access to applications and resources. Eliminates traditional VPN vulnerabilities and provides 99.9% security uptime.",
     category: "IT Infrastructure",
@@ -23,8 +22,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/zero-trust-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -37,8 +35,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   },
 
   // Edge Computing Orchestration Platform
-  {
-    id: "edge-computing-orchestration-platform",
+  { id: "edge-computing-orchestration-platform",
     title: "Edge Computing Orchestration Platform",
     description: "Advanced edge computing orchestration platform that manages distributed computing resources across edge locations. Reduces latency by 80% and improves application performance by 60%.",
     category: "IT Infrastructure",
@@ -55,8 +52,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     location: "Global",
     availability: "8-10 Weeks",
     aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-computing-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -69,8 +65,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   },
 
   // Quantum-Safe Cryptography Infrastructure
-  {
-    id: "quantum-safe-cryptography-infrastructure",
+  { id: "quantum-safe-cryptography-infrastructure",
     title: "Quantum-Safe Cryptography Infrastructure",
     description: "Future-proof quantum-safe cryptography infrastructure that protects against quantum computing attacks. Implements post-quantum cryptographic algorithms with 256-bit security.",
     category: "IT Infrastructure",
@@ -87,8 +82,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     location: "Global",
     availability: "12-16 Weeks",
     aiScore: 98,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-cryptography",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -101,8 +95,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   },
 
   // Autonomous Data Center Management
-  {
-    id: "autonomous-data-center-management",
+  { id: "autonomous-data-center-management",
     title: "Autonomous Data Center Management",
     description: "AI-powered autonomous data center management platform that optimizes operations, predicts failures, and reduces energy consumption. Achieves 40% energy savings and 99.99% uptime.",
     category: "IT Infrastructure",
@@ -119,8 +112,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     location: "Global",
     availability: "10-14 Weeks",
     aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-data-center",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -133,8 +125,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   },
 
   // Software-Defined Network Fabric
-  {
-    id: "software-defined-network-fabric",
+  { id: "software-defined-network-fabric",
     title: "Software-Defined Network Fabric",
     description: "Revolutionary software-defined network fabric that provides programmable, scalable, and secure networking infrastructure. Reduces network complexity by 70% and improves agility by 80%.",
     category: "IT Infrastructure",
@@ -151,8 +142,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     location: "Global",
     availability: "8-12 Weeks",
     aiScore: 94,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/sdn-fabric",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -165,8 +155,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   },
 
   // Hyperconverged Infrastructure Platform
-  {
-    id: "hyperconverged-infrastructure-platform",
+  { id: "hyperconverged-infrastructure-platform",
     title: "Hyperconverged Infrastructure Platform",
     description: "Next-generation hyperconverged infrastructure platform that integrates compute, storage, and networking into a single, scalable solution. Reduces infrastructure costs by 50% and simplifies management.",
     category: "IT Infrastructure",
@@ -183,8 +172,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     location: "Global",
     availability: "10-12 Weeks",
     aiScore: 93,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/hyperconverged-platform",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -197,8 +185,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
   },
 
   // Intelligent Cloud Cost Optimization
-  {
-    id: "intelligent-cloud-cost-optimization",
+  { id: "intelligent-cloud-cost-optimization",
     title: "Intelligent Cloud Cost Optimization",
     description: "AI-powered cloud cost optimization platform that automatically identifies cost-saving opportunities and optimizes resource allocation. Reduces cloud costs by 30-40% while maintaining performance.",
     category: "IT Infrastructure",
@@ -215,8 +202,7 @@ export const CUTTING_EDGE_IT_INFRASTRUCTURE_2030: ProductListing[] = [
     location: "Global",
     availability: "4-6 Weeks",
     aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/cloud-cost-optimization",
       address: "364 E Main St STE 1008 Middletown DE 19709"

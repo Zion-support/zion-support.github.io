@@ -31,54 +31,47 @@ import { SEO } from '../components/SEO';
 
 export default function ServicesOverview() {
   const serviceCategories = [
-    {
-      name: 'AI Services',
+    { name: 'AI Services',
       description: 'Cutting-edge artificial intelligence solutions that transform business operations',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       services: [
-        {
-          title: 'AI Workflow Automation',
+        { title: 'AI Workflow Automation',
           description: 'Intelligent process automation with AI-powered optimization',
           price: 'From $3,500',
           features: ['Process mapping', 'AI implementation', 'Ongoing optimization'],
           link: '/services/ai-workflow-automation',
           popular: true
         },
-        {
-          title: 'AI Customer Experience Platform',
+        { title: 'AI Customer Experience Platform',
           description: 'AI-powered personalization and customer journey optimization',
           price: 'From $4,500',
           features: ['CX assessment', 'Platform implementation', 'Performance optimization'],
           link: '/services/ai-customer-experience-platform',
           popular: false
         },
-        {
-          title: 'AI Supply Chain Optimization',
+        { title: 'AI Supply Chain Optimization',
           description: 'Intelligent supply chain management and logistics optimization',
           price: 'From $5,500',
           features: ['Supply chain assessment', 'AI platform implementation', 'Continuous optimization'],
           link: '/services/ai-supply-chain-optimization',
           popular: false
         },
-        {
-          title: 'AI Cybersecurity Suite',
+        { title: 'AI Cybersecurity Suite',
           description: 'Advanced AI-powered threat detection and security automation',
           price: 'From $2,500/month',
           features: ['Threat intelligence', 'SOC services', 'Compliance monitoring'],
           link: '/services/ai-cybersecurity-suite',
           popular: true
         },
-        {
-          title: 'AI Business Intelligence',
+        { title: 'AI Business Intelligence',
           description: 'Next-generation BI with AI-powered insights and analytics',
           price: 'From $2,999/month',
           features: ['AI data analysis', 'Predictive analytics', 'Custom dashboards'],
           link: '/services/ai-business-intelligence',
           popular: false
         },
-        {
-          title: 'AI Sales Copilot',
+        { title: 'AI Sales Copilot',
           description: 'AI-powered sales automation and lead optimization',
           price: 'From $1,999/month',
           features: ['Lead scoring', 'Sales automation', 'Performance analytics'],
@@ -87,54 +80,47 @@ export default function ServicesOverview() {
         }
       ]
     },
-    {
-      name: 'IT Services',
+    { name: 'IT Services',
       description: 'Comprehensive IT infrastructure and digital transformation solutions',
       icon: Server,
       color: 'from-blue-500 to-cyan-500',
       services: [
-        {
-          title: 'Cloud DevOps',
+        { title: 'Cloud DevOps',
           description: 'Cloud migration and DevOps transformation services',
           price: 'From $5,000',
           features: ['Cloud migration', 'DevOps implementation', '24/7 managed services'],
           link: '/services/cloud-devops',
           popular: true
         },
-        {
-          title: 'IT Infrastructure',
+        { title: 'IT Infrastructure',
           description: 'Modern infrastructure design and implementation',
           price: 'From $8,000',
           features: ['Infrastructure design', 'Implementation', 'Ongoing support'],
           link: '/services/it-infrastructure',
           popular: false
         },
-        {
-          title: 'Digital Transformation',
+        { title: 'Digital Transformation',
           description: 'End-to-end digital transformation consulting and implementation',
           price: 'From $15,000',
           features: ['Strategy development', 'Technology selection', 'Change management'],
           link: '/services/digital-transformation',
           popular: false
         },
-        {
-          title: 'IT Consulting',
+        { title: 'IT Consulting',
           description: 'Strategic IT consulting and technology advisory services',
           price: 'From $3,500',
           features: ['Technology assessment', 'Strategic planning', 'Vendor selection'],
           link: '/services/it-consulting',
           popular: false
         },
-        {
-          title: 'Zero Trust Network Architecture',
+        { title: 'Zero Trust Network Architecture',
           description: 'Advanced security architecture implementation',
           price: 'From $12,000',
           features: ['Security assessment', 'Architecture design', 'Implementation'],
           link: '/services/zero-trust-network-architecture',
           popular: false
         },
-        {
-          title: 'Green IT Solutions',
+        { title: 'Green IT Solutions',
           description: 'Sustainable technology solutions and energy optimization',
           price: 'From $6,000',
           features: ['Energy audit', 'Green technology', 'Sustainability reporting'],
@@ -143,46 +129,40 @@ export default function ServicesOverview() {
         }
       ]
     },
-    {
-      name: 'Micro SaaS Solutions',
+    { name: 'Micro SaaS Solutions',
       description: 'Specialized software-as-a-service solutions for specific business needs',
       icon: Zap,
       color: 'from-green-500 to-emerald-500',
       services: [
-        {
-          title: 'Cloud FinOps Optimizer',
+        { title: 'Cloud FinOps Optimizer',
           description: 'Cloud cost optimization and financial operations management',
           price: 'From $1,999/month',
           features: ['Cost analysis', 'Optimization', 'Financial reporting'],
           link: '/services/cloud-finops-optimizer',
           popular: true
         },
-        {
-          title: 'AI Compliance Assistant',
+        { title: 'AI Compliance Assistant',
           description: 'Automated compliance monitoring and reporting',
           price: 'From $1,500/month',
           features: ['Compliance monitoring', 'Automated reporting', 'Risk assessment'],
           link: '/services/ai-compliance-assistant',
           popular: false
         },
-        {
-          title: 'LLM Content Studio',
+        { title: 'LLM Content Studio',
           description: 'AI-powered content creation and management platform',
           price: 'From $999/month',
           features: ['Content generation', 'AI editing', 'Multi-platform publishing'],
           link: '/services/llm-content-studio',
           popular: false
         },
-        {
-          title: 'Customer Feedback Surveys',
+        { title: 'Customer Feedback Surveys',
           description: 'Intelligent customer feedback collection and analysis',
           price: 'From $799/month',
           features: ['Survey creation', 'AI analysis', 'Insight generation'],
           link: '/services/mobile-feedback-surveys',
           popular: false
         },
-        {
-          title: 'FinOps Advisor',
+        { title: 'FinOps Advisor',
           description: 'Financial operations optimization and cost management',
           price: 'From $2,500/month',
           features: ['Cost optimization', 'Financial planning', 'Performance analytics'],
@@ -194,29 +174,25 @@ export default function ServicesOverview() {
   ];
 
   const emergingTechnologies = [
-    {
-      title: 'Quantum Computing',
+    { title: 'Quantum Computing',
       description: 'Next-generation quantum computing solutions and consulting',
       price: 'From $25,000',
       link: '/services/quantum-computing',
       icon: Cpu
     },
-    {
-      title: 'Space Technology',
+    { title: 'Space Technology',
       description: 'Innovative space technology solutions and satellite systems',
       price: 'From $50,000',
       link: '/services/space-tech',
       icon: Globe
     },
-    {
-      title: 'IoT Edge Computing',
+    { title: 'IoT Edge Computing',
       description: 'Edge computing solutions for IoT and real-time processing',
       price: 'From $15,000',
       link: '/services/iot-edge',
       icon: Activity
     },
-    {
-      title: 'Blockchain Solutions',
+    { title: 'Blockchain Solutions',
       description: 'Enterprise blockchain implementation and consulting',
       price: 'From $20,000',
       link: '/services/blockchain-enterprise-solutions',
@@ -238,9 +214,8 @@ export default function ServicesOverview() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Our Services
             </h1>
@@ -250,15 +225,13 @@ export default function ServicesOverview() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
-                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                 Get Started
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
@@ -274,9 +247,8 @@ export default function ServicesOverview() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.6     }}
+              className="text-center mb-16">
               <div className="flex justify-center mb-6">
                 <div className={`w-20 h-20 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center`}>
                   <category.icon className="w-10 h-10 text-white" />
@@ -321,8 +293,7 @@ export default function ServicesOverview() {
                   </ul>
                   <Link 
                     to={service.link}
-                    className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2"
-                  >
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 flex items-center justify-center gap-2">
                     Learn More
                     <ArrowRight className="w-5 h-5" />
                   </Link>
@@ -339,9 +310,8 @@ export default function ServicesOverview() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Emerging Technologies
             </h2>
@@ -357,8 +327,7 @@ export default function ServicesOverview() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center hover:border-blue-500 transition-all duration-300"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center hover:border-blue-500 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>
@@ -367,8 +336,7 @@ export default function ServicesOverview() {
                 <div className="text-2xl font-bold text-green-400 mb-4">{tech.price}</div>
                 <Link 
                   to={tech.link}
-                  className="bg-gradient-to-r from-green-500 to-emerald-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 text-sm"
-                >
+                  className="bg-gradient-to-r from-green-500 to-emerald-500 text-white py-2 px-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 text-sm">
                   Explore
                 </Link>
               </motion.div>
@@ -383,9 +351,8 @@ export default function ServicesOverview() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Zion Tech Group?
             </h2>
@@ -396,23 +363,19 @@ export default function ServicesOverview() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                icon: Star,
+              { icon: Star,
                 title: 'Expert Team',
                 description: 'Certified professionals with years of industry experience'
               },
-              {
-                icon: Target,
+              { icon: Target,
                 title: 'Proven Results',
                 description: 'Track record of successful implementations and measurable ROI'
               },
-              {
-                icon: TrendingUp,
+              { icon: TrendingUp,
                 title: 'Innovation Focus',
                 description: 'Cutting-edge solutions that keep you ahead of the competition'
               },
-              {
-                icon: Shield,
+              { icon: Shield,
                 title: 'Quality Assurance',
                 description: 'Rigorous testing and quality control for reliable solutions'
               }
@@ -422,8 +385,7 @@ export default function ServicesOverview() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -441,9 +403,8 @@ export default function ServicesOverview() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -453,15 +414,13 @@ export default function ServicesOverview() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2">
                 Get Free Consultation
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call +1 302 464 0950
               </a>

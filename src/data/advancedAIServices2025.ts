@@ -1,5 +1,4 @@
 export interface AdvancedAIService {
-
   id: string;
   title: string;
   description: string;
@@ -18,19 +17,18 @@ export interface AdvancedAIService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-contactInfo: {;
+contactInfo: {  
     phone: string;
     email: string;
-    website: string;
-    address: string;
-  };
-  technicalSpecs: {
-    technology: string[];
+    website: string
+    address: string
+      };
+  technicalSpecs: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors: string[];
   marketSize: string;
   growthRate: string;
@@ -41,8 +39,7 @@ contactInfo: {;
 
 export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   // AI-Powered Autonomous Business Operations
-  {
-    id: "ai-autonomous-business-operations",
+  { id: "ai-autonomous-business-operations",
     title: "AI-Powered Autonomous Business Operations",
     description: "Revolutionary AI platform that autonomously manages business operations, decision-making, and process optimization without human intervention.",
     category: "AI & Business",
@@ -89,14 +86,12 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketPrice: "$15,999 - $45,000/month",
     roi: "500-1000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["GPT-4", "BERT", "Reinforcement Learning", "React", "Python"],
+    technicalSpecs: { technology: ["GPT-4", "BERT", "Reinforcement Learning", "React", "Python"],
       integrations: ["ERP systems", "CRM platforms", "Cloud services", "IoT devices", "Analytics tools"],
       apiEndpoints: 800,
       uptime: "99.99%",
@@ -111,8 +106,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   },
 
   // Quantum AI Neural Networks
-  {
-    id: "quantum-ai-neural-networks",
+  { id: "quantum-ai-neural-networks",
     title: "Quantum AI Neural Networks",
     description: "Next-generation AI platform that combines quantum computing with neural networks for unprecedented processing power and pattern recognition capabilities.",
     category: "Quantum & AI",
@@ -159,14 +153,12 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketPrice: "$24,999 - $75,000/month",
     roi: "800-1500%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Quantum algorithms", "Qiskit", "TensorFlow", "React", "Python"],
+    technicalSpecs: { technology: ["Quantum algorithms", "Qiskit", "TensorFlow", "React", "Python"],
       integrations: ["Quantum simulators", "AI platforms", "Research databases", "Cloud services"],
       apiEndpoints: 1000,
       uptime: "99.99%",
@@ -181,8 +173,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   },
 
   // AI-Powered Emotional Intelligence Platform
-  {
-    id: "ai-emotional-intelligence-platform",
+  { id: "ai-emotional-intelligence-platform",
     title: "AI-Powered Emotional Intelligence Platform",
     description: "Advanced AI platform that understands, processes, and responds to human emotions, enabling empathetic human-computer interactions.",
     category: "AI & Psychology",
@@ -229,14 +220,12 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketPrice: "$7,999 - $20,000/month",
     roi: "300-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["NLP", "Computer Vision", "Machine Learning", "React", "Python"],
+    technicalSpecs: { technology: ["NLP", "Computer Vision", "Machine Learning", "React", "Python"],
       integrations: ["CRM systems", "Chat platforms", "Social media", "Analytics tools"],
       apiEndpoints: 400,
       uptime: "99.9%",
@@ -251,8 +240,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   },
 
   // AI-Powered Predictive Healthcare
-  {
-    id: "ai-predictive-healthcare",
+  { id: "ai-predictive-healthcare",
     title: "AI-Powered Predictive Healthcare",
     description: "Revolutionary healthcare platform that uses AI to predict health issues, recommend treatments, and optimize patient care outcomes.",
     category: "AI & Healthcare",
@@ -299,14 +287,12 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketPrice: "$12,999 - $35,000/month",
     roi: "400-800%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Deep Learning", "NLP", "Computer Vision", "React", "Python"],
+    technicalSpecs: { technology: ["Deep Learning", "NLP", "Computer Vision", "React", "Python"],
       integrations: ["EHR systems", "Medical devices", "Lab systems", "Imaging platforms"],
       apiEndpoints: 600,
       uptime: "99.99%",
@@ -321,8 +307,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   },
 
   // AI-Powered Creative Content Generation
-  {
-    id: "ai-creative-content-generation",
+  { id: "ai-creative-content-generation",
     title: "AI-Powered Creative Content Generation",
     description: "Advanced AI platform that generates creative content including art, music, literature, and multimedia content with human-like creativity.",
     category: "AI & Creativity",
@@ -369,14 +354,12 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketPrice: "$5,499 - $15,000/month",
     roi: "250-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["GANs", "Transformers", "Computer Vision", "React", "Python"],
+    technicalSpecs: { technology: ["GANs", "Transformers", "Computer Vision", "React", "Python"],
       integrations: ["Design tools", "Music software", "Video editors", "Social media"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -391,8 +374,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   },
 
   // AI-Powered Financial Trading
-  {
-    id: "ai-financial-trading",
+  { id: "ai-financial-trading",
     title: "AI-Powered Financial Trading",
     description: "Intelligent trading platform that uses AI to analyze markets, predict trends, and execute trades with optimal timing and risk management.",
     category: "AI & Finance",
@@ -439,14 +421,12 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketPrice: "$18,999 - $50,000/month",
     roi: "600-1200%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Deep Learning", "Reinforcement Learning", "React", "Python", "PostgreSQL"],
+    technicalSpecs: { technology: ["Deep Learning", "Reinforcement Learning", "React", "Python", "PostgreSQL"],
       integrations: ["Trading platforms", "Market data feeds", "Risk systems", "Compliance tools"],
       apiEndpoints: 800,
       uptime: "99.99%",
@@ -461,8 +441,7 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
   },
 
   // AI-Powered Autonomous Vehicles
-  {
-    id: "ai-autonomous-vehicles",
+  { id: "ai-autonomous-vehicles",
     title: "AI-Powered Autonomous Vehicles",
     description: "Advanced AI platform for autonomous vehicle navigation, safety, and fleet management with real-time decision making and predictive maintenance.",
     category: "AI & Transportation",
@@ -509,14 +488,12 @@ export const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [
     marketPrice: "$29,999 - $85,000/month",
     roi: "800-1500%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
-    technicalSpecs: {
-      technology: ["Computer Vision", "LIDAR", "Machine Learning", "React", "Python"],
+    technicalSpecs: { technology: ["Computer Vision", "LIDAR", "Machine Learning", "React", "Python"],
       integrations: ["Vehicle systems", "GPS", "Traffic systems", "Fleet management", "Safety systems"],
       apiEndpoints: 1200,
       uptime: "99.99%",

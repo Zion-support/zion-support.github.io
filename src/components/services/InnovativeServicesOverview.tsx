@@ -9,7 +9,7 @@ interface InnovativeServicesOverviewProps extends React.PropsWithChildren<{}> {
 
 }
 
-const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
+const InnovativeServicesOverview: React.FC = ({
   maxServices = 6,
   category,
   showViewAllButton = true
@@ -58,7 +58,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
     return services.slice(0, maxServices);
   }, [activeTab, category, maxServices]);
 
-  const ServiceCard: React.FC<{ service: typeof INNOVATIVE_SERVICES_2025[0] }> = ({ service }) => (
+  const ServiceCard: React.FC = ({ service }) => (
     <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
       <div className="flex items-start justify-between mb-3">
         <h3 className="text-lg font-semibold text-gray-900">{service.title}</h3>
@@ -185,7 +185,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
         )}
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {filteredServices.map((service)  => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -213,8 +213,7 @@ const InnovativeServicesOverview: React.FC<InnovativeServicesOverviewProps> = ({
           <div className="text-center mt-8">
             <a
               href="/innovative-services-2025"
-              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-            >
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
               View All {totalServices} Services
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

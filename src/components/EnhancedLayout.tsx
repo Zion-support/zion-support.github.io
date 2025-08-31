@@ -5,14 +5,12 @@ import { FuturisticFooter  } from './FuturisticFooter';
 import { EnhancedSidebar  } from './EnhancedSidebar';
 import { FuturisticAnimatedBackground  } from './FuturisticAnimatedBackground';
 
-interface EnhancedLayoutProps extends React.PropsWithChildren<{}> {
-
-  children: ReactNode;
+interface EnhancedLayoutProps extends React.PropsWithChildren<{}> { children: ReactNode;
   showSidebar?: boolean;
 
-}
+    }
 
-export const EnhancedLayout: React.FC<EnhancedLayoutProps> = ({ 
+export const EnhancedLayout: React.FC = ({ 
   children, 
   showSidebar = true 
 }) => {

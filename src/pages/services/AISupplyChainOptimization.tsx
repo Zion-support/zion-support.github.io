@@ -46,74 +46,61 @@ import {
 
 export default function AISupplyChainOptimization() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI Demand Forecasting",
       description: "Predict demand patterns with 95% accuracy using machine learning and historical data analysis."
     },
-    {
-      icon: Route,
+    { icon: Route,
       title: "Route Optimization",
       description: "Optimize delivery routes in real-time considering traffic, weather, and delivery windows."
     },
-    {
-      icon: Warehouse,
+    { icon: Warehouse,
       title: "Inventory Optimization",
       description: "AI-powered inventory management with automated reordering and stock level optimization."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Supplier Performance Analytics",
       description: "Monitor supplier performance, quality metrics, and delivery reliability with predictive insights."
     },
-    {
-      icon: PieChart,
+    { icon: PieChart,
       title: "Cost Optimization",
       description: "Identify cost-saving opportunities across transportation, warehousing, and procurement."
     },
-    {
-      icon: Activity,
+    { icon: Activity,
       title: "Real-time Visibility",
       description: "End-to-end supply chain visibility with real-time tracking and predictive analytics."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Reduced Costs",
       description: "Optimize transportation, inventory, and operational costs by up to 30% through AI insights."
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: "Improved Efficiency",
       description: "Streamline operations and reduce lead times with intelligent automation and optimization."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Global Optimization",
       description: "Manage complex global supply chains with multi-location optimization and risk mitigation."
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Risk Management",
       description: "Identify and mitigate supply chain risks with predictive analytics and contingency planning."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Increased Revenue",
       description: "Improve customer satisfaction and increase sales through better inventory availability and faster delivery."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Savings",
       description: "Automate routine supply chain tasks and focus on strategic decision-making."
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$599",
       period: "/month",
       description: "Perfect for small businesses with basic supply chain optimization needs",
@@ -129,8 +116,7 @@ export default function AISupplyChainOptimization() {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$1,499",
       period: "/month",
       description: "Ideal for growing companies with complex supply chain requirements",
@@ -148,8 +134,7 @@ export default function AISupplyChainOptimization() {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$4,999",
       period: "/month",
       description: "For large organizations requiring enterprise-grade supply chain solutions",
@@ -170,103 +155,83 @@ export default function AISupplyChainOptimization() {
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Optimize fulfillment networks, reduce delivery times, and improve customer satisfaction",
       icon: Package
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Streamline production planning, optimize supplier networks, and reduce lead times",
       icon: Factory
     },
-    {
-      industry: "Retail",
+    { industry: "Retail",
       description: "Optimize store replenishment, reduce stockouts, and improve inventory turnover",
       icon: Store
     },
-    {
-      industry: "Logistics",
+    { industry: "Logistics",
       description: "Optimize transportation networks, reduce costs, and improve delivery efficiency",
       icon: Truck
     },
-    {
-      industry: "Food & Beverage",
+    { industry: "Food & Beverage",
       description: "Manage perishable supply chains, reduce waste, and ensure food safety",
       icon: Package
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Optimize medical supply chains, ensure availability, and reduce costs",
       icon: Shield
     }
   ];
 
   const integrations = [
-    {
-      name: "ERP Systems",
+    { name: "ERP Systems",
       platforms: ["SAP", "Oracle", "Microsoft Dynamics", "NetSuite"]
     },
-    {
-      name: "WMS Systems",
+    { name: "WMS Systems",
       platforms: ["Manhattan Associates", "HighJump", "Softeon", "JDA"]
     },
-    {
-      name: "Transportation",
+    { name: "Transportation",
       platforms: ["FedEx", "UPS", "DHL", "TMS Systems"]
     },
-    {
-      name: "E-commerce",
+    { name: "E-commerce",
       platforms: ["Shopify", "WooCommerce", "Magento", "BigCommerce"]
     },
-    {
-      name: "Analytics",
+    { name: "Analytics",
       platforms: ["Tableau", "Power BI", "Google Analytics", "Custom APIs"]
     },
-    {
-      name: "IoT & Sensors",
+    { name: "IoT & Sensors",
       platforms: ["RFID", "GPS Tracking", "Temperature Sensors", "IoT Platforms"]
     }
   ];
 
   const keyMetrics = [
-    {
-      metric: "30%",
+    { metric: "30%",
       label: "Cost Reduction",
       description: "Average reduction in supply chain costs"
     },
-    {
-      metric: "50%",
+    { metric: "50%",
       label: "Lead Time Reduction",
       description: "Faster delivery and reduced lead times"
     },
-    {
-      metric: "95%",
+    { metric: "95%",
       label: "Forecast Accuracy",
       description: "AI-powered demand prediction accuracy"
     },
-    {
-      metric: "40%",
+    { metric: "40%",
       label: "Inventory Optimization",
       description: "Reduction in excess inventory levels"
     }
   ];
 
   const optimizationAreas = [
-    {
-      category: "Demand Planning",
+    { category: "Demand Planning",
       areas: ["Forecasting", "Seasonal Analysis", "Trend Prediction", "Demand Shaping"]
     },
-    {
-      category: "Inventory Management",
+    { category: "Inventory Management",
       areas: ["Stock Optimization", "Reorder Points", "Safety Stock", "ABC Analysis"]
     },
-    {
-      category: "Transportation",
+    { category: "Transportation",
       areas: ["Route Optimization", "Load Planning", "Carrier Selection", "Freight Optimization"]
     },
-    {
-      category: "Supplier Management",
+    { category: "Supplier Management",
       areas: ["Performance Tracking", "Risk Assessment", "Cost Analysis", "Quality Monitoring"]
     }
   ];
@@ -286,9 +251,8 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">
               <Truck className="w-4 h-4 mr-2" />
               AI-Powered Optimization
@@ -327,9 +291,8 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">
                   {metric.metric}
                 </div>
@@ -351,9 +314,8 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Powerful Features
             </h2>
@@ -369,9 +331,8 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -403,9 +364,8 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Optimization Areas
             </h2>
@@ -421,9 +381,8 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors duration-300">
                   {category.category}
                 </h3>
@@ -447,10 +406,9 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -466,9 +424,8 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -500,10 +457,9 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Transparent Pricing
             </h2>
@@ -519,7 +475,7 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
                   plan.popular 
                     ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10' 
@@ -571,10 +527,9 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -590,9 +545,8 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -624,10 +578,9 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Seamless Integrations
             </h2>
@@ -643,9 +596,8 @@ export default function AISupplyChainOptimization() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors duration-300">
                   {integration.name}
                 </h3>
@@ -653,8 +605,7 @@ export default function AISupplyChainOptimization() {
                   {integration.platforms.map((platform, platformIndex) => (
                     <span
                       key={platformIndex}
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
-                    >
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">
                       {platform}
                     </span>
                   ))}
@@ -671,8 +622,8 @@ export default function AISupplyChainOptimization() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Optimize Your Supply Chain?

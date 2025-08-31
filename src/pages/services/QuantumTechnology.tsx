@@ -3,22 +3,19 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield, BarChart3, Activity } from 'lucid
 
 const QuantumTechnology = () => {
   const quantumServices = [
-    {
-      title: "Quantum Neural Networks",
+    { title: "Quantum Neural Networks",
       description: "Advanced quantum machine learning algorithms for pattern recognition and data analysis.",
       price: "From $35,000/project",
       features: ["Quantum algorithms", "Pattern recognition", "Data analysis", "Machine learning"],
       icon: Box
     },
-    {
-      title: "Quantum Edge Computing",
+    { title: "Quantum Edge Computing",
       description: "Distributed quantum computing solutions for real-time processing at the edge.",
       price: "From $28,000/month",
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
       icon: Zap
     },
-    {
-      title: "Quantum Cryptography",
+    { title: "Quantum Cryptography",
       description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",
       price: "From $42,000/month",
       features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],
@@ -27,20 +24,17 @@ const QuantumTechnology = () => {
   ];
 
   const quantumTechnologies = [
-    {
-      name: "Quantum Computing",
+    { name: "Quantum Computing",
       description: "Superposition and entanglement-based computation",
       icon: Cpu,
       features: ["Qubit management", "Quantum gates", "Error correction", "Quantum algorithms"]
     },
-    {
-      name: "Quantum Machine Learning",
+    { name: "Quantum Machine Learning",
       description: "AI algorithms leveraging quantum properties",
       icon: BarChart3,
       features: ["Quantum neural networks", "Pattern recognition", "Optimization", "Data analysis"]
     },
-    {
-      name: "Quantum Communications",
+    { name: "Quantum Communications",
       description: "Secure communication using quantum principles",
       icon: Globe,
       features: ["Quantum key distribution", "Entanglement", "Secure channels", "Quantum networks"]

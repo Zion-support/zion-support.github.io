@@ -140,33 +140,27 @@ import {
 
 const Enterprise = () => {
   const features = [
-    {
-      icon: Building,
+    { icon: Building,
       title: 'Scalable Architecture',
       description: 'Enterprise-grade scalable and resilient architecture design'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Enterprise Security',
       description: 'Advanced security features and compliance frameworks'
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: 'Data Management',
       description: 'Comprehensive data governance and management solutions'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'User Management',
       description: 'Advanced user roles, permissions, and access control'
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: 'Cloud Integration',
       description: 'Multi-cloud and hybrid cloud deployment options'
     },
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: 'Enterprise Monitoring',
       description: 'Advanced monitoring, alerting, and reporting capabilities'
     }
@@ -182,43 +176,35 @@ const Enterprise = () => {
   ];
 
   const services = [
-    {
-      icon: Strategy,
+    { icon: Strategy,
       title: 'Enterprise Strategy',
       description: 'Comprehensive enterprise technology strategy development'
     },
-    {
-      icon: Workflow,
+    { icon: Workflow,
       title: 'Process Automation',
       description: 'Enterprise-wide process automation and optimization'
     },
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI & Analytics',
       description: 'Advanced AI and analytics for enterprise insights'
     },
-    {
-      icon: Scale,
+    { icon: Scale,
       title: 'Scalability Planning',
       description: 'Plan for enterprise growth and technology scaling'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Fortune 500',
+    { industry: 'Fortune 500',
       description: 'Large-scale enterprise transformation and optimization'
     },
-    {
-      industry: 'Government',
+    { industry: 'Government',
       description: 'Secure, compliant government technology solutions'
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       description: 'HIPAA-compliant enterprise healthcare systems'
     },
-    {
-      industry: 'Financial Services',
+    { industry: 'Financial Services',
       description: 'Secure, compliant financial enterprise solutions'
     }
   ];
@@ -232,9 +218,8 @@ const Enterprise = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">
               <Building className="w-4 h-4 mr-2" />
               Enterprise Solutions
@@ -270,9 +255,8 @@ const Enterprise = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise-Grade Features
             </h2>
@@ -289,8 +273,7 @@ const Enterprise = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -308,9 +291,8 @@ const Enterprise = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Enterprise Services
             </h2>
@@ -327,8 +309,7 @@ const Enterprise = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -350,9 +331,8 @@ const Enterprise = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Enterprise Benefits
             </h2>
@@ -369,8 +349,7 @@ const Enterprise = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -383,8 +362,7 @@ const Enterprise = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -400,9 +378,8 @@ const Enterprise = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -419,8 +396,7 @@ const Enterprise = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -438,7 +414,7 @@ const Enterprise = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your Enterprise Project Today

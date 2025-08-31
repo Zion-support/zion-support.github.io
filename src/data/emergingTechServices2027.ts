@@ -20,12 +20,12 @@ export interface EmergingTechService2027 {
   featured: boolean;
   location: string;
   availability: string;
-  author: {
+  author: {  
     name: string;
     id: string;
-    avatarUrl?: string;
-    verified: boolean;
-  };
+    avatarUrl?: string
+    verified: boolean
+      };
   images: string[];
   createdAt: string;
   technologyStack: string[];
@@ -37,8 +37,7 @@ export interface EmergingTechService2027 {
 
 export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   // Blockchain & DeFi Platform
-  {
-    id: "blockchain-defi-platform",
+  { id: "blockchain-defi-platform",
     title: "Enterprise Blockchain & DeFi Platform",
     description: "Advanced blockchain platform for enterprise applications including DeFi, smart contracts, and decentralized applications. Enables secure, transparent, and efficient business operations.",
     category: "Blockchain",
@@ -74,8 +73,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -90,8 +88,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   },
 
   // Advanced IoT Platform
-  {
-    id: "advanced-iot-platform",
+  { id: "advanced-iot-platform",
     title: "Advanced IoT & Edge Computing Platform",
     description: "Comprehensive IoT platform with edge computing capabilities for real-time data processing, device management, and intelligent automation. Enables smart cities, industrial IoT, and connected ecosystems.",
     category: "IoT & Edge Computing",
@@ -127,8 +124,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -143,8 +139,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   },
 
   // Robotics & Automation Platform
-  {
-    id: "robotics-automation-platform",
+  { id: "robotics-automation-platform",
     title: "Intelligent Robotics & Automation Platform",
     description: "AI-powered robotics platform for industrial automation, collaborative robots, and intelligent manufacturing. Reduces production costs by 70% while improving quality and efficiency.",
     category: "Robotics",
@@ -180,8 +175,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     featured: true,
     location: "Global",
     availability: "Limited",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -196,8 +190,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   },
 
   // Augmented Reality Platform
-  {
-    id: "ar-vr-enterprise-platform",
+  { id: "ar-vr-enterprise-platform",
     title: "Enterprise AR/VR & Mixed Reality Platform",
     description: "Advanced augmented and virtual reality platform for enterprise applications including training, design, collaboration, and customer experiences. Transforms how businesses interact and operate.",
     category: "AR/VR",
@@ -233,8 +226,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -249,8 +241,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   },
 
   // Digital Twin Platform
-  {
-    id: "digital-twin-platform",
+  { id: "digital-twin-platform",
     title: "Digital Twin & Simulation Platform",
     description: "Comprehensive digital twin platform for creating virtual replicas of physical assets, processes, and systems. Enables predictive maintenance, optimization, and real-time monitoring.",
     category: "Digital Twin",
@@ -286,8 +277,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -302,8 +292,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   },
 
   // Biometric Security Platform
-  {
-    id: "biometric-security-platform",
+  { id: "biometric-security-platform",
     title: "Advanced Biometric Security Platform",
     description: "Next-generation biometric security platform using AI-powered facial recognition, fingerprint scanning, and behavioral analysis. Provides enterprise-grade security with 99.99% accuracy.",
     category: "Biometric Security",
@@ -339,8 +328,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     featured: true,
     location: "Global",
     availability: "Immediate",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true
@@ -355,8 +343,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
   },
 
   // Neuromorphic Computing Platform
-  {
-    id: "neuromorphic-computing-platform",
+  { id: "neuromorphic-computing-platform",
     title: "Neuromorphic Computing & Brain-Inspired AI",
     description: "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing. Enables edge AI with minimal power consumption.",
     category: "Neuromorphic Computing",
@@ -392,8 +379,7 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
     featured: true,
     location: "Global",
     availability: "Limited",
-    author: {
-      name: "Zion Tech Group",
+    author: { name: "Zion Tech Group",
       id: "zion-tech-group",
       avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=100&h=100",
       verified: true

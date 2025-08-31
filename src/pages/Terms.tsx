@@ -18,52 +18,42 @@ import { SEO } from '../components/SEO';
 
 export default function Terms() {
   const termsSections = [
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Acceptance of Terms',
       description: 'By accessing and using our services, you agree to be bound by these terms and conditions.'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Service Description',
       description: 'We provide technology consulting, development, and digital transformation services.'
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: 'User Responsibilities',
       description: 'Users must comply with applicable laws and respect intellectual property rights.'
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: 'Intellectual Property',
       description: 'All content and technology remain the property of Zion Tech Group.'
     }
   ];
 
   const userObligations = [
-    {
-      obligation: 'Compliance',
+    { obligation: 'Compliance',
       description: 'Comply with all applicable laws and regulations when using our services.'
     },
-    {
-      obligation: 'Account Security',
-      description: 'Maintain the security of your account credentials and notify us of any unauthorized access.'
+    { obligation: 'Account Security',
+      description: 'Maintain the security of your account credentials and notify us of  unauthorized access.'
     },
-    {
-      obligation: 'Acceptable Use',
+    { obligation: 'Acceptable Use',
       description: 'Use our services only for lawful purposes and in accordance with these terms.'
     },
-    {
-      obligation: 'Content Standards',
+    { obligation: 'Content Standards',
       description: 'Ensure all content you provide is accurate, lawful, and does not infringe on others\' rights.'
     },
-    {
-      obligation: 'Payment Terms',
+    { obligation: 'Payment Terms',
       description: 'Pay all fees and charges in accordance with agreed payment schedules.'
     },
-    {
-      obligation: 'Confidentiality',
-      description: 'Maintain the confidentiality of any proprietary information shared with you.'
+    { obligation: 'Confidentiality',
+      description: 'Maintain the confidentiality of  proprietary information shared with you.'
     }
   ];
 
@@ -79,20 +69,17 @@ export default function Terms() {
   ];
 
   const serviceLevels = [
-    {
-      level: 'Standard Support',
+    { level: 'Standard Support',
       description: 'Email support during business hours',
       response: '24-48 hours',
       included: true
     },
-    {
-      level: 'Priority Support',
+    { level: 'Priority Support',
       description: 'Phone and email support with faster response times',
       response: '4-8 hours',
       included: false
     },
-    {
-      level: 'Premium Support',
+    { level: 'Premium Support',
       description: 'Dedicated support team and 24/7 emergency response',
       response: '1-2 hours',
       included: false
@@ -113,9 +100,8 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <FileText className="w-4 h-4 mr-2" />
               Legal Terms & Conditions
@@ -141,9 +127,8 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Terms Overview
             </h2>
@@ -160,8 +145,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <section.icon className="w-8 h-8 text-blue-400" />
                 </div>
@@ -179,9 +163,8 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Your Obligations
             </h2>
@@ -198,8 +181,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                 <h3 className="text-xl font-semibold text-white mb-4">{obligation.obligation}</h3>
                 <p className="text-gray-300">{obligation.description}</p>
               </motion.div>
@@ -215,7 +197,7 @@ export default function Terms() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Prohibited Activities
@@ -237,9 +219,8 @@ export default function Terms() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+              transition={{ duration: 0.6     }}
+              className="relative">
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
                   <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
@@ -271,9 +252,8 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Service Levels & Support
             </h2>
@@ -322,7 +302,7 @@ export default function Terms() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Intellectual Property Rights
@@ -359,9 +339,8 @@ export default function Terms() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+              transition={{ duration: 0.6     }}
+              className="relative">
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
                   <Scale className="w-16 h-16 text-blue-400 mx-auto mb-4" />
@@ -397,9 +376,8 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Limitation of Liability
             </h2>
@@ -458,9 +436,8 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Termination & Cancellation
             </h2>
@@ -517,9 +494,8 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Terms?
             </h2>
@@ -557,26 +533,24 @@ export default function Terms() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               By using our services, you agree to these terms. 
-              Contact us if you need any clarification or have questions.
+              Contact us if you need  clarification or have questions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105">
                 Contact Us
               </a>
               <a
                 href="/privacy"
-                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
                 Privacy Policy
               </a>
             </div>

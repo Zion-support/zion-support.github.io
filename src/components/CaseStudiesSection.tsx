@@ -2,10 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const caseStudies = [
-  {
-    id: 1,
+  { id: 1,
     title: "AI-Powered Supply Chain Optimization",
-    company: "Global Manufacturing Corp",
+    comp: "Global Manufacturing Corp",
     industry: "Manufacturing",
     challenge: "Inefficient supply chain causing 30% cost overruns and delays",
     solution: "Implemented AI-driven demand forecasting and route optimization",
@@ -17,10 +16,9 @@ const caseStudies = [
     image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400",
     color: "from-blue-500 to-cyan-500"
   },
-  {
-    id: 2,
+  { id: 2,
     title: "Quantum Computing Financial Modeling",
-    company: "FinTech Innovations Ltd",
+    comp: "FinTech Innovations Ltd",
     industry: "Financial Services",
     challenge: "Complex financial models taking days to compute",
     solution: "Deployed quantum computing algorithms for portfolio optimization",
@@ -32,10 +30,9 @@ const caseStudies = [
     image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400",
     color: "from-purple-500 to-pink-500"
   },
-  {
-    id: 3,
+  { id: 3,
     title: "Blockchain Supply Chain Transparency",
-    company: "Organic Foods Inc",
+    comp: "Organic Foods Inc",
     industry: "Food & Beverage",
     challenge: "Lack of transparency in food supply chain",
     solution: "Implemented blockchain-based tracking system",
@@ -57,8 +54,8 @@ export function CaseStudiesSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Success Stories
@@ -75,7 +72,7 @@ export function CaseStudiesSection() {
               className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="relative">
@@ -97,7 +94,7 @@ export function CaseStudiesSection() {
                 </h3>
                 
                 <p className="text-blue-400 font-semibold mb-3">
-                  {study.company}
+                  {study.comp}
                 </p>
                 
                 <div className="mb-4">
@@ -136,7 +133,7 @@ export function CaseStudiesSection() {
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

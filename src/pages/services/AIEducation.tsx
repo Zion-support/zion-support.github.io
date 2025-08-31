@@ -13,18 +13,15 @@ export default function AIEducation() {
   ];
 
   const tiers = [
-    { 
-      name: 'Individual Teacher', 
+    { name: 'Individual Teacher', 
       price: '$99/mo', 
       details: ['Up to 50 students', 'Basic AI features', 'Standard content', 'Email support'] 
     },
-    { 
-      name: 'School District', 
+    { name: 'School District', 
       price: '$399/mo', 
       details: ['Up to 1,000 students', 'Advanced AI features', 'Custom content', 'Priority support'] 
     },
-    { 
-      name: 'University', 
+    { name: 'University', 
       price: '$999/mo', 
       details: ['Unlimited students', 'Custom AI models', 'Full platform integration', '24/7 dedicated support'] 
     },

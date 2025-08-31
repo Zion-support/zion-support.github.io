@@ -24,20 +24,17 @@ export default function AIQuantumComputingPlatform() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
+    { name: 'Starter', 
       price: '$1,299/mo', 
       features: ['Up to 10 qubits', 'Basic quantum simulation', 'Standard algorithms', 'Email support', 'Monthly usage reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$2,999/mo', 
       features: ['Up to 50 qubits', 'Advanced quantum AI', 'Real-time optimization', 'Priority support', 'Custom algorithms', 'API access'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$7,999/mo', 
       features: ['Unlimited qubits', 'Full quantum suite', 'Custom quantum models', 'Dedicated support', 'White-label solutions', 'Hardware access'],
       popular: false
@@ -287,8 +284,7 @@ export default function AIQuantumComputingPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold"
-          >
+            className="inline-flex items-center text-purple-600 hover:text-purple-700 font-semibold">
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>

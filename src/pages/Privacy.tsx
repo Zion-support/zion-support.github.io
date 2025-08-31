@@ -18,93 +18,75 @@ import { SEO } from '../components/SEO';
 
 export default function Privacy() {
   const privacyPrinciples = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Data Protection',
       description: 'We implement industry-standard security measures to protect your personal information.'
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: 'Privacy by Design',
       description: 'Privacy considerations are built into every aspect of our services and systems.'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Transparency',
       description: 'We are clear about what data we collect, how we use it, and your rights.'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'User Control',
-      description: 'You have full control over your personal data and can manage it at any time.'
+      description: 'You have full control over your personal data and can manage it at  time.'
     }
   ];
 
   const dataCategories = [
-    {
-      title: 'Personal Information',
-      description: 'Name, email address, phone number, and company information',
+    { title: 'Personal Information',
+      description: 'Name, email address, phone number, and comp information',
       examples: ['Contact details', 'Account information', 'Business details']
     },
-    {
-      title: 'Usage Data',
+    { title: 'Usage Data',
       description: 'Information about how you use our services and website',
       examples: ['Login times', 'Feature usage', 'Performance metrics']
     },
-    {
-      title: 'Technical Data',
+    { title: 'Technical Data',
       description: 'Device information and technical specifications',
       examples: ['IP address', 'Browser type', 'Device information']
     },
-    {
-      title: 'Communication Data',
+    { title: 'Communication Data',
       description: 'Records of our interactions and communications',
       examples: ['Support tickets', 'Email correspondence', 'Chat logs']
     }
   ];
 
   const dataUses = [
-    {
-      purpose: 'Service Delivery',
+    { purpose: 'Service Delivery',
       description: 'To provide and maintain our services, process transactions, and deliver support.'
     },
-    {
-      purpose: 'Communication',
+    { purpose: 'Communication',
       description: 'To send important updates, respond to inquiries, and provide customer support.'
     },
-    {
-      purpose: 'Improvement',
+    { purpose: 'Improvement',
       description: 'To analyze usage patterns and improve our services and user experience.'
     },
-    {
-      purpose: 'Security',
+    { purpose: 'Security',
       description: 'To protect against fraud, abuse, and ensure the security of our services.'
     }
   ];
 
   const userRights = [
-    {
-      right: 'Access',
+    { right: 'Access',
       description: 'Request a copy of your personal data that we hold.'
     },
-    {
-      right: 'Rectification',
+    { right: 'Rectification',
       description: 'Request correction of inaccurate or incomplete personal data.'
     },
-    {
-      right: 'Erasure',
+    { right: 'Erasure',
       description: 'Request deletion of your personal data under certain circumstances.'
     },
-    {
-      right: 'Portability',
+    { right: 'Portability',
       description: 'Request transfer of your data to another service provider.'
     },
-    {
-      right: 'Objection',
+    { right: 'Objection',
       description: 'Object to processing of your personal data in certain situations.'
     },
-    {
-      right: 'Restriction',
+    { right: 'Restriction',
       description: 'Request limitation of processing your personal data.'
     }
   ];
@@ -123,9 +105,8 @@ export default function Privacy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-400/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               Privacy & Data Protection
@@ -151,9 +132,8 @@ export default function Privacy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Our Privacy Principles
             </h2>
@@ -170,8 +150,7 @@ export default function Privacy() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-6">
                   <principle.icon className="w-8 h-8 text-blue-400" />
                 </div>
@@ -189,9 +168,8 @@ export default function Privacy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Information We Collect
             </h2>
@@ -208,8 +186,7 @@ export default function Privacy() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-semibold text-white mb-4">{category.title}</h3>
                 <p className="text-gray-300 mb-6">{category.description}</p>
                 <div className="space-y-2">
@@ -232,9 +209,8 @@ export default function Privacy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               How We Use Your Information
             </h2>
@@ -251,8 +227,7 @@ export default function Privacy() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                 <h3 className="text-xl font-semibold text-white mb-4">{use.purpose}</h3>
                 <p className="text-gray-300">{use.description}</p>
               </motion.div>
@@ -267,9 +242,8 @@ export default function Privacy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Your Privacy Rights
             </h2>
@@ -286,8 +260,7 @@ export default function Privacy() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
                 <h3 className="text-xl font-semibold text-white mb-4">{right.right}</h3>
                 <p className="text-gray-300">{right.description}</p>
               </motion.div>
@@ -303,7 +276,7 @@ export default function Privacy() {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Data Security
@@ -340,9 +313,8 @@ export default function Privacy() {
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="relative"
-            >
+              transition={{ duration: 0.6     }}
+              className="relative">
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="text-center mb-6">
                   <Shield className="w-16 h-16 text-blue-400 mx-auto mb-4" />
@@ -374,9 +346,8 @@ export default function Privacy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Contact Us
             </h2>
@@ -414,26 +385,24 @@ export default function Privacy() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Privacy?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We're here to help. Contact our privacy team for any questions 
+              We're here to help. Contact our privacy team for  questions 
               about your data or this privacy policy.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
                 href="mailto:privacy@ziontechgroup.com"
-                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-500 hover:to-purple-600 transition-all duration-300 hover:scale-105">
                 Contact Privacy Team
               </a>
               <a
                 href="/contact"
-                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
                 General Contact
               </a>
             </div>

@@ -32,43 +32,37 @@ export default function CybersecuritySolutions() {
   const [activeService, setActiveService] = useState('overview');
 
   const securityServices = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Threat Detection & Response",
       description: "Advanced security monitoring and incident response to protect against cyber threats",
       features: ["24/7 Monitoring", "Real-time Alerts", "Incident Response", "Threat Intelligence"],
       color: "from-zion-red to-zion-orange"
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Identity & Access Management",
       description: "Secure authentication and authorization systems for your organization",
       features: ["Multi-Factor Authentication", "Single Sign-On", "Role-Based Access", "Privilege Management"],
       color: "from-zion-blue to-zion-cyan"
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: "Security Auditing & Compliance",
       description: "Comprehensive security assessments and compliance management",
       features: ["Vulnerability Assessment", "Penetration Testing", "Compliance Audits", "Risk Assessment"],
       color: "from-zion-purple to-zion-pink"
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: "Network Security",
       description: "Protect your network infrastructure with advanced security measures",
       features: ["Firewall Management", "Intrusion Prevention", "VPN Solutions", "Network Monitoring"],
       color: "from-zion-green to-zion-emerald"
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Data Protection",
       description: "Safeguard sensitive data with encryption and backup solutions",
       features: ["Data Encryption", "Backup & Recovery", "Data Loss Prevention", "Privacy Compliance"],
       color: "from-zion-yellow to-zion-orange"
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: "Cloud Security",
       description: "Secure your cloud infrastructure and applications",
       features: ["Cloud Access Security", "API Security", "Container Security", "Cloud Compliance"],
@@ -86,48 +80,42 @@ export default function CybersecuritySolutions() {
   ];
 
   const securityThreats = [
-    {
-      title: "Advanced Persistent Threats (APTs)",
+    { title: "Advanced Persistent Threats (APTs)",
       description: "Sophisticated, long-term cyber attacks targeting specific organizations",
       type: "malware",
       impact: "High",
       solutions: ["Advanced Threat Detection", "Behavioral Analysis", "Network Segmentation", "Incident Response"],
       icon: Target
     },
-    {
-      title: "Ransomware Attacks",
+    { title: "Ransomware Attacks",
       description: "Malicious software that encrypts data and demands payment for decryption",
       type: "ransomware",
       impact: "Critical",
       solutions: ["Backup Solutions", "Email Security", "User Training", "Rapid Recovery"],
       icon: Lock
     },
-    {
-      title: "Social Engineering",
+    { title: "Social Engineering",
       description: "Manipulation tactics to trick users into revealing sensitive information",
       type: "phishing",
       impact: "Medium",
       solutions: ["Security Awareness Training", "Email Filtering", "Multi-Factor Authentication", "Incident Reporting"],
       icon: Users
     },
-    {
-      title: "Distributed Denial of Service",
+    { title: "Distributed Denial of Service",
       description: "Overwhelming systems with traffic to disrupt services",
       type: "ddos",
       impact: "Medium",
       solutions: ["DDoS Protection", "Traffic Filtering", "Load Balancing", "CDN Services"],
       icon: Network
     },
-    {
-      title: "Insider Threats",
+    { title: "Insider Threats",
       description: "Security risks from employees or contractors with access to systems",
       type: "insider",
       impact: "High",
       solutions: ["Access Monitoring", "Privilege Management", "Behavioral Analytics", "Regular Audits"],
       icon: Shield
     },
-    {
-      title: "Zero-Day Exploits",
+    { title: "Zero-Day Exploits",
       description: "Unknown vulnerabilities exploited before security patches are available",
       type: "malware",
       impact: "Critical",
@@ -137,38 +125,32 @@ export default function CybersecuritySolutions() {
   ];
 
   const complianceFrameworks = [
-    {
-      name: "SOC 2 Type II",
+    { name: "SOC 2 Type II",
       description: "Service Organization Control 2 compliance for data security",
       requirements: ["Security", "Availability", "Processing Integrity", "Confidentiality", "Privacy"],
       icon: ShieldCheck
     },
-    {
-      name: "ISO 27001",
+    { name: "ISO 27001",
       description: "International standard for information security management",
       requirements: ["Risk Assessment", "Security Controls", "Management System", "Continuous Improvement"],
       icon: CheckCircle
     },
-    {
-      name: "GDPR",
+    { name: "GDPR",
       description: "General Data Protection Regulation for EU data privacy",
       requirements: ["Data Protection", "User Consent", "Right to Erasure", "Data Portability"],
       icon: Lock
     },
-    {
-      name: "HIPAA",
+    { name: "HIPAA",
       description: "Health Insurance Portability and Accountability Act",
       requirements: ["Patient Privacy", "Data Security", "Access Controls", "Audit Trails"],
       icon: Database
     },
-    {
-      name: "PCI DSS",
+    { name: "PCI DSS",
       description: "Payment Card Industry Data Security Standard",
       requirements: ["Card Data Protection", "Network Security", "Access Control", "Monitoring"],
       icon: CreditCard
     },
-    {
-      name: "NIST Cybersecurity Framework",
+    { name: "NIST Cybersecurity Framework",
       description: "U.S. government framework for cybersecurity risk management",
       requirements: ["Identify", "Protect", "Detect", "Respond", "Recover"],
       icon: BarChart3
@@ -182,22 +164,17 @@ export default function CybersecuritySolutions() {
     { metric: "24/7", label: "Security Coverage", description: "Round-the-clock security operations" }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.6     }
     }
   };
 
@@ -218,7 +195,7 @@ export default function CybersecuritySolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="flex justify-center mb-8">
               <div className="w-24 h-24 bg-gradient-to-r from-zion-red to-zion-orange rounded-2xl flex items-center justify-center">
@@ -240,8 +217,8 @@ export default function CybersecuritySolutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 Security Assessment
               </motion.button>
@@ -260,8 +237,8 @@ export default function CybersecuritySolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Security Services
@@ -277,7 +254,7 @@ export default function CybersecuritySolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {securityServices.map((service, index) => (
               <motion.div 
@@ -314,8 +291,8 @@ export default function CybersecuritySolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Understanding Cyber Threats
@@ -331,8 +308,8 @@ export default function CybersecuritySolutions() {
             className="flex flex-wrap justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             {threatTypes.map((threat) => {
               const Icon = threat.icon;
@@ -359,7 +336,7 @@ export default function CybersecuritySolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {filteredThreats.map((threat, index) => (
               <motion.div 
@@ -410,8 +387,8 @@ export default function CybersecuritySolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Compliance & Standards
@@ -427,7 +404,7 @@ export default function CybersecuritySolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {complianceFrameworks.map((framework, index) => (
               <motion.div 
@@ -467,8 +444,8 @@ export default function CybersecuritySolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Security Performance Metrics
@@ -484,7 +461,7 @@ export default function CybersecuritySolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {securityMetrics.map((metric, index) => (
               <motion.div 
@@ -510,8 +487,8 @@ export default function CybersecuritySolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our Security Implementation Process
@@ -527,29 +504,25 @@ export default function CybersecuritySolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {[
-              {
-                step: "01",
+              { step: "01",
                 title: "Security Assessment",
                 description: "Evaluate current security posture and identify vulnerabilities",
                 icon: Eye
               },
-              {
-                step: "02",
+              { step: "02",
                 title: "Strategy Development",
                 description: "Design comprehensive security roadmap and policies",
                 icon: Target
               },
-              {
-                step: "03",
+              { step: "03",
                 title: "Implementation",
                 description: "Deploy security solutions and configure protection systems",
                 icon: Shield
               },
-              {
-                step: "04",
+              { step: "04",
                 title: "Monitoring & Maintenance",
                 description: "Continuous security monitoring and regular updates",
                 icon: Monitor
@@ -586,8 +559,8 @@ export default function CybersecuritySolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Secure Your Business?
@@ -600,8 +573,8 @@ export default function CybersecuritySolutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button 
                 className="px-8 py-4 bg-gradient-to-r from-zion-red to-zion-orange text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-red/25"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 Security Assessment
               </motion.button>

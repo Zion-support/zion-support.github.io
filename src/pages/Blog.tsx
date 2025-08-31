@@ -19,8 +19,7 @@ function Blog() {
   ];
 
   const blogPosts = [
-    {
-      id: 1,
+    { id: 1,
       title: 'The Future of AI in Business: 2025 Trends and Predictions',
       excerpt: 'Discover how artificial intelligence is reshaping business operations and what to expect in the coming year.',
       category: 'ai',
@@ -32,8 +31,7 @@ function Blog() {
       tags: ['AI', 'Business', 'Trends', '2025'],
       image: '/images/blog/ai-business-trends.jpg'
     },
-    {
-      id: 2,
+    { id: 2,
       title: 'Quantum Computing Breakthroughs: What\'s New in 2025',
       excerpt: 'Explore the latest developments in quantum computing and their implications for the tech industry.',
       category: 'quantum',
@@ -45,8 +43,7 @@ function Blog() {
       tags: ['Quantum Computing', 'Research', 'Innovation'],
       image: '/images/blog/quantum-breakthroughs.jpg'
     },
-    {
-      id: 3,
+    { id: 3,
       title: 'Building Secure Cloud Infrastructure: Best Practices',
       excerpt: 'Learn the essential security practices for building and maintaining robust cloud infrastructure.',
       category: 'cloud',
@@ -58,8 +55,7 @@ function Blog() {
       tags: ['Cloud Security', 'Infrastructure', 'Best Practices'],
       image: '/images/blog/cloud-security.jpg'
     },
-    {
-      id: 4,
+    { id: 4,
       title: 'AI-Powered Cybersecurity: The Next Generation of Protection',
       excerpt: 'How artificial intelligence is revolutionizing cybersecurity and threat detection.',
       category: 'cybersecurity',
@@ -71,8 +67,7 @@ function Blog() {
       tags: ['AI', 'Cybersecurity', 'Threat Detection'],
       image: '/images/blog/ai-cybersecurity.jpg'
     },
-    {
-      id: 5,
+    { id: 5,
       title: 'Micro SaaS Success Stories: Lessons from the Field',
       excerpt: 'Real-world examples of successful micro SaaS businesses and the strategies that made them thrive.',
       category: 'ai',
@@ -84,8 +79,7 @@ function Blog() {
       tags: ['Micro SaaS', 'Success Stories', 'Business Strategy'],
       image: '/images/blog/micro-saas-success.jpg'
     },
-    {
-      id: 6,
+    { id: 6,
       title: 'The Impact of Edge Computing on IoT Applications',
       excerpt: 'Understanding how edge computing is transforming IoT deployments and improving performance.',
       category: 'cloud',
@@ -109,8 +103,7 @@ function Blog() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
+    return date.toLocaleDateString('en-US', { year: 'numeric', 
       month: 'long', 
       day: 'numeric' 
     });
@@ -124,7 +117,7 @@ function Blog() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Zion Tech Blog
@@ -180,10 +173,9 @@ function Blog() {
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl font-bold text-white mb-12 text-center"
-            >
+              viewport={{ once: true     }}
+              transition={{ duration: 0.6     }}
+              className="text-3xl font-bold text-white mb-12 text-center">
               Featured Articles
             </motion.h2>
             
@@ -195,10 +187,9 @@ function Blog() {
                     key={post.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
+                    viewport={{ once: true     }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group"
-                  >
+                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group">
                     <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
                       <BookOpen className="w-16 h-16 text-blue-400 opacity-60" />
                     </div>
@@ -241,8 +232,7 @@ function Blog() {
                         {post.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded"
-                          >
+                            className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded">
                             {tag}
                           </span>
                         ))}
@@ -261,10 +251,9 @@ function Blog() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-3xl font-bold text-white mb-12 text-center"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
+            className="text-3xl font-bold text-white mb-12 text-center">
             Latest Articles
           </motion.h2>
           
@@ -276,10 +265,9 @@ function Blog() {
                   key={post.id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group hover:transform hover:-translate-y-2"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300 group hover:transform hover:-translate-y-2">
                   <div className="aspect-video bg-gradient-to-br from-slate-600/20 to-slate-700/20 flex items-center justify-center">
                     <BookOpen className="w-12 h-12 text-slate-400 opacity-60" />
                   </div>
@@ -322,8 +310,7 @@ function Blog() {
                       {post.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
-                          className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded"
-                        >
+                          className="px-2 py-1 bg-slate-700/50 text-slate-300 text-xs rounded">
                           {tag}
                         </span>
                       ))}
@@ -346,10 +333,9 @@ function Blog() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.6     }}
+            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">
             <h2 className="text-3xl font-bold text-white mb-4">
               Stay Updated with Our Latest Insights
             </h2>
@@ -369,7 +355,7 @@ function Blog() {
             </div>
             
             <p className="text-sm text-slate-400 mt-4">
-              No spam, unsubscribe at any time. We respect your privacy.
+              No spam, unsubscribe at  time. We respect your privacy.
             </p>
           </motion.div>
         </div>

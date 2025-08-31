@@ -24,24 +24,21 @@ const AIHealthcareAnalytics = () => {
   ];
 
   const testimonials = [
-    {
-      name: "Dr. Emily Rodriguez",
+    { name: "Dr. Emily Rodriguez",
       role: "Chief Medical Officer",
-      company: "Metro General Hospital",
+      comp: "Metro General Hospital",
       content: "AI Healthcare Analytics has transformed our diagnostic accuracy. We've improved early detection rates by 30% and reduced misdiagnoses significantly.",
       rating: 5
     },
-    {
-      name: "Dr. Michael Chen",
+    { name: "Dr. Michael Chen",
       role: "Research Director",
-      company: "National Medical Research Institute",
+      comp: "National Medical Research Institute",
       content: "The population health analytics have revealed patterns we never would have discovered manually. Our research has accelerated dramatically.",
       rating: 5
     },
-    {
-      name: "Sarah Johnson",
+    { name: "Sarah Johnson",
       role: "Healthcare Administrator",
-      company: "Community Health Network",
+      comp: "Community Health Network",
       content: "Our operational efficiency has improved by 40% thanks to AI optimization. We're serving more patients with better outcomes.",
       rating: 5
     }
@@ -68,8 +65,7 @@ const AIHealthcareAnalytics = () => {
   ];
 
   const tiers = [
-    {
-      name: 'Clinical',
+    { name: 'Clinical',
       price: '$599/mo',
       details: [
         'Up to 100 patients',
@@ -79,8 +75,7 @@ const AIHealthcareAnalytics = () => {
         'HIPAA compliance'
       ]
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$1,499/mo',
       details: [
         'Up to 1,000 patients',
@@ -91,8 +86,7 @@ const AIHealthcareAnalytics = () => {
         'Advanced compliance'
       ]
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$3,999/mo',
       details: [
         'Unlimited patients',
@@ -105,8 +99,7 @@ const AIHealthcareAnalytics = () => {
     }
   ];
 
-  const technicalSpecs = {
-    technology: ['Deep Learning', 'Natural Language Processing', 'Python', 'React', 'Node.js', 'PostgreSQL', 'TensorFlow'],
+  const technicalSpecs = { technology: ['Deep Learning', 'Natural Language Processing', 'Python', 'React', 'Node.js', 'PostgreSQL', 'TensorFlow'],
     integrations: ['Epic', 'Cerner', 'Allscripts', 'Meditech', 'Practice Fusion', 'Athenahealth'],
     security: ['HIPAA', 'SOC 2 Type II', 'HITECH', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.99%',
@@ -114,16 +107,13 @@ const AIHealthcareAnalytics = () => {
   };
 
   const healthcareSolutions = [
-    {
-      specialty: 'Cardiology',
+    { specialty: 'Cardiology',
       solutions: ['Heart disease prediction', 'ECG analysis', 'Risk assessment', 'Treatment optimization']
     },
-    {
-      specialty: 'Oncology',
+    { specialty: 'Oncology',
       solutions: ['Cancer detection', 'Treatment planning', 'Outcome prediction', 'Clinical trial matching']
     },
-    {
-      specialty: 'Neurology',
+    { specialty: 'Neurology',
       solutions: ['Brain imaging analysis', 'Cognitive assessment', 'Disease progression tracking', 'Treatment response monitoring']
     }
   ];

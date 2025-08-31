@@ -22,20 +22,17 @@ export default function AIHRTalentPlatform() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
+    { name: 'Starter', 
       price: '$149/mo', 
       features: ['Up to 50 employees', 'Basic AI screening', 'Standard reporting', 'Email support'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$399/mo', 
       features: ['Up to 200 employees', 'Advanced AI analytics', 'Custom workflows', 'Priority support', 'Integration APIs'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$999/mo', 
       features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],
       popular: false
@@ -311,8 +308,7 @@ export default function AIHRTalentPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"
-          >
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold">
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>

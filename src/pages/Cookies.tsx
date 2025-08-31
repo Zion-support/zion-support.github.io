@@ -10,43 +10,38 @@ interface CookieCategory {
   necessary: boolean;
   cookies: string[];
   purpose: string;
-}
+    }
 
 const Cookies: React.FC = () => {
-  const [cookiePreferences, setCookiePreferences] = useState({
-    necessary: true, // Always true, cannot be disabled
+  const [cookiePreferences, setCookiePreferences] = useState({ necessary: true, // Always true, cannot be disabled
     analytics: false,
     marketing: false,
     functional: false
   });
 
   const cookieCategories: CookieCategory[] = [
-    {
-      id: 'necessary',
+    { id: 'necessary',
       name: 'Necessary Cookies',
       description: 'These cookies are essential for the website to function properly and cannot be disabled.',
       necessary: true,
       cookies: ['session_id', 'csrf_token', 'auth_token', 'language'],
       purpose: 'Authentication, security, and basic website functionality'
     },
-    {
-      id: 'analytics',
+    { id: 'analytics',
       name: 'Analytics Cookies',
       description: 'These cookies help us understand how visitors interact with our website.',
       necessary: false,
       cookies: ['_ga', '_gid', '_gat', 'analytics_id', 'page_views'],
       purpose: 'Website analytics, performance monitoring, and user behavior insights'
     },
-    {
-      id: 'marketing',
+    { id: 'marketing',
       name: 'Marketing Cookies',
       description: 'These cookies are used to deliver personalized advertisements and track marketing campaigns.',
       necessary: false,
       cookies: ['ad_id', 'campaign_tracker', 'user_preferences', 'retargeting'],
       purpose: 'Advertising, retargeting, and marketing campaign optimization'
     },
-    {
-      id: 'functional',
+    { id: 'functional',
       name: 'Functional Cookies',
       description: 'These cookies enable enhanced functionality and personalization.',
       necessary: false,
@@ -71,8 +66,7 @@ const Cookies: React.FC = () => {
   };
 
   const acceptAll = () => {
-    const allAccepted = {
-      necessary: true,
+    const allAccepted = { necessary: true,
       analytics: true,
       marketing: true,
       functional: true
@@ -82,8 +76,7 @@ const Cookies: React.FC = () => {
   };
 
   const rejectAll = () => {
-    const onlyNecessary = {
-      necessary: true,
+    const onlyNecessary = { necessary: true,
       analytics: false,
       marketing: false,
       functional: false
@@ -101,9 +94,8 @@ const Cookies: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Cookie className="w-10 h-10 text-white" />
             </div>
@@ -152,8 +144,7 @@ const Cookies: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6"
-            >
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex-1">
                   <div className="flex items-center mb-2">
@@ -174,8 +165,7 @@ const Cookies: React.FC = () => {
                     {category.cookies.map((cookie, cookieIndex) => (
                       <span
                         key={cookieIndex}
-                        className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full font-mono"
-                      >
+                        className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full font-mono">
                         {cookie}
                       </span>
                     ))}
@@ -225,24 +215,21 @@ const Cookies: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <button
               onClick={acceptAll}
-              className="flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors">
               <CheckCircle className="w-5 h-5 mr-2" />
               Accept All Cookies
             </button>
             
             <button
               onClick={rejectAll}
-              className="flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="flex items-center justify-center px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-semibold rounded-xl transition-colors">
               <XCircle className="w-5 h-5 mr-2" />
               Reject Non-Essential
             </button>
             
             <button
               onClick={savePreferences}
-              className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">
               <Settings className="w-5 h-5 mr-2" />
               Save Preferences
             </button>
@@ -251,7 +238,7 @@ const Cookies: React.FC = () => {
           <div className="text-center">
             <p className="text-gray-300 mb-4">
               Your preferences will be saved and applied to this website. You can change these 
-              settings at any time by visiting this page again.
+              settings at  time by visiting this page again.
             </p>
             <p className="text-sm text-gray-400">
               Note: Some features of our website may not function properly if you disable certain cookies.
@@ -274,8 +261,7 @@ const Cookies: React.FC = () => {
             </p>
             <Link
               to="/privacy"
-              className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium"
-            >
+              className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium">
               Read Privacy Policy
               <ExternalLink className="w-4 h-4 ml-1" />
             </Link>
@@ -362,15 +348,13 @@ const Cookies: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">
               <Shield className="w-5 h-5 mr-2" />
               Contact Privacy Team
             </Link>
             <Link
               to="/privacy"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors">
               <Info className="w-5 h-5 mr-2" />
               Privacy Policy
             </Link>

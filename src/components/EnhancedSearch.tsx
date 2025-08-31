@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '@/hooks/useDebounce';
 
 interface SearchResult {
-
   id: string;
   title: string;
   description: string;
@@ -14,21 +13,19 @@ interface SearchResult {
   category: string;
   tags: string[];
   relevance: number;
-  icon?: React.ComponentType<any>;
-}
+  icon?: React.ComponentType<>;
+    }
 
-interface SearchFilter {
-
-  type: string[];
+interface SearchFilter { type: string[];
   category: string[];
   tags: string[];
 
-}
+    }
 
 interface SearchSuggestion {
   text: string;
   type: 'recent' | 'trending' | 'ai';
-}
+    }
 
 interface EnhancedSearchProps {
   className?: string;
@@ -39,8 +36,7 @@ interface EnhancedSearchProps {
 
 const searchData: SearchResult[] = [
   // Services
-  {
-    id: 'ai-solutions',
+  { id: 'ai-solutions',
     title: 'AI Business Intelligence',
     description: 'Transform your business with AI-powered insights and analytics',
     url: '/services/ai-business-intelligence',
@@ -50,8 +46,7 @@ const searchData: SearchResult[] = [
     relevance: 95,
     icon: Brain
   },
-  {
-    id: 'cloud-devops',
+  { id: 'cloud-devops',
     title: 'Cloud & DevOps Services',
     description: 'Scalable cloud infrastructure and automated deployment solutions',
     url: '/services/cloud-devops',
@@ -61,8 +56,7 @@ const searchData: SearchResult[] = [
     relevance: 90,
     icon: Globe
   },
-  {
-    id: 'cybersecurity',
+  { id: 'cybersecurity',
     title: 'AI Cybersecurity Suite',
     description: 'Advanced AI-powered security solutions for enterprise protection',
     url: '/services/ai-cybersecurity-suite',
@@ -72,8 +66,7 @@ const searchData: SearchResult[] = [
     relevance: 88,
     icon: Shield
   },
-  {
-    id: 'quantum-computing',
+  { id: 'quantum-computing',
     title: 'Quantum Computing Solutions',
     description: 'Next-generation computational power for complex problem solving',
     url: '/services/quantum-computing',
@@ -83,8 +76,7 @@ const searchData: SearchResult[] = [
     relevance: 92,
     icon: Zap
   },
-  {
-    id: 'micro-saas',
+  { id: 'micro-saas',
     title: 'Micro SaaS Platform',
     description: 'Scalable software solutions tailored to your specific needs',
     url: '/services/micro-saas',
@@ -95,19 +87,17 @@ const searchData: SearchResult[] = [
     icon: TrendingUp
   },
   // Pages
-  {
-    id: 'about',
+  { id: 'about',
     title: 'About Zion Tech Group',
     description: 'Learn about our mission, values, and commitment to innovation',
     url: '/about',
     type: 'page',
-    category: 'Company',
-    tags: ['About', 'Company', 'Mission', 'Values'],
+    category: 'Comp',
+    tags: ['About', 'Comp', 'Mission', 'Values'],
     relevance: 85,
     icon: Building
   },
-  {
-    id: 'contact',
+  { id: 'contact',
     title: 'Contact Us',
     description: 'Get in touch with our team for consultations and support',
     url: '/contact',
@@ -118,8 +108,7 @@ const searchData: SearchResult[] = [
     icon: Code
   },
   // Blog posts (example)
-  {
-    id: 'ai-trends-2025',
+  { id: 'ai-trends-2025',
     title: 'AI Trends in 2025',
     description: 'Discover the latest artificial intelligence trends shaping business',
     url: '/blog/ai-trends-2025',
@@ -159,8 +148,7 @@ export function EnhancedSearch({
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
-  const [filters, setFilters] = useState<SearchFilter>({
-    type: [],
+  const [filters, setFilters] = useState<SearchFilter>({ type: [],
     category: [],
     tags: []
   });
@@ -172,7 +160,7 @@ export function EnhancedSearch({
 
   // Handle click outside
   useEffect(() => {
-    const handleClickOutside = (event: anyMouseEvent)  => {
+    const handleClickOutside = (event: MouseEvent)  => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -185,7 +173,7 @@ export function EnhancedSearch({
 
   // Handle keyboard navigation
   useEffect(() => {
-    const handleKeyDown = (event: anyKeyboardEvent)  => {
+    const handleKeyDown = (event: KeyboardEvent)  => {
       if (event.key === 'Escape') {
         setIsOpen(false);
         setSelectedIndex(-1);
@@ -313,8 +301,7 @@ export function EnhancedSearch({
           {query && (
             <button
               onClick={clearSearch}
-              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
-            >
+              className="ml-2 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
               <X className="w-4 h-4 text-gray-400" />
             </button>
           )}
@@ -327,9 +314,8 @@ export function EnhancedSearch({
             initial={{ opacity: 0, y: -10, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto z-50"
-          >
+            transition={{ duration: 0.2     }}
+            className="absolute top-full left-0 right-0 mt-2 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 max-h-96 overflow-y-auto z-50">
             {/* Search Results */}
             {results.length > 0 && (
               <div className="p-4">
@@ -343,14 +329,13 @@ export function EnhancedSearch({
                       key={result.id}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                      transition={{ delay: index * 0.1     }}
                       className={`p-3 rounded-lg cursor-pointer transition-all duration-200 ${
                         selectedIndex === index
                           ? 'bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700'
                           : 'hover:bg-gray-50 dark:hover:bg-gray-700'
                       }`}
-                      onClick={() => handleResultClick(result)}
-                    >
+                      onClick={() => handleResultClick(result)}>
                       <div className="flex items-start space-x-3">
                         {result.icon && (
                           <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center">
@@ -368,8 +353,7 @@ export function EnhancedSearch({
                             {result.tags.slice(0, 3).map(tag => (
                               <span
                                 key={tag}
-                                className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full"
-                              >
+                                className="px-2 py-1 text-xs bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">
                                 {tag}
                               </span>
                             ))}
@@ -396,10 +380,9 @@ export function EnhancedSearch({
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: (index + results.length) * 0.1 }}
+                      transition={{ delay: (index + results.length) * 0.1     }}
                       onClick={() => handleSuggestionClick(suggestion)}
-                      className="w-full text-left p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center space-x-2"
-                    >
+                      className="w-full text-left p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors flex items-center space-x-2">
                       {suggestion.type === 'ai' && <Sparkles className="w-3 h-3 text-cyan-500" />}
                       {suggestion.type === 'trending' && <TrendingUp className="w-3 h-3 text-green-500" />}
                       {suggestion.type === 'recent' && <Clock className="w-3 h-3 text-gray-500" />}

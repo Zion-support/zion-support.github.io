@@ -11,11 +11,11 @@ export interface MarketplaceItem {
   image: string;
   tags: string[];
   featured: boolean;
-  seller: {
+  seller: {  
     name: string;
-    rating: number;
-    verified: boolean;
-  };
+    rating: number
+    verified: boolean
+      };
   location: string;
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
@@ -23,8 +23,7 @@ export interface MarketplaceItem {
 }
 
 export const marketplaceItems: MarketplaceItem[] = [
-  {
-    id: 'ai-server-cluster',
+  { id: 'ai-server-cluster',
     title: 'AI-Powered Server Cluster',
     category: 'products',
     description: 'High-performance computing cluster optimized for AI workloads with GPU acceleration and scalable architecture.',
@@ -36,8 +35,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: ['AI', 'High Performance', 'Scalable', 'GPU'],
     featured: true,
-    seller: {
-      name: 'TechCorp Solutions',
+    seller: { name: 'TechCorp Solutions',
       rating: 4.8,
       verified: true
     },
@@ -46,8 +44,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     deliveryTime: '2-3 weeks',
     warranty: '3 years'
   },
-  {
-    id: 'cybersecurity-team',
+  { id: 'cybersecurity-team',
     title: 'Cybersecurity Expert Team',
     category: 'talent',
     description: 'Senior cybersecurity professionals with 10+ years experience in enterprise security, compliance, and threat detection.',
@@ -59,8 +56,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags: ['Security', 'Expert', 'Certified', 'Compliance'],
     featured: true,
-    seller: {
-      name: 'SecureNet Professionals',
+    seller: { name: 'SecureNet Professionals',
       rating: 4.9,
       verified: true
     },
@@ -69,8 +65,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     deliveryTime: 'Immediate',
     warranty: 'N/A'
   },
-  {
-    id: 'quantum-hardware',
+  { id: 'quantum-hardware',
     title: 'Quantum Computing Hardware',
     category: 'equipment',
     description: 'State-of-the-art quantum computing components and systems for research and development applications.',
@@ -82,8 +77,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags: ['Quantum', 'Research', 'Advanced', 'Experimental'],
     featured: false,
-    seller: {
-      name: 'QuantumTech Labs',
+    seller: { name: 'QuantumTech Labs',
       rating: 4.6,
       verified: true
     },
@@ -92,8 +86,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     deliveryTime: '4-6 weeks',
     warranty: '1 year'
   },
-  {
-    id: 'cloud-migration-service',
+  { id: 'cloud-migration-service',
     title: 'Cloud Migration Service',
     category: 'services',
     description: 'Complete cloud migration service including planning, execution, and optimization for enterprise applications.',
@@ -105,8 +98,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags: ['Cloud', 'Migration', 'Enterprise', 'AWS'],
     featured: true,
-    seller: {
-      name: 'CloudMasters Inc',
+    seller: { name: 'CloudMasters Inc',
       rating: 4.9,
       verified: true
     },
@@ -115,8 +107,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     deliveryTime: '6-8 weeks',
     warranty: '90 days support'
   },
-  {
-    id: 'iot-platform',
+  { id: 'iot-platform',
     title: 'IoT Edge Computing Platform',
     category: 'products',
     description: 'Comprehensive IoT platform with edge computing capabilities for real-time data processing and analytics.',
@@ -128,8 +119,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags: ['IoT', 'Edge Computing', 'Real-time', 'Analytics'],
     featured: false,
-    seller: {
-      name: 'IoT Solutions Pro',
+    seller: { name: 'IoT Solutions Pro',
       rating: 4.5,
       verified: true
     },
@@ -138,8 +128,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     deliveryTime: '3-4 weeks',
     warranty: '2 years'
   },
-  {
-    id: 'data-scientist',
+  { id: 'data-scientist',
     title: 'Senior Data Scientist',
     category: 'talent',
     description: 'Experienced data scientist specializing in machine learning, statistical analysis, and big data processing.',
@@ -151,8 +140,7 @@ export const marketplaceItems: MarketplaceItem[] = [
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
     tags: ['Data Science', 'Machine Learning', 'Python', 'Statistics'],
     featured: false,
-    seller: {
-      name: 'DataGenius Consulting',
+    seller: { name: 'DataGenius Consulting',
       rating: 4.7,
       verified: true
     },
@@ -164,26 +152,22 @@ export const marketplaceItems: MarketplaceItem[] = [
 ];
 
 export const marketplaceCategories = [
-  {
-    id: 'products',
+  { id: 'products',
     name: 'Products',
     description: 'Hardware and software solutions',
     count: marketplaceItems.filter(item => item.category === 'products').length
   },
-  {
-    id: 'talent',
+  { id: 'talent',
     name: 'Talent',
     description: 'Expert professionals and teams',
     count: marketplaceItems.filter(item => item.category === 'talent').length
   },
-  {
-    id: 'equipment',
+  { id: 'equipment',
     name: 'Equipment',
     description: 'Computing and networking equipment',
     count: marketplaceItems.filter(item => item.category === 'equipment').length
   },
-  {
-    id: 'services',
+  { id: 'services',
     name: 'Services',
     description: 'Professional services and consulting',
     count: marketplaceItems.filter(item => item.category === 'services').length
@@ -191,18 +175,15 @@ export const marketplaceCategories = [
 ];
 
 export const marketplaceFilters = [
-  {
-    title: 'Category',
+  { title: 'Category',
     key: 'category',
     type: 'checkbox' as const,
-    options: marketplaceCategories.map(cat => ({
-      value: cat.id,
+    options: marketplaceCategories.map(cat => ({ value: cat.id,
       label: cat.name,
       count: cat.count
     }))
   },
-  {
-    title: 'Price Range',
+  { title: 'Price Range',
     key: 'priceRange',
     type: 'radio' as const,
     options: [
@@ -212,8 +193,7 @@ export const marketplaceFilters = [
       { value: '10000+', label: 'Over $10,000' }
     ]
   },
-  {
-    title: 'Rating',
+  { title: 'Rating',
     key: 'rating',
     type: 'checkbox' as const,
     options: [
@@ -222,8 +202,7 @@ export const marketplaceFilters = [
       { value: '3.5+', label: '3.5+ Stars' }
     ]
   },
-  {
-    title: 'Availability',
+  { title: 'Availability',
     key: 'availability',
     type: 'checkbox' as const,
     options: [

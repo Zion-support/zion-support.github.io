@@ -22,20 +22,17 @@ export default function AIFinancialAnalytics() {
   ];
 
   const pricing = [
-    { 
-      name: 'Analyst', 
+    { name: 'Analyst', 
       price: '$199/mo', 
       features: ['Up to 10 portfolios', 'Basic AI insights', 'Standard reporting', 'Email support'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$499/mo', 
       features: ['Up to 50 portfolios', 'Advanced AI analytics', 'Real-time alerts', 'Priority support', 'Custom dashboards'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$1,299/mo', 
       features: ['Unlimited portfolios', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'API access', 'White-label solutions'],
       popular: false
@@ -311,8 +308,7 @@ export default function AIFinancialAnalytics() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
-          >
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>

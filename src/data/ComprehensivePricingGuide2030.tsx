@@ -10,7 +10,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const getFilteredServices = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -42,7 +42,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   };
 
   const getCategories = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -61,7 +61,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   };
 
   const getPriceRange = () => {
-    let services: any[] = [];
+    let services: [] = [];
     
     switch (activeTab) {
       case 'microsaas':
@@ -86,7 +86,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
     }
   };
 
-  const renderPricingCard = (service: anyany)  => {
+  const renderPricingCard = (service: )  => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -109,7 +109,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -148,14 +148,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               <div className="flex flex-col gap-2">
                 <a
                   href={`tel:${service.contactInfo.phone}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center"
-                >
+                  className="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-center">
                   Call: {service.contactInfo.phone}
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}`}
-                  className="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center"
-                >
+                  className="w-full px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors text-center">
                   Email: {service.contactInfo.email}
                 </a>
               </div>
@@ -193,7 +191,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                     {benefit}
@@ -232,14 +230,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               <div className="flex flex-col gap-2">
                 <a
                   href={`tel:${service.contactInfo.phone}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center"
-                >
+                  className="w-full px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-center">
                   Call: {service.contactInfo.phone}
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}`}
-                  className="w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-center"
-                >
+                  className="w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors text-center">
                   Email: {service.contactInfo.email}
                 </a>
               </div>
@@ -277,7 +273,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <div className="mb-6">
               <h4 className="font-semibold text-gray-900 mb-3 text-center">Key Benefits</h4>
               <div className="space-y-2">
-                {service.benefits.slice(0, 4).map((benefit: anystring, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-3"></span>
                     {benefit}
@@ -316,14 +312,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               <div className="flex flex-col gap-2">
                 <a
                   href={`tel:${service.contactInfo.phone}`}
-                  className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-center"
-                >
+                  className="w-full px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-center">
                   Call: {service.contactInfo.phone}
                 </a>
                 <a
                   href={`mailto:${service.contactInfo.email}`}
-                  className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors text-center"
-                >
+                  className="w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors text-center">
                   Email: {service.contactInfo.email}
                 </a>
               </div>
@@ -482,8 +476,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                     <option value="all">All Categories</option>
                     {getCategories().map((category) => (
                       <option key={category} value={category}>{category}</option>
@@ -498,8 +491,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                     setPriceRange([priceRangeData[0], priceRangeData[1]]);
                     setSelectedCategory('all');
                   }}
-                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
-                >
+                  className="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors">
                   Reset Filters
                 </button>
               </div>
@@ -547,8 +539,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                   setPriceRange([priceRangeData[0], priceRangeData[1]]);
                   setSelectedCategory('all');
                 }}
-                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-              >
+                className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                 Clear Filters
               </button>
             </div>
@@ -606,14 +597,12 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
-                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
+                className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-              >
+                className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Email Us
               </a>
             </div>

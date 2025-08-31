@@ -17,21 +17,18 @@ import { BarChart3,
   RefreshCw
  } from 'lucide-react.ts';
 
-interface ChartData {
-
-  labels: string[];
-datasets: {;
+interface ChartData { labels: string[];
+datasets: {  
     label: string;
     data: number[];
     backgroundColor: string[];
-    borderColor: string[];
-    borderWidth: number;
+    borderColor: string[]
+    borderWidth: number
   
-}[];
+    }[];
 }
 
 interface MetricCard {
-
   title: string;
   value: string | number;
   change: number;
@@ -39,7 +36,7 @@ interface MetricCard {
   icon: React.ReactNode;
   color: string;
 
-}
+    }
 
 interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
@@ -50,7 +47,7 @@ interface DataVisualizationProps extends React.PropsWithChildren<{}> {
 
 }
 
-export const DataVisualization: React.FC<DataVisualizationProps> = ({
+export const DataVisualization: React.FC = ({
   title = "Data Analytics Dashboard",
   showMetrics = true,
   showCharts = true,
@@ -61,10 +58,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   const [activeChart, setActiveChart] = useState<any>('bar');
 
   // Sample data - in a real app, this would come from an API
-  const [chartData, setChartData] = useState<any>({
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
-    datasets: [{
-      label: 'Revenue',
+  const [chartData, setChartData] = useState<any>({ labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    datasets: [{ label: 'Revenue',
       data: [65, 59, 80, 81, 56, 55],
       backgroundColor: ['rgba(34, 221, 210, 0.2)'],
       borderColor: ['rgba(34, 221, 210, 1)'],
@@ -73,32 +68,28 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   });
 
   const [metrics, setMetrics] = useState<any>([
-    {
-      title: 'Total Revenue',
+    { title: 'Total Revenue',
       value: '$2.4M',
       change: 12.5,
       changeType: 'increase',
       icon: <DollarSign className="w-5 h-5" />,
       color: 'text-green-400'
     },
-    {
-      title: 'Active Users',
+    { title: 'Active Users',
       value: '45.2K',
       change: 8.1,
       changeType: 'increase',
       icon: <Users className="w-5 h-5" />,
       color: 'text-blue-400'
     },
-    {
-      title: 'Conversion Rate',
+    { title: 'Conversion Rate',
       value: '3.24%',
       change: -2.4,
       changeType: 'decrease',
       icon: <Target className="w-5 h-5" />,
       color: 'text-yellow-400'
     },
-    {
-      title: 'Avg Session',
+    { title: 'Avg Session',
       value: '2m 47s',
       change: 0.0,
       changeType: 'neutral',
@@ -116,7 +107,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
     // Update chart data with new random values
     setChartData(prev => ({
       ...prev,
-      datasets: any[{
+      datasets: [{
         ...prev.datasets[0],
         data: prev.datasets[0].data.map(()  => Math.floor(Math.random() * 100) + 20)
       }]
@@ -136,7 +127,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   // Get change icon and color
-  const getChangeDisplay = (change: anynumber, changeType: string)  => {
+  const getChangeDisplay = (change: number, changeType: string)  => {
     const icon = changeType === 'increase' ? <ArrowUp className="w-4 h-4" /> :
                  changeType === 'decrease' ? <ArrowDown className="w-4 h-4" /> :
                  <Minus className="w-4 h-4" />;
@@ -149,10 +140,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   // Generate pie chart data
-  const pieChartData = {
-    labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
-    datasets: [{
-      data: [35, 25, 20, 15, 5],
+  const pieChartData = { labels: ['AI Services', 'Cloud Solutions', 'Security', 'Consulting', 'Development'],
+    datasets: [{ data: [35, 25, 20, 15, 5],
       backgroundColor: [
         'rgba(34, 221, 210, 0.8)',
         'rgba(140, 21, 233, 0.8)',
@@ -172,10 +161,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
   };
 
   // Generate line chart data
-  const lineChartData = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-    datasets: [{
-      label: 'Weekly Performance',
+  const lineChartData = { labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    datasets: [{ label: 'Weekly Performance',
       data: [65, 59, 80, 81, 56, 55, 70],
       backgroundColor: 'rgba(34, 221, 210, 0.1)',
       borderColor: 'rgba(34, 221, 210, 1)',
@@ -200,8 +187,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             <select
               value={selectedTimeRange}
               onChange={(e) => setSelectedTimeRange(e.target.value)}
-              className="px-3 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-            >
+              className="px-3 py-2 bg-zinc-900/50 border border-zinc-700/50 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent">
               <option value="1d">Last 24 Hours</option>
               <option value="7d">Last 7 Days</option>
               <option value="30d">Last 30 Days</option>
@@ -213,8 +199,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             <button
               onClick={refreshData}
               disabled={isLoading}
-              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
-            >
+              className="px-4 py-2 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/80 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2">
               <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
               Refresh
             </button>
@@ -236,7 +221,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
 
       {/* Metrics Cards */}
       {showMetrics && (
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {metrics.map((metric, index)  => {
             const { icon, color } = getChangeDisplay(metric.change, metric.changeType);
             return (
@@ -244,9 +229,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                 key={metric.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300"
-              >
+                transition={{ delay: index * 0.1     }}
+                className="p-6 bg-zinc-900/30 border border-zinc-700/50 rounded-xl hover:bg-zinc-900/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <div className={`p-3 rounded-lg bg-zinc-800/50 ${metric.color}`}>
                     {metric.icon}
@@ -277,7 +261,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
             ].map((chartType) => (
               <button
                 key={chartType.id}
-                onClick={() => setActiveChart(chartType.id as any)}
+                onClick={() => setActiveChart(chartType.id as )}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   activeChart === chartType.id
                     ? 'bg-zion-cyan text-white'
@@ -313,9 +297,8 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
-                  className="w-full h-full flex items-center justify-center"
-                >
+                  transition={{ duration: 0.3     }}
+                  className="w-full h-full flex items-center justify-center">
                   {activeChart === 'bar' && (
                     <div className="w-full h-full flex items-end justify-center gap-4">
                       {chartData.labels.map((label, index) => (
@@ -323,11 +306,11 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           <div className="text-sm text-zinc-400 mb-2">{label}</div>
                           <div className="relative">
                             <motion.div
-                              initial={{ height: 0 }}
-                              animate={{ height: `${chartData.datasets[0].data[index]}%` }}
+                              initial={{ height: 0     }}
+                              animate={{ height: `${chartData.datasets[0].data[index]    }%` }}
                               transition={{ delay: index * 0.1, duration: 0.8 }}
                               className="w-12 bg-gradient-to-t from-zion-cyan to-zion-cyan/50 rounded-t-lg"
-                              style={{ maxHeight: '200px' }}
+                              style={{ maxHeight: '200px'     }}
                             />
                             <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs text-zinc-300 bg-zinc-800 px-2 py-1 rounded">
                               {chartData.datasets[0].data[index]}
@@ -373,7 +356,7 @@ export const DataVisualization: React.FC<DataVisualizationProps> = ({
                           <div key={label} className="flex items-center gap-2">
                             <div 
                               className="w-3 h-3 rounded"
-                              style={{ backgroundColor: pieChartData.datasets[0].backgroundColor[index] }}
+                              style={{ backgroundColor: pieChartData.datasets[0].backgroundColor[index]     }}
                             />
                             <span className="text-sm text-zinc-300">{label}</span>
                             <span className="text-xs text-zinc-500">

@@ -9,12 +9,12 @@ export interface EnterpriseSolution {
   features: string[];
   benefits: string[];
   useCases: string[];
-  pricing: {
+  pricing: {  
     starter: string;
     professional: string;
-    enterprise: string;
-    custom: string;
-  };
+    enterprise: string
+    custom: string
+      };
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -26,8 +26,7 @@ export interface EnterpriseSolution {
   support: string;
 }
 export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
-  {
-    id: 'enterprise-cloud-migration',
+  { id: 'enterprise-cloud-migration',
     title: 'Enterprise Cloud Migration & Strategy',
     description: 'Comprehensive cloud migration strategy and implementation for large enterprises',
     longDescription: 'Transform your enterprise infrastructure with our proven cloud migration methodology. We handle everything from strategy planning to implementation and optimization.',
@@ -54,8 +53,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Healthcare organizations',
       'Government agencies'
     ],
-    pricing: {
-      starter: '$50,000',
+    pricing: { starter: '$50,000',
       professional: '$150,000',
       enterprise: '$500,000+',
       custom: 'Contact us'
@@ -69,8 +67,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.9% uptime guarantee',
     support: '24/7 dedicated support team'
   },
-  {
-    id: 'enterprise-cybersecurity',
+  { id: 'enterprise-cybersecurity',
     title: 'Enterprise Cybersecurity Framework',
     description: 'Comprehensive cybersecurity framework and threat protection',
     longDescription: 'Protect your enterprise with our comprehensive cybersecurity framework. Includes threat detection, incident response, compliance management, and security training.',
@@ -97,8 +94,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Healthcare systems',
       'Government entities'
     ],
-    pricing: {
-      starter: '$75,000',
+    pricing: { starter: '$75,000',
       professional: '$200,000',
       enterprise: '$750,000+',
       custom: 'Contact us'
@@ -112,8 +108,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.99% security guarantee',
     support: '24/7 SOC team support'
   },
-  {
-    id: 'digital-transformation',
+  { id: 'digital-transformation',
     title: 'Digital Transformation Consulting',
     description: 'End-to-end digital transformation strategy and implementation',
     longDescription: 'Lead your industry with our comprehensive digital transformation services. We help enterprises modernize processes, adopt new technologies, and create competitive advantages.',
@@ -140,8 +135,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Retail chains',
       'Service organizations'
     ],
-    pricing: {
-      starter: '$100,000',
+    pricing: { starter: '$100,000',
       professional: '$300,000',
       enterprise: '$1,000,000+',
       custom: 'Contact us'
@@ -155,8 +149,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: 'Transformation success guarantee',
     support: 'Dedicated transformation team'
   },
-  {
-    id: 'enterprise-data-analytics',
+  { id: 'enterprise-data-analytics',
     title: 'Enterprise Data Analytics Platform',
     description: 'Advanced data analytics and business intelligence for enterprises',
     longDescription: 'Unlock the power of your data with our enterprise analytics platform. Features real-time processing, predictive analytics, and automated insights generation.',
@@ -183,8 +176,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Manufacturing',
       'Retail chains'
     ],
-    pricing: {
-      starter: '$60,000',
+    pricing: { starter: '$60,000',
       professional: '$180,000',
       enterprise: '$600,000+',
       custom: 'Contact us'
@@ -198,8 +190,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.9% data availability',
     support: '24/7 analytics support'
   },
-  {
-    id: 'enterprise-automation',
+  { id: 'enterprise-automation',
     title: 'Enterprise Process Automation',
     description: 'Intelligent process automation and workflow optimization',
     longDescription: 'Automate complex business processes with our intelligent automation platform. Reduce manual work, improve accuracy, and increase operational efficiency.',
@@ -226,8 +217,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Customer service',
       'Supply chain management'
     ],
-    pricing: {
-      starter: '$40,000',
+    pricing: { starter: '$40,000',
       professional: '$120,000',
       enterprise: '$400,000+',
       custom: 'Contact us'
@@ -241,8 +231,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '95% automation success rate',
     support: 'Automation support team'
   },
-  {
-    id: 'enterprise-integration',
+  { id: 'enterprise-integration',
     title: 'Enterprise System Integration',
     description: 'Seamless integration of enterprise systems and applications',
     longDescription: 'Connect your enterprise systems with our comprehensive integration platform. Enable data flow, automate processes, and create unified business operations.',
@@ -269,8 +258,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Legacy system modernization',
       'Cloud-to-on-premise'
     ],
-    pricing: {
-      starter: '$35,000',
+    pricing: { starter: '$35,000',
       professional: '$100,000',
       enterprise: '$350,000+',
       custom: 'Contact us'
@@ -284,8 +272,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.5% integration uptime',
     support: 'Integration support team'
   },
-  {
-    id: 'enterprise-infrastructure',
+  { id: 'enterprise-infrastructure',
     title: 'Enterprise Infrastructure Modernization',
     description: 'Modernize and optimize enterprise infrastructure',
     longDescription: 'Transform your enterprise infrastructure with modern technologies. Improve performance, reduce costs, and enhance security with our infrastructure modernization services.',
@@ -312,8 +299,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'Storage systems',
       'Computing resources'
     ],
-    pricing: {
-      starter: '$80,000',
+    pricing: { starter: '$80,000',
       professional: '$250,000',
       enterprise: '$800,000+',
       custom: 'Contact us'
@@ -327,8 +313,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
     sla: '99.9% infrastructure uptime',
     support: '24/7 infrastructure support'
   },
-  {
-    id: 'enterprise-consulting',
+  { id: 'enterprise-consulting',
     title: 'Strategic IT Consulting',
     description: 'Strategic IT consulting and technology advisory services',
     longDescription: 'Get expert guidance on your technology strategy with our enterprise consulting services. We help you make informed decisions and optimize your IT investments.',
@@ -355,8 +340,7 @@ export const ADVANCED_ENTERPRISE_SOLUTIONS_2025: EnterpriseSolution[] = [
       'System selection',
       'Risk management'
     ],
-    pricing: {
-      starter: '$25,000',
+    pricing: { starter: '$25,000',
       professional: '$75,000',
       enterprise: '$250,000+',
       custom: 'Contact us'

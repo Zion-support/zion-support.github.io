@@ -23,22 +23,19 @@ export default function AICustomerSupportAutomation() {
   ];
 
   const pricingTiers = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$79',
       period: '/mo',
       conversations: 'Up to 1,000 conversations/month',
       features: ['Basic AI chatbot', '5 integrations', 'Email support', 'Standard analytics']
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$199',
       period: '/mo',
       conversations: 'Up to 10,000 conversations/month',
       features: ['Advanced AI with sentiment analysis', 'Unlimited integrations', 'Priority support', 'Custom branding', 'Advanced analytics']
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$499',
       period: '/mo',
       conversations: 'Unlimited conversations',
@@ -87,14 +84,12 @@ export default function AICustomerSupportAutomation() {
               href="https://ziontechgroup.com/contact" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center">
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
               href="tel:+13024640950" 
-              className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center">
               <Phone className="w-5 h-5 mr-2" /> Call Now
             </a>
           </div>
@@ -160,7 +155,7 @@ export default function AICustomerSupportAutomation() {
                 <MessageCircle className="w-10 h-10 text-green-400" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Customer Inquiry</h3>
-              <p className="text-slate-300">Customer asks a question through any channel (chat, email, social media)</p>
+              <p className="text-slate-300">Customer asks a question through  channel (chat, email, social media)</p>
             </div>
             
             <div className="text-center">
@@ -285,14 +280,12 @@ export default function AICustomerSupportAutomation() {
               href="https://ziontechgroup.com/contact" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 inline-flex items-center">
               Start Free Trial <ArrowRight className="ml-2 w-5 h-5" />
             </a>
             <a 
               href="mailto:kleber@ziontechgroup.com" 
-              className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center"
-            >
+              className="px-8 py-4 border border-green-400/30 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300 inline-flex items-center">
               <Mail className="w-5 h-5 mr-2" /> Schedule Demo
             </a>
           </div>
@@ -325,8 +318,7 @@ export default function AICustomerSupportAutomation() {
                   href="https://ziontechgroup.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-slate-300 hover:text-green-400 inline-flex items-center"
-                >
+                  className="text-slate-300 hover:text-green-400 inline-flex items-center">
                   ziontechgroup.com <ExternalLink className="w-4 h-4 ml-1" />
                 </a>
               </div>

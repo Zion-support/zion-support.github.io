@@ -17,26 +17,24 @@ export interface InnovativeBlockchainWeb3Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3Service[] = [
   // DeFi Platform & Yield Farming
-  {
-    id: "defi-platform-yield-farming",
+  { id: "defi-platform-yield-farming",
     title: "DeFi Platform & Yield Farming Suite",
     description: "Comprehensive decentralized finance platform offering yield farming, liquidity provision, staking, and DeFi protocol aggregation with advanced risk management and analytics.",
     category: "Blockchain & Web3",
@@ -83,13 +81,11 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketPrice: "$1,899 - $4,899/month",
     roi: "400-800%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
       integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -100,8 +96,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
   },
 
   // NFT Marketplace & Creation Platform
-  {
-    id: "nft-marketplace-creation-platform",
+  { id: "nft-marketplace-creation-platform",
     title: "NFT Marketplace & Creation Platform Pro",
     description: "Advanced NFT platform for creating, minting, trading, and managing non-fungible tokens with AI-powered creation tools, marketplace functionality, and royalty management.",
     category: "Blockchain & Web3",
@@ -148,13 +143,11 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketPrice: "$1,299 - $3,299/month",
     roi: "300-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Solidity", "IPFS", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["Solidity", "IPFS", "React", "Node.js", "MongoDB"],
       integrations: ["Ethereum", "Polygon", "OpenSea API", "MetaMask", "WalletConnect"],
       apiEndpoints: 180,
       uptime: "99.9%",
@@ -165,8 +158,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
   },
 
   // DAO Governance & Management Platform
-  {
-    id: "dao-governance-management-platform",
+  { id: "dao-governance-management-platform",
     title: "DAO Governance & Management Platform",
     description: "Comprehensive platform for creating, managing, and governing decentralized autonomous organizations with voting mechanisms, proposal systems, and treasury management.",
     category: "Blockchain & Web3",
@@ -213,13 +205,11 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketPrice: "$999 - $2,999/month",
     roi: "250-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Solidity", "Web3.js", "React", "Node.js", "PostgreSQL"],
       integrations: ["Ethereum", "Polygon", "Gnosis Safe", "Snapshot", "Discord"],
       apiEndpoints: 120,
       uptime: "99.9%",
@@ -230,8 +220,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
   },
 
   // Web3 Identity & Authentication Platform
-  {
-    id: "web3-identity-authentication-platform",
+  { id: "web3-identity-authentication-platform",
     title: "Web3 Identity & Authentication Platform",
     description: "Decentralized identity platform that provides self-sovereign identity, zero-knowledge proofs, and privacy-preserving authentication for Web3 applications.",
     category: "Blockchain & Web3",
@@ -278,13 +267,11 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketPrice: "$1,499 - $3,999/month",
     roi: "300-600%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Solidity", "Zero-Knowledge Proofs", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Solidity", "Zero-Knowledge Proofs", "React", "Node.js", "PostgreSQL"],
       integrations: ["Ethereum", "Polygon", "WalletConnect", "MetaMask", "Discord"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -295,8 +282,7 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
   },
 
   // Cross-Chain Bridge & Interoperability Platform
-  {
-    id: "cross-chain-bridge-interoperability",
+  { id: "cross-chain-bridge-interoperability",
     title: "Cross-Chain Bridge & Interoperability Platform",
     description: "Advanced cross-chain bridge platform that enables seamless asset transfers, data sharing, and interoperability between different blockchain networks with enhanced security.",
     category: "Blockchain & Web3",
@@ -343,13 +329,11 @@ export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2025: InnovativeBlockchainWeb3S
     marketPrice: "$2,199 - $5,199/month",
     roi: "350-700%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Solidity", "Rust", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Solidity", "Rust", "React", "Node.js", "PostgreSQL"],
       integrations: ["Ethereum", "Polygon", "BSC", "Solana", "Avalanche"],
       apiEndpoints: 300,
       uptime: "99.99%",

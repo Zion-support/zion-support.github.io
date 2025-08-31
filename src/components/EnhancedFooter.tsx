@@ -55,8 +55,7 @@ export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 
   const footerSections = [
-    {
-      title: 'Services',
+    { title: 'Services',
       links: [
         { name: 'AI & Machine Learning', href: '/ai-services', icon: Brain },
         { name: 'IT Services', href: '/it-services', icon: Server },
@@ -68,8 +67,7 @@ export function EnhancedFooter() {
         { name: 'Digital Transformation', href: '/digital-transformation', icon: TrendingUp }
       ]
     },
-    {
-      title: 'Solutions',
+    { title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
         { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Heart },
@@ -81,8 +79,7 @@ export function EnhancedFooter() {
         { name: 'Space Technology', href: '/space-tech', icon: Satellite }
       ]
     },
-    {
-      title: 'Company',
+    { title: 'Comp',
       links: [
         { name: 'About Us', href: '/about', icon: Users },
         { name: 'Our Mission', href: '/mission', icon: Target },
@@ -94,8 +91,7 @@ export function EnhancedFooter() {
         { name: 'Blog', href: '/blog', icon: PenTool }
       ]
     },
-    {
-      title: 'Resources',
+    { title: 'Resources',
       links: [
         { name: 'Documentation', href: '/docs', icon: FileText },
         { name: 'API Reference', href: '/api', icon: Code },
@@ -110,7 +106,7 @@ export function EnhancedFooter() {
   ];
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/comp/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-400' },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-400' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-400' },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-600' },
@@ -118,8 +114,7 @@ export function EnhancedFooter() {
     { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube, color: 'hover:text-red-400' }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
@@ -135,7 +130,7 @@ export function EnhancedFooter() {
         {/* Main Footer Content */}
         <div className="container mx-auto px-4 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {/* Company Info */}
+            {/* Comp Info */}
             <div className="lg:col-span-2">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
@@ -190,8 +185,7 @@ export function EnhancedFooter() {
                     <li key={link.name}>
                       <Link
                         to={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group">
                         <link.icon className="w-3 h-3 text-cyan-400 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
                       </Link>
@@ -275,8 +269,7 @@ export function EnhancedFooter() {
         >
           <Link
             to="/contact"
-            className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group"
-          >
+            className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 hover:scale-110 group">
             <MessageCircle className="w-8 h-8 text-white group-hover:rotate-12 transition-transform duration-300" />
           </Link>
         </motion.div>

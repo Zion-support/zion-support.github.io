@@ -13,18 +13,15 @@ export default function AIManufacturing() {
   ];
 
   const tiers = [
-    { 
-      name: 'Small Manufacturer', 
+    { name: 'Small Manufacturer', 
       price: '$599/mo', 
       details: ['Up to 10 production lines', 'Basic AI features', 'Standard reports', 'Email support'] 
     },
-    { 
-      name: 'Medium Manufacturer', 
+    { name: 'Medium Manufacturer', 
       price: '$1,299/mo', 
       details: ['Up to 50 production lines', 'Advanced AI features', 'Custom reports', 'Priority support'] 
     },
-    { 
-      name: 'Large Manufacturer', 
+    { name: 'Large Manufacturer', 
       price: '$2,999/mo', 
       details: ['Unlimited production lines', 'Custom AI models', 'Full system integration', '24/7 dedicated support'] 
     },

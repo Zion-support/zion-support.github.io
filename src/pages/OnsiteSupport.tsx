@@ -22,38 +22,32 @@ import {
 
 export default function OnsiteSupport() {
   const services = [
-    {
-      icon: Server,
+    { icon: Server,
       title: 'Server Maintenance',
       description: 'Proactive server monitoring, updates, and optimization',
       features: ['Hardware diagnostics', 'Performance tuning', 'Security patches', 'Backup verification']
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: 'Network Infrastructure',
       description: 'Complete network setup, troubleshooting, and optimization',
       features: ['WiFi optimization', 'Cable management', 'Switch configuration', 'Network security']
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: 'Database Management',
       description: 'Database optimization, backup, and recovery services',
       features: ['Performance tuning', 'Backup strategies', 'Recovery procedures', 'Security hardening']
     },
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: 'Workstation Support',
       description: 'Desktop and laptop setup, maintenance, and troubleshooting',
       features: ['OS installation', 'Software deployment', 'Hardware upgrades', 'Virus removal']
     },
-    {
-      icon: HardDrive,
+    { icon: HardDrive,
       title: 'Storage Solutions',
       description: 'Storage system design, implementation, and maintenance',
       features: ['RAID configuration', 'Backup systems', 'Cloud integration', 'Data recovery']
     },
-    {
-      icon: Router,
+    { icon: Router,
       title: 'Security Implementation',
       description: 'Comprehensive security setup and monitoring',
       features: ['Firewall configuration', 'VPN setup', 'Access control', 'Security audits']
@@ -61,23 +55,19 @@ export default function OnsiteSupport() {
   ];
 
   const benefits = [
-    {
-      icon: Clock,
+    { icon: Clock,
       title: '24/7 Response',
       description: 'Emergency support available around the clock'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Certified Technicians',
       description: 'Microsoft, Cisco, and CompTIA certified experts'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Dedicated Team',
       description: 'Assigned technicians familiar with your infrastructure'
     },
-    {
-      icon: CheckCircle,
+    { icon: CheckCircle,
       title: 'Preventive Maintenance',
       description: 'Regular checkups to prevent issues before they occur'
     }
@@ -103,7 +93,7 @@ export default function OnsiteSupport() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
@@ -120,14 +110,12 @@ export default function OnsiteSupport() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Schedule Onsite Visit
               </a>
               <a
                 href="tel:+13024640950"
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 Call Now: +1 302 464 0950
               </a>
             </div>
@@ -141,9 +129,8 @@ export default function OnsiteSupport() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Onsite Services
             </h2>
@@ -160,8 +147,7 @@ export default function OnsiteSupport() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -187,9 +173,8 @@ export default function OnsiteSupport() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Onsite Support?
             </h2>
@@ -206,8 +191,7 @@ export default function OnsiteSupport() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -225,9 +209,8 @@ export default function OnsiteSupport() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Guaranteed Response Times
             </h2>
@@ -244,8 +227,7 @@ export default function OnsiteSupport() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center">
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 ${
                   item.priority === 'Critical' ? 'bg-red-500' :
                   item.priority === 'High' ? 'bg-orange-500' :
@@ -268,7 +250,7 @@ export default function OnsiteSupport() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready for Professional Onsite Support?
@@ -280,14 +262,12 @@ export default function OnsiteSupport() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
                 Get Started Today
               </a>
               <a
                 href="/services-overview"
-                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 View All Services
               </a>
             </div>

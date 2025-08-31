@@ -29,46 +29,38 @@ import { SEO } from '@/components/SEO';
 
 const AutonomousBusinessOperationsPlatform: React.FC = () => {
   const features = [
-    {
-      icon: Bot,
+    { icon: Bot,
       title: 'Intelligent Automation',
       description: 'AI-powered automation that learns from your business processes and continuously improves efficiency.'
     },
-    {
-      icon: Workflow,
+    { icon: Workflow,
       title: 'Process Orchestration',
       description: 'Seamlessly orchestrate complex business workflows across multiple systems and departments.'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Real-time Optimization',
       description: 'Dynamic optimization of business operations based on real-time data and market conditions.'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Secure Operations',
       description: 'Enterprise-grade security with role-based access control and audit trails for all operations.'
     }
   ];
 
   const useCases = [
-    {
-      title: 'Supply Chain Management',
+    { title: 'Supply Chain Management',
       description: 'Automated inventory management, demand forecasting, and supplier coordination.',
       icon: Workflow
     },
-    {
-      title: 'Customer Service',
+    { title: 'Customer Service',
       description: 'Intelligent chatbots, ticket routing, and automated customer support workflows.',
       icon: Users
     },
-    {
-      title: 'Financial Operations',
+    { title: 'Financial Operations',
       description: 'Automated invoicing, expense management, and financial reporting.',
       icon: BarChart3
     },
-    {
-      title: 'HR & Recruitment',
+    { title: 'HR & Recruitment',
       description: 'Automated candidate screening, onboarding processes, and performance management.',
       icon: Users
     }
@@ -95,20 +87,17 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
   ];
 
   const testimonials = [
-    {
-      name: 'Sarah Chen',
+    { name: 'Sarah Chen',
       role: 'CTO, TechFlow Industries',
       content: 'The autonomous operations platform has transformed our business processes. We\'ve seen a 45% reduction in operational costs.',
       rating: 5
     },
-    {
-      name: 'Michael Rodriguez',
+    { name: 'Michael Rodriguez',
       role: 'Operations Director, Global Logistics Co.',
       content: 'Real-time optimization and automated workflows have increased our efficiency by 60%. Game-changing technology.',
       rating: 5
     },
-    {
-      name: 'Dr. Emily Watson',
+    { name: 'Dr. Emily Watson',
       role: 'CEO, HealthTech Solutions',
       content: 'The AI-powered automation has streamlined our healthcare operations while maintaining the highest standards of care.',
       rating: 5
@@ -176,8 +165,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300"
-                >
+                  className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300">
                   <div className="w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-green-400" />
                   </div>
@@ -208,8 +196,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50"
-                >
+                  className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50">
                   <div className="w-16 h-16 bg-green-600/20 rounded-xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-green-400" />
                   </div>
@@ -240,8 +227,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>
@@ -269,8 +255,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-400/50 transition-all duration-300"
-                >
+                  className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-400/50 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white">{industry}</h3>
                 </motion.div>
               ))}
@@ -297,8 +282,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50"
-                >
+                  className="p-8 bg-slate-800/50 rounded-xl border border-slate-700/50">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -340,7 +324,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </div>
               
               <p className="text-sm text-gray-400 mt-6">
-                No credit card required • 14-day free trial • Cancel anytime
+                No credit card required • 14-day free trial • Cancel time
               </p>
             </div>
           </div>
@@ -371,7 +355,7 @@ const AutonomousBusinessOperationsPlatform: React.FC = () => {
               </div>
               
               <div>
-                <h4 className="text-lg font-semibold text-green-400 mb-4">Company</h4>
+                <h4 className="text-lg font-semibold text-green-400 mb-4">Comp</h4>
                 <ul className="space-y-2">
                   <li><Link to="/about" className="text-gray-300 hover:text-green-400 transition-colors">About Us</Link></li>
                   <li><Link to="/team" className="text-gray-300 hover:text-green-400 transition-colors">Our Team</Link></li>

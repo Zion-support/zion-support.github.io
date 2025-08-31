@@ -16,7 +16,6 @@ import { Eye,
  } from 'lucide-react.ts';
 
 interface AccessibilitySettings {
-
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -26,12 +25,11 @@ interface AccessibilitySettings {
   colorBlindness: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
   fontSize: 'small' | 'medium' | 'large' | 'extra-large';
 
-}
+    }
 
 export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false);
-  const [settings, setSettings] = useState<any>({
-    highContrast: false,
+  const [settings, setSettings] = useState<any>({ highContrast: false,
     largeText: false,
     reducedMotion: false,
     screenReader: boolean,
@@ -59,7 +57,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Apply accessibility settings to the document
-  const applySettings = useCallback((newSettings: anyAccessibilitySettings)  => {
+  const applySettings = useCallback((newSettings: AccessibilitySettings)  => {
     const root = document.documentElement;
     
     // High contrast mode
@@ -93,8 +91,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
 
     // Color blindness simulation
     if (newSettings.colorBlindness !== 'none') {
-      const filters = {
-        protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
+      const filters = { protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',
         tritanopia: 'brightness(0.8) saturate(0.5) hue-rotate(270deg)'
       };
@@ -104,8 +101,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
     }
 
     // Font size
-    const fontSizes = {
-      small: '0.875rem',
+    const fontSizes = { small: '0.875rem',
       medium: '1rem',
       large: '1.125rem',
       'extra-large': '1.25rem'
@@ -131,7 +127,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Handle keyboard navigation
-  const handleKeyboardNavigation = useCallback((event: anyKeyboardEvent)  => {
+  const handleKeyboardNavigation = useCallback((event: KeyboardEvent)  => {
     const focusableElements = document.querySelectorAll(
       'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
@@ -166,7 +162,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, []);
 
   // Screen reader announcements
-  const announceToScreenReader = useCallback((message: anystring)  => {
+  const announceToScreenReader = useCallback((message: string)  => {
     if (!settings.screenReader) return;
 
     const announcement = document.createElement('div');
@@ -190,14 +186,13 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
   }, [settings.screenReader]);
 
   // Update settings
-  const updateSetting = useCallback((key: anykeyof AccessibilitySettings, value: any)  => {
+  const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any)  => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
     
     // Announce changes to screen reader
-    const settingNames = {
-      highContrast: 'high contrast mode',
+    const settingNames = { highContrast: 'high contrast mode',
       largeText: 'large text',
       reducedMotion: 'reduced motion',
       screenReader: 'screen reader support',
@@ -212,8 +207,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
 
   // Reset to defaults
   const resetToDefaults = useCallback(() => {
-    const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
+    const defaultSettings: AccessibilitySettings = { highContrast: false,
       largeText: false,
       reducedMotion: false,
       screenReader: false,
@@ -236,7 +230,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
 
   // Handle escape key
   useEffect(() => {
-    const handleEscape = (event: anyKeyboardEvent)  => {
+    const handleEscape = (event: KeyboardEvent)  => {
       if (event.key === 'Escape' && isOpen) {
         setIsOpen(false);
         announceToScreenReader('Accessibility panel closed');
@@ -251,8 +245,8 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
     <>
       {/* Toggle Button */}
       <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0     }}
+        animate={{ opacity: 1     }}
         onClick={togglePanel}
         className="fixed top-4 right-4 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg z-40 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
         title="Accessibility Settings"
@@ -363,8 +357,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <select
                       value={settings.fontSize}
                       onChange={(e) => updateSetting('fontSize', e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    >
+                      className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
                       <option value="small">Small</option>
                       <option value="medium">Medium</option>
                       <option value="large">Large</option>
@@ -379,8 +372,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
                     <select
                       value={settings.colorBlindness}
                       onChange={(e) => updateSetting('colorBlindness', e.target.value)}
-                      className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                    >
+                      className="w-full px-3 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500">
                       <option value="none">None</option>
                       <option value="protanopia">Protanopia (Red-Blind)</option>
                       <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
@@ -468,8 +460,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
               <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
                 <button
                   onClick={resetToDefaults}
-                  className="w-full px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                >
+                  className="w-full px-4 py-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500">
                   Reset to Defaults
                 </button>
               </div>
@@ -493,8 +484,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       <div
         aria-live="polite"
         aria-atomic="true"
-        className="sr-only"
-      >
+        className="sr-only">
         {announcements[announcements.length - 1]}
       </div>
 
@@ -505,8 +495,7 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-20 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center gap-2"
-          >
+            className="fixed bottom-20 right-4 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg z-50 flex items-center gap-2">
             <Check className="w-4 h-4" />
             <span className="text-sm">Setting updated</span>
           </motion.div>
@@ -516,9 +505,9 @@ export const EnhancedAccessibilityPanel: React.FC = (): JSX.Element => {
       {/* Overlay */}
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
+          initial={{ opacity: 0     }}
+          animate={{ opacity: 1     }}
+          exit={{ opacity: 0     }}
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={togglePanel}
         />

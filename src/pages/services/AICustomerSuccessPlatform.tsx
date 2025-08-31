@@ -111,38 +111,32 @@ import {
 
 const AICustomerSuccessPlatform: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Customer Insights",
       description: "Machine learning algorithms that predict customer behavior and identify churn risks",
       color: "from-purple-500 to-pink-500"
     },
-    {
-      icon: MessageCircle,
+    { icon: MessageCircle,
       title: "Intelligent Communication",
       description: "Automated, personalized messaging that adapts to customer preferences and needs",
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Proactive Success Management",
       description: "Identify and resolve issues before they impact customer satisfaction",
       color: "from-green-500 to-emerald-500"
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Real-time Analytics Dashboard",
       description: "Comprehensive metrics and insights to track customer success and engagement",
       color: "from-orange-500 to-red-500"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Customer Journey Mapping",
       description: "Visualize and optimize every touchpoint in the customer experience",
       color: "from-indigo-500 to-purple-500"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Automated Support Escalation",
       description: "Smart routing and escalation based on customer priority and issue complexity",
       color: "from-yellow-500 to-orange-500"
@@ -150,8 +144,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
   ];
 
   const pricingPlans = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$299",
       period: "/month",
       description: "Perfect for small teams getting started with customer success automation",
@@ -167,8 +160,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
       cta: "Start Free Trial",
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$899",
       period: "/month",
       description: "Advanced customer success platform for growing businesses",
@@ -185,8 +177,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
       cta: "Start Free Trial",
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$2,999",
       period: "/month",
       description: "Comprehensive platform for large organizations with complex customer success needs",
@@ -206,26 +197,22 @@ const AICustomerSuccessPlatform: React.FC = () => {
   ];
 
   const benefits = [
-    {
-      icon: Heart,
+    { icon: Heart,
       title: "25% Higher Retention",
       description: "Proactive customer success management increases customer lifetime value",
       metric: "25%"
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "40% Faster Resolution",
       description: "AI-powered insights help resolve customer issues before they escalate",
       metric: "40%"
     },
-    {
-      icon: Star,
+    { icon: Star,
       title: "4.8/5 Customer Rating",
       description: "Improved customer experience leads to higher satisfaction scores",
       metric: "4.8/5"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "3x Team Efficiency",
       description: "Automation and AI insights multiply your team's effectiveness",
       metric: "3x"
@@ -233,29 +220,25 @@ const AICustomerSuccessPlatform: React.FC = () => {
   ];
 
   const useCases = [
-    {
-      industry: "SaaS & Technology",
+    { industry: "SaaS & Technology",
       title: "Product Adoption & Onboarding",
       description: "Guide customers through product features and ensure successful implementation",
       icon: Cpu,
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       title: "Customer Loyalty & Retention",
       description: "Build lasting relationships and increase repeat purchase rates",
       icon: Package,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       title: "Account Management & Support",
       description: "Provide personalized financial guidance and proactive account monitoring",
       icon: DollarSign,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       title: "Patient Engagement & Care",
       description: "Improve patient outcomes through proactive communication and monitoring",
       icon: Heart,
@@ -264,38 +247,32 @@ const AICustomerSuccessPlatform: React.FC = () => {
   ];
 
   const customerSuccessMetrics = [
-    {
-      metric: "Net Promoter Score (NPS)",
+    { metric: "Net Promoter Score (NPS)",
       description: "Measure customer loyalty and likelihood to recommend your product",
       icon: StarIcon,
       color: "from-yellow-500 to-orange-500"
     },
-    {
-      metric: "Customer Health Score",
+    { metric: "Customer Health Score",
       description: "AI-powered scoring system to identify at-risk customers",
       icon: Activity,
       color: "from-green-500 to-emerald-500"
     },
-    {
-      metric: "Time to Value (TTV)",
+    { metric: "Time to Value (TTV)",
       description: "Track how quickly customers achieve their first success milestone",
       icon: ClockIcon,
       color: "from-blue-500 to-cyan-500"
     },
-    {
-      metric: "Customer Lifetime Value (CLV)",
+    { metric: "Customer Lifetime Value (CLV)",
       description: "Predict and optimize long-term customer value",
       icon: TrendingUp,
       color: "from-purple-500 to-pink-500"
     },
-    {
-      metric: "Churn Rate",
+    { metric: "Churn Rate",
       description: "Monitor and reduce customer attrition through proactive engagement",
       icon: Users,
       color: "from-red-500 to-pink-500"
     },
-    {
-      metric: "Feature Adoption Rate",
+    { metric: "Feature Adoption Rate",
       description: "Track which features drive the most customer success",
       icon: Target,
       color: "from-indigo-500 to-purple-500"
@@ -317,7 +294,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-sm font-medium mb-8">
                 <Heart className="w-4 h-4 mr-2" />
@@ -366,8 +343,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${feature.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
@@ -400,8 +376,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -433,8 +408,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${metric.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${metric.color} mb-4`}>
                     <metric.icon className="w-6 h-6 text-white" />
@@ -467,8 +441,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
-              >
+                className="group">
                 <div className={`p-6 rounded-xl bg-gradient-to-br ${useCase.color} bg-opacity-10 border border-opacity-20 hover:bg-opacity-20 transition-all duration-300 h-full`}>
                   <div className="flex items-start space-x-4">
                     <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color}`}>
@@ -557,7 +530,7 @@ const AICustomerSuccessPlatform: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Customer Success?

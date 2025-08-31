@@ -4,28 +4,25 @@ import { useRef  } from 'react.ts';
 import { TrendingUp, Award, Users, Clock  } from 'lucide-react.ts';
 
 interface Stat {
-
   number: string;
   label: string;
   description: string;
   avatar: string;
 icon: React.ComponentType<{ className?: string;
-}>;
+    }>;
   color: string;
 }
 
-interface StatsSectionProps extends React.PropsWithChildren<{}> {
+interface StatsSectionProps extends React.PropsWithChildren<{}> { stats: Stat[];
 
-  stats: Stat[];
+    }
 
-}
-
-const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
+const StatsSection: React.FC = ({ stats }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true     });
   const [counts, setCounts] = useState<any>({});
 
-  useEffect(()  => {
+  useEffect(() => {
     if (isInView) {
       const timer = setTimeout(() => {
         stats.forEach((stat, index) => {
@@ -61,8 +58,8 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8     }}
+          viewport={{ once: true     }}
         >
           <h2 id="stats-heading" className="text-4xl md:text-5xl font-bold text-white mb-6">
             Trusted by <span className="bg-gradient-to-r from-zion-cyan to-zion-blue bg-clip-text text-transparent">Industry Leaders</span>
@@ -72,7 +69,7 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
           </p>
         </motion.div>
 
-        <div ref={ref} className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+        <div ref={ref} className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.label}
@@ -80,10 +77,9 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ 
-                y: -8,
-                transition: { duration: 0.3 }
+              viewport={{ once: true     }}
+              whileHover={{ y: -8,
+                transition: { duration: 0.3     }
               }}
             >
               {/* Animated background */}
@@ -99,10 +95,10 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
               {/* Animated number */}
               <motion.div 
                 className="relative text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300"
-                initial={{ scale: 0.8 }}
-                whileInView={{ scale: 1 }}
+                initial={{ scale: 0.8     }}
+                whileInView={{ scale: 1     }}
                 transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
               >
                 {counts[stat.label] || 0}
                 {stat.number.includes('%') ? '%' : stat.number.includes('+') ? '+' : ''}

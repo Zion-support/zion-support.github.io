@@ -2,33 +2,27 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const features = [
-  {
-    icon: "🚀",
+  { icon: "🚀",
     title: "Cutting-Edge Technology",
     description: "Leverage the latest advancements in AI, quantum computing, and blockchain technology"
   },
-  {
-    icon: "⚡",
+  { icon: "⚡",
     title: "Lightning Fast Performance",
     description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"
   },
-  {
-    icon: "🔒",
+  { icon: "🔒",
     title: "Enterprise Security",
     description: "Bank-level security protocols and compliance standards to protect your valuable data"
   },
-  {
-    icon: "🌐",
+  { icon: "🌐",
     title: "Global Scalability",
     description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"
   },
-  {
-    icon: "🤖",
+  { icon: "🤖",
     title: "AI-Powered Intelligence",
     description: "Smart automation and predictive analytics that adapt to your business requirements"
   },
-  {
-    icon: "📊",
+  { icon: "📊",
     title: "Real-Time Analytics",
     description: "Comprehensive insights and reporting to make data-driven decisions instantly"
   }
@@ -42,8 +36,8 @@ export function FeatureHighlights() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Why Choose Zion Tech Group?
@@ -60,7 +54,7 @@ export function FeatureHighlights() {
               className="text-center group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -82,7 +76,7 @@ export function FeatureHighlights() {
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-semibold">

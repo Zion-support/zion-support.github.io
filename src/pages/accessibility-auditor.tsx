@@ -21,23 +21,19 @@ import {
 
 const AccessibilityAuditor: React.FC = () => {
   const features = [
-    {
-      title: "Automated Testing",
+    { title: "Automated Testing",
       description: "Comprehensive automated accessibility testing for WCAG 2.1 AA compliance",
       icon: "🔍"
     },
-    {
-      title: "Manual Review",
+    { title: "Manual Review",
       description: "Expert manual accessibility audits by certified professionals",
       icon: "👁️"
     },
-    {
-      title: "Real-time Monitoring",
+    { title: "Real-time Monitoring",
       description: "Continuous monitoring and alerting for accessibility issues",
       icon: "📊"
     },
-    {
-      title: "Compliance Reporting",
+    { title: "Compliance Reporting",
       description: "Detailed reports with actionable recommendations",
       icon: "📋"
     }
@@ -52,16 +48,13 @@ const AccessibilityAuditor: React.FC = () => {
   ];
 
   const testingAreas = [
-    {
-      category: "Visual Accessibility",
+    { category: "Visual Accessibility",
       items: ["Color contrast", "Text sizing", "Screen reader compatibility", "Keyboard navigation"]
     },
-    {
-      category: "Content Accessibility",
+    { category: "Content Accessibility",
       items: ["Alt text for images", "Semantic HTML", "ARIA labels", "Form accessibility"]
     },
-    {
-      category: "Technical Accessibility",
+    { category: "Technical Accessibility",
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"]
     }
   ];
@@ -231,14 +224,12 @@ const AccessibilityAuditor: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-                >
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
                   Get Accessibility Audit
                 </Link>
                 <Link
                   to="/services"
-                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-                >
+                  className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
                   View All Services
                 </Link>
               </div>

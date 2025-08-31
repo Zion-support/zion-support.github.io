@@ -78,7 +78,7 @@ export default function Login() {
     setErrors({});
 
     // Basic validation
-    const newErrors: { email?: string; password?: string } = {};
+    const newErrors: {  email?: string password?: string } = {};
     
     if (!email) {
       newErrors.email = 'Email is required';
@@ -133,9 +133,8 @@ export default function Login() {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="w-full max-w-md"
-        >
+          transition={{ duration: 0.5     }}
+          className="w-full max-w-md">
           {/* Logo & Header */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl mb-4">
@@ -197,8 +196,7 @@ export default function Login() {
                 <button
                   type="button"
                   className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                  onClick={() => setShowPassword(!showPassword)}
-                >
+                  onClick={() => setShowPassword(!showPassword)}>
                   {showPassword ? (
                     <EyeOff className="h-5 w-5 text-gray-400 hover:text-gray-600" />
                   ) : (
@@ -230,8 +228,7 @@ export default function Login() {
               </div>
               <Link
                 to="/forgot-password"
-                className="text-sm text-blue-600 hover:text-blue-700 font-medium"
-              >
+                className="text-sm text-blue-600 hover:text-blue-700 font-medium">
                 Forgot password?
               </Link>
             </div>
@@ -240,8 +237,7 @@ export default function Login() {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-            >
+              className="w-full flex justify-center items-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200">
               {isLoading ? (
                 <div className="flex items-center">
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
@@ -288,8 +284,7 @@ export default function Login() {
               Don't have an account?{' '}
               <Link
                 to="/signup"
-                className="font-medium text-blue-600 hover:text-blue-700"
-              >
+                className="font-medium text-blue-600 hover:text-blue-700">
                 Sign up for free
               </Link>
             </p>
@@ -297,15 +292,14 @@ export default function Login() {
         </motion.div>
       </div>
 
-      {/* Right Side - Company Info & Features */}
+      {/* Right Side - Comp Info & Features */}
       <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 p-12 text-white">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="w-full max-w-lg mx-auto"
-        >
-          {/* Company Header */}
+          className="w-full max-w-lg mx-auto">
+          {/* Comp Header */}
           <div className="mb-12">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-3xl mb-6">
               <Zap className="h-10 w-10 text-white" />
@@ -323,9 +317,8 @@ export default function Login() {
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 + index * 0.1 }}
-                className="text-center"
-              >
+                transition={{ delay: 0.4 + index * 0.1     }}
+                className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-white/20 rounded-xl mb-3">
                   <stat.icon className="h-6 w-6 text-white" />
                 </div>
@@ -343,9 +336,8 @@ export default function Login() {
                 key={feature.title}
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.6 + index * 0.1 }}
-                className="flex items-start space-x-3"
-              >
+                transition={{ delay: 0.6 + index * 0.1     }}
+                className="flex items-start space-x-3">
                 <div className="flex-shrink-0 w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
                   <feature.icon className="h-4 w-4 text-white" />
                 </div>

@@ -268,8 +268,7 @@ import {
 } from 'lucide-react';
 
 const blockchainSolutions = [
-  {
-    id: 1,
+  { id: 1,
     title: "Enterprise Blockchain Platform",
     description: "Custom blockchain platform designed for enterprise use cases and requirements.",
     icon: Building,
@@ -284,8 +283,7 @@ const blockchainSolutions = [
     category: "Platform",
     technologies: ["Blockchain", "Smart Contracts", "Consensus", "Scalability"]
   },
-  {
-    id: 2,
+  { id: 2,
     title: "Supply Chain Blockchain",
     description: "Transparent and traceable supply chain solutions using blockchain technology.",
     icon: Package,
@@ -300,8 +298,7 @@ const blockchainSolutions = [
     category: "Supply Chain",
     technologies: ["Blockchain", "IoT", "Supply Chain", "Compliance"]
   },
-  {
-    id: 3,
+  { id: 3,
     title: "Financial Blockchain Solutions",
     description: "Blockchain-based financial services and payment solutions.",
     icon: DollarSign,
@@ -316,8 +313,7 @@ const blockchainSolutions = [
     category: "Financial",
     technologies: ["Blockchain", "Fintech", "Payments", "Compliance"]
   },
-  {
-    id: 4,
+  { id: 4,
     title: "Identity Management Blockchain",
     description: "Decentralized identity management and verification systems.",
     icon: Shield,
@@ -332,8 +328,7 @@ const blockchainSolutions = [
     category: "Identity",
     technologies: ["Blockchain", "Identity", "Security", "Privacy"]
   },
-  {
-    id: 5,
+  { id: 5,
     title: "Smart Contract Development",
     description: "Custom smart contract development for business automation.",
     icon: Code,
@@ -348,8 +343,7 @@ const blockchainSolutions = [
     category: "Smart Contracts",
     technologies: ["Smart Contracts", "Blockchain", "Automation", "Security"]
   },
-  {
-    id: 6,
+  { id: 6,
     title: "Blockchain Integration Services",
     description: "Integration services for existing enterprise systems with blockchain.",
     icon: Wrench,
@@ -367,29 +361,25 @@ const blockchainSolutions = [
 ];
 
 const blockchainTechnologies = [
-  {
-    name: "Blockchain Platforms",
+  { name: "Blockchain Platforms",
     description: "Enterprise blockchain platforms and frameworks",
     icon: Building,
     useCase: "Platform Development",
     reliability: "Critical"
   },
-  {
-    name: "Smart Contracts",
+  { name: "Smart Contracts",
     description: "Self-executing contracts with business logic",
     icon: Code,
     useCase: "Business Automation",
     reliability: "Critical"
   },
-  {
-    name: "Consensus Mechanisms",
+  { name: "Consensus Mechanisms",
     description: "Blockchain consensus and validation protocols",
     icon: Network,
     useCase: "Network Security",
     reliability: "High"
   },
-  {
-    name: "Cryptography",
+  { name: "Cryptography",
     description: "Advanced cryptographic security solutions",
     icon: Lock,
     useCase: "Security & Privacy",
@@ -398,27 +388,24 @@ const blockchainTechnologies = [
 ];
 
 const successStories = [
-  {
-    id: 1,
-    company: "Global Supply Chain Corp",
+  { id: 1,
+    comp: "Global Supply Chain Corp",
     industry: "Manufacturing",
     challenge: "Needed transparent supply chain tracking across 50+ countries",
     solution: "Built comprehensive blockchain supply chain platform with IoT integration",
     results: "100% supply chain transparency, 40% cost reduction, 60% efficiency improvement, better compliance",
     logo: "GSC"
   },
-  {
-    id: 2,
-    company: "Digital Bank International",
+  { id: 2,
+    comp: "Digital Bank International",
     industry: "Finance",
     challenge: "Required blockchain-based cross-border payment system",
     solution: "Implemented blockchain payment platform with smart contracts",
     results: "80% faster payments, 70% cost reduction, 100% transparency, better compliance",
     logo: "DBI"
   },
-  {
-    id: 3,
-    company: "Healthcare Identity Solutions",
+  { id: 3,
+    comp: "Healthcare Identity Solutions",
     industry: "Healthcare",
     challenge: "Needed secure patient identity management system",
     solution: "Built blockchain-based identity management platform",
@@ -428,29 +415,25 @@ const successStories = [
 ];
 
 const processSteps = [
-  {
-    step: 1,
+  { step: 1,
     title: "Blockchain Assessment",
     description: "Evaluate business needs and identify blockchain opportunities",
     icon: FileText,
     duration: "2-4 weeks"
   },
-  {
-    step: 2,
+  { step: 2,
     title: "Blockchain Strategy",
     description: "Develop blockchain strategy and implementation roadmap",
     icon: Code,
     duration: "4-8 weeks"
   },
-  {
-    step: 3,
+  { step: 3,
     title: "Platform Development",
     description: "Build and deploy blockchain platform and applications",
     icon: Wrench,
     duration: "16-48 weeks"
   },
-  {
-    step: 4,
+  { step: 4,
     title: "Testing & Deployment",
     description: "Test blockchain systems and deploy to production",
     icon: Gauge,
@@ -459,26 +442,22 @@ const processSteps = [
 ];
 
 const blockchainBenefits = [
-  {
-    title: "Transparency & Trust",
+  { title: "Transparency & Trust",
     description: "Blockchain provides immutable, transparent records that build trust",
     icon: Eye,
     examples: ["Immutable records", "Transparent transactions", "Audit trails", "Trust building"]
   },
-  {
-    title: "Security & Privacy",
+  { title: "Security & Privacy",
     description: "Advanced cryptography ensures data security and privacy protection",
     icon: Shield,
     examples: ["Cryptographic security", "Data privacy", "Access control", "Fraud prevention"]
   },
-  {
-    title: "Automation & Efficiency",
+  { title: "Automation & Efficiency",
     description: "Smart contracts automate business processes and reduce manual effort",
     icon: Zap,
     examples: ["Process automation", "Smart contracts", "Reduced errors", "Faster execution"]
   },
-  {
-    title: "Cost Reduction",
+  { title: "Cost Reduction",
     description: "Blockchain eliminates intermediaries and reduces operational costs",
     icon: TrendingUp,
     examples: ["No intermediaries", "Reduced costs", "Better efficiency", "Improved ROI"]
@@ -509,15 +488,13 @@ export default function BlockchainEnterpriseSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-            >
+              className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8">
               <Building className="w-10 h-10 text-white" />
             </motion.div>
             
@@ -555,9 +532,8 @@ export default function BlockchainEnterpriseSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Enterprise Benefits</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Understanding the fundamental advantages that make blockchain essential for enterprises
@@ -571,8 +547,7 @@ export default function BlockchainEnterpriseSolutions() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -601,9 +576,8 @@ export default function BlockchainEnterpriseSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Technologies We Support</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive support for leading blockchain enterprise technologies
@@ -617,8 +591,7 @@ export default function BlockchainEnterpriseSolutions() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <technology.icon className="w-8 h-8 text-white" />
                 </div>
@@ -648,9 +621,8 @@ export default function BlockchainEnterpriseSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Our Blockchain Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful blockchain enterprise implementation
@@ -664,8 +636,7 @@ export default function BlockchainEnterpriseSolutions() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -692,9 +663,8 @@ export default function BlockchainEnterpriseSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Enterprise Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed for blockchain enterprise transformation
@@ -726,8 +696,7 @@ export default function BlockchainEnterpriseSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
-                onClick={() => setSelectedSolution(solution)}
-              >
+                onClick={() => setSelectedSolution(solution)}>
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -748,8 +717,7 @@ export default function BlockchainEnterpriseSolutions() {
                   {solution.technologies.slice(0, 2).map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-                    >
+                      className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30">
                       {tech}
                     </span>
                   ))}
@@ -781,9 +749,8 @@ export default function BlockchainEnterpriseSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Blockchain Enterprise Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Organizations that have transformed their operations with blockchain enterprise solutions
@@ -797,14 +764,13 @@ export default function BlockchainEnterpriseSolutions() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white">{story.company}</h3>
+                    <h3 className="text-xl font-bold text-white">{story.comp}</h3>
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
@@ -842,9 +808,8 @@ export default function BlockchainEnterpriseSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform with Blockchain?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how blockchain enterprise solutions can revolutionize your operations, 
@@ -854,14 +819,12 @@ export default function BlockchainEnterpriseSolutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
                 Start Blockchain Project
               </a>
               <a
                 href="/contact"
-                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
                 Blockchain Consultation
               </a>
             </div>

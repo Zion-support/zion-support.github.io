@@ -6,74 +6,61 @@ import { SEO } from '@/components/SEO';
 
 export default function SOC2ComplianceTracker() {
   const features = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "SOC2 Framework Support",
       description: "Complete coverage of all SOC2 Trust Service Criteria: Security, Availability, Processing Integrity, Confidentiality, and Privacy."
     },
-    {
-      icon: FileText,
+    { icon: FileText,
       title: "Automated Documentation",
       description: "Generate and maintain compliance documentation, policies, and procedures automatically with AI-powered templates."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Access Management",
       description: "Track user access, permissions, and role-based controls with automated provisioning and deprovisioning."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Real-time Monitoring",
       description: "Continuous monitoring of security controls, system changes, and compliance status with instant alerts."
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Security Controls",
       description: "Comprehensive security control monitoring including encryption, authentication, and network security."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Audit Trail",
       description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting."
     }
   ];
 
   const complianceAreas = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Security",
       description: "Access controls, encryption, network security, and vulnerability management"
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Availability",
       description: "System uptime, disaster recovery, and business continuity planning"
     },
-    {
-      icon: CheckCircle,
+    { icon: CheckCircle,
       title: "Processing Integrity",
       description: "Data accuracy, processing completeness, and system reliability"
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Confidentiality",
       description: "Data classification, encryption, and information protection"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Privacy",
       description: "Data handling, consent management, and privacy controls"
     },
-    {
-      icon: FileText,
+    { icon: FileText,
       title: "Documentation",
       description: "Policies, procedures, and compliance documentation management"
     }
   ];
 
   const pricingPlans = [
-    {
-      name: "Compliance Starter",
+    { name: "Compliance Starter",
       price: "$199",
       period: "/month",
       description: "Perfect for small businesses starting their compliance journey",
@@ -87,8 +74,7 @@ export default function SOC2ComplianceTracker() {
       ],
       popular: false
     },
-    {
-      name: "Compliance Professional",
+    { name: "Compliance Professional",
       price: "$499",
       period: "/month",
       description: "Ideal for growing businesses with active compliance programs",
@@ -103,8 +89,7 @@ export default function SOC2ComplianceTracker() {
       ],
       popular: true
     },
-    {
-      name: "Compliance Enterprise",
+    { name: "Compliance Enterprise",
       price: "$1,299",
       period: "/month",
       description: "For large organizations with complex compliance requirements",
@@ -122,56 +107,46 @@ export default function SOC2ComplianceTracker() {
   ];
 
   const benefits = [
-    {
-      title: "Achieve SOC2 Compliance",
+    { title: "Achieve SOC2 Compliance",
       description: "Streamline your SOC2 audit process with automated tools and expert guidance.",
       icon: Award
     },
-    {
-      title: "Reduce Audit Costs",
+    { title: "Reduce Audit Costs",
       description: "Minimize external audit costs with comprehensive internal preparation and monitoring.",
       icon: TrendingUp
     },
-    {
-      title: "Improve Security Posture",
+    { title: "Improve Security Posture",
       description: "Strengthen your security controls and risk management with continuous monitoring.",
       icon: Shield
     },
-    {
-      title: "Build Customer Trust",
+    { title: "Build Customer Trust",
       description: "Demonstrate your commitment to security and compliance to build customer confidence.",
       icon: Users
     }
   ];
 
   const complianceSteps = [
-    {
-      step: "01",
+    { step: "01",
       title: "Assessment & Gap Analysis",
       description: "Evaluate current controls against SOC2 requirements and identify gaps"
     },
-    {
-      step: "02",
+    { step: "02",
       title: "Control Implementation",
       description: "Implement and configure necessary security and compliance controls"
     },
-    {
-      step: "03",
+    { step: "03",
       title: "Monitoring & Testing",
       description: "Continuously monitor controls and conduct regular testing"
     },
-    {
-      step: "04",
+    { step: "04",
       title: "Documentation & Evidence",
       description: "Maintain comprehensive documentation and evidence collection"
     },
-    {
-      step: "05",
+    { step: "05",
       title: "Audit Preparation",
       description: "Prepare for external audit with complete documentation and evidence"
     },
-    {
-      step: "06",
+    { step: "06",
       title: "Ongoing Compliance",
       description: "Maintain compliance with continuous monitoring and improvement"
     }
@@ -194,7 +169,7 @@ export default function SOC2ComplianceTracker() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.6     }}
               >
                 <h1 className="text-5xl md:text-6xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400 bg-clip-text text-transparent">
@@ -208,14 +183,12 @@ export default function SOC2ComplianceTracker() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link 
                     to="/request-quote"
-                    className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                  >
+                    className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                     Start Compliance Journey
                   </Link>
                   <Link 
                     to="/contact"
-                    className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
-                  >
+                    className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300">
                     Schedule Demo
                   </Link>
                 </div>
@@ -243,8 +216,7 @@ export default function SOC2ComplianceTracker() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -275,8 +247,7 @@ export default function SOC2ComplianceTracker() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
                   </div>
@@ -307,8 +278,7 @@ export default function SOC2ComplianceTracker() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto">
                     <span className="text-white font-bold text-lg">{step.step}</span>
                   </div>
@@ -339,8 +309,7 @@ export default function SOC2ComplianceTracker() {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
+                  className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -427,7 +396,7 @@ export default function SOC2ComplianceTracker() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6     }}
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Achieve SOC2 Compliance?
@@ -438,14 +407,12 @@ export default function SOC2ComplianceTracker() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
-                >
+                  className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
                 </Link>
                 <Link 
                   to="/contact"
-                  className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300"
-                >
+                  className="px-8 py-4 border-2 border-indigo-500 text-indigo-400 rounded-lg font-semibold hover:bg-indigo-500 hover:text-white transition-all duration-300">
                   Contact Sales
                 </Link>
               </div>

@@ -34,43 +34,32 @@ export default function ComprehensivePricing2027() {
       return b.rating - a.rating;
     });
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
+  const itemVariants = { hidden: { y: 20, opacity: 0 },
+    visible: { y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5,
+      transition: { duration: 0.5,
         ease: "easeOut"
       }
     }
   };
 
-  const cardVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: {
-      scale: 1,
+  const cardVariants = { hidden: { scale: 0.8, opacity: 0 },
+    visible: { scale: 1,
       opacity: 1,
-      transition: {
-        duration: 0.3,
+      transition: { duration: 0.3,
         ease: "easeOut"
       }
     },
-    hover: {
-      scale: 1.02,
+    hover: { scale: 1.02,
       y: -5,
-      transition: {
-        duration: 0.2,
+      transition: { duration: 0.2,
         ease: "easeOut"
       }
     }
@@ -98,8 +87,7 @@ export default function ComprehensivePricing2027() {
             <div
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20 animate-float"
-              style={{
-                left: `${Math.random() * 100}%`,
+              style={{ left: `${Math.random() * 100    }%`,
                 top: `${Math.random() * 100}%`,
                 animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${3 + Math.random() * 2}s`
@@ -114,7 +102,7 @@ export default function ComprehensivePricing2027() {
         className="relative z-10 pt-20 pb-16 px-6"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.8     }}
       >
         <div className="max-w-7xl mx-auto text-center">
           <motion.h1 
@@ -189,8 +177,7 @@ export default function ComprehensivePricing2027() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10">
                   {categories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}
@@ -203,8 +190,7 @@ export default function ComprehensivePricing2027() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as 'price' | 'aiScore' | 'rating')}
-                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
-                >
+                  className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10">
                   <option value="price">Sort by Price</option>
                   <option value="aiScore">Sort by AI Score</option>
                   <option value="rating">Sort by Rating</option>
@@ -248,7 +234,7 @@ export default function ComprehensivePricing2027() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.3     }}
               >
                 {filteredServices.map((service, index) => (
                   <motion.div
@@ -261,8 +247,7 @@ export default function ComprehensivePricing2027() {
                         className="bg-zion-blue-dark/30 backdrop-blur-md rounded-2xl p-6 border border-zion-purple/20 h-full group cursor-pointer"
                         variants={cardVariants}
                         whileHover="hover"
-                        onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                      >
+                        onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}>
                         {/* Service Header */}
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex-1">
@@ -292,8 +277,7 @@ export default function ComprehensivePricing2027() {
                           {service.tags.slice(0, 3).map((tag, tagIndex) => (
                             <span 
                               key={tagIndex}
-                              className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-                            >
+                              className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30">
                               {tag}
                             </span>
                           ))}
@@ -338,8 +322,7 @@ export default function ComprehensivePricing2027() {
                               initial={{ opacity: 0, height: 0 }}
                               animate={{ opacity: 1, height: 'auto' }}
                               exit={{ opacity: 0, height: 0 }}
-                              className="mt-4 pt-4 border-t border-zion-purple/20"
-                            >
+                              className="mt-4 pt-4 border-t border-zion-purple/20">
                               {/* Features */}
                               <div className="mb-4">
                                 <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
@@ -369,8 +352,7 @@ export default function ComprehensivePricing2027() {
                               {/* CTA Button */}
                               <button 
                                 onClick={() => window.open(service.website, '_blank')}
-                                className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-                              >
+                                className="w-full bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105">
                                 Get Started
                               </button>
                             </motion.div>
@@ -425,8 +407,7 @@ export default function ComprehensivePricing2027() {
                               {service.tags.slice(0, 4).map((tag, tagIndex) => (
                                 <span 
                                   key={tagIndex}
-                                  className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30"
-                                >
+                                  className="px-2 py-1 bg-zion-purple/20 text-zion-cyan text-xs rounded-full border border-zion-purple/30">
                                   {tag}
                                 </span>
                               ))}
@@ -434,8 +415,7 @@ export default function ComprehensivePricing2027() {
                             
                             <button 
                               onClick={() => window.open(service.website, '_blank')}
-                              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2"
-                            >
+                              className="bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2">
                               Get Started
                             </button>
                           </div>
@@ -448,9 +428,9 @@ export default function ComprehensivePricing2027() {
             ) : (
               <motion.div 
                 className="text-center py-20"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                transition={{ duration: 0.5     }}
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -479,14 +459,12 @@ export default function ComprehensivePricing2027() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 transform hover:scale-105">
                 Contact Our Team
               </Link>
               <a 
                 href="tel:+13024640950" 
-                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300"
-              >
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-black transition-all duration-300">
                 Call +1 302 464 0950
               </a>
             </div>

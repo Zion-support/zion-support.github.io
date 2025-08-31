@@ -22,12 +22,12 @@ interface AIService {
   description: string;
   category: string;
   features: string[];
-  pricing: {
+  pricing: {  
     starter: number;
-    professional: number;
-    enterprise: number;
-  };
-  icon: React.ComponentType<any>;
+    professional: number
+    enterprise: number
+      };
+  icon: React.ComponentType<>;
   route: string;
   status: 'active' | 'beta' | 'coming-soon';
 }
@@ -38,8 +38,7 @@ const AdvancedAIServicesHub: React.FC = () => {
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'popularity'>('popularity');
 
   const aiServices: AIService[] = [
-    {
-      id: 'ai-project-management',
+    { id: 'ai-project-management',
       name: 'AI-Powered Project Management',
       description: 'Intelligent project planning, resource allocation, and predictive analytics for optimal project delivery.',
       category: 'project-management',
@@ -49,8 +48,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-project-management',
       status: 'active'
     },
-    {
-      id: 'ai-customer-support',
+    { id: 'ai-customer-support',
       name: 'AI Customer Support Automation',
       description: 'Automated customer service with intelligent chatbots, ticket routing, and sentiment analysis.',
       category: 'customer-support',
@@ -60,8 +58,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-customer-support-automation',
       status: 'active'
     },
-    {
-      id: 'ai-financial-analytics',
+    { id: 'ai-financial-analytics',
       name: 'AI Financial Analytics Platform',
       description: 'Advanced financial forecasting, risk assessment, and compliance monitoring powered by AI.',
       category: 'finance',
@@ -71,8 +68,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-financial-analytics',
       status: 'active'
     },
-    {
-      id: 'ai-marketing-automation',
+    { id: 'ai-marketing-automation',
       name: 'AI Marketing Automation',
       description: 'Intelligent audience segmentation, content personalization, and multi-channel campaign orchestration.',
       category: 'marketing',
@@ -82,8 +78,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-marketing-automation',
       status: 'active'
     },
-    {
-      id: 'ai-data-analytics',
+    { id: 'ai-data-analytics',
       name: 'AI Data Analytics Engine',
       description: 'Advanced data processing, pattern recognition, and predictive modeling for business intelligence.',
       category: 'analytics',
@@ -93,8 +88,7 @@ const AdvancedAIServicesHub: React.FC = () => {
       route: '/services/ai-data-analytics',
       status: 'beta'
     },
-    {
-      id: 'ai-cybersecurity',
+    { id: 'ai-cybersecurity',
       name: 'AI Cybersecurity Suite',
       description: 'Intelligent threat detection, automated response, and proactive security monitoring.',
       category: 'security',
@@ -143,8 +137,7 @@ const AdvancedAIServicesHub: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI Services Hub
           </h1>
@@ -157,9 +150,8 @@ const AdvancedAIServicesHub: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mb-12"
-        >
+          transition={{ delay: 0.2     }}
+          className="mb-12">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search Bar */}
             <div className="relative flex-1 max-w-md">
@@ -177,8 +169,7 @@ const AdvancedAIServicesHub: React.FC = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as 'name' | 'price' | 'popularity')}
-              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
-            >
+              className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500">
               <option value="popularity">Most Popular</option>
               <option value="name">Name A-Z</option>
               <option value="price">Price: Low to High</option>
@@ -190,9 +181,8 @@ const AdvancedAIServicesHub: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="mb-12"
-        >
+          transition={{ delay: 0.3     }}
+          className="mb-12">
           <div className="flex flex-wrap gap-4 justify-center">
             {categories.map((category) => (
               <button
@@ -215,9 +205,8 @@ const AdvancedAIServicesHub: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+          transition={{ delay: 0.4     }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AnimatePresence>
             {sortedServices.map((service, index) => (
               <motion.div
@@ -225,9 +214,8 @@ const AdvancedAIServicesHub: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                transition={{ delay: index * 0.1 }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                transition={{ delay: index * 0.1     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Status Badge */}
                 <div className="absolute top-4 right-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -279,8 +267,7 @@ const AdvancedAIServicesHub: React.FC = () => {
                 {/* Action Button */}
                 <Link
                   to={service.route}
-                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25"
-                >
+                  className="inline-flex items-center gap-2 w-full justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-purple-500/25">
                   Explore Service
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -293,9 +280,8 @@ const AdvancedAIServicesHub: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="text-center mt-20"
-        >
+          transition={{ delay: 0.6     }}
+          className="text-center mt-20">
           <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Transform Your Business?

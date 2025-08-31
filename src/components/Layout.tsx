@@ -1,14 +1,11 @@
 import React from 'react.ts';
 import { ReactNode  } from 'react.ts';
-interface LayoutProps extends React.PropsWithChildren<{}> {
+interface LayoutProps extends React.PropsWithChildren<{}> { children: ReactNode;
 
-  children: ReactNode;
-
-}
+    }
 const navigation: NavItem[] = [
   { label: 'Home', href: '/' },
-  { 
-    label: 'Services', 
+  { label: 'Services', 
     href: '/services',
     children: [
       { label: 'AI & Machine Learning', href: '/services#ai' },
@@ -27,13 +24,13 @@ const navigation: NavItem[] = [
   },
   { label: 'Contact', href: '/contact' }
 ];
-export default function Layout(...args: any[]): any {
+export default function Layout(...args: []): {  
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [dropdownOpen, setDropdownOpen] = useState<any>(null);
+  const [dropdownOpen, setDropdownOpen] = useState(null);
   const location = useLocation();
-  const isActive = (href: anystring)  => location.pathname === href;
-  const toggleSidebarDropdown = (label: anystring)  => {
-    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label);
+  const isActive = (href: string)  => location.pathname === href
+  const toggleSidebarDropdown = (label: string)  => {
+    setSidebarDropdownOpen(sidebarDropdownOpen === label ? null : label)
   };
 
   return (
@@ -67,8 +64,7 @@ export default function Layout(...args: any[]): any {
             <div className="flex items-center space-x-4">
               <a 
                 href="tel:+13024640950" 
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-              >
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors">
                 📞 Call Us
               </a>
             </div>
@@ -89,8 +85,7 @@ export default function Layout(...args: any[]): any {
                     <div>
                       <button
                         onClick={() => toggleSidebarDropdown(item.label)}
-                        className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-                      >
+                        className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors">
                         <span className="flex items-center space-x-2">
                           {item.icon && <item.icon className="w-4 h-4" />}
                           <span>{item.label}</span>
@@ -105,8 +100,7 @@ export default function Layout(...args: any[]): any {
                             <a
                               key={child.label}
                               href={child.href}
-                              className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
-                            >
+                              className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors">
                               {child.label}
                             </a>
                           ))}
@@ -116,8 +110,7 @@ export default function Layout(...args: any[]): any {
                   ) : (
                     <a
                       href={item.href}
-                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors"
-                    >
+                      className="flex items-center space-x-2 px-3 py-2 text-sm font-medium rounded-md hover:bg-accent transition-colors">
                       {item.icon && <item.icon className="w-4 h-4" />}
                       <span>{item.label}</span>
                     </a>

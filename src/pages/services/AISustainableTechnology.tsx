@@ -33,18 +33,15 @@ export default function AISustainableTechnology() {
   ];
 
   const tiers = [
-    { 
-      name: 'Sustainability Starter', 
+    { name: 'Sustainability Starter', 
       price: '$299/mo', 
       details: ['Up to 5 locations', 'Basic AI monitoring', 'Standard reporting', 'Email support'] 
     },
-    { 
-      name: 'Sustainability Professional', 
+    { name: 'Sustainability Professional', 
       price: '$799/mo', 
       details: ['Up to 25 locations', 'Advanced AI features', 'Custom dashboards', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise Sustainability', 
+    { name: 'Enterprise Sustainability', 
       price: '$2,499/mo', 
       details: ['Unlimited locations', 'Full AI suite', 'White-label options', '24/7 support'] 
     },

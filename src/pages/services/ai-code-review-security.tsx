@@ -19,7 +19,7 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI-Powered Code Review & Security Analysis
@@ -45,10 +45,9 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced AI-Powered Features
               </h2>
@@ -59,33 +58,27 @@ const AICodeReviewSecurity: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "AI-Powered Analysis",
+                { title: "AI-Powered Analysis",
                   description: "Machine learning algorithms that continuously improve detection accuracy based on code patterns and security trends.",
                   icon: "🤖"
                 },
-                {
-                  title: "Vulnerability Detection",
+                { title: "Vulnerability Detection",
                   description: "Advanced SAST, DAST, SCA, and IAST analysis to identify security weaknesses before they reach production.",
                   icon: "🔒"
                 },
-                {
-                  title: "Bug Detection",
+                { title: "Bug Detection",
                   description: "Intelligent code review that catches logic errors, performance issues, and maintainability problems.",
                   icon: "🐛"
                 },
-                {
-                  title: "Multi-Language Support",
+                { title: "Multi-Language Support",
                   description: "Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust, and more.",
                   icon: "🌐"
                 },
-                {
-                  title: "Git Integration",
+                { title: "Git Integration",
                   description: "Seamless integration with Git workflows, providing real-time feedback on pull requests and commits.",
                   icon: "📚"
                 },
-                {
-                  title: "Real-Time Analysis",
+                { title: "Real-Time Analysis",
                   description: "Instant feedback and continuous monitoring with configurable security policies and compliance checks.",
                   icon: "⚡"
                 }
@@ -95,9 +88,8 @@ const AICodeReviewSecurity: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -113,10 +105,9 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Comprehensive Security Testing Approaches
               </h2>
@@ -127,23 +118,19 @@ const AICodeReviewSecurity: React.FC = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {[
-                {
-                  title: "Static Application Security Testing (SAST)",
+                { title: "Static Application Security Testing (SAST)",
                   description: "Analyzes source code to identify security vulnerabilities, coding errors, and compliance issues without executing the application.",
                   benefits: ["Early vulnerability detection", "No runtime overhead", "Comprehensive code coverage"]
                 },
-                {
-                  title: "Dynamic Application Security Testing (DAST)",
+                { title: "Dynamic Application Security Testing (DAST)",
                   description: "Tests running applications to identify security vulnerabilities from an external attacker's perspective.",
                   benefits: ["Real-world attack simulation", "Runtime vulnerability detection", "External threat perspective"]
                 },
-                {
-                  title: "Software Composition Analysis (SCA)",
+                { title: "Software Composition Analysis (SCA)",
                   description: "Identifies vulnerabilities in third-party dependencies, open-source components, and libraries.",
                   benefits: ["Dependency vulnerability tracking", "License compliance", "Supply chain security"]
                 },
-                {
-                  title: "Interactive Application Security Testing (IAST)",
+                { title: "Interactive Application Security Testing (IAST)",
                   description: "Combines SAST and DAST approaches to provide real-time security analysis during application execution.",
                   benefits: ["Real-time analysis", "Accurate vulnerability detection", "Minimal false positives"]
                 }
@@ -153,9 +140,8 @@ const AICodeReviewSecurity: React.FC = () => {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">{approach.title}</h3>
                   <p className="text-gray-300 mb-4">{approach.description}</p>
                   <ul className="space-y-2">
@@ -178,10 +164,9 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why Choose Our AI-Powered Platform?
               </h2>
@@ -204,9 +189,8 @@ const AICodeReviewSecurity: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30"
-                >
+                  viewport={{ once: true     }}
+                  className="text-center bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30">
                   <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2">{benefit.metric}</div>
                   <p className="text-white text-lg">{benefit.description}</p>
                 </motion.div>
@@ -221,10 +205,9 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industry-Specific Use Cases
               </h2>
@@ -235,23 +218,19 @@ const AICodeReviewSecurity: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                {
-                  industry: "Financial Services",
+                { industry: "Financial Services",
                   description: "Secure banking applications, payment systems, and trading platforms with compliance-focused security analysis.",
                   features: ["PCI DSS compliance", "SOX compliance", "Real-time fraud detection"]
                 },
-                {
-                  industry: "Healthcare",
+                { industry: "Healthcare",
                   description: "Protect patient data and ensure HIPAA compliance in medical software and telemedicine platforms.",
                   features: ["HIPAA compliance", "Patient data protection", "Medical device security"]
                 },
-                {
-                  industry: "E-commerce",
+                { industry: "E-commerce",
                   description: "Secure online shopping platforms, payment gateways, and customer data management systems.",
                   features: ["Payment security", "Customer data protection", "Fraud prevention"]
                 },
-                {
-                  industry: "Government",
+                { industry: "Government",
                   description: "Secure government applications, citizen portals, and critical infrastructure systems.",
                   features: ["FedRAMP compliance", "FISMA compliance", "National security standards"]
                 }
@@ -261,9 +240,8 @@ const AICodeReviewSecurity: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-2">
@@ -286,10 +264,9 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Technology Stack & Integrations
               </h2>
@@ -308,9 +285,8 @@ const AICodeReviewSecurity: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300">
                   <span className="text-white font-medium">{tech}</span>
                 </motion.div>
               ))}
@@ -324,10 +300,9 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Transparent Pricing Plans
               </h2>
@@ -338,8 +313,7 @@ const AICodeReviewSecurity: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                {
-                  name: "Developer",
+                { name: "Developer",
                   price: "$49",
                   period: "/month",
                   description: "Perfect for individual developers and small projects",
@@ -353,8 +327,7 @@ const AICodeReviewSecurity: React.FC = () => {
                   ],
                   popular: false
                 },
-                {
-                  name: "Team",
+                { name: "Team",
                   price: "$199",
                   period: "/month",
                   description: "Ideal for development teams and growing companies",
@@ -370,8 +343,7 @@ const AICodeReviewSecurity: React.FC = () => {
                   ],
                   popular: true
                 },
-                {
-                  name: "Enterprise",
+                { name: "Enterprise",
                   price: "$799",
                   period: "/month",
                   description: "Comprehensive solution for large organizations",
@@ -393,7 +365,7 @@ const AICodeReviewSecurity: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-blue-600 to-purple-600 border-2 border-blue-400' 
@@ -441,9 +413,8 @@ const AICodeReviewSecurity: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
+              viewport={{ once: true     }}
+              className="text-center mt-12">
               <p className="text-gray-300 mb-4">
                 All plans include a 14-day free trial. Annual plans save 20%.
               </p>
@@ -460,8 +431,8 @@ const AICodeReviewSecurity: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Secure Your Code?

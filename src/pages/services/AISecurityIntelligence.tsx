@@ -13,18 +13,15 @@ export default function AISecurityIntelligence() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$599/mo', 
       details: ['Up to 100 threat feeds', 'Basic AI features', 'Standard intelligence', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$1,499/mo', 
       details: ['Up to 500 threat feeds', 'Advanced AI features', 'Enhanced intelligence', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,999/mo', 
       details: ['Unlimited threat feeds', 'Custom AI models', 'Full intelligence suite', '24/7 dedicated support'] 
     },

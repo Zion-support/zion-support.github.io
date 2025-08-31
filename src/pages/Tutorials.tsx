@@ -4,26 +4,22 @@ import { Search, Play, Clock, Star, Users, BookOpen, Video, Code, Brain, Shield,
 
 const Tutorials = () => {
   const tutorialCategories = [
-    {
-      title: "Beginner",
+    { title: "Beginner",
       description: "Perfect for those new to AI and technology",
       color: "from-green-500 to-emerald-500",
       count: "12"
     },
-    {
-      title: "Intermediate",
+    { title: "Intermediate",
       description: "For users with some experience",
       color: "from-yellow-500 to-orange-500",
       count: "18"
     },
-    {
-      title: "Advanced",
+    { title: "Advanced",
       description: "Complex topics for experienced users",
       color: "from-red-500 to-pink-500",
       count: "8"
     },
-    {
-      title: "Expert",
+    { title: "Expert",
       description: "Cutting-edge research and techniques",
       color: "from-purple-500 to-indigo-500",
       count: "5"
@@ -31,8 +27,7 @@ const Tutorials = () => {
   ];
 
   const featuredTutorials = [
-    {
-      title: "Building Your First AI Chatbot",
+    { title: "Building Your First AI Chatbot",
       description: "Learn to create a conversational AI chatbot using our platform. This comprehensive tutorial covers everything from data preparation to deployment.",
       category: "Beginner",
       duration: "45 min",
@@ -41,8 +36,7 @@ const Tutorials = () => {
       students: "2.3k",
       thumbnail: "/images/tutorials/ai-chatbot.jpg"
     },
-    {
-      title: "Quantum Neural Network Implementation",
+    { title: "Quantum Neural Network Implementation",
       description: "Dive deep into quantum computing and implement neural networks that leverage quantum properties for enhanced performance.",
       category: "Advanced",
       duration: "90 min",
@@ -51,8 +45,7 @@ const Tutorials = () => {
       students: "856",
       thumbnail: "/images/tutorials/quantum-neural.jpg"
     },
-    {
-      title: "Cybersecurity Best Practices",
+    { title: "Cybersecurity Best Practices",
       description: "Master essential cybersecurity concepts and implement robust security measures to protect your applications and data.",
       category: "Intermediate",
       duration: "60 min",
@@ -61,8 +54,7 @@ const Tutorials = () => {
       students: "1.5k",
       thumbnail: "/images/tutorials/cybersecurity.jpg"
     },
-    {
-      title: "AI Model Optimization",
+    { title: "AI Model Optimization",
       description: "Learn advanced techniques to optimize your AI models for better performance, faster inference, and reduced resource consumption.",
       category: "Expert",
       duration: "75 min",
@@ -74,32 +66,28 @@ const Tutorials = () => {
   ];
 
   const recentTutorials = [
-    {
-      title: "Data Pipeline Automation",
+    { title: "Data Pipeline Automation",
       category: "Intermediate",
       duration: "40 min",
       instructor: "David Kim",
       rating: 4.5,
       students: "432"
     },
-    {
-      title: "Cloud Infrastructure Setup",
+    { title: "Cloud Infrastructure Setup",
       category: "Beginner",
       duration: "35 min",
       instructor: "Lisa Thompson",
       rating: 4.4,
       students: "789"
     },
-    {
-      title: "API Integration Patterns",
+    { title: "API Integration Patterns",
       category: "Intermediate",
       duration: "50 min",
       instructor: "Dr. Sarah Chen",
       rating: 4.6,
       students: "567"
     },
-    {
-      title: "Machine Learning Model Deployment",
+    { title: "Machine Learning Model Deployment",
       category: "Advanced",
       duration: "65 min",
       instructor: "Michael Rodriguez",
@@ -109,22 +97,19 @@ const Tutorials = () => {
   ];
 
   const learningPaths = [
-    {
-      title: "AI Developer Path",
+    { title: "AI Developer Path",
       description: "Complete path from beginner to AI expert",
       courses: 8,
       duration: "12 weeks",
       level: "Beginner to Expert"
     },
-    {
-      title: "Cybersecurity Specialist",
+    { title: "Cybersecurity Specialist",
       description: "Master security and compliance",
       courses: 6,
       duration: "8 weeks",
       level: "Intermediate to Expert"
     },
-    {
-      title: "Quantum Computing Engineer",
+    { title: "Quantum Computing Engineer",
       description: "Learn quantum algorithms and applications",
       courses: 5,
       duration: "10 weeks",
@@ -187,8 +172,7 @@ const Tutorials = () => {
             {featuredTutorials.map((tutorial, index) => (
               <div 
                 key={index}
-                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group"
-              >
+                className="bg-zion-blue-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl overflow-hidden hover:border-zion-cyan/40 transition-all duration-300 group">
                 {/* Tutorial Image Placeholder */}
                 <div className="h-48 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-zion-cyan" />
@@ -262,8 +246,7 @@ const Tutorials = () => {
             {learningPaths.map((path, index) => (
               <div 
                 key={index}
-                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                className="bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-8 text-center hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <BookOpen className="w-8 h-8 text-white" />
                 </div>

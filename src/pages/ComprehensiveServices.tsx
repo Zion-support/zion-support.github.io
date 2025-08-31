@@ -32,8 +32,7 @@ import { SEO } from '../components/SEO';
 
 const ComprehensiveServices: React.FC = () => {
   const serviceCategories = [
-    {
-      title: "AI & Machine Learning",
+    { title: "AI & Machine Learning",
       description: "Cutting-edge artificial intelligence solutions",
       icon: Brain,
       services: [
@@ -44,8 +43,7 @@ const ComprehensiveServices: React.FC = () => {
       ],
       featured: true
     },
-    {
-      title: "Quantum Computing",
+    { title: "Quantum Computing",
       description: "Next-generation quantum solutions",
       icon: Atom,
       services: [
@@ -55,8 +53,7 @@ const ComprehensiveServices: React.FC = () => {
       ],
       featured: true
     },
-    {
-      title: "Cloud & DevOps",
+    { title: "Cloud & DevOps",
       description: "Scalable infrastructure solutions",
       icon: Cloud,
       services: [
@@ -65,8 +62,7 @@ const ComprehensiveServices: React.FC = () => {
         { name: "IT Infrastructure", path: "/services/it-infrastructure" }
       ]
     },
-    {
-      title: "IoT & Edge Computing",
+    { title: "IoT & Edge Computing",
       description: "Smart device solutions",
       icon: Cpu,
       services: [
@@ -75,8 +71,7 @@ const ComprehensiveServices: React.FC = () => {
         { name: "Smart Manufacturing", path: "/services/manufacturing-solutions" }
       ]
     },
-    {
-      title: "Micro SaaS Solutions",
+    { title: "Micro SaaS Solutions",
       description: "Productized business tools",
       icon: Rocket,
       services: [
@@ -85,8 +80,7 @@ const ComprehensiveServices: React.FC = () => {
         { name: "Website Analytics", path: "/services/website-analytics" }
       ]
     },
-    {
-      title: "Business Intelligence",
+    { title: "Business Intelligence",
       description: "Data-driven insights",
       icon: BarChart3,
       services: [
@@ -119,9 +113,8 @@ const ComprehensiveServices: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Comprehensive
@@ -137,15 +130,13 @@ const ComprehensiveServices: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                 Request Quote
               </Link>
             </div>
@@ -163,8 +154,7 @@ const ComprehensiveServices: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -182,9 +172,8 @@ const ComprehensiveServices: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Our <span className="text-cyan-400">Service Categories</span>
             </h2>
@@ -224,8 +213,7 @@ const ComprehensiveServices: React.FC = () => {
                     <li key={serviceIndex}>
                       <Link
                         to={service.path}
-                        className="flex items-center text-sm text-slate-400 hover:text-cyan-400 transition-colors"
-                      >
+                        className="flex items-center text-sm text-slate-400 hover:text-cyan-400 transition-colors">
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {service.name}
                       </Link>
@@ -235,8 +223,7 @@ const ComprehensiveServices: React.FC = () => {
                 
                 <Link
                   to={`/services#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                >
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
                   View All {category.title}
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
@@ -252,7 +239,7 @@ const ComprehensiveServices: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -265,15 +252,13 @@ const ComprehensiveServices: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Your Journey
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/request-quote"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                 Get Custom Quote
               </Link>
             </div>

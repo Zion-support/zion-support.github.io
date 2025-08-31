@@ -27,9 +27,9 @@ interface AnalyticsData {
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  referrers: Array<{ source: string; count: number }>;
+  topPages: Array<{ path: string; views: number     }>;
+  userAgents: Array<{ device: string; count: number     }>;
+  referrers: Array<{ source: string; count: number     }>;
   timeOnPage: number;
   scrollDepth: number;
   clickEvents: number;
@@ -43,8 +43,7 @@ interface Props {
 
 export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props) {
   const [isVisible, setIsVisible] = useState(false);
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
-    pageViews: 0,
+  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({ pageViews: 0,
     uniqueVisitors: 0,
     sessionDuration: 0,
     bounceRate: 0,
@@ -158,7 +157,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
     trackReferrer();
 
     // Add event listeners
-    window.addEventListener('scroll', trackScrollDepth, { passive: true });
+    window.addEventListener('scroll', trackScrollDepth, { passive: true     });
     document.addEventListener('click', trackClickEvents);
     document.addEventListener('submit', trackFormSubmissions);
     
@@ -235,8 +234,8 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
       <motion.button
         onClick={() => setIsVisible(true)}
         className="fixed bottom-44 right-4 z-50 p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        whileHover={{ scale: 1.1     }}
+        whileTap={{ scale: 0.9     }}
         title="Analytics Dashboard"
         aria-label="Open analytics dashboard"
       >
@@ -251,8 +250,7 @@ export function AdvancedAnalytics({ enabled = true, showMetrics = true }: Props)
         initial={{ opacity: 0, x: 300 }}
         animate={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0, x: 300 }}
-        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[90vh] overflow-y-auto"
-      >
+        className="fixed top-4 right-4 z-50 w-96 bg-white/95 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200/50 p-6 max-h-[90vh] overflow-y-auto">
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-xl font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-6 h-6 text-indigo-500" />

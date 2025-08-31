@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface AIService {
   id: number;
@@ -37,11 +37,10 @@ export interface AIService {
   integrations: string[];
   freeTier: boolean;
   trialPeriod: string;
-}
+    }
 
 // Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
+const zionContact: ServiceContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -49,8 +48,7 @@ const zionContact: ServiceContact = {
 
 // Comprehensive AI Services 2030
 export const comprehensiveAIServices2030: AIService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "AI-Powered Predictive Analytics Platform",
     category: "Predictive Analytics",
     description: "Advanced AI platform that analyzes historical data to predict future trends, customer behavior, and business outcomes with 95%+ accuracy. Enables proactive decision-making and strategic planning.",
@@ -108,8 +106,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: true,
     trialPeriod: "30 days"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Natural Language Processing & Chatbot Platform",
     category: "NLP & Conversational AI",
     description: "Sophisticated NLP platform that understands, processes, and generates human language. Powers intelligent chatbots, virtual assistants, and language processing applications with 98% accuracy.",
@@ -167,8 +164,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: true,
     trialPeriod: "21 days"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "Computer Vision & Image Recognition Platform",
     category: "Computer Vision",
     description: "Advanced computer vision platform that analyzes images and videos to extract insights, detect objects, and automate visual processes. Achieves 99% accuracy in object detection and classification.",
@@ -226,8 +222,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: false,
     trialPeriod: "14 days"
   },
-  {
-    id: 4,
+  { id: 4,
     name: "AI-Powered Recommendation Engine",
     category: "Recommendation Systems",
     description: "Intelligent recommendation engine that analyzes user behavior and preferences to deliver personalized suggestions. Increases conversion rates by 35% and improves customer engagement significantly.",
@@ -285,8 +280,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: true,
     trialPeriod: "30 days"
   },
-  {
-    id: 5,
+  { id: 5,
     name: "AI-Powered Fraud Detection System",
     category: "Fraud Detection",
     description: "Advanced AI system that detects fraudulent activities in real-time across financial transactions, insurance claims, and digital interactions. Achieves 99.5% accuracy with minimal false positives.",
@@ -344,8 +338,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: false,
     trialPeriod: "21 days"
   },
-  {
-    id: 6,
+  { id: 6,
     name: "AI-Powered Supply Chain Optimization",
     category: "Supply Chain AI",
     description: "Intelligent supply chain platform that uses AI to optimize inventory, predict demand, and streamline operations. Reduces costs by 30% and improves efficiency by 50%.",
@@ -403,8 +396,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: false,
     trialPeriod: "30 days"
   },
-  {
-    id: 7,
+  { id: 7,
     name: "AI-Powered Healthcare Diagnostics",
     category: "Healthcare AI",
     description: "Advanced AI platform for medical image analysis, disease detection, and diagnostic support. Achieves 97% accuracy in medical imaging and provides real-time diagnostic assistance.",
@@ -461,8 +453,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: false,
     trialPeriod: "30 days"
   },
-  {
-    id: 8,
+  { id: 8,
     name: "AI-Powered Financial Trading Intelligence",
     category: "Financial AI",
     description: "Sophisticated AI platform for financial market analysis, trading strategy optimization, and risk management. Provides real-time insights and automated trading recommendations.",
@@ -520,8 +511,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: false,
     trialPeriod: "14 days"
   },
-  {
-    id: 9,
+  { id: 9,
     name: "AI-Powered Content Generation Platform",
     category: "Content AI",
     description: "Advanced AI platform that generates high-quality, engaging content for marketing, social media, and business communications. Supports multiple languages and content types with 96% quality score.",
@@ -578,8 +568,7 @@ export const comprehensiveAIServices2030: AIService[] = [
     freeTier: true,
     trialPeriod: "30 days"
   },
-  {
-    id: 10,
+  { id: 10,
     name: "AI-Powered Process Automation Platform",
     category: "Process Automation",
     description: "Intelligent process automation platform that uses AI to automate complex business processes, workflows, and decision-making. Reduces manual work by 70% and improves accuracy by 95%.",

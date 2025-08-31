@@ -71,24 +71,18 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
     return filtered;
   }, [searchTerm, selectedCategory, sortBy]);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
+  const itemVariants = { hidden: { y: 20, opacity: 0 },
+    visible: { y: 0,
       opacity: 1,
-      transition: {
-        duration: 0.5
-      }
+      transition: { duration: 0.5
+          }
     }
   };
 
@@ -97,9 +91,9 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
       {/* Header Section */}
       <motion.div 
         className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 py-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0     }}
+        animate={{ opacity: 1     }}
+        transition={{ duration: 0.8     }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
@@ -168,8 +162,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-              >
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50">
                 {categories.map(category => (
                   <option key={category} value={category}>
                     {category === 'all' ? 'All Categories' : category.charAt(0).toUpperCase() + category.slice(1)}
@@ -184,8 +177,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50"
-              >
+                className="px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500/50">
                 <option value="innovation">Sort by Innovation</option>
                 <option value="roi">Sort by ROI</option>
                 <option value="price">Sort by Price</option>
@@ -289,8 +281,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
                   href={service.contactInfo.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:gap-3 transition-all duration-300"
-                >
+                  className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 text-sm font-medium group-hover:gap-3 transition-all duration-300">
                   Learn More <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
@@ -301,8 +292,8 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
         {filteredServices.length === 0 && (
           <motion.div 
             className="text-center py-20"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
           >
             <div className="text-6xl mb-4">🔍</div>
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -364,8 +355,7 @@ const AdvancedInnovativeServicesShowcase2026: React.FC = () => {
               href="https://ziontechgroup.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
-            >
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
               Visit Our Website
               <ArrowRight className="w-5 h-5" />
             </a>

@@ -4,9 +4,9 @@ interface EnhancedMarketplaceCardProps {
   title: string;
   description: string;
   className?: string;
-}
+    }
 
-const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({ 
+const EnhancedMarketplaceCard: React.FC = ({ 
   title, 
   description, 
   className = "" 

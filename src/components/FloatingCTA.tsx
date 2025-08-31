@@ -10,8 +10,8 @@ export function FloatingCTA() {
       {/* Floating Action Button */}
       <motion.div
         className="fixed bottom-6 right-6 z-50"
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
+        initial={{ scale: 0     }}
+        animate={{ scale: 1     }}
         transition={{ duration: 0.3, delay: 2 }}
       >
         <div className="relative">
@@ -19,8 +19,8 @@ export function FloatingCTA() {
           <motion.button
             onClick={() => setIsExpanded(!isExpanded)}
             className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center text-white text-2xl"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1     }}
+            whileTap={{ scale: 0.9     }}
           >
             {isExpanded ? '✕' : '💬'}
           </motion.button>
@@ -33,14 +33,13 @@ export function FloatingCTA() {
                 initial={{ opacity: 0, scale: 0.8, y: 10 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.8, y: 10 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.2     }}
               >
                 <div className="space-y-3">
                   <Link
                     to="/contact"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >
+                    onClick={() => setIsExpanded(false)}>
                     <span className="text-xl">📞</span>
                     <div>
                       <div className="font-semibold">Contact Us</div>
@@ -51,8 +50,7 @@ export function FloatingCTA() {
                   <Link
                     to="/services"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >
+                    onClick={() => setIsExpanded(false)}>
                     <span className="text-xl">🚀</span>
                     <div>
                       <div className="font-semibold">Our Services</div>
@@ -63,8 +61,7 @@ export function FloatingCTA() {
                   <Link
                     to="/quote"
                     className="flex items-center gap-3 p-3 rounded-lg hover:bg-slate-700 transition-colors duration-200 text-white"
-                    onClick={() => setIsExpanded(false)}
-                  >
+                    onClick={() => setIsExpanded(false)}>
                     <span className="text-xl">💰</span>
                     <div>
                       <div className="font-semibold">Get Quote</div>
@@ -93,9 +90,9 @@ export function FloatingCTA() {
         {isExpanded && (
           <motion.div
             className="fixed inset-0 bg-black/20 z-40"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0     }}
+            animate={{ opacity: 1     }}
+            exit={{ opacity: 0     }}
             onClick={() => setIsExpanded(false)}
           />
         )}

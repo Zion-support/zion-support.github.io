@@ -61,7 +61,7 @@ export default function ITHelpdesk() {
 
       <section className="pb-16 max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-6">
-          {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'}].map((c) => (
+          {[{ icon: Ticket, t: 'Tickets & SLAs'}, { icon: Cpu, t: 'Remote Support'}, { icon: Shield, t: 'Security & SSO'}].map((c) => (
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>

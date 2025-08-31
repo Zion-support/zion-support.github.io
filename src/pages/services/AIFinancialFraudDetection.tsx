@@ -21,23 +21,19 @@ import {
 
 const AIFinancialFraudDetection: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Detection",
       description: "Advanced machine learning models that detect fraud patterns with 99.2% accuracy using behavioral analysis and real-time transaction monitoring."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Real-time Monitoring",
       description: "24/7 transaction monitoring with sub-second response times, detecting and blocking fraudulent activities before they impact your business."
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Multi-Layer Security",
       description: "Comprehensive fraud prevention combining AI detection, rule-based systems, and human expertise for maximum protection."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Adaptive Learning",
       description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."
     }
@@ -69,22 +65,19 @@ const AIFinancialFraudDetection: React.FC = () => {
   ];
 
   const pricing = [
-    {
-      plan: "Starter",
+    { plan: "Starter",
       price: "$799",
       period: "/month",
       features: ["Up to 10K transactions/month", "Basic fraud detection", "Email alerts", "Standard support"],
       popular: false
     },
-    {
-      plan: "Professional",
+    { plan: "Professional",
       price: "$1,999",
       period: "/month",
       features: ["Up to 100K transactions/month", "Advanced AI models", "Real-time blocking", "Priority support", "API access"],
       popular: true
     },
-    {
-      plan: "Enterprise",
+    { plan: "Enterprise",
       price: "Custom",
       period: "",
       features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],
@@ -108,9 +101,8 @@ const AIFinancialFraudDetection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+            transition={{ duration: 0.8     }}
+            className="mb-8">
             <div className="inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6">
               <Shield className="w-4 h-4 mr-2" />
               Fraud Prevention Platform
@@ -145,10 +137,9 @@ const AIFinancialFraudDetection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent">
               Advanced Security Features
             </h2>
@@ -163,10 +154,9 @@ const AIFinancialFraudDetection: React.FC = () => {
                 key={feature.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -184,10 +174,9 @@ const AIFinancialFraudDetection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">
               Proven Results
             </h2>
@@ -202,10 +191,9 @@ const AIFinancialFraudDetection: React.FC = () => {
                 key={benefit}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -222,10 +210,9 @@ const AIFinancialFraudDetection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Industry Applications
             </h2>
@@ -240,10 +227,9 @@ const AIFinancialFraudDetection: React.FC = () => {
                 key={useCase}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors"
-              >
+                className="bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors">
                 <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
@@ -260,10 +246,9 @@ const AIFinancialFraudDetection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">
               Seamless Integrations
             </h2>
@@ -278,10 +263,9 @@ const AIFinancialFraudDetection: React.FC = () => {
                 key={integration}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors"
-              >
+                className="bg-slate-800 p-4 rounded-lg border border-slate-700 text-center hover:border-indigo-500 transition-colors">
                 <p className="text-slate-300 text-sm font-medium">{integration}</p>
               </motion.div>
             ))}
@@ -295,10 +279,9 @@ const AIFinancialFraudDetection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
               Transparent Pricing
             </h2>
@@ -313,7 +296,7 @@ const AIFinancialFraudDetection: React.FC = () => {
                 key={plan.plan}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${
                   plan.popular 
@@ -365,8 +348,8 @@ const AIFinancialFraudDetection: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Ready to Stop Financial Fraud?
@@ -377,15 +360,13 @@ const AIFinancialFraudDetection: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center px-8 py-4 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a 
                 href="/contact" 
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-all duration-300">
                 Schedule Demo
               </a>
             </div>
@@ -402,7 +383,7 @@ const AIFinancialFraudDetection: React.FC = () => {
               <div>
                 <DollarSign className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                 <p className="font-semibold">Starting at $799/month</p>
-                <p className="text-sm">No setup fees, cancel anytime</p>
+                <p className="text-sm">No setup fees, cancel time</p>
               </div>
               <div>
                 <Clock className="w-6 h-6 text-green-400 mx-auto mb-2" />

@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface MicroSaasService {
   id: number;
@@ -32,7 +32,7 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-}
+    }
 
 export interface ITService {
   id: number;
@@ -55,7 +55,7 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-}
+    }
 
 export interface AIService {
   id: number;
@@ -80,11 +80,10 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-}
+    }
 
 // Zion Tech Group Contact Information
-const ZION_CONTACT: ServiceContact = {
-  phone: "+1 302 464 0950",
+const ZION_CONTACT: ServiceContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -92,8 +91,7 @@ const ZION_CONTACT: ServiceContact = {
 
 // Revolutionary Micro SAAS Services 2028
 export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "AI-Powered Legal Document Analyzer",
     category: "Legal Tech",
     pricing: "Professional",
@@ -138,8 +136,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
     marketSize: "$15.8 billion",
     growthRate: "23.4% annually"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Quantum-Enhanced Supply Chain Optimizer",
     category: "Supply Chain",
     pricing: "Enterprise",
@@ -184,8 +181,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
     marketSize: "$45.2 billion",
     growthRate: "18.7% annually"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "Neuro-Marketing Analytics Platform",
     category: "Marketing Tech",
     pricing: "Professional",
@@ -230,8 +226,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
     marketSize: "$23.1 billion",
     growthRate: "21.3% annually"
   },
-  {
-    id: 4,
+  { id: 4,
     name: "Biometric Employee Wellness Monitor",
     category: "HR Tech",
     pricing: "Professional",
@@ -275,8 +270,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
     marketSize: "$8.9 billion",
     growthRate: "28.5% annually"
   },
-  {
-    id: 5,
+  { id: 5,
     name: "Carbon Footprint Trading Platform",
     category: "Sustainability",
     pricing: "Enterprise",
@@ -321,8 +315,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
     marketSize: "$12.7 billion",
     growthRate: "31.2% annually"
   },
-  {
-    id: 6,
+  { id: 6,
     name: "AI-Powered Real Estate Valuation Engine",
     category: "Real Estate Tech",
     pricing: "Professional",
@@ -367,8 +360,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
     marketSize: "$18.3 billion",
     growthRate: "19.8% annually"
   },
-  {
-    id: 7,
+  { id: 7,
     name: "Quantum-Secure Communication Platform",
     category: "Cybersecurity",
     pricing: "Enterprise",
@@ -413,8 +405,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
     marketSize: "$31.8 billion",
     growthRate: "26.4% annually"
   },
-  {
-    id: 8,
+  { id: 8,
     name: "Predictive Maintenance AI Platform",
     category: "Industrial IoT",
     pricing: "Professional",
@@ -463,8 +454,7 @@ export const revolutionaryMicroSaasServices2028: MicroSaasService[] = [
 
 // Revolutionary IT Infrastructure Services 2028
 export const revolutionaryITInfrastructureServices2028: ITService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Quantum-Enhanced Cloud Infrastructure",
     category: "Cloud Computing",
     description: "Next-generation cloud infrastructure that integrates quantum computing capabilities with traditional cloud services for unprecedented performance and security.",
@@ -506,8 +496,7 @@ export const revolutionaryITInfrastructureServices2028: ITService[] = [
     marketSize: "$178.6 billion",
     growthRate: "22.7% annually"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "AI-Powered Network Security Operations Center",
     category: "Cybersecurity",
     description: "Intelligent security operations center that uses AI and machine learning to detect, prevent, and respond to cyber threats in real-time with automated incident response.",
@@ -553,8 +542,7 @@ export const revolutionaryITInfrastructureServices2028: ITService[] = [
 
 // Revolutionary AI Services 2028
 export const revolutionaryAIServices2028: AIService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Multi-Modal AI Content Studio",
     category: "Content Creation",
     description: "Advanced AI platform that generates text, images, video, and audio content using multiple AI models, ensuring brand consistency and high-quality output across all media types.",
@@ -609,8 +597,7 @@ export const revolutionaryAIServices2028: AIService[] = [
       "Transparency reporting"
     ]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Quantum AI Drug Discovery Platform",
     category: "Healthcare AI",
     description: "Revolutionary AI platform that combines quantum computing with machine learning to accelerate drug discovery, predict molecular interactions, and optimize pharmaceutical development.",

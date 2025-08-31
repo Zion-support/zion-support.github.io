@@ -5,33 +5,28 @@ import { Link } from 'react-router-dom';
 
 const ServicesSitemap: React.FC = () => {
   const allServices = [
-    {
-      category: "AI-Powered Micro SAAS Services",
+    { category: "AI-Powered Micro SAAS Services",
       description: "Cutting-edge AI solutions with measurable business impact",
       services: [
-        {
-          title: "AI Code Review & Security Analysis",
+        { title: "AI Code Review & Security Analysis",
           url: "/services/ai-code-review-security",
           description: "Advanced vulnerability detection with 85% accuracy improvement",
           pricing: "$49 - $799/month",
           features: ["85% vulnerability reduction", "50+ programming languages", "SAST, DAST, SCA, IAST", "Git integration"]
         },
-        {
-          title: "AI Customer Experience Analytics",
+        { title: "AI Customer Experience Analytics",
           url: "/services/ai-customer-experience-analytics",
           description: "Transform customer insights into actionable intelligence",
           pricing: "$299 - $1,999/month",
           features: ["Real-time sentiment analysis", "Customer journey tracking", "Predictive analytics", "Omnichannel insights"]
         },
-        {
-          title: "AI DevOps Automation Platform",
+        { title: "AI DevOps Automation Platform",
           url: "/services/ai-devops-automation-platform",
           description: "Revolutionize DevOps workflow with AI-powered automation",
           pricing: "$199 - $1,499/month",
           features: ["AI pipeline optimization", "Intelligent deployment", "GitOps workflows", "Multi-cloud orchestration"]
         },
-        {
-          title: "AI IoT Edge Computing Platform",
+        { title: "AI IoT Edge Computing Platform",
           url: "/services/ai-iot-edge-computing-platform",
           description: "Revolutionize IoT with AI-powered edge computing",
           pricing: "$299 - $2,499/month",
@@ -39,26 +34,22 @@ const ServicesSitemap: React.FC = () => {
         }
       ]
     },
-    {
-      category: "Cloud & Infrastructure Services",
+    { category: "Cloud & Infrastructure Services",
       description: "Scalable cloud solutions and enterprise infrastructure",
       services: [
-        {
-          title: "Cloud DevOps",
+        { title: "Cloud DevOps",
           url: "/services/cloud-devops",
           description: "Streamlined cloud deployment and management",
           pricing: "Custom pricing",
           features: ["Multi-cloud deployment", "Infrastructure as Code", "Automated scaling", "Cost optimization"]
         },
-        {
-          title: "IT Infrastructure",
+        { title: "IT Infrastructure",
           url: "/services/it-infrastructure",
           description: "Enterprise-grade infrastructure solutions",
           pricing: "Custom pricing",
           features: ["Network design", "Server management", "Storage solutions", "Backup & recovery"]
         },
-        {
-          title: "Digital Twin",
+        { title: "Digital Twin",
           url: "/services/digital-twin",
           description: "Virtual representation of physical systems",
           pricing: "Custom pricing",
@@ -66,26 +57,22 @@ const ServicesSitemap: React.FC = () => {
         }
       ]
     },
-    {
-      category: "Data & Analytics Services",
+    { category: "Data & Analytics Services",
       description: "Transform data into actionable business intelligence",
       services: [
-        {
-          title: "Data Analytics",
+        { title: "Data Analytics",
           url: "/services/data-analytics",
           description: "Comprehensive data analysis and visualization",
           pricing: "Custom pricing",
           features: ["Data visualization", "Statistical analysis", "Trend identification", "Reporting dashboards"]
         },
-        {
-          title: "AI Business Intelligence",
+        { title: "AI Business Intelligence",
           url: "/services/ai-business-intelligence",
           description: "AI-powered business insights and reporting",
           pricing: "Custom pricing",
           features: ["Predictive analytics", "Natural language queries", "Automated insights", "Real-time reporting"]
         },
-        {
-          title: "IoT Edge Computing",
+        { title: "IoT Edge Computing",
           url: "/services/iot-edge",
           description: "Real-time edge data processing",
           pricing: "Custom pricing",
@@ -93,26 +80,22 @@ const ServicesSitemap: React.FC = () => {
         }
       ]
     },
-    {
-      category: "Security & Compliance Services",
+    { category: "Security & Compliance Services",
       description: "Enterprise-grade security and regulatory compliance",
       services: [
-        {
-          title: "Zero Trust Network Architecture",
+        { title: "Zero Trust Network Architecture",
           url: "/services/zero-trust-network-architecture",
           description: "Modern security framework for enterprise",
           pricing: "Custom pricing",
           features: ["Identity verification", "Micro-segmentation", "Continuous monitoring", "Least privilege access"]
         },
-        {
-          title: "AI Cybersecurity Suite",
+        { title: "AI Cybersecurity Suite",
           url: "/services/ai-cybersecurity-suite",
           description: "Comprehensive security solutions",
           pricing: "Custom pricing",
           features: ["Threat detection", "Vulnerability assessment", "Incident response", "Security automation"]
         },
-        {
-          title: "AI Compliance Assistant",
+        { title: "AI Compliance Assistant",
           url: "/services/ai-compliance-assistant",
           description: "AI-powered compliance management",
           pricing: "Custom pricing",
@@ -120,26 +103,22 @@ const ServicesSitemap: React.FC = () => {
         }
       ]
     },
-    {
-      category: "Additional Specialized Services",
+    { category: "Additional Specialized Services",
       description: "Industry-specific and specialized solutions",
       services: [
-        {
-          title: "Healthcare Technology",
+        { title: "Healthcare Technology",
           url: "/services/healthcare-tech",
           description: "Technology solutions for healthcare industry",
           pricing: "Custom pricing",
           features: ["HIPAA compliance", "Patient data management", "Telemedicine platforms", "Healthcare analytics"]
         },
-        {
-          title: "Blockchain Enterprise Solutions",
+        { title: "Blockchain Enterprise Solutions",
           url: "/services/blockchain-enterprise-solutions",
           description: "Enterprise blockchain implementation",
           pricing: "Custom pricing",
           features: ["Smart contracts", "Supply chain tracking", "Digital identity", "Decentralized applications"]
         },
-        {
-          title: "Sustainability Technology",
+        { title: "Sustainability Technology",
           url: "/services/sustainability",
           description: "Green technology solutions",
           pricing: "Custom pricing",
@@ -173,7 +152,7 @@ const ServicesSitemap: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Complete Services Directory
@@ -185,14 +164,12 @@ const ServicesSitemap: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/ai-services-showcase"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Explore AI Services
                 </Link>
                 <Link 
                   to="/contact"
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                >
+                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
                   Get Expert Advice
                 </Link>
               </div>
@@ -206,10 +183,9 @@ const ServicesSitemap: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-12"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Quick Access
               </h2>
@@ -225,12 +201,11 @@ const ServicesSitemap: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                 >
                   <Link
                     to={link.url}
-                    className="block p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 group"
-                  >
+                    className="block p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 group">
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                       {link.title}
                     </h3>
@@ -250,10 +225,9 @@ const ServicesSitemap: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Complete Service Portfolio
               </h2>
@@ -269,9 +243,8 @@ const ServicesSitemap: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
                   <div className="text-center mb-12">
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                       {category.category}
@@ -288,9 +261,8 @@ const ServicesSitemap: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                        viewport={{ once: true }}
-                        className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300"
-                      >
+                        viewport={{ once: true     }}
+                        className="bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 hover:border-white/30 transition-all duration-300">
                         <div className="flex items-start justify-between mb-4">
                           <h4 className="text-xl font-semibold text-white mb-2">
                             {service.title}
@@ -318,8 +290,7 @@ const ServicesSitemap: React.FC = () => {
                         
                         <Link
                           to={service.url}
-                          className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
-                        >
+                          className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center">
                           Learn More
                         </Link>
                       </motion.div>
@@ -337,8 +308,8 @@ const ServicesSitemap: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Need Help Choosing the Right Service?

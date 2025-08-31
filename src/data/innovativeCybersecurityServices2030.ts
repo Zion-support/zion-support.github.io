@@ -7,14 +7,14 @@ export interface CybersecurityService {
   description: string;
   category: string;
   subcategory: string;
-  pricing: {
+  pricing: {  
     monthly: number;
     yearly: number;
     custom: string;
     currency: string;
-    pricingModel: string;
-    marketPrice: string;
-  };
+    pricingModel: string
+    marketPrice: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -51,22 +51,19 @@ export interface CybersecurityService {
 }
 
 // Zion Tech Group Contact Information
-const zionContact = {
-  phone: "+1 302 464 0950",
+const zionContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
-  {
-    id: "quantum-resistant-encryption",
+  { id: "quantum-resistant-encryption",
     title: "Zion Quantum-Resistant Encryption Platform",
     description: "Next-generation encryption platform that provides quantum-resistant cryptographic algorithms, ensuring data security against future quantum computing threats while maintaining high performance.",
     category: "Cybersecurity Services",
     subcategory: "Encryption & Cryptography",
-    pricing: {
-      monthly: 899,
+    pricing: { monthly: 899,
       yearly: 8990,
       custom: "Enterprise encryption solutions",
       currency: "$",
@@ -152,14 +149,12 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     trending: true
   },
 
-  {
-    id: "ai-threat-hunting-platform",
+  { id: "ai-threat-hunting-platform",
     title: "Zion AI Threat Hunting Platform",
     description: "Advanced AI-powered threat hunting platform that proactively identifies, analyzes, and neutralizes cybersecurity threats before they can cause damage to your organization.",
     category: "Cybersecurity Services",
     subcategory: "Threat Detection & Response",
-    pricing: {
-      monthly: 699,
+    pricing: { monthly: 699,
       yearly: 6990,
       custom: "Enterprise threat hunting solutions",
       currency: "$",
@@ -245,14 +240,12 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     trending: true
   },
 
-  {
-    id: "zero-trust-network-access",
+  { id: "zero-trust-network-access",
     title: "Zion Zero Trust Network Access Platform",
     description: "Comprehensive zero-trust network access solution that provides secure, granular access control to applications and resources without traditional VPN limitations.",
     category: "Cybersecurity Services",
     subcategory: "Network Security",
-    pricing: {
-      monthly: 499,
+    pricing: { monthly: 499,
       yearly: 4990,
       custom: "Enterprise ZTNA solutions",
       currency: "$",
@@ -338,14 +331,12 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     trending: true
   },
 
-  {
-    id: "ai-powered-vulnerability-management",
+  { id: "ai-powered-vulnerability-management",
     title: "Zion AI-Powered Vulnerability Management",
     description: "Intelligent vulnerability management platform that uses AI to prioritize security risks, automate patch management, and provide actionable insights for proactive security posture improvement.",
     category: "Cybersecurity Services",
     subcategory: "Vulnerability Management",
-    pricing: {
-      monthly: 399,
+    pricing: { monthly: 399,
       yearly: 3990,
       custom: "Enterprise vulnerability management",
       currency: "$",
@@ -431,14 +422,12 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     trending: true
   },
 
-  {
-    id: "blockchain-security-audit",
+  { id: "blockchain-security-audit",
     title: "Zion Blockchain Security Audit Platform",
     description: "Comprehensive blockchain security auditing platform that identifies vulnerabilities in smart contracts, DeFi protocols, and blockchain applications to ensure secure digital asset operations.",
     category: "Cybersecurity Services",
     subcategory: "Blockchain Security",
-    pricing: {
-      monthly: 799,
+    pricing: { monthly: 799,
       yearly: 7990,
       custom: "Enterprise blockchain security",
       currency: "$",

@@ -27,33 +27,27 @@ import {
 
 const AIBusinessIntelligenceAnalytics = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Insights',
       description: 'Advanced machine learning algorithms that automatically discover patterns and generate actionable insights'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Real-time Dashboards',
       description: 'Live monitoring and visualization of key business metrics across all departments'
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and identify opportunities using historical data analysis'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Performance Tracking',
       description: 'Monitor KPIs and track progress toward business goals with automated alerts'
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'User Behavior Analysis',
       description: 'Understand customer and employee behavior patterns for optimization'
     },
-    {
-      icon: PieChart,
+    { icon: PieChart,
       title: 'Data Visualization',
       description: 'Interactive charts and graphs that make complex data easy to understand'
     }
@@ -69,20 +63,16 @@ const AIBusinessIntelligenceAnalytics = () => {
   ];
 
   const useCases = [
-    {
-      industry: 'Finance',
+    { industry: 'Finance',
       description: 'Risk assessment, fraud detection, and investment portfolio optimization'
     },
-    {
-      industry: 'Retail',
+    { industry: 'Retail',
       description: 'Inventory management, customer segmentation, and sales forecasting'
     },
-    {
-      industry: 'Manufacturing',
+    { industry: 'Manufacturing',
       description: 'Production optimization, quality control, and supply chain management'
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       description: 'Patient outcomes analysis, resource planning, and operational efficiency'
     }
   ];
@@ -96,9 +86,8 @@ const AIBusinessIntelligenceAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
               AI-Powered Business Intelligence
@@ -134,9 +123,8 @@ const AIBusinessIntelligenceAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Analytics Features
             </h2>
@@ -153,8 +141,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -172,9 +159,8 @@ const AIBusinessIntelligenceAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Transform Your Business Intelligence
             </h2>
@@ -191,8 +177,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -205,8 +190,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -222,9 +206,8 @@ const AIBusinessIntelligenceAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -241,8 +224,7 @@ const AIBusinessIntelligenceAnalytics = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -260,7 +242,7 @@ const AIBusinessIntelligenceAnalytics = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Unlock Business Intelligence Today

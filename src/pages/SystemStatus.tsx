@@ -11,8 +11,8 @@ interface ServiceStatus {
   responseTime: number;
   lastUpdated: string;
   description: string;
-  icon: React.ComponentType<any>;
-}
+  icon: React.ComponentType<>;
+    }
 
 interface Incident {
   id: string;
@@ -23,11 +23,10 @@ interface Incident {
   startTime: string;
   endTime?: string;
   affectedServices: string[];
-}
+    }
 
 const services: ServiceStatus[] = [
-  {
-    id: 'api',
+  { id: 'api',
     name: 'API Services',
     status: 'operational',
     uptime: 99.99,
@@ -36,8 +35,7 @@ const services: ServiceStatus[] = [
     description: 'Core API endpoints and microservices',
     icon: Server
   },
-  {
-    id: 'database',
+  { id: 'database',
     name: 'Database Systems',
     status: 'operational',
     uptime: 99.95,
@@ -46,8 +44,7 @@ const services: ServiceStatus[] = [
     description: 'Primary and replica database clusters',
     icon: Database
   },
-  {
-    id: 'web',
+  { id: 'web',
     name: 'Web Application',
     status: 'operational',
     uptime: 99.98,
@@ -56,8 +53,7 @@ const services: ServiceStatus[] = [
     description: 'Main website and user interface',
     icon: Globe
   },
-  {
-    id: 'security',
+  { id: 'security',
     name: 'Security Services',
     status: 'operational',
     uptime: 100.00,
@@ -66,8 +62,7 @@ const services: ServiceStatus[] = [
     description: 'Authentication, authorization, and threat detection',
     icon: Shield
   },
-  {
-    id: 'ai',
+  { id: 'ai',
     name: 'AI Services',
     status: 'operational',
     uptime: 99.92,
@@ -76,8 +71,7 @@ const services: ServiceStatus[] = [
     description: 'Machine learning models and AI processing',
     icon: Zap
   },
-  {
-    id: 'analytics',
+  { id: 'analytics',
     name: 'Analytics Platform',
     status: 'operational',
     uptime: 99.89,
@@ -89,8 +83,7 @@ const services: ServiceStatus[] = [
 ];
 
 const incidents: Incident[] = [
-  {
-    id: 'inc-001',
+  { id: 'inc-001',
     title: 'Scheduled Maintenance - Database Optimization',
     description: 'Routine database maintenance to improve performance and reliability.',
     status: 'monitoring',
@@ -178,9 +171,8 @@ export default function SystemStatus() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50"
-          >
+            transition={{ duration: 0.6     }}
+            className="inline-flex items-center px-4 py-2 bg-slate-800/50 rounded-full text-sm font-medium mb-6 border border-slate-700/50">
             <Activity className="w-4 h-4 mr-2 text-cyan-400" />
             System Status
           </motion.div>
@@ -189,8 +181,7 @@ export default function SystemStatus() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold text-white mb-6"
-          >
+            className="text-4xl md:text-6xl font-bold text-white mb-6">
             System Status
           </motion.h1>
           
@@ -198,8 +189,7 @@ export default function SystemStatus() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
-          >
+            className="text-xl text-gray-300 max-w-3xl mx-auto">
             Real-time monitoring of our services, infrastructure, and performance metrics.
           </motion.p>
         </div>
@@ -211,13 +201,12 @@ export default function SystemStatus() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
-        >
+          className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Overall Status */}
             <div className="text-center">
               <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-4 ${getStatusColor(overallStatus)}`}>
-                {React.createElement(getStatusIcon(overallStatus), { className: "w-4 h-4 mr-2" })}
+                {React.createElement(getStatusIcon(overallStatus), { className: "w-4 h-4 mr-2"     })}
                 {overallStatus.charAt(0).toUpperCase() + overallStatus.slice(1)}
               </div>
               <h3 className="text-2xl font-bold text-white mb-2">Overall Status</h3>
@@ -249,16 +238,14 @@ export default function SystemStatus() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        >
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.0 + index * 0.1 }}
-              className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200"
-            >
+              className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50 hover:border-slate-600/50 transition-all duration-200">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
@@ -270,7 +257,7 @@ export default function SystemStatus() {
                   </div>
                 </div>
                 <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getStatusColor(service.status)}`}>
-                  {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1" })}
+                  {React.createElement(getStatusIcon(service.status), { className: "w-3 h-3 inline mr-1"     })}
                   {service.status.charAt(0).toUpperCase() + service.status.slice(1)}
                 </div>
               </div>
@@ -312,8 +299,7 @@ export default function SystemStatus() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 1.6 + index * 0.1 }}
-                  className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50"
-                >
+                  className="bg-slate-800/50 rounded-xl p-6 backdrop-blur-sm border border-slate-700/50">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <div className="flex items-center space-x-3 mb-2">
@@ -374,8 +360,7 @@ export default function SystemStatus() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.8 }}
-          className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50"
-        >
+          className="bg-slate-800/50 rounded-2xl p-8 backdrop-blur-sm border border-slate-700/50">
           <h2 className="text-2xl font-bold text-white mb-6">Performance Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
@@ -416,8 +401,7 @@ export default function SystemStatus() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 2.0 }}
-          className="text-center"
-        >
+          className="text-center">
           <div className="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-400/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Need Help?
@@ -428,14 +412,12 @@ export default function SystemStatus() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/support"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25"
-              >
+                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
                 Get Support
               </a>
               <a
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200"
-              >
+                className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-medium rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-200">
                 Contact Us
               </a>
             </div>

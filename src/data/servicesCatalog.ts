@@ -1,5 +1,4 @@
-export type ServiceItem = {
-	id: string;
+export type ServiceItem = { id: string;
 	title: string;
 	description: string;
 	category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems';
@@ -9,19 +8,16 @@ export type ServiceItem = {
 	ctaLabel: string;
 	href: string; // internal path or external URL
 	external?: boolean;
-};
-export type ServiceCategory = {
-	name: string;
+    };
+export type ServiceCategory = { name: string;
 	slug: string;
 	items: ServiceItem[];
-};
+    };
 export const servicesCatalog: ServiceCategory[] = [
-	{
-		name: 'Micro SaaS',
+	{ name: 'Micro SaaS',
 		slug: 'micro-saas',
 		items: [
-			{
-				id: 'smart-contract-risk-scanner',
+			{ id: 'smart-contract-risk-scanner',
 				title: 'Smart Contract Risk Scanner',
 				description: 'Continuous vulnerability scanning and risk assessment for blockchain smart contracts with automated security recommendations.',
 				category: 'Micro SaaS',
@@ -37,8 +33,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Start Free Trial',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'ai-content-optimizer',
+			{ id: 'ai-content-optimizer',
 				title: 'AI Content Optimizer Pro',
 				description: 'Advanced content optimization using AI to improve SEO, readability, and engagement across all digital platforms.',
 				category: 'Micro SaaS',
@@ -54,8 +49,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Get Started',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-workflow-automation',
+			{ id: 'quantum-workflow-automation',
 				title: 'Quantum Workflow Automation',
 				description: 'Next-generation workflow automation leveraging quantum computing principles for complex business process optimization.',
 				category: 'Micro SaaS',
@@ -71,8 +65,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Schedule Demo',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'edge-ai-inference-engine',
+			{ id: 'edge-ai-inference-engine',
 				title: 'Edge AI Inference Engine',
 				description: 'Lightweight AI inference engine optimized for edge devices, enabling real-time AI processing without cloud dependency.',
 				category: 'Micro SaaS',
@@ -88,8 +81,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Deploy Now',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'autonomous-crm-optimizer',
+			{ id: 'autonomous-crm-optimizer',
 				title: 'Autonomous CRM Optimizer',
 				description: 'AI-powered CRM system that automatically optimizes customer relationships, sales processes, and marketing campaigns.',
 				category: 'Micro SaaS',
@@ -105,8 +97,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Optimize CRM',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-supply-chain-optimizer',
+			{ id: 'quantum-supply-chain-optimizer',
 				title: 'Quantum Supply Chain Optimizer',
 				description: 'Revolutionary supply chain optimization using quantum algorithms for complex logistics and inventory management.',
 				category: 'Micro SaaS',
@@ -123,8 +114,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'soc2-compliance-automation-saas',
+			{ id: 'soc2-compliance-automation-saas',
 				title: 'SOC 2 Compliance Automation SaaS',
 				description: 'Automate evidence collection, policy mapping, and control monitoring to pass SOC 2 audits faster.',
 				category: 'Micro SaaS',
@@ -140,8 +130,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Start Compliance',
 				href: 'https://ziontechgroup.com/services'
 			},
-			{
-				id: 'mlops-observability',
+			{ id: 'mlops-observability',
 				title: 'MLOps Observability & Drift Monitor',
 				description: 'Track model performance, detect data drift, and automate retraining triggers with guardrails.',
 				category: 'Micro SaaS',
@@ -159,12 +148,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'AI Solutions',
+	{ name: 'AI Solutions',
 		slug: 'ai-solutions',
 		items: [
-			{
-				id: 'autonomous-business-manager',
+			{ id: 'autonomous-business-manager',
 				title: 'Autonomous Business Manager',
 				description: 'AI-powered business management system that autonomously handles operations, decision-making, and strategic planning.',
 				category: 'AI Solutions',
@@ -180,8 +167,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Request Demo',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'consciousness-simulation-platform',
+			{ id: 'consciousness-simulation-platform',
 				title: 'Consciousness Simulation Platform',
 				description: 'Advanced AI platform for simulating and understanding consciousness, enabling breakthrough research in cognitive science.',
 				category: 'AI Solutions',
@@ -197,8 +183,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Research Access',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-neural-network',
+			{ id: 'quantum-neural-network',
 				title: 'Quantum Neural Network Platform',
 				description: 'Revolutionary platform combining quantum computing with neural networks for unprecedented AI capabilities.',
 				category: 'AI Solutions',
@@ -214,8 +199,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Quantum Access',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'ai-autonomous-vehicles',
+			{ id: 'ai-autonomous-vehicles',
 				title: 'AI Autonomous Vehicle Platform',
 				description: 'Complete autonomous vehicle management system with AI-driven navigation, safety, and fleet optimization.',
 				category: 'AI Solutions',
@@ -232,8 +216,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'enterprise-rag-search',
+			{ id: 'enterprise-rag-search',
 				title: 'Enterprise RAG Search Platform',
 				description: 'Private, secure Retrieval-Augmented Generation over your docs, wikis, tickets, and data.',
 				category: 'AI Solutions',
@@ -249,8 +232,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Launch Secure Chat',
 				href: 'https://ziontechgroup.com/services'
 			},
-			{
-				id: 'agentic-copilot-suite',
+			{ id: 'agentic-copilot-suite',
 				title: 'Agentic Copilot Suite (Sales, Support, DevOps)',
 				description: 'Task-driven AI agents that execute workflows across CRM, ticketing, CI/CD, and cloud.',
 				category: 'AI Solutions',
@@ -268,12 +250,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'IT Services',
+	{ name: 'IT Services',
 		slug: 'it-services',
 		items: [
-			{
-				id: 'zero-trust-architecture',
+			{ id: 'zero-trust-architecture',
 				title: 'Zero Trust Network Architecture',
 				description: 'Comprehensive zero trust security implementation with continuous verification and adaptive access control.',
 				category: 'IT Services',
@@ -289,8 +269,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Security Assessment',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'five-g-enterprise-network',
+			{ id: 'five-g-enterprise-network',
 				title: '5G Enterprise Network Solutions',
 				description: 'Custom 5G network infrastructure for enterprises with ultra-low latency and massive IoT connectivity.',
 				category: 'IT Services',
@@ -306,8 +285,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Network Design',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-edge-computing',
+			{ id: 'quantum-edge-computing',
 				title: 'Quantum Edge Computing Platform',
 				description: 'Next-generation edge computing platform leveraging quantum principles for ultra-fast processing and decision making.',
 				category: 'IT Services',
@@ -324,8 +302,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'platform-engineering-kubernetes',
+			{ id: 'platform-engineering-kubernetes',
 				title: 'Platform Engineering on Kubernetes',
 				description: 'Golden paths, IDP, and paved roads for developers with secure, standardized delivery.',
 				category: 'IT Services',
@@ -341,8 +318,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Build Your IDP',
 				href: 'https://ziontechgroup.com/services'
 			},
-			{
-				id: 'finops-cloud-cost-optimization',
+			{ id: 'finops-cloud-cost-optimization',
 				title: 'FinOps Cloud Cost Optimization',
 				description: 'Reduce cloud spend 20–40% with rightsizing, reservations, and architectural optimizations.',
 				category: 'IT Services',
@@ -360,12 +336,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Cybersecurity',
+	{ name: 'Cybersecurity',
 		slug: 'cybersecurity',
 		items: [
-			{
-				id: 'ai-threat-intelligence',
+			{ id: 'ai-threat-intelligence',
 				title: 'AI Threat Intelligence Suite',
 				description: 'Advanced threat detection and response system using AI to identify and neutralize cyber threats in real-time.',
 				category: 'Cybersecurity',
@@ -381,8 +355,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Security Demo',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-cryptography',
+			{ id: 'quantum-cryptography',
 				title: 'Quantum Cryptography Solutions',
 				description: 'Future-proof cryptography using quantum key distribution for unbreakable security in the quantum era.',
 				category: 'Cybersecurity',
@@ -399,8 +372,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'managed-detection-response',
+			{ id: 'managed-detection-response',
 				title: 'Managed Detection & Response (MDR)',
 				description: '24/7 monitoring, threat hunting, and incident response with SIEM/SOAR integration.',
 				category: 'Cybersecurity',
@@ -416,8 +388,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Activate MDR',
 				href: 'https://ziontechgroup.com/services'
 			},
-			{
-				id: 'sase-rollout',
+			{ id: 'sase-rollout',
 				title: 'Secure Access Service Edge (SASE) Rollout',
 				description: 'Consolidate network and security with ZTNA, SWG, CASB, and SD-WAN.',
 				category: 'Cybersecurity',
@@ -435,12 +406,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Data & Analytics',
+	{ name: 'Data & Analytics',
 		slug: 'data-analytics',
 		items: [
-			{
-				id: 'quantum-data-analytics',
+			{ id: 'quantum-data-analytics',
 				title: 'Quantum Data Analytics Platform',
 				description: 'Revolutionary data analytics platform leveraging quantum computing for complex pattern recognition and insights.',
 				category: 'Data & Analytics',
@@ -456,8 +425,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Analytics Demo',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'ai-business-intelligence',
+			{ id: 'ai-business-intelligence',
 				title: 'AI Business Intelligence Suite',
 				description: 'Intelligent business analytics platform that automatically discovers insights and generates actionable recommendations.',
 				category: 'Data & Analytics',
@@ -474,8 +442,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'data-quality-observability',
+			{ id: 'data-quality-observability',
 				title: 'Data Quality & Observability',
 				description: 'Monitor freshness, completeness, and lineage to trust your analytics and AI.',
 				category: 'Data & Analytics',
@@ -491,8 +458,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Improve Data Trust',
 				href: 'https://ziontechgroup.com/services'
 			},
-			{
-				id: 'modern-etl-migration',
+			{ id: 'modern-etl-migration',
 				title: 'Modern ETL/ELT Migration',
 				description: 'Re-platform legacy pipelines to scalable ELT with dbt and cloud warehouses.',
 				category: 'Data & Analytics',
@@ -510,12 +476,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Cloud & DevOps',
+	{ name: 'Cloud & DevOps',
 		slug: 'cloud-devops',
 		items: [
-			{
-				id: 'autonomous-devops-platform',
+			{ id: 'autonomous-devops-platform',
 				title: 'Autonomous DevOps Platform',
 				description: 'Self-managing DevOps platform that automatically optimizes deployments, scaling, and infrastructure management.',
 				category: 'Cloud & DevOps',
@@ -531,8 +495,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'DevOps Demo',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-cloud-infrastructure',
+			{ id: 'quantum-cloud-infrastructure',
 				title: 'Quantum Cloud Infrastructure',
 				description: 'Next-generation cloud infrastructure optimized for quantum computing workloads and hybrid classical-quantum applications.',
 				category: 'Cloud & DevOps',
@@ -549,8 +512,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'serverless-application-factory',
+			{ id: 'serverless-application-factory',
 				title: 'Serverless Application Factory',
 				description: 'Blueprints and accelerators to build secure, low-cost serverless backends fast.',
 				category: 'Cloud & DevOps',
@@ -566,8 +528,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Build Serverless',
 				href: 'https://ziontechgroup.com/services'
 			},
-			{
-				id: 'disaster-recovery-blueprints',
+			{ id: 'disaster-recovery-blueprints',
 				title: 'Disaster Recovery Blueprints (RTO/RPO)',
 				description: 'Design and test DR strategies with automated failover and periodic game days.',
 				category: 'Cloud & DevOps',
@@ -585,12 +546,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Quantum Computing',
+	{ name: 'Quantum Computing',
 		slug: 'quantum-computing',
 		items: [
-			{
-				id: 'quantum-financial-trading',
+			{ id: 'quantum-financial-trading',
 				title: 'Quantum Financial Trading Platform',
 				description: 'Revolutionary trading platform using quantum algorithms for portfolio optimization and risk assessment.',
 				category: 'Quantum Computing',
@@ -606,8 +565,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Trading Demo',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-drug-discovery',
+			{ id: 'quantum-drug-discovery',
 				title: 'Quantum Drug Discovery Platform',
 				description: 'Advanced drug discovery platform leveraging quantum computing for molecular modeling and drug design.',
 				category: 'Quantum Computing',
@@ -625,12 +583,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Blockchain & Web3',
+	{ name: 'Blockchain & Web3',
 		slug: 'blockchain-web3',
 		items: [
-			{
-				id: 'decentralized-ai-marketplace',
+			{ id: 'decentralized-ai-marketplace',
 				title: 'Decentralized AI Marketplace',
 				description: 'Web3-powered marketplace for AI models, data, and computational resources with blockchain-based governance.',
 				category: 'Blockchain & Web3',
@@ -646,8 +602,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Marketplace Access',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-blockchain-platform',
+			{ id: 'quantum-blockchain-platform',
 				title: 'Quantum Blockchain Platform',
 				description: 'Next-generation blockchain platform with quantum-resistant cryptography and quantum-enhanced consensus.',
 				category: 'Blockchain & Web3',
@@ -665,12 +620,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'IoT & Edge',
+	{ name: 'IoT & Edge',
 		slug: 'iot-edge',
 		items: [
-			{
-				id: 'quantum-iot-platform',
+			{ id: 'quantum-iot-platform',
 				title: 'Quantum IoT Platform',
 				description: 'Revolutionary IoT platform using quantum computing for edge device optimization and intelligent data processing.',
 				category: 'IoT & Edge',
@@ -686,8 +639,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'IoT Demo',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'autonomous-edge-ai',
+			{ id: 'autonomous-edge-ai',
 				title: 'Autonomous Edge AI Platform',
 				description: 'Self-managing edge AI platform that automatically optimizes performance and resource usage across IoT networks.',
 				category: 'IoT & Edge',
@@ -704,8 +656,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'predictive-maintenance-iot',
+			{ id: 'predictive-maintenance-iot',
 				title: 'Predictive Maintenance for IoT Fleets',
 				description: 'Deploy sensors and analytics to predict failures and optimize uptime across assets.',
 				category: 'IoT & Edge',
@@ -721,8 +672,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Reduce Downtime',
 				href: 'https://ziontechgroup.com/services'
 			},
-			{
-				id: 'digital-twin-starter',
+			{ id: 'digital-twin-starter',
 				title: 'Digital Twin Starter Kit',
 				description: 'Model physical systems with twins to simulate scenarios and optimize operations.',
 				category: 'IoT & Edge',
@@ -740,12 +690,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Green Tech',
+	{ name: 'Green Tech',
 		slug: 'green-tech',
 		items: [
-			{
-				id: 'quantum-energy-optimization',
+			{ id: 'quantum-energy-optimization',
 				title: 'Quantum Energy Optimization',
 				description: 'Advanced energy optimization platform using quantum algorithms for sustainable infrastructure and renewable energy management.',
 				category: 'Green Tech',
@@ -761,8 +709,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Energy Assessment',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'ai-climate-prediction',
+			{ id: 'ai-climate-prediction',
 				title: 'AI Climate Prediction Platform',
 				description: 'Advanced climate modeling platform using AI and quantum computing for accurate weather and climate predictions.',
 				category: 'Green Tech',
@@ -779,8 +726,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'carbon-accounting-saas',
+			{ id: 'carbon-accounting-saas',
 				title: 'Carbon Accounting & ESG Reporting',
 				description: 'Automate Scope 1–3 emissions tracking with audit-ready ESG disclosures.',
 				category: 'Green Tech',
@@ -798,12 +744,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Space Tech',
+	{ name: 'Space Tech',
 		slug: 'space-tech',
 		items: [
-			{
-				id: 'satellite-ai-orchestrator',
+			{ id: 'satellite-ai-orchestrator',
 				title: 'Satellite AI Orchestrator',
 				description: 'AI-powered satellite constellation management system for optimal orbital positioning and data collection.',
 				category: 'Space Tech',
@@ -819,8 +763,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Launch Satellites',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-space-communications',
+			{ id: 'quantum-space-communications',
 				title: 'Quantum Space Communications',
 				description: 'Next-generation quantum communication system for secure, ultra-fast data transmission between Earth and space.',
 				category: 'Space Tech',
@@ -837,8 +780,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'satellite-imagery-analytics',
+			{ id: 'satellite-imagery-analytics',
 				title: 'Satellite Imagery Analytics',
 				description: 'Computer vision on multi-spectral imagery for agriculture, insurance, and defense insights.',
 				category: 'Space Tech',
@@ -856,12 +798,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'BioTech & Health',
+	{ name: 'BioTech & Health',
 		slug: 'biotech-health',
 		items: [
-			{
-				id: 'ai-drug-discovery-platform',
+			{ id: 'ai-drug-discovery-platform',
 				title: 'AI Drug Discovery Platform',
 				description: 'Revolutionary drug discovery platform using AI and quantum computing for accelerated pharmaceutical development.',
 				category: 'BioTech & Health',
@@ -877,8 +817,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Discover Drugs',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'quantum-genome-analyzer',
+			{ id: 'quantum-genome-analyzer',
 				title: 'Quantum Genome Analyzer',
 				description: 'Advanced genome analysis platform using quantum computing for personalized medicine and genetic research.',
 				category: 'BioTech & Health',
@@ -895,8 +834,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'telemedicine-ai-triage',
+			{ id: 'telemedicine-ai-triage',
 				title: 'Telemedicine AI Triage',
 				description: 'AI symptom checker with escalation workflows to clinicians and EHR integration.',
 				category: 'BioTech & Health',
@@ -914,12 +852,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'FinTech & DeFi',
+	{ name: 'FinTech & DeFi',
 		slug: 'fintech-defi',
 		items: [
-			{
-				id: 'quantum-trading-algorithm',
+			{ id: 'quantum-trading-algorithm',
 				title: 'Quantum Trading Algorithm',
 				description: 'Revolutionary trading algorithm using quantum computing for ultra-fast market analysis and automated trading.',
 				category: 'FinTech & DeFi',
@@ -935,8 +871,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Start Trading',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'autonomous-defi-protocol',
+			{ id: 'autonomous-defi-protocol',
 				title: 'Autonomous DeFi Protocol',
 				description: 'Self-managing DeFi protocol that automatically optimizes yields, manages risks, and executes strategies.',
 				category: 'FinTech & DeFi',
@@ -953,8 +888,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'kyc-aml-transaction-monitoring',
+			{ id: 'kyc-aml-transaction-monitoring',
 				title: 'KYC/AML Transaction Monitoring',
 				description: 'Detect suspicious activity using rules + ML with investigator case management.',
 				category: 'FinTech & DeFi',
@@ -972,12 +906,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Metaverse & AR/VR',
+	{ name: 'Metaverse & AR/VR',
 		slug: 'metaverse-ar-vr',
 		items: [
-			{
-				id: 'quantum-metaverse-engine',
+			{ id: 'quantum-metaverse-engine',
 				title: 'Quantum Metaverse Engine',
 				description: 'Next-generation metaverse platform using quantum computing for infinite scalability and realistic simulations.',
 				category: 'Metaverse & AR/VR',
@@ -993,8 +925,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Enter Metaverse',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'autonomous-ar-navigation',
+			{ id: 'autonomous-ar-navigation',
 				title: 'Autonomous AR Navigation',
 				description: 'AI-powered augmented reality navigation system for autonomous vehicles and smart cities.',
 				category: 'Metaverse & AR/VR',
@@ -1011,8 +942,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'vr-training-simulators',
+			{ id: 'vr-training-simulators',
 				title: 'VR Training Simulators',
 				description: 'Enterprise-grade immersive learning for safety, field ops, and medical procedures.',
 				category: 'Metaverse & AR/VR',
@@ -1030,12 +960,10 @@ export const servicesCatalog: ServiceCategory[] = [
 			}
 		]
 	},
-	{
-		name: 'Autonomous Systems',
+	{ name: 'Autonomous Systems',
 		slug: 'autonomous-systems',
 		items: [
-			{
-				id: 'quantum-ai-controller',
+			{ id: 'quantum-ai-controller',
 				title: 'Quantum AI Controller',
 				description: 'Revolutionary AI controller using quantum computing for autonomous system management and decision making.',
 				category: 'Autonomous Systems',
@@ -1051,8 +979,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				ctaLabel: 'Control Systems',
 				href: 'https://ziontechgroup.com/contact'
 			},
-			{
-				id: 'autonomous-robotics-platform',
+			{ id: 'autonomous-robotics-platform',
 				title: 'Autonomous Robotics Platform',
 				description: 'Complete robotics platform for autonomous manufacturing, logistics, and service operations.',
 				category: 'Autonomous Systems',
@@ -1069,8 +996,7 @@ export const servicesCatalog: ServiceCategory[] = [
 				href: 'https://ziontechgroup.com/contact'
 			}
 			,
-			{
-				id: 'warehouse-robotics-orchestration',
+			{ id: 'warehouse-robotics-orchestration',
 				title: 'Warehouse Robotics Orchestration',
 				description: 'Coordinate AMRs, conveyors, and pick stations to maximize throughput and safety.',
 				category: 'Autonomous Systems',

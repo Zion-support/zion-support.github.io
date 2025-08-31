@@ -56,7 +56,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Revolutionary Services 2030
@@ -151,8 +151,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group"
-              >
+                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group">
                 {/* Service Header */}
                 <div className="mb-4">
                   <div className="flex items-start justify-between mb-3">
@@ -223,8 +222,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                     {service.tags.slice(0, 3).map((tag, idx) => (
                       <span
                         key={idx}
-                        className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20"
-                      >
+                        className="px-2 py-1 bg-white/10 text-white text-xs rounded-full border border-white/20">
                         {tag}
                       </span>
                     ))}
@@ -255,15 +253,13 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                     href={service.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
-                  >
+                    className="flex-1 bg-purple-600 hover:bg-purple-700 text-white text-center py-2 px-4 rounded-lg transition-colors flex items-center justify-center gap-2">
                     <ExternalLink className="w-4 h-4" />
                     Learn More
                   </a>
                   <a
                     href={`mailto:${service.contactEmail}?subject=Inquiry about ${service.title}`}
-                    className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-2 px-4 rounded-lg transition-colors border border-white/20"
-                  >
+                    className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-2 px-4 rounded-lg transition-colors border border-white/20">
                     Contact
                   </a>
                 </div>
@@ -279,8 +275,7 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                   setSearchTerm('');
                   setActiveCategory('all');
                 }}
-                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
-              >
+                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors">
                 Clear Filters
               </button>
             </div>
@@ -294,10 +289,9 @@ const InnovativeServicesShowcase2030: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
@@ -308,23 +302,19 @@ const InnovativeServicesShowcase2030: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              {
-                icon: Award,
+              { icon: Award,
                 title: "Industry Expertise",
                 description: "20+ years of experience in cutting-edge technology solutions"
               },
-              {
-                icon: Zap,
+              { icon: Zap,
                 title: "Innovation First",
                 description: "Pioneering the latest AI, cybersecurity, and cloud technologies"
               },
-              {
-                icon: Shield,
+              { icon: Shield,
                 title: "Enterprise Security",
                 description: "SOC 2, ISO 27001, and industry compliance certifications"
               },
-              {
-                icon: Users,
+              { icon: Users,
                 title: "24/7 Support",
                 description: "Round-the-clock technical support and consultation"
               }
@@ -334,9 +324,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="w-16 h-16 bg-purple-600/20 border border-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-4">
                   <feature.icon className="w-8 h-8 text-purple-400" />
                 </div>
@@ -354,8 +343,8 @@ const InnovativeServicesShowcase2030: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -366,15 +355,13 @@ const InnovativeServicesShowcase2030: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Service Inquiry"
-                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2"
-              >
+                className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2">
                 <Mail className="w-5 h-5" />
                 Get Started Today
               </a>
               <a
                 href="tel:+13024640950"
-                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors border border-white/20 flex items-center justify-center gap-2"
-              >
+                className="bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors border border-white/20 flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>

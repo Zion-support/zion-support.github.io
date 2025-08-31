@@ -8,24 +8,21 @@ interface PerformanceMetrics {
   domLoad: number | null; // DOM Content Loaded
   windowLoad: number | null; // Window Load
   navigationStart: number | null;
-}
+    }
 interface PerformanceObserverEntry {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
-}
+    }
 // Extended interfaces for specific performance entry types
-interface FirstInputEntry extends PerformanceEntry {
-  processingStart: number;
+interface FirstInputEntry extends PerformanceEntry { processingStart: number;
   startTime: number;
-}
-interface LayoutShiftEntry extends PerformanceEntry {
-  hadRecentInput: boolean;
+    }
+interface LayoutShiftEntry extends PerformanceEntry { hadRecentInput: boolean;
   value: number;
-}
+    }
 export function usePerformance() {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null,
     lcp: null,
     fid: null,
     cls: null,
@@ -80,10 +77,10 @@ export function usePerformance() {
     });
     // Start observing
     try {
-      fcpObserver.observe({ entryTypes: ['paint'] });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      fcpObserver.observe({ entryTypes: ['paint']     });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint']     });
+      fidObserver.observe({ entryTypes: ['first-input']     });
+      clsObserver.observe({ entryTypes: ['layout-shift']     });
     } catch (error) {
       console.warn('Error setting up performance observers:', error);
     }
@@ -107,8 +104,7 @@ export function usePerformance() {
   }, []);
   // Get performance rating
   const getRating = (metric: keyof PerformanceMetrics, value: number): 'good' | 'needs-improvement' | 'poor' => {
-    const thresholds = {
-      fcp: { good: 1800, poor: 3000 },
+    const thresholds = { fcp: { good: 1800, poor: 3000 },
       lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
       cls: { good: 0.1, poor: 0.25 },
@@ -125,8 +121,7 @@ export function usePerformance() {
     const result: PerformanceObserverEntry[] = [];
     Object.entries(metrics).forEach(([key, value]) => {
       if (value !== null) {
-        result({
-          name: key.toUpperCase(),
+        result({ name: key.toUpperCase(),
           value,
           rating: getRating(key as keyof PerformanceMetrics, value)
         });
@@ -163,8 +158,7 @@ export function usePerformance() {
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.duration > 50) {
-          console.warn('Long task detected:', {
-            duration: entry.duration,
+          console.warn('Long task detected:', { duration: entry.duration,
             startTime: entry.startTime,
             name: entry.name
           });
@@ -172,7 +166,7 @@ export function usePerformance() {
       });
     });
     try {
-      longTaskObserver.observe({ entryTypes: ['longtask'] });
+      longTaskObserver.observe({ entryTypes: ['longtask']     });
     } catch (error) {
       console.warn('Error setting up long task observer:', error);
     }
@@ -197,7 +191,7 @@ export function usePerformanceEvent(eventName: string, callback: (entry: Perform
       list.getEntries().forEach(callback);
     });
     try {
-      observer.observe({ entryTypes: [eventName] });
+      observer.observe({ entryTypes: [eventName]     });
     } catch (error) {
       console.warn(`Error observing ${eventName}:`, error);
     }

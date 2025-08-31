@@ -17,26 +17,24 @@ export interface AdvancedAIService2028 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors: string[];
   marketSize: string;
 }
 
 export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
   // AI-Powered Quantum Computing Solutions
-  {
-    id: "quantum-ai-hybrid-platform",
+  { id: "quantum-ai-hybrid-platform",
     title: "Quantum AI Hybrid Platform",
     description: "Revolutionary platform that combines quantum computing with AI to solve complex optimization problems, drug discovery, and financial modeling that are impossible for classical computers.",
     category: "Quantum AI",
@@ -83,13 +81,11 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
     marketPrice: "$15,000 - $50,000/month",
     roi: "500-1000%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Qiskit", "TensorFlow Quantum", "Cirq", "Python", "CUDA"],
+    technicalSpecs: { technology: ["Qiskit", "TensorFlow Quantum", "Cirq", "Python", "CUDA"],
       integrations: ["IBM Quantum", "Google Quantum", "AWS Braket", "Azure Quantum"],
       apiEndpoints: 500,
       uptime: "99.95%",
@@ -100,8 +96,7 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
   },
 
   // AI-Powered Autonomous Business Operations
-  {
-    id: "ai-autonomous-business-platform",
+  { id: "ai-autonomous-business-platform",
     title: "AI Autonomous Business Operations Platform",
     description: "Complete business automation platform that uses AI to autonomously manage operations, make decisions, and optimize business processes without human intervention.",
     category: "Business Automation",
@@ -148,13 +143,11 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
     marketPrice: "$8,500 - $25,000/month",
     roi: "400-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "Kubernetes", "React", "Node.js"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "Kubernetes", "React", "Node.js"],
       integrations: ["SAP", "Oracle", "Salesforce", "Microsoft Dynamics", "Workday"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -165,8 +158,7 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
   },
 
   // AI-Powered Cybersecurity Threat Intelligence
-  {
-    id: "ai-cybersecurity-threat-intelligence",
+  { id: "ai-cybersecurity-threat-intelligence",
     title: "AI Cybersecurity Threat Intelligence Platform",
     description: "Advanced cybersecurity platform that uses AI to detect, analyze, and respond to cyber threats in real-time, providing proactive protection against sophisticated attacks.",
     category: "Cybersecurity",
@@ -213,13 +205,11 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
     marketPrice: "$6,500 - $18,000/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "Elasticsearch", "Kafka", "Docker"],
       integrations: ["Splunk", "QRadar", "FireEye", "CrowdStrike", "SentinelOne"],
       apiEndpoints: 400,
       uptime: "99.99%",
@@ -230,8 +220,7 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
   },
 
   // AI-Powered Healthcare Diagnostics
-  {
-    id: "ai-healthcare-diagnostics-platform",
+  { id: "ai-healthcare-diagnostics-platform",
     title: "AI Healthcare Diagnostics Platform",
     description: "Revolutionary healthcare platform that uses AI to analyze medical images, patient data, and symptoms to provide accurate diagnoses and treatment recommendations.",
     category: "Healthcare",
@@ -278,13 +267,11 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
     marketPrice: "$12,000 - $35,000/month",
     roi: "350-600%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "DICOM", "HL7 FHIR"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "DICOM", "HL7 FHIR"],
       integrations: ["Epic", "Cerner", "PACS systems", "EHR platforms", "Telemedicine tools"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -295,8 +282,7 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
   },
 
   // AI-Powered Financial Trading Platform
-  {
-    id: "ai-financial-trading-platform",
+  { id: "ai-financial-trading-platform",
     title: "AI Financial Trading Platform",
     description: "Advanced algorithmic trading platform that uses AI to analyze market data, predict trends, and execute trades automatically with high accuracy and speed.",
     category: "Financial Services",
@@ -343,13 +329,11 @@ export const ADVANCED_AI_SERVICES_2028: AdvancedAIService2028[] = [
     marketPrice: "$18,000 - $50,000/month",
     roi: "500-1000%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "Kafka", "Redis", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "Kafka", "Redis", "PostgreSQL"],
       integrations: ["Bloomberg", "Reuters", "Interactive Brokers", "TD Ameritrade", "E*TRADE"],
       apiEndpoints: 600,
       uptime: "99.99%",

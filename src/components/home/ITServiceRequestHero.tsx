@@ -16,8 +16,8 @@ export function ITServiceRequestHero() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            viewport={{ once: true     }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Need IT Services?
@@ -53,15 +53,13 @@ export function ITServiceRequestHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold text-lg rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
                 Request Quote
               </Link>
               
               <Link
                 to="/it-services"
-                className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-bold text-lg rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 hover:scale-105"
-              >
+                className="px-8 py-4 border-2 border-blue-400 text-blue-400 font-bold text-lg rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300 hover:scale-105">
                 Learn More
               </Link>
             </div>
@@ -70,10 +68,9 @@ export function ITServiceRequestHero() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8"
-          >
+            className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-6 text-center">
               Contact Information
             </h3>

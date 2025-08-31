@@ -5,7 +5,7 @@ interface PerformanceMetrics {
   renderTime: number;
   memoryUsage: number;
   fps: number;
-}
+    }
 
 interface UsePerformanceOptimizationOptions {
   enableLazyLoading?: boolean;
@@ -24,8 +24,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
     threshold = 0.1
   } = options;
 
-  const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
+  const metricsRef = useRef<PerformanceMetrics>({ loadTime: 0,
     renderTime: 0,
     memoryUsage: 0,
     fps: 0
@@ -43,8 +42,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
       
       // Report to analytics if available
       if (window.gtag) {
-        window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
+        window.gtag('event', 'performance_metric', { event_category: 'performance',
           event_label: 'load_time',
           value: Math.round(loadTime)
         });
@@ -93,7 +91,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
     const checkMemoryUsage = () => {
       if ('memory' in performance) {
-        const memory = (performance as any).memory;
+        const memory = (performance as ).memory;
         metricsRef.current.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // MB
 
         // Warn if memory usage is high
@@ -160,8 +158,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 
       // Report to analytics if available
       if (window.gtag) {
-        window.gtag('event', 'performance_metric', {
-          event_category: 'performance',
+        window.gtag('event', 'performance_metric', { event_category: 'performance',
           event_label: 'render_time',
           value: Math.round(renderTime)
         });
@@ -170,7 +167,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Debounced function utility
-  const debounce = useCallback(<T extends (...args: any[]) => any>(
+  const debounce = useCallback(<T extends (...args: []) => >(
     func: T,
     delay: number
   ): ((...args: Parameters<T>) => void) => {
@@ -183,7 +180,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   }, []);
 
   // Throttled function utility
-  const throttle = useCallback(<T extends (...args: any[]) => any>(
+  const throttle = useCallback(<T extends (...args: []) => >(
     func: T,
     delay: number
   ): ((...args: Parameters<T>) => void) => {
@@ -209,8 +206,7 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   const getMetrics = useCallback(() => ({ ...metricsRef.current }), []);
 
   // Memoized performance data
-  const performanceData = useMemo(() => ({
-    metrics: getMetrics(),
+  const performanceData = useMemo(() => ({ metrics: getMetrics(),
     isLowFPS: metricsRef.current.fps < 30,
     isHighMemory: metricsRef.current.memoryUsage > 100,
     isSlowRender: metricsRef.current.renderTime > 16
@@ -236,6 +232,6 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
 // Type declaration for gtag
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (...args: []) => void;
   }
 }

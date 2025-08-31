@@ -8,41 +8,34 @@ import { CheckCircle, TrendingUp, BarChart3, Zap, Shield, Users, Globe, Clock } 
 
 const AIBusinessIntelligenceDashboard: React.FC = () => {
   const features = [
-    {
-      icon: <TrendingUp className="h-6 w-6 text-green-500" />,
+    { icon: <TrendingUp className="h-6 w-6 text-green-500" />,
       title: "Real-time Analytics",
       description: "Monitor business metrics in real-time with AI-powered insights and predictive analytics"
     },
-    {
-      icon: <BarChart3 className="h-6 w-6 text-blue-500" />,
+    { icon: <BarChart3 className="h-6 w-6 text-blue-500" />,
       title: "Advanced Reporting",
       description: "Generate comprehensive reports with automated insights and actionable recommendations"
     },
-    {
-      icon: <Zap className="h-6 w-6 text-yellow-500" />,
+    { icon: <Zap className="h-6 w-6 text-yellow-500" />,
       title: "AI-Powered Insights",
       description: "Get intelligent insights and recommendations based on your data patterns"
     },
-    {
-      icon: <Shield className="h-6 w-6 text-purple-500" />,
+    { icon: <Shield className="h-6 w-6 text-purple-500" />,
       title: "Data Security",
       description: "Enterprise-grade security with role-based access control and data encryption"
     },
-    {
-      icon: <Users className="h-6 w-6 text-indigo-500" />,
+    { icon: <Users className="h-6 w-6 text-indigo-500" />,
       title: "Team Collaboration",
       description: "Share dashboards and insights with your team for better decision-making"
     },
-    {
-      icon: <Globe className="h-6 w-6 text-teal-500" />,
+    { icon: <Globe className="h-6 w-6 text-teal-500" />,
       title: "Multi-platform Access",
-      description: "Access your dashboards from anywhere with responsive web and mobile interfaces"
+      description: "Access your dashboards from where with responsive web and mobile interfaces"
     }
   ];
 
   const pricingTiers = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$299",
       period: "/month",
       description: "Perfect for small businesses getting started with BI",
@@ -56,8 +49,7 @@ const AIBusinessIntelligenceDashboard: React.FC = () => {
       ],
       popular: false
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$799",
       period: "/month",
       description: "Ideal for growing businesses with advanced BI needs",
@@ -73,8 +65,7 @@ const AIBusinessIntelligenceDashboard: React.FC = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "$1,999",
       period: "/month",
       description: "For large enterprises requiring maximum scalability",
@@ -94,20 +85,16 @@ const AIBusinessIntelligenceDashboard: React.FC = () => {
   ];
 
   const benefits = [
-    {
-      metric: "40%",
+    { metric: "40%",
       description: "Faster decision making with real-time insights"
     },
-    {
-      metric: "60%",
+    { metric: "60%",
       description: "Reduction in manual reporting time"
     },
-    {
-      metric: "85%",
+    { metric: "85%",
       description: "Improvement in data accuracy and reliability"
     },
-    {
-      metric: "3x",
+    { metric: "3x",
       description: "Increase in team productivity and collaboration"
     }
   ];

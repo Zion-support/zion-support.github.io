@@ -17,8 +17,7 @@ import {
 
 export const EnhancedServicesShowcase: React.FC = () => {
   const services = [
-    {
-      title: 'AI Workflow Automation',
+    { title: 'AI Workflow Automation',
       description: 'Transform business operations with intelligent automation that learns and scales',
       price: 'From $299/month',
       path: '/services/ai-workflow-automation',
@@ -29,8 +28,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       color: 'from-cyan-500 to-blue-600',
       glowColor: 'cyan'
     },
-    {
-      title: 'AI Cybersecurity',
+    { title: 'AI Cybersecurity',
       description: 'Protect your business with AI-powered threat detection and prevention',
       price: 'From $499/month',
       path: '/services/ai-cybersecurity',
@@ -41,8 +39,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       color: 'from-purple-500 to-indigo-600',
       glowColor: 'purple'
     },
-    {
-      title: 'Quantum Computing',
+    { title: 'Quantum Computing',
       description: 'Solve complex problems 1000x faster with quantum computing solutions',
       price: 'From $2,999/month',
       path: '/services/quantum-computing-solutions',
@@ -53,8 +50,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       color: 'from-green-500 to-emerald-600',
       glowColor: 'green'
     },
-    {
-      title: 'IoT Edge Computing',
+    { title: 'IoT Edge Computing',
       description: 'Process data at the edge and reduce latency by 90%',
       price: 'From $399/month',
       path: '/services/iot-edge-computing',
@@ -65,8 +61,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       color: 'from-orange-500 to-red-600',
       glowColor: 'orange'
     },
-    {
-      title: 'Cloud & DevOps',
+    { title: 'Cloud & DevOps',
       description: 'Build, deploy, and scale with enterprise-grade cloud infrastructure',
       price: 'From $799/month',
       path: '/services/cloud-devops',
@@ -77,8 +72,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
       color: 'from-blue-500 to-cyan-600',
       glowColor: 'blue'
     },
-    {
-      title: 'AI Sales Copilot',
+    { title: 'AI Sales Copilot',
       description: 'Automate sales processes and boost conversion rates with AI',
       price: 'From $1,500/month',
       path: '/services/ai-sales-copilot',
@@ -91,24 +85,18 @@ export const EnhancedServicesShowcase: React.FC = () => {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.6
-      }
+      transition: { duration: 0.6
+          }
     }
   };
 
@@ -126,8 +114,8 @@ export const EnhancedServicesShowcase: React.FC = () => {
           className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.8     }}
         >
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
             Innovative <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Technology Solutions</span>
@@ -148,8 +136,7 @@ export const EnhancedServicesShowcase: React.FC = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="group relative"
-            >
+              className="group relative">
               <div className="relative bg-gradient-to-br from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl p-8 rounded-3xl border border-zion-cyan/20 hover:border-zion-cyan/60 transition-all duration-500 hover:shadow-2xl hover:shadow-zion-cyan/25 hover:transform hover:scale-105">
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-6">
@@ -227,21 +214,19 @@ export const EnhancedServicesShowcase: React.FC = () => {
           className="text-center mt-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="inline-flex items-center space-x-4">
             <Link 
               to="/services"
-              className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-            >
+              className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105">
               View All Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
             <a 
               href="tel:+13024640950"
-              className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-            >
+              className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Call +1 302 464 0950
             </a>
           </div>

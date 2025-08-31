@@ -222,7 +222,7 @@ import { Menu,
 export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeDropdown, setActiveDropdown] = useState<any>(null);
+  const [activeDropdown, setActiveDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -239,27 +239,25 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
     setActiveDropdown(null);
   }, [location.pathname]);
 
-  const handleSearch = (e: anyReact.FormEvent)  => {
+  const handleSearch = (e: React.FormEvent)  => {
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
     }
   };
 
-  const toggleDropdown = (dropdown: anystring)  => {
+  const toggleDropdown = (dropdown: string)  => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
   const navigationItems = [
-    {
-      name: 'Home',
+    { name: 'Home',
       href: '/',
       icon: Home,
       color: 'from-zion-cyan to-zion-blue',
       isMain: true
     },
-    {
-      name: 'AI & Consciousness',
+    { name: 'AI & Consciousness',
       href: '/ai-services',
       icon: Brain,
       color: 'from-zion-purple to-zion-pink',
@@ -272,8 +270,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
         { name: 'Predictive Analytics', href: '/ai-services/predictive-analytics', icon: TrendingUp, description: 'AI-powered business insights' }
       ]
     },
-    {
-      name: 'Micro SAAS',
+    { name: 'Micro SAAS',
       href: '/micro-saas',
       icon: Code,
       color: 'from-zion-purple to-zion-cyan',
@@ -288,8 +285,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
         { name: 'HR Management Suite', href: '/micro-saas/hr-platform', icon: Briefcase, description: 'Modern HR management platform' }
       ]
     },
-    {
-      name: 'IT Services',
+    { name: 'IT Services',
       href: '/it-services',
       icon: Network,
       color: 'from-zion-blue to-zion-purple',
@@ -302,8 +298,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
         { name: '5G Network Solutions', href: '/it-services/5g-solutions', icon: Satellite, description: 'Next-gen network infrastructure' }
       ]
     },
-    {
-      name: 'Emerging Tech',
+    { name: 'Emerging Tech',
       href: '/emerging-tech',
       icon: Rocket,
       color: 'from-zion-cyan to-zion-purple',
@@ -316,8 +311,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
         { name: 'Augmented Reality', href: '/emerging-tech/ar-vr', icon: Eye, description: 'AR/VR development services' }
       ]
     },
-    {
-      name: 'Marketplace',
+    { name: 'Marketplace',
       href: '/marketplace',
       icon: ShoppingCart,
       color: 'from-zion-purple to-zion-cyan',
@@ -330,8 +324,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
         { name: 'Innovation Hub', href: '/marketplace/innovation', icon: Lightbulb, description: 'Innovation and R&D services' }
       ]
     },
-    {
-      name: 'Comprehensive',
+    { name: 'Comprehensive',
       href: '/services-overview',
       icon: BarChart3,
       color: 'from-zion-green to-zion-emerald',
@@ -342,15 +335,13 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
         { name: 'Innovative Services', href: '/innovative-services-2027', icon: Lightbulb, description: 'Cutting-edge innovative solutions' }
       ]
     },
-    {
-      name: 'About',
+    { name: 'About',
       href: '/about',
       icon: Info,
       color: 'from-zion-blue to-zion-cyan',
       isMain: true
     },
-    {
-      name: 'Contact',
+    { name: 'Contact',
       href: '/contact',
       icon: Phone,
       color: 'from-zion-cyan to-zion-purple',
@@ -425,17 +416,15 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
                           initial={{ opacity: 0, y: 10, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                          transition={{ duration: 0.2 }}
-                          className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
-                        >
+                          transition={{ duration: 0.2     }}
+                          className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden">
                           <div className="p-4">
                             <div className="grid grid-cols-1 gap-2">
                               {item.dropdown.map((dropdownItem) => (
                                 <Link
                                   key={dropdownItem.name}
                                   to={dropdownItem.href}
-                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-slate-light/30 transition-all duration-200 group"
-                                >
+                                  className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-slate-light/30 transition-all duration-200 group">
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
                                     {dropdownItem.icon && <dropdownItem.icon className="w-4 h-4 text-zion-cyan" />}
                                   </div>
@@ -512,8 +501,7 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
-              >
+                className="p-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
@@ -527,9 +515,8 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden"
-            >
+              transition={{ duration: 0.3     }}
+              className="bg-zion-slate-dark/95 backdrop-blur-xl border-b border-zion-cyan/20 overflow-hidden">
               <div className="max-w-7xl mx-auto px-6 py-6">
                 {/* Search */}
                 <form onSubmit={handleSearch} className="relative mb-6">
@@ -573,15 +560,13 @@ export const EnhancedFuturisticNavigation: React.FC = (): JSX.Element => {
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: 'auto' }}
                                 exit={{ opacity: 0, height: 0 }}
-                                transition={{ duration: 0.3 }}
-                                className="ml-6 mt-2 space-y-1 overflow-hidden"
-                              >
+                                transition={{ duration: 0.3     }}
+                                className="ml-6 mt-2 space-y-1 overflow-hidden">
                                 {item.dropdown.map((dropdownItem) => (
                                   <Link
                                     key={dropdownItem.name}
                                     to={dropdownItem.href}
-                                    className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200"
-                                  >
+                                    className="block px-4 py-2 text-gray-400 hover:text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200">
                                     {dropdownItem.name}
                                   </Link>
                                 ))}

@@ -1,13 +1,12 @@
 import React from 'react';
 import { SEO } from '@/components/SEO';
 
-type Service = {
-  name: string;
+type Service = { name: string;
   path: string;
   summary: string;
   price: string;
   category: 'Micro SaaS' | 'IT Services' | 'AI Solutions';
-};
+    };
 
 const services: Service[] = [
   { name: 'Website AI Chatbot', path: '/services/website-ai-chatbot', summary: '24/7 on-site AI that answers, qualifies, and books meetings.', price: '$299–$899/mo', category: 'Micro SaaS' },

@@ -32,8 +32,7 @@ const ResearchDevelopment: React.FC = () => {
   ];
 
   const researchProjects = [
-    {
-      id: 1,
+    { id: 1,
       title: 'Quantum Neural Networks',
       area: 'quantum',
       description: 'Developing hybrid quantum-classical neural networks for superior computational performance.',
@@ -47,8 +46,7 @@ const ResearchDevelopment: React.FC = () => {
         'Novel quantum computing architectures'
       ]
     },
-    {
-      id: 2,
+    { id: 2,
       title: 'AI-Powered Drug Discovery',
       area: 'biotech',
       description: 'Using advanced AI algorithms to accelerate pharmaceutical research and drug development.',
@@ -62,8 +60,7 @@ const ResearchDevelopment: React.FC = () => {
         'Improved success rates in clinical trials'
       ]
     },
-    {
-      id: 3,
+    { id: 3,
       title: 'Zero-Trust Security Framework',
       area: 'cybersecurity',
       description: 'Developing next-generation security protocols for enterprise and government applications.',
@@ -77,8 +74,7 @@ const ResearchDevelopment: React.FC = () => {
         'Industry-standard security protocols'
       ]
     },
-    {
-      id: 4,
+    { id: 4,
       title: 'Space-Based Computing Infrastructure',
       area: 'space',
       description: 'Exploring orbital computing platforms for global connectivity and edge computing.',
@@ -92,8 +88,7 @@ const ResearchDevelopment: React.FC = () => {
         'Satellite computing networks'
       ]
     },
-    {
-      id: 5,
+    { id: 5,
       title: 'Advanced Natural Language Processing',
       area: 'ai-ml',
       description: 'Developing context-aware language models for human-computer interaction.',
@@ -107,8 +102,7 @@ const ResearchDevelopment: React.FC = () => {
         'Enhanced conversational AI'
       ]
     },
-    {
-      id: 6,
+    { id: 6,
       title: 'Sustainable Computing Technologies',
       area: 'all',
       description: 'Researching energy-efficient computing solutions for environmental sustainability.',
@@ -129,24 +123,21 @@ const ResearchDevelopment: React.FC = () => {
   );
 
   const publications = [
-    {
-      title: 'Quantum Computing in Machine Learning: A Comprehensive Survey',
+    { title: 'Quantum Computing in Machine Learning: A Comprehensive Survey',
       authors: 'Dr. Sarah Chen, Dr. Michael Rodriguez, Dr. Emily Watson',
       journal: 'Nature Machine Intelligence',
       year: 2024,
       citations: 45,
       doi: '10.1038/s42256-024-00001-x'
     },
-    {
-      title: 'Zero-Trust Architecture for Enterprise Security',
+    { title: 'Zero-Trust Architecture for Enterprise Security',
       authors: 'Dr. James Thompson, Dr. Lisa Park, Dr. David Kim',
       journal: 'IEEE Security & Privacy',
       year: 2024,
       citations: 32,
       doi: '10.1109/MSEC.2024.00001'
     },
-    {
-      title: 'AI-Driven Drug Discovery: Current State and Future Directions',
+    { title: 'AI-Driven Drug Discovery: Current State and Future Directions',
       authors: 'Dr. Maria Garcia, Dr. Robert Johnson, Dr. Amanda Lee',
       journal: 'Science',
       year: 2023,
@@ -156,26 +147,22 @@ const ResearchDevelopment: React.FC = () => {
   ];
 
   const partnerships = [
-    {
-      name: 'MIT Computer Science & AI Lab',
+    { name: 'MIT Computer Science & AI Lab',
       type: 'Academic',
       focus: 'Quantum computing research',
       duration: '2022-2026'
     },
-    {
-      name: 'Stanford University',
+    { name: 'Stanford University',
       type: 'Academic',
       focus: 'AI and machine learning',
       duration: '2023-2027'
     },
-    {
-      name: 'NASA Ames Research Center',
+    { name: 'NASA Ames Research Center',
       type: 'Government',
       focus: 'Space technology development',
       duration: '2024-2028'
     },
-    {
-      name: 'Google Research',
+    { name: 'Google Research',
       type: 'Industry',
       focus: 'Large language models',
       duration: '2023-2025'
@@ -190,7 +177,7 @@ const ResearchDevelopment: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Research & <span className="text-zion-cyan">Development</span>
@@ -230,10 +217,9 @@ const ResearchDevelopment: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Active Research Projects</h2>
             <p className="text-lg text-zion-slate-light">Exploring the frontiers of technology and innovation</p>
           </motion.div>
@@ -245,9 +231,8 @@ const ResearchDevelopment: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="mb-6">
                   <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
                   <p className="text-zion-slate-light leading-relaxed mb-4">{project.description}</p>
@@ -298,10 +283,9 @@ const ResearchDevelopment: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Recent Publications</h2>
             <p className="text-lg text-zion-slate-light">Contributing to the global body of scientific knowledge</p>
           </motion.div>
@@ -313,9 +297,8 @@ const ResearchDevelopment: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate/30 rounded-lg p-6 border border-zion-cyan/20"
-              >
+                viewport={{ once: true     }}
+                className="bg-zion-slate/30 rounded-lg p-6 border border-zion-cyan/20">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{pub.title}</h3>
@@ -335,8 +318,7 @@ const ResearchDevelopment: React.FC = () => {
                       href={`https://doi.org/${pub.doi}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan/80 transition-colors"
-                    >
+                      className="inline-flex items-center gap-2 text-zion-cyan hover:text-zion-cyan/80 transition-colors">
                       View Paper
                       <ArrowRight className="w-4 h-4" />
                     </a>
@@ -354,10 +336,9 @@ const ResearchDevelopment: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Research Partnerships</h2>
             <p className="text-lg text-zion-slate-light">Collaborating with leading institutions worldwide</p>
           </motion.div>
@@ -369,9 +350,8 @@ const ResearchDevelopment: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-zion-slate/30 rounded-lg p-8 border border-zion-cyan/20 hover:border-zion-cyan/40 transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div className="w-16 h-16 bg-zion-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Users className="w-8 h-8 text-zion-cyan" />
@@ -397,28 +377,24 @@ const ResearchDevelopment: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Innovation Lab</h2>
             <p className="text-lg text-zion-slate-light">Where ideas become reality</p>
           </motion.div>
           
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              {
-                icon: Flask,
+              { icon: Flask,
                 title: 'Experimental Research',
                 description: 'State-of-the-art laboratories for cutting-edge experiments'
               },
-              {
-                icon: Code,
+              { icon: Code,
                 title: 'Software Development',
                 description: 'Advanced development environments for software innovation'
               },
-              {
-                icon: Database,
+              { icon: Database,
                 title: 'Data Analytics',
                 description: 'High-performance computing for big data research'
               }
@@ -428,9 +404,8 @@ const ResearchDevelopment: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="w-20 h-20 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <lab.icon className="w-10 h-10 text-zion-cyan" />
                 </div>
@@ -448,8 +423,8 @@ const ResearchDevelopment: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Join Our Research Team

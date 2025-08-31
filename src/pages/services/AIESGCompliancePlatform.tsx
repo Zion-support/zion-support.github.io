@@ -24,20 +24,17 @@ export default function AIESGCompliancePlatform() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
+    { name: 'Starter', 
       price: '$399/mo', 
       features: ['Up to 50 ESG metrics', 'Basic compliance reporting', 'Standard dashboards', 'Email support', 'Monthly sustainability reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$899/mo', 
       features: ['Up to 200 ESG metrics', 'Advanced AI analytics', 'Real-time monitoring', 'Priority support', 'Custom dashboards', 'API access'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$2,999/mo', 
       features: ['Unlimited ESG metrics', 'Full AI suite', 'Custom compliance models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
@@ -289,8 +286,7 @@ export default function AIESGCompliancePlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold"
-          >
+            className="inline-flex items-center text-green-600 hover:text-green-700 font-semibold">
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>

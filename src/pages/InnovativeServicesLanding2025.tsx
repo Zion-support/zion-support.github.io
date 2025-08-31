@@ -13,8 +13,7 @@ import {
 
 export default function InnovativeServicesLanding2025() {
   const featuredServices = [
-    {
-      name: "AI-Powered Legal Document Automation",
+    { name: "AI-Powered Legal Document Automation",
       description: "Revolutionary legal tech that reduces document creation time by 80% and ensures 99.9% compliance accuracy",
       price: "$299/month",
       category: "Legal Technology",
@@ -22,8 +21,7 @@ export default function InnovativeServicesLanding2025() {
       color: "from-blue-500 to-cyan-500",
       benefits: ["80% faster document creation", "99.9% compliance accuracy", "40-60% cost reduction"]
     },
-    {
-      name: "Quantum-Enhanced Financial Trading",
+    { name: "Quantum-Enhanced Financial Trading",
       description: "Next-generation trading platform leveraging quantum computing for ultra-fast market analysis",
       price: "$2,499/month",
       category: "Financial Technology",
@@ -31,8 +29,7 @@ export default function InnovativeServicesLanding2025() {
       color: "from-green-500 to-emerald-500",
       benefits: ["35% increased accuracy", "50% risk reduction", "1000x faster computation"]
     },
-    {
-      name: "AI Autonomous Research Assistant",
+    { name: "AI Autonomous Research Assistant",
       description: "Self-directed AI research platform that accelerates research by 500% across multiple domains",
       price: "$1,999/month",
       category: "Research & Development",
@@ -43,26 +40,22 @@ export default function InnovativeServicesLanding2025() {
   ];
 
   const innovationHighlights = [
-    {
-      title: "Cutting-Edge AI",
+    { title: "Cutting-Edge AI",
       description: "Advanced artificial intelligence powered by the latest models including GPT-4, Claude, and custom neural networks",
       icon: Brain,
       color: "from-orange-500 to-red-500"
     },
-    {
-      title: "Quantum Computing",
+    { title: "Quantum Computing",
       description: "Revolutionary quantum-classical hybrid platforms that solve previously impossible computational problems",
       icon: Atom,
       color: "from-indigo-500 to-purple-500"
     },
-    {
-      title: "Zero-Trust Security",
+    { title: "Zero-Trust Security",
       description: "Next-generation cybersecurity implementing zero-trust architecture with AI-powered threat detection",
       icon: Shield,
       color: "from-red-500 to-pink-500"
     },
-    {
-      title: "Edge Computing",
+    { title: "Edge Computing",
       description: "Advanced IoT platforms with edge computing capabilities for real-time data processing",
       icon: Network,
       color: "from-cyan-500 to-blue-500"
@@ -85,7 +78,7 @@ export default function InnovativeServicesLanding2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 text-cyan-400 text-sm font-medium mb-6">
               <Star className="w-4 h-4 mr-2" />
@@ -105,16 +98,14 @@ export default function InnovativeServicesLanding2025() {
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Link
                 to="/comprehensive-services-showcase-2025"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg">
                 <Rocket className="w-5 h-5 mr-2" />
                 Explore All Services
               </Link>
               
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Innovation Consultation"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 <Mail className="w-5 h-5 mr-2" />
                 Get Innovation Consultation
               </a>
@@ -133,9 +124,8 @@ export default function InnovativeServicesLanding2025() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                   {stat.value}
                 </div>
@@ -157,10 +147,9 @@ export default function InnovativeServicesLanding2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Innovation at Every Level
             </h2>
@@ -176,9 +165,8 @@ export default function InnovativeServicesLanding2025() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-zion-slate-dark/50 rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${highlight.color} flex items-center justify-center mx-auto mb-6`}>
                   <highlight.icon className="w-8 h-8 text-white" />
                 </div>
@@ -202,10 +190,9 @@ export default function InnovativeServicesLanding2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured Revolutionary Services
             </h2>
@@ -221,9 +208,8 @@ export default function InnovativeServicesLanding2025() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-zion-slate-dark/50 rounded-2xl p-8 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300">
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
@@ -257,8 +243,7 @@ export default function InnovativeServicesLanding2025() {
 
                 <Link
                   to="/comprehensive-services-showcase-2025"
-                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300"
-                >
+                  className="w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300">
                   <ArrowRight className="w-4 h-4 mr-2" />
                   Learn More
                 </Link>
@@ -274,15 +259,14 @@ export default function InnovativeServicesLanding2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We're not just another technology company - we're your innovation partner for the future
+              We're not just another technology comp - we're your innovation partner for the future
             </p>
           </motion.div>
 
@@ -291,9 +275,8 @@ export default function InnovativeServicesLanding2025() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+              viewport={{ once: true     }}
+              className="text-center">
               <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mx-auto mb-6">
                 <Award className="w-10 h-10 text-white" />
               </div>
@@ -307,9 +290,8 @@ export default function InnovativeServicesLanding2025() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+              viewport={{ once: true     }}
+              className="text-center">
               <div className="w-20 h-20 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-6">
                 <TrendingUpIcon className="w-10 h-10 text-white" />
               </div>
@@ -323,9 +305,8 @@ export default function InnovativeServicesLanding2025() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="text-center"
-            >
+              viewport={{ once: true     }}
+              className="text-center">
               <div className="w-20 h-20 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-6">
                 <GlobeIcon className="w-10 h-10 text-white" />
               </div>
@@ -344,8 +325,8 @@ export default function InnovativeServicesLanding2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Lead the Innovation Revolution?
@@ -357,16 +338,14 @@ export default function InnovativeServicesLanding2025() {
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Innovation Consultation Request"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:scale-105 transition-transform duration-300 shadow-lg">
                 <Mail className="w-5 h-5 mr-2" />
                 Schedule Innovation Consultation
               </a>
               
               <Link
                 to="/comprehensive-services-showcase-2025"
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300">
                 <ArrowRight className="w-5 h-5 mr-2" />
                 Explore All Services
               </Link>

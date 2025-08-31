@@ -19,26 +19,22 @@ import {
 
 export default function CloudSolutions() {
   const cloudServices = [
-    {
-      icon: Server,
+    { icon: Server,
       title: "Cloud Migration",
       description: "Seamlessly migrate your infrastructure to the cloud with zero downtime",
       features: ["Assessment & Planning", "Data Migration", "Application Modernization", "Performance Optimization"]
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: "Database Management",
       description: "Optimize and manage your databases in the cloud for maximum performance",
       features: ["Performance Tuning", "Backup & Recovery", "Scaling & Optimization", "Security Hardening"]
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Cloud Security",
       description: "Comprehensive security solutions to protect your cloud infrastructure",
       features: ["Identity & Access Management", "Data Encryption", "Threat Detection", "Compliance Management"]
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "DevOps Automation",
       description: "Streamline your development and deployment processes with automation",
       features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring & Alerting", "Auto-scaling"]
@@ -46,23 +42,19 @@ export default function CloudSolutions() {
   ];
 
   const benefits = [
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Cost Optimization",
       description: "Reduce infrastructure costs by up to 40% with intelligent cloud management"
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Global Scalability",
       description: "Scale your applications globally with multi-region deployment strategies"
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: "Enhanced Security",
       description: "Enterprise-grade security with advanced threat protection and compliance"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "24/7 Support",
       description: "Round-the-clock expert support for your cloud infrastructure needs"
     }
@@ -77,22 +69,17 @@ export default function CloudSolutions() {
     { name: "Terraform", logo: "TF", description: "Infrastructure as Code" }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
+  const containerVariants = { hidden: { opacity: 0     },
+    visible: { opacity: 1,
+      transition: { staggerChildren: 0.1
+          }
     }
   };
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
+  const itemVariants = { hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.6     }
     }
   };
 
@@ -109,7 +96,7 @@ export default function CloudSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
               Cloud Solutions for the{' '}
@@ -130,16 +117,16 @@ export default function CloudSolutions() {
             >
               <motion.button 
                 className="group px-10 py-5 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 Get Started
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </motion.button>
               <motion.button 
                 className="px-10 py-5 border-2 border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 flex items-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
               >
                 <Play className="w-5 h-5" />
                 Watch Demo
@@ -156,8 +143,8 @@ export default function CloudSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Comprehensive Cloud Services
@@ -173,7 +160,7 @@ export default function CloudSolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {cloudServices.map((service, index) => (
               <motion.div 
@@ -210,8 +197,8 @@ export default function CloudSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose Our Cloud Solutions?
@@ -227,7 +214,7 @@ export default function CloudSolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {benefits.map((benefit, index) => (
               <motion.div 
@@ -253,8 +240,8 @@ export default function CloudSolutions() {
             className="text-center mb-16"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Technologies We Master
@@ -270,14 +257,14 @@ export default function CloudSolutions() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: true     }}
           >
             {technologies.map((tech, index) => (
               <motion.div 
                 key={index}
                 className="text-center group"
                 variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{ scale: 1.05     }}
               >
                 <div className="w-20 h-20 bg-zion-blue-dark/50 border border-zion-cyan/20 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:border-zion-cyan/40 transition-colors duration-300">
                   <span className="text-zion-cyan font-bold text-lg">{tech.logo}</span>
@@ -296,8 +283,8 @@ export default function CloudSolutions() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
@@ -308,8 +295,8 @@ export default function CloudSolutions() {
             </p>
             <motion.button 
               className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05     }}
+              whileTap={{ scale: 0.95     }}
             >
               Start Your Cloud Journey
             </motion.button>

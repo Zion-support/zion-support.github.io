@@ -19,7 +19,7 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 AI-Powered DevOps Automation Platform
@@ -45,10 +45,9 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced AI-Powered Features
               </h2>
@@ -59,33 +58,27 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "AI Pipeline Optimization",
+                { title: "AI Pipeline Optimization",
                   description: "Machine learning algorithms that continuously optimize CI/CD pipelines for maximum efficiency and reliability.",
                   icon: "🚀"
                 },
-                {
-                  title: "Intelligent Deployment Automation",
+                { title: "Intelligent Deployment Automation",
                   description: "AI-driven deployment strategies with automatic rollback, canary deployments, and blue-green switching.",
                   icon: "🤖"
                 },
-                {
-                  title: "Advanced GitOps Workflows",
+                { title: "Advanced GitOps Workflows",
                   description: "Seamless GitOps implementation with automated infrastructure provisioning and configuration management.",
                   icon: "📚"
                 },
-                {
-                  title: "Infrastructure as Code (IaC)",
+                { title: "Infrastructure as Code (IaC)",
                   description: "Automated infrastructure provisioning using Terraform, CloudFormation, and Kubernetes manifests.",
                   icon: "🏗️"
                 },
-                {
-                  title: "Multi-Cloud Orchestration",
+                { title: "Multi-Cloud Orchestration",
                   description: "Unified management across AWS, Azure, GCP, and on-premises infrastructure with intelligent resource allocation.",
                   icon: "☁️"
                 },
-                {
-                  title: "Security-First Automation",
+                { title: "Security-First Automation",
                   description: "Built-in security scanning, compliance checks, and vulnerability assessment throughout the deployment pipeline.",
                   icon: "🔒"
                 }
@@ -95,9 +88,8 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
@@ -113,10 +105,9 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Measurable Business Impact
               </h2>
@@ -139,9 +130,8 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-8 border border-purple-500/30"
-                >
+                  viewport={{ once: true     }}
+                  className="text-center bg-gradient-to-br from-purple-600/20 to-blue-600/20 rounded-xl p-8 border border-purple-500/30">
                   <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">{benefit.metric}</div>
                   <p className="text-white text-lg">{benefit.description}</p>
                 </motion.div>
@@ -156,10 +146,9 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Industry-Specific Use Cases
               </h2>
@@ -170,23 +159,19 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
-                {
-                  industry: "Financial Services",
+                { industry: "Financial Services",
                   description: "Secure, compliant DevOps automation for banking applications with audit trails and regulatory compliance.",
                   features: ["PCI DSS compliance", "SOX compliance", "Secure deployment pipelines"]
                 },
-                {
-                  industry: "E-commerce",
+                { industry: "E-commerce",
                   description: "High-availability deployment automation for online retail platforms with zero-downtime updates.",
                   features: ["Blue-green deployments", "Auto-scaling", "Performance monitoring"]
                 },
-                {
-                  industry: "Healthcare",
+                { industry: "Healthcare",
                   description: "HIPAA-compliant DevOps automation for medical applications with secure data handling.",
                   features: ["HIPAA compliance", "Data encryption", "Audit logging"]
                 },
-                {
-                  industry: "Manufacturing",
+                { industry: "Manufacturing",
                   description: "IoT-focused DevOps automation for industrial applications with edge computing support.",
                   features: ["Edge deployment", "IoT integration", "Real-time monitoring"]
                 }
@@ -196,9 +181,8 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                   <p className="text-gray-300 mb-4">{useCase.description}</p>
                   <ul className="space-y-2">
@@ -221,10 +205,9 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Technology Stack & Integrations
               </h2>
@@ -243,9 +226,8 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  viewport={{ once: true }}
-                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-white/20 hover:border-white/40 transition-all duration-300">
                   <span className="text-white font-medium">{tech}</span>
                 </motion.div>
               ))}
@@ -259,10 +241,9 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Transparent Pricing Plans
               </h2>
@@ -273,8 +254,7 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                {
-                  name: "Starter",
+                { name: "Starter",
                   price: "$199",
                   period: "/month",
                   description: "Perfect for small teams starting with DevOps automation",
@@ -288,8 +268,7 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   ],
                   popular: false
                 },
-                {
-                  name: "Professional",
+                { name: "Professional",
                   price: "$599",
                   period: "/month",
                   description: "Ideal for growing teams with advanced automation needs",
@@ -305,8 +284,7 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   ],
                   popular: true
                 },
-                {
-                  name: "Enterprise",
+                { name: "Enterprise",
                   price: "$1,499",
                   period: "/month",
                   description: "Comprehensive solution for large organizations",
@@ -328,7 +306,7 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                   className={`relative rounded-xl p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-purple-600 to-blue-600 border-2 border-purple-400' 
@@ -376,9 +354,8 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="text-center mt-12"
-            >
+              viewport={{ once: true     }}
+              className="text-center mt-12">
               <p className="text-gray-300 mb-4">
                 All plans include a 14-day free trial. Annual plans save 20%.
               </p>
@@ -395,8 +372,8 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Automate Your DevOps?

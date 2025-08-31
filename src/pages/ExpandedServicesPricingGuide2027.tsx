@@ -152,9 +152,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
         key={pricing.serviceId}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
-      >
+        transition={{ duration: 0.5     }}
+        className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden">
         {/* Header */}
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>
           <div className="flex items-center justify-between mb-4">
@@ -199,8 +198,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                   {pricing.pricingTiers.starter.features.length > 3 && (
                     <button
                       onClick={() => setExpandedService(expandedService === pricing.serviceId + '-starter' ? null : pricing.serviceId + '-starter')}
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                    >
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
                       {expandedService === pricing.serviceId + '-starter' ? 'Show less' : `+${pricing.pricingTiers.starter.features.length - 3} more features`}
                     </button>
                   )}
@@ -212,8 +210,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600"
-                    >
+                      className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600">
                       <div className="space-y-2">
                         {pricing.pricingTiers.starter.features.slice(3).map((feature, index) => (
                           <div key={index} className="flex items-center space-x-2">
@@ -252,8 +249,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                   {pricing.pricingTiers.professional.features.length > 3 && (
                     <button
                       onClick={() => setExpandedService(expandedService === pricing.serviceId + '-professional' ? null : pricing.serviceId + '-professional')}
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                    >
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
                       {expandedService === pricing.serviceId + '-professional' ? 'Show less' : `+${pricing.pricingTiers.professional.features.length - 3} more features`}
                     </button>
                   )}
@@ -265,8 +261,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-700"
-                    >
+                      className="mt-3 pt-3 border-t border-blue-200 dark:border-blue-700">
                       <div className="space-y-2">
                         {pricing.pricingTiers.professional.features.slice(3).map((feature, index) => (
                           <div key={index} className="flex items-center space-x-2">
@@ -302,8 +297,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                   {pricing.pricingTiers.enterprise.features.length > 3 && (
                     <button
                       onClick={() => setExpandedService(expandedService === pricing.serviceId + '-enterprise' ? null : pricing.serviceId + '-enterprise')}
-                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                    >
+                      className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
                       {expandedService === pricing.serviceId + '-enterprise' ? 'Show less' : `+${pricing.pricingTiers.enterprise.features.length - 3} more features`}
                     </button>
                   )}
@@ -315,8 +309,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600"
-                    >
+                      className="mt-3 pt-3 border-t border-gray-200 dark:border-slate-600">
                       <div className="space-y-2">
                         {pricing.pricingTiers.enterprise.features.slice(3).map((feature, index) => (
                           <div key={index} className="flex items-center space-x-2">
@@ -417,8 +410,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             <div className="flex space-x-2">
               <a
                 href={`mailto:${pricing.contactInfo.email}`}
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Mail className="w-4 h-4" />
                 <span>Get Pricing</span>
               </a>
@@ -426,8 +418,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
                 href={pricing.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
+                className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
               </a>
@@ -453,9 +444,8 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Expanded Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 Pricing Guide 2027
@@ -465,8 +455,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
-            >
+              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services. 
               Find the perfect pricing tier for your business needs.
             </motion.p>
@@ -476,8 +465,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
-            >
+              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-600" />
@@ -531,8 +519,7 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-              >
+                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
                 {categories.map((category) => (
                   <option key={category} value={category}>
                     {category}
@@ -581,15 +568,13 @@ const ExpandedServicesPricingGuide2027: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
-            >
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2">
               <Mail className="w-5 h-5" />
               <span>Get Custom Quote</span>
             </a>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
-            >
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2">
               <Phone className="w-5 h-5" />
               <span>Call Sales Team</span>
             </a>

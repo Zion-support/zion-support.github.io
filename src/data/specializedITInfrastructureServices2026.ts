@@ -17,26 +17,24 @@ export interface SpecializedITInfrastructureService2026 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 
 export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastructureService2026[] = [
   // 5G Enterprise Network Solutions
-  {
-    id: "5g-enterprise-network-solutions-2026",
+  { id: "5g-enterprise-network-solutions-2026",
     title: "5G Enterprise Network Solutions 2026",
     description: "Advanced 5G enterprise networking solutions that provide ultra-fast connectivity, low latency, and massive IoT device support for modern business operations.",
     category: "IT & Infrastructure",
@@ -83,13 +81,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$4,500 - $12,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["5G Core", "RAN", "Network Slicing", "Edge Computing", "SDN/NFV"],
+    technicalSpecs: { technology: ["5G Core", "RAN", "Network Slicing", "Edge Computing", "SDN/NFV"],
       integrations: ["AWS", "Azure", "Google Cloud", "IoT Platforms", "Security Systems"],
       apiEndpoints: 200,
       uptime: "99.99%",
@@ -100,8 +96,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Zero Trust Network Architecture
-  {
-    id: "zero-trust-network-architecture-2026",
+  { id: "zero-trust-network-architecture-2026",
     title: "Zero Trust Network Architecture 2026",
     description: "Comprehensive zero trust security framework that implements strict access controls, continuous monitoring, and least-privilege access across all network resources.",
     category: "IT & Security",
@@ -148,13 +143,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$3,200 - $8,500/month",
     roi: "300-500%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Identity Management", "Network Segmentation", "Monitoring Tools", "Policy Engine"],
+    technicalSpecs: { technology: ["Identity Management", "Network Segmentation", "Monitoring Tools", "Policy Engine"],
       integrations: ["Active Directory", "LDAP", "SIEM", "EDR", "Firewalls"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -165,8 +158,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Hybrid Cloud Infrastructure
-  {
-    id: "hybrid-cloud-infrastructure-2026",
+  { id: "hybrid-cloud-infrastructure-2026",
     title: "Hybrid Cloud Infrastructure 2026",
     description: "Seamless hybrid cloud solution that combines on-premises infrastructure with public and private cloud services for optimal performance, cost, and security.",
     category: "IT & Infrastructure",
@@ -213,13 +205,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$3,800 - $10,000/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"],
+    technicalSpecs: { technology: ["AWS", "Azure", "GCP", "VMware", "OpenStack", "Kubernetes"],
       integrations: ["On-premise Systems", "Cloud Services", "Storage Systems", "Networking"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -230,8 +220,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Software-Defined Networking (SDN)
-  {
-    id: "software-defined-networking-sdn-2026",
+  { id: "software-defined-networking-sdn-2026",
     title: "Software-Defined Networking (SDN) 2026",
     description: "Advanced SDN solution that centralizes network control, automates configuration, and provides programmatic network management for improved agility and efficiency.",
     category: "IT & Infrastructure",
@@ -278,13 +267,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$2,800 - $7,500/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["OpenFlow", "OpenDaylight", "OVS", "Linux", "Python", "Java"],
+    technicalSpecs: { technology: ["OpenFlow", "OpenDaylight", "OVS", "Linux", "Python", "Java"],
       integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"],
       apiEndpoints: 200,
       uptime: "99.9%",
@@ -295,8 +282,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Edge Computing Infrastructure
-  {
-    id: "edge-computing-infrastructure-2026",
+  { id: "edge-computing-infrastructure-2026",
     title: "Edge Computing Infrastructure 2026",
     description: "Distributed edge computing platform that brings computation and data storage closer to data sources, reducing latency and improving real-time processing capabilities.",
     category: "IT & Infrastructure",
@@ -343,13 +329,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$2,200 - $6,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Docker", "Kubernetes", "Edge Runtime", "Message Queues", "Databases"],
+    technicalSpecs: { technology: ["Docker", "Kubernetes", "Edge Runtime", "Message Queues", "Databases"],
       integrations: ["Cloud Platforms", "IoT Devices", "Monitoring Tools", "Security Systems"],
       apiEndpoints: 150,
       uptime: "99.8%",
@@ -360,8 +344,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Network Function Virtualization (NFV)
-  {
-    id: "network-function-virtualization-nfv-2026",
+  { id: "network-function-virtualization-nfv-2026",
     title: "Network Function Virtualization (NFV) 2026",
     description: "NFV platform that virtualizes network functions, enabling flexible deployment, scaling, and management of network services on standard hardware.",
     category: "IT & Infrastructure",
@@ -408,13 +391,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$3,500 - $9,500/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["OpenStack", "Kubernetes", "Docker", "OVS", "DPDK", "SR-IOV"],
+    technicalSpecs: { technology: ["OpenStack", "Kubernetes", "Docker", "OVS", "DPDK", "SR-IOV"],
       integrations: ["Network Equipment", "Management Systems", "Orchestration Platforms"],
       apiEndpoints: 250,
       uptime: "99.9%",
@@ -425,8 +406,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Intent-Based Networking
-  {
-    id: "intent-based-networking-2026",
+  { id: "intent-based-networking-2026",
     title: "Intent-Based Networking 2026",
     description: "AI-powered networking solution that translates business intent into network configuration, automatically implementing policies and ensuring compliance across the network.",
     category: "IT & Infrastructure",
@@ -473,13 +453,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$4,200 - $11,000/month",
     roi: "300-500%",
     innovationLevel: "Revolutionary",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Machine Learning", "AI", "Network APIs", "Policy Engine", "Analytics"],
+    technicalSpecs: { technology: ["Machine Learning", "AI", "Network APIs", "Policy Engine", "Analytics"],
       integrations: ["Network Devices", "Management Systems", "Security Tools", "Monitoring"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -490,8 +468,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Network Automation Platform
-  {
-    id: "network-automation-platform-2026",
+  { id: "network-automation-platform-2026",
     title: "Network Automation Platform 2026",
     description: "Comprehensive network automation solution that streamlines network operations, reduces manual tasks, and improves network reliability through intelligent automation.",
     category: "IT & Infrastructure",
@@ -538,13 +515,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$1,800 - $5,000/month",
     roi: "200-350%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "Ansible", "Terraform", "Jenkins", "Git", "APIs"],
+    technicalSpecs: { technology: ["Python", "Ansible", "Terraform", "Jenkins", "Git", "APIs"],
       integrations: ["Network Devices", "Management Systems", "Monitoring Tools", "Security"],
       apiEndpoints: 120,
       uptime: "99.8%",
@@ -555,8 +530,7 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
   },
 
   // Network Performance Monitoring
-  {
-    id: "network-performance-monitoring-2026",
+  { id: "network-performance-monitoring-2026",
     title: "Network Performance Monitoring 2026",
     description: "Advanced network monitoring solution that provides real-time visibility into network performance, identifies bottlenecks, and optimizes network operations.",
     category: "IT & Infrastructure",
@@ -603,13 +577,11 @@ export const SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2026: SpecializedITInfrastru
     marketPrice: "$1,200 - $3,500/month",
     roi: "150-250%",
     innovationLevel: "Standard",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["SNMP", "NetFlow", "Packet Analysis", "Analytics Engine", "Web Technologies"],
+    technicalSpecs: { technology: ["SNMP", "NetFlow", "Packet Analysis", "Analytics Engine", "Web Technologies"],
       integrations: ["Network Devices", "Management Systems", "Ticketing Systems", "APIs"],
       apiEndpoints: 80,
       uptime: "99.8%",

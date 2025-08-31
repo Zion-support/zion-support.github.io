@@ -21,15 +21,14 @@ interface AnalyticsData {
   sessionDuration: number;
   bounceRate: number;
   conversionRate: number;
-  topPages: Array<{ path: string; views: number }>;
-  userAgents: Array<{ device: string; count: number }>;
-  performance: {
-    fcp: number;
+  topPages: Array<{ path: string; views: number     }>;
+  userAgents: Array<{ device: string; count: number     }>;
+  performance: { fcp: number;
     lcp: number;
-    fid: number;
-    cls: number;
-  };
-  events: Array<{ name: string; count: number; timestamp: string }>;
+    fid: number
+    cls: number
+      };
+  events: Array<{ name: string; count: number; timestamp: string     }>;
 }
 
 interface UserSession {
@@ -37,7 +36,7 @@ interface UserSession {
   startTime: number;
   lastActivity: number;
   pageViews: string[];
-  events: Array<{ name: string; timestamp: number; data?: any }>;
+  events: Array<{ name: string; timestamp: number; data?:      }>;
   userAgent: string;
   referrer: string;
 }
@@ -61,8 +60,7 @@ export function AnalyticsManager() {
     const sessionId = localStorage.getItem('zion_session_id') || generateSessionId();
     localStorage.setItem('zion_session_id', sessionId);
     
-    const session: UserSession = {
-      id: sessionId,
+    const session: UserSession = { id: sessionId,
       startTime: Date.now(),
       lastActivity: Date.now(),
       pageViews: [window.location.pathname],
@@ -114,10 +112,10 @@ export function AnalyticsManager() {
 
   const setupEventListeners = useCallback(() => {
     // Click tracking
-    document.addEventListener('click', handleClick, { passive: true });
+    document.addEventListener('click', handleClick, { passive: true     });
     
     // Scroll tracking
-    document.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('scroll', handleScroll, { passive: true     });
     
     // Page unload tracking
     window.addEventListener('beforeunload', handleBeforeUnload);
@@ -128,8 +126,7 @@ export function AnalyticsManager() {
     
     // Track button clicks
     if (target.tagName === 'BUTTON' || target.closest('button')) {
-      trackEvent('button_click', {
-        text: target.textContent || target.innerText,
+      trackEvent('button_click', { text: target.textContent || target.innerText,
         className: target.className,
         id: target.id
       });
@@ -138,16 +135,14 @@ export function AnalyticsManager() {
     // Track link clicks
     if (target.tagName === 'A' || target.closest('a')) {
       const link = target.tagName === 'A' ? target : target.closest('a') as HTMLAnchorElement;
-      trackEvent('link_click', {
-        href: link.href,
+      trackEvent('link_click', { href: link.href,
         text: link.textContent || link.innerText
       });
     }
     
     // Track form interactions
     if (target.tagName === 'INPUT' || target.tagName === 'SELECT' || target.tagName === 'TEXTAREA') {
-      trackEvent('form_interaction', {
-        type: target.tagName.toLowerCase(),
+      trackEvent('form_interaction', { type: target.tagName.toLowerCase(),
         name: (target as HTMLInputElement).name,
         id: target.id
       });
@@ -159,15 +154,14 @@ export function AnalyticsManager() {
     const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
     
     if (scrollDepth % 25 === 0) { // Track at 25%, 50%, 75%, 100%
-      trackEvent('scroll_depth', { depth: scrollDepth });
+      trackEvent('scroll_depth', { depth: scrollDepth     });
     }
   }, []);
 
   const handleBeforeUnload = useCallback(() => {
     // Track session end
     if (currentSession) {
-      trackEvent('session_end', {
-        duration: Date.now() - currentSession.startTime,
+      trackEvent('session_end', { duration: Date.now() - currentSession.startTime,
         pageViews: currentSession.pageViews.length
       });
     }
@@ -183,7 +177,7 @@ export function AnalyticsManager() {
           trackPerformance('fcp', fcp.startTime);
         }
       });
-      fcpObserver.observe({ entryTypes: ['paint'] });
+      fcpObserver.observe({ entryTypes: ['paint']     });
 
       // Largest Contentful Paint
       const lcpObserver = new PerformanceObserver((list) => {
@@ -193,7 +187,7 @@ export function AnalyticsManager() {
           trackPerformance('lcp', lcp.startTime);
         }
       });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint']     });
 
       // First Input Delay
       const fidObserver = new PerformanceObserver((list) => {
@@ -203,19 +197,19 @@ export function AnalyticsManager() {
           trackPerformance('fid', fid.processingStart - fid.startTime);
         }
       });
-      fidObserver.observe({ entryTypes: ['first-input'] });
+      fidObserver.observe({ entryTypes: ['first-input']     });
 
       // Cumulative Layout Shift
       const clsObserver = new PerformanceObserver((list) => {
         let clsValue = 0;
         for (const entry of list.getEntries()) {
           if (!entry.hadRecentInput) {
-            clsValue += (entry as any).value;
+            clsValue += (entry as ).value;
           }
         }
         trackPerformance('cls', clsValue);
       });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
+      clsObserver.observe({ entryTypes: ['layout-shift']     });
     }
   }, []);
 
@@ -245,7 +239,7 @@ export function AnalyticsManager() {
     }
   }, [currentSession]);
 
-  const trackEvent = useCallback((name: string, data?: any) => {
+  const trackEvent = useCallback((name: string, data?: ) => {
     if (currentSession) {
       const event = { name, timestamp: Date.now(), data };
       
@@ -272,7 +266,7 @@ export function AnalyticsManager() {
     trackEvent('performance_metric', { metric, value });
   }, []);
 
-  const sendAnalyticsData = useCallback(async (type: string, data: any) => {
+  const sendAnalyticsData = useCallback(async (type: string, data: ) => {
     try {
       // In production, send to your analytics endpoint
       // await fetch('/api/analytics', {
@@ -368,8 +362,7 @@ export function AnalyticsManager() {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="fixed bottom-4 left-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 text-white text-sm z-50 max-w-sm"
-    >
+      className="fixed bottom-4 left-4 bg-white/10 backdrop-blur-sm border border-cyan-400/30 rounded-lg p-4 text-white text-sm z-50 max-w-sm">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center space-x-2">
           <BarChart3 className="w-5 h-5 text-cyan-400" />
@@ -377,8 +370,7 @@ export function AnalyticsManager() {
         </div>
         <button
           onClick={() => setShowAnalytics(false)}
-          className="text-gray-400 hover:text-white"
-        >
+          className="text-gray-400 hover:text-white">
           ×
         </button>
       </div>
@@ -440,8 +432,7 @@ export function AnalyticsManager() {
               saveSessionData(currentSession);
             }
           }}
-          className="w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors duration-200"
-        >
+          className="w-full px-3 py-2 bg-cyan-600 hover:bg-cyan-700 text-white text-xs rounded transition-colors duration-200">
           Save Session Data
         </button>
       </div>

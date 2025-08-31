@@ -85,8 +85,7 @@ export function generateRandomListing(): MarketplaceItem {
   const sellerName = sellerNames[sellerNameIndex];
   const image = sampleImages[imageIndex];
   
-  return {
-    id: `listing-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+  return { id: `listing-${Date.now()    }-${Math.random().toString(36).substr(2, 9)}`,
     title: sampleTitles[randomIndex] || 'Default Title',
     category: category || 'products',
     description: sampleDescriptions[randomIndex] || 'Default description',
@@ -98,8 +97,7 @@ export function generateRandomListing(): MarketplaceItem {
     image: image || 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: sampleTags[randomIndex] || ['Technology', 'Solution'],
     featured: Math.random() > 0.7,
-    seller: {
-      name: sellerName || 'Default Seller',
+    seller: { name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random() * 1.0,
       verified: Math.random() > 0.3
     },

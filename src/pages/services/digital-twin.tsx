@@ -36,8 +36,7 @@ export default function DigitalTwin() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function DigitalTwin() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Cpu,
+                { icon: Cpu,
                   title: "Real-time Monitoring",
                   description: "Continuous monitoring of physical assets with instant virtual representation updates."
                 },
-                {
-                  icon: Eye,
+                { icon: Eye,
                   title: "Predictive Analytics",
                   description: "AI-powered predictions for maintenance, performance, and failure prevention."
                 },
-                {
-                  icon: Zap,
+                { icon: Zap,
                   title: "Simulation & Testing",
                   description: "Test scenarios and changes in the virtual environment before physical implementation."
                 },
-                {
-                  icon: Settings,
+                { icon: Settings,
                   title: "Performance Optimization",
                   description: "Identify bottlenecks and optimize operations based on digital twin insights."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Collaborative Planning",
                   description: "Enable teams to work together on virtual models and simulations."
                 },
-                {
-                  icon: Globe,
+                { icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
                 }
@@ -122,38 +115,32 @@ export default function DigitalTwin() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Manufacturing",
+                { title: "Manufacturing",
                   description: "Monitor production lines, predict maintenance, and optimize manufacturing processes.",
                   icon: Settings,
                   benefits: ["Production monitoring", "Predictive maintenance", "Quality control"]
                 },
-                {
-                  title: "Smart Cities",
+                { title: "Smart Cities",
                   description: "Manage urban infrastructure, traffic systems, and public services efficiently.",
                   icon: Globe,
                   benefits: ["Traffic optimization", "Infrastructure monitoring", "Public services"]
                 },
-                {
-                  title: "Healthcare",
+                { title: "Healthcare",
                   description: "Patient monitoring, medical device management, and treatment optimization.",
                   icon: Users,
                   benefits: ["Patient monitoring", "Device management", "Treatment optimization"]
                 },
-                {
-                  title: "Energy & Utilities",
+                { title: "Energy & Utilities",
                   description: "Grid monitoring, renewable energy optimization, and infrastructure management.",
                   icon: Zap,
                   benefits: ["Grid monitoring", "Energy optimization", "Infrastructure management"]
                 },
-                {
-                  title: "Transportation",
+                { title: "Transportation",
                   description: "Fleet management, route optimization, and vehicle performance monitoring.",
                   icon: Target,
                   benefits: ["Fleet management", "Route optimization", "Performance monitoring"]
                 },
-                {
-                  title: "Buildings & Facilities",
+                { title: "Buildings & Facilities",
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
@@ -298,15 +285,13 @@ export default function DigitalTwin() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface MicroSaasService {
   id: number;
@@ -32,7 +32,7 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-}
+    }
 
 export interface ITService {
   id: number;
@@ -55,7 +55,7 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-}
+    }
 
 export interface AIService {
   id: number;
@@ -80,12 +80,11 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-}
+    }
 
 // Revolutionary Micro SAAS Services 2026
 export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "QuantumFlow Pro",
     category: "Quantum Computing",
     pricing: "Enterprise",
@@ -113,8 +112,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     ],
     targetAudience: ["Fortune 500 companies", "Research institutions", "Government agencies", "Financial services"],
     tags: ["Quantum Computing", "Workflow Automation", "AI", "Enterprise", "Innovation"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantumflow-pro",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -130,8 +128,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     marketSize: "$1.2 billion by 2026",
     growthRate: "300% annual growth"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "NeuroSync AI",
     category: "Neural Networks",
     pricing: "Professional",
@@ -159,8 +156,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     ],
     targetAudience: ["IoT companies", "AI startups", "Manufacturing", "Healthcare", "Autonomous vehicles"],
     tags: ["Neural Networks", "Edge Computing", "AI Training", "IoT", "Federated Learning"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/neurosync-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -176,8 +172,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     marketSize: "$800 million by 2026",
     growthRate: "250% annual growth"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "BlockchainForge",
     category: "Blockchain Development",
     pricing: "Enterprise",
@@ -205,8 +200,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     ],
     targetAudience: ["Fintech companies", "Banks", "Insurance", "Real estate", "Supply chain"],
     tags: ["Blockchain", "Smart Contracts", "DeFi", "Security", "Compliance"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/blockchainforge",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -226,8 +220,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
 
 // Revolutionary IT Infrastructure Services 2026
 export const revolutionaryITInfrastructureServices2026: ITService[] = [
-  {
-    id: 101,
+  { id: 101,
     name: "Quantum Cloud Infrastructure",
     category: "Quantum Computing Infrastructure",
     description: "Enterprise-grade quantum computing infrastructure with hybrid classical-quantum architecture and quantum-safe security",
@@ -253,8 +246,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     ],
     targetAudience: ["Fortune 500", "Government", "Research institutions", "Financial services"],
     tags: ["Quantum Computing", "Cloud Infrastructure", "Security", "Hybrid Architecture"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-cloud",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -269,8 +261,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     marketSize: "$3.5 billion by 2026",
     compliance: ["GDPR", "HIPAA", "SOX", "Quantum-safe standards"]
   },
-  {
-    id: 102,
+  { id: 102,
     name: "Edge AI Infrastructure",
     category: "Edge Computing",
     description: "Distributed edge AI infrastructure for real-time processing and inference at the network edge",
@@ -296,8 +287,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     ],
     targetAudience: ["IoT companies", "Manufacturing", "Healthcare", "Autonomous systems"],
     tags: ["Edge Computing", "AI", "IoT", "Real-time", "Distributed Systems"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/edge-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -316,8 +306,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
 
 // Revolutionary AI Services 2026
 export const revolutionaryAIServices2026: AIService[] = [
-  {
-    id: 201,
+  { id: 201,
     name: "Autonomous AI Agents",
     category: "Autonomous Systems",
     description: "Fully autonomous AI agents that can perform complex business tasks without human intervention",
@@ -343,8 +332,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     ],
     targetAudience: ["Enterprises", "E-commerce", "Customer service", "Operations"],
     tags: ["Autonomous AI", "Automation", "Machine Learning", "NLP", "Ethical AI"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/autonomous-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -360,8 +348,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     marketSize: "$4.2 billion by 2026",
     ethicalAI: ["Bias detection", "Transparency", "Accountability", "Fairness"]
   },
-  {
-    id: 202,
+  { id: 202,
     name: "Quantum AI Platform",
     category: "Quantum AI",
     description: "Quantum-enhanced AI platform that combines quantum computing with machine learning for unprecedented performance",
@@ -387,8 +374,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     ],
     targetAudience: ["Research institutions", "Pharmaceutical", "Financial services", "Government"],
     tags: ["Quantum AI", "Machine Learning", "Quantum Computing", "Research", "Innovation"],
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/quantum-ai",
       address: "364 E Main St STE 1008 Middletown DE 19709"

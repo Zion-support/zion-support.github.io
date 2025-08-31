@@ -11,7 +11,7 @@ export interface PricingTier {
   bestFor: string;
   setupTime: string;
   support: string;
-}
+    }
 
 export interface ServicePricing {
   serviceId: string;
@@ -26,18 +26,16 @@ export interface ServicePricing {
   paymentOptions: string[];
   volumeDiscounts: string[];
   enterpriseFeatures: string[];
-}
+    }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   // AI-Powered Autonomous Research Assistant
-  {
-    serviceId: "ai-autonomous-research-assistant",
+  { serviceId: "ai-autonomous-research-assistant",
     serviceName: "AI Autonomous Research Assistant",
     category: "AI & Research",
     basePrice: 8999,
     pricingTiers: [
-      {
-        name: "Starter",
+      { name: "Starter",
         price: 8999,
         features: [
           "Basic research automation",
@@ -50,8 +48,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "6-8 weeks",
         support: "Email support"
       },
-      {
-        name: "Professional",
+      { name: "Professional",
         price: 15999,
         features: [
           "Advanced research automation",
@@ -65,8 +62,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "6-8 weeks",
         support: "Priority support + phone"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 29999,
         features: [
           "Full research automation",
@@ -91,14 +87,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   },
 
   // AI-Powered Metaverse Development Platform
-  {
-    serviceId: "ai-metaverse-development-platform",
+  { serviceId: "ai-metaverse-development-platform",
     serviceName: "AI Metaverse Development Platform",
     category: "AI & Metaverse",
     basePrice: 12999,
     pricingTiers: [
-      {
-        name: "Creator",
+      { name: "Creator",
         price: 12999,
         features: [
           "Basic metaverse creation tools",
@@ -111,8 +105,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "8-10 weeks",
         support: "Community support"
       },
-      {
-        name: "Studio",
+      { name: "Studio",
         price: 24999,
         features: [
           "Advanced metaverse tools",
@@ -125,8 +118,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "8-10 weeks",
         support: "Priority support"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 49999,
         features: [
           "Full metaverse platform",
@@ -150,14 +142,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   },
 
   // Zero-Trust Network Access Platform
-  {
-    serviceId: "zero-trust-network-access-platform",
+  { serviceId: "zero-trust-network-access-platform",
     serviceName: "Zero-Trust Network Access Platform",
     category: "IT Infrastructure",
     basePrice: 12999,
     pricingTiers: [
-      {
-        name: "Basic",
+      { name: "Basic",
         price: 12999,
         features: [
           "Basic zero-trust access",
@@ -170,8 +160,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "6-8 weeks",
         support: "Email support"
       },
-      {
-        name: "Professional",
+      { name: "Professional",
         price: 21999,
         features: [
           "Advanced zero-trust",
@@ -184,8 +173,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "6-8 weeks",
         support: "Priority support"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 39999,
         features: [
           "Full zero-trust platform",
@@ -209,14 +197,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   },
 
   // AI-Powered Medical Imaging Analysis
-  {
-    serviceId: "ai-medical-imaging-analysis",
+  { serviceId: "ai-medical-imaging-analysis",
     serviceName: "AI Medical Imaging Analysis Platform",
     category: "AI & Healthcare",
     basePrice: 24999,
     pricingTiers: [
-      {
-        name: "Clinic",
+      { name: "Clinic",
         price: 24999,
         features: [
           "Basic image analysis",
@@ -229,8 +215,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "10-12 weeks",
         support: "Email support"
       },
-      {
-        name: "Hospital",
+      { name: "Hospital",
         price: 44999,
         features: [
           "Advanced image analysis",
@@ -244,8 +229,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "10-12 weeks",
         support: "Priority support"
       },
-      {
-        name: "Medical Center",
+      { name: "Medical Center",
         price: 79999,
         features: [
           "Full medical imaging platform",
@@ -269,14 +253,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
   },
 
   // AI-Powered Risk Assessment Platform
-  {
-    serviceId: "ai-risk-assessment-platform",
+  { serviceId: "ai-risk-assessment-platform",
     serviceName: "AI Risk Assessment Platform",
     category: "AI & FinTech",
     basePrice: 18999,
     pricingTiers: [
-      {
-        name: "Basic",
+      { name: "Basic",
         price: 18999,
         features: [
           "Basic risk assessment",
@@ -289,8 +271,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "8-10 weeks",
         support: "Email support"
       },
-      {
-        name: "Professional",
+      { name: "Professional",
         price: 32999,
         features: [
           "Advanced risk assessment",
@@ -304,8 +285,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
         setupTime: "8-10 weeks",
         support: "Priority support"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 59999,
         features: [
           "Full risk management platform",
@@ -330,13 +310,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: ServicePricing[] = [
 ];
 
 // Pricing Analysis and Insights
-export const PRICING_ANALYSIS_2030 = {
-  averagePrice: Math.round(
+export const PRICING_ANALYSIS_2030 = { averagePrice: Math.round(
     COMPREHENSIVE_PRICING_GUIDE_2030.reduce((sum, service) => sum + service.basePrice, 0) / 
     COMPREHENSIVE_PRICING_GUIDE_2030.length
   ),
-  priceRange: {
-    min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
+  priceRange: { min: Math.min(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice)),
     max: Math.max(...COMPREHENSIVE_PRICING_GUIDE_2030.map(s => s.basePrice))
   },
   categoryPricing: COMPREHENSIVE_PRICING_GUIDE_2030.reduce((acc, service) => {
@@ -346,8 +324,7 @@ export const PRICING_ANALYSIS_2030 = {
     acc[service.category].push(service.basePrice);
     return acc;
   }, {} as Record<string, number[]>),
-  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({
-    serviceName: service.serviceName,
+  roiAnalysis: COMPREHENSIVE_PRICING_GUIDE_2030.map(service => ({ serviceName: service.serviceName,
     roi: service.roi,
     setupTime: service.setupTime,
     price: service.basePrice
@@ -355,8 +332,7 @@ export const PRICING_ANALYSIS_2030 = {
 };
 
 // Payment and Discount Information
-export const PAYMENT_OPTIONS_2030 = {
-  paymentMethods: ["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],
+export const PAYMENT_OPTIONS_2030 = { paymentMethods: ["Credit Card", "Bank Transfer", "Wire Transfer", "Cryptocurrency"],
   installmentPlans: ["3-month plan", "6-month plan", "12-month plan"],
   volumeDiscounts: [
     "5-10 licenses: 15% discount",
@@ -375,8 +351,7 @@ export const PAYMENT_OPTIONS_2030 = {
 };
 
 // Contact Information for Pricing Inquiries
-export const PRICING_CONTACT_2030 = {
-  phone: "+1 302 464 0950",
+export const PRICING_CONTACT_2030 = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709",

@@ -5,38 +5,32 @@ import { Shield, Lock, Database, Zap, Globe, Server, BarChart3, Settings, Users,
 
 export default function ZeroTrustNetworkArchitecture() {
   const features = [
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Never Trust, Always Verify',
       description: 'Continuous verification of every user, device, and network request',
       color: 'from-red-500 to-pink-500'
     },
-    {
-      icon: Lock,
+    { icon: Lock,
       title: 'Least Privilege Access',
       description: 'Users and systems only get access to what they absolutely need',
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Continuous Monitoring',
       description: 'Real-time monitoring and analysis of all network activities',
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      icon: Key,
+    { icon: Key,
       title: 'Multi-Factor Authentication',
       description: 'Multiple layers of identity verification and access control',
       color: 'from-yellow-500 to-orange-500'
     },
-    {
-      icon: Fingerprint,
+    { icon: Fingerprint,
       title: 'Identity-Based Security',
       description: 'Security policies based on user identity and context',
       color: 'from-purple-500 to-pink-500'
     },
-    {
-      icon: ShieldCheck,
+    { icon: ShieldCheck,
       title: 'Micro-Segmentation',
       description: 'Network segmentation at the application and workload level',
       color: 'from-indigo-500 to-purple-500'
@@ -44,26 +38,22 @@ export default function ZeroTrustNetworkArchitecture() {
   ];
 
   const services = [
-    {
-      title: 'Zero Trust Assessment',
+    { title: 'Zero Trust Assessment',
       description: 'Comprehensive evaluation of current security posture',
       price: 'From $5,000',
       features: ['Security audit', 'Gap analysis', 'Risk assessment', 'Implementation roadmap']
     },
-    {
-      title: 'Identity & Access Management',
+    { title: 'Identity & Access Management',
       description: 'Modern IAM solutions with multi-factor authentication',
       price: 'From $15,000',
       features: ['Single sign-on', 'MFA implementation', 'Role-based access', 'Identity governance']
     },
-    {
-      title: 'Network Segmentation',
+    { title: 'Network Segmentation',
       description: 'Micro-segmentation and network isolation strategies',
       price: 'From $20,000',
       features: ['Network design', 'Segmentation policies', 'Traffic monitoring', 'Security controls']
     },
-    {
-      title: 'Continuous Monitoring',
+    { title: 'Continuous Monitoring',
       description: 'Real-time security monitoring and threat detection',
       price: 'From $12,000',
       features: ['SIEM implementation', 'Threat detection', 'Incident response', 'Security analytics']
@@ -93,9 +83,8 @@ export default function ZeroTrustNetworkArchitecture() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Shield className="w-10 h-10 text-white" />
@@ -113,17 +102,15 @@ export default function ZeroTrustNetworkArchitecture() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300">
                 Get Started
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300">
                 Learn More
               </motion.button>
             </div>
@@ -137,9 +124,8 @@ export default function ZeroTrustNetworkArchitecture() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Zero Trust Principles
             </h2>
@@ -156,8 +142,7 @@ export default function ZeroTrustNetworkArchitecture() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300">
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -175,9 +160,8 @@ export default function ZeroTrustNetworkArchitecture() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Zero Trust Services
             </h2>
@@ -194,8 +178,7 @@ export default function ZeroTrustNetworkArchitecture() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300">
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-slate-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-pink-400 mb-4">{service.price}</div>
@@ -208,10 +191,9 @@ export default function ZeroTrustNetworkArchitecture() {
                   ))}
                 </ul>
                 <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-                >
+                  whileHover={{ scale: 1.05     }}
+                  whileTap={{ scale: 0.95     }}
+                  className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300">
                   Get Quote
                 </motion.button>
               </motion.div>
@@ -226,9 +208,8 @@ export default function ZeroTrustNetworkArchitecture() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Benefits of Zero Trust
             </h2>
@@ -245,8 +226,7 @@ export default function ZeroTrustNetworkArchitecture() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center group"
-              >
+                className="text-center group">
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">
                   <benefit.icon className="w-8 h-8 text-pink-400" />
                 </div>
@@ -264,7 +244,7 @@ export default function ZeroTrustNetworkArchitecture() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Secure Your Network?
@@ -275,17 +255,15 @@ export default function ZeroTrustNetworkArchitecture() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300">
                 Schedule Consultation
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-              >
+                whileHover={{ scale: 1.05     }}
+                whileTap={{ scale: 0.95     }}
+                className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300">
                 View Case Studies
               </motion.button>
             </div>

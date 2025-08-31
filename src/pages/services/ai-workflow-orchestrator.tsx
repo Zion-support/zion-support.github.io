@@ -27,33 +27,27 @@ import {
 
 const AIWorkflowOrchestrator = () => {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "Intelligent Decision Making",
       description: "AI-powered workflow decisions based on real-time data analysis and predictive modeling"
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Lightning Fast Execution",
       description: "Optimized workflow execution with parallel processing and intelligent resource allocation"
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: "Enterprise Security",
       description: "Bank-level security with encryption, access controls, and compliance monitoring"
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: "Scalable Infrastructure",
       description: "Auto-scaling cloud infrastructure that grows with your business needs"
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Advanced Analytics",
       description: "Comprehensive insights into workflow performance and optimization opportunities"
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Team Collaboration",
       description: "Seamless team coordination with real-time updates and communication tools"
     }
@@ -69,31 +63,26 @@ const AIWorkflowOrchestrator = () => {
   ];
 
   const useCases = [
-    {
-      title: "Financial Services",
+    { title: "Financial Services",
       description: "Automate loan processing, fraud detection, and compliance workflows",
       icon: BarChart3
     },
-    {
-      title: "Healthcare",
+    { title: "Healthcare",
       description: "Streamline patient care coordination and medical record management",
       icon: Users
     },
-    {
-      title: "Manufacturing",
+    { title: "Manufacturing",
       description: "Optimize production scheduling and quality control processes",
       icon: Settings
     },
-    {
-      title: "Retail",
+    { title: "Retail",
       description: "Automate inventory management and customer service workflows",
       icon: ShoppingCart
     }
   ];
 
   const pricing = [
-    {
-      name: "Starter",
+    { name: "Starter",
       price: "$2,500",
       period: "/month",
       description: "Perfect for small teams getting started with workflow automation",
@@ -105,8 +94,7 @@ const AIWorkflowOrchestrator = () => {
         "Basic analytics dashboard"
       ]
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: "$7,500",
       period: "/month",
       description: "Ideal for growing businesses with complex workflow needs",
@@ -120,8 +108,7 @@ const AIWorkflowOrchestrator = () => {
       ],
       popular: true
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: "Custom",
       period: "",
       description: "Tailored solutions for large organizations with specific requirements",
@@ -151,9 +138,8 @@ const AIWorkflowOrchestrator = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
+              transition={{ duration: 0.6     }}
+              className="text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Workflow className="w-10 h-10 text-white" />
               </div>
@@ -198,8 +184,7 @@ const AIWorkflowOrchestrator = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200"
-                  >
+                    className="bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                       <feature.icon className="w-6 h-6 text-blue-600" />
                     </div>
@@ -231,8 +216,7 @@ const AIWorkflowOrchestrator = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.05 * index }}
-                    className="flex items-center gap-3"
-                  >
+                    className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
                     <span className="text-slate-700">{benefit}</span>
                   </motion.div>
@@ -261,8 +245,7 @@ const AIWorkflowOrchestrator = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
-                    className="text-center"
-                  >
+                    className="text-center">
                     <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                       <useCase.icon className="w-8 h-8 text-blue-600" />
                     </div>

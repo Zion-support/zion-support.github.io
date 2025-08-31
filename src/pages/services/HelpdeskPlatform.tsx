@@ -36,132 +36,108 @@ import {
 
 export default function HelpdeskPlatform() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: "AI-Powered Support",
       description: "Intelligent chatbots and virtual assistants for instant customer support."
     },
-    {
-      icon: MessageCircle,
+    { icon: MessageCircle,
       title: "Multi-Channel Support",
       description: "Unified support across email, chat, phone, and social media channels."
     },
-    {
-      icon: Ticket,
+    { icon: Ticket,
       title: "Ticket Management",
       description: "Comprehensive ticket creation, tracking, and resolution workflow management."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Agent Management",
       description: "Efficient agent assignment, workload balancing, and performance tracking."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Analytics & Reporting",
       description: "Real-time insights into support performance and customer satisfaction metrics."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "SLA Management",
       description: "Automated service level agreement monitoring and escalation workflows."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Improved Response Times",
       description: "Reduce customer wait times with AI-powered automation and intelligent routing."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Enhanced Customer Experience",
       description: "Provide consistent, high-quality support across all channels and touchpoints."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Better Performance Insights",
       description: "Track key metrics and identify areas for improvement with detailed analytics."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Increased Efficiency",
       description: "Automate repetitive tasks and focus agents on complex customer issues."
     },
-    {
-      icon: Star,
+    { icon: Star,
       title: "Higher Customer Satisfaction",
       description: "Improve CSAT scores through faster resolution and personalized support."
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Cost Optimization",
       description: "Reduce support costs while maintaining or improving service quality."
     }
   ];
 
   const supportChannels = [
-    {
-      channel: "Email Support",
+    { channel: "Email Support",
       description: "Professional email ticketing with automated categorization and routing",
       icon: Mail
     },
-    {
-      channel: "Live Chat",
+    { channel: "Live Chat",
       description: "Real-time chat support with AI assistance and agent handoff",
       icon: MessageCircle
     },
-    {
-      channel: "Phone Support",
+    { channel: "Phone Support",
       description: "Voice support with intelligent call routing and quality monitoring",
       icon: Phone
     },
-    {
-      channel: "Social Media",
+    { channel: "Social Media",
       description: "Monitor and respond to customer inquiries across social platforms",
       icon: Globe
     },
-    {
-      channel: "Self-Service Portal",
+    { channel: "Self-Service Portal",
       description: "Knowledge base and FAQ management for customer self-help",
       icon: Search
     },
-    {
-      channel: "Mobile App",
+    { channel: "Mobile App",
       description: "Mobile-optimized support interface for on-the-go customers",
       icon: Smartphone
     }
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Customer service and order support for online retail businesses",
       icon: ShoppingCart
     },
-    {
-      industry: "SaaS",
+    { industry: "SaaS",
       description: "Technical support and customer success for software companies",
       icon: Cpu
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Patient support and medical information assistance",
       icon: Heart
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       description: "Customer support and account management for financial institutions",
       icon: DollarSign
     },
-    {
-      industry: "Education",
+    { industry: "Education",
       description: "Student and faculty support for educational institutions",
       icon: GraduationCap
     },
-    {
-      industry: "Manufacturing",
+    { industry: "Manufacturing",
       description: "Product support and technical assistance for manufacturing companies",
       icon: Settings
     }
@@ -182,7 +158,7 @@ export default function HelpdeskPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">
               <Headphones className="w-4 h-4 mr-2" />
@@ -218,10 +194,9 @@ export default function HelpdeskPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -238,9 +213,8 @@ export default function HelpdeskPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -272,10 +246,9 @@ export default function HelpdeskPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Benefits
             </h2>
@@ -292,9 +265,8 @@ export default function HelpdeskPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -326,10 +298,9 @@ export default function HelpdeskPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Support Channels
             </h2>
@@ -346,9 +317,8 @@ export default function HelpdeskPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -380,10 +350,9 @@ export default function HelpdeskPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -400,9 +369,8 @@ export default function HelpdeskPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -434,8 +402,8 @@ export default function HelpdeskPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Support?

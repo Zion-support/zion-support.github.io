@@ -13,7 +13,7 @@ interface SkeletonProps extends React.PropsWithChildren<{}> {
 
 }
 
-const Skeleton: React.FC<SkeletonProps> = ({
+const Skeleton: React.FC = ({
   className,
   variant = 'default',
   width,
@@ -23,8 +23,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
 }) => {
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
   
-  const variants = {
-    default: 'h-4 w-full',
+  const variants = { default: 'h-4 w-full',
     circular: 'rounded-full',
     rectangular: 'w-full',
     text: 'h-4 w-full',
@@ -41,7 +40,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
   if (variant === 'text' && lines > 1) {
     return (
       <div className="space-y-2">
-        {Array.from({ length: anylines }).map((_, index)  => (
+        {Array.from({ length: lines     }).map((_, index)  => (
           <motion.div
             key={index}
             className={cn(
@@ -49,10 +48,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
               'h-4',
               index === lines - 1 ? 'w-3/4' : 'w-full'
             )}
-            initial={animated ? { opacity: 0.5 } : {}}
+            initial={animated ? { opacity: 0.5     } : {}}
             animate={animated ? { opacity: [0.5, 1, 0.5] } : {}}
-            transition={{
-              duration: 1.5,
+            transition={{ duration: 1.5,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: index * 0.1
@@ -71,10 +69,9 @@ const Skeleton: React.FC<SkeletonProps> = ({
     <motion.div
       className={skeletonClasses}
       style={style}
-      initial={animated ? { opacity: 0.5 } : {}}
+      initial={animated ? { opacity: 0.5     } : {}}
       animate={animated ? { opacity: [0.5, 1, 0.5] } : {}}
-      transition={{
-        duration: 1.5,
+      transition={{ duration: 1.5,
         repeat: Infinity,
         ease: 'easeInOut'
       }}
@@ -83,7 +80,7 @@ const Skeleton: React.FC<SkeletonProps> = ({
 };
 
 // Specialized skeleton components
-export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
+export const CardSkeleton: React.FC = ({ className }) => (
   <div className={cn('p-6 space-y-4', className)}>
     <Skeleton variant="rectangular" height={24} width="60%" />
     <Skeleton variant="text" lines={3} />
@@ -95,7 +92,7 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
   </div>
 );
 
-export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
+export const TableSkeleton: React.FC = ({
   rows = 5,
   columns = 4,
   className
@@ -103,14 +100,14 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   <div className={cn('space-y-3', className)}>
     {/* Header */}
     <div className="flex space-x-4">
-      {Array.from({ length: anycolumns }).map((_, index)  => (
+      {Array.from({ length: columns     }).map((_, index)  => (
         <Skeleton key={index} variant="rectangular" height={20} width="100%" />
       ))}
     </div>
     {/* Rows */}
-    {Array.from({ length: anyrows }).map((_, rowIndex)  => (
+    {Array.from({ length: rows     }).map((_, rowIndex)  => (
       <div key={rowIndex} className="flex space-x-4">
-        {Array.from({ length: anycolumns }).map((_, colIndex)  => (
+        {Array.from({ length: columns     }).map((_, colIndex)  => (
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />
         ))}
       </div>
@@ -118,12 +115,12 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   </div>
 );
 
-export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
+export const ListSkeleton: React.FC = ({
   items = 5,
   className
 }) => (
   <div className={cn('space-y-4', className)}>
-    {Array.from({ length: anyitems }).map((_, index)  => (
+    {Array.from({ length: items     }).map((_, index)  => (
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">
@@ -135,21 +132,15 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   </div>
 );
 
-export const GridSkeleton: React.FC<{ 
-  rows?: number; 
-  columns?: number; 
-  className?: string;
-  itemHeight?: number;
-}> = ({
+export const GridSkeleton: React.FC = ({
   rows = 3,
   columns = 3,
   className,
   itemHeight = 120
 }) => (
-  <div className={cn('grid gap-4', className)} style={{
-    gridTemplateColumns: any`repeat(${columns}, minmax(0, 1fr))`
+  <div className={cn('grid gap-4', className)} style={{ gridTemplateColumns: `repeat(${columns    }, minmax(0, 1fr))`
   }}>
-    {Array.from({ length: rows * columns }).map((_, index)  => (
+    {Array.from({ length: rows * columns     }).map((_, index)  => (
       <Skeleton key={index} variant="card" height={itemHeight} />
     ))}
   </div>

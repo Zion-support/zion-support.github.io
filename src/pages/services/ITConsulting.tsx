@@ -157,33 +157,27 @@ import {
 
 const ITConsulting = () => {
   const features = [
-    {
-      icon: Briefcase,
+    { icon: Briefcase,
       title: 'Strategic IT Planning',
       description: 'Comprehensive IT strategy development and roadmap planning'
     },
-    {
-      icon: Cpu,
+    { icon: Cpu,
       title: 'Technology Assessment',
       description: 'Evaluate current technology stack and identify optimization opportunities'
     },
-    {
-      icon: Server,
+    { icon: Server,
       title: 'Infrastructure Planning',
       description: 'Design scalable and secure IT infrastructure solutions'
     },
-    {
-      icon: Network2,
+    { icon: Network2,
       title: 'Network Design',
       description: 'Plan and implement robust network architectures'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Security Consulting',
       description: 'Develop comprehensive cybersecurity strategies and policies'
     },
-    {
-      icon: Cloud,
+    { icon: Cloud,
       title: 'Cloud Strategy',
       description: 'Plan cloud migration and hybrid cloud solutions'
     }
@@ -199,43 +193,35 @@ const ITConsulting = () => {
   ];
 
   const services = [
-    {
-      icon: Strategy,
+    { icon: Strategy,
       title: 'IT Strategy',
       description: 'Develop comprehensive IT strategies aligned with business goals'
     },
-    {
-      icon: Workflow,
+    { icon: Workflow,
       title: 'Process Optimization',
       description: 'Optimize IT processes and workflows for efficiency'
     },
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'Technology Advisory',
       description: 'Expert guidance on technology selection and implementation'
     },
-    {
-      icon: Scale,
+    { icon: Scale,
       title: 'Scalability Planning',
       description: 'Plan for future growth and technology scaling'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Enterprise',
+    { industry: 'Enterprise',
       description: 'Large-scale IT transformation and optimization'
     },
-    {
-      industry: 'Healthcare',
+    { industry: 'Healthcare',
       description: 'HIPAA-compliant IT infrastructure and systems'
     },
-    {
-      industry: 'Financial Services',
+    { industry: 'Financial Services',
       description: 'Secure, compliant financial technology solutions'
     },
-    {
-      industry: 'Manufacturing',
+    { industry: 'Manufacturing',
       description: 'Industry 4.0 and smart manufacturing IT'
     }
   ];
@@ -249,9 +235,8 @@ const ITConsulting = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6">
               <Briefcase className="w-4 h-4 mr-2" />
               IT Consulting Services
@@ -287,9 +272,8 @@ const ITConsulting = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive IT Consulting Features
             </h2>
@@ -306,8 +290,7 @@ const ITConsulting = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -325,9 +308,8 @@ const ITConsulting = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core IT Consulting Services
             </h2>
@@ -344,8 +326,7 @@ const ITConsulting = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -367,9 +348,8 @@ const ITConsulting = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               IT Consulting Benefits
             </h2>
@@ -386,8 +366,7 @@ const ITConsulting = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -400,8 +379,7 @@ const ITConsulting = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -417,9 +395,8 @@ const ITConsulting = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -436,8 +413,7 @@ const ITConsulting = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -455,7 +431,7 @@ const ITConsulting = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your IT Consultation Today

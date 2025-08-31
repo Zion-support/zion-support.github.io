@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface MicroSaasService {
   id: number;
@@ -32,7 +32,7 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-}
+    }
 
 export interface ITService {
   id: number;
@@ -55,7 +55,7 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-}
+    }
 
 export interface AIService {
   id: number;
@@ -79,11 +79,10 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-}
+    }
 
 // Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
+const zionContact: ServiceContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -91,8 +90,7 @@ const zionContact: ServiceContact = {
 
 // Innovative Micro SAAS Services 2031
 export const innovativeMicroSaasServices2031: MicroSaasService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "QuantumFlow Pro",
     category: "Quantum Computing Workflow Management",
     pricing: "Enterprise",
@@ -137,8 +135,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     marketSize: "$1.2B by 2025",
     growthRate: "45% annually"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "NeuroSync Hub",
     category: "Neural Network Synchronization Platform",
     pricing: "Professional",
@@ -183,8 +180,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     marketSize: "$2.8B by 2026",
     growthRate: "52% annually"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "BlockchainFlow Enterprise",
     category: "Enterprise Blockchain Orchestration",
     pricing: "Enterprise",
@@ -229,8 +225,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     marketSize: "$19.9B by 2025",
     growthRate: "87% annually"
   },
-  {
-    id: 4,
+  { id: 4,
     name: "CyberShield Pro",
     category: "Advanced Cybersecurity Automation",
     pricing: "Professional",
@@ -275,8 +270,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
     marketSize: "$376B by 2029",
     growthRate: "13.4% annually"
   },
-  {
-    id: 5,
+  { id: 5,
     name: "DataFusion Nexus",
     category: "Real-time Data Integration Platform",
     pricing: "Enterprise",
@@ -325,8 +319,7 @@ export const innovativeMicroSaasServices2031: MicroSaasService[] = [
 
 // Innovative IT Infrastructure Services 2031
 export const innovativeITInfrastructureServices2031: ITService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Quantum Cloud Infrastructure",
     category: "Quantum Computing Infrastructure",
     description: "Specialized IT infrastructure services for quantum computing environments, including quantum-safe networking and hybrid classical-quantum systems",
@@ -368,8 +361,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
     marketSize: "$2.1B by 2026",
     compliance: ["GDPR", "HIPAA", "SOX", "Quantum-safe standards"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Edge Computing Orchestration",
     category: "Edge Computing Infrastructure",
     description: "Comprehensive edge computing infrastructure services for distributed computing environments with real-time processing capabilities",
@@ -411,8 +403,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
     marketSize: "$43.4B by 2027",
     compliance: ["GDPR", "ISO 27001", "NIST", "Industry-specific standards"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "Sustainable Green IT Solutions",
     category: "Green IT Infrastructure",
     description: "Eco-friendly IT infrastructure services focused on reducing carbon footprint while maintaining high performance and reliability",
@@ -454,8 +445,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
     marketSize: "$17.8B by 2025",
     compliance: ["Environmental regulations", "Sustainability standards", "Green certifications"]
   },
-  {
-    id: 4,
+  { id: 4,
     name: "Zero-Trust Network Architecture",
     category: "Network Security Infrastructure",
     description: "Advanced zero-trust network architecture implementation with continuous verification and micro-segmentation for maximum security",
@@ -497,8 +487,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
     marketSize: "$51.6B by 2026",
     compliance: ["NIST", "ISO 27001", "SOC 2", "Industry-specific regulations"]
   },
-  {
-    id: 5,
+  { id: 5,
     name: "Hybrid Cloud Optimization",
     category: "Cloud Infrastructure",
     description: "Comprehensive hybrid cloud optimization services for seamless integration between on-premises and cloud environments",
@@ -544,8 +533,7 @@ export const innovativeITInfrastructureServices2031: ITService[] = [
 
 // Innovative AI Services 2031
 export const innovativeAIServices2031: AIService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Quantum AI Hybrid Platform",
     category: "Quantum AI Integration",
     description: "Revolutionary platform that combines quantum computing with artificial intelligence for breakthrough problem-solving capabilities",
@@ -594,8 +582,7 @@ export const innovativeAIServices2031: AIService[] = [
     marketSize: "$3.2B by 2027",
     ethicalAI: ["Transparency", "Fairness", "Accountability", "Privacy protection", "Bias mitigation"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Autonomous AI Research Assistant",
     category: "AI Research Automation",
     description: "Intelligent AI research assistant that autonomously conducts research, analyzes data, and generates insights across multiple domains",
@@ -644,8 +631,7 @@ export const innovativeAIServices2031: AIService[] = [
     marketSize: "$1.8B by 2026",
     ethicalAI: ["Transparency", "Accuracy", "Bias detection", "Source verification", "Ethical guidelines"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "AI-Powered Predictive Healthcare",
     category: "Healthcare AI",
     description: "Advanced AI platform for predictive healthcare analytics, early disease detection, and personalized treatment recommendations",
@@ -694,8 +680,7 @@ export const innovativeAIServices2031: AIService[] = [
     marketSize: "$45.2B by 2026",
     ethicalAI: ["Patient privacy", "Clinical validation", "Bias mitigation", "Transparency", "Accountability"]
   },
-  {
-    id: 4,
+  { id: 4,
     name: "AI Financial Trading Intelligence",
     category: "Financial AI",
     description: "Sophisticated AI platform for financial trading intelligence, market prediction, and automated trading strategies",
@@ -744,8 +729,7 @@ export const innovativeAIServices2031: AIService[] = [
     marketSize: "$28.6B by 2026",
     ethicalAI: ["Transparency", "Risk disclosure", "Fair trading", "Compliance", "Ethical guidelines"]
   },
-  {
-    id: 5,
+  { id: 5,
     name: "AI Supply Chain Optimization",
     category: "Supply Chain AI",
     description: "Intelligent AI platform for supply chain optimization, demand forecasting, and logistics automation",
@@ -797,8 +781,7 @@ export const innovativeAIServices2031: AIService[] = [
 ];
 
 // Export all services
-export const allInnovativeServices2031 = {
-  microSaas: innovativeMicroSaasServices2031,
+export const allInnovativeServices2031 = { microSaas: innovativeMicroSaasServices2031,
   itInfrastructure: innovativeITInfrastructureServices2031,
   ai: innovativeAIServices2031
 };

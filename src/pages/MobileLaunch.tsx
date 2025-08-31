@@ -43,26 +43,22 @@ import { SEO } from '../components/SEO';
 
 const MobileLaunch: React.FC = () => {
   const features = [
-    {
-      title: "AI-Powered Insights",
+    { title: "AI-Powered Insights",
       description: "Get intelligent recommendations and insights powered by our advanced AI algorithms",
       icon: Zap,
       color: "from-cyan-400 to-blue-500"
     },
-    {
-      title: "Real-time Sync",
+    { title: "Real-time Sync",
       description: "Seamlessly sync data across all your devices with cloud-based synchronization",
       icon: Cloud,
       color: "from-blue-400 to-purple-500"
     },
-    {
-      title: "Secure & Private",
+    { title: "Secure & Private",
       description: "Enterprise-grade security with end-to-end encryption and privacy controls",
       icon: Shield,
       color: "from-green-400 to-emerald-500"
     },
-    {
-      title: "Smart Notifications",
+    { title: "Smart Notifications",
       description: "Intelligent alerts that adapt to your preferences and schedule",
       icon: Bell,
       color: "from-orange-400 to-red-500"
@@ -70,26 +66,22 @@ const MobileLaunch: React.FC = () => {
   ];
 
   const appScreens = [
-    {
-      name: "Dashboard",
+    { name: "Dashboard",
       description: "Overview of your business metrics and key performance indicators",
       icon: Home,
       features: ["Real-time metrics", "Customizable widgets", "Quick actions"]
     },
-    {
-      name: "AI Assistant",
+    { name: "AI Assistant",
       description: "Your personal AI companion for business insights and automation",
       icon: Zap,
       features: ["Natural language queries", "Smart recommendations", "Automated tasks"]
     },
-    {
-      name: "Analytics",
+    { name: "Analytics",
       description: "Comprehensive data visualization and business intelligence tools",
       icon: BarChart3,
       features: ["Interactive charts", "Custom reports", "Data export"]
     },
-    {
-      name: "Services",
+    { name: "Services",
       description: "Access to all Zion Tech Group services and solutions",
       icon: Settings,
       features: ["Service catalog", "Quick setup", "Support access"]
@@ -97,22 +89,19 @@ const MobileLaunch: React.FC = () => {
   ];
 
   const downloadOptions = [
-    {
-      platform: "iOS App Store",
+    { platform: "iOS App Store",
       icon: "🍎",
       description: "Download for iPhone and iPad",
       link: "#",
       featured: true
     },
-    {
-      platform: "Google Play Store",
+    { platform: "Google Play Store",
       icon: "🤖",
       description: "Download for Android devices",
       link: "#",
       featured: true
     },
-    {
-      platform: "Web App",
+    { platform: "Web App",
       icon: "🌐",
       description: "Access via browser",
       link: "/",
@@ -132,7 +121,7 @@ const MobileLaunch: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Mobile App - Zion Tech Group"
-        description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions anywhere."
+        description="Take Zion Tech Group with you on the go! Download our mobile app for iOS and Android to access AI services, analytics, and business solutions where."
         keywords="mobile app, iOS app, Android app, Zion Tech Group mobile, business app"
       />
 
@@ -144,7 +133,7 @@ const MobileLaunch: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
@@ -168,15 +157,13 @@ const MobileLaunch: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   to="#download"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25">
                   <Download className="mr-2 w-5 h-5" />
                   Download Now
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-                >
+                  className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                   Learn More
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -187,8 +174,7 @@ const MobileLaunch: React.FC = () => {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
+              className="relative">
               {/* Mock Phone */}
               <div className="relative mx-auto w-80 h-96 bg-slate-800 rounded-[3rem] border-8 border-slate-700 shadow-2xl">
                 {/* Phone Screen */}
@@ -252,9 +238,8 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful <span className="text-cyan-400">Mobile Features</span>
             </h2>
@@ -271,8 +256,7 @@ const MobileLaunch: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105">
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -291,9 +275,8 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               App <span className="text-cyan-400">Screens</span>
             </h2>
@@ -309,8 +292,7 @@ const MobileLaunch: React.FC = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6">
                   <screen.icon className="w-8 h-8 text-cyan-400" />
                 </div>
@@ -338,9 +320,8 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Download <span className="text-cyan-400">Now</span>
             </h2>
@@ -373,8 +354,7 @@ const MobileLaunch: React.FC = () => {
                 
                 <Link
                   to={option.link}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105"
-                >
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105">
                   Download
                   <Download className="ml-2 w-4 h-4" />
                 </Link>
@@ -390,9 +370,8 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               System <span className="text-cyan-400">Requirements</span>
             </h2>
@@ -408,8 +387,7 @@ const MobileLaunch: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300"
-              >
+                className="bg-slate-700/30 border border-slate-600/30 rounded-xl p-6 text-center hover:border-cyan-400/30 transition-all duration-300">
                 <div className="text-4xl mb-3">{req.icon}</div>
                 <p className="text-white font-medium">{req.requirement}</p>
               </motion.div>
@@ -424,7 +402,7 @@ const MobileLaunch: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Mobile?
@@ -437,15 +415,13 @@ const MobileLaunch: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="#download"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25">
                 <Download className="mr-2 w-5 h-5" />
                 Download App
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
                 Get Support
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>

@@ -5,8 +5,7 @@ import { ProductListing } from "@/types/listings";
 
 export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
   // AI-Powered Medical Imaging Analysis
-  {
-    id: "ai-medical-imaging-analysis",
+  { id: "ai-medical-imaging-analysis",
     title: "AI Medical Imaging Analysis Platform",
     description: "Revolutionary AI-powered medical imaging analysis platform that provides accurate diagnosis from X-rays, MRIs, CT scans, and ultrasounds. Achieves 98.5% accuracy and reduces diagnosis time by 80%.",
     category: "AI & Healthcare",
@@ -23,8 +22,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "10-12 Weeks",
     aiScore: 98,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-medical-imaging",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -37,8 +35,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Drug Discovery Platform
-  {
-    id: "ai-drug-discovery-platform",
+  { id: "ai-drug-discovery-platform",
     title: "AI Drug Discovery Platform",
     description: "Advanced AI-powered drug discovery platform that accelerates pharmaceutical research using machine learning and molecular modeling. Reduces drug development time by 60% and increases success rates by 40%.",
     category: "AI & Healthcare",
@@ -55,8 +52,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "16-20 Weeks",
     aiScore: 99,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-drug-discovery",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -69,8 +65,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Patient Monitoring System
-  {
-    id: "ai-patient-monitoring-system",
+  { id: "ai-patient-monitoring-system",
     title: "AI Patient Monitoring System",
     description: "Intelligent AI-powered patient monitoring system that tracks vital signs, predicts health deterioration, and alerts healthcare providers in real-time. Reduces ICU readmissions by 30% and improves patient outcomes by 25%.",
     category: "AI & Healthcare",
@@ -87,8 +82,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "8-10 Weeks",
     aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-patient-monitoring",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -101,8 +95,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Clinical Decision Support
-  {
-    id: "ai-clinical-decision-support",
+  { id: "ai-clinical-decision-support",
     title: "AI Clinical Decision Support System",
     description: "Advanced AI-powered clinical decision support system that provides evidence-based treatment recommendations and clinical guidelines. Improves treatment accuracy by 35% and reduces medical errors by 50%.",
     category: "AI & Healthcare",
@@ -119,8 +112,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "10-12 Weeks",
     aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-clinical-decision",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -133,8 +125,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Telemedicine Platform
-  {
-    id: "ai-telemedicine-platform",
+  { id: "ai-telemedicine-platform",
     title: "AI Telemedicine Platform",
     description: "Revolutionary AI-powered telemedicine platform that provides virtual consultations, symptom assessment, and remote monitoring. Increases patient access by 200% and reduces healthcare costs by 30%.",
     category: "AI & Healthcare",
@@ -151,8 +142,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "6-8 Weeks",
     aiScore: 95,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-telemedicine",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -165,8 +155,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Medical Records Management
-  {
-    id: "ai-medical-records-management",
+  { id: "ai-medical-records-management",
     title: "AI Medical Records Management",
     description: "Intelligent AI-powered medical records management system that automates documentation, extracts key information, and improves data accuracy. Reduces documentation time by 70% and improves data quality by 60%.",
     category: "AI & Healthcare",
@@ -183,8 +172,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "8-10 Weeks",
     aiScore: 96,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-medical-records",
       address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -197,8 +185,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
   },
 
   // AI-Powered Healthcare Analytics Platform
-  {
-    id: "ai-healthcare-analytics-platform",
+  { id: "ai-healthcare-analytics-platform",
     title: "AI Healthcare Analytics Platform",
     description: "Advanced AI-powered healthcare analytics platform that analyzes patient data, predicts outcomes, and optimizes healthcare operations. Improves operational efficiency by 40% and reduces costs by 25%.",
     category: "AI & Healthcare",
@@ -215,8 +202,7 @@ export const SPECIALIZED_HEALTHCARE_AI_SERVICES_2028: ProductListing[] = [
     location: "Global",
     availability: "10-12 Weeks",
     aiScore: 97,
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com/ai-healthcare-analytics",
       address: "364 E Main St STE 1008 Middletown DE 19709"

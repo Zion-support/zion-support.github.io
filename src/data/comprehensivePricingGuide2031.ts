@@ -8,11 +8,11 @@ export interface PricingTier2031 {
   features: string[];
   bestFor: string[];
   includedServices: string[];
-  addOns: {
+  addOns: {  
     name: string;
-    price: number;
-    description: string;
-  }[];
+    price: number
+    description: string
+      }[];
   roi: string;
   implementationTime: string;
   supportLevel: string;
@@ -23,7 +23,7 @@ export interface ServiceCategory2031 {
   name: string;
   description: string;
   icon: string;
-  services: {
+  services: {  
     id: string;
     name: string;
     description: string;
@@ -38,26 +38,23 @@ export interface ServiceCategory2031 {
     targetAudience: string[];
     contactInfo: {
       phone: string;
-      email: string;
-      website: string;
-    };
+      email: string
+      website: string
+        };
   }[];
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
-  {
-    id: "ai-powered-micro-saas",
+  { id: "ai-powered-micro-saas",
     name: "AI-Powered Micro SAAS Services",
     description: "Revolutionary AI services that automate, optimize, and transform your business operations with subscription-based pricing.",
     icon: "🚀",
     services: [
-      {
-        id: "ai-autonomous-code-reviewer",
+      { id: "ai-autonomous-code-reviewer",
         name: "AI Autonomous Code Reviewer",
         description: "Intelligent code analysis that automatically reviews, suggests improvements, and maintains code quality standards.",
         pricingTiers: [
-          {
-            id: "starter",
+          { id: "starter",
             name: "Starter",
             price: 399,
             currency: "$",
@@ -73,13 +70,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Small development teams", "Startups", "Individual developers"],
             includedServices: ["Core code review", "Basic reporting", "Standard integrations"],
             addOns: [
-              {
-                name: "Advanced Security Scanning",
+              { name: "Advanced Security Scanning",
                 price: 99,
                 description: "Enhanced security vulnerability detection and remediation"
               },
-              {
-                name: "Custom Rule Engine",
+              { name: "Custom Rule Engine",
                 price: 149,
                 description: "Create and enforce custom coding standards"
               }
@@ -88,8 +83,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             implementationTime: "2-4 weeks",
             supportLevel: "Email support"
           },
-          {
-            id: "professional",
+          { id: "professional",
             name: "Professional",
             price: 799,
             currency: "$",
@@ -106,13 +100,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Growing development teams", "Mid-size companies", "DevOps teams"],
             includedServices: ["Advanced security", "Team collaboration", "Custom rules", "Priority support"],
             addOns: [
-              {
-                name: "Enterprise Integrations",
+              { name: "Enterprise Integrations",
                 price: 199,
                 description: "Advanced integrations with enterprise tools"
               },
-              {
-                name: "Custom Training",
+              { name: "Custom Training",
                 price: 299,
                 description: "On-site team training and enablement"
               }
@@ -121,8 +113,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             implementationTime: "3-5 weeks",
             supportLevel: "Priority support"
           },
-          {
-            id: "enterprise",
+          { id: "enterprise",
             name: "Enterprise",
             price: 1999,
             currency: "$",
@@ -139,13 +130,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Large enterprises", "Fortune 500 companies", "Government agencies"],
             includedServices: ["Enterprise features", "Dedicated support", "SLA guarantees", "Custom training"],
             addOns: [
-              {
-                name: "White-label Solution",
+              { name: "White-label Solution",
                 price: 499,
                 description: "Custom branding and white-labeling"
               },
-              {
-                name: "On-premise Deployment",
+              { name: "On-premise Deployment",
                 price: 999,
                 description: "Deploy on your own infrastructure"
               }
@@ -192,19 +181,16 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
           "Quality assurance teams",
           "Security engineers"
         ],
-        contactInfo: {
-          phone: "+1 302 464 0950",
+        contactInfo: { phone: "+1 302 464 0950",
           email: "kleber@ziontechgroup.com",
           website: "https://ziontechgroup.com"
         }
       },
-      {
-        id: "ai-quantum-financial-trading",
+      { id: "ai-quantum-financial-trading",
         name: "AI Quantum Financial Trading Platform",
         description: "Next-generation trading platform combining quantum computing algorithms with AI for optimal portfolio management.",
         pricingTiers: [
-          {
-            id: "professional",
+          { id: "professional",
             name: "Professional",
             price: 2999,
             currency: "$",
@@ -221,13 +207,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Professional traders", "Small hedge funds", "Investment advisors"],
             includedServices: ["Core trading platform", "Basic analytics", "Standard support"],
             addOns: [
-              {
-                name: "Advanced Backtesting",
+              { name: "Advanced Backtesting",
                 price: 499,
                 description: "Comprehensive backtesting and simulation tools"
               },
-              {
-                name: "Custom Algorithms",
+              { name: "Custom Algorithms",
                 price: 999,
                 description: "Development of custom trading algorithms"
               }
@@ -236,8 +220,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             implementationTime: "8-12 weeks",
             supportLevel: "Email support"
           },
-          {
-            id: "enterprise",
+          { id: "enterprise",
             name: "Enterprise",
             price: 9999,
             currency: "$",
@@ -254,13 +237,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Institutional traders", "Large hedge funds", "Investment banks"],
             includedServices: ["Advanced features", "Custom development", "Priority support"],
             addOns: [
-              {
-                name: "White-label Solution",
+              { name: "White-label Solution",
                 price: 1999,
                 description: "Custom branding and white-labeling"
               },
-              {
-                name: "On-premise Deployment",
+              { name: "On-premise Deployment",
                 price: 4999,
                 description: "Deploy on your own infrastructure"
               }
@@ -307,27 +288,23 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
           "Trading firms",
           "Financial advisors"
         ],
-        contactInfo: {
-          phone: "+1 302 464 0950",
+        contactInfo: { phone: "+1 302 464 0950",
           email: "kleber@ziontechgroup.com",
           website: "https://ziontechgroup.com"
         }
       }
     ]
   },
-  {
-    id: "it-infrastructure-services",
+  { id: "it-infrastructure-services",
     name: "IT Infrastructure & Cloud Services",
     description: "Enterprise-grade infrastructure solutions for modern, scalable, and secure operations with project-based pricing.",
     icon: "☁️",
     services: [
-      {
-        id: "cloud-native-transformation",
+      { id: "cloud-native-transformation",
         name: "Cloud-Native Transformation & Migration",
         description: "End-to-end cloud transformation services that modernize legacy applications and infrastructure.",
         pricingTiers: [
-          {
-            id: "starter",
+          { id: "starter",
             name: "Starter Transformation",
             price: 25000,
             currency: "$",
@@ -344,13 +321,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Small applications", "Startups", "Basic cloud needs"],
             includedServices: ["Migration planning", "Basic implementation", "Documentation"],
             addOns: [
-              {
-                name: "Advanced Monitoring",
+              { name: "Advanced Monitoring",
                 price: 5000,
                 description: "Comprehensive monitoring and alerting setup"
               },
-              {
-                name: "Security Hardening",
+              { name: "Security Hardening",
                 price: 8000,
                 description: "Advanced security implementation and compliance"
               }
@@ -359,8 +334,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             implementationTime: "12-16 weeks",
             supportLevel: "Email support"
           },
-          {
-            id: "enterprise",
+          { id: "enterprise",
             name: "Enterprise Transformation",
             price: 100000,
             currency: "$",
@@ -378,13 +352,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Large enterprises", "Complex applications", "High availability needs"],
             includedServices: ["Full transformation", "Architecture design", "Team training", "Ongoing support"],
             addOns: [
-              {
-                name: "Custom Development",
+              { name: "Custom Development",
                 price: 25000,
                 description: "Custom application development and integration"
               },
-              {
-                name: "Managed Services",
+              { name: "Managed Services",
                 price: 15000,
                 description: "Ongoing managed services and support"
               }
@@ -431,19 +403,16 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
           "Operations managers",
           "Business transformation leaders"
         ],
-        contactInfo: {
-          phone: "+1 302 464 0950",
+        contactInfo: { phone: "+1 302 464 0950",
           email: "kleber@ziontechgroup.com",
           website: "https://ziontechgroup.com"
         }
       },
-      {
-        id: "zero-trust-security",
+      { id: "zero-trust-security",
         name: "Zero Trust Security Implementation",
         description: "Comprehensive zero trust security implementation with continuous verification and least-privilege access.",
         pricingTiers: [
-          {
-            id: "basic",
+          { id: "basic",
             name: "Basic Implementation",
             price: 35000,
             currency: "$",
@@ -460,13 +429,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Small organizations", "Basic security needs", "Compliance requirements"],
             includedServices: ["Basic implementation", "Policy setup", "Documentation"],
             addOns: [
-              {
-                name: "Advanced Monitoring",
+              { name: "Advanced Monitoring",
                 price: 10000,
                 description: "Comprehensive security monitoring and alerting"
               },
-              {
-                name: "Compliance Reporting",
+              { name: "Compliance Reporting",
                 price: 15000,
                 description: "Advanced compliance reporting and auditing"
               }
@@ -475,8 +442,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             implementationTime: "16-20 weeks",
             supportLevel: "Email support"
           },
-          {
-            id: "enterprise",
+          { id: "enterprise",
             name: "Enterprise Implementation",
             price: 150000,
             currency: "$",
@@ -495,13 +461,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Large enterprises", "High security needs", "Complex compliance"],
             includedServices: ["Full implementation", "Advanced features", "Team training", "Ongoing support"],
             addOns: [
-              {
-                name: "Custom Development",
+              { name: "Custom Development",
                 price: 50000,
                 description: "Custom security tools and integrations"
               },
-              {
-                name: "Managed Security",
+              { name: "Managed Security",
                 price: 25000,
                 description: "Ongoing managed security services"
               }
@@ -548,27 +512,23 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
           "Compliance officers",
           "Risk managers"
         ],
-        contactInfo: {
-          phone: "+1 302 464 0950",
+        contactInfo: { phone: "+1 302 464 0950",
           email: "kleber@ziontechgroup.com",
           website: "https://ziontechgroup.com"
         }
       }
     ]
   },
-  {
-    id: "specialized-ai-services",
+  { id: "specialized-ai-services",
     name: "Specialized AI Solutions",
     description: "Cutting-edge AI solutions for specific industries and use cases with flexible pricing models.",
     icon: "🤖",
     services: [
-      {
-        id: "ai-strategy-consulting",
+      { id: "ai-strategy-consulting",
         name: "AI Strategy & Digital Transformation Consulting",
         description: "Comprehensive AI strategy consulting for digital transformation initiatives.",
         pricingTiers: [
-          {
-            id: "assessment",
+          { id: "assessment",
             name: "AI Assessment",
             price: 15000,
             currency: "$",
@@ -584,13 +544,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Organizations starting AI journey", "Strategy development", "ROI analysis"],
             includedServices: ["Assessment", "Roadmap", "ROI analysis", "Final report"],
             addOns: [
-              {
-                name: "Change Management",
+              { name: "Change Management",
                 price: 10000,
                 description: "Change management strategy and implementation"
               },
-              {
-                name: "Talent Assessment",
+              { name: "Talent Assessment",
                 price: 8000,
                 description: "AI talent assessment and acquisition planning"
               }
@@ -599,8 +557,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             implementationTime: "8-12 weeks",
             supportLevel: "Email support"
           },
-          {
-            id: "full-transformation",
+          { id: "full-transformation",
             name: "Full Transformation",
             price: 75000,
             currency: "$",
@@ -617,13 +574,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
             bestFor: ["Full AI transformation", "Complex implementations", "Long-term partnerships"],
             includedServices: ["Full transformation", "Implementation support", "Ongoing guidance"],
             addOns: [
-              {
-                name: "Custom AI Development",
+              { name: "Custom AI Development",
                 price: 25000,
                 description: "Custom AI solution development"
               },
-              {
-                name: "Managed AI Services",
+              { name: "Managed AI Services",
                 price: 15000,
                 description: "Ongoing AI managed services"
               }
@@ -670,8 +625,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
           "Strategy officers",
           "Innovation directors"
         ],
-        contactInfo: {
-          phone: "+1 302 464 0950",
+        contactInfo: { phone: "+1 302 464 0950",
           email: "kleber@ziontechgroup.com",
           website: "https://ziontechgroup.com"
         }
@@ -680,20 +634,16 @@ export const COMPREHENSIVE_PRICING_GUIDE_2031: ServiceCategory2031[] = [
   }
 ];
 
-export const PRICING_SUMMARY_2031 = {
-  totalServices: COMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category) => acc + category.services.length, 0),
+export const PRICING_SUMMARY_2031 = { totalServices: COMPREHENSIVE_PRICING_GUIDE_2031.reduce((acc, category) => acc + category.services.length, 0),
   totalCategories: COMPREHENSIVE_PRICING_GUIDE_2031.length,
-  priceRange: {
-    min: "$399/month",
+  priceRange: { min: "$399/month",
     max: "$150,000/project"
   },
   averageROI: "300-500%",
-  implementationTime: {
-    min: "2-4 weeks",
+  implementationTime: { min: "2-4 weeks",
     max: "24-48 weeks"
   },
-  contactInfo: {
-    phone: "+1 302 464 0950",
+  contactInfo: { phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"

@@ -28,38 +28,32 @@ import {
 
 export default function AICybersecuritySuite() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI Threat Detection',
       description: 'Advanced machine learning algorithms that identify and respond to threats in real-time',
       color: 'from-blue-500 to-cyan-500'
     },
-    {
-      icon: Eye,
+    { icon: Eye,
       title: 'Behavioral Analytics',
       description: 'Monitor user and system behavior patterns to detect anomalies and potential threats',
       color: 'from-green-500 to-emerald-500'
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Zero-Day Protection',
       description: 'Protect against unknown threats using AI-powered predictive security models',
       color: 'from-purple-500 to-pink-500'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Automated Response',
       description: 'Instant automated threat response and incident containment without human intervention',
       color: 'from-yellow-500 to-orange-500'
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: 'Network Security',
       description: 'Comprehensive network monitoring and protection with AI-driven threat intelligence',
       color: 'from-red-500 to-pink-500'
     },
-    {
-      icon: Database,
+    { icon: Database,
       title: 'Data Protection',
       description: 'Advanced encryption and data loss prevention with AI-powered monitoring',
       color: 'from-indigo-500 to-purple-500'
@@ -67,26 +61,22 @@ export default function AICybersecuritySuite() {
   ];
 
   const services = [
-    {
-      title: 'Threat Intelligence Platform',
+    { title: 'Threat Intelligence Platform',
       description: 'Real-time threat intelligence and analysis powered by AI',
       price: 'From $2,500/month',
       features: ['Global threat monitoring', 'AI-powered analysis', 'Custom threat feeds', '24/7 monitoring']
     },
-    {
-      title: 'Security Operations Center (SOC)',
+    { title: 'Security Operations Center (SOC)',
       description: 'AI-enhanced SOC services with automated threat detection and response',
       price: 'From $8,000/month',
       features: ['AI threat detection', 'Automated response', 'Security analysts', 'Incident management']
     },
-    {
-      title: 'Vulnerability Assessment',
+    { title: 'Vulnerability Assessment',
       description: 'Comprehensive security assessment using AI-powered scanning and analysis',
       price: 'From $5,000',
       features: ['AI vulnerability scanning', 'Penetration testing', 'Security audit', 'Remediation plan']
     },
-    {
-      title: 'Compliance & Governance',
+    { title: 'Compliance & Governance',
       description: 'AI-powered compliance monitoring and reporting for regulatory requirements',
       price: 'From $3,500/month',
       features: ['GDPR compliance', 'SOC 2 monitoring', 'HIPAA compliance', 'Automated reporting']
@@ -94,46 +84,38 @@ export default function AICybersecuritySuite() {
   ];
 
   const securityModules = [
-    {
-      title: 'Endpoint Protection',
+    { title: 'Endpoint Protection',
       description: 'AI-powered endpoint security with behavioral analysis and threat prevention',
       features: ['Malware detection', 'Ransomware protection', 'Device control', 'Data encryption']
     },
-    {
-      title: 'Cloud Security',
+    { title: 'Cloud Security',
       description: 'Comprehensive cloud security monitoring and threat detection',
       features: ['Multi-cloud protection', 'API security', 'Data encryption', 'Access control']
     },
-    {
-      title: 'Identity & Access Management',
+    { title: 'Identity & Access Management',
       description: 'AI-enhanced identity verification and access control systems',
       features: ['Multi-factor authentication', 'Behavioral biometrics', 'Privileged access management', 'Single sign-on']
     },
-    {
-      title: 'Incident Response',
+    { title: 'Incident Response',
       description: 'Automated incident response with AI-powered threat containment',
       features: ['Automated containment', 'Forensic analysis', 'Recovery procedures', 'Post-incident review']
     }
   ];
 
   const benefits = [
-    {
-      title: 'Proactive Threat Prevention',
+    { title: 'Proactive Threat Prevention',
       description: 'Stop threats before they impact your business with AI-powered predictive security',
       icon: Shield
     },
-    {
-      title: 'Reduced False Positives',
+    { title: 'Reduced False Positives',
       description: 'AI algorithms reduce false alarms by 90%, allowing security teams to focus on real threats',
       icon: CheckCircle
     },
-    {
-      title: '24/7 Automated Protection',
+    { title: '24/7 Automated Protection',
       description: 'Continuous security monitoring and automated response, even when your team is offline',
       icon: Monitor
     },
-    {
-      title: 'Cost Optimization',
+    { title: 'Cost Optimization',
       description: 'Reduce security costs by 40% while improving protection through intelligent automation',
       icon: TrendingUp
     }
@@ -162,9 +144,8 @@ export default function AICybersecuritySuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center max-w-4xl mx-auto">
             <div className="flex justify-center mb-6">
               <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center">
                 <Shield className="w-10 h-10 text-white" />
@@ -179,15 +160,13 @@ export default function AICybersecuritySuite() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center gap-2">
                 Get Protected
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Security Consultation
               </a>
@@ -202,9 +181,8 @@ export default function AICybersecuritySuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced AI-Powered Security Features
             </h2>
@@ -220,8 +198,7 @@ export default function AICybersecuritySuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all duration-300"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-500 transition-all duration-300">
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -239,9 +216,8 @@ export default function AICybersecuritySuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Security Solutions
             </h2>
@@ -257,8 +233,7 @@ export default function AICybersecuritySuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600">
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6">{service.description}</p>
                 <div className="text-3xl font-bold text-blue-400 mb-6">{service.price}</div>
@@ -282,9 +257,8 @@ export default function AICybersecuritySuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Integrated Security Modules
             </h2>
@@ -300,8 +274,7 @@ export default function AICybersecuritySuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600">
                 <h3 className="text-2xl font-bold text-white mb-4">{module.title}</h3>
                 <p className="text-gray-300 mb-6">{module.description}</p>
                 <ul className="space-y-3">
@@ -324,9 +297,8 @@ export default function AICybersecuritySuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose AI-Powered Security?
             </h2>
@@ -342,8 +314,7 @@ export default function AICybersecuritySuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
@@ -361,9 +332,8 @@ export default function AICybersecuritySuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Security Technologies
             </h2>
@@ -379,8 +349,7 @@ export default function AICybersecuritySuite() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center"
-              >
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-2xl border border-slate-600 text-center">
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>
                 <p className="text-gray-300">{tech.description}</p>
               </motion.div>
@@ -395,9 +364,8 @@ export default function AICybersecuritySuite() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Secure Your Business Today
             </h2>
@@ -407,15 +375,13 @@ export default function AICybersecuritySuite() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://ziontechgroup.com/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2">
                 Start Security Assessment
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="tel:+13024640950" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call +1 302 464 0950
               </a>

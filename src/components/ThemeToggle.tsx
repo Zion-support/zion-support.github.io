@@ -8,7 +8,7 @@ interface ThemeToggleProps {
   className?: string;
 }
 
-export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
+export const ThemeToggle: React.FC = ({ className = '' }) => {
   const [theme, setTheme] = useState<Theme>('system');
   const [mounted, setMounted] = useState(false);
 
@@ -50,7 +50,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     setTheme(newTheme);
   };
 
-  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [
+  const themes: { value: Theme label: string icon: React.ComponentType<>     }[] = [
     { value: 'light', label: 'Light theme', icon: Sun },
     { value: 'dark', label: 'Dark theme', icon: Moon },
     { value: 'system', label: 'System theme', icon: Monitor }
@@ -68,7 +68,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
         className="flex items-center space-x-1 bg-white/10 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-1"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 0.3     }}
       >
         {themes.map((themeOption) => {
           const Icon = themeOption.icon;
@@ -83,8 +83,8 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
                   : 'text-gray-300 hover:text-white hover:bg-white/10'
               }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05     }}
+              whileTap={{ scale: 0.95     }}
               aria-label={themeOption.label}
               title={themeOption.label}
             >

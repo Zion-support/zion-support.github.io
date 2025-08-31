@@ -59,8 +59,7 @@ import {
 
 export default function ComprehensivePricingGuide2025() {
   const pricingTiers = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$99',
       period: 'month',
       description: 'Perfect for small businesses and startups',
@@ -77,8 +76,7 @@ export default function ComprehensivePricingGuide2025() {
       cta: 'Get Started',
       href: '/request-quote'
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$299',
       period: 'month',
       description: 'Ideal for growing businesses',
@@ -97,8 +95,7 @@ export default function ComprehensivePricingGuide2025() {
       cta: 'Get Professional',
       href: '/request-quote'
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$999',
       period: 'month',
       description: 'For large organizations',
@@ -122,8 +119,7 @@ export default function ComprehensivePricingGuide2025() {
   ];
 
   const serviceCategories = [
-    {
-      title: 'AI & Machine Learning',
+    { title: 'AI & Machine Learning',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       services: [
@@ -133,8 +129,7 @@ export default function ComprehensivePricingGuide2025() {
         { name: 'AI Automation', price: '$100-1000', description: 'Per workflow/month' }
       ]
     },
-    {
-      title: 'Cloud & Infrastructure',
+    { title: 'Cloud & Infrastructure',
       icon: Cloud,
       color: 'from-blue-500 to-cyan-500',
       services: [
@@ -144,8 +139,7 @@ export default function ComprehensivePricingGuide2025() {
         { name: 'Security Audits', price: '$500-3000', description: 'Per audit' }
       ]
     },
-    {
-      title: 'Cybersecurity',
+    { title: 'Cybersecurity',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       services: [
@@ -155,8 +149,7 @@ export default function ComprehensivePricingGuide2025() {
         { name: 'Incident Response', price: '$500-5000', description: 'Per incident' }
       ]
     },
-    {
-      title: 'Data & Analytics',
+    { title: 'Data & Analytics',
       icon: BarChart3,
       color: 'from-green-500 to-emerald-500',
       services: [
@@ -169,34 +162,29 @@ export default function ComprehensivePricingGuide2025() {
   ];
 
   const industrySolutions = [
-    {
-      title: 'Healthcare',
+    { title: 'Healthcare',
       icon: Heart,
       color: 'from-red-500 to-pink-500',
       pricing: 'Custom pricing based on patient volume and requirements'
     },
-    {
-      title: 'Financial Services',
+    { title: 'Financial Services',
       icon: TrendingUp,
       color: 'from-green-500 to-blue-500',
       pricing: 'Enterprise pricing with compliance requirements'
     },
-    {
-      title: 'Manufacturing',
+    { title: 'Manufacturing',
       icon: Factory,
       color: 'from-orange-500 to-red-500',
       pricing: 'Volume-based pricing for production scale'
     },
-    {
-      title: 'Retail & E-commerce',
+    { title: 'Retail & E-commerce',
       icon: ShoppingCart,
       color: 'from-purple-500 to-indigo-500',
       pricing: 'Revenue-based pricing model'
     }
   ];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
@@ -209,9 +197,8 @@ export default function ComprehensivePricingGuide2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Comprehensive Pricing Guide 2025
             </h1>
@@ -222,14 +209,12 @@ export default function ComprehensivePricingGuide2025() {
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/request-quote"
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                 Get Custom Quote
               </Link>
               <Link
                 to="/demo"
-                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
-              >
+                className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300">
                 Schedule Demo
               </Link>
             </div>
@@ -249,10 +234,9 @@ export default function ComprehensivePricingGuide2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Choose Your Plan
             </h2>
@@ -268,7 +252,7 @@ export default function ComprehensivePricingGuide2025() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                viewport={{ once: true     }}
                 className={`relative group ${
                   tier.popular ? 'lg:scale-105' : ''
                 }`}
@@ -325,10 +309,9 @@ export default function ComprehensivePricingGuide2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Service-Specific Pricing
             </h2>
@@ -344,9 +327,8 @@ export default function ComprehensivePricingGuide2025() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700/50">
                 <div className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center mb-6`}>
                   <category.icon className="w-8 h-8 text-white" />
                 </div>
@@ -378,10 +360,9 @@ export default function ComprehensivePricingGuide2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry-Specific Pricing
             </h2>
@@ -397,9 +378,8 @@ export default function ComprehensivePricingGuide2025() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 text-center">
                 <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
@@ -409,8 +389,7 @@ export default function ComprehensivePricingGuide2025() {
                 
                 <Link
                   to="/request-quote"
-                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm mt-4"
-                >
+                  className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm mt-4">
                   Get Custom Quote
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -426,10 +405,9 @@ export default function ComprehensivePricingGuide2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center">
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">
               <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Calculator className="w-10 h-10 text-white" />
@@ -446,20 +424,17 @@ export default function ComprehensivePricingGuide2025() {
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   to="/request-quote"
-                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
-                >
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
                   Get Custom Quote
                 </Link>
                 <Link
                   to="/contact"
-                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300"
-                >
+                  className="px-8 py-4 border border-cyan-400/50 text-cyan-400 hover:bg-cyan-400/10 font-semibold rounded-xl transition-all duration-300">
                   Contact Sales Team
                 </Link>
                 <Link
                   to="/demo"
-                  className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300"
-                >
+                  className="px-8 py-4 border border-purple-400/50 text-purple-400 hover:bg-purple-400/10 font-semibold rounded-xl transition-all duration-300">
                   <Play className="w-5 h-5 inline mr-2" />
                   Schedule Demo
                 </Link>
@@ -475,10 +450,9 @@ export default function ComprehensivePricingGuide2025() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Questions About Pricing?
             </h2>

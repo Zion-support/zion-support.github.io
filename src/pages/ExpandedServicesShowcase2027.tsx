@@ -135,9 +135,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         key={service.id}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden"
-      >
+        transition={{ duration: 0.5     }}
+        className="bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-slate-700 overflow-hidden">
         {/* Header */}
         <div className={`bg-gradient-to-r ${categoryColor} p-6 text-white`}>
           <div className="flex items-center justify-between mb-4">
@@ -194,8 +193,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               {service.features.length > 3 && (
                 <button
                   onClick={() => setExpandedService(expandedService === service.id ? null : service.id)}
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                >
+                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline">
                   {expandedService === service.id ? 'Show less' : `+${service.features.length - 3} more features`}
                 </button>
               )}
@@ -209,8 +207,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-                className="mb-4"
-              >
+                className="mb-4">
                 <div className="space-y-1">
                   {service.features.slice(3).map((feature, index) => (
                     <div key={index} className="flex items-center space-x-2">
@@ -284,8 +281,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             <div className="flex space-x-2">
               <a
                 href={`mailto:${service.contactInfo.email}`}
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
+                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                 <Mail className="w-4 h-4" />
                 <span>Contact</span>
               </a>
@@ -293,8 +289,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 href={service.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2"
-              >
+                className="flex-1 bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 text-center py-2 px-4 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
               </a>
@@ -314,9 +309,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {
         key={service.id}
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }}
-        className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 p-6"
-      >
+        transition={{ duration: 0.5     }}
+        className="bg-white dark:bg-slate-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-slate-700 p-6">
         <div className="flex items-start space-x-4">
           {/* Icon and Category */}
           <div className={`bg-gradient-to-r ${categoryColor} p-3 rounded-lg text-white flex-shrink-0`}>
@@ -371,8 +365,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             <div className="flex items-center space-x-3">
               <a
                 href={`mailto:${service.contactInfo.email}`}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-              >
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
                 <span>Contact Sales</span>
               </a>
@@ -380,8 +373,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
                 href={service.contactInfo.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2"
-              >
+                className="bg-gray-100 hover:bg-gray-200 dark:bg-slate-700 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2">
                 <ExternalLink className="w-4 h-4" />
                 <span>Learn More</span>
               </a>
@@ -407,9 +399,8 @@ const ExpandedServicesShowcase2027: React.FC = () => {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Expanded Innovative Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 2027
@@ -419,8 +410,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
-            >
+              className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
               Discover our comprehensive portfolio of advanced micro SAAS, IT infrastructure, and AI services. 
               From quantum cybersecurity to healthcare AI, explore cutting-edge solutions that drive innovation and growth.
             </motion.p>
@@ -430,8 +420,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
-            >
+              className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-600" />
@@ -485,8 +474,7 @@ const ExpandedServicesShowcase2027: React.FC = () => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
-              >
+                className="px-4 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white">
                 {EXPANDED_SERVICE_CATEGORIES.map((category) => (
                   <option key={category} value={category}>
                     {category}
@@ -561,15 +549,13 @@ const ExpandedServicesShowcase2027: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
-            >
+              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2">
               <Mail className="w-5 h-5" />
               <span>Get Started</span>
             </a>
             <a
               href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
-            >
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2">
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
             </a>

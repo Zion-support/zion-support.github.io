@@ -17,7 +17,7 @@ interface SEOProps {
   canonical?: string;
 }
 
-export const EnhancedSEO: React.FC<SEOProps> = ({
+export const EnhancedSEO: React.FC = ({
   title = 'Zion Tech Group - Leading AI Solutions & Technology Services',
   description = 'Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.',
   keywords = 'AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services',
@@ -54,7 +54,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       "url": `${url}/contact`
     },
     "sameAs": [
-      "https://linkedin.com/company/ziontechgroup",
+      "https://linkedin.com/comp/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://github.com/ziontechgroup"
     ],

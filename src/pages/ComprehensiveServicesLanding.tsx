@@ -5,33 +5,28 @@ import { Link } from 'react-router-dom';
 
 const ComprehensiveServicesLanding: React.FC = () => {
   const serviceCategories = [
-    {
-      name: "AI-Powered Micro SAAS Services",
+    { name: "AI-Powered Micro SAAS Services",
       description: "Cutting-edge AI solutions that transform business operations",
       services: [
-        {
-          title: "AI Code Review & Security",
+        { title: "AI Code Review & Security",
           description: "Advanced vulnerability detection with 85% accuracy improvement",
           url: "/services/ai-code-review-security",
           pricing: "From $49/month",
           icon: "🔒"
         },
-        {
-          title: "Customer Experience Analytics",
+        { title: "Customer Experience Analytics",
           description: "Boost satisfaction by 35% with AI-driven insights",
           url: "/services/ai-customer-experience-analytics",
           pricing: "From $299/month",
           icon: "📊"
         },
-        {
-          title: "DevOps Automation Platform",
+        { title: "DevOps Automation Platform",
           description: "Reduce deployment time by 80% with intelligent automation",
           url: "/services/ai-devops-automation-platform",
           pricing: "From $199/month",
           icon: "🚀"
         },
-        {
-          title: "IoT Edge Computing",
+        { title: "IoT Edge Computing",
           description: "Sub-millisecond processing with 90% latency reduction",
           url: "/services/ai-iot-edge-computing-platform",
           pricing: "From $299/month",
@@ -39,26 +34,22 @@ const ComprehensiveServicesLanding: React.FC = () => {
         }
       ]
     },
-    {
-      name: "Cloud & Infrastructure",
+    { name: "Cloud & Infrastructure",
       description: "Scalable cloud solutions and enterprise infrastructure",
       services: [
-        {
-          title: "Cloud DevOps",
+        { title: "Cloud DevOps",
           description: "Streamlined cloud deployment and management",
           url: "/services/cloud-devops",
           pricing: "Custom pricing",
           icon: "☁️"
         },
-        {
-          title: "IT Infrastructure",
+        { title: "IT Infrastructure",
           description: "Enterprise-grade infrastructure solutions",
           url: "/services/it-infrastructure",
           pricing: "Custom pricing",
           icon: "🏗️"
         },
-        {
-          title: "Digital Twin",
+        { title: "Digital Twin",
           description: "Virtual representation of physical systems",
           url: "/services/digital-twin",
           pricing: "Custom pricing",
@@ -66,26 +57,22 @@ const ComprehensiveServicesLanding: React.FC = () => {
         }
       ]
     },
-    {
-      name: "Data & Analytics",
+    { name: "Data & Analytics",
       description: "Transform data into actionable business intelligence",
       services: [
-        {
-          title: "Data Analytics",
+        { title: "Data Analytics",
           description: "Comprehensive data analysis and visualization",
           url: "/services/data-analytics",
           pricing: "Custom pricing",
           icon: "📈"
         },
-        {
-          title: "AI Business Intelligence",
+        { title: "AI Business Intelligence",
           description: "AI-powered business insights and reporting",
           url: "/services/ai-business-intelligence",
           pricing: "Custom pricing",
           icon: "🧠"
         },
-        {
-          title: "IoT Edge Computing",
+        { title: "IoT Edge Computing",
           description: "Real-time edge data processing",
           url: "/services/iot-edge",
           pricing: "Custom pricing",
@@ -93,26 +80,22 @@ const ComprehensiveServicesLanding: React.FC = () => {
         }
       ]
     },
-    {
-      name: "Security & Compliance",
+    { name: "Security & Compliance",
       description: "Enterprise-grade security and regulatory compliance",
       services: [
-        {
-          title: "Zero Trust Architecture",
+        { title: "Zero Trust Architecture",
           description: "Modern security framework for enterprise",
           url: "/services/zero-trust-network-architecture",
           pricing: "Custom pricing",
           icon: "🛡️"
         },
-        {
-          title: "Cybersecurity Suite",
+        { title: "Cybersecurity Suite",
           description: "Comprehensive security solutions",
           url: "/services/ai-cybersecurity-suite",
           pricing: "Custom pricing",
           icon: "🔐"
         },
-        {
-          title: "Compliance Assistant",
+        { title: "Compliance Assistant",
           description: "AI-powered compliance management",
           url: "/services/ai-compliance-assistant",
           pricing: "Custom pricing",
@@ -138,7 +121,7 @@ const ComprehensiveServicesLanding: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8     }}
             >
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Comprehensive Business Solutions
@@ -150,14 +133,12 @@ const ComprehensiveServicesLanding: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   to="/ai-services-showcase"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
-                >
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Explore AI Services
                 </Link>
                 <Link 
                   to="/contact"
-                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                >
+                  className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
                   Get Started
                 </Link>
               </div>
@@ -171,10 +152,9 @@ const ComprehensiveServicesLanding: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Service Portfolio
               </h2>
@@ -190,7 +170,7 @@ const ComprehensiveServicesLanding: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: true     }}
                 >
                   <div className="text-center mb-12">
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
@@ -208,9 +188,8 @@ const ComprehensiveServicesLanding: React.FC = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
-                        viewport={{ once: true }}
-                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group"
-                      >
+                        viewport={{ once: true     }}
+                        className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 group">
                         <div className="text-3xl mb-4">{service.icon}</div>
                         <h4 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors duration-300">
                           {service.title}
@@ -223,8 +202,7 @@ const ComprehensiveServicesLanding: React.FC = () => {
                         </div>
                         <Link
                           to={service.url}
-                          className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
-                        >
+                          className="inline-block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center">
                           Learn More
                         </Link>
                       </motion.div>
@@ -242,10 +220,9 @@ const ComprehensiveServicesLanding: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Featured AI-Powered Solutions
               </h2>
@@ -256,16 +233,14 @@ const ComprehensiveServicesLanding: React.FC = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {[
-                {
-                  title: "AI-Powered Code Review & Security Analysis",
+                { title: "AI-Powered Code Review & Security Analysis",
                   description: "Detect vulnerabilities with 85% accuracy improvement. Support for 50+ programming languages with comprehensive security testing.",
                   benefits: ["85% vulnerability reduction", "50+ programming languages", "Real-time analysis", "Git integration"],
                   pricing: "$49 - $799/month",
                   url: "/services/ai-code-review-security",
                   cta: "Secure Your Code"
                 },
-                {
-                  title: "AI-Powered Customer Experience Analytics",
+                { title: "AI-Powered Customer Experience Analytics",
                   description: "Transform customer insights into actionable intelligence. Boost satisfaction by 35% and reduce churn by 25%.",
                   benefits: ["35% satisfaction increase", "25% churn reduction", "Real-time insights", "Predictive analytics"],
                   pricing: "$299 - $1,999/month",
@@ -278,9 +253,8 @@ const ComprehensiveServicesLanding: React.FC = () => {
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/30">
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                   <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                   
@@ -304,14 +278,12 @@ const ComprehensiveServicesLanding: React.FC = () => {
                   <div className="flex gap-3">
                     <Link
                       to={service.url}
-                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center"
-                    >
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 text-center">
                       {service.cta}
                     </Link>
                     <Link
                       to="/contact"
-                      className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center"
-                    >
+                      className="flex-1 border-2 border-white text-white font-semibold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 text-center">
                       Contact Sales
                     </Link>
                   </div>
@@ -327,8 +299,8 @@ const ComprehensiveServicesLanding: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?

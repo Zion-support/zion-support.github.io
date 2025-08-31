@@ -35,118 +35,96 @@ import {
 
 const AIHealthcarePlatform = () => {
   const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-blue-400" />,
+    { icon: <Brain className="w-8 h-8 text-blue-400" />,
       title: "AI Diagnosis",
       description: "Advanced AI algorithms that analyze symptoms, medical history, and test results for accurate diagnosis"
     },
-    {
-      icon: <Heart className="w-8 h-8 text-red-400" />,
+    { icon: <Heart className="w-8 h-8 text-red-400" />,
       title: "Predictive Health",
       description: "Predict potential health issues before they become serious using machine learning and data analysis"
     },
-    {
-      icon: <Stethoscope className="w-8 h-8 text-green-400" />,
+    { icon: <Stethoscope className="w-8 h-8 text-green-400" />,
       title: "Virtual Consultations",
       description: "AI-powered virtual consultations with healthcare professionals for remote patient care"
     },
-    {
-      icon: <Microscope className="w-8 h-8 text-purple-400" />,
+    { icon: <Microscope className="w-8 h-8 text-purple-400" />,
       title: "Medical Imaging",
       description: "AI-enhanced medical imaging analysis for faster and more accurate diagnosis"
     },
-    {
-      icon: <Pill className="w-8 h-8 text-orange-400" />,
+    { icon: <Pill className="w-8 h-8 text-orange-400" />,
       title: "Drug Discovery",
       description: "AI-powered drug discovery and development for faster pharmaceutical breakthroughs"
     },
-    {
-      icon: <Database className="w-8 h-8 text-cyan-400" />,
+    { icon: <Database className="w-8 h-8 text-cyan-400" />,
       title: "Health Records",
       description: "Secure, AI-managed electronic health records with intelligent data analysis"
     }
   ];
 
   const benefits = [
-    {
-      metric: "95%",
+    { metric: "95%",
       description: "Diagnosis accuracy with AI assistance"
     },
-    {
-      metric: "60%",
+    { metric: "60%",
       description: "Faster diagnosis and treatment"
     },
-    {
-      metric: "24/7",
+    { metric: "24/7",
       description: "Continuous health monitoring"
     },
-    {
-      metric: "Global",
+    { metric: "Global",
       description: "Healthcare access worldwide"
     }
   ];
 
   const healthcareModules = [
-    {
-      title: "Primary Care",
+    { title: "Primary Care",
       description: "AI-powered primary care consultations, symptom analysis, and treatment recommendations",
       icon: <Stethoscope className="w-6 h-6 text-blue-400" />
     },
-    {
-      title: "Specialty Care",
+    { title: "Specialty Care",
       description: "Specialized AI modules for cardiology, neurology, oncology, and other medical specialties",
       icon: <Heart className="w-6 h-6 text-red-400" />
     },
-    {
-      title: "Preventive Care",
+    { title: "Preventive Care",
       description: "Predictive health analytics, risk assessment, and preventive care recommendations",
       icon: <Target className="w-6 h-6 text-green-400" />
     },
-    {
-      title: "Emergency Care",
+    { title: "Emergency Care",
       description: "AI-powered emergency triage, critical care monitoring, and rapid response systems",
       icon: <AlertTriangle className="w-6 h-6 text-orange-400" />
     },
-    {
-      title: "Mental Health",
+    { title: "Mental Health",
       description: "AI-driven mental health assessment, therapy support, and wellness monitoring",
       icon: <Brain className="w-6 h-6 text-purple-400" />
     },
-    {
-      title: "Research & Development",
+    { title: "Research & Development",
       description: "AI-powered medical research, clinical trial optimization, and breakthrough discovery",
       icon: <Microscope className="w-6 h-6 text-cyan-400" />
     }
   ];
 
   const complianceFeatures = [
-    {
-      name: "HIPAA Compliance",
+    { name: "HIPAA Compliance",
       status: "100%",
       icon: <Shield className="w-5 h-5 text-green-400" />
     },
-    {
-      name: "GDPR Compliance",
+    { name: "GDPR Compliance",
       status: "100%",
       icon: <Lock className="w-5 h-5 text-blue-400" />
     },
-    {
-      name: "FDA Approval",
+    { name: "FDA Approval",
       status: "Pending",
       icon: <CheckCircle className="w-5 h-5 text-yellow-400" />
     },
-    {
-      name: "ISO 27001",
+    { name: "ISO 27001",
       status: "100%",
       icon: <Award className="w-5 h-5 text-purple-400" />
     },
-    {
-      name: "SOC 2 Type II",
+    { name: "SOC 2 Type II",
       status: "100%",
       icon: <Eye className="w-5 h-5 text-cyan-400" />
     },
-    {
-      name: "HITECH Act",
+    { name: "HITECH Act",
       status: "100%",
       icon: <FileText className="w-5 h-5 text-orange-400" />
     }
@@ -161,9 +139,8 @@ const AIHealthcarePlatform = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="flex justify-center mb-6"
-            >
+              transition={{ duration: 0.8     }}
+              className="flex justify-center mb-6">
               <div className="p-3 bg-gradient-to-r from-blue-600/20 to-green-600/20 rounded-full border border-blue-500/30">
                 <Heart className="h-12 w-12 text-blue-400" />
               </div>
@@ -172,16 +149,14 @@ const AIHealthcarePlatform = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-cyan-500 bg-clip-text text-transparent"
-            >
+              className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-green-400 to-cyan-500 bg-clip-text text-transparent">
               AI Healthcare Platform
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-            >
+              className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Revolutionize healthcare delivery with our comprehensive AI-powered platform. 
               From diagnosis to treatment, our intelligent system enhances patient care, 
               improves outcomes, and accelerates medical breakthroughs.
@@ -190,8 +165,7 @@ const AIHealthcarePlatform = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
+              className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg">
                 Get Started Today
               </Link>
@@ -210,8 +184,8 @@ const AIHealthcarePlatform = () => {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 What is AI Healthcare Platform?
@@ -240,10 +214,9 @@ const AIHealthcarePlatform = () => {
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="relative">
               <div className="bg-gradient-to-br from-blue-600/20 to-green-600/20 p-8 rounded-2xl border border-blue-500/30">
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3">
@@ -283,10 +256,9 @@ const AIHealthcarePlatform = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-3xl md:text-4xl font-bold text-center mb-16">
             Key Features
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -296,9 +268,8 @@ const AIHealthcarePlatform = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-600/20 to-green-600/20 rounded-lg flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
@@ -318,10 +289,9 @@ const AIHealthcarePlatform = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-3xl md:text-4xl font-bold text-center mb-16">
             Healthcare Modules
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -331,9 +301,8 @@ const AIHealthcarePlatform = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
                 <div className="flex items-center space-x-3 mb-4">
                   {module.icon}
                   <h3 className="text-xl font-semibold text-blue-400">{module.title}</h3>
@@ -351,10 +320,9 @@ const AIHealthcarePlatform = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-3xl md:text-4xl font-bold text-center mb-16">
             Compliance & Security
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -364,9 +332,8 @@ const AIHealthcarePlatform = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700"
-              >
+                viewport={{ once: true     }}
+                className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     {feature.icon}
@@ -385,7 +352,7 @@ const AIHealthcarePlatform = () => {
                       feature.status === '100%' ? 'bg-green-400' : 
                       feature.status === 'Pending' ? 'bg-yellow-400' : 'bg-blue-400'
                     }`}
-                    style={{ width: feature.status === 'Pending' ? '75%' : '100%' }}
+                    style={{ width: feature.status === 'Pending' ? '75%' : '100%'     }}
                   ></div>
                 </div>
               </motion.div>
@@ -400,10 +367,9 @@ const AIHealthcarePlatform = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-3xl md:text-4xl font-bold text-center mb-16">
             Why Choose AI Healthcare Platform?
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -413,9 +379,8 @@ const AIHealthcarePlatform = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-center"
-              >
+                viewport={{ once: true     }}
+                className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-600/20 to-green-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
                     {benefit.metric}
@@ -434,10 +399,9 @@ const AIHealthcarePlatform = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-3xl md:text-4xl font-bold text-center mb-16">
             Pricing Plans
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -445,10 +409,9 @@ const AIHealthcarePlatform = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-            >
+              transition={{ duration: 0.8     }}
+              viewport={{ once: true     }}
+              className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-4">Starter</h3>
                 <div className="text-4xl font-bold text-blue-400 mb-2">$399</div>
@@ -482,9 +445,8 @@ const AIHealthcarePlatform = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-br from-blue-600/20 to-green-600/20 p-8 rounded-xl border border-blue-500/50 relative"
-            >
+              viewport={{ once: true     }}
+              className="bg-gradient-to-br from-blue-600/20 to-green-600/20 p-8 rounded-xl border border-blue-500/50 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <div className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                   Most Popular
@@ -527,9 +489,8 @@ const AIHealthcarePlatform = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300"
-            >
+              viewport={{ once: true     }}
+              className="bg-slate-800/50 p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300">
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-blue-400 mb-2">$2,499</div>
@@ -571,19 +532,17 @@ const AIHealthcarePlatform = () => {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-6"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Healthcare?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="text-xl text-gray-300 mb-8"
-          >
+            viewport={{ once: true     }}
+            className="text-xl text-gray-300 mb-8">
             Join the healthcare revolution with Zion Tech Group's AI Healthcare Platform. 
             Enhance patient care, improve outcomes, and accelerate medical breakthroughs.
           </motion.p>
@@ -591,9 +550,8 @@ const AIHealthcarePlatform = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
+            viewport={{ once: true     }}
+            className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-green-700 transition-all duration-300 text-lg">
               Start Your Healthcare Journey
             </Link>

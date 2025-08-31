@@ -22,33 +22,27 @@ import {
 
 export default function AIContentGenerator() {
   const features = [
-    {
-      icon: PenTool,
+    { icon: PenTool,
       title: 'Multi-Format Content Creation',
       description: 'Generate blog posts, social media content, emails, ads, and more with AI-powered writing assistance'
     },
-    {
-      icon: Image,
+    { icon: Image,
       title: 'AI Image Generation',
       description: 'Create stunning visuals, graphics, and illustrations using advanced AI image generation models'
     },
-    {
-      icon: Video,
+    { icon: Video,
       title: 'Video Content Creation',
       description: 'Generate video scripts, storyboards, and even short video clips with AI technology'
     },
-    {
-      icon: Search,
+    { icon: Search,
       title: 'SEO-Optimized Content',
       description: 'AI automatically optimizes content for search engines with keyword research and semantic analysis'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Audience Targeting',
       description: 'Content tailored to specific demographics, industries, and customer personas'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Performance Analytics',
       description: 'Track content performance with AI-powered insights and optimization recommendations'
     }
@@ -64,8 +58,7 @@ export default function AIContentGenerator() {
   ];
 
   const pricing = [
-    {
-      name: 'Creator',
+    { name: 'Creator',
       price: '$49',
       period: '/month',
       description: 'Perfect for individual creators and small businesses',
@@ -80,8 +73,7 @@ export default function AIContentGenerator() {
       cta: 'Start Free Trial',
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$149',
       period: '/month',
       description: 'Ideal for marketing teams and growing businesses',
@@ -98,8 +90,7 @@ export default function AIContentGenerator() {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$399',
       period: '/month',
       description: 'For large organizations with high content demands',
@@ -134,15 +125,14 @@ export default function AIContentGenerator() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent">
                 AI Content Generator
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence. 
-                Generate articles, images, videos, and more for any platform.
+                Generate articles, images, videos, and more for  platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
@@ -162,9 +152,8 @@ export default function AIContentGenerator() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 AI-Powered Content Creation
               </h2>
@@ -181,8 +170,7 @@ export default function AIContentGenerator() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -200,9 +188,8 @@ export default function AIContentGenerator() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Proven Results
               </h2>
@@ -219,8 +206,7 @@ export default function AIContentGenerator() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>
@@ -235,9 +221,8 @@ export default function AIContentGenerator() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Simple, Transparent Pricing
               </h2>
@@ -305,9 +290,8 @@ export default function AIContentGenerator() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Revolutionize Your Content Creation?
               </h2>

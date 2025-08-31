@@ -33,8 +33,7 @@ export default function AIContentCreationSuite() {
   ];
 
   const tiers = [
-    {
-      name: 'Creator',
+    { name: 'Creator',
       price: '$199/mo',
       details: [
         'Up to 100 content pieces/month',
@@ -44,8 +43,7 @@ export default function AIContentCreationSuite() {
         'Basic analytics'
       ]
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$499/mo',
       details: [
         'Up to 500 content pieces/month',
@@ -56,8 +54,7 @@ export default function AIContentCreationSuite() {
         'Advanced analytics'
       ]
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$1,299/mo',
       details: [
         'Unlimited content creation',
@@ -70,8 +67,7 @@ export default function AIContentCreationSuite() {
     }
   ];
 
-  const technicalSpecs = {
-    technology: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
+  const technicalSpecs = { technology: ['GPT-4', 'DALL-E', 'Stable Diffusion', 'Python', 'React', 'Node.js', 'PostgreSQL', 'Redis'],
     integrations: ['WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Hootsuite', 'Buffer', 'Canva', 'Adobe Creative Suite'],
     security: ['SOC 2 Type II', 'ISO 27001', 'GDPR', 'End-to-end encryption', 'Multi-factor authentication'],
     uptime: '99.9%',
@@ -79,16 +75,13 @@ export default function AIContentCreationSuite() {
   };
 
   const contentTypes = [
-    {
-      type: 'Text Content',
+    { type: 'Text Content',
       solutions: ['Blog posts', 'Social media posts', 'Email campaigns', 'Product descriptions', 'Press releases']
     },
-    {
-      type: 'Visual Content',
+    { type: 'Visual Content',
       solutions: ['Images and graphics', 'Infographics', 'Social media visuals', 'Product photos', 'Brand assets']
     },
-    {
-      type: 'Video Content',
+    { type: 'Video Content',
       solutions: ['Product videos', 'Social media clips', 'Educational content', 'Marketing videos', 'Live streams']
     }
   ];

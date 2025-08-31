@@ -7,7 +7,7 @@ interface SEOProps {
   keywords?: string;
   ogImage?: string;
   canonicalUrl?: string;
-  structuredData?: any;
+  structuredData?: ;
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';
   ogType?: 'website' | 'article' | 'book' | 'profile' | 'music.song' | 'music.album' | 'music.playlist' | 'music.radio_station' | 'video.movie' | 'video.episode' | 'video.tv_show' | 'video.other' | 'business.business' | 'website';
   author?: string;
@@ -31,12 +31,11 @@ interface SEOProps {
   manifest?: string;
   preconnect?: string[];
   dnsPrefetch?: string[];
-  preload?: Array<{
-    href: string;
+  preload?: Array<{ href: string;
     as: string;
     type?: string;
     crossorigin?: boolean;
-  }>;
+      }>;
   prefetch?: string[];
   dnsPrefetch?: string[];
   preconnect?: string[];
@@ -104,7 +103,7 @@ export function SEO({
       "availableLanguage": "English"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
+      "https://www.linkedin.com/comp/zion-tech-group",
       "https://twitter.com/ziontechgroup",
       "https://www.facebook.com/ziontechgroup"
     ],
@@ -260,8 +259,7 @@ export function SEO({
     ...preconnect.map(domain => ({ rel: "preconnect", href: domain })),
     
     // Preload critical resources
-    ...preload.map(resource => ({
-      rel: "preload",
+    ...preload.map(resource => ({ rel: "preload",
       href: resource.href,
       as: resource.as,
       type: resource.type,
@@ -281,8 +279,7 @@ export function SEO({
 
   // Generate script tags for structured data
   const scriptTags = useMemo(() => [
-    {
-      type: "application/ld+json",
+    { type: "application/ld+json",
       innerHTML: JSON.stringify(finalStructuredData)
     }
   ], [finalStructuredData]);
@@ -342,8 +339,7 @@ export function SEO({
       <style>
         {`
           /* Critical CSS for above-the-fold content */
-          .hero-section {
-            background: linear-gradient(135deg, #22ddd2 0%, #8c15e9 100%);
+          .hero-section { background: linear-gradient(135deg, #22ddd2 0%, #8c15e9 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -399,8 +395,7 @@ export function SEO({
                 
                 // Send to analytics if available
                 if (window.gtag) {
-                  window.gtag('event', 'timing_complete', {
-                    name: 'load',
+                  window.gtag('event', 'timing_complete', { name: 'load',
                     value: Math.round(loadTime)
                   });
                 }

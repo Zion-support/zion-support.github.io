@@ -10,8 +10,7 @@ import { SEO } from '@/components/SEO';
 
 export default function InnovativeAIServicesShowcase() {
   const services = [
-    {
-      id: 'ai-project-manager',
+    { id: 'ai-project-manager',
       title: 'AI Project Manager',
       description: 'Transform your project management with AI-driven insights, automated planning, and intelligent resource optimization.',
       icon: Zap,
@@ -26,8 +25,7 @@ export default function InnovativeAIServicesShowcase() {
       pricing: { starter: '$99/mo', professional: '$299/mo', enterprise: '$799/mo' },
       route: '/services/ai-project-manager'
     },
-    {
-      id: 'ai-content-marketing-suite',
+    { id: 'ai-content-marketing-suite',
       title: 'AI Content Marketing Suite',
       description: 'Transform your content marketing with AI that writes, optimizes, and distributes content across all channels.',
       icon: PenTool,
@@ -42,8 +40,7 @@ export default function InnovativeAIServicesShowcase() {
       pricing: { starter: '$79/mo', professional: '$199/mo', enterprise: '$499/mo' },
       route: '/services/ai-content-marketing-suite'
     },
-    {
-      id: 'ai-financial-analytics',
+    { id: 'ai-financial-analytics',
       title: 'AI Financial Analytics Platform',
       description: 'Transform your financial decision-making with AI-driven insights, predictive analytics, and automated portfolio optimization.',
       icon: TrendingUp,
@@ -58,8 +55,7 @@ export default function InnovativeAIServicesShowcase() {
       pricing: { starter: '$199/mo', professional: '$499/mo', enterprise: '$1,299/mo' },
       route: '/services/ai-financial-analytics'
     },
-    {
-      id: 'ai-hr-talent-platform',
+    { id: 'ai-hr-talent-platform',
       title: 'AI HR & Talent Platform',
       description: 'Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.',
       icon: Users,
@@ -74,8 +70,7 @@ export default function InnovativeAIServicesShowcase() {
       pricing: { starter: '$149/mo', professional: '$399/mo', enterprise: '$999/mo' },
       route: '/services/ai-hr-talent-platform'
     },
-    {
-      id: 'ai-supply-chain-optimization',
+    { id: 'ai-supply-chain-optimization',
       title: 'AI Supply Chain Optimization',
       description: 'Transform your supply chain with AI-driven insights, predictive analytics, and automated optimization.',
       icon: Route,
@@ -105,9 +100,8 @@ export default function InnovativeAIServicesShowcase() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6"
-          >
+            transition={{ duration: 0.6     }}
+            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold mb-6">
             <Sparkles className="w-4 h-4 mr-2" />
             Innovative AI-Powered Solutions
           </motion.div>
@@ -116,8 +110,7 @@ export default function InnovativeAIServicesShowcase() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6"
-          >
+            className="text-4xl sm:text-6xl font-extrabold tracking-tight mb-6">
             AI Services That
             <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Transform Business
@@ -128,8 +121,7 @@ export default function InnovativeAIServicesShowcase() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl text-slate-300 max-w-3xl mx-auto mb-8"
-          >
+            className="text-xl text-slate-300 max-w-3xl mx-auto mb-8">
             Discover our comprehensive suite of AI-powered micro SaaS solutions designed to revolutionize 
             how businesses operate, scale, and succeed in the digital age.
           </motion.p>
@@ -146,8 +138,7 @@ export default function InnovativeAIServicesShowcase() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
+                className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-r ${service.color} mb-4`}>
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
@@ -190,8 +181,7 @@ export default function InnovativeAIServicesShowcase() {
                 
                 <Link 
                   to={service.route}
-                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold group-hover:translate-x-1 transition-all duration-300"
-                >
+                  className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-semibold group-hover:translate-x-1 transition-all duration-300">
                   Learn More <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </motion.div>
@@ -248,14 +238,12 @@ export default function InnovativeAIServicesShowcase() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a 
               href="mailto:kleber@ziontechgroup.com"
-              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-cyan-50 transition-colors"
-            >
+              className="px-8 py-4 bg-white text-cyan-600 rounded-lg font-semibold hover:bg-cyan-50 transition-colors">
               Start Free Trial
             </a>
             <a 
               href="tel:+13024640950"
-              className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
-            >
+              className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors">
               Call Us
             </a>
           </div>
@@ -279,8 +267,7 @@ export default function InnovativeAIServicesShowcase() {
               href="https://ziontechgroup.com" 
               target="_blank" 
               rel="noreferrer" 
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300"
-            >
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-900 font-semibold rounded-lg hover:from-cyan-300 hover:to-blue-400 transition-all duration-300">
               Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </div>

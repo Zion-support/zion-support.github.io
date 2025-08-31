@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface ITService {
   id: number;
@@ -33,11 +33,10 @@ export interface ITService {
   useCases: string[];
   roi: string;
   setupTime: string;
-}
+    }
 
 // Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
+const zionContact: ServiceContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -45,8 +44,7 @@ const zionContact: ServiceContact = {
 
 // Comprehensive IT Services 2030
 export const comprehensiveITServices2030: ITService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Cloud Infrastructure & DevOps Engineering",
     category: "Cloud & DevOps",
     description: "Comprehensive cloud infrastructure design, implementation, and DevOps automation services. We specialize in AWS, Azure, and Google Cloud with infrastructure-as-code, CI/CD pipelines, and automated deployment strategies.",
@@ -102,8 +100,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "300% within 12 months",
     setupTime: "2-8 weeks"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Cybersecurity & Zero Trust Architecture",
     category: "Security",
     description: "Comprehensive cybersecurity services including zero trust architecture implementation, threat detection, incident response, and compliance management. We provide end-to-end security solutions for modern enterprises.",
@@ -159,8 +156,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "400% within 18 months",
     setupTime: "4-12 weeks"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "Data Analytics & Business Intelligence",
     category: "Data & Analytics",
     description: "Advanced data analytics and business intelligence services that transform raw data into actionable insights. We help organizations make data-driven decisions through modern analytics platforms and AI-powered insights.",
@@ -216,8 +212,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "350% within 15 months",
     setupTime: "3-10 weeks"
   },
-  {
-    id: 4,
+  { id: 4,
     name: "Digital Transformation & Legacy Modernization",
     category: "Digital Transformation",
     description: "End-to-end digital transformation services that modernize legacy systems, implement new technologies, and transform business processes. We help organizations become digital-first and future-ready.",
@@ -273,8 +268,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "500% within 24 months",
     setupTime: "6-24 weeks"
   },
-  {
-    id: 5,
+  { id: 5,
     name: "AI & Machine Learning Implementation",
     category: "Artificial Intelligence",
     description: "Comprehensive AI and machine learning services that help organizations implement intelligent solutions. From strategy to deployment, we deliver AI solutions that drive business value and competitive advantage.",
@@ -330,8 +324,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "600% within 18 months",
     setupTime: "8-20 weeks"
   },
-  {
-    id: 6,
+  { id: 6,
     name: "Network Infrastructure & SD-WAN Solutions",
     category: "Networking",
     description: "Advanced networking solutions including SD-WAN implementation, network security, and infrastructure optimization. We design and implement scalable, secure, and high-performance network architectures.",
@@ -387,8 +380,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "300% within 12 months",
     setupTime: "3-8 weeks"
   },
-  {
-    id: 7,
+  { id: 7,
     name: "Managed IT Services & Support",
     category: "Managed Services",
     description: "Comprehensive managed IT services that provide 24/7 monitoring, support, and maintenance for your IT infrastructure. We act as your virtual IT department, ensuring optimal performance and security.",
@@ -444,8 +436,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "250% within 12 months",
     setupTime: "1-2 weeks"
   },
-  {
-    id: 8,
+  { id: 8,
     name: "Enterprise Software Development",
     category: "Software Development",
     description: "Custom enterprise software development services that deliver scalable, secure, and high-performance applications. We specialize in modern development practices and cutting-edge technologies.",
@@ -501,8 +492,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "400% within 18 months",
     setupTime: "8-24 weeks"
   },
-  {
-    id: 9,
+  { id: 9,
     name: "Data Center & Colocation Services",
     category: "Infrastructure",
     description: "Enterprise-grade data center services including colocation, cloud connectivity, and disaster recovery solutions. We provide secure, reliable, and scalable infrastructure for mission-critical applications.",
@@ -558,8 +548,7 @@ export const comprehensiveITServices2030: ITService[] = [
     roi: "350% within 15 months",
     setupTime: "4-12 weeks"
   },
-  {
-    id: 10,
+  { id: 10,
     name: "IT Strategy & Digital Consulting",
     category: "Consulting",
     description: "Strategic IT consulting services that help organizations align technology with business objectives. We provide roadmaps, assessments, and strategic guidance for digital transformation and technology adoption.",

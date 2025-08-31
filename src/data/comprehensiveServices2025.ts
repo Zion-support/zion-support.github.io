@@ -6,7 +6,7 @@ export interface ServiceContact {
   email: string;
   website: string;
   address: string;
-}
+    }
 
 export interface MicroSaasService {
   id: number;
@@ -32,7 +32,7 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
-}
+    }
 
 export interface ITService {
   id: number;
@@ -55,7 +55,7 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
-}
+    }
 
 export interface AIService {
   id: number;
@@ -80,11 +80,10 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
-}
+    }
 
 // Zion Tech Group Contact Information
-const zionContact: ServiceContact = {
-  phone: "+1 302 464 0950",
+const zionContact: ServiceContact = { phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
   website: "https://ziontechgroup.com",
   address: "364 E Main St STE 1008 Middletown DE 19709"
@@ -92,8 +91,7 @@ const zionContact: ServiceContact = {
 
 // Revolutionary Micro SAAS Services 2025
 export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "AI-Powered Legal Document Automation",
     category: "Legal Technology",
     pricing: "Professional",
@@ -137,8 +135,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$12.5 billion",
     growthRate: "25% annually"
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Quantum-Enhanced Financial Trading Platform",
     category: "Financial Technology",
     pricing: "Enterprise",
@@ -182,8 +179,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$28 billion",
     growthRate: "30% annually"
   },
-  {
-    id: 3,
+  { id: 3,
     name: "AI-Driven Healthcare Analytics Platform",
     category: "Healthcare Technology",
     pricing: "Professional",
@@ -227,8 +223,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$45 billion",
     growthRate: "28% annually"
   },
-  {
-    id: 4,
+  { id: 4,
     name: "Autonomous Supply Chain Optimization",
     category: "Supply Chain",
     pricing: "Enterprise",
@@ -272,8 +267,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$18 billion",
     growthRate: "22% annually"
   },
-  {
-    id: 5,
+  { id: 5,
     name: "AI Content Marketing Suite",
     category: "Marketing Technology",
     pricing: "Professional",
@@ -317,8 +311,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$32 billion",
     growthRate: "26% annually"
   },
-  {
-    id: 6,
+  { id: 6,
     name: "Zero-Trust Cybersecurity Platform",
     category: "Cybersecurity",
     pricing: "Enterprise",
@@ -362,8 +355,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$150 billion",
     growthRate: "35% annually"
   },
-  {
-    id: 7,
+  { id: 7,
     name: "IoT Edge Computing Platform",
     category: "Internet of Things",
     pricing: "Professional",
@@ -407,8 +399,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$65 billion",
     growthRate: "24% annually"
   },
-  {
-    id: 8,
+  { id: 8,
     name: "AI-Powered Project Management",
     category: "Project Management",
     pricing: "Professional",
@@ -452,8 +443,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$20 billion",
     growthRate: "23% annually"
   },
-  {
-    id: 9,
+  { id: 9,
     name: "Blockchain-Based Identity Management",
     category: "Blockchain",
     pricing: "Enterprise",
@@ -497,8 +487,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
     marketSize: "$25 billion",
     growthRate: "32% annually"
   },
-  {
-    id: 10,
+  { id: 10,
     name: "AI Customer Support Automation",
     category: "Customer Service",
     pricing: "Professional",
@@ -546,8 +535,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [
 
 // Advanced IT Infrastructure Services 2025
 export const advancedITInfrastructureServices2025: ITService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "Cloud-Native Architecture Consulting",
     category: "Cloud Infrastructure",
     description: "Expert consulting services for designing and implementing cloud-native architectures using modern technologies and best practices",
@@ -588,8 +576,7 @@ export const advancedITInfrastructureServices2025: ITService[] = [
     marketSize: "$85 billion",
     compliance: ["SOC 2", "ISO 27001", "GDPR"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "Zero-Trust Network Implementation",
     category: "Cybersecurity",
     description: "Complete implementation of zero-trust network architecture with advanced security controls and monitoring",
@@ -630,8 +617,7 @@ export const advancedITInfrastructureServices2025: ITService[] = [
     marketSize: "$150 billion",
     compliance: ["SOC 2", "ISO 27001", "NIST", "GDPR"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "AI-Powered IT Asset Management",
     category: "IT Management",
     description: "Intelligent IT asset management system using AI to track, optimize, and manage technology resources",
@@ -676,8 +662,7 @@ export const advancedITInfrastructureServices2025: ITService[] = [
 
 // Revolutionary AI Services 2025
 export const revolutionaryAIServices2025: AIService[] = [
-  {
-    id: 1,
+  { id: 1,
     name: "AI Autonomous Research Assistant",
     category: "Research & Development",
     description: "Self-directed AI research platform that autonomously conducts research, analyzes data, and generates insights across multiple domains",
@@ -725,8 +710,7 @@ export const revolutionaryAIServices2025: AIService[] = [
     marketSize: "$35 billion",
     ethicalAI: ["Bias detection", "Transparency", "Accountability", "Privacy protection"]
   },
-  {
-    id: 2,
+  { id: 2,
     name: "AI Quantum Hybrid Platform",
     category: "Quantum Computing",
     description: "Groundbreaking platform that combines classical AI with quantum computing for unprecedented computational power and problem-solving capabilities",
@@ -774,8 +758,7 @@ export const revolutionaryAIServices2025: AIService[] = [
     marketSize: "$65 billion",
     ethicalAI: ["Quantum ethics", "Security protocols", "Transparency", "Responsible AI"]
   },
-  {
-    id: 3,
+  { id: 3,
     name: "AI Consciousness Simulation Platform",
     category: "Advanced AI",
     description: "Revolutionary platform that simulates human consciousness patterns for advanced AI development and cognitive research",
@@ -826,8 +809,7 @@ export const revolutionaryAIServices2025: AIService[] = [
 ];
 
 // Export all services
-export const allServices2025 = {
-  microSaas: revolutionaryMicroSaasServices2025,
+export const allServices2025 = { microSaas: revolutionaryMicroSaasServices2025,
   itInfrastructure: advancedITInfrastructureServices2025,
   ai: revolutionaryAIServices2025
 };

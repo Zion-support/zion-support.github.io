@@ -36,8 +36,7 @@ export default function BlockchainEnterpriseSolutions() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function BlockchainEnterpriseSolutions() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Lock,
+                { icon: Lock,
                   title: "Smart Contracts",
                   description: "Automated, self-executing contracts with predefined conditions and outcomes."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with advanced encryption and privacy controls."
                 },
-                {
-                  icon: Zap,
+                { icon: Zap,
                   title: "DeFi Solutions",
                   description: "Decentralized finance applications for modern financial operations."
                 },
-                {
-                  icon: Settings,
+                { icon: Settings,
                   title: "Enterprise Integration",
                   description: "Seamless integration with existing enterprise systems and workflows."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "Consortium Networks",
                   description: "Private blockchain networks for trusted business partnerships."
                 },
-                {
-                  icon: Globe,
+                { icon: Globe,
                   title: "Cross-border Solutions",
                   description: "Global blockchain networks for international business operations."
                 }
@@ -122,38 +115,32 @@ export default function BlockchainEnterpriseSolutions() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Supply Chain",
+                { title: "Supply Chain",
                   description: "Track products from origin to destination with immutable records.",
                   icon: LinkIcon,
                   benefits: ["Product tracking", "Quality assurance", "Compliance verification"]
                 },
-                {
-                  title: "Financial Services",
+                { title: "Financial Services",
                   description: "Secure transactions, cross-border payments, and asset tokenization.",
                   icon: Zap,
                   benefits: ["Secure payments", "Asset tokenization", "Cross-border transfers"]
                 },
-                {
-                  title: "Healthcare",
+                { title: "Healthcare",
                   description: "Secure patient records, drug traceability, and medical supply chains.",
                   icon: Users,
                   benefits: ["Patient records", "Drug traceability", "Supply chain"]
                 },
-                {
-                  title: "Real Estate",
+                { title: "Real Estate",
                   description: "Property tokenization, smart contracts, and automated transactions.",
                   icon: Target,
                   benefits: ["Property tokenization", "Smart contracts", "Automated transactions"]
                 },
-                {
-                  title: "Government",
+                { title: "Government",
                   description: "Voting systems, identity management, and public records.",
                   icon: Globe,
                   benefits: ["Voting systems", "Identity management", "Public records"]
                 },
-                {
-                  title: "Energy Trading",
+                { title: "Energy Trading",
                   description: "Peer-to-peer energy trading and renewable energy certificates.",
                   icon: Activity,
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
@@ -303,23 +290,19 @@ export default function BlockchainEnterpriseSolutions() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Assessment",
                   description: "Evaluate business needs and identify blockchain opportunities."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "Architecture",
                   description: "Design blockchain solution architecture and network topology."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Development",
                   description: "Build smart contracts and blockchain applications."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Deployment",
                   description: "Deploy and integrate with existing enterprise systems."
                 }
@@ -348,15 +331,13 @@ export default function BlockchainEnterpriseSolutions() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-semibold rounded-lg hover:from-yellow-600 hover:to-orange-700 transition-all duration-200">
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

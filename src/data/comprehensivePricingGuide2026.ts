@@ -12,7 +12,7 @@ export interface PricingTier {
   roi: string;
   setupCost: number;
   contractLength: string;
-}
+    }
 
 export interface ServicePricing {
   serviceId: string;
@@ -20,34 +20,30 @@ export interface ServicePricing {
   category: string;
   description: string;
   pricingTiers: PricingTier[];
-  marketComparison: {
+  marketComparison: {  
     competitors: string[];
-    averageMarketPrice: string;
-    ourAdvantage: string[];
-  };
-  roiAnalysis: {
-    shortTerm: string;
+    averageMarketPrice: string
+    ourAdvantage: string[]
+      };
+  roiAnalysis: { shortTerm: string;
     longTerm: string;
-    paybackPeriod: string;
-    totalValue: string;
-  };
-  implementation: {
-    timeline: string;
+    paybackPeriod: string
+    totalValue: string
+      };
+  implementation: { timeline: string;
     requirements: string[];
-    support: string[];
-    training: string[];
-  };
+    support: string[]
+    training: string[]
+      };
 }
 
 export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
-  {
-    serviceId: "ai-autonomous-business-manager",
+  { serviceId: "ai-autonomous-business-manager",
     serviceName: "AI Autonomous Business Manager",
     category: "AI & Automation",
     description: "Fully autonomous AI system that manages business operations, makes decisions, and optimizes processes without human intervention.",
     pricingTiers: [
-      {
-        name: "Starter",
+      { name: "Starter",
         price: 2999,
         currency: "$",
         billingCycle: "monthly",
@@ -68,8 +64,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 5000,
         contractLength: "12 months"
       },
-      {
-        name: "Professional",
+      { name: "Professional",
         price: 4999,
         currency: "$",
         billingCycle: "monthly",
@@ -91,8 +86,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 10000,
         contractLength: "12 months"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 9999,
         currency: "$",
         billingCycle: "monthly",
@@ -115,8 +109,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         contractLength: "24 months"
       }
     ],
-    marketComparison: {
-      competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
+    marketComparison: { competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
       averageMarketPrice: "$8,000 - $25,000/month",
       ourAdvantage: [
         "True AI autonomy vs. rule-based automation",
@@ -125,14 +118,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "Better ROI and business impact"
       ]
     },
-    roiAnalysis: {
-      shortTerm: "40-60% operational cost reduction within 6 months",
+    roiAnalysis: { shortTerm: "40-60% operational cost reduction within 6 months",
       longTerm: "300-800% ROI over 3 years",
       paybackPeriod: "8-12 months",
       totalValue: "$500K - $5M+ in operational savings over 3 years"
     },
-    implementation: {
-      timeline: "8-12 weeks",
+    implementation: { timeline: "8-12 weeks",
       requirements: [
         "Data access and API connections",
         "Business process documentation",
@@ -154,14 +145,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     }
   },
 
-  {
-    serviceId: "quantum-ai-analytics-platform",
+  { serviceId: "quantum-ai-analytics-platform",
     serviceName: "Quantum-Enhanced AI Analytics Platform",
     category: "Quantum Computing",
     description: "Next-generation analytics platform that combines quantum computing algorithms with AI to solve complex optimization problems.",
     pricingTiers: [
-      {
-        name: "Research",
+      { name: "Research",
         price: 4999,
         currency: "$",
         billingCycle: "monthly",
@@ -182,8 +171,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 8000,
         contractLength: "12 months"
       },
-      {
-        name: "Commercial",
+      { name: "Commercial",
         price: 8999,
         currency: "$",
         billingCycle: "monthly",
@@ -204,8 +192,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 15000,
         contractLength: "24 months"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 19999,
         currency: "$",
         billingCycle: "monthly",
@@ -226,8 +213,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         contractLength: "36 months"
       }
     ],
-    marketComparison: {
-      competitors: ["IBM Quantum", "Google Quantum AI", "D-Wave Systems"],
+    marketComparison: { competitors: ["IBM Quantum", "Google Quantum AI", "D-Wave Systems"],
       averageMarketPrice: "$15,000 - $50,000/month",
       ourAdvantage: [
         "Hybrid quantum-classical approach",
@@ -236,14 +222,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "More practical business applications"
       ]
     },
-    roiAnalysis: {
-      shortTerm: "10-20x speedup for optimization problems",
+    roiAnalysis: { shortTerm: "10-20x speedup for optimization problems",
       longTerm: "400-1000% ROI through breakthrough solutions",
       paybackPeriod: "12-18 months",
       totalValue: "$1M - $10M+ in research and development savings"
     },
-    implementation: {
-      timeline: "12-16 weeks",
+    implementation: { timeline: "12-16 weeks",
       requirements: [
         "Quantum computing infrastructure",
         "Data scientists and researchers",
@@ -265,14 +249,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     }
   },
 
-  {
-    serviceId: "blockchain-supply-chain-transparency",
+  { serviceId: "blockchain-supply-chain-transparency",
     serviceName: "Blockchain Supply Chain Transparency Platform",
     category: "Blockchain",
     description: "End-to-end supply chain visibility platform using blockchain technology for real-time tracking and authentication.",
     pricingTiers: [
-      {
-        name: "Basic",
+      { name: "Basic",
         price: 1499,
         currency: "$",
         billingCycle: "monthly",
@@ -293,8 +275,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 3000,
         contractLength: "12 months"
       },
-      {
-        name: "Professional",
+      { name: "Professional",
         price: 2999,
         currency: "$",
         billingCycle: "monthly",
@@ -315,8 +296,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 6000,
         contractLength: "12 months"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 5999,
         currency: "$",
         billingCycle: "monthly",
@@ -337,8 +317,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         contractLength: "24 months"
       }
     ],
-    marketComparison: {
-      competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
+    marketComparison: { competitors: ["IBM Food Trust", "VeChain", "OriginTrail"],
       averageMarketPrice: "$3,000 - $12,000/month",
       ourAdvantage: [
         "More comprehensive tracking",
@@ -347,14 +326,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "Faster time to value"
       ]
     },
-    roiAnalysis: {
-      shortTerm: "20-30% reduction in supply chain costs",
+    roiAnalysis: { shortTerm: "20-30% reduction in supply chain costs",
       longTerm: "250-600% ROI through transparency and efficiency",
       paybackPeriod: "6-12 months",
       totalValue: "$200K - $2M+ in supply chain optimization"
     },
-    implementation: {
-      timeline: "6-10 weeks",
+    implementation: { timeline: "6-10 weeks",
       requirements: [
         "IoT sensors and devices",
         "Supply chain data access",
@@ -376,14 +353,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     }
   },
 
-  {
-    serviceId: "ai-cybersecurity-threat-intelligence",
+  { serviceId: "ai-cybersecurity-threat-intelligence",
     serviceName: "AI-Powered Cybersecurity Threat Intelligence Platform",
     category: "Cybersecurity",
     description: "Advanced cybersecurity platform that uses AI and machine learning to detect, analyze, and respond to cyber threats in real-time.",
     pricingTiers: [
-      {
-        name: "Standard",
+      { name: "Standard",
         price: 2499,
         currency: "$",
         billingCycle: "monthly",
@@ -404,8 +379,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 5000,
         contractLength: "12 months"
       },
-      {
-        name: "Advanced",
+      { name: "Advanced",
         price: 3999,
         currency: "$",
         billingCycle: "monthly",
@@ -426,8 +400,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 8000,
         contractLength: "12 months"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 7999,
         currency: "$",
         billingCycle: "monthly",
@@ -448,8 +421,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         contractLength: "24 months"
       }
     ],
-    marketComparison: {
-      competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
+    marketComparison: { competitors: ["CrowdStrike", "SentinelOne", "Darktrace"],
       averageMarketPrice: "$5,000 - $20,000/month",
       ourAdvantage: [
         "More advanced AI capabilities",
@@ -458,14 +430,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "More cost-effective"
       ]
     },
-    roiAnalysis: {
-      shortTerm: "80% reduction in security incidents",
+    roiAnalysis: { shortTerm: "80% reduction in security incidents",
       longTerm: "300-800% ROI through threat prevention",
       paybackPeriod: "8-12 months",
       totalValue: "$500K - $5M+ in security incident prevention"
     },
-    implementation: {
-      timeline: "8-12 weeks",
+    implementation: { timeline: "8-12 weeks",
       requirements: [
         "Network access and monitoring",
         "Security team coordination",
@@ -487,14 +457,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
     }
   },
 
-  {
-    serviceId: "iot-edge-computing-analytics",
+  { serviceId: "iot-edge-computing-analytics",
     serviceName: "IoT Edge Computing Analytics Platform",
     category: "IoT",
     description: "Distributed analytics platform that processes IoT data at the edge, providing real-time insights and local decision-making.",
     pricingTiers: [
-      {
-        name: "Starter",
+      { name: "Starter",
         price: 1499,
         currency: "$",
         billingCycle: "monthly",
@@ -515,8 +483,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 3000,
         contractLength: "12 months"
       },
-      {
-        name: "Professional",
+      { name: "Professional",
         price: 2499,
         currency: "$",
         billingCycle: "monthly",
@@ -537,8 +504,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         setupCost: 6000,
         contractLength: "12 months"
       },
-      {
-        name: "Enterprise",
+      { name: "Enterprise",
         price: 4999,
         currency: "$",
         billingCycle: "monthly",
@@ -559,8 +525,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         contractLength: "24 months"
       }
     ],
-    marketComparison: {
-      competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
+    marketComparison: { competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT Edge"],
       averageMarketPrice: "$2,000 - $8,000/month",
       ourAdvantage: [
         "More advanced edge processing",
@@ -569,14 +534,12 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
         "More cost-effective"
       ]
     },
-    roiAnalysis: {
-      shortTerm: "90% reduction in latency",
+    roiAnalysis: { shortTerm: "90% reduction in latency",
       longTerm: "250-600% ROI through operational efficiency",
       paybackPeriod: "6-10 months",
       totalValue: "$300K - $3M+ in operational optimization"
     },
-    implementation: {
-      timeline: "6-10 weeks",
+    implementation: { timeline: "6-10 weeks",
       requirements: [
         "IoT devices and sensors",
         "Network infrastructure",
@@ -600,13 +563,11 @@ export const COMPREHENSIVE_PRICING_GUIDE_2026: ServicePricing[] = [
 };
 
 // BlockchainForge Pricing
-export const blockchainForgePricing: ServicePricing = {
-  serviceId: 3,
+export const blockchainForgePricing: ServicePricing = { serviceId: 3,
   serviceName: "BlockchainForge",
   category: "Blockchain Development",
   pricingTiers: [
-    {
-      name: "Creator",
+    { name: "Creator",
       price: 999,
       billingCycle: "monthly",
       features: [
@@ -628,8 +589,7 @@ export const blockchainForgePricing: ServicePricing = {
       marketComparison: "50% below market average",
       volumeDiscounts: ["20% off annual billing"]
     },
-    {
-      name: "Professional",
+    { name: "Professional",
       price: 2499,
       billingCycle: "monthly",
       features: [
@@ -652,8 +612,7 @@ export const blockchainForgePricing: ServicePricing = {
       marketComparison: "30% below market average",
       volumeDiscounts: ["25% off annual billing", "Volume discounts available"]
     },
-    {
-      name: "Enterprise",
+    { name: "Enterprise",
       price: 7999,
       billingCycle: "monthly",
       features: [
@@ -677,14 +636,12 @@ export const blockchainForgePricing: ServicePricing = {
       volumeDiscounts: ["30% off annual billing", "Custom enterprise pricing"]
     }
   ],
-  marketAnalysis: {
-    averagePrice: "$4,800/month",
+  marketAnalysis: { averagePrice: "$4,800/month",
     priceRange: "$1,500 - $12,000/month",
     competitors: ["OpenZeppelin Enterprise: $8,000/month", "Truffle Enterprise: $6,500/month", "Hardhat Enterprise: $7,000/month"],
     valueProposition: "90% faster blockchain development with automated security and compliance"
   },
-  specialOffers: {
-    annualDiscount: "30% off annual billing",
+  specialOffers: { annualDiscount: "30% off annual billing",
     enterpriseDiscount: "Up to 45% off for enterprise contracts",
     startupProgram: "70% off for qualified startups (first year)",
     referralProgram: "25% commission for successful referrals"
@@ -698,8 +655,7 @@ export const ALL_PRICING_GUIDES_2026 = [
   blockchainForgePricing
 ];
 
-export const PRICING_SUMMARY_2026 = {
-  overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
+export const PRICING_SUMMARY_2026 = { overview: "Our 2026 innovative services pricing is designed to provide exceptional value while maintaining the highest quality and innovation standards.",
   keyBenefits: [
     "Competitive pricing with superior technology",
     "Flexible tiered pricing for all business sizes",
@@ -707,14 +663,12 @@ export const PRICING_SUMMARY_2026 = {
     "Comprehensive support and implementation",
     "Future-proof technology investments"
   ],
-  pricingStrategy: {
-    approach: "Value-based pricing with ROI focus",
+  pricingStrategy: { approach: "Value-based pricing with ROI focus",
     target: "15-30% below market average",
     value: "2-3x better ROI than competitors",
     flexibility: "Custom pricing for enterprise clients"
   },
-  contactInfo: {
-    phone: "+1 302 464 0950",
+  contactInfo: { phone: "+1 302 464 0950",
     email: "kleber@ziontechgroup.com",
     website: "https://ziontechgroup.com",
     address: "364 E Main St STE 1008 Middletown DE 19709"

@@ -5,10 +5,9 @@ interface Notification {
   message: string;
   type: 'success' | 'error' | 'warning' | 'info';
   duration?: number;
-}
+    }
 
-interface NotificationContextType {
-  notifications: Notification[];
+interface NotificationContextType { notifications: Notification[];
   addNotification: (notification: Omit<Notification, 'id'>) => void;
   removeNotification: (id: string) => void;
   clearNotifications: () => void;
@@ -26,9 +25,9 @@ export const useNotifications = () => {
 
 interface NotificationProviderProps {
   children: ReactNode;
-}
+    }
 
-export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
+export const NotificationProvider: React.FC = ({ children }) => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
 
   const addNotification = (notification: Omit<Notification, 'id'>) => {

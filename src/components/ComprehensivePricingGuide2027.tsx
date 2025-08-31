@@ -39,7 +39,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1     }
     );
 
     const element = document.getElementById('comprehensive-pricing-guide');
@@ -55,7 +55,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     ...servicesCatalog.flatMap(category => 
       category.items.map(item => ({
         ...item,
-        source: any'catalog',
+        source: 'catalog',
         category: category.name
       }))
     ),
@@ -102,20 +102,19 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
   const categories = ['All', ...Array.from(new Set(allServices.map(s => s.category)))];
   const priceRanges = ['All', 'Low (<$100)', 'Medium ($100-$999)', 'High ($1000+)'];
 
-  const contactInfo = {
-    phone: '+1 302 464 0950',
+  const contactInfo = { phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
-  const getPriceRange = (price: anystring)  => {
+  const getPriceRange = (price: string)  => {
     const numPrice = parseFloat(price.replace(/[^0-9.]/g, ''));
     if (numPrice < 100) return 'Low';
     if (numPrice < 1000) return 'Medium';
     return 'High';
   };
 
-  const getPriceColor = (price: anystring)  => {
+  const getPriceColor = (price: string)  => {
     const range = getPriceRange(price);
     switch (range) {
       case 'Low': return 'text-green-400';
@@ -125,8 +124,8 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
     }
   };
 
-  const getCategoryIcon = (category: anystring)  => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
+  const getCategoryIcon = (category: string)  => {
+    const iconMap: { [key: string]: React.ComponentType<> } = {
       'AI Solutions': Brain,
       'Micro SaaS': Zap,
       'IT Services': Shield,
@@ -164,9 +163,8 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
+          transition={{ duration: 0.8     }}
+          className="text-center mb-16">
           <div className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-full border border-zion-cyan/30 mb-6">
             <Calculator className="w-5 h-5 text-zion-cyan mr-2" />
             <span className="text-zion-cyan font-semibold">2027 Pricing Guide</span>
@@ -191,8 +189,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 20 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-12"
-        >
+          className="mb-12">
           <div className="bg-gradient-to-r from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Search */}
@@ -211,8 +208,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20">
                 {categories.map(category  => (
                   <option key={category} value={category} className="bg-zion-slate-dark text-white">
                     {category}
@@ -224,8 +220,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={priceRange}
                 onChange={(e) => setPriceRange(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: anyoutline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20">
                 {priceRanges.map(range  => (
                   <option key={range} value={range} className="bg-zion-slate-dark text-white">
                     {range}
@@ -237,8 +232,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20"
-              >
+                className="px-4 py-3 bg-zion-slate-light/30 border border-zion-cyan/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/40 focus:ring-2 focus:ring-zion-cyan/20">
                 <option value="name" className="bg-zion-slate-dark text-white">Sort by Name</option>
                 <option value="price" className="bg-zion-slate-dark text-white">Sort by Price</option>
                 <option value="category" className="bg-zion-slate-dark text-white">Sort by Category</option>
@@ -264,22 +258,20 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8 mb-16"
-        >
+          className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sortedServices.map((service, index)  => (
             <motion.div
               key={`${service.source}-${service.id}`}
               initial={{ opacity: 0, y: 20 }}
               animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
-              className="group relative"
-            >
+              className="group relative">
               <div className="bg-gradient-to-br from-zion-slate-light/50 to-zion-slate-dark/50 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:border-zion-cyan/40 hover:shadow-2xl hover:shadow-zion-cyan/25">
                 {/* Service Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-4 h-4 text-zion-cyan" })}
+                      {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-4 h-4 text-zion-cyan"     })}
                       <span className="text-zion-cyan text-xs font-medium">{service.category}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-zion-cyan transition-colors duration-300">
@@ -298,8 +290,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
                         <span
                           key={featureIndex}
-                          className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30"
-                        >
+                          className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                           {feature}
                         </span>
                       ))}
@@ -346,8 +337,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
                   href={service.href}
                   target={service.external ? "_blank" : "_self"}
                   rel={service.external ? "noopener noreferrer" : ""}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group"
-                >
+                  className="w-full px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2 group">
                   {service.ctaLabel}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                   {service.external && <ExternalLink className="w-4 h-4" />}
@@ -362,14 +352,13 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center"
-        >
+          className="text-center">
           <div className="bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8">
             <h3 className="text-3xl font-bold text-white mb-6">
               Need Custom Pricing or Have Questions?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to provide personalized quotes and answer any questions 
+              Our team of experts is ready to provide personalized quotes and answer  questions 
               about our services. Get in touch for a detailed consultation.
             </p>
             
@@ -391,8 +380,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 flex items-center justify-center gap-2">
                 Get Custom Quote
                 <ArrowRight className="w-4 h-4" />
               </a>
@@ -400,8 +388,7 @@ export const ComprehensivePricingGuide2027: React.FC = (): JSX.Element => {
                 href="https://ziontechgroup.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2"
-              >
+                className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300 flex items-center justify-center gap-2">
                 Visit Website
                 <ExternalLink className="w-4 h-4" />
               </a>

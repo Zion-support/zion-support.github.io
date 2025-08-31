@@ -23,7 +23,7 @@ interface NavigationItem {
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
-}
+    }
 
 interface EnhancedNavigationProps {
   className?: string;
@@ -32,8 +32,7 @@ interface EnhancedNavigationProps {
 
 const navigationItems: NavigationItem[] = [
   { label: 'Home', href: '/' },
-  { 
-    label: 'Services', 
+  { label: 'Services', 
     href: '/services',
     children: [
       { label: 'AI & Machine Learning', href: '/services/ai-ml' },
@@ -43,8 +42,7 @@ const navigationItems: NavigationItem[] = [
       { label: 'Consulting', href: '/services/consulting' }
     ]
   },
-  { 
-    label: 'Solutions', 
+  { label: 'Solutions', 
     href: '/solutions',
     children: [
       { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
@@ -56,7 +54,7 @@ const navigationItems: NavigationItem[] = [
   { label: 'Contact', href: '/contact' }
 ];
 
-export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({ 
+export const EnhancedNavigation: React.FC = ({ 
   className = '',
   onThemeChange 
 }) => {
@@ -115,8 +113,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       <a 
         href="#main-content" 
         className="skip-link sr-only focus:not-sr-only"
-        onClick={() => document.getElementById('main-content')?.focus()}
-      >
+        onClick={() => document.getElementById('main-content')?.focus()}>
         Skip to main content
       </a>
 
@@ -156,8 +153,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                 ) : (
                   <Link
                     to={item.href}
-                    className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-                  >
+                    className="text-slate-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900">
                     {item.label}
                   </Link>
                 )}
@@ -170,15 +166,13 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 z-50"
-                      >
+                        transition={{ duration: 0.2     }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 z-50">
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
                             to={child.href}
-                            className="flex items-center space-x-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
-                          >
+                            className="flex items-center space-x-3 px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200">
                             {child.icon}
                             <span className="text-sm font-medium">{child.label}</span>
                           </Link>
@@ -223,22 +217,19 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <div className="absolute right-0 top-full mt-2 w-48 bg-slate-800/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <button
                   onClick={() => handleThemeChange('light')}
-                  className="flex items-center space-x-3 w-full px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
-                >
+                  className="flex items-center space-x-3 w-full px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200">
                   <Sun className="w-4 h-4" />
                   <span className="text-sm">Light</span>
                 </button>
                 <button
                   onClick={() => handleThemeChange('dark')}
-                  className="flex items-center space-x-3 w-full px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
-                >
+                  className="flex items-center space-x-3 w-full px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200">
                   <Moon className="w-4 h-4" />
                   <span className="text-sm">Dark</span>
                 </button>
                 <button
                   onClick={() => handleThemeChange('system')}
-                  className="flex items-center space-x-3 w-full px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200"
-                >
+                  className="flex items-center space-x-3 w-full px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-700/50 transition-colors duration-200">
                   <Monitor className="w-4 h-4" />
                   <span className="text-sm">System</span>
                 </button>
@@ -271,9 +262,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
-            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50"
-          >
+            transition={{ duration: 0.3     }}
+            className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-slate-700/50">
             <div className="px-4 py-6 space-y-4">
               {navigationItems.map((item) => (
                 <div key={item.label}>
@@ -296,15 +286,13 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                           initial={{ opacity: 0, y: -10 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.2 }}
-                          className="ml-4 mt-2 space-y-2"
-                        >
+                          transition={{ duration: 0.2     }}
+                          className="ml-4 mt-2 space-y-2">
                           {item.children.map((child) => (
                             <Link
                               key={child.href}
                               to={child.href}
-                              className="block text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200"
-                            >
+                              className="block text-slate-400 hover:text-white px-3 py-2 rounded-md text-sm transition-colors duration-200">
                               {child.label}
                             </Link>
                           ))}
@@ -314,8 +302,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
                   ) : (
                     <Link
                       to={item.href}
-                      className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
-                    >
+                      className="block text-slate-300 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900">
                       {item.label}
                     </Link>
                   )}

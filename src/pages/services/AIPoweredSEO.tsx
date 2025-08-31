@@ -32,132 +32,108 @@ import {
 
 export default function AIPoweredSEO() {
   const features = [
-    {
-      icon: Search,
+    { icon: Search,
       title: "AI Keyword Research",
       description: "Intelligent keyword discovery and analysis using machine learning algorithms."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Content Optimization",
       description: "AI-powered content analysis and optimization for better search rankings."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Competitive Analysis",
       description: "Advanced competitor research and gap analysis with AI insights."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Performance Tracking",
       description: "Real-time SEO metrics and automated performance optimization."
     },
-    {
-      icon: Monitor,
+    { icon: Monitor,
       title: "Technical SEO",
       description: "Automated technical SEO audits and optimization recommendations."
     },
-    {
-      icon: Smartphone,
+    { icon: Smartphone,
       title: "Mobile Optimization",
       description: "AI-driven mobile-first SEO strategies and testing."
     }
   ];
 
   const benefits = [
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Improved Search Rankings",
       description: "Boost your website's visibility and climb search engine result pages."
     },
-    {
-      icon: Globe,
+    { icon: Globe,
       title: "Increased Organic Traffic",
       description: "Generate more qualified leads through better search engine optimization."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Better User Experience",
       description: "Enhance website performance and user engagement metrics."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time-Saving Automation",
       description: "Automate repetitive SEO tasks and focus on strategic improvements."
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Competitive Advantage",
       description: "Stay ahead of competitors with AI-powered SEO insights and strategies."
     },
-    {
-      icon: Star,
+    { icon: Star,
       title: "ROI Optimization",
       description: "Maximize your marketing budget with data-driven SEO decisions."
     }
   ];
 
   const seoProcess = [
-    {
-      stage: "Research & Analysis",
+    { stage: "Research & Analysis",
       description: "AI-powered keyword research, competitor analysis, and technical audit",
       icon: Search
     },
-    {
-      stage: "Content Strategy",
+    { stage: "Content Strategy",
       description: "Data-driven content planning and optimization recommendations",
       icon: Target
     },
-    {
-      stage: "Technical Optimization",
+    { stage: "Technical Optimization",
       description: "Automated technical SEO improvements and performance optimization",
       icon: Cpu
     },
-    {
-      stage: "Monitoring & Reporting",
+    { stage: "Monitoring & Reporting",
       description: "Real-time performance tracking and actionable insights",
       icon: BarChart3
     },
-    {
-      stage: "Continuous Improvement",
+    { stage: "Continuous Improvement",
       description: "Ongoing optimization based on performance data and trends",
       icon: TrendingUp
     },
-    {
-      stage: "Mobile & Local SEO",
+    { stage: "Mobile & Local SEO",
       description: "Mobile-first optimization and local search enhancement",
       icon: Smartphone
     }
   ];
 
   const useCases = [
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Optimize product pages, category pages, and search functionality",
       icon: ShoppingCart
     },
-    {
-      industry: "B2B Services",
+    { industry: "B2B Services",
       description: "Improve lead generation through targeted keyword optimization",
       icon: Building
     },
-    {
-      industry: "Content Marketing",
+    { industry: "Content Marketing",
       description: "Enhance content discoverability and engagement metrics",
       icon: FileText
     },
-    {
-      industry: "Local Businesses",
+    { industry: "Local Businesses",
       description: "Boost local search visibility and Google My Business optimization",
       icon: MapPin
     },
-    {
-      industry: "SaaS Companies",
+    { industry: "SaaS Companies",
       description: "Optimize landing pages and conversion-focused content",
       icon: Cloud
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Improve patient discovery and medical information accessibility",
       icon: Heart
     }
@@ -178,7 +154,7 @@ export default function AIPoweredSEO() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Search className="w-4 h-4 mr-2" />
@@ -214,10 +190,9 @@ export default function AIPoweredSEO() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -234,9 +209,8 @@ export default function AIPoweredSEO() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -268,10 +242,9 @@ export default function AIPoweredSEO() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Benefits
             </h2>
@@ -288,9 +261,8 @@ export default function AIPoweredSEO() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -322,10 +294,9 @@ export default function AIPoweredSEO() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               SEO Process
             </h2>
@@ -342,9 +313,8 @@ export default function AIPoweredSEO() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -376,10 +346,9 @@ export default function AIPoweredSEO() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -396,9 +365,8 @@ export default function AIPoweredSEO() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -430,8 +398,8 @@ export default function AIPoweredSEO() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your SEO?

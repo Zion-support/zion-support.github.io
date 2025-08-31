@@ -42,35 +42,33 @@ import {
 
 interface SitemapSection {
   title: string;
-  icon: any;
+  icon: ;
   color: string;
   pages: SitemapPage[];
-}
+    }
 
 interface SitemapPage {
   name: string;
   href: string;
   description: string;
   featured?: boolean;
-}
+    }
 
 const Sitemap: React.FC = () => {
   const sitemapSections: SitemapSection[] = [
-    {
-      title: 'Main Pages',
+    { title: 'Main Pages',
       icon: Home,
       color: 'from-blue-500 to-cyan-500',
       pages: [
-        { name: 'Home', href: '/', description: 'Main landing page with company overview and services', featured: true },
-        { name: 'About', href: '/about', description: 'Company information, mission, and team details', featured: true },
+        { name: 'Home', href: '/', description: 'Main landing page with comp overview and services', featured: true },
+        { name: 'About', href: '/about', description: 'Comp information, mission, and team details', featured: true },
         { name: 'Contact', href: '/contact', description: 'Contact information and inquiry forms', featured: true },
         { name: 'Pricing', href: '/pricing', description: 'Service pricing and package information', featured: true },
         { name: 'Careers', href: '/careers', description: 'Job opportunities and career information', featured: false },
         { name: 'Partners', href: '/partners', description: 'Partnership opportunities and programs', featured: false }
       ]
     },
-    {
-      title: 'AI & Machine Learning Services',
+    { title: 'AI & Machine Learning Services',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
       pages: [
@@ -88,8 +86,7 @@ const Sitemap: React.FC = () => {
         { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform', description: 'Quantum-AI integration platform', featured: true }
       ]
     },
-    {
-      title: 'Cloud & Infrastructure Services',
+    { title: 'Cloud & Infrastructure Services',
       icon: Cloud,
       color: 'from-green-500 to-blue-500',
       pages: [
@@ -101,8 +98,7 @@ const Sitemap: React.FC = () => {
         { name: 'AI DevOps Automation Platform', href: '/services/ai-devops-automation-platform', description: 'AI-powered DevOps automation', featured: true }
       ]
     },
-    {
-      title: 'Security & Compliance Services',
+    { title: 'Security & Compliance Services',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
       pages: [
@@ -113,8 +109,7 @@ const Sitemap: React.FC = () => {
         { name: 'AI Code Review Security Scanner', href: '/services/ai-code-review-security-scanner', description: 'Automated security code review', featured: true }
       ]
     },
-    {
-      title: 'Micro SaaS Solutions',
+    { title: 'Micro SaaS Solutions',
       icon: ShoppingCart,
       color: 'from-yellow-500 to-orange-500',
       pages: [
@@ -129,8 +124,7 @@ const Sitemap: React.FC = () => {
         { name: 'AI Marketing Automation', href: '/services/ai-marketing-automation', description: 'Marketing campaign automation', featured: true }
       ]
     },
-    {
-      title: 'Industry Solutions',
+    { title: 'Industry Solutions',
       icon: Building,
       color: 'from-indigo-500 to-purple-500',
       pages: [
@@ -146,8 +140,7 @@ const Sitemap: React.FC = () => {
         { name: 'Energy Solutions', href: '/solutions/energy', description: 'Energy sector digital transformation', featured: false }
       ]
     },
-    {
-      title: 'Resources & Support',
+    { title: 'Resources & Support',
       icon: BookOpen,
       color: 'from-orange-500 to-red-500',
       pages: [
@@ -163,8 +156,7 @@ const Sitemap: React.FC = () => {
         { name: 'Developer Portal', href: '/developers', description: 'Developer resources and tools', featured: false }
       ]
     },
-    {
-      title: 'Interactive & Demo',
+    { title: 'Interactive & Demo',
       icon: Zap,
       color: 'from-cyan-500 to-blue-500',
       pages: [
@@ -174,8 +166,7 @@ const Sitemap: React.FC = () => {
         { name: 'Marketplace', href: '/marketplace', description: 'Browse and purchase our services', featured: true }
       ]
     },
-    {
-      title: 'Legal & Compliance',
+    { title: 'Legal & Compliance',
       icon: FileText,
       color: 'from-gray-500 to-slate-500',
       pages: [
@@ -185,8 +176,7 @@ const Sitemap: React.FC = () => {
         { name: 'Legal Information', href: '/legal', description: 'Legal notices and compliance', featured: false }
       ]
     },
-    {
-      title: 'Specialized Services',
+    { title: 'Specialized Services',
       icon: Target,
       color: 'from-pink-500 to-rose-500',
       pages: [
@@ -223,9 +213,8 @@ const Sitemap: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
               <Globe className="w-10 h-10 text-white" />
             </div>
@@ -284,8 +273,7 @@ const Sitemap: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: sectionIndex * 0.1 }}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8"
-            >
+              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8">
               <div className="flex items-center mb-8">
                 <div className={`w-12 h-12 bg-gradient-to-r ${section.color} rounded-xl flex items-center justify-center mr-4`}>
                   <section.icon className="w-6 h-6 text-white" />
@@ -300,12 +288,10 @@ const Sitemap: React.FC = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: pageIndex * 0.05 }}
-                    className="group"
-                  >
+                    className="group">
                     <Link
                       to={page.href}
-                      className="block p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all duration-300 border border-white/10 hover:border-white/20"
-                    >
+                      className="block p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all duration-300 border border-white/10 hover:border-white/20">
                       <div className="flex items-start justify-between mb-2">
                         <h3 className="text-lg font-semibold text-white group-hover:text-blue-300 transition-colors">
                           {page.name}
@@ -346,22 +332,19 @@ const Sitemap: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors">
               <MessageCircle className="w-5 h-5 mr-2" />
               Contact Us
             </Link>
             <Link
               to="/schedule-demo"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors">
               <Calendar className="w-5 h-5 mr-2" />
               Schedule Demo
             </Link>
             <Link
               to="/faq"
-              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
-            >
+              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors">
               <HelpCircle className="w-5 h-5 mr-2" />
               View FAQ
             </Link>

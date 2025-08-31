@@ -131,25 +131,22 @@ export default function UltimateInnovativeServicesShowcase2025() {
             <motion.h1 
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent"
-            >
+              className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               Ultimate Innovative Services 2025
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto"
-            >
+              transition={{ delay: 0.2     }}
+              className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
               Discover the future of technology with our revolutionary micro SAAS services. 
               From AI and quantum computing to space technology and biotechnology.
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.4 }}
-              className="mt-6 flex flex-wrap justify-center gap-4"
-            >
+              transition={{ delay: 0.4     }}
+              className="mt-6 flex flex-wrap justify-center gap-4">
               <div className="flex items-center gap-2 text-sm text-gray-600">
                 <CheckCircle className="w-5 h-5 text-green-500" />
                 <span>10 Revolutionary Services</span>
@@ -191,8 +188,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
                   setSelectedCategory(e.target.value);
                   setSelectedSubcategory('all');
                 }}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="all">All Categories</option>
                 {SERVICE_CATEGORIES.map(category => (
                   <option key={category} value={category}>{category}</option>
@@ -202,8 +198,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               <select
                 value={selectedSubcategory}
                 onChange={(e) => setSelectedSubcategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="all">All Subcategories</option>
                 {selectedCategory !== 'all' && SERVICE_SUBCATEGORIES[selectedCategory as keyof typeof SERVICE_SUBCATEGORIES]?.map(subcategory => (
                   <option key={subcategory} value={subcategory}>{subcategory}</option>
@@ -213,8 +208,7 @@ export default function UltimateInnovativeServicesShowcase2025() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              >
+                className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                 <option value="innovation">Sort by Innovation</option>
                 <option value="roi">Sort by ROI</option>
                 <option value="price-low">Price: Low to High</option>
@@ -234,9 +228,8 @@ export default function UltimateInnovativeServicesShowcase2025() {
               key={service.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-            >
+              transition={{ delay: index * 0.1     }}
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
               {/* Service Header */}
               <div className="p-6 border-b border-gray-100">
                 <div className="flex items-start justify-between mb-4">
@@ -386,15 +379,13 @@ export default function UltimateInnovativeServicesShowcase2025() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={`tel:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.phone}`}
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-              >
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
               <a
                 href={`mailto:${ULTIMATE_INNOVATIVE_SERVICES_2025[0].contactInfo.email}`}
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
-              >
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2">
                 <Mail className="w-5 h-5" />
                 Email Us
               </a>

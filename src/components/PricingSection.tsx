@@ -3,8 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const pricingTiers = [
-  {
-    name: "Starter",
+  { name: "Starter",
     price: "$99",
     period: "/month",
     description: "Perfect for small businesses and startups",
@@ -18,8 +17,7 @@ const pricingTiers = [
     popular: false,
     color: "from-blue-500 to-cyan-500"
   },
-  {
-    name: "Professional",
+  { name: "Professional",
     price: "$299",
     period: "/month",
     description: "Ideal for growing businesses",
@@ -35,8 +33,7 @@ const pricingTiers = [
     popular: true,
     color: "from-purple-500 to-pink-500"
   },
-  {
-    name: "Enterprise",
+  { name: "Enterprise",
     price: "$999",
     period: "/month",
     description: "For large organizations",
@@ -63,8 +60,8 @@ export function PricingSection() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true     }}
+          transition={{ duration: 0.6     }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Transparent Pricing
@@ -81,7 +78,7 @@ export function PricingSection() {
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true     }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               {tier.popular && (
@@ -131,7 +128,7 @@ export function PricingSection() {
           className="mt-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true     }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className="text-gray-400 mb-6">
@@ -139,8 +136,7 @@ export function PricingSection() {
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
-          >
+            className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200">
             Contact Sales Team
             <span className="text-sm">→</span>
           </Link>

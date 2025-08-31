@@ -26,38 +26,32 @@ import {
 
 export default function AIContentGenerationPlatform() {
   const features = [
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'AI-Powered Writing',
       description: 'Advanced language models that generate high-quality, engaging content across multiple formats and industries.',
       benefits: ['SEO-optimized content', 'Brand voice consistency', 'Multi-language support', 'Context-aware generation']
     },
-    {
-      icon: Palette,
+    { icon: Palette,
       title: 'Visual Content Creation',
       description: 'Generate stunning images, graphics, and visual assets using cutting-edge AI image generation technology.',
       benefits: ['Custom brand styling', 'High-resolution output', 'Style transfer', 'Batch generation']
     },
-    {
-      icon: Video,
+    { icon: Video,
       title: 'Video Content Generation',
       description: 'Create professional videos, animations, and multimedia content with AI-powered video generation tools.',
       benefits: ['Auto-script generation', 'Voice synthesis', 'Background music', 'Template library']
     },
-    {
-      icon: Code,
+    { icon: Code,
       title: 'Technical Content',
       description: 'Generate technical documentation, code comments, and developer resources with specialized AI models.',
       benefits: ['Code documentation', 'API guides', 'Tutorial generation', 'Technical writing']
     },
-    {
-      icon: Shield,
+    { icon: Shield,
       title: 'Content Moderation',
       description: 'Built-in AI content filtering and moderation to ensure all generated content meets quality and safety standards.',
       benefits: ['Plagiarism detection', 'Content filtering', 'Quality scoring', 'Compliance checking']
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: 'Team Collaboration',
       description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',
       benefits: ['Real-time editing', 'Approval workflows', 'Version history', 'Team analytics']
@@ -65,26 +59,22 @@ export default function AIContentGenerationPlatform() {
   ];
 
   const useCases = [
-    {
-      industry: 'Marketing & Advertising',
+    { industry: 'Marketing & Advertising',
       title: 'Campaign Content Creation',
       description: 'Generate complete marketing campaigns including copy, visuals, and video content for multiple channels.',
       metrics: ['50% faster campaign creation', '40% increase in engagement', '30% reduction in content costs']
     },
-    {
-      industry: 'E-commerce',
+    { industry: 'E-commerce',
       title: 'Product Descriptions & Marketing',
       description: 'Create compelling product descriptions, marketing copy, and visual assets for online stores.',
       metrics: ['60% faster product onboarding', '35% improvement in conversion rates', '25% increase in SEO traffic']
     },
-    {
-      industry: 'Publishing & Media',
+    { industry: 'Publishing & Media',
       title: 'Content Production',
       description: 'Generate articles, blog posts, and multimedia content for digital publishing platforms.',
       metrics: ['70% increase in content output', '45% reduction in editorial time', '40% improvement in reader engagement']
     },
-    {
-      industry: 'Corporate Communications',
+    { industry: 'Corporate Communications',
       title: 'Business Content',
       description: 'Create professional reports, presentations, and corporate communications with consistent branding.',
       metrics: ['55% faster report creation', '50% improvement in brand consistency', '35% reduction in review cycles']
@@ -92,26 +82,22 @@ export default function AIContentGenerationPlatform() {
   ];
 
   const benefits = [
-    {
-      icon: Clock,
+    { icon: Clock,
       title: 'Time Savings',
       description: 'Generate high-quality content in minutes instead of hours or days.',
       value: '80-90%'
     },
-    {
-      icon: DollarSign,
+    { icon: DollarSign,
       title: 'Cost Reduction',
       description: 'Reduce content creation costs while maintaining or improving quality.',
       value: '40-60%'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Quality Improvement',
       description: 'Consistent, high-quality content that resonates with your target audience.',
       value: '95%+'
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: 'Scalability',
       description: 'Scale content production without proportional increases in resources.',
       value: '10x'
@@ -134,8 +120,7 @@ export default function AIContentGenerationPlatform() {
   ];
 
   const pricing = [
-    {
-      plan: 'Starter',
+    { plan: 'Starter',
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and individual creators',
@@ -150,8 +135,7 @@ export default function AIContentGenerationPlatform() {
       cta: 'Start Free Trial',
       popular: false
     },
-    {
-      plan: 'Professional',
+    { plan: 'Professional',
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
@@ -168,8 +152,7 @@ export default function AIContentGenerationPlatform() {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      plan: 'Enterprise',
+    { plan: 'Enterprise',
       price: '$999',
       period: '/month',
       description: 'For large organizations with high-volume content needs',
@@ -202,9 +185,8 @@ export default function AIContentGenerationPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
               <PenTool className="w-10 h-10 text-white" />
             </div>
@@ -222,15 +204,13 @@ export default function AIContentGenerationPlatform() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="#pricing"
-                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 <span>View Pricing</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
@@ -242,8 +222,7 @@ export default function AIContentGenerationPlatform() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
+            className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>
               <div className="text-slate-400">Time Savings</div>
@@ -270,9 +249,8 @@ export default function AIContentGenerationPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Powerful Features for
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -292,8 +270,7 @@ export default function AIContentGenerationPlatform() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
@@ -319,9 +296,8 @@ export default function AIContentGenerationPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Real-World
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -340,8 +316,7 @@ export default function AIContentGenerationPlatform() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300">
                 <div className="flex items-center space-x-3 mb-4">
                   <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">
                     {useCase.industry}
@@ -370,9 +345,8 @@ export default function AIContentGenerationPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Measurable
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -391,8 +365,7 @@ export default function AIContentGenerationPlatform() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-10 h-10 text-white" />
                 </div>
@@ -411,9 +384,8 @@ export default function AIContentGenerationPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Cutting-Edge
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -432,8 +404,7 @@ export default function AIContentGenerationPlatform() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center"
-              >
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300 text-center">
                 <div className="text-white font-semibold">{tech}</div>
               </motion.div>
             ))}
@@ -447,9 +418,8 @@ export default function AIContentGenerationPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
               Transparent
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
@@ -522,7 +492,7 @@ export default function AIContentGenerationPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your
@@ -537,15 +507,13 @@ export default function AIContentGenerationPlatform() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105"
-              >
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105">
                 <span>Start Free Trial</span>
                 <ArrowRight className="w-5 h-5" />
               </a>
               <a
                 href="tel:+13024640950"
-                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+                className="inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 <span>Call +1 302 464 0950</span>
                 <ArrowRight className="w-5 h-5" />
               </a>

@@ -36,8 +36,7 @@ export default function AIAutoEmailResponder() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                >
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl">
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -65,33 +64,27 @@ export default function AIAutoEmailResponder() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  icon: Bot,
+                { icon: Bot,
                   title: "AI-Powered Responses",
                   description: "Intelligent email responses that understand context and provide relevant answers."
                 },
-                {
-                  icon: Clock,
+                { icon: Clock,
                   title: "24/7 Availability",
                   description: "Round-the-clock email response and customer support automation."
                 },
-                {
-                  icon: MessageCircle,
+                { icon: MessageCircle,
                   title: "Smart Categorization",
                   description: "Automatically categorize and prioritize emails based on content and sender."
                 },
-                {
-                  icon: Settings,
+                { icon: Settings,
                   title: "Customizable Templates",
                   description: "Create and customize email templates for different scenarios and industries."
                 },
-                {
-                  icon: Users,
+                { icon: Users,
                   title: "CRM Integration",
                   description: "Seamless integration with popular CRM systems for customer data management."
                 },
-                {
-                  icon: Shield,
+                { icon: Shield,
                   title: "Security & Privacy",
                   description: "Enterprise-grade security with data encryption and privacy protection."
                 }
@@ -122,38 +115,32 @@ export default function AIAutoEmailResponder() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Customer Support",
+                { title: "Customer Support",
                   description: "Automated responses to common customer inquiries and support requests.",
                   icon: Users,
                   benefits: ["FAQ responses", "Ticket routing", "Support escalation"]
                 },
-                {
-                  title: "Sales & Marketing",
+                { title: "Sales & Marketing",
                   description: "Lead nurturing, follow-ups, and automated sales communication.",
                   icon: Target,
                   benefits: ["Lead nurturing", "Follow-ups", "Sales automation"]
                 },
-                {
-                  title: "Appointment Booking",
+                { title: "Appointment Booking",
                   description: "Automated scheduling, confirmations, and reminder emails.",
                   icon: Clock,
                   benefits: ["Scheduling", "Confirmations", "Reminders"]
                 },
-                {
-                  title: "Order Management",
+                { title: "Order Management",
                   description: "Order confirmations, shipping updates, and delivery notifications.",
                   icon: Activity,
                   benefits: ["Order confirmations", "Shipping updates", "Delivery tracking"]
                 },
-                {
-                  title: "Internal Communication",
-                  description: "Team notifications, project updates, and company announcements.",
+                { title: "Internal Communication",
+                  description: "Team notifications, project updates, and comp announcements.",
                   icon: MessageCircle,
                   benefits: ["Team notifications", "Project updates", "Announcements"]
                 },
-                {
-                  title: "Feedback Collection",
+                { title: "Feedback Collection",
                   description: "Automated surveys, review requests, and customer feedback gathering.",
                   icon: BarChart3,
                   benefits: ["Surveys", "Review requests", "Feedback collection"]
@@ -193,23 +180,19 @@ export default function AIAutoEmailResponder() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
-                {
-                  step: "01",
+                { step: "01",
                   title: "Email Reception",
                   description: "AI system receives and analyzes incoming emails in real-time."
                 },
-                {
-                  step: "02",
+                { step: "02",
                   title: "Content Analysis",
                   description: "Natural language processing analyzes email content and intent."
                 },
-                {
-                  step: "03",
+                { step: "03",
                   title: "Response Generation",
                   description: "AI generates appropriate responses based on context and templates."
                 },
-                {
-                  step: "04",
+                { step: "04",
                   title: "Delivery & Logging",
                   description: "Automated responses are sent and logged in CRM systems."
                 }
@@ -291,38 +274,32 @@ export default function AIAutoEmailResponder() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                {
-                  title: "Email Platforms",
+                { title: "Email Platforms",
                   description: "Gmail, Outlook, Yahoo, and other popular email services.",
                   icon: Mail,
                   features: ["Gmail", "Outlook", "Yahoo", "Custom SMTP"]
                 },
-                {
-                  title: "CRM Systems",
+                { title: "CRM Systems",
                   description: "Salesforce, HubSpot, Pipedrive, and other CRM platforms.",
                   icon: Database,
                   features: ["Salesforce", "HubSpot", "Pipedrive", "Custom CRM"]
                 },
-                {
-                  title: "Business Tools",
+                { title: "Business Tools",
                   description: "Slack, Teams, Zapier, and other business applications.",
                   icon: Settings,
                   features: ["Slack", "Teams", "Zapier", "API Integration"]
                 },
-                {
-                  title: "Analytics Platforms",
+                { title: "Analytics Platforms",
                   description: "Google Analytics, Mixpanel, and other analytics tools.",
                   icon: BarChart3,
                   features: ["Google Analytics", "Mixpanel", "Custom Analytics"]
                 },
-                {
-                  title: "Marketing Tools",
+                { title: "Marketing Tools",
                   description: "Mailchimp, Constant Contact, and email marketing platforms.",
                   icon: Target,
                   features: ["Mailchimp", "Constant Contact", "Email Marketing"]
                 },
-                {
-                  title: "Support Systems",
+                { title: "Support Systems",
                   description: "Zendesk, Freshdesk, and customer support platforms.",
                   icon: Users,
                   features: ["Zendesk", "Freshdesk", "Support Systems"]
@@ -360,15 +337,13 @@ export default function AIAutoEmailResponder() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200">
                 Schedule a Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200"
-              >
+                className="inline-flex items-center px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
                 Explore All Services
               </Link>
             </div>

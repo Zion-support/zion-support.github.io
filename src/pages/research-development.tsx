@@ -42,8 +42,7 @@ import {
 } from 'lucide-react';
 
 const researchAreas = [
-  {
-    id: 'ai-ml',
+  { id: 'ai-ml',
     name: 'Artificial Intelligence & Machine Learning',
     icon: Brain,
     description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.',
@@ -60,8 +59,7 @@ const researchAreas = [
     patents: 8,
     projects: 12
   },
-  {
-    id: 'quantum-computing',
+  { id: 'quantum-computing',
     name: 'Quantum Computing & Quantum Technologies',
     icon: Atom,
     description: 'Exploring quantum computing applications and developing quantum-resistant cryptographic solutions.',
@@ -78,8 +76,7 @@ const researchAreas = [
     patents: 5,
     projects: 6
   },
-  {
-    id: 'cybersecurity',
+  { id: 'cybersecurity',
     name: 'Cybersecurity & Privacy',
     icon: Shield,
     description: 'Developing next-generation security solutions to protect against evolving cyber threats.',
@@ -96,8 +93,7 @@ const researchAreas = [
     patents: 12,
     projects: 18
   },
-  {
-    id: 'edge-computing',
+  { id: 'edge-computing',
     name: 'Edge Computing & IoT',
     icon: Zap,
     description: 'Researching distributed computing paradigms and intelligent edge systems for real-time processing.',
@@ -114,8 +110,7 @@ const researchAreas = [
     patents: 9,
     projects: 14
   },
-  {
-    id: 'data-science',
+  { id: 'data-science',
     name: 'Data Science & Analytics',
     icon: TrendingUp,
     description: 'Advancing data analytics methodologies and developing tools for extracting meaningful insights from complex datasets.',
@@ -132,8 +127,7 @@ const researchAreas = [
     patents: 15,
     projects: 20
   },
-  {
-    id: 'cloud-native',
+  { id: 'cloud-native',
     name: 'Cloud-Native Technologies',
     icon: Cloud,
     description: 'Researching cloud computing architectures and developing scalable, resilient cloud solutions.',
@@ -153,8 +147,7 @@ const researchAreas = [
 ];
 
 const researchProjects = [
-  {
-    id: 1,
+  { id: 1,
     title: 'AI-Powered Cybersecurity Threat Detection',
     area: 'AI & ML',
     status: 'Active',
@@ -171,8 +164,7 @@ const researchProjects = [
     icon: Brain,
     color: 'from-purple-500 to-indigo-600'
   },
-  {
-    id: 2,
+  { id: 2,
     title: 'Quantum-Resistant Cryptographic Protocols',
     area: 'Quantum Computing',
     status: 'Active',
@@ -189,8 +181,7 @@ const researchProjects = [
     icon: Atom,
     color: 'from-blue-500 to-cyan-600'
   },
-  {
-    id: 3,
+  { id: 3,
     title: 'Edge AI for Smart Manufacturing',
     area: 'Edge Computing',
     status: 'Active',
@@ -207,8 +198,7 @@ const researchProjects = [
     icon: Zap,
     color: 'from-yellow-500 to-orange-600'
   },
-  {
-    id: 4,
+  { id: 4,
     title: 'Privacy-Preserving Data Analytics',
     area: 'Data Science',
     status: 'Completed',
@@ -225,8 +215,7 @@ const researchProjects = [
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-600'
   },
-  {
-    id: 5,
+  { id: 5,
     title: 'Cloud-Native Security Architecture',
     area: 'Cloud-Native',
     status: 'Active',
@@ -243,8 +232,7 @@ const researchProjects = [
     icon: Cloud,
     color: 'from-indigo-500 to-purple-600'
   },
-  {
-    id: 6,
+  { id: 6,
     title: 'AI Ethics and Responsible AI',
     area: 'AI & ML',
     status: 'Active',
@@ -264,8 +252,7 @@ const researchProjects = [
 ];
 
 const publications = [
-  {
-    id: 1,
+  { id: 1,
     title: 'Advanced Neural Network Architectures for Cybersecurity',
     authors: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],
     journal: 'IEEE Transactions on Cybersecurity',
@@ -274,8 +261,7 @@ const publications = [
     area: 'AI & ML',
     abstract: 'This paper presents novel neural network architectures specifically designed for detecting sophisticated cyber threats...'
   },
-  {
-    id: 2,
+  { id: 2,
     title: 'Quantum-Resistant Cryptographic Protocols: A Comprehensive Survey',
     authors: ['Dr. Michael Rodriguez', 'Dr. Emily Wang'],
     journal: 'Cryptography and Security',
@@ -284,8 +270,7 @@ const publications = [
     area: 'Quantum Computing',
     abstract: 'We survey the current state of post-quantum cryptography and propose new protocols...'
   },
-  {
-    id: 3,
+  { id: 3,
     title: 'Edge Computing Optimization for Real-Time AI Applications',
     authors: ['Dr. Emily Wang', 'Dr. James Brown'],
     journal: 'Edge Computing Systems',
@@ -294,8 +279,7 @@ const publications = [
     area: 'Edge Computing',
     abstract: 'This research explores optimization techniques for deploying AI models at the edge...'
   },
-  {
-    id: 4,
+  { id: 4,
     title: 'Privacy-Preserving Machine Learning: Techniques and Applications',
     authors: ['Dr. James Brown', 'Dr. Lisa Garcia'],
     journal: 'Data Privacy and Security',
@@ -304,8 +288,7 @@ const publications = [
     area: 'Data Science',
     abstract: 'We present a comprehensive framework for privacy-preserving machine learning...'
   },
-  {
-    id: 5,
+  { id: 5,
     title: 'Security-First Cloud Architecture Patterns',
     authors: ['Dr. Lisa Garcia', 'Dr. David Kim'],
     journal: 'Cloud Computing Security',
@@ -317,8 +300,7 @@ const publications = [
 ];
 
 const patents = [
-  {
-    id: 1,
+  { id: 1,
     title: 'Adaptive Threat Detection System Using Machine Learning',
     inventors: ['Dr. Sarah Chen', 'Dr. Michael Rodriguez'],
     filingDate: '2026-08-15',
@@ -327,8 +309,7 @@ const patents = [
     area: 'AI & ML',
     description: 'A system for detecting cybersecurity threats using adaptive machine learning algorithms.'
   },
-  {
-    id: 2,
+  { id: 2,
     title: 'Quantum-Resistant Digital Signature Algorithm',
     inventors: ['Dr. Michael Rodriguez'],
     filingDate: '2026-06-20',
@@ -337,8 +318,7 @@ const patents = [
     area: 'Quantum Computing',
     description: 'A digital signature algorithm resistant to quantum computing attacks.'
   },
-  {
-    id: 3,
+  { id: 3,
     title: 'Edge Computing Resource Optimization Method',
     inventors: ['Dr. Emily Wang', 'Dr. James Brown'],
     filingDate: '2026-05-10',
@@ -347,8 +327,7 @@ const patents = [
     area: 'Edge Computing',
     description: 'A method for optimizing resource allocation in edge computing environments.'
   },
-  {
-    id: 4,
+  { id: 4,
     title: 'Privacy-Preserving Data Analytics Framework',
     inventors: ['Dr. James Brown'],
     filingDate: '2026-03-25',
@@ -357,8 +336,7 @@ const patents = [
     area: 'Data Science',
     description: 'A framework for analyzing data while preserving individual privacy.'
   },
-  {
-    id: 5,
+  { id: 5,
     title: 'Cloud Security Architecture Pattern',
     inventors: ['Dr. Lisa Garcia'],
     filingDate: '2026-02-15',
@@ -414,9 +392,8 @@ export default function ResearchDevelopment() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.6     }}
+            className="text-center">
             <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
               <FlaskConical className="w-5 h-5" />
               <span className="font-medium">Research & Development</span>
@@ -456,8 +433,7 @@ export default function ResearchDevelopment() {
                 <select
                   value={selectedArea}
                   onChange={(e) => setSelectedArea(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {areas.map(area => (
                     <option key={area} value={area}>{area}</option>
                   ))}
@@ -469,8 +445,7 @@ export default function ResearchDevelopment() {
                 <select
                   value={selectedStatus}
                   onChange={(e) => setSelectedStatus(e.target.value)}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {statuses.map(status => (
                     <option key={status} value={status}>{status}</option>
                   ))}
@@ -487,10 +462,9 @@ export default function ResearchDevelopment() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>
           </motion.div>
@@ -504,9 +478,8 @@ export default function ResearchDevelopment() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-2xl flex items-center justify-center mb-4`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
@@ -552,10 +525,9 @@ export default function ResearchDevelopment() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>
           </motion.div>
@@ -570,9 +542,8 @@ export default function ResearchDevelopment() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-                >
+                  viewport={{ once: true     }}
+                  className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
@@ -637,8 +608,7 @@ export default function ResearchDevelopment() {
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/research-development/projects/${project.id}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -660,10 +630,9 @@ export default function ResearchDevelopment() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Research Publications</h2>
             <p className="text-zion-slate-light text-lg">Our latest research contributions to the scientific community</p>
           </motion.div>
@@ -675,9 +644,8 @@ export default function ResearchDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{pub.title}</h3>
@@ -709,8 +677,7 @@ export default function ResearchDevelopment() {
                   <div className="ml-6">
                     <Link
                       to={`/research-development/publications/${pub.id}`}
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                    >
+                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                       Read Paper
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
@@ -728,10 +695,9 @@ export default function ResearchDevelopment() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12 text-center"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="mb-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Patents & Intellectual Property</h2>
             <p className="text-zion-slate-light text-lg">Our innovative technologies protected by intellectual property rights</p>
           </motion.div>
@@ -743,9 +709,8 @@ export default function ResearchDevelopment() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
-              >
+                viewport={{ once: true     }}
+                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300">
                 <div className="flex items-start justify-between mb-4">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">{patent.title}</h3>
@@ -781,8 +746,7 @@ export default function ResearchDevelopment() {
                 <div className="flex items-center justify-between">
                   <Link
                     to={`/research-development/patents/${patent.id}`}
-                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
-                  >
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300">
                     View Details
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -803,10 +767,9 @@ export default function ResearchDevelopment() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
-          >
+            transition={{ duration: 0.6     }}
+            viewport={{ once: true     }}
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8">
             <h2 className="text-3xl font-bold text-white mb-4">
               Collaborate with Our Research Team
             </h2>
@@ -817,15 +780,13 @@ export default function ResearchDevelopment() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg">
                 Start Collaboration
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/case-studies"
-                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
-              >
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg">
                 View Research Impact
               </Link>
             </div>

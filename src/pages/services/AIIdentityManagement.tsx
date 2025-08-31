@@ -13,18 +13,15 @@ export default function AIIdentityManagement() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$299/mo', 
       details: ['Up to 1,000 users', 'Basic AI features', 'Standard monitoring', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$799/mo', 
       details: ['Up to 10,000 users', 'Advanced AI features', 'Enhanced monitoring', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$1,999/mo', 
       details: ['Unlimited users', 'Custom AI models', 'Full identity suite', '24/7 dedicated support'] 
     },

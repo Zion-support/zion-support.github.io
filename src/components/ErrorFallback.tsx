@@ -3,9 +3,9 @@ import React from 'react';
 interface ErrorFallbackProps {
   error: Error;
   resetErrorBoundary: () => void;
-}
+    }
 
-export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary }) => {
+export const ErrorFallback: React.FC = ({ error, resetErrorBoundary }) => {
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center">
@@ -17,14 +17,12 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorB
         <div className="space-y-3">
           <button
             onClick={resetErrorBoundary}
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-          >
+            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
             Try Again
           </button>
           <button
             onClick={() => window.location.href = '/'}
-            className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
-          >
+            className="w-full bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors">
             Go Home
           </button>
         </div>

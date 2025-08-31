@@ -32,132 +32,108 @@ import { SEO } from '@/components/SEO';
 
 const AISalesCopilot = () => {
   const features = [
-    {
-      icon: Users,
+    { icon: Users,
       title: "Lead Scoring & Qualification",
       description: "AI-powered lead analysis and prioritization to focus on high-value prospects."
     },
-    {
-      icon: MessageCircle,
+    { icon: MessageCircle,
       title: "Intelligent Conversation AI",
       description: "Natural language processing for personalized customer interactions and support."
     },
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Predictive Analytics",
       description: "Forecast sales outcomes and identify high-probability opportunities with AI insights."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Automated Follow-ups",
       description: "Smart email sequences and follow-up scheduling based on prospect behavior patterns."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Performance Insights",
       description: "Real-time sales metrics and performance optimization recommendations."
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: "Revenue Optimization",
       description: "Data-driven strategies to maximize deal size and improve win rates."
     }
   ];
 
   const benefits = [
-    {
-      icon: TrendingUp,
+    { icon: TrendingUp,
       title: "Increased Sales Productivity",
       description: "Automate repetitive tasks and focus on high-value sales activities."
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: "Better Lead Conversion",
       description: "Improve conversion rates with AI-powered lead scoring and qualification."
     },
-    {
-      icon: Users,
+    { icon: Users,
       title: "Enhanced Customer Experience",
       description: "Provide personalized interactions and faster response times to prospects."
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: "Data-Driven Decisions",
       description: "Make informed sales decisions based on AI analytics and insights."
     },
-    {
-      icon: Clock,
+    { icon: Clock,
       title: "Time Optimization",
       description: "Reduce manual work and focus on building relationships and closing deals."
     },
-    {
-      icon: Award,
+    { icon: Award,
       title: "Competitive Advantage",
       description: "Stay ahead of competitors with AI-powered sales intelligence and automation."
     }
   ];
 
   const salesProcess = [
-    {
-      stage: "Lead Generation",
+    { stage: "Lead Generation",
       description: "AI-powered prospecting and lead identification from multiple sources",
       icon: Search
     },
-    {
-      stage: "Qualification",
+    { stage: "Qualification",
       description: "Automated lead scoring and prioritization using machine learning",
       icon: Target
     },
-    {
-      stage: "Engagement",
+    { stage: "Engagement",
       description: "Intelligent conversation AI and personalized communication",
       icon: MessageCircle
     },
-    {
-      stage: "Opportunity Management",
+    { stage: "Opportunity Management",
       description: "Track and manage sales opportunities with predictive analytics",
       icon: TrendingUp
     },
-    {
-      stage: "Closing",
+    { stage: "Closing",
       description: "AI-assisted deal closing with optimized pricing and negotiation",
       icon: CheckCircle
     },
-    {
-      stage: "Retention",
+    { stage: "Retention",
       description: "Customer success monitoring and expansion opportunity identification",
       icon: Users
     }
   ];
 
   const useCases = [
-    {
-      industry: "B2B Sales",
+    { industry: "B2B Sales",
       description: "Enterprise sales teams and complex deal management",
       icon: Users
     },
-    {
-      industry: "E-commerce",
+    { industry: "E-commerce",
       description: "Online retail sales and customer relationship management",
       icon: ShoppingCart
     },
-    {
-      industry: "SaaS",
+    { industry: "SaaS",
       description: "Software subscription sales and customer lifecycle management",
       icon: Cpu
     },
-    {
-      industry: "Real Estate",
+    { industry: "Real Estate",
       description: "Property sales and client relationship management",
       icon: Home
     },
-    {
-      industry: "Financial Services",
+    { industry: "Financial Services",
       description: "Investment and insurance sales with compliance support",
       icon: DollarSign
     },
-    {
-      industry: "Healthcare",
+    { industry: "Healthcare",
       description: "Medical device and service sales with regulatory compliance",
       icon: Heart
     }
@@ -178,7 +154,7 @@ const AISalesCopilot = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <div className="inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6">
               <Users className="w-4 h-4 mr-2" />
@@ -214,10 +190,9 @@ const AISalesCopilot = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -238,9 +213,8 @@ const AISalesCopilot = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -272,10 +246,9 @@ const AISalesCopilot = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Platform Benefits
             </h2>
@@ -292,9 +265,8 @@ const AISalesCopilot = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -326,10 +298,9 @@ const AISalesCopilot = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Sales Process
             </h2>
@@ -346,9 +317,8 @@ const AISalesCopilot = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -380,10 +350,9 @@ const AISalesCopilot = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
+            className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -400,9 +369,8 @@ const AISalesCopilot = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50"
-              >
+                viewport={{ once: true     }}
+                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50">
                 {/* Icon */}
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -434,8 +402,8 @@ const AISalesCopilot = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            transition={{ duration: 0.8     }}
+            viewport={{ once: true     }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Sales?

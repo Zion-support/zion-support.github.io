@@ -9,12 +9,12 @@ export interface IndustrySolution {
   features: string[];
   benefits: string[];
   useCases: string[];
-  pricing: {
+  pricing: {  
     starter: string;
     professional: string;
-    enterprise: string;
-    custom: string;
-  };
+    enterprise: string
+    custom: string
+      };
   estimatedTime: string;
   technologies: string[];
   image?: string;
@@ -26,8 +26,7 @@ export interface IndustrySolution {
   certifications: string[];
 }
 export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
-  {
-    id: 'healthcare-ai-platform',
+  { id: 'healthcare-ai-platform',
     title: 'Healthcare AI Platform',
     description: 'Comprehensive AI-powered healthcare solutions for hospitals and clinics',
     longDescription: 'Transform healthcare delivery with our comprehensive AI platform. Features diagnostic assistance, patient monitoring, drug discovery, and personalized medicine.',
@@ -54,8 +53,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Medical imaging centers',
       'Pharmaceutical companies'
     ],
-    pricing: {
-      starter: '$2,999/month',
+    pricing: { starter: '$2,999/month',
       professional: '$7,999/month',
       enterprise: '$19,999/month',
       custom: 'Contact us'
@@ -69,8 +67,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['HIPAA', 'FDA', 'CE Mark', 'GDPR'],
     certifications: ['ISO 13485', 'ISO 27001', 'SOC 2 Type II']
   },
-  {
-    id: 'fintech-solutions',
+  { id: 'fintech-solutions',
     title: 'FinTech Solutions Platform',
     description: 'Advanced financial technology solutions for banks and financial institutions',
     longDescription: 'Modernize your financial services with our comprehensive FinTech platform. Features fraud detection, risk assessment, automated trading, and regulatory compliance.',
@@ -97,8 +94,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Investment firms',
       'Insurance companies'
     ],
-    pricing: {
-      starter: '$3,999/month',
+    pricing: { starter: '$3,999/month',
       professional: '$9,999/month',
       enterprise: '$24,999/month',
       custom: 'Contact us'
@@ -112,8 +108,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['PCI DSS', 'SOX', 'GLBA', 'GDPR', 'CCPA'],
     certifications: ['ISO 27001', 'SOC 2 Type II', 'PCI DSS Level 1']
   },
-  {
-    id: 'smart-manufacturing',
+  { id: 'smart-manufacturing',
     title: 'Smart Manufacturing Platform',
     description: 'IoT and AI-powered manufacturing optimization and automation',
     longDescription: 'Transform your manufacturing operations with our smart manufacturing platform. Features predictive maintenance, quality control, supply chain optimization, and real-time monitoring.',
@@ -140,8 +135,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Food processing',
       'Chemical manufacturing'
     ],
-    pricing: {
-      starter: '$4,999/month',
+    pricing: { starter: '$4,999/month',
       professional: '$12,999/month',
       enterprise: '$29,999/month',
       custom: 'Contact us'
@@ -155,8 +149,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['ISO 9001', 'ISO 14001', 'OSHA', 'FDA'],
     certifications: ['ISO 9001', 'ISO 14001', 'ISO 45001']
   },
-  {
-    id: 'retail-ai-platform',
+  { id: 'retail-ai-platform',
     title: 'Retail AI Platform',
     description: 'AI-powered retail solutions for customer experience and operations',
     longDescription: 'Enhance your retail operations with our comprehensive AI platform. Features customer analytics, inventory optimization, personalized marketing, and fraud prevention.',
@@ -183,8 +176,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Retail chains',
       'Online marketplaces'
     ],
-    pricing: {
-      starter: '$1,999/month',
+    pricing: { starter: '$1,999/month',
       professional: '$4,999/month',
       enterprise: '$12,999/month',
       custom: 'Contact us'
@@ -198,8 +190,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['PCI DSS', 'GDPR', 'CCPA', 'SOX'],
     certifications: ['PCI DSS Level 1', 'ISO 27001', 'SOC 2 Type II']
   },
-  {
-    id: 'education-technology',
+  { id: 'education-technology',
     title: 'Education Technology Platform',
     description: 'Comprehensive edtech solutions for schools and universities',
     longDescription: 'Transform education with our comprehensive edtech platform. Features personalized learning, student analytics, content management, and virtual classrooms.',
@@ -226,8 +217,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Corporate training',
       'Online education'
     ],
-    pricing: {
-      starter: '$999/month',
+    pricing: { starter: '$999/month',
       professional: '$2,999/month',
       enterprise: '$7,999/month',
       custom: 'Contact us'
@@ -241,8 +231,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['FERPA', 'COPPA', 'GDPR', 'CCPA'],
     certifications: ['ISO 27001', 'SOC 2 Type II', 'EdTech Certification']
   },
-  {
-    id: 'government-solutions',
+  { id: 'government-solutions',
     title: 'Government Technology Solutions',
     description: 'Secure and compliant technology solutions for government agencies',
     longDescription: 'Modernize government operations with our secure and compliant technology solutions. Features citizen services, data analytics, cybersecurity, and process automation.',
@@ -269,8 +258,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Local municipalities',
       'Government departments'
     ],
-    pricing: {
-      starter: '$5,999/month',
+    pricing: { starter: '$5,999/month',
       professional: '$15,999/month',
       enterprise: '$39,999/month',
       custom: 'Contact us'
@@ -284,8 +272,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['FedRAMP', 'FISMA', 'NIST', 'CJIS', 'HIPAA'],
     certifications: ['FedRAMP High', 'FISMA High', 'ISO 27001', 'SOC 2 Type II']
   },
-  {
-    id: 'energy-optimization',
+  { id: 'energy-optimization',
     title: 'Energy Optimization Platform',
     description: 'AI-powered energy management and optimization solutions',
     longDescription: 'Optimize your energy operations with our comprehensive platform. Features smart grid management, renewable energy integration, demand forecasting, and energy analytics.',
@@ -312,8 +299,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Industrial facilities',
       'Smart cities'
     ],
-    pricing: {
-      starter: '$3,999/month',
+    pricing: { starter: '$3,999/month',
       professional: '$9,999/month',
       enterprise: '$24,999/month',
       custom: 'Contact us'
@@ -327,8 +313,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['NERC', 'FERC', 'ISO', 'Grid Standards'],
     certifications: ['ISO 27001', 'SOC 2 Type II', 'Energy Management']
   },
-  {
-    id: 'transportation-logistics',
+  { id: 'transportation-logistics',
     title: 'Transportation & Logistics Platform',
     description: 'Intelligent transportation and logistics optimization',
     longDescription: 'Optimize your transportation and logistics operations with our intelligent platform. Features route optimization, fleet management, supply chain visibility, and predictive analytics.',
@@ -355,8 +340,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'E-commerce delivery',
       'Supply chain management'
     ],
-    pricing: {
-      starter: '$2,999/month',
+    pricing: { starter: '$2,999/month',
       professional: '$7,999/month',
       enterprise: '$19,999/month',
       custom: 'Contact us'
@@ -370,8 +354,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['DOT', 'FMCSA', 'OSHA', 'ISO'],
     certifications: ['ISO 27001', 'SOC 2 Type II', 'Transportation Safety']
   },
-  {
-    id: 'real-estate-tech',
+  { id: 'real-estate-tech',
     title: 'Real Estate Technology Platform',
     description: 'Comprehensive real estate technology solutions',
     longDescription: 'Transform your real estate operations with our comprehensive technology platform. Features property management, market analytics, virtual tours, and transaction management.',
@@ -398,8 +381,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Real estate investors',
       'Property developers'
     ],
-    pricing: {
-      starter: '$1,499/month',
+    pricing: { starter: '$1,499/month',
       professional: '$3,999/month',
       enterprise: '$9,999/month',
       custom: 'Contact us'
@@ -413,8 +395,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
     compliance: ['Real Estate Laws', 'Data Privacy', 'Financial Regulations', 'Local Compliance'],
     certifications: ['ISO 27001', 'SOC 2 Type II', 'Real Estate Technology']
   },
-  {
-    id: 'media-entertainment',
+  { id: 'media-entertainment',
     title: 'Media & Entertainment Platform',
     description: 'AI-powered media and entertainment solutions',
     longDescription: 'Revolutionize your media and entertainment operations with our AI-powered platform. Features content creation, audience analytics, recommendation engines, and content management.',
@@ -441,8 +422,7 @@ export const SPECIALIZED_INDUSTRY_SOLUTIONS_2025: IndustrySolution[] = [
       'Media companies',
       'Entertainment providers'
     ],
-    pricing: {
-      starter: '$1,999/month',
+    pricing: { starter: '$1,999/month',
       professional: '$4,999/month',
       enterprise: '$12,999/month',
       custom: 'Contact us'

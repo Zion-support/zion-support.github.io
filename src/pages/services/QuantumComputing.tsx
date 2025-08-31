@@ -92,33 +92,27 @@ import { Link } from 'react-router-dom';
 
 const QuantumComputing = () => {
   const features = [
-    {
-      icon: Atom,
+    { icon: Atom,
       title: 'Quantum Processing',
       description: 'Advanced quantum algorithms and computational capabilities'
     },
-    {
-      icon: Binary,
+    { icon: Binary,
       title: 'Quantum Algorithms',
       description: 'Custom quantum algorithms for complex problem solving'
     },
-    {
-      icon: Network,
+    { icon: Network,
       title: 'Quantum Networks',
       description: 'Secure quantum communication and networking solutions'
     },
-    {
-      icon: Lock2,
+    { icon: Lock2,
       title: 'Quantum Cryptography',
       description: 'Unbreakable encryption using quantum principles'
     },
-    {
-      icon: Brain2,
+    { icon: Brain2,
       title: 'Quantum Machine Learning',
       description: 'AI and ML enhanced by quantum computing power'
     },
-    {
-      icon: Database2,
+    { icon: Database2,
       title: 'Quantum Databases',
       description: 'High-performance quantum database systems'
     }
@@ -134,43 +128,35 @@ const QuantumComputing = () => {
   ];
 
   const services = [
-    {
-      icon: Cpu2,
+    { icon: Cpu2,
       title: 'Quantum Computing Services',
       description: 'Access to quantum computing resources and expertise'
     },
-    {
-      icon: Memory,
+    { icon: Memory,
       title: 'Quantum Algorithm Development',
       description: 'Custom quantum algorithm design and optimization'
     },
-    {
-      icon: HardDrive,
+    { icon: HardDrive,
       title: 'Quantum Software Solutions',
       description: 'Quantum software development and deployment'
     },
-    {
-      icon: Server2,
+    { icon: Server2,
       title: 'Quantum Cloud Platform',
       description: 'Cloud-based quantum computing infrastructure'
     }
   ];
 
   const useCases = [
-    {
-      industry: 'Pharmaceuticals',
+    { industry: 'Pharmaceuticals',
       description: 'Drug discovery and molecular modeling'
     },
-    {
-      industry: 'Financial Services',
+    { industry: 'Financial Services',
       description: 'Portfolio optimization and risk assessment'
     },
-    {
-      industry: 'Materials Science',
+    { industry: 'Materials Science',
       description: 'New material discovery and simulation'
     },
-    {
-      industry: 'Artificial Intelligence',
+    { industry: 'Artificial Intelligence',
       description: 'Enhanced machine learning algorithms'
     }
   ];
@@ -190,9 +176,8 @@ const QuantumComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center">
             <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-6">
               <Atom className="w-4 h-4 mr-2" />
               Quantum Computing Solutions
@@ -228,9 +213,8 @@ const QuantumComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Advanced Quantum Computing Features
             </h2>
@@ -247,8 +231,7 @@ const QuantumComputing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200">
                 <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
@@ -266,9 +249,8 @@ const QuantumComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Core Quantum Computing Services
             </h2>
@@ -285,8 +267,7 @@ const QuantumComputing = () => {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-200">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-6 h-6 text-white" />
@@ -308,9 +289,8 @@ const QuantumComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Quantum Computing Benefits
             </h2>
@@ -327,8 +307,7 @@ const QuantumComputing = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -341,8 +320,7 @@ const QuantumComputing = () => {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-indigo-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
@@ -358,9 +336,8 @@ const QuantumComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
+            transition={{ duration: 0.8     }}
+            className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
@@ -377,8 +354,7 @@ const QuantumComputing = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-indigo-500/30 transition-all duration-200"
-              >
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-indigo-500/30 transition-all duration-200">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-white" />
                 </div>
@@ -396,7 +372,7 @@ const QuantumComputing = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
               Start Your Quantum Journey Today

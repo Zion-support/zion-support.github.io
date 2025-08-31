@@ -17,25 +17,23 @@ export interface InnovativeMicroSaasService {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+  contactInfo: {  
     phone: string;
-    email: string;
-    website: string;
-  };
-  technicalSpecs?: {
-    technology: string[];
+    email: string
+    website: string
+      };
+  technicalSpecs?: { technology: string[];
     integrations: string[];
     apiEndpoints: number;
-    uptime: string;
-    security: string[];
-  };
+    uptime: string
+    security: string[]
+      };
   competitors?: string[];
   marketSize?: string;
 }
 export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
   // AI-Powered Business Intelligence Platform
-  {
-    id: "ai-business-intelligence-platform",
+  { id: "ai-business-intelligence-platform",
     title: "AI Business Intelligence Platform",
     description: "Next-generation business intelligence platform that uses AI to automatically analyze data, generate insights, and create actionable reports for business decision-making.",
     category: "AI & Analytics",
@@ -82,13 +80,11 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketPrice: "$2,999 - $8,999/month",
     roi: "250-400%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "React", "Node.js", "PostgreSQL"],
       integrations: ["Salesforce", "HubSpot", "QuickBooks", "Google Analytics", "Shopify"],
       apiEndpoints: 150,
       uptime: "99.9%",
@@ -98,8 +94,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketSize: "$29.9 billion by 2025"
   },
   // AI-Powered Autonomous DevOps Platform
-  {
-    id: "ai-autonomous-devops-platform",
+  { id: "ai-autonomous-devops-platform",
     title: "AI Autonomous DevOps Platform",
     description: "Self-healing DevOps platform that automatically detects, diagnoses, and resolves infrastructure issues using AI and machine learning.",
     category: "DevOps & Infrastructure",
@@ -146,13 +141,11 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketPrice: "$3,499 - $9,999/month",
     roi: "300-500%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],
+    technicalSpecs: { technology: ["Python", "Kubernetes", "Docker", "Terraform", "Prometheus"],
       integrations: ["AWS", "Azure", "GCP", "GitHub", "Jenkins", "Slack"],
       apiEndpoints: 200,
       uptime: "99.99%",
@@ -162,8 +155,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketSize: "$8.2 billion by 2025"
   },
   // Quantum-Safe Cybersecurity Suite
-  {
-    id: "quantum-safe-cybersecurity-suite",
+  { id: "quantum-safe-cybersecurity-suite",
     title: "Quantum-Safe Cybersecurity Suite",
     description: "Future-proof cybersecurity solution that implements post-quantum cryptography to protect against quantum computing threats.",
     category: "Cybersecurity",
@@ -210,13 +202,11 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketPrice: "$5,999 - $15,999/month",
     roi: "200-400%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],
+    technicalSpecs: { technology: ["Post-quantum algorithms", "Hybrid encryption", "Key management", "React", "Node.js"],
       integrations: ["PKI systems", "Identity management", "SIEM platforms", "Compliance tools"],
       apiEndpoints: 200,
       uptime: "99.99%",
@@ -226,8 +216,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketSize: "$2.8 billion by 2025"
   },
   // AI-Powered Healthcare Diagnostics Platform
-  {
-    id: "ai-healthcare-diagnostics-platform",
+  { id: "ai-healthcare-diagnostics-platform",
     title: "AI Healthcare Diagnostics Platform",
     description: "Advanced medical diagnostics platform that uses AI to analyze medical images, lab results, and patient data for early disease detection.",
     category: "AI & Healthcare",
@@ -274,13 +263,11 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketPrice: "$4,499 - $12,999/month",
     roi: "150-300%",
     innovationLevel: "Advanced",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
+    technicalSpecs: { technology: ["Python", "TensorFlow", "PyTorch", "React", "Node.js", "PostgreSQL"],
       integrations: ["PACS systems", "EHR platforms", "Lab systems", "Telemedicine platforms"],
       apiEndpoints: 300,
       uptime: "99.9%",
@@ -290,8 +277,7 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketSize: "$45.2 billion by 2025"
   },
   // Edge AI Computing Platform
-  {
-    id: "edge-ai-computing-platform",
+  { id: "edge-ai-computing-platform",
     title: "Edge AI Computing Platform",
     description: "Distributed AI computing platform that brings machine learning capabilities to edge devices for real-time processing and decision making.",
     category: "AI & Edge Computing",
@@ -338,13 +324,11 @@ export const INNOVATIVE_SERVICES: InnovativeMicroSaasService[] = [
     marketPrice: "$3,799 - $11,999/month",
     roi: "250-450%",
     innovationLevel: "Cutting-edge",
-    contactInfo: {
-      phone: "+1 302 464 0950",
+    contactInfo: { phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com"
     },
-    technicalSpecs: {
-      technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],
+    technicalSpecs: { technology: ["TensorFlow Lite", "ONNX", "Edge TPU", "React", "Node.js", "MongoDB"],
       integrations: ["IoT platforms", "Cloud AI services", "Edge devices", "Data centers"],
       apiEndpoints: 400,
       uptime: "99.9%",

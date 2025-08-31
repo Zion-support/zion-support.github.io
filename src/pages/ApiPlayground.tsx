@@ -5,7 +5,7 @@ export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
-  const [selectedApi, setSelectedApi] = useState<any>(null);
+  const [selectedApi, setSelectedApi] = useState(null);
   const [requestBody, setRequestBody] = useState('');
   const [responseData, setResponseData] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -29,8 +29,7 @@ export default function ApiPlayground() {
   ];
 
   const apis = [
-    {
-      id: 1,
+    { id: 1,
       name: 'AI Text Analysis',
       description: 'Analyze text sentiment, extract entities, and perform language processing tasks.',
       category: 'ai-ml',
@@ -46,13 +45,11 @@ export default function ApiPlayground() {
         { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' },
         { name: 'features', type: 'array', required: false, description: 'Analysis features to enable' }
       ],
-      requestExample: {
-        text: "I love this new AI technology! It's amazing how it can understand context.",
+      requestExample: { text: "I love this new AI technology! It's amazing how it can understand context.",
         language: "en",
         features: ["sentiment", "entities", "keywords"]
       },
-      responseExample: {
-        sentiment: { score: 0.9, label: "positive" },
+      responseExample: { sentiment: { score: 0.9, label: "positive" },
         entities: [
           { text: "AI technology", type: "technology", confidence: 0.95 }
         ],
@@ -63,8 +60,7 @@ export default function ApiPlayground() {
       sdk: 'https://github.com/ziontechgroup/ai-sdk',
       featured: true
     },
-    {
-      id: 2,
+    { id: 2,
       name: 'Cloud Resource Management',
       description: 'Manage cloud infrastructure, deploy resources, and monitor performance.',
       category: 'cloud',
@@ -80,13 +76,11 @@ export default function ApiPlayground() {
         { name: 'type', type: 'string', required: false, description: 'Resource type' },
         { name: 'status', type: 'string', required: false, description: 'Resource status' }
       ],
-      requestExample: {
-        region: "us-east-1",
+      requestExample: { region: "us-east-1",
         type: "compute",
         status: "running"
       },
-      responseExample: {
-        resources: [
+      responseExample: { resources: [
           {
             id: "i-1234567890abcdef0",
             name: "web-server-01",
@@ -101,8 +95,7 @@ export default function ApiPlayground() {
       sdk: 'https://github.com/ziontechgroup/cloud-sdk',
       featured: false
     },
-    {
-      id: 3,
+    { id: 3,
       name: 'Security Threat Detection',
       description: 'Detect and analyze security threats in real-time.',
       category: 'security',
@@ -118,8 +111,7 @@ export default function ApiPlayground() {
         { name: 'source', type: 'string', required: true, description: 'Data source identifier' },
         { name: 'timestamp', type: 'string', required: false, description: 'Event timestamp' }
       ],
-      requestExample: {
-        data: {
+      requestExample: { data: {
           ip: "192.168.1.100",
           user_agent: "Mozilla/5.0...",
           action: "login_attempt"
@@ -127,8 +119,7 @@ export default function ApiPlayground() {
         source: "web_application",
         timestamp: "2024-01-15T10:30:00Z"
       },
-      responseExample: {
-        threat_level: "low",
+      responseExample: { threat_level: "low",
         risk_score: 0.2,
         recommendations: ["Enable 2FA", "Monitor login patterns"],
         detected: false
@@ -137,8 +128,7 @@ export default function ApiPlayground() {
       sdk: 'https://github.com/ziontechgroup/security-sdk',
       featured: true
     },
-    {
-      id: 4,
+    { id: 4,
       name: 'Data Analytics Query',
       description: 'Query and analyze large datasets with SQL-like syntax.',
       category: 'data',
@@ -154,13 +144,11 @@ export default function ApiPlayground() {
         { name: 'format', type: 'string', required: false, description: 'Response format (json, csv, xml)' },
         { name: 'timeout', type: 'integer', required: false, description: 'Query timeout in seconds' }
       ],
-      requestExample: {
-        query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10",
+      requestExample: { query: "SELECT user_id, COUNT(*) as login_count FROM user_logins WHERE date >= '2024-01-01' GROUP BY user_id ORDER BY login_count DESC LIMIT 10",
         format: "json",
         timeout: 30
       },
-      responseExample: {
-        results: [
+      responseExample: { results: [
           { user_id: "user123", login_count: 45 },
           { user_id: "user456", login_count: 38 }
         ],
@@ -171,8 +159,7 @@ export default function ApiPlayground() {
       sdk: 'https://github.com/ziontechgroup/data-sdk',
       featured: false
     },
-    {
-      id: 5,
+    { id: 5,
       name: 'IoT Device Management',
       description: 'Manage IoT devices, monitor sensors, and control actuators.',
       category: 'iot',
@@ -188,13 +175,11 @@ export default function ApiPlayground() {
         { name: 'type', type: 'string', required: false, description: 'Device type' },
         { name: 'status', type: 'string', required: false, description: 'Device status' }
       ],
-      requestExample: {
-        location: "building-a",
+      requestExample: { location: "building-a",
         type: "sensor",
         status: "active"
       },
-      responseExample: {
-        devices: [
+      responseExample: { devices: [
           {
             id: "sensor-001",
             name: "Temperature Sensor A1",
@@ -248,7 +233,7 @@ export default function ApiPlayground() {
     }
   };
 
-  const handleApiSelect = (api: any) => {
+  const handleApiSelect = (api: ) => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
@@ -274,7 +259,7 @@ export default function ApiPlayground() {
   const downloadResponse = () => {
     if (!responseData) return;
     
-    const blob = new Blob([responseData], { type: 'application/json' });
+    const blob = new Blob([responseData], { type: 'application/json'     });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -481,8 +466,7 @@ export default function ApiPlayground() {
                                 <span className="text-zion-slate-light text-sm">Request Body (JSON)</span>
                                 <button
                                   onClick={() => copyToClipboard(requestBody)}
-                                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                                >
+                                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
                                   <Copy className="w-4 h-4" />
                                 </button>
                               </div>
@@ -500,8 +484,7 @@ export default function ApiPlayground() {
                             <button
                               onClick={handleTestApi}
                               disabled={isLoading}
-                              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
-                            >
+                              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2">
                               {isLoading ? (
                                 <>
                                   <RefreshCw className="w-5 h-5 animate-spin" />
@@ -526,14 +509,12 @@ export default function ApiPlayground() {
                                   <div className="flex items-center gap-2">
                                     <button
                                       onClick={() => copyToClipboard(responseData)}
-                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                                    >
+                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
                                       <Copy className="w-4 h-4" />
                                     </button>
                                     <button
                                       onClick={downloadResponse}
-                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-                                    >
+                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors">
                                       <Download className="w-4 h-4" />
                                     </button>
                                   </div>
@@ -576,8 +557,7 @@ export default function ApiPlayground() {
                               href={selectedApi.documentation}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2"
-                            >
+                              className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
                               <BookOpen className="w-5 h-5" />
                               View Full Documentation
                             </a>
@@ -600,8 +580,7 @@ export default function ApiPlayground() {
                                   href={selectedApi.sdk}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2"
-                                >
+                                  className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2">
                                   <ExternalLink className="w-5 h-5" />
                                   View SDK
                                 </a>

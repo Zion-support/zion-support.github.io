@@ -28,8 +28,7 @@ import { SEO } from '../components/SEO';
 
 const AIServicesPage = () => {
   const aiServices = [
-    {
-      id: 'ai-consciousness-simulator',
+    { id: 'ai-consciousness-simulator',
       name: 'AI Consciousness Simulator',
       tagline: 'Simulate and test AI consciousness emergence patterns',
       price: '$15,999',
@@ -69,8 +68,7 @@ const AIServicesPage = () => {
       reviews: 18,
       customers: 25
     },
-    {
-      id: 'quantum-emotion-processor',
+    { id: 'quantum-emotion-processor',
       name: 'Quantum Emotion Processor',
       tagline: 'Process and analyze emotions using quantum computing',
       price: '$12,999',
@@ -113,45 +111,38 @@ const AIServicesPage = () => {
   ];
 
   const aiSolutions = [
-    {
-      title: 'AI-Powered Chatbots',
+    { title: 'AI-Powered Chatbots',
       description: 'Intelligent customer service automation',
       benefits: ['24/7 Availability', 'Multi-language Support', 'Seamless Integration']
     },
-    {
-      title: 'Intelligent Document Processing',
+    { title: 'Intelligent Document Processing',
       description: 'Automated data extraction and analysis',
       benefits: ['Faster Processing', 'Reduced Errors', 'Cost Savings']
     },
-    {
-      title: 'Predictive Maintenance',
+    { title: 'Predictive Maintenance',
       description: 'Prevent equipment failures with AI insights',
       benefits: ['Reduced Downtime', 'Lower Costs', 'Improved Safety']
     },
-    {
-      title: 'AI-Driven Marketing',
+    { title: 'AI-Driven Marketing',
       description: 'Personalized campaigns and customer insights',
       benefits: ['Higher Conversion', 'Better Targeting', 'ROI Optimization']
     }
   ];
 
   const caseStudies = [
-    {
-      company: 'TechCorp Industries',
+    { comp: 'TechCorp Industries',
       industry: 'Manufacturing',
       challenge: 'Quality control inefficiencies',
       solution: 'Computer vision system for defect detection',
       results: ['99.2% accuracy', '40% faster inspection', '30% cost reduction']
     },
-    {
-      company: 'Global Finance Ltd',
+    { comp: 'Global Finance Ltd',
       industry: 'Financial Services',
       challenge: 'Fraud detection complexity',
       solution: 'ML-powered risk assessment',
       results: ['95% fraud detection rate', '60% faster processing', '25% false positive reduction']
     },
-    {
-      company: 'HealthTech Solutions',
+    { comp: 'HealthTech Solutions',
       industry: 'Healthcare',
       challenge: 'Patient data analysis',
       solution: 'NLP for medical records',
@@ -208,8 +199,7 @@ const AIServicesPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300"
-                >
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{solution.title}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{solution.description}</p>
                   <ul className="space-y-2">
@@ -235,9 +225,8 @@ const AIServicesPage = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20"
-                >
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.company}</h3>
+                  className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20">
+                  <h3 className="text-xl font-semibold text-white mb-2">{study.comp}</h3>
                   <p className="text-purple-400 text-sm mb-4">{study.industry}</p>
                   <div className="space-y-3">
                     <div>
@@ -274,14 +263,12 @@ const AIServicesPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact" 
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                 Get Started Today
               </Link>
               <Link 
                 to="/services" 
-                className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
+                className="px-8 py-4 border-2 border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
                 View All Services
               </Link>
             </div>

@@ -22,33 +22,27 @@ import {
 
 export default function AICustomerSupport() {
   const features = [
-    {
-      icon: Bot,
+    { icon: Bot,
       title: '24/7 AI Chat Support',
       description: 'Intelligent chatbots that provide instant responses and handle customer inquiries around the clock'
     },
-    {
-      icon: Brain,
+    { icon: Brain,
       title: 'Smart Ticket Routing',
       description: 'AI automatically categorizes and routes support tickets to the right agents for faster resolution'
     },
-    {
-      icon: MessageCircle,
+    { icon: MessageCircle,
       title: 'Multi-Channel Support',
       description: 'Unified support across email, chat, phone, social media, and messaging platforms'
     },
-    {
-      icon: Target,
+    { icon: Target,
       title: 'Personalized Responses',
       description: 'AI learns customer preferences and provides tailored support experiences'
     },
-    {
-      icon: BarChart3,
+    { icon: BarChart3,
       title: 'Predictive Analytics',
       description: 'Identify support trends and proactively address common customer issues'
     },
-    {
-      icon: Zap,
+    { icon: Zap,
       title: 'Automated Workflows',
       description: 'Streamline support processes with intelligent automation and self-service options'
     }
@@ -64,8 +58,7 @@ export default function AICustomerSupport() {
   ];
 
   const pricing = [
-    {
-      name: 'Starter',
+    { name: 'Starter',
       price: '$79',
       period: '/month',
       description: 'Perfect for small businesses starting with AI support',
@@ -80,8 +73,7 @@ export default function AICustomerSupport() {
       cta: 'Start Free Trial',
       popular: false
     },
-    {
-      name: 'Professional',
+    { name: 'Professional',
       price: '$199',
       period: '/month',
       description: 'Ideal for growing businesses with moderate support volume',
@@ -98,8 +90,7 @@ export default function AICustomerSupport() {
       cta: 'Start Free Trial',
       popular: true
     },
-    {
-      name: 'Enterprise',
+    { name: 'Enterprise',
       price: '$499',
       period: '/month',
       description: 'For large organizations with high support demands',
@@ -134,9 +125,8 @@ export default function AICustomerSupport() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-500 to-teal-600 bg-clip-text text-transparent">
                 AI Customer Support
               </h1>
@@ -162,9 +152,8 @@ export default function AICustomerSupport() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 AI-Powered Support Features
               </h2>
@@ -181,8 +170,7 @@ export default function AICustomerSupport() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 group"
-                >
+                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300 group">
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
@@ -200,9 +188,8 @@ export default function AICustomerSupport() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Proven Results
               </h2>
@@ -219,8 +206,7 @@ export default function AICustomerSupport() {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start space-x-3"
-                >
+                  className="flex items-start space-x-3">
                   <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                   <span className="text-gray-300">{benefit}</span>
                 </motion.div>
@@ -235,9 +221,8 @@ export default function AICustomerSupport() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Simple, Transparent Pricing
               </h2>
@@ -305,9 +290,8 @@ export default function AICustomerSupport() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center max-w-4xl mx-auto"
-            >
+              transition={{ duration: 0.8     }}
+              className="text-center max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Customer Support?
               </h2>

@@ -12,20 +12,18 @@ import { Users,
  } from 'lucide-react.ts';
 
 interface Stat {
-
   id: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<>;
   value: string;
   label: string;
   description: string;
   color: string;
   gradient: string;
 
-}
+    }
 
 const stats: Stat[] = [
-  {
-    id: 'clients',
+  { id: 'clients',
     icon: Users,
     value: '500+',
     label: 'Global Clients',
@@ -33,8 +31,7 @@ const stats: Stat[] = [
     color: 'zion-cyan',
     gradient: 'from-zion-cyan to-zion-blue'
   },
-  {
-    id: 'uptime',
+  { id: 'uptime',
     icon: Shield,
     value: '99.99%',
     label: 'Uptime Guarantee',
@@ -42,8 +39,7 @@ const stats: Stat[] = [
     color: 'zion-purple',
     gradient: 'from-zion-purple to-zion-cyan'
   },
-  {
-    id: 'roi',
+  { id: 'roi',
     icon: TrendingUp,
     value: '600%',
     label: 'Average ROI',
@@ -51,8 +47,7 @@ const stats: Stat[] = [
     color: 'zion-blue',
     gradient: 'from-zion-blue to-zion-purple'
   },
-  {
-    id: 'satisfaction',
+  { id: 'satisfaction',
     icon: Star,
     value: '4.9/5',
     label: 'Client Satisfaction',
@@ -60,8 +55,7 @@ const stats: Stat[] = [
     color: 'zion-cyan',
     gradient: 'from-zion-cyan to-zion-purple'
   },
-  {
-    id: 'innovation',
+  { id: 'innovation',
     icon: Zap,
     value: '50+',
     label: 'Patents & Innovations',
@@ -69,8 +63,7 @@ const stats: Stat[] = [
     color: 'zion-purple',
     gradient: 'from-zion-purple to-zion-blue'
   },
-  {
-    id: 'growth',
+  { id: 'growth',
     icon: Rocket,
     value: '300%',
     label: 'Annual Growth',
@@ -80,15 +73,14 @@ const stats: Stat[] = [
   }
 ];
 
-export default function EnhancedStatsSection(...args: any[]): any {
+export default function EnhancedStatsSection(...args: []):  {
   const [countedValues, setCountedValues] = useState<any>({});
   const controls = useAnimation();
-  const [ref, inView] = useInView({
-    threshold: any0.3,
+  const [ref, inView] = useInView({ threshold: 0.3,
     triggerOnce: true
   });
 
-  useEffect(()  => {
+  useEffect(() => {
     if (inView) {
       controls.start('visible');
     }
@@ -141,17 +133,14 @@ export default function EnhancedStatsSection(...args: any[]): any {
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={controls}
-          variants={{
-            visible: {
+          variants={{ visible: {
               opacity: 1,
               y: 0,
-              transition: {
-                duration: 0.6
-              }
+              transition: { duration: 0.6
+                  }
             }
           }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
             Proven Results & Global Impact
           </h2>
@@ -161,32 +150,28 @@ export default function EnhancedStatsSection(...args: any[]): any {
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
           {stats.map((stat, index)  => (
             <motion.div
               key={stat.id}
               initial={{ opacity: 0, y: 30 }}
               animate={controls}
-              variants={{
-                visible: {
+              variants={{ visible: {
                   opacity: 1,
                   y: 0,
-                  transition: {
-                    duration: 0.6,
+                  transition: { duration: 0.6,
                     delay: index * 0.1
                   }
                 }
               }}
-              className="group relative"
-            >
+              className="group relative">
               <motion.div
                 className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 text-center overflow-hidden"
-                whileHover={{ 
-                  y: -10,
+                whileHover={{ y: -10,
                   scale: 1.02,
                   borderColor: `rgba(34, 221, 210, 0.5)`
                 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.3     }}
               >
                 {/* Background gradient overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
@@ -194,11 +179,10 @@ export default function EnhancedStatsSection(...args: any[]): any {
                 {/* Icon */}
                 <motion.div
                   className={`w-20 h-20 rounded-3xl bg-gradient-to-r ${stat.gradient} bg-opacity-20 flex items-center justify-center mx-auto mb-6 relative z-10 border border-white/20`}
-                  whileHover={{ 
-                    rotate: 360,
+                  whileHover={{ rotate: 360,
                     scale: 1.1
                   }}
-                  transition={{ duration: 0.6 }}
+                  transition={{ duration: 0.6     }}
                 >
                   <stat.icon className={`w-10 h-10 text-${stat.color}`} />
                 </motion.div>
@@ -206,8 +190,8 @@ export default function EnhancedStatsSection(...args: any[]): any {
                 {/* Value */}
                 <motion.div
                   className="mb-4 relative z-10"
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
+                  initial={{ scale: 0.8     }}
+                  animate={{ scale: 1     }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
                   <span className="text-5xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -241,23 +225,20 @@ export default function EnhancedStatsSection(...args: any[]): any {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={controls}
-          variants={{
-            visible: {
+          variants={{ visible: {
               opacity: 1,
               y: 0,
-              transition: {
-                duration: 0.6,
+              transition: { duration: 0.6,
                 delay: 0.6
               }
             }
           }}
-          className="mt-16"
-        >
+          className="mt-16">
           <div className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-3xl p-8 lg:p-12 text-center">
             <motion.div
               className="w-20 h-20 rounded-full bg-gradient-to-r from-zion-cyan to-zion-purple flex items-center justify-center mx-auto mb-6"
-              whileHover={{ rotate: 360 }}
-              transition={{ duration: 0.6 }}
+              whileHover={{ rotate: 360     }}
+              transition={{ duration: 0.6     }}
             >
               <Award className="w-10 h-10 text-white" />
             </motion.div>

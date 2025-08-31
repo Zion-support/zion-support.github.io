@@ -139,7 +139,7 @@ export default function ServicesPage() {
             className="text-center max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h1 className="heading-responsive font-bold mb-6">
               <span className="text-gradient">Innovative Micro SAAS</span>
@@ -207,7 +207,7 @@ export default function ServicesPage() {
             className="flex flex-wrap gap-3 mb-8 justify-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             {categories.map((category) => (
               <button
@@ -239,8 +239,7 @@ export default function ServicesPage() {
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>{range.name}</option>
                   ))}
@@ -253,8 +252,7 @@ export default function ServicesPage() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-                >
+                  className="bg-zion-slate-light/10 border border-zion-cyan/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan">
                   {sortOptions.map((option) => (
                     <option key={option.id} value={option.id}>{option.name}</option>
                   ))}
@@ -276,10 +274,10 @@ export default function ServicesPage() {
             {sortedServices.length > 0 ? (
               <motion.div 
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.5 }}
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                exit={{ opacity: 0     }}
+                transition={{ duration: 0.5     }}
               >
                 {sortedServices.map((service, index) => (
                   <motion.div
@@ -288,13 +286,13 @@ export default function ServicesPage() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    whileHover={{ y: -10 }}
+                    whileHover={{ y: -10     }}
                   >
                     {/* Service Header */}
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`w-12 h-12 bg-gradient-to-r ${getCategoryColor(service.category)} rounded-xl flex items-center justify-center`}>
-                          {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white" })}
+                          {getCategoryIcon(service.category) && React.createElement(getCategoryIcon(service.category), { className: "w-6 h-6 text-white"     })}
                         </div>
                         <div className="text-right">
                           <div className="text-2xl font-bold text-zion-cyan">${service.price.toLocaleString()}</div>
@@ -365,8 +363,7 @@ export default function ServicesPage() {
                       
                       <Link
                         to={`/services/${service.id}`}
-                        className="btn-futuristic px-4 py-2 text-sm"
-                      >
+                        className="btn-futuristic px-4 py-2 text-sm">
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
@@ -377,9 +374,9 @@ export default function ServicesPage() {
             ) : (
               <motion.div 
                 className="text-center py-16"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={{ opacity: 0     }}
+                animate={{ opacity: 1     }}
+                exit={{ opacity: 0     }}
               >
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -392,8 +389,7 @@ export default function ServicesPage() {
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
                   }}
-                  className="btn-futuristic px-6 py-3"
-                >
+                  className="btn-futuristic px-6 py-3">
                   View All Services
                 </button>
               </motion.div>
@@ -409,7 +405,7 @@ export default function ServicesPage() {
             className="text-center mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6     }}
           >
             <h2 className="heading-responsive font-bold mb-4">
               <span className="text-gradient">Specialized Solutions</span>
@@ -427,7 +423,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5     }}
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Rocket className="w-8 h-8 text-white" />
@@ -447,8 +443,7 @@ export default function ServicesPage() {
                 
                 <Link
                   to={`/services/${service.id}`}
-                  className="btn-neon w-full"
-                >
+                  className="btn-neon w-full">
                   Explore Solution
                 </Link>
               </motion.div>
@@ -463,7 +458,7 @@ export default function ServicesPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8     }}
           >
             <h2 className="heading-responsive font-bold mb-6">
               Ready to Transform Your Business?
@@ -476,16 +471,14 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="btn-futuristic px-8 py-4 text-lg"
-              >
+                className="btn-futuristic px-8 py-4 text-lg">
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Free Consultation
               </Link>
               
               <a
                 href="tel:+13024640950"
-                className="btn-neon px-8 py-4 text-lg"
-              >
+                className="btn-neon px-8 py-4 text-lg">
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now: +1 302 464 0950
               </a>

@@ -24,20 +24,17 @@ export default function AIEdgeComputingPlatform() {
   ];
 
   const pricing = [
-    { 
-      name: 'Starter', 
+    { name: 'Starter', 
       price: '$499/mo', 
       features: ['Up to 50 edge devices', 'Basic edge processing', 'Standard monitoring', 'Email support', 'Monthly reports'],
       popular: false
     },
-    { 
-      name: 'Professional', 
+    { name: 'Professional', 
       price: '$1,199/mo', 
       features: ['Up to 200 edge devices', 'Advanced AI analytics', 'Real-time processing', 'Priority support', 'Custom workflows', 'API access'],
       popular: true
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$3,499/mo', 
       features: ['Unlimited edge devices', 'Full AI suite', 'Custom edge models', 'Dedicated support', 'White-label solutions', 'Advanced integrations'],
       popular: false
@@ -287,8 +284,7 @@ export default function AIEdgeComputingPlatform() {
             href="https://ziontechgroup.com" 
             target="_blank" 
             rel="noreferrer" 
-            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold"
-          >
+            className="inline-flex items-center text-teal-600 hover:text-teal-700 font-semibold">
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </div>

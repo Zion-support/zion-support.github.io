@@ -13,18 +13,15 @@ export default function AISecurityAwareness() {
   ];
 
   const tiers = [
-    { 
-      name: 'Developer', 
+    { name: 'Developer', 
       price: '$149/mo', 
       details: ['Up to 50 employees', 'Basic AI features', 'Standard awareness', 'Email support'] 
     },
-    { 
-      name: 'Business', 
+    { name: 'Business', 
       price: '$449/mo', 
       details: ['Up to 200 employees', 'Advanced AI features', 'Enhanced awareness', 'Priority support'] 
     },
-    { 
-      name: 'Enterprise', 
+    { name: 'Enterprise', 
       price: '$1,199/mo', 
       details: ['Unlimited employees', 'Custom AI models', 'Full awareness suite', '24/7 dedicated support'] 
     },

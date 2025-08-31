@@ -17,17 +17,15 @@ export const securityConfig = {
   },
 
   // Rate limiting configuration
-  rateLimit: {
-    windowMs: 15 * 60 * 1000, // 15 minutes
+  rateLimit: { windowMs: 15 * 60 * 1000, // 15 minutes
     max: 100, // limit each IP to 100 requests per windowMs
-    message: 'Too many requests from this IP, please try again later.',
+    message: 'Too m requests from this IP, please try again later.',
     standardHeaders: true,
     legacyHeaders: false,
   },
 
   // Input validation patterns
-  validation: {
-    email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+  validation: { email: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     phone: /^\+?[\d\s\-\(\)]{10,}$/,
     name: /^[a-zA-Z\s\-']{2,50}$/,
     username: /^[a-zA-Z0-9_-]{3,20}$/,
@@ -39,13 +37,13 @@ export const securityConfig = {
   },
 
   // Security headers
-  headers: {
+  headers: {  
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
-    'X-XSS-Protection': '1; mode=block',
+    'X-XSS-Protection': '1 mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'geolocation=(), microphone=(), camera=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
+    'Strict-Transport-Security': 'max-age=31536000 includeSubDomains'
   }
 };
 
@@ -89,10 +87,9 @@ export const sanitizeInput = {
 };
 
 // Validation functions
-export const validateInput = {
-  email: (email: string): boolean => {
+export const validateInput = { email: (email: string): boolean => {
     return securityConfig.validation.email.test(email);
-  },
+      },
 
   phone: (phone: string): boolean => {
     return securityConfig.validation.phone.test(phone);
@@ -128,10 +125,9 @@ export const validateInput = {
 };
 
 // CSRF protection utilities
-export const csrfProtection = {
-  generateToken: (): string => {
+export const csrfProtection = { generateToken: (): string => {
     return Math.random().toString(36).substring(2) + Date.now().toString(36);
-  },
+      },
 
   validateToken: (token: string, storedToken: string): boolean => {
     return token === storedToken && token.length > 0;
@@ -139,12 +135,11 @@ export const csrfProtection = {
 };
 
 // Password strength checker
-export const passwordStrength = {
-  check: (password: string): {
+export const passwordStrength = { check: (password: string): {  
     score: number;
-    feedback: string[];
-    strength: 'weak' | 'medium' | 'strong' | 'very-strong';
-  } => {
+    feedback: string[]
+    strength: 'weak' | 'medium' | 'strong' | 'very-strong'
+      } => {
     const feedback: string[] = [];
     let score = 0;
 

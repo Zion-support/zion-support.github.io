@@ -34,8 +34,7 @@ import {
 } from "lucide-react";
 export default function MicroSAASServicesPage() {
   const microSAASServices = [
-    {
-      id: "crm-saas",
+    { id: "crm-saas",
       title: "ZionCRM Pro",
       description: "Complete customer relationship management solution with sales automation, lead tracking, and analytics.",
       icon: <Users className="h-8 w-8 text-blue-500" />,
@@ -53,8 +52,7 @@ export default function MicroSAASServicesPage() {
       badge: "Popular",
       link: "https://ziontechgroup.com/zion-crm",
       details: "Streamline your sales process with our comprehensive CRM solution. Track leads, manage contacts, and close more deals with intelligent automation and insights.",
-      pricing: {
-        starter: "$29/month",
+      pricing: { starter: "$29/month",
         professional: "$79/month",
         enterprise: "$199/month"
       },
@@ -62,8 +60,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.8,
       reviewCount: 342
     },
-    {
-      id: "project-management",
+    { id: "project-management",
       title: "ZionProject Hub",
       description: "Project management platform with task tracking, team collaboration, and resource management.",
       icon: <Calendar className="h-8 w-8 text-green-500" />,
@@ -81,8 +78,7 @@ export default function MicroSAASServicesPage() {
       badge: "Essential",
       link: "https://ziontechgroup.com/zion-project",
       details: "Keep your projects on track with our intuitive project management platform. Collaborate with your team, track progress, and deliver results on time.",
-      pricing: {
-        starter: "$19/month",
+      pricing: { starter: "$19/month",
         professional: "$49/month",
         enterprise: "$99/month"
       },
@@ -90,8 +86,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.7,
       reviewCount: 267
     },
-    {
-      id: "analytics-platform",
+    { id: "analytics-platform",
       title: "ZionAnalytics",
       description: "Business intelligence platform with real-time dashboards, reporting, and data visualization.",
       icon: <BarChart3 className="h-8 w-8 text-purple-500" />,
@@ -109,8 +104,7 @@ export default function MicroSAASServicesPage() {
       badge: "Insightful",
       link: "https://ziontechgroup.com/zion-analytics",
       details: "Transform your data into actionable insights with our powerful analytics platform. Create custom dashboards, generate reports, and make data-driven decisions.",
-      pricing: {
-        starter: "$39/month",
+      pricing: { starter: "$39/month",
         professional: "$89/month",
         enterprise: "$199/month"
       },
@@ -118,8 +112,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.9,
       reviewCount: 189
     },
-    {
-      id: "communication-tool",
+    { id: "communication-tool",
       title: "ZionChat",
       description: "Team communication platform with chat, video calls, and file sharing capabilities.",
       icon: <MessageSquare className="h-8 w-8 text-orange-500" />,
@@ -137,8 +130,7 @@ export default function MicroSAASServicesPage() {
       badge: "Collaborative",
       link: "https://ziontechgroup.com/zion-chat",
       details: "Connect your team with our modern communication platform. Chat, call, and collaborate seamlessly across all devices and platforms.",
-      pricing: {
-        starter: "$15/month",
+      pricing: { starter: "$15/month",
         professional: "$39/month",
         enterprise: "$79/month"
       },
@@ -146,8 +138,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.6,
       reviewCount: 198
     },
-    {
-      id: "document-management",
+    { id: "document-management",
       title: "ZionDocs",
       description: "Document management system with version control, collaboration, and secure storage.",
       icon: <FileText className="h-8 w-8 text-cyan-500" />,
@@ -165,8 +156,7 @@ export default function MicroSAASServicesPage() {
       badge: "Secure",
       link: "https://ziontechgroup.com/zion-docs",
       details: "Organize and secure your documents with our enterprise-grade document management system. Collaborate with your team while maintaining version control and security.",
-      pricing: {
-        starter: "$25/month",
+      pricing: { starter: "$25/month",
         professional: "$59/month",
         enterprise: "$129/month"
       },
@@ -174,8 +164,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.8,
       reviewCount: 156
     },
-    {
-      id: "payment-processor",
+    { id: "payment-processor",
       title: "ZionPay",
       description: "Payment processing solution with multiple payment methods, invoicing, and subscription management.",
       icon: <CreditCard className="h-8 w-8 text-emerald-500" />,
@@ -193,8 +182,7 @@ export default function MicroSAASServicesPage() {
       badge: "Free",
       link: "https://ziontechgroup.com/zion-pay",
       details: "Accept payments from customers worldwide with our secure payment processing solution. Support multiple payment methods and automate your billing processes.",
-      pricing: {
-        starter: "2.9% + $0.30",
+      pricing: { starter: "2.9% + $0.30",
         professional: "2.5% + $0.30",
         enterprise: "2.2% + $0.30"
       },
@@ -202,8 +190,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.9,
       reviewCount: 423
     },
-    {
-      id: "marketing-automation",
+    { id: "marketing-automation",
       title: "ZionMarketing",
       description: "Marketing automation platform with email campaigns, lead nurturing, and conversion tracking.",
       icon: <BarChart className="h-8 w-8 text-pink-500" />,
@@ -221,8 +208,7 @@ export default function MicroSAASServicesPage() {
       badge: "Automated",
       link: "https://ziontechgroup.com/zion-marketing",
       details: "Automate your marketing efforts and nurture leads effectively with our comprehensive marketing automation platform. Track conversions and optimize your campaigns.",
-      pricing: {
-        starter: "$49/month",
+      pricing: { starter: "$49/month",
         professional: "$99/month",
         enterprise: "$199/month"
       },
@@ -230,8 +216,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.7,
       reviewCount: 234
     },
-    {
-      id: "inventory-management",
+    { id: "inventory-management",
       title: "ZionInventory",
       description: "Inventory management system with stock tracking, order management, and supplier management.",
       icon: <Building className="h-8 w-8 text-indigo-500" />,
@@ -249,8 +234,7 @@ export default function MicroSAASServicesPage() {
       badge: "Efficient",
       link: "https://ziontechgroup.com/zion-inventory",
       details: "Keep track of your inventory in real-time with our comprehensive inventory management system. Prevent stockouts and optimize your supply chain.",
-      pricing: {
-        starter: "$35/month",
+      pricing: { starter: "$35/month",
         professional: "$79/month",
         enterprise: "$149/month"
       },
@@ -258,8 +242,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.8,
       reviewCount: 178
     },
-    {
-      id: "hr-management",
+    { id: "hr-management",
       title: "ZionHR",
       description: "Human resources management platform with employee onboarding, time tracking, and performance management.",
       icon: <Users className="h-8 w-8 text-teal-500" />,
@@ -277,8 +260,7 @@ export default function MicroSAASServicesPage() {
       badge: "Comprehensive",
       link: "https://ziontechgroup.com/zion-hr",
       details: "Streamline your HR processes with our comprehensive human resources management platform. Manage employees, track performance, and ensure compliance.",
-      pricing: {
-        starter: "$45/month",
+      pricing: { starter: "$45/month",
         professional: "$89/month",
         enterprise: "$179/month"
       },
@@ -286,8 +268,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.6,
       reviewCount: 145
     },
-    {
-      id: "accounting-software",
+    { id: "accounting-software",
       title: "ZionBooks",
       description: "Cloud-based accounting software with invoicing, expense tracking, and financial reporting.",
       icon: <BarChart3 className="h-8 w-8 text-amber-500" />,
@@ -305,8 +286,7 @@ export default function MicroSAASServicesPage() {
       badge: "Financial",
       link: "https://ziontechgroup.com/zion-books",
       details: "Manage your business finances with our cloud-based accounting software. Create invoices, track expenses, and generate comprehensive financial reports.",
-      pricing: {
-        starter: "$30/month",
+      pricing: { starter: "$30/month",
         professional: "$69/month",
         enterprise: "$129/month"
       },
@@ -314,8 +294,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.8,
       reviewCount: 267
     },
-    {
-      id: "ecommerce-platform",
+    { id: "ecommerce-platform",
       title: "ZionShop",
       description: "E-commerce platform with online store creation, payment processing, and inventory management.",
       icon: <Globe className="h-8 w-8 text-red-500" />,
@@ -333,8 +312,7 @@ export default function MicroSAASServicesPage() {
       badge: "Complete",
       link: "https://ziontechgroup.com/zion-shop",
       details: "Create and manage your online store with our comprehensive e-commerce platform. Sell products, process payments, and grow your business online.",
-      pricing: {
-        starter: "$40/month",
+      pricing: { starter: "$40/month",
         professional: "$89/month",
         enterprise: "$199/month"
       },
@@ -342,8 +320,7 @@ export default function MicroSAASServicesPage() {
       rating: 4.7,
       reviewCount: 198
     },
-    {
-      id: "learning-platform",
+    { id: "learning-platform",
       title: "ZionAcademy",
       description: "Online learning management system with course creation, student management, and progress tracking.",
       icon: <FileText className="h-8 w-8 text-violet-500" />,
@@ -361,8 +338,7 @@ export default function MicroSAASServicesPage() {
       badge: "Educational",
       link: "https://ziontechgroup.com/zion-academy",
       details: "Create and deliver online courses with our comprehensive learning management system. Engage students and track their progress effectively.",
-      pricing: {
-        starter: "$55/month",
+      pricing: { starter: "$55/month",
         professional: "$109/month",
         enterprise: "$249/month"
       },
@@ -546,7 +522,7 @@ export default function MicroSAASServicesPage() {
           </h2>
           <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
             Start with a free trial and see how our micro SAAS solutions can streamline your operations, 
-            improve productivity, and drive growth. No long-term contracts, cancel anytime.
+            improve productivity, and drive growth. No long-term contracts, cancel time.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-8 py-3">

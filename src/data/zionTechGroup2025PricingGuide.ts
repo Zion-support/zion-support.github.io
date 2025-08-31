@@ -8,7 +8,7 @@ export interface PricingTier {
   bestFor: string[];
   popular?: boolean;
   savings?: string;
-}
+    }
 
 export interface ServicePricing {
   id: string;
@@ -16,32 +16,29 @@ export interface ServicePricing {
   description: string;
   category: string;
   pricingTiers: PricingTier[];
-  marketComparison: {
+  marketComparison: {  
     averageMarketPrice: string;
     ourPrice: string;
-    savings: string;
-    valueProposition: string;
-  };
+    savings: string
+    valueProposition: string
+      };
   features: string[];
   benefits: string[];
   useCases: string[];
-  contactInfo: {
-    mobile: string;
+  contactInfo: { mobile: string;
     email: string;
-    address: string;
-    website: string;
-  };
+    address: string
+    website: string
+      };
 }
 
 export const zionTechGroup2025PricingGuide: ServicePricing[] = [
-  {
-    id: 'ai-autonomous-business-manager',
+  { id: 'ai-autonomous-business-manager',
     title: 'AI Autonomous Business Manager',
     description: 'Fully autonomous AI system that manages business operations, decision-making, and strategic planning.',
     category: 'AI Solutions',
     pricingTiers: [
-      {
-        name: 'Starter',
+      { name: 'Starter',
         price: '$1,500',
         billing: 'month',
         description: 'Perfect for small businesses starting their AI journey',
@@ -64,8 +61,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Local service providers'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$2,500',
         billing: 'month',
         description: 'Advanced features for growing businesses',
@@ -92,8 +88,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$4,000',
         billing: 'month',
         description: 'Complete solution for large enterprises',
@@ -121,8 +116,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$5,000',
+    marketComparison: { averageMarketPrice: '$5,000',
       ourPrice: '$2,500',
       savings: '50%',
       valueProposition: 'Advanced AI capabilities at half the market price with superior features'
@@ -154,21 +148,18 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Startup scaling and management',
       'Multi-location business coordination'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'ai-content-optimization-suite-pro',
+  { id: 'ai-content-optimization-suite-pro',
     title: 'AI Content Optimization Suite Pro',
     description: 'Advanced AI-powered content creation, optimization, and distribution platform.',
     category: 'AI Solutions',
     pricingTiers: [
-      {
-        name: 'Basic',
+      { name: 'Basic',
         price: '$800',
         billing: 'month',
         description: 'Essential content optimization for small teams',
@@ -191,8 +182,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Startups'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$1,800',
         billing: 'month',
         description: 'Advanced features for professional content teams',
@@ -221,8 +211,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$3,500',
         billing: 'month',
         description: 'Complete content management solution for large organizations',
@@ -250,8 +239,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$2,500',
+    marketComparison: { averageMarketPrice: '$2,500',
       ourPrice: '$1,800',
       savings: '28%',
       valueProposition: 'Professional-grade content optimization with advanced AI capabilities'
@@ -283,21 +271,18 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'B2B marketing teams',
       'Social media managers'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'zero-trust-network-architecture',
+  { id: 'zero-trust-network-architecture',
     title: 'Zero Trust Network Architecture',
     description: 'Comprehensive zero-trust security implementation with continuous verification.',
     category: 'Cybersecurity',
     pricingTiers: [
-      {
-        name: 'Foundation',
+      { name: 'Foundation',
         price: '$2,000',
         billing: 'month',
         description: 'Basic zero-trust implementation for small organizations',
@@ -321,8 +306,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Basic compliance needs'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$3,500',
         billing: 'month',
         description: 'Advanced zero-trust security for growing businesses',
@@ -351,8 +335,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$6,000',
         billing: 'month',
         description: 'Complete zero-trust solution for large enterprises',
@@ -381,8 +364,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$5,000',
+    marketComparison: { averageMarketPrice: '$5,000',
       ourPrice: '$3,500',
       savings: '30%',
       valueProposition: 'Enterprise-grade zero-trust security at competitive pricing'
@@ -414,21 +396,18 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Enterprise businesses',
       'Compliance-focused industries'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'cloud-finops-optimizer',
+  { id: 'cloud-finops-optimizer',
     title: 'Cloud FinOps Optimizer',
     description: 'Intelligent cloud cost optimization platform with real-time analysis.',
     category: 'Cloud & DevOps',
     pricingTiers: [
-      {
-        name: 'Starter',
+      { name: 'Starter',
         price: '$800',
         billing: 'month',
         description: 'Basic cloud cost optimization for small cloud users',
@@ -451,8 +430,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Basic cloud needs'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$1,500',
         billing: 'month',
         description: 'Advanced cloud cost optimization for growing businesses',
@@ -481,8 +459,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$3,000',
         billing: 'month',
         description: 'Complete FinOps solution for large enterprises',
@@ -511,8 +488,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$2,200',
+    marketComparison: { averageMarketPrice: '$2,200',
       ourPrice: '$1,500',
       savings: '32%',
       valueProposition: 'Advanced FinOps capabilities with significant cost savings'
@@ -544,21 +520,18 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Enterprise cloud users',
       'Startup cloud optimization'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     }
   },
-  {
-    id: 'quantum-computing-platform',
+  { id: 'quantum-computing-platform',
     title: 'Quantum Computing Platform',
     description: 'Next-generation quantum computing platform for complex problem-solving.',
     category: 'Emerging Tech',
     pricingTiers: [
-      {
-        name: 'Research',
+      { name: 'Research',
         price: '$3,000',
         billing: 'month',
         description: 'Basic quantum computing access for research purposes',
@@ -581,8 +554,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
           'Basic quantum needs'
         ]
       },
-      {
-        name: 'Professional',
+      { name: 'Professional',
         price: '$5,000',
         billing: 'month',
         description: 'Advanced quantum computing for professional applications',
@@ -611,8 +583,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ],
         popular: true
       },
-      {
-        name: 'Enterprise',
+      { name: 'Enterprise',
         price: '$10,000',
         billing: 'month',
         description: 'Complete quantum computing solution for enterprises',
@@ -641,8 +612,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
         ]
       }
     ],
-    marketComparison: {
-      averageMarketPrice: '$8,000',
+    marketComparison: { averageMarketPrice: '$8,000',
       ourPrice: '$5,000',
       savings: '37.5%',
       valueProposition: 'Advanced quantum computing at competitive pricing with superior capabilities'
@@ -674,8 +644,7 @@ export const zionTechGroup2025PricingGuide: ServicePricing[] = [
       'Pharmaceutical research',
       'Advanced computing'
     ],
-    contactInfo: {
-      mobile: '+1 302 464 0950',
+    contactInfo: { mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
