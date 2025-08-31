@@ -235,6 +235,30 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Content Studio
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-business-intelligence-dashboard" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <BarChart3 className="w-3 h-3 mr-2" />
+                        AI BI Dashboard
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <MessageCircle className="w-3 h-3 mr-2" />
+                        AI Support Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI Project Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-marketing-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Marketing Automation
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 

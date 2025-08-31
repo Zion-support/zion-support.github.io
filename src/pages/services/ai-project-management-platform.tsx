@@ -1,529 +1,328 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  Brain,
-  Users,
-  Calendar,
-  TrendingUp,
-  Shield,
-  Zap,
-  CheckCircle,
-=======
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
-import { Brain, 
+import { 
+  Workflow, 
   Users, 
   Calendar, 
-  TrendingUp, 
-  Shield, 
+  Target, 
   Zap, 
-  CheckCircle, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  Brain, 
+  CheckCircle,
   ArrowRight,
-  Clock,
-  Target,
-  BarChart3,
-  MessageSquare,
-  FileText,
-  GitBranch,
-  AlertTriangle,
   Star,
-  DollarSign,
+  Clock,
   Globe,
+  Database,
+  Activity,
+  Eye,
+  Settings,
+  Download,
+  Share2,
+  Filter,
+  Search,
+  AlertTriangle,
+  Lightbulb,
+  BarChart3,
+  TrendingUp,
+  Cpu,
+  Network,
   Smartphone,
-  Cloud
-<<<<<<< HEAD
-export default function AIProjectManagementPlatform() {
-=======
- } from 'lucide-react';
+  Lock,
+  BarChart,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  ShieldCheck,
+  Globe2,
+  Play,
+  FileText,
+  PieChart,
+  LineChart,
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Settings as SettingsIcon,
+  Download as DownloadIcon,
+  Share2 as Share2Icon,
+  Filter as FilterIcon,
+  Search as SearchIcon,
+  AlertTriangle as AlertTriangleIcon,
+  Lightbulb as LightbulbIcon
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function AIProjectManagementPlatform(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function AIProjectManagementPlatform() {
   const features = [
     {
       icon: Brain,
-      title: 'AI-Powered Task Prioritization',
-      description: 'Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, and team capacity'
+      title: "AI-Powered Planning",
+      description: "Intelligent project planning with automated task breakdown, resource allocation, and timeline optimization",
+      benefits: ["Smart task decomposition", "Resource optimization", "Risk assessment", "Timeline prediction"]
+    },
+    {
+      icon: Workflow,
+      title: "Intelligent Workflow Automation",
+      description: "Automate repetitive tasks, approvals, and workflows with AI-driven decision making",
+      benefits: ["Process automation", "Smart routing", "Approval workflows", "Status tracking"]
     },
     {
       icon: Users,
-      title: 'Smart Team Collaboration',
-      description: 'AI-driven team matching and workload balancing for optimal project execution'
+      title: "Team Collaboration Hub",
+      description: "Centralized platform for team communication, file sharing, and real-time collaboration",
+      benefits: ["Real-time chat", "File management", "Version control", "Team analytics"]
     },
     {
-      icon: Calendar,
-      title: 'Predictive Timeline Management',
-      description: 'Machine learning models predict project delays and suggest mitigation strategies'
+      icon: Target,
+      title: "Smart Goal Tracking",
+      description: "AI-powered goal setting, progress monitoring, and predictive completion analysis",
+      benefits: ["Goal visualization", "Progress tracking", "Milestone management", "Completion prediction"]
     },
     {
-      icon: TrendingUp,
-      title: 'Performance Analytics',
-      description: 'Real-time insights into team productivity, project health, and resource utilization'
-    },
-    {
-      icon: Shield,
-      title: 'Risk Assessment & Mitigation',
-<<<<<<< HEAD
-      description: 'AI continuously monitors project risks and provides proactive recommendations'
+      icon: BarChart3,
+      title: "Advanced Analytics & Reporting",
+      description: "Comprehensive project insights with predictive analytics and performance optimization",
+      benefits: ["Performance metrics", "Predictive analytics", "Custom reports", "Data visualization"]
     },
     {
       icon: Zap,
-      title: 'Automated Reporting',
-      description: 'Intelligent report generation with customizable dashboards and stakeholder updates'
-
-=======
-      description: 'AI continuously monitors project risks and provides proactive recommendations';
-    },;
-    {;
-      icon: Zap,;
-      title: 'Automated Reporting',;
-      description: 'Intelligent report generation with customizable dashboards and stakeholder updates';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      title: "Resource Management",
+      description: "Intelligent resource allocation, capacity planning, and workload optimization",
+      benefits: ["Resource allocation", "Capacity planning", "Workload balancing", "Skill matching"]
+    }
   ];
 
   const pricingPlans = [
     {
-      name: 'Starter',
-      price: '$299',
-      period: '/month',
-      description: 'Perfect for small teams and startups',
+      name: "Starter",
+      price: "$99",
+      period: "/month",
+      description: "Perfect for small teams and startups",
       features: [
-        'Up to 10 team members',
-        'Basic AI task prioritization',
-        'Standard project templates',
-        'Email support',
-        'Basic analytics dashboard',
-        'Mobile app access'
+        "Up to 10 team members",
+        "Basic project templates",
+        "Task management",
+        "Basic reporting",
+        "Email support",
+        "Mobile app access"
       ],
+      cta: "Start Free Trial",
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$599',
-      period: '/month',
-      description: 'Ideal for growing businesses',
+      name: "Professional",
+      price: "$299",
+      period: "/month",
+      description: "Ideal for growing teams and businesses",
       features: [
-        'Up to 50 team members',
-        'Advanced AI features',
-        'Custom project templates',
-        'Priority support',
-        'Advanced analytics',
-        'API access',
-        'Integrations (Slack, Jira, etc.)',
-        'White-label options'
+        "Up to 50 team members",
+        "Advanced project templates",
+        "AI-powered planning",
+        "Advanced analytics",
+        "Priority support",
+        "Custom integrations",
+        "Advanced workflows",
+        "Resource management"
       ],
+      cta: "Start Free Trial",
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$1,299',
-      period: '/month',
-      description: 'For large organizations',
+      name: "Enterprise",
+      price: "$799",
+      period: "/month",
+      description: "For large organizations with complex project needs",
       features: [
-        'Unlimited team members',
-        'Full AI suite',
-        'Custom integrations',
-        'Dedicated support manager',
-<<<<<<< HEAD
-        'Advanced security features',
-        'Custom AI model training',
-        'On-premise deployment options',
-        'SLA guarantees'
+        "Unlimited team members",
+        "Custom project templates",
+        "Advanced AI features",
+        "Custom analytics",
+        "24/7 dedicated support",
+        "Custom development",
+        "Advanced security",
+        "On-premise deployment"
       ],
+      cta: "Contact Sales",
       popular: false
+    }
+  ];
 
-=======
-        'Advanced security features',;
-        'Custom AI model training',;
-        'On-premise deployment options',;
-        'SLA guarantees';
-      ],;
-      popular: false;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  const useCases = [
+    {
+      industry: "Software Development",
+      description: "Manage agile development cycles, sprint planning, and release management with AI insights",
+      metrics: ["Sprint velocity", "Code quality", "Release frequency", "Team productivity"]
+    },
+    {
+      industry: "Construction",
+      description: "Coordinate complex construction projects with resource optimization and timeline management",
+      metrics: ["Project completion", "Resource utilization", "Cost management", "Safety compliance"]
+    },
+    {
+      industry: "Marketing",
+      description: "Execute marketing campaigns with automated workflows and performance tracking",
+      metrics: ["Campaign ROI", "Lead generation", "Conversion rates", "Team efficiency"]
+    },
+    {
+      industry: "Consulting",
+      description: "Manage client projects with intelligent resource allocation and progress tracking",
+      metrics: ["Client satisfaction", "Project profitability", "Resource efficiency", "Delivery time"]
+    }
   ];
 
   const benefits = [
     {
       icon: Clock,
-      title: '30% Faster Project Delivery',
-      description: 'AI optimization reduces project timelines through intelligent resource allocation'
+      title: "Time Savings",
+      description: "Automate routine tasks and reduce manual work by up to 40%"
     },
     {
-      icon: Target,
-      title: '95% On-Time Completion',
-      description: 'Predictive analytics help teams meet deadlines consistently'
-    },
-    {
-      icon: BarChart3,
-      title: '40% Cost Reduction',
-<<<<<<< HEAD
-      description: 'Eliminate waste through AI-driven efficiency improvements'
+      icon: TrendingUp,
+      title: "Improved Efficiency",
+      description: "Optimize workflows and increase team productivity by 30%"
     },
     {
       icon: Users,
-      title: 'Enhanced Team Productivity',
-      description: 'Automated workflows free up time for strategic work'
-
-=======
-      description: 'Eliminate waste through AI-driven efficiency improvements';
-    },;
-    {;
-      icon: Users,;
-      title: 'Enhanced Team Productivity',;
-      description: 'Automated workflows free up time for strategic work';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  ];
-
-  const useCases = [
-    {
-      title: 'Software Development',
-      description: 'Manage complex development cycles with AI-powered sprint planning and resource allocation',
-      icon: GitBranch
+      title: "Better Collaboration",
+      description: "Enhanced team communication and seamless project coordination"
     },
     {
-      title: 'Marketing Campaigns',
-      description: 'Coordinate multi-channel campaigns with intelligent timeline optimization',
-      icon: MessageSquare
-    },
-    {
-      title: 'Construction Projects',
-      description: 'Track progress and manage resources across multiple sites with predictive analytics',
-<<<<<<< HEAD
-      icon: Building
-    },
-    {
-      title: 'Event Planning',
-      description: 'Streamline event coordination with AI-driven task management and vendor coordination',
-      icon: Calendar
-
+      icon: Target,
+      title: "Higher Success Rate",
+      description: "AI-powered insights help complete projects on time and within budget"
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
-      icon: Building;
-    },;
-    {;
-      title: 'Event Planning',;
-      description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
-      icon: Calendar;
-    };
-  ];
-
-  return (
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-        title="AI Project Management Platform - Zion Tech Group"
-        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
-      />
-
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            animate = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+            className="text-center"
+          >
+            <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
+              <Workflow className="w-4 h-4 mr-2" />
               AI-Powered Project Management
             </div>
-
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              The Future of
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent"> Project Management</span>
+            
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              Transform Project Management with
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> AI Intelligence</span>
             </h1>
-
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.
-              Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.
+            
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Revolutionize your project management with AI-powered planning, intelligent automation, and predictive analytics. 
+              Deliver projects on time, within budget, and exceed expectations.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Schedule Demo
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25"
+              >
+                <span className="flex items-center gap-2">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </Link>
+              
+              <button className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300">
+                <span className="flex items-center gap-2">
+                  Watch Demo
+                  <Play className="w-5 h-5" />
+                </span>
               </button>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powered by Advanced AI
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform leverages cutting-edge artificial intelligence to revolutionize how you manage projects
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
-                viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
-
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Proven Results
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Why Choose AI-Powered Project Management?
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join thousands of teams already experiencing the benefits of AI-powered project management
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Discover how AI automation can transform your project delivery and team productivity
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300">{benefit.description}</p>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Industry
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Powerful Features for Modern Project Management
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform adapts to your specific needs, regardless of your industry or project type
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Everything you need to plan, execute, and deliver successful projects with AI intelligence
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
-            {useCases.map((useCase, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  x: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">
-                  <useCase.icon className="w-8 h-8 text-white" />
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 text-lg">{useCase.description}</p>
+                
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400 mb-4">{feature.description}</p>
+                
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
@@ -531,85 +330,40 @@ export default function AIProjectManagementPlatform(...args: []):  {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Plan
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Transparent Pricing
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your business needs
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Choose the plan that best fits your team size and project complexity
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index) => (
               <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-                transition = {
-  { duration: 0.8,
-  delay: index * 0.1 
-
-
-
-
-
-
-}}
+                key={plan.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular
-                    ? 'border-purple-500 ring-2 ring-purple-500/20'
-                    : 'border-gray-700'
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
+                  plan.popular 
+                    ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20' 
+                    : 'border-slate-700/50'
                 }`}
-
+              >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular
                     </span>
                   </div>
@@ -617,28 +371,28 @@ export default function AIProjectManagementPlatform(...args: []):  {
 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
+                  <div className="flex items-baseline justify-center mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-1">{plan.period}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
+                  <p className="text-gray-400">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      {feature}
                     </li>
                   ))}
                 </ul>
 
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                   plan.popular
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
-                    : 'bg-gray-700 text-white hover:bg-gray-600'
+                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                    : 'bg-slate-700 text-white hover:bg-slate-600'
                 }`}>
-                  Get Started
+                  {plan.cta}
                 </button>
               </motion.div>
             ))}
@@ -646,64 +400,101 @@ export default function AIProjectManagementPlatform(...args: []):  {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-
-
-
-
-
-
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
-}}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Industry-Specific Solutions
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Tailored project management solutions for different industries and use cases
+            </p>
+          </motion.div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={useCase.industry}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
+              >
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.industry}</h3>
+                <p className="text-gray-400 mb-4">{useCase.description}</p>
+                
+                <div>
+                  <h4 className="text-cyan-400 font-medium mb-2">Key Metrics:</h4>
+                  <ul className="space-y-1">
+                    {useCase.metrics.map((metric, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                        <Target className="w-3 h-3 text-cyan-400 mr-2" />
+                        {metric}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Project Management?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of teams already experiencing the future of project management
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Join thousands of teams that have already revolutionized their project delivery with AI-powered management
             </p>
-
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-                Start Free Trial
-              </button>
-              <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
-                Contact Sales
-              </button>
+              <Link
+                to="/request-quote"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+              >
+                <span className="flex items-center gap-2">
+                  Get Started Today
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </Link>
+              
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300"
+              >
+                <span className="flex items-center gap-2">
+                  Schedule Demo
+                  <ArrowRight className="w-5 h-5" />
+                </span>
+              </Link>
             </div>
-
-            <p className="text-gray-400 mt-6">
-<<<<<<< HEAD
-              No credit card required • 14-day free trial • Cancel time
-            </p>
           </motion.div>
         </div>
       </section>
     </div>
-=======;
-              No credit card required • 14-day free trial • Cancel anytime;
-            </p>;
-          </motion.div>;
-        </div>;
-      </section>;
-    </div>;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   );
-}}}}}}
+}
+
+// Missing icon components
+const Target = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+  </svg>
+);

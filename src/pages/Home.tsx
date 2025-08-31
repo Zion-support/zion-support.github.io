@@ -356,7 +356,7 @@ const ServicesPreviewSection = React.memo(() => {
       description: "Innovative software-as-a-service solutions for modern businesses",
       href: "/micro-saas",
       color: "from-indigo-500 to-purple-500",
-      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer"]
+      features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
     },
     {
       icon: Zap,

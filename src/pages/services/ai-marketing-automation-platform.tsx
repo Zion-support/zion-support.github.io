@@ -1,17 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageCircle, 
-  Bot, 
+  Megaphone, 
   Users, 
-  Clock, 
+  Target, 
   TrendingUp, 
   Zap, 
-  Shield, 
   Brain, 
   CheckCircle,
   ArrowRight,
   Star,
+  Clock,
   Globe,
   Database,
   Activity,
@@ -23,66 +22,64 @@ import {
   Search,
   AlertTriangle,
   Lightbulb,
-  Phone,
-  Mail,
-  Chat,
-  Video,
-  FileText,
   BarChart3,
-  Target,
-  Cpu,
-  Network,
-  Smartphone,
-  Lock,
-  BarChart,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
-  Workflow,
+  Mail,
+  MessageSquare,
+  Phone,
+  Calendar,
+  FileText,
+  PieChart,
+  LineChart,
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Settings as SettingsIcon,
+  Download as DownloadIcon,
+  Share2 as Share2Icon,
+  Filter as FilterIcon,
+  Search as SearchIcon,
+  AlertTriangle as AlertTriangleIcon,
+  Lightbulb as LightbulbIcon,
   Play
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AICustomerSupportAutomation() {
+export default function AIMarketingAutomationPlatform() {
   const features = [
     {
-      icon: Bot,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand natural language and provide instant, accurate responses 24/7",
-      benefits: ["Natural language processing", "Multi-language support", "Context-aware conversations"]
-    },
-    {
       icon: Brain,
-      title: "Smart Ticket Routing",
-      description: "Automatically categorize and route support tickets to the right agents based on content analysis",
-      benefits: ["Intelligent categorization", "Priority-based routing", "Reduced response times"]
+      title: "AI-Powered Audience Segmentation",
+      description: "Intelligent customer segmentation using machine learning to identify high-value prospects and personalize campaigns",
+      benefits: ["Behavioral analysis", "Predictive modeling", "Dynamic segmentation", "Real-time optimization"]
     },
     {
-      icon: MessageCircle,
-      title: "Omnichannel Support",
-      description: "Unified support across email, chat, social media, and phone with consistent experience",
-      benefits: ["Channel integration", "Unified customer history", "Seamless transitions"]
+      icon: Target,
+      title: "Smart Campaign Automation",
+      description: "Automate marketing campaigns with AI-driven triggers, personalization, and optimization",
+      benefits: ["Trigger-based automation", "Personalized content", "A/B testing", "Performance optimization"]
+    },
+    {
+      icon: Users,
+      title: "Multi-Channel Marketing",
+      description: "Unified platform for email, SMS, social media, and web push notifications with consistent messaging",
+      benefits: ["Channel integration", "Unified analytics", "Cross-channel attribution", "Consistent branding"]
     },
     {
       icon: TrendingUp,
       title: "Predictive Analytics",
-      description: "Anticipate customer needs and potential issues before they arise using AI algorithms",
-      benefits: ["Issue prevention", "Proactive support", "Customer satisfaction improvement"]
+      description: "Forecast campaign performance, customer lifetime value, and optimal send times using AI algorithms",
+      benefits: ["Performance prediction", "Send time optimization", "ROI forecasting", "Customer insights"]
     },
     {
-      icon: Users,
-      title: "Agent Productivity Tools",
-      description: "AI-powered tools that help support agents provide faster, more accurate responses",
-      benefits: ["Response suggestions", "Knowledge base integration", "Performance analytics"]
+      icon: BarChart3,
+      title: "Advanced Reporting & Analytics",
+      description: "Comprehensive marketing insights with real-time dashboards and actionable recommendations",
+      benefits: ["Real-time metrics", "Custom dashboards", "ROI tracking", "Competitive analysis"]
     },
     {
       icon: Zap,
-      title: "Automated Workflows",
-      description: "Streamline support processes with intelligent automation and workflow management",
-      benefits: ["Process automation", "Escalation rules", "SLA management"]
+      title: "Lead Scoring & Nurturing",
+      description: "Intelligent lead scoring and automated nurturing sequences to convert prospects into customers",
+      benefits: ["Behavioral scoring", "Automated nurturing", "Lead qualification", "Conversion optimization"]
     }
   ];
 
@@ -91,11 +88,11 @@ export default function AICustomerSupportAutomation() {
       name: "Starter",
       price: "$199",
       period: "/month",
-      description: "Perfect for small businesses starting with AI support",
+      description: "Perfect for small businesses starting with marketing automation",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
-        "Email & chat support",
+        "Up to 5,000 contacts",
+        "Basic email automation",
+        "Simple templates",
         "Basic analytics",
         "Email support",
         "Standard integrations"
@@ -107,16 +104,16 @@ export default function AICustomerSupportAutomation() {
       name: "Professional",
       price: "$499",
       period: "/month",
-      description: "Ideal for growing companies with moderate support volume",
+      description: "Ideal for growing businesses with moderate marketing needs",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI chatbot",
-        "Omnichannel support",
+        "Up to 25,000 contacts",
+        "Advanced automation",
+        "Multi-channel marketing",
         "Advanced analytics",
         "Priority support",
         "Custom integrations",
-        "Agent productivity tools",
-        "Multi-language support"
+        "AI-powered insights",
+        "Lead scoring"
       ],
       cta: "Start Free Trial",
       popular: true
@@ -125,12 +122,12 @@ export default function AICustomerSupportAutomation() {
       name: "Enterprise",
       price: "$1,299",
       period: "/month",
-      description: "For large organizations with high support volume and complex needs",
+      description: "For large organizations with complex marketing automation needs",
       features: [
-        "Unlimited conversations",
+        "Unlimited contacts",
         "Custom AI models",
-        "Advanced automation",
-        "Predictive analytics",
+        "Advanced personalization",
+        "Custom analytics",
         "24/7 dedicated support",
         "Custom development",
         "Advanced security",
@@ -144,46 +141,46 @@ export default function AICustomerSupportAutomation() {
   const useCases = [
     {
       industry: "E-commerce",
-      description: "Handle product inquiries, order tracking, and returns with intelligent automation",
-      metrics: ["Response time reduction", "Customer satisfaction", "Support cost savings"]
+      description: "Automate abandoned cart recovery, product recommendations, and customer lifecycle marketing",
+      metrics: ["Cart recovery rate", "Customer lifetime value", "Email open rates", "Conversion rates"]
     },
     {
       industry: "SaaS",
-      description: "Provide technical support, feature explanations, and onboarding assistance",
-      metrics: ["Ticket resolution time", "User activation", "Churn reduction"]
+      description: "Automate onboarding sequences, feature adoption campaigns, and churn prevention",
+      metrics: ["User activation", "Feature adoption", "Churn rate", "Customer satisfaction"]
+    },
+    {
+      industry: "B2B",
+      description: "Automate lead nurturing, account-based marketing, and sales enablement campaigns",
+      metrics: ["Lead quality", "Sales cycle length", "Account expansion", "Pipeline velocity"]
     },
     {
       industry: "Healthcare",
-      description: "Manage appointment scheduling, general inquiries, and basic health information",
-      metrics: ["Patient satisfaction", "Staff efficiency", "Wait time reduction"]
-    },
-    {
-      industry: "Financial Services",
-      description: "Handle account inquiries, transaction support, and basic financial guidance",
-      metrics: ["Support efficiency", "Compliance adherence", "Customer retention"]
+      description: "Automate patient communication, appointment reminders, and health education campaigns",
+      metrics: ["Patient engagement", "Appointment attendance", "Health outcomes", "Patient satisfaction"]
     }
   ];
 
   const benefits = [
     {
       icon: Clock,
-      title: "24/7 Availability",
-      description: "Provide instant support around the clock without additional staffing costs"
+      title: "Time Savings",
+      description: "Automate repetitive tasks and save up to 20 hours per week on marketing operations"
     },
     {
       icon: TrendingUp,
-      title: "Increased Efficiency",
-      description: "Handle more support requests with faster response times and automated processes"
+      title: "Increased ROI",
+      description: "Improve campaign performance and achieve up to 40% higher conversion rates"
     },
     {
       icon: Users,
-      title: "Improved Satisfaction",
-      description: "Deliver consistent, accurate, and personalized support experiences"
+      title: "Better Engagement",
+      description: "Deliver personalized content that resonates with your audience and drives engagement"
     },
     {
-      icon: DollarSign,
-      title: "Cost Reduction",
-      description: "Reduce support costs while improving service quality and coverage"
+      icon: Target,
+      title: "Scalable Growth",
+      description: "Scale your marketing efforts efficiently without proportional increases in resources"
     }
   ];
 
@@ -199,18 +196,18 @@ export default function AICustomerSupportAutomation() {
             className="text-center"
           >
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-6">
-              <Bot className="w-4 h-4 mr-2" />
-              AI-Powered Customer Support
+              <Megaphone className="w-4 h-4 mr-2" />
+              AI-Powered Marketing Automation
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Transform Customer Support with
+              Transform Your Marketing with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400"> AI Automation</span>
             </h1>
             
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Revolutionize your customer support with intelligent AI chatbots, automated workflows, and predictive analytics. 
-              Provide 24/7 support while reducing costs and improving customer satisfaction.
+              Revolutionize your marketing with AI-powered automation, intelligent segmentation, and predictive analytics. 
+              Deliver personalized campaigns that convert prospects into loyal customers.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -246,10 +243,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose AI-Powered Support?
+              Why Choose AI-Powered Marketing Automation?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Discover how AI automation can transform your customer support operations
+              Discover how AI automation can transform your marketing performance and customer engagement
             </p>
           </motion.div>
 
@@ -286,10 +283,10 @@ export default function AICustomerSupportAutomation() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful Features for Modern Support
+              Powerful Features for Modern Marketing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to automate and optimize your customer support operations
+              Everything you need to automate and optimize your marketing campaigns with AI intelligence
             </p>
           </motion.div>
 
@@ -338,7 +335,7 @@ export default function AICustomerSupportAutomation() {
               Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Choose the plan that best fits your support needs and scale as you grow
+              Choose the plan that best fits your marketing needs and scale as you grow
             </p>
           </motion.div>
 
@@ -409,7 +406,7 @@ export default function AICustomerSupportAutomation() {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Tailored support automation for different industries and use cases
+              Tailored marketing automation solutions for different industries and use cases
             </p>
           </motion.div>
 
@@ -453,10 +450,10 @@ export default function AICustomerSupportAutomation() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Support?
+              Ready to Transform Your Marketing?
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-              Join thousands of businesses that have already revolutionized their support operations with AI automation
+              Join thousands of businesses that have already revolutionized their marketing with AI automation
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -488,12 +485,6 @@ export default function AICustomerSupportAutomation() {
 }
 
 // Missing icon components
-const DollarSign = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-  </svg>
-);
-
 const Target = ({ className }: { className?: string }) => (
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
