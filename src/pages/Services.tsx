@@ -350,6 +350,52 @@ export default function Services() {
       features: ['Content automation', 'Distribution', 'Analytics', 'A/B testing'],
       pricing: '$179/month',
       featured: false
+    },
+
+    // New Innovative Services 2025
+    {
+      name: 'AI Data Privacy Compliance Platform',
+      description: 'AI-powered data privacy compliance automation for GDPR, CCPA, and more',
+      category: 'AI & Analytics',
+      icon: Shield,
+      href: '/services/ai-data-privacy-compliance-platform',
+      color: 'from-green-600 to-emerald-600',
+      features: ['GDPR automation', 'Data discovery', 'Consent management', 'Compliance reporting'],
+      pricing: 'From $299/month',
+      featured: true
+    },
+    {
+      name: 'AI Carbon Footprint Management',
+      description: 'AI-powered sustainability tracking and carbon footprint optimization',
+      category: 'AI & Analytics',
+      icon: Leaf,
+      href: '/services/ai-carbon-footprint-management-platform',
+      color: 'from-green-600 to-blue-600',
+      features: ['Real-time tracking', 'AI analytics', 'Supply chain monitoring', 'ESG compliance'],
+      pricing: 'From $199/month',
+      featured: true
+    },
+    {
+      name: 'AI Talent Acquisition Platform',
+      description: 'AI-powered recruitment and candidate matching platform',
+      category: 'AI & Analytics',
+      icon: Users,
+      href: '/services/ai-talent-acquisition-platform',
+      color: 'from-blue-600 to-purple-600',
+      features: ['AI matching', 'Automated screening', 'Predictive analytics', 'Multi-channel sourcing'],
+      pricing: 'From $199/month',
+      featured: true
+    },
+    {
+      name: 'AI Customer Experience Analytics',
+      description: 'AI-powered customer experience optimization and sentiment analysis',
+      category: 'AI & Analytics',
+      icon: Heart,
+      href: '/services/ai-customer-experience-analytics-platform',
+      color: 'from-purple-600 to-pink-600',
+      features: ['Sentiment analysis', 'Journey mapping', 'Predictive behavior', 'Personalization'],
+      pricing: 'From $249/month',
+      featured: true
     }
   ];
 

@@ -85,8 +85,17 @@ const AIFinancialTradingPlatform = createLazyComponent(() => import('./pages/ser
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/AISupplyChainOptimizationPlatform'));
 const AIRealEstateInvestmentPlatform = createLazyComponent(() => import('./pages/services/AIRealEstateInvestmentPlatform'));
 
+// New Innovative Services 2025
+const AIDataPrivacyCompliancePlatform = createLazyComponent(() => import('./pages/services/AI-Data-Privacy-Compliance-Platform'));
+const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/AI-Carbon-Footprint-Management-Platform'));
+const AITalentAcquisitionPlatform = createLazyComponent(() => import('./pages/services/AI-Talent-Acquisition-Platform'));
+const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
+
 // New Micro SAAS Services Showcase 2025
 const NewMicroSaasServicesShowcase2025 = createLazyComponent(() => import('./pages/NewMicroSaasServicesShowcase2025'));
+
+// Innovative Services Showcase 2025
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 
 // New pages I've created
 const Careers = createLazyComponent(() => import('./pages/Careers'));
@@ -189,9 +198,16 @@ function App() {
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
                     <Route path="/services/ai-real-estate-investment-platform" element={<AIRealEstateInvestmentPlatform />} />
                     
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-data-privacy-compliance-platform" element={<AIDataPrivacyCompliancePlatform />} />
+                    <Route path="/services/ai-carbon-footprint-management-platform" element={<AICarbonFootprintManagementPlatform />} />
+                    <Route path="/services/ai-talent-acquisition-platform" element={<AITalentAcquisitionPlatform />} />
+                    <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
+                    
                     {/* Showcase pages */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
                     <Route path="/new-micro-saas-services-2025" element={<NewMicroSaasServicesShowcase2025 />} />
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                     
                     {/* 2031 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2031" element={<ZionCuttingEdgeServices2031 />} />
