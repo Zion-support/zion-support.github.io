@@ -89,6 +89,11 @@ const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Team = createLazyComponent(() => import('./pages/Team'));
 const Events = createLazyComponent(() => import('./pages/Events'));
 
+// Additional missing pages
+const ZionHireAI = createLazyComponent(() => import('./pages/ZionHireAI'));
+const EnhancedServices = createLazyComponent(() => import('./pages/EnhancedServices'));
+const ITOnsiteServices = createLazyComponent(() => import('./pages/ITOnsiteServices'));
+
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-zion-blue flex items-center justify-center p-4">
@@ -225,6 +230,11 @@ function App() {
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/team" element={<Team />} />
                     <Route path="/events" element={<Events />} />
+                    
+                    {/* Additional missing pages */}
+                    <Route path="/zion-hire-ai" element={<ZionHireAI />} />
+                    <Route path="/enhanced-services" element={<EnhancedServices />} />
+                    <Route path="/it-onsite-services" element={<ITOnsiteServices />} />
                   </Routes>
                 </AnimatePresence>
               </main>

@@ -133,11 +133,11 @@ export function Footer() {
               <li><Link to="/ai-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services</Link></li>
               <li><Link to="/it-services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">IT Services</Link></li>
               <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SAAS</Link></li>
-              <li><Link to="/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
-              <li><Link to="/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
-              <li><Link to="/quantum-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
-              <li><Link to="/blockchain" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
-              <li><Link to="/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
+              <li><Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+              <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+              <li><Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Computing</Link></li>
+              <li><Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Blockchain Solutions</Link></li>
+              <li><Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Digital Transformation</Link></li>
             </ul>
           </div>
 
@@ -149,13 +149,13 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/enterprise" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Enterprise Solutions</Link></li>
-              <li><Link to="/healthcare" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare Tech</Link></li>
-              <li><Link to="/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Solutions</Link></li>
-              <li><Link to="/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
-              <li><Link to="/retail" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail Solutions</Link></li>
-              <li><Link to="/government" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
-              <li><Link to="/education" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
-              <li><Link to="/startup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Startup Solutions</Link></li>
+              <li><Link to="/services/healthcare-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare Tech</Link></li>
+              <li><Link to="/services/ai-financial-trading-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Financial Solutions</Link></li>
+              <li><Link to="/services/ai-autonomous-manufacturing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Manufacturing</Link></li>
+              <li><Link to="/services/ai-ecommerce-optimization-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Retail Solutions</Link></li>
+              <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Government</Link></li>
+              <li><Link to="/services/ai-educational-content-creation" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Education</Link></li>
+              <li><Link to="/startup-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Startup Solutions</Link></li>
             </ul>
           </div>
 
