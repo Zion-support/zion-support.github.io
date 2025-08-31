@@ -135,7 +135,6 @@ const Services = () => {
   const services = [
     // AI & Automation Services
     {
-<<<<<<< HEAD
       id: 'ai-autonomous-business-operations',
       title: 'AI Autonomous Business Operations Platform',
       description: 'Revolutionary AI platform that autonomously manages and optimizes entire business operations.',
@@ -358,7 +357,6 @@ const Services = () => {
       price: '$4,999/month',
       features: ['Infrastructure monitoring', 'Performance optimization', 'Automated management', '24/7 support'],
       link: '/services/it-infrastructure-management'
-
     }
   ];
 
@@ -408,31 +406,24 @@ const Services = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <Link
+                  to="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center"
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5 ml-2" />
-                </motion.button>
+                </Link>
                 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <Link
+                  to="/comprehensive-services-showcase-2032"
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >
-                  <Phone className="w-4 h-4 mr-2" />
-                  +1 (302) 464-0950
-                </motion.button>
+                  View 2032 Services
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
               </div>
             </motion.div>
           </div>
-          
-          {/* Floating Elements */}
-          <div className="absolute top-20 left-10 w-20 h-20 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute top-40 right-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-pulse delay-1000"></div>
-          <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-zion-cyan/30 rounded-full blur-lg animate-pulse delay-500"></div>
         </section>
 
         {/* Search and Filter Section */}
@@ -642,6 +633,50 @@ const Services = () => {
           </div>
         </section>
 
+        {/* CTA Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Let's discuss how our innovative technology solutions can drive your success and competitive advantage.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
+                >
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/comprehensive-services-showcase-2032"
+                  className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300"
+                >
+                  View 2032 Services
+                </Link>
+                <a
+                  href="tel:+13024640950"
+                  className="bg-transparent border-2 border-blue-400 text-blue-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
+                >
+                  Call Now
+                </a>
+              </div>
+            </motion.div>
+          </div>
+          
+          {/* Floating Elements */}
+          <div className="absolute top-20 left-10 w-20 h-20 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>
+          <div className="absolute top-40 right-20 w-32 h-32 bg-zion-purple/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-zion-cyan/30 rounded-full blur-lg animate-pulse delay-500"></div>
+        </section>
+
         {/* Contact Section */}
         <section className="py-20 bg-zion-slate-dark/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -660,23 +695,21 @@ const Services = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <Link
+                  to="/contact"
                   className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-lg hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-300 flex items-center"
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
-                </motion.button>
+                </Link>
                 
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <a
+                  href="tel:+13024640950"
                   className="px-8 py-4 border border-zion-cyan/30 text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 flex items-center"
                 >
                   <Phone className="w-4 h-4 mr-2" />
                   +1 (302) 464-0950
-                </motion.button>
+                </a>
               </div>
               
               <div className="mt-8 text-zion-slate-light">

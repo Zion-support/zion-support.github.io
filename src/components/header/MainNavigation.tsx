@@ -229,6 +229,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                           <span>Quantum Edge Computing</span>
                         </Link>
                       </li>
+                      <li>
+                        <Link to="/services/ai-cybersecurity-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <Shield className="w-3 h-3 mr-2" />
+                          AI Cybersecurity Platform
+                        </Link>
+                      </li>
                     </ul>
                   </div>
 
@@ -251,6 +257,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/micro-saas-solutions-comprehensive" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                           <Code className="w-3 h-3 mr-2" />
                           Comprehensive Solutions
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-powered-customer-churn-predictor" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <TrendingDown className="w-3 h-3 mr-2" />
+                          AI Customer Churn Predictor
                         </Link>
                       </li>
                       <li>
