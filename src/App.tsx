@@ -103,6 +103,7 @@ const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 // AI Service pages
 const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/AIHealthcareAnalytics'));
+const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pages/services/AICybersecurityThreatIntelligence'));
 const AIFinancialTrading = createLazyComponent(() => import('./pages/services/AIFinancialTrading'));
 const AIContentCreationSuite = createLazyComponent(() => import('./pages/services/AIContentCreationSuite'));
 const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/AIWorkflowOrchestrator'));
@@ -377,6 +378,8 @@ function App(...args: any[]): any {
                     {/* AI Service Routes */}
                     <Route path="/services/ai-legal-document-automation" element={<AILegalDocumentAutomation />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+                    <Route path="/services/ai-cybersecurity-threat-intelligence" element={<AICybersecurityThreatIntelligence />} />
+                    <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-financial-trading" element={<AIFinancialTrading />} />
                     <Route path="/services/ai-content-creation-suite" element={<AIContentCreationSuite />} />
                     <Route path="/services/ai-workflow-orchestrator" element={<AIWorkflowOrchestrator />} />
