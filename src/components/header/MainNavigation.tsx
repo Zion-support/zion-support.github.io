@@ -53,6 +53,9 @@ export function MainNavigation({ className }: { className?: string }) {
                     <li><Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Cybersecurity</Link></li>
                     <li><Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Healthcare</Link></li>
                     <li><Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum AI</Link></li>
+                    <li><Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Neural Network</Link></li>
+                    <li><Link to="/services/ai-autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Autonomous Operations</Link></li>
+                    <li><Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Customer Analytics</Link></li>
                   </ul>
                 </div>
                 <div>
@@ -65,6 +68,7 @@ export function MainNavigation({ className }: { className?: string }) {
                     <li><Link to="/micro-saas" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Micro SaaS</Link></li>
                     <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
                     <li><Link to="/comprehensive-services-showcase-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors">2025 Services</Link></li>
+                    <li><Link to="/innovative-ai-services-showcase-2025" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Services Showcase</Link></li>
                   </ul>
                 </div>
               </div>
