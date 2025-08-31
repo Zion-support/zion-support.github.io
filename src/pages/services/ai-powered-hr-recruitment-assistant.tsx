@@ -2,32 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  BarChart3,
   Users,
-  TrendingUp,
-  Eye,
-  Heart,
-  MessageCircle,
-  Star,
+  Brain,
   Zap,
   Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
+  TrendingUp,
   CheckCircle,
   ArrowRight,
-  Brain,
-  Target,
-  Activity,
-  PieChart,
-  LineChart,
-  BarChart,
-  ScatterPlot,
-  HeatMap,
-  Funnel,
-  UserCheck,
-  UserX,
   Clock,
   DollarSign,
   Award,
@@ -131,94 +112,154 @@ import {
   BatteryFull10,
   BatteryMedium10,
   BatteryLow10,
-  BatteryEmpty10
+  BatteryEmpty10,
+  Target,
+  Activity,
+  BarChart3,
+  PieChart,
+  LineChart,
+  BarChart,
+  ScatterPlot,
+  HeatMap,
+  Funnel,
+  UserCheck,
+  UserX,
+  Eye,
+  Heart,
+  MessageCircle,
+  Star,
+  FileText,
+  Briefcase,
+  Building,
+  Globe,
+  UserPlus,
+  UserMinus,
+  UserCheck2,
+  UserX2,
+  UserPlus2,
+  UserMinus2,
+  UserCheck3,
+  UserX3,
+  UserPlus3,
+  UserMinus3,
+  UserCheck4,
+  UserX4,
+  UserPlus4,
+  UserMinus4,
+  UserCheck5,
+  UserX5,
+  UserPlus5,
+  UserMinus5,
+  UserCheck6,
+  UserX6,
+  UserPlus6,
+  UserMinus6,
+  UserCheck7,
+  UserX7,
+  UserPlus7,
+  UserMinus7,
+  UserCheck8,
+  UserX8,
+  UserPlus8,
+  UserMinus8,
+  UserCheck9,
+  UserX9,
+  UserPlus9,
+  UserMinus9,
+  UserCheck10,
+  UserX10,
+  UserPlus10,
+  UserMinus10
 } from 'lucide-react';
 
-const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
+const AIPoweredHRRecruitmentAssistant: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced natural language processing to understand customer emotions and intent across all communication channels."
+      title: "AI-Powered Candidate Screening",
+      description: "Advanced machine learning algorithms that analyze resumes, assess skills, and rank candidates based on job requirements."
     },
     {
-      icon: <Eye className="w-6 h-6 text-purple-400" />,
-      title: "Real-Time Customer Journey Tracking",
-      description: "Monitor customer interactions across touchpoints with predictive analytics for proactive engagement."
+      icon: <Users className="w-6 h-6 text-purple-400" />,
+      title: "Intelligent Talent Matching",
+      description: "Smart algorithms that match candidates to job openings based on skills, experience, culture fit, and career goals."
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: "Predictive Customer Behavior Modeling",
-      description: "Machine learning algorithms that forecast customer needs and churn risks with 95% accuracy."
+      icon: <Search className="w-6 h-6 text-green-400" />,
+      title: "Automated Sourcing & Outreach",
+      description: "AI-driven candidate sourcing from multiple platforms with personalized outreach campaigns and follow-up automation."
     },
     {
-      icon: <Users className="w-6 h-6 text-blue-400" />,
-      title: "360° Customer Profile Analytics",
-      description: "Comprehensive customer profiles with behavioral patterns, preferences, and lifetime value predictions."
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+      title: "Predictive Analytics",
+      description: "Data-driven insights into hiring trends, candidate success prediction, and recruitment performance optimization."
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-      title: "Advanced Performance Metrics",
-      description: "Customizable dashboards with KPIs, conversion funnels, and ROI tracking across all customer touchpoints."
+      icon: <Shield className="w-6 h-6 text-orange-400" />,
+      title: "Bias-Free Hiring",
+      description: "AI algorithms designed to eliminate unconscious bias and ensure fair, inclusive hiring practices."
     },
     {
-      icon: <Shield className="w-6 h-6 text-red-400" />,
-      title: "Privacy-First Data Collection",
-      description: "GDPR and CCPA compliant data collection with end-to-end encryption and secure analytics processing."
+      icon: <Zap className="w-6 h-6 text-red-400" />,
+      title: "Workflow Automation",
+      description: "Streamlined recruitment processes with automated scheduling, interview coordination, and candidate communication."
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$149",
       period: "/month",
-      description: "Perfect for small businesses starting their CX analytics journey",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 10,000 customer interactions/month",
-        "Basic sentiment analysis",
-        "Standard reporting dashboard",
+        "Up to 50 active job postings",
+        "Basic AI candidate screening",
+        "Standard job board integrations",
         "Email support",
-        "Basic integrations (3 platforms)",
-        "30-day data retention"
+        "Basic analytics dashboard",
+        "Mobile app access",
+        "Up to 5 team members"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$399",
       period: "/month",
-      description: "Ideal for growing companies with advanced analytics needs",
+      description: "Ideal for growing companies and HR teams",
       features: [
-        "Up to 100,000 customer interactions/month",
-        "Advanced AI sentiment analysis",
-        "Custom dashboard creation",
+        "Up to 200 active job postings",
+        "Advanced AI screening & matching",
+        "Premium job board integrations",
         "Priority support",
-        "Advanced integrations (10 platforms)",
-        "90-day data retention",
-        "Predictive analytics",
-        "API access"
+        "Advanced analytics & reporting",
+        "Custom workflow automation",
+        "API access",
+        "Up to 25 team members",
+        "Advanced candidate scoring"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$999",
       period: "/month",
-      description: "For large organizations requiring enterprise-grade solutions",
+      description: "For large organizations with complex hiring needs",
       features: [
-        "Unlimited customer interactions",
+        "Unlimited job postings",
         "Custom AI model training",
         "White-label solutions",
         "24/7 dedicated support",
-        "Unlimited integrations",
-        "Unlimited data retention",
+        "Full analytics suite",
+        "Custom integrations",
         "Advanced security features",
-        "Custom deployment options",
-        "Dedicated account manager"
+        "Unlimited team members",
+        "Dedicated account manager",
+        "On-premise deployment options"
       ],
       popular: false
     }
@@ -226,48 +267,59 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
 
   const benefits = [
     {
-      title: "Increase Customer Retention by 35%",
-      description: "Predict and prevent churn with AI-powered insights and proactive engagement strategies.",
-      icon: <Heart className="w-8 h-8 text-red-400" />
+      title: "Reduce Time-to-Hire by 60%",
+      description: "AI-powered screening and matching dramatically speeds up the recruitment process from weeks to days.",
+      icon: <Clock className="w-8 h-8 text-blue-400" />
     },
     {
-      title: "Boost Customer Satisfaction by 42%",
-      description: "Identify pain points and optimize customer journeys for better experiences across all touchpoints.",
+      title: "Improve Quality of Hire by 45%",
+      description: "Data-driven candidate assessment and predictive analytics ensure better cultural and skill fit.",
       icon: <Star className="w-8 h-8 text-yellow-400" />
     },
     {
-      title: "Reduce Support Costs by 28%",
-      description: "Automate routine inquiries and route complex issues to the right agents for faster resolution.",
+      title: "Cut Recruitment Costs by 35%",
+      description: "Automate routine tasks, reduce agency fees, and optimize advertising spend with targeted campaigns.",
       icon: <DollarSign className="w-8 h-8 text-green-400" />
     },
     {
-      title: "Improve Conversion Rates by 31%",
-      description: "Optimize customer touchpoints based on behavioral data and personalized recommendations.",
-      icon: <TrendingUp className="w-8 h-8 text-blue-400" />
+      title: "Increase Candidate Engagement by 80%",
+      description: "Personalized communication and automated follow-ups keep candidates engaged throughout the process.",
+      icon: <Users className="w-8 h-8 text-purple-400" />
     }
   ];
 
   const useCases = [
     {
-      industry: "E-commerce",
-      description: "Track customer journey from browsing to purchase, optimize product recommendations, and reduce cart abandonment.",
-      metrics: ["Conversion rate", "Average order value", "Customer lifetime value"]
-    },
-    {
-      industry: "SaaS",
-      description: "Monitor user engagement, identify feature adoption patterns, and predict subscription renewals.",
-      metrics: ["User activation rate", "Feature adoption", "Churn prediction"]
+      industry: "Technology",
+      description: "Fast-paced hiring for technical roles with skill assessment and culture fit evaluation.",
+      metrics: ["Time-to-fill", "Technical skill match", "Cultural fit score"]
     },
     {
       industry: "Healthcare",
-      description: "Improve patient experience, track appointment satisfaction, and optimize care delivery processes.",
-      metrics: ["Patient satisfaction", "Appointment adherence", "Care quality scores"]
+      description: "Compliance-focused recruitment with credential verification and specialized skill matching.",
+      metrics: ["Credential verification", "Compliance rate", "Specialty match"]
     },
     {
-      industry: "Financial Services",
-      description: "Enhance customer onboarding, detect fraud patterns, and personalize financial product recommendations.",
-      metrics: ["Onboarding completion", "Fraud detection rate", "Product adoption"]
+      industry: "Finance",
+      description: "Risk-aware hiring with background checks and regulatory compliance monitoring.",
+      metrics: ["Background check completion", "Compliance rate", "Risk assessment"]
+    },
+    {
+      industry: "Manufacturing",
+      description: "High-volume hiring with skill-based matching and safety certification tracking.",
+      metrics: ["Volume processing", "Skill match rate", "Safety compliance"]
     }
+  ];
+
+  const recruitmentStages = [
+    "Job Posting Creation",
+    "Candidate Sourcing",
+    "Resume Screening",
+    "Skill Assessment",
+    "Interview Scheduling",
+    "Reference Checking",
+    "Offer Management",
+    "Onboarding Coordination"
   ];
 
   return (
@@ -284,17 +336,17 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Analytics Platform
+              AI-Powered HR Recruitment
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Transform Customer Experience with
+              Transform Hiring with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}AI Analytics
+                {" "}AI Recruitment Assistant
               </span>
             </h1>
             <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-              Unlock deep insights into customer behavior, predict trends, and deliver exceptional experiences 
-              with our advanced AI-powered customer experience analytics platform.
+              Revolutionize your recruitment process with intelligent candidate screening, 
+              automated sourcing, and data-driven hiring decisions that save time and improve quality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -323,11 +375,11 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Businesses
+              Intelligent Recruitment Features
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive insights and analytics to help you understand 
-              your customers better than ever before.
+              Our AI-powered platform streamlines every aspect of the recruitment process, 
+              from candidate sourcing to final hiring decisions.
             </p>
           </motion.div>
 
@@ -349,8 +401,45 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Recruitment Stages Section */}
       <section className="py-20 bg-zinc-800/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              End-to-End Recruitment Process
+            </h2>
+            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+              Our platform covers every stage of the recruitment lifecycle with AI-powered automation 
+              and intelligent insights.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {recruitmentStages.map((stage, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-cyan-400 font-bold text-sm">{index + 1}</span>
+                </div>
+                <p className="text-sm text-white font-medium">{stage}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -362,7 +451,8 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
               Proven Results Across Industries
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Join thousands of companies that have transformed their customer experience with our platform.
+              Join thousands of companies that have transformed their recruitment process 
+              with AI-powered automation.
             </p>
           </motion.div>
 
@@ -387,7 +477,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zinc-800/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -399,7 +489,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Tailored analytics solutions for different industries with proven success metrics.
+              Tailored recruitment solutions for different industries with proven success metrics.
             </p>
           </motion.div>
 
@@ -432,7 +522,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-zinc-800/20">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -444,7 +534,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your business needs and scale as you grow.
+              Choose the plan that best fits your recruitment needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -505,7 +595,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zinc-800/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -514,11 +604,11 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Experience?
+              Ready to Transform Your Recruitment?
             </h2>
             <p className="text-xl text-zinc-300 mb-8">
-              Join thousands of businesses that trust our AI-powered analytics platform to deliver 
-              exceptional customer experiences and drive growth.
+              Join thousands of companies that trust our AI-powered platform to streamline 
+              hiring processes and find the best talent faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -543,4 +633,4 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
   );
 };
 
-export default AICustomerExperienceAnalyticsPlatform;
+export default AIPoweredHRRecruitmentAssistant;

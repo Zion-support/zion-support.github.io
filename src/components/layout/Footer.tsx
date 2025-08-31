@@ -102,15 +102,17 @@ export function Footer() {
       title: "Innovative Micro SAAS 2026",
       icon: Rocket,
       links: [
-        { name: "AI Churn Predictor", href: "/services/ai-powered-customer-churn-predictor" },
-        { name: "Quantum-Secure Password Manager", href: "/services/quantum-secure-password-manager" },
-        { name: "AI Invoice Automation", href: "/services/ai-powered-invoice-automation" },
-        { name: "Sustainable Carbon Tracker", href: "/services/sustainable-business-carbon-tracker" },
-        { name: "AI Legal Document Analyzer", href: "/services/ai-powered-legal-document-analyzer" },
-        { name: "Blockchain Supply Chain Verifier", href: "/services/blockchain-supply-chain-verifier" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform" },
         { name: "AI HR Recruitment Assistant", href: "/services/ai-powered-hr-recruitment-assistant" },
-        { name: "Quantum-Encrypted File Storage", href: "/services/quantum-encrypted-file-storage" },
         { name: "AI Marketing Automation", href: "/services/ai-powered-marketing-automation" },
+        { name: "AI Churn Predictor", href: "/services/ai-powered-customer-churn-predictor" },
+        { name: "AI Invoice Automation", href: "/services/ai-powered-invoice-automation" },
+        { name: "AI Legal Document Analyzer", href: "/services/ai-powered-legal-document-analyzer" },
+        { name: "Quantum-Secure Password Manager", href: "/services/quantum-secure-password-manager" },
+        { name: "Sustainable Carbon Tracker", href: "/services/sustainable-business-carbon-tracker" },
+        { name: "Blockchain Supply Chain Verifier", href: "/services/blockchain-supply-chain-verifier" },
+        { name: "Quantum-Encrypted File Storage", href: "/services/quantum-encrypted-file-storage" },
         { name: "IoT Energy Optimization", href: "/services/iot-energy-optimization-platform" }
       ]
     },
@@ -153,9 +155,9 @@ export function Footer() {
     <footer className="bg-zinc-900 border-t border-zinc-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="md:col-span-2 lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                 <Globe className="w-5 h-5 text-white" />
@@ -171,15 +173,15 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-4 text-zinc-400">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">
+                  +1 302 464 0950
+                </a>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />
@@ -195,7 +197,7 @@ export function Footer() {
                   <Link
                     key={link.name}
                     to={link.href}
-                    className="text-zinc-400 hover:text-zion-cyan transition-colors text-sm flex items-center"
+                    className="text-zinc-400 hover:text-zion-cyan transition-colors text-sm flex items-center p-2 rounded hover:bg-zinc-800 transition-all duration-200"
                   >
                     <link.icon className="w-3 h-3 mr-2" />
                     {link.name}
@@ -207,7 +209,7 @@ export function Footer() {
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
-            <div key={section.title}>
+            <div key={section.title} className="md:col-span-1">
               <h3 className="text-white font-semibold mb-4 flex items-center">
                 <section.icon className="w-4 h-4 mr-2" />
                 {section.title}
@@ -217,7 +219,7 @@ export function Footer() {
                   <li key={link.name}>
                     <Link 
                       to={link.href} 
-                      className="text-zinc-400 hover:text-white transition-colors text-sm"
+                      className="text-zinc-400 hover:text-zion-cyan transition-colors text-sm"
                     >
                       {link.name}
                     </Link>
@@ -230,7 +232,7 @@ export function Footer() {
 
         {/* Additional Resources Section */}
         <div className="border-t border-zinc-800 pt-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div>
               <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
                 <BookOpen className="w-4 h-4 mr-2" />
@@ -238,22 +240,22 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to="/white-papers" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/white-papers" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     White Papers
                   </Link>
                 </li>
                 <li>
-                  <Link to="/webinars" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/webinars" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Webinars
                   </Link>
                 </li>
                 <li>
-                  <Link to="/training" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/training" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Training
                   </Link>
                 </li>
                 <li>
-                  <Link to="/research-development" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/research-development" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Research & Development
                   </Link>
                 </li>
@@ -266,32 +268,32 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to="/privacy" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/privacy" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link to="/terms" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/terms" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Terms of Service
                   </Link>
                 </li>
                 <li>
-                  <Link to="/cookies" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/cookies" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Cookie Policy
                   </Link>
                 </li>
                 <li>
-                  <Link to="/accessibility" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/accessibility" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Accessibility
                   </Link>
                 </li>
                 <li>
-                  <Link to="/security" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/security" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Security
                   </Link>
                 </li>
                 <li>
-                  <Link to="/compliance" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/compliance" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Compliance
                   </Link>
                 </li>
@@ -304,27 +306,27 @@ export function Footer() {
               </h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <Link to="/innovative-services-showcase-2026" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/innovative-services-showcase-2026" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Innovation Showcase 2026
                   </Link>
                 </li>
                 <li>
-                  <Link to="/innovative-micro-saas-showcase-2026" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/innovative-micro-saas-showcase-2026" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Micro SAAS Showcase 2026
                   </Link>
                 </li>
                 <li>
-                  <Link to="/comprehensive-services-showcase-2025" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/comprehensive-services-showcase-2025" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Comprehensive Showcase 2025
                   </Link>
                 </li>
                 <li>
-                  <Link to="/innovative-ai-services-showcase-2025" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/innovative-ai-services-showcase-2025" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     AI Services Showcase 2025
                   </Link>
                 </li>
                 <li>
-                  <Link to="/emerging-tech" className="text-zinc-400 hover:text-white transition-colors">
+                  <Link to="/emerging-tech" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                     Emerging Technology
                   </Link>
                 </li>
@@ -335,9 +337,9 @@ export function Footer() {
 
         {/* Bottom Footer */}
         <div className="border-t border-zinc-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center space-y-4 lg:space-y-0">
             {/* Copyright */}
-            <div className="text-zinc-400 text-sm">
+            <div className="text-zinc-400 text-sm text-center lg:text-left">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
@@ -349,7 +351,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-white transition-colors"
+                  className="text-zinc-400 hover:text-zion-cyan transition-colors p-2 hover:bg-zinc-800 rounded-lg"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
@@ -358,14 +360,14 @@ export function Footer() {
             </div>
 
             {/* Additional Quick Links */}
-            <div className="flex items-center space-x-6 text-sm">
-              <Link to="/sitemap" className="text-zinc-400 hover:text-white transition-colors">
+            <div className="flex items-center space-x-4 lg:space-x-6 text-sm">
+              <Link to="/sitemap" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                 Sitemap
               </Link>
-              <Link to="/help" className="text-zinc-400 hover:text-white transition-colors">
+              <Link to="/help" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                 Support
               </Link>
-              <Link to="/contact" className="text-zinc-400 hover:text-white transition-colors">
+              <Link to="/contact" className="text-zinc-400 hover:text-zion-cyan transition-colors">
                 Contact
               </Link>
             </div>

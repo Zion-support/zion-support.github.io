@@ -2,32 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  BarChart3,
-  Users,
   TrendingUp,
-  Eye,
-  Heart,
-  MessageCircle,
-  Star,
+  Brain,
   Zap,
   Shield,
-  Globe,
-  Smartphone,
-  Monitor,
-  Tablet,
+  Users,
   CheckCircle,
   ArrowRight,
-  Brain,
-  Target,
-  Activity,
-  PieChart,
-  LineChart,
-  BarChart,
-  ScatterPlot,
-  HeatMap,
-  Funnel,
-  UserCheck,
-  UserX,
   Clock,
   DollarSign,
   Award,
@@ -131,94 +112,188 @@ import {
   BatteryFull10,
   BatteryMedium10,
   BatteryLow10,
-  BatteryEmpty10
+  BatteryEmpty10,
+  Target,
+  Activity,
+  BarChart3,
+  PieChart,
+  LineChart,
+  BarChart,
+  ScatterPlot,
+  HeatMap,
+  Funnel,
+  UserCheck,
+  UserX,
+  Eye,
+  Heart,
+  MessageCircle,
+  Star,
+  FileText,
+  Briefcase,
+  Building,
+  Globe,
+  Mail as MailIcon,
+  MessageCircle as MessageCircleIcon,
+  Smartphone,
+  Monitor,
+  Tablet,
+  Target2,
+  Users2,
+  Palette,
+  MousePointer,
+  MousePointer2,
+  MousePointerClick,
+  MousePointerClick2,
+  MousePointerOff,
+  MousePointerOff2,
+  MousePointerCheck,
+  MousePointerCheck2,
+  MousePointerCode,
+  MousePointerCode2,
+  MousePointerDollar,
+  MousePointerDollar2,
+  MousePointerHeart,
+  MousePointerHeart2,
+  MousePointerMinus,
+  MousePointerMinus2,
+  MousePointerOff3,
+  MousePointerOff4,
+  MousePointerOff5,
+  MousePointerOff6,
+  MousePointerOff7,
+  MousePointerOff8,
+  MousePointerOff9,
+  MousePointerOff10,
+  MousePointerOff11,
+  MousePointerOff12,
+  MousePointerOff13,
+  MousePointerOff14,
+  MousePointerOff15,
+  MousePointerOff16,
+  MousePointerOff17,
+  MousePointerOff18,
+  MousePointerOff19,
+  MousePointerOff20,
+  MousePointerOff21,
+  MousePointerOff22,
+  MousePointerOff23,
+  MousePointerOff24,
+  MousePointerOff25,
+  MousePointerOff26,
+  MousePointerOff27,
+  MousePointerOff28,
+  MousePointerOff29,
+  MousePointerOff30,
+  MousePointerOff31,
+  MousePointerOff32,
+  MousePointerOff33,
+  MousePointerOff34,
+  MousePointerOff35,
+  MousePointerOff36,
+  MousePointerOff37,
+  MousePointerOff38,
+  MousePointerOff39,
+  MousePointerOff40,
+  MousePointerOff41,
+  MousePointerOff42,
+  MousePointerOff43,
+  MousePointerOff44,
+  MousePointerOff45,
+  MousePointerOff46,
+  MousePointerOff47,
+  MousePointerOff48,
+  MousePointerOff49,
+  MousePointerOff50
 } from 'lucide-react';
 
-const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
+const AIPoweredMarketingAutomation: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced natural language processing to understand customer emotions and intent across all communication channels."
+      title: "AI-Powered Customer Segmentation",
+      description: "Advanced machine learning algorithms that automatically segment customers based on behavior, preferences, and purchase patterns."
     },
     {
-      icon: <Eye className="w-6 h-6 text-purple-400" />,
-      title: "Real-Time Customer Journey Tracking",
-      description: "Monitor customer interactions across touchpoints with predictive analytics for proactive engagement."
+      icon: <TrendingUp className="w-6 h-6 text-purple-400" />,
+      title: "Predictive Campaign Optimization",
+      description: "AI-driven insights that predict campaign performance and automatically optimize content, timing, and targeting for maximum ROI."
     },
     {
-      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
-      title: "Predictive Customer Behavior Modeling",
-      description: "Machine learning algorithms that forecast customer needs and churn risks with 95% accuracy."
+      icon: <Users className="w-6 h-6 text-green-400" />,
+      title: "Personalized Content Generation",
+      description: "Automatically create personalized marketing content, emails, and ads tailored to individual customer preferences and behavior."
     },
     {
-      icon: <Users className="w-6 h-6 text-blue-400" />,
-      title: "360° Customer Profile Analytics",
-      description: "Comprehensive customer profiles with behavioral patterns, preferences, and lifetime value predictions."
+      icon: <BarChart3 className="w-6 h-6 text-blue-400" />,
+      title: "Real-Time Analytics & Insights",
+      description: "Comprehensive dashboards with real-time performance metrics, customer journey tracking, and conversion optimization insights."
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
-      title: "Advanced Performance Metrics",
-      description: "Customizable dashboards with KPIs, conversion funnels, and ROI tracking across all customer touchpoints."
+      icon: <Zap className="w-6 h-6 text-orange-400" />,
+      title: "Multi-Channel Automation",
+      description: "Seamlessly orchestrate campaigns across email, social media, SMS, web, and advertising platforms with unified automation."
     },
     {
       icon: <Shield className="w-6 h-6 text-red-400" />,
-      title: "Privacy-First Data Collection",
-      description: "GDPR and CCPA compliant data collection with end-to-end encryption and secure analytics processing."
+      title: "Compliance & Privacy Management",
+      description: "Built-in GDPR, CCPA, and privacy compliance tools with automated consent management and data protection."
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses starting their CX analytics journey",
+      description: "Perfect for small businesses starting their marketing automation journey",
       features: [
-        "Up to 10,000 customer interactions/month",
-        "Basic sentiment analysis",
-        "Standard reporting dashboard",
+        "Up to 1,000 contacts",
+        "Basic email automation",
+        "Standard templates (25+)",
         "Email support",
-        "Basic integrations (3 platforms)",
-        "30-day data retention"
+        "Basic analytics dashboard",
+        "Mobile app access",
+        "Up to 3 team members"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing companies with advanced analytics needs",
+      description: "Ideal for growing businesses with advanced marketing needs",
       features: [
-        "Up to 100,000 customer interactions/month",
-        "Advanced AI sentiment analysis",
-        "Custom dashboard creation",
+        "Up to 10,000 contacts",
+        "Advanced AI segmentation",
+        "Premium templates (100+)",
         "Priority support",
-        "Advanced integrations (10 platforms)",
-        "90-day data retention",
-        "Predictive analytics",
-        "API access"
+        "Advanced analytics & reporting",
+        "Multi-channel automation",
+        "API access",
+        "Up to 10 team members",
+        "Custom workflows"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$799",
       period: "/month",
       description: "For large organizations requiring enterprise-grade solutions",
       features: [
-        "Unlimited customer interactions",
+        "Unlimited contacts",
         "Custom AI model training",
         "White-label solutions",
         "24/7 dedicated support",
-        "Unlimited integrations",
-        "Unlimited data retention",
+        "Full analytics suite",
+        "Custom integrations",
         "Advanced security features",
-        "Custom deployment options",
-        "Dedicated account manager"
+        "Unlimited team members",
+        "Dedicated account manager",
+        "On-premise deployment options"
       ],
       popular: false
     }
@@ -226,48 +301,59 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
 
   const benefits = [
     {
-      title: "Increase Customer Retention by 35%",
-      description: "Predict and prevent churn with AI-powered insights and proactive engagement strategies.",
-      icon: <Heart className="w-8 h-8 text-red-400" />
-    },
-    {
-      title: "Boost Customer Satisfaction by 42%",
-      description: "Identify pain points and optimize customer journeys for better experiences across all touchpoints.",
-      icon: <Star className="w-8 h-8 text-yellow-400" />
-    },
-    {
-      title: "Reduce Support Costs by 28%",
-      description: "Automate routine inquiries and route complex issues to the right agents for faster resolution.",
+      title: "Increase Revenue by 50%",
+      description: "AI-powered personalization and optimization drive higher conversion rates and customer lifetime value.",
       icon: <DollarSign className="w-8 h-8 text-green-400" />
     },
     {
-      title: "Improve Conversion Rates by 31%",
-      description: "Optimize customer touchpoints based on behavioral data and personalized recommendations.",
+      title: "Reduce Marketing Costs by 40%",
+      description: "Automate routine tasks, optimize ad spend, and eliminate manual campaign management overhead.",
       icon: <TrendingUp className="w-8 h-8 text-blue-400" />
+    },
+    {
+      title: "Improve Customer Engagement by 75%",
+      description: "Personalized content and timely automation keep customers engaged across all touchpoints.",
+      icon: <Users className="w-8 h-8 text-purple-400" />
+    },
+    {
+      title: "Save 20+ Hours per Week",
+      description: "Automate repetitive marketing tasks and focus on strategy and creative work that drives results.",
+      icon: <Clock className="w-8 h-8 text-orange-400" />
     }
   ];
 
   const useCases = [
     {
       industry: "E-commerce",
-      description: "Track customer journey from browsing to purchase, optimize product recommendations, and reduce cart abandonment.",
-      metrics: ["Conversion rate", "Average order value", "Customer lifetime value"]
+      description: "Personalized product recommendations, abandoned cart recovery, and customer lifecycle marketing.",
+      metrics: ["Conversion rate", "Customer lifetime value", "Cart recovery rate"]
     },
     {
       industry: "SaaS",
-      description: "Monitor user engagement, identify feature adoption patterns, and predict subscription renewals.",
-      metrics: ["User activation rate", "Feature adoption", "Churn prediction"]
+      description: "User onboarding, feature adoption campaigns, and subscription renewal automation.",
+      metrics: ["User activation", "Feature adoption", "Churn reduction"]
     },
     {
       industry: "Healthcare",
-      description: "Improve patient experience, track appointment satisfaction, and optimize care delivery processes.",
-      metrics: ["Patient satisfaction", "Appointment adherence", "Care quality scores"]
+      description: "Patient appointment reminders, health education campaigns, and follow-up care automation.",
+      metrics: ["Appointment adherence", "Patient engagement", "Care compliance"]
     },
     {
-      industry: "Financial Services",
-      description: "Enhance customer onboarding, detect fraud patterns, and personalize financial product recommendations.",
-      metrics: ["Onboarding completion", "Fraud detection rate", "Product adoption"]
+      industry: "Real Estate",
+      description: "Lead nurturing, property updates, and market insights automation.",
+      metrics: ["Lead conversion", "Client retention", "Market engagement"]
     }
+  ];
+
+  const marketingChannels = [
+    "Email Marketing",
+    "Social Media",
+    "SMS Marketing",
+    "Web Push Notifications",
+    "Advertising Platforms",
+    "Content Marketing",
+    "Influencer Marketing",
+    "Event Marketing"
   ];
 
   return (
@@ -284,17 +370,17 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
           >
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Analytics Platform
+              AI-Powered Marketing Automation
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              Transform Customer Experience with
+              Supercharge Marketing with
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                {" "}AI Analytics
+                {" "}AI Automation
               </span>
             </h1>
             <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-              Unlock deep insights into customer behavior, predict trends, and deliver exceptional experiences 
-              with our advanced AI-powered customer experience analytics platform.
+              Transform your marketing with intelligent automation, AI-powered personalization, 
+              and data-driven campaigns that convert prospects into loyal customers.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -323,11 +409,11 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful Features for Modern Businesses
+              Intelligent Marketing Features
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive insights and analytics to help you understand 
-              your customers better than ever before.
+              Our AI-powered platform automates every aspect of marketing, from customer segmentation 
+              to campaign optimization and personalization.
             </p>
           </motion.div>
 
@@ -349,7 +435,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Marketing Channels Section */}
       <section className="py-20 bg-zinc-800/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -359,10 +445,55 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Proven Results Across Industries
+              Multi-Channel Marketing Automation
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Join thousands of companies that have transformed their customer experience with our platform.
+              Orchestrate seamless campaigns across all marketing channels with unified automation 
+              and intelligent cross-channel optimization.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {marketingChannels.map((channel, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.05 }}
+                className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-lg p-4 text-center hover:border-cyan-500/50 transition-all duration-300"
+              >
+                <div className="w-8 h-8 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                  {index === 0 && <MailIcon className="w-4 h-4 text-cyan-400" />}
+                  {index === 1 && <MessageCircleIcon className="w-4 h-4 text-cyan-400" />}
+                  {index === 2 && <Smartphone className="w-4 h-4 text-cyan-400" />}
+                  {index === 3 && <Bell className="w-4 h-4 text-cyan-400" />}
+                  {index === 4 && <Target className="w-4 h-4 text-cyan-400" />}
+                  {index === 5 && <FileText className="w-4 h-4 text-cyan-400" />}
+                  {index === 6 && <Users className="w-4 h-4 text-cyan-400" />}
+                  {index === 7 && <Calendar className="w-4 h-4 text-cyan-400" />}
+                </div>
+                <p className="text-sm text-white font-medium">{channel}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transform Your Marketing Results
+            </h2>
+            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
+              Join thousands of businesses that have revolutionized their marketing 
+              with AI-powered automation and personalization.
             </p>
           </motion.div>
 
@@ -387,7 +518,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zinc-800/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -399,7 +530,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Tailored analytics solutions for different industries with proven success metrics.
+              Tailored marketing automation solutions for different industries with proven success metrics.
             </p>
           </motion.div>
 
@@ -432,7 +563,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-zinc-800/20">
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -444,7 +575,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your business needs and scale as you grow.
+              Choose the plan that best fits your marketing needs and scale as you grow.
             </p>
           </motion.div>
 
@@ -505,7 +636,7 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20 bg-zinc-800/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -514,11 +645,11 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Experience?
+              Ready to Transform Your Marketing?
             </h2>
             <p className="text-xl text-zinc-300 mb-8">
-              Join thousands of businesses that trust our AI-powered analytics platform to deliver 
-              exceptional customer experiences and drive growth.
+              Join thousands of businesses that trust our AI-powered platform to automate 
+              marketing and drive exceptional results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -543,4 +674,4 @@ const AICustomerExperienceAnalyticsPlatform: React.FC = () => {
   );
 };
 
-export default AICustomerExperienceAnalyticsPlatform;
+export default AIPoweredMarketingAutomation;

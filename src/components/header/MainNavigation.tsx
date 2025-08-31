@@ -204,6 +204,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Marketing Automation
                       </Link>
                     </li>
+                    <li>
+                      <Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <BarChart3 className="w-3 h-3 mr-2" />
+                        AI Customer Experience Analytics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-legal-document-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <FileText className="w-3 h-3 mr-2" />
+                        AI Legal Document Automation
+                      </Link>
+                    </li>
                     {/* Additional services from remote branch */}
                     <li>
                       <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
