@@ -108,6 +108,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-enterprise-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Enterprise Intelligence
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/ai-data-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <BarChart3 className="w-3 h-3 mr-2" />
                         AI Data Analytics
@@ -147,6 +153,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Atom className="w-3 h-3 mr-2" />
                         Quantum AI Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Neural Networks
                       </Link>
                     </li>
                     <li>
@@ -203,10 +215,16 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-zion-purple/20">
-                <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                  View All Services
-                  <TrendingUp className="w-4 h-4 ml-2"/>
-                </Link>
+                <div className="grid grid-cols-2 gap-4">
+                  <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    View All Services
+                    <TrendingUp className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/innovative-services-showcase-2026" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Innovation Showcase 2026
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -260,6 +278,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <MessageCircle className="w-3 h-3 mr-2" />
                         AI Support
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cloud className="w-3 h-3 mr-2" />
+                        Cloud FinOps
                       </Link>
                     </li>
                   </ul>
