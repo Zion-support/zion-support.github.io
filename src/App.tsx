@@ -78,6 +78,7 @@ const AISupplyChainIntelligenceOptimizationPlatform = createLazyComponent(() => 
 
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
+const ComprehensivePricingGuide2028 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2028'));
 
 // 2025 Innovative Services
 const InnovativeServices2025 = lazy(() => import('./pages/InnovativeServices2025'));
@@ -291,6 +292,9 @@ function App() {
 
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
+
+                    {/* 2028 Pricing Guide */}
+                    <Route path="/comprehensive-pricing-guide-2028" element={<ComprehensivePricingGuide2028 />} />
 
                     {/* Enhanced Services Showcase 2025 */}
                     <Route path="/enhanced-services-showcase-2025" element={

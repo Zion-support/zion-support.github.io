@@ -491,6 +491,18 @@ export default function Home() {
               >
                 Explore Services
               </Link>
+              <Link
+                to="/innovative-services-showcase-2028"
+                className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
+              >
+                Innovative Services 2028
+              </Link>
+              <Link
+                to="/comprehensive-pricing-guide-2028"
+                className="px-8 py-4 border-2 border-green-500 text-green-400 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300"
+              >
+                View Pricing Guide
+              </Link>
             </motion.div>
           </div>
         </div>
