@@ -71,10 +71,12 @@ export const Sidebar: React.FC = () => {
       icon: Brain,
       items: [
         { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: Brain, description: 'Machine Learning & Data Science' },
+        { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator', icon: Workflow, description: 'Intelligent Process Automation' },
+        { name: 'AI Data Governance Platform', path: '/services/ai-data-governance-platform', icon: Shield, description: 'Data Protection & Compliance' },
+        { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics', icon: Users, description: 'Customer Insights & Analytics' },
         { name: 'AI Healthcare Analytics', path: '/services/ai-healthcare-analytics', icon: Brain, description: 'Medical AI & Diagnostics' },
-        { name: 'AI Legal Document Analysis', path: '/services/ai-legal-document-analysis', icon: Brain, description: 'Legal Tech Platform' },
-        { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: Brain, description: 'FinTech AI Solutions' },
-        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Brain, description: 'Supply Chain AI' }
+        { name: 'AI Financial Trading', path: '/services/ai-financial-trading', icon: TrendingUp, description: 'FinTech AI Solutions' },
+        { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization', icon: Workflow, description: 'Supply Chain AI' }
       ]
     },
     {

@@ -49,7 +49,7 @@ const pricingTiers: PricingTier[] = [
   {
     name: 'Starter',
     description: 'Perfect for small businesses and startups',
-    price: '$499',
+    price: '$299',
     period: '/month',
     features: [
       'AI-powered business intelligence dashboard',
@@ -59,7 +59,9 @@ const pricingTiers: PricingTier[] = [
       'Monthly performance reports',
       'Up to 5 team members',
       'Basic API access',
-      'Standard compliance features'
+      'Standard compliance features',
+      'AI Workflow Orchestrator (Basic)',
+      'AI Data Governance (Foundation)'
     ],
     color: 'from-blue-500 to-cyan-500',
     icon: Zap,
@@ -69,7 +71,7 @@ const pricingTiers: PricingTier[] = [
   {
     name: 'Professional',
     description: 'Ideal for growing businesses and teams',
-    price: '$1,299',
+    price: '$799',
     period: '/month',
     popular: true,
     features: [
@@ -82,7 +84,10 @@ const pricingTiers: PricingTier[] = [
       'Custom integrations',
       'Advanced analytics & reporting',
       'Compliance automation tools',
-      'Monthly strategy sessions'
+      'Monthly strategy sessions',
+      'AI Workflow Orchestrator (Professional)',
+      'AI Data Governance (Enterprise)',
+      'AI Customer Experience Analytics (Professional)'
     ],
     color: 'from-zion-cyan to-zion-purple',
     icon: Brain,
@@ -393,6 +398,157 @@ export default function Pricing() {
                 View Case Studies
               </Link>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Individual Service Pricing Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          className="mt-20"
+        >
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Individual Service Pricing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Choose specific AI services that fit your business needs. All services include our core AI optimization features.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* AI Workflow Orchestrator */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300"
+            >
+              <div className="text-center mb-6">
+                <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-fit mx-auto mb-4">
+                  <Workflow className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">AI Workflow Orchestrator</h3>
+                <p className="text-gray-400 mb-4">Intelligent workflow automation platform</p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-3xl font-bold text-white">$299</span>
+                  <span className="text-gray-400 ml-1">/month</span>
+                </div>
+              </div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Up to 10 workflows
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Basic AI optimization
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Standard integrations
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Email support
+                </li>
+              </ul>
+              <Link
+                to="/services/ai-workflow-orchestrator"
+                className="w-full text-center py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </motion.div>
+
+            {/* AI Data Governance Platform */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-indigo-400/50 transition-all duration-300"
+            >
+              <div className="text-center mb-6">
+                <div className="p-3 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full w-fit mx-auto mb-4">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">AI Data Governance Platform</h3>
+                <p className="text-gray-400 mb-4">Intelligent data protection & compliance</p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-3xl font-bold text-white">$399</span>
+                  <span className="text-gray-400 ml-1">/month</span>
+                </div>
+              </div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Up to 10 data sources
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Basic AI discovery
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  GDPR & CCPA compliance
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Standard access control
+                </li>
+              </ul>
+              <Link
+                to="/services/ai-data-governance-platform"
+                className="w-full text-center py-3 px-6 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </motion.div>
+
+            {/* AI Customer Experience Analytics */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300"
+            >
+              <div className="text-center mb-6">
+                <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-2">AI Customer Experience Analytics</h3>
+                <p className="text-gray-400 mb-4">Customer insights & analytics platform</p>
+                <div className="flex items-baseline justify-center">
+                  <span className="text-3xl font-bold text-white">$199</span>
+                  <span className="text-gray-400 ml-1">/month</span>
+                </div>
+              </div>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Up to 10K interactions/month
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Basic sentiment analysis
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Standard reporting
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  Email support
+                </li>
+              </ul>
+              <Link
+                to="/services/ai-customer-experience-analytics"
+                className="w-full text-center py-3 px-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+              >
+                Learn More
+              </Link>
+            </motion.div>
           </div>
         </motion.div>
       </div>

@@ -27,11 +27,47 @@ const Services: React.FC = () => {
             <p className="text-2xl font-bold text-blue-400 mb-4">$3,000 - $25,000</p>
           </div>
         </div>
-        {/* New: Micro-SaaS Solutions */}
+        {/* New: AI-Powered Micro-SaaS Solutions */}
         <div className="mt-24 text-left">
-          <h2 className="text-4xl font-bold mb-4">Micro-SaaS Solutions</h2>
-          <p className="text-gray-300 mb-10 max-w-4xl">Fast-to-deploy, subscription-based tools that solve specific business problems with clear ROI.</p>
+          <h2 className="text-4xl font-bold mb-4">AI-Powered Micro-SaaS Solutions</h2>
+          <p className="text-gray-300 mb-10 max-w-4xl">Intelligent, subscription-based tools that solve specific business problems with AI-powered automation and clear ROI.</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Workflow Orchestrator</h3>
+              <p className="text-gray-300 mb-4">Intelligent workflow automation platform that orchestrates complex business processes with AI-powered optimization.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>AI-powered process optimization</li>
+                <li>Visual workflow designer</li>
+                <li>Real-time automation</li>
+                <li>Team collaboration tools</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $1,999/month</p>
+              <a href="/services/ai-workflow-orchestrator" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Data Governance Platform</h3>
+              <p className="text-gray-300 mb-4">Intelligent data governance that automatically discovers, classifies, and protects sensitive data while ensuring compliance.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>AI-powered data discovery</li>
+                <li>Global compliance framework</li>
+                <li>Advanced access control</li>
+                <li>Data lineage tracking</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$399 - $2,999/month</p>
+              <a href="/services/ai-data-governance-platform" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-2">AI Customer Experience Analytics</h3>
+              <p className="text-gray-300 mb-4">Transform customer insights into actionable intelligence with AI-powered analytics that reveal the true voice of your customers.</p>
+              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
+                <li>AI-powered sentiment analysis</li>
+                <li>Real-time experience monitoring</li>
+                <li>Customer journey mapping</li>
+                <li>Predictive analytics</li>
+              </ul>
+              <p className="text-2xl font-bold text-blue-400 mb-4">$199 - $1,499/month</p>
+              <a href="/services/ai-customer-experience-analytics" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
+            </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-2">AI Sales Email Optimizer</h3>
               <p className="text-gray-300 mb-4">Auto-drafts and A/B tests emails based on CRM context to raise reply rates.</p>
@@ -41,7 +77,7 @@ const Services: React.FC = () => {
                 <li>Compliance guardrails</li>
               </ul>
               <p className="text-2xl font-bold text-blue-400 mb-4">$299 - $799/month</p>
-              <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Get a demo →</a>
+              <a href="/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Get a demo →</a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-2">Support Ticket Triage Copilot</h3>
@@ -52,7 +88,7 @@ const Services: React.FC = () => {
                 <li>First-response macros</li>
               </ul>
               <p className="text-2xl font-bold text-blue-400 mb-4">$249 - $999/month</p>
-              <a href="https://ziontechgroup.com/solutions" className="text-cyan-300 hover:text-cyan-200 font-semibold">See solution →</a>
+              <a href="/solutions" className="text-cyan-300 hover:text-cyan-200 font-semibold">See solution →</a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold mb-2">Invoice OCR + Reconciliation</h3>
@@ -63,29 +99,7 @@ const Services: React.FC = () => {
                 <li>Audit trails</li>
               </ul>
               <p className="text-2xl font-bold text-blue-400 mb-4">$199 - $799/month</p>
-              <a href="https://ziontechgroup.com/services" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-2">SEO Content Planner</h3>
-              <p className="text-gray-300 mb-4">Keyword clustering, brief generation, and on-page optimization recommendations.</p>
-              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
-                <li>Competitor gap analysis</li>
-                <li>Automatic internal linking</li>
-                <li>Publish to CMS</li>
-              </ul>
-              <p className="text-2xl font-bold text-blue-400 mb-4">$99 - $399/month</p>
-              <a href="https://ziontechgroup.com/pricing" className="text-cyan-300 hover:text-cyan-200 font-semibold">Pricing →</a>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-2">HR Screening Assistant</h3>
-              <p className="text-gray-300 mb-4">Summarizes resumes, auto-screens candidates, and schedules interviews.</p>
-              <ul className="text-sm text-gray-300 mb-4 list-disc pl-5 space-y-1">
-                <li>ATS integration</li>
-                <li>Bias-mitigation controls</li>
-                <li>Compliance exports</li>
-              </ul>
-              <p className="text-2xl font-bold text-blue-400 mb-4">$149 - $599/month</p>
-              <a href="https://ziontechgroup.com/contact" className="text-cyan-300 hover:text-cyan-200 font-semibold">Talk to sales →</a>
+              <a href="/services" className="text-cyan-300 hover:text-cyan-200 font-semibold">Learn more →</a>
             </div>
           </div>
         </div>

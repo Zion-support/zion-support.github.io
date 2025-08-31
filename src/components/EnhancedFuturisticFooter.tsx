@@ -136,8 +136,10 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
       color: 'from-purple-500 to-cyan-500',
       links: [
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', featured: true },
+        { name: 'AI Workflow Orchestrator', href: '/services/ai-workflow-orchestrator', featured: true },
+        { name: 'AI Data Governance Platform', href: '/services/ai-data-governance-platform', featured: true },
+        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics', featured: true },
         { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics', featured: true },
-        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation', featured: true },
         { name: 'AI Financial Trading', href: '/services/ai-financial-trading', featured: true },
         { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization', featured: true },
         { name: 'AI Content Creation', href: '/services/ai-content-creation', featured: true },

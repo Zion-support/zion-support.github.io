@@ -59,17 +59,31 @@ export function AppHeader() {
           featured: true
         },
         { 
+          name: 'AI Workflow Orchestrator', 
+          href: '/services/ai-workflow-orchestrator', 
+          icon: Workflow, 
+          description: 'Intelligent Process Automation',
+          featured: true
+        },
+        { 
+          name: 'AI Data Governance Platform', 
+          href: '/services/ai-data-governance-platform', 
+          icon: Shield, 
+          description: 'Data Protection & Compliance',
+          featured: true
+        },
+        { 
+          name: 'AI Customer Experience Analytics', 
+          href: '/services/ai-customer-experience-analytics', 
+          icon: Users, 
+          description: 'Customer Insights & Analytics',
+          featured: true
+        },
+        { 
           name: 'AI Healthcare Analytics', 
           href: '/services/ai-healthcare-analytics', 
           icon: Heart, 
           description: 'Medical AI & Diagnostics',
-          featured: true
-        },
-        { 
-          name: 'AI Legal Document Analysis', 
-          href: '/services/ai-legal-document-analysis', 
-          icon: FileText, 
-          description: 'Legal Tech Platform',
           featured: true
         },
         { 
