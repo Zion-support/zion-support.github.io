@@ -92,11 +92,23 @@ const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sal
 const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/ai-compliance-assistant'));
 const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/cloud-finops-optimizer'));
 
+// New Innovative Services 2026
+const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
+const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
+
 // New Innovative Micro SAAS Services 2026
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
 const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+
+// Additional Services
+const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
+const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
+const DigitalTransformation = createLazyComponent(() => import('./pages/services/digital-transformation'));
+const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITInfrastructure'));
+const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
+const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
@@ -135,6 +147,10 @@ const DigitalTransformation = createLazyComponent(() => import('./pages/services
 const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITInfrastructure'));
 const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+
+// New Innovative Services 2026
+const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
+const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
 
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
@@ -328,6 +344,10 @@ function App() {
                     <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
                     <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 */}
+                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-space-technology-platform" element={<ModernLayout><AISpaceTechnologyPlatform /></ModernLayout>} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />

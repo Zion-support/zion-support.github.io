@@ -66,7 +66,9 @@ export function Footer() {
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
         { name: "AI Customer Success Automation", href: "/services/ai-customer-success-automation" },
         { name: "AI Supply Chain Optimization Enhanced", href: "/services/ai-supply-chain-optimization-enhanced" },
-        { name: "AI Financial Risk Management Enhanced", href: "/services/ai-financial-risk-management-enhanced" }
+        { name: "AI Financial Risk Management Enhanced", href: "/services/ai-financial-risk-management-enhanced" },
+        { name: "AI Autonomous Logistics Platform", href: "/services/ai-autonomous-logistics-platform" },
+        { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }
       ]
     },
     {
