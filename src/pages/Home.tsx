@@ -359,6 +359,14 @@ const ServicesPreviewSection = React.memo(() => {
       features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer"]
     },
     {
+      icon: Shield,
+      title: "Cybersecurity",
+      description: "Advanced AI-powered security and threat detection",
+      href: "/services/cybersecurity",
+      color: "from-red-500 to-orange-500",
+      features: ["AI Threat Detection", "Zero Trust", "Incident Response"]
+    },
+    {
       icon: Zap,
       title: "Quantum AI",
       description: "Next-generation quantum computing and AI integration",
@@ -435,15 +443,25 @@ const ServicesPreviewSection = React.memo(() => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
+          className="text-center mt-12 space-y-4"
         >
           <Link
             to="/services"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 mr-4"
           >
             <span className="flex items-center gap-2">
               View All Services
               <ArrowRight className="w-5 h-5" />
+            </span>
+          </Link>
+          
+          <Link
+            to="/innovative-services-showcase-2030"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+          >
+            <span className="flex items-center gap-2">
+              Revolutionary Services 2030
+              <Rocket className="w-5 h-5" />
             </span>
           </Link>
         </motion.div>

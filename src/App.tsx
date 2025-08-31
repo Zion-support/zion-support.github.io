@@ -85,6 +85,9 @@ const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
+// Revolutionary Services Showcase 2030
+const InnovativeServicesShowcase2030 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2030'));
+
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
 const AIDataAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-data-analytics-platform'));
@@ -231,6 +234,9 @@ function App() {
 
 {/* Innovative Services Showcase 2026 */}
 <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
+
+{/* Revolutionary Services Showcase 2030 */}
+<Route path="/innovative-services-showcase-2030" element={<ModernLayout><InnovativeServicesShowcase2030 /></ModernLayout>} />
 
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />

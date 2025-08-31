@@ -310,6 +310,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     Innovation Showcase 2026
                     <Rocket className="w-4 h-4 ml-2"/>
                   </Link>
+                  <Link to="/innovative-services-showcase-2030" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Revolutionary Services 2030
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
                 </div>
               </div>
             </div>

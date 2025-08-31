@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Star, Zap, Shield, Users, Globe } from 'lucide-react';
+import { Check, Star, Zap, Shield, Users, Globe, Brain, Heart, DollarSign, Truck, Atom, Rocket } from 'lucide-react';
 
 const Pricing = () => {
   const pricingTiers = [
@@ -19,6 +19,77 @@ const Pricing = () => {
       ],
       popular: false,
       cta: "Start Free Trial",
+      link: "/contact"
+    },
+    {
+      name: "Professional",
+      price: "$49",
+      period: "/month",
+      description: "Ideal for growing businesses and professional teams",
+      features: [
+        "Everything in Starter",
+        "AI Content Generation (500 credits/month)",
+        "Advanced AI Image & Video Editing",
+        "AI Code Assistant (Basic)",
+        "AI Meeting Assistant (20 hours/month)",
+        "AI Translation (10 languages)",
+        "Priority Support",
+        "Advanced Analytics",
+        "API Access (1000 calls/month)",
+        "Team Collaboration Tools"
+      ],
+      popular: true,
+      cta: "Start Free Trial",
+      link: "/contact"
+    },
+    {
+      name: "Business",
+      price: "$99",
+      period: "/month",
+      description: "Comprehensive solution for established businesses",
+      features: [
+        "Everything in Professional",
+        "AI Content Generation (2000 credits/month)",
+        "AI Code Assistant (Advanced)",
+        "AI Data Analytics Platform",
+        "AI Threat Detection",
+        "Multi-Cloud Management",
+        "AI-Powered CRM",
+        "Business Process Automation",
+        "AI Meeting Assistant (Unlimited)",
+        "AI Translation (100+ languages)",
+        "24/7 Support",
+        "Custom Integrations",
+        "API Access (10000 calls/month)",
+        "Advanced Security Features"
+      ],
+      popular: false,
+      cta: "Start Free Trial",
+      link: "/contact"
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large organizations with specific requirements",
+      features: [
+        "Everything in Business",
+        "Unlimited AI Content Generation",
+        "Custom AI Model Training",
+        "Zero Trust Security Suite",
+        "Edge Computing Solutions",
+        "AI Market Research Platform",
+        "AI Legal Document Review",
+        "AI Financial Advisor",
+        "AI Healthcare Assistant",
+        "Dedicated Account Manager",
+        "Custom Development",
+        "On-Premise Deployment",
+        "SLA Guarantees",
+        "Compliance Certifications"
+      ],
+      popular: false,
+      cta: "Contact Sales",
       link: "/contact"
     },
     {
@@ -326,6 +397,106 @@ const Pricing = () => {
               className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300"
             >
               Schedule Demo
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Revolutionary Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-800/50 to-slate-900/50">
+        <div className="max-w-6xl mx-auto text-center">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-5xl font-bold text-white mb-6"
+          >
+            Revolutionary Services 2030
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            Discover our cutting-edge micro SAAS solutions that combine advanced AI, 
+            quantum computing, and innovative technology to transform your business.
+          </motion.p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12"
+          >
+            {[
+              {
+                icon: Brain,
+                title: "AI Business Intelligence",
+                description: "Advanced analytics and predictive insights",
+                price: "From $2,999"
+              },
+              {
+                icon: Shield,
+                title: "AI Cybersecurity",
+                description: "Zero-trust security with AI threat detection",
+                price: "From $3,999"
+              },
+              {
+                icon: Heart,
+                title: "AI Healthcare Analytics",
+                description: "Patient care and diagnostic support",
+                price: "From $4,999"
+              },
+              {
+                icon: DollarSign,
+                title: "AI Financial Trading",
+                description: "Algorithmic trading and risk management",
+                price: "From $5,999"
+              },
+              {
+                icon: Truck,
+                title: "AI Supply Chain",
+                description: "Optimization and demand forecasting",
+                price: "From $3,499"
+              },
+              {
+                icon: Atom,
+                title: "Quantum AI Platform",
+                description: "Next-generation quantum computing",
+                price: "From $7,999"
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 hover:bg-slate-700/50 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <service.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                <p className="text-gray-400 mb-4">{service.description}</p>
+                <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+              </motion.div>
+            ))}
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <a
+              href="/innovative-services-showcase-2030"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+            >
+              <span className="flex items-center gap-2">
+                Explore All Revolutionary Services
+                <Rocket className="w-5 h-5" />
+              </span>
             </a>
           </motion.div>
         </div>
