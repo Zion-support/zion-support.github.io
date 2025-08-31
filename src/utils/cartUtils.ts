@@ -1,66 +1,19 @@
 export interface CartItem {
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   name: string;
   price: number;
   quantity: number;
   type: 'equipment' | 'service' | 'talent';
-<<<<<<< HEAD
+  image?: string;
+  description?: string;
+  category?: string;
 }
-export const calculateCartTotal = (items: CartItem[]): number => {;
-  return items.reduce((total, item) => total + (item.price * item.quantity), 0);
-};
-export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {;
-=======
-<<<<<<< HEAD
-=======
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-<<<<<<< HEAD
-export const calculateCartTotal = (items: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[]): number               => {;
+export const calculateCartTotal = (items: CartItem[]): number => {
   return items.reduce((total, item) => total + (item.price * item.quantity), 0);
 };
 
-export const addToCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], item: CartItem): CartItem[]               => {;
-=======;
-export const calculateCartTotal = (items: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[]): number              => {;
-  return items.reduce((total, item) => total + (item.price * item.quantity), 0);
-};
-
-export const addToCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], item: CartItem): CartItem[]              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export const addToCart = (cart: CartItem[], item: CartItem): CartItem[] => {
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
   if (existingItem) {
     return cart.map(cartItem =>
@@ -71,57 +24,59 @@ export const addToCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[
   }
   return [...cart, item];
 };
-<<<<<<< HEAD
-export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {;
-  return cart.filter(item => item.id !== itemId);
-};
-export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {;
-=======
 
-<<<<<<< HEAD
-export const removeFromCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string): CartItem[]               => {;
+export const removeFromCart = (cart: CartItem[], itemId: string): CartItem[] => {
   return cart.filter(item => item.id !== itemId);
 };
 
-export const updateQuantity = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string, quantity: number): CartItem[]               => {
-  if (quantity <= 0) {;
-=======;
-export const removeFromCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string): CartItem[]              => {;
-  return cart.filter(item => item.id !== itemId);
-};
-
-export const updateQuantity = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], itemId: string, quantity: number): CartItem[]              => {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-  if (quantity <= 0) {;
+export const updateQuantity = (cart: CartItem[], itemId: string, quantity: number): CartItem[] => {
+  if (quantity <= 0) {
     return removeFromCart(cart, itemId);
   }
   return cart.map(item =>
     item.id === itemId ? { ...item, quantity } : item
   );
 };
-export const clearCart = (): CartItem[] => {;
+
+export const clearCart = (): CartItem[] => {
   return [];
 };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-export const getCartKey = (userId: anyanyanyanyanyanyanyanyanyanyanyanyanystring): string               => {;
-  return `cart_${userId}`;
+export const getCartItemCount = (cart: CartItem[]): number => {
+  return cart.reduce((total, item) => total + item.quantity, 0);
 };
 
-export const mergeCartItems = (existingItems: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[], newItems: CartItem[]): CartItem[]              => {
-  const merged = [...existingItems];
+export const getCartSubtotal = (cart: CartItem[]): number => {
+  return calculateCartTotal(cart);
+};
 
-  newItems.forEach(newItem => {
-    const existingIndex = merged.findIndex(item => item.id === newItem.id);
-    if (existingIndex >= 0 && merged[existingIndex]) {
-      merged[existingIndex].quantity += newItem.quantity;
-    } else {
-      merged.push(newItem);
+export const getCartTax = (cart: CartItem[], taxRate: number = 0.08): number => {
+  return getCartSubtotal(cart) * taxRate;
+};
 
-  });
+export const getCartTotal = (cart: CartItem[], taxRate: number = 0.08): number => {
+  return getCartSubtotal(cart) + getCartTax(cart, taxRate);
+};
 
-  return merged;
-};}}}}
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+export const isCartEmpty = (cart: CartItem[]): boolean => {
+  return cart.length === 0;
+};
+
+export const getCartItemsByType = (cart: CartItem[], type: CartItem['type']): CartItem[] => {
+  return cart.filter(item => item.type === type);
+};
+
+export const getCartSummary = (cart: CartItem[]) => {
+  const subtotal = getCartSubtotal(cart);
+  const tax = getCartTax(cart);
+  const total = getCartTotal(cart);
+  const itemCount = getCartItemCount(cart);
+
+  return {
+    subtotal,
+    tax,
+    total,
+    itemCount,
+    isEmpty: isCartEmpty(cart)
+  };
+};

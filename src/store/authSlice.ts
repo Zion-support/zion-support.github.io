@@ -1,151 +1,81 @@
-<<<<<<< HEAD
-import { createSlice, PayloadAction  } from '@reduxjs/toolkit';
-=======
-import { createSlice, PayloadAction               } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 interface User {
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
   email: string;
   name: string;
   avatar?: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
+  role?: string;
+  permissions?: string[];
 }
+
 interface AuthState {
-<<<<<<< HEAD
   isLoggedIn: boolean;
   user: User | null;
   token: string | null;
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  isLoggedIn: boolean;
-  user:  | null;
-  token: string | null;
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  isAuthenticated: boolean;
+  isLoading: boolean;
+  error: string | null;
 }
+
 const initialState: AuthState = {
   isLoggedIn: false,
   user: null,
   token: null,
   isAuthenticated: false,
   isLoading: false,
-  error: null,;
-  ;
-  ;
-  ;
-  ;
-  ;
-  ;
+  error: null,
 };
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 const authSlice = createSlice({
-  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',
+  name: 'auth',
   initialState,
-  reducers: {;
-    setLoggedIn: (state, action: PayloadAction<boolean>)               => {;
-      state.isLoggedIn = action.payload;
+  reducers: {
+    loginStart: (state) => {
+      state.isLoading = true;
+      state.error = null;
     },
-    setUser: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<any>)               => {
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-const authSlice = createSlice({;
-  name: anyanyanyanyanyanyanyanyanyanyanyanyany'auth',;
-  initialState,;
-  reducers: {;
-<<<<<<< HEAD
-    setUser: (state, action: PayloadAction<User>) => {;
-=======
-    setUser: (state, action: PayloadAction<User>)              => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-      state.user = action.payload;
+    loginSuccess: (state, action: PayloadAction<{ user: User; token: string }>) => {
+      state.isLoading = false;
+      state.isLoggedIn = true;
       state.isAuthenticated = true;
+      state.user = action.payload.user;
+      state.token = action.payload.token;
       state.error = null;
     },
-<<<<<<< HEAD
-    setToken: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)               => {
-      state.token = action.payload;
-    },
-    logout: anyanyanyanyanyanyanyanyanyanyanyanyany(state)               => {
-=======
-    setToken: (state, action: PayloadAction<string>) => {
-      state.token = action.payload;
-    },
-    logout: (state) => {
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-      state.isLoggedIn = false;
-      state.user = null;
-      state.token = null;
-      state.isAuthenticated = false;
-      state.error = null;
-    },
-    setLoading: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<boolean>)              => {
-      state.isLoading = action.payload;
-    },
-    setError: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)              => {
+    loginFailure: (state, action: PayloadAction<string>) => {
+      state.isLoading = false;
       state.error = action.payload;
     },
-    clearError: anyanyanyanyanyanyanyanyanyanyanyanyany(state)              => {
+    logout: (state) => {
+      state.isLoggedIn = false;
+      state.isAuthenticated = false;
+      state.user = null;
+      state.token = null;
       state.error = null;
+    },
+    updateUser: (state, action: PayloadAction<Partial<User>>) => {
+      if (state.user) {
+        state.user = { ...state.user, ...action.payload };
+      }
+    },
+    clearError: (state) => {
+      state.error = null;
+    },
+    setLoading: (state, action: PayloadAction<boolean>) => {
+      state.isLoading = action.payload;
     },
   },
 });
-export const { setUser, clearUser, setLoading, setError, clearError } = authSlice.actions;
+
+export const {
+  loginStart,
+  loginSuccess,
+  loginFailure,
+  logout,
+  updateUser,
+  clearError,
+  setLoading,
+} = authSlice.actions;
+
 export default authSlice.reducer;

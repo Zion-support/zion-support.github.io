@@ -416,11 +416,8 @@ function App() {
                   <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
                   <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
                   <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
-<<<<<<< HEAD
                   <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
-=======
                   <Route path="/services-showcase-2025" element={<ServicesShowcase2025 />} />
->>>>>>> add-new-micro-saas-services
 
                   {/* 2029 Cutting-Edge Services */}
                   <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />

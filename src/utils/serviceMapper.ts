@@ -1,32 +1,7 @@
-<<<<<<< HEAD
 import { specializedIndustrySolutions2026 } from "../../data/2026-specialized-industry-solutions";
 
 // Interface for the existing service structure
 export interface Service {
-=======
-<<<<<<< HEAD
-import { specializedIndustrySolutions2026               } from '@/data/2026-specialized-industry-solutions';
-=======
-import { specializedIndustrySolutions2026              } from '../../data/2026-specialized-industry-solutions';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
-// Interface for the existing service structure
-export interface Service {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -45,28 +20,11 @@ export interface Service {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-<<<<<<< HEAD
   contactInfo: {
-=======
-contactInfo: {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     phone: string;
     email: string;
     website: string;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-};
+  };
   technicalSpecs?: {
     technology: string[];
     integrations: string[];
@@ -99,21 +57,59 @@ export function map2026ServicesToExistingStructure(): Service[] {
     supportLevel: "enterprise",
     marketPrice: service.price + service.period,
     roi: service.roi,
-    innovationLevel: "Advanced",
+    innovationLevel: service.innovationLevel || "high",
     contactInfo: {
-      phone: service.contactInfo.mobile,
-      email: service.contactInfo.email,
-      website: service.contactInfo.website
+      phone: "+1-555-ZION-TECH",
+      email: "services@ziontechgroup.com",
+      website: "https://ziontechgroup.com"
     },
     technicalSpecs: {
       technology: service.technology,
-      integrations: service.integrations,
-      apiEndpoints: 200, // Default value
-      uptime: "99.9%", // Default value
-      security: ["SOC 2", "ISO 27001", "Data encryption"] // Default security
+      integrations: service.integrations || [],
+      apiEndpoints: service.apiEndpoints || 0,
+      uptime: service.uptime || "99.9%",
+      security: service.security || ["SOC2", "GDPR", "HIPAA"]
     },
-    competitors: service.competitors,
-    marketSize: service.marketSize,
-    compliance: ["SOC 2", "ISO 27001"] // Default compliance
+    competitors: service.competitors || [],
+    marketSize: service.marketSize || "Growing",
+    compliance: service.compliance || ["SOC2", "GDPR", "HIPAA"]
   }));
+}
+
+// Helper function to get services by category
+export function getServicesByCategory(category: string): Service[] {
+  const allServices = map2026ServicesToExistingStructure();
+  return allServices.filter(service => 
+    service.category.toLowerCase() === category.toLowerCase() ||
+    service.subcategory.toLowerCase() === category.toLowerCase()
+  );
+}
+
+// Helper function to search services
+export function searchServices(query: string): Service[] {
+  const allServices = map2026ServicesToExistingStructure();
+  const searchTerm = query.toLowerCase();
+  
+  return allServices.filter(service =>
+    service.title.toLowerCase().includes(searchTerm) ||
+    service.description.toLowerCase().includes(searchTerm) ||
+    service.category.toLowerCase().includes(searchTerm) ||
+    service.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+  );
+}
+
+// Helper function to get services by price range
+export function getServicesByPriceRange(minPrice: number, maxPrice: number): Service[] {
+  const allServices = map2026ServicesToExistingStructure();
+  return allServices.filter(service => 
+    service.price >= minPrice && service.price <= maxPrice
+  );
+}
+
+// Helper function to get featured services
+export function getFeaturedServices(): Service[] {
+  const allServices = map2026ServicesToExistingStructure();
+  return allServices
+    .filter(service => service.innovationLevel === "high")
+    .slice(0, 6); // Return top 6 featured services
 }
