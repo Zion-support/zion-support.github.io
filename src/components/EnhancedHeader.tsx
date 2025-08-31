@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import EnhancedSearch from './EnhancedSearch';
+import ThemeToggle from './ThemeToggle';
 import { 
   Menu, 
   X, 
@@ -330,6 +332,16 @@ export default function EnhancedHeader() {
                   )}
                 </div>
               ))}
+            </div>
+
+            {/* Search and Theme Toggle */}
+            <div className="hidden lg:flex items-center space-x-4 mr-4">
+              <EnhancedSearch 
+                placeholder="Search services..."
+                className="w-64"
+                showFilters={false}
+              />
+              <ThemeToggle />
             </div>
 
             {/* CTA Buttons */}

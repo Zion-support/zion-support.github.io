@@ -10,6 +10,7 @@ import EnhancedFooter from './components/EnhancedFooter';
 // Enhanced Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
+import EnhancedAccessibility from './components/EnhancedAccessibility';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import { SEO } from './components/SEO';
 import { FloatingActionButton } from './components/FloatingActionButton';
@@ -221,6 +222,7 @@ function App() {
 
           {/* Enhanced Accessibility */}
           <EnhancedAccessibilityEnhancer enabled={true} />
+          <EnhancedAccessibility />
 
           {/* Mobile Experience Enhancer */}
           <MobileExperienceEnhancer enabled={true} />
