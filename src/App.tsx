@@ -47,6 +47,21 @@ const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
 const ITServices = createLazyComponent(() => import('./pages/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 
+// Additional pages
+const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
+const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
+const Blog = createLazyComponent(() => import('./pages/BlogPage'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const CaseStudies = createLazyComponent(() => import('./pages/case-studies'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const ResearchDevelopment = createLazyComponent(() => import('./pages/research-development'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const News = createLazyComponent(() => import('./pages/News'));
+
 // New AI Services 2025
 const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Optimization'));
 const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cybersecurity-Platform'));
@@ -175,6 +190,23 @@ function App() {
                     <Route path="/digital-transformation" element={<DigitalTransformation />} />
                     <Route path="/cloud-solutions" element={<CloudSolutions />} />
                     <Route path="/emerging-tech" element={<EmergingTech />} />
+
+                    {/* Additional pages */}
+                    <Route path="/get-started" element={<GetStarted />} />
+                    <Route path="/white-papers" element={<WhitePapers />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/docs" element={<Documentation />} />
+                    <Route path="/documentation" element={<Documentation />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/research-development" element={<ResearchDevelopment />} />
+                    <Route path="/help" element={<Help />} />
+                    <Route path="/support" element={<Help />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/news" element={<News />} />
 
                     {/* 404 Page */}
                     <Route
