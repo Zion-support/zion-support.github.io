@@ -1,9 +1,9 @@
 export class SEOOptimizer {
     static DEFAULT_META_DESCRIPTIONS = {
-  '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
+        '/': 'Leading provider of revolutionary micro SaaS services, AI solutions, cloud infrastructure, and cutting-edge technology services. Transform your business with Zion Tech Group.',
         '/services': 'Comprehensive AI services, cybersecurity solutions, cloud infrastructure, and emerging technology services. Expert IT solutions for modern businesses.',
         '/ai-solutions': 'Advanced AI solutions including autonomous systems, machine learning, and intelligent automation. Drive innovation with our cutting-edge AI technology.',
-        '/about': 'Learn about Zion Tech Group - a pioneering technology comp delivering innovative solutions and transforming businesses through cutting-edge technology.',
+        '/about': 'Learn about Zion Tech Group - a pioneering technology company delivering innovative solutions and transforming businesses through cutting-edge technology.',
         '/contact': 'Get in touch with Zion Tech Group. Contact our expert team for technology solutions, consultations, and partnership opportunities.',
         '/pricing': 'Transparent pricing for our comprehensive technology services. Choose the perfect plan for your business needs and budget.',
         '/careers': 'Join the Zion Tech Group team. Explore exciting career opportunities in technology, AI, and innovation.',
@@ -19,15 +19,15 @@ export class SEOOptimizer {
   and innovative IT services for the healthcare industry.'
 };
     static KEYWORD_MAPPINGS = {
-  '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
+        '/': ['AI marketplace', 'tech services', 'artificial intelligence', 'IT services', 'AI developers', 'technology marketplace', 'AI solutions', 'machine learning', 'digital transformation', 'micro SaaS', 'quantum computing', 'blockchain', 'cybersecurity', 'edge computing', 'metaverse'],
         '/services': ['AI services', 'cybersecurity', 'cloud infrastructure', 'IT solutions', 'digital transformation', 'automation', 'machine learning', 'blockchain', 'quantum computing'],
         '/ai-solutions': ['artificial intelligence', 'AI automation', 'machine learning', 'deep learning', 'neural networks', 'AI systems', 'intelligent automation', 'AI platforms'],
-        '/about': ['Zion Tech Group', 'technology comp', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'comp history'],
+        '/about': ['Zion Tech Group', 'technology company', 'innovation', 'expertise', 'leadership', 'mission', 'vision', 'company history'],
         '/contact': ['contact us', 'get in touch', 'support', 'consultation', 'partnership', 'sales inquiry', 'technical support'],
         '/pricing': ['pricing plans', 'cost', 'subscription', 'enterprise pricing', 'custom solutions', 'affordable technology'],
         '/careers': ['job opportunities', 'careers', 'employment', 'work with us', 'join our team', 'technology jobs', 'AI careers'],
         '/blog': ['technology blog', 'industry insights', 'AI trends', 'tech news', 'thought leadership', 'expert analysis'],
-        '/news': ['comp news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],
+        '/news': ['company news', 'press releases', 'announcements', 'updates', 'partnerships', 'achievements'],
         '/services/ai-autonomous-systems': ['AI autonomous systems', 'intelligent automation', 'business process automation', 'AI agents', 'autonomous operations', 'machine learning systems'],
         '/services/quantum-technology': ['quantum computing', 'quantum technology', 'quantum algorithms', 'quantum cryptography', 'quantum machine learning', 'quantum advantage'],
         '/services/cybersecurity': ['cybersecurity', 'information security', 'threat protection', 'security assessment', 'compliance', 'data protection', 'quantum-safe security'],
@@ -55,8 +55,9 @@ export class SEOOptimizer {
         if (path === '/') {
             return `${baseTitle} - Revolutionary Technology Solutions`;
         const pathSegments = path.split('/').filter(Boolean);
-        if (pathSegments.length === 0)
+        if (pathSegments.length === 0) {
             return baseTitle;
+        }
         const lastSegment = pathSegments[pathSegments.length - 1];
         const formattedSegment = lastSegment
             .split('-')
@@ -74,7 +75,7 @@ export class SEOOptimizer {
         return `${baseUrl}${path}`;
     static generateStructuredData(path) {
         const baseData = {
-  "@context": "https://schema.org",
+            "@context": "https://schema.org",
             "@type": "WebPage",
             "name": this.generateTitle(path),
             "description": this.generateDescription(path),
@@ -86,6 +87,7 @@ export class SEOOptimizer {
   "logo": "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc"
 }
         };
+
         // Add specific structured data based on page type
         if (path === '/') {
             return {
@@ -121,6 +123,7 @@ export class SEOOptimizer {
         return baseData;
     static analyzeContentQuality(content, page) {
         const issues = [];
+        
         // Check for missing or short title
         if (!content.includes('<title>') || content.includes('<title></title>')) {
             issues.push({

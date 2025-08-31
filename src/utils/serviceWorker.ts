@@ -70,13 +70,6 @@ self.addEventListener('install', (event: ExtendableEvent) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Service Worker installed successfully');
-        return self.skipWaiting();
-      })
-      .catch(error => {
-        console.error('Service Worker installation failed:', error);
-      })
   );
 });
 
@@ -92,9 +85,6 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
           }
         })
       );
-    }).then(() => {
-      console.log('Service Worker activated successfully');
-      return self.clients.claim();
     })
   );
 });
@@ -126,6 +116,29 @@ self.addEventListener('fetch', (event: FetchEvent) => {
   } else {
     event.respondWith(networkFirst(request, CACHE_NAME));
   }
+
+  // Handle API requests
+  if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
+    event.respondWith(
+      fetch(request).then(response => {
+        // Cache successful API responses
+        if (response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        // Return cached response if available
+        return caches.match(request);
+      })
+    );
+    return;
+  }
+
+  // Default behavior for other requests
+  event.respondWith(fetch(request));
 });
 
 // Helper functions
@@ -198,3 +211,56 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
     throw error;
   }
 }
+// Handle push notifications
+self.addEventListener('push', (event: PushEvent) => {
+  console.log('Push notification received:', event);
+  const options = {
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    }
+  };
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+
+// Handle notification clicks
+self.addEventListener('notificationclick', (event: NotificationEvent) => {
+  console.log('Notification clicked:', event);
+  event.notification.close();
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+
+// Handle message events from main thread
+self.addEventListener('message', (event: ExtendableMessageEvent) => {
+  console.log('Message received in service worker:', event.data);
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
+});
+
+// Utility functions for offline data management
+async function getOfflineData(): Promise<any[]> {
+  // Implementation for retrieving offline data
+  return [];
+}
+
+async function syncOfflineData(data: any[]): Promise<void> {
+  // Implementation for syncing offline data
+  console.log('Syncing offline data:', data);
+}
+
+// Export for testing purposes
+export {};

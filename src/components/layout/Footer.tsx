@@ -75,7 +75,22 @@ export function Footer() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Zap },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform", icon: Database },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: TrendingUp },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow }
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
+        { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform", icon: TrendingUp },
+        { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
+        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
+        { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
+        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
+        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", icon: Database },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
+        { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
+>>>>>>> 2f94ab630cdb3ae7e34b2d154567193b6397d59b
       ]
     },
     {
@@ -135,7 +150,31 @@ export function Footer() {
       ]
     },
     {
-      title: "Resources",
+      title: "Legal & Education",
+      icon: BookOpen,
+      links: [
+        { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: Scale },
+        { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
+        { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Home },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText }
+      ]
+    },
+    {
+      title: "Company & About",
+      icon: Building2,
+      links: [
+        { name: "About Zion Tech Group", href: "/about", icon: Users },
+        { name: "Leadership Team", href: "/leadership", icon: Award },
+        { name: "Careers & Jobs", href: "/careers", icon: Users },
+        { name: "Partners & Alliances", href: "/partners", icon: Handshake },
+        { name: "News & Press", href: "/news", icon: FileText },
+        { name: "Events & Webinars", href: "/events", icon: Calendar },
+        { name: "Contact Us", href: "/contact", icon: Phone },
+        { name: "Get Started", href: "/get-started", icon: Rocket }
+      ]
+    },
+    {
+      title: "Resources & Support",
       icon: BookOpen,
       links: [
         { name: "Blog", href: "/blog", icon: PenTool },
@@ -229,6 +268,7 @@ export function Footer() {
         </div>
 
         {/* Main Footer Content */}
+<<<<<<< HEAD
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Company Info */}
           <div className="text-center mb-12">
@@ -241,13 +281,54 @@ export function Footer() {
                   Zion Tech Group
                 </h3>
                 <p className="text-sm text-slate-400 font-medium">Innovation • Technology • Growth</p>
+=======
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
+          {/* Company Info - Spans 2 columns on large screens */}
+          <div className="lg:col-span-2">
+            <div className="flex items-center space-x-3 mb-6">
+              <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg shadow-zion-cyan/25">
+                <Globe className="w-7 h-7 text-white" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white">Zion Tech Group</h3>
+                <p className="text-zion-cyan text-sm">Innovation • Technology • Growth</p>
+>>>>>>> 2f94ab630cdb3ae7e34b2d154567193b6397d59b
               </div>
             </Link>
             <p className="text-slate-300 max-w-3xl mx-auto leading-relaxed">
               Leading the future of technology with cutting-edge AI solutions, quantum computing innovations, 
               and transformative digital experiences that empower businesses to achieve unprecedented growth.
             </p>
+<<<<<<< HEAD
           </div>
+=======
+            
+            {/* Contact Info */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
+                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
+                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <a href="tel:+13024640950" className="hover:underline">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <div className="p-2 bg-zion-purple/20 rounded-lg">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
+>>>>>>> 2f94ab630cdb3ae7e34b2d154567193b6397d59b
 
           {/* Footer Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-12">

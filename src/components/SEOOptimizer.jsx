@@ -1,9 +1,12 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOptimizer = () => {
+import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
+
+const SEOOptimizer = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
     const [report, setReport] = useState(null);
     const [selectedPage, setSelectedPage] = useState(null);
+
     const analyzeSEO = useCallback(async () => {
         setIsAnalyzing(true);
         try {
@@ -13,19 +16,19 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
                     url: '/',
                     title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services',
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',
-                    headings['AI-Powered Business Solutions', 'Comprehensive IT Services', 'Micro-SaaS Solutions'],
-                    images['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],
-                    links['/services', '/ai-solutions', '/about', '/contact'],
-                    keywords['AI solutions', 'quantum computing', 'cybersecurity', 'digital transformation']
+                    headings: ['AI-Powered Business Solutions', 'Comprehensive IT Services', 'Micro-SaaS Solutions'],
+                    images: ['/images/hero-ai-solutions.jpg', '/images/hero-it-services.jpg'],
+                    links: ['/services', '/ai-solutions', '/about', '/contact'],
+                    keywords: ['AI solutions', 'quantum computing', 'cybersecurity', 'digital transformation']
                 },
                 {
                     url: '/services',
                     title: 'Our Services - Comprehensive Technology Solutions',
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.',
-                    headings['AI Solutions', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation'],
-                    images['/images/services-overview.jpg'],
-                    links['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'],
-                    keywords['technology services', 'AI solutions', 'cloud infrastructure', 'cybersecurity']
+                    headings: ['AI Solutions', 'Cloud & DevOps', 'Cybersecurity', 'Digital Transformation'],
+                    images: ['/images/services-overview.jpg'],
+                    links: ['/ai-solutions', '/cloud-devops', '/cybersecurity', '/about'],
+                    keywords: ['technology services', 'AI solutions', 'cloud infrastructure', 'cybersecurity']
                 },
                 {
                     url: '/ai-solutions',
@@ -37,6 +40,7 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
                     keywords['artificial intelligence', 'machine learning', 'predictive analytics', 'AI automation']
                 }
             ];
+
             const pageAnalyses = samplePages.map(page => {
                 const score = calculateSEOScore(page);
                 const issues = identifySEOIssues(page);
@@ -52,20 +56,28 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
                     score,
                     issues,
                     recommendations
-                }});
+                };
+            });
+
             const totalPages = pageAnalyses.length;
             const averageScore = Math.round(pageAnalyses.reduce((sum, page) => sum + page.score, 0) / totalPages);
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0).length;
+
             // Collect all issues and count frequency
-            const issueCounts = { /* empty */ };
+            const issueCounts = {};
             pageAnalyses.forEach(page => {
                 page.issues.forEach(issue => {
-                    issueCounts[issue] = (issueCounts[issue] || 0) + 1})});
+                    issueCounts[issue] = (issueCounts[issue] || 0) + 1;
+                });
+            });
+
             const topIssues = Object.entries(issueCounts)
                 .sort(([, a], [, b]) => b - a)
                 .slice(0, 5)
                 .map(([issue]) => issue);
+
             const summary = generateSummary(pageAnalyses, topIssues);
+
             setReport({
                 totalPages,
                 averageScore,
@@ -83,12 +95,16 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
         finally {
             setIsAnalyzing(false)}
     }, []);
+
     useEffect(() => {
         // Auto-analyze SEO when component mounts
-        analyzeSEO()}, [analyzeSEO]);
+        analyzeSEO();
+    }, [analyzeSEO]);
+
     const calculateSEOScore = (page) => {
         let score = 0;
-        const maxScore = 0;
+        let maxScore = 0;
+
         // Title optimization (0-20 points)
         maxScore += 20;
         if (page.title.length >= 30 && page.title.length <= 60) {
@@ -172,7 +188,9 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
         recommendations.push('Ensure content is unique, valuable, and addresses user intent');
         recommendations.push('Implement structured data markup for better search engine understanding');
         recommendations.push('Optimize page loading speed for better user experience and SEO');
-        return recommendations};
+        return recommendations;
+    };
+
     const generateSummary = (pageAnalyses, topIssues) => {
         const totalPages = pageAnalyses.length;
         const excellentPages = pageAnalyses.filter(page => page.score >= 80).length;
@@ -207,7 +225,9 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
         a.href = url;
         a.download = 'seo-optimization-report.csv';
         a.click();
-        window.URL.revokeObjectURL(url)};
+        window.URL.revokeObjectURL(url);
+    };
+
     const getScoreColor = (score) => {
         if (score >= 80)
             return 'text-green-600 bg-green-50 border-green-200';
@@ -215,7 +235,9 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';
         if (score >= 40)
             return 'text-orange-600 bg-orange-50 border-orange-200';
-        return 'text-red-600 bg-red-50 border-red-200'};
+        return 'text-red-600 bg-red-50 border-red-200';
+    };
+
     const getScoreText = (score) => {
         if (score >= 80)
             return 'Excellent';
@@ -223,7 +245,9 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
             return 'Good';
         if (score >= 40)
             return 'Fair';
-        return 'Poor'};
+        return 'Poor';
+    };
+
     return (<div className="fixed bottom-6 right-24 z-50">
       {/* Floating Action Button */}
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">
@@ -391,4 +415,3 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
         </div>)}
     </div>)};
 export default SEOOptimizer;
-}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
