@@ -2,12 +2,22 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Workflow,
   Brain,
-  Zap,
-  Shield,
   Users,
   BarChart3,
+  Target,
+  TrendingUp,
+  Eye,
+  Search,
+  Filter,
+  Download,
+  Upload,
+  RefreshCw,
+  Activity,
+  MessageCircle,
+  Phone,
+  Mail,
+  Globe,
   Clock,
   DollarSign,
   CheckCircle,
@@ -17,97 +27,98 @@ import {
   Database,
   Cloud,
   Lock,
-  TrendingUp,
-  Target,
-  Globe,
-  Cpu,
-  Bot,
-  FileText,
-  MessageCircle,
+  Shield,
+  Zap,
+  Heart,
+  Star,
+  ShoppingCart,
+  UserPlus,
+  UserMinus,
   Calendar,
   Bell,
-  Eye,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  RefreshCw,
-  Activity
+  PieChart,
+  LineChart,
+  BarChart,
+  MapPin,
+  Tag,
+  CreditCard,
+  Gift,
+  Award
 } from 'lucide-react';
 
-const AIEnterpriseWorkflowAutomation: React.FC = () => {
+const AICustomerIntelligencePlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Decision Making",
-      description: "Intelligent workflow routing and decision automation using advanced machine learning algorithms",
-      benefits: ["Reduces manual decision time by 80%", "Improves accuracy by 95%", "Learns from historical patterns"]
+      title: "AI-Powered Customer Segmentation",
+      description: "Advanced machine learning algorithms that automatically segment customers based on behavior, preferences, and value",
+      benefits: ["Dynamic segmentation updates", "Predictive behavior modeling", "Real-time customer insights"]
     },
     {
-      icon: Workflow,
-      title: "Visual Workflow Designer",
-      description: "Drag-and-drop interface for creating complex business processes without coding",
-      benefits: ["No-code workflow creation", "Real-time process visualization", "Instant deployment"]
+      icon: Eye,
+      title: "360° Customer View",
+      description: "Comprehensive customer profiles combining data from all touchpoints and interactions",
+      benefits: ["Unified customer data", "Cross-channel insights", "Historical behavior tracking"]
     },
     {
-      icon: Zap,
-      title: "Smart Automation Triggers",
-      description: "Intelligent event-driven automation that responds to business conditions in real-time",
-      benefits: ["Real-time responsiveness", "Conditional logic execution", "Multi-channel triggers"]
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast customer lifetime value, churn risk, and purchase probability using advanced AI models",
+      benefits: ["Churn prediction", "LTV forecasting", "Next-best-action recommendations"]
     },
     {
-      icon: Shield,
-      title: "Enterprise Security & Compliance",
-      description: "SOC 2 Type II compliant with role-based access control and audit trails",
-      benefits: ["Bank-grade security", "Full audit compliance", "Data encryption at rest"]
+      icon: Target,
+      title: "Personalized Marketing Automation",
+      description: "AI-driven campaigns that automatically adapt to customer behavior and preferences",
+      benefits: ["Dynamic content personalization", "Optimal timing optimization", "A/B testing automation"]
     },
     {
       icon: Users,
-      title: "Team Collaboration Hub",
-      description: "Built-in communication tools and task management for seamless team coordination",
-      benefits: ["Real-time collaboration", "Task assignment tracking", "Performance analytics"]
+      title: "Customer Journey Mapping",
+      description: "Visualize and optimize the complete customer journey across all touchpoints",
+      benefits: ["Journey visualization", "Bottleneck identification", "Conversion optimization"]
     },
     {
       icon: BarChart3,
-      title: "Advanced Analytics Dashboard",
-      description: "Comprehensive insights into workflow performance, bottlenecks, and optimization opportunities",
-      benefits: ["Performance metrics", "Bottleneck identification", "ROI tracking"]
+      title: "Real-Time Analytics Dashboard",
+      description: "Live insights into customer behavior, campaign performance, and business metrics",
+      benefits: ["Real-time monitoring", "Custom dashboards", "Automated reporting"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small teams getting started with workflow automation",
+      description: "Perfect for small businesses starting their customer intelligence journey",
       features: [
-        "Up to 10 workflows",
-        "5 team members",
-        "Basic AI automation",
+        "Up to 10,000 customer profiles",
+        "Basic AI segmentation",
+        "Standard analytics dashboard",
         "Email support",
-        "Standard integrations",
-        "Basic analytics"
+        "Basic integrations",
+        "Monthly reports"
       ],
       cta: "Start Free Trial",
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$499",
       period: "/month",
-      description: "Ideal for growing businesses with advanced automation needs",
+      description: "Ideal for growing businesses with advanced customer intelligence needs",
       features: [
-        "Up to 50 workflows",
-        "25 team members",
-        "Advanced AI automation",
+        "Up to 100,000 customer profiles",
+        "Advanced AI segmentation",
+        "Predictive analytics",
         "Priority support",
         "Premium integrations",
-        "Advanced analytics",
-        "Custom branding",
+        "Real-time dashboards",
+        "Custom reporting",
         "API access"
       ],
       cta: "Start Free Trial",
@@ -115,18 +126,18 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,299",
       period: "/month",
-      description: "For large organizations requiring enterprise-grade automation",
+      description: "For large organizations requiring enterprise-grade customer intelligence",
       features: [
-        "Unlimited workflows",
-        "Unlimited team members",
+        "Unlimited customer profiles",
         "Custom AI models",
+        "Advanced predictive analytics",
         "24/7 dedicated support",
         "Custom integrations",
-        "Advanced security",
         "White-label solution",
-        "Custom SLA"
+        "Custom SLA",
+        "On-premise option"
       ],
       cta: "Contact Sales",
       popular: false
@@ -135,40 +146,67 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
 
   const useCases = [
     {
+      industry: "E-commerce",
+      title: "Personalized Shopping Experience",
+      description: "Deliver tailored product recommendations and personalized shopping experiences",
+      benefits: ["Increased conversion rates", "Higher average order value", "Improved customer retention"]
+    },
+    {
+      industry: "SaaS",
+      title: "User Adoption & Retention",
+      description: "Identify at-risk users and optimize onboarding for better product adoption",
+      benefits: ["Reduced churn", "Higher user engagement", "Better product-market fit"]
+    },
+    {
+      industry: "Financial Services",
+      title: "Customer Risk Assessment",
+      description: "Evaluate customer risk profiles and optimize financial product offerings",
+      benefits: ["Better risk management", "Improved product targeting", "Enhanced compliance"]
+    },
+    {
       industry: "Healthcare",
-      title: "Patient Care Workflow Automation",
-      description: "Automate patient intake, appointment scheduling, and follow-up processes",
-      benefits: ["Reduced wait times", "Improved patient satisfaction", "Better resource utilization"]
-    },
-    {
-      industry: "Finance",
-      title: "Loan Processing Automation",
-      description: "Streamline loan applications, approvals, and disbursement workflows",
-      benefits: ["Faster processing", "Reduced errors", "Compliance automation"]
-    },
-    {
-      industry: "Manufacturing",
-      title: "Production Line Optimization",
-      description: "Automate quality control, maintenance scheduling, and inventory management",
-      benefits: ["Increased efficiency", "Reduced downtime", "Better quality control"]
-    },
-    {
-      industry: "Retail",
-      title: "Customer Service Automation",
-      description: "Automate customer inquiries, returns processing, and loyalty programs",
-      benefits: ["Improved customer experience", "Reduced response time", "Increased retention"]
+      title: "Patient Engagement",
+      description: "Personalize patient communications and improve healthcare outcomes",
+      benefits: ["Better patient compliance", "Improved health outcomes", "Enhanced patient satisfaction"]
     }
   ];
 
   const integrations = [
     { name: "Salesforce", category: "CRM", icon: Users },
-    { name: "Slack", category: "Communication", icon: MessageCircle },
-    { name: "Microsoft Teams", category: "Collaboration", icon: Users },
-    { name: "Zapier", category: "Automation", icon: Zap },
     { name: "HubSpot", category: "Marketing", icon: Target },
-    { name: "QuickBooks", category: "Accounting", icon: DollarSign },
     { name: "Shopify", category: "E-commerce", icon: ShoppingCart },
-    { name: "Jira", category: "Project Management", icon: Settings }
+    { name: "Stripe", category: "Payments", icon: CreditCard },
+    { name: "Mailchimp", category: "Email", icon: Mail },
+    { name: "Google Analytics", category: "Analytics", icon: BarChart },
+    { name: "Facebook Ads", category: "Advertising", icon: Target },
+    { name: "Zapier", category: "Automation", icon: Zap }
+  ];
+
+  const metrics = [
+    {
+      icon: TrendingUp,
+      title: "Customer Lifetime Value",
+      value: "+45%",
+      description: "Average increase in CLV"
+    },
+    {
+      icon: Users,
+      title: "Customer Retention",
+      value: "+38%",
+      description: "Improvement in retention rates"
+    },
+    {
+      icon: Target,
+      title: "Conversion Rate",
+      value: "+52%",
+      description: "Higher conversion rates"
+    },
+    {
+      icon: DollarSign,
+      title: "Revenue Growth",
+      value: "+67%",
+      description: "Average revenue increase"
+    }
   ];
 
   return (
@@ -184,17 +222,17 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
             >
               <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-6">
                 <Brain className="w-4 h-4 mr-2" />
-                AI-Powered Workflow Automation
+                AI-Powered Customer Intelligence
               </div>
               <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                Transform Your Business with
+                Unlock the Power of
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
-                  {" "}AI Workflow Automation
+                  {" "}Customer Intelligence
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Streamline operations, eliminate manual tasks, and boost productivity with intelligent workflow automation powered by advanced AI. 
-                Create, deploy, and optimize business processes in minutes, not months.
+                Transform customer data into actionable insights with our AI-powered platform. 
+                Understand your customers like never before and drive growth through personalized experiences.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
@@ -223,9 +261,9 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
               <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                 <div className="w-full h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
                   <div className="text-center">
-                    <Workflow className="w-24 h-24 text-cyan-400 mx-auto mb-4" />
-                    <h3 className="text-2xl font-bold text-white mb-2">Workflow Designer</h3>
-                    <p className="text-gray-300">Drag & Drop Interface</p>
+                    <Users className="w-24 h-24 text-cyan-400 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-white mb-2">Customer Intelligence</h3>
+                    <p className="text-gray-300">AI-Powered Insights</p>
                   </div>
                 </div>
               </div>
@@ -234,8 +272,33 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
         </div>
       </section>
 
+      {/* Metrics Section */}
+      <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {metrics.map((metric, index) => (
+              <motion.div
+                key={metric.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <metric.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-4xl font-bold text-white mb-2">{metric.value}</div>
+                <h3 className="text-lg font-semibold text-white mb-2">{metric.title}</h3>
+                <p className="text-gray-400">{metric.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -245,10 +308,10 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Powerful Features for Modern Businesses
+              Powerful Features for Customer Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to automate complex business processes and drive operational excellence
+              Everything you need to understand, engage, and retain your customers
             </p>
           </motion.div>
 
@@ -282,7 +345,7 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -353,7 +416,7 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -366,7 +429,7 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how different industries leverage our workflow automation platform
+              See how different industries leverage our customer intelligence platform
             </p>
           </motion.div>
 
@@ -405,7 +468,7 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -414,10 +477,10 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Workflows?
+              Ready to Transform Your Customer Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses that have already automated their processes and increased productivity by 300%
+              Join thousands of businesses that have already increased customer lifetime value by 45% using our platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25">
@@ -443,4 +506,4 @@ const AIEnterpriseWorkflowAutomation: React.FC = () => {
   );
 };
 
-export default AIEnterpriseWorkflowAutomation;
+export default AICustomerIntelligencePlatform;

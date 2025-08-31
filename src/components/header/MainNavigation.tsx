@@ -51,13 +51,55 @@ import {
   Users2,
   Cog,
   Palette as PaletteIcon,
-  Menu,
-  X,
-  ArrowRight,
+  ShoppingCart,
+  Calendar,
+  Handshake,
+  BookOpen,
   Video,
   GraduationCap,
-  Handshake,
-  ShoppingCart
+  PenTool,
+  FileText as FileTextIcon,
+  Briefcase,
+  Globe as GlobeIcon,
+  Users as UsersIcon,
+  Building as BuildingIcon,
+  Shield as ShieldIcon,
+  Zap as ZapIcon2,
+  Brain as BrainIcon,
+  Server as ServerIcon,
+  Cloud as CloudIcon,
+  Lock as LockIcon,
+  BarChart as BarChartIcon,
+  Cpu as CpuIcon,
+  Workflow as WorkflowIcon,
+  Database as DatabaseIcon,
+  Target as TargetIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Code as CodeIcon,
+  Monitor as MonitorIcon,
+  Smartphone as SmartphoneIcon,
+  Network as NetworkIcon,
+  Wifi as WifiIcon,
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Search as SearchIcon,
+  Settings as SettingsIcon,
+  Palette as PaletteIcon2,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Clock as ClockIcon,
+  DollarSign as DollarSignIcon,
+  Atom as AtomIcon,
+  Leaf as LeafIcon,
+  Gamepad2 as GamepadIcon,
+  Coins as CoinsIcon,
+  Satellite as SatelliteIcon,
+  MessageCircle as MessageCircleIcon,
+  Star as StarIcon,
+  Users2 as Users2Icon,
+  Cog as CogIcon
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -69,465 +111,444 @@ export function MainNavigation({ className }: MainNavigationProps) {
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
   const [isCompanyOpen, setIsCompanyOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <>
-      {/* Desktop Navigation */}
-      <nav className={cn("hidden lg:flex items-center space-x-8", className)}>
-        <NavLink 
-          to="/" 
-          className={({ isActive }) => 
-            cn("text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md", 
-              isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
-            )
-          }
+    <nav className={cn("hidden md:flex items-center space-x-6", className)}>
+      <NavLink 
+        to="/" 
+        className={({ isActive }) => 
+          cn("text-sm font-medium transition-colors hover:text-primary", 
+            isActive ? "text-zion-cyan" : "text-muted-foreground"
+          )
+        }
+      >
+        Home
+      </NavLink>
+      
+      {/* Services Dropdown */}
+      <div className="relative group">
+        <button 
+          onMouseEnter={() => setIsServicesOpen(true)} 
+          onMouseLeave={() => setIsServicesOpen(false)} 
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
         >
-          Home
-        </NavLink>
-        
-        {/* Services Dropdown */}
-        <div className="relative group">
-          <button 
+          <Zap className="w-4 h-4"/>
+          <span>Services</span>
+          <ChevronDown className="w-3 h-3"/>
+        </button>
+        {isServicesOpen && (
+          <div 
             onMouseEnter={() => setIsServicesOpen(true)} 
             onMouseLeave={() => setIsServicesOpen(false)} 
-            className="flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary text-muted-foreground px-3 py-2 rounded-md hover:bg-zion-cyan/5"
+            className="absolute top-full left-0 mt-2 w-[800px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
-            <Zap className="w-4 h-4"/>
-            <span>Services</span>
-            <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180"/>
-          </button>
-          {isServicesOpen && (
-            <div 
-              onMouseEnter={() => setIsServicesOpen(true)} 
-              onMouseLeave={() => setIsServicesOpen(false)} 
-              className="absolute top-full left-0 mt-2 w-[800px] bg-zion-blue-dark border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 z-50 backdrop-blur-sm"
-            >
-              <div className="p-8">
-                <div className="grid grid-cols-3 gap-8">
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
-                      <Zap className="w-5 h-5 mr-3"/>
-                      AI & Automation
-                    </h4>
-                    <ul className="space-y-4 text-sm">
-                      <li>
-                        <Link to="/services/ai-autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Brain className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Autonomous Business Operations</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <BarChart3 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Customer Experience Analytics</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Workflow className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Project Management</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-enterprise-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Brain className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Enterprise Automation</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-data-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <BarChart3 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Data Analytics</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <TrendingUp className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Business Intelligence</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
-                      <Server className="w-5 h-5 mr-3"/>
-                      IT & Infrastructure
-                    </h4>
-                    <ul className="space-y-4 text-sm">
-                      <li>
-                        <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Quantum Edge Computing</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/it-infrastructure-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Server className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Infrastructure Management</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Cloud className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Cloud & DevOps</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Cybersecurity</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Rocket className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Digital Transformation</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-6 flex items-center text-lg">
-                      <Building2 className="w-5 h-5 mr-3"/>
-                      Micro SaaS
-                    </h4>
-                    <ul className="space-y-4 text-sm">
-                      <li>
-                        <Link to="/services/micro-saas-solutions-comprehensive" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Code className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Comprehensive Solutions</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <TrendingUp className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Sales Copilot</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <DollarSign className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Cloud FinOps Optimizer</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Shield className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>AI Compliance Assistant</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+            <div className="p-6">
+              <div className="grid grid-cols-3 gap-6">
+                {/* AI & Automation Services */}
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
+                    <Brain className="w-4 h-4 mr-2"/>
+                    AI & Automation
+                  </h4>
+                  <ul className="space-y-3 text-sm">
+                    <li>
+                      <Link to="/services/ai-enterprise-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Enterprise Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-enterprise-intelligence-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Enterprise Intelligence
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-data-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <BarChart3 className="w-3 h-3 mr-2" />
+                        AI Data Analytics
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-business-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Business Intelligence
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-cybersecurity-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Cybersecurity
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-research-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Research Assistant
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-financial-trading-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Trading Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-healthcare-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Healthcare
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-hybrid-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum AI Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Neural Networks
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        Supply Chain AI
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-supply-chain-optimization-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Truck className="w-3 h-3 mr-2" />
+                        AI Supply Chain Optimization Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Sales Copilot
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-experience-optimization-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Eye className="w-3 h-3 mr-2" />
+                        AI Customer Experience Optimization
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Compliance Assistant
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI Project Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Edge Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-content-creation-studio" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <PenTool className="w-3 h-3 mr-2" />
+                        AI Content Studio
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-business-intelligence-dashboard" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <BarChart3 className="w-3 h-3 mr-2" />
+                        AI BI Dashboard
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <MessageCircle className="w-3 h-3 mr-2" />
+                        AI Support Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-marketing-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Marketing Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-workflow-orchestrator" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI Workflow Orchestrator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-predictive-maintenance" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Activity className="w-3 h-3 mr-2" />
+                        AI Predictive Maintenance
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-hr-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI HR Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-financial-trading-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Financial Risk Management
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
-                <div className="mt-8 pt-6 border-t border-zion-purple/30">
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <Link 
-                      to="/comprehensive-services-showcase-2025" 
-                      className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"
-                    >
-                      <span>View All Services</span>
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                    <Link to="/innovative-services-showcase-2032" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
-                      Innovation Showcase 2032
-                      <Rocket className="w-4 h-4 ml-2"/>
-                    </Link>
-                    <Link to="/innovative-services-showcase-2026" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
-                      Innovation Showcase 2026
-                      <Rocket className="w-4 h-4 ml-2"/>
-                    </Link>
-                    <Link to="/comprehensive-pricing-guide-2032" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                      Pricing Guide 2032
-                      <DollarSign className="w-4 h-4 ml-2"/>
-                    </Link>
-                  </div>
-                </div>
-            </div>
-          )}
-        </div>
 
-        {/* Solutions Dropdown */}
-        <div className="relative group">
-          <button 
+                {/* IT & Infrastructure Services */}
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
+                    <Server className="w-4 h-4 mr-2"/>
+                    IT & Infrastructure
+                  </h4>
+                  <ul className="space-y-3 text-sm">
+                    <li>
+                      <Link to="/services/it-infrastructure-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Server className="w-3 h-3 mr-2" />
+                        Infrastructure Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/cloud-devops" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cloud className="w-3 h-3 mr-2" />
+                        Cloud & DevOps
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Lock className="w-3 h-3 mr-2" />
+                        Cybersecurity
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cpu className="w-3 h-3 mr-2" />
+                        Edge Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Network className="w-3 h-3 mr-2" />
+                        Blockchain Solutions
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/iot-edge" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Wifi className="w-3 h-3 mr-2" />
+                        IoT & Edge Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/digital-transformation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Rocket className="w-3 h-3 mr-2" />
+                        Digital Transformation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cloud className="w-3 h-3 mr-2" />
+                        Cloud FinOps
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Micro SaaS & Specialized Services */}
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
+                    <Zap className="w-4 h-4 mr-2"/>
+                    Micro SaaS & Specialized
+                  </h4>
+                  <ul className="space-y-3 text-sm">
+                    <li>
+                      <Link to="/services/micro-saas-solutions-comprehensive" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Zap className="w-3 h-3 mr-2" />
+                        All Micro SaaS
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <MessageCircle className="w-3 h-3 mr-2" />
+                        AI Support Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-workflow-orchestrator" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI Workflow Orchestrator
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Calendar className="w-3 h-3 mr-2" />
+                        AI Project Management
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-marketing-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Marketing Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-predictive-maintenance" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Activity className="w-3 h-3 mr-2" />
+                        AI Predictive Maintenance
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-hr-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI HR Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-financial-trading-risk-management" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Financial Risk Management
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              {/* Bottom Links */}
+              <div className="mt-6 pt-6 border-t border-zion-purple/20">
+                <div className="grid grid-cols-3 gap-4">
+                  <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    View All Services
+                    <TrendingUp className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/innovative-services-showcase-2026" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Innovation Showcase 2026
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/comprehensive-services-showcase-2025" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Comprehensive Showcase 2025
+                    <Star className="w-4 h-4 ml-2"/>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Solutions Dropdown */}
+      <div className="relative group">
+        <button 
+          onMouseEnter={() => setIsSolutionsOpen(true)} 
+          onMouseLeave={() => setIsSolutionsOpen(false)} 
+          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+        >
+          <Brain className="w-4 h-4"/>
+          <span>Solutions</span>
+          <ChevronDown className="w-3 h-3"/>
+        </button>
+        {isSolutionsOpen && (
+          <div 
             onMouseEnter={() => setIsSolutionsOpen(true)} 
             onMouseLeave={() => setIsSolutionsOpen(false)} 
-            className="flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary text-muted-foreground px-3 py-2 rounded-md hover:bg-zion-cyan/5"
+            className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
-            <Target className="w-4 h-4"/>
-            <span>Solutions</span>
-            <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180"/>
-          </button>
-          {isSolutionsOpen && (
-            <div 
-              onMouseEnter={() => setIsSolutionsOpen(true)} 
-              onMouseLeave={() => setIsSolutionsOpen(false)} 
-              className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 z-50 backdrop-blur-sm"
-            >
-              <div className="p-6">
-                <h4 className="text-zion-cyan font-semibold mb-4 text-lg">Industry Solutions</h4>
-                <ul className="space-y-3 text-sm">
-                  <li>
-                    <Link to="/solutions/healthcare" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <Activity className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Healthcare</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/solutions/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <DollarSign className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Financial Services</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/solutions/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <Cog className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Manufacturing</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/solutions/retail" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <ShoppingCart className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Retail & E-commerce</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/solutions/government" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <Building2 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Government</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Company Dropdown */}
-        <div className="relative group">
-          <button 
-            onMouseEnter={() => setIsCompanyOpen(true)} 
-            onMouseLeave={() => setIsCompanyOpen(false)} 
-            className="flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary text-muted-foreground px-3 py-2 rounded-md hover:bg-zion-cyan/5"
-          >
-            <Building2 className="w-4 h-4"/>
-            <span>Company</span>
-            <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180"/>
-          </button>
-          {isCompanyOpen && (
-            <div 
-              onMouseEnter={() => setIsCompanyOpen(true)} 
-              onMouseLeave={() => setIsCompanyOpen(false)} 
-              className="absolute top-full left-0 mt-2 w-64 bg-zion-blue-dark border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 z-50 backdrop-blur-sm"
-            >
-              <div className="p-6">
-                <ul className="space-y-3 text-sm">
-                  <li>
-                    <Link to="/about" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <Users className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>About Us</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/leadership" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <Star className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Leadership</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/careers" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <Rocket className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Careers</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/partners" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <Handshake className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Partners</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/contact" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                      <MessageCircle className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                      <span>Contact</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Resources Dropdown */}
-        <div className="relative group">
-          <button 
-            onMouseEnter={() => setIsResourcesOpen(true)} 
-            onMouseLeave={() => setIsResourcesOpen(false)} 
-            className="flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary text-muted-foreground px-3 py-2 rounded-md hover:bg-zion-cyan/5"
-          >
-            <FileText className="w-4 h-4"/>
-            <span>Resources</span>
-            <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180"/>
-          </button>
-          {isResourcesOpen && (
-            <div 
-              onMouseEnter={() => setIsResourcesOpen(true)} 
-              onMouseLeave={() => setIsResourcesOpen(false)} 
-              className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-xl shadow-2xl shadow-zion-purple/20 z-50 backdrop-blur-sm"
-            >
-              <div className="p-6">
-                <div className="grid grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-4">Learning</h4>
-                    <ul className="space-y-3 text-sm">
-                      <li>
-                        <Link to="/blog" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <FileText className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Blog</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/webinars" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Video className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Webinars</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/training" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <GraduationCap className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Training</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-zion-cyan font-semibold mb-4">Documentation</h4>
-                    <ul className="space-y-3 text-sm">
-                      <li>
-                        <Link to="/docs" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <Code className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>API Docs</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/case-studies" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <BarChart className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>Case Studies</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/white-papers" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
-                          <FileText className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
-                          <span>White Papers</span>
-                        </Link>
-                      </li>
-                    </ul>
-                  </div>
+            <div className="p-6">
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
+                    <Users className="w-4 h-4 mr-2"/>
+                    Industry Solutions
+                  </h4>
+                  <ul className="space-y-3 text-sm">
+                    <li>
+                      <Link to="/solutions/healthcare" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        Healthcare
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/financial" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <DollarSign className="w-3 h-3 mr-2" />
+                        Financial
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/manufacturing" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Cog className="w-3 h-3 mr-2" />
+                        Manufacturing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/government" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Building2 className="w-3 h-3 mr-2" />
+                        Government
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/retail" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <ShoppingCart className="w-3 h-3 mr-2" />
+                        Retail
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
+                    <HardDrive className="w-4 h-4 mr-2"/>
+                    Technology Solutions
+                  </h4>
+                  <ul className="space-y-3 text-sm">
+                    <li>
+                      <Link to="/solutions/quantum-edge-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Edge Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/ai-autonomous-business" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Brain className="w-3 h-3 mr-2" />
+                        AI Autonomous Business
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/blockchain-web3" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Network className="w-3 h-3 mr-2" />
+                        Blockchain & Web3
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/iot-edge-computing" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Wifi className="w-3 h-3 mr-2" />
+                        IoT Edge Computing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/solutions/space-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Satellite className="w-3 h-3 mr-2" />
+                        Space Technology
+                      </Link>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
-
-        {/* Pricing Link */}
-        <NavLink 
-          to="/pricing" 
-          className={({ isActive }) => 
-            cn("text-sm font-medium transition-colors hover:text-primary px-3 py-2 rounded-md", 
-              isActive ? "text-zion-cyan bg-zion-cyan/10" : "text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5"
-            )
-          }
-        >
-          Pricing
-        </NavLink>
-      </nav>
-
-      {/* Mobile Menu Button */}
-      <button
-        onClick={toggleMobileMenu}
-        className="lg:hidden p-2 text-muted-foreground hover:text-zion-cyan transition-colors"
-        aria-label="Toggle mobile menu"
-      >
-        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-
-      {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 shadow-2xl z-50">
-          <div className="p-6 space-y-6">
-            {/* Mobile Services Section */}
-            <div>
-              <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
-                <Zap className="w-5 h-5 mr-3"/>
-                Services
-              </h4>
-              <div className="grid grid-cols-1 gap-3">
-                <Link 
-                  to="/services/ai-autonomous-business-operations-platform" 
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center p-3 rounded-lg hover:bg-zion-cyan/5"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Brain className="w-4 h-4 mr-3" />
-                  <span>AI Autonomous Business Operations</span>
-                </Link>
-                <Link 
-                  to="/services/ai-customer-experience-analytics-platform" 
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center p-3 rounded-lg hover:bg-zion-cyan/5"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <BarChart3 className="w-4 h-4 mr-3" />
-                  <span>AI Customer Experience Analytics</span>
-                </Link>
-                <Link 
-                  to="/services/quantum-edge-computing-solutions" 
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center p-3 rounded-lg hover:bg-zion-cyan/5"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Atom className="w-4 h-4 mr-3" />
-                  <span>Quantum Edge Computing</span>
-                </Link>
-                <Link 
-                  to="/comprehensive-services-showcase-2025" 
-                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center p-3 rounded-lg hover:bg-zion-cyan/5 font-medium"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <span>View All Services →</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Mobile Company Section */}
-            <div>
-              <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
-                <Building2 className="w-5 h-5 mr-3"/>
-                Company
-              </h4>
-              <div className="space-y-3">
-                <Link 
-                  to="/about" 
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center p-3 rounded-lg hover:bg-zion-cyan/5"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Users className="w-4 h-4 mr-3" />
-                  <span>About Us</span>
-                </Link>
-                <Link 
-                  to="/contact" 
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center p-3 rounded-lg hover:bg-zion-cyan/5"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <MessageCircle className="w-4 h-4 mr-3" />
-                  <span>Contact</span>
-                </Link>
-                <Link 
-                  to="/pricing" 
-                  className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center p-3 rounded-lg hover:bg-zion-cyan/5"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <DollarSign className="w-4 h-4 mr-3" />
-                  <span>Pricing</span>
+              <div className="mt-6 pt-6 border-t border-zion-purple/20">
+                <Link to="/request-quote" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                  Get Custom Quote
+                  <TrendingUp className="w-4 h-4 ml-2"/>
                 </Link>
               </div>
             </div>
@@ -634,12 +655,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                    <HelpCircle className="w-3 h-3 mr-2" />
-                    Help Center
-                  </Link>
-                </li>
-                <li>
                   <Link to="/white-papers" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                     <FileText className="w-3 h-3 mr-2" />
                     White Papers
@@ -669,18 +684,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     Case Studies
                   </Link>
                 </li>
-                <li>
-                  <Link to="/marketplace" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                    <ShoppingCart className="w-3 h-3 mr-2" />
-                    Marketplace
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/request-quote" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                    <DollarSign className="w-3 h-3 mr-2" />
-                    Request Quote
-                  </Link>
-                </li>
               </ul>
             </div>
           </div>
@@ -688,7 +691,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
       </div>
 
       {/* Support */}
-      <Link to="/support" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
+      <Link to="/help" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <HelpCircle className="w-4 h-4 mr-1" />
         Support
       </Link>
@@ -714,43 +717,5 @@ export function MainNavigation({ className }: MainNavigationProps) {
     </nav>
   );
 }
-  );
-}
 
-// Missing icon components
-const ShoppingCart = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m8 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
-  </svg>
-);
 
-const Calendar = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-  </svg>
-);
-
-const Handshake = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-  </svg>
-);
-
-const BookOpen = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-  </svg>
-);
-
-const Video = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-  </svg>
-);
-
-const GraduationCap = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l9-5-9-5-9 5 9 5z" />
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-  </svg>
-);
