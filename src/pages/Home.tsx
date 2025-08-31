@@ -137,6 +137,13 @@ export default function Home() {
   const services = [
     {
       icon: Brain,
+      title: "AI Autonomous Business Manager",
+      description: "Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction",
+      color: "from-purple-500 to-pink-500",
+      link: "/services/ai-autonomous-business-manager"
+    },
+    {
+      icon: Brain,
       title: "AI Autonomous Business Operations",
       description: "Automate complex business processes with intelligent AI agents",
       color: "from-purple-500 to-pink-500",

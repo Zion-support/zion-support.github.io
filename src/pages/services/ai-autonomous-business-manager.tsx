@@ -1,340 +1,368 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Brain, Users, BarChart3, Shield, Zap, Clock, 
-  TrendingUp, CheckCircle, Star, Target, ArrowRight,
-  Phone, Mail, MapPin, Globe, Cpu, Database, 
-  Lock, Smartphone, Network, Server, Code, 
-  Bot, GitFork, Eye, Sparkles, Award, DollarSign
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Zap,
+  TrendingUp,
+  BarChart3,
+  Users,
+  Target,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  DollarSign,
+  Shield,
+  Globe,
+  Cpu,
+  Database,
+  Network,
+  Smartphone,
+  Lock,
+  Code,
+  Server,
+  Chip,
+  Wifi,
+  Bot,
+  Workflow,
+  Eye,
+  Sparkles,
+  Calendar,
+  FileText,
+  MessageCircle,
+  Search,
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  Activity,
+  Award,
+  Gift,
+  ShieldCheck,
+  Car,
+  Building,
+  Calculator,
+  Leaf,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Factory,
+  Heart,
+  Cloud
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 const AIAutonomousBusinessManager: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
-  const [showPricingModal, setShowPricingModal] = useState(false);
 
-  const contactInfo = {
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    website: "https://ziontechgroup.com"
+  const tabs = [
+    { id: 'overview', name: 'Overview', icon: Eye },
+    { id: 'features', name: 'Features', icon: Sparkles },
+    { id: 'pricing', name: 'Pricing', icon: DollarSign },
+    { id: 'benefits', name: 'Benefits', icon: Star },
+    { id: 'use-cases', name: 'Use Cases', icon: Target },
+    { id: 'technology', name: 'Technology', icon: Cpu }
+  ];
+
+  const features = {
+    starter: [
+      'Basic Business Monitoring & Analytics',
+      'Automated Reporting (Daily/Weekly)',
+      'Performance Metrics Dashboard',
+      'Email Support (24/48 hour response)',
+      'Basic Integration with 5 systems',
+      'Standard Security & Compliance'
+    ],
+    professional: [
+      'Advanced Business Intelligence',
+      'Real-time Performance Analytics',
+      'Predictive Analytics & Forecasting',
+      'Automated Decision Making Engine',
+      'Priority Support (4-8 hour response)',
+      'Integration with 15+ systems',
+      'Custom Workflow Automation',
+      'Advanced Security & Compliance'
+    ],
+    enterprise: [
+      'Full Business Autonomy',
+      'Real-time Business Optimization',
+      'Multi-location Management',
+      'AI-Powered Strategic Planning',
+      'Dedicated Support Team (1-2 hour response)',
+      'Unlimited System Integrations',
+      'Custom AI Model Training',
+      'White-label Solutions',
+      'Advanced Analytics & Reporting',
+      'Enterprise Security & Compliance'
+    ]
   };
 
-  const features = [
-    {
-      category: "Autonomous Decision Making",
-      items: [
-        "AI-powered strategic planning and execution",
-        "Real-time market analysis and adaptation",
-        "Automated resource allocation optimization",
-        "Intelligent risk assessment and mitigation",
-        "Dynamic pricing and revenue optimization",
-        "Predictive customer behavior analysis"
-      ]
+  const pricing = {
+    starter: {
+      price: '$2,500/month',
+      setup: '$5,000',
+      contract: '12 months',
+      savings: 'Save 60% vs. market rates'
     },
-    {
-      category: "Business Intelligence",
-      items: [
-        "Real-time KPI monitoring and reporting",
-        "Advanced predictive analytics",
-        "Competitive intelligence gathering",
-        "Market trend identification",
-        "Performance benchmarking",
-        "Custom dashboard creation"
-      ]
+    professional: {
+      price: '$5,000/month',
+      setup: '$10,000',
+      contract: '24 months',
+      savings: 'Save 65% vs. market rates'
     },
-    {
-      category: "Process Automation",
-      items: [
-        "End-to-end workflow automation",
-        "Intelligent document processing",
-        "Automated customer service",
-        "Smart inventory management",
-        "Financial process automation",
-        "HR and recruitment automation"
-      ]
-    },
-    {
-      category: "Communication Management",
-      items: [
-        "Multi-channel communication orchestration",
-        "AI-powered content generation",
-        "Automated email marketing campaigns",
-        "Social media management",
-        "Customer relationship optimization",
-        "Internal communication automation"
-      ]
+    enterprise: {
+      price: '$12,000/month',
+      setup: '$25,000',
+      contract: '36 months',
+      savings: 'Save 70% vs. market rates'
     }
-  ];
+  };
 
   const benefits = [
     {
-      title: "24/7 Autonomous Operation",
-      description: "Your business runs continuously without human intervention, maximizing efficiency and opportunities.",
-      icon: Clock,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Data-Driven Decisions",
-      description: "Every decision is based on real-time data analysis, ensuring optimal outcomes and reduced risk.",
-      icon: BarChart3,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cost Reduction",
-      description: "Automation reduces operational costs by 30-50% while improving quality and consistency.",
+      title: 'Cost Reduction',
+      description: 'Reduce operational costs by 40-60% through automation and optimization',
       icon: DollarSign,
-      color: "from-yellow-500 to-orange-500"
+      color: 'from-green-500 to-emerald-500',
+      metric: '40-60%'
     },
     {
-      title: "Scalable Growth",
-      description: "The system automatically scales with your business, handling increased complexity and volume.",
+      title: 'Decision Speed',
+      description: 'Improve decision-making speed by 80% with real-time insights',
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500',
+      metric: '80%'
+    },
+    {
+      title: 'Efficiency Gain',
+      description: 'Increase overall business efficiency by 50% through process optimization',
       icon: TrendingUp,
-      color: "from-purple-500 to-pink-500"
+      color: 'from-purple-500 to-pink-500',
+      metric: '50%'
     },
     {
-      title: "Risk Mitigation",
-      description: "Continuous monitoring and predictive analytics identify and prevent potential issues before they occur.",
+      title: '24/7 Operation',
+      description: 'Continuous business monitoring and optimization without human intervention',
+      icon: Clock,
+      color: 'from-orange-500 to-red-500',
+      metric: '24/7'
+    },
+    {
+      title: 'Market Adaptation',
+      description: 'Real-time market analysis and automatic strategy adjustment',
+      icon: Globe,
+      color: 'from-indigo-500 to-purple-500',
+      metric: 'Real-time'
+    },
+    {
+      title: 'Risk Mitigation',
+      description: 'Proactive risk identification and automated response systems',
       icon: Shield,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Competitive Advantage",
-      description: "Stay ahead of competitors with AI-powered insights and rapid adaptation to market changes.",
-      icon: Award,
-      color: "from-indigo-500 to-purple-500"
+      color: 'from-red-500 to-pink-500',
+      metric: '90%'
     }
   ];
 
   const useCases = [
     {
-      industry: "E-commerce & Retail",
-      applications: [
-        "Automated inventory management",
-        "Dynamic pricing optimization",
-        "Customer behavior analysis",
-        "Marketing campaign automation",
-        "Supply chain optimization"
-      ]
+      title: 'Enterprise Business Management',
+      description: 'Complete autonomous management of large enterprise operations across multiple locations and departments.',
+      icon: Building,
+      color: 'from-blue-500 to-cyan-500',
+      industries: ['Fortune 500', 'Multi-national', 'Conglomerates']
     },
     {
-      industry: "Financial Services",
-      applications: [
-        "Risk assessment and management",
-        "Portfolio optimization",
-        "Fraud detection",
-        "Customer service automation",
-        "Compliance monitoring"
-      ]
+      title: 'E-commerce Optimization',
+      description: 'Automated inventory management, pricing optimization, and customer experience enhancement.',
+      icon: ShoppingCart,
+      color: 'from-green-500 to-emerald-500',
+      industries: ['E-commerce', 'Retail', 'Marketplaces']
     },
     {
-      industry: "Healthcare",
-      applications: [
-        "Patient scheduling optimization",
-        "Resource allocation",
-        "Predictive diagnostics",
-        "Administrative automation",
-        "Quality assurance"
-      ]
+      title: 'Financial Services',
+      description: 'Automated risk assessment, portfolio optimization, and regulatory compliance management.',
+      icon: DollarSign,
+      color: 'from-purple-500 to-pink-500',
+      industries: ['Banking', 'Investment', 'Insurance']
     },
     {
-      industry: "Manufacturing",
-      applications: [
-        "Production planning optimization",
-        "Quality control automation",
-        "Predictive maintenance",
-        "Supply chain management",
-        "Energy consumption optimization"
-      ]
+      title: 'Manufacturing Operations',
+      description: 'Supply chain optimization, production planning, and quality control automation.',
+      icon: Factory,
+      color: 'from-orange-500 to-red-500',
+      industries: ['Manufacturing', 'Automotive', 'Aerospace']
+    },
+    {
+      title: 'Healthcare Management',
+      description: 'Patient care optimization, resource allocation, and compliance management.',
+      icon: Heart,
+      color: 'from-red-500 to-pink-500',
+      industries: ['Healthcare', 'Hospitals', 'Clinics']
+    },
+    {
+      title: 'Service Industry',
+      description: 'Customer service automation, appointment scheduling, and service delivery optimization.',
+      icon: Users,
+      color: 'from-indigo-500 to-purple-500',
+      industries: ['Consulting', 'Legal', 'Real Estate']
     }
   ];
 
   const technology = [
     {
-      category: "AI & Machine Learning",
-      technologies: [
-        "GPT-4 Turbo with 128K context",
-        "Claude 3.5 Sonnet",
-        "Custom fine-tuned models",
-        "Deep learning algorithms",
-        "Natural language processing",
-        "Computer vision capabilities"
-      ]
+      title: 'Advanced AI Models',
+      description: 'GPT-4, Claude 3.5, and custom fine-tuned models for business intelligence',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      category: "Data Processing",
-      technologies: [
-        "Real-time data streaming",
-        "Big data analytics",
-        "Data warehousing",
-        "ETL/ELT pipelines",
-        "Data quality management",
-        "Real-time analytics"
-      ]
+      title: 'Machine Learning',
+      description: 'Predictive analytics, pattern recognition, and continuous learning algorithms',
+      icon: Cpu,
+      color: 'from-blue-500 to-cyan-500'
     },
     {
-      category: "Integration & APIs",
-      technologies: [
-        "RESTful APIs",
-        "GraphQL interfaces",
-        "Webhook systems",
-        "Third-party integrations",
-        "Custom connectors",
-        "API management platform"
-      ]
+      title: 'Real-time Processing',
+      description: 'High-performance data processing and real-time decision making',
+      icon: Zap,
+      color: 'from-yellow-500 to-orange-500'
     },
     {
-      category: "Security & Compliance",
-      technologies: [
-        "End-to-end encryption",
-        "Zero-trust architecture",
-        "GDPR compliance tools",
-        "SOC 2 Type II certification",
-        "Regular security audits",
-        "Data privacy protection"
-      ]
-    }
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$15,000",
-      period: "/month",
-      description: "Perfect for small businesses starting their AI journey",
-      features: [
-        "Basic autonomous decision making",
-        "Core business intelligence",
-        "Process automation (up to 10 workflows)",
-        "Standard integrations",
-        "Email support",
-        "Monthly reporting"
-      ],
-      cta: "Get Started",
-      popular: false
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud architecture with 99.9% uptime guarantee',
+      icon: Cloud,
+      color: 'from-green-500 to-emerald-500'
     },
     {
-      name: "Professional",
-      price: "$35,000",
-      period: "/month",
-      description: "Ideal for growing businesses with complex operations",
-      features: [
-        "Advanced autonomous decision making",
-        "Comprehensive business intelligence",
-        "Unlimited process automation",
-        "Advanced integrations",
-        "Priority support",
-        "Real-time reporting",
-        "Custom dashboards",
-        "API access"
-      ],
-      cta: "Get Started",
-      popular: true
+      title: 'Security & Compliance',
+      description: 'Enterprise-grade security with SOC 2, ISO 27001, and GDPR compliance',
+      icon: Shield,
+      color: 'from-red-500 to-pink-500'
     },
     {
-      name: "Enterprise",
-      price: "$75,000",
-      period: "/month",
-      description: "For large enterprises requiring maximum automation",
-      features: [
-        "Full autonomous business management",
-        "Enterprise-grade intelligence",
-        "Custom AI model development",
-        "White-label solutions",
-        "Dedicated support team",
-        "Custom integrations",
-        "Advanced analytics",
-        "Multi-tenant architecture"
-      ],
-      cta: "Contact Sales",
-      popular: false
+      title: 'API Integration',
+      description: 'Seamless integration with 100+ business systems and platforms',
+      icon: Network,
+      color: 'from-indigo-500 to-purple-500'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI Autonomous Business Manager
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 bg-clip-text text-transparent">
-                AI Autonomous
-              </span>
-              <br />
-              <span className="text-white">Business Manager</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with a fully autonomous AI system that manages every aspect 
-              of your operations, from decision-making to execution, 24/7 without human intervention.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                onClick={() => setShowPricingModal(true)}
-                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-              >
-                View Pricing
-              </button>
-              <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
-                Schedule Demo
-              </button>
-            </div>
-          </motion.div>
+      <SEO 
+        title="AI Autonomous Business Manager - Zion Tech Group"
+        description="Transform your business with our AI Autonomous Business Manager. Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction."
+        keywords="AI autonomous business manager, business automation, AI business intelligence, autonomous operations, business optimization, Zion Tech Group"
+        canonical="https://ziontechgroup.com/services/ai-autonomous-business-manager"
+      />
 
-          {/* Key Metrics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {[
-              { label: "ROI Improvement", value: "300%+", icon: TrendingUp },
-              { label: "Cost Reduction", value: "30-50%", icon: DollarSign },
-              { label: "Efficiency Gain", value: "80%+", icon: Zap },
-              { label: "Decision Speed", value: "1000x", icon: Clock }
-            ].map((metric, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center"
-              >
-                <metric.icon className="w-8 h-8 text-purple-400 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                <div className="text-gray-400">{metric.label}</div>
-              </motion.div>
-            ))}
+      {/* Hero Section */}
+      <section className="relative py-20 bg-gradient-to-r from-slate-800 to-slate-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>
+        <div className="relative z-10 container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-6">
+                <Brain className="w-4 h-4" />
+                Featured AI Service
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                AI Autonomous Business Manager
+              </h1>
+              <p className="text-xl text-slate-300 mb-8 leading-relaxed">
+                Fully autonomous AI system that manages your entire business operations, from strategy to execution. 
+                Reduce costs by 40-60% while improving efficiency and decision-making speed.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started Today
+                </Link>
+                <Link
+                  to="/comprehensive-pricing-guide-2028"
+                  className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
+                >
+                  View Pricing
+                </Link>
+              </div>
+              <div className="flex items-center gap-6 text-sm text-slate-400">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Free Consultation
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  30-Day Trial
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  24/7 Support
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Brain className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-4">Autonomous Business Management</h3>
+                  <div className="space-y-3 text-left">
+                    <div className="flex items-center gap-3 text-slate-300">
+                      <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                      Real-time monitoring
+                    </div>
+                    <div className="flex items-center gap-3 text-slate-300">
+                      <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+                      Automated decisions
+                    </div>
+                    <div className="flex items-center gap-3 text-slate-300">
+                      <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
+                      Predictive analytics
+                    </div>
+                    <div className="flex items-center gap-3 text-slate-300">
+                      <div className="w-2 h-2 bg-pink-400 rounded-full"></div>
+                      Continuous optimization
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Navigation Tabs */}
-      <section className="py-8 px-4 sm:px-6 lg:px-8 border-b border-gray-700">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { id: 'overview', name: 'Overview', icon: Eye },
-              { id: 'features', name: 'Features', icon: CheckCircle },
-              { id: 'benefits', name: 'Benefits', icon: Star },
-              { id: 'use-cases', name: 'Use Cases', icon: Target },
-              { id: 'technology', name: 'Technology', icon: Cpu },
-              { id: 'pricing', name: 'Pricing', icon: DollarSign }
-            ].map((tab) => (
+      <section className="py-8 bg-slate-800/50 border-b border-slate-700">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap justify-center gap-2">
+            {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   activeTab === tab.id
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
+                    : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
                 }`}
               >
-                <tab.icon className="w-5 h-5" />
+                <tab.icon className="w-4 h-4" />
                 {tab.name}
               </button>
             ))}
@@ -342,57 +370,56 @@ const AIAutonomousBusinessManager: React.FC = () => {
         </div>
       </section>
 
-      {/* Content Sections */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      {/* Tab Content */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
           {/* Overview Tab */}
           {activeTab === 'overview' && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
             >
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">
-                  The Future of Business Management
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Revolutionize Your Business Operations
                 </h2>
-                <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                  Our AI Autonomous Business Manager is a revolutionary system that completely 
-                  transforms how businesses operate. It combines cutting-edge artificial intelligence, 
-                  machine learning, and automation to create a self-managing business ecosystem.
+                <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+                  Our AI Autonomous Business Manager is the future of business management. 
+                  It combines advanced artificial intelligence with deep business understanding to create a system 
+                  that can autonomously manage your entire business operations.
                 </p>
-                <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                  From strategic decision-making to daily operations, the system continuously 
-                  learns, adapts, and optimizes every aspect of your business, ensuring maximum 
-                  efficiency, profitability, and growth.
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-white">24/7 autonomous operation</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-white">Real-time decision making</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400" />
-                    <span className="text-white">Continuous optimization</span>
-                  </div>
-                </div>
               </div>
-              <div className="relative">
-                <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">
-                  <Brain className="w-24 h-24 text-purple-400 mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-white text-center mb-4">
-                    Autonomous Intelligence
-                  </h3>
-                  <p className="text-gray-300 text-center">
-                    Your business runs on intelligent automation that never sleeps, 
-                    continuously optimizing and improving every process.
-                  </p>
-                </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                {benefits.slice(0, 6).map((benefit, index) => (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                  >
+                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center text-white mb-4`}>
+                      <benefit.icon className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
+                    <p className="text-slate-300 mb-4">{benefit.description}</p>
+                    <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      {benefit.metric}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="text-center">
+                <Link
+                  to="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Schedule a Demo
+                </Link>
               </div>
             </motion.div>
           )}
@@ -402,127 +429,66 @@ const AIAutonomousBusinessManager: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
             >
-              <h2 className="text-4xl font-bold text-white text-center mb-12">
-                Comprehensive Feature Set
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {features.map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6"
-                  >
-                    <h3 className="text-xl font-semibold text-white mb-4">{feature.category}</h3>
-                    <ul className="space-y-3">
-                      {feature.items.map((item, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Comprehensive Feature Sets
+                </h2>
+                <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+                  Choose the plan that best fits your business needs. All plans include our core AI capabilities 
+                  with additional features and support levels as you scale.
+                </p>
               </div>
-            </motion.div>
-          )}
 
-          {/* Benefits Tab */}
-          {activeTab === 'benefits' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-4xl font-bold text-white text-center mb-12">
-                Transform Your Business
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {benefits.map((benefit, index) => (
+              <div className="grid lg:grid-cols-3 gap-8">
+                {Object.entries(pricing).map(([plan, details], index) => (
                   <motion.div
-                    key={index}
+                    key={plan}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 text-center"
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className={`bg-slate-800 rounded-xl p-8 border ${
+                      plan === 'professional' 
+                        ? 'border-purple-500 ring-2 ring-purple-500/50' 
+                        : 'border-slate-700'
+                    }`}
                   >
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${benefit.color} flex items-center justify-center mx-auto mb-4`}>
-                      <benefit.icon className="w-8 h-8 text-white" />
+                    {plan === 'professional' && (
+                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </div>
+                    )}
+                    
+                    <div className="text-center mb-8">
+                      <h3 className="text-2xl font-bold text-white mb-2 capitalize">{plan}</h3>
+                      <div className="text-4xl font-bold text-purple-400 mb-2">{details.price}</div>
+                      <div className="text-sm text-slate-400 mb-4">{details.savings}</div>
+                      <div className="text-sm text-slate-500">
+                        Setup: {details.setup} | Contract: {details.contract}
+                      </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                    <p className="text-gray-300">{benefit.description}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
 
-          {/* Use Cases Tab */}
-          {activeTab === 'use-cases' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-4xl font-bold text-white text-center mb-12">
-                Industry Applications
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {useCases.map((useCase, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6"
-                  >
-                    <h3 className="text-xl font-semibold text-white mb-4">{useCase.industry}</h3>
-                    <ul className="space-y-3">
-                      {useCase.applications.map((app, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <Target className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{app}</span>
+                    <ul className="space-y-4 mb-8">
+                      {features[plan as keyof typeof features].map((feature, idx) => (
+                        <li key={idx} className="flex items-start text-slate-300">
+                          <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0 mt-0.5" />
+                          {feature}
                         </li>
                       ))}
                     </ul>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
 
-          {/* Technology Tab */}
-          {activeTab === 'technology' && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-4xl font-bold text-white text-center mb-12">
-                Cutting-Edge Technology Stack
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {technology.map((tech, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6"
-                  >
-                    <h3 className="text-xl font-semibold text-white mb-4">{tech.category}</h3>
-                    <ul className="space-y-3">
-                      {tech.technologies.map((technology, idx) => (
-                        <li key={idx} className="flex items-start gap-3">
-                          <Code className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-300">{technology}</span>
-                        </li>
-                      ))}
-                    </ul>
+                    <Link
+                      to="/contact"
+                      className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                        plan === 'professional'
+                          ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
+                          : 'bg-slate-700 text-white hover:bg-slate-600'
+                      }`}
+                    >
+                      Get Started
+                    </Link>
                   </motion.div>
                 ))}
               </div>
@@ -534,46 +500,167 @@ const AIAutonomousBusinessManager: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
             >
-              <h2 className="text-4xl font-bold text-white text-center mb-12">
-                Transparent Pricing
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {pricingPlans.map((plan, index) => (
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Transparent Pricing
+                </h2>
+                <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+                  Competitive pricing with significant savings compared to market rates. 
+                  All plans include setup, training, and ongoing support.
+                </p>
+              </div>
+
+              <div className="bg-slate-800 rounded-xl p-8 border border-slate-700 mb-12">
+                <div className="grid md:grid-cols-3 gap-8">
+                  {Object.entries(pricing).map(([plan, details], index) => (
+                    <div key={plan} className="text-center">
+                      <h3 className="text-xl font-bold text-white mb-4 capitalize">{plan}</h3>
+                      <div className="text-3xl font-bold text-purple-400 mb-2">{details.price}</div>
+                      <div className="text-sm text-slate-400 mb-4">{details.savings}</div>
+                      <div className="space-y-2 text-sm text-slate-500">
+                        <div>Setup Fee: {details.setup}</div>
+                        <div>Contract: {details.contract}</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Link
+                  to="/comprehensive-pricing-guide-2028"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  View Detailed Pricing
+                </Link>
+              </div>
+            </motion.div>
+          )}
+
+          {/* Benefits Tab */}
+          {activeTab === 'benefits' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
+            >
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Transform Your Business
+                </h2>
+                <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+                  Experience unprecedented business transformation with measurable results 
+                  that impact your bottom line and competitive position.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {benefits.map((benefit, index) => (
                   <motion.div
-                    key={index}
+                    key={benefit.title}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-6 ${
-                      plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700/50'
-                    }`}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
                   >
-                    {plan.popular && (
-                      <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular
-                      </div>
-                    )}
-                    <div className="text-center mb-6">
-                      <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <div className="text-4xl font-bold text-purple-400 mb-1">
-                        {plan.price}
-                        <span className="text-lg text-gray-400">{plan.period}</span>
-                      </div>
-                      <p className="text-gray-300">{plan.description}</p>
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${benefit.color} flex items-center justify-center text-white mb-6`}>
+                      <benefit.icon className="w-8 h-8" />
                     </div>
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-3">
-                          <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
-                      {plan.cta}
-                    </button>
+                    <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+                    <p className="text-slate-300 mb-4">{benefit.description}</p>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      {benefit.metric}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* Use Cases Tab */}
+          {activeTab === 'use-cases' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
+            >
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Industry Applications
+                </h2>
+                <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+                  Our AI Autonomous Business Manager is designed to work across industries, 
+                  providing tailored solutions for different business models and challenges.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {useCases.map((useCase, index) => (
+                  <motion.div
+                    key={useCase.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                  >
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${useCase.color} flex items-center justify-center text-white mb-6`}>
+                      <useCase.icon className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{useCase.title}</h3>
+                    <p className="text-slate-300 mb-4">{useCase.description}</p>
+                    <div className="space-y-2">
+                      <div className="text-sm font-semibold text-purple-400">Industries:</div>
+                      <div className="flex flex-wrap gap-2">
+                        {useCase.industries.map((industry, idx) => (
+                          <span key={idx} className="px-2 py-1 bg-slate-700 text-slate-300 text-xs rounded">
+                            {industry}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          )}
+
+          {/* Technology Tab */}
+          {activeTab === 'technology' && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="max-w-6xl mx-auto"
+            >
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  Cutting-Edge Technology
+                </h2>
+                <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+                  Built on the latest advancements in artificial intelligence, machine learning, 
+                  and cloud computing to deliver unmatched performance and reliability.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {technology.map((tech, index) => (
+                  <motion.div
+                    key={tech.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300"
+                  >
+                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${tech.color} flex items-center justify-center text-white mb-6`}>
+                      <tech.icon className="w-8 h-8" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3">{tech.title}</h3>
+                    <p className="text-slate-300">{tech.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -582,81 +669,45 @@ const AIAutonomousBusinessManager: React.FC = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-12">
-            Ready to Automate Your Business?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="flex flex-col items-center">
-              <Phone className="w-12 h-12 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
-              <p className="text-gray-300">{contactInfo.phone}</p>
+      {/* Contact CTA */}
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-slate-300 mb-12 max-w-3xl mx-auto">
+              Join the future of autonomous business management. Contact us today to schedule a demo 
+              and see how our AI can revolutionize your operations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Schedule a Demo
+              </Link>
+              <a
+                href="tel:+13024640950"
+                className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now: +1 302 464 0950
+              </a>
             </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-12 h-12 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
-              <p className="text-gray-300">{contactInfo.email}</p>
+            <div className="text-slate-400 space-y-2">
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+              <p className="text-sm mt-4">Free consultation and 30-day trial available</p>
             </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-12 h-12 text-purple-400 mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-300">{contactInfo.address}</p>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
-              Schedule Free Consultation
-            </button>
-            <button className="px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300">
-              Request Demo
-            </button>
-          </div>
+          </motion.div>
         </div>
       </section>
-
-      {/* Pricing Modal */}
-      {showPricingModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
-          <div className="bg-gray-800 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div className="p-8">
-              <div className="flex justify-between items-start mb-6">
-                <h2 className="text-3xl font-bold text-white">Pricing Plans</h2>
-                <button
-                  onClick={() => setShowPricingModal(false)}
-                  className="text-gray-400 hover:text-white text-2xl"
-                >
-                  ×
-                </button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {pricingPlans.map((plan, index) => (
-                  <div key={index} className="bg-gray-700 rounded-lg p-6">
-                    <h3 className="text-xl font-semibold text-white mb-4">{plan.name}</h3>
-                    <div className="text-3xl font-bold text-purple-400 mb-2">
-                      {plan.price}
-                      <span className="text-lg text-gray-400">{plan.period}</span>
-                    </div>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <ul className="space-y-2 mb-6">
-                      {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
-                      {plan.cta}
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
