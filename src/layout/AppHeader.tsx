@@ -99,6 +99,16 @@ export function AppHeader() {
     { name: 'Contact', href: '/contact', current: false },
   ];
 
+  // Featured Services Showcase
+  const featuredServicesShowcase = {
+    title: 'Innovative Services 2032',
+    href: '/innovative-services-showcase-2032',
+    icon: Rocket,
+    color: 'from-indigo-500 to-purple-600',
+    description: 'Cutting-edge AI & Micro SAAS Solutions',
+    featured: true
+  };
+
   // Organized Services Categories
   const servicesCategories = [
     {

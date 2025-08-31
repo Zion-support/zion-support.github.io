@@ -146,6 +146,9 @@ const AIInventoryManagement = lazy(() => import('./pages/services/AIInventoryMan
 const AIEmployeePerformanceAnalytics = lazy(() => import('./pages/services/AIEmployeePerformanceAnalytics'));
 const AIFinancialPlanning = lazy(() => import('./pages/services/AIFinancialPlanning'));
 
+// 2032 Innovative Services Showcase
+const InnovativeServicesShowcase2032 = lazy(() => import('./pages/InnovativeServicesShowcase2032'));
+
 function App() {
   return (
     <ErrorBoundary>
@@ -294,6 +297,12 @@ function App() {
                 
                 {/* Zion Tech Group 2025 Comprehensive Showcase */}
                 <Route path="/zion-tech-group-2025-comprehensive-showcase" element={<ZionTechGroup2025ComprehensiveShowcase />} />
+                
+                {/* 2032 Innovative Services Showcase */}
+                <Route path="/innovative-services-showcase-2032" element={<InnovativeServicesShowcase2032 />} />
+                <Route path="/services-2032" element={<InnovativeServicesShowcase2032 />} />
+                <Route path="/ai-services-2032" element={<InnovativeServicesShowcase2032 />} />
+                <Route path="/micro-saas-2032" element={<InnovativeServicesShowcase2032 />} />
                 
                 {/* {/*_404 Page */}
                 <Route path="*" element={<div>Page not found</div>} />

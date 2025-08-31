@@ -22,7 +22,8 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', featured: true },
         { name: 'AI Project Management', href: '/services/ai-project-management', featured: true },
         { name: 'AI Predictive Maintenance', href: '/services/ai-predictive-maintenance', featured: true },
-        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true }
+        { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', featured: true },
+        { name: 'Innovative Services 2032', href: '/innovative-services-showcase-2032', featured: true }
       ]
     },
     {

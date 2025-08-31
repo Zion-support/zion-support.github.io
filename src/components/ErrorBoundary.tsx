@@ -117,7 +117,7 @@ User Agent: ${navigator.userAgent}
             button.innerHTML = originalText;
             button.classList.remove('text-green-600');
           }, 2000);
-})
+        }
       }).catch(() => {
         // Fallback for older browsers
         const textArea = document.createElement('textarea');
@@ -338,5 +338,7 @@ export function useErrorHandler() {
     
     // Re-throw the error to trigger error boundaries
     throw error;
-})
+  });
+}
+
 export default withErrorBoundary;
