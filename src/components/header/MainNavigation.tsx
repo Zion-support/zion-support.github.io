@@ -152,6 +152,18 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         </Link>
                       </li>
                       <li>
+                        <Link to="/services/ai-autonomous-financial-advisor-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <DollarSign className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Financial Advisor</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-supply-chain-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <BarChart3 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Supply Chain Intelligence</span>
+                        </Link>
+                      </li>
+                      <li>
                         <Link to="/services/ai-quantum-neural-network-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Quantum Neural Network</span>
@@ -185,6 +197,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                           <Shield className="w-3 h-3 mr-2" />
                           Cybersecurity
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-cybersecurity-intelligence" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                          <Brain className="w-3 h-3 mr-2" />
+                          AI Cybersecurity Intelligence
                         </Link>
                       </li>
                     </ul>
