@@ -13,6 +13,7 @@ import {
   Mail,
   MapPin
 } from 'lucide-react';
+import { ThemeToggle } from './ThemeToggle';
 
 interface NavigationItem {
   name: string;
@@ -207,6 +208,9 @@ export const EnhancedNavigation: React.FC = () => {
                 <Search className="w-5 h-5" />
               </button>
 
+              {/* Theme Toggle */}
+              <ThemeToggle />
+
               {/* Contact Info */}
               <div className="flex items-center space-x-4">
                 {contactInfo.slice(0, 2).map((contact, index) => (
@@ -302,6 +306,11 @@ export const EnhancedNavigation: React.FC = () => {
 
                 {/* Mobile Contact Info */}
                 <div className="pt-6 border-t border-slate-700/50">
+                  {/* Mobile Theme Toggle */}
+                  <div className="flex justify-center mb-4">
+                    <ThemeToggle />
+                  </div>
+                  
                   <div className="space-y-3">
                     {contactInfo.map((contact, index) => (
                       <a

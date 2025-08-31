@@ -19,6 +19,9 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
+import { BreadcrumbsWithSchema } from './components/ui/Breadcrumbs';
+import { PWAInstallBanner, PWAUpdateBanner } from './components/ui/PWAInstallBanner';
+import { PerformanceMonitor } from './components/ui/PerformanceMonitor';
 
 // Layout Components
 import Header from './components/Header';
@@ -95,6 +98,10 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            {/* PWA Banners */}
+            <PWAInstallBanner />
+            <PWAUpdateBanner />
+            
             {/* Enhanced Navigation */}
             <EnhancedNavigation />
             
@@ -107,6 +114,11 @@ function App() {
             <main id="main-content" className="flex-1 pt-32">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
+                  {/* Breadcrumbs for better navigation */}
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <BreadcrumbsWithSchema />
+                  </div>
+                  
                   <Routes>
                     {/* Core Routes */}
                     <Route
@@ -213,6 +225,9 @@ function App() {
 
             {/* Floating Action Button */}
             <FloatingActionButton enabled={true} />
+
+            {/* Performance Monitor */}
+            <PerformanceMonitor />
           </div>
         </Router>
       </ErrorBoundary>
