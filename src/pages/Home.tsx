@@ -298,11 +298,32 @@ const ServicesSection = () => {
       link: "/services/ai-customer-experience-analytics-platform"
     },
     {
+      title: "AI Customer Churn Predictor",
+      description: "Stop losing customers before they leave with AI that predicts churn with 95% accuracy and automatically triggers retention campaigns.",
+      icon: TrendingDown,
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/ai-powered-customer-churn-predictor"
+    },
+    {
       title: "AI Project Management",
       description: "Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation.",
       icon: Workflow,
       color: "from-zion-cyan to-zion-purple",
       link: "/services/ai-project-management-platform"
+    },
+    {
+      title: "AI-Powered SEO Platform",
+      description: "Revolutionize your search engine optimization with AI that understands search intent, predicts trends, and automatically optimizes content.",
+      icon: Search,
+      color: "from-green-500 to-blue-500",
+      link: "/services/ai-powered-seo"
+    },
+    {
+      title: "AI Legal Document Automation",
+      description: "Transform your legal practice with AI that generates, reviews, and optimizes legal documents in seconds.",
+      icon: FileText,
+      color: "from-purple-500 to-indigo-500",
+      link: "/services/ai-legal-document-automation-platform"
     },
     {
       title: "AI Enterprise Workflow Automation",
@@ -450,6 +471,15 @@ const ServicesSection = () => {
                 Explore 2032 Services
                 <ArrowRight className="w-5 h-5" />
               </Link>
+              <div className="mt-4">
+                <Link
+                  to="/innovative-services-showcase-2026"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300"
+                >
+                  View 2026 Services
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
