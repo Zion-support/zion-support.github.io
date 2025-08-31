@@ -17,6 +17,7 @@ import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import Footer from './components/Footer';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -159,6 +160,9 @@ function App() {
                 </AnimatePresence>
               </Suspense>
             </main>
+
+            {/* Footer */}
+            <Footer />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
