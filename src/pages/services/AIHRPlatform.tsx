@@ -1,190 +1,182 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import { 
-  Brain, 
   Users, 
-  TrendingUp, 
-  Target, 
-  BarChart3, 
-  Calendar,
-  Zap,
-  CheckCircle,
-  Star,
+  Brain, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
   ArrowRight,
-  Globe,
-  Smartphone,
-  Monitor,
+  Activity,
+  Search,
   BookOpen,
-  MessageSquare,
-  Share2,
-  Analytics,
-  Palette,
   Clock,
   DollarSign,
-  Shield,
-  Headphones,
-  Rocket,
+  BarChart3,
+  Lock,
+  Eye,
+  FileSearch,
   UserCheck,
+  Target,
+  AlertTriangle,
+  Database,
+  Network,
+  Globe,
+  Cpu,
   FileText,
-  Briefcase,
-  GraduationCap,
+  Calendar,
   Award,
-  Heart,
-  Building
+  TrendingUp,
+  Briefcase,
+  Heart
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function AIHRPlatform() {
+const AIHRPlatform: React.FC = () => {
   const features = [
-    "AI-powered candidate screening and matching",
-    "Intelligent resume parsing and analysis",
-    "Automated interview scheduling and coordination",
-    "Performance analytics and employee insights",
-    "Predictive analytics for retention and engagement",
-    "Skills gap analysis and training recommendations",
-    "Automated onboarding and offboarding",
-    "Employee sentiment analysis and feedback",
-    "Compliance monitoring and reporting",
-    "Talent pipeline management",
-    "Diversity and inclusion analytics",
-    "Workforce planning and forecasting"
-  ];
-
-  const benefits = [
-    "Reduce hiring time by 60%",
-    "Improve candidate quality by 40%",
-    "Increase employee retention by 35%",
-    "Reduce HR administrative costs by 50%",
-    "Enhance diversity and inclusion metrics"
+    {
+      icon: Brain,
+      title: 'AI-Powered Recruitment',
+      description: 'Intelligent candidate screening and matching using advanced algorithms'
+    },
+    {
+      icon: Users,
+      title: 'Employee Management',
+      description: 'Comprehensive HR management with automated workflows and processes'
+    },
+    {
+      icon: Shield,
+      title: 'Compliance & Security',
+      description: 'Built-in compliance with GDPR, HIPAA, and other HR regulations'
+    },
+    {
+      icon: Zap,
+      title: 'Performance Analytics',
+      description: 'Real-time performance tracking and AI-driven insights'
+    },
+    {
+      icon: Heart,
+      title: 'Employee Engagement',
+      description: 'AI-powered engagement surveys and satisfaction monitoring'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Automated Onboarding',
+      description: 'Streamlined onboarding processes with intelligent automation'
+    }
   ];
 
   const useCases = [
-    "Enterprise HR departments",
-    "Recruitment agencies",
-    "Startups and scale-ups",
-    "Remote-first companies",
-    "Healthcare organizations",
-    "Financial services firms",
-    "Technology companies",
-    "Manufacturing companies"
+    {
+      title: 'Talent Acquisition',
+      description: 'AI-powered recruitment and candidate management',
+      icon: UserCheck
+    },
+    {
+      title: 'Performance Management',
+      description: 'Continuous performance tracking and development planning',
+      icon: TrendingUp
+    },
+    {
+      title: 'Employee Development',
+      description: 'Personalized training and career development paths',
+      icon: BookOpen
+    },
+    {
+      title: 'HR Analytics',
+      description: 'Data-driven insights for strategic HR decision making',
+      icon: BarChart3
+    }
   ];
 
-  const pricing = [
+  const benefits = [
+    'Reduce hiring time by 60%',
+    'Improve candidate quality by 40%',
+    'Increase employee retention by 35%',
+    'Lower HR operational costs by 50%',
+    'Enhanced compliance and risk management',
+    'Scalable for any organization size'
+  ];
+
+  const modules = [
     {
-      name: "Starter",
-      price: "$399",
-      period: "/month",
-      description: "Perfect for small businesses and startups",
-      features: [
-        "AI candidate screening (up to 100/month)",
-        "Basic resume parsing",
-        "Interview scheduling",
-        "Basic analytics dashboard",
-        "Email support",
-        "Up to 50 employees"
-      ],
-      cta: "Start Free Trial",
-      popular: false
+      title: 'Recruitment',
+      description: 'AI-powered candidate sourcing and screening',
+      icon: UserCheck
     },
     {
-      name: "Professional",
-      price: "$899",
-      period: "/month",
-      description: "Ideal for growing companies and HR teams",
-      features: [
-        "AI candidate screening (unlimited)",
-        "Advanced resume parsing",
-        "Performance analytics",
-        "Employee engagement tools",
-        "Compliance monitoring",
-        "Priority support",
-        "Up to 500 employees"
-      ],
-      cta: "Start Free Trial",
-      popular: true
+      title: 'Onboarding',
+      description: 'Automated employee onboarding workflows',
+      icon: Briefcase
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "For large organizations with complex HR needs",
-      features: [
-        "Custom AI model training",
-        "Advanced workforce planning",
-        "White-label solutions",
-        "Custom integrations",
-        "Dedicated account manager",
-        "24/7 phone support",
-        "Unlimited employees"
-      ],
-      cta: "Contact Sales",
-      popular: false
+      title: 'Performance',
+      description: 'Continuous performance management',
+      icon: TrendingUp
+    },
+    {
+      title: 'Analytics',
+      description: 'Comprehensive HR analytics and reporting',
+      icon: BarChart3
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI HR Platform - Zion Tech Group"
-        description="Transform your HR operations with AI-powered recruitment, performance management, and employee engagement. Streamline hiring and improve retention."
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-blue-50 to-cyan-100">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden bg-gradient-to-r from-indigo-900 via-blue-900 to-cyan-900 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered HR
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-indigo-500/20 rounded-full">
+                <Users className="w-12 h-12 text-indigo-300" />
+              </div>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI HR
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {" "}Platform
-              </span>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-300 to-blue-300 bg-clip-text text-transparent">
+              AI HR Platform
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your HR operations with AI that screens candidates, manages performance, and engages employees. 
-              Streamline hiring, improve retention, and build better teams with intelligent automation.
+            <p className="text-xl md:text-2xl text-indigo-100 mb-8 max-w-4xl mx-auto">
+              Transform your HR operations with AI-powered recruitment, employee management, and intelligent automation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
               >
-                Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+                Get Started
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/schedule-demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-indigo-300 text-indigo-300 hover:bg-indigo-300 hover:text-indigo-900 font-semibold rounded-lg transition-all duration-200"
               >
-                Watch Demo
-              </motion.button>
+                Schedule Demo
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive HR Intelligence
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Advanced AI-Powered HR Technology
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Everything you need to manage your workforce with AI-powered insights and automation
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our AI HR platform combines cutting-edge machine learning with HR expertise to deliver unprecedented efficiency and insights
             </p>
           </motion.div>
 
@@ -195,48 +187,17 @@ export default function AIHRPlatform() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-indigo-500 transition-all duration-300"
+                className="bg-gradient-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border border-indigo-100 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <CheckCircle className="w-6 h-6 text-white" />
+                <div className="w-16 h-16 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your HR Operations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              See measurable improvements in your HR efficiency and employee satisfaction
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-20 h-20 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-10 h-10 text-white" />
-                </div>
-                <p className="text-lg text-white font-medium">{benefit}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -244,108 +205,119 @@ export default function AIHRPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry-Leading Solutions
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive HR Solutions
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Proven solutions across diverse industries and company sizes
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              From recruitment to performance management, our AI platform handles every aspect of HR operations
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-indigo-500 transition-all duration-300"
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Building className="w-8 h-8 text-white" />
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                      {useCase.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {useCase.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white">{useCase}</h3>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto">
+      {/* Platform Modules Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Company
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Complete HR Platform Modules
             </h2>
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Scale your HR platform as your company grows
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our modular AI HR platform provides comprehensive solutions for all your HR needs
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {modules.map((module, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
-                    : 'border-gray-700'
-                }`}
+                className="text-center"
               >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
-                  </div>
+                <div className="w-20 h-20 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <module.icon className="w-10 h-10 text-white" />
                 </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {module.title}
+                </h3>
+                <p className="text-gray-600 text-sm">
+                  {module.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+      {/* Benefits Section */}
+      <section className="py-20 bg-gradient-to-r from-indigo-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose AI HR Platform?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your HR operations with unprecedented efficiency, insights, and employee satisfaction
+            </p>
+          </motion.div>
 
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700'
-                      : 'bg-gray-700 text-white hover:bg-gray-600'
-                  }`}
-                >
-                  {plan.cta}
-                </motion.button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="flex items-center space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                <span className="text-gray-700">{benefit}</span>
               </motion.div>
             ))}
           </div>
@@ -353,55 +325,39 @@ export default function AIHRPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 bg-gradient-to-r from-indigo-900 to-blue-900 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your HR Operations?
+            <h2 className="text-4xl font-bold mb-6">
+              Ready to Transform Your HR with AI?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of companies that have already revolutionized their HR with AI
+            <p className="text-xl text-indigo-100 mb-8">
+              Join leading organizations already using AI to revolutionize their HR operations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200"
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+              <Link
+                to="/schedule-demo"
+                className="inline-flex items-center px-8 py-4 border-2 border-indigo-300 text-indigo-300 hover:bg-indigo-300 hover:text-indigo-900 font-semibold rounded-lg transition-all duration-200"
               >
-                Schedule Demo
-              </motion.button>
+                Schedule Consultation
+              </Link>
             </div>
-            <p className="text-sm text-gray-400 mt-4">
-              No credit card required • 14-day free trial • Cancel anytime
-            </p>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-gray-400 mb-4">
-            Need help choosing the right plan? Contact our sales team
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400">
-            <span>📞 +1 302 464 0950</span>
-            <span>📧 kleber@ziontechgroup.com</span>
-            <span>🌐 https://ziontechgroup.com</span>
-          </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AIHRPlatform;

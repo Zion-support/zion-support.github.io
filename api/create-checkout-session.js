@@ -1,6 +1,6 @@
 import Stripe from 'stripe';
 import { withErrorLogging } from './withErrorLogging.cjs';
-const PROD_DOMAIN = 'app.ziontechgroup.com';
+const PROD_DOMAIN = 'ziontechgroup.com';
 function isProdDomain() {
   const url = process.env.URL || '';
   try {
