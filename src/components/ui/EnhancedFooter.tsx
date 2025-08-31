@@ -29,29 +29,52 @@ const footerSections = [
       { name: 'Micro SaaS', href: '/micro-saas' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform' }
+      { name: 'Edge & IoT', href: '/services/edge-computing-platform' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+      { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
+      { name: 'Healthcare Tech', href: '/services/healthcare-tech' },
+      { name: 'Financial Solutions', href: '/services/finops-advisor' }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { name: 'Enterprise', href: '/solutions/Enterprise' },
-      { name: 'Healthcare', href: '/solutions/Healthcare' },
-      { name: 'Financial', href: '/solutions/FinancialSolutions' },
-      { name: 'Manufacturing', href: '/solutions/ManufacturingSolutions' },
-      { name: 'Government', href: '/solutions/GovernmentSolutions' },
-      { name: 'Retail', href: '/solutions/RetailSolutions' }
+      { name: 'Enterprise', href: '/enterprise' },
+      { name: 'Healthcare', href: '/industry-solutions' },
+      { name: 'Financial', href: '/financial-solutions' },
+      { name: 'Manufacturing', href: '/manufacturing-solutions' },
+      { name: 'Government', href: '/industry-solutions' },
+      { name: 'Retail', href: '/industry-solutions' },
+      { name: 'Education', href: '/industry-solutions' },
+      { name: 'Real Estate', href: '/industry-solutions' },
+      { name: 'Legal Tech', href: '/industry-solutions' },
+      { name: 'Energy & Utilities', href: '/industry-solutions' }
+    ]
+  },
+  {
+    title: 'Emerging Tech',
+    links: [
+      { name: 'Quantum AI', href: '/services/quantum-ai-platform' },
+      { name: 'Metaverse', href: '/services/metaverse-business-platform' },
+      { name: 'Space Tech', href: '/services/space-tech' },
+      { name: 'Biotechnology', href: '/services/ai-biotechnology-platform' },
+      { name: 'Climate Tech', href: '/services/ai-climate-technology' },
+      { name: 'Robotics', href: '/services/ai-robotics-automation' },
+      { name: 'AR/VR', href: '/services/ai-augmented-reality' },
+      { name: 'Voice AI', href: '/services/ai-voice-technology' }
     ]
   },
   {
     title: 'Company',
     links: [
       { name: 'About Us', href: '/about' },
-      { name: 'Leadership', href: '/leadership' },
+      { name: 'Leadership', href: '/about' },
       { name: 'Careers', href: '/careers' },
-      { name: 'News & Events', href: '/news' },
+      { name: 'News & Events', href: '/events' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Press Kit', href: '/press' }
+      { name: 'Press Kit', href: '/press' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Testimonials', href: '/testimonials' }
     ]
   },
   {
@@ -62,7 +85,9 @@ const footerSections = [
       { name: 'Developer Portal', href: '/developer' },
       { name: 'Support Center', href: '/support' },
       { name: 'Training', href: '/training' },
-      { name: 'Community', href: '/community' }
+      { name: 'Community', href: '/community' },
+      { name: 'White Papers', href: '/white-papers' },
+      { name: 'Webinars', href: '/webinars' }
     ]
   }
 ];
@@ -152,7 +177,7 @@ export const EnhancedFooter: React.FC = () => {
 
           {/* Footer Links */}
           <div className="lg:col-span-8">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
               {footerSections.map((section, sectionIndex) => (
                 <motion.div
                   key={section.title}
