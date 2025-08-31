@@ -87,7 +87,6 @@ const ITInfrastructureManagement = createLazyComponent(() => import('./pages/ser
 const MicroSaaSSolutionsComprehensive = createLazyComponent(() => import('./pages/services/micro-saas-solutions-comprehensive'));
 
 // New Innovative AI Services 2025 - Enhanced
-const AIEnterpriseIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-intelligence-platform'));
 const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
