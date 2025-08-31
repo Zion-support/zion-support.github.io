@@ -29,7 +29,9 @@ import {
   Settings,
   LogOut,
   Sun,
-  Moon
+  Moon,
+  Atom,
+  DollarSign
 } from 'lucide-react';
 
 const EnhancedHeader: React.FC = () => {
@@ -64,6 +66,27 @@ const EnhancedHeader: React.FC = () => {
       services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']
     },
     { 
+      name: 'Quantum Computing', 
+      icon: Atom, 
+      href: '/services/ai-quantum-computing-platform',
+      description: 'Revolutionary quantum computing solutions',
+      services: ['Quantum AI Hybrid', 'Post-Quantum Crypto', 'Quantum Data Storage', 'Quantum Analytics']
+    },
+    { 
+      name: 'Space Technology', 
+      icon: Rocket, 
+      href: '/services/ai-space-technology-platform',
+      description: 'Cutting-edge space technology solutions',
+      services: ['Satellite Systems', 'Space Navigation', 'Planetary Exploration', 'Space Analytics']
+    },
+    { 
+      name: 'Financial Technology', 
+      icon: DollarSign, 
+      href: '/services/ai-financial-technology-platform',
+      description: 'Next-generation fintech solutions',
+      services: ['AI Trading', 'Fraud Detection', 'Risk Management', 'Digital Banking']
+    },
+    { 
       name: 'Cloud & DevOps', 
       icon: Cloud, 
       href: '/services#cloud',
@@ -90,19 +113,14 @@ const EnhancedHeader: React.FC = () => {
       href: '/services#enterprise',
       description: 'Enterprise-grade business solutions',
       services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']
-    },
-    { 
-      name: 'Emerging Technologies', 
-      icon: Rocket, 
-      href: '/services#emerging',
-      description: 'Quantum computing and blockchain',
-      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']
     }
   ];
 
   const mainNavigation = [
     { name: 'Home', href: '/', hasDropdown: false },
     { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Showcase', href: '/comprehensive-services-showcase-2025', hasDropdown: false },
+    { name: 'Pricing', href: '/comprehensive-pricing-guide-2025', hasDropdown: false },
     { name: 'Solutions', href: '/solutions', hasDropdown: false },
     { name: 'About', href: '/about', hasDropdown: false },
     { name: 'Case Studies', href: '/case-studies', hasDropdown: false },

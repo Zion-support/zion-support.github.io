@@ -120,11 +120,15 @@ export const EnhancedFooter: React.FC = () => {
       title: 'Services',
       links: [
         { name: 'AI Solutions', href: '/ai-services' },
+        { name: 'Quantum Computing', href: '/services/ai-quantum-computing-platform' },
+        { name: 'Space Technology', href: '/services/ai-space-technology-platform' },
+        { name: 'Financial Technology', href: '/services/ai-financial-technology-platform' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Cloud & DevOps', href: '/cloud-devops' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Data Analytics', href: '/data-analytics' },
-        { name: 'Micro SAAS', href: '/micro-saas' }
+        { name: 'Micro SAAS', href: '/micro-saas' },
+        { name: 'All Services', href: '/comprehensive-services-showcase-2025' }
       ]
     },
     {
@@ -146,7 +150,8 @@ export const EnhancedFooter: React.FC = () => {
         { name: 'White Papers', href: '/white-papers' },
         { name: 'Documentation', href: '/documentation' },
         { name: 'Webinars', href: '/webinars' },
-        { name: 'Training', href: '/training' }
+        { name: 'Training', href: '/training' },
+        { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2025' }
       ]
     },
     {
@@ -171,9 +176,9 @@ export const EnhancedFooter: React.FC = () => {
   ];
 
   const contactInfo = [
-    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: '#' }
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
   ];
 
   return (
