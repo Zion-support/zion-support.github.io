@@ -3,6 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { AnimatePresence, motion } from 'framer-motion';
 
+// Layout Components
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { AppFooter } from './components/layout/AppFooter';
+import ModernLayout from './components/layout/ModernLayout';
+
 // Performance & Optimization Components
 import { PerformanceOptimizer } from './components/PerformanceOptimizer';
 import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
@@ -17,11 +23,7 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
-
-// Layout Components
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { AppFooter } from './components/layout/AppFooter';
+import { FloatingActionButton } from './components/FloatingActionButton';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -64,7 +66,19 @@ const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
 
-// New pages we created
+// All pages - combining both branches
+const Blog = createLazyComponent(() => import('./pages/Blog'));
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Events = createLazyComponent(() => import('./pages/Events'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const Security = createLazyComponent(() => import('./pages/Security'));
+const Compliance = createLazyComponent(() => import('./pages/Compliance'));
+
+// Additional pages from main branch
 const Enterprise = createLazyComponent(() => import('./pages/Enterprise'));
 const IndustrySolutions = createLazyComponent(() => import('./pages/IndustrySolutions'));
 const DigitalTransformation = createLazyComponent(() => import('./pages/DigitalTransformation'));
@@ -106,32 +120,16 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex flex-col">
-            {/* Header */}
-            <Header />
-            
-            {/* Skip Link for Accessibility */}
-            <a href="#main-content" className="skip-link">
-              Skip to main content
-            </a>
-            
-            <main id="main-content" className="flex-1 pt-20">
-              <Suspense fallback={<EnhancedLoadingSpinner />}>
+            {/* Enhanced Navigation */}
+            <EnhancedNavigation />
+
+            {/* Main Content */}
+            <main id="main-content" className="flex-1">
+              <Suspense fallback={<LoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
                     {/* Core Routes */}
-                    <Route
-                      path="/"
-                      element={
-                        <motion.div
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <Home />
-                        </motion.div>
-                      }
-                    />
+                    <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/services" element={<Services />} />
@@ -140,7 +138,7 @@ function App() {
                     <Route path="/it-services" element={<ITServices />} />
                     <Route path="/micro-saas" element={<MicroSaaS />} />
 
-                    {/* New AI Services 2025 */}
+                    {/* AI Services Routes */}
                     <Route path="/services/ai-supply-chain-optimization" element={<AISupplyChainOptimization />} />
                     <Route path="/services/ai-cybersecurity-platform" element={<AICybersecurity />} />
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
@@ -158,8 +156,15 @@ function App() {
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
 
                     {/* Showcase Routes */}
-                    <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
-                    <Route path="/innovative-ai-services-showcase-2025" element={<InnovativeAIServicesShowcase2025 />} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
+
+                    {/* Legal and Policy Pages */}
+                    <Route path="/privacy" element={<ModernLayout><Privacy /></ModernLayout>} />
+                    <Route path="/terms" element={<ModernLayout><Terms /></ModernLayout>} />
+                    <Route path="/cookies" element={<ModernLayout><Cookies /></ModernLayout>} />
+                    <Route path="/accessibility" element={<ModernLayout><Accessibility /></ModernLayout>} />
+                    <Route path="/security" element={<ModernLayout><Security /></ModernLayout>} />
+                    <Route path="/compliance" element={<ModernLayout><Compliance /></ModernLayout>} />
 
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<Enterprise />} />
