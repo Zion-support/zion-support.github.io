@@ -1,162 +1,186 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
-  Zap,
-  Shield,
-  TrendingUp,
-  Users,
-  Clock,
-  DollarSign,
-  CheckCircle,
+import { Helmet } from 'react-helmet-async';
+import { 
+  Brain, 
+  Zap, 
+  Shield, 
+  TrendingUp, 
+  Users, 
+  Globe,
   ArrowRight,
-  Bot,
-  Workflow,
-  BarChart3,
+  CheckCircle,
+  Star,
+  Rocket,
+  Target,
+  Lightbulb,
   Cpu,
   Database,
   Network,
-  Globe,
-  Target,
-  Rocket,
-  Lightbulb,
-  Settings,
+  Workflow,
   Activity,
-  Eye,
-  Lock,
+  BarChart3,
+  Code,
   Server,
   Cloud,
-  Smartphone,
-  Monitor,
-  Code,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Globe2,
+  Lock,
   MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Palette,
-  ArrowUpRight,
-  CheckCircle2,
-  Clock3,
-  Target2,
-  Building2,
-  Handshake,
-  FileText,
   Calendar,
+  FileText,
+  Settings,
+  Cog,
+  Monitor,
+  Smartphone,
+  Wifi,
+  Eye,
+  Search,
+  Palette,
   Phone,
   Mail,
   MapPin,
-  Heart,
-  Star,
-  ThumbsUp,
-  MessageSquare,
-  UserCheck,
-  PieChart,
-  LineChart,
-  Activity as ActivityIcon,
-  MousePointer,
+  Clock,
+  DollarSign,
+  Atom,
+  Leaf,
+  Gamepad2,
+  Coins,
+  Satellite,
+  MessageCircle as MessageCircleIcon,
+  Star as StarIcon,
+  Users2,
+  Cog as CogIcon,
+  ShoppingCart,
+  Handshake,
+  BookOpen,
+  Video,
+  GraduationCap,
+  PenTool,
+  Briefcase,
+  Globe as GlobeIcon,
+  Building as BuildingIcon,
+  Shield as ShieldIcon,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Server as ServerIcon,
+  Cloud as CloudIcon,
+  Lock as LockIcon,
+  BarChart as BarChartIcon,
+  Cpu as CpuIcon,
+  Workflow as WorkflowIcon,
+  Database as DatabaseIcon,
+  Target as TargetIcon,
+  Rocket as RocketIcon,
+  Lightbulb as LightbulbIcon,
+  Code as CodeIcon,
+  Monitor as MonitorIcon,
   Smartphone as SmartphoneIcon,
-  Globe as GlobeIcon
+  Network as NetworkIcon,
+  Wifi as WifiIcon,
+  Activity as ActivityIcon,
+  Eye as EyeIcon,
+  Search as SearchIcon,
+  Settings as SettingsIcon,
+  Palette as PaletteIcon,
+  Phone as PhoneIcon,
+  Mail as MailIcon,
+  MapPin as MapPinIcon,
+  Clock as ClockIcon,
+  DollarSign as DollarSignIcon,
+  Atom as AtomIcon,
+  Leaf as LeafIcon,
+  Gamepad2 as GamepadIcon,
+  Coins as CoinsIcon,
+  Satellite as SatelliteIcon
 } from 'lucide-react';
 
-export default function AICustomerExperienceAnalyticsPlatform() {
+const AICustomerExperienceAnalyticsPlatform = () => {
   const features = [
     {
+      icon: Eye,
+      title: "Real-Time Customer Journey Tracking",
+      description: "Monitor every touchpoint and interaction across all channels with millisecond precision and AI-powered insights."
+    },
+    {
       icon: Brain,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced natural language processing that understands customer emotions, intent, and satisfaction levels across all touchpoints."
+      title: "Predictive Customer Behavior Analysis",
+      description: "Anticipate customer needs and preferences using advanced machine learning algorithms and behavioral pattern recognition."
     },
     {
       icon: BarChart3,
-      title: "Real-Time Customer Journey Mapping",
-      description: "Track customer interactions in real-time across all channels to identify friction points and optimization opportunities."
+      title: "Advanced Sentiment Analysis",
+      description: "Understand customer emotions and satisfaction levels through natural language processing and voice tone analysis."
+    },
+    {
+      icon: Workflow,
+      title: "Automated Experience Optimization",
+      description: "Continuously improve customer experiences through AI-driven A/B testing and real-time optimization recommendations."
     },
     {
       icon: Users,
-      title: "Predictive Customer Behavior Modeling",
-      description: "Forecast customer actions, churn risk, and lifetime value using machine learning algorithms with 90%+ accuracy."
+      title: "Personalized Customer Segmentation",
+      description: "Create dynamic customer segments based on behavior, preferences, and predicted lifetime value for targeted engagement."
     },
     {
-      icon: Eye,
-      title: "Omnichannel Experience Monitoring",
-      description: "Unified view of customer interactions across web, mobile, social media, call centers, and physical locations."
-    },
-    {
-      icon: Heart,
-      title: "Emotional Intelligence Analytics",
-      description: "Measure and analyze customer emotional responses to improve brand perception and loyalty."
-    },
-    {
-      icon: Target,
-      title: "Personalization Engine",
-      description: "AI-driven personalization that adapts content, offers, and experiences based on individual customer preferences."
+      icon: Shield,
+      title: "Privacy-First Analytics",
+      description: "Ensure GDPR and CCPA compliance while maintaining comprehensive customer insights through privacy-preserving AI techniques."
     }
   ];
 
   const benefits = [
-    "Increase customer satisfaction scores by 35-50%",
-    "Reduce customer churn by 25-40% through predictive insights",
-    "Improve customer lifetime value by 30-60%",
-    "Optimize conversion rates by 20-45%",
-    "Reduce customer service costs by 30-50%",
-    "Achieve 90%+ accuracy in customer behavior prediction"
+    "Increase customer satisfaction scores by up to 35% through personalized experiences",
+    "Reduce customer churn by 40% with predictive analytics and proactive engagement",
+    "Boost conversion rates by 25% through AI-optimized customer journeys",
+    "Improve customer lifetime value by 50% with targeted personalization",
+    "Reduce support costs by 30% through predictive issue resolution",
+    "Achieve 90%+ accuracy in customer behavior prediction and segmentation"
   ];
 
-  const pricingPlans = [
+  const pricingTiers = [
     {
       name: "Starter",
-      price: "$1,999",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small businesses starting their CX analytics journey",
+      description: "Perfect for small businesses starting their customer analytics journey",
       features: [
-        "Basic sentiment analysis",
+        "Basic customer journey tracking",
         "Up to 10,000 customer interactions/month",
-        "Standard analytics dashboard",
+        "Standard sentiment analysis",
+        "Basic reporting dashboard",
         "Email support",
-        "Basic integrations",
-        "Real-time monitoring"
+        "3 team members"
       ],
-      cta: "Get Started",
       popular: false
     },
     {
       name: "Professional",
-      price: "$4,999",
+      price: "$499",
       period: "/month",
-      description: "Ideal for growing businesses with complex customer journeys",
+      description: "Ideal for growing businesses with complex customer interactions",
       features: [
-        "Advanced AI analytics",
-        "Up to 100,000 interactions/month",
-        "Predictive modeling",
+        "Advanced customer journey tracking",
+        "Unlimited customer interactions",
+        "Advanced sentiment analysis",
+        "Predictive analytics",
         "Priority support",
-        "Custom integrations",
-        "Multi-channel tracking",
-        "Customer journey mapping",
-        "A/B testing tools"
+        "Unlimited team members",
+        "Custom integrations"
       ],
-      cta: "Start Free Trial",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$12,999",
-      period: "/month",
-      description: "For large enterprises requiring comprehensive CX insights",
+      price: "Custom",
+      period: "",
+      description: "Tailored solutions for large organizations",
       features: [
-        "Full AI-powered analytics",
-        "Unlimited interactions",
+        "Full customer experience analytics",
         "Custom AI model training",
-        "Dedicated support team",
         "White-label solutions",
-        "Advanced security features",
-        "Global customer insights",
-        "Custom development"
+        "Dedicated support team",
+        "On-premise deployment options",
+        "Custom compliance frameworks"
       ],
-      cta: "Contact Sales",
       popular: false
     }
   ];
@@ -164,53 +188,44 @@ export default function AICustomerExperienceAnalyticsPlatform() {
   const useCases = [
     {
       industry: "E-commerce",
-      description: "Personalized shopping experiences, cart abandonment analysis, and product recommendation optimization",
-      roi: "40% revenue increase"
-    },
-    {
-      industry: "Banking & Finance",
-      description: "Customer journey optimization, fraud detection, and personalized financial advice",
-      roi: "55% customer retention"
+      description: "Personalized product recommendations, cart abandonment analysis, and customer journey optimization.",
+      icon: ShoppingCart
     },
     {
       industry: "Healthcare",
-      description: "Patient experience monitoring, appointment scheduling optimization, and care quality improvement",
-      roi: "65% patient satisfaction"
+      description: "Patient experience monitoring, appointment scheduling optimization, and care quality improvement.",
+      icon: Shield
+    },
+    {
+      industry: "Banking",
+      description: "Customer service optimization, fraud detection, and personalized financial product recommendations.",
+      icon: DollarSign
     },
     {
       industry: "Telecommunications",
-      description: "Service quality monitoring, customer support optimization, and churn prediction",
-      roi: "50% service improvement"
+      description: "Network quality monitoring, customer service optimization, and churn prediction and prevention.",
+      icon: Network
     }
   ];
 
-  const analyticsCapabilities = [
-    {
-      category: "Customer Sentiment",
-      metrics: ["Emotion detection", "Satisfaction scoring", "Brand perception", "Voice of customer"],
-      icon: Heart
-    },
-    {
-      category: "Behavioral Analytics",
-      metrics: ["Click patterns", "Navigation flows", "Engagement metrics", "Conversion tracking"],
-      icon: MousePointer
-    },
-    {
-      category: "Predictive Insights",
-      metrics: ["Churn prediction", "Lifetime value", "Next best action", "Demand forecasting"],
-      icon: TrendingUp
-    },
-    {
-      category: "Journey Mapping",
-      metrics: ["Touchpoint analysis", "Friction identification", "Optimization opportunities", "Cross-channel insights"],
-      icon: Workflow
-    }
-  ];
+  const contactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Helmet>
+        <title>AI Customer Experience Analytics Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform customer insights with our AI Customer Experience Analytics Platform. Track journeys, analyze behavior, and optimize experiences in real-time." />
+        <meta name="keywords" content="customer experience analytics, AI analytics, customer journey tracking, sentiment analysis, customer behavior prediction" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-customer-experience-analytics-platform" />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -218,44 +233,38 @@ export default function AICustomerExperienceAnalyticsPlatform() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 text-zion-purple text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
-              AI-Powered Customer Experience
-            </div>
-            
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Customer Experience
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                 {" "}Analytics Platform
               </span>
             </h1>
-            
-            <p className="text-xl text-zinc-300 mb-8 max-w-4xl mx-auto">
-              Transform customer relationships with AI-powered analytics that understand, predict, and optimize every customer interaction 
-              across all touchpoints in real-time.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Unlock the power of customer data with AI-driven analytics that track every interaction, 
+              predict behavior patterns, and optimize experiences in real-time for maximum customer satisfaction.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
+              <a
+                href={`tel:${contactInfo.phone}`}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
               >
-                Get Custom Quote
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now: {contactInfo.phone}
+              </a>
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
               >
-                Schedule Demo
-              </Link>
+                <Mail className="w-5 h-5 mr-2" />
+                Get Quote
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -265,10 +274,10 @@ export default function AICustomerExperienceAnalyticsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Revolutionary CX Analytics Capabilities
+              Revolutionary Customer Analytics
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform combines cutting-edge AI technologies to deliver unprecedented insights into customer behavior and preferences
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform combines cutting-edge AI with comprehensive analytics to deliver unprecedented customer insights.
             </p>
           </motion.div>
 
@@ -280,61 +289,13 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 hover:border-zion-purple/50 transition-all duration-300 hover:-translate-y-2"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zinc-300">{feature.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Analytics Capabilities Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Comprehensive Analytics Suite
-            </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Advanced analytics capabilities that provide deep insights into every aspect of customer experience
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {analyticsCapabilities.map((capability, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mr-4">
-                    <capability.icon className="w-5 h-5 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white">{capability.category}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {capability.metrics.map((metric, metricIndex) => (
-                    <li key={metricIndex} className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                      <span className="text-zinc-300">{metric}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -342,7 +303,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -354,61 +315,31 @@ export default function AICustomerExperienceAnalyticsPlatform() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Transform Your Customer Experience
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Experience unprecedented customer insights and loyalty with AI-powered analytics
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience unprecedented customer satisfaction and loyalty with data-driven insights.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
-              <ul className="space-y-4">
-                {benefits.map((benefit, index) => (
-                  <motion.li
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-start space-x-3"
-                  >
-                    <CheckCircle className="w-6 h-6 text-zion-cyan mt-0.5 flex-shrink-0" />
-                    <span className="text-zinc-300">{benefit}</span>
-                  </motion.li>
-                ))}
-              </ul>
-            </div>
-            <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-8">
-              <h3 className="text-2xl font-semibold text-white mb-6">Why Choose Our Platform?</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">Real-time processing of customer data</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">99.9% accuracy in sentiment analysis</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">GDPR and SOC 2 compliant</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">24/7 customer insights monitoring</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-zion-cyan rounded-full"></div>
-                  <span className="text-zinc-300">Custom AI model training</span>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -418,63 +349,63 @@ export default function AICustomerExperienceAnalyticsPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transparent Pricing
+              Flexible Pricing Plans
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your customer analytics needs and scale as you grow
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your business needs and scale as you grow.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingTiers.map((tier, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-zinc-800/50 border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-zion-purple shadow-lg shadow-zion-purple/25' 
-                    : 'border-zinc-700'
+                className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
+                  tier.popular 
+                    ? 'border-cyan-500 shadow-lg shadow-cyan-500/25' 
+                    : 'border-slate-700'
                 }`}
               >
-                {plan.popular && (
+                {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-zinc-400 ml-1">{plan.period}</span>
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <div className="text-4xl font-bold text-white mb-2">
+                    {tier.price}
+                    <span className="text-lg text-gray-400">{tier.period}</span>
                   </div>
-                  <p className="text-zinc-300">{plan.description}</p>
+                  <p className="text-gray-300">{tier.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-zion-cyan flex-shrink-0" />
-                      <span className="text-zinc-300">{feature}</span>
+                      <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Link
-                  to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
+                <a
+                  href={`tel:${contactInfo.phone}`}
                   className={`w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple'
-                      : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
-                  {plan.cta}
-                </Link>
+                  Get Started
+                </a>
               </motion.div>
             ))}
           </div>
@@ -482,7 +413,7 @@ export default function AICustomerExperienceAnalyticsPlatform() {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -494,12 +425,12 @@ export default function AICustomerExperienceAnalyticsPlatform() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Industry Applications
             </h2>
-            <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-              Our platform delivers measurable results across diverse industries
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform is designed to transform customer experiences across various industries.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -507,92 +438,88 @@ export default function AICustomerExperienceAnalyticsPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-6 text-center hover:border-zion-purple/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6"
               >
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
-                <p className="text-zinc-300 mb-4">{useCase.description}</p>
-                <div className="inline-flex items-center px-3 py-1 bg-zion-cyan/20 border border-zion-cyan/30 rounded-full">
-                  <span className="text-zion-cyan text-sm font-medium">{useCase.roi}</span>
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <useCase.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white">{useCase.industry}</h3>
                 </div>
+                <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zinc-800/30">
-        <div className="max-w-4xl mx-auto text-center">
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Experience?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Transform Customer Experience?
             </h2>
-            <p className="text-xl text-zinc-300 mb-8">
-              Join the future of customer experience analytics with our AI-powered platform
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Contact us today to learn how our AI Customer Experience Analytics Platform can revolutionize your customer insights.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white font-semibold rounded-lg hover:from-zion-purple-light hover:to-zion-purple transition-all duration-300 hover:-translate-y-1 shadow-lg shadow-zion-purple/25"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              >
-                Schedule Consultation
-              </Link>
-            </div>
           </motion.div>
-        </div>
-      </section>
 
-      {/* Contact Information */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Get in Touch</h3>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3 text-zinc-300">
-                  <Phone className="w-5 h-5 text-zion-cyan" />
-                  <span>+1 302 464 0950</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zinc-300">
-                  <Mail className="w-5 h-5 text-zion-cyan" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-zinc-300">
-                  <MapPin className="w-5 h-5 text-zion-cyan" />
-                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Phone className="w-8 h-8 text-white" />
               </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
+              <a 
+                href={`tel:${contactInfo.phone}`}
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                {contactInfo.phone}
+              </a>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-white mb-6">Learn More</h3>
-              <div className="space-y-3">
-                <Link to="/services" className="block text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                  View All Services →
-                </Link>
-                <Link to="/case-studies" className="block text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                  Case Studies →
-                </Link>
-                <Link to="/blog" className="block text-zion-cyan hover:text-zion-cyan-light transition-colors">
-                  Latest Insights →
-                </Link>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-white" />
               </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Email Us</h3>
+              <a 
+                href={`mailto:${contactInfo.email}`}
+                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+              >
+                {contactInfo.email}
+              </a>
             </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
+              <p className="text-gray-300 text-sm">{contactInfo.address}</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href={`tel:${contactInfo.phone}`}
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
+            >
+              <Phone className="w-5 h-5 mr-2" />
+              Start Your Customer Analytics Journey Today
+            </a>
           </div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AICustomerExperienceAnalyticsPlatform;
