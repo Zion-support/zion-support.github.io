@@ -53,7 +53,8 @@ import {
   Palette as PaletteIcon,
   ExternalLink,
   ArrowRight,
-  Handshake
+  Handshake,
+  Truck
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -179,6 +180,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <div className="flex items-center space-x-3">
                           <Brain className="w-4 h-4 text-zion-cyan" />
                           <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Enterprise Automation</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-autonomous-logistics-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Truck className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Autonomous Logistics</span>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-space-technology-platform" className="group flex items-center justify-between p-3 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-3">
+                          <Satellite className="w-4 h-4 text-zion-cyan" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors">AI Space Technology</span>
                         </div>
                         <ArrowRight className="w-4 h-4 text-zion-purple/50 group-hover:text-zion-cyan transition-all duration-300 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0" />
                       </Link>

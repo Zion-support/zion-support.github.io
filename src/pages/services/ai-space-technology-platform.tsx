@@ -2,9 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
-  Truck, 
-  Route, 
-  Package, 
+  Satellite, 
+  Rocket, 
   Globe, 
   Zap, 
   Shield, 
@@ -12,80 +11,85 @@ import {
   Clock, 
   DollarSign, 
   CheckCircle,
-  MapPin,
-  TrendingUp,
-  Users,
+  Cpu,
   Database,
   Cloud,
   Lock,
   Activity,
   Target,
-  Rocket,
   Star,
   ArrowRight,
   Phone,
   Mail,
-  MapPin as MapPinIcon
+  MapPin as MapPinIcon,
+  Network,
+  Orbit,
+  Telescope,
+  Planet,
+  Comet,
+  Meteor,
+  Sun,
+  Moon
 } from 'lucide-react';
 
-const AIAutonomousLogisticsPlatform: React.FC = () => {
+const AISpaceTechnologyPlatform: React.FC = () => {
   const features = [
     {
-      icon: Truck,
-      title: "Autonomous Fleet Management",
-      description: "AI-powered fleet optimization with real-time route planning and autonomous decision-making capabilities."
+      icon: Satellite,
+      title: "Satellite Constellation Management",
+      description: "AI-powered management of satellite networks with autonomous orbital optimization and collision avoidance."
     },
     {
-      icon: Route,
-      title: "Intelligent Route Optimization",
-      description: "Dynamic route planning that adapts to traffic, weather, and delivery constraints in real-time."
+      icon: Telescope,
+      title: "Space Observation & Analytics",
+      description: "Advanced AI algorithms for processing astronomical data and space imagery with unprecedented accuracy."
     },
     {
-      icon: Package,
-      title: "Smart Package Tracking",
-      description: "End-to-end visibility with predictive delivery times and automated status updates."
+      icon: Orbit,
+      title: "Orbital Mechanics AI",
+      description: "Intelligent trajectory planning and orbital maneuver optimization for space missions."
     },
     {
-      icon: Globe,
-      title: "Global Supply Chain Visibility",
-      description: "Real-time tracking across multiple countries, carriers, and transportation modes."
+      icon: Network,
+      title: "Space Communication Networks",
+      description: "AI-optimized inter-satellite communication and ground station coordination systems."
     },
     {
       icon: Zap,
-      title: "Predictive Analytics",
-      description: "AI-driven demand forecasting and capacity planning with 95% accuracy."
+      title: "Real-time Space Monitoring",
+      description: "Continuous monitoring of space debris, solar activity, and cosmic events with predictive analytics."
     },
     {
       icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with SOC 2 Type II compliance and blockchain verification."
+      title: "Space Security & Defense",
+      description: "Advanced threat detection and space situational awareness for national security applications."
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$599",
+      name: "Space Explorer",
+      price: "$2,999",
       period: "/month",
-      description: "Perfect for small logistics companies",
+      description: "For space research institutions and universities",
       features: [
-        "Up to 100 shipments/month",
-        "Basic route optimization",
-        "Real-time tracking",
+        "Up to 100 satellite observations/month",
+        "Basic orbital calculations",
+        "Space weather monitoring",
         "Email support",
-        "Mobile app access"
+        "Research data access"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$1,299",
+      name: "Space Enterprise",
+      price: "$7,999",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "For commercial space companies and startups",
       features: [
-        "Up to 1,000 shipments/month",
-        "Advanced AI optimization",
-        "Predictive analytics",
+        "Up to 1,000 satellite operations/month",
+        "Advanced AI space analytics",
+        "Custom mission planning",
         "API access",
         "Priority support",
         "Custom integrations"
@@ -93,16 +97,16 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$2,999",
+      name: "Space Command",
+      price: "$19,999",
       period: "/month",
-      description: "For large-scale operations",
+      description: "For government and military applications",
       features: [
-        "Unlimited shipments",
-        "Full AI autonomy",
-        "Custom AI models",
+        "Unlimited space operations",
+        "Full AI space autonomy",
+        "Custom space algorithms",
         "White-label options",
-        "Dedicated support",
+        "Dedicated space engineers",
         "On-premise deployment"
       ],
       popular: false
@@ -111,30 +115,96 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
 
   const benefits = [
     {
-      metric: "40%",
-      description: "Reduction in delivery costs"
+      metric: "99.9%",
+      description: "Satellite tracking accuracy"
     },
     {
-      metric: "60%",
-      description: "Improvement in delivery times"
+      metric: "1000x",
+      description: "Faster space data processing"
     },
     {
-      metric: "95%",
-      description: "Route optimization accuracy"
+      metric: "24/7",
+      description: "Continuous space monitoring"
     },
     {
-      metric: "80%",
-      description: "Reduction in fuel consumption"
+      metric: "Global",
+      description: "Coverage and reach"
+    }
+  ];
+
+  const useCases = [
+    {
+      icon: Satellite,
+      title: "Satellite Operations",
+      description: "Autonomous satellite constellation management and mission control."
+    },
+    {
+      icon: Telescope,
+      title: "Astronomy Research",
+      description: "AI-powered analysis of astronomical data and space phenomena."
+    },
+    {
+      icon: Globe,
+      title: "Earth Observation",
+      description: "Environmental monitoring and climate change analysis from space."
+    },
+    {
+      icon: Rocket,
+      title: "Space Missions",
+      description: "Mission planning and execution for interplanetary exploration."
+    },
+    {
+      icon: Network,
+      title: "Space Communications",
+      description: "Global communication networks and internet connectivity from space."
+    },
+    {
+      icon: Shield,
+      title: "Space Defense",
+      description: "National security and space situational awareness systems."
+    }
+  ];
+
+  const spaceTechnologies = [
+    {
+      icon: Cpu,
+      title: "AI & Machine Learning",
+      description: "Advanced algorithms for space data processing and autonomous decision-making."
+    },
+    {
+      icon: Database,
+      title: "Big Data Analytics",
+      description: "Processing massive amounts of space data in real-time."
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Computing",
+      description: "Scalable cloud infrastructure for space applications."
+    },
+    {
+      icon: Network,
+      title: "5G & IoT",
+      description: "Next-generation communication networks for space connectivity."
+    },
+    {
+      icon: Lock,
+      title: "Cybersecurity",
+      description: "Advanced security protocols for space systems and communications."
+    },
+    {
+      icon: Activity,
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring and alerting systems for space operations."
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Helmet>
-        <title>AI Autonomous Logistics Platform | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your logistics operations with AI-powered autonomous fleet management, intelligent route optimization, and global supply chain visibility. Reduce costs by 40% and improve delivery times by 60%." />
-        <meta name="keywords" content="AI logistics, autonomous logistics, fleet management, route optimization, supply chain visibility, logistics automation" />
-        <link rel="canonical" href="https://ziontechgroup.com/services/ai-autonomous-logistics-platform" />
+        <title>AI Space Technology Platform | Zion Tech Group</title>
+        <meta name="description" content="Revolutionize space technology with our AI-powered platform. Achieve 99.9% satellite tracking accuracy and 1000x faster space data processing with autonomous space operations." />
+        <meta name="keywords" content="AI space technology, satellite management, space analytics, orbital mechanics, space communication, space monitoring" />
+        <link rel="canonical" href="https://ziontechgroup.com/services/ai-space-technology-platform" />
       </Helmet>
 
       {/* Hero Section */}
@@ -147,18 +217,18 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
             className="text-center"
           >
             <div className="inline-flex items-center space-x-2 bg-zion-cyan/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Truck className="w-4 h-4" />
-              <span>AI-Powered Logistics</span>
+              <Satellite className="w-4 h-4" />
+              <span>AI Space Technology</span>
             </div>
             
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              AI Autonomous
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Logistics Platform</span>
+              AI Space Technology
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple"> Platform</span>
             </h1>
             
             <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Transform your logistics operations with the world's most advanced AI-powered autonomous fleet management system. 
-              Achieve unprecedented efficiency with 95% route optimization accuracy and 40% cost reduction.
+              Pioneer the future of space exploration with our revolutionary AI-powered space technology platform. 
+              Achieve 99.9% satellite tracking accuracy and unlock autonomous space operations.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -167,7 +237,7 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
-                Start Free Trial
+                Launch Space Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -191,10 +261,10 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Proven Results That Drive Business Growth
+              Space Technology Performance That Reaches for the Stars
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Our AI Autonomous Logistics Platform delivers measurable improvements across all key performance indicators.
+              Our AI Space Technology Platform delivers performance metrics that push the boundaries of what's possible in space.
             </p>
           </motion.div>
 
@@ -229,10 +299,10 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Cutting-Edge Features for Modern Logistics
+              Revolutionary Space Technology Features
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Experience the future of logistics with AI-powered automation and intelligent decision-making.
+              Experience the cutting-edge capabilities that make our platform the most advanced space technology solution available.
             </p>
           </motion.div>
 
@@ -260,6 +330,88 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20 bg-zion-slate-dark/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Transform Space Operations with AI
+            </h2>
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+              Our platform is revolutionizing multiple space applications with unprecedented AI capabilities.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {useCases.map((useCase, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 p-6 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 bg-zion-purple/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zion-purple/30 transition-all duration-300">
+                  <useCase.icon className="w-6 h-6 text-zion-purple" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {useCase.title}
+                </h3>
+                <p className="text-zion-slate-light">
+                  {useCase.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technology Stack Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+              Cutting-Edge Technology Stack
+            </h2>
+            <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
+              Built with the latest technologies to ensure maximum performance and reliability in space applications.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {spaceTechnologies.map((tech, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="bg-zion-slate-dark/50 p-6 rounded-xl border border-zion-purple/20 hover:border-zion-cyan/40 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 bg-zion-cyan/20 rounded-lg flex items-center justify-center mb-4 group-hover:bg-zion-cyan/30 transition-all duration-300">
+                  <tech.icon className="w-6 h-6 text-zion-cyan" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
+                  {tech.title}
+                </h3>
+                <p className="text-zion-slate-light">
+                  {tech.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 bg-zion-slate-dark/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,10 +422,10 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Flexible Pricing for Every Business Size
+              Space Technology Pricing Plans
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Choose the plan that fits your logistics needs and scale as you grow.
+              Access the power of AI space technology with flexible pricing designed for every level of space operations.
             </p>
           </motion.div>
 
@@ -343,11 +495,11 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 rounded-3xl p-12 text-center border border-zion-cyan/30"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Logistics Operations?
+              Ready to Launch into the Future of Space Technology?
             </h2>
             <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Join thousands of companies already using AI to optimize their logistics and reduce costs. 
-              Start your free trial today and see the difference AI can make.
+              Join the space revolution and unlock the full potential of AI-powered space operations. 
+              Start your space technology journey today with our cutting-edge platform.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -356,14 +508,14 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300"
               >
-                Start Free Trial
+                Launch Space Trial
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
               >
-                Contact Sales
+                Contact Space Experts
               </motion.button>
             </div>
           </motion.div>
@@ -383,7 +535,7 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
               Get in Touch
             </h2>
             <p className="text-zion-slate-light text-lg max-w-2xl mx-auto">
-              Ready to revolutionize your logistics operations? Our team is here to help you get started.
+              Ready to explore the final frontier? Our space technology experts are here to guide you.
             </p>
           </motion.div>
 
@@ -433,4 +585,4 @@ const AIAutonomousLogisticsPlatform: React.FC = () => {
   );
 };
 
-export default AIAutonomousLogisticsPlatform;
+export default AISpaceTechnologyPlatform;
