@@ -65,6 +65,12 @@ const AIAutonomousVehicleManagementPlatform = createLazyComponent(() => import('
 const AISmartCityInfrastructureManagement = createLazyComponent(() => import('./pages/services/ai-smart-city-infrastructure-management'));
 const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-financial-trading-platform'));
 
+// New AI Services 2025 - Enhanced
+const AILegalResearchCompliancePlatform = createLazyComponent(() => import('./pages/services/ai-legal-research-compliance-platform'));
+const AIHealthcarePredictiveAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-predictive-analytics-platform'));
+const AIFinancialRiskManagementTradingPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-trading-platform'));
+const AISupplyChainIntelligenceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-intelligence-optimization-platform'));
+
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
 
@@ -169,6 +175,12 @@ function App() {
                     <Route path="/services/ai-autonomous-vehicle-management-platform" element={<AIAutonomousVehicleManagementPlatform />} />
                     <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
                     <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
+
+                    {/* New AI Services 2025 - Enhanced */}
+                    <Route path="/services/ai-legal-research-compliance-platform" element={<AILegalResearchCompliancePlatform />} />
+                    <Route path="/services/ai-healthcare-predictive-analytics-platform" element={<AIHealthcarePredictiveAnalyticsPlatform />} />
+                    <Route path="/services/ai-financial-risk-management-trading-platform" element={<AIFinancialRiskManagementTradingPlatform />} />
+                    <Route path="/services/ai-supply-chain-intelligence-optimization-platform" element={<AISupplyChainIntelligenceOptimizationPlatform />} />
 
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
