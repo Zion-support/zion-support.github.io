@@ -117,6 +117,8 @@ export function Footer() {
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
         { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
+        { name: "AI Autonomous Education Platform", href: "/services/ai-autonomous-education-platform", icon: GraduationCap },
+        { name: "AI Autonomous Creative Studio", href: "/services/ai-autonomous-creative-studio", icon: Palette },
         { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
         { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
         { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },

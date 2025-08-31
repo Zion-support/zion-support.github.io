@@ -138,8 +138,16 @@ const AIAutonomousFinancialAdvisor = createLazyComponent(() => import('./pages/s
 const AIAutonomousHealthcareDiagnostics = createLazyComponent(() => import('./pages/services/ai-autonomous-healthcare-diagnostics'));
 const AIAutonomousCybersecurityOperations = createLazyComponent(() => import('./pages/services/ai-autonomous-cybersecurity-operations'));
 
+// New Innovative AI Services 2027
+const AIAutonomousLegalResearchPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-legal-research-platform'));
+const AIAutonomousEducationPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-education-platform'));
+const AIAutonomousCreativeStudio = createLazyComponent(() => import('./pages/services/ai-autonomous-creative-studio'));
+
 // New Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
+
+// Innovative Services Showcase 2027
+const InnovativeServicesShowcase2027 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2027'));
 
 // Comprehensive Pricing Guide 2026
 const ComprehensivePricingGuide2026 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2026'));
@@ -174,9 +182,6 @@ const AIHealthcareDiagnosticsPlatform = createLazyComponent(() => import('./page
 
 // New AI Services 2026
 const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
-
-// Innovative Services Showcase 2027
-const InnovativeServicesShowcase2027 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2027'));
 
 // Innovative Services Showcase 2032
 const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2032'));
@@ -391,11 +396,11 @@ function App() {
                     {/* Innovative Services Showcase 2026 */}
                     <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
 
-                    {/* Comprehensive Pricing Guide 2026 */}
-                    <Route path="/comprehensive-pricing-guide-2026" element={<ModernLayout><ComprehensivePricingGuide2026 /></ModernLayout>} />
-
                     {/* Innovative Services Showcase 2027 */}
                     <Route path="/innovative-services-showcase-2027" element={<ModernLayout><InnovativeServicesShowcase2027 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2026 */}
+                    <Route path="/comprehensive-pricing-guide-2026" element={<ModernLayout><ComprehensivePricingGuide2026 /></ModernLayout>} />
 
                     {/* Innovative Services Showcase 2032 */}
                     <Route path="/innovative-services-showcase-2032" element={<ModernLayout><InnovativeServicesShowcase2032 /></ModernLayout>} />
@@ -470,6 +475,11 @@ function App() {
                     <Route path="/services/ai-autonomous-financial-advisor" element={<ModernLayout><AIAutonomousFinancialAdvisor /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-healthcare-diagnostics" element={<ModernLayout><AIAutonomousHealthcareDiagnostics /></ModernLayout>} />
                     <Route path="/services/ai-autonomous-cybersecurity-operations" element={<ModernLayout><AIAutonomousCybersecurityOperations /></ModernLayout>} />
+
+                    {/* New Innovative AI Services 2027 */}
+                    <Route path="/services/ai-autonomous-legal-research-platform" element={<ModernLayout><AIAutonomousLegalResearchPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-education-platform" element={<ModernLayout><AIAutonomousEducationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-autonomous-creative-studio" element={<ModernLayout><AIAutonomousCreativeStudio /></ModernLayout>} />
 
                     {/* New Innovative Micro SAAS Services 2026 */}
                     <Route path="/services/ai-powered-customer-churn-predictor" element={<ModernLayout><AIPoweredCustomerChurnPredictor /></ModernLayout>} />
