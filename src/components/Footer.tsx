@@ -67,6 +67,7 @@ export function Footer() {
         { name: "AI Content Intelligence", href: "/services/ai-content-intelligence-platform" },
         { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management" },
         { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
         { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
         { name: "Micro SAAS Solutions", href: "/micro-saas" }
       ]
@@ -84,15 +85,16 @@ export function Footer() {
       ]
     },
     {
-      title: 'Solutions',
-      links: [
-        { name: 'Enterprise Solutions', href: '/enterprise' },
-        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
-        { name: 'Financial Solutions', href: '/financial-solutions' },
-        { name: 'Manufacturing', href: '/manufacturing-solutions' },
-        { name: 'Industry Solutions', href: '/industry-solutions' },
-        { name: 'Emerging Tech', href: '/emerging-tech' }
->>>>>>> 4cf84cee096ee4bad48102099687eb335d856d5c
+      title: "Cloud & Infrastructure",
+      icon: Cloud,
+      services: [
+        { name: "Cloud DevOps", href: "/services/cloud-devops" },
+        { name: "IT Infrastructure", href: "/services/it-infrastructure" },
+        { name: "FinOps Advisor", href: "/services/finops-advisor" },
+        { name: "Cloud Migration", href: "/services/cloud-migration-services" },
+        { name: "Edge Computing", href: "/services/iot-edge-computing" },
+        { name: "Edge Computing Solutions", href: "/services/edge-computing-solutions" }
+      ]
       ]
     },
     {
@@ -148,7 +150,9 @@ export function Footer() {
     { name: "Documentation", href: "/documentation" },
     { name: "API Reference", href: "/api" },
     { name: "Help Center", href: "/help" },
-    { name: "FAQ", href: "/faq" }
+    { name: "FAQ", href: "/faq" },
+    { name: "Services Overview", href: "/services-overview" },
+    { name: "Marketplace", href: "/marketplace" }
   ];
 
   const company = [
