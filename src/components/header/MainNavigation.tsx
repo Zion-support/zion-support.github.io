@@ -67,7 +67,8 @@ import {
   HeartHandshake,
   Briefcase,
   PenTool,
-  Layout
+  Layout,
+  Truck
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -136,6 +137,20 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         </Link>
                       </li>
                       <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-powered-seo" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Search className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI-Powered SEO</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                      <li>
                         <Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Users className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI Customer Experience Analytics</span>
@@ -183,6 +198,12 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/quantum-edge-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Atom className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>Quantum Edge Computing</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-autonomous-logistics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Truck className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Autonomous Logistics</span>
                         </Link>
                       </li>
                       <li>
