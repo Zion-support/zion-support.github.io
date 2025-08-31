@@ -651,3 +651,24 @@ export const comprehensivePricingGuide2031: ServicePricing[] = [
 
 // Export the complete pricing guide
 export default comprehensivePricingGuide2031;
+
+// Pricing summary for 2031
+export const PRICING_SUMMARY_2031 = {
+  totalServices: comprehensivePricingGuide2031.length,
+  totalCategories: 4, // Micro SAAS, IT Services, AI Services, Quantum Computing
+  priceRange: {
+    min: "$299/month",
+    max: "$50,000/project"
+  },
+  averageROI: "300-500%",
+  implementationTime: {
+    min: "2-4 weeks",
+    max: "8-12 weeks"
+  },
+  contactInfo: {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    website: "https://ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709"
+  }
+};

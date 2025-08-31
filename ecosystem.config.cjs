@@ -1,8 +1,7 @@
 module.exports = {
   apps: [
-    // Main application
     {
-      name: 'zion-app',
+      name: 'bolt-app',
       script: 'npm',
       args: 'start',
       cwd: './',
@@ -11,8 +10,8 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
+        NODE_ENV: 'development',
+        PORT: 3000
       },
       env_production: {
         NODE_ENV: 'production',
@@ -243,6 +242,85 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '21600000' // 6 hours
       }
+    },
+
+    // INTELLIGENT AUTOMATION SYSTEMS
+    {
+      name: 'ai-code-review-automation',
+      script: './scripts/automation/ai-code-review-automation.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */4 * * *', // Every 4 hours
+      log_file: './logs/ai-code-review.log',
+      error_file: './logs/ai-code-review-error.log',
+      out_file: './logs/ai-code-review-out.log'
+    },
+
+    {
+      name: 'smart-dependency-intelligence',
+      script: './scripts/automation/smart-dependency-intelligence.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      log_file: './logs/smart-dependency-intelligence.log',
+      error_file: './logs/smart-dependency-intelligence-error.log',
+      out_file: './logs/smart-dependency-intelligence-out.log'
+    },
+
+    {
+      name: 'predictive-issue-detection',
+      script: './scripts/automation/predictive-issue-detection.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */3 * * *', // Every 3 hours
+      log_file: './logs/predictive-issue-detection.log',
+      error_file: './logs/predictive-issue-detection-error.log',
+      out_file: './logs/predictive-issue-detection-out.log'
+    },
+
+    {
+      name: 'intelligent-build-pipeline',
+      script: './scripts/automation/intelligent-build-pipeline.cjs',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+        NODE_ENV: 'production'
+      },
+      cron_restart: '0 */8 * * *', // Every 8 hours
+      log_file: './logs/intelligent-build-pipeline.log',
+      error_file: './logs/intelligent-build-pipeline-error.log',
+      out_file: './logs/intelligent-build-pipeline-out.log'
     }
-  ]
+    }
+  ],
+
+  deploy: {
+    production: {
+      user: 'root',
+      host: 'localhost',
+      ref: 'origin/main',
+      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
+      path: '/workspace/production',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
+      'pre-setup': ''
+    }
+  }
 };
