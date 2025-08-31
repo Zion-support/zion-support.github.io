@@ -126,6 +126,13 @@ const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
 
+// New Innovative Services
+const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
+const QuantumAICybersecurityPlatform = createLazyComponent(() => import('./pages/services/Quantum-AI-Cybersecurity-Platform'));
+const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/AI-Space-Technology-Platform'));
+const AIFinancialTechnologyPlatform = createLazyComponent(() => import('./pages/services/AI-Financial-Technology-Platform'));
+const AISupplyChainRiskManagementPlatform = createLazyComponent(() => import('./pages/services/AI-Supply-Chain-Risk-Management-Platform'));
+
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
@@ -397,6 +404,17 @@ function App() {
                   <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+                  
+                  {/* New Innovative Services Routes */}
+                  <Route path="/services/AI-Autonomous-Business-Operations-Platform" element={<AIAutonomousBusinessOperationsPlatform />} />
+                  <Route path="/services/Quantum-AI-Cybersecurity-Platform" element={<QuantumAICybersecurityPlatform />} />
+                  <Route path="/services/AI-Space-Technology-Platform" element={<AISpaceTechnologyPlatform />} />
+                  <Route path="/services/AI-Financial-Technology-Platform" element={<AIFinancialTechnologyPlatform />} />
+                  <Route path="/services/AI-Data-Governance-Platform" element={<AIDataGovernancePlatform />} />
+                  <Route path="/services/AI-ESG-Compliance-Platform" element={<AIESGCompliancePlatform />} />
+                  <Route path="/services/AI-Digital-Twin-Platform" element={<AIDigitalTwinPlatform />} />
+                  <Route path="/services/AI-Edge-Computing-Platform" element={<AIEdgeComputingPlatform />} />
+                  <Route path="/services/AI-Supply-Chain-Risk-Management-Platform" element={<AISupplyChainRiskManagementPlatform />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />

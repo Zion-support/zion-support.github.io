@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../../components/SEO';
 import { 
-  Cpu, 
+  Truck, 
   Network, 
   Brain, 
   Shield, 
@@ -21,7 +21,6 @@ import {
   FileText,
   Sparkles,
   Workflow,
-  Truck,
   ShieldCheck,
   Activity,
   PieChart,
@@ -47,82 +46,85 @@ import {
   Monitor,
   Server,
   Router,
-  Smartphone
+  Smartphone,
+  AlertTriangle,
+  TrendingUp,
+  TrendingDown
 } from 'lucide-react';
 
-export default function AIEdgeComputingPlatform() {
+export default function AISupplyChainRiskManagementPlatform() {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Edge Processing",
-      description: "Intelligent algorithms that process data at the edge for real-time insights and decision-making."
+      title: "AI-Powered Risk Assessment",
+      description: "Intelligent algorithms that continuously monitor and assess supply chain risks in real-time."
     },
     {
       icon: Network,
-      title: "Distributed Edge Network",
-      description: "Seamless connectivity across edge devices with intelligent load balancing and failover capabilities."
+      title: "End-to-End Visibility",
+      description: "Complete transparency across your entire supply chain from suppliers to end customers."
     },
     {
-      icon: Cpu,
-      title: "Real-time Analytics",
-      description: "Instant data processing and analysis at the edge for immediate action and response."
+      icon: Truck,
+      title: "Logistics Optimization",
+      description: "AI-driven route optimization, inventory management, and delivery scheduling."
     },
     {
       icon: Database,
-      title: "Edge Data Management",
-      description: "Efficient data storage, processing, and synchronization across distributed edge locations."
+      title: "Predictive Analytics",
+      description: "Advanced forecasting and risk prediction using machine learning and historical data."
     },
     {
       icon: Shield,
-      title: "Edge Security",
-      description: "Advanced security protocols and encryption for edge devices and data transmission."
+      title: "Risk Mitigation",
+      description: "Automated alerts and proactive strategies to minimize supply chain disruptions."
     },
     {
       icon: Eye,
-      title: "IoT Integration",
-      description: "Comprehensive IoT device management and data collection at the edge."
+      title: "Real-time Monitoring",
+      description: "Continuous tracking of suppliers, shipments, and potential risk factors."
     }
   ];
 
   const benefits = [
-    "Reduce latency by 90%",
-    "Lower bandwidth costs by 60%",
-    "Real-time processing",
-    "Enhanced security",
-    "Scalable architecture",
-    "Improved reliability",
-    "Cost optimization",
+    "Reduce supply chain disruptions by 70%",
+    "Lower operational costs by 40%",
+    "Improve delivery reliability by 85%",
+    "Real-time risk monitoring",
+    "Enhanced supplier management",
+    "Better inventory optimization",
+    "Improved customer satisfaction",
     "Competitive advantage"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$3,999",
+      price: "$4,499",
       period: "/month",
-      description: "Perfect for small organizations starting with edge computing",
+      description: "Perfect for small organizations starting with supply chain risk management",
       features: [
-        "Basic edge processing",
-        "IoT integration",
-        "Standard security",
+        "Basic risk assessment",
+        "Supplier monitoring",
+        "Standard reporting",
         "Email support",
         "Basic analytics",
-        "Up to 50 edge devices"
+        "Up to 100 suppliers"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$8,999",
+      price: "$9,999",
       period: "/month",
-      description: "Ideal for growing organizations with complex edge computing needs",
+      description: "Ideal for growing organizations with complex supply chain needs",
       features: [
-        "Advanced edge processing",
-        "Full IoT integration",
-        "Advanced security",
+        "Advanced risk assessment",
+        "Full supply chain visibility",
+        "Predictive analytics",
         "Priority support",
-        "Real-time analytics",
-        "Unlimited edge devices",
+        "Advanced monitoring",
+        "Unlimited suppliers",
         "Custom models",
         "API integrations"
       ],
@@ -130,13 +132,13 @@ export default function AIEdgeComputingPlatform() {
     },
     {
       name: "Enterprise",
-      price: "$18,999",
+      price: "$19,999",
       period: "/month",
-      description: "For large enterprises requiring maximum edge computing capabilities",
+      description: "For large enterprises requiring maximum supply chain risk management capabilities",
       features: [
-        "Full edge computing suite",
+        "Full risk management suite",
         "Custom AI model development",
-        "Advanced edge features",
+        "Advanced risk features",
         "Dedicated support team",
         "Multi-tenant architecture",
         "Custom integrations",
@@ -150,48 +152,59 @@ export default function AIEdgeComputingPlatform() {
   const useCases = [
     {
       industry: "Manufacturing",
-      description: "Real-time production monitoring, predictive maintenance, and quality control",
+      description: "Supply chain optimization, supplier risk management, and production planning",
       icon: Factory
     },
     {
+      industry: "Retail",
+      description: "Inventory management, supplier monitoring, and customer demand forecasting",
+      icon: ShoppingCart
+    },
+    {
       industry: "Healthcare",
-      description: "Patient monitoring, medical device management, and real-time diagnostics",
+      description: "Medical supply chain management, supplier compliance, and patient safety",
       icon: Heart
     },
     {
-      industry: "Transportation",
-      description: "Fleet management, traffic optimization, and autonomous vehicle support",
-      icon: Truck
+      industry: "Automotive",
+      description: "Parts supply chain, supplier quality management, and production scheduling",
+      icon: Car
     },
     {
-      industry: "Energy",
-      description: "Grid monitoring, renewable energy management, and predictive maintenance",
-      icon: Zap
+      industry: "Technology",
+      description: "Component supply chain, supplier risk assessment, and product development",
+      icon: Cpu
     },
     {
-      industry: "Smart Cities",
-      description: "Infrastructure monitoring, traffic management, and public services",
-      icon: Building
-    },
-    {
-      industry: "Retail",
-      description: "Inventory management, customer analytics, and supply chain optimization",
+      industry: "Food & Beverage",
+      description: "Food safety, supplier compliance, and quality assurance",
       icon: ShoppingCart
     }
+  ];
+
+  const riskCategories = [
+    "Supplier Risk",
+    "Logistics Risk",
+    "Demand Risk",
+    "Financial Risk",
+    "Regulatory Risk",
+    "Environmental Risk",
+    "Geopolitical Risk",
+    "Technology Risk"
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Edge Computing Platform - Zion Tech Group"
-        description="Comprehensive AI-powered edge computing platform for real-time processing, IoT integration, and distributed intelligence. Transform operations with edge computing."
-        keywords="AI edge computing, IoT integration, real-time processing, edge analytics, distributed computing"
-        canonicalUrl="https://ziontechgroup.com/services/AI-Edge-Computing-Platform"
+        title="AI Supply Chain Risk Management Platform - Zion Tech Group"
+        description="Comprehensive AI-powered supply chain risk management platform for end-to-end visibility, risk assessment, and predictive analytics. Transform your supply chain operations."
+        keywords="AI supply chain risk management, supplier monitoring, logistics optimization, risk assessment, supply chain visibility"
+        canonicalUrl="https://ziontechgroup.com/services/AI-Supply-Chain-Risk-Management-Platform"
       />
       
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 via-blue-500/10 to-indigo-500/10"></div>
         <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -200,25 +213,25 @@ export default function AIEdgeComputingPlatform() {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Edge{' '}
-              <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
-                Computing Platform
+              AI Supply Chain{' '}
+              <span className="bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-transparent">
+                Risk Management Platform
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Process data at the edge with our AI-powered computing platform. Reduce latency, lower costs, 
-              and enable real-time intelligence across your distributed infrastructure.
+              Master your supply chain with our AI-powered risk management platform. Gain end-to-end visibility, 
+              predict disruptions, and optimize operations for maximum efficiency and reliability.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="mailto:kleber@ziontechgroup.com"
-                className="px-8 py-4 bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold rounded-lg hover:from-orange-500 hover:to-red-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/25"
+                className="px-8 py-4 bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold rounded-lg hover:from-teal-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-teal-500/25"
               >
                 Get Started
               </a>
               <a
                 href="tel:+13024640950"
-                className="px-8 py-4 border border-orange-400/50 text-orange-400 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200"
+                className="px-8 py-4 border border-teal-400/50 text-teal-400 font-semibold rounded-lg hover:bg-teal-400/10 transition-all duration-200"
               >
                 Call Now
               </a>
@@ -238,10 +251,10 @@ export default function AIEdgeComputingPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Edge Operations
+              Transform Supply Chain Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI platform delivers measurable improvements that revolutionize how organizations process and analyze data at the edge
+              Our AI platform delivers measurable improvements that revolutionize how organizations manage and optimize their supply chains
             </p>
           </motion.div>
 
@@ -253,9 +266,9 @@ export default function AIEdgeComputingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-orange-400/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300"
               >
-                <CheckCircle className="w-12 h-12 text-orange-400 mb-4" />
+                <CheckCircle className="w-12 h-12 text-teal-400 mb-4" />
                 <p className="text-white text-lg">{benefit}</p>
               </motion.div>
             ))}
@@ -264,7 +277,7 @@ export default function AIEdgeComputingPlatform() {
       </section>
 
       {/* Features */}
-      <section className="py-20 bg-gradient-to-r from-orange-500/5 to-red-500/5">
+      <section className="py-20 bg-gradient-to-r from-teal-500/5 to-blue-500/5">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -274,10 +287,10 @@ export default function AIEdgeComputingPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Edge Computing Features
+              Advanced Risk Management Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Cutting-edge AI capabilities designed specifically for comprehensive edge computing operations
+              Cutting-edge AI capabilities designed specifically for comprehensive supply chain risk management
             </p>
           </motion.div>
 
@@ -289,9 +302,9 @@ export default function AIEdgeComputingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-orange-400/50 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300 group"
               >
-                <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-teal-500 to-blue-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -302,8 +315,44 @@ export default function AIEdgeComputingPlatform() {
         </div>
       </section>
 
-      {/* Use Cases */}
+      {/* Risk Categories */}
       <section className="py-20">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Risk Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our platform monitors and manages all critical supply chain risk factors
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {riskCategories.map((category, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10 hover:border-teal-400/50 transition-all duration-300 text-center"
+              >
+                <AlertTriangle className="w-8 h-8 text-teal-400 mx-auto mb-3" />
+                <p className="text-white font-semibold">{category}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="py-20 bg-gradient-to-r from-teal-500/5 to-blue-500/5">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -316,7 +365,7 @@ export default function AIEdgeComputingPlatform() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform serves diverse industries with specialized edge computing solutions
+              Our platform serves diverse industries with specialized supply chain risk management solutions
             </p>
           </motion.div>
 
@@ -328,9 +377,9 @@ export default function AIEdgeComputingPlatform() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-orange-400/50 transition-all duration-300"
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-teal-400/50 transition-all duration-300"
               >
-                <useCase.icon className="w-12 h-12 text-orange-400 mb-4" />
+                <useCase.icon className="w-12 h-12 text-teal-400 mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
@@ -340,7 +389,7 @@ export default function AIEdgeComputingPlatform() {
       </section>
 
       {/* Pricing */}
-      <section className="py-20 bg-gradient-to-r from-orange-500/5 to-red-500/5">
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -350,10 +399,10 @@ export default function AIEdgeComputingPlatform() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Edge Computing Plans
+              Risk Management Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that transforms your edge computing capabilities
+              Choose the plan that transforms your supply chain risk management capabilities
             </p>
           </motion.div>
 
@@ -367,12 +416,12 @@ export default function AIEdgeComputingPlatform() {
                 viewport={{ once: true }}
                 className={`bg-white/5 backdrop-blur-lg rounded-xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-orange-400/50 scale-105' 
-                    : 'border-white/10 hover:border-orange-400/30'
+                    ? 'border-teal-400/50 scale-105' 
+                    : 'border-white/10 hover:border-teal-400/30'
                 }`}
               >
                 {plan.popular && (
-                  <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                  <div className="bg-gradient-to-r from-teal-500 to-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     Most Popular
                   </div>
                 )}
@@ -385,14 +434,14 @@ export default function AIEdgeComputingPlatform() {
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-teal-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <a
-                  href="mailto:kleber@ziontechgroup.com?subject=AI%20Edge%20Computing%20Platform%20-%20{plan.name}%20Plan"
-                  className="w-full bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-orange-500 hover:to-red-600 transition-all duration-200 text-center block"
+                  href="mailto:kleber@ziontechgroup.com?subject=AI%20Supply%20Chain%20Risk%20Management%20Platform%20-%20{plan.name}%20Plan"
+                  className="w-full bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-teal-500 hover:to-blue-600 transition-all duration-200 text-center block"
                 >
                   Get Started
                 </a>
@@ -403,7 +452,7 @@ export default function AIEdgeComputingPlatform() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20">
+      <section className="py-20 bg-gradient-to-r from-teal-500/5 to-blue-500/5">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -413,29 +462,29 @@ export default function AIEdgeComputingPlatform() {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Edge Computing?
+              Ready to Master Your Supply Chain?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn how our AI Edge Computing Platform can optimize your operations
+              Contact us today to learn how our AI Supply Chain Risk Management Platform can transform your operations
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-orange-400 mb-3" />
+                <Phone className="w-8 h-8 text-teal-400 mb-3" />
                 <p className="text-white font-semibold">Phone</p>
-                <a href="tel:+13024640950" className="text-orange-400 hover:text-orange-300 transition-colors">
+                <a href="tel:+13024640950" className="text-teal-400 hover:text-teal-300 transition-colors">
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-orange-400 mb-3" />
+                <Mail className="w-8 h-8 text-teal-400 mb-3" />
                 <p className="text-white font-semibold">Email</p>
-                <a href="mailto:kleber@ziontechgroup.com" className="text-orange-400 hover:text-orange-300 transition-colors">
+                <a href="mailto:kleber@ziontechgroup.com" className="text-teal-400 hover:text-teal-300 transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-orange-400 mb-3" />
+                <MapPin className="w-8 h-8 text-teal-400 mb-3" />
                 <p className="text-white font-semibold">Address</p>
                 <p className="text-gray-300 text-sm">
                   364 E Main St STE 1008<br />
@@ -446,14 +495,14 @@ export default function AIEdgeComputingPlatform() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:kleber@ziontechgroup.com?subject=AI%20Edge%20Computing%20Platform%20Inquiry"
-                className="px-8 py-4 bg-gradient-to-r from-orange-400 to-red-500 text-white font-semibold rounded-lg hover:from-orange-500 hover:to-red-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/25"
+                href="mailto:kleber@ziontechgroup.com?subject=AI%20Supply%20Chain%20Risk%20Management%20Platform%20Inquiry"
+                className="px-8 py-4 bg-gradient-to-r from-teal-400 to-blue-500 text-white font-semibold rounded-lg hover:from-teal-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg shadow-teal-500/25"
               >
                 Request Demo
               </a>
               <a
                 href="tel:+13024640950"
-                className="px-8 py-4 border border-orange-400/50 text-orange-400 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200"
+                className="px-8 py-4 border border-teal-400/50 text-teal-400 font-semibold rounded-lg hover:bg-teal-400/10 transition-all duration-200"
               >
                 Call Now
               </a>
