@@ -156,7 +156,7 @@ const SecurityEnhancer = (): JSX.Element => {
                     <p className="text-sm text-zion-slate-light">{check.description}</p>
                   </div>
                 </div>
-                <Badge className="border-zion-cyan/30 text-zion-cyan">
+                <Badge variant="outline" className="border-zion-cyan/30 text-zion-cyan">
                   {check.category}
                 </Badge>
               </div>
@@ -183,4 +183,4 @@ const SecurityEnhancer = (): JSX.Element => {
   );
 };
 
-export default SecurityEnhancer;export { SecurityEnhancer };
+export default SecurityEnhancer;
