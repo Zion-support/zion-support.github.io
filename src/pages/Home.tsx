@@ -663,7 +663,7 @@ const CTASection = React.memo(() => {
               </a>
               
               <Link
-                to="/services"
+                to="/innovative-services-showcase-2033"
                 className="px-8 py-4 border-2 border-cyan-400/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300"
               >
                 Explore Services

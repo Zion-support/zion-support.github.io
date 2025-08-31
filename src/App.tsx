@@ -98,8 +98,14 @@ const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages
 // Innovative Services Showcase 2032
 const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2032'));
 
+// Innovative Services Showcase 2033
+const InnovativeServicesShowcase2033 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2033'));
+
 // Comprehensive Pricing Guide 2032
 const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
+
+// Comprehensive Pricing Guide 2033
+const ComprehensivePricingGuide2033 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2033'));
 
 
 // New Innovative Services 2025 - Combined from both versions
@@ -267,8 +273,14 @@ function App() {
                     {/* Innovative Services Showcase 2032 */}
                     <Route path="/innovative-services-showcase-2032" element={<ModernLayout><InnovativeServicesShowcase2032 /></ModernLayout>} />
 
+                    {/* Innovative Services Showcase 2033 */}
+                    <Route path="/innovative-services-showcase-2033" element={<ModernLayout><InnovativeServicesShowcase2033 /></ModernLayout>} />
+
                     {/* Comprehensive Pricing Guide 2032 */}
                     <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+
+                    {/* Comprehensive Pricing Guide 2033 */}
+                    <Route path="/comprehensive-pricing-guide-2033" element={<ModernLayout><ComprehensivePricingGuide2033 /></ModernLayout>} />
                     {/* New Innovative Services 2025 - Combined from both versions */}
                     <Route path="/services/ai-enterprise-automation-platform" element={<AIEnterpriseAutomationPlatform />} />
                     <Route path="/services/ai-data-analytics-platform" element={<AIDataAnalyticsPlatform />} />
