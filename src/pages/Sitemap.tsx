@@ -1,304 +1,466 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { motion } from 'react-motion';
+import { 
+  Sitemap, 
+  Home, 
+  Users, 
+  Settings, 
+  Shield, 
+  Brain, 
+  Cloud, 
+  Zap, 
+  FileText, 
+  Mail, 
+  Phone,
+  MapPin,
+  ArrowRight,
+  ExternalLink,
+  Globe,
+  Building,
+  Award,
+  Rocket,
+  Code,
+  Database,
+  Lock,
+  Lightbulb,
+  TrendingUp,
+  Newspaper,
+  Megaphone,
+  CheckCircle,
+  Calendar,
+  Download
+} from 'lucide-react';
 
-export default function Sitemap() {
-  const sitemapData = {
-    mainPages: [
-      { name: 'Home', path: '/', description: 'Zion Tech Group - AI, Cloud, and Technology Solutions' },
-      { name: 'About Us', path: '/about', description: 'Learn about our company and mission' },
-      { name: 'Contact', path: '/contact', description: 'Get in touch with our team' },
-      { name: 'Services', path: '/services', description: 'Overview of all our services' },
-      { name: 'Solutions', path: '/solutions', description: 'Industry and technology solutions' },
-      { name: 'Company', path: '/company', description: 'Company information and resources' },
-      { name: 'Resources', path: '/resources', description: 'Educational and informational resources' },
-      { name: 'Support', path: '/help', description: 'Get help and support' },
-      { name: 'Pricing', path: '/pricing', description: 'Service pricing and packages' },
-      { name: 'Get Started', path: '/signup', description: 'Start your journey with Zion Tech Group' },
-      { name: 'Request Quote', path: '/request-quote', description: 'Get a custom quote for your needs' },
-      { name: 'Marketplace', path: '/marketplace', description: 'AI and technology marketplace' }
+const Sitemap: React.FC = () => {
+  const siteStructure = {
+    main: [
+      {
+        title: "Home",
+        path: "/",
+        description: "Main landing page with company overview and key services",
+        icon: <Home className="w-5 h-5" />
+      },
+      {
+        title: "About",
+        path: "/about",
+        description: "Company information, mission, vision, and team details",
+        icon: <Building className="w-5 h-5" />
+      },
+      {
+        title: "Contact",
+        path: "/contact",
+        description: "Contact information and inquiry forms",
+        icon: <Mail className="w-5 h-5" />
+      }
     ],
-    aiServices: [
-      { name: 'AI Enterprise Automation Platform', path: '/services/ai-enterprise-automation-platform' },
-      { name: 'AI Enterprise Intelligence Platform', path: '/services/ai-enterprise-intelligence-platform' },
-      { name: 'AI Data Analytics Platform', path: '/services/ai-data-analytics-platform' },
-      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence' },
-      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform' },
-      { name: 'AI Autonomous Research Assistant', path: '/services/ai-autonomous-research-assistant' },
-      { name: 'AI Financial Trading Platform', path: '/services/ai-financial-trading-platform' },
-      { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform' },
-      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform' },
-      { name: 'AI Quantum Neural Network Platform', path: '/services/ai-quantum-neural-network-platform' },
-      { name: 'AI Supply Chain Optimization', path: '/services/ai-supply-chain-optimization' },
-      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot' },
-      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant' },
-      { name: 'AI Project Management Platform', path: '/services/ai-project-management-platform' },
-      { name: 'AI Workflow Orchestrator', path: '/services/ai-workflow-orchestrator' },
-      { name: 'AI Predictive Maintenance', path: '/services/ai-predictive-maintenance' },
-      { name: 'AI HR Platform', path: '/services/ai-hr-platform' },
-      { name: 'AI Financial Risk Management', path: '/services/ai-financial-trading-risk-management' },
-      { name: 'AI Business Intelligence Dashboard', path: '/services/ai-business-intelligence-dashboard' },
-      { name: 'AI Customer Support Automation', path: '/services/ai-customer-support-automation' },
-      { name: 'AI Marketing Automation Platform', path: '/services/ai-marketing-automation-platform' },
-      { name: 'AI Content Creation Studio', path: '/services/ai-content-creation-studio' },
-      { name: 'AI Customer Experience Analytics', path: '/services/ai-customer-experience-analytics-platform' },
-      { name: 'AI Autonomous Business Operations', path: '/services/ai-autonomous-business-operations-platform' },
-      { name: 'AI Content Intelligence Platform', path: '/services/ai-content-intelligence-platform' },
-      { name: 'AI Enterprise Resource Planning', path: '/services/ai-enterprise-resource-planning' },
-      { name: 'AI Customer Success Platform', path: '/services/ai-customer-success-platform' },
-      { name: 'AI Supply Chain Intelligence', path: '/services/ai-supply-chain-intelligence' }
-    ],
-    itServices: [
-      { name: 'Infrastructure Management', path: '/services/it-infrastructure-management' },
-      { name: 'Cloud & DevOps', path: '/services/cloud-devops' },
-      { name: 'Cybersecurity', path: '/services/cybersecurity' },
-      { name: 'Digital Transformation', path: '/services/digital-transformation' },
-      { name: 'Quantum Computing', path: '/services/quantum-computing-solutions' },
-      { name: 'Edge Computing', path: '/services/edge-computing-solutions' },
-      { name: 'Blockchain Solutions', path: '/services/blockchain-enterprise-solutions' },
-      { name: 'IoT & Edge Computing', path: '/services/iot-edge' },
-      { name: 'Cloud FinOps', path: '/services/cloud-finops-optimizer' }
-    ],
-    solutions: [
-      { name: 'Healthcare Solutions', path: '/solutions/healthcare' },
-      { name: 'Financial Solutions', path: '/solutions/financial' },
-      { name: 'Manufacturing Solutions', path: '/solutions/manufacturing' },
-      { name: 'Government Solutions', path: '/solutions/government' },
-      { name: 'Retail Solutions', path: '/solutions/retail' },
-      { name: 'Enterprise Solutions', path: '/enterprise' },
-      { name: 'Digital Transformation', path: '/digital-transformation' },
-      { name: 'Cloud Solutions', path: '/cloud-solutions' },
-      { name: 'Emerging Technology', path: '/emerging-tech' },
-      { name: 'Quantum Edge Computing', path: '/solutions/quantum-edge-computing' },
-      { name: 'AI Autonomous Business', path: '/solutions/ai-autonomous-business' },
-      { name: 'Blockchain & Web3', path: '/solutions/blockchain-web3' },
-      { name: 'IoT Edge Computing', path: '/solutions/iot-edge-computing' },
-      { name: 'Space Technology', path: '/solutions/space-tech' }
+    services: [
+      {
+        title: "All Services",
+        path: "/services",
+        description: "Comprehensive overview of all technology services",
+        icon: <Settings className="w-5 h-5" />
+      },
+      {
+        title: "AI Innovation Hub",
+        path: "/ai-services-innovation-2029",
+        description: "Artificial intelligence and machine learning solutions",
+        icon: <Brain className="w-5 h-5" />
+      },
+      {
+        title: "Micro SAAS Hub",
+        path: "/micro-saas-innovation-hub-2029",
+        description: "Micro software-as-a-service solutions and platforms",
+        icon: <Code className="w-5 h-5" />
+      },
+      {
+        title: "IT Infrastructure",
+        path: "/it-infrastructure-innovation-2029",
+        description: "Cloud computing, DevOps, and infrastructure services",
+        icon: <Cloud className="w-5 h-5" />
+      },
+      {
+        title: "Innovative Services Showcase",
+        path: "/innovative-services-showcase-2029",
+        description: "Cutting-edge technology solutions and innovations",
+        icon: <Lightbulb className="w-5 h-5" />
+      },
+      {
+        title: "Comprehensive Services",
+        path: "/comprehensive-services-2029",
+        description: "End-to-end technology consulting and implementation",
+        icon: <Zap className="w-5 h-5" />
+      },
+      {
+        title: "Pricing Guide",
+        path: "/comprehensive-pricing-guide-2029",
+        description: "Service pricing, packages, and cost information",
+        icon: <TrendingUp className="w-5 h-5" />
+      }
     ],
     company: [
-      { name: 'About Us', path: '/about' },
-      { name: 'Leadership', path: '/leadership' },
-      { name: 'Careers', path: '/careers' },
-      { name: 'News', path: '/news' },
-      { name: 'Events', path: '/events' },
-      { name: 'Partners', path: '/partners' },
-      { name: 'Contact', path: '/contact' }
-    ],
-    resources: [
-      { name: 'Blog', path: '/blog' },
-      { name: 'Documentation', path: '/docs' },
-      { name: 'White Papers', path: '/white-papers' },
-      { name: 'Webinars', path: '/webinars' },
-      { name: 'Training', path: '/training' },
-      { name: 'Research & Development', path: '/research-development' },
-      { name: 'Case Studies', path: '/case-studies' },
-      { name: 'Innovative Services Showcase 2026', path: '/innovative-services-showcase-2026' },
-      { name: 'Comprehensive Services Showcase 2025', path: '/comprehensive-services-showcase-2025' },
-      { name: 'Innovative AI Services Showcase 2025', path: '/innovative-ai-services-showcase-2025' },
-      { name: 'Advanced Services Showcase 2025', path: '/advanced-services-showcase-2025' },
-      { name: 'Comprehensive Pricing Guide 2025', path: '/comprehensive-pricing-guide-2025' }
+      {
+        title: "Careers",
+        path: "/careers",
+        description: "Job opportunities, company culture, and application process",
+        icon: <Users className="w-5 h-5" />
+      },
+      {
+        title: "News",
+        path: "/news",
+        description: "Company updates, press releases, and industry news",
+        icon: <Newspaper className="w-5 h-5" />
+      },
+      {
+        title: "Blog",
+        path: "/blog",
+        description: "Technology insights, industry trends, and expert analysis",
+        icon: <FileText className="w-5 h-5" />
+      }
     ],
     legal: [
-      { name: 'Privacy Policy', path: '/privacy' },
-      { name: 'Terms of Service', path: '/terms' },
-      { name: 'Cookie Policy', path: '/cookies' },
-      { name: 'Accessibility', path: '/accessibility' },
-      { name: 'Security', path: '/security' },
-      { name: 'Compliance', path: '/compliance' }
-    ],
-    showcases: [
-      { name: 'Innovation Showcase 2026', path: '/innovative-services-showcase-2026' },
-      { name: 'Comprehensive Showcase 2025', path: '/comprehensive-services-showcase-2025' },
-      { name: 'AI Services Showcase 2025', path: '/innovative-ai-services-showcase-2025' }
+      {
+        title: "Privacy Policy",
+        path: "/privacy",
+        description: "Data collection, usage, and protection policies",
+        icon: <Shield className="w-5 h-5" />
+      },
+      {
+        title: "Terms of Service",
+        path: "/terms",
+        description: "Service usage terms, conditions, and user obligations",
+        icon: <FileText className="w-5 h-5" />
+      }
     ]
   };
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>Sitemap - Zion Tech Group</title>
-        <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all our services, solutions, and resources organized by category." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ziontechgroup.com/sitemap" />
-      </Helmet>
+  const contactInfo = {
+    email: "kleber@ziontechgroup.com",
+    phone: "+1 302 464 0950",
+    address: "364 E Main St STE 1008, Middletown DE 19709",
+    website: "https://ziontechgroup.com"
+  };
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Website Sitemap
-          </h1>
-          <p className="text-xl text-zinc-300 max-w-3xl mx-auto">
-            Complete navigation guide to all pages, services, and resources on the Zion Tech Group website
-          </p>
-        </div>
+  const quickLinks = [
+    { title: "Get Started", path: "/contact", description: "Start your project with us" },
+    { title: "View Services", path: "/services", description: "Explore our service offerings" },
+    { title: "Request Quote", path: "/contact", description: "Get a custom quote for your needs" },
+    { title: "Support", path: "/contact", description: "Get help and technical support" }
+  ];
 
-        {/* Main Pages */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">Main Pages</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.mainPages.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {page.name}
-                </h3>
-                <p className="text-sm text-zinc-400 mt-2">{page.description}</p>
-                <span className="text-xs text-zion-cyan mt-2 block">{page.path}</span>
-              </Link>
-            ))}
+  const renderSection = (title: string, items: any[], icon: any) => (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+    >
+      <div className="flex items-center space-x-3 mb-6">
+        <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center">
+          <div className="text-blue-600 dark:text-blue-400">
+            {icon}
           </div>
         </div>
-
-        {/* AI Services */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">AI & Automation Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.aiServices.map((service) => (
-              <Link
-                key={service.path}
-                to={service.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {service.name}
-                </h3>
-                <span className="text-xs text-zion-cyan mt-2 block">{service.path}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* IT Services */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">IT & Infrastructure Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.itServices.map((service) => (
-              <Link
-                key={service.path}
-                to={service.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {service.name}
-                </h3>
-                <span className="text-xs text-zion-cyan mt-2 block">{service.path}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Solutions */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">Industry & Technology Solutions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.solutions.map((solution) => (
-              <Link
-                key={solution.path}
-                to={solution.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {solution.name}
-                </h3>
-                <span className="text-xs text-zion-cyan mt-2 block">{solution.path}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Company */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">Company Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.company.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {page.name}
-                </h3>
-                <span className="text-xs text-zion-cyan mt-2 block">{page.path}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Resources */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">Resources & Documentation</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.resources.map((resource) => (
-              <Link
-                key={resource.path}
-                to={resource.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {resource.name}
-                </h3>
-                <span className="text-xs text-zion-cyan mt-2 block">{resource.path}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Legal */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">Legal & Compliance</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.legal.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {page.name}
-                </h3>
-                <span className="text-xs text-zion-cyan mt-2 block">{page.path}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Showcases */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-zion-cyan mb-6">Innovation Showcases</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {sitemapData.showcases.map((showcase) => (
-              <Link
-                key={showcase.path}
-                to={showcase.path}
-                className="block p-4 bg-zinc-800/50 border border-zinc-700 rounded-lg hover:bg-zinc-700/50 transition-colors group"
-              >
-                <h3 className="text-lg font-semibold text-white group-hover:text-zion-cyan transition-colors">
-                  {showcase.name}
-                </h3>
-                <span className="text-xs text-zion-cyan mt-2 block">{showcase.path}</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="text-center pt-8 border-t border-zinc-700">
-          <p className="text-zinc-400 mb-4">
-            Total Pages: {Object.values(sitemapData).flat().length}
-          </p>
-          <Link
-            to="/"
-            className="inline-flex items-center px-6 py-3 bg-zion-cyan text-white font-semibold rounded-lg hover:bg-zion-cyan-light transition-colors"
-          >
-            Back to Home
-          </Link>
-        </div>
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{title}</h3>
       </div>
+      
+      <div className="space-y-4">
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="border-l-4 border-blue-200 dark:border-blue-800 pl-4 hover:border-blue-400 dark:hover:border-blue-600 transition-colors"
+          >
+            <div className="flex items-start justify-between">
+              <div className="flex-1">
+                <div className="flex items-center space-x-2 mb-2">
+                  {item.icon}
+                  <h4 className="font-medium text-gray-900 dark:text-white">
+                    {item.title}
+                  </h4>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                  {item.description}
+                </p>
+                <div className="flex items-center space-x-2">
+                  <span className="text-xs text-gray-500 dark:text-gray-500">Path:</span>
+                  <code className="text-xs bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                    {item.path}
+                  </code>
+                </div>
+              </div>
+              <a
+                href={item.path}
+                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
+              >
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+
+  return (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Sitemap className="w-10 h-10" />
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Site Map
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Navigate through all pages and sections of the Zion Tech Group website. 
+              Find what you're looking for quickly and easily.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
+              <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
+                <Globe className="w-4 h-4" />
+                <span>Complete Navigation</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
+                <CheckCircle className="w-4 h-4" />
+                <span>All Pages Listed</span>
+              </div>
+              <div className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full">
+                <ArrowRight className="w-4 h-4" />
+                <span>Quick Access</span>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-16 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              Quick Access
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Most commonly accessed pages and actions
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {quickLinks.map((link, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                  {link.title}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                  {link.description}
+                </p>
+                <a
+                  href={link.path}
+                  className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors"
+                >
+                  <span>Go to {link.title}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Main Site Structure */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              Complete Site Structure
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Explore all sections and pages organized by category for easy navigation
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {renderSection("Main Pages", siteStructure.main, <Home className="w-6 h-6" />)}
+            {renderSection("Services", siteStructure.services, <Settings className="w-6 h-6" />)}
+            {renderSection("Company", siteStructure.company, <Building className="w-6 h-6" />)}
+            {renderSection("Legal & Policies", siteStructure.legal, <Shield className="w-6 h-6" />)}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-16 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                Contact Information
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-400">
+                Get in touch with us for any questions or assistance
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                  Primary Contact
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <a 
+                      href={`mailto:${contactInfo.email}`}
+                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      {contactInfo.email}
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Phone className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <a 
+                      href={`tel:${contactInfo.phone}`}
+                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                    >
+                      {contactInfo.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-5 h-5 text-blue-600 dark:text-blue-400 mt-0.5" />
+                    <span className="text-gray-700 dark:text-gray-300">
+                      {contactInfo.address}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                  Website & Online
+                </h3>
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <Globe className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <a 
+                      href={contactInfo.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center space-x-2"
+                    >
+                      <span>Visit Website</span>
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <Calendar className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <span className="text-gray-700 dark:text-gray-300">
+                      Business Hours: Mon-Fri 9AM-6PM EST
+                    </span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+                    <span className="text-gray-700 dark:text-gray-300">
+                      Response Time: Within 24 hours
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-lg p-6 text-center">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                Need Help Finding Something?
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Can't find what you're looking for? Our team is here to help you navigate 
+                our website and find the information you need.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center space-x-2"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>Contact Support</span>
+                </a>
+                <a
+                  href="/services"
+                  className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors flex items-center space-x-2"
+                >
+                  <Settings className="w-4 h-4" />
+                  <span>Browse Services</span>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Download Options */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+              Download Site Map
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+              Get a printable or downloadable version of our site map for offline reference
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition-colors flex items-center space-x-2">
+                <Download className="w-5 h-5" />
+                <span>Download PDF</span>
+              </button>
+              <button className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-3 rounded-lg font-medium transition-colors flex items-center space-x-2">
+                <FileText className="w-5 h-5" />
+                <span>Download XML</span>
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
-}
+};
+
+export default Sitemap;
