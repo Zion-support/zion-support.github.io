@@ -40,6 +40,16 @@ const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Partners = createLazyComponent(() => import('./pages/Partners'));
 const Services = createLazyComponent(() => import('./pages/Services'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const Pricing = createLazyComponent(() => import('./pages/Pricing'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const Leadership = createLazyComponent(() => import('./pages/Leadership'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const News = createLazyComponent(() => import('./pages/News'));
+const Help = createLazyComponent(() => import('./pages/Help'));
+const Support = createLazyComponent(() => import('./pages/Support'));
+const Community = createLazyComponent(() => import('./pages/Community'));
+const Press = createLazyComponent(() => import('./pages/Press'));
 const FAQ = createLazyComponent(() => import('./pages/FAQ'));
 const Privacy = createLazyComponent(() => import('./pages/Privacy'));
 const Terms = createLazyComponent(() => import('./pages/Terms'));
@@ -152,6 +162,16 @@ function App() {
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/partners" element={<Partners />} />
                     <Route path="/services" element={<Services />} />
+                    <Route path="/solutions" element={<Solutions />} />
+                    <Route path="/pricing" element={<Pricing />} />
+                    <Route path="/team" element={<Team />} />
+                    <Route path="/leadership" element={<Leadership />} />
+                    <Route path="/case-studies" element={<CaseStudies />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/help" element={<Help />} />
+                    <Route path="/support" element={<Support />} />
+                    <Route path="/community" element={<Community />} />
+                    <Route path="/press" element={<Press />} />
                     <Route path="/faq" element={<FAQ />} />
                     <Route path="/privacy" element={<Privacy />} />
                     <Route path="/terms" element={<Terms />} />
