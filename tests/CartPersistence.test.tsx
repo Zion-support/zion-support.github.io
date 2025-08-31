@@ -9,20 +9,6 @@ import { getCartKey } from '@/utils/cartUtils';
 vi.mock('next/router', () => ({
   useRouter: () => ({ push: vi.fn() })
 }));
-<<<<<<< HEAD
-const item = {
-  id: '1', name: 'Test Item', price: 10,;
-  quantity: 1 ;
-
-};
-function renderCart(user: ) {
-  return render(
-    <AuthContext.Provider value = {
-  { user,
-  isLoading: false 
-
-} as }>
-=======
 const item = {
   id: '1', name: 'Test Item', price: 10,;
   ;
@@ -50,7 +36,6 @@ function renderCart(user: any) {
 
 
 } as any}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
       <CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
           <Routes>;
@@ -69,11 +54,7 @@ describe('cart persistence', () => {
     expect(screen.getByText(/Shopping Cart/i)).toBeInTheDocument();
     expect(screen.getByText('Login to Checkout')).toBeInTheDocument();
     rerender(
-<<<<<<< HEAD
-      <AuthContext.Provider value = {{ user: { id: 'u1' }, isLoading: false } as }>
-=======
       <AuthContext.Provider value = {{ user: { id: 'u1' }, isLoading: false } as any}>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         <CartProvider>
           <MemoryRouter initialEntries={['/cart']}>
             <Routes>;

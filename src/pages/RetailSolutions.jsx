@@ -25,118 +25,10 @@ import {
   Tag,
   Brain,
   Code
-<<<<<<< HEAD
-=======
 } from 'lucide-react';
-
-<<<<<<< HEAD
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-const retailSolutions = [
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description: "Complete online shopping experience with advanced features and seamless user experience.",
-    icon: ShoppingCart,
-    features[
-      "Multi-channel sales",
-      "Inventory management",
-      "Payment processing",
-      "Order fulfillment"
-    ],
-    price: "From $30,000",
-    timeline: "12-20 weeks",
-    category: "E-commerce",
-    integrations["Shopify", "WooCommerce", "Magento", "Payment Gateways"]
-  },
-  {
-    id: 2,
-    title: "Mobile Shopping App",
-    description: "Native mobile applications that provide seamless shopping experience on iOS and Android.",
-    icon: Smartphone,
-    features[
-      "Native app development",
-      "Push notifications",
-      "Offline functionality",
-      "App store optimization"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Mobile Development",
-    integrations["iOS", "Android", "Cross-platform", "React Native"]
-  },
-  {
-    id: 3,
-    title: "Point of Sale (POS) System",
-    description: "Modern POS solutions that streamline in-store operations and customer service.",
-    icon: CreditCard,
-    features[
-      "Payment processing",
-      "Inventory tracking",
-      "Customer management",
-      "Sales reporting"
-    ],
-    price: "From $20,000",
-    timeline: "8-14 weeks",
-    category: "POS Systems",
-    integrations["Payment Processors", "Accounting Software", "CRM Systems"]
-  },
-  {
-    id: 4,
-    title: "Customer Analytics Platform",
-    description: "Data-driven insights to understand customer behavior and optimize retail strategies.",
-    icon: BarChart3,
-    features[
-      "Customer segmentation",
-      "Purchase patterns",
-      "Predictive analytics",
-      "Real-time reporting"
-    ],
-    price: "From $35,000",
-    timeline: "12-18 weeks",
-    category: "Analytics",
-    integrations["Google Analytics", "Facebook Pixel", "CRM Systems", "Marketing Tools"]
-  },
-  {
-    id: 5,
-    title: "Inventory Management System",
-    description: "Comprehensive inventory tracking and management across all sales channels.",
-    icon: Package,
-    features[
-      "Real-time tracking",
-      "Automated reordering",
-      "Multi-location support",
-      "Supplier management"
-    ],
-    price: "From $25,000",
-    timeline: "10-16 weeks",
-    category: "Inventory",
-    integrations["ERP Systems", "Accounting Software", "Shipping Providers"]
-  },
-  {
-    id: 6,
-    title: "Omnichannel Retail Platform",
-    description: "Unified platform that connects online and offline retail experiences seamlessly.",
-    icon: Store,
-    features[
-      "Channel integration",
-      "Unified inventory",
-      "Customer experience",
-      "Data synchronization"
-    ],
-    price: "From $50,000",
-    timeline: "16-24 weeks",
-    category: "Platform Solutions",
-<<<<<<< HEAD
-    integrations: ["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
-
-=======
     integrations["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
-=======
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 const retailTrends = [
   {
     title: "AI-Powered Personalization",
@@ -161,9 +53,7 @@ const retailTrends = [
     description: "Analytics and insights driving retail strategy and optimization",
     icon: BarChart3,
     impact: "High"
-
 ];
-
 const successStories = [
   {
     id: 1,
@@ -191,9 +81,7 @@ const successStories = [
     solution: "Implemented cloud-based inventory system with real-time tracking",
     results: "30% reduction in stockouts, 20% improvement in order fulfillment",
     logo: "HG"
-
 ];
-
 const processSteps = [
   {
     step: 1,
@@ -222,19 +110,14 @@ const processSteps = [
     description: "Deploy solution and provide comprehensive staff training",
     icon: Users,
     duration: "1-2 weeks"
-
 ];
-
 export default function RetailSolutions() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSolution, setSelectedSolution] = useState(null);
-
   const categories = ['All', 'E-commerce', 'Mobile Development', 'POS Systems', 'Analytics', 'Inventory', 'Platform Solutions'];
-
   const filteredSolutions = selectedCategory === 'All'
     ? retailSolutions
     : retailSolutions.filter(solution => solution.category === selectedCategory);
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -244,79 +127,43 @@ export default function RetailSolutions() {
           <div className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/30 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/30 rounded-full blur-3xl"></div>
         </div>
-
         <div className="container-responsive relative z-10">
           <motion.div
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <motion.div
               initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl mb-8"
-
               <ShoppingCart className="w-10 h-10 text-white" />
             </motion.div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Retail
               <span className="text-gradient block">Solutions</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light leading-relaxed mb-8">
               Transform your retail business with cutting-edge technology solutions.
               From e-commerce platforms to omnichannel experiences, we help retailers
               thrive in the digital age.
             </p>
-
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 text-zion-cyan">
                 <ShoppingCart className="w-4 h-4" />
@@ -334,7 +181,6 @@ export default function RetailSolutions() {
           </motion.div>
         </div>
       </section>
-
       {/* Retail Trends */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -342,32 +188,18 @@ export default function RetailSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Retail Technology Trends</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Stay ahead of the curve with the latest retail technology innovations
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {retailTrends.map((trend, index) => (
               <motion.div
@@ -375,42 +207,21 @@ export default function RetailSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 text-center hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-6">
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{trend.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{trend.description}</p>
-
                 <span className={`inline-block px-3 py-1 rounded-full text-sm font-semibold ${
                   trend.impact === 'Critical'
                     ? 'bg-red-500/20 text-red-400 border border-red-500/30'
@@ -425,7 +236,6 @@ export default function RetailSolutions() {
           </div>
         </div>
       </section>
-
       {/* Process Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -433,32 +243,18 @@ export default function RetailSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Our Implementation Process</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               A proven methodology that ensures successful retail technology implementation
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
               <motion.div
@@ -466,35 +262,16 @@ export default function RetailSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="relative mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto">
                     <step.icon className="w-8 h-8 text-white" />
@@ -503,7 +280,6 @@ export default function RetailSolutions() {
                     {step.step}
                   </div>
                 </div>
-
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-zion-slate-light mb-4 leading-relaxed">{step.description}</p>
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
@@ -514,7 +290,6 @@ export default function RetailSolutions() {
           </div>
         </div>
       </section>
-
       {/* Solutions Section */}
       <section className="py-20 bg-zion-blue-dark/50">
         <div className="container-responsive">
@@ -522,32 +297,18 @@ export default function RetailSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Retail Technology Solutions</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Comprehensive solutions designed to modernize and optimize retail operations
             </p>
           </motion.div>
-
           {/* Category Filter */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
@@ -559,12 +320,10 @@ export default function RetailSolutions() {
                     ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/30 text-zion-slate-light border border-zion-cyan/20 hover:border-zion-cyan/40'
                 }`}
-
                 {category}
               </button>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredSolutions.map((solution, index) => (
               <motion.div
@@ -572,43 +331,22 @@ export default function RetailSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedSolution(solution)}
-
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6">
                   <solution.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-3">{solution.title}</h3>
                 <p className="text-zion-slate-light mb-6 leading-relaxed">{solution.description}</p>
-
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center gap-3">
@@ -617,23 +355,19 @@ export default function RetailSolutions() {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex flex-wrap gap-2 mb-4">
                   {solution.integrations.slice(0, 2).map((integration, intIndex) => (
                     <span
                       key={intIndex}
                       className="px-2 py-1 bg-zion-purple/20 text-zion-purple text-xs rounded border border-zion-purple/30"
-
                       {integration}
                     </span>
                   ))}
                 </div>
-
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-zion-cyan font-semibold">{solution.price}</span>
                   <span className="text-zion-slate-light text-sm">{solution.timeline}</span>
                 </div>
-
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full border border-zion-cyan/30">
                     {solution.category}
@@ -648,7 +382,6 @@ export default function RetailSolutions() {
           </div>
         </div>
       </section>
-
       {/* Success Stories */}
       <section className="py-20">
         <div className="container-responsive">
@@ -656,32 +389,18 @@ export default function RetailSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">Success Stories</h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Retail businesses that have transformed their operations with our technology solutions
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <motion.div
@@ -689,35 +408,16 @@ export default function RetailSolutions() {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-zion-blue-dark/30 border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300"
-
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center text-white font-bold text-lg">
                     {story.logo}
@@ -727,7 +427,6 @@ export default function RetailSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.industry}</p>
                   </div>
                 </div>
-
                 <div className="space-y-4 mb-6">
                   <div>
                     <h4 className="text-zion-cyan font-semibold mb-2">Challenge</h4>
@@ -742,7 +441,6 @@ export default function RetailSolutions() {
                     <p className="text-zion-slate-light text-sm">{story.results}</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-2">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -754,7 +452,6 @@ export default function RetailSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
         <div className="container-responsive">
@@ -762,43 +459,27 @@ export default function RetailSolutions() {
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Retail Business?</h2>
             <p className="text-xl text-zion-slate-light mb-8 leading-relaxed">
               Let's discuss how our retail technology solutions can modernize your operations,
               enhance customer experience, and drive growth in the digital marketplace.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
                 className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105"
-
                 Start Your Project
               </a>
               <a
                 href="/contact"
                 className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-
                 Schedule Consultation
               </a>
             </div>
@@ -806,9 +487,4 @@ export default function RetailSolutions() {
         </div>
       </section>
     </div>
-<<<<<<< HEAD
-  );
-}}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

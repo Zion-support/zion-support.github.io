@@ -6,9 +6,12 @@
          xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
          xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
          xmlns:pagemap="http://www.google.com/schemas/sitemap-pagemap/1.0"
-         xmlns:fo="http://www.w3.org/1999/XSL/Format">
+         xmlns:fo="http://www.w3.org/1999/XSL/Format"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage -->
+  <!-- Home Page -->
   <url>
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>2025-01-27</lastmod>
@@ -44,7 +47,21 @@
   </url>
 
   <url>
-    <loc>https://ziontechgroup.com/solutions</loc>
+    <loc>https://ziontechgroup.com/ai-solutions</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ziontechgroup.com/it-services</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://ziontechgroup.com/micro-saas</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -241,7 +258,7 @@
   </url>
 
   <url>
-    <loc>https://ziontechgroup.com/services/ai-customer-experience-analytics-platform</loc>
+    <loc>https://ziontechgroup.com/services/ai-customer-experience-analytics</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -261,7 +278,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- IT & Infrastructure Services -->
+  <!-- IT Infrastructure Services -->
   <url>
     <loc>https://ziontechgroup.com/services/it-infrastructure-management</loc>
     <lastmod>2025-01-27</lastmod>
@@ -291,7 +308,7 @@
   </url>
 
   <url>
-    <loc>https://ziontechgroup.com/services/quantum-computing-solutions</loc>
+    <loc>https://ziontechgroup.com/services/quantum-edge-computing-solutions</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -325,76 +342,82 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Industry Solutions -->
+  <!-- Solutions -->
+  <url>
+    <loc>https://ziontechgroup.com/solutions</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://ziontechgroup.com/solutions/healthcare</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/financial</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/manufacturing</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/government</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/retail</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
-  <!-- Technology Solutions -->
   <url>
     <loc>https://ziontechgroup.com/solutions/quantum-edge-computing</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/ai-autonomous-business</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/blockchain-web3</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/iot-edge-computing</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/solutions/space-tech</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <!-- Company Pages -->
@@ -402,7 +425,7 @@
     <loc>https://ziontechgroup.com/leadership</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
@@ -416,7 +439,7 @@
     <loc>https://ziontechgroup.com/partners</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
@@ -442,9 +465,9 @@
   </url>
 
   <url>
-    <loc>https://ziontechgroup.com/white-papers</loc>
+    <loc>https://ziontechgroup.com/events</loc>
     <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 
@@ -452,11 +475,19 @@
     <loc>https://ziontechgroup.com/webinars</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://ziontechgroup.com/cookies</loc>
+    <loc>https://ziontechgroup.com/white-papers</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Business Pages -->
+  <url>
+    <loc>https://ziontechgroup.com/pricing</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -469,12 +500,26 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Business Pages -->
   <url>
-    <loc>https://ziontechgroup.com/pricing</loc>
+    <loc>https://ziontechgroup.com/training</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://ziontechgroup.com/documentation</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Support Pages -->
+  <url>
+    <loc>https://ziontechgroup.com/help</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
@@ -488,53 +533,17 @@
     <loc>https://ziontechgroup.com/marketplace</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://ziontechgroup.com/signup</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- Showcase Pages -->
-  <url>
-    <loc>https://ziontechgroup.com/comprehensive-services-showcase-2025</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <url>
-    <loc>https://ziontechgroup.com/innovative-ai-services-showcase-2025</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://ziontechgroup.com/innovative-services-showcase-2026</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Support & Legal -->
-  <url>
-    <loc>https://ziontechgroup.com/help</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://ziontechgroup.com/docs</loc>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
+  <!-- Legal Pages -->
   <url>
     <loc>https://ziontechgroup.com/privacy</loc>
     <lastmod>2025-01-27</lastmod>
@@ -544,6 +553,13 @@
 
   <url>
     <loc>https://ziontechgroup.com/terms</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://ziontechgroup.com/cookies</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -568,6 +584,43 @@
     <lastmod>2025-01-27</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+
+  <!-- Special Showcase Pages -->
+  <url>
+    <loc>https://ziontechgroup.com/innovative-services-showcase-2026</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ziontechgroup.com/comprehensive-services-showcase-2025</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ziontechgroup.com/ultimate-services-showcase-2025</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://ziontechgroup.com/ultimate-services-showcase-2027</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Sitemap -->
+  <url>
+    <loc>https://ziontechgroup.com/sitemap</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.4</priority>
   </url>
 
 </urlset>

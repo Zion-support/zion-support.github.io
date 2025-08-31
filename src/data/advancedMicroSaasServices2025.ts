@@ -1,5 +1,4 @@
 export interface AdvancedMicroSaasService {
-
   id: string;
   title: string;
   description: string;
@@ -30,19 +29,9 @@ contactInfo: {
     uptime: string;
     security: string[];
   };
-<<<<<<< HEAD
-  competitors: string[];
-  marketSize: string;
-  growthRate: string;
-  rating: number;
-  reviews: number;
-  customers: number;
-=======
   competitors?: string[];
   marketSize?: string;
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
   // AI-Powered Financial Services
   {
@@ -108,7 +97,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     competitors: ["FICO", "VantageScore", "Credit Karma", "Experian Boost"],
     marketSize: "$12.4 billion by 2025"
   },
-
   // AI-Powered Healthcare Solutions
   {
     id: "ai-medical-imaging-analysis",
@@ -173,7 +161,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     competitors: ["IBM Watson Health", "Google Health", "Microsoft Azure Health", "NVIDIA Clara"],
     marketSize: "$45.8 billion by 2025"
   },
-
   // AI-Powered Legal Services
   {
     id: "ai-contract-analysis-platform",
@@ -238,7 +225,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     competitors: ["Kira Systems", "Evisort", "ContractPodAi", "Icertis"],
     marketSize: "$8.7 billion by 2025"
   },
-
   // AI-Powered Supply Chain Optimization
   {
     id: "ai-supply-chain-optimizer",
@@ -303,7 +289,6 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
     competitors: ["Blue Yonder", "Manhattan Associates", "Oracle SCM", "SAP SCM"],
     marketSize: "$15.8 billion by 2025"
   },
-
   // AI-Powered HR & Talent Management
   {
     id: "ai-talent-acquisition-platform",
@@ -365,20 +350,7 @@ export const ADVANCED_MICRO_SAAS_SERVICES_2025: AdvancedMicroSaasService[] = [
       uptime: "99.9%",
       security: ["SOC 2", "GDPR", "End-to-end encryption", "Role-based access control"]
     },
-<<<<<<< HEAD
-    competitors: ["Strivr", "Mursion", "VirtualSpeech", "Interplay Learning"],
-    marketSize: "$28.7 billion by 2025",
-    growthRate: "180% annual growth",
-    rating: 4.7,
-    reviews: 189,
-    customers: 345
-
-];
-
-export default ADVANCED_MICRO_SAAS_SERVICES_2025;}}
-=======
     competitors: ["Hired", "Pymetrics", "HireVue", "Mya Systems", "Paradox"],
     marketSize: "$18.9 billion by 2025"
   }
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

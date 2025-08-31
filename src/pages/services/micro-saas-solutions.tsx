@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket import { Link } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { ShoppingCart, Zap, Settings, Users, Shield, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Rocket  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function MicroSAASSolutions(...args: []):  {
   return (
     <>
@@ -17,7 +10,6 @@ export default function MicroSAASSolutions(...args: []):  {
         <meta name = "description" content="Build and scale your micro SaaS business with our comprehensive solutions. From development to deployment and growth strategies." />
         <meta name="keywords" content="micro SaaS, software as a service, SaaS development, SaaS marketing, SaaS growth, subscription business" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -28,22 +20,18 @@ export default function MicroSAASSolutions(...args: []):  {
                 <ShoppingCart className="w-4 h-4 mr-2" />
                 Micro SaaS Solutions
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Micro SaaS
                 <span className="bg-gradient-to-r from-violet-400 to-purple-500 bg-clip-text text-transparent"> Solutions</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Build, launch, and scale your micro SaaS business with our comprehensive solutions.
                 From development to marketing, we help you create profitable subscription businesses.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -55,7 +43,6 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +55,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 your subscription business successfully.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -100,13 +86,8 @@ export default function MicroSAASSolutions(...args: []):  {
                   icon: Globe,
                   title: "Multi-tenant Architecture",
                   description: "Scalable multi-tenant architecture for growing SaaS businesses."
-<<<<<<< HEAD
-
-              ].map((feature, index) => (
-=======
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -118,7 +99,6 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* SaaS Categories Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,7 +110,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 Discover profitable micro SaaS niches and business opportunities across different industries.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -168,13 +147,8 @@ export default function MicroSAASSolutions(...args: []):  {
                   description: "Content management, SEO tools, and digital marketing platforms.",
                   icon: Database,
                   benefits: ["Content management", "SEO tools", "Digital marketing"]
-<<<<<<< HEAD
-
-              ].map((category, index) => (
-=======
                 }
               ].map((category, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                     <category.icon className="w-6 h-6 text-white" />
@@ -194,7 +168,6 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Development Process Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,7 +179,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 Our proven development methodology ensures successful SaaS product delivery and launch.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -228,13 +200,8 @@ export default function MicroSAASSolutions(...args: []):  {
                   step: "04",
                   title: "Launch & Growth",
                   description: "Product launch, marketing, and continuous improvement."
-<<<<<<< HEAD
-
-              ].map((step, index) => (
-=======
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -246,7 +213,6 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Technology Stack Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -258,7 +224,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 Built on cutting-edge technologies for maximum performance, scalability, and reliability.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -277,7 +242,6 @@ export default function MicroSAASSolutions(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Key Features</h3>
                 <div className="space-y-4">
@@ -299,7 +263,6 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Growth Strategies Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -311,7 +274,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 Proven strategies to acquire customers, increase revenue, and scale your micro SaaS business.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Customer Acquisition</h3>
@@ -331,7 +293,6 @@ export default function MicroSAASSolutions(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Revenue Optimization</h3>
                 <div className="space-y-4">
@@ -353,7 +314,6 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Success Metrics Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -365,7 +325,6 @@ export default function MicroSAASSolutions(...args: []):  {
                 Track the right metrics to measure and improve your SaaS business performance.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
@@ -387,13 +346,8 @@ export default function MicroSAASSolutions(...args: []):  {
                   metric: "CAC",
                   title: "Customer Acquisition Cost",
                   description: "Optimize marketing and sales efficiency"
-<<<<<<< HEAD
-
-              ].map((metric, index) => (
-=======
                 }
               ].map((metric, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{metric.metric}</span>
@@ -405,7 +359,6 @@ export default function MicroSAASSolutions(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-violet-500/10 to-purple-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -419,23 +372,12 @@ export default function MicroSAASSolutions(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-600 hover:to-purple-700 transition-all duration-200"
-
                 Start Your Project
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-violet-500/30 text-violet-400 font-semibold rounded-lg hover:bg-violet-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -444,6 +386,5 @@ export default function MicroSAASSolutions(...args: []):  {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

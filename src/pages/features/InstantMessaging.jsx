@@ -12,13 +12,6 @@ export default function InstantMessaging() {
         "name": "Instant Messaging",
         "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
   "url": "https://app.ziontechgroup.com/features/instant-messaging"
-    
-
-
-
-
-
-
 };
     return (<>
       <SEO title="Instant Messaging" description="Negotiate deals and collaborate instantly with real-time chat." keywords="real-time messaging, Socket.IO chat, project communication" canonical="https://app.ziontechgroup.com/features/instant-messaging"/>
@@ -57,9 +50,4 @@ export default function InstantMessaging() {
         </div>
       </main>
       <Footer />
-<<<<<<< HEAD
-    </>);
-}
-=======
     </>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

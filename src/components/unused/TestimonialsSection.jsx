@@ -34,7 +34,6 @@ export function TestimonialsSection() {
             content: "Zion Tech Group helped us build a scalable SaaS platform from scratch. Their microservices approach was game-changing.",
             rating: 5,
             avatar: "DT"
-
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -42,53 +41,30 @@ export function TestimonialsSection() {
             opacity: 1,
             transition: {
                 staggerChildren: 0.2
-
-
     };
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5
-
-
     };
     return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-quantum-mesh opacity-20"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-zion-cyan/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl"></div>
-
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             What Our Clients Say
@@ -98,7 +74,6 @@ export function TestimonialsSection() {
             about their experience working with Zion Tech Group.
           </p>
         </motion.div>
-
         {/* Testimonials Grid */}
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (<motion.div key={index} variants={itemVariants} className="group">
@@ -107,12 +82,10 @@ export function TestimonialsSection() {
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (<StarIcon key={i} className="w-5 h-5 text-yellow-400"/>))}
                 </div>
-
                 {/* Content */}
                 <blockquote className="text-zion-slate-light mb-6 italic">
                   "{testimonial.content}"
                 </blockquote>
-
                 {/* Author */}
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
@@ -126,35 +99,16 @@ export function TestimonialsSection() {
               </div>
             </motion.div>))}
         </motion.div>
-
         {/* Stats */}
         <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition = {
   { duration: 0.8,
   delay: 0.5 
-
-
-
-
-
-
 }} className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -172,9 +126,4 @@ export function TestimonialsSection() {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
-    </section>);
-}}}}}}
-=======
     </section>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

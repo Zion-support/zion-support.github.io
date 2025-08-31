@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database import { Link } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
 import { Cpu, Eye, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export default function DigitalTwin(...args: []):  {
   return (
     <>
@@ -17,7 +11,6 @@ export default function DigitalTwin(...args: []):  {
         <meta name = "description" content="Create virtual replicas of physical systems with our digital twin technology. Monitor, simulate, and optimize operations in real-time." />
         <meta name="keywords" content="digital twin, virtual simulation, IoT monitoring, predictive maintenance, system optimization, real-time analytics" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 overflow-hidden">
@@ -28,22 +21,18 @@ export default function DigitalTwin(...args: []):  {
                 <Cpu className="w-4 h-4 mr-2" />
                 Digital Twin Technology
               </div>
-
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Digital
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Twin</span>
               </h1>
-
               <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Create virtual replicas of your physical systems and assets. Monitor performance,
                 simulate scenarios, and optimize operations with real-time digital twin technology.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-
                   Get Started
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
@@ -55,7 +44,6 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,7 +56,6 @@ export default function DigitalTwin(...args: []):  {
                 real-time monitoring, simulation, and optimization.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -100,10 +87,6 @@ export default function DigitalTwin(...args: []):  {
                   icon: Globe,
                   title: "IoT Integration",
                   description: "Seamlessly connect with IoT sensors and devices for real-time data."
-<<<<<<< HEAD
-
-              ].map((feature, index) => (
-=======
                 }
               ].map((feature, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -118,7 +101,6 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Applications Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,7 +112,6 @@ export default function DigitalTwin(...args: []):  {
                 Discover how digital twin technology can revolutionize different industries and operations.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
@@ -168,10 +149,6 @@ export default function DigitalTwin(...args: []):  {
                   description: "Building management, energy efficiency, and maintenance optimization.",
                   icon: Activity,
                   benefits: ["Building management", "Energy efficiency", "Maintenance optimization"]
-<<<<<<< HEAD
-
-              ].map((application, index) => (
-=======
                 }
               ].map((application, index)  => (
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
@@ -194,7 +171,6 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Technology Stack Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,7 +182,6 @@ export default function DigitalTwin(...args: []):  {
                 Built on cutting-edge technologies for maximum performance, scalability, and reliability.
               </p>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="space-y-6">
@@ -225,7 +200,6 @@ export default function DigitalTwin(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
                 <h3 className="text-2xl font-semibold text-white mb-4">Core Components</h3>
                 <div className="space-y-4">
@@ -247,7 +221,6 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-slate-800/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -259,7 +232,6 @@ export default function DigitalTwin(...args: []):  {
                 Experience unprecedented visibility, control, and optimization across your entire operation.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Operational Benefits</h3>
@@ -279,7 +251,6 @@ export default function DigitalTwin(...args: []):  {
                   ))}
                 </div>
               </div>
-
               <div>
                 <h3 className="text-2xl font-semibold text-white mb-6">Strategic Advantages</h3>
                 <div className="space-y-4">
@@ -301,7 +272,6 @@ export default function DigitalTwin(...args: []):  {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -315,23 +285,12 @@ export default function DigitalTwin(...args: []):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-teal-700 transition-all duration-200"
-
                 Schedule a Consultation
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;

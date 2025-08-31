@@ -29,7 +29,6 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 manualInterventions: 2,
                 cost: 150,
                 efficiency: 94
-
         ],
         rules[
             {
@@ -42,7 +41,6 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-15T10:30:00Z'),
                 triggerCount: 156
-
         ],
         dependencies['vendor_verification', 'budget_approval']
     },
@@ -75,7 +73,6 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 manualInterventions: 1,
                 cost: 200,
                 efficiency: 89
-
         ],
         rules[
             {
@@ -88,7 +85,6 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-14T14:15:00Z'),
                 triggerCount: 23
-
         ],
         dependencies['background_check', 'document_verification']
     },
@@ -121,7 +117,6 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 manualInterventions: 0,
                 cost: 50,
                 efficiency: 98
-
         ],
         rules[
             {
@@ -134,15 +129,9 @@ import { Workflow, Brain, Settings, X, Maximize2, Minimize2, Search, CheckCircle
                 aiOptimized: true,
                 lastTriggered: new Date('2024-01-15T16:45:00Z'),
                 triggerCount: 8
-
         ],
-<<<<<<< HEAD
-        dependencies: ['ticket_classification', 'agent_availability']
-
-=======
         dependencies['ticket_classification', 'agent_availability']
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false);
@@ -165,12 +154,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'completed': return 'text-blue-500 bg-blue-100 dark:bg-blue-900/20';
             case 'failed': return 'text-red-500 bg-red-100 dark:bg-red-900/20';
             case 'draft': return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-<<<<<<< HEAD
-            default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20';
-
-=======
             default: return 'text-gray-500 bg-gray-100 dark:bg-gray-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -178,24 +162,14 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'high': return 'text-orange-600 bg-orange-100 dark:bg-orange-900/20';
             case 'medium': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'low': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getAutomationLevelColor = (level) => {
         switch (level) {
             case 'fully-automated': return 'text-green-600 bg-green-100 dark:bg-green-900/20';
             case 'semi-automated': return 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/20';
             case 'manual': return 'text-red-600 bg-red-100 dark:bg-red-900/20';
-<<<<<<< HEAD
-            default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20';
-
-=======
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const getCategoryIcon = (category) => {
         switch (category) {
@@ -205,20 +179,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             case 'sales': return <TrendingUp className="w-4 h-4"/>;
             case 'marketing': return <Target className="w-4 h-4"/>;
             case 'it': return <Server className="w-4 h-4"/>;
-<<<<<<< HEAD
-            default: return <FileText className="w-4 h-4"/>;
-
-    };
-    const formatCurrency = (amount) => {
-        return new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 0
-        }).format(amount);
-=======
             default: return <FileText className="w-4 h-4"/>}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const formatPercentage = (value) => {
         return `${value}%`};
@@ -244,12 +205,7 @@ export function AdvancedAIBusinessProcessAutomation() {
         <div className="absolute -top-2 -right-2 bg-zion-cyan text-zion-slate text-xs px-2 py-1 rounded-full font-bold">
           NEW
         </div>
-<<<<<<< HEAD
-      </button>);
-
-=======
       </button>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (isMinimized) {
         return (<div className="fixed bottom-4 right-4 bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50">
         <div className="flex items-center gap-3 p-3">
@@ -259,12 +215,7 @@ export function AdvancedAIBusinessProcessAutomation() {
             <Maximize2 className="w-4 h-4"/>
           </button>
         </div>
-<<<<<<< HEAD
-      </div>);
-
-=======
       </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className={`fixed bg-white dark:bg-zion-slate border border-zion-slate-light rounded-lg shadow-2xl z-50 overflow-hidden transition-all duration-300 ${isFullscreen ? 'inset-4' : 'bottom-4 right-4 w-[1400px] h-[900px]'}`} ref={containerRef}>
       {/* Header */}
       <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">
@@ -287,7 +238,6 @@ export function AdvancedAIBusinessProcessAutomation() {
           </button>
         </div>
       </div>
-
       {/* Controls */}
       <div className="p-4 border-b border-zion-slate-light bg-zion-slate-light/10">
         <div className="flex items-center gap-4 mb-4">
@@ -330,7 +280,6 @@ export function AdvancedAIBusinessProcessAutomation() {
           </label>
         </div>
       </div>
-
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">
         {['overview', 'processes', 'automation', 'analytics', 'optimization'].map((tab) => (<button key={tab} onClick={() => setActiveTab(tab)} className={`px-6 py-3 text-sm font-medium transition-colors ${activeTab === tab
@@ -339,7 +288,6 @@ export function AdvancedAIBusinessProcessAutomation() {
             {tab.charAt(0).toUpperCase() + tab.slice(1)}
           </button>))}
       </div>
-
       {/* Content */}
       <div className="flex-1 overflow-auto p-6">
         {activeTab === 'overview' && (<div className="space-y-6">
@@ -387,7 +335,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                 </div>
               </div>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -406,7 +353,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                     </div>))}
                 </div>
               </div>
-
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                   <Activity className="w-5 h-5 text-zion-blue"/>
@@ -435,7 +381,6 @@ export function AdvancedAIBusinessProcessAutomation() {
               </div>
             </div>
           </div>)}
-
         {activeTab === 'processes' && (<div className="space-y-4">
             {filteredProcesses.map(process => (<div key={process.id} className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6 hover:shadow-lg transition-shadow">
                 <div className="flex items-start justify-between mb-4">
@@ -458,7 +403,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                     </button>
                   </div>
                 </div>
-
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
                   <div className="text-center">
                     <p className="text-2xl font-bold text-zion-blue">{formatPercentage(process.efficiency)}</p>
@@ -477,7 +421,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                     <p className="text-xs text-zion-slate-light">Executions</p>
                   </div>
                 </div>
-
                 <div className="flex items-center gap-3 mb-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(process.status)}`}>
                     {process.status}
@@ -489,7 +432,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                     {process.automationLevel.replace('-', ' ')}
                   </span>
                 </div>
-
                 {showAIInsights && (<div className="mb-4">
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
                       <Brain className="w-4 h-4 text-zion-blue"/>
@@ -502,7 +444,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                         </div>))}
                     </div>
                   </div>)}
-
                 {showAutomation && (<div>
                     <h4 className="font-medium text-sm mb-2 flex items-center gap-2">
                                              <Settings className="w-4 h-4 text-zion-blue"/>
@@ -533,7 +474,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                   </div>)}
               </div>))}
           </div>)}
-
         {activeTab === 'automation' && (<div className="space-y-6">
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -560,7 +500,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                 </div>
               </div>
             </div>
-
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <Settings className="w-5 h-5 text-zion-blue"/>
@@ -600,7 +539,6 @@ export function AdvancedAIBusinessProcessAutomation() {
               </div>
             </div>
           </div>)}
-
         {activeTab === 'analytics' && (<div className="space-y-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
@@ -622,7 +560,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                 </div>
               </div>
             </div>
-
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4">Process Performance Metrics</h3>
               <div className="overflow-x-auto">
@@ -665,7 +602,6 @@ export function AdvancedAIBusinessProcessAutomation() {
               </div>
             </div>
           </div>)}
-
         {activeTab === 'optimization' && (<div className="space-y-6">
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
@@ -696,7 +632,6 @@ export function AdvancedAIBusinessProcessAutomation() {
                   </div>))}
               </div>
             </div>
-
             <div className="bg-white dark:bg-zion-slate border border-zion-slate-light rounded-xl p-6">
               <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
                 <TrendingUp className="w-5 h-5 text-zion-blue"/>
@@ -731,9 +666,4 @@ export function AdvancedAIBusinessProcessAutomation() {
             </div>
           </div>)}
       </div>
-<<<<<<< HEAD
-    </div>);
-}}}}}}}}}}}}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

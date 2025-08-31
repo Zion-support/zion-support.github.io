@@ -9,7 +9,6 @@ import { Clock, Briefcase function ProjectsContent() {
     const { projects, isLoading } = useProjects();
     return (<>
       <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects."/>
-
       <main className="container mx-auto px-4 py-8">
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>
@@ -43,16 +42,6 @@ import { Clock, Briefcase function ProjectsContent() {
               </Card>))}
           </div>)}
       </main>
-<<<<<<< HEAD
-
-    </>);
-
-export default function Projects() {
-    return <ProjectsContent />;
-</Card></Card></Card></Card></Card>}}}
-=======
-      
     </>)}
 export default function Projects() {
     return <ProjectsContent />}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

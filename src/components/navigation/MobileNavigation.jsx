@@ -13,17 +13,9 @@ export function MobileNavigation() {
         setIsOpen(!isOpen);
         // Prevent body scroll when menu is open
         if (!isOpen) {
-<<<<<<< HEAD
-            document.body.style.overflow = 'hidden';
-
-        else {
-            document.body.style.overflow = 'unset';
-
-=======
             document.body.style.overflow = 'hidden'}
         else {
             document.body.style.overflow = 'unset'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
     const closeMenu = () => {
         setIsOpen(false);
@@ -33,7 +25,6 @@ export function MobileNavigation() {
       <Button variant="ghost" size="sm" onClick={toggleMenu} className="p-2 text-white hover:bg-zion-blue-dark" aria-label="Toggle mobile menu" aria-expanded={isOpen}>
         {isOpen ? <X className="w-6 h-6"/> : <Menu className="w-6 h-6"/>}
       </Button>
-
       {/* Mobile menu overlay */}
       {isOpen && (<div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm">
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-zion-blue-dark shadow-xl">
@@ -44,7 +35,6 @@ export function MobileNavigation() {
                 <X className="w-6 h-6"/>
               </Button>
             </div>
-
             {/* Search bar */}
             <div className="p-6 border-b border-zion-blue-light">
               <div className="relative">
@@ -52,7 +42,6 @@ export function MobileNavigation() {
                 <input type="text" placeholder="Search services, talent, equipment..." className="w-full pl-10 pr-4 py-3 bg-zion-blue border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"/>
               </div>
             </div>
-
             {/* Menu items */}
             <nav className="p-6">
               <ul className="space-y-4">
@@ -66,7 +55,6 @@ export function MobileNavigation() {
                   </li>))}
               </ul>
             </nav>
-
             {/* Auth buttons */}
             <div className="p-6 border-t border-zion-blue-light space-y-3">
               <Button asChild className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
@@ -81,7 +69,6 @@ export function MobileNavigation() {
                 </Link>
               </Button>
             </div>
-
             {/* Footer */}
             <div className="p-6 border-t border-zion-blue-light">
               <div className="text-center text-zion-slate-light text-sm">
@@ -91,9 +78,4 @@ export function MobileNavigation() {
             </div>
           </div>
         </div>)}
-<<<<<<< HEAD
-    </div>);
-}}}}
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

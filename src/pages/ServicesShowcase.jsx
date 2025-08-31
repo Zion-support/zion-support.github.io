@@ -23,13 +23,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "AI Workflow Automation",
                     description: "Streamline business processes with intelligent automation",
                     href: "/services/ai-workflow-automation",
-<<<<<<< HEAD
-                    features: ["Process Optimization", "Error Reduction", "Efficiency Gains"]
-
-=======
                     features["Process Optimization", "Error Reduction", "Efficiency Gains"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -52,13 +47,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "Digital Transformation",
                     description: "End-to-end digital transformation consulting and implementation",
                     href: "/services/transformation",
-<<<<<<< HEAD
-                    features: ["Strategy Development", "Technology Selection", "Change Management"]
-
-=======
                     features["Strategy Development", "Technology Selection", "Change Management"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -81,13 +71,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "Zero Trust Architecture",
                     description: "Modern zero trust security implementation",
                     href: "/zero-trust-network-architecture",
-<<<<<<< HEAD
-                    features: ["Identity Verification", "Access Control", "Continuous Monitoring"]
-
-=======
                     features["Identity Verification", "Access Control", "Continuous Monitoring"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -110,13 +95,8 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "5G Enterprise Solutions",
                     description: "Enterprise-grade 5G network optimization",
                     href: "/5g-enterprise-solutions",
-<<<<<<< HEAD
-                    features: ["Network Optimization", "Edge Computing", "IoT Integration"]
-
-=======
                     features["Network Optimization", "Edge Computing", "IoT Integration"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
         },
         {
@@ -139,15 +119,9 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                     name: "Micro SAAS Services",
                     description: "Specialized software-as-a-service solutions",
                     href: "/micro-saas-services",
-<<<<<<< HEAD
-                    features: ["Custom Development", "Scalable Architecture", "API Integration"]
-
-=======
                     features["Custom Development", "Scalable Architecture", "API Integration"]
                 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             ]
-
     ];
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -155,51 +129,28 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
             opacity: 1,
             transition: {
                 duration: 0.5
-
-
     };
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
-
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }} className="text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-600 bg-clip-text text-transparent">
@@ -221,7 +172,6 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
           </motion.div>
         </div>
       </div>
-
       {/* Services Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-16">
@@ -233,7 +183,6 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                 <h2 className="text-3xl font-bold text-white mb-4">{category.category}</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto"></div>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.services.map((service, serviceIndex) => (<motion.div key={service.name} variants={itemVariants} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300 group">
                     <div className="mb-4">
@@ -244,7 +193,6 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                         {service.description}
                       </p>
                     </div>
-
                     <div className="mb-6">
                       <h4 className="text-sm font-medium text-gray-300 mb-3">Key Features:</h4>
                       <ul className="space-y-2">
@@ -254,7 +202,6 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
                           </li>))}
                       </ul>
                     </div>
-
                     <Link to={service.href} className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm group-hover:translate-x-1 transition-all duration-300">
                       Learn More
                       <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -266,28 +213,15 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
             </motion.div>))}
         </motion.div>
       </div>
-
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }} whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -307,11 +241,6 @@ import { Brain, Cloud, Shield, Rocket, Target const ServicesShowcase = () => {
           </motion.div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>);
-</div>};
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export default ServicesShowcase;
 }}}}}}}}}}}

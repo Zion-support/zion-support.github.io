@@ -38,12 +38,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     size: Math.random() * 3 + 1,
                     opacity: Math.random() * 0.8 + 0.2,
                     color: colors[Math.floor(Math.random() * colors.length)]
-<<<<<<< HEAD
-                });
-
-=======
                 })}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             // Animation loop
             const animate = () => {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -89,23 +84,11 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                                 ctx.strokeStyle = particle.color;
                                 ctx.globalAlpha = (150 - distance) / 150 * 0.3;
                                 ctx.lineWidth = 1;
-<<<<<<< HEAD
-                                ctx.stroke();
-
-
-                    });
-                });
-                requestAnimationFrame(animate);
-            };
-            animate();
-
-=======
                                 ctx.stroke()}
                         }
                     })});
                 requestAnimationFrame(animate)};
             animate()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Grid system
         if (variant === 'grid') {
             const gridSize = intensity === 'high' ? 20 : intensity === 'medium' ? 30 : 40;
@@ -119,22 +102,12 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     ctx.beginPath();
                     ctx.moveTo(x, 0);
                     ctx.lineTo(x, canvas.height);
-<<<<<<< HEAD
-                    ctx.stroke();
-
-=======
                     ctx.stroke()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 for (let y = 0; y < canvas.height; y += gridSize) {
                     ctx.beginPath();
                     ctx.moveTo(0, y);
                     ctx.lineTo(canvas.width, y);
-<<<<<<< HEAD
-                    ctx.stroke();
-
-=======
                     ctx.stroke()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 // Animated grid points
                 const time = Date.now() * 0.001;
                 for (let x = 0; x < canvas.width; x += gridSize) {
@@ -144,20 +117,10 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                         ctx.arc(x, y, 2 * pulse, 0, Math.PI * 2);
                         ctx.fillStyle = '#00ffff';
                         ctx.globalAlpha = 0.8 * pulse;
-<<<<<<< HEAD
-                        ctx.fill();
-
-
-                requestAnimationFrame(animate);
-            };
-            animate();
-
-=======
                         ctx.fill()}
                 }
                 requestAnimationFrame(animate)};
             animate()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Wave system
         if (variant === 'waves') {
             const animate = () => {
@@ -174,20 +137,6 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                             Math.sin(x * 0.01 + time + i) * 100 +
                             Math.sin(x * 0.005 + time * 0.5 + i) * 50;
                         if (x === 0) {
-<<<<<<< HEAD
-                            ctx.moveTo(x, y);
-
-                        else {
-                            ctx.lineTo(x, y);
-
-
-                    ctx.stroke();
-
-                requestAnimationFrame(animate);
-            };
-            animate();
-
-=======
                             ctx.moveTo(x, y)}
                         else {
                             ctx.lineTo(x, y)}
@@ -195,7 +144,6 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     ctx.stroke()}
                 requestAnimationFrame(animate)};
             animate()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         // Matrix system
         if (variant === 'matrix') {
             const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
@@ -203,12 +151,7 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
             const fontSize = intensity === 'high' ? 12 : intensity === 'medium' ? 16 : 20;
             const columns = Math.floor(canvas.width / fontSize);
             for (let i = 0; i < columns; i++) {
-<<<<<<< HEAD
-                drops[i] = 1;
-
-=======
                 drops[i] = 1}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const animate = () => {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -218,56 +161,20 @@ export function FuturisticBackground({ variant = 'particles', intensity = 'mediu
                     const text = characters[Math.floor(Math.random() * characters.length)];
                     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
                     if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-<<<<<<< HEAD
-                        drops[i] = 0;
-
-                    drops[i]++;
-
-                requestAnimationFrame(animate);
-            };
-            animate();
-
-=======
                         drops[i] = 0}
                     drops[i]++}
                 requestAnimationFrame(animate)};
             animate()}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         return () => {
-<<<<<<< HEAD
-            window.removeEventListener('resize', resizeCanvas)}}, [variant, intensity]);
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
-  {
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
-  #16213e 100%)'
-        
-
-}}/>)}
-=======
             window.removeEventListener('resize', resizeCanvas);
         };
     }, [variant, intensity]);
-<<<<<<< HEAD
-    return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style={{
-            background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)'
-        }}/>);
-
-=======
     return (<canvas ref={canvasRef} className={`fixed inset-0 pointer-events-none z-0 ${className}`} style = {
   {
             background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%,
   #16213e 100%)'
-        
-
-
-
-
-
-
 }}/>);
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Neon text component
 export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium', className = '' }) {
     const glowSize = glowIntensity === 'high' ? '0 0 20px' : glowIntensity === 'medium' ? '0 0 15px' : '0 0 10px';
@@ -276,12 +183,6 @@ export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium'
             color: color,
   textShadow: `
           ${glowSize
-
-
-
-
-
-
 } ${color},
           0 0 30px ${color},
           0 0 40px ${color}
@@ -289,12 +190,7 @@ export function NeonText({ children, color = '#00ffff', glowIntensity = 'medium'
             animation: 'neon-pulse 2s ease-in-out infinite alternate'
         }}>
       {children}
-<<<<<<< HEAD
-    </span>);
-
-=======
     </span>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Futuristic card component
 export function FuturisticCard({ children, className = '', glowColor = '#00ffff', intensity = 'medium' }) {
     const glowSize = intensity === 'high' ? '0 0 30px' : intensity === 'medium' ? '0 0 20px' : '0 0 10px';
@@ -310,54 +206,25 @@ export function FuturisticCard({ children, className = '', glowColor = '#00ffff'
   {
             background: `linear-gradient(45deg, transparent 30%,
   ${glowColor
-
-
-
-
-
-
 }20 50%, transparent 70%)`,
             animation: 'shimmer 3s ease-in-out infinite'
         }}/>
-<<<<<<< HEAD
-    </div>);
-
-=======
     </div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 // Add CSS animations
 const style = document.createElement('style');
 style.textContent = `
   @keyframes neon-pulse {
     from {
-<<<<<<< HEAD
-      text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-
-    to {
-      text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
-
-
-  @keyframes shimmer {
-    0% {
-      transform: translateX(-100%);
-
-    100% {
-      transform: translateX(100%);
-
-  </div></div>}
-=======
       text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor}
     to {
       text-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor}
   }
-  
   @keyframes shimmer {
     0% {
       transform: translateX(-100%)}
     100% {
       transform: translateX(100%)}
   }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 `;
 document.head.appendChild(style);
 }}}}}}}}}}}}}}}}}}}}}}}}}}

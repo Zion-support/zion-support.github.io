@@ -42,7 +42,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             description: 'When we\'re available',
             action: 'Mon-Fri: 9AM-6PM EST',
             href: '#'
-
     ];
     const services = [
         'AI Solutions',
@@ -59,18 +58,10 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             opacity: 1,
             transition: {
                 staggerChildren: 0.1
-
-
     };
     const itemVariants = {
   hidden: { y: 20,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             y: 0,
@@ -78,18 +69,10 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             transition: {
                 duration: 0.6,
                 ease: "easeOut"
-
-
     };
     const cardVariants = {
   hidden: { scale: 0.9,
   opacity: 0 
-
-
-
-
-
-
 },
         visible: {
             scale: 1,
@@ -97,7 +80,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             transition: {
                 duration: 0.5,
                 ease: "easeOut"
-
         },
         hover: {
             scale: 1.02,
@@ -105,8 +87,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             transition: {
                 duration: 0.3,
                 ease: "easeOut"
-
-
     };
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -136,21 +116,9 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
         return (<motion.div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white flex items-center justify-center" initial = {
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} transition={{ duration: 0.5 }}>
         <div className="text-center max-w-md mx-auto px-4">
           <CheckCircle className="h-24 w-24 text-green-400 mx-auto mb-6"/>
@@ -162,12 +130,7 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
             Send Another Message
           </Button>
         </div>
-<<<<<<< HEAD
-      </motion.div>);
-
-=======
       </motion.div>)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -183,7 +146,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           </motion.p>
         </motion.div>
       </section>
-
       {/* Contact Methods */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -203,7 +165,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           </motion.div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
@@ -215,7 +176,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
               Fill out the form below and we'll get back to you as soon as possible
             </p>
           </motion.div>
-
           <motion.form onSubmit={handleSubmit} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div variants={itemVariants}>
@@ -225,7 +185,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 <Input type="text" placeholder="Enter your full name" value={formData.name} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan"/>
                 <input type="hidden" name="name" value={formData.name}/>
               </motion.div>
-
               <motion.div variants={itemVariants}>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   Email Address *
@@ -234,7 +193,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 <input type="hidden" name="email" value={formData.email}/>
               </motion.div>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <motion.div variants={itemVariants}>
                 <label htmlFor="comp" className="block text-sm font-medium text-gray-300 mb-2">
@@ -242,7 +200,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 <Input type="text" placeholder="Enter your comp name" value={formData.comp} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan"/>
                 <input type="hidden" name="comp" value={formData.comp}/>
               </motion.div>
-
               <motion.div variants={itemVariants}>
                 <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                   Phone Number
@@ -251,7 +208,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                 <input type="hidden" name="phone" value={formData.phone}/>
               </motion.div>
             </div>
-
             <motion.div className="mb-6" variants={itemVariants}>
               <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                 Service of Interest
@@ -263,7 +219,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
                   </option>))}
               </select>
             </motion.div>
-
             <motion.div className="mb-8" variants={itemVariants}>
               <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                 Message *
@@ -271,7 +226,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
               <Textarea rows={6} placeholder="Tell us about your project, requirements, or  questions you have..." value={formData.message} onChange={handleInputChange} className="bg-white/20 border-white/30 text-white placeholder-gray-400 focus:border-zion-cyan focus:ring-zion-cyan resize-none"/>
               <input type="hidden" name="message" value={formData.message}/>
             </motion.div>
-
             <motion.div className="text-center" variants={itemVariants}>
               <Button type="submit" disabled={isSubmitting} className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-lg py-3 px-8 disabled:opacity-50 disabled:cursor-not-allowed">
                 {isSubmitting ? (<>
@@ -286,7 +240,6 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           </motion.form>
         </div>
       </section>
-
       {/* Comp Info */}
       <section className="py-16 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -298,20 +251,17 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
               Leading technology solutions provider helping businesses innovate and grow through cutting-edge AI, cloud services, and digital transformation.
             </p>
           </motion.div>
-
           <motion.div className="grid grid-cols-1 md:grid-cols-3 gap-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div className="text-center" variants={itemVariants}>
               <Building className="h-16 w-16 text-zion-cyan mx-auto mb-4"/>
               <h3 className="text-xl font-semibold text-white mb-2">Enterprise Solutions</h3>
               <p className="text-gray-300">Scalable technology solutions for businesses of all sizes</p>
             </motion.div>
-
             <motion.div className="text-center" variants={itemVariants}>
               <Users className="h-16 w-16 text-zion-cyan mx-auto mb-4"/>
               <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
               <p className="text-gray-300">Seasoned professionals with deep industry expertise</p>
             </motion.div>
-
             <motion.div className="text-center" variants={itemVariants}>
               <Globe className="h-16 w-16 text-zion-cyan mx-auto mb-4"/>
               <h3 className="text-xl font-semibold text-white mb-2">Global Reach</h3>
@@ -320,10 +270,4 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, Building, Users, Globe e
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
-    </div>);
-};
-}}}}}}}}}}
-=======
     </div>)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
