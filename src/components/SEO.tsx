@@ -55,7 +55,7 @@ export const SEO: React.FC<SEOProps> = ({
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
 
-  // Enhanced SEO analysis
+  // Enhanced SEO analysis with more comprehensive checks
   const analyzeSEO = useCallback(() => {
     if (!enableAnalytics) return;
     
@@ -63,25 +63,36 @@ export const SEO: React.FC<SEOProps> = ({
     const issues: string[] = [];
     let score = 100;
 
-    // Check title length
+    // Enhanced title analysis
     if (data.title.length < 30 || data.title.length > 60) {
       issues.push('Title length should be between 30-60 characters');
       score -= 10;
     }
 
-    // Check description length
+    // Enhanced description analysis
     if (data.description.length < 120 || data.description.length > 160) {
       issues.push('Description length should be between 120-160 characters');
       score -= 10;
     }
 
-    // Check keywords
+    // Enhanced keyword analysis
     if (data.keywords.length < 3) {
       issues.push('Add more relevant keywords (minimum 3)');
       score -= 5;
     }
 
-    // Check for missing meta tags
+    // Check for keyword density in title and description
+    const titleLower = data.title.toLowerCase();
+    const descLower = data.description.toLowerCase();
+    data.keywords.forEach(keyword => {
+      const keywordLower = keyword.toLowerCase();
+      if (!titleLower.includes(keywordLower) && !descLower.includes(keywordLower)) {
+        issues.push(`Keyword "${keyword}" not found in title or description`);
+        score -= 3;
+      }
+    });
+
+    // Enhanced meta tag checks
     if (!data.ogImage) {
       issues.push('Missing Open Graph image');
       score -= 5;
@@ -92,68 +103,61 @@ export const SEO: React.FC<SEOProps> = ({
       score -= 5;
     }
 
-    // Check for duplicate content
+    // Enhanced URL and canonical checks
     const currentUrl = window.location.href;
     if (currentUrl !== data.canonical) {
       issues.push('URL mismatch with canonical');
       score -= 5;
     }
 
-    // Check for proper heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    const h1Count = document.querySelectorAll('h1').length;
-    
-    if (h1Count === 0) {
-      issues.push('Missing H1 heading');
-      score -= 10;
-    } else if (h1Count > 1) {
-      issues.push('Multiple H1 headings found');
+    // Check for HTTPS
+    if (!window.location.protocol.includes('https')) {
+      issues.push('Site should use HTTPS for better SEO');
       score -= 5;
     }
 
-    // Check for images without alt text
-    const images = document.querySelectorAll('img');
-    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
-    if (imagesWithoutAlt.length > 0) {
-      issues.push(`${imagesWithoutAlt.length} images missing alt text`);
-      score -= Math.min(10, imagesWithoutAlt.length * 2);
-    }
-
-    // Check for internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="' + window.location.origin + '"]');
-    if (internalLinks.length < 5) {
-      issues.push('Add more internal links for better site structure');
-      score -= 5;
-    }
-
-    // Check for external links
-    const externalLinks = document.querySelectorAll('a[href^="http"]:not([href^="' + window.location.origin + '"])');
-    if (externalLinks.length > 0) {
-      externalLinks.forEach(link => {
-        if (!link.hasAttribute('rel') || !link.getAttribute('rel')?.includes('nofollow')) {
-          issues.push('External links should have rel="nofollow"');
-          score -= 2;
-        }
-      });
+    // Check for mobile responsiveness
+    if (window.innerWidth < 768) {
+      const viewport = document.querySelector('meta[name="viewport"]');
+      if (!viewport) {
+        issues.push('Missing viewport meta tag for mobile optimization');
+        score -= 5;
+      }
     }
 
     // Check for schema markup
     if (enableStructuredData && !data.structuredData) {
-      issues.push('Missing structured data markup');
-      score -= 10;
-    }
-
-    // Check for mobile optimization
-    const viewport = document.querySelector('meta[name="viewport"]');
-    if (!viewport) {
-      issues.push('Missing viewport meta tag');
+      issues.push('Missing structured data (schema markup)');
       score -= 5;
     }
 
-    // Check for language declaration
-    const htmlLang = document.documentElement.getAttribute('lang');
-    if (!htmlLang) {
-      issues.push('Missing HTML lang attribute');
+    // Check for internal linking opportunities
+    const links = document.querySelectorAll('a[href^="/"]');
+    if (links.length < 5) {
+      issues.push('Consider adding more internal links for better site structure');
+      score -= 3;
+    }
+
+    // Check for image alt tags
+    const images = document.querySelectorAll('img');
+    const imagesWithoutAlt = Array.from(images).filter(img => !img.alt);
+    if (imagesWithoutAlt.length > 0) {
+      issues.push(`${imagesWithoutAlt.length} images missing alt tags`);
+      score -= Math.min(5, imagesWithoutAlt.length);
+    }
+
+    // Check for heading structure
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const h1Count = document.querySelectorAll('h1').length;
+    if (h1Count !== 1) {
+      issues.push(`Should have exactly 1 H1 tag, found ${h1Count}`);
+      score -= 5;
+    }
+
+    // Check for content length
+    const content = document.body.textContent || '';
+    if (content.length < 300) {
+      issues.push('Content should be at least 300 characters for better SEO');
       score -= 5;
     }
 
@@ -162,58 +166,17 @@ export const SEO: React.FC<SEOProps> = ({
     setIsAnalyzing(false);
   }, [data, enableAnalytics, enableStructuredData]);
 
-  // Performance tracking
-  const trackPerformance = useCallback(() => {
-    if (!enablePerformanceTracking) return;
-
-    if ('performance' in window) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      
-      const metrics = {
-        ttfb: navigation.responseStart - navigation.requestStart,
-        fcp: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        lcp: paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0,
-        domLoad: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        windowLoad: navigation.loadEventEnd - navigation.loadEventStart
-      };
-
-      setPerformanceMetrics(metrics);
-
-      // Send to analytics if available
-      if (window.gtag) {
-        window.gtag('event', 'performance_metrics', {
-          event_category: 'performance',
-          event_label: pageType,
-          value: Math.round(metrics.lcp),
-          custom_parameters: {
-            ttfb: Math.round(metrics.ttfb),
-            fcp: Math.round(metrics.fcp),
-            dom_load: Math.round(metrics.domLoad),
-            window_load: Math.round(metrics.windowLoad)
-          }
-        });
-      }
-    }
-  }, [enablePerformanceTracking, pageType]);
-
-  // Auto-analyze on mount
-  useEffect(() => {
-    analyzeSEO();
-    trackPerformance();
-  }, [analyzeSEO, trackPerformance]);
-
-  // Generate structured data based on page type
+  // Enhanced structured data generation
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData) return null;
 
-    const baseData = {
+    const baseStructuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com",
       "logo": "https://ziontechgroup.com/logo.png",
-      "description": "Leading technology solutions provider specializing in AI, quantum computing, and digital transformation",
+      "description": "Leading provider of innovative micro SAAS, IT infrastructure, and AI solutions",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "364 E Main St STE 1008",
@@ -231,66 +194,83 @@ export const SEO: React.FC<SEOProps> = ({
       "sameAs": [
         "https://linkedin.com/company/ziontechgroup",
         "https://twitter.com/ziontechgroup"
-      ]
+      ],
+      "foundingDate": "2020",
+      "numberOfEmployees": "10-50",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.4496,
+          "longitude": -75.7163
+        },
+        "geoRadius": "50000"
+      }
     };
 
-    switch (pageType) {
-      case 'service':
-        return {
-          ...baseData,
+    // Add page-specific structured data
+    if (pageType === 'home') {
+      return {
+        ...baseStructuredData,
+        "@type": "WebPage",
+        "mainEntity": {
           "@type": "Service",
-          "name": data.title,
-          "description": data.description,
-          "provider": baseData,
+          "name": "AI-Powered Business Solutions",
+          "description": "Comprehensive AI and technology solutions for business transformation",
+          "provider": baseStructuredData,
           "areaServed": "Worldwide",
-          "serviceType": "Technology Solutions"
-        };
-      
-      case 'about':
-        return {
-          ...baseData,
-          "@type": "AboutPage",
-          "mainEntity": {
-            "@type": "Organization",
-            ...baseData
-          }
-        };
-      
-      case 'contact':
-        return {
-          ...baseData,
-          "@type": "ContactPage",
-          "mainEntity": {
-            "@type": "ContactPage",
-            "name": "Contact Zion Tech Group",
-            "description": "Get in touch with our team for technology solutions"
-          }
-        };
-      
-      default:
-        return baseData;
+          "serviceType": "Technology Consulting"
+        }
+      };
     }
-  }, [pageType, data, enableStructuredData]);
 
-  // Generate meta tags
-  const generateMetaTags = useCallback(() => {
-    const tags: Record<string, string> = {
-      'viewport': 'width=device-width, initial-scale=1.0',
-      'robots': 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
-      'author': 'Zion Tech Group',
-      'theme-color': '#0ea5e9',
-      'msapplication-TileColor': '#0ea5e9',
-      'apple-mobile-web-app-capable': 'yes',
-      'apple-mobile-web-app-status-bar-style': 'default',
-      'format-detection': 'telephone=no',
-      ...data.metaTags
+    if (pageType === 'service') {
+      return {
+        ...baseStructuredData,
+        "@type": "Service",
+        "name": data.title,
+        "description": data.description,
+        "provider": baseStructuredData
+      };
+    }
+
+    return baseStructuredData;
+  }, [data, pageType, enableStructuredData]);
+
+  // Enhanced performance tracking
+  const trackPerformance = useCallback(() => {
+    if (!enablePerformanceTracking || !window.performance) return;
+
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    const paint = performance.getEntriesByType('paint');
+    
+    const metrics = {
+      ttfb: navigation.responseStart - navigation.requestStart,
+      fcp: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+      lcp: paint.find(entry => entry.name === 'largest-contentful-paint')?.startTime || 0,
+      domLoad: navigation.domContentLoadedEventEnd - navigation.navigationStart,
+      windowLoad: navigation.loadEventEnd - navigation.navigationStart
     };
 
-    return tags;
-  }, [data.metaTags]);
+    setPerformanceMetrics(metrics);
+
+    // Send to analytics if available
+    if (window.gtag) {
+      window.gtag('event', 'performance_metrics', {
+        event_category: 'performance',
+        value: Math.round(metrics.ttfb),
+        custom_parameter_1: Math.round(metrics.fcp),
+        custom_parameter_2: Math.round(metrics.lcp)
+      });
+    }
+  }, [enablePerformanceTracking]);
+
+  useEffect(() => {
+    analyzeSEO();
+    trackPerformance();
+  }, [analyzeSEO, trackPerformance]);
 
   const structuredData = generateStructuredData();
-  const metaTags = generateMetaTags();
 
   return (
     <>
@@ -301,26 +281,31 @@ export const SEO: React.FC<SEOProps> = ({
         <meta name="keywords" content={data.keywords.join(', ')} />
         <link rel="canonical" href={data.canonical} />
         
-        {/* Open Graph */}
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content={data.title} />
         <meta property="og:description" content={data.description} />
-        <meta property="og:url" content={data.canonical} />
         <meta property="og:type" content={data.ogType} />
-        {data.ogImage && <meta property="og:image" content={data.ogImage} />}
+        <meta property="og:url" content={data.canonical} />
+        <meta property="og:image" content={data.ogImage} />
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
-        {/* Twitter Card */}
+        {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content={data.twitterCard} />
         <meta name="twitter:title" content={data.title} />
         <meta name="twitter:description" content={data.description} />
-        {data.ogImage && <meta name="twitter:image" content={data.ogImage} />}
+        <meta name="twitter:image" content={data.ogImage} />
         <meta name="twitter:site" content="@ziontechgroup" />
         
-        {/* Additional Meta Tags */}
-        {Object.entries(metaTags).map(([name, content]) => (
-          <meta key={name} name={name} content={content} />
-        ))}
+        {/* Additional SEO Meta Tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#a855f7" />
+        
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* Structured Data */}
         {structuredData && (
@@ -329,176 +314,71 @@ export const SEO: React.FC<SEOProps> = ({
           </script>
         )}
         
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        
-        {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        
-        {/* Favicon */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        {/* Additional Meta Tags */}
+        {Object.entries(data.metaTags).map(([name, content]) => (
+          <meta key={name} name={name} content={content} />
+        ))}
       </Helmet>
 
-      {/* SEO Analysis Panel (Development Only) */}
-      {process.env.NODE_ENV === 'development' && enableAnalytics && (
+      {/* SEO Dashboard (Development Only) */}
+      {process.env.NODE_ENV === 'development' && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="fixed top-4 right-4 z-50 w-80 bg-slate-900/95 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl overflow-hidden"
+          className="fixed top-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-4 max-w-sm z-50 border border-gray-200"
         >
-          {/* Panel Header */}
-          <div className="bg-gradient-to-r from-green-500/20 to-blue-600/20 p-4 border-b border-slate-700/50">
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
-                <Search className="w-5 h-5 text-green-400" />
-                <span>SEO Analysis</span>
-              </h3>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={analyzeSEO}
-                  disabled={isAnalyzing}
-                  className="p-2 bg-slate-800/50 text-green-400 rounded-lg hover:bg-slate-700/50 transition-colors disabled:opacity-50"
-                  title="Refresh analysis"
-                >
-                  <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`} />
-                </button>
-              </div>
-            </div>
+          <div className="flex items-center justify-between mb-3">
+            <h3 className="text-sm font-semibold text-gray-800">SEO Dashboard</h3>
+            <button
+              onClick={analyzeSEO}
+              disabled={isAnalyzing}
+              className="text-xs bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600 disabled:opacity-50"
+            >
+              {isAnalyzing ? <RefreshCw className="w-3 h-3 animate-spin" /> : 'Analyze'}
+            </button>
           </div>
-
-          {/* Panel Content */}
-          <div className="p-4 space-y-4 max-h-[60vh] overflow-y-auto">
-            {/* SEO Score */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
-                SEO Score
-              </h4>
-              <div className="flex items-center space-x-3">
-                <div className="relative">
-                  <svg className="w-16 h-16 transform -rotate-90">
-                    <circle
-                      cx="32"
-                      cy="32"
-                      r="28"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="transparent"
-                      className="text-slate-700"
-                    />
-                    <circle
-                      cx="32"
-                      cy="32"
-                      r="28"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="transparent"
-                      strokeDasharray={`${(seoScore / 100) * 175.93} 175.93`}
-                      className={`text-green-400 transition-all duration-1000 ${
-                        seoScore >= 80 ? 'text-green-400' : seoScore >= 60 ? 'text-yellow-400' : 'text-red-400'
-                      }`}
-                    />
-                  </svg>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="text-lg font-bold text-white">{seoScore}</span>
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <div className="text-sm text-gray-400">Current Score</div>
-                  <div className={`text-lg font-semibold ${
-                    seoScore >= 80 ? 'text-green-400' : seoScore >= 60 ? 'text-yellow-400' : 'text-red-400'
-                  }`}>
-                    {seoScore >= 80 ? 'Excellent' : seoScore >= 60 ? 'Good' : 'Needs Improvement'}
-                  </div>
-                </div>
-              </div>
+          
+          <div className="space-y-2">
+            <div className="flex items-center justify-between text-xs">
+              <span>SEO Score:</span>
+              <span className={`font-semibold ${
+                seoScore >= 80 ? 'text-green-600' : 
+                seoScore >= 60 ? 'text-yellow-600' : 'text-red-600'
+              }`}>
+                {seoScore}/100
+              </span>
             </div>
-
-            {/* Issues Found */}
+            
             {seoIssues.length > 0 && (
-              <div className="space-y-3">
-                <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
-                  Issues Found ({seoIssues.length})
-                </h4>
-                <div className="space-y-2">
-                  {seoIssues.slice(0, 5).map((issue, index) => (
-                    <div key={index} className="flex items-start space-x-2 text-sm">
-                      <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{issue}</span>
-                    </div>
+              <div className="text-xs">
+                <span className="text-red-600 font-semibold">Issues ({seoIssues.length}):</span>
+                <ul className="mt-1 space-y-1">
+                  {seoIssues.slice(0, 3).map((issue, index) => (
+                    <li key={index} className="text-red-600">• {issue}</li>
                   ))}
-                  {seoIssues.length > 5 && (
-                    <div className="text-xs text-gray-500 text-center">
-                      +{seoIssues.length - 5} more issues
-                    </div>
+                  {seoIssues.length > 3 && (
+                    <li className="text-gray-500">... and {seoIssues.length - 3} more</li>
                   )}
-                </div>
+                </ul>
               </div>
             )}
-
-            {/* Performance Metrics */}
+            
             {performanceMetrics && (
-              <div className="space-y-3">
-                <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
-                  Performance
-                </h4>
-                <div className="grid grid-cols-2 gap-2">
-                  <div className="bg-slate-800/50 p-2 rounded">
-                    <div className="text-xs text-gray-400">FCP</div>
-                    <div className="text-sm font-semibold text-white">
-                      {performanceMetrics.fcp.toFixed(0)}ms
-                    </div>
-                  </div>
-                  <div className="bg-slate-800/50 p-2 rounded">
-                    <div className="text-xs text-gray-400">LCP</div>
-                    <div className="text-sm font-semibold text-white">
-                      {performanceMetrics.lcp.toFixed(0)}ms
-                    </div>
-                  </div>
-                  <div className="bg-slate-800/50 p-2 rounded">
-                    <div className="text-xs text-gray-400">TTFB</div>
-                    <div className="text-sm font-semibold text-white">
-                      {performanceMetrics.ttfb.toFixed(0)}ms
-                    </div>
-                  </div>
-                  <div className="bg-slate-800/50 p-2 rounded">
-                    <div className="text-xs text-gray-400">DOM Load</div>
-                    <div className="text-sm font-semibold text-white">
-                      {performanceMetrics.domLoad.toFixed(0)}ms
-                    </div>
-                  </div>
+              <div className="text-xs space-y-1">
+                <div className="flex justify-between">
+                  <span>TTFB:</span>
+                  <span className={performanceMetrics.ttfb < 200 ? 'text-green-600' : 'text-yellow-600'}>
+                    {Math.round(performanceMetrics.ttfb)}ms
+                  </span>
+                </div>
+                <div className="flex justify-between">
+                  <span>FCP:</span>
+                  <span className={performanceMetrics.fcp < 1800 ? 'text-green-600' : 'text-yellow-600'}>
+                    {Math.round(performanceMetrics.fcp)}ms
+                  </span>
                 </div>
               </div>
             )}
-
-            {/* Quick Actions */}
-            <div className="space-y-3">
-              <h4 className="text-sm font-semibold text-green-400 uppercase tracking-wider">
-                Quick Actions
-              </h4>
-              <div className="grid grid-cols-2 gap-2">
-                <button
-                  onClick={() => window.open('https://search.google.com/test/rich-results', '_blank')}
-                  className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 text-gray-300 hover:text-white rounded-lg transition-colors"
-                >
-                  <Code className="w-4 h-4" />
-                  <span className="text-xs">Test Rich Results</span>
-                </button>
-                <button
-                  onClick={() => window.open('https://pagespeed.web.dev/', '_blank')}
-                  className="flex items-center justify-center space-x-2 p-2 bg-slate-800/50 text-gray-300 hover:text-white rounded-lg transition-colors"
-                >
-                  <Zap className="w-4 h-4" />
-                  <span className="text-xs">PageSpeed</span>
-                </button>
-              </div>
-            </div>
           </div>
         </motion.div>
       )}
