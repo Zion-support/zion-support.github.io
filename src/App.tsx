@@ -221,6 +221,37 @@ const MarketplaceEquipment = createLazyComponent(() => import('./pages/marketpla
 const MarketplaceServices = createLazyComponent(() => import('./pages/marketplace/MarketplaceServices'));
 const Login = createLazyComponent(() => import('./pages/Login'));
 const Pricing = createLazyComponent(() => import('./pages/PricingPage'));
+
+// New Innovative Services 2025 - Content Creation & Analytics
+const PricingGuide = createLazyComponent(() => import('./components/PricingGuide'));
+
+// Solution pages
+const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
+const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
+const ManufacturingSolutions = createLazyComponent(() => import('./pages/solutions/ManufacturingSolutions'));
+const GovernmentSolutions = createLazyComponent(() => import('./pages/solutions/GovernmentSolutions'));
+const RetailSolutions = createLazyComponent(() => import('./pages/solutions/RetailSolutions'));
+const QuantumEdgeComputing = createLazyComponent(() => import('./pages/solutions/QuantumEdgeComputing'));
+const AIAutonomousBusiness = createLazyComponent(() => import('./pages/solutions/AIAutonomousBusiness'));
+const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/BlockchainWeb3'));
+const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoTEdgeComputing'));
+const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
+const CloudMigration = createLazyComponent(() => import('./pages/solutions/CloudMigration'));
+
+// New Innovative Services 2025
+const AICustomerIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-customer-intelligence-platform'));
+
+// Showcase pages
+const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
+
+const InnovativeServicesHub = createLazyComponent(() => import('./pages/InnovativeServicesHub'));
+
+// Legal and Policy Pages
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
 const Security = createLazyComponent(() => import('./pages/Security'));
 const Cookies = createLazyComponent(() => import('./pages/Cookies'));
 const Talent = createLazyComponent(() => import('./pages/Talent'));
@@ -462,6 +493,19 @@ function App() {
                   <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+
+                  {/* Solution Routes */}
+                  <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
+                  <Route path="/solutions/financial" element={<FinancialSolutions />} />
+                  <Route path="/solutions/manufacturing" element={<ManufacturingSolutions />} />
+                  <Route path="/solutions/government" element={<GovernmentSolutions />} />
+                  <Route path="/solutions/retail" element={<RetailSolutions />} />
+                  <Route path="/solutions/quantum-edge-computing" element={<QuantumEdgeComputing />} />
+                  <Route path="/solutions/ai-autonomous-business" element={<AIAutonomousBusiness />} />
+                  <Route path="/solutions/blockchain-web3" element={<BlockchainWeb3 />} />
+                  <Route path="/solutions/iot-edge-computing" element={<IoTEdgeComputing />} />
+                  <Route path="/solutions/space-tech" element={<SpaceTech />} />
+                  <Route path="/solutions/cloud-migration" element={<CloudMigration />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
