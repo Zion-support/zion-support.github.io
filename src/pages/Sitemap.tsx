@@ -264,39 +264,40 @@ const Sitemap: React.FC = () => {
           ))}
         </div>
 
-      {/* CTA Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Can't Find What You're Looking For?
-          </h2>
-          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Our team is here to help you navigate our services and find the perfect solution 
-            for your business needs.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Contact Us
-            </Link>
-            <Link
-              to="/schedule-demo"
-              className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Schedule Demo
-            </Link>
-            <Link
-              to="/faq"
-              className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
-            >
-              <HelpCircle className="w-5 h-5 mr-2" />
-              View FAQ
-            </Link>
+        {/* CTA Section */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Can't Find What You're Looking For?
+            </h2>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Our team is here to help you navigate our services and find the perfect solution 
+              for your business needs.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-colors"
+              >
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Contact Us
+              </Link>
+              <Link
+                to="/schedule-demo"
+                className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-colors"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Schedule Demo
+              </Link>
+              <Link
+                to="/faq"
+                className="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
+              >
+                <HelpCircle className="w-5 h-5 mr-2" />
+                View FAQ
+              </Link>
+            </div>
           </div>
         </div>
       </div>

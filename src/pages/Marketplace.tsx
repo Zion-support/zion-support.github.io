@@ -140,7 +140,6 @@ const Marketplace: React.FC = () => {
       rating: 4.7,
       reviews: 203,
       users: 34,
-      features: ["Predictive analytics", "Patient monitoring", "Diagnostic support", "HIPAA compliant"],
       image: "🏥",
       badge: "New",
       vendor: "HealthAI Innovations",
@@ -268,7 +267,6 @@ const Marketplace: React.FC = () => {
       rating: 4.6,
       reviews: 78,
       users: 23,
-      features: ["Blockchain security", "AI optimization", "Supply chain tracking", "Smart contracts"],
       image: "🔗",
       badge: "Innovative",
       vendor: "ChainAI Solutions",
@@ -295,7 +293,6 @@ const Marketplace: React.FC = () => {
       rating: 4.8,
       reviews: 234,
       users: 156,
-      features: ["Cost optimization", "Resource management", "Budget tracking", "Automated scaling"],
       image: "☁️",
       badge: "Cost Effective",
       vendor: "CloudOpt Solutions",
@@ -325,7 +322,7 @@ const Marketplace: React.FC = () => {
       default:
         return b.reviews - a.reviews; // popularity
     }
-  };
+  });
 
   const getTypeColor = (type: string) => {
     switch (type) {
@@ -653,21 +650,5 @@ const Marketplace: React.FC = () => {
     </>
   );
 };
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const Marketplace: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-12">
-		<div className="max-w-3xl mx-auto px-4 text-white">
-			<h1 className="text-4xl font-bold mb-6">Marketplace</h1>
-			<div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-				<Link to="/marketplace/products" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Products</Link>
-				<Link to="/marketplace/talent" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Talent</Link>
-				<Link to="/marketplace/equipment" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Equipment</Link>
-				<Link to="/marketplace/services" className="p-4 bg-white/10 rounded-lg hover:bg-white/15">Services</Link>
-			</div>
-		</div>
-	</div>
-);
 
 export default Marketplace;

@@ -1,7 +1,6 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
   Brain, 
@@ -126,7 +125,7 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
       color: 'from-green-600 to-emerald-600',
       features: ['Predictive analytics', 'Diagnostic support', 'Care optimization']
     }
-  ];
+  ], []);
 
   const serviceCategories = [
     {
@@ -228,79 +227,102 @@ const HeroSection = React.memo(({ onGetStarted }: { onGetStarted: () => void }) 
   ];
 
   return (
-    <>
-      <SEO />
-      <div className="min-h-screen bg-futuristic">
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6"
-            >
-              Transforming Business Through
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                AI Innovation
-              </span>
-            </motion.h1>
-            
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
-            >
-              Zion Tech Group delivers cutting-edge AI solutions, micro SaaS products, and strategic IT services 
-              that drive digital transformation and business growth.
-            </motion.p>
+    <div className="relative">
+      <FuturisticBackground />
+      <div className="relative z-10">
+        {/* Hero content */}
+        <div className="text-center max-w-4xl mx-auto">
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-5xl md:text-7xl font-bold text-white mb-6"
+          >
+            Transforming Business Through
+            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              AI Innovation
+            </span>
+          </motion.h1>
+          
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            Zion Tech Group delivers cutting-edge AI solutions, micro SaaS products, and strategic IT services 
+            that drive digital transformation and business growth.
+          </motion.p>
 
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-            >
-              <Link
-                to="/services"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
-              >
-                Explore Services
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
-              >
-                Get Started
-              </Link>
-            </motion.div>
-          </div>
-
-          {/* Stats */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            {heroStats.map((stat, index) => (
-              <div key={stat.label} className="text-center">
-                <div className="flex justify-center mb-3">
-                  <div className="p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20">
-                    <stat.icon className="h-8 w-8 text-blue-400" />
-                  </div>
-                </div>
-                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </div>
-            ))}
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
+            >
+              Explore Services
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-200"
+            >
+              Get Started
+            </Link>
           </motion.div>
         </div>
-      </section>
+
+        {/* Stats */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
+        >
+          {heroStats.map((stat, index) => (
+            <div key={stat.label} className="text-center">
+              <div className="flex justify-center mb-3">
+                <div className="p-3 rounded-lg bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+                  <stat.icon className="h-8 w-8 text-blue-400" />
+                </div>
+              </div>
+              <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+              <div className="text-gray-400">{stat.label}</div>
+            </div>
+          ))}
+        </motion.div>
+      </div>
     </div>
+  );
+});
+
+HeroSection.displayName = 'HeroSection';
+
+// Main Home component
+export default function Home() {
+  const heroStats = [
+    { label: 'AI Solutions', value: '50+', icon: Brain, description: 'Cutting-edge AI services' },
+    { label: 'Micro SaaS', value: '25+', icon: Rocket, description: 'Innovative products' },
+    { label: 'Enterprise Clients', value: '100+', icon: Building, description: 'Trusted partnerships' },
+    { label: 'Success Rate', value: '99%', icon: CheckCircle, description: 'Proven results' }
+  ];
+
+  return (
+    <>
+      <SEO />
+      <div className="min-h-screen bg-futuristic">
+        {/* Hero Section */}
+        <section className="relative pt-32 pb-20 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
+          <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
+            <HeroSection onGetStarted={() => {}} />
+          </div>
+        </section>
+      </div>
+    </>
   );
 }

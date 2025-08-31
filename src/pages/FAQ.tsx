@@ -257,7 +257,7 @@ export default function FAQ() {
                   </div>
                 </motion.div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -62,21 +62,19 @@ const Contact: React.FC = () => {
               href="tel:+13024640950" 
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
             >
-              <div className="w-20 h-20 bg-green-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <CheckCircle className="h-10 w-10 text-white" />
-              </div>
-              <h1 className="text-4xl font-bold text-white mb-4">Thank You!</h1>
-              <p className="text-xl text-gray-300 mb-6">
-                Your message has been sent successfully. We'll get back to you within 24 hours.
-              </p>
-              <p className="text-gray-400">
-                In the meantime, feel free to explore our services or check out our latest insights.
-              </p>
-            </motion.div>
+              Call Now
+            </a>
+            <a 
+              href="mailto:kleber@ziontechgroup.com" 
+              className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              Send Email
+            </a>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
 export default Contact;

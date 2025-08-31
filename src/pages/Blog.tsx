@@ -1,242 +1,176 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Calendar, Clock, User, Tag, Search, Filter, 
-  ArrowRight, BookOpen, TrendingUp, Star, Eye
+  Search, 
+  Filter, 
+  Calendar, 
+  User, 
+  Eye, 
+  BookOpen, 
+  ArrowRight,
+  Mail,
+  Send
 } from 'lucide-react';
 
-export default function Blog() {
+interface BlogPost {
+  id: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  category: string;
+  tags: string[];
+  readTime: string;
+  views: number;
+  featured: boolean;
+  image?: string;
+}
+
+interface Category {
+  id: string;
+  name: string;
+  count: number;
+}
+
+const Blog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedTag, setSelectedTag] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const categories = [
-    { id: 'all', name: 'All Categories', icon: BookOpen, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 12 },
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 8 },
-    { id: 'cloud-devops', name: 'Cloud & DevOps', icon: Cloud, count: 10 },
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 6 },
-    { id: 'blockchain', name: 'Blockchain', icon: ShieldCheck, count: 5 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: Cpu, count: 7 },
-    { id: 'data-analytics', name: 'Data & Analytics', icon: BarChart, count: 9 },
-    { id: 'digital-transformation', name: 'Digital Transformation', icon: TrendingUp, count: 11 },
-    { id: 'startup-tech', name: 'Startup Technology', icon: Rocket, count: 4 }
+  const categories: Category[] = [
+    { id: 'all', name: 'All Posts', count: 12 },
+    { id: 'ai', name: 'AI & Machine Learning', count: 4 },
+    { id: 'cybersecurity', name: 'Cybersecurity', count: 3 },
+    { id: 'quantum', name: 'Quantum Computing', count: 2 },
+    { id: 'saas', name: 'Micro SaaS', count: 2 },
+    { id: 'business', name: 'Business Insights', count: 1 }
   ];
 
-  const tags = [
-    { id: 'all', name: 'All Tags', count: 0 },
-    { id: 'artificial-intelligence', name: 'Artificial Intelligence', count: 15 },
-    { id: 'machine-learning', name: 'Machine Learning', count: 12 },
-    { id: 'cybersecurity', name: 'Cybersecurity', count: 10 },
-    { id: 'cloud-computing', name: 'Cloud Computing', count: 8 },
-    { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
-    { id: 'blockchain', name: 'Blockchain', count: 5 },
-    { id: 'iot', name: 'Internet of Things', count: 7 },
-    { id: 'data-science', name: 'Data Science', count: 9 },
-    { id: 'devops', name: 'DevOps', count: 8 },
-    { id: 'startup', name: 'Startup', count: 4 },
-    { id: 'enterprise', name: 'Enterprise', count: 11 },
-    { id: 'innovation', name: 'Innovation', count: 13 }
-  ];
-
-  const blogPosts = [
+  const blogPosts: BlogPost[] = [
     {
-      id: 1,
-      title: 'The Future of AI-Powered Cybersecurity: Protecting Against Next-Gen Threats',
-      excerpt: 'Explore how artificial intelligence is revolutionizing cybersecurity, from automated threat detection to predictive security analytics that stay ahead of evolving cyber threats.',
-      content: 'In today\'s rapidly evolving digital landscape, cybersecurity threats are becoming increasingly sophisticated and complex. Traditional security measures are no longer sufficient to protect against the advanced persistent threats (APTs) and zero-day vulnerabilities that organizations face daily. This is where artificial intelligence comes in, offering a paradigm shift in how we approach cybersecurity...',
-      author: 'Dr. Sarah Chen',
-      authorAvatar: '/avatars/sarah-chen.jpg',
-      publishDate: '2024-01-15',
-      readTime: '8 min read',
+      id: '1',
+      title: 'The Future of AI in Enterprise: 2024 Trends and Predictions',
+      excerpt: 'Explore the latest developments in AI technology and how they\'re reshaping enterprise operations.',
+      content: 'Full article content here...',
+      author: 'Dr. Sarah Johnson',
+      date: '2024-01-15',
+      category: 'ai',
+      tags: ['AI', 'Enterprise', 'Technology', 'Innovation'],
+      readTime: '5 min read',
       views: 1247,
-      category: 'cybersecurity',
-      tags: ['artificial-intelligence', 'cybersecurity', 'enterprise'],
-      featured: true,
-      image: '/blog/ai-cybersecurity-future.jpg'
+      featured: true
     },
     {
-      id: 2,
-      title: 'Quantum Computing in Enterprise: Real-World Applications and ROI',
-      excerpt: 'Discover practical applications of quantum computing in enterprise environments and how organizations can calculate the return on investment for quantum initiatives.',
-      content: 'Quantum computing has long been the domain of research laboratories and academic institutions, but we\'re now entering an era where quantum computers are becoming accessible to enterprises. While the technology is still in its early stages, forward-thinking organizations are already exploring how quantum computing can solve complex business problems...',
-      author: 'Michael Rodriguez',
-      authorAvatar: '/avatars/michael-rodriguez.jpg',
-      publishDate: '2024-01-12',
-      readTime: '12 min read',
-      views: 892,
+      id: '2',
+      title: 'Quantum Computing: Breaking Down the Hype vs Reality',
+      excerpt: 'A comprehensive look at quantum computing\'s current state and practical applications.',
+      content: 'Full article content here...',
+      author: 'Michael Chen',
+      date: '2024-01-10',
       category: 'quantum',
-      tags: ['quantum-computing', 'enterprise', 'innovation'],
-      featured: true,
-      image: '/blog/quantum-enterprise-applications.jpg'
+      tags: ['Quantum Computing', 'Technology', 'Research'],
+      readTime: '8 min read',
+      views: 892,
+      featured: true
     },
     {
-      id: 3,
-      title: 'Building Scalable Microservices Architecture with AI-Driven Monitoring',
-      excerpt: 'Learn how to design and implement microservices architecture that scales automatically using AI-powered monitoring and orchestration tools.',
-      content: 'Microservices architecture has become the de facto standard for building scalable, maintainable applications. However, as the number of services grows, traditional monitoring and orchestration approaches become insufficient. This is where AI-driven monitoring comes into play, offering intelligent insights and automated scaling decisions...',
-      author: 'Alex Thompson',
-      authorAvatar: '/avatars/alex-thompson.jpg',
-      publishDate: '2024-01-10',
-      readTime: '10 min read',
+      id: '3',
+      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
+      excerpt: 'How AI is both creating new security challenges and providing innovative solutions.',
+      content: 'Full article content here...',
+      author: 'Emily Rodriguez',
+      date: '2024-01-08',
+      category: 'cybersecurity',
+      tags: ['Cybersecurity', 'AI', 'Security'],
+      readTime: '6 min read',
       views: 756,
-      category: 'cloud-devops',
-      tags: ['microservices', 'devops', 'artificial-intelligence'],
-      featured: false,
-      image: '/blog/microservices-ai-monitoring.jpg'
+      featured: false
     },
     {
-      id: 4,
-      title: 'The Rise of Edge AI: Bringing Intelligence to the Network Edge',
-      excerpt: 'Explore how edge AI is transforming industries by bringing machine learning capabilities closer to where data is generated, enabling real-time decision making.',
-      content: 'Edge computing has been gaining momentum as organizations seek to process data closer to its source. Now, with the integration of artificial intelligence at the edge, we\'re seeing a new paradigm emerge: Edge AI. This combination is revolutionizing industries from manufacturing to healthcare...',
-      author: 'Dr. Emily Watson',
-      authorAvatar: '/avatars/emily-watson.jpg',
-      publishDate: '2024-01-08',
-      readTime: '9 min read',
-      views: 634,
-      category: 'iot',
-      tags: ['edge-computing', 'artificial-intelligence', 'iot'],
-      featured: false,
-      image: '/blog/edge-ai-transformation.jpg'
-    },
-    {
-      id: 5,
-      title: 'Blockchain Beyond Cryptocurrency: Enterprise Use Cases That Matter',
-      excerpt: 'Discover practical enterprise applications of blockchain technology that go far beyond digital currencies and are driving real business value.',
-      content: 'When most people think of blockchain, they immediately think of cryptocurrencies like Bitcoin and Ethereum. However, the underlying technology has far-reaching implications for enterprise applications. From supply chain management to digital identity verification...',
+      id: '4',
+      title: 'Building Successful Micro SaaS Products: Lessons Learned',
+      excerpt: 'Key insights from building and scaling micro SaaS solutions for modern businesses.',
+      content: 'Full article content here...',
       author: 'David Kim',
-      authorAvatar: '/avatars/david-kim.jpg',
-      publishDate: '2024-01-05',
-      readTime: '11 min read',
-      views: 567,
-      category: 'blockchain',
-      tags: ['blockchain', 'enterprise', 'innovation'],
-      featured: false,
-      image: '/blog/blockchain-enterprise-use-cases.jpg'
-    },
-    {
-      id: 6,
-      title: 'Data-Driven Decision Making: Building a Culture of Analytics',
-      excerpt: 'Learn how to create a data-driven culture in your organization and empower teams to make better decisions using advanced analytics and AI.',
-      content: 'In today\'s competitive business environment, organizations that can harness the power of their data have a significant advantage. However, building a truly data-driven culture requires more than just implementing analytics tools...',
-      author: 'Lisa Park',
-      authorAvatar: '/avatars/lisa-park.jpg',
-      publishDate: '2024-01-03',
+      date: '2024-01-05',
+      category: 'saas',
+      tags: ['SaaS', 'Business', 'Startup'],
       readTime: '7 min read',
-      views: 445,
-      category: 'data-analytics',
-      tags: ['data-science', 'analytics', 'enterprise'],
-      featured: false,
-      image: '/blog/data-driven-decision-making.jpg'
+      views: 634,
+      featured: false
     }
   ];
 
-  const filteredPosts = blogPosts.filter(post => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         post.content.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
-    const matchesTag = selectedTag === 'all' || post.tags.includes(selectedTag);
-    
-    return matchesSearch && matchesCategory && matchesTag;
-  });
-
-  const featuredPosts = blogPosts.filter(post => post.featured);
-  const recentPosts = blogPosts.slice(0, 3);
+  const filteredPosts = useMemo(() => {
+    return blogPosts.filter(post => {
+      const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           post.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      
+      const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
+      
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchTerm, selectedCategory]);
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
+    return new Date(dateString).toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
     });
   };
 
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : BookOpen;
-  };
-
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'General';
-  };
-
   return (
-    <div className="min-h-screen bg-zion-blue">
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+      {/* Header */}
+      <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            className="text-5xl md:text-6xl font-bold text-white mb-6"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Insights & Innovation
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
-                {' '}Blog
-              </span>
-            </h1>
-            <p className="text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
-              Stay ahead of the curve with expert insights on AI, cybersecurity, quantum computing, 
-              and the latest technology trends that are shaping the future of business.
-            </p>
+            Zion Tech Blog
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
+          >
+            Insights, trends, and expert analysis on AI, cybersecurity, quantum computing, and business technology.
+          </motion.p>
+
+          {/* Search Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search articles..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Search and Filter Section */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search Bar */}
-            <div className="max-w-2xl mx-auto mb-8">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search articles, topics, or authors..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-zion-blue-dark border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20"
-                />
-              </div>
-            </div>
-
-            {/* Category Pills */}
-            <div className="flex flex-wrap justify-center gap-3">
-              {categories.slice(0, 6).map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 flex items-center gap-2 ${
-                    selectedCategory === category.id
-                      ? 'bg-zion-cyan text-zion-blue'
-                      : 'bg-zion-blue-dark text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
-                  }`}
-                >
-                  <category.icon className="w-4 h-4" />
-                  {category.name}
-                  {category.count > 0 && (
-                    <span className="ml-1 text-xs opacity-75">({category.count})</span>
-                  )}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Posts */}
+      {/* Featured Articles */}
       {filteredPosts.filter(post => post.featured).length > 0 && (
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <motion.div
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               className="text-3xl font-bold text-white mb-12 text-center"
             >
@@ -308,9 +242,8 @@ export default function Blog() {
                         <ArrowRight className="w-5 h-5" />
                       </button>
                     </div>
-                  </div>
-                </motion.article>
-              ))}
+                  </motion.article>
+                ))}
             </div>
           </div>
         </section>
@@ -337,82 +270,97 @@ export default function Blog() {
                         className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-colors flex items-center justify-between ${
                           selectedCategory === category.id
                             ? 'bg-zion-cyan text-zion-blue'
-                            : 'text-zion-slate-light hover:bg-zion-purple/20 hover:text-white'
+                            : 'text-gray-300 hover:bg-zion-purple/20'
                         }`}
                       >
-                        <span className="flex items-center gap-2">
-                          <category.icon className="w-4 h-4" />
-                          {category.name}
-                        </span>
-                        {category.count > 0 && (
-                          <span className="text-xs opacity-75">({category.count})</span>
-                        )}
+                        <span>{category.name}</span>
+                        <span className="text-xs opacity-75">({category.count})</span>
                       </button>
                     ))}
                   </div>
                 </div>
+              </div>
+            </div>
 
-                {/* Popular Tags */}
-                <div className="bg-zion-blue-dark border border-zion-purple/20 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold text-white mb-4 flex items-center gap-2">
-                    <Tag className="w-5 h-5 text-zion-cyan" />
-                    Popular Tags
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {tags.slice(1, 13).map((tag) => (
-                      <button
-                        key={tag.id}
-                        onClick={() => setSelectedTag(tag.id)}
-                        className={`px-3 py-1 rounded-full text-xs font-medium transition-colors ${
-                          selectedTag === tag.id
-                            ? 'bg-zion-cyan text-zion-blue'
-                            : 'bg-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/40 hover:text-white'
-                        }`}
-                      >
-                        {tag.name}
-                      </button>
-                    ))}
-                  </div>
-                </motion.article>
-              ))}
+            {/* Posts Grid */}
+            <div className="lg:col-span-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {filteredPosts
+                  .filter(post => !post.featured)
+                  .map((post, index) => (
+                    <motion.article
+                      key={post.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      className="bg-slate-800/30 backdrop-blur-sm rounded-lg overflow-hidden border border-slate-700/30 hover:border-slate-600/50 transition-all duration-300"
+                    >
+                      <div className="aspect-video bg-gradient-to-br from-blue-500/10 to-purple-500/10 flex items-center justify-center">
+                        <BookOpen className="w-12 h-12 text-blue-400 opacity-40" />
+                      </div>
+                      <div className="p-4">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs font-medium rounded">
+                            {categories.find(c => c.id === post.category)?.name}
+                          </span>
+                          <span className="text-slate-400 text-xs">•</span>
+                          <span className="text-slate-400 text-xs">{post.readTime}</span>
+                        </div>
+                        
+                        <h3 className="text-lg font-semibold text-white mb-2 line-clamp-2">
+                          {post.title}
+                        </h3>
+                        
+                        <p className="text-slate-300 text-sm mb-3 line-clamp-2">
+                          {post.excerpt}
+                        </p>
+                        
+                        <div className="flex items-center justify-between text-xs text-slate-400">
+                          <span>{post.author}</span>
+                          <span>{formatDate(post.date)}</span>
+                        </div>
+                      </div>
+                    </motion.article>
+                  ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Stay Updated with Latest Insights
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Stay Updated with Our Latest Insights
             </h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Get the latest technology insights, industry trends, and expert analysis 
-              delivered directly to your inbox. Never miss an important update.
+            <p className="text-gray-300 mb-6">
+              Get the latest articles, industry trends, and expert analysis delivered to your inbox.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 bg-zion-blue-darker border border-zion-purple/30 rounded-lg text-white placeholder-zion-slate-light focus:border-zion-cyan focus:outline-none focus:ring-2 focus:ring-zion-cyan/20"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 hover:-translate-y-1">
+              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors flex items-center justify-center gap-2">
+                <Mail className="w-4 h-4" />
                 Subscribe
               </button>
             </div>
-            
-            <p className="text-zion-slate-light text-sm mt-4">
-              By subscribing, you agree to our privacy policy and terms of service.
-            </p>
           </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default Blog;
