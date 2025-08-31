@@ -2,17 +2,32 @@ import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
-import { Sidebar } from './components/Sidebar';
-import { ChatAssistant } from './components/ChatAssistant';
-import { LoadingSpinner } from './components/ui/LoadingSpinner';
+
+// Layout Components
+import { Header } from './components/header/Header';
+import { Footer } from './components/layout/Footer';
+
+// Enhanced Components
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
+import { MobileResponsivenessEnhancer } from './components/MobileResponsivenessEnhancer';
 import { SEO } from './components/SEO';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { ThemeProvider } from './components/ThemeProvider';
-import { EnhancedAccessibilityPanel } from './components/EnhancedAccessibilityPanel';
-import { AdvancedPerformanceMonitor } from './components/AdvancedPerformanceMonitor';
-import { InteractiveUserExperience } from './components/InteractiveUserExperience';
-import SecurityEnhancer from './components/SecurityEnhancer';
+import FloatingActionButton from './components/FloatingActionButton';
+import { AdvancedAnalytics } from './components/AdvancedAnalytics';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
+import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
+import { AIContentOptimizer } from './components/AIContentOptimizer';
+import { SecurityMonitoringSystem } from './components/SecurityMonitoringSystem';
+import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
+import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
+import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
+import { EnhancedFooter } from './components/ui/EnhancedFooter';
+
+// Layout Components
+import ModernLayout from './components/layout/ModernLayout';
+import { AppFooter } from './components/layout/AppFooter';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -51,6 +66,18 @@ const AIAutonomousManufacturingPlatform = createLazyComponent(() => import('./pa
 const AICarbonFootprintManagementPlatform = createLazyComponent(() => import('./pages/services/ai-carbon-footprint-management-platform'));
 const AIMentalHealthSupportPlatform = createLazyComponent(() => import('./pages/services/ai-mental-health-support-platform'));
 const AISmartHomeEnergyManagementPlatform = createLazyComponent(() => import('./pages/services/ai-smart-home-energy-management-platform'));
+
+// New Innovative Services 2026 - Legal & Education
+const AIEducationalContentCreationPlatform = createLazyComponent(() => import('./pages/services/ai-educational-content-creation-platform'));
+const AIRealEstateInvestmentAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-analytics-platform'));
+
+// New Innovative Services 2025 - Additional
+const AIEnterpriseWorkflowAutomation = createLazyComponent(() => import('./pages/services/ai-enterprise-workflow-automation'));
+const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
+const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-intelligence'));
+
+// New AI Services 2026
+const AIEnterpriseResourcePlanning = createLazyComponent(() => import('./pages/services/ai-enterprise-resource-planning'));
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
 
@@ -84,6 +111,9 @@ const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services
 const AIAutonomousFinancialAdvisor = createLazyComponent(() => import('./pages/services/ai-autonomous-financial-advisor'));
 const AIHealthcareDiagnosticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-diagnostics-platform'));
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+
+// New Innovative Services 2025 - Content Creation & Analytics
+const PricingGuide = createLazyComponent(() => import('./components/PricingGuide'));
 
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
@@ -316,10 +346,41 @@ function App() {
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
 
+<<<<<<< HEAD
                     {/* New Innovative AI Services 2026 */}
                     <Route path="/services/ai-autonomous-financial-advisor" element={<AIAutonomousFinancialAdvisor />} />
                     <Route path="/services/ai-healthcare-diagnostics-platform" element={<AIHealthcareDiagnosticsPlatform />} />
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
+=======
+                    {/* New Innovative Services 2025 - Content Creation & Analytics */}
+                    <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
+                    <Route path="/pricing-guide" element={<PricingGuide />} />
+                    
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 - Additional */}
+                    <Route path="/services/ai-carbon-footprint-management-platform" element={<ModernLayout><AICarbonFootprintManagementPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-mental-health-support-platform" element={<ModernLayout><AIMentalHealthSupportPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-smart-home-energy-management-platform" element={<ModernLayout><AISmartHomeEnergyManagementPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 - Legal & Education */}
+                    <Route path="/services/ai-autonomous-legal-research-platform" element={<ModernLayout><AIAutonomousLegalResearchPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-educational-content-creation-platform" element={<ModernLayout><AIEducationalContentCreationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-real-estate-investment-analytics-platform" element={<ModernLayout><AIRealEstateInvestmentAnalyticsPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 */}
+                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-powered-seo" element={<ModernLayout><AIPoweredSEO /></ModernLayout>} />
+                    <Route path="/services/quantum-edge-computing-solutions" element={<ModernLayout><QuantumEdgeComputingSolutions /></ModernLayout>} />
+                    <Route path="/services/ai-space-technology-platform" element={<ModernLayout><AISpaceTechnologyPlatform /></ModernLayout>} />
+
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />
+>>>>>>> 632eae2770b36c1cea39caa0aeb35d304d78eae8
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
@@ -405,6 +466,7 @@ function App() {
 
                   </Routes>
                 </AnimatePresence>
+<<<<<<< HEAD
               </main>
               
               <Footer />
@@ -420,6 +482,52 @@ function App() {
         </ThemeProvider>
       </HelmetProvider>
     </ErrorBoundary>
+=======
+              </Suspense>
+            </main>
+
+            {/* Footer - Using AppFooter for enhanced features */}
+            <AppFooter />
+
+            {/* Enhanced Performance Optimizer */}
+            <PerformanceOptimizer enabled={true} showMetrics={false} />
+
+            {/* Enhanced Accessibility Enhancer */}
+            <EnhancedAccessibilityEnhancer enabled={true} showIssues={false} autoFix={true} />
+
+            {/* Mobile Responsiveness Enhancer */}
+            <MobileResponsivenessEnhancer 
+              enabled={true} 
+              showMobileIndicator={false}
+              enableTouchGestures={true}
+              enableMobileOptimizations={true}
+            />
+
+            {/* Advanced Analytics */}
+            <AdvancedAnalytics enabled={true} showMetrics={false} />
+
+            {/* Smart Notification System */}
+            <SmartNotificationSystem enabled={true} />
+
+            {/* Advanced Analytics Dashboard */}
+            <AdvancedAnalyticsDashboard enabled={true} />
+
+            {/* AI Content Optimizer */}
+            <AIContentOptimizer enabled={true} />
+
+            {/* Security Monitoring System */}
+            <SecurityMonitoringSystem enabled={true} />
+
+            {/* User Experience Optimizer */}
+            <UserExperienceOptimizer enabled={true} />
+
+            {/* Floating Action Button */}
+            <FloatingActionButton enabled={true} />
+          </div>
+        </Router>
+      </ErrorBoundary>
+    </HelmetProvider>
+>>>>>>> 632eae2770b36c1cea39caa0aeb35d304d78eae8
   );
 }
 

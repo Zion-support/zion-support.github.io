@@ -13,4 +13,21 @@ export const logErrorToProduction = (message, error) => {
   // - Custom logging service
   // - Analytics service
 };
-}
+
+export const logInfoToProduction = (message, data) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.info(message, data);
+  }
+};
+
+export const logWarningToProduction = (message, data) => {
+  if (process.env.NODE_ENV === 'development') {
+    console.warn(message, data);
+  }
+};
+
+export default {
+  logError: logErrorToProduction,
+  logInfo: logInfoToProduction,
+  logWarning: logWarningToProduction
+};

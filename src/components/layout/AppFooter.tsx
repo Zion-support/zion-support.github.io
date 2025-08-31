@@ -89,7 +89,11 @@ export function AppFooter() {
         { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI HR Management Platform", href: "/services/ai-hr-management-platform" },
+        { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" },
+        { name: "AI HR Management", href: "/services/ai-hr-management-platform" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
         { name: "AI Customer Churn Prevention", href: "/services/ai-customer-churn-prevention" },
@@ -115,7 +119,8 @@ export function AppFooter() {
     { name: "White Papers", href: "/white-papers", icon: FileText },
     { name: "Webinars", href: "/webinars", icon: Monitor },
     { name: "Training", href: "/training", icon: GraduationCap },
-    { name: "Research & Development", href: "/research-development", icon: Lightbulb }
+    { name: "Research & Development", href: "/research-development", icon: Lightbulb },
+    { name: "Pricing Guide", href: "/pricing-guide" }
   ];
 
   const supportLinks = [

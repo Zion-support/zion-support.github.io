@@ -24,7 +24,7 @@ import ContractBuilder from "@/pages/ContractBuilder";
 import Projects from "@/pages/Projects";
 const DashboardRoutes = () => {
   return (
-    <Routes>
+    <>
       {/* Dashboard Routes */}
       <Route
         path="/dashboard"
@@ -104,34 +104,42 @@ const DashboardRoutes = () => {
         }
       />
       <Route
-        path="/payments"
+        path="/orders"
         element={
           <ProtectedRoute>
-            <Payments />
+            <Orders />
           </ProtectedRoute>
         }
       />
       <Route
-        path="/interviews"
+        path="/order/:id"
         element={
           <ProtectedRoute>
-            <Interviews />
+            <OrderDetail />
           </ProtectedRoute>
         }
       />
       <Route
-        path="/notifications"
+        path="/profile"
         element={
           <ProtectedRoute>
-            <Notifications />
+            <Profile />
           </ProtectedRoute>
         }
       />
       <Route
-        path="/applications/track"
+        path="/account-settings"
         element={
           <ProtectedRoute>
-            <ApplicationStatusTracker />
+            <AccountSettings />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/saved-talents"
+        element={
+          <ProtectedRoute>
+            <SavedTalents />
           </ProtectedRoute>
         }
       />
@@ -209,7 +217,39 @@ const DashboardRoutes = () => {
           </ProtectedRoute>
         }
       />
-    </Routes>
+      <Route
+        path="/dispute-management"
+        element={
+          <ProtectedRoute>
+            <DisputeManagement />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/disputes"
+        element={
+          <ProtectedRoute>
+            <DisputesPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/dispute/:id"
+        element={
+          <ProtectedRoute>
+            <DisputeDetailPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/requests"
+        element={
+          <ProtectedRoute>
+            <RequestsPanel />
+          </ProtectedRoute>
+        }
+      />
+    </>
   );
 };
 export default DashboardRoutes;
