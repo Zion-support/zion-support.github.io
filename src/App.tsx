@@ -93,14 +93,24 @@ const AISalesCopilot = createLazyComponent(() => import('./pages/services/ai-sal
 const AIComplianceAssistant = createLazyComponent(() => import('./pages/services/ai-compliance-assistant'));
 const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/cloud-finops-optimizer'));
 
+// New Innovative Services 2026
+const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
+const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
+const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
+const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
 // New Innovative Micro SAAS Services 2026
-const AILegalDocumentAnalysis = createLazyComponent(() => import('./pages/services/ai-legal-document-analysis'));
-const AIRealEstateInvestmentPlatform = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-platform'));
+const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
+const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
-const AIEcommerceOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-ecommerce-optimization-platform'));
+
+
 
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
+
+// Comprehensive Services Showcase 2031
+const ComprehensiveServicesShowcase2031 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2031'));
 
 // Innovative Services Showcase 2032
 const InnovativeServicesShowcase2032 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2032'));
@@ -110,10 +120,6 @@ const InnovativeServicesShowcase2033 = createLazyComponent(() => import('./pages
 
 // Comprehensive Pricing Guide 2032
 const ComprehensivePricingGuide2032 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2032'));
-
-// Comprehensive Pricing Guide 2033
-const ComprehensivePricingGuide2033 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2033'));
-
 
 // New Innovative Services 2025 - Combined from both versions
 const AIEnterpriseAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-enterprise-automation-platform'));
@@ -281,6 +287,16 @@ function App() {
                     <Route path="/services/ai-compliance-assistant" element={<ModernLayout><AIComplianceAssistant /></ModernLayout>} />
                     <Route path="/services/cloud-finops-optimizer" element={<ModernLayout><CloudFinOpsOptimizer /></ModernLayout>} />
 
+                    {/* New Innovative Micro SAAS Services 2026 */}
+                    <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+
+                    {/* New Innovative Services 2026 */}
+                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-powered-seo" element={<ModernLayout><AIPoweredSEO /></ModernLayout>} />
+
                     {/* Innovative Services Showcase 2026 */}
                     <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
 
@@ -331,10 +347,16 @@ function App() {
                     <Route path="/services/ai-healthcare-analytics" element={<ModernLayout><AIHealthcareAnalytics /></ModernLayout>} />
 
                     {/* New Innovative Micro SAAS Services 2026 */}
-                    <Route path="/services/ai-legal-document-analysis" element={<ModernLayout><AILegalDocumentAnalysis /></ModernLayout>} />
-                    <Route path="/services/ai-real-estate-investment-platform" element={<ModernLayout><AIRealEstateInvestmentPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-ecommerce-optimization-platform" element={<ModernLayout><AIEcommerceOptimizationPlatform /></ModernLayout>} />
+                    
+                    {/* New Innovative Services 2026 */}
+                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-powered-seo" element={<ModernLayout><AIPoweredSEO /></ModernLayout>} />
+                    <Route path="/services/quantum-edge-computing-solutions" element={<ModernLayout><QuantumEdgeComputingSolutions /></ModernLayout>} />
+                    <Route path="/services/ai-space-technology-platform" element={<ModernLayout><AISpaceTechnologyPlatform /></ModernLayout>} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
@@ -351,9 +373,15 @@ function App() {
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/innovative-ai-services-showcase-2025" element={<ModernLayout><InnovativeAIServicesShowcase2025 /></ModernLayout>} />
+                    <Route path="/comprehensive-services-showcase-2031" element={<ModernLayout><ComprehensiveServicesShowcase2031 /></ModernLayout>} />
                     <Route path="/innovative-services-showcase-2025" element={<ModernLayout><InnovativeServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/advanced-services-showcase-2025" element={<ModernLayout><AdvancedServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/comprehensive-pricing-guide-2025" element={<ModernLayout><ComprehensivePricingGuide2025 /></ModernLayout>} />
+                    <Route path="/innovative-services-showcase-2026" element={<ModernLayout><InnovativeServicesShowcase2026 /></ModernLayout>} />
+                    <Route path="/innovative-services-showcase-2032" element={<ModernLayout><InnovativeServicesShowcase2032 /></ModernLayout>} />
+                    <Route path="/innovative-services-showcase-2033" element={<ModernLayout><InnovativeServicesShowcase2033 /></ModernLayout>} />
+                    <Route path="/comprehensive-pricing-guide-2032" element={<ModernLayout><ComprehensivePricingGuide2032 /></ModernLayout>} />
+                    <Route path="/comprehensive-pricing-guide-2033" element={<ModernLayout><ComprehensivePricingGuide2033 /></ModernLayout>} />
 
                     {/* Legal and Policy Pages */}
                     <Route path="/privacy" element={<ModernLayout><Privacy /></ModernLayout>} />

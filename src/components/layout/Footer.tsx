@@ -69,7 +69,9 @@ export function Footer() {
         { name: "AI Financial Risk Management Enhanced", href: "/services/ai-financial-risk-management-enhanced" },
         { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning" },
         { name: "AI Customer Success Platform", href: "/services/ai-customer-success-platform" },
-        { name: "AI Supply Chain Intelligence", href: "/services/ai-supply-chain-intelligence" }
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-supply-chain-intelligence" },
+        { name: "AI Autonomous Logistics Platform", href: "/services/ai-autonomous-logistics-platform" },
+        { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" }
       ]
     },
     {
