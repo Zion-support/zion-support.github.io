@@ -111,36 +111,36 @@ export default function Services() {
 
   const featuredServices = [
     {
-      title: "AI Legal Document Analysis",
-      description: "Revolutionize legal document processing with 95% accuracy and 80% time savings",
-      price: "From $299/month",
-      features: ["AI-Powered Analysis", "Compliance Monitoring", "Risk Assessment"],
-      href: "/services/ai-legal-document-analysis",
+      title: "AI Autonomous Legal Research Platform",
+      description: "Revolutionize legal research with AI-powered intelligence and 90% time savings",
+      price: "From $199/month",
+      features: ["AI-Powered Research", "Case Law Search", "Legal Analysis"],
+      href: "/services/ai-autonomous-legal-research-platform",
       color: "from-blue-400 to-purple-500",
       popular: true
     },
     {
-      title: "AI Real Estate Investment Analytics",
-      description: "Transform real estate investments with 92% prediction accuracy",
-      price: "From $199/month",
-      features: ["Market Predictions", "ROI Calculator", "Geographic Intelligence"],
-      href: "/services/ai-real-estate-investment-analytics",
+      title: "AI Autonomous Logistics Platform",
+      description: "Transform logistics operations with 30% faster delivery and 25% cost reduction",
+      price: "From $599/month",
+      features: ["Route Optimization", "Fleet Management", "Supply Chain Visibility"],
+      href: "/services/ai-autonomous-logistics-platform",
       color: "from-green-400 to-blue-500"
     },
     {
-      title: "AI Supply Chain Optimization",
-      description: "Reduce costs by 40% and improve delivery times by 50%",
-      price: "From $399/month",
-      features: ["Demand Forecasting", "Route Optimization", "Inventory Management"],
-      href: "/services/ai-supply-chain-optimization-enhanced",
+      title: "AI Autonomous Manufacturing Platform",
+      description: "Revolutionize manufacturing with 40% faster production and 35% cost reduction",
+      price: "From $799/month",
+      features: ["Production Planning", "Quality Control", "Predictive Maintenance"],
+      href: "/services/ai-autonomous-manufacturing-platform",
       color: "from-blue-400 to-indigo-500"
     },
     {
-      title: "AI Sales Copilot",
-      description: "Intelligent sales automation with 40% conversion improvement",
-      price: "From $2,200/month",
-      features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
-      href: "/services/ai-sales-copilot",
+      title: "AI Autonomous Research Assistant",
+      description: "Accelerate research with 80% time savings and 95% accuracy rate",
+      price: "From $99/month",
+      features: ["Literature Review", "Data Analysis", "Report Generation"],
+      href: "/services/ai-autonomous-research-assistant",
       color: "from-green-400 to-emerald-500"
     }
   ];
