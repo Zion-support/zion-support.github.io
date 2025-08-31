@@ -1,25 +1,59 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon export default function Research(...args: any[]): any {
-=======
-import { FlaskConical, BookOpen, Users, Clock, Star, Search, Filter, Download, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Code, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star as StarIcon               } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { 
+  FlaskConical, 
+  BookOpen, 
+  Users, 
+  Clock, 
+  Star, 
+  Search, 
+  Filter, 
+  Download, 
+  ExternalLink, 
+  ArrowRight, 
+  Brain, 
+  Cloud, 
+  Shield, 
+  Database, 
+  Zap, 
+  Globe, 
+  Target, 
+  TrendingUp, 
+  Award, 
+  CheckCircle, 
+  Calendar, 
+  MapPin, 
+  DollarSign, 
+  FileText, 
+  Lightbulb, 
+  Microscope, 
+  Rocket, 
+  Code, 
+  Network, 
+  Cpu, 
+  Lock, 
+  BarChart3, 
+  Palette, 
+  Smartphone, 
+  Eye
+} from 'lucide-react';
 
-export default function Research(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function Research() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeStatus, setActiveStatus] = useState('all');
   const [activeType, setActiveType] = useState('all');
 
   const categories = [
-    { id: 'all', name: 'All Categories', icon: <FlaskConical className="w-5 h-5" />, count: 0 },
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 12 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 8 },
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 6 },
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 10 },
-    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 7 },
-    { id: 'quantum', name: 'Quantum Computing', icon: <Cpu className="w-5 h-5" />, count: 4 },
-    { id: 'iot', name: 'IoT & Edge Computing', icon: <Network className="w-5 h-5" />, count: 5 }
+    { id: 'all', name: 'All Categories', icon: FlaskConical, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 12 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 8 },
+    { id: 'security', name: 'Cybersecurity', icon: Shield, count: 6 },
+    { id: 'data', name: 'Data & Analytics', icon: Database, count: 10 },
+    { id: 'emerging', name: 'Emerging Technologies', icon: Zap, count: 7 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Cpu, count: 4 },
+    { id: 'iot', name: 'IoT & Edge Computing', icon: Network, count: 5 }
   ];
 
   const statuses = [
@@ -62,7 +96,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1038/s41534-024-00800-5',
           citations: 23
-
+        }
       ],
       tags: ['Quantum Computing', 'Machine Learning', 'Finance', 'Optimization', 'Risk Assessment'],
       featured: true,
@@ -99,7 +133,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 18
-
+        }
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'AI Ethics', 'Medical Imaging'],
       featured: true,
@@ -129,7 +163,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1109/MSEC.2024.001234',
           citations: 12
-
+        }
       ],
       tags: ['Zero-Trust', 'Industrial IoT', 'Cybersecurity', 'Critical Infrastructure', 'Security Architecture'],
       featured: false,
@@ -181,7 +215,7 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1111/jscm.12345',
           citations: 28
-
+        }
       ],
       tags: ['Blockchain', 'Supply Chain', 'Transparency', 'Smart Contracts', 'Traceability'],
       featured: false,
@@ -211,52 +245,31 @@ export default function Research(...args: any[]): any {
           year: 2024,
           doi: '10.1038/s41928-024-01123-4',
           citations: 19
-<<<<<<< HEAD
-
+        }
       ],
       tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],
       featured: true,
       progress: 55,
       impact: 'high'
-
-=======
-        };
-      ],;
-      tags: ['Neuromorphic Computing', 'Edge AI', 'Energy Efficiency', 'Spiking Neural Networks', 'Hardware Design'],;
-      featured: true,;
-      progress: 55,;
-      impact: 'high';
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   // Update counts
-<<<<<<< HEAD
-  categories.forEach(cat = > {;
-    cat.count = researchProjects.filter(p => p.category === cat.id).length});
-
-  statuses.forEach(status = > {;
-    status.count = researchProjects.filter(p => p.status === status.id).length});
-
-  types.forEach(type = > {;
-    type.count = researchProjects.filter(p => p.type === type.id).length});
-=======
-  categories.forEach(cat = > {;
+  categories.forEach(cat => {
     cat.count = researchProjects.filter(p => p.category === cat.id).length;
   });
 
-  statuses.forEach(status = > {;
+  statuses.forEach(status => {
     status.count = researchProjects.filter(p => p.status === status.id).length;
   });
 
-  types.forEach(type = > {;
+  types.forEach(type => {
     type.count = researchProjects.filter(p => p.type === type.id).length;
   });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredProjects = researchProjects.filter(project => {;
-    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
-                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredProjects = researchProjects.filter(project => {
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
 
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
@@ -266,407 +279,375 @@ export default function Research(...args: any[]): any {
     return matchesSearch && matchesCategory && matchesStatus && matchesType;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />};
-
-  const getCategoryIcon = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return categories.find(c => c.id === categoryId)?.icon || <FlaskConical className="w-5 h-5" />;
+  const getCategoryIcon = (categoryId: string) => {
+    const category = categories.find(c => c.id === categoryId);
+    return category ? category.icon : FlaskConical;
   };
 
-  const getStatusColor = (status: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const getStatusColor = (status: string) => {
+    switch (status) {
       case 'active': return 'text-green-400';
       case 'completed': return 'text-blue-400';
       case 'planning': return 'text-yellow-400';
       case 'published': return 'text-purple-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      default: return 'text-gray-400';
+    }
   };
 
-<<<<<<< HEAD
-  const getImpactColor = (impact: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    switch (impact) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const getImpactColor = (impact: string) => {
+    switch (impact) {
       case 'very-high': return 'text-red-400';
       case 'high': return 'text-orange-400';
       case 'medium': return 'text-yellow-400';
       case 'low': return 'text-green-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      default: return 'text-gray-400';
+    }
   };
 
-<<<<<<< HEAD
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+  const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',;
-      month: 'short';
-    })};
-
-  const formatFunding = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
-    if (amount >= 1000000) {
-      return `$${(amount / 1000000).toFixed(1)}M`} else if (amount >= 1000) {;
-      return `$${(amount / 1000).toFixed(0)}K`};
-    return `$${amount.toLocaleString()}`};
-=======
-  const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
-    return new Date(dateString).toLocaleDateString('en-US', {;
-      year: 'numeric',;
-      month: 'short';
+      year: 'numeric',
+      month: 'short'
     });
   };
 
-  const formatFunding = (amount: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
-    if (amount >= 1000000) {;
+  const formatFunding = (amount: number) => {
+    if (amount >= 1000000) {
       return `$${(amount / 1000000).toFixed(1)}M`;
     } else if (amount >= 1000) {
       return `$${(amount / 1000).toFixed(0)}K`;
-
+    }
     return `$${amount.toLocaleString()}`;
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <FlaskConical className="w-16 h-16 text-zion-cyan" />
-            </div>
-          </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Research & Innovation
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-            Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.
-          </p>
-        </div>
-      </div>
-
-      {/* Search and Filters */}
-      <div className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            {/* Search Bar */}
-            <div className="relative mb-8">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search research projects..."
-                className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
-              />
-            </div>
-
-            {/* Filters */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              {/* Categories */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Category</label>
-                <div className="flex flex-wrap gap-2">
-                  {categories.slice(0, 4).map((category) => (
-                    <button
-                      key={category.id}
-                      onClick={() => setActiveCategory(category.id)}
-                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeCategory === category.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {category.icon}
-                      {category.name}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Status */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Status</label>
-                <div className="flex flex-wrap gap-2">
-                  {statuses.map((status) => (
-                    <button
-                      key={status.id}
-                      onClick={() => setActiveStatus(status.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeStatus === status.id
-                          ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {status.name} ({status.count})
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Types */}
-              <div className="space-y-3">
-                <label className="text-white font-medium">Type</label>
-                <div className="flex flex-wrap gap-2">
-                  {types.map((type) => (
-                    <button
-                      key={type.id}
-                      onClick={() => setActiveType(type.id)}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        activeType === type.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover: anyanyanyanyanyanyanyanyanyanyanyanyanybg-zion-slate-light hover:text-white'
-                      }`}
-
-                      {type.name} ({type.count})
-                    </button>
-                  ))}
-                </div>
+    <>
+      <SEO 
+        title="Research & Innovation - Zion Tech Group"
+        description="Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships."
+        keywords="research, innovation, AI research, quantum computing, cybersecurity, technology research"
+        canonicalUrl="https://ziontechgroup.com/research"
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-blue-500/20 rounded-full">
+                <FlaskConical className="w-16 h-16 text-blue-400" />
               </div>
             </div>
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Research & Innovation
+            </h1>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+              Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.
+            </p>
           </div>
         </div>
-      </div>
 
-      {/* Featured Research */}
-      {researchProjects.filter(p               => p.featured).length > 0 && (
-        <div className="py-12 bg-zion-slate-dark">
+        {/* Search and Filters */}
+        <div className="py-12">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold text-center text-white mb-12">
-              Featured Research Projects
-            </h2>
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {researchProjects.filter(p               => p.featured).map((project) => (
-                <div
-                  key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+            <div className="max-w-6xl mx-auto">
+              {/* Search Bar */}
+              <div className="relative mb-8">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search research projects..."
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                />
+              </div>
 
-                  <div className="relative h-48 bg-gradient-to-br from-zion-blue to-zion-purple">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                        Featured
-                      </span>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <div className="flex items-center gap-1 text-white">
-                        <span className={`text-sm font-medium ${getImpactColor(project.impact)}`}>
-                          {project.impact.replace('-', ' ').toUpperCase()}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="absolute bottom-4 left-4 right-4">
-                      <div className="flex items-center justify-between text-white">
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4" />
-                          <span className="text-sm">{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <DollarSign className="w-4 h-4" />
-                          <span className="text-sm">{formatFunding(project.funding)}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="p-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      {getCategoryIcon(project.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === project.category)?.name}
-                      </span>
-                      <span className={`text-sm font-medium ${getStatusColor(project.status)}`}>
-                        {statuses.find(s => s.id === project.status)?.name}
-                      </span>
-                    </div>
-
-                    <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-                    <p className="text-zion-slate-light text-sm mb-4">{project.description}</p>
-
-                    <div className="flex items-center justify-between mb-4 text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1">
-                        <Users className="w-4 h-4" />
-                        {project.team.length} researchers
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <FileText className="w-4 h-4" />
-                        {project.publications.length} publications
-                      </div>
-                    </div>
-
-                    <button className="w-full bg-zion-cyan text-zion-slate-dark py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                      Learn More
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* All Research Projects */}
-      <div className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-white mb-12">
-            All Research Projects
-          </h2>
-
-          {filteredProjects.length > 0 ? (
-            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 max-w-6xl mx-auto">
-              {filteredProjects.map((project)               => (
-                <div
-                  key={project.id}
-                  className="bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow"
-
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-2">
-                      {getCategoryIcon(project.category)}
-                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
-                        {categories.find(c => c.id === project.category)?.name}
-                      </span>
-                      {project.featured && (
-                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
-                          Featured
-                        </span>
-                      )}
-                    </div>
-                    <div className="text-right">
-                      <div className={`text-sm font-medium ${getStatusColor(project.status)}`}>
-                        {statuses.find(s => s.id === project.status)?.name}
-                      </div>
-                      <div className={`text-xs font-medium ${getImpactColor(project.impact)}`}>
-                        {project.impact.replace('-', ' ').toUpperCase()} Impact
-                      </div>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
-                  <p className="text-zion-slate-light mb-4">{project.description}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.slice(0, 4).map((tag, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-zion-slate-light/20 text-zion-slate-light text-xs rounded-full"
-
-                        {tag}
-                      </span>
+              {/* Filters */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {/* Categories */}
+                <div className="space-y-3">
+                  <label className="text-white font-medium">Category</label>
+                  <div className="flex flex-wrap gap-2">
+                    {categories.slice(0, 4).map((category) => (
+                      <button
+                        key={category.id}
+                        onClick={() => setActiveCategory(category.id)}
+                        className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                          activeCategory === category.id
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700 hover:text-white'
+                        }`}
+                      >
+                        <category.icon className="w-4 h-4" />
+                        {category.name}
+                      </button>
                     ))}
                   </div>
+                </div>
 
-                  <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-zion-slate-light">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-4 h-4" />
-                      <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <DollarSign className="w-4 h-4" />
-                      <span>{formatFunding(project.funding)}</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4" />
-                      <span>{project.team.length} researchers</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <FileText className="w-4 h-4" />
-                      <span>{project.publications.length} publications</span>
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between text-sm text-zion-slate-light mb-2">
-                      <span>Progress</span>
-                      <span>{project.progress}%</span>
-                    </div>
-                    <div className="w-full bg-zion-slate-light/20 rounded-full h-2">
-                      <div
-                        className="bg-zion-cyan h-2 rounded-full transition-all duration-300"
-                        style={{ width: `${project.progress}%` }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-zion-slate-light">
-                      <div className="flex items-center gap-1 mb-1">
-                        <Users className="w-4 h-4" />
-                        Lead: {project.leadResearcher}
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <MapPin className="w-4 h-4" />
-                        {project.institution}
-                      </div>
-                    </div>
-
-                    <div className="flex gap-2">
-                      <button className="bg-zion-purple text-white px-4 py-2 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2">
-                        <FileText className="w-4 h-4" />
-                        Details
+                {/* Status */}
+                <div className="space-y-3">
+                  <label className="text-white font-medium">Status</label>
+                  <div className="flex flex-wrap gap-2">
+                    {statuses.map((status) => (
+                      <button
+                        key={status.id}
+                        onClick={() => setActiveStatus(status.id)}
+                        className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                          activeStatus === status.id
+                            ? 'bg-purple-500 text-white'
+                            : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700 hover:text-white'
+                        }`}
+                      >
+                        {status.name} ({status.count})
                       </button>
-                      {project.publications.length > 0 && (
-                        <button className="bg-zion-cyan text-zion-slate-dark px-4 py-2 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-                          Papers
-                        </button>
-                      )}
-                    </div>
+                    ))}
                   </div>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <FlaskConical className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-white mb-2">No research projects found</h3>
-              <p className="text-zion-slate-light">
-                Try adjusting your search terms or browse all categories
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Join Our Research Community
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-            Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
-              Explore Collaborations
-            </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
-              Contact Research Team
-<<<<<<< HEAD
-            </button>
+                {/* Types */}
+                <div className="space-y-3">
+                  <label className="text-white font-medium">Type</label>
+                  <div className="flex flex-wrap gap-2">
+                    {types.map((type) => (
+                      <button
+                        key={type.id}
+                        onClick={() => setActiveType(type.id)}
+                        className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                          activeType === type.id
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700 hover:text-white'
+                        }`}
+                      >
+                        {type.name} ({type.count})
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Featured Research */}
+        {researchProjects.filter(p => p.featured).length > 0 && (
+          <div className="py-12 bg-slate-800/50">
+            <div className="container mx-auto px-4">
+              <h2 className="text-3xl font-bold text-center text-white mb-12">
+                Featured Research Projects
+              </h2>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                {researchProjects.filter(p => p.featured).map((project) => (
+                  <div
+                    key={project.id}
+                    className="bg-slate-800/50 border border-slate-600/50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                  >
+                    <div className="relative h-48 bg-gradient-to-br from-blue-600 to-purple-600">
+                      <div className="absolute inset-0 bg-black/20"></div>
+                      <div className="absolute top-4 left-4">
+                        <span className="px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-medium">
+                          Featured
+                        </span>
+                      </div>
+                      <div className="absolute top-4 right-4">
+                        <div className="flex items-center gap-1 text-white">
+                          <span className={`text-sm font-medium ${getImpactColor(project.impact)}`}>
+                            {project.impact.replace('-', ' ').toUpperCase()}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="absolute bottom-4 left-4 right-4">
+                        <div className="flex items-center justify-between text-white">
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <span className="text-sm">{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <DollarSign className="w-4 h-4" />
+                            <span className="text-sm">{formatFunding(project.funding)}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="p-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <getCategoryIcon categoryId={project.category} className="w-5 h-5" />
+                        <span className="text-sm text-gray-300 bg-gray-600/20 px-2 py-1 rounded-full">
+                          {categories.find(c => c.id === project.category)?.name}
+                        </span>
+                        <span className={`text-sm font-medium ${getStatusColor(project.status)}`}>
+                          {statuses.find(s => s.id === project.status)?.name}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+                      <p className="text-gray-300 text-sm mb-4">{project.description}</p>
+
+                      <div className="flex items-center justify-between mb-4 text-sm text-gray-300">
+                        <div className="flex items-center gap-1">
+                          <Users className="w-4 h-4" />
+                          {project.team.length} researchers
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <FileText className="w-4 h-4" />
+                          {project.publications.length} publications
+                        </div>
+                      </div>
+
+                      <button className="w-full bg-blue-500 text-white py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                        Learn More
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* All Research Projects */}
+        <div className="py-16">
+          <div className="container mx-auto px-4">
+            <h2 className="text-3xl font-bold text-center text-white mb-12">
+              All Research Projects
+            </h2>
+
+            {filteredProjects.length > 0 ? (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                {filteredProjects.map((project) => (
+                  <div
+                    key={project.id}
+                    className="bg-slate-800/50 border border-slate-600/50 rounded-lg p-6 hover:shadow-lg transition-shadow"
+                  >
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-2">
+                        <getCategoryIcon categoryId={project.category} className="w-5 h-5" />
+                        <span className="text-sm text-gray-300 bg-gray-600/20 px-2 py-1 rounded-full">
+                          {categories.find(c => c.id === project.category)?.name}
+                        </span>
+                        {project.featured && (
+                          <span className="px-2 py-1 bg-blue-500 text-white rounded-full text-xs font-medium">
+                            Featured
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-right">
+                        <div className={`text-sm font-medium ${getStatusColor(project.status)}`}>
+                          {statuses.find(s => s.id === project.status)?.name}
+                        </div>
+                        <div className={`text-xs font-medium ${getImpactColor(project.impact)}`}>
+                          {project.impact.replace('-', ' ').toUpperCase()} Impact
+                        </div>
+                      </div>
+                    </div>
+
+                    <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
+                    <p className="text-gray-300 mb-4">{project.description}</p>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.slice(0, 4).map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 bg-gray-600/20 text-gray-300 text-xs rounded-full"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-300">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{formatDate(project.startDate)} - {formatDate(project.endDate)}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <DollarSign className="w-4 h-4" />
+                        <span>{formatFunding(project.funding)}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4" />
+                        <span>{project.team.length} researchers</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <FileText className="w-4 h-4" />
+                        <span>{project.publications.length} publications</span>
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <div className="flex items-center justify-between text-sm text-gray-300 mb-2">
+                        <span>Progress</span>
+                        <span>{project.progress}%</span>
+                      </div>
+                      <div className="w-full bg-gray-600/20 rounded-full h-2">
+                        <div
+                          className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                          style={{ width: `${project.progress}%` }}
+                        ></div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between">
+                      <div className="text-sm text-gray-300">
+                        <div className="flex items-center gap-1 mb-1">
+                          <Users className="w-4 h-4" />
+                          Lead: {project.leadResearcher}
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <MapPin className="w-4 h-4" />
+                          {project.institution}
+                        </div>
+                      </div>
+
+                      <div className="flex gap-2">
+                        <button className="bg-purple-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center gap-2">
+                          <FileText className="w-4 h-4" />
+                          Details
+                        </button>
+                        {project.publications.length > 0 && (
+                          <button className="bg-blue-500 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                            Papers
+                          </button>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-12">
+                <FlaskConical className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">No research projects found</h3>
+                <p className="text-gray-300">
+                  Try adjusting your search terms or browse all categories
+                </p>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Join Our Research Community
+            </h2>
+            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+              Collaborate with leading researchers, access cutting-edge technology, and contribute to breakthrough innovations.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <button className="bg-blue-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors">
+                Explore Collaborations
+              </button>
+              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Contact Research Team
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  )};
-=======;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
+    </>
   );
-<<<<<<< HEAD
-}}}}}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
