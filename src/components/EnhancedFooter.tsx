@@ -41,12 +41,18 @@ export function EnhancedFooter() {
       ]
     },
     {
-      title: 'IT Services',
-      services: [
-        { name: 'Intelligent DevOps Automation', href: '/services/intelligent-devops-automation' },
-        { name: 'Cloud Migration & Optimization', href: '/services/cloud-migration-automation' },
-        { name: 'Cybersecurity Solutions', href: '/services/ai-threat-hunting-platform' },
-        { name: 'Digital Transformation', href: '/services/digital-transformation' }
+      title: 'Services',
+      links: [
+        { name: 'AI Solutions', href: '/ai-services' },
+        { name: 'Quantum Computing', href: '/services/ai-quantum-computing-platform' },
+        { name: 'Space Technology', href: '/services/ai-space-technology-platform' },
+        { name: 'Financial Technology', href: '/services/ai-financial-technology-platform' },
+        { name: 'IT Services', href: '/it-services' },
+        { name: 'Cloud & DevOps', href: '/cloud-devops' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Data Analytics', href: '/data-analytics' },
+        { name: 'Micro SAAS', href: '/micro-saas' },
+        { name: 'All Services', href: '/comprehensive-services-showcase-2025' }
       ]
     },
     {
@@ -59,12 +65,27 @@ export function EnhancedFooter() {
       ]
     },
     {
-      title: 'Emerging Tech',
-      services: [
-        { name: 'Quantum Computing', href: '/services/quantum-computing' },
-        { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },
-        { name: 'IoT Edge Analytics', href: '/services/ai-iot-edge-analytics' },
-        { name: 'Decentralized Identity', href: '/services/decentralized-identity-platform' }
+      title: 'Resources',
+      links: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Documentation', href: '/documentation' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Training', href: '/training' },
+        { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2025' }
+      ]
+    },
+    {
+      title: 'Support',
+      links: [
+        { name: 'Help Center', href: '/help' },
+        { name: 'System Status', href: '/status' },
+        { name: 'API Documentation', href: '/api' },
+        { name: 'Developer Portal', href: '/developer-portal' },
+        { name: 'Community', href: '/community' },
+        { name: 'Contact Support', href: '/contact' }
+>>>>>>> cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-4ef6
       ]
     }
   ];
@@ -104,9 +125,14 @@ export function EnhancedFooter() {
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+  ];
+
+  const contactInfo = [
+    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
+    { icon: MapPin, text: '364 E Main St STE 1008 Middletown DE 19709', href: '#' }
+  ];
   ];
 
   return (
