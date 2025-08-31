@@ -7,7 +7,7 @@ import {
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, 
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, 
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, 
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText 
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car 
 } from 'lucide-react';
 
 export function EnhancedHeader() {
@@ -52,7 +52,7 @@ export function EnhancedHeader() {
         { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' },
         { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
-        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', description: 'Automated content creation' },
+        { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation & optimization' },
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
         { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' },
         { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' },
@@ -86,9 +86,32 @@ export function EnhancedHeader() {
       color: 'from-purple-500 to-pink-500',
       services: [
         { name: 'Quantum Computing', href: '/services/quantum-computing', description: 'Next-generation computing power' },
+        { name: 'AI Quantum Financial Trading', href: '/services/ai-quantum-financial-trading-platform', description: 'Quantum-powered trading platform' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'Connected device intelligence' },
         { name: 'Digital Twin Platform', href: '/services/digital-twin', description: 'Virtual replica technology' },
         { name: 'Space Technology', href: '/space-tech', description: 'Innovative space solutions' },
+      ]
+    },
+    {
+      title: 'Smart City & Infrastructure',
+      icon: Building2,
+      color: 'from-green-500 to-emerald-500',
+      services: [
+        { name: 'AI Smart City Management', href: '/services/ai-smart-city-infrastructure-management', description: 'Intelligent urban infrastructure' },
+        { name: 'Traffic Management', href: '/services/traffic-management', description: 'AI-powered traffic optimization' },
+        { name: 'Energy Grid Management', href: '/services/energy-grid', description: 'Smart energy distribution' },
+        { name: 'Environmental Monitoring', href: '/services/environmental-monitoring', description: 'Real-time environmental tracking' },
+      ]
+    },
+    {
+      title: 'Autonomous Systems',
+      icon: Car,
+      color: 'from-blue-500 to-cyan-500',
+      services: [
+        { name: 'AI Autonomous Vehicle Platform', href: '/services/ai-autonomous-vehicle-management-platform', description: 'Fleet management & safety' },
+        { name: 'Drone Management', href: '/services/drone-management', description: 'Autonomous drone operations' },
+        { name: 'Robotics Automation', href: '/services/robotics-automation', description: 'Industrial robotics solutions' },
+        { name: 'Autonomous Logistics', href: '/services/autonomous-logistics', description: 'Smart supply chain automation' },
       ]
     },
     {
@@ -98,8 +121,8 @@ export function EnhancedHeader() {
       services: [
         { name: 'Micro CRM', href: '/services/micro-crm', description: 'Lightweight customer management' },
         { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', description: 'Efficient support system' },
-        { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance insights' },
-        { name: 'Affiliate Tracking', href: '/services/affiliate-tracking', description: 'Partner program management' },
+        { name: 'AI Content Marketing', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation' },
+        { name: 'Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
       ]
     }
   ];

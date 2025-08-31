@@ -1,95 +1,96 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  MessageSquare, Brain, Zap, Globe, Users, BarChart3, 
+  Building2, Brain, Zap, Globe, Users, BarChart3, 
   Lock, Cpu, Network, Eye, AlertTriangle, CheckCircle,
-  ArrowRight, Star, Award, Phone, Mail, MapPin, TrendingUp,
-  Target, Shield, Gauge, Clock, FileText, Search, Headphones
+  ArrowRight, Star, Award, Phone, Mail, MapPin, Leaf,
+  Lightbulb, Wifi, TrafficCone, Droplets, Gauge
 } from 'lucide-react';
 
-const AICustomerSupportAutomation: React.FC = () => {
+const AISmartCityInfrastructureManagement: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Chatbots",
-      description: "Intelligent chatbots that understand context and provide accurate responses"
+      title: "AI-Powered Traffic Management",
+      description: "Real-time traffic flow optimization using machine learning algorithms"
     },
     {
-      icon: MessageSquare,
-      title: "Multi-Channel Support",
-      description: "Unified support across email, chat, social media, and phone channels"
+      icon: Lightbulb,
+      title: "Smart Energy Grid",
+      description: "Intelligent power distribution and renewable energy integration"
     },
     {
-      icon: Search,
-      title: "Knowledge Base Integration",
-      description: "Seamless integration with existing knowledge bases and documentation"
+      icon: Droplets,
+      title: "Water Management System",
+      description: "AI-driven water quality monitoring and distribution optimization"
     },
     {
-      icon: BarChart3,
-      title: "Sentiment Analysis",
-      description: "Real-time customer sentiment tracking and escalation management"
+      icon: Wifi,
+      title: "5G/6G Infrastructure",
+      description: "Next-generation connectivity for IoT devices and smart sensors"
     },
     {
-      icon: Target,
-      title: "Personalized Support",
-      description: "AI-driven personalization based on customer history and preferences"
+      icon: Building2,
+      title: "Building Automation",
+      description: "Smart building management with energy efficiency optimization"
     },
     {
-      icon: Shield,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR and SOC2 compliance"
+      icon: Leaf,
+      title: "Environmental Monitoring",
+      description: "Real-time air quality, noise, and pollution tracking"
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Starter",
-      price: "$199",
+      name: "City Starter",
+      price: "$25,000",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small cities and municipalities",
       features: [
-        "Up to 1,000 conversations/month",
-        "Basic AI chatbot",
-        "Email and chat support",
-        "Basic knowledge base",
-        "Email support",
-        "Standard integrations"
+        "Up to 100,000 citizens",
+        "Basic traffic management",
+        "Energy monitoring",
+        "Water quality tracking",
+        "24/7 system monitoring",
+        "Basic analytics dashboard",
+        "Email support"
       ],
       cta: "Get Started",
       popular: false
     },
     {
-      name: "Professional",
-      price: "$599",
+      name: "Metropolitan",
+      price: "$75,000",
       period: "/month",
-      description: "Ideal for growing businesses and support teams",
+      description: "Ideal for medium-sized cities and urban areas",
       features: [
-        "Up to 10,000 conversations/month",
-        "Advanced AI with custom training",
-        "Multi-channel support",
-        "Advanced knowledge base",
-        "Sentiment analysis",
+        "Up to 500,000 citizens",
+        "Advanced AI algorithms",
+        "Smart grid integration",
+        "Traffic optimization",
+        "Environmental monitoring",
+        "Predictive analytics",
         "Priority support",
-        "Custom integrations",
-        "Analytics dashboard"
+        "Custom integrations"
       ],
       cta: "Start Free Trial",
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
+      name: "Mega City",
+      price: "$200,000",
       period: "/month",
-      description: "For large organizations with complex support needs",
+      description: "For large metropolitan areas and smart city networks",
       features: [
-        "Unlimited conversations",
+        "Unlimited citizens",
         "Custom AI models",
-        "White-label solution",
+        "Full infrastructure control",
         "Advanced analytics",
-        "API access",
+        "White-label solution",
         "Dedicated support team",
         "Custom development",
-        "Multi-tenant architecture"
+        "Multi-city coordination"
       ],
       cta: "Contact Sales",
       popular: false
@@ -98,63 +99,63 @@ const AICustomerSupportAutomation: React.FC = () => {
 
   const benefits = [
     {
-      title: "24/7 Support",
-      description: "Provide instant support to customers around the clock without human intervention",
-      icon: Clock
+      title: "Traffic Optimization",
+      description: "Reduce congestion by up to 40% with AI-powered traffic management",
+      icon: TrafficCone
     },
     {
-      title: "Cost Reduction",
-      description: "Reduce support costs by up to 70% through automation and AI efficiency",
-      icon: DollarSign
+      title: "Energy Efficiency",
+      description: "Save up to 35% on energy costs through smart grid optimization",
+      icon: Lightbulb
     },
     {
-      title: "Faster Resolution",
-      description: "Resolve customer issues 5x faster with AI-powered solutions",
-      icon: Zap
+      title: "Environmental Impact",
+      description: "Monitor and reduce pollution levels in real-time",
+      icon: Leaf
     },
     {
-      title: "Customer Satisfaction",
-      description: "Improve customer satisfaction scores by up to 40%",
-      icon: Star
+      title: "Public Safety",
+      description: "Enhanced emergency response with intelligent monitoring systems",
+      icon: Shield
     }
   ];
 
-  const supportChannels = [
+  const useCases = [
     {
-      title: "Live Chat",
-      description: "AI-powered live chat with instant responses and human handoff capabilities",
-      icon: MessageSquare,
-      color: "from-blue-500 to-cyan-500"
+      title: "Traffic Management",
+      description: "AI-powered traffic light optimization, real-time route suggestions, and congestion prediction",
+      icon: TrafficCone,
+      color: "from-orange-500 to-red-500"
     },
     {
-      title: "Email Support",
-      description: "Automated email responses with intelligent routing and escalation",
-      icon: Mail,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Phone Support",
-      description: "AI voice assistants with natural language processing and call routing",
-      icon: Phone,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Social Media",
-      description: "Monitor and respond to customer inquiries across all social platforms",
-      icon: Globe,
+      title: "Energy Management",
+      description: "Smart grid optimization, renewable energy integration, and demand response management",
+      icon: Lightbulb,
       color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "Self-Service Portal",
-      description: "Intelligent knowledge base with AI-powered search and recommendations",
-      icon: Search,
+      title: "Water Systems",
+      description: "Intelligent water distribution, leak detection, and quality monitoring",
+      icon: Droplets,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Public Safety",
+      description: "Emergency response optimization, surveillance analytics, and incident prediction",
+      icon: Shield,
       color: "from-red-500 to-pink-500"
     },
     {
-      title: "Mobile App Support",
-      description: "In-app support with push notifications and contextual assistance",
-      icon: Smartphone,
-      color: "from-indigo-500 to-purple-500"
+      title: "Environmental Monitoring",
+      description: "Air quality tracking, noise pollution monitoring, and climate data analysis",
+      icon: Leaf,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Building Management",
+      description: "Smart building automation, energy efficiency, and occupant comfort optimization",
+      icon: Building2,
+      color: "from-purple-500 to-indigo-500"
     }
   ];
 
@@ -169,22 +170,22 @@ const AICustomerSupportAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
-              <MessageSquare className="w-4 h-4 mr-2" />
-              AI Customer Support
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+              <Building2 className="w-4 h-4 mr-2" />
+              Smart City Technology
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered
-              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                {" "}Customer Support Automation
+              AI Smart City
+              <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                {" "}Infrastructure Management
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your customer support with AI-powered automation. Provide instant, 
-              accurate, and personalized support 24/7 while reducing costs and improving satisfaction.
+              Transform your city into a smart, sustainable, and efficient urban environment. 
+              Our AI platform manages all aspects of city infrastructure for optimal performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105">
                 Start Free Trial
               </button>
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
@@ -205,11 +206,11 @@ const AICustomerSupportAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Complete Customer Support Solution
+              Comprehensive Smart City Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI platform handles every aspect of customer support, from initial contact 
-              to resolution, ensuring exceptional customer experiences every time.
+              Our platform integrates all aspects of urban infrastructure management 
+              into a unified, AI-powered system for maximum efficiency and sustainability.
             </p>
           </motion.div>
 
@@ -220,9 +221,9 @@ const AICustomerSupportAutomation: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -233,7 +234,7 @@ const AICustomerSupportAutomation: React.FC = () => {
         </div>
       </section>
 
-      {/* Support Channels Section */}
+      {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -243,28 +244,28 @@ const AICustomerSupportAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Multi-Channel Support
+              Smart City Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Meet your customers wherever they are with our comprehensive multi-channel 
-              support platform that provides consistent experiences across all touchpoints.
+              Discover how our AI platform can transform every aspect of your city's infrastructure 
+              and improve the quality of life for your citizens.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {supportChannels.map((channel, index) => (
+            {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
+                className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <channel.icon className="w-6 h-6 text-white" />
+                <div className={`w-12 h-12 bg-gradient-to-r ${useCase.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <useCase.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
-                <p className="text-gray-300">{channel.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>
+                <p className="text-gray-300">{useCase.description}</p>
               </motion.div>
             ))}
           </div>
@@ -281,11 +282,11 @@ const AICustomerSupportAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Support Platform?
+              Why Choose Our Smart City Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience the future of customer support with proven results 
-              and industry-leading AI technology.
+              Experience the future of urban management with proven results 
+              and industry-leading smart city technology.
             </p>
           </motion.div>
 
@@ -298,7 +299,7 @@ const AICustomerSupportAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="flex items-start space-x-4"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
                   <benefit.icon className="w-6 h-6 text-white" />
                 </div>
                 <div>
@@ -324,7 +325,7 @@ const AICustomerSupportAutomation: React.FC = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Choose the perfect plan for your support volume and automation requirements.
+              Choose the perfect plan for your city's size and smart infrastructure requirements.
             </p>
           </motion.div>
 
@@ -337,13 +338,13 @@ const AICustomerSupportAutomation: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   tier.popular 
-                    ? 'border-indigo-500 ring-2 ring-indigo-500/20' 
+                    ? 'border-green-500 ring-2 ring-green-500/20' 
                     : 'border-gray-700'
                 }`}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -369,7 +370,7 @@ const AICustomerSupportAutomation: React.FC = () => {
 
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   tier.popular
-                    ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white hover:from-indigo-600 hover:to-purple-600'
+                    ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                     : 'bg-gray-700 text-white hover:bg-gray-600'
                 }`}>
                   {tier.cta}
@@ -389,30 +390,30 @@ const AICustomerSupportAutomation: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Automate Your Customer Support?
+              Ready to Build Your Smart City?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team to learn more about implementing AI-powered customer support 
-              automation for your business.
+              Contact our team to learn more about implementing smart city infrastructure 
+              management for your municipality.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Phone className="w-5 h-5 text-indigo-400" />
+                <Phone className="w-5 h-5 text-green-400" />
                 <span>+1 302 464 0950</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <Mail className="w-5 h-5 text-indigo-400" />
+                <Mail className="w-5 h-5 text-green-400" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center justify-center space-x-3 text-gray-300">
-                <MapPin className="w-5 h-5 text-indigo-400" />
+                <MapPin className="w-5 h-5 text-green-400" />
                 <span>Middletown, DE 19709</span>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-purple-600 transition-all duration-300">
+              <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
                 Schedule Demo
               </button>
               <button className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300">
@@ -426,4 +427,4 @@ const AICustomerSupportAutomation: React.FC = () => {
   );
 };
 
-export default AICustomerSupportAutomation;
+export default AISmartCityInfrastructureManagement;

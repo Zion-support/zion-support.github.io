@@ -65,6 +65,8 @@ const Login = createLazyComponent(() => import('./pages/Login'));
 const AIAutonomousVehicleManagementPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-vehicle-management-platform'));
 const AISmartCityInfrastructureManagement = createLazyComponent(() => import('./pages/services/ai-smart-city-infrastructure-management'));
 const AIQuantumFinancialTradingPlatform = createLazyComponent(() => import('./pages/services/ai-quantum-financial-trading-platform'));
+const AIContentMarketingSuite = createLazyComponent(() => import('./pages/services/ai-content-marketing-suite'));
+const AICustomerSupportAutomation = createLazyComponent(() => import('./pages/services/ai-customer-support-automation'));
 
 // 2028 Services Showcase
 const InnovativeServicesShowcase2028 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2028'));
@@ -173,6 +175,8 @@ function App() {
                     <Route path="/services/ai-autonomous-vehicle-management-platform" element={<AIAutonomousVehicleManagementPlatform />} />
                     <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
                     <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
+                    <Route path="/services/ai-content-marketing-suite" element={<AIContentMarketingSuite />} />
+                    <Route path="/services/ai-customer-support-automation" element={<AICustomerSupportAutomation />} />
 
                     {/* 2028 Services Showcase */}
                     <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
