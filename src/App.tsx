@@ -119,6 +119,11 @@ const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITIn
 const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
 const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
 
+// New Innovative Services 2026 - Enhanced
+const AILegalDocumentAnalysis = createLazyComponent(() => import('./pages/services/ai-legal-document-analysis'));
+const AIRealEstateInvestmentAnalytics = createLazyComponent(() => import('./pages/services/ai-real-estate-investment-analytics'));
+const AISupplyChainOptimizationEnhanced = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-enhanced'));
+
 // Solution pages
 const HealthcareSolutions = createLazyComponent(() => import('./pages/solutions/Healthcare'));
 const FinancialSolutions = createLazyComponent(() => import('./pages/solutions/FinancialSolutions'));
@@ -280,6 +285,11 @@ function App() {
                     <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
+
+                    {/* New Innovative Services 2026 - Enhanced */}
+                    <Route path="/services/ai-legal-document-analysis" element={<ModernLayout><AILegalDocumentAnalysis /></ModernLayout>} />
+                    <Route path="/services/ai-real-estate-investment-analytics" element={<ModernLayout><AIRealEstateInvestmentAnalytics /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-enhanced" element={<ModernLayout><AISupplyChainOptimizationEnhanced /></ModernLayout>} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
