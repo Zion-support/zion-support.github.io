@@ -168,29 +168,6 @@ export function Footer() {
     }
   ];
 
-  const contactInfo = [
-    {
-      icon: Phone,
-      text: '+1 (302) 464-0950',
-      href: 'tel:+13024640950'
-    },
-    {
-      icon: Mail,
-      text: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com'
-    },
-    {
-      icon: MapPin,
-      text: '364 E Main St STE 1008, Middletown DE 19709',
-      href: '#'
-    },
-    {
-      icon: Clock,
-      text: 'Mon-Fri: 9AM-6PM EST',
-      href: '#'
-    }
-  ];
-
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
