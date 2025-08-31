@@ -59,6 +59,9 @@ import {
   Sparkles as SparklesIcon
 } from 'lucide-react';
 
+// Import SEO component
+import { SEO } from '../components/SEO';
+
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
   const particles = useMemo(() =>
@@ -250,6 +253,11 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+      <SEO
+        title="Zion Tech Group - Leading AI, Quantum, and Cybersecurity Solutions"
+        description="Zion Tech Group provides cutting-edge AI, quantum computing, and cybersecurity solutions to help businesses innovate and secure their digital assets."
+        keywords="AI, Quantum Computing, Cybersecurity, Data Analytics, Enterprise Solutions, Blockchain, Web3"
+      />
       <FuturisticBackground />
       
       {/* Hero Section */}

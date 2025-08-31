@@ -515,6 +515,16 @@ function App() {
 
           {/* Performance Monitor */}
           <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'} />
+
+          {/* Enhanced Analytics */}
+          <EnhancedAnalytics 
+            enabled={true}
+            showDashboard={process.env.NODE_ENV === 'development'}
+            trackingId="G-XXXXXXXXXX"
+          />
+
+          {/* Enhanced Accessibility */}
+          <EnhancedAccessibilityEnhancer />
         </div>
       </ErrorBoundary>
     </HelmetProvider>
