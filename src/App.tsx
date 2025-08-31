@@ -91,7 +91,6 @@ const ITInfrastructureManagement = createLazyComponent(() => import('./pages/ser
 const MicroSaaSSolutionsComprehensive = createLazyComponent(() => import('./pages/services/micro-saas-solutions-comprehensive'));
 
 // New Innovative AI Services 2025 - Enhanced
-const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions'));
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
@@ -346,41 +345,14 @@ function App() {
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
                     <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
 
-<<<<<<< HEAD
                     {/* New Innovative AI Services 2026 */}
                     <Route path="/services/ai-autonomous-financial-advisor" element={<AIAutonomousFinancialAdvisor />} />
                     <Route path="/services/ai-healthcare-diagnostics-platform" element={<AIHealthcareDiagnosticsPlatform />} />
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
-=======
+
                     {/* New Innovative Services 2025 - Content Creation & Analytics */}
                     <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
                     <Route path="/pricing-guide" element={<PricingGuide />} />
-                    
-                    {/* New Innovative Micro SAAS Services 2026 */}
-                    <Route path="/services/ai-legal-document-automation-platform" element={<ModernLayout><AILegalDocumentAutomationPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
-                    
-                    {/* New Innovative Services 2026 - Additional */}
-                    <Route path="/services/ai-carbon-footprint-management-platform" element={<ModernLayout><AICarbonFootprintManagementPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-mental-health-support-platform" element={<ModernLayout><AIMentalHealthSupportPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-smart-home-energy-management-platform" element={<ModernLayout><AISmartHomeEnergyManagementPlatform /></ModernLayout>} />
-                    
-                    {/* New Innovative Services 2026 - Legal & Education */}
-                    <Route path="/services/ai-autonomous-legal-research-platform" element={<ModernLayout><AIAutonomousLegalResearchPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-educational-content-creation-platform" element={<ModernLayout><AIEducationalContentCreationPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-real-estate-investment-analytics-platform" element={<ModernLayout><AIRealEstateInvestmentAnalyticsPlatform /></ModernLayout>} />
-                    
-                    {/* New Innovative Services 2026 */}
-                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
-                    <Route path="/services/ai-powered-seo" element={<ModernLayout><AIPoweredSEO /></ModernLayout>} />
-                    <Route path="/services/quantum-edge-computing-solutions" element={<ModernLayout><QuantumEdgeComputingSolutions /></ModernLayout>} />
-                    <Route path="/services/ai-space-technology-platform" element={<ModernLayout><AISpaceTechnologyPlatform /></ModernLayout>} />
-
-                    {/* New Innovative Micro SAAS Services 2026 */}
-                    <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />
->>>>>>> 632eae2770b36c1cea39caa0aeb35d304d78eae8
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />
@@ -465,25 +437,7 @@ function App() {
                     />
 
                   </Routes>
-                </AnimatePresence>
-<<<<<<< HEAD
-              </main>
-              
-              <Footer />
-              
-              {/* Enhanced Components */}
-              <EnhancedAccessibilityPanel />
-              <AdvancedPerformanceMonitor />
-              <InteractiveUserExperience />
-              <SecurityEnhancer />
-              <ChatAssistant />
-            </div>
-          </Router>
-        </ThemeProvider>
-      </HelmetProvider>
-    </ErrorBoundary>
-=======
-              </Suspense>
+                              </AnimatePresence>
             </main>
 
             {/* Footer - Using AppFooter for enhanced features */}
@@ -502,32 +456,10 @@ function App() {
               enableTouchGestures={true}
               enableMobileOptimizations={true}
             />
-
-            {/* Advanced Analytics */}
-            <AdvancedAnalytics enabled={true} showMetrics={false} />
-
-            {/* Smart Notification System */}
-            <SmartNotificationSystem enabled={true} />
-
-            {/* Advanced Analytics Dashboard */}
-            <AdvancedAnalyticsDashboard enabled={true} />
-
-            {/* AI Content Optimizer */}
-            <AIContentOptimizer enabled={true} />
-
-            {/* Security Monitoring System */}
-            <SecurityMonitoringSystem enabled={true} />
-
-            {/* User Experience Optimizer */}
-            <UserExperienceOptimizer enabled={true} />
-
-            {/* Floating Action Button */}
-            <FloatingActionButton enabled={true} />
-          </div>
-        </Router>
-      </ErrorBoundary>
-    </HelmetProvider>
->>>>>>> 632eae2770b36c1cea39caa0aeb35d304d78eae8
+        </div>
+      </Router>
+    </ErrorBoundary>
+  </HelmetProvider>
   );
 }
 
