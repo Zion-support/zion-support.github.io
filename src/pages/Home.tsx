@@ -81,6 +81,38 @@ export default function Home() {
       href: '/services/ai-cybersecurity-platform',
       color: 'from-red-600 to-orange-600',
       features: ['Threat detection', 'Real-time response', 'Compliance automation']
+    },
+    {
+      name: 'Cloud & DevOps',
+      description: 'Scalable cloud infrastructure and automation',
+      icon: Cloud,
+      href: '/services/cloud-devops',
+      color: 'from-blue-500 to-cyan-500',
+      features: ['AWS/Azure', 'Kubernetes', 'CI/CD']
+    },
+    {
+      name: 'Edge Computing',
+      description: 'Ultra-low latency IoT and edge solutions',
+      icon: Chip,
+      href: '/services/edge-computing-platform',
+      color: 'from-green-500 to-emerald-500',
+      features: ['IoT Platforms', 'Real-time Analytics', '5G Integration']
+    },
+    {
+      name: 'Micro SaaS Solutions',
+      description: 'Innovative software-as-a-service solutions for modern businesses',
+      icon: TrendingUp,
+      href: '/micro-saas',
+      color: 'from-indigo-500 to-purple-500',
+      features: ['AI Sales Copilot', 'Compliance Assistant', 'FinOps Optimizer']
+    },
+    {
+      name: 'Quantum AI Platform',
+      description: 'Next-generation quantum computing and AI integration',
+      icon: Zap,
+      href: '/services/ai-quantum-neural-network-platform',
+      color: 'from-cyan-500 to-blue-500',
+      features: ['Quantum Neural Networks', 'AI Algorithms', 'Quantum Simulation']
     }
   ];
 
@@ -162,6 +194,40 @@ export default function Home() {
     }
   ];
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-12 space-y-4"
+        >
+          <Link
+            to="/services"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25 mr-4"
+          >
+            <span className="flex items-center gap-2">
+              View All Services
+              <ArrowRight className="w-5 h-5" />
+            </span>
+          </Link>
+          
+          <Link
+            to="/innovative-services-showcase-2030"
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"
+          >
+            <span className="flex items-center gap-2">
+              Revolutionary Services 2030
+              <Rocket className="w-5 h-5" />
+            </span>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+});
+
+// Enhanced Testimonials Section
+const TestimonialsSection = React.memo(() => {
   const testimonials = [
     {
       name: 'Sarah Johnson',

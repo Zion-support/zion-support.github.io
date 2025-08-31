@@ -377,6 +377,9 @@ export function Footer() {
               </div>
             </div>
           </div>
+              </div>
+            </div>
+          </div>
 
           {/* Bottom Bar */}
           <div className="border-t border-slate-700/50 pt-8">

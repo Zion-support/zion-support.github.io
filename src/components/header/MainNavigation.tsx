@@ -143,14 +143,22 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </ul>
                 </div>
               </div>
-              <div className="mt-4 pt-4 border-t border-zion-purple/20">
-                <Link 
-                  to="/enhanced-services" 
-                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center"
-                >
-                  View All Services
-                  <TrendingUp className="w-4 h-4 ml-2"/>
-                </Link>
+              <div className="mt-6 pt-6 border-t border-zion-purple/20">
+                <div className="grid grid-cols-2 gap-4">
+                  <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    View All Services
+                    <TrendingUp className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/innovative-services-showcase-2026" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Innovation Showcase 2026
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/innovative-services-showcase-2030" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Revolutionary Services 2030
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                </div>
+              </div>
               </div>
             </div>
           </div>
