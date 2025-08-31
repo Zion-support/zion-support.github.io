@@ -51,13 +51,8 @@ pricing: {
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",;
-  ;
-  ;
-  ;
-  ;
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-;
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 export const innovativeAIServices2030: AIService[] = [
   {
@@ -74,9 +69,9 @@ export const innovativeAIServices2030: AIService[] = [
       pricingModel: "Monthly subscription with usage-based pricing",
       marketPrice: "$299-599/month"
     },
-    features[
-      "High-quality voice cloning",
-      "Multi-language support",
+          features: [
+        "High-quality voice cloning",
+        "Multi-language support",
       "Emotion and tone control",
       "Real-time voice synthesis",
       "Voice customization tools",

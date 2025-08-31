@@ -50,13 +50,8 @@ pricing: {
 const zionContact = {
   phone: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  website: "https://ziontechgroup.com",;
-  ;
-  ;
-  ;
-  ;
-  address: "364 E Main St STE 1008 Middletown DE 19709";
-;
+  website: "https://ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709"
 };
 export const innovativeCybersecurityServices2030: CybersecurityService[] = [
   {
@@ -73,7 +68,7 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with data volume pricing",
       marketPrice: "$899-1,799/month"
     },
-    features[
+    features: [
       "Post-quantum cryptography algorithms",
       "Hybrid encryption systems",
       "Quantum key distribution",
@@ -85,36 +80,36 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       "Real-time threat monitoring",
       "Zero-trust architecture"
     ],
-    benefits[
+    benefits: [
       "Future-proof against quantum threats",
       "Maintain regulatory compliance",
       "Reduce encryption overhead",
       "Enhance data protection",
       "Simplify key management"
     ],
-    useCases[
+    useCases: [
       "Financial data protection",
       "Healthcare records security",
       "Government communications",
       "Critical infrastructure",
       "Cloud data encryption"
     ],
-    targetAudience[
+    targetAudience: [
       "Financial institutions",
       "Healthcare organizations",
       "Government agencies",
       "Technology companies",
       "Critical infrastructure"
     ],
-    technologies[
+    technologies: [
       "Post-quantum cryptography", "Quantum key distribution", "Hardware security modules",
       "Zero-trust architecture", "Multi-party computation", "Homomorphic encryption"
     ],
-    integrations[
+    integrations: [
       "Cloud platforms", "Database systems", "File storage", "Communication tools",
       "Identity management", "Compliance platforms"
     ],
-    support[
+    support: [
       "24/7 security support",
       "Encryption consultation",
       "Compliance guidance",
@@ -129,13 +124,13 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
     reviewCount: 178,
     innovationLevel: "Revolutionary",
     marketSize: "$15.2B by 2030",
-    competitors["Thales", "Gemalto", "Utimaco", "Atos"],
-    securityCapabilities[
+    competitors: ["Thales", "Gemalto", "Utimaco", "Atos"],
+    securityCapabilities: [
       "Quantum-resistant encryption", "Key management", "Threat detection",
       "Compliance automation", "Performance optimization", "Zero-trust security"
     ],
-    complianceStandards["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001", "GDPR"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid", "Edge"],
+    complianceStandards: ["FIPS 140-2", "Common Criteria", "SOC 2", "ISO 27001", "GDPR"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid", "Edge"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -165,9 +160,9 @@ export const innovativeCybersecurityServices2030: CybersecurityService[] = [
       pricingModel: "Monthly subscription with endpoint-based pricing",
       marketPrice: "$699-1,399/month"
     },
-    features[
-      "AI-powered threat detection",
-      "Behavioral analysis",
+          features: [
+        "AI-powered threat detection",
+        "Behavioral analysis",
       "Threat intelligence integration",
       "Automated response actions",
       "Real-time monitoring",

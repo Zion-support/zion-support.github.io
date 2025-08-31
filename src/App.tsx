@@ -123,7 +123,7 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const Tutorials = createLazyComponent(() => import('./pages/Tutorials'));
 const Support = createLazyComponent(() => import('./pages/Support'));
 const Sustainability = createLazyComponent(() => import('./pages/Sustainability'));
-const SpaceTech = createLazyComponent(() => import('./pages/SpaceTech'));
+
 const StartupSolutions = createLazyComponent(() => import('./pages/StartupSolutions'));
 const SupplyChain = createLazyComponent(() => import('./pages/SupplyChain'));
 const Talent = createLazyComponent(() => import('./pages/Talent'));
@@ -392,7 +392,7 @@ function App() {
                         </motion.div>
                       }
                     />
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-95bf
+
                   </Routes>
                 </AnimatePresence>
               </main>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   Check, 
@@ -14,11 +13,13 @@ import {
   Headphones,
   Rocket,
   Award,
-  Lock
+  Lock,
+  Brain,
+  Heart,
+  DollarSign,
+  Truck,
+  Atom
 } from 'lucide-react';
-=======
-import { Check, Star, Zap, Shield, Users, Globe, Brain, Heart, DollarSign, Truck, Atom, Rocket } from 'lucide-react';
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-95bf
 
 const Pricing = () => {
   const pricingTiers = [
@@ -119,7 +120,6 @@ const Pricing = () => {
       ],
       popular: false,
       cta: "Contact Sales",
-<<<<<<< HEAD
       link: "/contact",
       savings: null
     }
@@ -149,80 +149,6 @@ const Pricing = () => {
       price: "$199",
       description: "Per month for enhanced security features and compliance",
       icon: Shield
-=======
-      link: "/contact"
-    },
-    {
-      name: "Professional",
-      price: "$49",
-      period: "/month",
-      description: "Ideal for growing businesses and professional teams",
-      features: [
-        "Everything in Starter",
-        "AI Content Generation (500 credits/month)",
-        "Advanced AI Image & Video Editing",
-        "AI Code Assistant (Basic)",
-        "AI Meeting Assistant (20 hours/month)",
-        "AI Translation (10 languages)",
-        "Priority Support",
-        "Advanced Analytics",
-        "API Access (1000 calls/month)",
-        "Team Collaboration Tools"
-      ],
-      popular: true,
-      cta: "Start Free Trial",
-      link: "/contact"
-    },
-    {
-      name: "Business",
-      price: "$99",
-      period: "/month",
-      description: "Comprehensive solution for established businesses",
-      features: [
-        "Everything in Professional",
-        "AI Content Generation (2000 credits/month)",
-        "AI Code Assistant (Advanced)",
-        "AI Data Analytics Platform",
-        "AI Threat Detection",
-        "Multi-Cloud Management",
-        "AI-Powered CRM",
-        "Business Process Automation",
-        "AI Meeting Assistant (Unlimited)",
-        "AI Translation (100+ languages)",
-        "24/7 Support",
-        "Custom Integrations",
-        "API Access (10000 calls/month)",
-        "Advanced Security Features"
-      ],
-      popular: false,
-      cta: "Start Free Trial",
-      link: "/contact"
-    },
-    {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored solutions for large organizations with specific requirements",
-      features: [
-        "Everything in Business",
-        "Unlimited AI Content Generation",
-        "Custom AI Model Training",
-        "Zero Trust Security Suite",
-        "Edge Computing Solutions",
-        "AI Market Research Platform",
-        "AI Legal Document Review",
-        "AI Financial Advisor",
-        "AI Healthcare Assistant",
-        "Dedicated Account Manager",
-        "Custom Development",
-        "On-Premise Deployment",
-        "SLA Guarantees",
-        "Compliance Certifications"
-      ],
-      popular: false,
-      cta: "Contact Sales",
-      link: "/contact"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-95bf
     }
   ];
 
