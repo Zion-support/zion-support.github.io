@@ -68,8 +68,8 @@ export function MainNavigation({ className }: MainNavigationProps) {
       <NavLink 
         to="/" 
         className={({ isActive }) => 
-          cn("text-sm font-medium transition-colors hover:text-primary", 
-            isActive ? "text-zion-cyan" : "text-muted-foreground"
+          cn("text-sm font-medium transition-all duration-200 hover:text-cyan-400 hover:scale-105", 
+            isActive ? "text-cyan-400" : "text-zinc-300"
           )
         }
       >
@@ -81,17 +81,17 @@ export function MainNavigation({ className }: MainNavigationProps) {
         <button 
           onMouseEnter={() => setIsServicesOpen(true)} 
           onMouseLeave={() => setIsServicesOpen(false)} 
-          className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground"
+          className="flex items-center space-x-1 text-sm font-medium transition-all duration-200 hover:text-cyan-400 hover:scale-105 text-zinc-300 group"
         >
-          <Zap className="w-4 h-4"/>
+          <Zap className="w-4 h-4 group-hover:text-cyan-400 transition-colors duration-200"/>
           <span>Services</span>
-          <ChevronDown className="w-3 h-3"/>
+          <ChevronDown className="w-3 h-3 group-hover:text-cyan-400 transition-colors duration-200"/>
         </button>
         {isServicesOpen && (
           <div 
             onMouseEnter={() => setIsServicesOpen(true)} 
             onMouseLeave={() => setIsServicesOpen(false)} 
-            className="absolute top-full left-0 mt-2 w-96 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+            className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-slate-600/50 rounded-xl shadow-2xl shadow-black/50 z-50 transform transition-all duration-200"
           >
             <div className="p-6">
               <div className="grid grid-cols-2 gap-6">
@@ -102,8 +102,8 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   </h4>
                   <ul className="space-y-3 text-sm">
                     <li>
-                      <Link to="/services/ai-enterprise-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Brain className="w-3 h-3 mr-2" />
+                      <Link to="/services/ai-enterprise-automation-platform" className="text-zinc-300 hover:text-cyan-400 transition-all duration-200 flex items-center group">
+                        <Brain className="w-3 h-3 mr-2 group-hover:text-cyan-400 transition-colors duration-200" />
                         AI Enterprise Automation
                       </Link>
                     </li>
@@ -171,6 +171,37 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       <Link to="/services/blockchain-enterprise-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Network className="w-3 h-3 mr-2" />
                         Blockchain Solutions
+                      </Link>
+                    </li>
+                    {/* New Innovative Services 2026 */}
+                    <li>
+                      <Link to="/services/ai-powered-customer-churn-predictor" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Churn Predictor
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-invoice-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <FileText className="w-3 h-3 mr-2" />
+                        AI Invoice Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-legal-document-analyzer" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <FileText className="w-3 h-3 mr-2" />
+                        AI Legal Analyzer
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-hr-recruitment-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Users className="w-3 h-3 mr-2" />
+                        AI HR Assistant
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-powered-marketing-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <TrendingUp className="w-3 h-3 mr-2" />
+                        AI Marketing Automation
                       </Link>
                     </li>
                     {/* Additional services from remote branch */}
@@ -241,10 +272,16 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-zion-purple/20">
-                <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                  View All Services
-                  <TrendingUp className="w-4 h-4 ml-2"/>
-                </Link>
+                <div className="grid grid-cols-1 gap-3">
+                  <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    View All Services
+                    <TrendingUp className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/innovative-micro-saas-showcase-2026" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                    New 2026 Services
+                    <Rocket className="w-4 h-4 ml-2"/>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

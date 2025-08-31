@@ -60,7 +60,12 @@ export function Footer() {
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
         { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
-        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
+        { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
+        { name: "AI Churn Predictor", href: "/services/ai-powered-customer-churn-predictor" },
+        { name: "AI Invoice Automation", href: "/services/ai-powered-invoice-automation" },
+        { name: "AI Legal Analyzer", href: "/services/ai-powered-legal-document-analyzer" },
+        { name: "AI HR Assistant", href: "/services/ai-powered-hr-recruitment-assistant" },
+        { name: "AI Marketing Automation", href: "/services/ai-powered-marketing-automation" }
       ]
     },
     {
@@ -91,6 +96,22 @@ export function Footer() {
         { name: "Digital Transformation", href: "/digital-transformation" },
         { name: "Cloud Solutions", href: "/cloud-solutions" },
         { name: "Emerging Tech", href: "/emerging-tech" }
+      ]
+    },
+    {
+      title: "Innovative Micro SAAS 2026",
+      icon: Rocket,
+      links: [
+        { name: "AI Churn Predictor", href: "/services/ai-powered-customer-churn-predictor" },
+        { name: "Quantum-Secure Password Manager", href: "/services/quantum-secure-password-manager" },
+        { name: "AI Invoice Automation", href: "/services/ai-powered-invoice-automation" },
+        { name: "Sustainable Carbon Tracker", href: "/services/sustainable-business-carbon-tracker" },
+        { name: "AI Legal Document Analyzer", href: "/services/ai-powered-legal-document-analyzer" },
+        { name: "Blockchain Supply Chain Verifier", href: "/services/blockchain-supply-chain-verifier" },
+        { name: "AI HR Recruitment Assistant", href: "/services/ai-powered-hr-recruitment-assistant" },
+        { name: "Quantum-Encrypted File Storage", href: "/services/quantum-encrypted-file-storage" },
+        { name: "AI Marketing Automation", href: "/services/ai-powered-marketing-automation" },
+        { name: "IoT Energy Optimization", href: "/services/iot-energy-optimization-platform" }
       ]
     },
     {
@@ -285,6 +306,11 @@ export function Footer() {
                 <li>
                   <Link to="/innovative-services-showcase-2026" className="text-zinc-400 hover:text-white transition-colors">
                     Innovation Showcase 2026
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/innovative-micro-saas-showcase-2026" className="text-zinc-400 hover:text-white transition-colors">
+                    Micro SAAS Showcase 2026
                   </Link>
                 </li>
                 <li>

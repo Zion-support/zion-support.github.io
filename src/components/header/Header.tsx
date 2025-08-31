@@ -14,9 +14,11 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" className="flex items-center space-x-2 group">
               <Logo />
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
+              <span className="text-lg sm:text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
+                Zion Tech Group
+              </span>
             </Link>
           </div>
 
@@ -26,8 +28,10 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white lg:hidden"
+            className="inline-flex items-center justify-center rounded-md p-2 text-zinc-400 hover:bg-zinc-800 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white lg:hidden transition-all duration-200"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-expanded={isMobileMenuOpen}
+            aria-label="Toggle mobile menu"
           >
             <span className="sr-only">Open main menu</span>
             {isMobileMenuOpen ? (
