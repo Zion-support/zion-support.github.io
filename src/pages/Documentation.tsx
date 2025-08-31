@@ -7,7 +7,7 @@ interface DocSection {
   id: string;
   title: string;
   description: string;
-  icon: ;
+      icon: any;
   color: string;
   items: DocItem[];
     }

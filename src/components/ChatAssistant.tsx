@@ -77,24 +77,24 @@ export function ChatAssistant({
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<>(null);
+      const recognitionRef = useRef<any>(null);
 
   // Initialize speech recognition
   useEffect(() => {
     if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
-      const SpeechRecognition = (window as ).SpeechRecognition || (window as ).webkitSpeechRecognition;
+              const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = language;
 
-      recognitionRef.current.onresult = (event: ) => {
+      recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: ) => {
+      recognitionRef.current.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };
@@ -123,7 +123,7 @@ export function ChatAssistant({
 
   // Auto-scroll to bottom
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth'     });
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
   // Handle input change
@@ -135,7 +135,7 @@ export function ChatAssistant({
   const handleSendMessage = useCallback(async () => {
     if (!inputValue.trim() || isProcessing) return;
 
-    const userMessage: Message = { id: `user-${Date.now()    }`,
+    const userMessage: Message = { id: `user-${Date.now() }`,
       type: 'user',
       content: inputValue.trim(),
       timestamp: new Date()
@@ -150,7 +150,7 @@ export function ChatAssistant({
     // Simulate AI response
     setTimeout(() => {
       const aiResponse = generateAIResponse(inputValue.trim());
-      const assistantMessage: Message = { id: `assistant-${Date.now()    }`,
+      const assistantMessage: Message = { id: `assistant-${Date.now() }`,
         type: 'assistant',
         content: aiResponse.content,
         timestamp: new Date(),
@@ -166,7 +166,7 @@ export function ChatAssistant({
   }, [inputValue, isProcessing]);
 
   // Generate AI response
-  const generateAIResponse = (userInput: string): { content: string metadata:      } => {
+  const generateAIResponse = (userInput: string): { content: string; metadata: any } => {
     const input = userInput.toLowerCase();
     
     // AI response logic based on user input
@@ -246,19 +246,19 @@ export function ChatAssistant({
   // Voice recognition setup
   useEffect(() => {
     if (enabled && 'webkitSpeechRecognition' in window) {
-      const SpeechRecognition = (window as ).webkitSpeechRecognition;
+              const SpeechRecognition = (window as any).webkitSpeechRecognition;
       recognitionRef.current = new SpeechRecognition();
       recognitionRef.current.continuous = false;
       recognitionRef.current.interimResults = false;
       recognitionRef.current.lang = 'en-US';
 
-      recognitionRef.current.onresult = (event: ) => {
+      recognitionRef.current.onresult = (event: any) => {
         const transcript = event.results[0][0].transcript;
         setInputValue(transcript);
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: ) => {
+      recognitionRef.current.onerror = (event: any) => {
         console.error('Speech recognition error:', event.error);
         setIsListening(false);
       };

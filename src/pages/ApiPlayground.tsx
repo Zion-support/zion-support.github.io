@@ -233,7 +233,7 @@ export default function ApiPlayground() {
     }
   };
 
-  const handleApiSelect = (api: ) => {
+      const handleApiSelect = (api: any) => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
