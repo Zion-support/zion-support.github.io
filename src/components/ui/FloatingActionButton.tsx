@@ -8,7 +8,6 @@ interface FloatingActionButtonProps {
 
 export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const actions = [
     {
       icon: MessageCircle,
@@ -36,7 +35,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
   return (
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
       {/* Scroll to top button */}
@@ -49,7 +47,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
       >
         <ArrowUp className="w-6 h-6 text-white" />
       </motion.button>
-
       {/* Main floating action button */}
       <motion.button
         initial={{ opacity: 0, scale: 0 }}
@@ -82,7 +79,6 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ clas
           )}
         </AnimatePresence>
       </motion.button>
-
       {/* Action buttons */}
       <AnimatePresence>
         {isOpen && (

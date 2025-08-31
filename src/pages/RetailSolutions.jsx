@@ -29,6 +29,10 @@ import {
     integrations["E-commerce", "POS Systems", "Mobile Apps", "CRM"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const retailTrends = [
   {
     title: "AI-Powered Personalization",

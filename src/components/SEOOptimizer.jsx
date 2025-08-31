@@ -77,6 +77,10 @@ import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download const SEOOp
         }
         finally {
             setIsAnalyzing(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             })}
         catch (error) {
             console.error('Error analyzing SEO:', error)}

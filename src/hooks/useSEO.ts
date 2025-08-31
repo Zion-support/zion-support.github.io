@@ -187,6 +187,10 @@ export const useSEO = (seoData: SEOData, options: UseSEOOptions = {}) => {;
       // This would require the web-vitals library
       // // // // // // // console.log('Web Vitals available');
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       console.log('Web Vitals available')}
     // Navigation Timing API
     if ('performance' in window) {

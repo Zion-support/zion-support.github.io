@@ -1,12 +1,20 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/Button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Checkbox } from './ui/checkbox';
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Button } from "./ui/Button";
+import { Input } from "./ui/input";
+import { Textarea } from "./ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import { Checkbox } from "./ui/checkbox";
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 import { Mail, Phone, Building, Send, CheckCircle, AlertCircle } from 'lucide-react';
-
 export const QuoteRequestForm = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -23,11 +31,14 @@ export const QuoteRequestForm = () => {
     agreeToTerms: false,
     agreeToMarketing: false
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+<<<<<<< HEAD
   const [errors, setErrors] = useState({});
 
+=======
+  const [errors, setErrors] = useState({ /* empty */ });
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const serviceTypes = [
     { value: 'ai-services', label: 'AI & Machine Learning Services' },
     { value: 'it-solutions', label: 'IT Infrastructure & Solutions' },
@@ -37,7 +48,6 @@ export const QuoteRequestForm = () => {
     { value: 'custom-development', label: 'Custom Software Development' },
     { value: 'other', label: 'Other Services' }
   ];
-
   const timelineOptions = [
     { value: 'asap', label: 'ASAP (Within 1 week)' },
     { value: '1-2-weeks', label: '1-2 weeks' },
@@ -46,7 +56,6 @@ export const QuoteRequestForm = () => {
     { value: '3-6-months', label: '3-6 months' },
     { value: '6-months-plus', label: '6+ months' }
   ];
-
   const budgetRanges = [
     { value: 'under-5k', label: 'Under $5,000' },
     { value: '5k-10k', label: '$5,000 - $10,000' },
@@ -56,30 +65,31 @@ export const QuoteRequestForm = () => {
     { value: '100k-plus', label: '$100,000+' },
     { value: 'to-be-discussed', label: 'To be discussed' }
   ];
-
   const urgencyLevels = [
     { value: 'low', label: 'Low - Planning phase' },
     { value: 'medium', label: 'Medium - Ready to start soon' },
     { value: 'high', label: 'High - Need to start immediately' },
     { value: 'critical', label: 'Critical - Emergency situation' }
   ];
-
   const handleChange = (field, value) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
     }));
-
     // Clear error when user starts typing
     if (errors[field]) {
       setErrors(prev => ({
         ...prev,
         [field]: ''
+<<<<<<< HEAD
       }));
     }
+=======
+      }))}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   };
-
   const validateForm = () => {
+<<<<<<< HEAD
     const newErrors = {};
 
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
@@ -88,12 +98,22 @@ export const QuoteRequestForm = () => {
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid';
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
     if (!formData.serviceType) newErrors.serviceType = 'Service type is required';
+=======
+    const newErrors = { /* empty */ };
+    if (!formData.firstName.trim()) newErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required'} else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address'}
+    if (!formData.company.trim()) newErrors.comp = 'Comp name is required';
+    if (!formData.serviceType) newErrors.serviceType = 'Please select a service type';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     if (!formData.projectDescription.trim()) newErrors.projectDescription = 'Project description is required';
     if (!formData.timeline) newErrors.timeline = 'Timeline is required';
     if (!formData.budget) newErrors.budget = 'Budget range is required';
     if (!formData.agreeToTerms) newErrors.agreeToTerms = 'You must agree to the terms and conditions';
-
     setErrors(newErrors);
+<<<<<<< HEAD
     return Object.keys(newErrors).length === 0;
   };
 
@@ -115,10 +135,47 @@ export const QuoteRequestForm = () => {
     } finally {
       setIsSubmitting(false);
     }
+=======
+    return Object.keys(newErrors).length === 0};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) {
+      return}
+    setIsSubmitting(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      // In a real app, you would send the data to your backend
+      // // // // // // // console.log('Quote request submitted:', formData);
+      setIsSubmitted(true);
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        comp: '',
+        serviceType: '',
+        projectDescription: '',
+        timeline: '',
+        budget: '',
+        urgency: 'medium',
+        contactMethod: 'email',
+        agreeToTerms: false,
+        agreeToMarketing: false
+      // // // // // // // console.error('Error submitting quote request:', error);
+      setErrors({ submit: 'Failed to submit request. Please try again.' });
+    } finally {
+      setIsSubmitting(false);
+=======
+      })} catch (error) {
+      console.error('Error submitting quote request:', error);
+      setErrors({ submit: 'Failed to submit request. Please try again.' })} finally {
+      setIsSubmitting(false)}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   };
-
   if (isSubmitted) {
     return (
+<<<<<<< HEAD
       <Card className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700">
         <CardContent className="p-8 text-center">
           <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -142,6 +199,27 @@ export const QuoteRequestForm = () => {
     );
   }
 
+=======
+      <Card className="max-w-2xl mx-auto bg-green-50 border-green-200">
+        <CardContent className="pt-6">
+          <div className="text-center">
+            <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-green-800 mb-2">
+              Quote Request Submitted!
+            </h3>
+            <p className="text-green-700 mb-6">
+              Thank you for your interest! Our team will review your request and get back to you within 24 hours with a detailed quote.
+            </p>
+            <Button
+              onClick={() => setIsSubmitted(false)}
+              className="bg-green-600 hover:bg-green-700"
+              Submit Another Request
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
+    )}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   return (
     <Card className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700">
       <CardHeader>
@@ -150,7 +228,11 @@ export const QuoteRequestForm = () => {
           Fill out the form below and we'll provide you with a detailed quote within 24 hours.
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className="p-6">
+=======
+      <CardContent>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Personal Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -161,9 +243,18 @@ export const QuoteRequestForm = () => {
               <Input
                 type="text"
                 value={formData.firstName}
+<<<<<<< HEAD
                 onChange={(e) => handleChange('firstName', e.target.value)}
                 className={`${errors.firstName ? 'border-red-500' : 'border-zinc-600'}`}
                 placeholder="Enter first name"
+=======
+                onChange = {
+  (e) => handleChange('firstName',
+  e.target.value)
+}
+                className={errors.firstName ? 'border-red-500' : ''}
+                placeholder="Enter your first name"
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               />
               {errors.firstName && (
                 <p className="text-red-400 text-sm mt-1 flex items-center">
@@ -172,7 +263,6 @@ export const QuoteRequestForm = () => {
                 </p>
               )}
             </div>
-
             <div>
               <label className="block text-sm font-medium text-zinc-300 mb-2">
                 Last Name *
@@ -180,9 +270,18 @@ export const QuoteRequestForm = () => {
               <Input
                 type="text"
                 value={formData.lastName}
+<<<<<<< HEAD
                 onChange={(e) => handleChange('lastName', e.target.value)}
                 className={`${errors.lastName ? 'border-red-500' : 'border-zinc-600'}`}
                 placeholder="Enter last name"
+=======
+                onChange = {
+  (e) => handleChange('lastName',
+  e.target.value)
+}
+                className={errors.lastName ? 'border-red-500' : ''}
+                placeholder="Enter your last name"
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               />
               {errors.lastName && (
                 <p className="text-red-400 text-sm mt-1 flex items-center">
@@ -192,13 +291,13 @@ export const QuoteRequestForm = () => {
               )}
             </div>
           </div>
-
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-zinc-300 mb-2">
                 Email Address *
               </label>
+<<<<<<< HEAD
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400" />
                 <Input
@@ -209,6 +308,18 @@ export const QuoteRequestForm = () => {
                   placeholder="Enter your email"
                 />
               </div>
+=======
+              <Input
+                type="email"
+                value={formData.email}
+                onChange = {
+  (e) => handleChange('email',
+  e.target.value)
+}
+                className={errors.email ? 'border-red-500' : ''}
+                placeholder="your.email@company.com"
+              />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               {errors.email && (
                 <p className="text-red-400 text-sm mt-1 flex items-center">
                   <AlertCircle className="w-4 h-4 mr-1" />
@@ -216,11 +327,11 @@ export const QuoteRequestForm = () => {
                 </p>
               )}
             </div>
-
             <div>
               <label className="block text-sm font-medium text-zinc-300 mb-2">
                 Phone Number
               </label>
+<<<<<<< HEAD
               <div className="relative">
                 <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400" />
                 <Input
@@ -235,10 +346,25 @@ export const QuoteRequestForm = () => {
           </div>
 
           {/* Company Information */}
+=======
+              <Input
+                type="tel"
+                value={formData.phone}
+                onChange = {
+  (e) => handleChange('phone',
+  e.target.value)
+}
+                placeholder="+1 (555) 123-4567"
+              />
+            </div>
+          </div>
+          {/* Comp Information */}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           <div>
             <label className="block text-sm font-medium text-zinc-300 mb-2">
               Company Name *
             </label>
+<<<<<<< HEAD
             <div className="relative">
               <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zinc-400" />
               <Input
@@ -350,8 +476,49 @@ export const QuoteRequestForm = () => {
                 </SelectContent>
               </Select>
             </div>
+=======
+            <Input
+              type="text"
+              value={formData.company}
+              onChange = {
+  (e) => handleChange('company',
+  e.target.value)
+}
+              className={errors.company ? 'border-red-500' : ''}
+              placeholder="Your Company Inc."
+            />
+            {errors.comp && (
+              <p className="text-red-500 text-sm mt-1">{errors.comp}</p>
+            )}
           </div>
-
+          {/* Service Type */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Service Type *
+            </label>
+            <Select
+              value={formData.serviceType}
+              onValueChange = {
+  (value) => handleChange('serviceType',
+  value)
+}
+            >
+              <SelectTrigger className={errors.serviceType ? 'border-red-500' : ''}>
+                <SelectValue placeholder="Select a service type" />
+              </SelectTrigger>
+              <SelectContent>
+                {serviceTypes.map((service) => (
+                  <SelectItem key={service.value} value={service.value}>
+                    {service.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            {errors.serviceType && (
+              <p className="text-red-500 text-sm mt-1">{errors.serviceType}</p>
+            )}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
+          </div>
           {/* Project Description */}
           <div>
             <label className="block text-sm font-medium text-zinc-300 mb-2">
@@ -359,9 +526,18 @@ export const QuoteRequestForm = () => {
             </label>
             <Textarea
               value={formData.projectDescription}
+<<<<<<< HEAD
               onChange={(e) => handleChange('projectDescription', e.target.value)}
               className={`${errors.projectDescription ? 'border-red-500' : 'border-zinc-600'}`}
               placeholder="Please describe your project requirements, goals, and any specific needs..."
+=======
+              onChange = {
+  (e) => handleChange('projectDescription',
+  e.target.value)
+}
+              className={errors.projectDescription ? 'border-red-500' : ''}
+              placeholder="Please describe your project requirements, goals, and  specific needs..."
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               rows={4}
             />
             {errors.projectDescription && (
@@ -371,6 +547,7 @@ export const QuoteRequestForm = () => {
               </p>
             )}
           </div>
+<<<<<<< HEAD
 
           {/* Preferences */}
           <div>
@@ -390,12 +567,118 @@ export const QuoteRequestForm = () => {
           </div>
 
           {/* Checkboxes */}
+=======
+          {/* Timeline and Budget */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Timeline
+              </label>
+              <Select
+                value={formData.timeline}
+                onValueChange = {
+  (value) => handleChange('timeline',
+  value)
+}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select timeline" />
+                </SelectTrigger>
+                <SelectContent>
+                  {timelineOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Budget Range
+              </label>
+              <Select
+                value={formData.budget}
+                onValueChange = {
+  (value) => handleChange('budget',
+  value)
+}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select budget range" />
+                </SelectTrigger>
+                <SelectContent>
+                  {budgetRanges.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          {/* Urgency and Contact Method */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Project Urgency
+              </label>
+              <Select
+                value={formData.urgency}
+                onValueChange = {
+  (value) => handleChange('urgency',
+  value)
+}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  {urgencyLevels.map((level) => (
+                    <SelectItem key={level.value} value={level.value}>
+                      {level.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Preferred Contact Method
+              </label>
+              <Select
+                value={formData.contactMethod}
+                onValueChange = {
+  (value) => handleChange('contactMethod',
+  value)
+}
+              >
+                <SelectTrigger>
+                  <SelectValue />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="email">Email</SelectItem>
+                  <SelectItem value="phone">Phone</SelectItem>
+                  <SelectItem value="both">Both</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+          {/* Terms and Marketing */}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           <div className="space-y-4">
             <div className="flex items-start">
               <Checkbox
                 id="terms"
                 checked={formData.agreeToTerms}
+<<<<<<< HEAD
                 onCheckedChange={(checked) => handleChange('agreeToTerms', checked)}
+=======
+                onCheckedChange = {
+  (checked) => handleChange('agreeToTerms',
+  checked)
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 className="mt-1"
               />
               <label htmlFor="terms" className="ml-3 text-sm text-zinc-300">
@@ -409,6 +692,7 @@ export const QuoteRequestForm = () => {
                 </a> *
               </label>
             </div>
+<<<<<<< HEAD
             {errors.agreeToTerms && (
               <p className="text-red-400 text-sm ml-7 flex items-center">
                 <AlertCircle className="w-4 h-4 mr-1" />
@@ -421,14 +705,29 @@ export const QuoteRequestForm = () => {
                 id="marketing"
                 checked={formData.agreeToMarketing}
                 onCheckedChange={(checked) => handleChange('agreeToMarketing', checked)}
+=======
+            <div className="flex items-start space-x-3">
+              <Checkbox
+                id="marketing"
+                checked={formData.agreeToMarketing}
+                onCheckedChange = {
+  (checked) => handleChange('agreeToMarketing',
+  checked)
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 className="mt-1"
               />
               <label htmlFor="marketing" className="ml-3 text-sm text-zinc-300">
                 I want to receive updates about new services, industry insights, and special offers
               </label>
             </div>
+<<<<<<< HEAD
+=======
+            {errors.agreeToTerms && (
+              <p className="text-red-500 text-sm">{errors.agreeToTerms}</p>
+            )}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           </div>
-
           {/* Submit Error */}
           {errors.submit && (
             <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-4">
@@ -438,13 +737,16 @@ export const QuoteRequestForm = () => {
               </p>
             </div>
           )}
-
           {/* Submit Button */}
           <Button
             type="submit"
             disabled={isSubmitting}
+<<<<<<< HEAD
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
           >
+=======
+            className="w-full bg-zion-blue hover:bg-zion-blue-dark text-white py-3 text-lg font-semibold"
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             {isSubmitting ? (
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -457,8 +759,18 @@ export const QuoteRequestForm = () => {
               </>
             )}
           </Button>
+<<<<<<< HEAD
         </form>
       </CardContent>
     </Card>
   );
 };
+=======
+          <p className="text-sm text-gray-600 text-center">
+            * Required fields. We'll respond to your quote request within 24 hours.
+          </p>
+        </form>
+      </CardContent>
+    </Card>
+  )};
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

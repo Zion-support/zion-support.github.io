@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -6,6 +7,19 @@ import {
   Brain,
   TrendingUp,
   Users,
+=======
+import React from 'react.ts';
+import { motion  } from 'framer-motion.ts';
+import { SEO  } from '@/components/SEO';
+import { Brain, 
+  Users, 
+  Calendar, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  ArrowRight,
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   Clock,
   DollarSign,
   CheckCircle,
@@ -36,6 +50,7 @@ import {
   Cpu,
   Network,
   Smartphone,
+<<<<<<< HEAD
   Lock,
   Code,
   Server,
@@ -80,6 +95,11 @@ import {
 } from 'lucide-react';
 
 const AIProjectManagementPlatform: React.FC = () => {
+=======
+  Cloud
+ } from 'lucide-react';
+export default function AIProjectManagementPlatform(...args: []):  {
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const features = [
     {
       title: "AI-Powered Task Prioritization",
@@ -115,10 +135,25 @@ const AIProjectManagementPlatform: React.FC = () => {
       title: "Smart Goal Optimization",
       description: "AI algorithms continuously optimize project goals and milestones based on real-time data and constraints.",
       icon: TrendingUp,
+<<<<<<< HEAD
       benefits: ["Adaptive planning", "Resource optimization", "Goal achievement"]
     }
+=======
+      title: 'Performance Analytics',
+      description: 'Real-time insights into team productivity, project health, and resource utilization'
+    },
+    {
+      icon: Shield,
+      title: 'Risk Assessment & Mitigation',
+      description: 'AI continuously monitors project risks and provides proactive recommendations';
+    },;
+    {;
+      icon: Zap,;
+      title: 'Automated Reporting',;
+      description: 'Intelligent report generation with customizable dashboards and stakeholder updates';
+    };
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -157,6 +192,7 @@ const AIProjectManagementPlatform: React.FC = () => {
       period: "/month",
       description: "For large organizations",
       features: [
+<<<<<<< HEAD
         "Unlimited team members",
         "Full AI suite",
         "Custom AI model training",
@@ -167,8 +203,42 @@ const AIProjectManagementPlatform: React.FC = () => {
       cta: "Contact Sales",
       popular: false
     }
+=======
+        'Unlimited team members',
+        'Full AI suite',
+        'Custom integrations',
+        'Dedicated support manager',
+        'Advanced security features',;
+        'Custom AI model training',;
+        'On-premise deployment options',;
+        'SLA guarantees';
+      ],;
+      popular: false;
+    };
   ];
-
+  const benefits = [
+    {
+      icon: Clock,
+      title: '30% Faster Project Delivery',
+      description: 'AI optimization reduces project timelines through intelligent resource allocation'
+    },
+    {
+      icon: Target,
+      title: '95% On-Time Completion',
+      description: 'Predictive analytics help teams meet deadlines consistently'
+    },
+    {
+      icon: BarChart3,
+      title: '40% Cost Reduction',
+      description: 'Eliminate waste through AI-driven efficiency improvements';
+    },;
+    {;
+      icon: Users,;
+      title: 'Enhanced Team Productivity',;
+      description: 'Automated workflows free up time for strategic work';
+    };
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
+  ];
   const useCases = [
     {
       industry: "Software Development",
@@ -183,6 +253,7 @@ const AIProjectManagementPlatform: React.FC = () => {
       benefits: ["Campaign automation", "Performance optimization", "ROI tracking"]
     },
     {
+<<<<<<< HEAD
       industry: "Product Launch",
       description: "Streamline product launches with AI-driven timeline optimization and risk management.",
       icon: Rocket,
@@ -262,11 +333,30 @@ const AIProjectManagementPlatform: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-slate-darker">
+=======
+      title: 'Construction Projects',
+      description: 'Track progress and manage resources across multiple sites with predictive analytics',
+      icon: Building;
+    },;
+    {;
+      title: 'Event Planning',;
+      description: 'Streamline event coordination with AI-driven task management and vendor coordination',;
+      icon: Calendar;
+    };
+  ];
+  return (
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AI Project Management Platform - Zion Tech Group"
+        description="Revolutionize your project management with AI-powered task prioritization, predictive analytics, and intelligent team collaboration. Start from $299/month."
+      />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       {/* Hero Section */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20"></div>
         <div className="relative z-10 container mx-auto px-4 py-20 lg:py-32">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -277,18 +367,40 @@ const AIProjectManagementPlatform: React.FC = () => {
               AI-Powered Project Management
             </div>
             
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Project Management
+            </div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               AI Project Management
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
                 {" "}Platform
               </span>
             </h1>
+<<<<<<< HEAD
             
             <p className="text-xl md:text-2xl text-zinc-300 mb-8 leading-relaxed">
               Transform your project management with AI-powered insights, automated workflows, and intelligent resource allocation. 
               Deliver projects faster, smarter, and with unprecedented success rates.
             </p>
             
+=======
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your project delivery with intelligent automation, predictive analytics, and AI-driven insights.
+              Manage teams smarter, deliver faster, and achieve more with our cutting-edge platform.
+            </p>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -307,6 +419,7 @@ const AIProjectManagementPlatform: React.FC = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Key Benefits */}
       <section className="py-20">
@@ -363,10 +476,13 @@ const AIProjectManagementPlatform: React.FC = () => {
         </div>
       </section>
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       {/* Features Section */}
       <section id="features" className="py-20 bg-zion-slate-dark/30">
         <div className="container mx-auto px-4">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -378,11 +494,27 @@ const AIProjectManagementPlatform: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
                 {" "}AI Features
               </span>
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powered by Advanced AI
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
               Discover how our AI technology revolutionizes every aspect of project management.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <motion.div
             variants={containerVariants}
@@ -399,6 +531,78 @@ const AIProjectManagementPlatform: React.FC = () => {
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-xl mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
+=======
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300"
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join thousands of teams already experiencing the benefits of AI-powered project management
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)  => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
+                viewport={{ once: true }}
+                className="text-center"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-white" />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-zinc-400 mb-6">{feature.description}</p>
@@ -412,14 +616,68 @@ const AIProjectManagementPlatform: React.FC = () => {
                 </ul>
               </motion.div>
             ))}
+<<<<<<< HEAD
           </motion.div>
+=======
+          </div>
         </div>
       </section>
-
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Perfect for Every Industry
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our platform adapts to your specific needs, regardless of your industry or project type
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
+            {useCases.map((useCase, index)  => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
+                viewport={{ once: true }}
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700"
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-6">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 text-lg">{useCase.description}</p>
+              </motion.div>
+            ))}
+          </div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
+        </div>
+      </section>
       {/* Pricing Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -431,11 +689,27 @@ const AIProjectManagementPlatform: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
                 {" "}Transparent Pricing
               </span>
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Choose Your Plan
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
               Choose the plan that fits your team size and project requirements. All plans include our core AI features.
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <motion.div
             variants={containerVariants}
@@ -454,6 +728,30 @@ const AIProjectManagementPlatform: React.FC = () => {
                     : 'border-zion-slate-light/20'
                 }`}
               >
+=======
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)  => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.8,
+  delay: index * 0.1 
+}}
+                viewport={{ once: true }}
+                className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
+                  plan.popular
+                    ? 'border-purple-500 ring-2 ring-purple-500/20'
+                    : 'border-gray-700'
+                }`}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white text-sm font-semibold rounded-full">
@@ -461,7 +759,10 @@ const AIProjectManagementPlatform: React.FC = () => {
                     </span>
                   </div>
                 )}
+<<<<<<< HEAD
                 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-zinc-400 mb-6">{plan.description}</p>
@@ -470,7 +771,6 @@ const AIProjectManagementPlatform: React.FC = () => {
                     <span className="text-zinc-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-zinc-300">
@@ -479,6 +779,7 @@ const AIProjectManagementPlatform: React.FC = () => {
                     </li>
                   ))}
                 </ul>
+<<<<<<< HEAD
 
                 <Link
                   to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
@@ -490,6 +791,15 @@ const AIProjectManagementPlatform: React.FC = () => {
                 >
                   {plan.cta}
                 </Link>
+=======
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
+                    : 'bg-gray-700 text-white hover:bg-gray-600'
+                }`}>
+                  Get Started
+                </button>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               </motion.div>
             ))}
           </motion.div>
@@ -599,11 +909,11 @@ const AIProjectManagementPlatform: React.FC = () => {
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-purple/20 via-zion-cyan/20 to-zion-purple/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -615,6 +925,20 @@ const AIProjectManagementPlatform: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple">
                 {" "}Your Project Management?
               </span>
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Project Management?
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-zinc-400 mb-8 leading-relaxed">
               Join thousands of teams already using AI to deliver projects faster, smarter, and with unprecedented success rates.
@@ -634,6 +958,7 @@ const AIProjectManagementPlatform: React.FC = () => {
                 Schedule Demo
               </Link>
             </div>
+<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
@@ -693,6 +1018,15 @@ const AIProjectManagementPlatform: React.FC = () => {
         </div>
       </section>
     </div>
+=======
+            <p className="text-gray-400 mt-6">
+              No credit card required • 14-day free trial • Cancel anytime;
+            </p>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   );
 };
 

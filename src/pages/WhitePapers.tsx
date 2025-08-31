@@ -1,6 +1,5 @@
-
-
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -82,8 +81,13 @@ import {
   Hash as HashIcon10
 } from 'lucide-react';
 
+=======
+import { FileText, Download, Search, Filter, Calendar, Clock, Users, Star, Eye, ArrowRight, BookOpen, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award } from 'lucide-react';
+import SEO from '@/components/SEO';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default function WhitePapers() {
   const [searchQuery, setSearchQuery] = useState('');
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('latest');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -96,8 +100,23 @@ export default function WhitePapers() {
     { id: 'data', name: 'Data & Analytics', icon: BarChart3, count: 7 },
     { id: 'digital', name: 'Digital Transformation', icon: Rocket, count: 5 },
     { id: 'industry', name: 'Industry Solutions', icon: Building2, count: 3 }
+=======
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: <FileText className="w-5 h-5" />, count: 0 },;
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
+    { id: 'emerging', name: 'Emerging Technologies', icon: <Zap className="w-5 h-5" />, count: 4 },;
+    { id: 'strategy', name: 'Digital Strategy', icon: <Target className="w-5 h-5" />, count: 6 };
   ];
-
+  const sortOptions = [;
+    { value: 'newest', label: 'Newest First' },;
+    { value: 'popular', label: 'Most Popular' },;
+    { value: 'alphabetical', label: 'Alphabetical' },;
+    { value: 'downloads', label: 'Most Downloaded' };
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
+  ];
   const whitePapers = [
     {
       id: 1,
@@ -201,6 +220,7 @@ export default function WhitePapers() {
     },
     {
       id: 6,
+<<<<<<< HEAD
       title: 'Machine Learning Operations (MLOps): Enterprise Guide',
       description: 'Learn how to implement MLOps practices to streamline machine learning model development, deployment, and monitoring in enterprise environments.',
       category: 'ai-ml',
@@ -296,9 +316,75 @@ export default function WhitePapers() {
     // Simulate download
     console.log(`Downloading: ${title}`);
     // In a real app, this would trigger an actual download
+=======
+      title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
+      description: 'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
+      category: 'strategy',
+      author: 'David Thompson, Digital Strategy Director',
+      publishDate: '2025-01-08',
+      readTime: '22 min',
+      downloads: 8930,
+      rating: 4.5,;
+      featured: false,;
+      tags: ['Digital Transformation', 'ROI', 'Strategy', 'Measurement'],;
+      coverImage: '/images/whitepapers/digital-transformation-roi.jpg',;
+      fileSize: '2.2 MB',;
+      language: 'English';
+    };
+  ];
+  const featuredInsights = [
+    {
+      title: 'AI Adoption Trends 2025',
+      description: 'Key insights from our latest research on enterprise AI adoption',
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: '/insights/ai-adoption-2025'
+    },
+    {
+      title: 'Cybersecurity Landscape Report',
+      description: 'Current threats and emerging security challenges',
+      icon: <Shield className="w-6 h-6" />,
+      link: '/insights/cybersecurity-2025'
+    },;
+    {;
+      title: 'Cloud Migration Success Stories',;
+      description: 'Real-world examples of successful cloud transformations',;
+      icon: <Cloud className="w-6 h-6" />,;
+      link: '/insights/cloud-success-stories';
+    };
+  ];
+  const getCategoryCount = (categoryId: string) => {;
+    if (categoryId === 'all') {;
+      return whitePapers.length;
+    return whitePapers.filter(paper => paper.category === categoryId).length;
   };
-
+  // Update counts
+  categories.forEach(cat = > {;
+    cat.count = getCategoryCount(cat.id);
+  });
+  const filteredPapers = whitePapers.filter(paper => {;
+    const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         paper.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         paper.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = activeCategory === 'all' || paper.category === activeCategory;
+    return matchesSearch && matchesCategory;
+  });
+  const formatDate = (dateString: string) => {;
+    return new Date(dateString).toLocaleDateString('en-US', {;
+      year: 'numeric',;
+      month: 'long',;
+      day: 'numeric';
+    });
+  };
+  const formatDownloads = (downloads: number) => {;
+    if (downloads >= 1000000) {;
+      return (downloads / 1000000).toFixed(1) + 'M';
+    } else if (downloads >= 1000) {
+      return (downloads / 1000).toFixed(1) + 'K';
+    return downloads.toString();
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
+  };
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
@@ -307,9 +393,25 @@ export default function WhitePapers() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Hero Section */}
+      <section className="pt-32 pb-20 px-4">
+        <div className="container mx-auto text-center">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             transition={{ duration: 0.6 }}
             className="text-center"
           >
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               White Papers
             </h1>
@@ -321,6 +423,68 @@ export default function WhitePapers() {
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
                 <span>Expert Insights</span>
+=======
+            <FileText className="w-10 h-10 text-white" />
+          </motion.div>
+          <motion.h1 
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.1 
+}}
+            className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+          >
+            White Papers & Research
+          </motion.h1>
+          <motion.p 
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.2 
+}}
+            className="text-xl text-slate-300 max-w-3xl mx-auto mb-12"
+          >
+            Access our latest research, insights, and technical expertise on cutting-edge 
+            technologies that are shaping the future of business.
+          </motion.p>
+          {/* Stats */}
+          <motion.div 
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition = {
+  { duration: 0.6,
+  delay: 0.3 
+}}
+            className="grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto"
+          >
+            {stats.map((stat, index)  => (
+              <div key={stat.label} className="text-center">
+                <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
+                  <stat.icon className="w-6 h-6 text-white" />
+                </div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-xs text-slate-400">{stat.label}</div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
@@ -333,6 +497,7 @@ export default function WhitePapers() {
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* Search and Filter Section */}
@@ -344,6 +509,13 @@ export default function WhitePapers() {
           className="bg-zinc-800/50 backdrop-blur-sm border border-zinc-700/50 rounded-2xl p-6"
         >
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+=======
+      </section>
+      {/* Filters and Search */}
+      <section className="py-12 px-4 bg-slate-800/30">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
@@ -355,6 +527,7 @@ export default function WhitePapers() {
                 className="w-full pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
+<<<<<<< HEAD
 
             {/* Category Filter */}
             <div>
@@ -627,6 +800,21 @@ export default function WhitePapers() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
                   className="bg-zinc-800/50 backdrop-blur-sm border border-zion-cyan/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300"
+=======
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category) => (
+                <motion.button
+                  key={category.id}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
+                    selectedCategory === category.id
+                      ? 'bg-cyan-400 text-slate-900 shadow-lg shadow-cyan-400/30'
+                      : 'bg-slate-800 text-slate-300 hover:bg-slate-700 border border-slate-600'
+                  }`}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 >
                   <div className="flex items-start justify-between mb-6">
                     <div className="w-16 h-16 bg-zion-cyan/20 rounded-xl flex items-center justify-center">
@@ -676,6 +864,7 @@ export default function WhitePapers() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       )}
 
       {/* CTA Section */}
@@ -707,5 +896,135 @@ export default function WhitePapers() {
         </div>
       </div>
     </div>
+=======
+      </section>
+      {/* White Papers Grid */}
+      <div className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center text-white mb-12">
+            White Papers Library
+          </h2>
+          {filteredPapers.length > 0 ? (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {filteredPapers.map((paper) => (
+                <div
+                  key={paper.id}
+                  className={`bg-zion-slate border border-zion-slate-light rounded-lg p-6 hover:shadow-lg transition-shadow ${
+                    paper.featured ? 'ring-2 ring-zion-cyan' : ''
+                  }`}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                        {categories.find(c => c.id === paper.category)?.name}
+                      </span>
+                      {paper.featured && (
+                        <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex items-center gap-2 text-zion-slate-light text-sm">
+                      <Calendar className="w-4 h-4" />
+                      {formatDate(paper.publishDate)}
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-3 line-clamp-2">
+                    {paper.title}
+                  </h3>
+                  <div className="flex items-center space-x-4 text-sm text-slate-400 mb-4">
+                    <span>By {paper.author}</span>
+                    <span>•</span>
+                    <time>{new Date(paper.publishDate).toLocaleDateString()}</time>
+                  </div>
+                </div>
+                {/* Summary */}
+                <p className="text-slate-300 text-sm mb-6 leading-relaxed">
+                  {paper.summary}
+                </p>
+                {/* Tags */}
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-2">
+                    {paper.tags.map((tag) => (
+                      <span key={tag} className="px-2 py-1 bg-slate-700/50 rounded-full text-xs text-slate-300">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                {/* File Info */}
+                <div className="flex items-center justify-between mb-6 text-sm text-slate-400">
+                  <div className="flex items-center space-x-4">
+                    <span className="flex items-center space-x-1">
+                      <FileText className="w-4 h-4" />
+                      <span>{paper.format}</span>
+                    </span>
+                    <span>{paper.fileSize}</span>
+                  </div>
+                </div>
+                {/* Actions */}
+                <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
+                  <a 
+                    href={paper.readMore}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
+                  >
+                    Read More
+                    <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
+                  <a 
+                    href={paper.downloadUrl}
+                    className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-400 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    <Download className="w-4 h-4 mr-2" />
+                    Download
+                  </a>
+                </div>
+              </motion.article>
+            ))}
+          </div>
+          {filteredWhitePapers.length === 0 && (
+            <motion.div
+              initial = {
+  { opacity: 0,
+  y: 20 
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+}}
+              transition={{ duration: 0.6 }}
+              className="text-center py-20"
+            >
+              <div className="w-20 h-20 mx-auto mb-6 bg-slate-700/50 rounded-full flex items-center justify-center">
+                <Search className="w-10 h-10 text-slate-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">No white papers found</h3>
+              <p className="text-slate-400">Try adjusting your filters or search terms</p>
+            </motion.div>
+          )}
+        </div>
+      </section>
+      {/* Subscribe to Updates */}
+      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Stay Updated
+          </h2>
+          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+            Subscribe to receive notifications about new white papers, research updates, and industry insights.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            />
+            <button className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">;
+              Subscribe;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+    </div>;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   );
 }

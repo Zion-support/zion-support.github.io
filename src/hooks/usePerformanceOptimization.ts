@@ -99,6 +99,10 @@ export const usePerformanceOptimization = (options: UsePerformanceOptimizationOp
   // Performance monitoring
         // // // // // // // console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms');
       }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         console.warn(`Slow render detected in ${componentName}:`, renderTime.toFixed(2), 'ms')}
       // Report to analytics if available
       if (window.gtag) {

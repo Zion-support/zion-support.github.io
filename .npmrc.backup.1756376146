@@ -1,0 +1,6 @@
+# Enable npm usage
+engine-strict=true
+package-lock=true
+shamefully-hoist=false
+# Use npm as package manager
+# package-manager=npm

@@ -17,6 +17,10 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       // Add to favorites
       // // // // // // // console.log(`Added ${itemType} ${itemId} to favorites`);
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       console.log(`Removed ${itemType} ${itemId} from favorites`)} else {
       // Add to favorites
       console.log(`Added ${itemType} ${itemId} to favorites`)}

@@ -400,7 +400,6 @@ export const specializedIndustrySolutions2025: SpecializedIndustrySolution[] = [
     customers: 18,
     rating: 4.6,
     reviews: 42
-
 ];
 export const industryCategories2025: string[] = Array.from(
   new Set(

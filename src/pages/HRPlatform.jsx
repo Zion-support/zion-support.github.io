@@ -144,6 +144,10 @@ import {
     technologies["Business Intelligence", "Machine Learning", "Data Mining", "Visualization Tools"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const hrTechnologies = [
   {
     name: "Employee Management",

@@ -45,12 +45,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] = [
   {
@@ -1082,5 +1076,4 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
     customers: 73,
     rating: 4.8,
     reviews: 39
-
 ];}}

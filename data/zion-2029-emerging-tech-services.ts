@@ -32,7 +32,10 @@ export interface ZionEmergingTechService2029 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
   // Space Technology Solutions
   {
@@ -83,7 +86,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.9,
     reviews: 45
   },
-
   // Renewable Energy AI Platform
   {
     id: 'renewable-energy-ai-platform',
@@ -132,7 +134,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.8,
     reviews: 67
   },
-
   // Autonomous Vehicle Technology
   {
     id: 'autonomous-vehicle-technology',
@@ -181,7 +182,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.7,
     reviews: 78
   },
-
   // Biotechnology AI Platform
   {
     id: 'biotech-ai-platform',
@@ -230,7 +230,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.9,
     reviews: 56
   },
-
   // Advanced Robotics Platform
   {
     id: 'advanced-robotics-platform',
@@ -279,7 +278,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.8,
     reviews: 89
   },
-
   // Augmented Reality Enterprise Platform
   {
     id: 'ar-enterprise-platform',
@@ -328,7 +326,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.7,
     reviews: 123
   },
-
   // Quantum Computing as a Service
   {
     id: 'quantum-computing-service',
@@ -377,7 +374,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.9,
     reviews: 34
   },
-
   // Nanotechnology Manufacturing Platform
   {
     id: 'nanotech-manufacturing-platform',
@@ -426,7 +422,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.8,
     reviews: 23
   },
-
   // Smart Cities Infrastructure Platform
   {
     id: 'smart-cities-infrastructure',
@@ -475,7 +470,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.8,
     reviews: 78
   },
-
   // Digital Twin Technology Platform
   {
     id: 'digital-twin-platform',
@@ -524,7 +518,6 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     rating: 4.7,
     reviews: 67
   },
-
   // Metaverse Development Platform
   {
     id: 'metaverse-development-platform',
@@ -574,15 +567,16 @@ export const zionEmergingTechServices2029: ZionEmergingTechService2029[] = [
     reviews: 156
   }
 ];
-
 export const getServicesByCategory = (category: ZionEmergingTechService2029['category']) => {
   return zionEmergingTechServices2029.filter(service => service.category === category);
 };
-
 export const getPopularServices = () => {
   return zionEmergingTechServices2029.filter(service => service.isPopular);
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const getNewServices = () => {
   return zionEmergingTechServices2029.filter(service => service.isNew);
 };

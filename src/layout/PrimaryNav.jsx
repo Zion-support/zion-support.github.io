@@ -39,6 +39,10 @@ export function PrimaryNav() {
             // // // // // // // console.log('PrimaryNav search submit:', query);
             navigate(`/search/${slugify(query)}`);
             setQuery('');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             console.log('PrimaryNav search submit:', query);
             router(`/search/${slugify(query)}`);
             setQuery('');
@@ -69,6 +73,10 @@ export function PrimaryNav() {
             else {
                 // Default: search results page with slug
                 navigate(`/search/${sugg.slug || slugify(sugg.text)}`);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
   { width: 'clamp(12rem, 20vw,
   16rem)' 

@@ -317,6 +317,10 @@ export const AdvancedReportingDashboard: React.FC<AdvancedReportingDashboardProp
   // Export report data
   const exportReport = (report: ReportData, format: 'pdf' | 'excel' | 'csv') => {
     // // // // // // // console.log(`Exporting ${report.title} as ${format}`);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           // // // // console.log(`Downloading ${report.title}`);
           break;
         case 'share':

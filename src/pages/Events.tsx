@@ -340,6 +340,5 @@ const Events: React.FC = () => {
       </section>
     </div>
   );
-};
+}
 
-export default Events;

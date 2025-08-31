@@ -453,5 +453,4 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     customers: 30,
     rating: 4.8,
     reviews: 25
-
 ];}}

@@ -94,6 +94,10 @@ const PWAUpdater: React.FC<PWAUpdaterProps> = ({
     } catch (error) {
       // // // // // // // console.error('Update failed:', error);
       setIsUpdating(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       console.error('Failed to apply update:', error);
       setUpdating(false);
       setShowPrompt(true);

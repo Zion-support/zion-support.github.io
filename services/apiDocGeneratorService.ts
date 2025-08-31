@@ -148,9 +148,7 @@ export class APIDocGeneratorService {
       // Fallback to basic documentation
       documentation.endpoints = this.generateFallbackEndpoints();
       documentation.metadata.totalEndpoints = documentation.endpoints.length;
-
     return documentation;
-
   private async analyzeSourceCode(sourcePath: string): Promise<{
         documentation.examples = await this.generateExamples(documentation.endpoints)}
       // Calculate coverage;
@@ -171,10 +169,12 @@ export class APIDocGeneratorService {
     const frameworks: string[] = [];
     // Simulate code analysis based on file extensions
     const files = await this.scanDirectory(sourcePath);
-
     for (const file of files) {
       const extension = file.split('.').pop()?.toLowerCase();
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       if (extension = == 'js' || extension === 'ts') {;
         languages.push('javascript', 'typescript');
         frameworks.push('express', 'fastify');
@@ -209,7 +209,6 @@ export class APIDocGeneratorService {
     ]}
   private analyzeJavaScriptFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-
     // Simulate route analysis
     if (filePath.includes('users')) {
       endpoints.push(
@@ -233,7 +232,6 @@ export class APIDocGeneratorService {
               required: false,
               schema: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
               description: 'Number of users per page'
-
           ],
           requestBody: null,
           responses: [
@@ -251,12 +249,6 @@ export class APIDocGeneratorService {
                       },
                       pagination: {
                         $ref: '#/components/schemas/Pagination'
-
-
-
-
-
-
           ],
           tags['Users'],
           deprecated: false,
@@ -268,7 +260,6 @@ export class APIDocGeneratorService {
             type: 'bearer',
             description: 'JWT token required',
             required: true
-
         },
         {
           id: `endpoint_${Date.now()}_2`,
@@ -283,7 +274,6 @@ export class APIDocGeneratorService {
               required: true,
               schema: { type: 'string', format: 'uuid' },
               description: 'User unique identifier'
-
           ],
           requestBody: null,
           responses: [
@@ -293,13 +283,10 @@ export class APIDocGeneratorService {
               content: {
                 'application/json': {
                   schema: { $ref: '#/components/schemas/User' }
-
-
             },
             {
               code: '404',
               description: 'User not found'
-
           ],
           tags['Users'],
           deprecated: false
@@ -308,7 +295,6 @@ export class APIDocGeneratorService {
     return endpoints}
   private analyzePythonFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-
     // Simulate FastAPI/Django route analysis
     if (filePath.includes('products')) {
       endpoints.push({
@@ -323,8 +309,6 @@ export class APIDocGeneratorService {
           content: {
             'application/json': {
               schema: { $ref: '#/components/schemas/Product' }
-
-
         },
         responses[
           {
@@ -333,13 +317,10 @@ export class APIDocGeneratorService {
             content: {
               'application/json': {
                 schema: { $ref: '#/components/schemas/Product' }
-
-
           },
           {
             code: '400',
             description: 'Invalid input data'
-
         ],
         tags['Products'],
         deprecated: false
@@ -347,7 +328,6 @@ export class APIDocGeneratorService {
     return endpoints}
   private analyzeJavaFile(filePath: string): APIEndpoint[] {
     const endpoints: APIEndpoint[] = [];
-
     // Simulate Spring Boot endpoint analysis
     if (filePath.includes('orders')) {
       endpoints.push({
@@ -363,7 +343,6 @@ export class APIDocGeneratorService {
             required: false,
             schema: { type: 'string', enum['pending', 'processing', 'completed', 'cancelled'] },
             description: 'Filter orders by status'
-
         ],
         requestBody: null,
         responses: [
@@ -375,10 +354,6 @@ export class APIDocGeneratorService {
                 schema: {
                   type: 'array',
                   items: { $ref: '#/components/schemas/Order' }
-
-
-
-
         ],
         tags['Orders'],
         deprecated: false
@@ -424,8 +399,6 @@ export class APIDocGeneratorService {
                 productId: { type: 'string', format: 'uuid' },
                 quantity: { type: 'integer', minimum: 1 },
                 price: { type: 'number', minimum: 0 }
-
-
           },
           total: { type: 'number', minimum: 0 },
           status: { type: 'string', enum['pending', 'processing', 'completed', 'cancelled'] }
@@ -443,7 +416,6 @@ export class APIDocGeneratorService {
         },
         required['page', 'limit', 'total', 'pages'],
         description: 'Pagination metadata schema'
-
     ];
     return schemas}
   private async generateExamples(endpoints: APIEndpoint[]): Promise<APIExample[]> {
@@ -503,7 +475,6 @@ export class APIDocGeneratorService {
           {
             code: '200',
             description: 'API is healthy'
-
         ],
         tags['System'],
         deprecated: false
@@ -525,13 +496,11 @@ export class APIDocGeneratorService {
   private calculateCoverage(endpoints: APIEndpoint[]): number {
     // Calculate documentation coverage based on endpoints
     if (endpoints.length === 0) return 0;
-
     const documentedEndpoints = 0;
     for (const endpoint of endpoints) {
       if (endpoint.description && endpoint.description.length > 10) {
         documentedEndpoints++}
     }
-    
     return Math.round((documentedEndpoints / endpoints.length) * 100)}
   async exportDocumentation(
     documentation: APIDocumentation,

@@ -505,5 +505,4 @@ export const futuristic2028Services: Futuristic2028Service[] = [
     customers: 110,
     rating: 4.9,
     reviews: 89
-
 ];}}

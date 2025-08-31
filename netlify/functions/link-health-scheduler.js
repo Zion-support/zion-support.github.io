@@ -1,22 +1,20 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
+<<<<<<< HEAD
 
 function res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
   return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
 }
 
+=======
+function res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 exports.config = {
   schedule: '*/20 * * * *',
   // every 20 minutes
-
-
-
-
-
-
-
 };
-
 exports.handler = async () => {
   const logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
@@ -25,14 +23,19 @@ exports.handler = async () => {
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'https://ziontechgroup.com';
-
   logStep('sitemap:run', () => runNode('automation/sitemap-runner.cjs'));
   logStep('links:crawl', () => runNode('automation/site-link-crawler.cjs'));
   logStep('links:fix', () => runNode('automation/site-link-fixer.cjs'));
   logStep('external-link:check', () => runNode('automation/external-link-check.cjs'));
   logStep('homepage:update', () => runNode('automation/homepage-updater.cjs'));
   logStep('homepage:advertise', () => runNode('automation/homepage-auto-advertiser.cjs'));
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   return { statusCode: 200, body: logs.join('\n') }};

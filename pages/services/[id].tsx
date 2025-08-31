@@ -9,7 +9,10 @@ import { addedMicroSaaS2025 } from "../../data/2025-added-micro-saas"
 import { addedITServices2025 } from "../../data/2025-added-it-services"
 import { addedAIServices2025 } from "../../data/2025-added-ai-services"
 interface ServiceItem {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 id: string;
 name: string;
 tagline: string;

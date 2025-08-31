@@ -42,6 +42,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             await startTraining(modelId, hyperparameters);
             // // // // // // // console.error('Training failed:', error);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             trackEvent('ml', 'dashboard', 'training_started')}
         catch (error) {
             console.error('Training failed:', error)}
@@ -75,6 +79,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             navigator.clipboard.writeText(modelData);
             // // // // // // // console.error('Export failed:', error);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             trackEvent('ml', 'dashboard', 'model_exported')}
         catch (error) {
             console.error('Export failed:', error)}
@@ -92,6 +100,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 }
             };
             reader.readAsText(file);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     trackEvent('ml', 'dashboard', 'model_imported')}
                 catch (error) {
                     console.error('Import failed:', error)}

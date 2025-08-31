@@ -366,5 +366,4 @@ export const innovativeMicroSaas2034Services: MicroSaasService2034[] = [
     uptime: '99.99% IoT platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/quantum-iot-edge-orchestration'
-
 ];}}

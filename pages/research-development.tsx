@@ -1,8 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { FlaskConical, Lightbulb, Users, Award, ArrowRight, BookOpen, Microscope, Rocket  } from 'lucide-react'
-
-
 export default function ResearchDevelopment(...args[]):  {
 	const researchAreas = [
 		{
@@ -25,9 +23,11 @@ export default function ResearchDevelopment(...args[]):  {
 			projects['Edge AI deployment', '5G integration', 'Autonomous edge systems'],
 			icon: Rocket,
 			color: 'green'
-
 	]
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 						</Link>;
 					</div>;
 				</div>;

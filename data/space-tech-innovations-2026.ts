@@ -297,5 +297,4 @@ export const spaceTechInnovations2026: SpaceTechInnovation2026[] = [
     customers: 150,
     rating: 4.8,
     reviews: 85
-
 ];}}

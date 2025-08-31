@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -12,11 +13,17 @@ import {
 
 type Theme = 'light' | 'dark' | 'system' | 'cyberpunk' | 'minimal' | 'retro';
 
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { Sun, Moon, Monitor  } from 'lucide-react';
+type Theme = 'dark' | 'light' | 'system';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 interface ThemeToggleProps {
   className?: string;
   showAdvanced?: boolean;
   size?: 'sm' | 'md' | 'lg';
 }
+<<<<<<< HEAD
 
 export const ThemeToggle: React.FC<ThemeToggleProps> = ({
   className = '',
@@ -118,6 +125,49 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
     return theme ? theme.label : 'Dark';
   };
 
+=======
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {;
+  const [theme, setTheme] = useState<Theme>('system');
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme)}
+  }, []);
+  useEffect(() => {
+    if (!mounted) return;
+    const root = window.document.documentElement;
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.toggle('dark', systemTheme === 'dark');
+    } else {
+      root.classList.toggle('dark', theme === 'dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => {
+      if (theme === 'system') {
+        const root = window.document.documentElement;
+        root.classList.toggle('dark', mediaQuery.matches);
+      }
+    };
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, [theme]);
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" />
+    );
+  }
+  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [
+    { value: 'light', label: 'Light', icon: Sun },
+    { value: 'dark', label: 'Dark', icon: Moon },
+    { value: 'system', label: 'System', icon: Monitor }
+  ];
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   return (
     <div className={`relative ${className}`}>
       {/* Main Theme Toggle Button */}
@@ -141,8 +191,62 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({
           </motion.div>
         </AnimatePresence>
       </motion.button>
+<<<<<<< HEAD
 
       {/* Quick Theme Switcher */}
+=======
+      {/* Theme indicator tooltip */}
+      <div className="absolute bottom-full right-0 mb-2 px-2 py-1 text-xs text-white bg-gray-900 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+        {themes.find(t => t.value === theme)?.label} theme
+      </div>
+    </div>
+  );
+}
+// Alternative dropdown version for more explicit theme selection
+export function ThemeToggleDropdown() {
+  const [theme, setTheme] = useState<Theme>('system');
+  const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+  }, []);
+  useEffect(() => {
+    if (!mounted) return;
+    const root = window.document.documentElement;
+    if (theme === 'system') {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.classList.toggle('dark', systemTheme === 'dark');
+    } else {
+      root.classList.toggle('dark', theme === 'dark');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme, mounted]);
+  if (!mounted) {
+    return (
+      <div className="w-32 h-10 rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse" />
+    );
+  }
+  const themes: { value: Theme; label: string; icon: React.ComponentType<any> }[] = [
+    { value: 'light', label: 'Light', icon: Sun },
+    { value: 'dark', label: 'Dark', icon: Moon },
+    { value: 'system', label: 'System', icon: Monitor }
+  ];
+  return (
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+        aria-label="Select theme"
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+      >
+        {themes.find(t => t.value === theme)?.icon({ className: 'w-4 h-4' })}
+        <span className="text-sm font-medium">{themes.find(t => t.value === theme)?.label}</span>
+      </button>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       <AnimatePresence>
         {isOpen && (
           <motion.div

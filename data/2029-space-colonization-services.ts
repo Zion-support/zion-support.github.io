@@ -294,5 +294,4 @@ export const spaceColonization2029Services: SpaceColonization2029Service[] = [
     customers: 18,
     rating: 4.8,
     reviews: 52
-
 ];}}

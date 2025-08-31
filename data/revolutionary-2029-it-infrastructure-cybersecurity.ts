@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../types/service-variants";
-
 export interface RevolutionaryITInfrastructureService2029 {
   id: string;
   name: string;
@@ -41,7 +40,10 @@ export interface RevolutionaryITInfrastructureService2029 {
   isPopular?: boolean;
   isNew?: boolean;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastructureService2029[] = [
   // Zero Trust Network Access
   {
@@ -96,7 +98,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 22,
     isPopular: true
   },
-
   // Cloud FinOps Optimizer
   {
     id: 'cloud-finops-optimizer',
@@ -150,7 +151,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 35,
     isPopular: true
   },
-
   // AI-Powered Compliance Assistant
   {
     id: 'ai-compliance-assistant',
@@ -204,7 +204,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 24,
     isNew: true
   },
-
   // Advanced Threat Intelligence Platform
   {
     id: 'advanced-threat-intelligence',
@@ -257,7 +256,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     rating: 4.9,
     reviews: 18
   },
-
   // Quantum-Ready Infrastructure
   {
     id: 'quantum-ready-infrastructure',
@@ -311,7 +309,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 12,
     isNew: true
   },
-
   // Edge Computing Security
   {
     id: 'edge-computing-security',
@@ -364,7 +361,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     rating: 4.7,
     reviews: 19
   },
-
   // AI-Powered Network Monitoring
   {
     id: 'ai-network-monitoring',
@@ -417,7 +413,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     rating: 4.6,
     reviews: 28
   },
-
   // DevSecOps Automation Platform
   {
     id: 'devsecops-automation',
@@ -471,7 +466,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     reviews: 21,
     isPopular: true
   },
-
   // Data Privacy & Governance Platform
   {
     id: 'data-privacy-governance',
@@ -524,7 +518,6 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     rating: 4.7,
     reviews: 16
   },
-
   // Hybrid Cloud Management
   {
     id: 'hybrid-cloud-management',
@@ -579,19 +572,15 @@ export const revolutionaryITInfrastructureServices2029: RevolutionaryITInfrastru
     isNew: true
   }
 ];
-
 export const getITInfrastructureServicesByCategory = (category: string) => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.category === category);
 };
-
 export const getPopularITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.isPopular);
 };
-
 export const getNewITInfrastructureServices = () => {
   return revolutionaryITInfrastructureServices2029.filter(service => service.isNew);
 };
-
 export const getITInfrastructureServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryITInfrastructureServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));

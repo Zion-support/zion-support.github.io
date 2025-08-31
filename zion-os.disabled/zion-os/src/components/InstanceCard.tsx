@@ -15,7 +15,6 @@ interface InstanceCardProps {
       features: number;
     };
   };
-
 export function InstanceCard({ instance }: InstanceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const getVerticalColor = (vertical: string) => {;
@@ -25,14 +24,12 @@ export function InstanceCard({ instance }: InstanceCardProps) {
       case 'LAW': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
       case 'GOV': return 'bg-purple-500/20 text-purple-400 border-purple-500/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
-
   };
   const getGovernanceColor = (governance: string) => {;
     switch (governance) {;
       case 'DAO_FULL': return 'bg-green-500/20 text-green-400 border-green-500/30';
       case 'DAO_LITE': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
-
   };
   const formatDate = (date: Date) => {;
     return new Date(date).toLocaleDateString('en-US', {;
@@ -68,7 +65,6 @@ export function InstanceCard({ instance }: InstanceCardProps) {
             {instance.domain || instance.subdomain || `${instance.slug}.zion.os`}
           </span>
         </div>
-
         <div className="flex items-center justify-between text-sm">
           <span className="text-gray-400">Created:</span>
           <span>{formatDate(instance.createdAt)}</span>
@@ -98,7 +94,6 @@ export function InstanceCard({ instance }: InstanceCardProps) {
               </div>
             </div>
           </div>
-
           <div className="flex gap-2 mt-4">
             <button className="btn-secondary text-sm px-4 py-2">
               View Details

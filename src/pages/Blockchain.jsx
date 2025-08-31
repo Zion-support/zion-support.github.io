@@ -39,6 +39,10 @@ import {
     technologies["Polkadot", "Cosmos", "LayerZero", "Wormhole"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const blockchainTechnologies = [
   {
     name: "Ethereum",

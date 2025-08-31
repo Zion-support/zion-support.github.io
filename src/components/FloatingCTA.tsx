@@ -233,6 +233,10 @@ const FloatingCTA: React.FC = (): JSX.Element => {;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             onClick={() => setIsExpanded(false)};
           />;
         )};

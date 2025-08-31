@@ -342,5 +342,4 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     customers: 180,
     rating: 4.8,
     reviews: 298
-
 ];}}

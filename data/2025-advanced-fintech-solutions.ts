@@ -292,5 +292,4 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [
     customers: 89,
     rating: 4.5,
     reviews: 52
-
 ];}}

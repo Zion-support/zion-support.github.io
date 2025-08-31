@@ -3,6 +3,10 @@ import React from 'react';
   Cpu,
   Lock
 } from 'lucide-react';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 import { motion } from 'framer-motion';
 import {
   Brain,
@@ -101,6 +105,10 @@ const AIBusinessIntelligence: React.FC = () => {
       cta: 'Contact Sales',
       popular: false
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       title: "Automated Insights",
       description: "Automatically discover patterns, anomalies, and actionable insights from your data.";
     };
@@ -301,6 +309,10 @@ const AIBusinessIntelligence: React.FC = () => {
                 <p className="text-zion-slate-light text-lg">{benefit}</p>
               </motion.div>
             ))}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
@@ -555,6 +567,10 @@ const AIBusinessIntelligence: React.FC = () => {
             <div className="flex items-center gap-2">
               <Clock className="w-5 h-5 text-blue-400" />
               <span>14-day free trial</span>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}

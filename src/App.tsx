@@ -161,6 +161,9 @@ const BlockchainWeb3 = createLazyComponent(() => import('./pages/solutions/Block
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/solutions/IoTEdgeComputing'));
 const SpaceTech = createLazyComponent(() => import('./pages/solutions/SpaceTech'));
 
+// New Innovative Services 2025
+const AIAutonomousBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-autonomous-business-intelligence-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 const InnovativeAIServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeAIServicesShowcase2025'));
@@ -184,6 +187,8 @@ const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 
 // Additional pages
 const Research = createLazyComponent(() => import('./pages/Research'));
+
+
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -361,6 +366,11 @@ function App() {
                     <Route path="/solutions/iot-edge-computing" element={<IoTEdgeComputing />} />
                     <Route path="/solutions/space-tech" element={<SpaceTech />} />
 
+                    {/* New Innovative Services 2025 */}
+                    <Route path="/services/ai-autonomous-business-intelligence-platform" element={<AIAutonomousBusinessIntelligence />} />
+                    <Route path="/services/ai-cybersecurity-threat-intelligence-platform" element={<AICybersecurityThreatIntelligence />} />
+                    <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalytics />} />
+
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/innovative-ai-services-showcase-2025" element={<ModernLayout><InnovativeAIServicesShowcase2025 /></ModernLayout>} />
@@ -388,6 +398,9 @@ function App() {
                     <Route path="/partners" element={<ModernLayout><Partners /></ModernLayout>} />
                     <Route path="/news" element={<ModernLayout><News /></ModernLayout>} />
                     <Route path="/research" element={<ModernLayout><Research /></ModernLayout>} />
+
+                    {/* Pricing Route */}
+                    <Route path="/pricing" element={<Pricing />} />
 
                     {/* 404 Page */}
                     <Route

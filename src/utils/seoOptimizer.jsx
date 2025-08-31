@@ -187,6 +187,10 @@ export class SEOOptimizer {
     </script>
     `;
 export const seoOptimizer = new SEOOptimizer();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Simulate SEO analysis
     setTimeout(() => {
       let score = 0;

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
   availability_type?: string}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}
 // Simple error component to replace Next.js ErrorPage
@@ -87,7 +91,6 @@ const TalentProfilePage: React.FC = () => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-300 hover:text-blue-100 underline"
-
                   {platform}
                 </a>
               ))}

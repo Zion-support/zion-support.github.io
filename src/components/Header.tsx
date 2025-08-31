@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { MainNavigation } from './header/MainNavigation';
 import { 
   Menu, 
@@ -8,12 +9,32 @@ import {
   Zap, 
   Phone, 
   Mail, 
+=======
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Brain,
+  Shield,
+  Cpu,
+  Heart,
+  Rocket,
+  Sparkles,
+  BarChart3,
+  Network,
+  Globe,
+  Users,
+  FileText,
+  Phone,
+  Mail,
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   MapPin,
   ChevronDown,
   Globe,
   Search,
   Bell
 } from 'lucide-react';
+<<<<<<< HEAD
 import { ThemeToggle } from './ThemeToggle';
 
 interface HeaderProps {
@@ -23,9 +44,18 @@ interface HeaderProps {
 export function Header({ className }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+=======
+interface HeaderProps {
+  onMenuClick?: () => void;
+}
+
+export function Header({ onMenuClick }: HeaderProps) {
+  const [isOpen, setIsOpen] = useState(false);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [showSearch, setShowSearch] = useState(false);
   const location = useLocation();
+<<<<<<< HEAD
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +70,8 @@ export function Header({ className }: HeaderProps) {
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
   };
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const navigation = [
     {
       name: 'Services',
@@ -80,6 +112,7 @@ export function Header({ className }: HeaderProps) {
       ]
     },
     {
+<<<<<<< HEAD
       title: 'Company',
       items: [
         { name: 'About Us', href: '/about' },
@@ -88,6 +121,33 @@ export function Header({ className }: HeaderProps) {
         { name: 'Partners', href: '/partners' },
         { name: 'News', href: '/news' },
         { name: 'Contact', href: '/contact' }
+=======
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      dropdown: [
+        { name: 'Our Story', href: '/about/story', icon: FileText },
+        { name: 'Team', href: '/about/team', icon: Users },
+        { name: 'Careers', href: '/careers', icon: Briefcase },
+        { name: 'Partners', href: '/partners', icon: Network },
+        { name: 'Press', href: '/press', icon: Newspaper }
+      ]
+    },
+    {
+      name: 'Resources',
+      href: '/resources',
+      icon: FileText,
+      dropdown: [
+        { name: 'Blog', href: '/blog', icon: Newspaper },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText },
+        { name: 'Research & Development', href: '/research-development', icon: Activity },
+        { name: 'Documentation', href: '/docs', icon: FileText },
+        { name: 'API Reference', href: '/api', icon: Cpu },
+        { name: 'Sitemap', href: '/sitemap', icon: FileText },
+        { name: 'Support', href: '/support', icon: FileText },
+        { name: 'Training', href: '/training', icon: FileText },
+        { name: 'Helpdesk', href: '/help', icon: FileText }
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       ]
     },
     {
@@ -103,6 +163,7 @@ export function Header({ className }: HeaderProps) {
       ]
     }
   ];
+<<<<<<< HEAD
 
   return (
     <header 
@@ -114,6 +175,27 @@ export function Header({ className }: HeaderProps) {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
+=======
+  const isActive = (href: string) => location.pathname === href;
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      // Implement search functionality
+      console.log('Searching for:', searchQuery);
+      setIsSearchOpen(false);
+      setSearchQuery('');
+    }
+  };
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setIsOpen(false);
+    setActiveDropdown(null);
+  }, [location.pathname]);
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-b border-white/10 shadow-lg">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -128,13 +210,71 @@ export function Header({ className }: HeaderProps) {
               </p>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+<<<<<<< HEAD
             <MainNavigation />
           </div>
 
           {/* Right Side Actions */}
+=======
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                {item.dropdown ? (
+                  <div
+                    className="flex items-center space-x-1 text-white hover:text-cyan-400 cursor-pointer transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black rounded"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                    onFocus={() => setActiveDropdown(item.name)}
+                    onBlur={() => setActiveDropdown(null)}
+                    tabIndex={0}
+                    role="button"
+                    aria-expanded={activeDropdown === item.name}
+                    aria-haspopup="true"
+                  >
+                    <span className={isActive(item.href) ? 'text-cyan-400' : ''}>
+                      {item.name}
+                    </span>
+                    <ChevronDown className="w-4 h-4" />
+                  </div>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black rounded ${
+                      isActive(item.href) ? 'text-cyan-400' : ''
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                )}
+                {/* Dropdown Menu */}
+                {item.dropdown && activeDropdown === item.name && (
+                  <motion.div 
+                    className="absolute top-full left-0 mt-2 w-64 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-lg shadow-xl"
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div className="py-2">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          to={subItem.href}
+                          className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset"
+                        >
+                          <subItem.icon className="w-4 h-4" />
+                          <span>{subItem.name}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </div>
+            ))}
+          </div>
+          {/* Right side actions */}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           <div className="hidden lg:flex items-center space-x-4">
             {/* Search Button */}
             <button
@@ -159,6 +299,7 @@ export function Header({ className }: HeaderProps) {
               to="/contact"
               className="px-6 py-2 border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
             >
+<<<<<<< HEAD
               Get Quote
             </Link>
             <Link
@@ -183,6 +324,22 @@ export function Header({ className }: HeaderProps) {
         </div>
       </div>
 
+=======
+              Get Started
+            </Link>
+          </div>
+          {/* Mobile menu button */}
+          <button
+            onClick={onMenuClick || (() => setIsOpen(!isOpen))}
+            className="lg:hidden text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-black rounded p-2"
+            aria-label="Toggle mobile menu"
+            aria-expanded={isOpen}
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+      </nav>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       {/* Search Bar */}
       <AnimatePresence>
         {showSearch && (
@@ -213,7 +370,6 @@ export function Header({ className }: HeaderProps) {
           </motion.div>
         )}
       </AnimatePresence>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isMobileMenuOpen && (
@@ -284,6 +440,7 @@ export function Header({ className }: HeaderProps) {
                   )}
                 </div>
               ))}
+<<<<<<< HEAD
               
               {/* Mobile Theme Toggle */}
               <div className="pt-4 border-t border-slate-700/50">
@@ -295,11 +452,16 @@ export function Header({ className }: HeaderProps) {
               
               {/* Mobile CTA Buttons */}
               <div className="pt-4 border-t border-slate-700/50 space-y-3">
+=======
+              {/* Mobile CTA */}
+              <div className="pt-4 border-t border-gray-700">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 <Link
                   to="/contact"
                   className="block w-full px-4 py-2 text-center border border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
+<<<<<<< HEAD
                   Get Quote
                 </Link>
                 <Link
@@ -308,6 +470,9 @@ export function Header({ className }: HeaderProps) {
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Start Project
+=======
+                  Get Started
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 </Link>
               </div>
             </div>

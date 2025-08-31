@@ -27,6 +27,10 @@ import {
     technologies["TLS/SSL", "OAuth 2.0", "JWT", "Zero Trust"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const iotTechnologies = [
   {
     name: "MQTT Protocol",

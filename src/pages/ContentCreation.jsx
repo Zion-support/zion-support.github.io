@@ -120,6 +120,10 @@ import {
     technologies["CDN", "Edge Computing", "Load Balancing", "Performance Monitoring"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const contentTechnologies = [
   {
     name: "Content Creation Tools",

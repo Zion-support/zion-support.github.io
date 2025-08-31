@@ -25,13 +25,13 @@ export function AppHeader() {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
   const location = useLocation();
-
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
+<<<<<<< HEAD
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -41,11 +41,17 @@ export function AppHeader() {
     setActiveDropdown(null);
   }, [location.pathname]);
 
+=======
+    return () => window.removeEventListener('scroll', handleScroll)}, []);
+  // Close mobile menu when route changes
+  useEffect(() => {
+    setMobileMenuOpen(false);
+    setActiveDropdown(null)}, [location.pathname]);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
     // In a real app, this would toggle the theme
   };
-
   const navigationItems = [
     { name: 'Home', path: '/', icon: null },
     { 
@@ -66,14 +72,18 @@ export function AppHeader() {
     { name: 'About', path: '/about', icon: null },
     { name: 'Contact', path: '/contact', icon: null },
   ];
-
   const isActiveRoute = (path) => {
     if (path === '/') {
+<<<<<<< HEAD
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
   };
 
+=======
+      return location.pathname === '/'}
+    return location.pathname.startsWith(path)};
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   return (
     <motion.header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -84,7 +94,10 @@ export function AppHeader() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
+<<<<<<< HEAD
     >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
@@ -92,7 +105,14 @@ export function AppHeader() {
             <motion.div 
               className="relative"
               whileHover={{ scale: 1.1 }}
+<<<<<<< HEAD
               transition={{ type: "spring", stiffness: 400, damping: 10 }}
+=======
+              transition = {
+  { type: "spring", stiffness: 400,
+  damping: 10 
+}}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             >
               <div className="w-10 h-10 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-white" />
@@ -107,7 +127,6 @@ export function AppHeader() {
               </p>
             </div>
           </Link>
-
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -118,16 +137,23 @@ export function AppHeader() {
                       className="flex items-center space-x-1 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300 py-2"
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
                     
+=======
+                      <span>{item.name}</span>
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     {/* Dropdown Menu */}
                     <AnimatePresence>
                       {activeDropdown === item.name && (
                         <motion.div
                           className="absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-zion-cyan/30 rounded-xl shadow-2xl shadow-zion-cyan/10 p-4"
+<<<<<<< HEAD
                           initial={{ opacity: 0, y: -10, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           exit={{ opacity: 0, y: -10, scale: 0.95 }}
@@ -135,13 +161,33 @@ export function AppHeader() {
                           onMouseEnter={() => setActiveDropdown(item.name)}
                           onMouseLeave={() => setActiveDropdown(null)}
                         >
+=======
+                          initial = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+}}
+                          animate = {
+  { opacity: 1, y: 0,
+  scale: 1 
+}}
+                          exit = {
+  { opacity: 0, y: -10,
+  scale: 0.95 
+}}
+                          transition={{ duration: 0.2 }}
+                          onMouseEnter={() => setActiveDropdown(item.name)}
+                          onMouseLeave={() => setActiveDropdown(null)}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                           <div className="grid grid-cols-1 gap-2">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
                                 className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/5 transition-all duration-300 group/item"
+<<<<<<< HEAD
                               >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                                 <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${dropdownItem.color} flex items-center justify-center`}>
                                   <dropdownItem.icon className="w-5 h-5 text-white" />
                                 </div>
@@ -165,53 +211,77 @@ export function AppHeader() {
                         ? 'text-zion-cyan'
                         : 'text-zion-slate-light hover:text-zion-cyan'
                     }`}
+<<<<<<< HEAD
                   >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     {item.name}
                   </Link>
                 )}
               </div>
             ))}
           </nav>
-
           {/* Right side actions */}
           <div className="flex items-center space-x-4">
             {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
               className="p-2 text-zion-slate-light hover:text-zion-cyan transition-colors duration-300"
+<<<<<<< HEAD
             >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
-
             {/* CTA Button */}
             <Link
               to="/contact"
               className="hidden sm:inline-flex items-center px-6 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-medium rounded-lg hover:from-zion-purple hover:to-zion-cyan transition-all duration-300 transform hover:scale-105"
+<<<<<<< HEAD
             >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               Get Started
             </Link>
-
             {/* Mobile menu button */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="lg:hidden p-2 text-zinc-400 hover:text-white hover:bg-zinc-800/50 rounded-lg transition-colors"
+<<<<<<< HEAD
             >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </div>
-
       {/* Mobile Navigation */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             className="lg:hidden bg-zinc-900/95 backdrop-blur-xl border-t border-zinc-700/50"
+<<<<<<< HEAD
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
           >
+=======
+            initial = {
+  { opacity: 0,
+  height: 0 
+}}
+            animate = {
+  { opacity: 1,
+  height: 'auto' 
+}}
+            exit = {
+  { opacity: 0,
+  height: 0 
+}}
+            transition={{ duration: 0.3 }}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <div className="container mx-auto px-4 py-4">
               <nav className="space-y-4">
                 {navigationItems.map((item) => (
@@ -221,7 +291,10 @@ export function AppHeader() {
                         <button
                           className="flex items-center justify-between w-full text-left text-zinc-300 hover:text-white transition-colors duration-300 p-3 rounded-lg hover:bg-zinc-800/50"
                           onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+<<<<<<< HEAD
                         >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                           <span className="font-medium">{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
                             activeDropdown === item.name ? 'rotate-180' : ''
@@ -234,7 +307,10 @@ export function AppHeader() {
                                 key={dropdownItem.name}
                                 to={dropdownItem.path}
                                 className="block p-3 rounded-lg hover:bg-zinc-800/50 text-zinc-300 hover:text-white transition-colors duration-300"
+<<<<<<< HEAD
                               >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                                 {dropdownItem.name}
                               </Link>
                             ))}
@@ -249,7 +325,10 @@ export function AppHeader() {
                             ? 'text-zion-cyan bg-zion-cyan/10'
                             : 'text-zinc-300 hover:text-white hover:bg-zinc-800/50'
                         }`}
+<<<<<<< HEAD
                       >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                         {item.name}
                       </Link>
                     )}
@@ -261,5 +340,9 @@ export function AppHeader() {
         )}
       </AnimatePresence>
     </motion.header>
+<<<<<<< HEAD
   );
 }
+=======
+  )}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

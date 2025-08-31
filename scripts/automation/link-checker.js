@@ -1,22 +1,24 @@
 #!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
-
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 
 // // // // // // // console.log('🔗 Starting continuous link checker automation...');
 // // // console.log('🔗 Starting continuous link checker automation...');
 
+=======
+// // // // // // // console.log('🔗 Starting continuous link checker automation...');
+=======
+// // // console.log('🔗 Starting continuous link checker automation...');
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 // Get automation interval from environment variable (default: 30 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes
-
 async function checkLinks() {
   try {
     // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
-
     // Build the project first
     // // // console.log('📦 Building project...');
     try {
@@ -25,7 +27,6 @@ async function checkLinks() {
     } catch (error) {
       // // // console.log('⚠️  Build failed but continuing...');
     // // // // // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);
-
     // Build the project first
     // // // // // // // console.log('📦 Building project...');
     try {
@@ -33,44 +34,55 @@ async function checkLinks() {
       // // // // // // // console.log('✅ Build completed');
     } catch (error) {
       // // // // // // // console.log('⚠️  Build failed but continuing...');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       return;
-
     // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
       // // // // // // // console.log('⚠️  Dist folder not found, skipping link check');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       // // // console.log('⚠️  Dist folder not found, skipping link check');
       return;
-
     // Check for index.html
     const indexHtmlPath = path.join(distPath, 'index.html');
     if (!fs.existsSync(indexHtmlPath)) {
       // // // // // // // console.log('⚠️  index.html not found in build output');
       return;
+<<<<<<< HEAD
 
       // // // console.log('⚠️  index.html not found in build output');
       return;
 
+=======
+      // // // console.log('⚠️  index.html not found in build output');
+      return;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // // // console.log('✅ index.html found in build output');
-
     // Find all HTML files
     const htmlFiles = findHtmlFiles(distPath);
     // // // console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
     // // // // // // // console.log('✅ index.html found in build output');
-
     // Find all HTML files
     const htmlFiles = findHtmlFiles(distPath);
     // // // // // // // console.log(`📄 Found ${htmlFiles.length} HTML files to check`);
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Check for broken references
     let hasIssues = false;
     const brokenReferences = [];
-
     for (const htmlFile of htmlFiles) {
       try {
         const content = fs.readFileSync(htmlFile, 'utf8');
         const references = findReferences(content);
-
         for (const ref of references) {
           if (!isValidReference(ref, distPath)) {
             brokenReferences.push({
@@ -78,73 +90,73 @@ async function checkLinks() {
               reference: ref
             });
             hasIssues = true;
-
-
       } catch (error) {
         // // // // // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
       }
     }
-
     if (brokenReferences.length > 0) {
       // // // // // // // console.log('⚠️  Broken references found:');
       brokenReferences.forEach(ref => {
         // // // // // // // console.log(`  - ${ref.file}: ${ref.reference}`);
       });
-
     if (!hasIssues) {
       // // // // // // // console.log('✅ No broken references found');
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         // // // console.log(`⚠️  Could not read ${htmlFile}: ${error.message}`);
-
-
     if (brokenReferences.length > 0) {
       // // // console.log('⚠️  Broken references found:');
       brokenReferences.forEach(ref => {
         // // // console.log(`  - ${ref.file}: ${ref.reference}`);
       });
-
     if (!hasIssues) {
       // // // console.log('✅ No broken references found');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Generate report
     // // // // // // // console.log(`📊 Report saved to ${reportPath}`);
-
   } catch (error) {
     // // // // // // // console.error('❌ Link check failed:', error.message);
     // Don't exit, just log the error and continue
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   summary: 'Link check completed'
-    
-
 };
+<<<<<<< HEAD
 
     const reportPath = path.join(process.cwd(), 'link-checker-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
 
+=======
+=======
+    const reportPath = path.join(process.cwd(), 'link-checker-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    // // // console.log(`📊 Report saved to ${reportPath}`);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   } catch (error) {
     // // // console.error('❌ Link check failed:', error.message);
     // Don't exit, just log the error and continue
-
-
 function files = [];
   const items = fs.readdirSync(dir);
-
   for (const item of items) {
     const fullPath = path.join(dir, item);
     const stat = fs.statSync(fullPath);
-
     if (stat.isDirectory()) {
       files.push(...findHtmlFiles(fullPath));
     } else if (item.endsWith('.html')) {
       files.push(fullPath);
-
-
   return files;
-
 function findReferences(content) {
   const references = [];
-
   // Find href attributes
   const hrefMatches = content.match(/href=["']([^"']+)["']/g);
   if (hrefMatches) {
@@ -152,9 +164,7 @@ function findReferences(content) {
       const href = match.match(/href=["']([^"']+)["']/)[1];
       if (href && !href.startsWith('#') && !href.startsWith('javascript:') && !href.startsWith('http')) {
         references.push(href);
-
     });
-
   // Find src attributes
   const srcMatches = content.match(/src=["']([^"']+)["']/g);
   if (srcMatches) {
@@ -162,54 +172,64 @@ function findReferences(content) {
       const src = match.match(/src=["']([^"']+)["']/)[1];
       if (src && !src.startsWith('data:') && !src.startsWith('blob:') && !src.startsWith('http')) {
         references.push(src);
-
     });
-
   return references;
-
 function isValidReference(ref, distPath) {
   if (ref.startsWith('/')) {
     ref = ref.substring(1);
-
   const fullPath = path.join(distPath, ref);
   return fs.existsSync(fullPath);
-
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+<<<<<<< HEAD
   // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 
+=======
+=======
+  // // // console.log(`🚀 Starting continuous link checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // Run initial check
   await checkLinks();
-
   // Set up continuous execution
   setInterval(async () => {
     await checkLinks();
   }, AUTOMATION_INTERVAL);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // // // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
-
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // console.log(`✅ Continuous link checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
-
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
-
 // Start the continuous link checker
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous link checker:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // console.error('❌ Failed to start continuous link checker:', error);
   process.exit(1);
 });

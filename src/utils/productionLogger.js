@@ -5,6 +5,10 @@ export const logErrorToProduction = (message, error) => {
   if (process.env.NODE_ENV === 'development') {
     // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.error(message, error);
   }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // // // // // // // // // // // // // // // // // // // // // // // // // console.error(message, error);
   }
   // You can add production logging here:

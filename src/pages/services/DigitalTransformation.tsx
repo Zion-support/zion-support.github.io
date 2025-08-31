@@ -1,4 +1,21 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { SEO } from '@/components/SEO';
+export default function DigitalTransformation() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <SEO title="Digital Transformation - Zion Tech Group" description="Modernize processes with cloud-native platforms, automation, and data-driven operations." />
+      <section className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">Digital Transformation</h1>
+        <p className="text-lg text-gray-300 max-w-3xl">
+          We partner with teams to reimagine workflows, build cloud-native systems, and scale data and AI capabilities across the enterprise.
+        </p>
+      </section>
+    </div>
+  );
+import React from 'react';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
@@ -56,6 +73,7 @@ export default function DigitalTransformation() {
       features: ["User Journey Mapping", "Digital Touchpoints", "Personalization", "Feedback Systems"],
       icon: Target
     },
+<<<<<<< HEAD
     {
       title: "Data & Analytics Strategy",
       description: "Leverage data insights to drive informed business decisions",
@@ -87,9 +105,56 @@ export default function DigitalTransformation() {
     }
   ];
 
+=======
+    };
+=======;
+    {;
+      icon: Search,;
+      title: 'Performance Monitoring',;
+      description: 'Track transformation progress and measure ROI';
+    };
+  ];
+  const benefits = [;
+    'Increase operational efficiency by 40%',;
+    'Reduce costs by 30% through automation',;
+    'Improve customer experience and satisfaction',;
+    'Enable data-driven decision making',;
+    'Accelerate time to market',;
+    'Enhance competitive advantage';
+  ];
+  const services = [
+    {
+      icon: Strategy,
+      title: 'Digital Strategy',
+      description: 'Comprehensive digital transformation strategy development'
+    },
+    {
+      icon: Workflow,
+      title: 'Process Automation',
+      description: 'Automate manual processes and workflows'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Migration',
+      description: 'Migrate legacy systems to modern cloud platforms';
+    },;
+    {;
+      icon: Data,;
+      title: 'Data Analytics',;
+      description: 'Implement advanced analytics and business intelligence';
+    };
+  ];
+    address: "364 E Main St STE 1008,;
+  ;
+  ;
+  Middletown DE 19709";
+  ;
+};
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const industries = [
     'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Technology', 'Energy'
   ];
+<<<<<<< HEAD
 
   const contactInfo = {
     phone: "+1 302 464 0950",
@@ -97,6 +162,8 @@ export default function DigitalTransformation() {
     address: "364 E Main St STE 1008, Middletown DE 19709"
   };
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
@@ -108,6 +175,7 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           >
             Digital Transformation
           </motion.h1>
@@ -129,6 +197,30 @@ export default function DigitalTransformation() {
               View Solutions
             </Link>
           </div>
+=======
+            className="text-center"
+          >
+            <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue bg-clip-text text-transparent mb-6">
+              Digital Transformation
+            </h1>
+            <p className="text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed">
+              Transform your business for the digital age with comprehensive technology solutions that drive innovation,
+              efficiency, and growth. Our expert team guides you through every step of your digital journey.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
+                Start Your Transformation
+              </Link>
+              <Link
+                to="/solutions"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
+                View Solutions
+              </Link>
+            </div>
+          </motion.div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         </div>
       </section>
 
@@ -140,9 +232,16 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Our Transformation Services
+=======
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Digital Transformation Features
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Comprehensive digital transformation services designed to modernize your business operations 
@@ -153,14 +252,101 @@ export default function DigitalTransformation() {
             {services.map((service, index) => (
               <motion.div 
                 key={index}
+<<<<<<< HEAD
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-xl p-8 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+=======
+                initial = {
+  { opacity: 0,
+  y: 30 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <service.icon className="w-8 h-8 text-white" />
+<<<<<<< HEAD
+=======
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Services Section */}
+      <section className="py-20 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Core Transformation Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From strategy to implementation, we provide 
+              end-to-end digital transformation solutions.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {services.map((service, index) => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-200"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <service.icon className="w-6 h-6 text-white" />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
@@ -192,9 +378,16 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Why Choose Digital Transformation?
+=======
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Transformation Benefits
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Digital transformation delivers measurable benefits that impact every aspect of your business.
@@ -208,8 +401,12 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
+=======
+                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -228,9 +425,16 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Industries We Serve
+=======
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Our digital transformation expertise spans across multiple industries, 
@@ -241,12 +445,30 @@ export default function DigitalTransformation() {
             {industries.map((industry, index) => (
               <motion.div 
                 key={index}
+<<<<<<< HEAD
                 className="bg-slate-800/50 border border-cyan-500/20 rounded-lg p-6 text-center hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="text-cyan-400 font-semibold">{industry}</div>
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-orange-500/30 transition-all duration-200"
+              >
+                <div className="text-zion-cyan font-semibold">{industry}</div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               </motion.div>
             ))}
           </div>
@@ -261,7 +483,10 @@ export default function DigitalTransformation() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           >
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Our Transformation Process
             </h2>
@@ -282,8 +507,12 @@ export default function DigitalTransformation() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+<<<<<<< HEAD
               >
                 <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+=======
+                <div className="w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   {phase.step}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{phase.title}</h3>
@@ -303,14 +532,20 @@ export default function DigitalTransformation() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
+<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Start Your Digital Transformation Today
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Let our digital transformation experts guide you through your journey to digital excellence. 
               Get started with a free consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <Link 
                 to="/contact" 
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 font-semibold"
@@ -321,6 +556,16 @@ export default function DigitalTransformation() {
                 to="/solutions" 
                 className="px-8 py-4 border-2 border-cyan-500 text-cyan-500 rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300 font-semibold"
               >
+=======
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:scale-105 font-semibold"
+                Schedule Consultation
+              </Link>
+              <Link
+                to="/solutions"
+                className="px-8 py-4 border-2 border-zion-cyan text-zion-cyan rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 font-semibold"
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 Explore Solutions
               </Link>
             </div>
@@ -328,5 +573,21 @@ export default function DigitalTransformation() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
+=======
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200">
+                Contact Sales;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   );
 }

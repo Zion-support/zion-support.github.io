@@ -1,6 +1,5 @@
 import Head from 'next/head.ts';
 import Link from 'next/link.ts';
-
 export default function CloudCostOptimizer(...args[]):  {
   return (
     <div className = "relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -33,4 +32,7 @@ export default function CloudCostOptimizer(...args[]):  {
     </div>;
   );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

@@ -100,7 +100,6 @@ export const advancedAIServices2025 = [
         competitors['Intercom', 'Zendesk', 'Freshdesk', 'Help Scout'],
         marketSize: '$2.8B customer service automation market',
         growthRate: '40% annual growth'
-
 ];
 export default {
     advancedInnovativeServices2025V3,

@@ -70,11 +70,9 @@ interface SidebarItem {
   children?: SidebarItem[];
   badge?: string;
   external?: boolean;
-
 export function Sidebar() {
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
   const location = useLocation();
-
   const sidebarItems: SidebarItem[] = [
     {
       name: 'Dashboard',
@@ -161,9 +159,11 @@ export function Sidebar() {
         { name: 'Business Intelligence', path: '/analytics/bi', icon: PieChart },
         { name: 'Reports', path: '/analytics/reports', icon: BarChart }
       ]
-
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const toggleItem = (itemName: string) => {;
     setExpandedItems(prev => ;
       prev.includes(itemName);
@@ -171,9 +171,7 @@ export function Sidebar() {
         : [...prev, itemName];
     );
   };
-
   const isActive = (path: string) => location.pathname === path;
-
   return (
     <div className = {`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
       isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -186,11 +184,9 @@ export function Sidebar() {
             onClick={onClose}
             className="p-2 rounded-md text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
             aria-label="Close sidebar"
-
             <X className="h-5 w-5" />
           </button>
         </div>
-
         {/* Navigation Items */}
         <nav className="flex-1 overflow-y-auto p-6">
           <div className="space-y-2">
@@ -205,7 +201,6 @@ export function Sidebar() {
                           ? 'bg-blue-600/20 text-white'
                           : 'text-gray-300 hover:text-white hover:bg-white/10'
                       }`}
-
                       <div className="flex items-center space-x-3">
                         <item.icon className="h-5 w-5" />
                         <span className="font-medium">{item.name}</span>
@@ -216,7 +211,6 @@ export function Sidebar() {
                         }`}
                       />
                     </button>
-
                     {expandedItems.includes(item.name) && (
                       <div className="ml-6 mt-2 space-y-1">
                         {item.children.map((child) => (
@@ -229,7 +223,6 @@ export function Sidebar() {
                                 : 'text-gray-400 hover:text-white hover:bg-white/10'
                             }`}
                             onClick={onClose}
-
                             <child.icon className="h-4 w-4" />
                             <span className="text-sm">{child.name}</span>
                           </Link>
@@ -246,7 +239,6 @@ export function Sidebar() {
                         : 'text-gray-300 hover:text-white hover:bg-white/10'
                     }`}
                     onClick={onClose}
-
                     <item.icon className="h-5 w-5" />
                     <span className="font-medium">{item.name}</span>
                   </Link>
@@ -255,7 +247,6 @@ export function Sidebar() {
             ))}
           </div>
         </nav>
-
         {/* Footer */}
         <div className="p-6 border-t border-white/10">
           <div className="text-center">
@@ -272,11 +263,9 @@ export function Sidebar() {
       </div>;
     </div>;
   );
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
-
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {
   return <Sidebar isOpen={isOpen} onClose={onClose} />;
 }}}}}}

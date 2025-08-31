@@ -1,6 +1,5 @@
 // Development Service Worker for Vite
 const CACHE_NAME = 'zion-tech-group-dev-v1';
-
 // Files to cache in development
 const STATIC_FILES = [
   '/',
@@ -12,7 +11,6 @@ const STATIC_FILES = [
   '/offline.html',
   '/vite.svg'
 ];
-
 // Install event - cache static files
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -39,7 +37,6 @@ self.addEventListener('install', (event) => {
       })
   );
 });
-
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -50,7 +47,6 @@ self.addEventListener('activate', (event) => {
             if (cacheName !== CACHE_NAME) {
               // // // // // // // console.log('Dev SW: Deleting old cache:', cacheName);
               return caches.delete(cacheName);
-
           })
         );
       })
@@ -60,16 +56,13 @@ self.addEventListener('activate', (event) => {
       })
   );
 });
-
 // Fetch event - network first for development
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
-
   // Skip non-GET requests
   if (request.method !== 'GET') {
     return;
-
   // Handle external requests (fonts, etc.)
   if (url.origin !== self.location.origin) {
     event.respondWith(
@@ -80,7 +73,6 @@ self.addEventListener('fetch', (event) => {
       })
     );
     return;
-
   // For development, always try network first, then cache
   event.respondWith(
     fetch(request)
@@ -91,7 +83,6 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(request, responseClone);
           });
-
         return response;
       })
       .catch((error) => {
@@ -100,11 +91,9 @@ self.addEventListener('fetch', (event) => {
         return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
-
           // Return offline page for navigation requests
           if (request.destination === 'document') {
             return caches.match('/offline.html');
-
           return new Response('Not available offline', { status: 503 });
         });
       })

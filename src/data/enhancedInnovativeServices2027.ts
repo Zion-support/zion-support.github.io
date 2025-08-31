@@ -31,6 +31,10 @@ contactInfo: {
     useCases['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const enhancedInnovativeServices2027Categories = [
   'Web3 Solutions',
   'Metaverse Solutions',

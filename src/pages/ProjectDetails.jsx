@@ -65,6 +65,10 @@ function ProjectDetailsContent() {
                 throw error;
             // // // // // // // console.error("Error fetching project notes:", err);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             setNotes(data || [])}
         catch (err) {
             console.error("Error fetching project notes:", err)}

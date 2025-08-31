@@ -100,7 +100,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
   },
   {
     id: 'quantum-cloud-infrastructure',
@@ -164,7 +163,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
   },
   {
     id: 'ai-powered-enterprise-security',
@@ -228,7 +226,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
   },
   {
     id: 'autonomous-it-operations-center',
@@ -292,6 +289,4 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
-
-
 ];}}}}}}

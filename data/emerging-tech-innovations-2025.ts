@@ -297,5 +297,4 @@ export const emergingTechInnovations2025: EmergingTechInnovation2025[] = [
     customers: 35,
     rating: 4.8,
     reviews: 24
-
 ];}}

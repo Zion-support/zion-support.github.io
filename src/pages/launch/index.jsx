@@ -66,6 +66,10 @@ const LaunchToolkitPage = () => {
             setZipError(error instanceof Error ? error.message : 'An unknown error occurred while creating ZIP.');
         finally {
             setIsZipping(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     continue}
                 const blob = await response.blob();
                 // The path in the zip should be relative to 'toolkit_assets' or a desired root folder in the zip

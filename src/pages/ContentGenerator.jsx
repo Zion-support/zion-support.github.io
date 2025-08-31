@@ -49,6 +49,10 @@ export default function ContentGenerator() {
             toast.error("Failed to generate content. Please try again.");
         finally {
             setIsGenerating(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)}
         catch (error) {
             console.error("Error generating content:", error);
@@ -76,6 +80,10 @@ export default function ContentGenerator() {
                 throw error;
             // // // // // // // console.error("Error sending test newsletter:", error);
             toast.error("Failed to send test newsletter. Please try again.");
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             toast.success(`Test newsletter sent to ${testEmail}!`)}
         catch (error) {
             console.error("Error sending test newsletter:", error);

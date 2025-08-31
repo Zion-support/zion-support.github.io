@@ -45,12 +45,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
   {
@@ -277,5 +271,4 @@ export const emergingTechnologyServices2025: EmergingTechnologyService[] = [
     customers: 23,
     rating: 4.8,
     reviews: 18
-
 ];}}

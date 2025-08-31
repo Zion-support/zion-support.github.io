@@ -118,13 +118,10 @@ function fixUtilsFile(filePath) {
       fs.writeFileSync(filePath, content, "utf8");
       // // // // // // // console.log(`Fixed: ${filePath}`);
       return true;
-
     return false;
   } catch (error) {
     // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-
-
 async function fixAllUtilsFiles() {
   const files = await glob("utils/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", ".next/**"],
@@ -137,6 +134,10 @@ async function fixAllUtilsFiles() {
   }
   // // // // // // // console.log(`Fixed ${fixedCount} utils files.`);
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       console.log(`Fixed: ${filePath}`);
       return true}
     return false} catch (error) {

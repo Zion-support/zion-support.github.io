@@ -346,5 +346,4 @@ export const revolutionaryAI2025ServicesV2: RevolutionaryAI2025ServiceV2[] = [
     customers: 65,
     rating: 4.6,
     reviews: 38
-
 ];}}

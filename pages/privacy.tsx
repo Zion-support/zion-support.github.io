@@ -1,8 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Shield, Eye, Lock, Database, Users, ArrowRight  } from 'lucide-react'
-
-
 export default function Privacy(...args[]):  {
 	return (
 		<>
@@ -19,7 +17,6 @@ export default function Privacy(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Content */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -51,7 +48,6 @@ export default function Privacy(...args[]):  {
 								This information may include your name, email address, comp name, phone number, and  other information you choose to provide.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
 							<p className="text-gray-600 mb-4">
@@ -76,7 +72,6 @@ export default function Privacy(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Information Sharing</h2>
 							<p className="text-gray-600 mb-4">
@@ -101,7 +96,6 @@ export default function Privacy(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Data Security</h2>
 							<p className="text-gray-600 mb-4">
@@ -126,7 +120,6 @@ export default function Privacy(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Your Rights</h2>
 							<p className="text-gray-600 mb-4">
@@ -155,7 +148,6 @@ export default function Privacy(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Cookies and Tracking</h2>
 							<p className="text-gray-600 mb-4">
@@ -183,7 +175,6 @@ export default function Privacy(...args[]):  {
 								You can control cookie settings through your browser preferences.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
 							<p className="text-gray-600 mb-4">
@@ -201,21 +192,18 @@ export default function Privacy(...args[]):  {
 								</p>
 							</div>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">Updates to This Policy</h2>
 							<p className="text-gray-600">
 								We may update this Privacy Policy from time to time. We will notify you of  changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. We encourage you to review this Privacy Policy periodically for  changes.
 							</p>
 						</div>
-
 						<div className="text-center text-sm text-gray-500">
 							<p>Last Updated: January 15, 2025</p>
 						</div>
 					</div>
 				</div>
 			</section>
-
 			{/* CTA */}
 			<section className="py-16 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
@@ -228,7 +216,6 @@ export default function Privacy(...args[]):  {
 					<Link
 						to="/contact"
 						className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
 					</Link>;

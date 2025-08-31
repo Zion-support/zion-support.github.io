@@ -1,22 +1,24 @@
 #!/usr/bin/env node
-
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-
 const __dirname = path.dirname(__filename);
+<<<<<<< HEAD
 
 // // // // // // // console.log('🔍 Starting continuous quality checks automation...');
 // // // console.log('🔍 Starting continuous quality checks automation...');
 
+=======
+// // // // // // // console.log('🔍 Starting continuous quality checks automation...');
+=======
+// // // console.log('🔍 Starting continuous quality checks automation...');
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 // Get automation interval from environment variable (default: 3 hours)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours
-
 async function runQualityChecks() {
   try {
     // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
-
     // Run linting
     // // // console.log('🔍 Running ESLint...');
     try {
@@ -24,7 +26,6 @@ async function runQualityChecks() {
       // // // console.log('✅ ESLint completed successfully');
     } catch (error) {
       // // // console.log('⚠️  ESLint issues found but continuing...');
-
     // Run type checking
     // // // console.log('🔍 Running TypeScript type checking...');
     try {
@@ -32,7 +33,6 @@ async function runQualityChecks() {
       // // // console.log('✅ Type checking completed successfully');
     } catch (error) {
       // // // console.log('⚠️  Type checking issues found but continuing...');
-
     // Run tests
     // // // console.log('🧪 Running tests...');
     try {
@@ -40,7 +40,6 @@ async function runQualityChecks() {
       // // // console.log('✅ Tests completed successfully');
     } catch (error) {
       // // // console.log('⚠️  Tests failed but continuing...');
-
     // Check code coverage if available
     // // // console.log('📊 Checking code coverage...');
     try {
@@ -48,7 +47,6 @@ async function runQualityChecks() {
       // // // console.log('✅ Code coverage check completed');
     } catch (error) {
       // // // console.log('ℹ️  Code coverage not available');
-
     // Check for dead code
     // // // console.log('🔍 Checking for dead code...');
     try {
@@ -56,7 +54,6 @@ async function runQualityChecks() {
       // // // console.log('✅ Dead code check completed');
     } catch (error) {
       // // // console.log('ℹ️  Dead code checker not available');
-
     // Check for circular dependencies
     // // // console.log('🔍 Checking for circular dependencies...');
     try {
@@ -64,7 +61,6 @@ async function runQualityChecks() {
       // // // console.log('✅ Circular dependency check completed');
     } catch (error) {
       // // // console.log('ℹ️  Circular dependency checker not available');
-
     // Check for duplicate code
     // // // console.log('🔍 Checking for duplicate code...');
     try {
@@ -72,10 +68,8 @@ async function runQualityChecks() {
       // // // console.log('✅ Duplicate code check completed');
     } catch (error) {
       // // // console.log('ℹ️  Duplicate code checker not available');
-
     // Generate quality report
     // // // // // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);
-
     // Run linting
     // // // // // // // console.log('🔍 Running ESLint...');
     try {
@@ -84,7 +78,6 @@ async function runQualityChecks() {
     } catch (error) {
       // // // // // // // console.log('⚠️  ESLint issues found but continuing...');
     }
-
     // Run type checking
     // // // // // // // console.log('🔍 Running TypeScript type checking...');
     try {
@@ -93,7 +86,6 @@ async function runQualityChecks() {
     } catch (error) {
       // // // // // // // console.log('⚠️  Type checking issues found but continuing...');
     }
-
     // Run tests
     // // // // // // // console.log('🧪 Running tests...');
     try {
@@ -102,7 +94,6 @@ async function runQualityChecks() {
     } catch (error) {
       // // // // // // // console.log('⚠️  Tests failed but continuing...');
     }
-
     // Check code coverage if available
     // // // // // // // console.log('📊 Checking code coverage...');
     try {
@@ -111,7 +102,6 @@ async function runQualityChecks() {
     } catch (error) {
       // // // // // // // console.log('ℹ️  Code coverage not available');
     }
-
     // Check for dead code
     // // // // // // // console.log('🔍 Checking for dead code...');
     try {
@@ -120,7 +110,6 @@ async function runQualityChecks() {
     } catch (error) {
       // // // // // // // console.log('ℹ️  Dead code checker not available');
     }
-
     // Check for circular dependencies
     // // // // // // // console.log('🔍 Checking for circular dependencies...');
     try {
@@ -129,7 +118,6 @@ async function runQualityChecks() {
     } catch (error) {
       // // // // // // // console.log('ℹ️  Circular dependency checker not available');
     }
-
     // Check for duplicate code
     // // // // // // // console.log('🔍 Checking for duplicate code...');
     try {
@@ -138,68 +126,86 @@ async function runQualityChecks() {
     } catch (error) {
       // // // // // // // console.log('ℹ️  Duplicate code checker not available');
     }
-
     // Generate quality report
     // // // // // // // console.log('📊 Generating quality report...');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   status: 'completed'
-    
-
 };
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     console.log('📊 Generating quality report...');
     const reportPath = path.join(process.cwd(), 'quality-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Quality report saved to ${reportPath}`);
-
     // // // console.log('✅ Continuous quality checks completed successfully');
-
   } catch (error) {
     // // // console.error('❌ Continuous quality checks failed:', error.message);
     // // // // // // // console.log(`✅ Quality report saved to ${reportPath}`);
-
     // // // // // // // console.log('✅ Continuous quality checks completed successfully');
-
   } catch (error) {
     // // // // // // // console.error('❌ Continuous quality checks failed:', error.message);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Don't exit, just log the error and continue
-
-
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+<<<<<<< HEAD
   // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
 
+=======
+=======
+  // // // console.log(`🚀 Starting continuous quality checks with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // Run initial quality checks
   await runQualityChecks();
-
   // Set up continuous execution
   setInterval(async () => {
     await runQualityChecks();
   }, AUTOMATION_INTERVAL);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // // // // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
-
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // console.log(`✅ Continuous quality checks running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
-
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
-
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
-
 // Start the continuous quality checks
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous quality checks:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // // // console.error('❌ Failed to start continuous quality checks:', error);
   process.exit(1);
 });

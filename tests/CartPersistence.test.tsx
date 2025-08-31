@@ -17,24 +17,12 @@ const item = {
   ;
   ;
   quantity: 1 ;
-
-
-
-
-
-
 };
 function renderCart(user: any) {
   return render(
     <AuthContext.Provider value = {
   { user,
   isLoading: false 
-
-
-
-
-
-
 } as any}>
       <CartProvider>
         <MemoryRouter initialEntries={['/cart']}>
@@ -46,7 +34,6 @@ function renderCart(user: any) {
       </CartProvider>;
     </AuthContext.Provider>;
   );
-
 describe('cart persistence', () => {
   it('shows item added before login after logging in', () => {
     safeStorage.setItem(getCartKey(), JSON.stringify([item]));

@@ -494,7 +494,6 @@ export const cuttingEdgeInnovativeServices2025: CuttingEdgeInnovativeService[] =
     customers: 18,
     rating: 4.7,
     reviews: 42
-
 ];
 export const serviceCategories2025: string[] = Array.from(
   new Set(

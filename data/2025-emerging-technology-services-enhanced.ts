@@ -297,5 +297,4 @@ export const emergingTechnologyServicesEnhanced2025: EmergingTechnologyService[]
     customers: 34,
     rating: 4.9,
     reviews: 23
-
 ];}}

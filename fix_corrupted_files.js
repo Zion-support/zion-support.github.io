@@ -55,8 +55,12 @@ function fixCorruptedFile(filePath) {
   } catch (error) {
     // // // // // // // console.error(`Error fixing ${filePath}:`, error.message);
     return false;
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     console.log(`Fixed: ${filePath}`);
     return true} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -76,8 +80,11 @@ function files = fs.readdirSync(directory);
 fixCorruptedFiles("./pages");
 fixCorruptedFiles("./components");
 // // // // // // // console.log("Finished fixing corrupted files.");
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 console.log("Finished fixing corrupted files.");
-
 export default fixCorruptedFile;
 export default fixCorruptedFile;
 export default fixCorruptedFile;

@@ -44,6 +44,10 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                         setLoading(false);
                     else {
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 500));
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     return}
                 catch (err) {
                     if (attempt === maxRetries - 1) {

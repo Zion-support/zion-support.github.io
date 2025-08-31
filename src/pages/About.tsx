@@ -25,15 +25,18 @@ import {
   Youtube,
   Github
 } from 'lucide-react';
+<<<<<<< HEAD
 
 const About = () => {
+=======
+export default function About() {
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const stats = [
     { number: '500+', label: 'Clients Worldwide', icon: Users },
     { number: '50+', label: 'AI Solutions', icon: Target },
     { number: '99.9%', label: 'Uptime', icon: Award },
     { number: '24/7', label: 'Support', icon: TrendingUp }
   ];
-
   const values = [
     {
       title: 'Innovation First',
@@ -60,7 +63,6 @@ const About = () => {
       color: 'from-purple-500 to-pink-500'
     }
   ];
-
   const team = [
     {
       name: 'Sarah Johnson',
@@ -95,6 +97,7 @@ const About = () => {
       twitter: '#'
     }
   ];
+<<<<<<< HEAD
 
   const milestones = [
     {
@@ -138,6 +141,14 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="About Us - Zion Tech Group"
+        description="Learn about Zion Tech Group's mission to revolutionize business through AI, quantum computing, and cutting-edge technology solutions."
+      />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -164,11 +175,84 @@ const About = () => {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Stats Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+      {/* Mission & Vision */}
+      <section className="py-20">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex items-center mb-6">
+                <Target className="w-8 h-8 text-cyan-400 mr-3" />
+                <h2 className="text-3xl font-bold text-white">Our Mission</h2>
+              </div>
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                To democratize access to advanced AI and quantum technologies, enabling businesses of all sizes 
+                to leverage cutting-edge solutions for growth, efficiency, and competitive advantage.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                We believe that technology should be accessible, understandable, and transformative. 
+                Our team works tirelessly to bridge the gap between complex technological innovations 
+                and practical business applications.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-400/20">
+                <div className="flex items-center mb-6">
+                  <Zap className="w-8 h-8 text-cyan-400 mr-3" />
+                  <h3 className="text-2xl font-bold text-white">Our Vision</h3>
+                </div>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  To be the global leader in AI-powered business solutions, driving the next wave of 
+                  digital transformation and creating a future where technology serves humanity.
+                </p>
+                <div className="space-y-3">
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span>AI-First Business Solutions</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span>Quantum Computing Innovation</span>
+                  </div>
+                  <div className="flex items-center text-gray-300">
+                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                    <span>Sustainable Technology</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      {/* Stats Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">Our Impact in Numbers</h2>
+            <p className="text-xl text-gray-300">Delivering results that speak for themselves</p>
+          </motion.div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -188,6 +272,7 @@ const About = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Mission & Vision */}
       <section className="py-20 px-6 bg-slate-800/20">
@@ -250,6 +335,8 @@ const About = () => {
         </div>
       </section>
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       {/* Values Section */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -265,7 +352,6 @@ const About = () => {
               The principles that guide everything we do and every decision we make
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <motion.div
@@ -286,7 +372,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
       {/* Team Section */}
       <section className="py-20 px-6 bg-slate-800/20">
         <div className="max-w-7xl mx-auto">
@@ -302,8 +387,12 @@ const About = () => {
               The brilliant minds behind our innovative AI solutions
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+=======
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             {team.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -332,10 +421,16 @@ const About = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Timeline Section */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
+=======
+      {/* CTA Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-6 text-center">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -578,5 +673,9 @@ const About = () => {
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default About;
+=======
+export default About;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

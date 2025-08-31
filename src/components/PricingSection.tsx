@@ -181,6 +181,10 @@ export function PricingSection() {
             className="inline-flex items-center gap-2 px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-200"
           >
             Contact Sales Team
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <span className="text-sm">→</span>;
           </Link>;
         </motion.div>;

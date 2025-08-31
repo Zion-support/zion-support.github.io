@@ -505,5 +505,4 @@ export const realMarketServices: RealMarketService[] = [
     customers: 850,
     rating: 4.8,
     reviews: 480
-
 ];}}

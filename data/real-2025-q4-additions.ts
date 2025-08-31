@@ -46,12 +46,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const realQ4Services2025: RealQ4Service[] = [
 	{
@@ -263,7 +257,6 @@ export const realQ4Services2025: RealQ4Service[] = [
 		customers: 70,
 		rating: 4.5,
 		reviews: 28
-
 ];
 export const real2025Q4Additions = [
   {
@@ -705,5 +698,4 @@ export const real2025Q4Additions = [
     customers: 17,
     rating: 4.6,
     reviews: 9
-
 ];}}}

@@ -297,5 +297,4 @@ export const revolutionaryAIServices2026: RevolutionaryAIService2026[] = [
     customers: 220,
     rating: 4.8,
     reviews: 134
-
 ];}}

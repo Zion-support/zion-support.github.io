@@ -580,6 +580,10 @@ import {
     technologies["5G Analytics", "Performance Insights", "Predictive", "Reporting"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const fiveGTechnologies = [
   {
     name: "5G Core Network",

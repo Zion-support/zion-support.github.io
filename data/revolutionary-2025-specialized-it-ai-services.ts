@@ -47,12 +47,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const revolutionary2025SpecializedITAIServices: Revolutionary2025SpecializedITAIService[] = [
   // AI-Powered Autonomous Network Security Platform
@@ -477,6 +471,5 @@ export const revolutionary2025SpecializedITAIServices: Revolutionary2025Speciali
     customers: 480,
     rating: 4.7,
     reviews: 267
-
 ];
 export default revolutionary2025SpecializedITAIServices;}}

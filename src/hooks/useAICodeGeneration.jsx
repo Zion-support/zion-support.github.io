@@ -52,6 +52,10 @@ export const useAICodeGeneration = () => {
             });
         finally {
             setIsGenerating(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             })}
         catch (error) {
             // // // // // // // // // // // // // // // // // // // // // console.error('Failed to generate code:', error);
@@ -91,6 +95,10 @@ export const useAICodeGeneration = () => {
             });
         finally {
             setIsAnalyzing(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             })}
         catch (error) {
             // // // // // // // // // // // // // // // // // // // // // console.error('Failed to analyze code:', error);
@@ -131,6 +139,10 @@ export const useAICodeGeneration = () => {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return code;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     break}
             trackEvent('ai_code_generation', 'code_optimized', focus, optimizedCode.length);
             return optimizedCode}
@@ -153,6 +165,10 @@ export const useAICodeGeneration = () => {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate tests';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 testCode = generateJestTests(code)}
             else if (language === 'python') {
                 testCode = generatePytestTests(code)}
@@ -179,6 +195,10 @@ export const useAICodeGeneration = () => {
                 error: error instanceof Error ? error.message : 'Unknown error'
             });
             return '// Failed to generate documentation';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 docs = generateJSDoc(code)}
             else if (language === 'python') {
                 docs = generatePythonDoc(code)}

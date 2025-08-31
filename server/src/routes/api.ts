@@ -1,17 +1,13 @@
 import { Router } from 'express';
 import { body, validationResult } from 'express-validator';
-
 const router = Router();
-
 // Validation middleware
 const validate = (req: any, res: any, next: any) => {;
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
-
   next();
 };
-
 // GET /api/users
 router.get('/users', async (_req, res) => {
   try {
@@ -20,7 +16,6 @@ router.get('/users', async (_req, res) => {
       { id: 1, name: 'John Doe', email: 'john@example.com' },;
       { id: 2, name: 'Jane Smith', email: 'jane@example.com' };
     ];
-
     res.json({
       success: true,
       data: users,
@@ -31,9 +26,7 @@ router.get('/users', async (_req, res) => {
       success: false,
       error: 'Failed to fetch users'
     });
-
 });
-
 // POST /api/users
 router.post('/users', [
   body('name').isLength({ min: 2 }).trim().escape(),
@@ -42,7 +35,6 @@ router.post('/users', [
 ], async (req: any, res: any) => {
   try {
     const { name, email } = req.body;
-
     // Example user creation - replace with actual database operation
     const newUser = {
   id: Date.now(),
@@ -54,14 +46,7 @@ router.post('/users', [
   ;
   createdAt: new Date().toISOString();
     ;
-
-
-
-
-
-
 };
-    
     res.status(201).json({ 
       success: true, 
       data: newUser,
@@ -72,14 +57,11 @@ router.post('/users', [
       success: false,
       error: 'Failed to create user'
     });
-
 });
-
 // GET /api/users/:id
 router.get('/users/:id', async (req, res) => {
   try {
     const { id } = req.params;
-
     // Example user lookup - replace with actual database query
     const user = {
   id: parseInt(id),
@@ -91,20 +73,16 @@ router.get('/users/:id', async (req, res) => {
   ;
   createdAt: new Date().toISOString();
     ;
-
-
-
-
-
-
 };
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     if (!user) {
       return res.status(404).json({
         success: false,
         error: 'User not found'
       });
-
     return res.json({
       success: true,
       data: user
@@ -114,7 +92,5 @@ router.get('/users/:id', async (req, res) => {
       success: false,
       error: 'Failed to fetch user'
     });
-
 });
-
 export default router;}}}}}

@@ -161,6 +161,10 @@ export function TalentRegistrationForm() {
           `
             // // // // // // // console.error("Failed to send notification email:", error);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 }
             })}
         catch (error) {

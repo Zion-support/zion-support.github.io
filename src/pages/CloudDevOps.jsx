@@ -27,6 +27,10 @@ import {
     platforms["IAM", "VPC", "Security Groups", "WAF"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const cloudPlatforms = [
   {
     name: "Amazon Web Services",

@@ -13,7 +13,11 @@ class LintAutomationManager {
     this.logFile = path.join(__dirname, 'logs', 'lint-automation.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -51,7 +55,6 @@ class LintAutomationManager {
   }
   startFileWatcher() {
     this.log('👀 Starting file watcher...');
-
     const watcher = chokidar.watch([
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -71,7 +74,6 @@ class LintAutomationManager {
     this.log('✅ File watcher started')}
   async handleFileChange(filePath) {
     this.log(`🔍 Checking file: ${filePath}`);
-
     // Run lint on the specific file
     try {
       const result = execSync(`npx eslint "${filePath}" --fix`, {
@@ -129,7 +131,11 @@ switch (command) {
   default:
     // // // // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
     process.exit(1);
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     console.log('Usage: node lint-automation-manager.js [start|stop|status]');
     process.exit(1)}
 // Graceful shutdown

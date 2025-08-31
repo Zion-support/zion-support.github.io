@@ -334,5 +334,4 @@ export const integration',
     customers: 120,
     rating: 4.9,
     reviews: 98
-
 ];}}

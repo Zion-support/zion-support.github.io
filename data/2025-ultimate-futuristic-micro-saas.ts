@@ -557,5 +557,4 @@ export const ultimateFuturisticMicroSaasServices2025: UltimateFuturisticMicroSaa
     customers: 15,
     rating: 4.9,
     reviews: 8
-
 ];}}

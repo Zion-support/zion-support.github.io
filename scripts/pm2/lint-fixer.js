@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 class IntelligentLintFixer {
   constructor() {
     this.projectRoot = process.cwd();
@@ -13,7 +11,10 @@ class IntelligentLintFixer {
     this.errorsFixed = 0;
     this.warningsFixed = 0;
     this.startTime = Date.now();
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Configuration from environment variables
     this.config = {
       autoFix: process.env.AUTO_FIX === 'true',
@@ -28,11 +29,17 @@ class IntelligentLintFixer {
       ]
     };
   }
+<<<<<<< HEAD
 
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
 
+=======
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
@@ -40,10 +47,8 @@ class IntelligentLintFixer {
       console.error('Failed to write to log file:', error.message);
     }
   }
-
   async analyzeCodePatterns() {
     this.log('🔍 Analyzing code patterns for intelligent fixes...');
-    
     const patterns = {
       commonIssues: {
         'console.log': { severity: 'medium', suggestion: 'Use proper logging framework' },
@@ -62,13 +67,10 @@ class IntelligentLintFixer {
         'tabIndex="-1"': { severity: 'low', suggestion: 'Review tab order' }
       }
     };
-
     return patterns;
   }
-
   async scanFiles() {
     this.log('📁 Scanning project files for linting issues...');
-    
     const files = [];
     const scanDirectory = (dir) => {
       try {
@@ -76,7 +78,6 @@ class IntelligentLintFixer {
         items.forEach(item => {
           const fullPath = path.join(dir, item);
           const stat = fs.statSync(fullPath);
-          
           if (stat.isDirectory() && !this.isExcluded(fullPath)) {
             scanDirectory(fullPath);
           } else if (this.isLintableFile(fullPath) && stat.size < this.config.maxFileSize) {
@@ -87,37 +88,38 @@ class IntelligentLintFixer {
         this.log(`Error scanning directory ${dir}: ${error.message}`, 'ERROR');
       }
     };
-
     scanDirectory(this.projectRoot);
     return files;
   }
-
   isExcluded(filePath) {
     return this.config.excludedPatterns.some(pattern => {
       const regex = new RegExp(pattern.replace(/\*\*/g, '.*'));
       return regex.test(filePath);
     });
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   isLintableFile(filePath) {
     const extensions = ['.js', '.jsx', '.ts', '.tsx', '.vue'];
     return extensions.some(ext => filePath.endsWith(ext));
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   async runESLint(files) {
     this.log('🔧 Running ESLint with auto-fix...');
-    
     try {
       const eslintCommand = this.config.autoFix ? 
         `npx eslint ${files.join(' ')} --fix --format=json` :
         `npx eslint ${files.join(' ')} --format=json`;
-      
       const result = execSync(eslintCommand, {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: 'pipe'
       });
-
       return JSON.parse(result);
     } catch (error) {
       // ESLint returns non-zero exit code when there are issues
@@ -132,10 +134,12 @@ class IntelligentLintFixer {
       return { error: true, message: error.message };
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   async runPrettier(files) {
     this.log('💅 Running Prettier for code formatting...');
-    
     try {
       const prettierCommand = `npx prettier --write ${files.join(' ')}`;
       execSync(prettierCommand, {
@@ -148,14 +152,10 @@ class IntelligentLintFixer {
       return { success: false, error: error.message };
     }
   }
-
   async generateIntelligentSuggestions(eslintResults) {
     this.log('🧠 Generating intelligent code improvement suggestions...');
-    
     const suggestions = [];
-    
     if (eslintResults.error) return suggestions;
-    
     eslintResults.forEach(fileResult => {
       if (fileResult.messages) {
         fileResult.messages.forEach(message => {
@@ -166,10 +166,12 @@ class IntelligentLintFixer {
         });
       }
     });
-
     return suggestions;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   createSuggestion(message, filePath) {
     const suggestions = {
       'no-console': {
@@ -193,7 +195,6 @@ class IntelligentLintFixer {
         priority: 'medium'
       }
     };
-
     const rule = message.ruleId;
     if (suggestions[rule]) {
       return {
@@ -206,15 +207,15 @@ class IntelligentLintFixer {
         severity: message.severity
       };
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     return null;
   }
-
   async applyIntelligentFixes(suggestions) {
     this.log('🛠️  Applying intelligent fixes...');
-    
     let fixesApplied = 0;
-    
     for (const suggestion of suggestions) {
       if (suggestion.priority === 'high' || suggestion.priority === 'critical') {
         try {
@@ -225,19 +226,15 @@ class IntelligentLintFixer {
         }
       }
     }
-
     return fixesApplied;
   }
-
   async applyFix(suggestion) {
     // This is a simplified version - in practice, you'd implement more sophisticated fix logic
     this.log(`Applying fix for ${suggestion.file}:${suggestion.line} - ${suggestion.message}`);
-    
     // Here you could implement actual code transformations
     // For now, we'll just log the suggestion
     return true;
   }
-
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
@@ -252,54 +249,44 @@ class IntelligentLintFixer {
         info: 0
       }
     };
-
     try {
       fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
       this.log(`📊 Report generated: ${this.reportFile}`);
     } catch (error) {
       this.log(`Failed to write report: ${error.message}`, 'ERROR');
     }
-
     return report;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   async run() {
     this.log('🚀 Starting Intelligent Lint Fixer...');
-    
     try {
       // 1. Analyze code patterns
       const patterns = await this.analyzeCodePatterns();
-      
       // 2. Scan project files
       const files = await this.scanFiles();
       this.log(`Found ${files.length} files to analyze`);
-      
       // 3. Run ESLint
       const eslintResults = await this.runESLint(files);
-      
       // 4. Run Prettier for formatting
       await this.runPrettier(files);
-      
       // 5. Generate intelligent suggestions
       const suggestions = await this.generateIntelligentSuggestions(eslintResults);
-      
       // 6. Apply intelligent fixes
       const fixesApplied = await this.applyIntelligentFixes(suggestions);
-      
       // 7. Generate report
       const report = await this.generateReport();
-      
       this.log(`✅ Lint fixing completed! Fixed ${fixesApplied} issues, ${suggestions.length} suggestions generated`);
-      
       return report;
-      
     } catch (error) {
       this.log(`❌ Lint fixing failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 }
-
 // Run the lint fixer
 if (require.main === module) {
   const fixer = new IntelligentLintFixer();
@@ -308,5 +295,4 @@ if (require.main === module) {
     process.exit(1);
   });
 }
-
 module.exports = IntelligentLintFixer;

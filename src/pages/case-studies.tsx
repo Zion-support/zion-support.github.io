@@ -12,8 +12,12 @@ import {
   Cloud,
   Zap,
   Globe
+<<<<<<< HEAD
 } from 'lucide-react';
 
+=======
+ } from 'lucide-react';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const caseStudies = [
   {
     id: 1,
@@ -158,17 +162,22 @@ const caseStudies = [
     duration: "15 months",
     roi: "500%",
     image: "/images/case-study-6.jpg"
+<<<<<<< HEAD
   }
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 ];
-
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
+<<<<<<< HEAD
 
 const CaseStudies = () => {
+=======
+export default function CaseStudies() {
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedTechnology, setSelectedTechnology] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
-
   const filteredCaseStudies = caseStudies.filter(study => {
     const matchesIndustry = selectedIndustry === 'All' || study.industry === selectedIndustry;
     const matchesTechnology = selectedTechnology === 'All' ||
@@ -176,22 +185,45 @@ const CaseStudies = () => {
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase());
-
     return matchesIndustry && matchesTechnology && matchesSearch;
   });
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6"
           >
             <Award className="w-10 h-10 text-white" />
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+            <div className="inline-flex items-center gap-2 bg-zion-cyan/20 text-zion-cyan px-6 py-3 rounded-full border border-zion-cyan/30 mb-6">
+              <Award className="w-5 h-5" />
+              <span className="font-medium">Success Stories</span>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Real Results, Real Impact
+            </h1>
+            <p className="text-xl text-zion-slate-light max-w-4xl mx-auto">
+              Discover how Zion Tech Group has transformed businesses across industries with
+              cutting-edge technology solutions. Our case studies showcase measurable results
+              and proven success stories.
+            </p>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           </motion.div>
           
           <motion.h1 
@@ -216,7 +248,6 @@ const CaseStudies = () => {
           </motion.p>
         </div>
       </section>
-
       {/* Filters Section */}
       <section className="py-12 px-6">
         <div className="max-w-7xl mx-auto">
@@ -234,29 +265,40 @@ const CaseStudies = () => {
                   />
                 </div>
               </div>
-
               {/* Industry Filter */}
               <div>
                 <select
                   value={selectedIndustry}
                   onChange={(e) => setSelectedIndustry(e.target.value)}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-cyan-500 transition-colors"
                 >
                   {industries.map(industry => (
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {industries.map(industry  => (
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     <option key={industry} value={industry}>{industry}</option>
                   ))}
                 </select>
               </div>
-
               {/* Technology Filter */}
               <div>
                 <select
                   value={selectedTechnology}
                   onChange={(e) => setSelectedTechnology(e.target.value)}
+<<<<<<< HEAD
                   className="w-full px-4 py-3 bg-slate-700 border border-slate-600 text-white rounded-lg focus:outline-none focus:border-cyan-500 transition-colors"
                 >
                   {technologies.map(technology => (
                     <option key={technology} value={technology}>{technology}</option>
+=======
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan"
+                >
+                  {technologies.map(tech  => (
+                    <option key={tech} value={tech}>{tech}</option>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   ))}
                 </select>
               </div>
@@ -264,7 +306,6 @@ const CaseStudies = () => {
           </div>
         </div>
       </section>
-
       {/* Case Studies Grid */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -281,12 +322,29 @@ const CaseStudies = () => {
             {filteredCaseStudies.map((study, index) => (
               <motion.div
                 key={study.id}
+<<<<<<< HEAD
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
                 className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300"
               >
+=======
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                animate = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
+                className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
+                {/* Header */}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -303,6 +361,7 @@ const CaseStudies = () => {
                     <div className="text-xs text-gray-400">ROI</div>
                   </div>
                 </div>
+<<<<<<< HEAD
                 
                 <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
                 <p className="text-gray-400 mb-2 text-sm">Client: {study.comp}</p>
@@ -311,12 +370,23 @@ const CaseStudies = () => {
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-1">Challenge:</h4>
                     <p className="text-gray-300 text-sm">{study.challenge}</p>
+=======
+                {/* Challenge & Solution */}
+                <div className="mb-4">
+                  <div className="mb-3">
+                    <h4 className="font-semibold text-white mb-2 flex items-center gap-2">
+                      <Target className="w-4 h-4 text-red-400" />
+                      Challenge
+                    </h4>
+                    <p className="text-zion-slate-light text-sm">{study.challenge}</p>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   </div>
                   <div>
                     <h4 className="text-sm font-semibold text-cyan-400 mb-1">Solution:</h4>
                     <p className="text-gray-300 text-sm">{study.solution}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 
                 <div className="space-y-3 mb-4">
                   <h4 className="text-sm font-semibold text-cyan-400">Key Results:</h4>
@@ -326,17 +396,48 @@ const CaseStudies = () => {
                         <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {result}
                       </li>
+=======
+                {/* Key Results */}
+                <div className="mb-4">
+                  <h4 className="font-semibold text-white mb-3 flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-green-400" />
+                    Key Results
+                  </h4>
+                  <div className="grid grid-cols-2 gap-2">
+                    {study.results.slice(0, 4).map((result, idx) => (
+                      <div key={idx} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                        <CheckCircle className="w-3 h-3 text-green-400" />
+                        <span>{result}</span>
+                      </div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {study.technologies.slice(0, 4).map((tech, idx) => (
                     <span key={idx} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">
                       {tech}
+=======
+                {/* Technologies & Metrics */}
+                <div className="mb-4">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {study.technologies.slice(0, 3).map((tech, idx) => (
+                      <span key={idx} className="px-2 py-1 bg-zion-cyan/20 text-zion-cyan text-xs rounded-full">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-between text-sm text-zion-slate-light">
+                    <span className="flex items-center gap-1">
+                      <Clock className="w-4 h-4" />
+                      {study.duration}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     </span>
                   ))}
                 </div>
+<<<<<<< HEAD
                 
                 <div className="flex items-center justify-between text-sm text-gray-400">
                   <span className="flex items-center">
@@ -347,6 +448,20 @@ const CaseStudies = () => {
                     <DollarSign className="w-4 h-4 mr-1" />
                     {study.metrics.costReduction || study.metrics.efficiency}
                   </span>
+=======
+                {/* CTA */}
+                <div className="flex items-center justify-between">
+                  <Link
+                    href={`/case-studies/${study.id}`}
+                    className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+                    Read Full Case Study
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                  <div className="text-right">
+                    <div className="text-sm text-zion-slate-light">Contact us to learn more</div>
+                    <div className="text-zion-cyan font-medium">+1 302 464 0950</div>
+                  </div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 </div>
               </motion.div>
             ))}
@@ -365,17 +480,31 @@ const CaseStudies = () => {
           )}
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="bg-gradient-to-r from-slate-800/80 to-slate-700/80 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-12"
           >
             <h2 className="text-3xl font-bold text-white mb-6">
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-r from-zion-cyan to-zion-purple rounded-3xl p-8"
+            <h2 className="text-3xl font-bold text-white mb-4">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               Ready to Create Your Success Story?
             </h2>
             <p className="text-gray-300 mb-8 text-lg">
@@ -385,6 +514,7 @@ const CaseStudies = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
+<<<<<<< HEAD
                 className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Start Your Project
@@ -395,12 +525,27 @@ const CaseStudies = () => {
               >
                 Explore Our Services
               </a>
+=======
+                className="inline-flex items-center bg-white text-zion-cyan px-8 py-4 rounded-xl hover:bg-zion-slate-light transition-all duration-300 font-medium text-lg"
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center border-2 border-white text-white px-8 py-4 rounded-xl hover:bg-white hover:text-zion-cyan transition-all duration-300 font-medium text-lg"
+                View Our Services
+              </Link>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </div>
           </motion.div>
         </div>
       </section>
     </div>
   );
+<<<<<<< HEAD
 };
 
 export default CaseStudies;
+=======
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

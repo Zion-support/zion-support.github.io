@@ -297,5 +297,4 @@ export const nextGenAIServices2026: NextGenAIService2026[] = [
     customers: 120,
     rating: 4.9,
     reviews: 80
-
 ];}}

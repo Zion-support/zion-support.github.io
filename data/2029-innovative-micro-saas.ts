@@ -296,5 +296,4 @@ export const innovative2029MicroSaasServices: Innovative2029MicroSaasService[] =
     customers: 23,
     rating: 4.7,
     reviews: 56
-
 ];}}

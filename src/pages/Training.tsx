@@ -75,6 +75,7 @@ import {
   Hash as HashIcon9,
   Hash as HashIcon10
 } from 'lucide-react';
+<<<<<<< HEAD
 
 export default function Training() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -82,6 +83,16 @@ export default function Training() {
   const [selectedLevel, setSelectedLevel] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+=======
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+const Training: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeLevel, setActiveLevel] = useState('all');
+  const [activeFormat, setActiveFormat] = useState('all');
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const categories = [
     { id: 'all', name: 'All Courses', icon: GraduationCap, count: 89 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 24 },
@@ -91,15 +102,25 @@ export default function Training() {
     { id: 'development', name: 'Software Development', icon: Code, count: 12 },
     { id: 'devops', name: 'DevOps & Automation', icon: Server, count: 5 }
   ];
-
   const levels = [
     { id: 'all', name: 'All Levels', count: 89 },
     { id: 'beginner', name: 'Beginner', count: 32 },
     { id: 'intermediate', name: 'Intermediate', count: 35 },
     { id: 'advanced', name: 'Advanced', count: 22 }
   ];
+<<<<<<< HEAD
 
   const courses = [
+=======
+  const formats = [
+    { id: 'all', name: 'All Formats', count: 0 },
+    { id: 'online', name: 'Online', count: 0 },
+    { id: 'in-person', name: 'In-Person', count: 0 },
+    { id: 'hybrid', name: 'Hybrid', count: 0 },
+    { id: 'self-paced', name: 'Self-Paced', count: 0 }
+  ];
+  const trainingPrograms = [
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     {
       id: 1,
       title: 'AI Fundamentals: From Theory to Practice',
@@ -176,7 +197,11 @@ export default function Training() {
       description: 'Master cloud-native development practices including microservices, containers, and serverless architectures.',
       category: 'cloud',
       level: 'intermediate',
+<<<<<<< HEAD
       instructor: 'Jennifer Kim',
+=======
+      format: 'in-person',
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       duration: '6 weeks',
       totalHours: 35,
       price: 349,
@@ -381,6 +406,7 @@ export default function Training() {
       ]
     }
   ];
+<<<<<<< HEAD
 
   const filteredCourses = courses.filter(course => {
     const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -422,12 +448,69 @@ export default function Training() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark to-zion-purple opacity-20"></div>
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
+=======
+  const filteredPrograms = trainingPrograms.filter(program => {
+    const matchesSearch = program.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         program.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         program.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = activeCategory === 'all' || program.category === activeCategory;
+    const matchesLevel = activeLevel === 'all' || program.level === activeLevel;
+    const matchesFormat = activeFormat === 'all' || program.format === activeFormat;
+    return matchesSearch && matchesCategory && matchesLevel && matchesFormat;
+  });
+  return (
+    <>
+      <SEO 
+        title="Training & Development - Zion Tech Group"
+        description="Comprehensive training programs in AI, cloud computing, cybersecurity, and emerging technologies. Advance your career with expert-led courses."
+        keywords="training, AI courses, cloud computing, cybersecurity, machine learning, professional development"
+        canonicalUrl="https://ziontechgroup.com/training"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        {/* Hero Section */}
+        <motion.div
+          className="relative py-20 overflow-hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `radial-gradient(circle at 25% 25%, currentColor 1px, transparent 1px)`,
+              backgroundSize: '50px 50px'
+            }} />
+          </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6">
+                <GraduationCap className="w-10 h-10 text-white" />
+              </div>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Training & Development
+              </h1>
+              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">
+                Master cutting-edge technologies with our comprehensive training programs. 
+                From AI fundamentals to advanced cloud architecture, advance your skills with expert-led courses.
+              </p>
+            </motion.div>
+          </div>
+        </motion.div>
+        {/* Search and Filters */}
+        <div className="container mx-auto px-4 pb-12">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center"
           >
+<<<<<<< HEAD
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Training & Courses
             </h1>
@@ -447,10 +530,87 @@ export default function Training() {
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
                 <span>Certifications</span>
+=======
+            {/* Search Bar */}
+            <div className="relative mb-6">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+              <input
+                type="text"
+                placeholder="Search training programs..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full pl-10 pr-4 py-3 bg-zion-slate-dark/50 border border-zion-blue-light/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              />
+            </div>
+            {/* Filter Tabs */}
+            <div className="space-y-4">
+              {/* Categories */}
+              <div>
+                <h3 className="text-sm font-medium text-zion-slate-light mb-3">Categories</h3>
+                <div className="flex flex-wrap gap-2">
+                  {categories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => setActiveCategory(category.id)}
+                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                        activeCategory === category.id
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2">
+                        <category.icon className="w-4 h-4" />
+                        {category.name}
+                        <span className="text-xs opacity-75">({category.count})</span>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              </div>
+              {/* Levels and Formats */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <h3 className="text-sm font-medium text-zion-slate-light mb-3">Skill Level</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {levels.map((level) => (
+                      <button
+                        key={level.id}
+                        onClick={() => setActiveLevel(level.id)}
+                        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          activeLevel === level.id
+                            ? 'bg-purple-600 text-white'
+                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
+                        }`}
+                      >
+                        {level.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-sm font-medium text-zion-slate-light mb-3">Format</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {formats.map((format) => (
+                      <button
+                        key={format.id}
+                        onClick={() => setActiveFormat(format.id)}
+                        className={`px-3 py-1 rounded-lg text-sm font-medium transition-all duration-200 ${
+                          activeFormat === format.id
+                            ? 'bg-green-600 text-white'
+                            : 'bg-zion-slate-dark/50 text-zion-slate-light hover:bg-zion-slate-dark hover:text-white'
+                        }`}
+                      >
+                        {format.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               </div>
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* Search and Filter Section */}
@@ -963,6 +1123,69 @@ const Training: React.FC = () => {
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {course.tags.slice(0, 3).map((tag, tagIndex) => (
+=======
+        {/* Training Programs Grid */}
+        <div className="container mx-auto px-4 pb-20">
+          <motion.div
+            className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            {filteredPrograms.map((program, index) => (
+              <motion.div
+                key={program.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
+              >
+                <Card className="h-full bg-zion-slate-dark/80 backdrop-blur-sm border-zion-blue-light/20 hover:border-zion-blue-light/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start justify-between mb-3">
+                      <div className="flex items-center gap-2">
+                        <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                          <GraduationCap className="w-4 h-4 text-white" />
+                        </div>
+                        <span className="text-xs font-medium text-zion-slate-light uppercase tracking-wide">
+                          {program.category.replace('-', ' ')}
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-sm font-medium text-white">{program.rating}</span>
+                      </div>
+                    </div>
+                    <CardTitle className="text-xl text-white mb-2 line-clamp-2">
+                      {program.title}
+                    </CardTitle>
+                    <CardDescription className="text-zion-slate-light line-clamp-3">
+                      {program.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {/* Program Details */}
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div className="flex items-center gap-2 text-zion-slate-light">
+                        <Clock className="w-4 h-4" />
+                        <span>{program.duration}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-zion-slate-light">
+                        <Users className="w-4 h-4" />
+                        <span>{program.students} students</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-zion-slate-light">
+                        <Users className="w-4 h-4" />
+                        <span>{program.instructor}</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-zion-slate-light">
+                        <DollarSign className="w-4 h-4" />
+                        <span>{program.price}</span>
+                      </div>
+                    </div>
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {program.tags.slice(0, 3).map((tag, tagIndex) => (
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                         <span
                           key={tagIndex}
                           className="px-2 py-1 bg-zinc-700/50 text-zinc-300 text-xs rounded-full"
@@ -970,6 +1193,7 @@ const Training: React.FC = () => {
                           {tag}
                         </span>
                       ))}
+<<<<<<< HEAD
                     </div>
 
                     <div className="flex items-center justify-between text-sm text-zinc-500 mb-4">
@@ -981,6 +1205,32 @@ const Training: React.FC = () => {
                         <Clock className="w-4 h-4" />
                         <span>{course.duration}</span>
                       </span>
+=======
+                      {program.tags.length > 3 && (
+                        <span className="px-2 py-1 bg-zion-slate-dark/50 text-zion-slate-light text-xs rounded-md">
+                          +{program.tags.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                    {/* Features */}
+                    <div className="space-y-2">
+                      {program.features.slice(0, 2).map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center gap-2 text-sm text-zion-slate-light">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          <span>{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                    {/* Action Buttons */}
+                    <div className="flex gap-2 pt-2">
+                      <Button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
+                        <Play className="w-4 h-4 mr-2" />
+                        Enroll Now
+                      </Button>
+                      <Button variant="outline" size="sm">
+                        <Download className="w-4 h-4" />
+                      </Button>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     </div>
 
                     <div className="flex items-center justify-between mb-4">
@@ -1094,6 +1344,7 @@ const Training: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
         ) : (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1113,6 +1364,15 @@ const Training: React.FC = () => {
                 setSelectedLevel('all');
               }}
               className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors"
+=======
+          {/* No Results */}
+          {filteredPrograms.length === 0 && (
+            <motion.div
+              className="text-center py-12"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6 }}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             >
               Clear Filters
             </button>
@@ -1154,6 +1414,7 @@ const Training: React.FC = () => {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 =======
                 transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
@@ -1431,7 +1692,11 @@ const Training: React.FC = () => {
       </motion.div>
     </div>
   );
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 };
-
 export default Training;
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

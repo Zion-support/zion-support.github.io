@@ -453,5 +453,4 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 420,
     rating: 4.8,
     reviews: 280
-
 ];}}

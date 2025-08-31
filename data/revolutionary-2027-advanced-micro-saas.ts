@@ -297,5 +297,4 @@ export const revolutionary2027AdvancedMicroSaasServices: Revolutionary2027Advanc
     customers: 850,
     rating: 4.6,
     reviews: 520
-
 ];}}

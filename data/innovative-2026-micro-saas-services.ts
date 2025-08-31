@@ -557,5 +557,4 @@ export const innovative2026MicroSaasServices: Innovative2026MicroSaasService[] =
     customers: 800,
     rating: 4.8,
     reviews: 500
-
 ];}}

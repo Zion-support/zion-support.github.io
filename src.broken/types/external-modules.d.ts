@@ -12,13 +12,11 @@ declare module "@radix-ui/react-toggle";
 declare module '*.module.css' {
   const classes: { [key: string]: string };
   export default classes;
-
 declare module '@tanstack/react-query';
 declare module 'react-day-picker' {
   export interface DateRange {
     from?: Date;
     to?: Date;
-
   // Minimal placeholder for the DayPicker component used in the app
   // The actual library provides full typings but we stub them here so the
   // TypeScript compiler can understand the imports without requiring the real
@@ -31,7 +29,6 @@ declare module 'lucide-react' {
     color?: string;
     size?: number | string;
     strokeWidth?: number | string;
-
   export type LucideIcon = FC<LucideProps>;
   export const Award: LucideIcon;
   export const Building: LucideIcon;
@@ -59,7 +56,6 @@ declare module 'lucide-react' {
   export const Zap: LucideIcon;
   const icons: { [key: string]: LucideIcon };
   export default icons;
-
 declare module 'child_process';
 declare module 'date-fns';
 declare module 'jspdf' {

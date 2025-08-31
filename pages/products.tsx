@@ -21,10 +21,8 @@ import { Brain,
   Users,
   CheckCircle
  } from 'lucide-react';
-
 const Products: NextPage = () => {;
   const [activeCategory, setActiveCategory] = useState('all');
-
   const productCategories = [;
     { id: 'all', name: 'All Products', icon: Rocket, color: 'from-purple-600 to-pink-600' },;
     { id: 'ai', name: 'AI Solutions', icon: Brain, color: 'from-blue-600 to-cyan-600' },;
@@ -33,7 +31,6 @@ const Products: NextPage = () => {;
     { id: 'analytics', name: 'Analytics', icon: BarChart3, color: 'from-emerald-600 to-green-600' },;
     { id: 'automation', name: 'Automation', icon: Zap, color: 'from-yellow-600 to-orange-600' };
   ];
-
   const products = [
     {
       id: 'zionai-content-studio',
@@ -204,11 +201,17 @@ const Products: NextPage = () => {;
       pricingUrl: '/pricing/blockchainforge';
     };
   ];
+<<<<<<< HEAD
 
   const filteredProducts = activeCategory === 'all' ;
     ? products ;
     : products.filter(product => product.category === activeCategory);
 
+=======
+  const filteredProducts = activeCategory === 'all' ;
+    ? products ;
+    : products.filter(product => product.category === activeCategory);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   return (
     <div className = "min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
       <Helmet>
@@ -216,7 +219,6 @@ const Products: NextPage = () => {;
         <meta name="description" content="Explore our innovative product portfolio including AI-powered content creation, lead generation, cybersecurity, blockchain development, and more. Transform your business with cutting-edge technology." />
         <meta name="keywords" content="AI products, SaaS platforms, cybersecurity tools, blockchain development, Zion Tech Group products" />
       </Helmet>
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
@@ -232,13 +234,11 @@ const Products: NextPage = () => {;
             <a
               href="tel:+13024640950"
               className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-
               📞 Call +1 (302) 464-0950
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-
               ✉️ Request Demo
             </a>
           </div>
@@ -266,7 +266,6 @@ const Products: NextPage = () => {;
             );
           })}
         </div>
-
         {/* Products Grid */}
         <div className = "grid lg:grid-cols-2 gap-8">;
           {filteredProducts.map((product) => {;
@@ -275,7 +274,6 @@ const Products: NextPage = () => {;
               <div
                 key = {product.id}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
-
                 <div className="flex items-start justify-between mb-6">
                   <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${product.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8 text-white" />
@@ -285,11 +283,9 @@ const Products: NextPage = () => {;
                     <p className="text-gray-400 text-sm">per month</p>
                   </div>
                 </div>
-
                 <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
                 <p className="text-blue-300 font-medium mb-4">{product.tagline}</p>
                 <p className="text-gray-300 mb-6 leading-relaxed">{product.description}</p>
-
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
                     <Sparkles className="w-5 h-5 text-yellow-400 mr-2" />
@@ -304,7 +300,6 @@ const Products: NextPage = () => {;
                     ))}
                   </div>
                 </div>
-
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
                     <TrendingUp className="w-5 h-5 text-green-400 mr-2" />
@@ -319,12 +314,10 @@ const Products: NextPage = () => {;
                     ))}
                   </ul>
                 </div>
-
                 <div className="flex space-x-3">
                   <a
                     href={product.demoUrl}
                     className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-center py-3 px-4 rounded-lg font-medium transition-colors"
-
                     🚀 Try Demo
                   </a>
                   <a
@@ -338,7 +331,6 @@ const Products: NextPage = () => {;
             );
           })}
         </div>
-
         {/* Enterprise Solutions */}
         <div className = "mt-20">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 text-center">
@@ -349,7 +341,6 @@ const Products: NextPage = () => {;
               Need custom enterprise solutions? We offer tailored development, white-label options,
               and dedicated support for large organizations.
             </p>
-
             <div className="grid md:grid-cols-3 gap-8 mb-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -373,24 +364,20 @@ const Products: NextPage = () => {;
                 <p className="text-gray-300 text-sm">24/7 dedicated support team and priority response</p>
               </div>
             </div>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-
                 📞 Call +1 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-
                 ✉️ Enterprise Inquiry
               </a>
             </div>
           </div>
         </div>
-
         {/* Pricing Comparison */}
         <div className="mt-20">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12">
@@ -419,7 +406,6 @@ const Products: NextPage = () => {;
                   Get Started
                 </a>
               </div>
-
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-6 border border-white/20 transform scale-105">
                 <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
                 <div className="text-4xl font-bold text-white mb-6">$299<span className="text-lg text-blue-100">/month</span></div>
@@ -445,7 +431,6 @@ const Products: NextPage = () => {;
                   Get Started
                 </a>
               </div>
-
               <div className="bg-white/5 rounded-xl p-6 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
                 <div className="text-4xl font-bold text-blue-400 mb-6">Custom</div>
@@ -474,7 +459,6 @@ const Products: NextPage = () => {;
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center mt-20">
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
@@ -485,22 +469,18 @@ const Products: NextPage = () => {;
               Start your free trial today or schedule a personalized demo to see how our products
               can revolutionize your workflow and drive growth.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
                 href="tel:+13024640950"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-
                 📞 Call +1 (302) 464-0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-
                 ✉️ Schedule Demo
               </a>
             </div>
-
             <div className="grid md:grid-cols-3 gap-6 text-sm">
               <div>
                 <h3 className="text-white font-semibold mb-2">📍 Location</h3>
@@ -523,5 +503,8 @@ const Products: NextPage = () => {;
     </div>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default Products;}}

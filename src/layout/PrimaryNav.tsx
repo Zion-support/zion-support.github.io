@@ -20,6 +20,10 @@ import type { RootState } from '@/store';
       // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
@@ -54,6 +58,10 @@ const ModeToggle = () => {;
                 value={query}
                 onChange={setQuery}
                   // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 onSelectSuggestion = {
   (sugg) => {
                   // // // // console.log('PrimaryNav search suggestion selected:',;

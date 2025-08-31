@@ -500,5 +500,4 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     customers: 95,
     rating: 4.9,
     reviews: 67
-
 ];}}

@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../types/service-variants";
-
 export interface RevolutionaryAIInnovationService2029 {
   id: string;
   name: string;
@@ -41,7 +40,10 @@ export interface RevolutionaryAIInnovationService2029 {
   isPopular?: boolean;
   isNew?: boolean;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationService2029[] = [
   // AI-Powered Autonomous Code Review
   {
@@ -96,7 +98,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 34,
     isPopular: true
   },
-
   // AI-Powered Content Creation Suite
   {
     id: 'ai-content-creation-suite',
@@ -150,7 +151,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 45,
     isPopular: true
   },
-
   // AI-Powered Project Management
   {
     id: 'ai-project-management',
@@ -204,7 +204,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 28,
     isNew: true
   },
-
   // AI-Powered SEO Optimization
   {
     id: 'ai-powered-seo',
@@ -257,7 +256,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     rating: 4.6,
     reviews: 38
   },
-
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation',
@@ -310,7 +308,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     rating: 4.7,
     reviews: 32
   },
-
   // AI-Powered Customer Support
   {
     id: 'ai-customer-support-automation',
@@ -364,7 +361,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 26,
     isPopular: true
   },
-
   // AI-Powered Financial Analytics
   {
     id: 'ai-financial-analytics',
@@ -418,7 +414,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 19,
     isNew: true
   },
-
   // AI-Powered Legal Document Automation
   {
     id: 'ai-legal-document-automation',
@@ -471,7 +466,6 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     rating: 4.7,
     reviews: 15
   },
-
   // AI-Powered Interview Assessment
   {
     id: 'ai-interview-assessment',
@@ -525,19 +519,15 @@ export const revolutionaryAIInnovationServices2029: RevolutionaryAIInnovationSer
     reviews: 23
   }
 ];
-
 export const getAIServicesByCategory = (category: string) => {
   return revolutionaryAIInnovationServices2029.filter(service => service.category === category);
 };
-
 export const getPopularAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(service => service.isPopular);
 };
-
 export const getNewAIServices = () => {
   return revolutionaryAIInnovationServices2029.filter(service => service.isNew);
 };
-
 export const getAIServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionaryAIInnovationServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));

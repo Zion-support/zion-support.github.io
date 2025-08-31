@@ -4,6 +4,7 @@ const contact = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
+<<<<<<< HEAD
 
 
 
@@ -11,6 +12,8 @@ const contact = {
 
 
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 }
 export const addedAIServices2025: InnovativeAIService[] = [
   {
@@ -710,5 +713,4 @@ export const addedAIServices2025: InnovativeAIService[] = [
     customers: 10,
     rating: 4.7,
     reviews: 6
-
 ]}}

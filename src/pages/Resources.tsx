@@ -16,6 +16,7 @@ const Resources: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Resources', icon: BookOpen, count: 156 },
     { id: 'documentation', name: 'Documentation', icon: FileText, count: 42 },
     { id: 'case-studies', name: 'Case Studies', icon: TrendingUp, count: 28 },
@@ -23,6 +24,13 @@ const Resources: React.FC = (): JSX.Element => {;
     { id: 'webinars', name: 'Webinars', icon: Video, count: 23 },
     { id: 'training', name: 'Training', icon: Headphones, count: 18 },
     { id: 'research', name: 'Research', icon: BookOpen, count: 10 }
+=======
+    { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },
+    { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },
+    { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },
+    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },;
+    { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   ];
   const featuredResources = [
     {

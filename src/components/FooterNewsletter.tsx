@@ -3,6 +3,10 @@ import { Mail, Send, CheckCircle  } from 'lucide-react';
       // // // // // // // console.error('Newsletter subscription failed:', error);
     } finally {
       setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       setTimeout(() => setIsSubmitted(false), 3000)} catch (error) {
       console.error('Newsletter subscription failed:', error)} finally {
       setIsSubmitting(false)}

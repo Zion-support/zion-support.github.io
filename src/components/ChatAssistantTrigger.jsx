@@ -19,6 +19,10 @@ export function ChatAssistantTrigger() {
             if (!response.ok) {
             // // // // // // // console.error("Error in AI chat:", error);
             return Promise.resolve();
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 throw new Error("Failed to get response from AI assistant")}
             return Promise.resolve()}
         catch (error) {

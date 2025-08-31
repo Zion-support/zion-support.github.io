@@ -37,7 +37,10 @@ export interface AdvancedCybersecurityService2027 {
     email: string;
     website: string;
     address: string}}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2027[] = [
   // AI-Powered Threat Intelligence Platform
   {
@@ -122,9 +125,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-
   },
-
   // Quantum Cryptography Platform
   {
     id: "quantum-cryptography-platform",
@@ -208,9 +209,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-
   },
-
   // Zero Trust Security Architecture
   {
     id: "zero-trust-security-architecture",
@@ -294,9 +293,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-
   },
-
   // Autonomous Security Operations Center
   {
     id: "autonomous-security-operations-center",
@@ -380,9 +377,7 @@ export const ADVANCED_CYBERSECURITY_SERVICES_2027: AdvancedCybersecurityService2
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-
   },
-
   // Quantum-Resistant Cryptography Platform
   {
     id: "quantum-resistant-cryptography-platform",

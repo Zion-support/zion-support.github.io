@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Cloud, Shield, BarChart3, Database, Rocket, Users, Building, Globe, Zap, CheckCircle, Star, TrendingUp, Clock, Target, Award } from 'lucide-react';
-
 export default function Solutions() {
 	const industrySolutions = [
 		{
@@ -29,7 +28,10 @@ export default function Solutions() {
 			color: 'from-purple-600 to-pink-700'
 		}
 	];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 	const technologySolutions = [
 		{
 			icon: Brain,
@@ -80,7 +82,10 @@ export default function Solutions() {
 			color: 'from-pink-600 to-rose-700'
 		}
 	];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 	const useCaseSolutions = [
 		{
 			title: 'Digital Transformation',
@@ -119,14 +124,12 @@ export default function Solutions() {
 			href: '/solutions/process-automation'
 		}
 	];
-
 	const successMetrics = [
 		{ number: '95%', label: 'Client Satisfaction', icon: Star },
 		{ number: '40%', label: 'Cost Reduction', icon: TrendingUp },
 		{ number: '60%', label: 'Efficiency Gain', icon: Zap },
 		{ number: '99.9%', label: 'Uptime SLA', icon: Clock }
 	];
-
 	return (
 		<>
 			{/* Hero Section */}
@@ -156,7 +159,6 @@ export default function Solutions() {
 					</div>
 				</div>
 			</section>
-
 			{/* Success Metrics */}
 			<section className="py-16 bg-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -177,7 +179,6 @@ export default function Solutions() {
 					</div>
 				</div>
 			</section>
-
 			{/* Industry Solutions */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -214,7 +215,6 @@ export default function Solutions() {
 					</div>
 				</div>
 			</section>
-
 			{/* Technology Solutions */}
 			<section className="py-24 sm:py-32 bg-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -251,7 +251,6 @@ export default function Solutions() {
 					</div>
 				</div>
 			</section>
-
 			{/* Use Case Solutions */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -280,7 +279,6 @@ export default function Solutions() {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-gradient-to-r from-blue-600 to-purple-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">

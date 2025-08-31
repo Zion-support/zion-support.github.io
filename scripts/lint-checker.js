@@ -1,9 +1,7 @@
 #!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
 // Common lint issues to check for
 const lintRules = {
   'no-console': /console\.(log|warn|error|info|debug)/g,
@@ -19,10 +17,8 @@ const lintRules = {
   'no-multiple-empty-lines': /\n\s*\n\s*\n/g,
   'no-unused-jsx-props': /<[^>]+\s+[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*\{[^}]+\}[^>]*>/g
 };
-
 // File extensions to check
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
-
 // Directories to ignore
 const ignoreDirs = [
   'node_modules',
@@ -44,23 +40,18 @@ const ignoreDirs = [
   'temp_backup',
   'temp_working'
 ];
-
 // Issues found
 const issues = [];
 const totalFiles = 0;
 const filesWithIssues = 0;
-
 function shouldIgnoreFile(filePath) {
   return ignoreDirs.some(dir => filePath.includes(dir));
-
 function checkFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const lines = content.split('\n');
     totalFiles++;
-
     const fileIssues = [];
-
     // Check each line for issues
     lines.forEach((line, lineNum) => {
       Object.entries(lintRules).forEach(([rule, pattern]) => {
@@ -71,96 +62,86 @@ function checkFile(filePath) {
             content: line.trim(),
             file: filePath
           });
-
       });
     });
-
     if (fileIssues.length > 0) {
       filesWithIssues++;
       issues.push(...fileIssues);
-
   } catch (error) {
     // // // // // // // console.warn(`Warning: Could not read file ${filePath}: ${error.message}`);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 function walkDir(dir) {
   const files = fs.readdirSync(dir);
-
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
     if (stat.isDirectory()) {
       if (!shouldIgnoreFile(filePath)) {
         walkDir(filePath);
-
     } else if (stat.isFile()) {
       const ext = path.extname(file);
       if (extensions.includes(ext)) {
         checkFile(filePath);
-
-
   });
-
 function generateReport() {
   // // // // // // // console.log('\n=== LINT CHECK REPORT ===\n');
   // // // // // // // console.log(`Total files checked: ${totalFiles}`);
   // // // // // // // console.log(`Files with issues: ${filesWithIssues}`);
   // // // // // // // console.log(`Total issues found: ${issues.length}\n`);
-
   if (issues.length === 0) {
     // // // // // // // console.log('✅ No lint issues found!');
     return;
-
   // Group issues by file
   const issuesByFile = { /* empty */ };
   issues.forEach(issue => {
     if (!issuesByFile[issue.file]) {
       issuesByFile[issue.file] = [];
-
     issuesByFile[issue.file].push(issue);
   });
-
   Object.entries(issuesByFile).forEach(([file, fileIssues]) => {
     // // // // // // // console.log(`\n📁 ${file} (${fileIssues.length} issues):`);
     fileIssues.forEach(issue => {
       // // // // // // // console.log(`  Line ${issue.line}: [${issue.rule}] ${issue.content}`);
     });
   });
-
   // Summary by rule
   // // // // // // // console.log('\n📊 Issues by rule:');
   const ruleCounts = { /* empty */ };
   issues.forEach(issue => {
     ruleCounts[issue.rule] = (ruleCounts[issue.rule] || 0) + 1;
   });
-
   Object.entries(ruleCounts)
     .sort(([,a], [,b]) => b - a)
     .forEach(([rule, count]) => {
       // // // // // // // console.log(`  ${rule}: ${count}`);
     });
-
 function main() {
   // // // // // // // console.log('🔍 Starting lint check...');
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const startTime = Date.now();
   walkDir('.');
   const endTime = Date.now();
-
   generateReport();
+<<<<<<< HEAD
 
   // // // // // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
 
+=======
+  // // // // // // // console.log(`\n⏱️  Check completed in ${endTime - startTime}ms`);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   // Exit with error code if issues found
   if (issues.length > 0) {
     process.exit(1);
-
-
 // Run the checker
 if (require.main === module) {
   main();
-
 module.exports = { checkFile, walkDir, lintRules };
 }}}}}}}}}}}}}))

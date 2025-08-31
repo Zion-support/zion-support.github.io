@@ -165,6 +165,5 @@ export const added2025Services: AddedService[] = [
     link: 'https://ziontechgroup.com/webhook-relay-replay',
     rating: 4.6,
     customerCount: 640
-
 ];
 }}

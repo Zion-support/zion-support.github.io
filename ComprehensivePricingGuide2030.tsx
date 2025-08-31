@@ -37,28 +37,33 @@ import { CheckCircle,
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
 import { SEO  } from '@/components/SEO';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const cats = services.reduce((acc, service) => {;
       if (!acc.includes(service.category)) {;
         acc.push(service.category);
-
       return acc;
     }, [] as string[]);
     return ['all', ...cats];
   }, [services]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
-
   const filtered = services;
-
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)}
-
     if (selectedPricingModel !== 'all') {
       filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)};
 ;
     return filtered}, [services, selectedCategory, selectedPricingModel]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const getCategoryIcon = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':;
@@ -78,7 +83,6 @@ import { SEO  } from '@/components/SEO';
       default:
         return Zap}
   };
-
   const getCategoryColor = (category: string)  => {
     switch (category) {
       case 'AI & Analytics':;
@@ -98,7 +102,6 @@ import { SEO  } from '@/components/SEO';
       default:
         return 'from-gray-600 to-slate-600'}
   };
-
   const pricingTiers = [
     {
       name: 'Starter',
@@ -157,7 +160,6 @@ import { SEO  } from '@/components/SEO';
       bestFor: 'Large enterprises, government agencies, Fortune 500 companies';
     };
   ];
-
   const marketInsights = [
     {
       title: 'AI Services Market',
@@ -188,14 +190,12 @@ import { SEO  } from '@/components/SEO';
       color: 'from-indigo-500 to-purple-600';
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO 
         title="Comprehensive Pricing Guide 2030 - Zion Tech Group" 
         description="Explore our innovative service pricing with market analysis, ROI calculations, and flexible pricing tiers for AI, Cloud, IoT, and Quantum Computing solutions."
       />
-
       {/* Hero Section */}
       <section className="relative py-20 sm:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20"></div>
@@ -205,26 +205,13 @@ import { SEO  } from '@/components/SEO';
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               className="text-5xl sm:text-7xl font-extrabold tracking-tight mb-6"
-
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Pricing Guide
               </span>
@@ -235,35 +222,16 @@ import { SEO  } from '@/components/SEO';
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="text-xl sm:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto"
-
               Transparent pricing for cutting-edge technology solutions.
               Compare market rates, calculate ROI, and choose the perfect plan for your business.
             </motion.p>
@@ -271,53 +239,31 @@ import { SEO  } from '@/components/SEO';
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
               className="flex flex-wrap justify-center gap-4"
-
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-
                 Get Custom Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/innovative-services-showcase-2025"
                 className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
-
                 View All Services
               </Link>
             </motion.div>
           </div>
         </div>
       </section>
-
       {/* Market Insights */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -325,26 +271,13 @@ import { SEO  } from '@/components/SEO';
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
-
             Market Insights & Trends
           </motion.h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
@@ -354,35 +287,16 @@ import { SEO  } from '@/components/SEO';
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
-
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
                   <TrendingUp className="w-8 h-8 text-white" />
                 </div>
@@ -395,7 +309,6 @@ import { SEO  } from '@/components/SEO';
           </div>
         </div>
       </section>
-
       {/* Pricing Tiers */}
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
@@ -403,26 +316,13 @@ import { SEO  } from '@/components/SEO';
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
-
             Flexible Pricing Tiers
           </motion.h2>
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -432,39 +332,20 @@ import { SEO  } from '@/components/SEO';
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
                   tier.popular
                     ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20'
                     : 'border-cyan-400/15'
                 }`}
-
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -472,7 +353,6 @@ import { SEO  } from '@/components/SEO';
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <p className="text-slate-300 mb-6">{tier.description}</p>
@@ -482,7 +362,6 @@ import { SEO  } from '@/components/SEO';
                   </div>
                   <p className="text-sm text-slate-400 mb-4">Best for: {tier.bestFor}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-slate-300">
@@ -491,7 +370,6 @@ import { SEO  } from '@/components/SEO';
                     </li>
                   ))}
                 </ul>
-
                 <Link
                   to="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
@@ -499,7 +377,6 @@ import { SEO  } from '@/components/SEO';
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90'
                       : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
                   }`}
-
                   Get Started
                 </Link>
               </motion.div>
@@ -507,7 +384,6 @@ import { SEO  } from '@/components/SEO';
           </div>
         </div>
       </section>
-
       {/* Service Pricing Details */}
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -515,29 +391,15 @@ import { SEO  } from '@/components/SEO';
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
-
             Service Pricing Details
           </motion.h2>
-
           {/* Filters */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <select
@@ -569,42 +431,22 @@ import { SEO  } from '@/components/SEO';
             {filteredServices.map((service, index) => {;
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
-
               return (
                 <motion.div
                   key = {service.id}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
-
                   {/* Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${categoryColor} flex items-center justify-center`}>
@@ -620,7 +462,6 @@ import { SEO  } from '@/components/SEO';
                       <div className="text-xs text-slate-400">per {service.pricingModel}</div>
                     </div>
                   </div>
-
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {service.title}
@@ -628,7 +469,6 @@ import { SEO  } from '@/components/SEO';
                   <p className="text-slate-300 text-sm mb-4 line-clamp-3">
                     {service.description}
                   </p>
-
                   {/* Category and ROI */}
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs bg-slate-800 px-2 py-1 rounded text-cyan-300">
@@ -639,7 +479,6 @@ import { SEO  } from '@/components/SEO';
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
-
                   {/* Market Price Comparison */}
                   <div className="mb-4 p-3 bg-slate-800/50 rounded-lg">
                     <div className="text-xs text-slate-400 mb-1">Market Price Range</div>
@@ -648,7 +487,6 @@ import { SEO  } from '@/components/SEO';
                       Our price: {service.currency}{service.price.toLocaleString()}/{service.pricingModel}
                     </div>
                   </div>
-
                   {/* Key Benefits */}
                   <div className="mb-4">
                     <div className="text-xs text-slate-400 mb-2">Key Benefits:</div>
@@ -661,13 +499,11 @@ import { SEO  } from '@/components/SEO';
                       ))}
                     </div>
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <Link
                       to={`/services/${service.id}`}
                       className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
-
                       Learn More
                       <ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
@@ -682,7 +518,6 @@ import { SEO  } from '@/components/SEO';
               );
             })}
           </div>
-
           {filteredServices.length = == 0 && (;
             <div className="text-center py-16">;
               <div className="text-slate-400 text-lg mb-4">No services found matching your criteria</div>;
@@ -699,7 +534,6 @@ import { SEO  } from '@/components/SEO';
           )}
         </div>
       </section>
-
       {/* ROI Calculator */}
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
@@ -708,98 +542,50 @@ import { SEO  } from '@/components/SEO';
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               className="text-3xl font-bold mb-6"
-
               Calculate Your ROI
             </motion.h2>
             <motion.p 
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="text-xl text-slate-300 mb-8"
-
               Use our ROI calculator to estimate the return on investment for our services.
               Most clients see returns within 3-6 months.
             </motion.p>
+<<<<<<< HEAD
             
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <motion.div 
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
               className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8"
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">3-6</div>
@@ -814,11 +600,9 @@ import { SEO  } from '@/components/SEO';
                   <div className="text-slate-300">Cost Reduction</div>
                 </div>
               </div>
-
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-
                 Get Personalized ROI Analysis
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -826,7 +610,6 @@ import { SEO  } from '@/components/SEO';
           </div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -835,105 +618,56 @@ import { SEO  } from '@/components/SEO';
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               className="text-4xl font-bold text-white mb-6"
-
               Ready to Get Started?
             </motion.h2>
             <motion.p 
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="text-xl text-slate-300 mb-8"
-
               Our team of experts is ready to help you choose the right services and pricing plan.
               Get in touch today for a personalized consultation.
             </motion.p>
+<<<<<<< HEAD
             
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <motion.div 
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
               className="grid md:grid-cols-3 gap-8 mb-12"
-
               <div className="flex flex-col items-center">
                 <Phone className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Call Us</div>
                 <a
                   href="tel:+13024640950"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-
                   +1 302 464 0950
                 </a>
               </div>
@@ -943,7 +677,6 @@ import { SEO  } from '@/components/SEO';
                 <a
                   href="mailto:kleber@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -956,58 +689,39 @@ import { SEO  } from '@/components/SEO';
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <motion.div 
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.6 
-
-
-
-
-
-
 }}
               className="flex flex-wrap justify-center gap-4"
-
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
-
                 Schedule a Consultation
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
-
                 Request a Quote
               </Link>
             </motion.div>
           </div>
         </div>
       </section>
-
       {/* Footer CTA */}
       <section className="py-16">
         <div className="container mx-auto px-4 text-center">
@@ -1020,7 +734,6 @@ import { SEO  } from '@/components/SEO';
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-cyan-400 hover:text-cyan-300 transition-colors"
-
                 ziontechgroup.com
               </a>
               {' '}to explore our full range of services and solutions.
@@ -1035,5 +748,8 @@ import { SEO  } from '@/components/SEO';
     </div>;
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default ComprehensivePricingGuide2030;}}}}}}}}

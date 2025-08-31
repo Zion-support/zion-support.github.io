@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../src/types/service-variants";
-
 export interface Zion2026AdvancedAIAutomationService {
   id: string;
   name: string;
@@ -38,7 +37,10 @@ export interface Zion2026AdvancedAIAutomationService {
   customers: number;
   rating: number;
   reviews: number}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -49,14 +51,7 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
-
 export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationService[] = [
   // AI-Powered Autonomous Customer Success Platform
   {
@@ -105,7 +100,6 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.9,
     reviews: 920
   },
-
   // AI-Powered Autonomous HR and Recruitment Platform
   {
     id: 'ai-autonomous-hr-recruitment-platform-2026',
@@ -153,7 +147,6 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.8,
     reviews: 1100
   },
-
   // AI-Powered Autonomous Sales Intelligence Platform
   {
     id: 'ai-autonomous-sales-intelligence-platform-2026',
@@ -201,7 +194,6 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.9,
     reviews: 980
   },
-
   // AI-Powered Autonomous Research and Development Platform
   {
     id: 'ai-autonomous-research-development-platform-2026',
@@ -249,7 +241,6 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.9,
     reviews: 420
   },
-
   // AI-Powered Autonomous Quality Assurance Platform
   {
     id: 'ai-autonomous-quality-assurance-platform-2026',
@@ -297,7 +288,6 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.8,
     reviews: 1400
   },
-
   // AI-Powered Autonomous Compliance and Governance Platform
   {
     id: 'ai-autonomous-compliance-governance-platform-2026',
@@ -345,7 +335,6 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.9,
     reviews: 580
   },
-
   // AI-Powered Autonomous Energy Management Platform
   {
     id: 'ai-autonomous-energy-management-platform-2026',
@@ -393,7 +382,6 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     rating: 4.8,
     reviews: 820
   },
-
   // AI-Powered Autonomous Transportation and Logistics Platform
   {
     id: 'ai-autonomous-transportation-logistics-platform-2026',
@@ -440,7 +428,5 @@ export const zion2026AdvancedAIAutomationServices: Zion2026AdvancedAIAutomationS
     customers: 1400,
     rating: 4.9,
     reviews: 720
-
 ];
-
 export default zion2026AdvancedAIAutomationServices;}}

@@ -45,12 +45,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const specializedITInfrastructureServices2025: SpecializedITInfrastructureService[] = [
   {
@@ -277,5 +271,4 @@ export const specializedITInfrastructureServices2025: SpecializedITInfrastructur
     customers: 56,
     rating: 4.6,
     reviews: 34
-
 ];}}

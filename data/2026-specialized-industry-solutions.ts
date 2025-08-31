@@ -45,12 +45,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const specializedIndustrySolutions2026: SpecializedIndustrySolution[] = [
   {

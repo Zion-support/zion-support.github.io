@@ -12,6 +12,10 @@ import { RefreshCcw, AlertCircle function MarketplaceErrorFallback({ error, rese
             resetErrorBoundary();
             // // // // // // // console.error('Error during retry:', retryError);
             Sentry.captureException(retryError);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         }
         catch (retryError) {
             console.error('Error during retry:', retryError);

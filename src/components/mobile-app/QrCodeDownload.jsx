@@ -23,6 +23,10 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
       setCopied(true);
       // // // // // // // console.error('Failed to copy: ', err);
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       setTimeout(() => setCopied(false), 2000)} catch (err) {
       console.error('Failed to copy: ', err)}
   };
@@ -40,6 +44,10 @@ import { QrCode, Smartphone, Download, Share2, Copy, Check export const QrCodeDo
     } else {
       // Fallback for browsers that don't support Web Share API
       handleCopyLink(url);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         })} catch (err) {
         console.error('Error sharing:', err)}
     } else {

@@ -28,9 +28,13 @@ export default function VideoCall() {
             id: 'user-1',
             name: 'You',
             isVideoEnabled: true,
+<<<<<<< HEAD
             isMuted: false,
             isScreenSharing: false
         }
+=======
+            isMuted: false
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     ]);
 
     const handleJoinCall = () => {
@@ -39,6 +43,7 @@ export default function VideoCall() {
         setTimeout(() => {
             setHasJoined(true);
             setIsJoining(false);
+<<<<<<< HEAD
         }, 1500);
     };
 
@@ -62,6 +67,21 @@ export default function VideoCall() {
         setIsScreenSharing(!isScreenSharing);
     };
 
+=======
+            toast.success("Call joined", {
+                description: `You have joined meeting room ${roomId}`
+            })}, 1500)};
+    const handleLeaveCall = () => {
+        setHasJoined(false);
+        toast.info("Call ended", {
+            description: "You have left the meeting"
+        });
+        // Navigate back after a short delay
+        setTimeout(() => {
+            router(-1);
+        }, 1500);
+    };
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     const simulateUserJoining = () => {
         // This is just for demo purposes - in a real app, this would be handled by the video call service
         const mockUsers = [
@@ -72,6 +92,7 @@ export default function VideoCall() {
         const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
         if (!participants.find(p => p.id === randomUser.id)) {
             setParticipants(prev => [...prev, randomUser]);
+<<<<<<< HEAD
         }
     };
 
@@ -200,3 +221,27 @@ export default function VideoCall() {
         </>
     );
 }
+=======
+            toast(`${randomUser.name} joined the call`)}
+    };
+    return (<>
+      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call"/>
+      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
+        {!hasJoined ? (<div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
+            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
+            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
+            <Button onClick={handleJoinCall} disabled={isJoining} size="lg" className="bg-zion-purple hover:bg-zion-purple-light">
+              {isJoining ? "Connecting..." : "Join Call"}
+            </Button>
+          </div>) : (<div className="space-y-4">
+            <VideoCallRoom roomId={roomId || ''} participants={participants} onLeave={handleLeaveCall}/>
+            {/* This button is just for demo/testing purposes */}
+            <div className="flex justify-center mt-4">
+              <Button variant="outline" onClick={simulateUserJoining} className="text-sm">
+                Simulate user joining (demo only)
+              </Button>
+            </div>
+          </div>)}
+      </main>
+    </>)}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

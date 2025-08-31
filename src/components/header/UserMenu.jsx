@@ -21,6 +21,10 @@ export const UserMenu = () => {
     };
     if (!user) {
         return null;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             setIsOpen(false)}
         catch (error) {
             console.error('Logout failed:', error)}

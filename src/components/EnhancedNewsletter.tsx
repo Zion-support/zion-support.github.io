@@ -40,6 +40,10 @@ const frequencies = [;
       await new Promise(resolve => setTimeout(resolve, 2000));
       // Here you would typically send the data to your newsletter service
       // // // // // // // console.log('Newsletter subscription:', formData);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       console.log('Newsletter subscription: ', formData);
       setStatus('success');
       // Reset form after successful submission
@@ -52,6 +56,10 @@ const frequencies = [;
         });
       // // // // // // // console.error('Newsletter subscription error:', error);
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         setStatus('idle')}, 3000)} catch (error) {
       setStatus('error');
       console.error('Newsletter subscription error:', error)}

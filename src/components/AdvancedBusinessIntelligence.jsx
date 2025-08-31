@@ -3,6 +3,10 @@ import { BarChart3, TrendingUp, Brain, Zap, Target, AlertTriangle, Download, Ref
         actions['Conduct market research', 'Develop localization strategy', 'Establish partnerships']
     }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const mockModels = [
     {
         id: 'model-1',

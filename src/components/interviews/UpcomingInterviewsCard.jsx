@@ -25,6 +25,10 @@ export function UpcomingInterviewsCard() {
             }
             finally {
                 setIsLoading(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 setUpcomingInterviews(upcoming)}
             catch (error) {
                 console.error("Error loading upcoming interviews:", error)}

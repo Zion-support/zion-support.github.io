@@ -1,13 +1,27 @@
+<<<<<<< HEAD
 // Enhanced Innovative Services 2025 - Zion Tech Group
 // Comprehensive micro SAAS, IT, and AI services with real market data and pricing
 
 export interface EnhancedService {
   id: string;
   title: string;
+=======
+export interface ServiceContact {
+  phone: string;
+  email: string;
+  website: string;
+  address: string}
+export interface MicroSaasService {
+  id: number;
+  name: string;
+  category: string;
+  pricing: string;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   description: string;
   category: 'Micro SAAS' | 'IT Services' | 'AI Solutions' | 'Emerging Tech';
   subcategory: string;
   price: number;
+<<<<<<< HEAD
   currency: string;
   pricingModel: string;
   features: string[];
@@ -53,6 +67,62 @@ const zionContact = {
 // Enhanced Innovative Services 2025
 export const enhancedInnovativeServices2025: EnhancedService[] = [
   // NEW MICRO SAAS SERVICES
+=======
+  pricingModel: string;
+  userLimit: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  competitors: string[];
+  roi: string;
+  setupTime: string;
+  integrations: string[];
+  freeTier: boolean;
+  trialPeriod: string}
+export interface ITService {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  hourlyRate: number;
+  projectRate: number;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  responseTime: string;
+  sla: string;
+  certifications: string[];
+  deliveryTime: string;
+  support: string}
+export interface AIService {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+  pricing: string;
+  price: number;
+  pricingModel: string;
+  features: string[];
+  benefits: string[];
+  targetAudience: string[];
+  tags: string[];
+  contactInfo: ServiceContact;
+  marketPrice: string;
+  aiModels: string[];
+  accuracy: string;
+  trainingData: string;
+  compliance: string[];
+  aiScore: number;
+  useCases: string[]}
+export const ENHANCED_INNOVATIVE_SERVICES_2025: EnhancedInnovativeService[] = [
+  // Advanced AI & Machine Learning Services
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   {
     id: "ai-powered-customer-success-automation",
     title: "AI-Powered Customer Success Automation Platform",
@@ -479,6 +549,7 @@ export const enhancedInnovativeServices2025: EnhancedService[] = [
       uptime: "99.9%",
       security: ["Post-quantum cryptography", "Quantum-safe protocols", "SOC2", "ISO 27001"]
     },
+<<<<<<< HEAD
     competitors: ["IBM Quantum", "Google Quantum", "Microsoft Azure Quantum", "Amazon Braket"],
     marketSize: "$2.5B by 2025",
     freeTier: false,
@@ -1045,6 +1116,18 @@ export const enhancedInnovativeServices2025: EnhancedService[] = [
     growthRate: "70% YoY",
     compliance: ["SOC2", "IoT security standards", "GDPR"]
   }
+=======
+    marketPrice: "$2,999-8,999/month",
+    competitors["ISARA", "PQShield", "Cryptosense"],
+    roi: "600% within 18 months",
+  };
+=======;
+    setupTime: "24 hours",;
+    integrations: ["PKI systems", "VPN solutions", "Cloud platforms", "Security tools", "Compliance systems"],;
+    freeTier: false,;
+    trialPeriod: "7 days";
+  };
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 ];
 
 export default enhancedInnovativeServices2025;

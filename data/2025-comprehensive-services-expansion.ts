@@ -47,12 +47,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
@@ -819,5 +813,4 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     customers: 234,
     rating: 4.8,
     reviews: 178
-
 ];}}

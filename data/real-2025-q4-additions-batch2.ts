@@ -179,5 +179,4 @@ export const real2025Q4AdditionsBatch2: AdditionalQ42025Service[] = [
 		integrations['GitHub', 'Jira', 'Linear'],
 		trialDays: 7,
 		setupTime: 'Same day'
-
 ];}}

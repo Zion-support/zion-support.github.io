@@ -37,6 +37,10 @@ export function EnhancedNewsletterForm() {
             toast.error("Unable to subscribe right now. Please try again later.");
         finally {
             setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     toast.success(data.message || "You're already subscribed!")}
                 else {
                     toast.success(data.message || "Thanks for subscribing!")}

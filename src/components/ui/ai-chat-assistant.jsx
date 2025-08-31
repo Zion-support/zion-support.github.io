@@ -50,6 +50,10 @@ export function AIChatAssistant({ enabled = true, className = "", onMessageSend,
                     suggestions['Schedule consultation', 'View case studies', 'Meet the team']
                 }
             ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             const randomResponse = responses[Math.floor(Math.random() * responses.length)];
             const aiMessage = {
   id: Date.now().toString(),

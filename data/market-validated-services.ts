@@ -29,12 +29,6 @@ const contactInfo = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const marketValidatedServices: MarketValidatedService[] = [
 	// AI and Assistants

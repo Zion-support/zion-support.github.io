@@ -43,6 +43,7 @@ export default function AIPredictiveMaintenance() {
       description: "Continuous monitoring of equipment health with instant alerts and notifications."
     },
     {
+<<<<<<< HEAD
       icon: <Wrench className="w-6 h-6" />,
       title: "Smart Maintenance Scheduling",
       description: "Intelligent scheduling that optimizes maintenance windows and reduces downtime."
@@ -65,6 +66,19 @@ export default function AIPredictiveMaintenance() {
   ];
 
   const pricingPlans = [
+=======
+      icon: AlertTriangle,
+      title: 'Early Warning System',
+      description: 'Proactive alerts before equipment failure';
+    },;
+    {;
+      icon: BarChart3,;
+      title: 'Performance Analytics',;
+      description: 'Data-driven insights for optimization';
+    };
+  ];
+  const applications = [
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     {
       name: "Starter",
       price: "$149",
@@ -98,6 +112,7 @@ export default function AIPredictiveMaintenance() {
       popular: true
     },
     {
+<<<<<<< HEAD
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -160,13 +175,40 @@ export default function AIPredictiveMaintenance() {
       description: "Medical equipment monitoring and predictive maintenance",
       icon: <Activity className="w-8 h-8 text-red-500" />
     }
+=======
+      title: 'Transportation',
+      description: 'Fleet maintenance and vehicle optimization',
+      icon: '🚚';
+    },;
+    {;
+      title: 'Healthcare',;
+      description: 'Medical equipment maintenance and reliability',;
+      icon: '🏥';
+    };
   ];
-
+  const benefits = [;
+    'Reduce unplanned downtime by up to 75%',;
+    'Extend equipment lifespan and reliability',;
+    'Lower maintenance costs and labor requirements',;
+    'Improve safety and compliance standards',;
+    'Optimize spare parts inventory management',;
+    'Increase overall operational efficiency';
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
+  ];
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AI Predictive Maintenance Services - Zion Tech Group"
+        description="Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment failures and optimize performance with intelligent monitoring."
+      />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       {/* Hero Section */}
       <section className="relative pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
+<<<<<<< HEAD
           <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -208,17 +250,121 @@ export default function AIPredictiveMaintenance() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
+              <Wrench className="w-5 h-5 text-orange-400 mr-2" />
+              <span className="text-orange-300 font-medium">AI Predictive Maintenance</span>
+            </div>
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              AI Predictive
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-500 to-pink-400">
+                Maintenance
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your maintenance operations with AI-powered predictive maintenance. Prevent equipment
+              failures, reduce downtime, and optimize performance with intelligent monitoring and analytics.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
+                Get Started
+              </button>
+              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
+                Learn More
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Features Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Predictive Maintenance Features
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Intelligent monitoring and predictive analytics for optimal performance
+            </p>
+          </motion.div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200 hover:scale-105"
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-orange-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Applications Section */}
+      <section className="py-16 px-4 bg-slate-800/30">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Features for Predictive Maintenance
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Industry Applications
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Everything you need to predict, prevent, and optimize equipment maintenance
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -232,6 +378,31 @@ export default function AIPredictiveMaintenance() {
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   {feature.icon}
+=======
+          <div className="grid md:grid-cols-2 gap-8">
+            {applications.map((application, index) => (
+              <motion.div
+                key={application.title}
+                initial = {
+  { opacity: 0,
+  x: index % 2 === 0 ? -20 : 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-200"
+                <div className="flex items-start space-x-4">
+                  <div className="text-4xl">{application.icon}</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>
+                    <p className="text-gray-300">{application.description}</p>
+                  </div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
@@ -244,24 +415,39 @@ export default function AIPredictiveMaintenance() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
+<<<<<<< HEAD
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+=======
+            <h2 className="text-4xl font-bold text-white mb-4">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               Why Choose AI Predictive Maintenance?
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Experience the transformative power of AI-driven maintenance optimization
             </p>
           </motion.div>
+<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
@@ -396,14 +582,58 @@ export default function AIPredictiveMaintenance() {
                 </button>
               </motion.div>
             ))}
+=======
+          <div className="grid md:grid-cols-2 gap-8">
+            <motion.div
+              initial = {
+  { opacity: 0,
+  x: -20 
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+              transition={{ duration: 0.6 }}
+              className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
+              <h3 className="text-2xl font-semibold text-white mb-6">Key Benefits</h3>
+              <ul className="space-y-4">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span className="text-gray-300">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+            <motion.div
+              initial = {
+  { opacity: 0,
+  x: 20 
+}}
+              whileInView = {
+  { opacity: 1,
+  x: 0 
+}}
+              transition={{ duration: 0.6 }}
+              className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-400/30 rounded-xl p-8"
+              <h3 className="text-2xl font-semibold text-white mb-6">Get Started Today</h3>
+              <p className="text-gray-300 mb-6">
+                Ready to transform your maintenance operations? Our AI predictive maintenance experts can help you
+                implement intelligent monitoring systems that prevent failures and optimize performance.
+              </p>
+              <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
+                Contact Maintenance Experts
+              </button>
+            </motion.div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -411,12 +641,26 @@ export default function AIPredictiveMaintenance() {
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Maintenance?
+=======
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.6 }}
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready for Predictive Maintenance?
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses that have already revolutionized their maintenance 
               operations with AI-powered predictive analytics.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <Link
                 to="/request-quote"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1"
@@ -457,3 +701,19 @@ export default function AIPredictiveMaintenance() {
     </div>
   );
 }
+=======
+              <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-400 hover:to-red-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-500/20">
+                Start Predictive Journey
+              </button>
+              <button className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-200">
+                Schedule Demo;
+              </button>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+export default AIPredictiveMaintenance;}}}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

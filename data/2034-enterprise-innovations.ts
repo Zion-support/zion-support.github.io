@@ -366,5 +366,4 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     uptime: '99.999% data center platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/ai-autonomous-data-center'
-
 ];}}

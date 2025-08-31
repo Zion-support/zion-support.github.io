@@ -35,8 +35,6 @@ async function handler(req, res) {
     // // // // // // // console.error('Create checkout session error:', err);
     res.statusCode = 500;
     res.json({ error: err.message });
-
-
 export default withErrorLogging(handler);
 }}}}}}}
     res.json({ sessionId: session.id })} catch (err) {
@@ -45,7 +43,6 @@ export default withErrorLogging(handler);
     res.json({ error: err.message })}
 }
 export default withErrorLogging(handler);
-
 export default isProdDomain;
 export default isProdDomain;
 export default isProdDomain;

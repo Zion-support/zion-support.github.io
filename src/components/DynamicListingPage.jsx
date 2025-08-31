@@ -89,6 +89,10 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                   Category
                 </label>
             // // // // // // // console.log("Category selected:", value);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 <Select value={selectedCategory} onValueChange = {
   (value) => {
             console.log("Category selected:",
@@ -127,6 +131,10 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </label>
                 <div className="flex flex-wrap gap-2">
                 // // // // // // // console.log("Rating selected:", rating);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   {[null, 3, 4, 5].map((rating) => (<Button key={rating === null ? 'any' : rating} variant="outline" size="sm" onClick = {
   () => {
                 console.log("Rating selected:",
@@ -143,6 +151,10 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 </div>
               </div>
             // // // // // // // console.log("Resetting filters");
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               <Button variant="outline" className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick = {
   () => {
             console.log("Resetting filters");
@@ -162,6 +174,10 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/>
             // // // // // // // console.log("Search query:", e.target.value);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   <Input type="text" placeholder="Search listings..." value={searchQuery} onChange = {
   (e) => {
             console.log("Search query:",

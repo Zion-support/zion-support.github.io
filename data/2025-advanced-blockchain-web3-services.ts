@@ -46,12 +46,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[] = [
   {
@@ -323,5 +317,4 @@ export const advancedBlockchainWeb3Services2025: AdvancedBlockchainWeb3Service[]
     customers: 18,
     rating: 4.7,
     reviews: 35
-
 ];}}

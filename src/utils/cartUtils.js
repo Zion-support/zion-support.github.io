@@ -21,6 +21,10 @@ export const getCartFromStorage = () => {
       clearCartFromStorage();
       return [];
     // // // // // // // console.error('Error reading cart from storage:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     }
     return JSON.parse(cartData);
   } catch (error) {
@@ -236,6 +240,10 @@ export const exportCartData = (cart) => {
     return JSON.stringify(cart, null, 2);
   } catch (error) {
     // // // // // // // console.error('Error exporting cart data:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // // // // console.error('Error exporting cart data:', error);
     return '[]';
 };
@@ -252,6 +260,10 @@ export const importCartData = (cartData) => {
     return [];
   } catch (error) {
     // // // // // // // console.error('Error importing cart data:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // // // // console.error('Error importing cart data:', error);
     return [];
 };

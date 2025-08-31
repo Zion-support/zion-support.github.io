@@ -32,6 +32,10 @@ import {
     technologies["IBM Quantum", "Google Quantum", "Amazon Braket", "Azure Quantum"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const quantumTechnologies = [
   {
     name: "Superconducting Qubits",

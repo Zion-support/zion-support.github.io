@@ -304,5 +304,4 @@ export const enterpriseITSolutions2031: EnterpriseITSolution2031[] = [
     patentStatus: 'Patent Pending',
     aiCapabilities['Autonomous Systems', 'Self-Healing', 'Intelligent Optimization', 'Predictive Maintenance', 'Resource Management'],
     marketDisruption: 'Revolutionizes infrastructure management by enabling truly autonomous systems, eliminating manual operations and optimizing performance automatically.'
-
 ];}}

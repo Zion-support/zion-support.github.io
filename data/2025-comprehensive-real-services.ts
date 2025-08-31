@@ -506,5 +506,4 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     customers: 950,
     rating: 4.9,
     reviews: 520
-
 ];}}

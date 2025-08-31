@@ -12,6 +12,10 @@ export function TalentGrid({ talents, isLoading, onTalentClick, isAuthenticated,
     };
     if (isLoading) {
         return <TalentSkeleton />;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     const handleMessageInternal = (talent) => {
         if (handleMessage) {
             handleMessage(talent)}

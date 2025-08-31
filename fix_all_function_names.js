@@ -15,6 +15,7 @@ function fileName = path.basename(filePath, path.extname(filePath));
           2: "Two",
           1: "One",
           0: "Zero",
+<<<<<<< HEAD
   <<<<<<< HEAD
         
 
@@ -22,6 +23,8 @@ function fileName = path.basename(filePath, path.extname(filePath));
         return numberWords[digit] || `_${digit}`});
   
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 };
         return numberWords[digit] || `_${digit}`;
       });
@@ -61,8 +64,6 @@ function fileName = path.basename(filePath, path.extname(filePath));
       );
     // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-
-
 async function fixAllFiles() {
   const files = await glob("pages/**/*.{ts,tsx}", {
     ignore: ["node_modules/**", ".next/**"],
@@ -89,7 +90,6 @@ async function fixedCount = 0;
   }
   console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles();
-
 export default fileName;
 export default fileName;
 export default fileName;

@@ -1,8 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Users, Target, Eye, Award, TrendingUp, Globe, Zap, Shield  } from 'lucide-react'
-
-
 export default function About(...args[]):  {
 	return (
 		<>
@@ -19,7 +17,6 @@ export default function About(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Mission & Vision */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -63,7 +60,6 @@ export default function About(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Values */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -104,7 +100,6 @@ export default function About(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Team */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -145,7 +140,6 @@ export default function About(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-blue-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -158,13 +152,11 @@ export default function About(...args[]):  {
 							<Link
 								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-
 								Get in Touch
 							</Link>
 							<Link
 								to="/services"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-
 								Explore Our Services <span aria-hidden="true">→</span>
 							</Link>
 						</div>

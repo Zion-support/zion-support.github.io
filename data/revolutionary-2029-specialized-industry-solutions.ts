@@ -1,5 +1,4 @@
 import { ServiceVariant } from "../types/service-variants";
-
 export interface RevolutionarySpecializedIndustryService2029 {
   id: string;
   name: string;
@@ -41,7 +40,10 @@ export interface RevolutionarySpecializedIndustryService2029 {
   isPopular?: boolean;
   isNew?: boolean;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const revolutionarySpecializedIndustryServices2029: RevolutionarySpecializedIndustryService2029[] = [
   // AI-Powered Healthcare Platform
   {
@@ -96,7 +98,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 18,
     isPopular: true
   },
-
   // Fintech Innovation Platform
   {
     id: 'fintech-innovation-platform',
@@ -150,7 +151,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 25,
     isNew: true
   },
-
   // Smart Manufacturing Solutions
   {
     id: 'smart-manufacturing-solutions',
@@ -203,7 +203,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     rating: 4.7,
     reviews: 19
   },
-
   // Retail Technology Platform
   {
     id: 'retail-technology-platform',
@@ -257,7 +256,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 22,
     isPopular: true
   },
-
   // Education Technology Platform
   {
     id: 'education-technology-platform',
@@ -310,7 +308,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     rating: 4.6,
     reviews: 31
   },
-
   // Legal Technology Platform
   {
     id: 'legal-technology-platform',
@@ -364,7 +361,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 24,
     isNew: true
   },
-
   // Real Estate Technology Platform
   {
     id: 'real-estate-technology-platform',
@@ -417,7 +413,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     rating: 4.8,
     reviews: 20
   },
-
   // Transportation & Logistics Platform
   {
     id: 'transportation-logistics-platform',
@@ -471,7 +466,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     reviews: 18,
     isPopular: true
   },
-
   // Energy & Utilities Platform
   {
     id: 'energy-utilities-platform',
@@ -524,7 +518,6 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     rating: 4.8,
     reviews: 15
   },
-
   // Agriculture Technology Platform
   {
     id: 'agriculture-technology-platform',
@@ -579,19 +572,15 @@ export const revolutionarySpecializedIndustryServices2029: RevolutionarySpeciali
     isNew: true
   }
 ];
-
 export const getSpecializedIndustryServicesByCategory = (category: string) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.category === category);
 };
-
 export const getPopularSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.isPopular);
 };
-
 export const getNewSpecializedIndustryServices = () => {
   return revolutionarySpecializedIndustryServices2029.filter(service => service.isNew);
 };
-
 export const getSpecializedIndustryServicesByPriceRange = (minPrice: number, maxPrice: number) => {
   return revolutionarySpecializedIndustryServices2029.filter(service => {
     const price = parseInt(service.price.replace('$', '').replace(',', ''));

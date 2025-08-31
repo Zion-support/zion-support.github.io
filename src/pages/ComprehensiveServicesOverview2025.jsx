@@ -37,7 +37,10 @@ const ComprehensiveServicesOverview2025 = () => {
 };
         return icons[category] || '🚀';
     };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     const getCategoryColor = (category) => {
         const colors = {
   'AI & Business Intelligence': 'from-blue-500 to-cyan-500',
@@ -55,7 +58,10 @@ const ComprehensiveServicesOverview2025 = () => {
 };
         return colors[category] || 'from-gray-500 to-slate-500';
     };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

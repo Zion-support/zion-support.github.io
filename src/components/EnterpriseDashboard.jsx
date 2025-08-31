@@ -158,6 +158,10 @@ export const EnterpriseDashboard = () => {
             });
         finally {
             setIsRefreshing(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             console.log('Data refreshed at:', now.toLocaleTimeString());
             trackEvent('enterprise_dashboard', 'data_refreshed', 'manual', null, {
                 tab: activeTab,

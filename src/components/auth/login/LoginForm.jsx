@@ -17,6 +17,7 @@ const loginSchema = z.object({
 });
 
 function LoginForm() {
+<<<<<<< HEAD
   const { login, isLoading } = useAuth();
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -54,6 +55,37 @@ function LoginForm() {
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off">
         {form.formState.errors.root && (
           <p className="text-red-400 text-sm" role="alert">
+=======
+    const { login, isLoading } = useAuth();
+    const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const form = useForm({
+        resolver: zodResolver(loginSchema),
+        defaultValues: {
+            email: "",
+            password: "",
+        },
+    });
+    const onSubmit = async (data) => {
+        if (isSubmitting)
+            return;
+        try {
+            setIsSubmitting(true);
+            const { error } = await login(data.email, data.password);
+            if (error) {
+                form.setError("root", { message: error })}
+            else {
+                router("/");
+            }
+        }
+        finally {
+            setIsSubmitting(false)}
+    };
+    return (<Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" autoComplete="off" // Disable browser autofill
+        {form.formState.errors.root && (<p className="text-red-400 text-sm" role="alert">
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             {form.formState.errors.root.message}
           </p>
         )}
@@ -75,6 +107,7 @@ function LoginForm() {
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
                 </div>
               </FormControl>
+<<<<<<< HEAD
               <FormMessage className="text-red-400" />
             </FormItem>
           )}
@@ -85,6 +118,11 @@ function LoginForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
+=======
+              <FormMessage className="text-red-400"/>
+            </FormItem>)}/>
+        <FormField control={form.control} name="password" render={({ field }) => (<FormItem>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               <FormLabel className="text-zion-slate-light">Password</FormLabel>
               <FormControl>
                 <div className="relative">
@@ -114,11 +152,16 @@ function LoginForm() {
                   </Button>
                 </div>
               </FormControl>
+<<<<<<< HEAD
               <FormMessage className="text-red-400" />
             </FormItem>
           )}
         />
 
+=======
+              <FormMessage className="text-red-400"/>
+            </FormItem>)}/>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         <div className="flex items-center justify-between">
           <div className="text-sm">
             <Link
@@ -129,6 +172,7 @@ function LoginForm() {
             </Link>
           </div>
         </div>
+<<<<<<< HEAD
 
         <Button
           type="submit"
@@ -146,6 +190,10 @@ function LoginForm() {
               Sign in
             </>
           )}
+=======
+        <Button type="submit" className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" disabled={isLoading || isSubmitting}>
+          {isLoading || isSubmitting ? "Logging in..." : "Login"}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         </Button>
 
         <div className="text-center text-sm">
@@ -158,8 +206,20 @@ function LoginForm() {
           </Link>
         </div>
       </form>
+<<<<<<< HEAD
     </Form>
   );
 }
 
+=======
+      <LoadingOverlay visible={isLoading || isSubmitting}/>
+    </Form>)}
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+export default LoginForm;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default LoginForm;

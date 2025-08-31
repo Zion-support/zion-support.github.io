@@ -10,6 +10,10 @@ export function Sonner({ position = 'bottom-right', richColors = true, closeButt
     warning: (message) => // // // // // // // console.log('Warning:', message),
     loading: (message) => // // // // // // // console.log('Loading:', message),
     dismiss: (toastId) => // // // // // // // console.log('Dismiss:', toastId)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     </div>)}
 export const toast = {
   success: (message) => console.log('Success:', message),

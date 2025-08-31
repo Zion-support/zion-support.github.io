@@ -556,5 +556,4 @@ export const nextGenInnovativeServices: NextGenInnovativeService[] = [
     customers: 38,
     rating: 4.7,
     reviews: 26
-
 ];}}

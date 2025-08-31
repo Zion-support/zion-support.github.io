@@ -15,7 +15,6 @@ export interface Service {
   icon: string;
   isPopular?: boolean;
   isNew?: boolean}
-
 // Import enhanced services
 import { enhancedServices2025 } from './enhanced-2025-services';
 import { specializedIndustryServices } from './specialized-industry-services';
@@ -27,7 +26,7 @@ export const services: Service[] = [
     name: 'AI Chatbot Platform',
     category: 'AI',
     description: 'Enterprise-grade AI chatbot platform with natural language processing, multi-language support, and seamless integration.',
-    features[
+    features: [
       'Advanced NLP with GPT-4 integration',
       'Multi-language support (50+ languages)',
       'Custom training on your data',
@@ -35,7 +34,7 @@ export const services: Service[] = [
       'API integration and webhooks',
       '24/7 customer support'
     ],
-    benefits[
+    benefits: [
       'Reduce customer service costs by 60%',
       'Handle 1000+ conversations simultaneously',
       'Improve customer satisfaction by 40%',
@@ -57,7 +56,7 @@ export const services: Service[] = [
     name: 'AI Content Generator',
     category: 'AI',
     description: 'Generate high-quality, SEO-optimized content for blogs, social media, and marketing campaigns.',
-    features[
+    features: [
       'SEO-optimized content generation',
       'Multiple content types (blogs, social, ads)',
       'Plagiarism-free content',
@@ -65,8 +64,8 @@ export const services: Service[] = [
       'Content calendar management',
       'Performance analytics'
     ],
-    benefits[
-      'Save 80% of content creation time',
+    benefits: [
+      'Save 80% of content generation time',
       'Improve SEO rankings by 45%',
       'Generate 100+ articles per month',
       'Maintain consistent brand voice'
@@ -86,7 +85,7 @@ export const services: Service[] = [
     name: 'AI-Powered Data Analytics',
     category: 'AI',
     description: 'Transform raw data into actionable insights with machine learning algorithms and predictive analytics.',
-    features[
+    features: [
       'Real-time data processing',
       'Predictive analytics models',
       'Custom dashboard creation',
@@ -94,7 +93,7 @@ export const services: Service[] = [
       'Data visualization tools',
       'API integration capabilities'
     ],
-    benefits[
+    benefits: [
       'Increase data-driven decisions by 70%',
       'Reduce analysis time by 85%',
       'Predict trends with 90% accuracy',
@@ -111,7 +110,6 @@ export const services: Service[] = [
     icon: '📊',
     isNew: true
   },
-
   // IT Services
   {
     id: 'managed-it-services',
@@ -201,7 +199,6 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/cloud-migration',
     icon: '☁️'
   },
-
   // SAAS Services
   {
     id: 'project-management-platform',
@@ -291,7 +288,6 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/hr-management-system',
     icon: '👨‍💼'
   },
-
   // Development Services
   {
     id: 'web-development',
@@ -356,7 +352,7 @@ export const services: Service[] = [
     name: 'API Development & Integration',
     category: 'Development',
     description: 'Custom API development and third-party service integration for seamless data exchange.',
-    features[
+    features: [
       'RESTful API development',
       'GraphQL implementation',
       'Third-party integrations',
@@ -364,7 +360,7 @@ export const services: Service[] = [
       'Testing and monitoring',
       'Performance optimization'
     ],
-    benefits[
+    benefits: [
       'Enable system interoperability',
       'Improve data flow efficiency',
       'Reduce development time',
@@ -380,14 +376,13 @@ export const services: Service[] = [
     link: 'https://ziontechgroup.com/services/api-development',
     icon: '🔌'
   },
-
   // Analytics Services
   {
     id: 'business-intelligence',
     name: 'Business Intelligence Solutions',
     category: 'Analytics',
     description: 'Transform business data into actionable insights with advanced analytics and reporting tools.',
-    features[
+    features: [
       'Data warehousing',
       'Interactive dashboards',
       'Custom reporting',
@@ -395,7 +390,7 @@ export const services: Service[] = [
       'Predictive analytics',
       'Real-time monitoring'
     ],
-    benefits[
+    benefits: [
       'Make data-driven decisions',
       'Identify business opportunities',
       'Improve operational efficiency',
@@ -410,38 +405,29 @@ export const services: Service[] = [
     },
     link: 'https://ziontechgroup.com/services/business-intelligence',
     icon: '📈'
-
 ];
-
 // Enhanced Services from 2025
 export const enhancedServices = enhancedServices2025;
-
 // Specialized Industry Services
 export const specializedServices = specializedIndustryServices;
-
 // Combined Services Array
 export const allServices = [
   ...services,
   ...enhancedServices2025,
   ...specializedIndustryServices
 ];
-
 export const getServicesByCategory = (category: Service['category']) => {
   return allServices.filter(service => service.category === category);
 };
-
 export const getPopularServices = () => {
   return allServices.filter(service => service.isPopular);
 };
-
 export const getNewServices = () => {
   return allServices.filter(service => service.isNew);
 };
-
 export const getServicesByIndustry = (industry: string) => {
   return specializedIndustryServices.filter(service => service.industry === industry);
 };
-
 export const getServicesByAudience = (audience: string) => {
   return enhancedServices2025.filter(service => 
     service.targetAudience.includes(audience)

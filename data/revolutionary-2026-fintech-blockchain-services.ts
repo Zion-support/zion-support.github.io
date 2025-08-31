@@ -297,5 +297,4 @@ export const revolutionary2026FintechBlockchainServices: Revolutionary2026Fintec
     customers: 123,
     rating: 4.9,
     reviews: 89
-
 ];}}

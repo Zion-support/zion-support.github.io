@@ -45,12 +45,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
   {
@@ -412,5 +406,4 @@ export const cuttingEdgeMicroSAASServices2026: CuttingEdgeMicroSAASService[] = [
     customers: 45,
     rating: 4.8,
     reviews: 89
-
 ];}}

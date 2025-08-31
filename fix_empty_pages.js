@@ -9,12 +9,14 @@ function kebabToPascal(str) {
 // Function to create a proper Next.js page template
 function componentName = kebabToPascal(pageName);
   const isApi = filePath.includes('/api/');
-
   if (isApi) {
     return `import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint working' })}`}
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   return `import type { NextPage } from 'next';
 import { Helmet } from 'react-helmet-async';
 const ${componentName}: NextPage = () => {
@@ -24,7 +26,6 @@ const ${componentName}: NextPage = () => {
         <title>${componentName} - Zion Tech Solutions</title>
         <meta name="description" content="${componentName} page" />
       </Helmet>
-
       <main>
         <h1>${componentName}</h1>
         <p>This page is under construction.</p>
@@ -34,15 +35,16 @@ const ${componentName}: NextPage = () => {
 export default ${componentName};`}
 // Function to fix empty files
 function files = fs.readdirSync(dir);
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   files.forEach(file => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-
     if (stat.isDirectory()) {
       fixEmptyFiles(filePath)} else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
       const content = fs.readFileSync(filePath, 'utf8').trim();
-
       if (!content) {
         // // // // // // // console.log(`Fixing empty file: ${filePath}`);
         const fileName = path.basename(file, path.extname(file));
@@ -59,5 +61,9 @@ if (fs.existsSync(pagesDir)) {
 } else {
   // // // // // // // console.error('Pages directory not found');
 }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   console.log('Empty pages fixed successfully!')} else {
   console.error('Pages directory not found')}

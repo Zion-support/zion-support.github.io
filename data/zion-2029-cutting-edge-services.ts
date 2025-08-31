@@ -32,7 +32,10 @@ export interface ZionCuttingEdgeService2029 {
   rating: number;
   reviews: number;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
   // AI-Powered Quantum Computing Solutions
   {
@@ -83,7 +86,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.9,
     reviews: 89
   },
-
   // AI-Powered Cybersecurity Threat Intelligence
   {
     id: 'ai-cyber-threat-intelligence',
@@ -132,7 +134,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.8,
     reviews: 156
   },
-
   // Autonomous Business Process Automation
   {
     id: 'autonomous-business-automation',
@@ -181,7 +182,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.7,
     reviews: 203
   },
-
   // AI-Powered Financial Trading Platform
   {
     id: 'ai-financial-trading-platform',
@@ -230,7 +230,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.6,
     reviews: 134
   },
-
   // IoT Edge Computing Platform
   {
     id: 'iot-edge-computing-platform',
@@ -279,7 +278,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.8,
     reviews: 98
   },
-
   // AI-Powered Healthcare Diagnostics
   {
     id: 'ai-healthcare-diagnostics',
@@ -328,7 +326,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.9,
     reviews: 67
   },
-
   // Blockchain Supply Chain Platform
   {
     id: 'blockchain-supply-chain',
@@ -377,7 +374,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.7,
     reviews: 89
   },
-
   // AI-Powered Marketing Automation
   {
     id: 'ai-marketing-automation',
@@ -426,7 +422,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.8,
     reviews: 234
   },
-
   // Cloud-Native Development Platform
   {
     id: 'cloud-native-development',
@@ -475,7 +470,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.7,
     reviews: 167
   },
-
   // AI-Powered Customer Service Platform
   {
     id: 'ai-customer-service',
@@ -524,7 +518,6 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     rating: 4.8,
     reviews: 345
   },
-
   // Data Analytics and Business Intelligence
   {
     id: 'ai-data-analytics-bi',
@@ -574,15 +567,16 @@ export const zionCuttingEdgeServices2029: ZionCuttingEdgeService2029[] = [
     reviews: 234
   }
 ];
-
 export const getServicesByCategory = (category: ZionCuttingEdgeService2029['category']) => {
   return zionCuttingEdgeServices2029.filter(service => service.category === category);
 };
-
 export const getPopularServices = () => {
   return zionCuttingEdgeServices2029.filter(service => service.isPopular);
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const getNewServices = () => {
   return zionCuttingEdgeServices2029.filter(service => service.isNew);
 };

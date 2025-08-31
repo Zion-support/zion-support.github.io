@@ -1,8 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { Briefcase, Users, Heart, Zap, Globe, Award, ArrowRight, MapPin, Clock  } from 'lucide-react'
-
-
 export default function Careers(...args[]):  {
 	const openPositions = [
 		{
@@ -32,9 +30,7 @@ export default function Careers(...args[]):  {
 			location: 'Remote',
 			type: 'Full-time',
 			description: 'Create intuitive user interfaces for our AI-powered platforms.'
-
 	]
-
 	return (
 		<>
 			{/* Hero Section */}
@@ -50,7 +46,6 @@ export default function Careers(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Why Work With Us */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -112,7 +107,6 @@ export default function Careers(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Benefits & Perks */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -153,7 +147,6 @@ export default function Careers(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Open Positions */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -185,7 +178,6 @@ export default function Careers(...args[]):  {
 								<Link
 									to="/contact"
 									className="inline-flex items-center text-blue-600 hover:text-blue-500 font-medium"
-
 									Apply Now <ArrowRight className="ml-2 h-4 w-4" />
 								</Link>
 							</div>
@@ -193,7 +185,6 @@ export default function Careers(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-blue-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -206,13 +197,11 @@ export default function Careers(...args[]):  {
 							<Link
 								to="/contact"
 								className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-
 								Send Resume
 							</Link>
 							<a
 								href="mailto:careers@ziontechgroup.com"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100"
-
 								careers@ziontechgroup.com
 							</a>
 						</div>

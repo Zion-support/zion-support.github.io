@@ -20,7 +20,11 @@ exports.loginUser = async function (req, res) {
       user: { id: user._id, email: user.email, name: user.name },
     // // // // // // // console.error(err);
     res.status(500).json({ message: 'Server error' });
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     })} catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Server error' })}
@@ -48,7 +52,11 @@ exports.registerUser = async function (req, res) {
     }
     // // // // // // // console.error(err);
     return res.status(500).json({ message: 'Server error' });
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         .json({ code: 'EMAIL_EXISTS', message: 'Email already registered' })}
     console.error(err);
     return res.status(500).json({ message: 'Server error' })}

@@ -28,6 +28,10 @@ import {
     integrations["Google Analytics", "Tableau", "Power BI", "Custom APIs"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const edTechTrends = [
   {
     title: "Personalized Learning",

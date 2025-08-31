@@ -92,7 +92,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-
   },
   // QUANTUM NEURAL NETWORK PLATFORM
   {
@@ -152,7 +151,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-
   },
   // AUTONOMOUS DEFI TRADING PLATFORM
   {
@@ -212,7 +210,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-
   },
   // AI-POWERED THREAT HUNTING PLATFORM
   {
@@ -272,7 +269,6 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-
   },
   // AUTONOMOUS MANUFACTURING OPTIMIZER
   {
@@ -332,18 +328,12 @@ export const comprehensivePricingAnalysis2025: PricingAnalysis[] = [
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
-
-
 ];
     highestROI: '1000% (Quantum Neural Network Platform)',;
   ;
   ;
   fastestPayback: '2-4 months (DeFi Trading Platform)';
   ;
-
-
-
-
 };
   return insights;
 };

@@ -11,7 +11,11 @@ class LintErrorFixer {
     this.logFile = path.join(__dirname, 'logs', 'lint-error-fixer.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     this.ensureLogDirectory()}
   ensureLogDirectory() {
     const logDir = path.dirname(this.logFile);
@@ -42,7 +46,6 @@ class LintErrorFixer {
       // Filter out unused imports (basic check)
       const usedImports = imports.filter(importLine => {
         if (!importLine.trim().startsWith('import ')) return true;
-
         // Extract import names
         const match = importLine.match(/import\s+{([^}]+)}\s+from/);
         if (match) {
@@ -67,7 +70,6 @@ class LintErrorFixer {
       this.log(`✅ TypeScript check passed for: ${filePath}`);
       return true} catch (error) {
       this.log(`❌ TypeScript errors in ${filePath}: ${error.stdout || error.message}`);
-
       // Try to fix common TypeScript issues
       try {
         const content = fs.readFileSync(filePath, 'utf8');
@@ -97,7 +99,6 @@ class LintErrorFixer {
   }
   async fixFile(filePath) {
     this.log(`🔧 Fixing issues in: ${filePath}`);
-
     const fixes = [
       this.fixUnusedImports(filePath),
       this.fixTypeScriptErrors(filePath),
@@ -105,12 +106,10 @@ class LintErrorFixer {
     ];
     const results = await Promise.all(fixes);
     const successCount = results.filter(Boolean).length;
-
     this.log(`📊 Fixed ${successCount}/3 issue types in: ${filePath}`);
     return successCount > 0}
   async fixAllFiles() {
     this.log('🔧 Starting comprehensive lint error fix...');
-
     const patterns = [
       'pages/**/*.{js,jsx,ts,tsx}',
       'components/**/*.{js,jsx,ts,tsx}',
@@ -131,10 +130,8 @@ class LintErrorFixer {
     const files = [];
     const parts = pattern.split('/');
     const baseDir = parts[0];
-
     if (fs.existsSync(baseDir)) {
       this.scanDirectory(baseDir, files, pattern)}
-    
     return files.filter(file => 
       !file.includes('node_modules') && 
       !file.includes('.next') &&
@@ -142,11 +139,9 @@ class LintErrorFixer {
     )}
   scanDirectory(dir, files, pattern) {
     const items = fs.readdirSync(dir);
-
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-
       if (stat.isDirectory()) {
         this.scanDirectory(fullPath, files, pattern)} else {
         files.push(fullPath)}
@@ -162,6 +157,10 @@ switch (command) {
     if (filePath) {
       // // // // // // // // console.log('Usage: node lint-error-fixer.js file <filepath>');
     }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       fixer.fixFile(filePath)} else {
       console.log('Usage: node lint-error-fixer.js file <filepath>')}
     break;

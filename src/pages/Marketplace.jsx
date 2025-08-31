@@ -63,6 +63,7 @@ export default function Marketplace() {
     }, [view]);
 
     // Filter listings based on selected filters
+<<<<<<< HEAD
     const filteredListings = useMemo(() => {
         return listings.filter(listing => {
             // Search filter
@@ -97,6 +98,29 @@ export default function Marketplace() {
     }, [listings, searchQuery, selectedProductTypes, selectedLocations, selectedAvailability, selectedRating]);
 
     const handleFilterChange = (filterType, value) => {
+=======
+    const filteredListings = listings.filter(listing => {
+        // Search filter
+        if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&
+            !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
+            !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
+            return false}
+        // Product type filter
+        if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
+            return false}
+        // Location filter
+        if (selectedLocations.length > 0 && listing.location && !selectedLocations.includes(listing.location)) {
+            return false}
+        // Availability filter
+        if (selectedAvailability.length > 0 && listing.availability && !selectedAvailability.includes(listing.availability)) {
+            return false}
+        // Rating filter
+        if (selectedRating && (!listing.rating || listing.rating < selectedRating)) {
+            return false}
+        return true});
+    const handleFilterChange = (filterType, value) => {
+        // // // // // // // console.log(`Filter changed: ${filterType} = ${value}`);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         switch (filterType) {
             case 'productTypes':
                 setSelectedProductTypes(prev => 
@@ -109,6 +133,7 @@ export default function Marketplace() {
                 );
                 break;
             case 'availability':
+<<<<<<< HEAD
                 setSelectedAvailability(prev => 
                     prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
                 );
@@ -119,6 +144,10 @@ export default function Marketplace() {
             default:
                 break;
         }
+=======
+                setSelectedAvailability(prev => prev.includes(value) ? prev.filter(item => item !== value) [...prev, value]);
+                break}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     };
 
     const clearAllFilters = () => {
@@ -126,7 +155,29 @@ export default function Marketplace() {
         setSelectedProductTypes([]);
         setSelectedLocations([]);
         setSelectedAvailability([]);
+<<<<<<< HEAD
         setSelectedRating(null);
+=======
+        setSelectedRating(null)};
+    // Handle requesting a quote
+    const handleRequestQuote = (listingId) => {
+        const listing = listings.find(item => item.id === listingId);
+        if (listing) {
+                    // Quote request functionality would go here
+        // // // // // // // console.log(`Quote requested for ${listing.title}`);
+            // Navigate to the quote request page with the listing information
+            router("/request-quote", {
+                state: {
+                    serviceType: listing.category,
+                    specificItem: {
+                        id: listing.id,
+                        title: listing.title,
+                        category: listing.category,
+                        image: listing.images?.[0]
+                    }
+                }
+            })}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     };
 
     const handleSearch = (query) => {
@@ -190,6 +241,7 @@ export default function Marketplace() {
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
     );
 
     return (
@@ -362,7 +414,35 @@ export default function Marketplace() {
                         </Button>
                     </div>
                 </div>
+=======
+        {/* Main layout with sidebar and results */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          {/* Sidebar Filters */}
+          <div className="lg:col-span-1">
+            <FilterSidebar filters = {
+  {
+            selectedProductTypes,
+            selectedLocations,
+            selectedAvailability,
+  selectedRating
+}} filterOptions={filterOptions} onFilterChange={handleFilterChange} onRatingChange={setSelectedRating} onClearFilters={clearAllFilters}/>
+          </div>
+          {/* Main content */}
+          <div className="lg:col-span-3">
+            {/* Active filters display */}
+            <ActiveFiltersBar selectedProductTypes={selectedProductTypes} selectedLocations={selectedLocations} selectedAvailability={selectedAvailability} selectedRating={selectedRating} searchQuery={searchQuery} onRemoveFilter={handleFilterChange} onRemoveRating={() => setSelectedRating(null)} onClearSearch={() => setSearchQuery("")}/>
+            {/* Results count */}
+            <div className="mb-6">
+              <p className="text-zion-slate-light">
+                Showing {filteredListings.length} results
+                {searchQuery && ` for "${searchQuery}"`}
+              </p>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </div>
         </div>
+<<<<<<< HEAD
     );
 }
+=======
+      </main>)}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

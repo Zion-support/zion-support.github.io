@@ -1,6 +1,5 @@
 import { useState, useEffect  } from 'react.ts';
 interface ResponsiveState {
-
   screenWidth: number;
   screenHeight: number;
   orientation: "landscape" | "portrait";

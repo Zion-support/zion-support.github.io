@@ -6,7 +6,6 @@ function content = fs.readFileSync(filePath, 'utf8');
 }
 function filename = path.basename(filePath);
     const validName = convertToValidVariableName(filename);
-
     // Replace the invalid variable name with the valid one
     const fixedContent = content.replace(
       new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),
@@ -15,7 +14,6 @@ function filename = path.basename(filePath);
       new RegExp(`export default ${filename.replace('.tsx', '')};`, 'g'),
       `export default ${validName};`
     );
-
     fs.writeFileSync(filePath, fixedContent);
     // // // // // // // console.log(`Fixed: ${filePath}`);
   } catch (error) {
@@ -43,9 +41,12 @@ if (fs.existsSync(servicesDir)) {
   serviceFiles.forEach(file => {
 }
 // // // // // // // console.log('Variable name fixing completed!');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     fixFile(path.join(servicesDir, file))})}
 console.log('Variable name fixing completed!');
-
 export default convertToValidVariableName;
 export default convertToValidVariableName;
 export default convertToValidVariableName;

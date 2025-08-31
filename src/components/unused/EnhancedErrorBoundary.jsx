@@ -56,6 +56,10 @@ class EnhancedErrorBoundary extends Component {
             console.groupEnd();
         // In production, you would send this to your error reporting service
         // Example: Sentry.captureException(error, { extra: errorReport });
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             console.log('Error ID:', errorReport.id);
             console.log('Error Details:', errorReport);
             console.groupEnd()}
@@ -94,6 +98,10 @@ class EnhancedErrorBoundary extends Component {
                 <div>
                   <h1 className="text-2xl font-bold">Something went wrong</h1>
                   <p className="text-red-100">We've encountered an unexpected error</p>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Add global error handler
     window.addEventListener('error', handleError);
     window.addEventListener('unhandledrejection', (event) => {

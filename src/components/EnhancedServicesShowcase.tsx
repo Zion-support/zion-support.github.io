@@ -10,6 +10,10 @@ import {
   Zap, 
   Cpu, 
   Brain,
+<<<<<<< HEAD
+=======
+  Shield,
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   Cloud,
   Database,
   Globe,
@@ -18,6 +22,7 @@ import {
   DollarSign,
   Clock,
   CheckCircle,
+<<<<<<< HEAD
   ArrowRight,
   Phone,
   Mail,
@@ -470,6 +475,8 @@ const EnhancedServicesShowcase: React.FC = () => {
               className="bg-white/10 hover:bg-white/20 text-white font-semibold py-4 px-8 rounded-lg text-lg transition-colors duration-200 flex items-center justify-center gap-2"
             >
               <Phone className="w-5 h-5" />
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   Search
  } from 'lucide-react';
 export const EnhancedServicesShowcase: React.FC = () => {
@@ -832,5 +839,8 @@ export default function EnhancedServicesShowcase() {
     </div>
   );
 };
+<<<<<<< HEAD
 
 export default EnhancedServicesShowcase;
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

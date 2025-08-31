@@ -312,6 +312,10 @@ export default function Dashboard(...args[]):  {
               <h2 className="text-xl font-semibold text-white mb-4">Quick Actions</h2>
               <div className="grid grid-cols-2 gap-3">
                 {quickActions.map((action, index) => (
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                   <motion.button
                     key={action.name}
                     initial = {

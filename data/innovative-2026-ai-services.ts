@@ -297,7 +297,6 @@ export const innovative2026AIServices: Innovative2026AIService[] = [
     customers: 1900,
     rating: 4.8,
     reviews: 950
-
 ];
 export const getAIServicesByCategory = (category: string) => {;
   return innovative2026AIServices.filter(service => ;

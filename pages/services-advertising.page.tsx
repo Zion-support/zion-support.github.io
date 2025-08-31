@@ -1,6 +1,9 @@
 import React from 'react.ts';
 import Head from 'next/head.ts';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';
 import Link from 'next/link.ts';
 export default function ServicesAdvertisingPage(...args[]):  {
@@ -14,12 +17,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
   ;
   website: 'https://ziontechgroup.com';
   ;
-
-
-
-
-
-
 };
   const benefits = [
     '1000% ROI target with measurable KPIs',
@@ -135,8 +132,15 @@ export default function ServicesAdvertisingPage(...args[]):  {
     };
   ];
   const external = {
+<<<<<<< HEAD
     privacy: [
       { name: 'OneTrust', href: 'https://www.onetrust.com/pricing/' },
+=======
+  privacy: [
+      { name: 'OneTrust',
+  href: 'https://www.onetrust.com/pricing/' 
+},
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       { name: 'Transcend', href: 'https://transcend.io/pricing/' }
     ],
     finops: [
@@ -145,11 +149,19 @@ export default function ServicesAdvertisingPage(...args[]):  {
     ],
     devex: [
       { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
+<<<<<<< HEAD
     ],
     seo: [
       { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' }
     ]
+=======
+    ],;
+    seo: [;
+      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },;
+      { name: 'Little Warden', href: 'https://littlewarden.com/pricing' };
+    ];
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   } as const;
   function ext(...args[]):  {
     return (
@@ -421,7 +433,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://openai.com/safety')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
             </ul>
           </section>
-
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
             <p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
@@ -430,7 +441,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
             </ul>
           </section>
-
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">Status Page & SLO Monitor</h2>
             <p className="text-slate-300">Public status pages, incident comms, and SLO/error budget tracking.</p>
@@ -463,7 +473,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://stripe.com/pricing')}, {ext('https://pay.google.com/about/business/')}, {ext('https://partnerstack.com/')}</li>
             </ul>
           </section>
-
           <section className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">API Security Scanner</h2>
             <p className="text-slate-300">Continuously discover APIs and detect OWASP API Top 10 risks with CI gating.</p>
@@ -520,7 +529,6 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>References: {ext('https://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
             </ul>
           </section>
-
           <div className="pt-4 text-slate-400 text-sm">See also: <a className="text-cyan-400 underline" href="/market-pricing">Market Pricing</a> for a broader list of benchmarks and links.</div>
           <section id="ai-email-responder" className="space-y-6">
             <h2 className="text-2xl font-semibold text-white">AI Email Responder</h2>

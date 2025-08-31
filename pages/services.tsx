@@ -1,26 +1,24 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, Search, Filter, Star, TrendingUp, Clock, Users2, Target, Rocket, Cpu, Database2, ShieldCheck, Globe2, Zap2, Brain2, Cloud2, Lock2, ChevronLeft, ChevronRight } from 'lucide-react'
-
 import { additionalEnhancedServices } from '../data/additional-real-services'
 import { enhancedServices2025 } from '../data/enhanced-services-2025'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default function Services(...args[]):  {
 	const [searchTerm, setSearchTerm] = useState('')
 	const [selectedCategory, setSelectedCategory] = useState('all')
 	const [sortBy, setSortBy] = useState('popularity')
 	const [currentPage, setCurrentPage] = useState(1)
 	const [itemsPerPage] = useState(12) // Show 12 services per page
-
 	const title = 'Services — Zion Tech Group'
 	const description = 'Comprehensive AI, IT, and micro SaaS solutions for modern businesses.'
-
 	// Combine all services
 	const allServices = [...additionalEnhancedServices, ...enhancedServices2025]
-
 	// Get unique categories
 	const categories = ['all', ...new Set(allServices.map(service => service.category))]
-
 	// Filter and sort services
 	const filteredServices = allServices
 		.filter(service => 
@@ -41,38 +39,31 @@ export default function Services(...args[]):  {
 					return new Date(b.launchDate || '2024-01-01').getTime() - new Date(a.launchDate || '2024-01-01').getTime()
 				default:
 					return 0
-
 		})
-
 	// Pagination logic
 	const totalPages = Math.ceil(filteredServices.length / itemsPerPage)
 	const startIndex = (currentPage - 1) * itemsPerPage
 	const endIndex = startIndex + itemsPerPage
 	const currentServices = filteredServices.slice(startIndex, endIndex)
-
 	// Reset to first page when filters change
 	React.useEffect(() => {
 		setCurrentPage(1)
 	}, [searchTerm, selectedCategory, sortBy])
-
 	// Pagination controls
 	const goToPage = (page: number) => {
 		setCurrentPage(page)
 		window.scrollTo({ top: 0, behavior: 'smooth' })
 	}
-
 	const goToNextPage = () => {
 		if (currentPage < totalPages) {
 			goToPage(currentPage + 1)
 		}
 	}
-
 	const goToPreviousPage = () => {
 		if (currentPage > 1) {
 			goToPage(currentPage - 1)
 		}
 	}
-
 	return (
 		<>
 			{/* Hero Section */}
@@ -102,7 +93,6 @@ export default function Services(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Search and Filter Section */}
 			<section className="bg-white py-12 border-b border-gray-200">
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -118,7 +108,6 @@ export default function Services(...args[]):  {
 								className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
 							/>
 						</div>
-
 						{/* Category Filter */}
 						<div className="flex items-center gap-2 w-full sm:w-auto">
 							<Filter className="h-4 w-4 text-gray-400" />
@@ -134,7 +123,6 @@ export default function Services(...args[]):  {
 								))}
 							</select>
 						</div>
-
 						{/* Sort */}
 						<div className="flex items-center gap-2 w-full sm:w-auto">
 							<Clock className="h-4 w-4 text-gray-400" />
@@ -152,7 +140,6 @@ export default function Services(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Services Grid */}
 			<section className="py-16 sm:py-20 lg:py-24">
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -217,7 +204,6 @@ export default function Services(...args[]):  {
 							</div>
 						</div>
 					</div>
-					
 					{/* Results Count */}
 					<div className="mb-8">
 						<p className="text-gray-600">
@@ -225,7 +211,6 @@ export default function Services(...args[]):  {
 							{totalPages > 1 && ` (Page ${currentPage} of ${totalPages})`}
 						</p>
 					</div>
-
 					{/* Services Grid */}
 					<div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 						{currentServices.map((service) => (
@@ -236,7 +221,6 @@ export default function Services(...args[]):  {
 										POPULAR
 									</div>
 								)}
-
 								{/* Service Icon and Header */}
 								<div className="flex items-center gap-x-3 mb-4">
 									<div className="text-3xl">{service.icon}</div>
@@ -247,7 +231,6 @@ export default function Services(...args[]):  {
 										<p className="text-sm text-gray-500">{service.tagline}</p>
 									</div>
 								</div>
-
 								{/* Price */}
 								<div className="mb-4">
 									<div className="flex items-baseline gap-2">
@@ -260,12 +243,10 @@ export default function Services(...args[]):  {
 										</p>
 									)}
 								</div>
-
 								{/* Description */}
 								<p className="text-gray-600 text-sm mb-4 line-clamp-3">
 									{service.description}
 								</p>
-
 								{/* Features */}
 								<div className="mb-4">
 									<h4 className="text-sm font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -278,7 +259,6 @@ export default function Services(...args[]):  {
 										))}
 									</ul>
 								</div>
-
 								{/* Category and Rating */}
 								<div className="flex items-center justify-between mb-4">
 									<span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
@@ -292,7 +272,6 @@ export default function Services(...args[]):  {
 										</div>
 									)}
 								</div>
-
 								{/* Market Info */}
 								<div className="mb-4 p-3 bg-gray-50 rounded-lg">
 									<div className="grid grid-cols-2 gap-2 text-xs">
@@ -306,27 +285,23 @@ export default function Services(...args[]):  {
 										</div>
 									</div>
 								</div>
-
 								{/* CTA Button */}
 								<div className="flex gap-2">
 									<Link
 										to={service.link}
 										className="flex-1 inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
-
 										Learn More
 										<ArrowRight className="ml-2 h-4 w-4" />
 									</Link>
 									<Link
 										to="/contact"
 										className="inline-flex items-center justify-center px-4 py-2 text-sm font-semibold text-blue-600 border border-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-
 										Contact
 									</Link>
 								</div>
 							</div>
 						))}
 					</div>
-
 					{/* No Results */}
 					{filteredServices.length === 0 && (
 						<div className="text-center py-12">
@@ -337,7 +312,6 @@ export default function Services(...args[]):  {
 							<p className="text-gray-600">Try adjusting your search terms or filters.</p>
 						</div>
 					)}
-
 					{/* Pagination */}
 					{totalPages > 1 && (
 						<div className="mt-12 flex items-center justify-center gap-2">
@@ -368,7 +342,6 @@ export default function Services(...args[]):  {
 					)}
 				</div>
 			</section>
-
 			{/* Contact Information */}
 			<section className="bg-gradient-to-r from-blue-600 to-purple-600 py-16 sm:py-20 lg:py-24">
 				<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -379,7 +352,6 @@ export default function Services(...args[]):  {
 						<p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
 							Let's discuss your project and how our innovative services can help you achieve your goals.
 						</p>
-
 						{/* Contact Details */}
 						<div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
 							<div>
@@ -413,7 +385,6 @@ export default function Services(...args[]):  {
 								</p>
 							</div>
 						</div>
-
 						<div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
 							<Link
 								to="/contact"

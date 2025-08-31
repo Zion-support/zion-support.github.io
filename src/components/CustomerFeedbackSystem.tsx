@@ -18,6 +18,10 @@ import {
   Search
  } from 'lucide-react';
   verified: boolean}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 interface FeedbackStats {
   totalFeedback: number;
   averageRating: number;

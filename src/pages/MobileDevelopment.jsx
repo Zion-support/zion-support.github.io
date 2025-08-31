@@ -48,6 +48,10 @@ import {
     technologies["Bug Tracking", "Performance Monitoring", "CI/CD", "App Store Updates"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const mobileTechnologies = [
   {
     name: "iOS Development",

@@ -145,6 +145,10 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         }
         finally {
             setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 })}
             console.error('Form submission failed:', error)}
         finally {

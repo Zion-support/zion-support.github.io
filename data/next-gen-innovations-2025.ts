@@ -400,5 +400,4 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     customers: 320,
     rating: 4.8,
     reviews: 267
-
 ];}}

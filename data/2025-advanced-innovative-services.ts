@@ -47,12 +47,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   {
@@ -774,5 +768,4 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     customers: 34,
     rating: 4.8,
     reviews: 26
-
 ];}}

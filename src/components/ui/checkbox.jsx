@@ -9,6 +9,10 @@ export function Checkbox({ checked, onChange, label, disabled = false, className
         className="w-4 h-4 text-zion-cyan border-gray-300 rounded focus:ring-zion-cyan focus:ring-2"
       />
       {label && <span className="text-sm text-gray-700">{label}</span>}
+<<<<<<< HEAD
     </label>
   );
 }
+=======
+    </label>)}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

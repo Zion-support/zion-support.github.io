@@ -47,12 +47,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {
@@ -279,5 +273,4 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     customers: 123,
     rating: 4.6,
     reviews: 89
-
 ];}}

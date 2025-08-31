@@ -504,6 +504,5 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     customers: 78,
     rating: 4.8,
     reviews: 134
-
 ];
     return price >= minPrice && price <= maxPrice})};

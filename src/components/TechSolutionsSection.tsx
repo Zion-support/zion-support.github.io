@@ -192,6 +192,10 @@ export function TechSolutionsSection() {
     </section>;
   )};
 export default TechSolutionsSection;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;

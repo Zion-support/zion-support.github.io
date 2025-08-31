@@ -87,6 +87,10 @@ export const AICodeGenerator = () => {
             setTimeout(() => setCopied(false), 2000);
             // // // // // // // console.error('Failed to copy code:', error);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length)}
         catch (error) {
             console.error('Failed to copy code:', error)}

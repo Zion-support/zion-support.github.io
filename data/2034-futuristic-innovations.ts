@@ -366,5 +366,4 @@ export const futuristic2034Services: Service2034[] = [
     uptime: '99.99% prediction platform availability',
     contact: '+1 302 464 0950',
     website: 'https://ziontechgroup.com/quantum-financial-prediction'
-
 ];}}

@@ -341,6 +341,10 @@ const EnhancedInnovativeServicesShowcase2027: React.FC = () => {;
                       {service.external && <ExternalLink className="w-4 h-4" />}
                     </a>
                   </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       {/* Services Grid */}
       <div id="services-grid" className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

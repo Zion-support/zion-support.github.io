@@ -32,7 +32,6 @@ import {
   DollarSign,
   ShoppingCart
 } from 'lucide-react'
-
 export default function Index() {
 	const heroFeatures = [
 		{
@@ -43,9 +42,6 @@ export default function Index() {
 			color: 'from-blue-500 to-purple-600'
 import Link from 'next/link'
 import { ArrowRight, Zap, Shield, Cloud, Brain, Users, Target, Award, Globe, Rocket, Cpu, Database, Lock } from 'lucide-react'
-
-
-
 export default function Index(...args[]):  {
 	const features = [
 		{
@@ -77,7 +73,6 @@ export default function Index(...args[]):  {
 			color: 'from-purple-500 to-indigo-600'
 		}
 	]
-
 	const services = [
 		{
 			category: 'AI & Machine Learning',
@@ -107,7 +102,6 @@ export default function Index(...args[]):  {
 			]
 		}
 	]
-
 	const industries = [
 		{
 			name: 'Financial Services',
@@ -134,14 +128,12 @@ export default function Index(...args[]):  {
 			href: '/solutions/retail'
 		}
 	]
-
 	const stats = [
 		{ number: '500+', label: 'Enterprise Clients' },
 		{ number: '99.9%', label: 'Uptime Guarantee' },
 		{ number: '24/7', label: 'Expert Support' },
 		{ number: '50+', label: 'AI Services' }
 	]
-
 	const testimonials = [
 		{
 			quote: "Zion Tech Group transformed our business with their AI Business Intelligence platform. We're now making data-driven decisions that have increased our revenue by 35%.",
@@ -162,6 +154,10 @@ export default function Index(...args[]):  {
 			position: "Founder, StartupFlow",
 			company: "StartupFlow"
 		}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 			href: '/services#cybersecurity',
 			color: 'from-red-600 to-orange-700'
 		},
@@ -187,14 +183,12 @@ export default function Index(...args[]):  {
 			color: 'from-pink-600 to-rose-700'
 		}
 	]
-
 	const stats = [
 		{ number: '500+', label: 'Active Customers', icon: Users },
 		{ number: '4.7/5', label: 'Customer Rating', icon: Star },
 		{ number: '99.9%', label: 'Uptime SLA', icon: TrendingUp },
 		{ number: '50+', label: 'Services Offered', icon: Zap }
 	]
-
 	const benefits = [
 		'Cutting-edge AI and machine learning solutions',
 		'Enterprise-grade security and compliance',
@@ -203,7 +197,6 @@ export default function Index(...args[]):  {
 		'Quantum computing and emerging technologies',
 		'24/7 expert support and consultation'
 	]
-
 	return (
 		<>
 			{/* Hero Section */}
@@ -220,17 +213,24 @@ export default function Index(...args[]):  {
 							<Link
 								href="/services"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 								className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
 							>
 								<span className="relative z-10">Explore Our Services</span>
 								<div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 							</Link>
-							
 							<Link
 								className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
 							>
 								Get in Touch
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 								href="/contact"
 								className="text-sm font-semibold leading-6 text-gray-900"
 							>
@@ -238,7 +238,6 @@ export default function Index(...args[]):  {
 								<ArrowRight className="ml-2 h-5 w-5 inline transition-transform group-hover:translate-x-1" />
 							</Link>
 						</div>
-
 						{/* Hero Features */}
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
 							{heroFeatures.map((feature, index) => (
@@ -258,7 +257,6 @@ export default function Index(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Stats Section */}
 			<section className="py-16 bg-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -275,7 +273,10 @@ export default function Index(...args[]):  {
 					</div>
 				</div>
 			</section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 			{/* Features Section */}
 			<section className="py-24 sm:py-32 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -294,7 +295,6 @@ export default function Index(...args[]):  {
 							</div>
 						))}
 					</div>
-
 					<div className="text-center mt-16">
 						<Link
 							to="/services"
@@ -306,7 +306,6 @@ export default function Index(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Industries Section */}
 			<section className="py-24 sm:py-32 bg-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -319,7 +318,6 @@ export default function Index(...args[]):  {
 							understanding the unique challenges and compliance requirements of each sector.
 						</p>
 					</div>
-
 					<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 						{industries.map((industry, index) => (
 							<div key={index} className="group">
@@ -340,7 +338,10 @@ export default function Index(...args[]):  {
 					</div>
 				</div>
 			</section>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 			{/* Benefits Section */}
 			<section className="py-24 sm:py-32 bg-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -395,7 +396,6 @@ export default function Index(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-gradient-to-r from-blue-600 to-purple-600">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -408,14 +408,12 @@ export default function Index(...args[]):  {
 							<Link
 								href="/contact"
 								className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-
 								Get Started Today
 							</Link>
 							<Link
 								href="/about"
 								className="text-sm font-semibold leading-6 text-gray-900"
 					</div>
-
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 						{testimonials.map((testimonial, index) => (
 							<div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
@@ -437,7 +435,6 @@ export default function Index(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* CTA Section */}
 			<section className="py-24 sm:py-32 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
@@ -448,7 +445,6 @@ export default function Index(...args[]):  {
 						Let's discuss how our AI, cybersecurity, and micro SAAS solutions can help you achieve 
 						your technology goals and drive business growth.
 					</p>
-					
 					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
 						<Link
 							to="/contact"
@@ -464,7 +460,6 @@ export default function Index(...args[]):  {
 							Learn More
 						</Link>
 					</div>
-
 					{/* Contact Info */}
 					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
 						<div className="flex items-center justify-center gap-3 text-blue-100">

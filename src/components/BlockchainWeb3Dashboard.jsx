@@ -27,6 +27,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             await connectWallet();
             // // // // // // // console.error('Failed to connect wallet:', error);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             trackEvent('blockchain', 'dashboard', 'wallet_connected')}
         catch (error) {
             console.error('Failed to connect wallet:', error)}

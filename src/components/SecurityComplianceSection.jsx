@@ -88,6 +88,10 @@ const complianceFrameworks = [
         benefits["Network Protection", "Unauthorized Access Prevention", "Business Continuity", "Compliance"]
     }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const securityStats = [
     { icon: <Shield className="w-6 h-6"/>, value: "99.99%", label: "Uptime" },
     { icon: <Lock className="w-6 h-6"/>, value: "256-bit", label: "Encryption" },

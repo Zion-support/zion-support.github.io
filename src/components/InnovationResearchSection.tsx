@@ -246,6 +246,10 @@ export function InnovationResearchSection() {
     </section>;
   )};
 export default InnovationResearchSection;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;

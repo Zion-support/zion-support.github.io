@@ -580,6 +580,10 @@ import {
     technologies["AI", "Financial Analytics", "Risk Models", "Machine Learning"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const businessTechnologies = [
   {
     name: "AI & Machine Learning",

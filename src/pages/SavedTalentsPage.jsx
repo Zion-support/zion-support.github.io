@@ -17,6 +17,10 @@ export default function SavedTalentsPage() {
                 if (!user) {
                     // // // // // // // console.warn("User not authenticated.");
                     return;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     console.warn("User not authenticated.");
                     return}
                 const { data, error } = await supabase
@@ -71,6 +75,10 @@ export default function SavedTalentsPage() {
             if (!user) {
                 // // // // // // // console.warn("User not authenticated.");
                 return;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 console.warn("User not authenticated.");
                 return}
             if (isCurrentlySaved) {

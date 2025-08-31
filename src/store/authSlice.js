@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-
 // Async thunk for login
 export const loginUser = createAsyncThunk(
   'auth/loginUser',
@@ -8,6 +7,7 @@ export const loginUser = createAsyncThunk(
       // Simulate API call
       const response = await new Promise((resolve, reject) => {
         setTimeout(() => {
+<<<<<<< HEAD
           if (credentials.email && credentials.password) {
             resolve({
               user: {
@@ -21,20 +21,31 @@ export const loginUser = createAsyncThunk(
           } else {
             reject(new Error('Invalid credentials'));
           }
+=======
+          resolve({
+            user: {
+              id: 1,
+              email: credentials.email,
+              name: 'John Doe',
+              role: 'user'
+            },
+            token: 'mock-jwt-token'
+          });
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         }, 1000);
       });
-
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
+<<<<<<< HEAD
     }
   }
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 );
-
 // Async thunk for signup
 export const signupUser = createAsyncThunk(
   'auth/signupUser',
@@ -54,22 +65,26 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
+<<<<<<< HEAD
             reject(new Error('Invalid user data'));
+=======
+            throw new Error('Invalid user data');
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           }
         }, 1000);
       });
-
       // Store token in localStorage
       localStorage.setItem('token', response.token);
       localStorage.setItem('user', JSON.stringify(response.user));
-
       return response;
     } catch (error) {
       return rejectWithValue(error.message);
+<<<<<<< HEAD
     }
   }
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 );
-
 // Async thunk for logout
 export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
@@ -79,6 +94,7 @@ export const logoutUser = createAsyncThunk(
       await new Promise((resolve) => {
         setTimeout(resolve, 500);
       });
+<<<<<<< HEAD
       
       // Clear localStorage
       localStorage.removeItem('token');
@@ -89,8 +105,12 @@ export const logoutUser = createAsyncThunk(
       return rejectWithValue(error.message);
     }
   }
+=======
+      return null;
+    } catch (error) {
+      return rejectWithValue(error.message);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 );
-
 // Async thunk for checking auth status
 export const checkAuthStatus = createAsyncThunk(
   'auth/checkAuthStatus',
@@ -98,21 +118,29 @@ export const checkAuthStatus = createAsyncThunk(
     try {
       const token = localStorage.getItem('token');
       const user = localStorage.getItem('user');
+<<<<<<< HEAD
       
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       if (token && user) {
         return {
           user: JSON.parse(user),
           token: token
         };
       } else {
+<<<<<<< HEAD
         throw new Error('No valid session found');
       }
     } catch (error) {
       return rejectWithValue(error.message);
     }
   }
+=======
+        throw new Error('No auth data found');
+    } catch (error) {
+      return rejectWithValue(error.message);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 );
-
 const initialState = {
   user: null,
   token: null,
@@ -120,7 +148,6 @@ const initialState = {
   isLoading: false,
   error: null
 };
-
 const authSlice = createSlice({
   name: 'auth',
   initialState,
@@ -134,7 +161,10 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
+<<<<<<< HEAD
     },
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   },
   extraReducers: (builder) => {
     // Login
@@ -154,7 +184,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Signup
     builder
       .addCase(signupUser.pending, (state) => {
@@ -172,7 +201,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Logout
     builder
       .addCase(logoutUser.pending, (state) => {
@@ -189,7 +217,6 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       });
-
     // Check auth status
     builder
       .addCase(checkAuthStatus.pending, (state) => {
@@ -208,16 +235,21 @@ const authSlice = createSlice({
         state.user = null;
         state.token = null;
       });
+<<<<<<< HEAD
   }
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 });
-
 export const { clearError, setUser, setLoggedIn } = authSlice.actions;
-
 // Selectors
 export const selectUser = (state) => state.auth.user;
 export const selectToken = (state) => state.auth.token;
 export const selectIsAuthenticated = (state) => state.auth.isAuthenticated;
 export const selectIsLoading = (state) => state.auth.isLoading;
 export const selectError = (state) => state.auth.error;
+<<<<<<< HEAD
 
 export default authSlice.reducer;
+=======
+export default authSlice.reducer;}}}}}}}}}}}}}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

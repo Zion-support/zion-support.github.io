@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from "@/lib/utils";
@@ -221,6 +222,48 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </li>
                     </ul>
                   </div>
+=======
+import React, { useState } from 'react.ts';
+import { Link  } from 'react-router-dom.ts';
+import { cn  } from '@/lib/utils';
+import { NavLink  } from 'react-router-dom.ts';
+import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp  } from 'lucide-react';
+export function MainNavigation(...args[]):  {
+    const [isServicesOpen, setIsServicesOpen] = useState(false);
+    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+    const [isCompanyOpen, setIsCompanyOpen] = useState(false);
+    const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+    return (<nav className = {
+  cn("hidden md:flex items-center space-x-6",
+  className)
+}>
+      <NavLink to="/" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground")}>
+        Home
+      </NavLink>
+      {/* Services Dropdown */}
+      <div className="relative group">
+        <button onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary text-muted-foreground">
+          <Zap className="w-4 h-4"/>
+          <span>Services</span>
+          <ChevronDown className="w-3 h-3"/>
+        </button>
+        {isServicesOpen && (<div onMouseEnter={() => setIsServicesOpen(true)} onMouseLeave={() => setIsServicesOpen(false)} className="absolute top-full left-0 mt-2 w-80 bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50">
+            <div className="p-4">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
+                    <Zap className="w-4 h-4 mr-2"/>
+                    Micro SAAS
+                  </h4>
+                  <ul className="space-y-2 text-sm">
+                    <li><Link to="/services" className="text-zion-slate-light hover:text-zion-cyan transition-colors">All Services</Link></li>
+                    <li><Link to="/services/ai-sales-copilot" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Sales Copilot</Link></li>
+                    <li><Link to="/services/cloud-finops-optimizer" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud FinOps Optimizer</Link></li>
+                    <li><Link to="/services/ai-compliance-assistant" className="text-zion-slate-light hover:text-zion-cyan transition-colors">AI Compliance Assistant</Link></li>
+                    <li><Link to="/services/cloud" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cloud & DevOps</Link></li>
+                    <li><Link to="/services/cybersecurity" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Cybersecurity</Link></li>
+                  </ul>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 </div>
                 <div className="mt-8 pt-6 border-t border-zion-purple/30">
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -696,6 +739,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
       {/* Pricing */}
       <Link to="/pricing" className="text-zion-slate-light hover:text-white transition-colors flex items-center">
         <BarChart3 className="w-4 h-4 mr-1" />
+<<<<<<< HEAD
         Pricing
       </Link>
 
@@ -754,3 +798,12 @@ const GraduationCap = ({ className }: { className?: string }) => (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
   </svg>
 );
+=======
+        Pricing;
+      </Link>;
+      <NavLink to="/signup" className={({ isActive }) => cn("text-sm font-medium transition-colors hover:text-primary", isActive ? "text-zion-cyan" : "text-muted-foreground", "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-300 hover:-translate-y-1")}>;
+        Get Started;
+      </NavLink>;
+    </nav>);
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

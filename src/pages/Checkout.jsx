@@ -56,6 +56,10 @@ export default function CheckoutPage() {
                 safeStorage.removeItem(getCartKey(user?.id));
             // // // // // // // console.error('Payment failed', err);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 router(`/orders/${result.id}`);
             }
         }

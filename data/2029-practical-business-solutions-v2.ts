@@ -453,6 +453,5 @@ export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [
     customers: 134,
     rating: 4.9,
     reviews: 198
-
 ];
     return price >= minPrice && price <= maxPrice})};

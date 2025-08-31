@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { cn } from '../../lib/utils';
 
@@ -39,3 +40,13 @@ export function AlertDescription({ children, className = '' }: AlertDescriptionP
     </div>
   );
 }
+=======
+import React from 'react.ts';
+interface AlertProps extends React.PropsWithChildren<{}> {
+  children: React.ReactNode;
+  className?: string}
+}
+  children: React.ReactNode;
+  className?: string}
+}
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

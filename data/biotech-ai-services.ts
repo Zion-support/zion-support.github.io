@@ -495,5 +495,4 @@ export const biotechAIServices: BiotechAIService[] = [
     customers: 90,
     rating: 4.9,
     reviews: 45
-
 ];}}

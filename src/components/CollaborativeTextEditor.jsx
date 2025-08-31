@@ -147,6 +147,10 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             });
         finally {
             setIsProcessing(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             trackEvent('editor', 'ai_suggestions_generated', 'suggestions_created', suggestions.length)}
         catch (error) {
             console.error('Failed to generate AI suggestions:', error);

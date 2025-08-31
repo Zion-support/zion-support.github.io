@@ -297,5 +297,4 @@ export const innovativeBusinessSolutionsEnhanced2025: InnovativeBusinessSolution
     customers: 98,
     rating: 4.8,
     reviews: 67
-
 ];}}

@@ -60,7 +60,6 @@ const routes = [
     priority: '0.7',
     changefreq: 'weekly',
     lastmod: new Date().toISOString().split('T')[0]
-
 ];
 // Generate the sitemap XML content
 function generateSitemapXML() {
@@ -72,7 +71,6 @@ function generateSitemapXML() {
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
   </url>`}).join('\n');
-  
   return `${xmlHeader}
 ${urlsetOpen}
 ${urls}
@@ -84,38 +82,51 @@ function generateSitemap() {
     const publicDir = path.join(__dirname, '..', 'public');
     if (!fs.existsSync(publicDir)) {
       fs.mkdirSync(publicDir, { recursive: true })}
+<<<<<<< HEAD
     
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Generate and write sitemap.xml
     const sitemapPath = path.join(publicDir, 'sitemap.xml');
     fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
     // // // // // // // console.log('✅ Sitemap generated successfully at:', sitemapPath);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Generate and write robots.txt
     const robotsPath = path.join(publicDir, 'robots.txt');
     fs.writeFileSync(robotsPath, robotsContent, 'utf8');
     // // // // // // // console.log('✅ Robots.txt generated successfully at:', robotsPath);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Generate a JSON version for programmatic use
     const sitemapJsonPath = path.join(publicDir, 'sitemap.json');
     fs.writeFileSync(sitemapJsonPath, JSON.stringify(sitemapJson, null, 2), 'utf8');
     // // // // // // // console.log('✅ Sitemap JSON generated successfully at:', sitemapJsonPath);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // Generate a text sitemap for simple crawlers
     const textSitemapPath = path.join(publicDir, 'sitemap.txt');
     fs.writeFileSync(textSitemapPath, textSitemap, 'utf8');
     // // // // // // // console.log('✅ Text sitemap generated successfully at:', textSitemapPath);
-
     // // // // // // // console.log('\n🎉 All sitemap files generated successfully!');
     // // // // // // // console.log(`📊 Total routes: ${routes.length}`);
     // // // // // // // console.log(`🌐 Base URL: ${BASE_URL}`);
-
   } catch (error) {
     // // // // // // // console.error('❌ Error generating sitemap:', error.message);
     process.exit(1);
+<<<<<<< HEAD
 
 
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     console.log('✅ Text sitemap generated successfully at:', textSitemapPath);
-    
     console.log('\n🎉 All sitemap files generated successfully!');
     console.log(`📊 Total routes: ${routes.length}`);
     console.log(`🌐 Base URL: ${BASE_URL}`)} catch (error) {

@@ -123,6 +123,10 @@ export const AuthProvider = ({ children }) => {
                 catch (error) {
                     // // // // // // // console.error("Error fetching user profile:", error);
                     setUser(null);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                         console.error("Error fetching user profile:", error);
                         setUser(null)}
                 }

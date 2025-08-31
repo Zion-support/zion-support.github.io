@@ -36,6 +36,10 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
         // // // // // // // console.error('Error checking auth state:', error);
       } finally {
         setIsLoading(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               })}
           }
         }

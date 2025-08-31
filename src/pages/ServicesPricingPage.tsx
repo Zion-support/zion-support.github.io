@@ -388,6 +388,10 @@ const ServicesPricingPage: React.FC = () => {
                       <CardTitle className="text-lg text-white line-clamp-2">{service.title}</CardTitle>
                       <CardDescription className="text-zion-cyan-light line-clamp-3">
                         {service.description}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                       <CardTitle className="text-2xl font-bold text-white">
                         {plan.name}
                       </CardTitle>

@@ -27,6 +27,10 @@ import {
     integrations["Python", "Scikit-learn", "TensorFlow", "Custom APIs"]
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const aiCapabilities = [
   {
     title: "Machine Learning",

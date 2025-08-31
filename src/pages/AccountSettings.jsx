@@ -23,6 +23,10 @@ export default function AccountSettings() {
                 setDidHandle(parsed.didHandle || '');
             // // // // // // // console.error('Error loading account settings', e);
         }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 setEnableBackup(!!parsed.enableBackup)}
         }
         catch (e) {
@@ -76,6 +80,10 @@ export default function AccountSettings() {
             toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
         catch (error) {
             toast.error(error.message || 'Failed to connect wallet');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     setDidHandle(ensName)}
             }
             catch (error) {

@@ -557,5 +557,4 @@ export const zion2026InnovativeMicroSAASServices: Zion2026InnovativeMicroSAASSer
     customers: 150,
     rating: 4.9,
     reviews: 90
-
 ];}}

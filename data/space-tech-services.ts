@@ -495,5 +495,4 @@ export const spaceTechServices: SpaceTechService[] = [
     customers: 500,
     rating: 4.9,
     reviews: 250
-
 ];}}

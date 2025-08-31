@@ -1,11 +1,13 @@
 import { describe, it, expect, jest } from '@jest/globals';
 import apiClient from '@/services/apiClient';
 import { supabase } from '@/integrations/supabase/client';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 jest.mock('@/integrations/supabase/client', () => ({
   supabase: { auth: { signOut: jest.fn().mockResolvedValue({}) } }
 }));
-
 describe('apiClient interceptor', () => {
   it('logs out on 401 and redirects', async () => {
     const error = {
@@ -16,12 +18,6 @@ describe('apiClient interceptor', () => {
   ;
   ;
   data: {;
-
-
-
-
-
-
 } } } as any;
     const redirect = vi.spyOn(window.location, 'assign').mockImplementation(() => {});
     // @ts-ignore access internal handler

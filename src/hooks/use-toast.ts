@@ -32,6 +32,10 @@ export function useToast(...args[]):  {
     dismissAll
   // // // // // // // console.log('Toast:', { title, description, variant, duration });
 };
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   }}
 // Export a default toast function for backward compatibility
 export const toast = ({ title, description, variant = 'default', duration = 5000 }: Omit<Toast, 'id'>) => {;

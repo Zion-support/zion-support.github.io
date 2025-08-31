@@ -53,7 +53,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         className="group relative p-3 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-cyan-300"
         aria-label="Open accessibility controls"
         aria-expanded={isOpen}
-
         <Settings className="w-6 h-6" />
         <div className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
       </button>
@@ -72,14 +71,12 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   onClick={toggleExpanded}
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   aria-label={isExpanded ? 'Collapse panel' : 'Expand panel'}
-
                   {isExpanded ? <X className="w-4 h-4" /> : <Monitor className="w-4 h-4" />}
                 </button>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1 hover:bg-white/20 rounded transition-colors"
                   aria-label="Close accessibility panel"
-
                   <X className="w-4 h-4" />
                 </button>
               </div>
@@ -93,7 +90,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Eye className="w-4 h-4" />
                 Visual Preferences
               </h4>
-
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
@@ -102,18 +98,11 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('highContrast',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">High Contrast</span>
                 </label>
-
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -121,12 +110,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('largeText',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -140,7 +123,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Zap className="w-4 h-4" />
                 Motion Preferences
               </h4>
-
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
@@ -149,12 +131,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('reducedMotion',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -168,7 +144,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Keyboard className="w-4 h-4" />
                 Navigation
               </h4>
-
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
@@ -177,18 +152,11 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('focusIndicator',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
                   <span className="text-sm text-gray-700 dark:text-gray-300">Focus Indicators</span>
                 </label>
-
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
@@ -196,12 +164,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('keyboardNavigation',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />
@@ -215,7 +177,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                 <Volume2 className="w-4 h-4" />
                 Screen Reader
               </h4>
-
               <div className="space-y-2">
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
@@ -224,12 +185,6 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                     onChange = {
   (e) => handlePreferenceChange('screenReader',
   e.target.checked)
-
-
-
-
-
-
 }
                     className="w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus:ring-cyan-500 focus:ring-2"
                   />

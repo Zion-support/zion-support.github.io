@@ -35,7 +35,10 @@ export interface SpecializedInnovativeService2027 {
   customers: number;
   rating: number;
   reviews: number}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const specializedInnovativeServices2027: SpecializedInnovativeService2027[] = [
   // SPACE TECHNOLOGY SERVICES
   {
@@ -88,7 +91,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.9,
     reviews: 12
   },
-
   // AUGMENTED REALITY & VIRTUAL REALITY
   {
     id: 'ar-vr-enterprise-solutions-platform',
@@ -140,7 +142,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.7,
     reviews: 89
   },
-
   // ROBOTICS & AUTOMATION
   {
     id: 'ai-powered-robotics-automation-platform',
@@ -192,7 +193,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.8,
     reviews: 34
   },
-
   // GREEN TECHNOLOGY & SUSTAINABILITY
   {
     id: 'sustainable-energy-optimization-platform',
@@ -244,7 +244,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.7,
     reviews: 145
   },
-
   // SUPPLY CHAIN & LOGISTICS
   {
     id: 'ai-powered-supply-chain-optimization',
@@ -296,7 +295,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.6,
     reviews: 98
   },
-
   // HUMAN RESOURCES & TALENT MANAGEMENT
   {
     id: 'ai-powered-hr-talent-platform',
@@ -348,7 +346,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.7,
     reviews: 267
   },
-
   // LEGAL TECHNOLOGY & COMPLIANCE
   {
     id: 'ai-powered-legal-tech-platform',
@@ -400,7 +397,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.8,
     reviews: 78
   },
-
   // REAL ESTATE & PROPERTY TECHNOLOGY
   {
     id: 'ai-powered-proptech-platform',
@@ -452,7 +448,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.6,
     reviews: 123
   },
-
   // SPORTS TECHNOLOGY & ANALYTICS
   {
     id: 'ai-powered-sports-analytics-platform',
@@ -504,7 +499,6 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     rating: 4.7,
     reviews: 56
   },
-
   // ENTERTAINMENT & MEDIA TECHNOLOGY
   {
     id: 'ai-powered-entertainment-platform',
@@ -555,27 +549,25 @@ export const specializedInnovativeServices2027: SpecializedInnovativeService2027
     customers: 89,
     rating: 4.8,
     reviews: 167
-
 ];
-
 // Helper functions for service management
 export const getSpecializedServiceById = (id: string) => {;
   return specializedInnovativeServices2027.find(service => service.id === id);
 };
-
 export const getSpecializedServicesByCategory = (category: string) => {;
   return specializedInnovativeServices2027.filter(service => service.category === category);
 };
-
 export const getSpecializedPopularServices = () => {;
   return specializedInnovativeServices2027.filter(service => service.popular);
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const getSpecializedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return specializedInnovativeServices2027.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice})};
-
 export const searchSpecializedServices = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
   return specializedInnovativeServices2027.filter(service = > ;
@@ -584,5 +576,8 @@ export const searchSpecializedServices = (query: string) => {;
     service.category.toLowerCase().includes(lowercaseQuery);
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default specializedInnovativeServices2027;}}

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 export type ServiceVariant =
+=======
+export type ServiceVariant = | 'default'
+  | 'holographic'
+  | 'quantum'
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   | 'cyberpunk'
   | 'neural'
   | 'quantum-holographic'

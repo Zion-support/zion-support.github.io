@@ -188,6 +188,35 @@ import {
       ]
     }
   ];
+<<<<<<< HEAD
+=======
+  const partnershipTypes = [
+    {
+      type: 'Strategic Alliance',
+      description: 'Long-term partnerships focused on joint market development and innovation',
+      examples: ['Microsoft', 'Amazon Web Services', 'Google Cloud'],
+      icon: Star
+    },
+    {
+      type: 'Technology Partnership',
+      description: 'Collaboration on technology integration and platform development',
+      examples: ['Salesforce', 'Oracle', 'Adobe'],
+      icon: Zap
+    },
+    {
+      type: 'Consulting Partnership',
+      description: 'Joint delivery of consulting services and strategic advisory',
+      examples: ['Deloitte', 'McKinsey', 'Bain & Company'],
+      icon: BookOpen
+    },
+    {
+      type: 'Academic Partnership',
+      description: 'Research collaboration and talent development initiatives',
+      examples: ['Stanford University', 'MIT', 'Harvard'],
+      icon: Building2
+    }
+  ];
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const togglePartnerExpansion = (partnerId: string) => {
     setExpandedPartner(expandedPartner === partnerId ? null : partnerId);
   };
@@ -646,8 +675,13 @@ import {
               Ready to Partner With Us?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+<<<<<<< HEAD
               Join our global network and unlock new opportunities for growth, 
               innovation, and market expansion.
+=======
+              Interested in partnering with Zion Tech Group? Let's explore how we can 
+              create value together and drive innovation in the technology industry.
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

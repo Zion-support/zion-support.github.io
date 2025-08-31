@@ -45,6 +45,10 @@ const ScheduleDemo: React.FC = (): JSX.Element => {
       // // // // // // // console.error('Error submitting form:', error);
     } finally {
       setIsSubmitting(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
       setIsSubmitted(true)} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}

@@ -64,10 +64,13 @@ import {
   Network,
   Lock,
   Eye,
+<<<<<<< HEAD
   FileText,
   Settings,
   Key,
   ShieldCheck,
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   Smartphone,
   Monitor,
   Server,
@@ -78,6 +81,7 @@ import {
   Building,
   Car
 } from 'lucide-react';
+<<<<<<< HEAD
 export const EnhancedFuturisticFooter: React.FC = () => {
   Search,
   BookOpen,
@@ -125,12 +129,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         { name: 'Cybersecurity Suite', href: '/services/ai-compliance-copilot' },
         { name: 'Data Analytics', href: '/services/data-analytics' }
       ]
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     },
     {
       title: 'Innovation Hub',
       icon: Star,
       color: 'from-purple-600 to-pink-600',
       links: [
+<<<<<<< HEAD
         { name: 'Innovative Services 2025', href: '/innovative-services-showcase-2025' },
         { name: 'Revolutionary Services 2030', href: '/revolutionary-services-2030' },
         { name: 'Comprehensive Services 2028', href: '/comprehensive-services-landing-2028' },
@@ -140,6 +147,15 @@ export const EnhancedFuturisticFooter: React.FC = () => {
       ]
     },
     {
+=======
+        { name: 'About Zion Tech Group', href: '/about', featured: false },
+        { name: 'Our Team', href: '/about#team', featured: false },
+        { name: 'Careers', href: '/careers', featured: false },
+        { name: 'Contact Us', href: '/contact', featured: true },
+        { name: 'Request Quote', href: '/request-quote', featured: true },
+        { name: 'Schedule Demo', href: '/schedule-demo', featured: true },
+        { name: 'Partnerships', href: '/partners', featured: false },
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         { name: 'Investor Relations', href: '/investors', featured: false },;
         { name: 'Press & Media', href: '/press', featured: false },;
         { name: 'Legal & Privacy', href: '/legal', featured: false };
@@ -709,6 +725,10 @@ export const EnhancedFuturisticFooter: React.FC = () => {
         </motion.div>
       </div>
     </footer>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             {/* Additional Contact Methods */}
             <div className="mt-12 pt-8 border-t border-slate-700">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">

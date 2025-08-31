@@ -76,6 +76,7 @@ import {
   Hash as HashIcon9,
   Hash as HashIcon10
 } from 'lucide-react';
+<<<<<<< HEAD
 
 export default function Webinars() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -83,6 +84,15 @@ export default function Webinars() {
   const [selectedType, setSelectedType] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
+=======
+import { SEO } from '@/components/SEO';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+const Webinars: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const [showPast, setShowPast] = useState(false);
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const categories = [
     { id: 'all', name: 'All Categories', icon: Video, count: 67 },
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 18 },
@@ -92,6 +102,7 @@ export default function Webinars() {
     { id: 'digital', name: 'Digital Transformation', icon: Rocket, count: 8 },
     { id: 'industry', name: 'Industry Solutions', icon: Target, count: 4 }
   ];
+<<<<<<< HEAD
 
   const webinarTypes = [
     { id: 'all', name: 'All Types', count: 67 },
@@ -102,6 +113,9 @@ export default function Webinars() {
   ];
 
   const webinars = [
+=======
+  const upcomingWebinars = [
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     {
       id: 1,
       title: 'AI-Powered Business Intelligence: Transforming Decision Making',
@@ -158,6 +172,7 @@ export default function Webinars() {
     },
     {
       id: 3,
+<<<<<<< HEAD
       title: 'Cloud-Native Application Development: From Theory to Practice',
       description: 'Master cloud-native development practices with hands-on examples and real-world case studies. Learn microservices architecture, containerization, and DevOps integration.',
       category: 'cloud',
@@ -209,6 +224,38 @@ export default function Webinars() {
         'Measuring analytics ROI',
         'Future trends in business analytics'
       ]
+=======
+      title: 'AI-Powered Business Transformation: Real-World Success Stories',
+      description: 'Join industry experts as they share real-world case studies of successful AI implementations and the lessons learned along the way.',
+      category: 'ai-ml',
+      speaker: 'Dr. Sarah Chen, Chief AI Scientist',
+      date: '2024-02-15',
+      time: '14:00 EST',
+      duration: '60 minutes',
+      attendees: 450,
+      maxAttendees: 500,
+      summary: 'Learn how to implement AI-powered compliance automation to reduce manual work and improve accuracy.',
+      tags: ['AI', 'Compliance', 'Automation', 'Best Practices'],
+      registrationUrl: '/webinars/ai-compliance-automation-2024/register',
+      watchUrl: null,
+      isLive: false
+    },
+    {
+      id: 5,
+      title: 'Zero-Trust Security: Implementation Strategies for 2025',
+      description: 'Learn practical strategies for implementing zero-trust security architecture in your organization.',
+      category: 'security',
+      type: 'upcoming',
+      date: '2025-02-20T15:00:00Z',
+      duration: '45 min',
+      speakers: ['Alex Thompson', 'Dr. James Wilson'],
+      maxAttendees: 300,
+      summary: 'Explore practical applications of digital twin technology and how to measure return on investment.',
+      tags: ['Digital Twin', 'IoT', 'ROI', 'Digital Transformation'],
+      registrationUrl: '/webinars/digital-twin-technology-roi/register',
+      watchUrl: null,
+      isLive: false
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     },
     {
       id: 5,
@@ -239,6 +286,7 @@ export default function Webinars() {
     },
     {
       id: 6,
+<<<<<<< HEAD
       title: 'Machine Learning Operations (MLOps): Scaling AI in Enterprise',
       description: 'Learn how to implement MLOps practices to streamline machine learning model development, deployment, and monitoring in enterprise environments.',
       category: 'ai-ml',
@@ -264,6 +312,24 @@ export default function Webinars() {
         'Performance monitoring and optimization'
       ]
     },
+=======
+      title: 'Sustainable IT: Green Computing Strategies for Enterprise',
+      category: 'sustainability',
+      speaker: 'Lisa Park, Sustainability Director',
+      date: '2024-03-22',
+      time: '14:00 EST',
+      duration: '60 minutes',
+      attendees: 220,
+      maxAttendees: 300,
+      summary: 'Learn practical strategies for implementing sustainable IT practices and reducing carbon footprint.',
+      tags: ['Sustainability', 'Green IT', 'Enterprise', 'Carbon Footprint'],
+      registrationUrl: '/webinars/sustainable-it-enterprise/register',
+      watchUrl: null,
+      isLive: false
+    }
+  ];
+  const pastWebinars = [
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     {
       id: 7,
       title: 'Edge Computing: Transforming IoT and Mobile Applications',
@@ -319,11 +385,54 @@ export default function Webinars() {
       ]
     }
   ];
+<<<<<<< HEAD
 
   const filteredWebinars = webinars.filter(webinar => {
+=======
+  const allWebinars = [...upcomingWebinars, ...pastWebinars];
+      currentAttendees: 189,;
+      featured: false,;
+      tags: ['Cybersecurity', 'Zero-Trust', 'Security Architecture', 'Implementation'],;
+      thumbnail: '/images/webinars/zero-trust-security-2025.jpg',;
+      registrationRequired: true,;
+      recordingAvailable: false;
+    };
+  ];
+  // Update counts
+  React.useEffect(() => {
+    categories.forEach(cat = > {;
+      cat.count = webinars.filter(w => w.category === cat.id).length;
+    });
+    filterTypes.forEach(type = > {;
+      if (type.id === 'all') {;
+        type.count = webinars.length;
+      } else {
+        type.count = webinars.filter(w => w.type === type.id).length;
+    });
+  }, []);
+  const filteredWebinars = webinars.filter(webinar => {;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
+    const matchesType = filterType === 'all' || webinar.type === filterType;
+    return matchesSearch && matchesCategory && matchesType;
+=======
+  // Update category counts
+  categories.forEach(category => {
+    if (category.id === 'all') {
+      category.count = allWebinars.length;
+    } else {
+      category.count = allWebinars.filter(webinar => webinar.category === category.id).length;
+    }
+  });
+  const filteredWebinars = allWebinars.filter(webinar => {
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+<<<<<<< HEAD
     const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
     const matchesType = selectedType === 'all' || webinar.type === selectedType;
     return matchesSearch && matchesCategory && matchesType;
@@ -333,6 +442,19 @@ export default function Webinars() {
   const liveWebinars = filteredWebinars.filter(w => w.type === 'live');
   const recordedWebinars = filteredWebinars.filter(w => w.type === 'recorded');
 
+=======
+    const matchesTimeFilter = showPast ? true : !pastWebinars.includes(webinar);
+    return matchesCategory && matchesSearch && matchesTimeFilter;
+  });
+  const getCategoryIcon = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.icon : BookOpen;
+  };
+  const getCategoryName = (categoryId: string) => {
+    const category = categories.find(cat => cat.id === categoryId);
+    return category ? category.name : 'General';
+  };
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       weekday: 'long',
@@ -341,6 +463,7 @@ export default function Webinars() {
       day: 'numeric'
     });
   };
+<<<<<<< HEAD
 
   const formatTime = (timeString: string) => {
     return timeString;
@@ -362,9 +485,21 @@ export default function Webinars() {
     // Simulate watching
     console.log(`Watching: ${title}`);
     // In a real app, this would open the recorded webinar
+=======
+  const getRegistrationStatus = (webinar: any) => {
+    if (webinar.isLive) {
+      return { status: 'Live Now', color: 'from-red-500 to-pink-500', icon: Play };
+    } else if (webinar.attendees >= webinar.maxAttendees) {
+      return { status: 'Full', color: 'from-gray-500 to-slate-500', icon: Users };
+    } else if (webinar.watchUrl) {
+      return { status: 'Watch Now', color: 'from-blue-500 to-cyan-500', icon: Play };
+    } else {
+      return { status: 'Register Now', color: 'from-green-500 to-emerald-500', icon: CheckCircle };
+    }
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   };
-
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Header Section */}
       <div className="relative overflow-hidden">
@@ -378,11 +513,54 @@ export default function Webinars() {
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Webinars
+=======
+    <>
+      <SEO 
+        title="Webinars - Zion Tech Group"
+        description="Join our expert-led webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry leaders and gain practical insights."
+        keywords="webinars, AI webinars, cybersecurity webinars, cloud computing, technology education, Zion Tech Group, online learning"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-zion-purple/20 to-zion-blue/20"></div>
+          <div className="relative z-10 max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-zion-purple/20 border border-zion-purple/30 mb-6">
+                <Video className="w-5 h-5 text-zion-purple mr-2" />
+                <span className="text-zion-purple font-medium">Expert Webinars</span>
+              </div>
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Technology Webinars
+              </h1>
+              <p className="text-xl md:text-2xl text-zion-cyan-light max-w-4xl mx-auto leading-relaxed mb-8">
+                Join our expert-led webinars on AI, cybersecurity, cloud computing, and emerging technologies. 
+                Learn from industry leaders and gain practical insights to transform your business.
+              </p>
+            initial = {
+  { opacity: 0,
+  y: 30 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Stay Informed and Inspired
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             </h1>
             <p className="text-xl text-zinc-300 max-w-3xl mx-auto mb-8">
               Join our expert-led webinars to learn about the latest technology trends, 
               best practices, and innovative solutions from Zion Tech Group.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-wrap justify-center gap-4 text-zinc-300">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-zion-cyan" />
@@ -438,6 +616,33 @@ export default function Webinars() {
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zinc-400" />
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Contact Us
+              </a>
+              <a 
+                href="/white-papers"
+                className="px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300"
+              >
+                Read Our Research
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Search and Filters */}
+      <section className="py-12 bg-zion-slate">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {/* Search Bar */}
+            <div className="relative mb-8">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               <input
                 type="text"
                 placeholder="Search webinars..."
@@ -446,6 +651,7 @@ export default function Webinars() {
                 className="w-full pl-10 pr-4 py-3 bg-zinc-700/50 border border-zinc-600 rounded-lg text-white placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
               />
             </div>
+<<<<<<< HEAD
 
             {/* Category Filter */}
             <div>
@@ -584,10 +790,47 @@ export default function Webinars() {
                   </div>
                 </div>
 
+=======
+            {/* Category Filters */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setActiveCategory(category.id)}
+                  className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 ${
+                    activeCategory === category.id
+                      ? 'bg-zion-cyan border-zion-cyan text-white'
+                      : 'bg-zion-slate-dark border-zion-slate-light/20 text-zion-slate-light hover:border-zion-cyan/50'
+                  }`}
+                  {category.icon}
+=======
+              {/* Search Bar */}
+              <div className="max-w-2xl mx-auto mb-8">
+                <div className="relative">
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan-light" />
+                  <input
+                    type="text"
+                    placeholder="Search webinars, speakers, or topics..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"
+                  />
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+        {/* Categories Filter */}
+        <section className="py-12 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap justify-center gap-4">
+              {categories.map((category) => (
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                 <button
                   onClick={() => handleJoin(webinar.id, webinar.title)}
                   className="w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
                 >
+<<<<<<< HEAD
                   <Play className="w-4 h-4" />
                   <span>Join Now</span>
                 </button>
@@ -612,6 +855,59 @@ export default function Webinars() {
 
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-6'}>
             {upcomingWebinars.map((webinar, index) => (
+=======
+                  <category.icon className="w-5 h-5" />
+                  <span>{category.name}</span>
+                  <span className="text-sm opacity-75">({category.count})</span>
+                </button>
+              ))}
+            </div>
+                  className = "px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
+                >
+                  Clear Filters
+                </button>
+              </div>
+=======
+          </div>
+        </section>
+        {/* Time Filter */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex items-center space-x-4">
+                <span className="text-white font-medium">Show:</span>
+                <button
+                  onClick={() => setShowPast(false)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    !showPast
+                      ? 'bg-zion-purple text-white'
+                      : 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20'
+                  }`}
+                >
+                  Upcoming
+                </button>
+                <button
+                  onClick={() => setShowPast(true)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    showPast
+                      ? 'bg-zion-purple text-white'
+                      : 'bg-white/10 text-zion-cyan-light hover:bg-white/20 border border-white/20'
+                  }`}
+                >
+                  Past Webinars
+                </button>
+              </div>
+              <div className="text-zion-cyan-light">
+                {filteredWebinars.length} webinars found
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Webinars Grid */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            {filteredWebinars.length === 0 ? (
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
               <motion.div
                 key={webinar.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -621,6 +917,7 @@ export default function Webinars() {
                   viewMode === 'list' ? 'flex' : ''
                 }`}
               >
+<<<<<<< HEAD
                 {viewMode === 'grid' ? (
                   // Grid View
                   <div className="p-6">
@@ -913,6 +1210,153 @@ export default function Webinars() {
                 )}
               </motion.div>
             ))}
+=======
+                <Video className="w-16 h-16 text-zion-cyan-light mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">No webinars found</h3>
+                <p className="text-zion-cyan-light">
+                  Try adjusting your search terms or category filter.
+                </p>
+              </motion.div>
+            ) : (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredWebinars.map((webinar, index) => {
+                  const registrationStatus = getRegistrationStatus(webinar);
+                  return (
+                    <motion.div
+                      key={webinar.id}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="group"
+                    >
+                      <Card className="h-full bg-white/5 backdrop-blur-sm border-white/20 hover:border-zion-purple/50 transition-all duration-300 hover:scale-105">
+                        <CardHeader>
+                          <div className="flex items-start justify-between mb-4">
+                            <div className="inline-flex items-center px-3 py-1 rounded-full bg-zion-purple/20 border border-zion-purple/30">
+                              <span className="text-zion-purple text-sm font-medium">
+                                {getCategoryName(webinar.category)}
+                              </span>
+                            </div>
+                            <div className={`px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r ${registrationStatus.color}`}>
+                              {registrationStatus.status}
+                            </div>
+                          </div>
+                          <CardTitle className="text-xl font-bold text-white group-hover:text-zion-purple transition-colors duration-300 mb-3">
+                            {webinar.title}
+                          </CardTitle>
+                          <CardDescription className="text-zion-cyan-light leading-relaxed mb-4">
+                            {webinar.summary}
+                          </CardDescription>
+                          <div className="flex items-center space-x-4 text-sm text-zion-cyan-light mb-4">
+                            <div className="flex items-center space-x-1">
+                              <Users className="w-4 h-4" />
+                              <span>{webinar.attendees}/{webinar.maxAttendees}</span>
+                            </div>
+                            <div className="flex items-center space-x-1">
+                              <Clock className="w-4 h-4" />
+                              <span>{webinar.duration}</span>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <div className="space-y-3 mb-6 text-sm">
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-cyan-light">Speaker:</span>
+                              <span className="text-white">{webinar.speaker}</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-cyan-light">Date:</span>
+                              <span className="text-white">{formatDate(webinar.date)}</span>
+                            </div>
+                            <div className="flex items-center justify-between">
+                              <span className="text-zion-cyan-light">Time:</span>
+                              <span className="text-white">{webinar.time}</span>
+                            </div>
+                          </div>
+                          <div className="mb-6">
+                            <h4 className="text-white font-semibold mb-3">Tags:</h4>
+                            <div className="flex flex-wrap gap-2">
+                              {webinar.tags.map((tag, tagIndex) => (
+                                <span
+                                  key={tagIndex}
+                                  className="px-2 py-1 bg-white/10 rounded text-xs text-zion-cyan-light border border-white/20"
+                                >
+                                  {tag}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                          <div className="flex space-x-2">
+                            {webinar.registrationUrl ? (
+                              <Button
+                                asChild
+                                className="flex-1 bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white"
+                              >
+                                <a href={webinar.registrationUrl}>
+                                  <CheckCircle className="w-4 h-4 mr-2" />
+                                  Register
+                                </a>
+                              </Button>
+                            ) : webinar.watchUrl ? (
+                              <Button
+                                asChild
+                                className="flex-1 bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white"
+                              >
+                                <a href={webinar.watchUrl}>
+                                  <Play className="w-4 h-4 mr-2" />
+                                  Watch Now
+                                </a>
+                              </Button>
+                            ) : null}
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
+                            >
+                              <Share2 className="w-4 h-4" />
+                            </Button>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Want to Host a Webinar?
+              </h2>
+              <p className="text-xl text-zion-cyan-light mb-8 max-w-3xl mx-auto">
+                Have expertise to share? We're always looking for industry leaders and subject matter experts 
+                to share their knowledge with our community.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-gradient-to-r from-zion-purple to-zion-blue hover:from-zion-purple/80 hover:to-zion-blue/80 text-white">
+                  <Video className="w-5 h-5 mr-2" />
+                  Propose a Webinar
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark"
+                >
+                  <ExternalLink className="w-5 h-5 mr-2" />
+                  View All Webinars
+                </Button>
+              </div>
+            </motion.div>
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
           </div>
         </div>
       )}
@@ -947,4 +1391,9 @@ export default function Webinars() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+export default Webinars;
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7

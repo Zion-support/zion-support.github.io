@@ -18,6 +18,10 @@ export const isAuthenticated = (): boolean => {
     return false;
   } catch (error) {
     // // // // // // // console.error('Error checking authentication status:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // // // // console.error('Error checking authentication status:', error);
     return false;
 };
@@ -31,6 +35,10 @@ export const getAuthToken = (): string | null => {
     return null;
   } catch (error) {
     // // // // // // // console.error('Error getting auth token:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // // // // console.error('Error getting auth token:', error);
     return null;
 };
@@ -44,6 +52,10 @@ export const getUserData = ():  => {
     return null;
   } catch (error) {
     // // // // // // // console.error('Error getting user data:', error);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
     // // // // console.error('Error getting user data:', error);
     return null;
 };}}}}}}}}}}

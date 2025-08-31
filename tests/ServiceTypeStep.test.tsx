@@ -14,8 +14,6 @@ const baseData: QuoteFormData = {
   type: 'fixed' ;
 ;
 ;
-
-
 },;
   contactInfo: { name: '', email: '', phone: '', company: '' },;
 };

@@ -36,7 +36,10 @@ export interface CuttingEdgeComprehensiveService2027 {
   customers: number;
   rating: number;
   reviews: number}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveService2027[] = [
   // AI-POWERED INNOVATIVE SERVICES
   {
@@ -89,7 +92,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.9,
     reviews: 28
   },
-
   // QUANTUM COMPUTING SERVICES
   {
     id: 'quantum-neural-network-platform',
@@ -141,7 +143,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.8,
     reviews: 15
   },
-
   // BLOCKCHAIN & WEB3 SERVICES
   {
     id: 'decentralized-ai-marketplace',
@@ -193,7 +194,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.6,
     reviews: 89
   },
-
   // CYBERSECURITY & PRIVACY SERVICES
   {
     id: 'quantum-resistant-cybersecurity-suite',
@@ -245,7 +245,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.9,
     reviews: 67
   },
-
   // HEALTHCARE & BIOTECH SERVICES
   {
     id: 'ai-powered-drug-discovery-platform',
@@ -297,7 +296,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.7,
     reviews: 23
   },
-
   // FINANCIAL TECHNOLOGY SERVICES
   {
     id: 'ai-powered-trading-algorithm-platform',
@@ -349,7 +347,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.8,
     reviews: 45
   },
-
   // INTERNET OF THINGS (IoT) SERVICES
   {
     id: 'ai-powered-iot-automation-platform',
@@ -401,7 +398,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.6,
     reviews: 134
   },
-
   // CLOUD & INFRASTRUCTURE SERVICES
   {
     id: 'multi-cloud-orchestration-platform',
@@ -453,7 +449,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.7,
     reviews: 156
   },
-
   // DATA ANALYTICS & BUSINESS INTELLIGENCE
   {
     id: 'real-time-business-intelligence-platform',
@@ -505,7 +500,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.8,
     reviews: 289
   },
-
   // DIGITAL MARKETING & AUTOMATION
   {
     id: 'ai-powered-marketing-automation-suite',
@@ -557,7 +551,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.7,
     reviews: 445
   },
-
   // E-COMMERCE & RETAIL SOLUTIONS
   {
     id: 'ai-powered-ecommerce-optimization-platform',
@@ -609,7 +602,6 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     rating: 4.6,
     reviews: 312
   },
-
   // EDUCATION & LEARNING TECHNOLOGY
   {
     id: 'ai-powered-personalized-learning-platform',
@@ -660,27 +652,25 @@ export const cuttingEdgeComprehensiveServices2027: CuttingEdgeComprehensiveServi
     customers: 89,
     rating: 4.8,
     reviews: 167
-
 ];
-
 // Helper functions for service management
 export const getServiceById = (id: string) => {;
   return cuttingEdgeComprehensiveServices2027.find(service => service.id === id);
 };
-
 export const getServicesByCategory = (category: string) => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => service.category === category);
 };
-
 export const getPopularServices = () => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => service.popular);
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export const getServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return cuttingEdgeComprehensiveServices2027.filter(service => {;
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice})};
-
 export const searchServices = (query: string) => {;
   const lowercaseQuery = query.toLowerCase();
   return cuttingEdgeComprehensiveServices2027.filter(service = > ;
@@ -690,5 +680,8 @@ export const searchServices = (query: string) => {;
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
   );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default cuttingEdgeComprehensiveServices2027;}}

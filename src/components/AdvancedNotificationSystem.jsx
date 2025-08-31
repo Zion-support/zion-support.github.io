@@ -12,6 +12,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isArchived: false,
             { label: 'View Details', action: () => // // // // // // // console.log('View project'), variant: 'primary' },
             { label: 'Archive', action: () => // // // // // // // console.log('Archive'), variant: 'secondary' }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         actions[
             { label: 'View Details', action: () => console.log('View project'), variant: 'primary' },
             { label: 'Archive', action: () => console.log('Archive'), variant: 'secondary' }
@@ -29,6 +33,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isArchived: false,
             { label: 'Review Activity', action: () => // // // // // // // console.log('Review security'), variant: 'primary' },
             { label: 'Dismiss', action: () => // // // // // // // console.log('Dismiss'), variant: 'secondary' }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         actions[
             { label: 'Review Activity', action: () => console.log('Review security'), variant: 'primary' },
             { label: 'Dismiss', action: () => console.log('Dismiss'), variant: 'secondary' }
@@ -46,6 +54,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isArchived: false,
             { label: 'Investigate', action: () => // // // // // // // console.log('Investigate'), variant: 'primary' },
             { label: 'Acknowledge', action: () => // // // // // // // console.log('Acknowledge'), variant: 'secondary' }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         actions[
             { label: 'Investigate', action: () => console.log('Investigate'), variant: 'primary' },
             { label: 'Acknowledge', action: () => console.log('Acknowledge'), variant: 'secondary' }
@@ -63,6 +75,10 @@ import { Bell, X, CheckCircle, AlertTriangle, Info, XCircle, Search, Trash2, Eye
         isArchived: false,
             { label: 'Deploy Now', action: () => // // // // // // // console.log('Deploy'), variant: 'primary' },
             { label: 'Schedule', action: () => // // // // // // // console.log('Schedule'), variant: 'secondary' }
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
         actions[
             { label: 'Deploy Now', action: () => console.log('Deploy'), variant: 'primary' },
             { label: 'Schedule', action: () => console.log('Schedule'), variant: 'secondary' }

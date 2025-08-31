@@ -1,8 +1,6 @@
 import React from 'react.ts'
 import { Link  } from 'react-router-dom.ts'
 import { FileText, Shield, Users, ArrowRight, CheckCircle, AlertTriangle  } from 'lucide-react'
-
-
 export default function Terms(...args[]):  {
 	return (
 		<>
@@ -19,7 +17,6 @@ export default function Terms(...args[]):  {
 					</div>
 				</div>
 			</section>
-
 			{/* Content */}
 			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-4xl px-6 lg:px-8">
@@ -33,7 +30,6 @@ export default function Terms(...args[]):  {
 								If you do not agree to abide by the above, please do not use this service.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">2. Description of Service</h2>
 							<p className="text-gray-600 mb-4">
@@ -62,7 +58,6 @@ export default function Terms(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">3. Use License</h2>
 							<p className="text-gray-600 mb-4">
@@ -87,7 +82,6 @@ export default function Terms(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">4. Client Responsibilities</h2>
 							<p className="text-gray-600 mb-4">
@@ -116,7 +110,6 @@ export default function Terms(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">5. Payment Terms</h2>
 							<p className="text-gray-600 mb-4">
@@ -141,7 +134,6 @@ export default function Terms(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">6. Intellectual Property</h2>
 							<p className="text-gray-600 mb-4">
@@ -166,7 +158,6 @@ export default function Terms(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">7. Limitation of Liability</h2>
 							<p className="text-gray-600 mb-4">
@@ -176,7 +167,6 @@ export default function Terms(...args[]):  {
 								Our total liability shall not exceed the amount paid by you for the specific service in question.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">8. Confidentiality</h2>
 							<p className="text-gray-600 mb-4">
@@ -204,7 +194,6 @@ export default function Terms(...args[]):  {
 								This obligation survives the termination of our business relationship.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">9. Termination</h2>
 							<p className="text-gray-600 mb-4">
@@ -225,28 +214,24 @@ export default function Terms(...args[]):  {
 								</li>
 							</ul>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">10. Governing Law</h2>
 							<p className="text-gray-600">
 								These terms and conditions are governed by and construed in accordance with the laws of the State of California, and you irrevocably submit to the exclusive jurisdiction of the courts in that State or location.
 							</p>
 						</div>
-
 						<div className="mb-12">
 							<h2 className="text-2xl font-bold text-gray-900 mb-6">11. Changes to Terms</h2>
 							<p className="text-gray-600">
 								Zion Tech Group reserves the right to revise these terms of service at  time without notice. By using this website, you are agreeing to be bound by the then current version of these Terms and Conditions of Use.
 							</p>
 						</div>
-
 						<div className="text-center text-sm text-gray-500">
 							<p>Last Updated: January 15, 2025</p>
 						</div>
 					</div>
 				</div>
 			</section>
-
 			{/* CTA */}
 			<section className="py-16 bg-gray-50">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8 text-center">
@@ -259,7 +244,6 @@ export default function Terms(...args[]):  {
 					<Link
 						to="/contact"
 						className="inline-flex items-center rounded-md bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-blue-700 transition-colors"
-
 						Contact Us
 						<ArrowRight className="ml-2 h-4 w-4" />
 					</Link>;

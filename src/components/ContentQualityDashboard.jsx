@@ -56,6 +56,10 @@ const ContentQualityDashboard = ({ className = '' }) => {
         }
         finally {
             setIsLoading(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
                     images['/images/contact-office.jpg'],
                     links['/services', '/about', '/team']
                 }

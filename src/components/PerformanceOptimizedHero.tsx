@@ -48,6 +48,10 @@ const PerformanceOptimizedHero: React.FC<HeroProps> = ({
     return () => clearInterval(interval);
   }, [features.length]);
     // // // // // // // console.log('Hero CTA clicked');
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
   const handleCTAClick = useCallback(() => {;
     // Analytics tracking could be added here;
     console.log('Hero CTA clicked');

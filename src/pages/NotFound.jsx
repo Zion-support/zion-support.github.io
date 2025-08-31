@@ -7,50 +7,20 @@ const NotFound = () => {
         <motion.div initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition={{ duration: 0.8 }}>
           {/* 404 Number */}
           <motion.div initial = {
   { opacity: 0,
   scale: 0.5 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }} transition = {
   { duration: 1,
   delay: 0.2 
-
-
-
-
-
-
 }} className="text-9xl md:text-[12rem] font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mb-8">
             404
           </motion.div>
@@ -58,65 +28,43 @@ const NotFound = () => {
           <motion.h1 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }} className="text-4xl md:text-6xl font-bold text-white mb-6">
             Page Not Found
           </motion.h1>
+<<<<<<< HEAD
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }} className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
             The page you're looking for doesn't exist or has been moved.
+=======
+          <motion.p initial = {
+  { opacity: 0,
+  y: 30 
+}} animate = {
+  { opacity: 1,
+  y: 0 
+}} transition = {
+  { duration: 0.8,
+  delay: 0.6 
+}} className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            The page you're looking for doesn't exist or has been moved. 
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             Let's get you back on track to exploring our amazing services.
           </motion.p>
           {/* Navigation Options */}
           <motion.div initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.8,
   delay: 0.8 
-
-
-
-
-
-
 }} className="space-y-6 mb-16">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <Link to="/" className="group bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105">
@@ -152,30 +100,12 @@ const NotFound = () => {
           <motion.div initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }} animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }} transition = {
   { duration: 0.8,
   delay: 1 
-
-
-
-
-
-
 }} className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link to="/" className="inline-flex items-center px-10 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg">
               <svg className="mr-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,12 +124,6 @@ const NotFound = () => {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {
   { duration: 0.8,
   delay: 1.2 
-
-
-
-
-
-
 }} className="mt-16 p-6 bg-white/5 rounded-2xl border border-white/10">
             <h3 className="text-xl font-semibold text-white mb-4">
               Still Can't Find What You're Looking For?

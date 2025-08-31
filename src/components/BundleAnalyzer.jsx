@@ -86,6 +86,10 @@ import { BarChart3, AlertTriangle, CheckCircle, Info, HardDrive, Zap, Target, X,
         }
         finally {
             setIsAnalyzing(false);
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
             setAnalysis(mockAnalysis)}
         catch (error) {
             console.error('Bundle analysis failed:', error)}

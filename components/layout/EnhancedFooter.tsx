@@ -22,17 +22,16 @@ import { Twitter,
   Lock,
   Award
  } from 'lucide-react';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const footerNavigation = {
   services: {
 		title: 'Services',
 		items: [
 			{ name: 'AI Solutions',
   href: '/services/ai-solutions' 
-
-
-
-
 },
 			{ name: 'Cloud & DevOps', href: '/services/cloud' },
 			{ name: 'Cybersecurity', href: '/services/cybersecurity' },
@@ -80,7 +79,6 @@ const footerNavigation = {
 		],;
 	},;
 };
-
 const socialLinks = [;
 	{ name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },;
 	{ name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group/', icon: Linkedin },;
@@ -88,19 +86,24 @@ const socialLinks = [;
 	{ name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },;
 	{ name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },;
 ];
-
 const quickLinks = [;
 	{ name: 'Request Quote', href: '/request-quote', icon: Zap },;
 	{ name: 'Security', href: '/security', icon: Shield },;
 	{ name: 'Compliance', href: '/compliance', icon: Award },;
 	{ name: 'Status', href: '/status', icon: Cloud },;
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 const EnhancedFooter: React.FC = () => {;
 	const scrollToTop = () => {;
 		window.scrollTo({ top: 0, behavior: 'smooth' });
 	};
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 	return (
 		<footer className = "bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden">
 			{/* Background decorative elements */}
@@ -109,7 +112,6 @@ const EnhancedFooter: React.FC = () => {;
 				<div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
 				<div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
 			</div>
-
 			<div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 				{/* Main Footer Content */}
 				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
@@ -132,7 +134,6 @@ const EnhancedFooter: React.FC = () => {;
 							Leading provider of AI autonomous systems, cloud-native platforms, and 
 							zero-trust cybersecurity solutions that drive measurable business outcomes.
 						</p>
-
 						{/* Contact info */}
 						<div className="space-y-3 mb-6">
 							<div className="flex items-center gap-3 text-zion-slate-light">
@@ -148,7 +149,6 @@ const EnhancedFooter: React.FC = () => {;
 								<span className="text-sm">364 E Main St STE 1008, Middletown, DE 19709</span>
 							</div>
 						</div>
-
 						{/* Social media */}
 						<div className="flex space-x-4">
 							{socialLinks.map(({ name, href, icon: Icon })  => (
@@ -160,13 +160,11 @@ const EnhancedFooter: React.FC = () => {;
 									className="text-zion-slate-light hover:text-zion-cyan transition-colors p-2 hover:bg-zion-cyan/10 rounded-full"
 									aria-label={name}
 									title={name}
-
 									<Icon className="h-5 w-5" aria-label={name} />
 								</a>
 							))}
 						</div>
 					</div>
-
 					{/* Navigation Sections */}
 					{Object.entries(footerNavigation).map(([key, section]) => (
 						<div key={key}>
@@ -177,7 +175,6 @@ const EnhancedFooter: React.FC = () => {;
 										<Link 
 											href={item.href} 
 											className="text-zion-slate-light hover:text-zion-cyan transition-colors text-sm hover:translate-x-1 inline-block"
-
 											{item.name}
 										</Link>
 									</li>
@@ -186,7 +183,6 @@ const EnhancedFooter: React.FC = () => {;
 						</div>
 					))}
 				</div>
-
 				{/* Quick Links Section */}
 				<div className="py-8 border-t border-zion-blue-light mb-8">
 					<div className="grid grid-cols-2 md: grid-cols-4 gap-6">
@@ -195,7 +191,6 @@ const EnhancedFooter: React.FC = () => {;
 								key={link.name}
 								href={link.href}
 								className="flex items-center gap-3 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all duration-300 group"
-
 								<div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center">
 									<link.icon className="w-5 h-5 text-white" />
 								</div>
@@ -221,7 +216,6 @@ const EnhancedFooter: React.FC = () => {;
 								<span className="text-xs">Live</span>
 							</div>
 						</div>
-
 						<div className="flex items-center gap-6">
 							<Link href="/privacy" className="text-zion-slate-light hover:text-zion-cyan text-sm transition-colors">
 								Privacy Policy
@@ -236,14 +230,12 @@ const EnhancedFooter: React.FC = () => {;
 								Accessibility
 							</Link>
 						</div>
-
 						<div className="flex items-center space-x-2 text-zion-slate-light text-sm">
 							<span>Made with</span>
 							<Heart className="w-4 h-4 text-red-400 animate-pulse" />
 							<span>for the future of technology</span>
 						</div>
 					</div>
-
 					{/* Additional Links */}
 					<div className="flex flex-wrap items-center justify-center space-x-6 mt-6 text-zion-slate-light text-sm">
 						<Link href="/sitemap" className="hover:text-zion-cyan transition-colors duration-200">
@@ -254,7 +246,6 @@ const EnhancedFooter: React.FC = () => {;
 							target="_blank" 
 							rel="noopener noreferrer" 
 							className="hover:text-zion-cyan transition-colors duration-200 flex items-center space-x-1"
-
 							<Globe className="w-4 h-4" />
 							<span>Main Website</span>
 						</a>
@@ -267,7 +258,6 @@ const EnhancedFooter: React.FC = () => {;
 					</div>
 				</div>
 			</div>
-
 			{/* Scroll to top button */}
 			<button
 				onClick={scrollToTop}
@@ -279,6 +269,9 @@ const EnhancedFooter: React.FC = () => {;
 		</footer>;
 	);
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-04d7
 export default EnhancedFooter;
 }

@@ -973,5 +973,4 @@ export const ultimateRealMicroSaasServices2025: UltimateRealMicroSaasService[] =
     customers: 170,
     rating: 4.6,
     reviews: 66
-
 ];}}
