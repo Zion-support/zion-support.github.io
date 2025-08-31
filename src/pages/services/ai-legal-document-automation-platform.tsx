@@ -1,214 +1,177 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { 
-  FileText, Scale, Brain, Zap, CheckCircle, 
-  BarChart3, Users, Eye, Settings, Download, 
-  Play, MessageCircle, HelpCircle, BookOpen, Award, 
-  Rocket, Phone, Mail, MapPin, Clock, DollarSign, 
-  Activity, PieChart, LineChart, Star, ArrowRight,
-  Shield, Lock, Search, Target, TrendingUp, Workflow, Building
+  FileText, 
+  Shield, 
+  Zap, 
+  Users, 
+  CheckCircle, 
+  ArrowRight,
+  Scale,
+  Clock,
+  DollarSign,
+  Star,
+  Award,
+  Globe,
+  Lock,
+  BarChart3,
+  Target,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin
 } from 'lucide-react';
 
-export default function AILegalDocumentAutomationPlatform() {
-  const [activeTab, setActiveTab] = useState('overview');
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
+const AILegalDocumentAutomationPlatform = () => {
   const features = [
     {
-      title: "AI Document Generation",
-      description: "Generate legal documents in seconds using AI that understands legal requirements and jurisdiction-specific laws",
-      icon: Brain,
-      color: "from-purple-500 to-indigo-500"
+      icon: <FileText className="w-6 h-6" />,
+      title: "Smart Document Analysis",
+      description: "AI-powered analysis of legal documents with 99.9% accuracy for contract review, compliance checking, and risk assessment."
     },
     {
-      title: "Smart Contract Analysis",
-      description: "AI-powered contract review that identifies risks, missing clauses, and suggests improvements",
-      icon: Scale,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
+      icon: <Shield className="w-6 h-6" />,
       title: "Compliance Automation",
-      description: "Automatically ensure documents comply with current laws and regulations across jurisdictions",
-      icon: Shield,
-      color: "from-green-500 to-emerald-500"
+      description: "Automated compliance checking against regulatory frameworks including GDPR, SOX, HIPAA, and industry-specific requirements."
     },
     {
-      title: "Document Comparison",
-      description: "AI-powered document comparison that highlights differences and tracks version changes",
-      icon: Search,
-      color: "from-orange-500 to-red-500"
+      icon: <Zap className="w-6 h-6" />,
+      title: "Contract Generation",
+      description: "Intelligent contract generation with customizable templates, clause libraries, and automated negotiation support."
     },
     {
-      title: "Legal Research Assistant",
-      description: "AI that researches case law, statutes, and regulations to support document creation",
-      icon: BookOpen,
-      color: "from-pink-500 to-rose-500"
+      icon: <Users className="w-6 h-6" />,
+      title: "Collaborative Workflow",
+      description: "Multi-user collaboration with role-based access control, approval workflows, and audit trails."
     },
     {
-      title: "Workflow Automation",
-      description: "Automate legal document workflows with intelligent routing and approval processes",
-      icon: Workflow,
-      color: "from-indigo-500 to-blue-500"
+      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Risk Assessment",
+      description: "AI-powered risk identification and scoring for contracts, legal documents, and business agreements."
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics on document processing, compliance status, and legal risk metrics."
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Solo Practitioner",
+      name: "Starter",
       price: "$299",
       period: "/month",
-      description: "Perfect for individual lawyers",
+      description: "Perfect for small law firms and solo practitioners",
       features: [
         "Up to 100 documents/month",
-        "Basic AI generation",
+        "Basic AI analysis",
         "Standard templates",
         "Email support",
-        "Basic compliance checks",
-        "Document storage (10GB)"
+        "Basic compliance checking"
       ],
-      popular: false,
-      color: "from-gray-500 to-gray-600"
+      popular: false
     },
     {
-      name: "Law Firm",
+      name: "Professional",
       price: "$799",
       period: "/month",
-      description: "Ideal for small to medium firms",
+      description: "Ideal for growing law firms and legal departments",
       features: [
-        "Up to 1,000 documents/month",
-        "Advanced AI algorithms",
+        "Up to 500 documents/month",
+        "Advanced AI analysis",
         "Custom templates",
         "Priority support",
-        "Advanced compliance",
-        "Team collaboration",
-        "API access"
+        "Full compliance suite",
+        "Risk assessment tools",
+        "Collaborative workflows"
       ],
-      popular: true,
-      color: "from-blue-500 to-purple-600"
+      popular: true
     },
     {
       name: "Enterprise",
       price: "$1,999",
       period: "/month",
-      description: "For large law firms and corporations",
+      description: "For large law firms and corporate legal departments",
       features: [
         "Unlimited documents",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced analytics",
-        "Dedicated support",
+        "Enterprise AI models",
         "Custom integrations",
-        "Multi-jurisdiction support"
+        "Dedicated support",
+        "Advanced analytics",
+        "API access",
+        "White-label options",
+        "Custom training"
       ],
-      popular: false,
-      color: "from-purple-500 to-indigo-600"
+      popular: false
     }
   ];
 
   const benefits = [
     {
-      title: "Save 80% Time",
-      description: "AI automation reduces document creation time from hours to minutes",
-      icon: Clock,
-      metric: "80%"
+      icon: <Clock className="w-8 h-8" />,
+      title: "90% Time Savings",
+      description: "Reduce document review time from hours to minutes with AI automation"
     },
     {
-      title: "Reduce Errors",
-      description: "AI validation reduces legal document errors by 95%",
-      icon: Shield,
-      metric: "95%"
+      icon: <DollarSign className="w-8 h-8" />,
+      title: "Cost Reduction",
+      description: "Cut legal document processing costs by up to 70%"
     },
     {
-      title: "Lower Costs",
-      description: "Reduce legal document preparation costs by 60-70%",
-      icon: DollarSign,
-      metric: "60-70%"
+      icon: <Shield className="w-8 h-8" />,
+      title: "Risk Mitigation",
+      description: "Identify and prevent legal risks before they become issues"
     },
     {
-      title: "24/7 Availability",
-      description: "Generate documents anytime, anywhere with cloud-based access",
-      icon: Eye,
-      metric: "24/7"
-    }
-  ];
-
-  const documentTypes = [
-    {
-      title: "Contracts & Agreements",
-      description: "Generate, review, and analyze contracts with AI-powered risk assessment",
-      icon: FileText,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Legal Forms",
-      description: "Create court forms, applications, and legal documents automatically",
-      icon: Scale,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Corporate Documents",
-      description: "Generate corporate resolutions, bylaws, and governance documents",
-      icon: Building,
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "Compliance Documents",
-      description: "Create regulatory filings and compliance documentation",
-      icon: Shield,
-      color: "from-orange-500 to-red-500"
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Scalability",
+      description: "Handle increasing document volumes without proportional cost increases"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
-      <section className="relative pt-20 pb-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-indigo-900/20"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-medium mb-6">
-              <FileText className="w-4 h-4" />
-              AI Legal Automation
+            <div className="flex items-center justify-center mb-6">
+              <Scale className="w-12 h-12 text-blue-500 mr-3" />
+              <h1 className="text-4xl md:text-6xl font-bold text-white">
+                AI Legal Document
+                <span className="text-blue-500 block">Automation Platform</span>
+              </h1>
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              AI-Powered Legal
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                Document Platform
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Transform your legal practice with AI that generates, reviews, and optimizes legal documents 
-              in seconds. Reduce errors, save time, and focus on what matters most - your clients.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Transform your legal practice with AI-powered document automation. 
+              Generate, analyze, and manage legal documents with unprecedented speed and accuracy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-              <button
-                onClick={() => setIsVideoPlaying(true)}
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
+                Get Started Today
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="inline-flex items-center px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:border-blue-500 transition-colors"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Watch Demo
-              </button>
+                Call +1 302 464 0950
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -216,33 +179,27 @@ export default function AILegalDocumentAutomationPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced AI Features for
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                Legal Excellence
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Powerful Features for Modern Legal Practice
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Our AI platform combines legal expertise with cutting-edge technology to revolutionize 
-              how legal documents are created, reviewed, and managed.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI platform combines cutting-edge technology with legal expertise to deliver unmatched document automation capabilities.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zion-blue-dark border border-purple-500/30 rounded-2xl p-8 hover:border-purple-400/50 transition-all duration-300"
+                className="bg-slate-800 p-6 rounded-lg border border-slate-700 hover:border-blue-500 transition-colors"
               >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                <div className="text-blue-500 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -250,8 +207,8 @@ export default function AILegalDocumentAutomationPlatform() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -259,72 +216,27 @@ export default function AILegalDocumentAutomationPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Transform Your Practice
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Platform?
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Join thousands of legal professionals who have revolutionized their practice with our AI platform.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Experience the future of legal document management with measurable results and proven ROI.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
-                key={benefit.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                </div>
-                <div className="text-4xl font-bold text-purple-400 mb-2">{benefit.metric}</div>
+                <div className="text-blue-500 mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Document Types Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Comprehensive
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                Document Coverage
-              </span>
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              From simple contracts to complex corporate documents, our AI handles every type of legal document.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {documentTypes.map((docType, index) => (
-              <motion.div
-                key={docType.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-zion-blue-dark border border-purple-500/30 rounded-2xl p-8 text-center hover:border-purple-400/50 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${docType.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
-                  <docType.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{docType.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{docType.description}</p>
+                <p className="text-gray-300">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -332,8 +244,8 @@ export default function AILegalDocumentAutomationPlatform() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 bg-zion-blue-dark/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -341,34 +253,31 @@ export default function AILegalDocumentAutomationPlatform() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Simple, Transparent
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-                Pricing
-              </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing Plans
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your practice size and scale as you grow.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Choose the plan that fits your practice size and needs. All plans include our core AI capabilities.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
-                key={plan.name}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-zion-blue-dark border rounded-2xl p-8 ${
+                className={`relative bg-slate-800 p-8 rounded-lg border ${
                   plan.popular 
-                    ? 'border-purple-500 scale-105' 
-                    : 'border-gray-600'
+                    ? 'border-blue-500 ring-2 ring-blue-500/20' 
+                    : 'border-slate-700'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -376,33 +285,32 @@ export default function AILegalDocumentAutomationPlatform() {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
+                  <p className="text-gray-300 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                  <p className="text-gray-400">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      {feature}
+                <ul className="space-y-3 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Link
-                  to="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                <a
+                  href="https://ziontechgroup.com/contact"
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white hover:from-purple-600 hover:to-blue-600'
-                      : 'border-2 border-gray-600 text-gray-300 hover:border-purple-500 hover:text-purple-400'
+                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-slate-700 text-white hover:bg-slate-600'
                   }`}
                 >
                   Get Started
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -410,34 +318,33 @@ export default function AILegalDocumentAutomationPlatform() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/30 via-blue-900/30 to-indigo-900/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-blue-700">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Legal Practice?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of legal professionals who have revolutionized their practice with our AI-powered platform.
+            <p className="text-xl text-blue-100 mb-8">
+              Join thousands of legal professionals who have already automated their document workflows.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300"
+              <a
+                href="https://ziontechgroup.com/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
               <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300"
+                href="mailto:kleber@ziontechgroup.com"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Us
+                Schedule Demo
               </a>
             </div>
           </motion.div>
@@ -445,34 +352,37 @@ export default function AILegalDocumentAutomationPlatform() {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 bg-zion-blue-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors">
-                +1 302 464 0950
-              </a>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <Phone className="w-8 h-8 text-blue-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Phone</h3>
+                <p className="text-gray-300">+1 302 464 0950</p>
+              </div>
+              <div>
+                <Mail className="w-8 h-8 text-blue-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
+                <p className="text-gray-300">kleber@ziontechgroup.com</p>
+              </div>
+              <div>
+                <MapPin className="w-8 h-8 text-blue-500 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
+                <p className="text-gray-300">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
             </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors">
-                kleber@ziontechgroup.com
-              </a>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-purple-400 mb-4" />
-              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-gray-300">
-                364 E Main St STE 1008<br />
-                Middletown DE 19709
-              </p>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-}
+};
+
+export default AILegalDocumentAutomationPlatform;
