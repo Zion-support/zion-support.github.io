@@ -359,6 +359,22 @@ const ServicesPreviewSection = React.memo(() => {
       features: ["AI Sales Copilot", "Compliance Assistant", "FinOps Optimizer", "BI Dashboard", "Support Automation", "Project Management", "Marketing Automation"]
     },
     {
+      icon: BarChart3,
+      title: "AI BI Suite",
+      description: "Comprehensive business intelligence platform with AI-powered analytics",
+      href: "/services/ai-business-intelligence-suite",
+      color: "from-blue-500 to-indigo-500",
+      features: ["AI Analytics", "Interactive Dashboards", "Predictive Analytics", "Data Integration", "Enterprise Security"]
+    },
+    {
+      icon: Network,
+      title: "Supply Chain AI",
+      description: "End-to-end supply chain optimization with AI-powered insights",
+      href: "/services/ai-supply-chain-optimization-platform",
+      color: "from-green-500 to-emerald-500",
+      features: ["Demand Forecasting", "End-to-End Visibility", "Route Optimization", "Risk Management", "Real-time Monitoring"]
+    },
+    {
       icon: Zap,
       title: "Quantum AI",
       description: "Next-generation quantum computing and AI integration",

@@ -55,10 +55,13 @@ export function Footer() {
         { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform" },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform" },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence" },
+        { name: "AI BI Suite", href: "/services/ai-business-intelligence-suite" },
         { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-platform" },
         { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant" },
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform" },
         { name: "AI Healthcare", href: "/services/ai-healthcare-platform" },
+        { name: "Supply Chain Platform", href: "/services/ai-supply-chain-optimization-platform" },
+        { name: "Services Overview", href: "/comprehensive-services-overview" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" }
       ]

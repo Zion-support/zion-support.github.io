@@ -6,16 +6,17 @@ const Pricing = () => {
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$19",
+      price: "$99",
       period: "/month",
-      description: "Perfect for individuals and small teams getting started with AI tools",
+      description: "Perfect for small businesses starting their AI journey",
       features: [
-        "AI Content Generation (100 credits/month)",
-        "Basic AI Image Editing",
-        "AI Meeting Assistant (5 hours/month)",
+        "AI Content Generation (500 credits/month)",
+        "Basic AI Analytics",
+        "AI Meeting Assistant (10 hours/month)",
         "Email Support",
         "Basic Analytics Dashboard",
-        "Mobile App Access"
+        "Mobile App Access",
+        "2 AI Services Included"
       ],
       popular: false,
       cta: "Start Free Trial",
@@ -23,20 +24,22 @@ const Pricing = () => {
     },
     {
       name: "Professional",
-      price: "$49",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing businesses and professional teams",
+      description: "Ideal for growing businesses with advanced AI needs",
       features: [
         "Everything in Starter",
-        "AI Content Generation (500 credits/month)",
-        "Advanced AI Image & Video Editing",
-        "AI Code Assistant (Basic)",
-        "AI Meeting Assistant (20 hours/month)",
-        "AI Translation (10 languages)",
+        "AI Content Generation (2000 credits/month)",
+        "Advanced AI Analytics & BI",
+        "AI Code Assistant (Advanced)",
+        "AI Meeting Assistant (50 hours/month)",
+        "AI Translation (25 languages)",
         "Priority Support",
-        "Advanced Analytics",
-        "API Access (1000 calls/month)",
-        "Team Collaboration Tools"
+        "Advanced Analytics Dashboard",
+        "API Access (5000 calls/month)",
+        "Team Collaboration Tools",
+        "5 AI Services Included",
+        "Custom Integrations"
       ],
       popular: true,
       cta: "Start Free Trial",
@@ -44,14 +47,16 @@ const Pricing = () => {
     },
     {
       name: "Business",
-      price: "$99",
+      price: "$799",
       period: "/month",
       description: "Comprehensive solution for established businesses",
       features: [
         "Everything in Professional",
-        "AI Content Generation (2000 credits/month)",
+        "AI Content Generation (5000 credits/month)",
         "AI Code Assistant (Advanced)",
         "AI Data Analytics Platform",
+        "AI Business Intelligence Suite",
+        "AI Supply Chain Optimization",
         "AI Threat Detection",
         "Multi-Cloud Management",
         "AI-Powered CRM",
@@ -60,8 +65,9 @@ const Pricing = () => {
         "AI Translation (100+ languages)",
         "24/7 Support",
         "Custom Integrations",
-        "API Access (10000 calls/month)",
-        "Advanced Security Features"
+        "API Access (25000 calls/month)",
+        "Advanced Security Features",
+        "10 AI Services Included"
       ],
       popular: false,
       cta: "Start Free Trial",
@@ -82,11 +88,14 @@ const Pricing = () => {
         "AI Legal Document Review",
         "AI Financial Advisor",
         "AI Healthcare Assistant",
+        "AI Business Intelligence Suite (Custom)",
+        "AI Supply Chain Platform (Custom)",
         "Dedicated Account Manager",
         "Custom Development",
         "On-Premise Deployment",
         "SLA Guarantees",
-        "Compliance Certifications"
+        "Compliance Certifications",
+        "Unlimited AI Services"
       ],
       popular: false,
       cta: "Contact Sales",
@@ -204,6 +213,77 @@ const Pricing = () => {
                   }`}
                 >
                   {tier.cta}
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Individual Service Pricing Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-3xl md:text-4xl font-bold text-white text-center mb-16"
+          >
+            Individual Service Pricing
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                name: "AI Business Intelligence Suite",
+                price: "$299",
+                period: "/month",
+                description: "Comprehensive BI platform with AI-powered analytics",
+                features: ["AI-powered analytics", "Interactive dashboards", "Predictive analytics", "Data integration", "Enterprise security", "Automated reporting"]
+              },
+              {
+                name: "AI Supply Chain Platform",
+                price: "$499",
+                period: "/month",
+                description: "End-to-end supply chain optimization with AI",
+                features: ["AI demand forecasting", "End-to-end visibility", "Automated optimization", "Predictive analytics", "Supply chain security", "Real-time monitoring"]
+              },
+              {
+                name: "AI Enterprise Automation",
+                price: "$399",
+                period: "/month",
+                description: "Complete business process automation platform",
+                features: ["Process automation", "Workflow orchestration", "AI decision making", "Integration hub", "Performance analytics", "Custom workflows"]
+              }
+            ].map((service, index) => (
+              <motion.div
+                key={service.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-gray-800/50 border border-gray-700 rounded-xl p-6 hover:bg-gray-800/70 transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold text-white mb-4">{service.name}</h3>
+                <div className="mb-4">
+                  <span className="text-3xl font-bold text-white">{service.price}</span>
+                  <span className="text-lg text-gray-400 ml-1">{service.period}</span>
+                </div>
+                <p className="text-gray-300 text-sm mb-6">{service.description}</p>
+                <ul className="space-y-3 mb-6">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start text-gray-300 text-sm">
+                      <Check className="w-4 h-4 text-cyan-400 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href="/contact"
+                  className="block w-full text-center py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300"
+                >
+                  Get Started
                 </a>
               </motion.div>
             ))}

@@ -110,6 +110,13 @@ const AIQuantumComputingSolutions = createLazyComponent(() => import('./pages/se
 const AIContentCreationStudio = createLazyComponent(() => import('./pages/services/ai-content-creation-studio'));
 const EdgeComputingSolutions = createLazyComponent(() => import('./pages/services/edge-computing-solutions'));
 
+// New Innovative Services 2025 - Enhanced
+const AIBusinessIntelligenceSuite = createLazyComponent(() => import('./pages/services/ai-business-intelligence-suite'));
+const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
+
+// Comprehensive Services Overview
+const ComprehensiveServicesOverview = createLazyComponent(() => import('./pages/ComprehensiveServicesOverview'));
+
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-business-operations-platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
@@ -277,6 +284,13 @@ function App() {
                     <Route path="/services/ai-quantum-computing-solutions" element={<AIQuantumComputingSolutions />} />
                     <Route path="/services/ai-content-creation-studio" element={<AIContentCreationStudio />} />
                     <Route path="/services/edge-computing-solutions" element={<EdgeComputingSolutions />} />
+
+                    {/* New Innovative Services 2025 - Enhanced */}
+                    <Route path="/services/ai-business-intelligence-suite" element={<ModernLayout><AIBusinessIntelligenceSuite /></ModernLayout>} />
+                    <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+
+                    {/* Comprehensive Services Overview */}
+                    <Route path="/comprehensive-services-overview" element={<ModernLayout><ComprehensiveServicesOverview /></ModernLayout>} />
 
                     {/* New Innovative AI Services 2025 - From remote version */}
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
