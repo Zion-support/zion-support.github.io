@@ -18,6 +18,7 @@ import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -423,6 +424,9 @@ function App() {
 
           {/* Smart Notification System */}
           <SmartNotificationSystem />
+
+          {/* Performance Monitor */}
+          <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'} />
         </div>
       </ErrorBoundary>
     </HelmetProvider>

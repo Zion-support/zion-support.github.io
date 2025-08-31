@@ -1,6 +1,7 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import {
   Users,
   TrendingUp,
@@ -107,7 +108,10 @@ const HeroSection = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0.3]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      aria-label="Hero section - Future of Technology"
+    >
       <FuturisticBackground />
       
       <motion.div 
@@ -143,17 +147,19 @@ const HeroSection = () => {
           <Link
             to="/services"
             className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
+            aria-label="Explore our technology services"
           >
             Explore Services
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
           </Link>
           
           <Link
             to="/contact"
             className="group border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center gap-2"
+            aria-label="Contact us to get started"
           >
             Get Started
-            <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+            <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform" aria-hidden="true" />
           </Link>
         </motion.div>
 
@@ -161,18 +167,20 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex justify-center items-center gap-8 text-gray-400"
+          className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 text-gray-400"
+          role="list"
+          aria-label="Key features"
         >
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-green-400" />
+          <div className="flex items-center gap-2" role="listitem">
+            <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" />
             <span>AI-Powered Solutions</span>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-green-400" />
+          <div className="flex items-center gap-2" role="listitem">
+            <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" />
             <span>Quantum Computing</span>
           </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-green-400" />
+          <div className="flex items-center gap-2" role="listitem">
+            <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" />
             <span>24/7 Support</span>
           </div>
         </motion.div>
@@ -184,6 +192,7 @@ const HeroSection = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.6 }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        aria-label="Scroll indicator"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -251,7 +260,10 @@ const StatsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-transparent to-zion-slate-dark/50">
+    <section 
+      className="py-20 bg-gradient-to-b from-transparent to-zion-slate-dark/50"
+      aria-label="Company statistics and achievements"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -259,6 +271,7 @@ const StatsSection = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8"
+          role="list"
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -268,11 +281,12 @@ const StatsSection = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="text-center group"
+              role="listitem"
             >
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="w-8 h-8 text-cyan-400" />
+                <stat.icon className="w-8 h-8 text-cyan-400" aria-hidden="true" />
               </div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-white mb-2" aria-label={`${stat.label}: ${stat.value}${stat.suffix}`}>
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
@@ -332,7 +346,10 @@ const ServicesPreviewSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-zion-slate-dark/30">
+    <section 
+      className="py-20 bg-zion-slate-dark/30"
+      aria-label="Our technology services"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -349,7 +366,7 @@ const ServicesPreviewSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -358,19 +375,21 @@ const ServicesPreviewSection = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="group"
+              role="listitem"
             >
               <Link
                 to={service.link}
                 className="block bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105"
+                aria-label={`Learn more about ${service.title} - ${service.description}`}
               >
                 <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                  <service.icon className="w-8 h-8 text-white" />
+                  <service.icon className="w-8 h-8 text-white" aria-hidden="true" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                   <span className="font-semibold">Learn More</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </div>
               </Link>
             </motion.div>
@@ -423,7 +442,10 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-zion-slate-dark/30 to-transparent">
+    <section 
+      className="py-20 bg-gradient-to-b from-zion-slate-dark/30 to-transparent"
+      aria-label="Why choose Zion Tech Group"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -440,7 +462,7 @@ const WhyChooseUsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" role="list">
           {reasons.map((reason, index) => (
             <motion.div
               key={reason.title}
@@ -449,9 +471,10 @@ const WhyChooseUsSection = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="text-center group"
+              role="listitem"
             >
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                <reason.icon className="w-10 h-10 text-cyan-400" />
+                <reason.icon className="w-10 h-10 text-cyan-400" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-white mb-4">{reason.title}</h3>
               <p className="text-gray-300 leading-relaxed">{reason.description}</p>
@@ -466,7 +489,10 @@ const WhyChooseUsSection = () => {
 // CTA Section
 const CTASection = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10">
+    <section 
+      className="py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10"
+      aria-label="Call to action - Transform your business"
+    >
       <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -485,17 +511,19 @@ const CTASection = () => {
             <Link
               to="/contact"
               className="group bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center gap-2"
+              aria-label="Contact us to start your transformation journey"
             >
               Start Your Journey
-              <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+              <Rocket className="w-5 h-5 group-hover:rotate-12 transition-transform" aria-hidden="true" />
             </Link>
             
             <Link
               to="/case-studies"
               className="group border-2 border-white/30 hover:border-white/60 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-white/10 backdrop-blur-sm flex items-center gap-2"
+              aria-label="View our success stories and case studies"
             >
               View Case Studies
-              <FileText className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <FileText className="w-5 h-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
             </Link>
           </div>
         </motion.div>
@@ -508,6 +536,21 @@ const CTASection = () => {
 const Home = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Zion Tech - Leading the Future of Technology</title>
+        <meta name="description" content="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology with Zion Tech Group." />
+        <meta name="keywords" content="Zion Tech, AI solutions, Quantum Computing, Cloud Services, Cybersecurity, Data Analytics, Digital Transformation" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta property="og:title" content="Zion Tech - Leading the Future of Technology" />
+        <meta property="og:description" content="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology with Zion Tech Group." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:image" content="https://ziontechgroup.com/logo.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech - Leading the Future of Technology" />
+        <meta name="twitter:description" content="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology with Zion Tech Group." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/logo.png" />
+      </Helmet>
       <HeroSection />
       <StatsSection />
       <ServicesPreviewSection />
