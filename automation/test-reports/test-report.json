@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-08-31T12:46:23.820Z",
+  "timestamp": "2025-08-31T12:50:27.486Z",
   "summary": {
     "total": 6,
     "passed": 4,
@@ -20,11 +20,11 @@
     },
     "performance": {
       "status": "failure",
-      "results": "Command failed: npm run build\nnpm error Missing script: \"build\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/miami2/.npm/_logs/2025-08-31T12_46_19_005Z-debug-0.log\n"
+      "results": "Command failed: npm run build\nnpm error Missing script: \"build\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/miami2/.npm/_logs/2025-08-31T12_50_22_542Z-debug-0.log\n"
     },
     "accessibility": {
       "status": "success",
-      "results": "Lint check failed: Command failed: npm run lint\nnpm error Missing script: \"lint\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm link # Symlink a package folder\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/miami2/.npm/_logs/2025-08-31T12_46_20_541Z-debug-0.log\n"
+      "results": "Lint check failed: Command failed: npm run lint\nnpm error Missing script: \"lint\"\nnpm error\nnpm error Did you mean this?\nnpm error   npm link # Symlink a package folder\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /Users/miami2/.npm/_logs/2025-08-31T12_50_23_918Z-debug-0.log\n"
     },
     "coverage": {
       "status": "success",
