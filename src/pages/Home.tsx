@@ -59,7 +59,9 @@ import {
   CheckCircle2,
   Clock3,
   Target2,
-  Building2
+  Building2,
+  Edit3,
+  TrendingDown
 } from 'lucide-react';
 import { SEO } from "@/components/SEO";
 
@@ -381,6 +383,30 @@ const ServicesSection = () => {
       href: "/services/ai-real-estate-investment-analytics-platform",
       color: "from-orange-500 to-red-500",
       features: ["Market Analysis", "Investment Modeling", "ROI Optimization", "Risk Assessment"]
+    },
+    {
+      icon: Edit3,
+      title: "AI Content Optimizer Pro",
+      description: "AI-powered content optimization platform for maximum engagement and SEO performance",
+      href: "/services/ai-content-optimizer-pro",
+      color: "from-green-500 to-blue-500",
+      features: ["Content Analysis", "SEO Optimization", "Engagement Analytics", "Performance Tracking"]
+    },
+    {
+      icon: TrendingDown,
+      title: "AI Customer Churn Predictor",
+      description: "Predict and prevent customer churn with AI-powered analytics and proactive retention strategies",
+      href: "/services/ai-powered-customer-churn-predictor",
+      color: "from-red-500 to-purple-500",
+      features: ["Churn Prediction", "Risk Scoring", "Retention Strategies", "Customer Insights"]
+    },
+    {
+      icon: Cpu,
+      title: "AI IoT Edge Computing",
+      description: "Next-generation AI-powered IoT edge computing platform for real-time data processing and analytics",
+      href: "/services/ai-iot-edge-computing-platform",
+      color: "from-cyan-500 to-indigo-500",
+      features: ["Edge Computing", "IoT Management", "Real-time Analytics", "AI Processing"]
     }
   ];
 

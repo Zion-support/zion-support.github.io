@@ -118,6 +118,9 @@ const AIAutonomousSupplyChainIntelligence = createLazyComponent(() => import('./
 const AIAutonomousCybersecurityIntelligence = createLazyComponent(() => import('./pages/services/ai-autonomous-cybersecurity-intelligence'));
 // New Innovative Micro SAAS Services 2026
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
+const AIPoweredCustomerChurnPredictor = createLazyComponent(() => import('./pages/services/ai-powered-customer-churn-predictor'));
+const AIContentOptimizerPro = createLazyComponent(() => import('./pages/services/ai-content-optimizer-pro'));
+const AIIoTEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/ai-iot-edge-computing-platform'));
 
 // New Innovative Services 2026 - Additional
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-experience-analytics-platform'));
@@ -336,6 +339,8 @@ function App() {
                     <Route path="/services/ai-healthcare-analytics-platform" element={<ModernLayout><AIHealthcareAnalyticsPlatform /></ModernLayout>} />
                     <Route path="/services/ai-financial-risk-management-platform" element={<ModernLayout><AIFinancialRiskManagementPlatform /></ModernLayout>} />
                     <Route path="/services/ai-supply-chain-optimization-platform" element={<ModernLayout><AISupplyChainOptimizationPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-content-optimizer-pro" element={<ModernLayout><AIContentOptimizerPro /></ModernLayout>} />
+                    <Route path="/services/ai-iot-edge-computing-platform" element={<ModernLayout><AIIoTEdgeComputingPlatform /></ModernLayout>} />
 
                     {/* New Innovative Services 2025 - Additional */}
                     <Route path="/services/ai-enterprise-workflow-automation" element={<ModernLayout><AIEnterpriseWorkflowAutomation /></ModernLayout>} />
@@ -425,7 +430,7 @@ function App() {
                     <Route path="/services/ai-autonomous-cybersecurity-intelligence" element={<ModernLayout><AIAutonomousCybersecurityIntelligence /></ModernLayout>} />
 
                     {/* New Innovative Micro SAAS Services 2026 */}
-                    <Route path="/services/ai-powered-customer-churn-predictor" element={<AIPoweredCustomerChurnPredictor />} />
+                    <Route path="/services/ai-powered-customer-churn-predictor" element={<ModernLayout><AIPoweredCustomerChurnPredictor /></ModernLayout>} />
 
                     {/* Solution Routes */}
                     <Route path="/solutions/healthcare" element={<HealthcareSolutions />} />

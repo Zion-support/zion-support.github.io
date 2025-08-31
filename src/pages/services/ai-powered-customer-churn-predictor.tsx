@@ -1,587 +1,444 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  Brain, 
-  TrendingUp, 
+  TrendingDown, 
   Users, 
   BarChart3, 
+  Brain, 
   Shield, 
   Zap, 
   CheckCircle, 
-  Star, 
   ArrowRight, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  DollarSign, 
-  Clock, 
-  Rocket, 
-  Award, 
-  Globe, 
-  Cpu, 
-  Database, 
-  Network, 
-  Activity, 
-  Eye, 
-  Search, 
-  Settings, 
-  MessageCircle,
-  FileText,
-  ShoppingCart,
-  Building2,
-  Lightbulb,
-  Code,
-  Monitor,
-  Smartphone,
-  Wifi,
-  Palette,
-  Coins,
-  Satellite,
-  Handshake,
-  BookOpen,
-  Video,
-  GraduationCap,
-  HelpCircle,
-  ShoppingCart as ShoppingCartIcon,
+  Star,
+  Clock,
+  DollarSign,
   Target,
-  Workflow,
+  Activity,
+  AlertTriangle,
+  Lightbulb,
+  Database,
+  Cpu,
+  Globe,
   Lock,
-  Cloud,
-  Server,
-  Atom,
-  Leaf,
-  Gamepad2
+  MessageCircle
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-const AIPoweredCustomerChurnPredictor: React.FC = () => {
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'
-  };
-
+const AIPoweredCustomerChurnPredictor = () => {
   const features = [
-    'Real-time churn risk scoring with 95% accuracy',
-    'Advanced behavioral pattern analysis using machine learning',
-    'Predictive analytics dashboard with customizable metrics',
-    'Automated retention campaigns and intervention triggers',
-    'Customer lifetime value prediction and optimization',
-    'Integration with major CRM systems (Salesforce, HubSpot, etc.)',
-    'Custom alert thresholds and notification system',
-    'ROI tracking and comprehensive reporting suite',
-    'Multi-channel customer interaction analysis',
-    'A/B testing for retention strategies'
-  ];
-
-  const benefits = [
-    'Reduce customer churn by up to 40%',
-    'Increase customer lifetime value by 25-35%',
-    'Optimize retention spend with data-driven insights',
-    'Improve customer satisfaction scores',
-    'Enable proactive customer success strategies',
-    'Reduce customer acquisition costs',
-    'Enhance brand loyalty and reputation',
-    'Data-driven decision making for business growth'
-  ];
-
-  const useCases = [
-    'SaaS subscription businesses',
-    'E-commerce platforms and marketplaces',
-    'Financial services and banking',
-    'Telecommunications providers',
-    'Healthcare and wellness services',
-    'Subscription box services',
-    'Online education platforms',
-    'Digital media and entertainment'
-  ];
-
-  const pricingTiers = [
     {
-      name: 'Starter',
-      price: '$299',
-      billing: 'month',
-      description: 'Perfect for small businesses starting their churn prevention journey',
-      features: [
-        'Up to 10,000 customer profiles',
-        'Basic churn risk scoring',
-        'Standard behavioral analysis',
-        'Email support',
-        'Basic reporting dashboard',
-        'CRM integration (1 platform)'
-      ],
-      benefits: [
-        'Early churn detection',
-        'Basic retention insights',
-        'Customer behavior understanding',
-        'Reduced churn rates'
-      ],
-      bestFor: [
-        'Small businesses (1-50 employees)',
-        'Startups and early-stage companies',
-        'Local service providers'
-      ]
+      icon: Brain,
+      title: "AI-Powered Predictive Analytics",
+      description: "Advanced machine learning algorithms that analyze customer behavior patterns to predict churn risk with 95%+ accuracy."
     },
     {
-      name: 'Professional',
-      price: '$599',
-      billing: 'month',
-      description: 'Advanced features for growing businesses with complex customer bases',
-      features: [
-        'Up to 100,000 customer profiles',
-        'Advanced churn risk scoring',
-        'Comprehensive behavioral analysis',
-        'Automated retention campaigns',
-        'Priority support',
-        'Advanced analytics and reporting',
-        'Multi-CRM integration',
-        'Custom alert thresholds',
-        'A/B testing capabilities',
-        'API access'
-      ],
-      benefits: [
-        'Comprehensive churn prevention',
-        'Automated retention strategies',
-        'Advanced customer insights',
-        'Scalable customer success operations'
-      ],
-      bestFor: [
-        'Medium businesses (51-200 employees)',
-        'Growing SaaS companies',
-        'E-commerce businesses'
-      ],
-      popular: true
+      icon: BarChart3,
+      title: "Real-time Risk Scoring",
+      description: "Continuous monitoring and scoring of customer churn risk with real-time alerts and actionable insights."
     },
     {
-      name: 'Enterprise',
-      price: '$1,299',
-      billing: 'month',
-      description: 'Complete solution for large enterprises with complex customer ecosystems',
-      features: [
-        'Unlimited customer profiles',
-        'Enterprise-grade churn prediction',
-        'Custom machine learning models',
-        'Advanced retention automation',
-        'Dedicated success manager',
-        'Custom integrations and APIs',
-        'Advanced security and compliance',
-        'Multi-tenant architecture',
-        'White-label solutions',
-        '24/7 priority support'
-      ],
-      benefits: [
-        'Enterprise-grade churn prevention',
-        'Custom AI models for your business',
-        'Full automation and scalability',
-        'Dedicated support and consultation'
-      ],
-      bestFor: [
-        'Large enterprises (200+ employees)',
-        'Multi-national corporations',
-        'High-growth technology companies'
-      ]
+      icon: Users,
+      title: "Customer Segmentation",
+      description: "Intelligent segmentation based on behavior, demographics, and engagement patterns for targeted retention strategies."
+    },
+    {
+      icon: Target,
+      title: "Proactive Intervention",
+      description: "Automated triggers and recommendations for customer success teams to prevent churn before it happens."
+    },
+    {
+      icon: Activity,
+      title: "Behavioral Analysis",
+      description: "Deep analysis of customer interactions, usage patterns, and satisfaction indicators to identify early warning signs."
+    },
+    {
+      icon: Shield,
+      title: "Data Security & Privacy",
+      description: "Enterprise-grade security with GDPR compliance and SOC 2 Type II certification for data protection."
     }
   ];
 
-  const technology = [
-    'Machine Learning & AI',
-    'Python & TensorFlow',
-    'React & Node.js',
-    'Real-time Data Processing',
-    'Advanced Analytics Engine',
-    'Cloud-native Architecture'
+  const benefits = [
+    "Reduce customer churn by up to 40%",
+    "Increase customer lifetime value by 25%",
+    "Improve customer retention rates by 35%",
+    "Save up to $500K annually in customer acquisition costs",
+    "Boost customer satisfaction scores by 30%",
+    "Enable data-driven retention strategies"
   ];
 
-  const integrations = [
-    'Salesforce CRM',
-    'HubSpot CRM',
-    'Stripe Payment Processing',
-    'Shopify E-commerce',
-    'Zapier Automation',
-    'Custom API Integrations'
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299",
+      period: "/month",
+      description: "Perfect for small businesses and startups",
+      features: [
+        "Up to 1,000 customers",
+        "Basic churn prediction models",
+        "Email alerts",
+        "Standard reporting",
+        "Email support"
+      ],
+      cta: "Start Free Trial",
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$799",
+      period: "/month",
+      description: "Ideal for growing businesses",
+      features: [
+        "Up to 10,000 customers",
+        "Advanced ML models",
+        "Real-time alerts",
+        "Custom dashboards",
+        "Priority support",
+        "API access"
+      ],
+      cta: "Start Free Trial",
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "$1,999",
+      period: "/month",
+      description: "For large organizations with complex needs",
+      features: [
+        "Unlimited customers",
+        "Custom ML models",
+        "White-label solution",
+        "Dedicated support",
+        "Advanced analytics",
+        "Custom integrations"
+      ],
+      cta: "Contact Sales",
+      popular: false
+    }
   ];
 
-  const targetAudience = [
-    'Growth-stage SaaS companies',
-    'E-commerce businesses',
-    'Customer success teams',
-    'Business intelligence analysts',
-    'Product managers',
-    'Marketing teams'
+  const useCases = [
+    {
+      title: "SaaS Companies",
+      description: "Predict subscription cancellations and implement retention strategies for recurring revenue businesses.",
+      icon: Cpu
+    },
+    {
+      title: "E-commerce",
+      description: "Identify at-risk customers and personalize retention campaigns to reduce cart abandonment.",
+      icon: ShoppingCart
+    },
+    {
+      title: "Financial Services",
+      description: "Monitor account activity patterns to predict customer attrition and implement proactive engagement.",
+      icon: DollarSign
+    },
+    {
+      title: "Healthcare",
+      description: "Track patient engagement and predict potential disengagement for better care outcomes.",
+      icon: Heart
+    }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 mb-6">
-              <Brain className="w-10 h-10 text-white" />
+      <section className="relative pt-20 pb-16 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm font-medium mb-8">
+              <TrendingDown className="w-4 h-4 mr-2" />
+              AI-Powered Customer Retention
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI-Powered Customer Churn Predictor
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              AI-Powered Customer
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                Churn Predictor
+              </span>
             </h1>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Advanced machine learning platform that predicts customer churn with 95% accuracy, 
-              enabling proactive retention strategies and revenue protection.
+            
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Transform your customer retention strategy with AI that predicts churn before it happens. 
+              Our advanced machine learning platform analyzes customer behavior patterns to identify 
+              at-risk customers and provides actionable insights to prevent churn.
             </p>
             
-            {/* Market Comparison */}
-            <div className="inline-flex items-center gap-4 bg-slate-800/50 rounded-lg p-4 border border-slate-700">
-              <div className="text-center">
-                <p className="text-sm text-gray-400">Market Average</p>
-                <p className="text-2xl font-bold text-gray-300 line-through">$800</p>
-              </div>
-              <div className="text-center">
-                <p className="text-sm text-gray-400">Our Price</p>
-                <p className="text-2xl font-bold text-cyan-400">$299</p>
-              </div>
-              <div className="text-center">
-                <p className="text-sm text-gray-400">You Save</p>
-                <p className="text-2xl font-bold text-green-400">63%</p>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-blue-400 border-2 border-blue-400 hover:bg-blue-400 hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              </Link>
             </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-            >
-              <Rocket className="w-5 h-5 mr-2" />
-              Start Free Trial
-            </Link>
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Request Demo
-            </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Features
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Advanced Features for Customer Retention
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform provides comprehensive churn prediction and prevention 
-              capabilities designed for modern businesses.
+              Our AI-powered platform combines cutting-edge machine learning with intuitive analytics 
+              to give you unprecedented insights into customer behavior and churn risk.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="flex items-start space-x-4 p-6 bg-slate-800/50 rounded-lg border border-slate-700">
-                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">
-                  <CheckCircle className="w-5 h-5 text-white" />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/30 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-blue-400" />
                 </div>
-                <div>
-                  <p className="text-white font-medium">{feature}</p>
-                </div>
-              </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Business Benefits
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Transform Your Customer Retention
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your customer retention strategy with data-driven insights and 
-              automated intervention capabilities.
+              Join hundreds of companies that have revolutionized their customer retention 
+              strategies with our AI-powered churn prediction platform.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 bg-slate-800/50 rounded-lg border border-slate-700">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 mb-6">
-                  <Star className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3">{benefit}</h3>
-              </div>
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect For
+      <section className="py-20 bg-slate-800/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Perfect for Every Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform is designed to serve businesses across various industries 
-              that value customer retention and growth.
+              Our AI-powered churn prediction platform adapts to your industry's unique 
+              challenges and customer behavior patterns.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
-              <div key={index} className="p-6 bg-slate-800/50 rounded-lg border border-slate-700 text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 mb-4">
-                  <Target className="w-6 h-6 text-white" />
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center p-6 bg-slate-700/30 rounded-xl border border-slate-600/30 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2"
+              >
+                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <useCase.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <p className="text-white font-medium">{useCase}</p>
-              </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{useCase.description}</p>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Pricing Plans
+      <section className="py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that best fits your business needs and scale as you grow.
+              Choose the plan that fits your business needs. All plans include a 14-day free trial 
+              with full access to all features.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {pricingTiers.map((tier) => (
-              <div
-                key={tier.name}
-                className={`relative overflow-hidden rounded-2xl border ${
-                  tier.popular 
-                    ? 'border-cyan-500 bg-gradient-to-br from-slate-800 to-slate-900' 
-                    : 'border-slate-700 bg-gradient-to-br from-slate-800 to-slate-900'
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingPlans.map((plan, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative p-8 rounded-2xl border-2 transition-all duration-300 hover:-translate-y-2 ${
+                  plan.popular 
+                    ? 'border-blue-500 bg-slate-700/80 shadow-2xl shadow-blue-500/25' 
+                    : 'border-slate-600 bg-slate-700/50 hover:border-blue-500/50'
                 }`}
               >
-                {tier.popular && (
-                  <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-center py-2 text-sm font-semibold">
-                    Most Popular
+                {plan.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
                   </div>
                 )}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
-                  <p className="text-gray-300 mb-6">{tier.description}</p>
-                  
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold text-white">{tier.price}</span>
-                    <span className="text-gray-400">/{tier.billing}</span>
+
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-
-                  <ul className="space-y-3 mb-8">
-                    {tier.features.map((feature, index) => (
-                      <li key={index} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Benefits</h4>
-                    <ul className="space-y-2">
-                      {tier.benefits.map((benefit, index) => (
-                        <li key={index} className="flex items-center text-gray-300 text-sm">
-                          <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Best For</h4>
-                    <ul className="space-y-2">
-                      {tier.bestFor.map((audience, index) => (
-                        <li key={index} className="flex items-center text-gray-300 text-sm">
-                          <Users className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                          <span>{audience}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <Link
-                    to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
-                      tier.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-600 hover:to-blue-600'
-                        : 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white'
-                    }`}
-                  >
-                    Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
                 </div>
-              </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span className="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to={plan.cta === "Contact Sales" ? "/contact" : "/signup"}
+                  className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                      : 'bg-slate-600 hover:bg-slate-500 text-white'
+                  }`}
+                >
+                  {plan.cta}
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technology & Integration Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Technology Stack
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Built with cutting-edge technologies to ensure scalability, 
-                performance, and reliability.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {technology.map((tech, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded-lg border border-slate-700">
-                    <Code className="w-5 h-5 text-cyan-400" />
-                    <span className="text-white">{tech}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Integrations
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Seamlessly integrate with your existing tools and workflows 
-                for maximum efficiency.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {integrations.map((integration, index) => (
-                  <div key={index} className="flex items-center space-x-3 p-3 bg-slate-800/50 rounded-lg border border-slate-700">
-                    <Network className="w-5 h-5 text-green-400" />
-                    <span className="text-white">{integration}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Target Audience Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Who Should Use This?
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Customer Retention?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our platform is designed for businesses and teams that are serious 
-              about customer retention and growth.
+            <p className="text-xl text-gray-300 mb-8">
+              Join the companies that are already using AI to predict and prevent customer churn. 
+              Start your free trial today and see the difference AI can make.
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {targetAudience.map((audience, index) => (
-              <div key={index} className="text-center p-6 bg-slate-800/50 rounded-lg border border-slate-700">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-6">
-                  <Users className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-3">{audience}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ROI & Implementation Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="text-center p-8 bg-slate-800/50 rounded-lg border border-slate-700">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 mb-6">
-                <TrendingUp className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">ROI</h3>
-              <p className="text-3xl font-bold text-green-400 mb-2">300%</p>
-              <p className="text-gray-300">within 6 months</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                to="/contact"
+                className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-xl shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="group inline-flex items-center px-8 py-4 text-lg font-semibold text-blue-400 border-2 border-blue-400 hover:bg-blue-400 hover:text-white rounded-xl transition-all duration-300 hover:-translate-y-1"
+              >
+                Schedule Demo
+                <MessageCircle className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              </Link>
             </div>
-
-            <div className="text-center p-8 bg-slate-800/50 rounded-lg border border-slate-700">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 mb-6">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Implementation</h3>
-              <p className="text-3xl font-bold text-cyan-400 mb-2">2-3 weeks</p>
-              <p className="text-gray-300">to get started</p>
-            </div>
-
-            <div className="text-center p-8 bg-slate-800/50 rounded-lg border border-slate-700">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 mb-6">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Support</h3>
-              <p className="text-3xl font-bold text-purple-400 mb-2">24/7</p>
-              <p className="text-gray-300">technical support</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Predict and Prevent Customer Churn?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Contact us today to learn how our AI-powered churn prediction platform 
-            can help you retain more customers and grow your business.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div className="flex flex-col items-center">
-              <Phone className="w-8 h-8 text-cyan-400 mb-3" />
-              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <p className="text-gray-300">{contactInfo.mobile}</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Mail className="w-8 h-8 text-cyan-400 mb-3" />
-              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <p className="text-gray-300">{contactInfo.email}</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <MapPin className="w-8 h-8 text-cyan-400 mb-3" />
-              <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
-              <p className="text-gray-300 text-sm">{contactInfo.address}</p>
-            </div>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
-            >
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Start Free Trial
-            </Link>
-            <Link
-              to="/innovative-micro-saas-showcase-2026"
-              className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-300"
-            >
-              <Globe className="w-5 h-5 mr-2" />
-              View All Services
-            </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
 };
+
+// Missing icon component
+const ShoppingCart = ({ className }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 5M7 13l2.5 5m6-5v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6m6 0V9a2 2 0 00-2-2H9a2 2 0 00-2 2v4.01" />
+  </svg>
+);
+
+const Play = ({ className }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+);
+
+const Heart = ({ className }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+  </svg>
+);
 
 export default AIPoweredCustomerChurnPredictor;

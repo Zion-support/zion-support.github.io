@@ -62,7 +62,9 @@ import {
   Heart,
   Scale,
   Home,
-  BookOpen
+  BookOpen,
+  Edit3,
+  TrendingDown
 } from 'lucide-react';
 
 interface MainNavigationProps {
@@ -167,6 +169,24 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         <Link to="/services/ai-powered-seo" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
                           <Search className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
                           <span>AI-Powered SEO</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-content-optimizer-pro" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Edit3 className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Content Optimizer Pro</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-powered-customer-churn-predictor" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <TrendingDown className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI Customer Churn Predictor</span>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link to="/services/ai-iot-edge-computing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center group">
+                          <Cpu className="w-4 h-4 mr-3 group-hover:scale-110 transition-transform" />
+                          <span>AI IoT Edge Computing</span>
                         </Link>
                       </li>
                       <li>
@@ -676,6 +696,27 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       AI Real Estate Analytics
+                    </Link>
+                    <Link 
+                      to="/services/ai-content-optimizer-pro" 
+                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI Content Optimizer Pro
+                    </Link>
+                    <Link 
+                      to="/services/ai-powered-customer-churn-predictor" 
+                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI Customer Churn Predictor
+                    </Link>
+                    <Link 
+                      to="/services/ai-iot-edge-computing-platform" 
+                      className="block px-3 py-2 rounded-md text-sm text-muted-foreground hover:text-zion-cyan hover:bg-zion-cyan/5 transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      AI IoT Edge Computing
                     </Link>
                   </div>
                 )}

@@ -55,7 +55,9 @@ export function AppFooter() {
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
         { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
-        { name: "AI Autonomous Financial Advisor", href: "/services/ai-autonomous-financial-advisor-platform" }
+        { name: "AI Autonomous Financial Advisor", href: "/services/ai-autonomous-financial-advisor-platform" },
+        { name: "AI Customer Churn Predictor", href: "/services/ai-powered-customer-churn-predictor" },
+        { name: "AI Content Optimizer Pro", href: "/services/ai-content-optimizer-pro" }
       ]
     },
     {
@@ -86,7 +88,7 @@ export function AppFooter() {
         { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI Customer Churn Predictor", href: "/services/ai-powered-customer-churn-predictor" },
         { name: "AI HR Platform", href: "/services/ai-hr-platform" },
         { name: "AI HR Management", href: "/services/ai-hr-management-platform" },
         { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
