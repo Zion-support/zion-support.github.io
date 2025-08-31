@@ -75,7 +75,10 @@ export function Footer() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Zap },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform", icon: Database },
         { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: TrendingUp },
-        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow }
+        { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
+        { name: "AI Content Marketing Studio", href: "/services/ai-content-marketing-studio", icon: PenTool }
       ]
     },
     {

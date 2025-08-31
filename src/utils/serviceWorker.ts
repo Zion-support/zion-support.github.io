@@ -1,27 +1,27 @@
-export function registerServiceWorker() {
+// Service Worker Registration and Management
+export function registerServiceWorker(swUrl: string, isDev: boolean = false) {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-          
-          // Check for updates
-          registration.addEventListener('updatefound', () => {
-            const newWorker = registration.installing;
-            if (newWorker) {
-              newWorker.addEventListener('statechange', () => {
-                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                  // New content is available
-                  console.log('New content is available; please refresh.');
-                }
-              });
-            }
-          });
-        })
-        .catch((registrationError) => {
-          console.error('SW registration failed: ', registrationError);
+    console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
+    navigator.serviceWorker
+      .register(swUrl)
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+        // Handle updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available
+                console.log('New content is available; please refresh.');
+              }
+            });
+          }
         });
-    });
+      })
+      .catch((registrationError) => {
+        console.error('SW registration failed: ', registrationError);
+      });
   }
 }
 
@@ -70,13 +70,6 @@ self.addEventListener('install', (event: ExtendableEvent) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
-      .then(() => {
-        console.log('Service Worker installed successfully');
-        return self.skipWaiting();
-      })
-      .catch(error => {
-        console.error('Service Worker installation failed:', error);
-      })
   );
 });
 
@@ -92,9 +85,6 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
           }
         })
       );
-    }).then(() => {
-      console.log('Service Worker activated successfully');
-      return self.clients.claim();
     })
   );
 });
@@ -126,11 +116,35 @@ self.addEventListener('fetch', (event: FetchEvent) => {
   } else {
     event.respondWith(networkFirst(request, CACHE_NAME));
   }
+
+  // Handle API requests
+  if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
+    event.respondWith(
+      fetch(request).then(response => {
+        // Cache successful API responses
+        if (response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        // Return cached response if available
+        return caches.match(request);
+      })
+    );
+    return;
+  }
+
+  // Default behavior for other requests
+  event.respondWith(fetch(request));
 });
 
 // Helper functions
 function isStaticAsset(request: Request): boolean {
-  return STATIC_ASSETS.some(asset => request.url.includes(asset));
+  const url = new URL(request.url);
+  return STATIC_ASSETS.some(asset => url.pathname === asset);
 }
 
 function isImage(request: Request): boolean {
@@ -142,14 +156,16 @@ function isFont(request: Request): boolean {
 }
 
 function isAPIRequest(request: Request): boolean {
-  return API_ENDPOINTS.some(endpoint => request.url.includes(endpoint));
+  const url = new URL(request.url);
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
 }
 
 function isDynamicRoute(request: Request): boolean {
-  return DYNAMIC_ROUTES.some(route => request.url.includes(route));
+  const url = new URL(request.url);
+  return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route));
 }
 
-// Caching strategies
+// Cache strategies
 async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
@@ -165,12 +181,11 @@ async function cacheFirst(request: Request, cacheName: string): Promise<Response
     }
     return networkResponse;
   } catch (error) {
-    // Return offline page if available
-    const offlineResponse = await cache.match('/offline.html');
-    if (offlineResponse) {
-      return offlineResponse;
-    }
-    throw error;
+    // Return a fallback response if both cache and network fail
+    return new Response('Offline content not available', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
   }
 }
 
@@ -190,11 +205,98 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
       return cachedResponse;
     }
     
-    // Return offline page if available
-    const offlineResponse = await cache.match('/offline.html');
-    if (offlineResponse) {
-      return offlineResponse;
-    }
-    throw error;
+    // Return a fallback response if both network and cache fail
+    return new Response('Content not available offline', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
   }
 }
+// Helper functions to determine request type
+function isStaticAsset(request: Request): boolean {
+  const url = new URL(request.url);
+  return STATIC_ASSETS.some(asset => url.pathname === asset);
+}
+function isDynamicRoute(request: Request): boolean {
+  const url = new URL(request.url);
+  return DYNAMIC_ROUTES.some(route => url.pathname === route);
+}
+function isAPIRequest(request: Request): boolean {
+  const url = new URL(request.url);
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
+}
+function isImage(request: Request): boolean {
+  return request.destination === 'image';
+}
+function isFont(request: Request): boolean {
+  return request.destination === 'font';
+}
+// Background sync for offline actions
+self.addEventListener('sync', (event: SyncEvent) => {
+  console.log('Background sync triggered:', event.tag);
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+async function doBackgroundSync() {
+  try {
+    // Perform background sync operations
+    console.log('Performing background sync...');
+    // Example: Sync offline data
+    const offlineData = await getOfflineData();
+    if (offlineData.length > 0) {
+      await syncOfflineData(offlineData);
+    }
+    console.log('Background sync completed successfully');
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }
+}
+// Handle push notifications
+self.addEventListener('push', (event: PushEvent) => {
+  console.log('Push notification received:', event);
+  const options = {
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    }
+  };
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+// Handle notification clicks
+self.addEventListener('notificationclick', (event: NotificationEvent) => {
+  console.log('Notification clicked:', event);
+  event.notification.close();
+  if (event.action === 'explore') {
+    event.waitUntil(
+      clients.openWindow('/')
+    );
+  }
+});
+// Handle message events from main thread
+self.addEventListener('message', (event: ExtendableMessageEvent) => {
+  console.log('Message received in service worker:', event.data);
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+  if (event.data && event.data.type === 'GET_VERSION') {
+    event.ports[0].postMessage({ version: CACHE_NAME });
+  }
+});
+// Utility functions for offline data management
+async function getOfflineData(): Promise<any[]> {
+  // Implementation for retrieving offline data
+  return [];
+}
+async function syncOfflineData(data: any[]): Promise<void> {
+  // Implementation for syncing offline data
+  console.log('Syncing offline data:', data);
+}
+// Export for testing purposes
+export {};

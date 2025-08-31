@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const LinkHealthMonitor = () => {
+import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap } from 'lucide-react';
+
+const LinkHealthMonitor = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isMonitoring, setIsMonitoring] = useState(false);
     const [linkStatuses, setLinkStatuses] = useState([]);
@@ -77,6 +79,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             default:
                 return <RefreshCw className="w-4 h-4 text-yellow-400"/>}
     };
+
     const getStatusColor = (status) => {
         switch (status) {
             case 'healthy':
@@ -88,6 +91,7 @@ import { Link, ExternalLink, AlertTriangle, CheckCircle, RefreshCw, Zap const Li
             default:
                 return 'text-yellow-400'}
     };
+
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all')
             return true;
