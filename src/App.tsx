@@ -44,8 +44,14 @@ const AICybersecurity = createLazyComponent(() => import('./pages/services/AI-Cy
 const AIHealthcare = createLazyComponent(() => import('./pages/services/AI-Healthcare-Platform'));
 const AIQuantumHybridPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Hybrid-Platform'));
 
+// New Comprehensive Services 2025
+const AIBusinessIntelligencePlatform = createLazyComponent(() => import('./pages/services/ai-business-intelligence-platform'));
+const AICybersecurityThreatDetection = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-detection'));
+const AIDevOpsAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-devops-automation-platform'));
+
 // Showcase pages
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
+const AllServicesOverview = createLazyComponent(() => import('./pages/AllServicesOverview'));
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -119,8 +125,14 @@ function App() {
                     <Route path="/services/ai-healthcare-platform" element={<AIHealthcare />} />
                     <Route path="/services/ai-quantum-hybrid-platform" element={<AIQuantumHybridPlatform />} />
 
+                    {/* New Comprehensive Services 2025 */}
+                    <Route path="/services/ai-business-intelligence-platform" element={<AIBusinessIntelligencePlatform />} />
+                    <Route path="/services/ai-cybersecurity-threat-detection" element={<AICybersecurityThreatDetection />} />
+                    <Route path="/services/ai-devops-automation-platform" element={<AIDevOpsAutomationPlatform />} />
+
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ComprehensiveServicesShowcase2025 />} />
+                    <Route path="/all-services" element={<AllServicesOverview />} />
 
                     {/* 404 Page */}
                     <Route

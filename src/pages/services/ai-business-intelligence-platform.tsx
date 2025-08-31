@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  Cpu,
   Brain,
-  Zap,
-  Code,
-  Server,
-  Cloud,
-  Database,
-  Network,
+  BarChart3,
+  TrendingUp,
   Users,
+  Database,
+  Zap,
+  Shield,
+  Globe,
+  Target,
   CheckCircle,
   Star,
   ArrowRight,
@@ -19,12 +19,18 @@ import {
   MapPin,
   Clock,
   DollarSign,
+  PieChart,
+  LineChart,
+  ScatterChart,
   Activity,
-  BarChart3,
-  TrendingUp,
-  Target,
-  Globe,
+  Eye,
+  Lock,
+  Cloud,
+  Cpu,
+  Network,
   Smartphone,
+  Server,
+  Code,
   Palette,
   Settings,
   Bell,
@@ -83,10 +89,10 @@ import {
   UserPlus,
   UserMinus,
   Key,
-  Lock,
+  Lock as LockIcon,
   Unlock,
   EyeOff,
-  Eye,
+  Eye as EyeIcon,
   KeyRound,
   Fingerprint,
   Scan,
@@ -96,9 +102,9 @@ import {
   PiggyBank,
   TrendingDown,
   BarChart,
-  PieChart,
-  LineChart,
-  ScatterChart,
+  PieChart as PieChartIcon,
+  LineChart as LineChartIcon,
+  ScatterChart as ScatterChartIcon,
   AreaChart,
   CandlestickChart,
   GanttChart,
@@ -136,84 +142,83 @@ import {
   CalendarYear as CalendarYearIcon
 } from 'lucide-react';
 
-const AIDevOpsAutomationPlatform: React.FC = () => {
+const AIBusinessIntelligencePlatform: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
   const [selectedPlan, setSelectedPlan] = useState('professional');
 
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered CI/CD",
-      description: "Intelligent build and deployment automation that learns from your team's patterns and optimizes workflows"
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms that automatically identify patterns, trends, and insights from your data"
     },
     {
-      icon: Cpu,
-      title: "Infrastructure as Code",
-      description: "Automated infrastructure provisioning and management using AI-optimized Terraform and CloudFormation templates"
+      icon: BarChart3,
+      title: "Real-Time Dashboards",
+      description: "Interactive dashboards with live data updates and customizable widgets for instant business insights"
     },
     {
-      icon: Zap,
-      title: "Smart Testing Automation",
-      description: "AI-driven test case generation and execution that adapts to code changes and identifies critical test scenarios"
+      icon: TrendingUp,
+      title: "Predictive Analytics",
+      description: "Forecast future trends and outcomes using historical data and AI models"
     },
     {
-      icon: Server,
-      title: "Auto-Scaling & Monitoring",
-      description: "Intelligent resource scaling based on real-time demand analysis and predictive capacity planning"
+      icon: Users,
+      title: "User Behavior Analysis",
+      description: "Track and analyze user interactions to optimize customer experience and engagement"
     },
     {
       icon: Database,
-      title: "Database Automation",
-      description: "Automated database migrations, backups, and optimization using AI-powered schema analysis"
+      title: "Data Integration",
+      description: "Connect to multiple data sources including databases, APIs, and third-party services"
     },
     {
-      icon: Network,
-      title: "Security Automation",
-      description: "Automated security scanning, vulnerability assessment, and compliance checking throughout the CI/CD pipeline"
+      icon: Zap,
+      title: "Automated Reporting",
+      description: "Generate comprehensive reports automatically with AI-generated insights and recommendations"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small development teams",
+      description: "Perfect for small businesses getting started with BI",
       features: [
-        "Up to 10 developers",
-        "Basic CI/CD automation",
-        "GitHub/GitLab integration",
-        "Basic monitoring",
-        "Email support",
-        "Community templates"
+        "Up to 5 data sources",
+        "Basic AI analytics",
+        "5 customizable dashboards",
+        "Email reports",
+        "Basic support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$299",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for growing businesses with advanced analytics needs",
       features: [
-        "Up to 50 developers",
-        "Advanced AI automation",
-        "Multi-cloud support",
-        "Advanced monitoring",
-        "Priority support",
-        "Custom templates"
+        "Up to 20 data sources",
+        "Advanced AI analytics",
+        "Unlimited dashboards",
+        "Real-time alerts",
+        "API access",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
-      description: "For large organizations with complex DevOps needs",
+      description: "For large organizations requiring enterprise-grade BI solutions",
       features: [
-        "Unlimited developers",
+        "Unlimited data sources",
         "Custom AI models",
-        "On-premise deployment",
-        "Advanced analytics",
+        "Advanced security",
+        "White-label options",
         "Dedicated support",
         "Custom integrations"
       ],
@@ -222,26 +227,19 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
   ];
 
   const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 90% of manual configuration errors",
-    "Improve code quality with AI-powered testing",
-    "Reduce infrastructure costs by 40%",
-    "Achieve 99.9% deployment success rate",
-    "Scale DevOps processes without adding headcount"
-  ];
-
-  const automationMetrics = [
-    { metric: "80%", label: "Faster Deployments" },
-    { metric: "90%", label: "Error Reduction" },
-    { metric: "40%", label: "Cost Savings" },
-    { metric: "99.9%", label: "Success Rate" }
+    "Reduce manual reporting time by 80%",
+    "Improve decision-making with real-time insights",
+    "Identify new business opportunities through AI analysis",
+    "Optimize operations with predictive analytics",
+    "Enhance customer experience through behavioral insights",
+    "Scale analytics capabilities as your business grows"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Header */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-blue-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -249,21 +247,21 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-              <Cpu className="w-4 h-4 mr-2" />
-              AI-Powered DevOps Automation
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+              <Brain className="w-4 h-4 mr-2" />
+              AI-Powered Business Intelligence
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Automate Your DevOps with
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400"> Artificial Intelligence</span>
+              Transform Your Data Into
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Actionable Intelligence</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your development workflow with AI-powered automation that learns, adapts, and optimizes your entire DevOps pipeline.
+              Leverage the power of artificial intelligence to uncover hidden insights, predict trends, and make data-driven decisions that drive business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -277,26 +275,6 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
         </div>
       </div>
 
-      {/* Automation Metrics */}
-      <section className="py-16 bg-green-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {automationMetrics.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-green-400 mb-2">{item.metric}</div>
-                <div className="text-gray-300">{item.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,10 +285,10 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Powerful DevOps Automation Features
+              Powerful Features for Modern Business
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Everything you need to automate, optimize, and scale your development operations.
+              Everything you need to turn your data into strategic insights and competitive advantages.
             </p>
           </motion.div>
 
@@ -321,9 +299,9 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
@@ -344,10 +322,10 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Choose Your Automation Plan
+              Choose Your Plan
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Flexible pricing options designed to scale with your development team.
+              Flexible pricing options designed to scale with your business needs.
             </p>
           </motion.div>
 
@@ -360,13 +338,13 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`relative bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
+                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
                     : 'border-gray-700'
-                } hover:border-green-500/50 transition-all duration-300`}
+                } hover:border-blue-500/50 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -394,7 +372,7 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-200 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
+                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
                       : 'bg-gray-700 text-white hover:bg-gray-600'
                   }`}
                 >
@@ -416,10 +394,10 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our AI DevOps Platform?
+              Why Choose Our AI BI Platform?
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Discover the competitive advantages that our AI-powered DevOps automation delivers.
+              Discover the competitive advantages that our AI-powered business intelligence platform delivers.
             </p>
           </motion.div>
 
@@ -443,7 +421,7 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20">
+      <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -451,15 +429,15 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Automate Your DevOps?
+              Ready to Transform Your Business Intelligence?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of development teams already using AI to streamline their operations.
+              Join thousands of businesses already using AI to make smarter decisions and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -481,21 +459,21 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <Phone className="w-8 h-8 text-green-400 mx-auto mb-4" />
+              <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-gray-400 hover:text-green-400">
+              <a href="tel:+13024640950" className="text-gray-400 hover:text-blue-400">
                 +1 302 464 0950
               </a>
             </div>
             <div className="text-center">
-              <Mail className="w-8 h-8 text-green-400 mx-auto mb-4" />
+              <Mail className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-400 hover:text-green-400">
+              <a href="mailto:kleber@ziontechgroup.com" className="text-gray-400 hover:text-blue-400">
                 kleber@ziontechgroup.com
               </a>
             </div>
             <div className="text-center">
-              <MapPin className="w-8 h-8 text-green-400 mx-auto mb-4" />
+              <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-4" />
               <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
               <p className="text-gray-400">
                 364 E Main St STE 1008<br />
@@ -509,4 +487,4 @@ const AIDevOpsAutomationPlatform: React.FC = () => {
   );
 };
 
-export default AIDevOpsAutomationPlatform;
+export default AIBusinessIntelligencePlatform;
