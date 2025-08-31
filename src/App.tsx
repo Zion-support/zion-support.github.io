@@ -169,7 +169,6 @@ const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverv
 
 // Additional missing pages
 const Resources = createLazyComponent(() => import('./pages/Resources'));
-const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
 
 // About sub-pages
 const Team = createLazyComponent(() => import('./pages/about/Team'));
