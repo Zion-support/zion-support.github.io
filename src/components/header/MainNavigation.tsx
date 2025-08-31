@@ -140,10 +140,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
           <div 
             onMouseEnter={() => setIsServicesOpen(true)} 
             onMouseLeave={() => setIsServicesOpen(false)} 
-            className="absolute top-full left-0 mt-2 w-[800px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
+            className="absolute top-full left-0 mt-2 w-[900px] bg-zion-blue-dark border border-zion-purple/30 rounded-lg shadow-2xl shadow-zion-purple/20 z-50"
           >
             <div className="p-6">
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-4 gap-6">
                 {/* AI & Automation Services */}
                 <div>
                   <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
@@ -235,30 +235,6 @@ export function MainNavigation({ className }: MainNavigationProps) {
                         AI Content Studio
                       </Link>
                     </li>
-                    <li>
-                      <Link to="/services/ai-business-intelligence-dashboard" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <BarChart3 className="w-3 h-3 mr-2" />
-                        AI BI Dashboard
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/ai-customer-support-automation" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <MessageCircle className="w-3 h-3 mr-2" />
-                        AI Support Automation
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/ai-project-management-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <Workflow className="w-3 h-3 mr-2" />
-                        AI Project Management
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/services/ai-marketing-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
-                        <TrendingUp className="w-3 h-3 mr-2" />
-                        AI Marketing Automation
-                      </Link>
-                    </li>
                   </ul>
                 </div>
 
@@ -288,7 +264,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/services/quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                      <Link to="/services/ai-quantum-computing-solutions" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
                         <Atom className="w-3 h-3 mr-2" />
                         Quantum Computing
                       </Link>
@@ -383,11 +359,69 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     </li>
                   </ul>
                 </div>
+
+                {/* Emerging Technology Services */}
+                <div>
+                  <h4 className="text-zion-cyan font-semibold mb-4 flex items-center">
+                    <Rocket className="w-4 h-4 mr-2"/>
+                    Emerging Tech
+                  </h4>
+                  <ul className="space-y-3 text-sm">
+                    <li>
+                      <Link to="/services/space-tech" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Satellite className="w-3 h-3 mr-2" />
+                        Space Technology
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/sustainability" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Leaf className="w-3 h-3 mr-2" />
+                        Sustainability Solutions
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/green-it" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Leaf className="w-3 h-3 mr-2" />
+                        Green IT
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-technology" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Atom className="w-3 h-3 mr-2" />
+                        Quantum Technology
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-iot-edge-computing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Wifi className="w-3 h-3 mr-2" />
+                        AI IoT Edge Platform
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-devops-automation-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Workflow className="w-3 h-3 mr-2" />
+                        AI DevOps Automation
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-cybersecurity-suite" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <Shield className="w-3 h-3 mr-2" />
+                        AI Cybersecurity Suite
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/ai-content-optimizer-pro" className="text-zion-slate-light hover:text-zion-cyan transition-colors flex items-center">
+                        <PenTool className="w-3 h-3 mr-2" />
+                        AI Content Optimizer Pro
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
               
               {/* Bottom Links */}
               <div className="mt-6 pt-6 border-t border-zion-purple/20">
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-4 gap-4">
                   <Link to="/services" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                     View All Services
                     <TrendingUp className="w-4 h-4 ml-2"/>
@@ -399,6 +433,10 @@ export function MainNavigation({ className }: MainNavigationProps) {
                   <Link to="/comprehensive-services-showcase-2025" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
                     Comprehensive Showcase 2025
                     <Star className="w-4 h-4 ml-2"/>
+                  </Link>
+                  <Link to="/request-quote" className="text-zion-purple hover:text-zion-purple-light transition-colors text-sm font-medium flex items-center justify-center">
+                    Get Custom Quote
+                    <DollarSign className="w-4 h-4 ml-2"/>
                   </Link>
                 </div>
               </div>
@@ -504,9 +542,9 @@ export function MainNavigation({ className }: MainNavigationProps) {
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-zion-purple/20">
-                <Link to="/request-quote" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
-                  Get Custom Quote
-                  <TrendingUp className="w-4 h-4 ml-2"/>
+                <Link to="/enterprise" className="text-zion-cyan hover:text-zion-cyan-light transition-colors text-sm font-medium flex items-center justify-center">
+                  Enterprise Solutions
+                  <Building2 className="w-4 h-4 ml-2"/>
                 </Link>
               </div>
             </div>

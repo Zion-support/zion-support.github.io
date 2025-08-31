@@ -71,7 +71,7 @@ export function Footer() {
         { name: "Cloud & DevOps", href: "/services/cloud-devops" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
-        { name: "Quantum Computing", href: "/services/quantum-computing-solutions" },
+        { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions" },
         { name: "Edge Computing", href: "/services/edge-computing-solutions" },
         { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
         { name: "IoT & Edge Computing", href: "/services/iot-edge" },
@@ -154,11 +154,11 @@ export function Footer() {
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <Phone className="w-4 h-4" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (302) 464-0950</span>
               </div>
               <div className="flex items-center space-x-3 text-zinc-400">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
               </div>
             </div>
 
@@ -203,140 +203,53 @@ export function Footer() {
           ))}
         </div>
 
-        {/* Additional Resources Section */}
-        <div className="border-t border-zinc-800 pt-8 mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                <BookOpen className="w-4 h-4 mr-2" />
-                Resources
-              </h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link to="/white-papers" className="text-zinc-400 hover:text-white transition-colors">
-                    White Papers
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/webinars" className="text-zinc-400 hover:text-white transition-colors">
-                    Webinars
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/training" className="text-zinc-400 hover:text-white transition-colors">
-                    Training
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/research-development" className="text-zinc-400 hover:text-white transition-colors">
-                    Research & Development
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                <Shield className="w-4 h-4 mr-2" />
-                Legal & Compliance
-              </h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link to="/privacy" className="text-zinc-400 hover:text-white transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/terms" className="text-zinc-400 hover:text-white transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/cookies" className="text-zinc-400 hover:text-white transition-colors">
-                    Cookie Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/accessibility" className="text-zinc-400 hover:text-white transition-colors">
-                    Accessibility
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/security" className="text-zinc-400 hover:text-white transition-colors">
-                    Security
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/compliance" className="text-zinc-400 hover:text-white transition-colors">
-                    Compliance
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-zion-cyan font-semibold mb-3 flex items-center">
-                <Star className="w-4 h-4 mr-2" />
-                Innovation
-              </h4>
-              <ul className="space-y-2 text-sm">
-                <li>
-                  <Link to="/innovative-services-showcase-2026" className="text-zinc-400 hover:text-white transition-colors">
-                    Innovation Showcase 2026
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/comprehensive-services-showcase-2025" className="text-zinc-400 hover:text-white transition-colors">
-                    Comprehensive Showcase 2025
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/innovative-ai-services-showcase-2025" className="text-zinc-400 hover:text-white transition-colors">
-                    AI Services Showcase 2025
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/emerging-tech" className="text-zinc-400 hover:text-white transition-colors">
-                    Emerging Technology
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
         {/* Bottom Footer */}
         <div className="border-t border-zinc-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            {/* Copyright */}
-            <div className="text-zinc-400 text-sm">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-zinc-400 text-sm mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
-
+            
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
+            <div className="flex space-x-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-zinc-400 hover:text-white transition-colors"
+                  className="text-zinc-400 hover:text-zion-cyan transition-colors"
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
+          </div>
 
-            {/* Additional Quick Links */}
-            <div className="flex items-center space-x-6 text-sm">
+          {/* Legal Links */}
+          <div className="mt-6 pt-6 border-t border-zinc-800">
+            <div className="flex flex-wrap justify-center space-x-6 text-sm">
+              <Link to="/privacy" className="text-zinc-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-zinc-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-zinc-400 hover:text-white transition-colors">
+                Cookie Policy
+              </Link>
+              <Link to="/accessibility" className="text-zinc-400 hover:text-white transition-colors">
+                Accessibility
+              </Link>
+              <Link to="/security" className="text-zinc-400 hover:text-white transition-colors">
+                Security
+              </Link>
+              <Link to="/compliance" className="text-zinc-400 hover:text-white transition-colors">
+                Compliance
+              </Link>
               <Link to="/sitemap" className="text-zinc-400 hover:text-white transition-colors">
                 Sitemap
-              </Link>
-              <Link to="/help" className="text-zinc-400 hover:text-white transition-colors">
-                Support
-              </Link>
-              <Link to="/contact" className="text-zinc-400 hover:text-white transition-colors">
-                Contact
               </Link>
             </div>
           </div>
