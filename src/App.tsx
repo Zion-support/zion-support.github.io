@@ -484,6 +484,10 @@ function App() {
                     <Route path="/services/ai-customer-intelligence-platform" element={<AICustomerIntelligencePlatform />} />
                     <Route path="/services/ai-financial-trading-platform" element={<AIFinancialTradingPlatform />} />
 
+                    {/* Comprehensive Services Showcase 2026 */}
+                    <Route path="/comprehensive-services-showcase-2026" element={<ModernLayout><ComprehensiveServicesShowcase2026 /></ModernLayout>} />
+                    <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2026 /></ModernLayout>} />
+
                     {/* Showcase Routes */}
                     <Route path="/comprehensive-services-showcase-2025" element={<ModernLayout><ComprehensiveServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/innovative-ai-services-showcase-2025" element={<ModernLayout><InnovativeAIServicesShowcase2025 /></ModernLayout>} />

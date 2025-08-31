@@ -68,9 +68,11 @@ export function Footer() {
       title: "Core AI Services",
       icon: Brain,
       links: [
-        { name: "AI Enterprise Intelligence", href: "/services/ai-enterprise-intelligence-platform", icon: BarChart3 },
-        { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", icon: Settings },
-        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", icon: Users },
+        { name: "AI Autonomous Research Assistant", href: "/services/ai-autonomous-research-assistant", icon: Brain },
+        { name: "AI Cybersecurity Threat Intelligence", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
+        { name: "AI Healthcare Diagnostics Platform", href: "/services/ai-healthcare-diagnostics-platform", icon: Heart },
+        { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
+        { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
         { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Zap },
         { name: "AI Data Analytics", href: "/services/ai-data-analytics-platform", icon: Database },
@@ -83,7 +85,6 @@ export function Footer() {
         { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", icon: Factory },
         { name: "AI Quantum Neural Network", href: "/services/ai-quantum-neural-network-platform", icon: Atom },
         { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
-        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
         { name: "AI Customer Churn Predictor", href: "/services/ai-powered-customer-churn-predictor", icon: TrendingDown },
         { name: "AI Cybersecurity Platform", href: "/services/ai-cybersecurity-intelligence-platform", icon: Shield }
       ]
@@ -166,6 +167,7 @@ export function Footer() {
         { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
         { name: "Innovation Showcase 2032", href: "/innovative-services-showcase-2032", icon: Sparkles },
         { name: "Comprehensive Services 2025", href: "/comprehensive-services-showcase-2025", icon: Layers },
+        { name: "Comprehensive Services 2026", href: "/comprehensive-services-showcase-2026", icon: Rocket },
         { name: "Pricing Guide 2032", href: "/comprehensive-pricing-guide-2032", icon: DollarSign },
         { name: "All Services", href: "/services", icon: Layers },
         { name: "All Solutions", href: "/solutions", icon: Target },
@@ -194,6 +196,18 @@ export function Footer() {
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     website: 'https://ziontechgroup.com'
   };
+
+  const quickLinks = [
+    { name: "Get Started", href: "/contact", icon: Rocket },
+    { name: "Request Quote", href: "/contact", icon: TrendingUp },
+    { name: "Pricing Guide", href: "/pricing", icon: BarChart3 },
+    { name: "Comprehensive Services 2026", href: "/comprehensive-services-showcase-2026", icon: Star },
+    { name: "AI Research Assistant", href: "/services/ai-autonomous-research-assistant", icon: Brain },
+    { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
+    { name: "AI Healthcare", href: "/services/ai-healthcare-diagnostics-platform", icon: Heart },
+    { name: "All Services", href: "/services", icon: Zap },
+    { name: "Support Center", href: "/help", icon: HelpCircle }
+  ];
 
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -258,6 +272,38 @@ export function Footer() {
               and transformative digital experiences that empower businesses to achieve unprecedented growth.
             </p>
           </div>
+            
+            {/* Contact Info */}
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
+                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:underline">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400 hover:text-zion-cyan transition-colors group">
+                <div className="p-2 bg-zion-purple/20 rounded-lg group-hover:bg-zion-cyan/20 transition-colors">
+                  <Phone className="w-4 h-4" />
+                </div>
+                <a href="tel:+13024640950" className="hover:underline">
+                  +1 (302) 464-0950
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <div className="p-2 bg-zion-purple/20 rounded-lg">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+              <div className="flex items-center space-x-3 text-zinc-400">
+                <div className="p-2 bg-zion-purple/20 rounded-lg">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <span>Mon-Fri: 9:00 AM - 6:00 PM EST</span>
+              </div>
+            </div>
 
           {/* Footer Links Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 mb-12">

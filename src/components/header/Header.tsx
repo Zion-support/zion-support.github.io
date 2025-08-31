@@ -36,6 +36,9 @@ export function Header() {
                   Middletown, DE
                 </a>
               </div>
+              <div className="text-zion-slate-light hidden lg:block">
+                📍 <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
             </div>
             <div className="flex items-center space-x-4">
               <Link to="/help" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
