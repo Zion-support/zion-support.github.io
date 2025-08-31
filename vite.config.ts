@@ -5,29 +5,36 @@ import { resolve } from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-<<<<<<< HEAD
+  root: '.',
+  base: '/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
       '@components': resolve(__dirname, 'src/components'),
       '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
       '@utils': resolve(__dirname, 'src/utils'),
-      '@types': resolve(__dirname, 'src/types'),
       '@hooks': resolve(__dirname, 'src/hooks'),
-      '@services': resolve(__dirname, 'src/services'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
       '@styles': resolve(__dirname, 'src/styles'),
-    },
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
+      '@constants': resolve(__dirname, 'src/constants')
+    }
   },
-  build: {
-    target: 'es2020',
-    minify: 'terser',
-=======
-  root: '.',
-  base: '/',
   build: {
     target: 'esnext',
     minify: 'terser',
     sourcemap: false,
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+      }
+    },
     rollupOptions: {
       input: {
         main: './index.html'
@@ -55,113 +62,23 @@ export default defineConfig({
         }
       }
     },
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-<<<<<<< HEAD
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-      },
-    },
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog', '@radix-ui/react-aspect-ratio', '@radix-ui/react-avatar', '@radix-ui/react-checkbox', '@radix-ui/react-context-menu', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-popover', '@radix-ui/react-progress', '@radix-ui/react-radio-group', '@radix-ui/react-scroll-area', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slider', '@radix-ui/react-slot', '@radix-ui/react-switch', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip'],
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod'],
-          'animation-vendor': ['framer-motion'],
-          'charts-vendor': ['recharts'],
-          'date-vendor': ['date-fns', 'react-day-picker'],
-          'icons-vendor': ['lucide-react'],
-          'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge'],
-        },
-        chunkFileNames: (chunkInfo) => {
-          const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
-          return `js/${facadeModuleId}-[hash].js`;
-        },
-        assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
-          if (/\.(css)$/.test(assetInfo.name)) {
-            return `css/index-[hash].${ext}`;
-          }
-          return `assets/[name]-[hash].${ext}`;
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-    sourcemap: false,
-=======
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      }
-    },
     chunkSizeWarningLimit: 1000
-  },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-      '@components': resolve(__dirname, 'src/components'),
-      '@pages': resolve(__dirname, 'src/pages'),
-      '@layout': resolve(__dirname, 'src/layout'),
-      '@utils': resolve(__dirname, 'src/utils'),
-      '@hooks': resolve(__dirname, 'src/hooks'),
-      '@types': resolve(__dirname, 'src/types'),
-      '@assets': resolve(__dirname, 'src/assets'),
-      '@styles': resolve(__dirname, 'src/styles'),
-      '@data': resolve(__dirname, 'src/data'),
-      '@services': resolve(__dirname, 'src/services'),
-      '@context': resolve(__dirname, 'src/context'),
-      '@constants': resolve(__dirname, 'src/constants')
-    }
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
   },
   optimizeDeps: {
     include: [
       'react',
       'react-dom',
       'react-router-dom',
-<<<<<<< HEAD
-      '@radix-ui/react-accordion',
-      '@radix-ui/react-alert-dialog',
-      '@radix-ui/react-aspect-ratio',
-      '@radix-ui/react-avatar',
-      '@radix-ui/react-checkbox',
-      '@radix-ui/react-context-menu',
-      '@radix-ui/react-dialog',
-      '@radix-ui/react-dropdown-menu',
-      '@radix-ui/react-label',
-      '@radix-ui/react-popover',
-      '@radix-ui/react-progress',
-      '@radix-ui/react-radio-group',
-      '@radix-ui/react-scroll-area',
-      '@radix-ui/react-select',
-      '@radix-ui/react-separator',
-      '@radix-ui/react-slider',
-      '@radix-ui/react-slot',
-      '@radix-ui/react-switch',
-      '@radix-ui/react-tabs',
-      '@radix-ui/react-toast',
-      '@radix-ui/react-tooltip',
-=======
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
       'framer-motion',
       'lucide-react',
       'clsx',
-<<<<<<< HEAD
-      'class-variance-authority',
-      'tailwind-merge',
-=======
       'tailwind-merge'
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
     ],
   },
   server: {
     port: 3000,
     host: true,
     open: true,
-<<<<<<< HEAD
-=======
     cors: true,
     hmr: {
       overlay: false
@@ -174,14 +91,10 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '/api')
       }
     }
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
   },
   preview: {
     port: 4173,
     host: true,
-<<<<<<< HEAD
-  },
-=======
     open: true
   },
   css: {
@@ -192,5 +105,4 @@ export default defineConfig({
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
     __BUILD_TIME__: JSON.stringify(new Date().toISOString())
   }
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
 })
