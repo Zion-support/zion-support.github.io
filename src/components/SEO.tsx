@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useEffect, useCallback } from 'react';
+=======
+import React, { useEffect } from 'react';
+>>>>>>> 5744fec236daa51ca3ddce9178c8ec834cc3b8ce
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 interface SEOProps {
   title?: string;
@@ -13,6 +18,7 @@ interface SEOProps {
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
   structuredData?: any;
   canonicalUrl?: string;
   robots?: string;
@@ -42,10 +48,26 @@ export const SEO: React.FC<SEOProps> = ({
   ],
   image = '/images/zion-tech-group-og.jpg',
   url = 'https://ziontechgroup.com',
+=======
+  canonical?: string;
+  noindex?: boolean;
+  nofollow?: boolean;
+  language?: string;
+  structuredData?: object;
+}
+
+export const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading AI, Quantum Computing & Micro SAAS Solutions',
+  description = 'Transform your business with cutting-edge AI solutions, quantum computing platforms, and innovative micro SAAS services. Expert digital transformation and technology consulting.',
+  keywords = ['AI Solutions', 'Quantum Computing', 'Micro SAAS', 'Digital Transformation', 'Cybersecurity', 'Cloud Computing', 'Technology Consulting'],
+  image = '/images/zion-tech-group-og.jpg',
+  url,
+>>>>>>> 5744fec236daa51ca3ddce9178c8ec834cc3b8ce
   type = 'website',
   author = 'Zion Tech Group',
   publishedTime,
   modifiedTime,
+<<<<<<< HEAD
   section,
   tags = [],
   structuredData,
@@ -62,6 +84,69 @@ export const SEO: React.FC<SEOProps> = ({
   // Generate structured data for the page
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData) return null;
+=======
+  section = 'Technology',
+  tags = [],
+  canonical,
+  noindex = false,
+  nofollow = false,
+  language = 'en',
+  structuredData
+}) => {
+  const location = useLocation();
+  const siteName = 'Zion Tech Group';
+  const siteUrl = 'https://ziontechgroup.com';
+  const currentUrl = url || `${siteUrl}${location.pathname}`;
+  const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+  const fullCanonical = canonical ? `${siteUrl}${canonical}` : currentUrl;
+  const fullImage = image.startsWith('http') ? image : `${siteUrl}${image}`;
+
+  // Update document meta tags dynamically
+  useEffect(() => {
+    // Update title
+    document.title = fullTitle;
+    
+    // Update meta description
+    let metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+      metaDescription = document.createElement('meta');
+      metaDescription.setAttribute('name', 'description');
+      document.head.appendChild(metaDescription);
+    }
+    metaDescription.setAttribute('content', description);
+    
+    // Update meta keywords
+    let metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta');
+      metaKeywords.setAttribute('name', 'keywords');
+      document.head.appendChild(metaKeywords);
+    }
+    metaKeywords.setAttribute('content', keywords.join(', '));
+    
+    // Update canonical link
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    canonicalLink.setAttribute('href', fullCanonical);
+    
+    // Update robots meta
+    let robotsMeta = document.querySelector('meta[name="robots"]');
+    if (!robotsMeta) {
+      robotsMeta = document.createElement('meta');
+      robotsMeta.setAttribute('name', 'robots');
+      document.head.appendChild(robotsMeta);
+    }
+    const robotsContent = [];
+    if (noindex) robotsContent.push('noindex');
+    if (nofollow) robotsContent.push('nofollow');
+    if (robotsContent.length === 0) robotsContent.push('index', 'follow');
+    robotsMeta.setAttribute('content', robotsContent.join(', '));
+  }, [fullTitle, description, keywords, fullCanonical, noindex, nofollow]);
+>>>>>>> 5744fec236daa51ca3ddce9178c8ec834cc3b8ce
 
     const baseStructuredData = {
       '@context': 'https://schema.org',
@@ -91,6 +176,7 @@ export const SEO: React.FC<SEOProps> = ({
       }
     };
 
+<<<<<<< HEAD
     if (type === 'article') {
       return {
         ...baseStructuredData,
@@ -380,10 +466,60 @@ export const SEO: React.FC<SEOProps> = ({
       </noscript>
     );
   }, [enableAnalytics]);
+=======
+  // Website structured data
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": siteName,
+    "url": siteUrl,
+    "description": "Leading technology solutions provider specializing in AI, quantum computing, and micro SAAS services",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Current page structured data
+  const currentPageStructuredData = {
+    "@context": "https://schema.org",
+    "@type": type === 'article' ? 'Article' : 'WebPage',
+    "name": title,
+    "description": description,
+    "url": currentUrl,
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": currentUrl
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": siteName,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${siteUrl}/images/zion-tech-group-logo.png`
+      }
+    },
+    "author": {
+      "@type": "Organization",
+      "name": author
+    },
+    ...(publishedTime && { "datePublished": publishedTime }),
+    ...(modifiedTime && { "dateModified": modifiedTime }),
+    ...(section && { "articleSection": section }),
+    ...(tags.length > 0 && { "keywords": tags.join(', ') })
+  };
+
+  // Merge custom structured data with defaults
+  const finalStructuredData = structuredData 
+    ? { ...defaultStructuredData, ...structuredData }
+    : [defaultStructuredData, websiteStructuredData, currentPageStructuredData];
+>>>>>>> 5744fec236daa51ca3ddce9178c8ec834cc3b8ce
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
+<<<<<<< HEAD
       <title>{title}</title>
       {generateMetaTags().map((tag, index) => (
         <meta key={index} {...tag} />
@@ -431,6 +567,66 @@ export const SEO: React.FC<SEOProps> = ({
       {/* Analytics Scripts */}
       {generateAnalyticsScript()}
       {generateGTMNoscript()}
+=======
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      <meta name="author" content={author} />
+      <meta name="language" content={language} />
+      <meta name="robots" content={noindex || nofollow ? `${noindex ? 'noindex' : ''}${nofollow ? ',nofollow' : ''}`.replace(/^,/, '') : 'index,follow'} />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={fullCanonical} />
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={fullImage} />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:type" content={type} />
+      <meta property="og:site_name" content={siteName} />
+      <meta property="og:locale" content={language} />
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
+      
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={fullImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
+      
+      {/* Additional Meta Tags */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="theme-color" content="#06b6d4" />
+      <meta name="msapplication-TileColor" content="#06b6d4" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content={siteName} />
+      
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+      
+      {/* Preconnect and DNS Prefetch */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify(finalStructuredData)}
+      </script>
+>>>>>>> 5744fec236daa51ca3ddce9178c8ec834cc3b8ce
     </Helmet>
   );
 };
