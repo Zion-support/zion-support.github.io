@@ -1,12 +1,82 @@
 // Revolutionary Services 2030 - Zion Tech Group
 // Cutting-edge Micro SAAS, IT Infrastructure, and AI Services
 export interface ServiceContact {
+
+
+
+
+
+
+
+
+
+
+
+
+
   phone: string;
   email: string;
   website: string;
   address: string;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  rating: number;
+  reviewCount: number;
+  innovationLevel: string;
+  marketSize: string;
+  competitors: string[];
+  aiCapabilities: string[];
+  quantumFeatures?: string[];
+  blockchainFeatures?: string[];
+  edgeFeatures?: string[];
+  sustainabilityScore: number;
+  complianceStandards: string[];
+  deploymentOptions: string[];
+  apiAccess: boolean;
+  customDevelopment: boolean;
+  trainingIncluded: boolean;
+  freeTrial: boolean;
+  moneyBackGuarantee: boolean;
+  sla: string;
+  responseTime: string;
+  availability: string;
+  location: string;
+  tags: string[];
+  image: string;
+  createdAt: string;
+  featured: boolean;
+  trending: boolean;
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 export interface MicroSaasService {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: number;
   name: string;
   category: string;
@@ -30,8 +100,34 @@ export interface MicroSaasService {
   innovationLevel: string;
   marketSize: string;
   growthRate: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 export interface ITService {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: number;
   name: string;
   category: string;
@@ -52,8 +148,34 @@ export interface ITService {
   innovationLevel: string;
   marketSize: string;
   compliance: string[];
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 export interface AIService {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: number;
   name: string;
   category: string;
@@ -76,6 +198,19 @@ export interface AIService {
   innovationLevel: string;
   marketSize: string;
   ethicalAI: string[];
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 // Zion Tech Group Contact Information
 const zionContact: ServiceContact = {
@@ -343,6 +478,411 @@ export const revolutionaryMicroSaasServices2030: MicroSaasService[] = [
     createdAt: "2024-12-07T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 189,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-entertainment-tech",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$25,000-50,000",
+    competitors["Netflix", "Disney+", "HBO Max"],
+    roi: "500% within 12 months",
+    setupTime: "6-8 weeks",
+    integrations["Streaming Platforms", "Content Management", "Analytics Tools", "Social Media", "Payment Systems"]
+  },
+
+  // AI-Powered Research Technology Platform
+  {
+    id: "ai-research-technology-platform",
+    title: "AI Research Technology Platform",
+    description: "Advanced research platform using AI for data analysis, hypothesis generation, and research automation. Features autonomous research assistants, intelligent data processing, and predictive modeling. Accelerates research by 500% and improves accuracy by 90%.",
+    category: "AI & Research",
+    subcategory: "Research Automation",
+    price: 39999,
+    currency: "$",
+    tags["Research Tech", "Data Analysis", "Hypothesis Generation", "Research Automation", "Predictive Modeling"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/ai-research-tech.jpg"],
+    createdAt: "2024-12-08T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 123,
+    featured: true,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 98,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-research-tech",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$30,000-70,000",
+    competitors["IBM Research", "Google Research", "Microsoft Research"],
+    roi: "700% within 15 months",
+    setupTime: "8-12 weeks",
+    integrations["Research Databases", "Analytics Tools", "Publication Platforms", "Collaboration Tools", "Data Sources"]
+  },
+
+  // AI-Powered Development Technology Platform
+  {
+    id: "ai-development-technology-platform",
+    title: "AI Development Technology Platform",
+    description: "Revolutionary development platform using AI for code generation, testing, and deployment automation. Features AI-powered code review, intelligent debugging, and automated testing. Reduces development time by 60% and improves code quality by 80%.",
+    category: "AI & Development",
+    subcategory: "Development Automation",
+    price: 24999,
+    currency: "$",
+    tags["Development Tech", "Code Generation", "AI Testing", "Deployment Automation", "Code Quality"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/ai-development-tech.jpg"],
+    createdAt: "2024-12-09T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 567,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-development-tech",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$20,000-45,000",
+    competitors["GitHub Copilot", "Tabnine", "Kite"],
+    roi: "400% within 10 months",
+    setupTime: "4-6 weeks",
+    integrations["Git Platforms", "IDEs", "CI/CD Tools", "Testing Frameworks", "Deployment Platforms"]
+  },
+
+  // Blockchain & Web3 Development Platform
+  {
+    id: "blockchain-web3-development-platform",
+    title: "Blockchain & Web3 Development Platform",
+    description: "Comprehensive platform for blockchain and Web3 development using AI. Features smart contract generation, DeFi protocol development, and NFT marketplace creation. Reduces development time by 70% and increases security by 90%.",
+    category: "Blockchain & Web3",
+    subcategory: "Development Platform",
+    price: 34999,
+    currency: "$",
+    tags["Blockchain", "Web3", "Smart Contracts", "DeFi", "NFT Development"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/blockchain-web3-platform.jpg"],
+    createdAt: "2024-12-10T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/blockchain-web3-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$25,000-60,000",
+    competitors["OpenZeppelin", "Hardhat", "Truffle"],
+    roi: "600% within 12 months",
+    setupTime: "8-12 weeks",
+    integrations["Blockchain Networks", "Wallet APIs", "DeFi Protocols", "NFT Standards", "Smart Contract Libraries"]
+  },
+
+  // Advanced Cybersecurity Suite with AI
+  {
+    id: "advanced-cybersecurity-suite-ai",
+    title: "Advanced Cybersecurity Suite with AI",
+    description: "Next-generation cybersecurity platform using AI for threat detection, prevention, and response. Features autonomous threat hunting, behavioral analysis, and predictive security. Reduces security incidents by 90% and response time by 80%.",
+    category: "Cybersecurity",
+    subcategory: "AI-Powered Security",
+    price: 44999,
+    currency: "$",
+    tags["Cybersecurity", "AI Security", "Threat Detection", "Behavioral Analysis", "Predictive Security"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/advanced-cybersecurity-ai.jpg"],
+    createdAt: "2024-12-11T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 178,
+    featured: true,
+    location: "Global",
+    availability: "10-14 Weeks",
+    aiScore: 98,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/advanced-cybersecurity-ai",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$35,000-80,000",
+    competitors["CrowdStrike", "SentinelOne", "Darktrace"],
+    roi: "800% within 16 months",
+    setupTime: "10-14 weeks",
+    integrations["SIEM Systems", "EDR Solutions", "Firewall Platforms", "Identity Management", "Threat Intelligence"]
+  },
+
+  // Cloud & DevOps Automation Platform
+  {
+    id: "cloud-devops-automation-platform",
+    title: "Cloud & DevOps Automation Platform",
+    description: "Advanced platform for cloud infrastructure and DevOps automation using AI. Features autonomous infrastructure management, intelligent scaling, and automated deployment. Reduces operational costs by 50% and improves deployment speed by 300%.",
+    category: "Cloud & DevOps",
+    subcategory: "Automation Platform",
+    price: 29999,
+    currency: "$",
+    tags["Cloud DevOps", "Infrastructure Automation", "Intelligent Scaling", "Automated Deployment", "Cost Optimization"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/cloud-devops-automation.jpg"],
+    createdAt: "2024-12-12T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 345,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/cloud-devops-automation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$25,000-55,000",
+    competitors["AWS DevOps", "Azure DevOps", "GitLab CI/CD"],
+    roi: "500% within 12 months",
+    setupTime: "6-8 weeks",
+    integrations["Cloud Providers", "Container Platforms", "CI/CD Tools", "Monitoring Systems", "Configuration Management"]
+  },
+
+  // IoT & Edge Computing Intelligence Platform
+  {
+    id: "iot-edge-computing-intelligence",
+    title: "IoT & Edge Computing Intelligence Platform",
+    description: "Revolutionary platform for IoT and edge computing using AI. Features intelligent device management, real-time analytics, and autonomous decision-making. Reduces latency by 80% and improves efficiency by 200%.",
+    category: "IoT & Edge Computing",
+    subcategory: "Intelligence Platform",
+    price: 39999,
+    currency: "$",
+    tags["IoT", "Edge Computing", "Device Management", "Real-time Analytics", "Autonomous Decision Making"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/iot-edge-intelligence.jpg"],
+    createdAt: "2024-12-13T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 189,
+    featured: true,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/iot-edge-intelligence",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$30,000-70,000",
+    competitors["AWS IoT", "Azure IoT", "Google Cloud IoT"],
+    roi: "600% within 15 months",
+    setupTime: "8-12 weeks",
+    integrations["IoT Devices", "Edge Servers", "Cloud Platforms", "Analytics Tools", "Security Systems"]
+  },
+
+  // Digital Twin & Simulation Platform
+  {
+    id: "digital-twin-simulation-platform",
+    title: "Digital Twin & Simulation Platform",
+    description: "Advanced platform for creating and managing digital twins using AI. Features real-time simulation, predictive modeling, and autonomous optimization. Reduces operational costs by 40% and improves decision-making by 150%.",
+    category: "Digital Twin",
+    subcategory: "Simulation Platform",
+    price: 54999,
+    currency: "$",
+    tags["Digital Twin", "Simulation", "Predictive Modeling", "Autonomous Optimization", "Real-time Monitoring"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/digital-twin-simulation.jpg"],
+    createdAt: "2024-12-14T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 134,
+    featured: true,
+    location: "Global",
+    availability: "12-16 Weeks",
+    aiScore: 98,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/digital-twin-simulation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$45,000-100,000",
+    competitors["Siemens Digital Twin", "GE Digital Twin", "Microsoft Digital Twin"],
+    roi: "900% within 18 months",
+    setupTime: "12-16 weeks",
+    integrations["IoT Sensors", "3D Modeling Tools", "Simulation Engines", "Analytics Platforms", "Visualization Tools"]
+  },
+
+  // Sustainable Technology Solutions Platform
+  {
+    id: "sustainable-technology-solutions",
+    title: "Sustainable Technology Solutions Platform",
+    description: "Comprehensive platform for sustainable technology solutions using AI. Features energy optimization, waste reduction, and carbon footprint tracking. Helps organizations achieve sustainability goals and reduce environmental impact by 70%.",
+    category: "Sustainable Technology",
+    subcategory: "Solutions Platform",
+    price: 19999,
+    currency: "$",
+    tags["Sustainable Tech", "Energy Optimization", "Waste Reduction", "Carbon Tracking", "Environmental Impact"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/sustainable-tech-solutions.jpg"],
+    createdAt: "2024-12-15T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 267,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/sustainable-tech-solutions",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$15,000-40,000",
+    competitors["Carbon Trust", "Sustainalytics", "MSCI ESG"],
+    roi: "400% within 10 months",
+    setupTime: "4-6 weeks",
+    integrations["Energy Management Systems", "Waste Tracking", "Carbon Calculators", "Reporting Tools", "Analytics Platforms"]
+  },
+
+  // IT Infrastructure Modernization Platform
+  {
+    id: "it-infrastructure-modernization",
+    title: "IT Infrastructure Modernization Platform",
+    description: "Advanced platform for modernizing IT infrastructure using AI. Features intelligent migration planning, automated optimization, and performance monitoring. Reduces migration time by 60% and improves performance by 200%.",
+    category: "IT Infrastructure",
+    subcategory: "Modernization Platform",
+    price: 39999,
+    currency: "$",
+    tags["IT Infrastructure", "Modernization", "Migration Planning", "Performance Optimization", "Automated Management"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/it-infrastructure-modernization.jpg"],
+    createdAt: "2024-12-16T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 189,
+    featured: true,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/it-infrastructure-modernization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$30,000-70,000",
+    competitors["VMware", "Red Hat", "Microsoft"],
+    roi: "600% within 15 months",
+    setupTime: "8-12 weeks",
+    integrations["Virtualization Platforms", "Cloud Services", "Monitoring Tools", "Automation Tools", "Security Systems"]
+  },
+
+  // Emerging Technology Innovation Hub
+  {
+    id: "emerging-technology-innovation-hub",
+    title: "Emerging Technology Innovation Hub",
+    description: "Comprehensive platform for exploring and implementing emerging technologies using AI. Features technology assessment, implementation planning, and innovation management. Accelerates technology adoption by 300% and reduces implementation risks by 80%.",
+    category: "Emerging Technology",
+    subcategory: "Innovation Hub",
+    price: 24999,
+    currency: "$",
+    tags["Emerging Tech", "Innovation Hub", "Technology Assessment", "Implementation Planning", "Risk Management"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images["https://ziontechgroup.com/images/emerging-tech-innovation-hub.jpg"],
+    createdAt: "2024-12-17T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/emerging-tech-innovation-hub",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$20,000-50,000",
+    competitors["Gartner", "Forrester", "IDC"],
+    roi: "500% within 12 months",
+    setupTime: "6-8 weeks",
+    integrations["Research Databases", "Technology Platforms", "Innovation Tools", "Collaboration Platforms", "Analytics Tools"];
+  };
+];
+
+// Service Categories for Revolutionary Services
+export const REVOLUTIONARY_SERVICE_CATEGORIES = [
+  "AI & Autonomous Systems",
+  "Quantum Computing",
+  "AI & Metaverse",
+  "AI & Space Tech",
+  "AI & Environmental Tech",
+  "AI & Education",
+  "AI & Entertainment",
+  "AI & Research",
+  "AI & Development",
+  "Blockchain & Web3",
+  "Cybersecurity",
+  "Cloud & DevOps",
+  "IoT & Edge Computing",
+  "Digital Twin",
+  "Sustainable Technology",
+  "IT Infrastructure",;
+  "Emerging Technology";
+];
+
+// Service Statistics for Revolutionary Services
+export const REVOLUTIONARY_SERVICE_STATISTICS = {
+  totalServices: anyanyanyanyanyanyanyanyanyanyanyanyanyREVOLUTIONARY_SERVICES_2030.length,
+  totalCategories: REVOLUTIONARY_SERVICE_CATEGORIES.length,
+  averagePrice: Math.round(
+    REVOLUTIONARY_SERVICES_2030.reduce((sum, service)               => sum + service.price, 0) / 
+    REVOLUTIONARY_SERVICES_2030.length
+  ),
+  averageRating: anyanyanyanyanyanyanyanyanyanyanyanyanyMath.round(
+    (REVOLUTIONARY_SERVICES_2030.reduce((sum, service)               => sum + service.rating, 0) / 
+    REVOLUTIONARY_SERVICES_2030.length) * 10
+  ) / 10,
+  featuredServices: anyanyanyanyanyanyanyanyanyanyanyanyanyREVOLUTIONARY_SERVICES_2030.filter(service               => service.featured).length,
+  aiServices: anyanyanyanyanyanyanyanyanyanyanyanyanyREVOLUTIONARY_SERVICES_2030.filter(service               => 
+    service.category.includes('AI') || service.aiScore > 90
+  ).length,
+  emergingTechServices: anyanyanyanyanyanyanyanyanyanyanyanyanyREVOLUTIONARY_SERVICES_2030.filter(service               => 
+    service.category === 'Emerging Technology'
+  ).length;
+;
+
+};
+
+// Featured Revolutionary Services
+export const FEATURED_REVOLUTIONARY_SERVICES = REVOLUTIONARY_SERVICES_2030.filter(service => service.featured);
+
+// High-ROI Revolutionary Services (ROI > 500%)
+export const HIGH_ROI_REVOLUTIONARY_SERVICES = REVOLUTIONARY_SERVICES_2030.filter(service => {;
+  const roi = service.roi;
+  if (typeof roi = == 'string') {;
+    const roiNumber = parseInt(roi.match(/\d+/)?.[0] || '0');
+    return roiNumber > 500}
+  return false});
+
+// Quick Setup Revolutionary Services (< 8 weeks)
+export const QUICK_SETUP_REVOLUTIONARY_SERVICES = REVOLUTIONARY_SERVICES_2030.filter(service => {;
+  const setupTime = service.setupTime;
+  if (typeof setupTime = == 'string') {;
+    const weeks = parseInt(setupTime.match(/\d+/)?.[0] || '0');
+    return weeks < 8}
+  return false});
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     innovationLevel: "Revolutionary",
     marketSize: "$89.1B by 2030",
     competitors: ["Coursera", "Udemy", "Duolingo", "Khan Academy"],
@@ -987,7 +1527,12 @@ export const allRevolutionaryServices2030 = {
   itServices: revolutionaryITServices2030,
   aiServices: revolutionaryAIServices2030
 };
+<<<<<<< HEAD
 export const getRevolutionaryServicesByPriceRange = (minPrice: number, maxPrice: number): RevolutionaryService2030[] => {
+=======
+
+export const getRevolutionaryServicesByPriceRange = (minPrice: anyanyanyanyanyanyanyanyanyanyanyanyanynumber, maxPrice: number): RevolutionaryService2030[]              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return REVOLUTIONARY_SERVICES_2030.filter(service =>
     service.pricing.monthly >= minPrice && service.pricing.monthly <= maxPrice
   );
@@ -1002,7 +1547,12 @@ export const getRevolutionaryTrendingServices = (limit: number = 10): Revolution
     .filter(service => service.trending);
     .slice(0, limit);
 };
+<<<<<<< HEAD
 export const searchRevolutionaryServices = (query: string): RevolutionaryService2030[] => {;
+=======
+
+export const searchRevolutionaryServices = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryService2030[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const lowercaseQuery = query.toLowerCase();
   return revolutionaryMicroSaasServices2030.filter(service =>
     service.name.toLowerCase().includes(lowercaseQuery) ||
@@ -1011,10 +1561,19 @@ export const searchRevolutionaryServices = (query: string): RevolutionaryService
     service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
   ).map(service => service.contactInfo);
 };
+<<<<<<< HEAD
 export const getRevolutionaryServicesByInnovationLevel = (level: string): RevolutionaryService2030[] => {;
   return REVOLUTIONARY_SERVICES_2030.filter(service => service.innovationLevel === level);
 };
 export const getRevolutionaryServicesByTechnology = (technology: string): RevolutionaryService2030[] => {;
+=======
+
+export const getRevolutionaryServicesByInnovationLevel = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryService2030[]              => {;
+  return REVOLUTIONARY_SERVICES_2030.filter(service => service.innovationLevel === level);
+};
+
+export const getRevolutionaryServicesByTechnology = (technology: anyanyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryService2030[]              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const lowercaseTech = technology.toLowerCase();
   return revolutionaryMicroSaasServices2030.filter(service =>
     service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
@@ -1037,8 +1596,13 @@ export const getRevolutionaryServicesStats = () => {;
     averageRating: Math.round(averageRating * 100) / 100,
     featuredCount,
     trendingCount,
+<<<<<<< HEAD
+    categories: [...new Set(REVOLUTIONARY_SERVICES_2030.map(service = > service.category))],;
+    subcategories: anyanyanyanyanyanyanyanyanyanyanyanyany[...new Set(REVOLUTIONARY_SERVICES_2030.map(service              => service.subcategory))];
+=======
     categories: [...new Set(REVOLUTIONARY_SERVICE_CATEGORIES)],
     subcategories: [...new Set(revolutionaryMicroSaasServices2030.map(service => service.category).concat(revolutionaryITServices2030.map(service => service.category)).concat(revolutionaryAIServices2030.map(service => service.category)))]
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   };
 };
 export const ALL_REVOLUTIONARY_SERVICES_2030 = REVOLUTIONARY_SERVICES_2030;

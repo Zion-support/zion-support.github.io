@@ -1,8 +1,26 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
   Brain, 
+=======
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+<<<<<<< HEAD
+import { Brain, Shield, Cloud, Server, BarChart3, Users, ShoppingCart,
+  MessageCircle, HelpCircle, DollarSign, Target, TrendingUp,
+  Atom, Network, Eye, PenTool, Heart, Building, Truck,
+  Lock, Smartphone, Mail, Video, Satellite, Leaf, Code,
+  Zap, Star, Rocket, Globe, Cpu, ArrowRight, FileText,
+  Workflow, Database, AlertTriangle, Package, Route, Factory,
+  Calculator, Graph
+const NewInnovativeServices2025: React.FC = (): JSX.Element => {
+  const newServices = [
+=======
+import { Link              } from 'react-router-dom.ts';
+import { Brain, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   GitFork, 
   Shield, 
   Users, 
@@ -115,8 +133,14 @@ import {
   Gamepad2 as Gamepad2Icon3,
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
+<<<<<<< HEAD
 } from 'lucide-react';
 export default function NewInnovativeServices2025() {
+=======
+             } from 'lucide-react.ts';
+
+export default function NewInnovativeServices2025(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const featuredServices = [
     {
       title: "AI Workflow Orchestrator",
@@ -214,6 +238,89 @@ export default function NewInnovativeServices2025() {
     },
     {
       icon: DollarSign,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      color: 'from-emerald-500 to-teal-500',
+      count: 1
+
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="pt-20 pb-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center"
+
+            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full border border-indigo-400/30 mb-6">
+              <Rocket className="w-5 h-5 text-indigo-400 mr-2" />
+              <span className="text-indigo-300 font-medium">2025 New Services</span>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              New Innovative
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-400">
+                Services 2025
+              </span>
+            </h1>
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover our latest AI-powered micro SAAS services designed to transform your business operations,
+              enhance customer experiences, and drive innovation across all industries.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-400 hover:to-purple-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-indigo-500/20">
+                Explore Services
+              </button>
+              <button className="px-8 py-4 border border-indigo-400/30 text-indigo-300 font-semibold rounded-lg hover:bg-indigo-400/10 transition-all duration-200">
+                Contact Sales
+              </button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Categories Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Service Categories
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Explore our comprehensive range of AI-powered solutions
+            </p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-6">
+            {categories.map((category, index)              => (
+              <motion.div
+                key={category.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-400/30 transition-all duration-200 text-center"
+
+                <div className={`w-16 h-16 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                  <category.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{category.name}</h3>
+                <p className="text-gray-400 text-sm">{category.count} service{category.count !== 1 ? 's' : ''}</p>
+              </motion.div>
+            ))}
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       title: "Cost Reduction",
       description: "Reduce operational costs through intelligent automation and process optimization"
     },
@@ -282,6 +389,60 @@ export default function NewInnovativeServices2025() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+      {/* New Services Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Latest Innovative Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Cutting-edge AI solutions to transform your business
+            </p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {newServices.map((service, index)              => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-indigo-400/30 transition-all duration-200"
+
+                <div className="flex items-center mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-4`}>
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <span className="text-sm text-gray-400">{service.category}</span>
+                    <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                  </div>
+                </div>
+
+                <p className="text-gray-300 mb-4">{service.description}</p>
+
+                <div className="mb-4">
+                  <span className="text-lg font-bold text-white">{service.price}</span>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                  <ul className="space-y-1">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <li key={featureIndex} className="text-xs text-gray-400 flex items-center">
+                        <div className="w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2"></div>
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         {/* Featured Services */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -305,8 +466,14 @@ export default function NewInnovativeServices2025() {
                 Our flagship AI-powered solutions designed to revolutionize how you do business
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {featuredServices.map((service, index) => (
+=======
+
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {featuredServices.map((service, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -393,8 +560,14 @@ export default function NewInnovativeServices2025() {
                 Explore our organized service portfolio designed to meet every aspect of your business needs
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {serviceCategories.map((category, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {serviceCategories.map((category, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {
@@ -458,8 +631,14 @@ export default function NewInnovativeServices2025() {
                 Experience the transformative power of AI-powered solutions designed for modern businesses
               </p>
             </motion.div>
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
+=======
+
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <motion.div
                   key={index}
                   initial = {

@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Brain,
+  Shield,
+  Cloud,
+  Star,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
+=======
+import React, { useState, useMemo              } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -22,6 +40,7 @@ import { CheckCircle,
   Calculator,
   BarChart3,
   Target,
+<<<<<<< HEAD
   ArrowRight,
   Search
 } from 'lucide-react';
@@ -29,6 +48,102 @@ import { innovativeAIServices2030 } from "../data/innovativeAIServices2030";
 import { innovativeCybersecurityServices2030 } from "../data/innovativeCybersecurityServices2030";
 import { innovativeCloudDevOpsServices2030 } from "../data/innovativeCloudDevOpsServices2030";
 const ComprehensivePricingGuide2030: React.FC = () => {;
+=======
+<<<<<<< HEAD
+  Award,
+  Users,
+  Clock,
+  Calendar,
+  Check,
+  X,
+  Crown,
+  Rocket,
+  Cpu,
+  Lock,
+  Heart,
+  Sparkles
+              } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES_2025               } from '@/data/innovativeServices2025';
+import { SEO               } from '@/components/SEO';
+
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricingModel, setSelectedPricingModel] = useState('all');
+
+  const services = INNOVATIVE_SERVICES_2025;
+
+  const cats = services.reduce((acc, service) => {
+      if (!acc.includes(service.category)) {;
+        acc.push(service.category)};
+      return acc}, [] as string[]);
+    return ['all', ...cats]}, [services]);
+
+  const pricingModels = ['all', 'monthly', 'annual', 'enterprise'];
+
+  const filtered = services;
+
+    if (selectedCategory !== 'all') {
+      filtered = filtered.filter(service => service.category === selectedCategory)}
+
+    if (selectedPricingModel !== 'all') {
+      filtered = filtered.filter(service => service.pricingModel === selectedPricingModel)};
+;
+    return filtered}, [services, selectedCategory, selectedPricingModel]);
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    switch (category) {
+      case 'AI & Analytics':
+      case 'AI & Sales':
+      case 'AI & Compliance':
+      case 'AI & Communication':
+      case 'AI & Customer Experience':
+      case 'AI & Content':;
+      case 'AI & Finance':;
+        return Brain;
+      case 'Cloud & DevOps':
+        return Server;
+      case 'IoT & Digital Twin':
+        return Cpu;
+      case 'Quantum Computing':
+        return Rocket;
+      default:
+        return Zap}
+  };
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    switch (category) {
+      case 'AI & Analytics':
+      case 'AI & Sales':
+      case 'AI & Compliance':
+      case 'AI & Communication':
+      case 'AI & Customer Experience':
+      case 'AI & Content':;
+      case 'AI & Finance':;
+        return 'from-purple-600 to-pink-600';
+      case 'Cloud & DevOps':
+        return 'from-blue-600 to-cyan-600';
+      case 'IoT & Digital Twin':
+        return 'from-green-600 to-emerald-600';
+      case 'Quantum Computing':
+        return 'from-indigo-600 to-purple-600';
+      default:
+        return 'from-gray-600 to-slate-600'}
+=======
+  ArrowRight,
+  Search
+<<<<<<< HEAD
+import { innovativeAIServices2030              } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030              } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030              } from '../data/innovativeCloudDevOpsServices2030';
+=======
+} from 'lucide-react';
+import { innovativeAIServices2030              } from '../data/innovativeAIServices2030';
+import { innovativeCybersecurityServices2030              } from '../data/innovativeCybersecurityServices2030';
+import { innovativeCloudDevOpsServices2030              } from '../data/innovativeCloudDevOpsServices2030';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const allServices = [;
@@ -48,13 +163,23 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {;
+=======
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (category.toLowerCase().includes('ai')) return Brain;
     if (category.toLowerCase().includes('cybersecurity')) return Shield;
     if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star;
   };
+<<<<<<< HEAD
   const getPricingTier = (price: number) => {;
+=======
+
+  const getPricingTier = (price: anyanyanyanyanyanyanyanyanyanyanyanyanynumber)              => {;
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
@@ -259,8 +384,8 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           >
             Market Insights & Trends
           </motion.h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index)               => (
               <motion.div
                 key={index}
                 initial = {
@@ -290,11 +415,159 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Services Grid */};
       <section className="py-12 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredServices.map((service, index) => {;
+=======
+
+<<<<<<< HEAD
+      {/* Pricing Tiers */}
+      <section className="py-16 bg-slate-900/50">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            Flexible Pricing Tiers
+          </motion.h2>
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)               => (
+              <motion.div
+                key={tier.name}
+                initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+                className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
+                  tier.popular 
+                    ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20' 
+                    : 'border-cyan-400/15'
+                }`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-slate-300 mb-6">{tier.description}</p>
+                  <div className="mb-4">
+                    <span className="text-4xl font-bold text-white">${tier.price}</span>
+                    <span className="text-slate-400">/month</span>
+                  </div>
+                  <p className="text-sm text-slate-400 mb-4">Best for: {tier.bestFor}</p>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {tier.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-slate-300">
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  to="/contact"
+                  className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                    tier.popular
+                      ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90'
+                      : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
+                  }`}
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Pricing Details */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <motion.h2 
+            initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+            transition={{ duration: 0.8 }}
+            className="text-3xl font-bold text-center mb-12"
+          >
+            Service Pricing Details
+          </motion.h2>
+
+          {/* Filters */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+            >
+              {categories.map(category               => (
+                <option key={category} value={category} className="bg-slate-800 text-white">
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+            <select
+              value={selectedPricingModel}
+              onChange={(e) => setSelectedPricingModel(e.target.value)}
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+            >
+              {pricingModels.map(model               => (
+                <option key={model} value={model} className="bg-slate-800 text-white">
+                  {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {filteredServices.map((service, index)               => {;
+=======;
+      {/* Services Grid */};
+      <section className="py-12 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+            {filteredServices.map((service, index)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
               return (
@@ -425,7 +698,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
               We offer transparent, value-driven pricing that gives you the best ROI in the market
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             {[
               {
                 icon: DollarSign,
@@ -456,7 +734,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;
                 icon: Clock,
                 title: "24/7 Support",
                 description: "Round-the-clock support included in all plans. No additional support fees."
+<<<<<<< HEAD
             ].map((benefit, index) => (
+=======
+
+            ].map((benefit, index)              => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={index}
                 initial = {

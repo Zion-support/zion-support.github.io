@@ -1,20 +1,25 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   MessageCircle, 
   X, 
-  Minimize2, 
-  Maximize2, 
-  Mic, 
-  MicOff, 
   Send, 
-  Paperclip,
-  Bot,
-  User,
+  Bot, 
+  User, 
+  Sparkles,
   Settings,
+  Mic,
+  MicOff,
+  Paperclip,
+  Download,
+  RefreshCw,
+  Zap,
+  Brain,
   Lightbulb,
-  Moon,
-  Sun
+  TrendingUp,
+  Shield,
+  Clock,
+  Star
 } from 'lucide-react';
 
 interface ChatMessage {
@@ -41,14 +46,14 @@ interface ChatAssistantProps extends React.PropsWithChildren<{}> {
   enableSuggestions?: boolean;
 }
 
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({
-  enabled = true,
+export const ChatAssistant: React.FC<ChatAssistantProps> = ({ 
+  enabled = true, 
   position = 'bottom-right',
   theme = 'auto',
-  maxMessages = 50,
-  enableVoice = true,
-  enableFileUpload = true,
-  enableSuggestions = true,
+  maxMessages = 100,
+  enableVoice = false,
+  enableFileUpload = false,
+  enableSuggestions = true
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -105,140 +110,68 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         setIsListening(false);
       };
 
-      recognitionRef.current.onerror = (event: any) => {
-        console.error('Speech recognition error:', event.error);
+      recognitionRef.current.onerror = () => {
         setIsListening(false);
       };
     }
   }, [enableVoice]);
 
-  // Initialize with welcome message
-  useEffect(() => {
-    if (enabled && messages.length === 0) {
-      const welcomeMessage: ChatMessage = {
-        id: 'welcome',
-        type: 'assistant',
-        content: 'Hello! I\'m your AI assistant. How can I help you today?',
-        timestamp: new Date(),
-        metadata: {
-          suggestions: [
-            'Tell me about your services',
-            'How can I get started?',
-            'What are your pricing options?',
-            'Can you help with my project?'
-          ]
-        }
-      };
-      setMessages([welcomeMessage]);
-    }
-  }, [enabled, messages.length]);
-
   const handleSendMessage = async () => {
-    if (!inputValue.trim() || isProcessing) return;
+    if (!inputValue.trim()) return;
 
     const userMessage: ChatMessage = {
       id: Date.now().toString(),
       type: 'user',
-      content: inputValue.trim(),
+      content: inputValue,
       timestamp: new Date()
     };
 
     setMessages(prev => [...prev, userMessage]);
     setInputValue('');
-    setIsProcessing(true);
     setIsTyping(true);
 
     // Simulate AI response
     setTimeout(() => {
-      const aiResponse: ChatMessage = {
+      const aiMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         type: 'assistant',
-        content: `I understand you're asking about "${userMessage.content}". Let me help you with that. This is a simulated response - in a real implementation, this would connect to an AI service.`,
-        timestamp: new Date(),
-        metadata: {
-          confidence: 0.85,
-          suggestions: [
-            'Would you like more details?',
-            'Can I help with something else?',
-            'Should we schedule a consultation?'
-          ]
-        }
-      };
-
-      setMessages(prev => [...prev, aiResponse]);
-      setIsTyping(false);
-      setIsProcessing(false);
-    }, 2000);
-  };
-
-  const handleVoiceInput = () => {
-    if (recognitionRef.current) {
-      setIsListening(true);
-      recognitionRef.current.start();
-    }
-  };
-
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const fileMessage: ChatMessage = {
-        id: Date.now().toString(),
-        type: 'user',
-        content: `Uploaded file: ${file.name} (${(file.size / 1024).toFixed(1)} KB)`,
+        content: `I received your message: "${userMessage.content}". This is a demo response.`,
         timestamp: new Date()
       };
-      setMessages(prev => [...prev, fileMessage]);
+      setMessages(prev => [...prev, aiMessage]);
+      setIsTyping(false);
+    }, 1000);
+  };
+
+  const toggleVoice = () => {
+    if (recognitionRef.current) {
+      if (isListening) {
+        recognitionRef.current.stop();
+        setIsListening(false);
+      } else {
+        recognitionRef.current.start();
+        setIsListening(true);
+      }
     }
-  };
-
-  const handleSuggestionClick = (suggestion: string) => {
-    setInputValue(suggestion);
-    inputRef.current?.focus();
-  };
-
-  const toggleChat = () => {
-    setIsOpen(!isOpen);
-    if (!isOpen) {
-      setIsMinimized(false);
-    }
-  };
-
-  const toggleMinimize = () => {
-    setIsMinimized(!isMinimized);
-  };
-
-  const getPositionClasses = () => {
-    switch (position) {
-      case 'bottom-left':
-        return 'bottom-4 left-4';
-      case 'top-right':
-        return 'top-4 right-4';
-      case 'top-left':
-        return 'top-4 left-4';
-      default:
-        return 'bottom-4 right-4';
-    }
-  };
-
-  const getThemeClasses = () => {
-    return currentTheme === 'dark' 
-      ? 'bg-gray-900 text-white border-gray-700' 
-      : 'bg-white text-gray-900 border-gray-200';
   };
 
   if (!enabled) return null;
 
   return (
-    <>
+    <div className={`fixed ${position} z-50`}>
       {/* Chat Toggle Button */}
-      <motion.button
-        onClick={toggleChat}
-        className={`fixed ${getPositionClasses()} z-50 w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300`}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
-      </motion.button>
+      {!isOpen && (
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => setIsOpen(true)}
+          className="w-14 h-14 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+        >
+          <MessageCircle className="w-6 h-6 mx-auto" />
+        </motion.button>
+      )}
 
       {/* Chat Window */}
       <AnimatePresence>
@@ -247,36 +180,37 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
-            className={`fixed ${getPositionClasses()} z-40 w-96 max-h-[600px] ${getThemeClasses()} rounded-2xl shadow-2xl border transition-all duration-300 ${
-              isMinimized ? 'h-16' : 'h-[500px]'
+            className={`w-80 h-96 bg-white dark:bg-gray-800 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 ${
+              position.includes('right') ? 'mr-4' : 'ml-4'
             }`}
           >
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-              <div className="flex items-center gap-3">
-                <Bot className="w-6 h-6 text-blue-600" />
-                <span className="font-semibold">AI Assistant</span>
+              <div className="flex items-center space-x-2">
+                <Bot className="w-5 h-5 text-blue-500" />
+                <span className="font-semibold text-gray-800 dark:text-white">AI Assistant</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center space-x-2">
                 <button
-                  onClick={toggleMinimize}
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors"
+                  onClick={() => setIsMinimized(!isMinimized)}
+                  className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                 >
-                  {isMinimized ? <Maximize2 className="w-4 h-4" /> : <Minimize2 className="w-4 h-4" />}
+                  {isMinimized ? <motion.div layoutId="minimize" /> : <motion.div layoutId="minimize" />}
                 </button>
                 <button
-                  onClick={toggleChat}
-                  className="p-1 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition-colors"
+                  onClick={() => setIsOpen(false)}
+                  className="p-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
                 >
                   <X className="w-4 h-4" />
                 </button>
               </div>
             </div>
 
+            {/* Chat Content */}
             {!isMinimized && (
-              <>
+              <motion.div layout className="flex flex-col h-80">
                 {/* Messages */}
-                <div className="flex-1 overflow-y-auto p-4 space-y-4 max-h-[350px]">
+                <div className="flex-1 overflow-y-auto p-4 space-y-3">
                   {messages.map((message) => (
                     <motion.div
                       key={message.id}
@@ -285,26 +219,13 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
                       <div
-                        className={`max-w-[80%] p-3 rounded-2xl ${
+                        className={`max-w-xs px-3 py-2 rounded-lg ${
                           message.type === 'user'
-                            ? 'bg-blue-600 text-white'
-                            : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white'
+                            ? 'bg-blue-500 text-white'
+                            : 'bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white'
                         }`}
                       >
-                        <p className="text-sm">{message.content}</p>
-                        {message.metadata?.suggestions && (
-                          <div className="mt-2 space-y-1">
-                            {message.metadata.suggestions.map((suggestion, index) => (
-                              <button
-                                key={index}
-                                onClick={() => handleSuggestionClick(suggestion)}
-                                className="block w-full text-left text-xs p-2 hover:bg-blue-100 dark:hover:bg-gray-700 rounded transition-colors"
-                              >
-                                💡 {suggestion}
-                              </button>
-                            ))}
-                          </div>
-                        )}
+                        {message.content}
                       </div>
                     </motion.div>
                   ))}
@@ -314,11 +235,11 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       animate={{ opacity: 1 }}
                       className="flex justify-start"
                     >
-                      <div className="bg-gray-100 dark:bg-gray-800 p-3 rounded-2xl">
+                      <div className="bg-gray-100 dark:bg-gray-700 px-3 py-2 rounded-lg">
                         <div className="flex space-x-1">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" />
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }} />
+                          <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }} />
                         </div>
                       </div>
                     </motion.div>
@@ -328,18 +249,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
 
                 {/* Input Area */}
                 <div className="p-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex items-center gap-2">
-                    {enableFileUpload && (
-                      <label className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded cursor-pointer transition-colors">
-                        <Paperclip className="w-4 h-4" />
-                        <input
-                          type="file"
-                          className="hidden"
-                          onChange={handleFileUpload}
-                          accept=".pdf,.doc,.docx,.txt,.jpg,.jpeg,.png"
-                        />
-                      </label>
-                    )}
+                  <div className="flex items-center space-x-2">
                     <input
                       ref={inputRef}
                       type="text"
@@ -347,17 +257,15 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                       onChange={(e) => setInputValue(e.target.value)}
                       onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                       placeholder="Type your message..."
-                      className="flex-1 p-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      disabled={isProcessing}
+                      className="flex-1 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
                     />
                     {enableVoice && (
                       <button
-                        onClick={handleVoiceInput}
-                        disabled={isListening || isProcessing}
-                        className={`p-2 rounded transition-colors ${
+                        onClick={toggleVoice}
+                        className={`p-2 rounded-lg ${
                           isListening
                             ? 'bg-red-500 text-white'
-                            : 'hover:bg-gray-100 dark:hover:bg-gray-800'
+                            : 'bg-gray-200 dark:bg-gray-600 text-gray-600 dark:text-gray-300'
                         }`}
                       >
                         {isListening ? <MicOff className="w-4 h-4" /> : <Mic className="w-4 h-4" />}
@@ -365,18 +273,17 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
                     )}
                     <button
                       onClick={handleSendMessage}
-                      disabled={!inputValue.trim() || isProcessing}
-                      className="p-2 bg-blue-600 hover:bg-blue-700 text-white rounded transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="p-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                     >
                       <Send className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
-              </>
+              </motion.div>
             )}
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </div>
   );
 };

@@ -1,21 +1,51 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Users } from 'lucide-react';
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Star, Users               } from 'lucide-react.ts';
 
 interface Testimonial {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   quote: string;
   author: string;
   role: string;
   company: string;
   rating: number;
   avatar: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
-interface TestimonialsProps {
+interface TestimonialsProps extends React.PropsWithChildren<{}> {
+
   testimonials: Testimonial[];
+
 }
 
-export function Testimonials({ testimonials }: TestimonialsProps) {
+export function Testimonials(...args: any[]): any {
   return (
     <section className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,8 +68,8 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+          {testimonials.map((testimonial, index)               => (
             <motion.div
               key={testimonial.author}
               initial={{ opacity: 0, y: 20 }}
@@ -83,7 +113,7 @@ export function Testimonials({ testimonials }: TestimonialsProps) {
                     {testimonial.author}
                   </div>
                   <div className="text-sm text-gray-400">{testimonial.role}</div>
-                  <div className="text-sm text-cyan-400 font-medium">{testimonial.company}</div>
+                  <div className="text-sm text-cyan-400 font-medium">{testimonial.comp}</div>
                 </div>
               </div>
             </motion.div>

@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Brain, 
   Shield, 
+=======
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Search, 
+  Filter, 
+  Star, 
+  ArrowRight, 
+  ChevronDown, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Globe, 
   Zap, 
   Cpu, 
@@ -20,6 +30,7 @@ import {
   ArrowRight,
   Rocket,
   Target,
+<<<<<<< HEAD
   Award
 } from 'lucide-react';
 import { allExpandedServices2028 } from '../data/expandedInnovativeServices2028';
@@ -38,6 +49,152 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
     { id: 'blockchain', name: 'Blockchain', icon: Database, count: 0 },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 0 },
     { id: 'sustainability', name: 'Sustainability', icon: Leaf, count: 0 }
+=======
+  Lightbulb,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
+  FileText,
+  MessageCircle,
+  Calendar,
+  Settings,
+  Monitor,
+  Truck,
+  Car,
+  Clipboard,
+  Link,
+  Microscope,
+  X,
+  Atom,
+  Heart,
+  Leaf,
+  Gauge,
+  CpuIcon,
+  DatabaseIcon,
+  NetworkIcon,
+  SmartphoneIcon,
+  BarChart3Icon,
+  CodeIcon,
+  ServerIcon,
+  ChipIcon,
+  WifiIcon,
+  ShieldCheckIcon,
+  BotIcon,
+  WorkflowIcon,
+  EyeIcon,
+  SparklesIcon,
+  PhoneIcon,
+  MailIcon,
+  MapPinIcon,
+  TargetIcon,
+  LightbulbIcon,
+  BarChartIcon,
+  PieChartIcon,
+  LineChartIcon,
+  ActivityIcon,
+  FileTextIcon,
+  MessageCircleIcon,
+  CalendarIcon,
+  SettingsIcon,
+  MonitorIcon,
+  TruckIcon,
+  CarIcon,
+  ClipboardIcon,
+  LinkIcon,
+  MicroscopeIcon,
+  XIcon,
+  AtomIcon,
+  HeartIcon,
+  LeafIcon
+             } from 'lucide-react.ts';
+import { INNOVATIVE_MICRO_SAAS_SERVICES_2031              } from '../data/innovativeMicroSaasServices2031';
+import { SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031              } from '../data/specializedITInfrastructureServices2031';
+import { SPECIALIZED_AI_SERVICES_2031              } from '../data/specializedAIServices2031';
+
+interface ServiceContact {
+
+
+
+
+
+
+
+
+
+
+
+
+
+  mobile: string;
+  email: string;
+  address: string;
+  website: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+const ComprehensiveServicesShowcase2031: React.FC = (): JSX.Element => {;
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [sortBy, setSortBy] = useState('rating');
+  const [viewMode, setViewMode] = useState<any>('grid');
+  const [priceRange, setPriceRange] = useState<any>([0, 10000]);
+  const [innovationLevel, setInnovationLevel] = useState('all');
+
+  // Combine all services
+  const allServices = [;
+    ...INNOVATIVE_MICRO_SAAS_SERVICES_2031,;
+    ...SPECIALIZED_IT_INFRASTRUCTURE_SERVICES_2031,;
+    ...SPECIALIZED_AI_SERVICES_2031;
+  ];
+
+  const categories = [
+    { id: anyanyanyanyanyanyanyanyanyanyanyanyany'all', name: 'All Services', count: allServices.length, icon: '🚀' },
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s              => s.category === 'AI & Automation').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🤖' },
+    { id: 'AI & Analytics', name: 'AI & Analytics', count: allServices.filter(s              => s.category === 'AI & Analytics').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'📊' },
+    { id: 'AI & Development', name: 'AI & Development', count: allServices.filter(s              => s.category === 'AI & Development').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'💻' },
+    { id: 'AI & Finance', name: 'AI & Finance', count: allServices.filter(s              => s.category === 'AI & Finance').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'💰' },
+    { id: 'AI & Logistics', name: 'AI & Logistics', count: allServices.filter(s              => s.category === 'AI & Logistics').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🚚' },
+    { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s              => s.category === 'AI & Healthcare').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🏥' },
+    { id: 'AI & Cybersecurity', name: 'AI & Cybersecurity', count: allServices.filter(s              => s.category === 'AI & Cybersecurity').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🛡️' },
+    { id: 'AI & Marketing', name: 'AI & Marketing', count: allServices.filter(s              => s.category === 'AI & Marketing').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'📢' },
+    { id: 'AI & Research', name: 'AI & Research', count: allServices.filter(s              => s.category === 'AI & Research').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🔬' },
+    { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s              => s.category === 'AI & HR').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'👥' },
+    { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s              => s.category === 'AI & Content').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'✍️' },
+    { id: 'AI & Transportation', name: 'AI & Transportation', count: allServices.filter(s              => s.category === 'AI & Transportation').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🚗' },
+    { id: 'AI & Quantum Computing', name: 'AI & Quantum Computing', count: allServices.filter(s              => s.category === 'AI & Quantum Computing').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'⚛️' },
+    { id: 'AI & Robotics', name: 'AI & Robotics', count: allServices.filter(s              => s.category === 'AI & Robotics').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🤖' },
+    { id: 'AI & Edge', name: 'AI & Edge', count: allServices.filter(s              => s.category === 'AI & Edge').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🌐' },
+    { id: 'AI & Vision', name: 'AI & Vision', count: allServices.filter(s              => s.category === 'AI & Vision').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'👁️' },
+    { id: 'AI & Language', name: 'AI & Language', count: allServices.filter(s              => s.category === 'AI & Language').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🗣️' },
+    { id: 'AI Strategy', name: 'AI Strategy', count: allServices.filter(s              => s.category === 'AI Strategy').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🎯' },
+    { id: 'AI Governance', name: 'AI Governance', count: allServices.filter(s              => s.category === 'AI Governance').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'⚖️' },
+    { id: 'AI Talent', name: 'AI Talent', count: allServices.filter(s              => s.category === 'AI Talent').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🎓' },
+    { id: 'AI R&D', name: 'AI R&D', count: allServices.filter(s              => s.category === 'AI R&D').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🔬' },
+    { id: 'AI Operations', name: 'AI Operations', count: allServices.filter(s              => s.category === 'AI Operations').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'⚙️' },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s              => s.category === 'Cloud & DevOps').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'☁️' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s              => s.category === 'Cybersecurity').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🔒' },
+    { id: 'Data & Analytics', name: 'Data & Analytics', count: allServices.filter(s              => s.category === 'Data & Analytics').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'📈' },;
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s              => s.category === 'Edge Computing').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🌐' },;
+    { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s              => s.category === 'Quantum Computing').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'⚛️' },;
+    { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s              => s.category === 'Blockchain').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🔗' },;
+    { id: 'Sustainability', name: 'Sustainability', count: allServices.filter(s              => s.category === 'Sustainability').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🌱' },;
+    { id: 'Managed Services', name: 'Managed Services', count: allServices.filter(s              => s.category === 'Managed Services').length, icon: anyanyanyanyanyanyanyanyanyanyanyanyany'🔄' },;
+    { id: 'Digital Transformation', name: 'Digital Transformation', count: allServices.filter(s              => s.category === 'Digital Transformation').length, icon: '🔄' };
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   ];
 
   // Combine all services
@@ -69,6 +226,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
     return matchesCategory && matchesSearch;
   });
 
+<<<<<<< HEAD
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Legal Tech': return <Shield className="w-6 h-6" />;
@@ -91,6 +249,38 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
       case 'Predictive AI': return <TrendingUp className="w-6 h-6" />;
       case 'Autonomous AI': return <Bot className="w-6 h-6" />;
       default: return <Zap className="w-6 h-6" />;
+=======
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price-low':;
+        return a.price - b.price;
+      case 'price-high':
+        return b.price - a.price;
+      case 'innovation':
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1;
+      case 'roi':
+        return parseInt(b.roi.replace('%', '')) - parseInt(a.roi.replace('%', ''));
+      default:
+        return 0;
+    }
+  });
+
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    const categoryData = categories.find(c => c.id === category);
+    return categoryData?.icon || '🚀';
+  };
+
+  const getInnovationColor = (level: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    switch (level) {;
+      case 'Revolutionary':;
+        return 'text-purple-400';
+      case 'Advanced':
+        return 'text-blue-400';
+      case 'Innovative':
+        return 'text-green-400';
+      default:
+        return 'text-gray-400';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     }
   };
 
@@ -169,10 +359,58 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-6 py-4 bg-white/10 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
+<<<<<<< HEAD
               <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+=======
+            </div>
+            <select
+              value={activeCategory}
+              onChange={(e) => setActiveCategory(e.target.value)}
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-blue-500"
+            >
+              {categories.map(category              => (
+                <option key={category.id} value={category.id}>
+                  {category.icon} {category.name} ({category.count})
+                </option>
+              ))}
+            </select>
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="px-4 py-3 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="rating">Sort by Rating</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="innovation">Innovation Level</option>
+              <option value="roi">ROI</option>
+            </select>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`px-4 py-3 rounded-lg transition-colors ${
+                  viewMode === 'grid' 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                Grid
+              </button>
+              <button
+                onClick={() => setViewMode('list')}
+                className={`px-4 py-3 rounded-lg transition-colors ${
+                  viewMode === 'list' 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-white/20 text-white hover:bg-white/30'
+                }`}
+              >
+                List
+              </button>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </div>
           </div>
 
+<<<<<<< HEAD
           {/* Category Filters */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
@@ -189,6 +427,85 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
                 {category.name}
                 <span className="ml-2 bg-white/20 px-2 py-1 rounded-full text-xs">
                   {category.count}
+=======
+        {/* Services Grid */}
+        <motion.div 
+          initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+          animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: 0.8,
+  delay: 0.6 
+
+
+
+
+
+
+}}
+          className={`grid gap-6 ${
+            viewMode === 'grid' 
+              ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' 
+              : 'grid-cols-1'
+          }`}
+        >
+          {sortedServices.map((service, index)              => (
+            <motion.div
+              key={service.id}
+              initial = {
+  { opacity: 0,
+  y: 20 
+
+
+
+
+
+
+}}
+              animate = {
+  { opacity: 1,
+  y: 0 
+
+
+
+
+
+
+}}
+              transition = {
+  { duration: 0.5,
+  delay: index * 0.1 
+
+
+
+
+
+
+}}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105"
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="text-2xl mb-2">{getCategoryIcon(service.category)}</div>
+                <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getInnovationColor(service.innovationLevel)} bg-white/10`}>
+                  {service.innovationLevel}
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 </span>
               </button>
             ))}
@@ -196,6 +513,7 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -219,6 +537,154 @@ const ComprehensiveServicesShowcase2031: React.FC = () => {
                     </div>
                     {service.featured && (
                       <Star className="w-5 h-5 text-yellow-400 fill-current" />
+=======
+      {/* Service Detail Modal */}
+      <AnimatePresence>
+        {selectedService && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            onClick={() => setSelectedService(null)}
+          >
+            <motion.div
+              initial = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
+              animate = {
+  { scale: 1,
+  opacity: 1 
+
+
+
+
+
+
+}}
+              exit = {
+  { scale: 0.9,
+  opacity: 0 
+
+
+
+
+
+
+}}
+              className="bg-slate-800 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="flex justify-between items-start mb-6">
+                <h2 className="text-3xl font-bold text-white">{selectedService.title}</h2>
+                <button
+                  onClick={() => setSelectedService(null)}
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  <X className="w-6 h-6" />
+                </button>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-4">Service Overview</h3>
+                  <p className="text-gray-300 mb-6">{selectedService.description}</p>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
+                    <ul className="space-y-2">
+                      {selectedService.benefits.map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanystring, idx: number)              => (
+                        <li key={idx} className="flex items-start">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-gray-300">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Use Cases</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedService.useCases.map((useCase: anyanyanyanyanyanyanyanyanyanyanyanyanystring, idx: number)              => (
+                        <span key={idx} className="px-3 py-1 bg-blue-600/20 border border-blue-400/30 rounded-full text-sm text-blue-300">
+                          {useCase}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <div className="bg-slate-700/50 rounded-xl p-6 mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-4">Pricing & Details</h4>
+                    <div className="space-y-3">
+                      <div className="flex justify-between">
+                        <span className="text-gray-300">Price:</span>
+                        <span className="text-2xl font-bold text-blue-400">
+                          {selectedService.currency}{selectedService.price.toLocaleString()}/{selectedService.pricingModel}
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-300">Market Price:</span>
+                        <span className="text-white">{selectedService.marketPrice}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-300">ROI:</span>
+                        <span className="text-green-400 font-semibold">{selectedService.roi}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-300">Delivery:</span>
+                        <span className="text-white">{selectedService.estimatedDelivery}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-300">Support:</span>
+                        <span className="text-white capitalize">{selectedService.supportLevel}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="bg-slate-700/50 rounded-xl p-6 mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-4">Target Audience</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedService.targetAudience.map((audience: anyanyanyanyanyanyanyanyanyanyanyanyanystring, idx: number)              => (
+                        <span key={idx} className="px-3 py-1 bg-purple-600/20 border border-purple-400/30 rounded-full text-sm text-purple-300">
+                          {audience}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="bg-slate-700/50 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold text-white mb-4">Technical Specifications</h4>
+                    {selectedService.technicalSpecs && (
+                      <div className="space-y-3">
+                        <div>
+                          <span className="text-gray-300 text-sm">Technology:</span>
+                          <div className="flex flex-wrap gap-1 mt-1">
+                            {selectedService.technicalSpecs.technology.map((tech: anyanyanyanyanyanyanyanyanyanyanyanyanystring, idx: number)              => (
+                              <span key={idx} className="px-2 py-1 bg-slate-600/50 rounded text-xs text-gray-300">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <span className="text-gray-300 text-sm">Uptime:</span>
+                          <span className="text-white ml-2">{selectedService.technicalSpecs.uptime}</span>
+                        </div>
+                        <div>
+                          <span className="text-gray-300 text-sm">API Endpoints:</span>
+                          <span className="text-white ml-2">{selectedService.technicalSpecs.apiEndpoints}</span>
+                        </div>
+                      </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                     )}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">

@@ -1,6 +1,24 @@
+<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+=======
+<<<<<<< HEAD
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
+  Cloud,
+  Shield,
+  Rocket,
+  Cpu,
+  Lock,
+  Heart,
+=======
+import React, { useState              } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { Brain, 
   Cloud, 
   Shield, 
@@ -48,10 +66,24 @@ import { Brain,
   Play,
   ChevronRight,
   ChevronLeft
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import {
+  revolutionaryMicroSaasServices2028,
+  revolutionaryITInfrastructureServices2028,
+  revolutionaryAIServices2028
+             } from '@/data/innovativeMicroSaasServices2028';
+import { SEO              } from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Badge              } from '@/components/ui/badge';
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
  } from 'lucide-react';
 import { revolutionaryMicroSaasServices2028, 
   revolutionaryITInfrastructureServices2028, 
   revolutionaryAIServices2028 
+<<<<<<< HEAD
  } from '@/data/innovativeMicroSaasServices2028';
 import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
@@ -59,6 +91,54 @@ import { Badge  } from '@/components/ui/badge';
 export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null);
+=======
+              } from '@/data/innovativeMicroSaasServices2028';
+import { SEO               } from '@/components/SEO';
+import { Button               } from '@/components/ui/button';
+import { Badge               } from '@/components/ui/badge';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function ComprehensiveServicesLanding2028(...args[]: any):  {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [selectedService, setSelectedService] = useState(null);
+
+<<<<<<< HEAD
+  const allServices = [;
+    ...revolutionaryMicroSaasServices2028.map(s => ({ ...s, type: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS' })),;
+    ...revolutionaryITInfrastructureServices2028.map(s              => ({ ...s, type: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Infrastructure' })),;
+    ...revolutionaryAIServices2028.map(s              => ({ ...s, type: 'AI Services' }));
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "CTO, TechFlow Solutions",
+      comp: "TechFlow Solutions",
+      content: "Zion Tech Group's AI-powered legal document analyzer has revolutionized our contract review process. We've reduced review time by 80% and identified potential risks we would have missed.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      name: "Michael Chen",
+      role: "Operations Director, Global Logistics Inc",
+      comp: "Global Logistics Inc",
+      content: "The quantum-enhanced supply chain optimizer has transformed our logistics operations. We've reduced costs by 35% and improved delivery accuracy to 98%.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    },
+    {
+      name: "Dr. Emily Rodriguez",
+      role: "Research Director, BioTech Innovations",
+<<<<<<< HEAD
+      comp: "BioTech Innovations",
+      content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",
+      rating: 5,
+      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"
+<<<<<<< HEAD
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     };
       company: "BioTech Innovations",;
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. We're now able to analyze molecular interactions that were previously impossible to model.",;
@@ -72,9 +152,37 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
     { number: "99.9%", label: "Client Satisfaction", icon: Star },;
     { number: "24/7", label: "Support Available", icon: Clock };
   ];
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    switch (category) {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+      case 'Legal Tech': return Scale;
+      case 'Supply Chain': return Truck;
+      case 'Marketing Tech': return TargetIcon;
+      case 'HR Tech': return Users;
+      case 'Sustainability': return Globe;
+      case 'Real Estate Tech': return Home;
+      case 'Cybersecurity': return Shield;
+      case 'Industrial IoT': return Wrench;
+      case 'Cloud Computing': return Cloud;
+      case 'Content Creation': return FileText;
+      case 'Healthcare AI': return Heart;
+<<<<<<< HEAD
+      default: return Rocket;
+
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
       default: return Rocket}
   };
+<<<<<<< HEAD
   const getCategoryColor = (category: string)  => {
+=======
+
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     const colors = [
       'from-blue-600 to-cyan-600',
       'from-purple-600 to-pink-600',;
@@ -170,8 +278,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       {/* Stats Section */}
       <section className="py-16 bg-white/5 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
-            {stats.map((stat, index)  => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
+            {stats.map((stat, index)               => (
               <motion.div
                 key={stat.label}
                 initial = {
@@ -216,8 +324,14 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               Discover our revolutionary solutions designed to transform your business operations and drive growth
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {allServices.slice(0, 6).map((service, index)  => (
+=======
+
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {allServices.slice(0, 6).map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               <motion.div
                 key={service.id}
                 initial = {

@@ -1,17 +1,36 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { 
   Phone, 
+=======
+<<<<<<< HEAD
+const Contact: React.FC = (): JSX.Element => {
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Phone, 
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Mail, 
   MapPin, 
   Clock, 
   MessageSquare, 
   Send,
   CheckCircle,
+<<<<<<< HEAD
   AlertCircle
 } from 'lucide-react';
 export default function Contact() {
+=======
+  AlertCircle,
+  User,
+  MessageSquare,
+  Building
+             } from 'lucide-react.ts';
+
+export default function Contact(...args: any[]): any {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -24,8 +43,19 @@ export default function Contact() {
     preferredContact: 'email'
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const handleSubmit = async (e: React.FormEvent) => {
+=======
+  const [submitStatus, setSubmitStatus] = useState<any>('idle');
+
+  const handleInputChange = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>)              => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     e.preventDefault();
     setIsSubmitting(true);
     // Simulate form submission
@@ -121,6 +151,161 @@ export default function Contact() {
               Get in touch with our team of experts and let's discuss your project.
             </p>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20"
+          >
+            <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+            
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-500/20 border border-green-500/30 rounded-lg">
+                <div className="flex items-center gap-2 text-green-400">
+                  <CheckCircle className="w-5 h-5" />
+                  <span>Message sent successfully! We'll get back to you soon.</span>
+                </div>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
+                <div className="flex items-center gap-2 text-red-400">
+                  <AlertCircle className="w-5 h-5" />
+                  <span>Something went wrong. Please try again.</span>
+                </div>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="name" className="block text-white font-medium mb-2">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-white font-medium mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                    placeholder="your.email@company.com"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="comp" className="block text-white font-medium mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    id="comp"
+                    name="comp"
+                    value={formData.comp}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                    placeholder="Your company name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-white font-medium mb-2">
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors"
+                    placeholder="+1 (555) 123-4567"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="service" className="block text-white font-medium mb-2">
+                  Service Interest
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-cyan-400 transition-colors"
+                >
+                  {serviceOptions.map((option)              => (
+                    <option key={option.value} value={option.value} className="bg-slate-800 text-white">
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-white font-medium mb-2">
+                  Message *
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  rows={5}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                  placeholder="Tell us about your project, goals, or how we can help..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                disabled={!isFormValid || isSubmitting}
+                className={`w-full py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2 ${
+                  isFormValid && !isSubmitting
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white transform hover:scale-105'
+                    : 'bg-gray-500 text-gray-300 cursor-not-allowed'
+                }`}
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </>
+                )}
+              </button>
+            </form>
+          </motion.div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
         </div>
       </section>
       {/* Contact Form & Info */}

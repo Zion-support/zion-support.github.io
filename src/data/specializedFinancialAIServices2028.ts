@@ -1,4 +1,17 @@
 export interface FinancialAIService2028 {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -17,11 +30,24 @@ export interface FinancialAIService2028 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs?: {
     technology: string[];
     integrations: string[];

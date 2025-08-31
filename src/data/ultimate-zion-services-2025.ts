@@ -1,16 +1,42 @@
 export interface UltimateZionService {
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   name: string;
   tagline: string;
   description: string;
   category: 'micro-saas' | 'it-services' | 'ai-services' | 'emerging-tech' | 'quantum-computing' | 'blockchain-web3' | 'space-tech' | 'biotech-ai';
-  pricing: {
+pricing: {;
     monthly: string;
     yearly: string;
     enterprise: string;
     setup: string;
     marketPrice: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+};
   features: string[];
   benefits: string[];
   technology: string[];

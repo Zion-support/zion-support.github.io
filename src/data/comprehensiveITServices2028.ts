@@ -1,4 +1,18 @@
 export interface ComprehensiveITService2028 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   description: string;
@@ -17,12 +31,26 @@ export interface ComprehensiveITService2028 {
   marketPrice: string;
   roi: string;
   innovationLevel: string;
-  contactInfo: {
+contactInfo: {;
     phone: string;
     email: string;
     website: string;
     address: string;
-  };
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
   technicalSpecs: {
     technology: string[];
     integrations: string[];

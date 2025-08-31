@@ -1,6 +1,29 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
+=======
+<<<<<<< HEAD
+import React, { useState, useMemo } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  Brain,
+  Server,
+  Globe,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+=======
+import React, { useState, useMemo              } from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 import { CheckCircle, 
   Star, 
   Zap, 
@@ -34,10 +57,37 @@ import { CheckCircle,
   Lock,
   Heart,
   Sparkles
+<<<<<<< HEAD
  } from 'lucide-react.ts';
 import { INNOVATIVE_SERVICES_2025  } from '@/data/innovativeServices2025';
 import { SEO  } from '@/components/SEO';
 
+=======
+<<<<<<< HEAD
+import { INNOVATIVE_SERVICES_2025              } from '@/data/innovativeServices2025';
+import { SEO              } from '@/components/SEO';
+=======
+ } from 'lucide-react.ts';
+import { INNOVATIVE_SERVICES_2025               } from '@/data/innovativeServices2025';
+import { SEO               } from '@/components/SEO';
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+<<<<<<< HEAD
+const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedPricingModel, setSelectedPricingModel] = useState('all');
+
+  const services = INNOVATIVE_SERVICES_2025;
+
+<<<<<<< HEAD
+  const cats = services.reduce((acc, service) => {
+      if (!acc.includes(service.category)) {;
+        acc.push(service.category)};
+      return acc}, [] as string[]);
+    return ['all', ...cats]}, [services]);
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const cats = services.reduce((acc, service) => {;
       if (!acc.includes(service.category)) {;
         acc.push(service.category);
@@ -59,7 +109,7 @@ import { SEO  } from '@/components/SEO';
 ;
     return filtered}, [services, selectedCategory, selectedPricingModel]);
 
-  const getCategoryIcon = (category: string)  => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Sales':;
@@ -79,7 +129,7 @@ import { SEO  } from '@/components/SEO';
         return Zap}
   };
 
-  const getCategoryColor = (category: string)  => {
+  const getCategoryColor = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (category) {
       case 'AI & Analytics':;
       case 'AI & Sales':;
@@ -347,8 +397,8 @@ import { SEO  } from '@/components/SEO';
 
             Market Insights & Trends
           </motion.h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {marketInsights.map((insight, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {marketInsights.map((insight, index)               => (
               <motion.div
                 key={insight.title}
                 initial = {
@@ -425,8 +475,8 @@ import { SEO  } from '@/components/SEO';
 
             Flexible Pricing Tiers
           </motion.h2>
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingTiers.map((tier, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {pricingTiers.map((tier, index)               => (
               <motion.div
                 key={tier.name}
                 initial = {
@@ -543,9 +593,21 @@ import { SEO  } from '@/components/SEO';
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
+<<<<<<< HEAD
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {categories.map(category  => (
+=======
+<<<<<<< HEAD
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+
+              {categories.map(category              => (
+=======
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+            >
+              {categories.map(category               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -554,19 +616,47 @@ import { SEO  } from '@/components/SEO';
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
+<<<<<<< HEAD
               className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
               {pricingModels.map(model  => (
+=======
+<<<<<<< HEAD
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+
+              {pricingModels.map(model              => (
+=======
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+            >
+              {pricingModels.map(model               => (
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
                 </option>
               ))}
             </select>
+<<<<<<< HEAD
           </div>;
 ;
           {/* Services Grid */};
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">;
             {filteredServices.map((service, index) => {;
+=======
+<<<<<<< HEAD
+          </div>
+
+          {/* Services Grid */}
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">
+            {filteredServices.map((service, index)               => {;
+=======;
+          </div>;
+;
+          {/* Services Grid */};
+          <div className="grid gap-8 grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3">;
+            {filteredServices.map((service, index)              => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               const CategoryIcon = getCategoryIcon(service.category);
               const categoryColor = getCategoryColor(service.category);
 

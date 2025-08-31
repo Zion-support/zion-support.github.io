@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  ArrowRight,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { ArrowRight,
   Play,
   Star,
   CheckCircle,
@@ -15,8 +14,32 @@ import {
   Rocket,
   Target,
   TrendingUp
+<<<<<<< HEAD
  } from 'lucide-react';
 interface HeroSlide {
+=======
+<<<<<<< HEAD
+=======
+               } from 'lucide-react.ts';
+
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+interface HeroSlide {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   title: string;
   subtitle: string;
   description: string;
@@ -26,14 +49,39 @@ interface HeroSlide {
   features: string[];
   gradient: string;
   icon: React.ComponentType<any>;
+<<<<<<< HEAD
   stats: { label: string; value: string; icon: React.ComponentType<any> 
 }[]}
 export default function EnhancedHeroSection(...args[]):  {
+=======
+<<<<<<< HEAD
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}[];
+=======
+  stats: { label: string; value: string; icon: React.ComponentType<any> 
+}[]}
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+export default function EnhancedHeroSection(...args[]: any):  {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const heroSlides: HeroSlide[] = [
     {
-      title: "AI-Powered Business Solutions",
+      title: anyanyanyanyanyanyanyanyanyanyanyanyanyany"AI-Powered Business Solutions",
       subtitle: "Transform your business with cutting-edge artificial intelligence",
       description: "Leverage the power of AI to automate processes, gain insights, and drive innovation across your organization. Our solutions are designed to scale with your business needs.",
       image: "/images/hero-ai-solutions.jpg",
@@ -80,7 +128,12 @@ export default function EnhancedHeroSection(...args[]):  {
         { label: "Cost Reduction", value: "40%", icon: Rocket }
       ]
   ];
+<<<<<<< HEAD
   useEffect(()  => {
+=======
+
+  useEffect(()                => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     if (!isAutoPlaying) return;
     const interval = setInterval(() => {;
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -92,6 +145,86 @@ export default function EnhancedHeroSection(...args[]):  {
   const prevSlide = () => {;
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
     setIsAutoPlaying(false)};
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+  const goToSlide = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {;
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+    setCurrentSlide(index);
+    setIsAutoPlaying(false)};
+
+  const currentSlideData = heroSlides[currentSlide];
+
+  return (
+    <section className = "relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+      {/* Enhanced animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10"></div>
+        <motion.div
+          className="absolute top-20 left-20 w-72 h-72 bg-zion-cyan/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{ duration: 4, repeat: Infinity }}
+        ></motion.div>
+        <motion.div
+          className="absolute bottom-20 right-20 w-96 h-96 bg-zion-purple/20 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            opacity: [0.6, 0.3, 0.6]
+          }}
+          transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+        ></motion.div>
+        <motion.div
+          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-zion-blue/10 rounded-full blur-3xl"
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.1,
+  1]
+          
+
+
+
+
+
+
+}}
+          transition = {
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany20,
+  repeat: Infinity 
+
+
+
+
+
+
+}}
+>>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+        ></motion.div>
+
+        {/* Floating particles */}
+        {[...Array(6)].map((_, i)                => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-zion-cyan/40 rounded-full"
+            style={{
+              left: `${20 + i * 15}%`,
+              top: `${30 + i * 10}%`,
+            }}
+<<<<<<< HEAD
+            animate = {
+  {
+              y[0, -20, 0],
+              opacity[0.4, 1, 0.4],
+  
+
+}}
+            transition = {
+  {
+=======
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             animate = {
   {
               y: [0, -20, 0],
@@ -159,8 +292,8 @@ export default function EnhancedHeroSection(...args[]):  {
                   {currentSlideData.description}
                 </p>
                 {/* Features */}
-                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: mx-0">
-                  {currentSlideData.features.map((feature, index)  => (
+                <div className="grid grid-cols-2 gap-3 mb-8 max-w-md mx-auto lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanymx-0">
+                  {currentSlideData.features.map((feature, index)                => (
                     <motion.div
                       key={feature}
                       initial = {

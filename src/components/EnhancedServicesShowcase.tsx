@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -10,6 +11,25 @@ import {
   Zap, 
   Cpu, 
   Brain,
+=======
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Link               } from 'react-router-dom.ts';
+import { Brain,
+<<<<<<< HEAD
+  Workflow,
+  Shield,
+  Atom,
+  Cpu,
+  Cloud,
+  Rocket,
+  Zap,
+  ArrowRight,
+  Star,
+  CheckCircle
+=======
+  Shield,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   Cloud,
   Database,
   Globe,
@@ -18,6 +38,7 @@ import {
   DollarSign,
   Clock,
   CheckCircle,
+<<<<<<< HEAD
   ArrowRight,
   Phone,
   Mail,
@@ -26,8 +47,30 @@ import {
 } from 'lucide-react';
 import enhancedInnovativeServices2025 from '../data/enhancedInnovativeServices2025';
 import enhancedITandAIServices2025 from '../data/enhancedITandAIServices2025';
+=======
+  Search
+               } from 'lucide-react.ts';
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 
 interface Service {
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   title: string;
   description: string;
@@ -45,6 +88,7 @@ interface Service {
   supportLevel: string;
   marketPrice: string;
   roi: string;
+<<<<<<< HEAD
   innovationLevel: string;
   contactInfo: {
     phone: string;
@@ -69,10 +113,243 @@ interface Service {
 }
 
 const EnhancedServicesShowcase: React.FC = () => {
+=======
+  marketSize: string;
+  path: string;
+category: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
+  <motion.div
+    initial = {
+  { opacity: 0,
+  y: 20 
+
+}}
+    whileInView = {
+  { opacity: 1,
+  y: 0 
+
+}}
+    viewport={{ once: true }}
+    transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+
+}}
+    className="group relative"
+  >
+    <motion.div
+      className="relative bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-3xl p-8 h-full hover:border-zion-cyan/50 transition-all duration-300 cursor-pointer"
+      whileHover = {
+  { 
+        y: -5,
+        borderColor: 'rgba(34, 221, 210,
+  0.5)'
+      
+
+}}
+      transition={{ duration: 0.3 }}
+    >
+      {/* Background gradient overlay */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+      
+      {/* Icon */}
+      <motion.div
+        className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10`}
+        whileHover={{ rotate: 360 }}
+        transition={{ duration: 0.6 }}
+      >
+        <service.icon className="w-8 h-8 text-white" />
+      </motion.div>
+
+      {/* Category badge */}
+      <div className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full mb-4">
+        {service.category}
+      </div>
+
+      {/* Title */}
+      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
+        {service.title}
+      </h3>
+
+      {/* Description */}
+      <p className="text-gray-300 mb-6 leading-relaxed">
+        {service.description}
+      </p>
+
+      {/* Features */}
+      <div className="space-y-2 mb-6">
+        {service.features.map((feature, featureIndex) => (
+          <motion.div
+            key={feature}
+            className="flex items-center text-sm text-gray-300"
+            initial = {
+  { opacity: 0,
+  x: -20 
+
+}}
+            animate = {
+  { opacity: 1,
+  x: 0 
+
+}}
+            transition={{ delay: featureIndex * 0.1 }}
+          >
+            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
+            {feature}
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-3 gap-4 mb-6">
+        <div className="text-center">
+          <p className="text-2xl font-bold text-zion-cyan">{service.price}</p>
+          <p className="text-xs text-gray-400">Monthly</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-bold text-zion-purple">{service.roi}</p>
+          <p className="text-xs text-gray-400">ROI</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl font-bold text-zion-blue">{service.marketSize}</p>
+          <p className="text-xs text-gray-400">Market</p>
+        </div>
+      </div>
+
+      {/* CTA Button */}
+      <motion.div
+        className="relative z-10"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        <Link
+          to={service.path}
+          className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
+        >
+          Learn More
+          <ArrowRight className="ml-2 w-5 h-5" />
+        </Link>
+      </motion.div>
+
+      {/* Hover effect overlay */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        initial={false}
+      />
+    </motion.div>;
+  </motion.div>;
+);
+
+const services: Service[] = [
+  {
+    id: 'ai-analytics',
+    title: 'AI Predictive Analytics Engine',
+    description: 'Advanced machine learning algorithms for real-time business insights and forecasting',
+    icon: Brain,
+    gradient: 'from-zion-cyan to-zion-purple',
+    features['95% prediction accuracy', 'Real-time processing', 'Custom model training', 'Multi-dimensional forecasting'],
+    price: '$12,999/month',
+    roi: '450% ROI',
+    marketSize: '$23.1B Market',
+    path: '/services/ai-business-intelligence',
+    category: 'AI & Analytics'
+  },
+  {
+    id: 'quantum-optimization',
+    title: 'Quantum Optimization Suite',
+    description: 'Solve complex optimization problems with hybrid quantum-classical computing',
+    icon: Zap,
+    gradient: 'from-zion-purple to-zion-blue',
+    features['Quantum advantage', 'Custom algorithms', 'Hybrid computing', '800% ROI'],
+    price: '$25,999/month',
+    roi: '800% ROI',
+    marketSize: '$1.8B Market',
+    path: '/services/quantum-computing',
+    category: 'Quantum Computing'
+  },
+  {
+    id: 'zero-trust-security',
+    title: 'Zero Trust Security Platform',
+    description: 'Continuous verification with AI behavioral analysis and real-time threat detection',
+    icon: Shield,
+    gradient: 'from-zion-blue to-zion-cyan',
+    features['Continuous verification', 'AI behavioral analysis', 'Real-time detection', '600% ROI'],
+    price: '$18,999/month',
+    roi: '600% ROI',
+    marketSize: '$18.5B Market',
+    path: '/services/cybersecurity',
+    category: 'Cybersecurity'
+  },
+  {
+    id: 'multi-cloud',
+    title: 'Multi-Cloud Orchestration',
+    description: 'Unified management across AWS, Azure, and Google Cloud with cost optimization',
+    icon: Cloud,
+    gradient: 'from-zion-cyan to-zion-blue',
+    features['Unified management', 'Cost optimization', 'Performance monitoring', '700% ROI'],
+    price: '$15,999/month',
+    roi: '700% ROI',
+    marketSize: '$12.8B Market',
+    path: '/services/cloud-devops',
+    category: 'Cloud & DevOps'
+  },
+  {
+    id: 'data-streaming',
+    title: 'Real-Time Data Streaming',
+    description: 'Process millions of events per second with AI analytics and enterprise scalability',
+    icon: Database,
+    gradient: 'from-zion-purple to-zion-cyan',
+    features['Millions of events/sec', 'AI analytics', 'Low latency', '500% ROI'],
+    price: '$13,999/month',
+    roi: '500% ROI',
+    marketSize: '$15.2B Market',
+    path: '/services/data-analytics',
+    category: 'Data & Analytics'
+  },
+  {
+    id: 'blockchain-enterprise',
+    title: 'Enterprise Blockchain Platform',
+    description: 'AI-powered governance and smart contracts with multi-chain support',
+    icon: Globe,
+    gradient: 'from-zion-blue to-zion-purple',
+    features['AI governance', 'Multi-chain support', 'Smart contracts', '600% ROI'],
+    price: '$22,999/month',
+    roi: '600% ROI',
+    marketSize: '$19.9B Market',
+    path: '/services/blockchain',
+    category: 'Blockchain & Web3'
+  }
+];
+
+const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
+
+export default function EnhancedServicesShowcase(...args[]: any):  {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedInnovationLevel, setSelectedInnovationLevel] = useState<string>('all');
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
+  const [selectedDeliveryTime, setSelectedDeliveryTime] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [currentPage, setCurrentPage] = useState(1);
+  const servicesPerPage = 12;
 
   // Combine all services
   const allServices: Service[] = [
@@ -90,7 +367,47 @@ const EnhancedServicesShowcase: React.FC = () => {
       const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
       const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
       
-      return matchesSearch && matchesCategory && matchesInnovation;
+      // Price range filtering
+      let matchesPrice = true;
+      if (selectedPriceRange !== 'all') {
+        const price = service.price;
+        switch (selectedPriceRange) {
+          case 'under-1000':
+            matchesPrice = price < 1000;
+            break;
+          case '1000-5000':
+            matchesPrice = price >= 1000 && price <= 5000;
+            break;
+          case '5000-10000':
+            matchesPrice = price > 5000 && price <= 10000;
+            break;
+          case 'over-10000':
+            matchesPrice = price > 10000;
+            break;
+        }
+      }
+      
+      // Delivery time filtering
+      let matchesDelivery = true;
+      if (selectedDeliveryTime !== 'all') {
+        const delivery = service.estimatedDelivery.toLowerCase();
+        switch (selectedDeliveryTime) {
+          case 'under-1-week':
+            matchesDelivery = delivery.includes('1 week') || delivery.includes('3-5 days');
+            break;
+          case '1-2-weeks':
+            matchesDelivery = delivery.includes('2 weeks') || delivery.includes('1-2 weeks');
+            break;
+          case '2-4-weeks':
+            matchesDelivery = delivery.includes('4 weeks') || delivery.includes('2-4 weeks');
+            break;
+          case 'over-4-weeks':
+            matchesDelivery = delivery.includes('6 weeks') || delivery.includes('8 weeks') || delivery.includes('12 weeks');
+            break;
+        }
+      }
+      
+      return matchesSearch && matchesCategory && matchesInnovation && matchesPrice && matchesDelivery;
     })
     .sort((a, b) => {
       switch (sortBy) {
@@ -98,6 +415,12 @@ const EnhancedServicesShowcase: React.FC = () => {
           return a.price - b.price;
         case 'price-high':
           return b.price - a.price;
+        case 'innovation-high':
+          return b.innovationLevel.localeCompare(a.innovationLevel);
+        case 'delivery-fast':
+          return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
+        case 'roi-high':
+          return b.roi.localeCompare(a.roi);
         case 'roi':
           return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
         case 'name':
@@ -106,8 +429,33 @@ const EnhancedServicesShowcase: React.FC = () => {
       }
     });
 
+  // Pagination logic
+  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
+  const startIndex = (currentPage - 1) * servicesPerPage;
+  const endIndex = startIndex + servicesPerPage;
+  const currentServices = filteredServices.slice(startIndex, endIndex);
+
+  // Reset to first page when filters change
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchTerm, selectedCategory, selectedInnovationLevel, selectedPriceRange, selectedDeliveryTime, sortBy]);
+
   const categories = ['all', ...Array.from(new Set(allServices.map(s => s.category)))];
   const innovationLevels = ['all', ...Array.from(new Set(allServices.map(s => s.innovationLevel)))];
+  const priceRanges = [
+    { value: 'all', label: 'All Prices' },
+    { value: 'under-1000', label: 'Under $1,000' },
+    { value: '1000-5000', label: '$1,000 - $5,000' },
+    { value: '5000-10000', label: '$5,000 - $10,000' },
+    { value: 'over-10000', label: 'Over $10,000' }
+  ];
+  const deliveryTimes = [
+    { value: 'all', label: 'All Delivery Times' },
+    { value: 'under-1-week', label: 'Under 1 Week' },
+    { value: '1-2-weeks', label: '1-2 Weeks' },
+    { value: '2-4-weeks', label: '2-4 Weeks' },
+    { value: 'over-4-weeks', label: 'Over 4 Weeks' }
+  ];
 
   const getInnovationLevelColor = (level: string) => {
     switch (level) {
@@ -178,7 +526,7 @@ const EnhancedServicesShowcase: React.FC = () => {
       {/* Filters and Search */}
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 mb-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
             {/* Search */}
             <div className="relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -204,6 +552,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               ))}
             </select>
 
+<<<<<<< HEAD
             {/* Innovation Level Filter */}
             <select
               value={selectedInnovationLevel}
@@ -227,13 +576,42 @@ const EnhancedServicesShowcase: React.FC = () => {
               <option value="price-low" className="bg-slate-800 text-white">Price: Low to High</option>
               <option value="price-high" className="bg-slate-800 text-white">Price: High to Low</option>
               <option value="roi" className="bg-slate-800 text-white">Highest ROI</option>
+              <option value="innovation-high" className="bg-slate-800 text-white">Highest Innovation</option>
+              <option value="delivery-fast" className="bg-slate-800 text-white">Fastest Delivery</option>
+              <option value="roi-high" className="bg-slate-800 text-white">Highest ROI %</option>
+            </select>
+
+            {/* Price Range Filter */}
+            <select
+              value={selectedPriceRange}
+              onChange={(e) => setSelectedPriceRange(e.target.value)}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              {priceRanges.map(range => (
+                <option key={range.value} value={range.value} className="bg-slate-800 text-white">
+                  {range.label}
+                </option>
+              ))}
+            </select>
+
+            {/* Delivery Time Filter */}
+            <select
+              value={selectedDeliveryTime}
+              onChange={(e) => setSelectedDeliveryTime(e.target.value)}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              {deliveryTimes.map(time => (
+                <option key={time.value} value={time.value} className="bg-slate-800 text-white">
+                  {time.label}
+                </option>
+              ))}
             </select>
           </div>
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredServices.map((service) => (
+          {currentServices.map((service) => (
             <div
               key={service.id}
               className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
@@ -440,10 +818,92 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>
         )}
 
-        {/* Results Count */}
+        {/* Pagination Controls */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center space-x-2 mt-12 mb-8">
+            <button
+              onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+              disabled={currentPage === 1}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            >
+              Previous
+            </button>
+            
+            {Array.from({ length: Math.min(5, totalPages) }, (_, i) => {
+              let pageNum;
+              if (totalPages <= 5) {
+                pageNum = i + 1;
+              } else if (currentPage <= 3) {
+                pageNum = i + 1;
+              } else if (currentPage >= totalPages - 2) {
+                pageNum = totalPages - 4 + i;
+              } else {
+                pageNum = currentPage - 2 + i;
+              }
+              
+              return (
+                <button
+                  key={pageNum}
+                  onClick={() => setCurrentPage(pageNum)}
+                  className={`px-4 py-2 rounded-lg transition-colors duration-200 ${
+                    currentPage === pageNum
+                      ? 'bg-purple-600 text-white'
+                      : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
+                  }`}
+                >
+                  {pageNum}
+                </button>
+              );
+            })}
+            
+            <button
+              onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            >
+              Next
+            </button>
+          </div>
+        )}
+
+        {/* Results Summary and View Toggle */}
         {filteredServices.length > 0 && (
-          <div className="text-center mt-8 text-slate-400">
-            Showing {filteredServices.length} of {allServices.length} services
+          <div className="flex flex-col sm:flex-row justify-between items-center mt-8 text-slate-400">
+            <div className="text-center sm:text-left mb-4 sm:mb-0">
+              <p>Showing {startIndex + 1}-{Math.min(endIndex, filteredServices.length)} of {filteredServices.length} services</p>
+              <p className="text-sm">Page {currentPage} of {totalPages}</p>
+            </div>
+            
+            {/* View Mode Toggle */}
+            <div className="flex items-center space-x-2">
+              <span className="text-sm">View:</span>
+              <button
+                onClick={() => setViewMode('grid')}
+                className={`p-2 rounded-lg transition-colors duration-200 ${
+                  viewMode === 'grid'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
+                }`}
+                title="Grid View"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setViewMode('list')}
+                className={`p-2 rounded-lg transition-colors duration-200 ${
+                  viewMode === 'list'
+                    ? 'bg-purple-600 text-white'
+                    : 'bg-white/10 border border-white/20 text-white hover:bg-white/20'
+                }`}
+                title="List View"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -473,6 +933,12 @@ const EnhancedServicesShowcase: React.FC = () => {
   Search
  } from 'lucide-react';
 export const EnhancedServicesShowcase: React.FC = () => {
+=======
+}}
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export const EnhancedServicesShowcase: React.FC = (): JSX.Element => {
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const services = [
     {
       title: 'AI Workflow Automation',
@@ -557,12 +1023,24 @@ export const EnhancedServicesShowcase: React.FC = () => {
     };
   };
 const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
+<<<<<<< HEAD
 export default function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
   const filteredServices = selectedCategory === 'All'
     ? services
     : services.filter(service => service.category === selectedCategory);
+=======
+
+export default function EnhancedServicesShowcase(...args: any[]): any {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [hoveredService, setHoveredService] = useState<any>(null);
+
+  const filteredServices = selectedCategory === 'All'
+    ? services: anyanyanyanyanyanyanyanyanyanyanyanyanyanyservices.filter(service               => service.category === selectedCategory);
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   return (
     <section className = "py-24 bg-futuristic-enhanced relative overflow-hidden">
       {/* Background Elements */}
@@ -599,11 +1077,16 @@ export default function EnhancedServicesShowcase() {
           initial="hidden"
           whileInView="visible"
           viewport = {
-  { once: true,
+  { once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue,
   margin: "-100px" 
 }}
         >
+<<<<<<< HEAD
           {services.map((service, index) => (
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+          {services.map((service, index)               => (
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             <motion.div
               key={index}
               variants={itemVariants}
@@ -786,11 +1269,11 @@ export default function EnhancedServicesShowcase() {
 }}
           viewport={{ once: true }}
           transition = {
-  { duration: 0.6,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.3 
 }}
         >
-          {categories.map((category, index) => (
+          {categories.map((category, index)               => (
             <motion.button
               key={category}
               onClick={() => setSelectedCategory(category)}
@@ -815,6 +1298,98 @@ export default function EnhancedServicesShowcase() {
   delay: index * 0.1 
 }}
             >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              {category}
+            </motion.button>
+          ))}
+        </motion.div>
+
+        {/* Search */}
+        <div className="relative mb-8 text-center">
+          <input
+            type="text"
+            placeholder="Search services..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="w-64 px-4 py-2 bg-zion-slate-dark/50 border border-zion-slate/30 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20"
+          />
+          <Search className="absolute right-3 top-2.5 w-5 h-5 text-zion-slate-light" />
+        </div>
+
+        {/* Services Grid */}
+        <div className="max-w-7xl mx-auto">
+          {filteredServices.length > 0 ? (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index)                => (
+                <ServiceCard key={service.id} service={service} index={index} />
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-16">
+              <div className="text-zion-slate-light text-lg">No services found matching your criteria.</div>
+              <button;
+                onClick={() => {;
+                  setSelectedCategory('All');
+                  setSearchTerm('')}}
+                className = "mt-4 text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300"
+              >
+                Clear filters
+              </button>
+            </div>
+          )}
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-20">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 30 
+
+}}
+            animate = {
+  { opacity: 1,
+  y: 0 
+
+}}
+            transition = {
+  { duration: 0.8,
+  delay: 0.4 
+
+}}
+            className="bg-gradient-to-r from-zion-slate-dark/80 to-zion-slate/80 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-zion-slate-light mb-6 max-w-2xl mx-auto">
+              Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-semibold hover:from-zion-cyan/90 hover:to-zion-blue/90 transition-all duration-300 flex items-center justify-center"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/about"
+                className="border border-zion-cyan/30 text-zion-cyan px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan/10 transition-all duration-300"
+              >
+                Learn More About Us
+              </Link>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )}
+=======
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
               View All Services
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>

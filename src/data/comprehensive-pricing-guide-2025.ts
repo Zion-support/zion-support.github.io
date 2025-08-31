@@ -1,13 +1,55 @@
 export interface PricingTier {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     name: string;
     price: string;
     billing: 'monthly' | 'yearly' | 'one-time';
     features: string[];
     popular?: boolean;
     savings?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 export interface ServicePricing {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     id: string;
     name: string;
     category: string;
@@ -20,12 +62,26 @@ export interface ServicePricing {
     setupTime: string;
     marketPosition: string;
     competitors: string[];
-    contactInfo: {
+contactInfo: {;
         mobile: string;
         email: string;
         address: string;
         website: string;
-    };
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+};
 }
 
 const CONTACT = {

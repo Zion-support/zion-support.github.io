@@ -1,14 +1,29 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Mail, 
   Phone, 
   MapPin, 
+<<<<<<< HEAD
+  Clock,
+  Facebook,
+  Twitter,
+=======
+import React, { useState } from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Twitter,
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+  Linkedin,
+  Instagram,
+=======
   Globe, 
   Linkedin, 
   Twitter, 
   Facebook, 
   Instagram, 
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   Youtube,
   Github,
   Zap,
@@ -26,6 +41,173 @@ import {
   Star,
   CheckCircle,
   Award,
+<<<<<<< HEAD
+<<<<<<< HEAD
+  Users,
+  CheckCircle
+=======
+  Lock,
+  Eye,
+  Atom,
+  Code,
+<<<<<<< HEAD
+  BookOpen,
+  Truck,
+  ExternalLink,
+  ChevronDown,
+  Copyright
+import { AnimatePresence               } from 'framer-motion.ts';
+
+interface FooterLink {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  name: string;
+  path: string;
+  icon: ;
+  external?: boolean;
+
+interface FooterSection {
+  title: string;
+  icon: ;
+  links: FooterLink[];
+
+const footerSections = [
+  {
+title: 'Comp',;
+icon: Globe,;
+links: [;
+{ name: 'About Us', path: '/about', icon: Users;
+
+
+
+
+
+
+
+
+
+
+
+
+
+},
+      { name: 'Partners', path: '/partners', icon: Users },
+      { name: 'Careers', path: '/careers', icon: Briefcase },
+      { name: 'Contact', path: '/contact', icon: Phone },
+      { name: 'Blog', path: '/blog', icon: Newspaper },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'News', path: '/news', icon: Newspaper },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Help Center', path: '/help', icon: HelpCircle }
+    ]
+  },
+  {
+    title: 'AI & Machine Learning',
+    icon: Brain,
+    links: [
+      { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: BarChart3 },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: Shield },
+      { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
+      { name: 'AI-Powered SEO', path: '/services/ai-seo', icon: TrendingUp },
+      { name: 'AI Content Marketing Suite', path: '/services/ai-content-marketing-suite', icon: FileText },
+      { name: 'AI Customer Support', path: '/services/ai-customer-support-automation', icon: MessageCircle },
+      { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
+      { name: 'AI Financial Analytics', path: '/services/ai-financial-analytics', icon: DollarSign }
+    ]
+  },
+  {
+    title: 'Cloud & Infrastructure',
+    icon: Cloud,
+    links: [
+      { name: 'Cloud DevOps', path: '/services/cloud-devops', icon: Server },
+      { name: 'IT Infrastructure', path: '/services/it-infrastructure', icon: Building },
+      { name: 'FinOps Advisor', path: '/services/finops-advisor', icon: DollarSign },
+      { name: 'Cloud FinOps Optimizer', path: '/services/cloud-finops-optimizer', icon: BarChart3 },
+      { name: 'IT Consulting', path: '/it-consulting', icon: Cpu },
+      { name: 'Enterprise Solutions', path: '/solutions/enterprise', icon: Building },
+      { name: 'Healthcare Solutions', path: '/solutions/healthcare', icon: Heart }
+    ]
+  },
+  {
+    title: 'Cybersecurity & Privacy',
+    icon: Shield,
+    links: [
+      { name: 'AI Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Lock },
+      { name: 'Security Headers & CSP', path: '/services/security-headers-csp', icon: Shield },
+      { name: 'DSR Privacy Portal', path: '/services/dsr-portal', icon: Eye },
+      { name: 'Zero Trust Network Access', path: '/services/zero-trust-network-access', icon: Lock },
+      { name: 'AI Compliance Assistant', path: '/services/ai-compliance-assistant', icon: CheckCircle }
+    ]
+  },
+  {
+    title: 'Emerging Technologies',
+    icon: Atom,
+    links: [
+      { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
+      { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Network },
+      { name: 'AI Quantum Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Brain },
+      { name: 'Space Technology', path: '/space-tech', icon: Satellite },
+      { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
+      { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Zap }
+    ]
+  },
+  {
+    title: 'Micro SaaS Solutions',
+    icon: ShoppingCart,
+    links: [
+      { name: 'Micro CRM', path: '/services/micro-crm', icon: Users },
+      { name: 'Helpdesk Platform', path: '/services/helpdesk', icon: MessageCircle },
+      { name: 'Website Analytics', path: '/services/website-analytics', icon: BarChart3 },
+      { name: 'IT Helpdesk', path: '/services/it-helpdesk', icon: HelpCircle },
+      { name: 'Affiliate Tracking', path: '/services/affiliate-tracking', icon: TrendingUp },
+      { name: 'Mobile Survey', path: '/services/mobile-survey', icon: Smartphone },
+      { name: 'Email Sequencer', path: '/services/email-sequencer', icon: Mail },
+      { name: 'Podcast Transcription', path: '/services/podcast-transcription', icon: Video }
+    ]
+  },
+  {
+    title: 'Support & Resources',
+    icon: HelpCircle,
+    links: [
+      { name: 'Help Center', path: '/help', icon: HelpCircle },
+      { name: 'FAQ', path: '/faq', icon: HelpCircle },
+      { name: 'Blog', path: '/blog', icon: BookOpen },
+      { name: 'News', path: '/news', icon: Newspaper },
+      { name: 'Case Studies', path: '/case-studies', icon: FileText },
+      { name: 'Pricing', path: '/pricing', icon: DollarSign },
+      { name: 'Contact Support', path: '/contact', icon: MessageCircle },
+      { name: 'Marketplace', path: '/marketplace', icon: ShoppingCart },
+      { name: 'Sitemap', path: '/sitemap', icon: FileText }
+    ]
+
+];
+
+const socialLinks = [
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'hover:text-blue-500' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'hover:text-gray-400' },
+  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'hover:text-blue-400' },
+  { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'hover:text-blue-600' },
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'hover:text-pink-500' },
+  { name: 'YouTube', icon: TestTube, href: 'https://youtube.com/ziontechgroup', color: 'hover:text-red-600' }
+];
+=======
+  Database,
+  Network,
+  Server
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
   Rocket,
   Target,
   Handshake,
@@ -56,15 +238,208 @@ import {
   Users2,
   Settings,
   Palette
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 } from 'lucide-react';
 
-export function Footer() {
+export function Footer(...args: any[]): any {
   const currentYear = new Date().getFullYear();
+<<<<<<< HEAD
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+<<<<<<< HEAD
+  const footerSections = [
+    {
+      title: "AI & Machine Learning",
+=======
+  const [activeSection, setActiveSection] = useState<any>(null);
+
+  const footerSections = [
+    {
+      title: 'Comp',
+      icon: Building,
+      links: [
+        { name: 'About Us', path: '/about', icon: Users },
+        { name: 'Our Story', path: '/about/story', icon: FileText },
+        { name: 'Team', path: '/about/team', icon: Users },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Network },
+        { name: 'Press', path: '/press', icon: Newspaper },
+        { name: 'Contact', path: '/contact', icon: Phone }
+      ]
+    },
+    {
+      title: 'AI & Quantum Solutions',
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+      icon: Brain,
+      category: "Core Services",
+      services: [
+        { name: "AI Customer Success Automation", href: "/services/ai-customer-success-automation", badge: "Popular" },
+        { name: "AI Healthcare Analytics Platform", href: "/services/ai-healthcare-analytics-platform", badge: "New" },
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced", badge: "Featured" },
+        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced", badge: "Trending" },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", badge: "Innovative" },
+        { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform", badge: "Healthcare" },
+        { name: "AI Smart Home Energy Management", href: "/services/ai-smart-home-energy-management-platform", badge: "IoT" },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", badge: "Logistics" },
+        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", badge: "Marketing" },
+        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", badge: "Quantum" },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", badge: "Space Tech" },
+        { name: "AI Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform", badge: "Green Tech" },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", badge: "Manufacturing" },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" },
+        { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }
+      ]
+    },
+    {
+      title: "AI Cybersecurity & Infrastructure",
+      icon: Shield,
+      category: "Security & Infrastructure",
+      services: [
+        { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite", badge: "Security" },
+        { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management", badge: "Infrastructure" },
+        { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization", badge: "Cloud" },
+        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform", badge: "Analytics" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation", badge: "DevOps" },
+        { name: "Edge Computing Platform", href: "/services/edge-computing-platform", badge: "Edge" }
+      ]
+    },
+    {
+      title: 'Solutions',
+      links: [
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' }
+>>>>>>> 4cf84cee096ee4bad48102099687eb335d856d5c
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      title: "Quantum Computing & Emerging Tech",
+      icon: Atom,
+      services: [
+        { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" },
+        { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" },
+        { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" },
+        { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }
+      ]
+    },
+    {
+      title: 'Resources',
+      links: [
+        { name: 'Documentation', href: '/docs' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Support Center', href: '/help' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Research', href: '/research-development' }
+      ]
+    }
+  ];
+
+  const solutions = [
+    { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+    { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+    { name: "Financial Solutions", href: "/solutions/financial" },
+    { name: "Government Solutions", href: "/solutions/government" },
+    { name: "Manufacturing Solutions", href: "/solutions/manufacturing" },
+    { name: "Retail Solutions", href: "/solutions/retail" },
+    { name: "Education Solutions", href: "/solutions/education" },
+    { name: "Startup Solutions", href: "/solutions/startup" }
+  ];
+
+<<<<<<< HEAD
+  const resources = [
+    { name: "Blog", href: "/blog" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "White Papers", href: "/white-papers" },
+    { name: "Webinars", href: "/webinars" },
+    { name: "Documentation", href: "/documentation" },
+    { name: "API Reference", href: "/api" },
+    { name: "Help Center", href: "/help" },
+    { name: "FAQ", href: "/faq" }
+  ];
+=======
+<<<<<<< HEAD
+  // Toggle section expansion (for mobile)
+  const toggleSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
+    setExpandedSections(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(title)) {
+        newSet.delete(title);
+      } else {
+        newSet.add(title);
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
+  const company = [
+    { name: "About Us", href: "/about" },
+    { name: "Leadership", href: "/leadership" },
+    { name: "Careers", href: "/careers" },
+    { name: "Partners", href: "/partners" },
+    { name: "News", href: "/news" },
+    { name: "Contact", href: "/contact" },
+    { name: "Request Quote", href: "/request-quote" },
+    { name: "Schedule Demo", href: "/schedule-demo" }
+  ];
+
+  const legal = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "GDPR Compliance", href: "/gdpr" },
+    { name: "Accessibility", href: "/accessibility" },
+    { name: "Security", href: "/security" }
+  ];
+
+  const socialLinks = [
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/zion-tech-group', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
+  ];
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      text: '+1 (302) 464-0950',
+      href: 'tel:+13024640950'
+    },
+    {
+      icon: Mail,
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
+    },
+    {
+      icon: MapPin,
+      text: '364 E Main St STE 1008, Middletown DE 19709',
+      href: '#'
+    },
+    {
+      icon: Clock,
+      text: 'Mon-Fri: 9AM-6PM EST',
+      href: '#'
+    }
+  ];
+
+=======
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       {/* Main Footer Content */}
@@ -96,9 +471,109 @@ export function Footer() {
                   kleber@ziontechgroup.com
                 </a>
               </div>
+<<<<<<< HEAD
+              <div className="flex items-start space-x-3 text-gray-300">
+                <MapPin className="w-4 h-4 text-blue-400 mt-0.5" />
+                <span>{companyInfo.address}</span>
+              </div>
+<<<<<<< HEAD
+              <div className="flex items-center space-x-3 text-gray-300">
+                <Clock className="w-4 h-4 text-blue-400" />
+                <span>{companyInfo.hours}</span>
+=======
+            </div>
+          </div>
+
+          {/* Service Sections */}
+          {footerSections.slice(1, 6).map((section) => (
+            <div key={section.title} className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <section.icon className="w-5 h-5 text-cyan-400" />
+                <h3 className="font-semibold text-white">{section.title}</h3>
+              </div>
+
+              <div className="space-y-2">
+                {section.links.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
+
+                    <div className="flex items-center space-x-2">
+                      <link.icon className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                      <span>{link.name}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+=======
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          {footerSections.map((section)               => (
+            <div key={section.title} className="space-y-4">
+              <motion.button
+                onClick={() => setActiveSection(activeSection === section.title ? null : section.title)}
+                className="flex items-center space-x-2 text-lg font-semibold text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2"
+                aria-expanded={activeSection === section.title}
+              >
+                <section.icon className="w-5 h-5" />
+                <span>{section.title}</span>
+              </motion.button>
+              
+              <motion.div
+                initial={false}
+                animate={{ height: activeSection === section.title ? 'auto' : 0, opacity: activeSection === section.title ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-2">
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group"
+                    >
+                      <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm">{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+            </div>
+          ))}
+        </div>
+
+        {/* Contact & Social Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>Get in Touch</span>
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <span>contact@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>123 Innovation Drive, Tech City, TC 12345</span>
+                </div>
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
               <div className="flex items-center text-zion-slate-light text-sm">
                 <MapPin className="w-4 h-4 mr-2 text-zion-cyan" />
                 <span>364 E Main St STE 1008, Middletown DE 19709</span>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
               </div>
             </div>
             <div className="flex space-x-4">

@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Menu, 
+import React, { useState, useEffect, useCallback } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { Menu, 
   X, 
   ChevronDown, 
   Search, 
@@ -27,19 +26,49 @@ import {
   Building,
   Rocket,
   Star
-} from 'lucide-react';
+              } from 'lucide-react.ts';
 
 interface NavigationItem {
-  label: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   href: string;
   icon?: React.ReactNode;
   children?: NavigationItem[];
   featured?: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
-interface EnhancedNavigationProps {
+interface EnhancedNavigationProps extends React.PropsWithChildren<{}> {
+
   className?: string;
-  onThemeChange?: (theme: 'light' | 'dark' | 'system') => void;
+  onThemeChange?: (theme: 'light' | 'dark' | 'system')               => void;
+
 }
 
 const navigationItems: NavigationItem[] = [
@@ -147,7 +176,7 @@ const navigationItems: NavigationItem[] = [
     ]
   },
   { 
-    label: 'Company', 
+    label: 'Comp', 
     href: '/about',
     icon: <Users className="w-4 h-4" />,
     children: [
@@ -186,8 +215,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   onThemeChange ;
 }) => {;
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('system');
+  const [activeDropdown, setActiveDropdown] = useState<any>(null);
+  const [theme, setTheme] = useState<any>('system');
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
@@ -205,7 +234,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     setActiveDropdown(null);
   }, [location]);
 
-  const handleThemeChange = useCallback((newTheme: 'light' | 'dark' | 'system') => {;
+  const handleThemeChange = useCallback((newTheme: anyanyanyanyanyanyanyanyanyanyanyanyanyany'light' | 'dark' | 'system')               => {;
     setTheme(newTheme);
     onThemeChange?.(newTheme);
     
@@ -222,7 +251,7 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     localStorage.setItem('zion-theme', newTheme);
   }, [onThemeChange]);
 
-  const toggleDropdown = (label: string) => {
+  const toggleDropdown = (label: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setActiveDropdown(activeDropdown === label ? null : label);
   };
 
@@ -258,8 +287,8 @@ export const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navigationItems.map((item) => (
+          <div className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
+            {navigationItems.map((item)               => (
               <div key={item.label} className="relative group">
                 {item.children ? (
                   <button

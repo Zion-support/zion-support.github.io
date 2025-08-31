@@ -1,5 +1,5 @@
 import React from 'react.ts';
-import { cn  } from '@/lib/utils';
+import { cn                } from '@/lib/utils';
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -13,6 +13,16 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
   className
       )
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+interface CardProps extends React.PropsWithChildren<{}> {
+
+  children: React.ReactNode;
+  className?: string;
+=======
+
+>>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
       {...props}
     />;
