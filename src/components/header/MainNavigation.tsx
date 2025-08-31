@@ -364,6 +364,22 @@ export function MainNavigation({ className }: MainNavigationProps) {
                       </Link>
                     </li>
                     <li>
+                      <Link to="/services/ai-cybersecurity-threat-intelligence" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Shield className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">AI Cybersecurity</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/services/quantum-edge-computing-solutions" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
+                        <div className="flex items-center space-x-2">
+                          <Atom className="w-3 h-3 text-zion-purple" />
+                          <span className="text-zion-slate-light group-hover:text-white transition-colors text-sm">Quantum Edge Computing</span>
+                        </div>
+                      </Link>
+                    </li>
+                    <li>
                       <Link to="/services/micro-saas-solutions-comprehensive" className="group flex items-center justify-between p-2 rounded-lg hover:bg-zion-purple/10 transition-all duration-300">
                         <div className="flex items-center space-x-2">
                           <Layers className="w-3 h-3 text-zion-purple" />

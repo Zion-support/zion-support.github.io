@@ -74,7 +74,9 @@ export function Footer() {
         { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
         { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
-        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users }
+        { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
       ]
     },
     {
@@ -113,6 +115,7 @@ export function Footer() {
         { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions", icon: Atom },
         { name: "Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
         { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
+        { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
         { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
         { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
         { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
