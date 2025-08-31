@@ -78,7 +78,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
         name: "Enterprise",
 <<<<<<< HEAD
         price: 29999,
-        features[
+        features: [
           "Full research automation",
           "Custom AI models",
           "White-label solutions",
@@ -91,7 +91,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
         support: "Dedicated account manager"
     ],
     marketPrice: "$7,000-15,000",
-    competitors["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
+    competitors: ["OpenAI Research", "Anthropic Claude", "Google DeepMind"],
     roi: "800% within 12 months",
     setupTime: "6-8 weeks",
     paymentOptions["One-time payment", "Annual subscription", "Monthly payment"],
@@ -131,7 +131,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
       {
         name: "Studio",
         price: 24999,
-        features[
+        features: [
           "Advanced metaverse tools",
           "AI-powered content generation",
           "Multi-user environments",
@@ -145,7 +145,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
       {
         name: "Enterprise",
         price: 49999,
-        features[
+        features: [
           "Full metaverse platform",
           "Custom AI models",
           "Scalable infrastructure",
@@ -304,7 +304,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
       {
         name: "Medical Center",
         price: 79999,
-        features[
+        features: [
           "Full medical imaging platform",
           "Custom AI models",
           "White-label solutions",
@@ -316,7 +316,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
         support: "Dedicated support"
     ],
     marketPrice: "$20,000-50,000",
-    competitors["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
+    competitors: ["IBM Watson Health", "Google Health", "Microsoft Healthcare"],
     roi: "1000% within 20 months",
     setupTime: "10-12 weeks",
     paymentOptions["One-time payment", "Annual subscription", "Per-image pricing"],
@@ -333,7 +333,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
       {
         name: "Basic",
         price: 18999,
-        features[
+        features: [
           "Basic risk assessment",
           "Portfolio analysis",
           "Basic reporting",
@@ -347,7 +347,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
       {
         name: "Professional",
         price: 32999,
-        features[
+        features: [
           "Advanced risk assessment",
           "Real-time monitoring",
           "Advanced analytics",
@@ -385,7 +385,7 @@ export const COMPREHENSIVE_PRICING_GUIDE_2030: PricingTier[] = [
         support: "Dedicated support"
     ],
     marketPrice: "$15,000-40,000",
-    competitors["Bloomberg Risk", "Reuters Risk", "S&P Global"],
+    competitors: ["Bloomberg Risk", "Reuters Risk", "S&P Global"],
     roi: "900% within 18 months",
     setupTime: "8-10 weeks",
     paymentOptions["One-time payment", "Annual subscription", "Per-portfolio pricing"],

@@ -24,6 +24,8 @@ import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 import { EnhancedNavigation } from './components/ui/EnhancedNavigation';
 import { EnhancedFooter } from './components/ui/EnhancedFooter';
+import { ThemeProvider } from './components/ThemeProvider';
+import { Sidebar } from './components/Sidebar';
 
 // Layout Components
 import ModernLayout from './components/layout/ModernLayout';
@@ -97,6 +99,11 @@ const EdgeComputingSolutions = createLazyComponent(() => import('./pages/service
 // New Innovative AI Services 2025 - From remote version
 const AIAutonomousBusinessOperationsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Operations-Platform'));
 const AICustomerExperienceAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Customer-Experience-Analytics-Platform'));
+
+// New AI Services 2026 - Our Enhanced Services
+const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
+const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
+const AIContentMarketingStudio = createLazyComponent(() => import('./pages/services/ai-content-marketing-studio'));
 
 // Additional service pages from remote branch
 const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
@@ -334,6 +341,11 @@ function App() {
                     <Route path="/services/ai-autonomous-business-operations-platform" element={<AIAutonomousBusinessOperationsPlatform />} />
                     <Route path="/services/ai-customer-experience-analytics-platform" element={<AICustomerExperienceAnalyticsPlatform />} />
 
+                    {/* New AI Services 2026 - Our Enhanced Services */}
+                    <Route path="/services/ai-autonomous-logistics-platform" element={<ModernLayout><AIAutonomousLogisticsPlatform /></ModernLayout>} />
+                    <Route path="/services/ai-powered-seo" element={<ModernLayout><AIPoweredSEO /></ModernLayout>} />
+                    <Route path="/services/ai-content-marketing-studio" element={<ModernLayout><AIContentMarketingStudio /></ModernLayout>} />
+
                     {/* Additional service routes from remote branch */}
                     <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
                     <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
@@ -437,29 +449,30 @@ function App() {
                     />
 
                   </Routes>
-                              </AnimatePresence>
-            </main>
+                </AnimatePresence>
+              </main>
 
-            {/* Footer - Using AppFooter for enhanced features */}
-            <AppFooter />
+              {/* Footer - Using AppFooter for enhanced features */}
+              <AppFooter />
 
-            {/* Enhanced Performance Optimizer */}
-            <PerformanceOptimizer enabled={true} showMetrics={false} />
+              {/* Enhanced Performance Optimizer */}
+              <PerformanceOptimizer enabled={true} showMetrics={false} />
 
-            {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} showIssues={false} autoFix={true} />
+              {/* Enhanced Accessibility Enhancer */}
+              <EnhancedAccessibilityEnhancer enabled={true} showIssues={false} autoFix={true} />
 
-            {/* Mobile Responsiveness Enhancer */}
-            <MobileResponsivenessEnhancer 
-              enabled={true} 
-              showMobileIndicator={false}
-              enableTouchGestures={true}
-              enableMobileOptimizations={true}
-            />
-        </div>
-      </Router>
+              {/* Mobile Responsiveness Enhancer */}
+              <MobileResponsivenessEnhancer 
+                enabled={true} 
+                showMobileIndicator={false}
+                enableTouchGestures={true}
+                enableMobileOptimizations={true}
+              />
+            </div>
+          </Router>
+        </ThemeProvider>
+      </HelmetProvider>
     </ErrorBoundary>
-  </HelmetProvider>
   );
 }
 

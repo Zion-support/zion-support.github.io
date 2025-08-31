@@ -54,7 +54,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     category: 'Cybersecurity',
     subcategory: 'Threat Intelligence',
     description: 'AI-powered cybersecurity platform that uses quantum-resistant algorithms to detect and neutralize advanced persistent threats in real-time',
-    features[
+    features: [
       'Quantum-resistant encryption algorithms',
       'Real-time threat detection and response',
       'Behavioral analytics and anomaly detection',
@@ -64,7 +64,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'Advanced persistent threat hunting',
       'Compliance automation and reporting'
     ],
-    benefits[
+    benefits: [
       '99.99% threat detection rate',
       'Zero false positives',
       'Automated compliance reporting',
@@ -72,7 +72,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'Reduced security team workload',
       'Future-proof quantum security'
     ],
-    useCases[
+    useCases: [
       'Government cybersecurity',
       'Financial institution protection',
       'Healthcare data security',
@@ -80,7 +80,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'Enterprise security operations',
       'Cloud security monitoring'
     ],
-    targetAudience[
+    targetAudience: [
       'Government agencies',
       'Financial institutions',
       'Healthcare organizations',
@@ -102,10 +102,10 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       trialPeriod: '30 days'
     },
     marketPrice: '$2,500 - $15,000/month',
-    competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
+    competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
     roi: '400-600% through threat prevention',
     setupTime: '2-4 weeks',
-    integrations['SIEM systems', 'EDR platforms', 'Cloud providers', 'Security tools'],
+    integrations: ['SIEM systems', 'EDR platforms', 'Cloud providers', 'Security tools'],
     technology['Quantum Computing', 'AI/ML', 'Behavioral Analytics', 'Zero Trust'],
     innovationLevel: 'Revolutionary',
     marketSize: '$4.2 billion by 2027',
@@ -135,7 +135,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
     category: 'Cybersecurity',
     subcategory: 'Compliance Automation',
     description: 'Intelligent compliance automation platform that continuously monitors and ensures regulatory compliance across multiple frameworks',
-    features[
+    features: [
       'Multi-framework compliance monitoring',
       'Automated compliance reporting',
       'Real-time policy enforcement',
@@ -145,7 +145,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'Compliance scoring and metrics',
       'Integration with existing systems'
     ],
-    benefits[
+    benefits: [
       '90% reduction in compliance costs',
       'Automated regulatory updates',
       'Real-time compliance monitoring',
@@ -153,7 +153,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'Proactive risk mitigation',
       'Centralized compliance management'
     ],
-    useCases[
+    useCases: [
       'Financial services compliance',
       'Healthcare HIPAA compliance',
       'Government security compliance',
@@ -161,7 +161,7 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       'GDPR data protection',
       'Industry-specific regulations'
     ],
-    targetAudience[
+    targetAudience: [
       'Financial institutions',
       'Healthcare organizations',
       'Government agencies',
@@ -183,10 +183,10 @@ export const advancedCybersecurityServices: ExpandedService2027[] = [
       trialPeriod: '14 days'
     },
     marketPrice: '$1,500 - $8,000/month',
-    competitors['OneTrust', 'TrustArc', 'LogicGate'],
+    competitors: ['OneTrust', 'TrustArc', 'LogicGate'],
     roi: '300-500% through automation',
     setupTime: '1-2 weeks',
-    integrations['GRC platforms', 'Security tools', 'HR systems', 'Cloud providers'],
+    integrations: ['GRC platforms', 'Security tools', 'HR systems', 'Cloud providers'],
     technology['AI/ML', 'Automation', 'Compliance Frameworks', 'Risk Management'],
     innovationLevel: 'Advanced',
     marketSize: '$3.8 billion by 2027',
@@ -218,7 +218,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     category: 'Data Analytics',
     subcategory: 'Predictive Analytics',
     description: 'Advanced predictive analytics platform that uses machine learning to forecast business trends and provide actionable insights',
-    features[
+    features: [
       'Multi-dimensional data analysis',
       'Real-time predictive modeling',
       'Automated insight generation',
@@ -228,7 +228,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'Machine learning model training',
       'Automated reporting'
     ],
-    benefits[
+    benefits: [
       'Data-driven decision making',
       'Proactive business planning',
       'Increased operational efficiency',
@@ -236,7 +236,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'Reduced manual analysis time',
       'Improved forecasting accuracy'
     ],
-    useCases[
+    useCases: [
       'Sales forecasting and planning',
       'Inventory optimization',
       'Customer behavior prediction',
@@ -244,7 +244,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'Market trend analysis',
       'Operational performance optimization'
     ],
-    targetAudience[
+    targetAudience: [
       'Retail companies',
       'Manufacturing firms',
       'Financial services',
@@ -266,10 +266,10 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       trialPeriod: '21 days'
     },
     marketPrice: '$1,800 - $10,000/month',
-    competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
+    competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
     roi: '250-400% through improved decisions',
     setupTime: '2-3 weeks',
-    integrations['Data warehouses', 'CRM systems', 'ERP platforms', 'Cloud services'],
+    integrations: ['Data warehouses', 'CRM systems', 'ERP platforms', 'Cloud services'],
     technology['Machine Learning', 'Big Data', 'Data Visualization', 'Predictive Modeling'],
     innovationLevel: 'Advanced',
     marketSize: '$5.6 billion by 2027',
@@ -299,7 +299,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
     category: 'Data Analytics',
     subcategory: 'Real-Time Processing',
     description: 'High-performance real-time data streaming platform for processing and analyzing data as it flows through systems',
-    features[
+    features: [
       'Real-time data ingestion',
       'Stream processing engines',
       'Low-latency analytics',
@@ -309,7 +309,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'Scalable streaming clusters',
       'Data quality monitoring'
     ],
-    benefits[
+    benefits: [
       'Instant data insights',
       'Real-time decision making',
       'Reduced data latency',
@@ -317,7 +317,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'Enhanced customer experience',
       'Cost-effective data processing'
     ],
-    useCases[
+    useCases: [
       'IoT data processing',
       'Financial trading systems',
       'E-commerce analytics',
@@ -325,7 +325,7 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       'Social media analytics',
       'Sensor data processing'
     ],
-    targetAudience[
+    targetAudience: [
       'IoT companies',
       'Financial institutions',
       'E-commerce platforms',
@@ -347,10 +347,10 @@ export const advancedDataAnalyticsServices: ExpandedService2027[] = [
       trialPeriod: '14 days'
     },
     marketPrice: '$2,200 - $12,000/month',
-    competitors['Apache Kafka', 'Amazon Kinesis', 'Google Cloud Dataflow'],
+    competitors: ['Apache Kafka', 'Amazon Kinesis', 'Google Cloud Dataflow'],
     roi: '300-500% through real-time insights',
     setupTime: '3-5 weeks',
-    integrations['Message queues', 'Data warehouses', 'Cloud platforms', 'Streaming services'],
+    integrations: ['Message queues', 'Data warehouses', 'Cloud platforms', 'Streaming services'],
     technology['Stream Processing', 'Real-Time Analytics', 'Event Streaming', 'Big Data'],
     innovationLevel: 'Advanced',
     marketSize: '$4.8 billion by 2027',
@@ -382,7 +382,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     category: 'Cloud & DevOps',
     subcategory: 'Multi-Cloud Management',
     description: 'Intelligent multi-cloud orchestration platform that manages and optimizes workloads across multiple cloud providers',
-    features[
+    features: [
       'Multi-cloud workload management',
       'Automated cost optimization',
       'Unified monitoring and logging',
@@ -392,7 +392,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Performance optimization',
       'Compliance management'
     ],
-    benefits[
+    benefits: [
       'Reduced cloud costs by 30-50%',
       'Improved performance and reliability',
       'Vendor lock-in avoidance',
@@ -400,7 +400,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Automated operations',
       'Enhanced security posture'
     ],
-    useCases[
+    useCases: [
       'Multi-cloud deployments',
       'Hybrid cloud environments',
       'Cloud cost optimization',
@@ -408,7 +408,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Performance monitoring',
       'Security compliance'
     ],
-    targetAudience[
+    targetAudience: [
       'Large enterprises',
       'Technology companies',
       'Financial institutions',
@@ -430,10 +430,10 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       trialPeriod: '30 days'
     },
     marketPrice: '$2,000 - $15,000/month',
-    competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
+    competitors: ['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
     roi: '200-400% through cost optimization',
     setupTime: '4-6 weeks',
-    integrations['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'CI/CD tools'],
+    integrations: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'CI/CD tools'],
     technology['Multi-Cloud', 'DevOps', 'Automation', 'Orchestration', 'Monitoring'],
     innovationLevel: 'Advanced',
     marketSize: '$6.2 billion by 2027',
@@ -463,7 +463,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
     category: 'Cloud & DevOps',
     subcategory: 'DevOps Automation',
     description: 'Intelligent DevOps automation platform that uses AI to optimize software development, testing, and deployment processes',
-    features[
+    features: [
       'AI-powered code review',
       'Automated testing optimization',
       'Intelligent deployment strategies',
@@ -473,7 +473,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Continuous integration/continuous deployment',
       'DevOps metrics and analytics'
     ],
-    benefits[
+    benefits: [
       '50-70% faster deployments',
       'Reduced deployment failures',
       'Automated quality assurance',
@@ -481,7 +481,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Cost-effective operations',
       'Enhanced software quality'
     ],
-    useCases[
+    useCases: [
       'Software development teams',
       'DevOps engineering',
       'Quality assurance',
@@ -489,7 +489,7 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       'Performance optimization',
       'Incident management'
     ],
-    targetAudience[
+    targetAudience: [
       'Software companies',
       'Technology startups',
       'Enterprise IT teams',
@@ -511,10 +511,10 @@ export const advancedCloudDevOpsServices: ExpandedService2027[] = [
       trialPeriod: '21 days'
     },
     marketPrice: '$1,200 - $8,000/month',
-    competitors['Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'CircleCI'],
+    competitors: ['Jenkins', 'GitLab CI/CD', 'GitHub Actions', 'CircleCI'],
     roi: '300-500% through automation',
     setupTime: '2-3 weeks',
-    integrations['Git platforms', 'CI/CD tools', 'Cloud providers', 'Monitoring tools'],
+    integrations: ['Git platforms', 'CI/CD tools', 'Cloud providers', 'Monitoring tools'],
     technology['AI/ML', 'DevOps', 'Automation', 'CI/CD', 'Monitoring'],
     innovationLevel: 'Advanced',
     marketSize: '$5.4 billion by 2027',
@@ -546,7 +546,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
     category: 'IoT & Edge Computing',
     subcategory: 'Industrial IoT',
     description: 'Comprehensive industrial IoT platform that provides real-time monitoring, predictive maintenance, and operational intelligence for manufacturing and industrial operations',
-    features[
+    features: [
       'Real-time equipment monitoring',
       'Predictive maintenance algorithms',
       'Energy consumption optimization',
@@ -556,7 +556,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Performance analytics',
       'Integration with existing systems'
     ],
-    benefits[
+    benefits: [
       'Reduced equipment downtime by 40-60%',
       'Energy cost savings of 20-30%',
       'Improved product quality',
@@ -564,7 +564,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Proactive maintenance planning',
       'Real-time operational insights'
     ],
-    useCases[
+    useCases: [
       'Manufacturing operations',
       'Industrial automation',
       'Energy management',
@@ -572,7 +572,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Supply chain optimization',
       'Safety monitoring'
     ],
-    targetAudience[
+    targetAudience: [
       'Manufacturing companies',
       'Industrial facilities',
       'Energy companies',
@@ -594,10 +594,10 @@ export const advancedIoTServices: ExpandedService2027[] = [
       trialPeriod: '30 days'
     },
     marketPrice: '$2,800 - $18,000/month',
-    competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
+    competitors: ['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
     roi: '250-400% through operational efficiency',
     setupTime: '6-8 weeks',
-    integrations['PLC systems', 'SCADA systems', 'ERP platforms', 'Cloud services'],
+    integrations: ['PLC systems', 'SCADA systems', 'ERP platforms', 'Cloud services'],
     technology['IoT', 'Edge Computing', 'AI/ML', 'Predictive Analytics', 'Industrial Protocols'],
     innovationLevel: 'Advanced',
     marketSize: '$7.8 billion by 2027',
@@ -627,7 +627,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
     category: 'IoT & Edge Computing',
     subcategory: 'Smart Cities',
     description: 'Comprehensive smart city platform that integrates IoT sensors, AI analytics, and automation to optimize urban operations and improve citizen services',
-    features[
+    features: [
       'Traffic management optimization',
       'Public safety monitoring',
       'Environmental monitoring',
@@ -637,7 +637,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Energy grid optimization',
       'Citizen engagement portal'
     ],
-    benefits[
+    benefits: [
       'Reduced traffic congestion by 25-35%',
       'Energy savings of 20-30%',
       'Improved public safety',
@@ -645,7 +645,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Operational cost reduction',
       'Sustainable urban development'
     ],
-    useCases[
+    useCases: [
       'City traffic management',
       'Public safety operations',
       'Environmental monitoring',
@@ -653,7 +653,7 @@ export const advancedIoTServices: ExpandedService2027[] = [
       'Public transportation',
       'Urban planning'
     ],
-    targetAudience[
+    targetAudience: [
       'City governments',
       'Municipalities',
       'Urban planners',
@@ -675,10 +675,10 @@ export const advancedIoTServices: ExpandedService2027[] = [
       trialPeriod: '60 days'
     },
     marketPrice: '$5,000 - $50,000/month',
-    competitors['Cisco Smart Cities', 'IBM Smart Cities', 'Microsoft CityNext', 'Siemens Smart Cities'],
+    competitors: ['Cisco Smart Cities', 'IBM Smart Cities', 'Microsoft CityNext', 'Siemens Smart Cities'],
     roi: '200-350% through operational efficiency',
     setupTime: '8-12 weeks',
-    integrations['City systems', 'IoT sensors', 'Traffic systems', 'Utility networks'],
+    integrations: ['City systems', 'IoT sensors', 'Traffic systems', 'Utility networks'],
     technology['IoT', 'Edge Computing', 'AI/ML', 'Big Data', 'Urban Analytics'],
     innovationLevel: 'Advanced',
     marketSize: '$8.9 billion by 2027',
@@ -710,7 +710,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     category: 'Financial Technology',
     subcategory: 'Quantum Finance',
     description: 'Revolutionary financial modeling platform that uses quantum computing to solve complex financial problems and optimize investment strategies',
-    features[
+    features: [
       'Quantum portfolio optimization',
       'Risk assessment algorithms',
       'Real-time market analysis',
@@ -720,7 +720,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Performance analytics',
       'Multi-asset management'
     ],
-    benefits[
+    benefits: [
       '1000x faster financial calculations',
       'Superior risk assessment',
       'Enhanced portfolio returns',
@@ -728,7 +728,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Automated compliance',
       'Competitive advantage'
     ],
-    useCases[
+    useCases: [
       'Portfolio optimization',
       'Risk management',
       'Algorithmic trading',
@@ -736,7 +736,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Regulatory reporting',
       'Investment analysis'
     ],
-    targetAudience[
+    targetAudience: [
       'Investment banks',
       'Hedge funds',
       'Asset management firms',
@@ -758,10 +758,10 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       trialPeriod: '30 days'
     },
     marketPrice: '$8,000 - $50,000/month',
-    competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
+    competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
     roi: '500-1000% through superior returns',
     setupTime: '8-12 weeks',
-    integrations['Trading platforms', 'Market data feeds', 'Risk systems', 'Compliance tools'],
+    integrations: ['Trading platforms', 'Market data feeds', 'Risk systems', 'Compliance tools'],
     technology['Quantum Computing', 'Financial Modeling', 'AI/ML', 'Risk Analytics'],
     innovationLevel: 'Revolutionary',
     marketSize: '$12.5 billion by 2027',
@@ -791,7 +791,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
     category: 'Financial Technology',
     subcategory: 'DeFi',
     description: 'Advanced DeFi protocol that provides automated financial services including lending, borrowing, trading, and yield farming',
-    features[
+    features: [
       'Automated lending and borrowing',
       'Decentralized trading',
       'Yield farming optimization',
@@ -801,7 +801,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Risk management tools',
       'Governance mechanisms'
     ],
-    benefits[
+    benefits: [
       'Eliminates intermediaries',
       '24/7 automated operation',
       'Transparent operations',
@@ -809,7 +809,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Global accessibility',
       'Programmable financial services'
     ],
-    useCases[
+    useCases: [
       'Decentralized lending',
       'Automated trading',
       'Yield farming',
@@ -817,7 +817,7 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       'Cross-border payments',
       'Asset management'
     ],
-    targetAudience[
+    targetAudience: [
       'Cryptocurrency users',
       'DeFi enthusiasts',
       'Traders and investors',
@@ -839,10 +839,10 @@ export const advancedFinTechServices: ExpandedService2027[] = [
       trialPeriod: 'Immediate'
     },
     marketPrice: 'Transaction fees only',
-    competitors['Uniswap', 'Compound', 'Aave', 'MakerDAO'],
+    competitors: ['Uniswap', 'Compound', 'Aave', 'MakerDAO'],
     roi: 'Variable based on DeFi yields',
     setupTime: 'Immediate',
-    integrations['Ethereum', 'Polygon', 'Binance Smart Chain', 'Other blockchains'],
+    integrations: ['Ethereum', 'Polygon', 'Binance Smart Chain', 'Other blockchains'],
     technology['Blockchain', 'Smart Contracts', 'DeFi Protocols', 'Web3'],
     innovationLevel: 'Advanced',
     marketSize: '$15.2 billion by 2027',
@@ -874,7 +874,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     category: 'Healthcare Technology',
     subcategory: 'AI Diagnostics',
     description: 'Advanced AI-powered diagnostic platform that assists healthcare professionals in accurate disease diagnosis and treatment planning',
-    features[
+    features: [
       'Medical image analysis',
       'Symptom assessment algorithms',
       'Treatment recommendation engine',
@@ -884,7 +884,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Medical literature integration',
       'Compliance with medical standards'
     ],
-    benefits[
+    benefits: [
       'Improved diagnostic accuracy',
       'Reduced diagnostic time',
       'Enhanced treatment planning',
@@ -892,7 +892,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Reduced medical errors',
       'Cost-effective healthcare'
     ],
-    useCases[
+    useCases: [
       'Medical imaging analysis',
       'Symptom assessment',
       'Treatment planning',
@@ -900,7 +900,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Clinical research',
       'Medical education'
     ],
-    targetAudience[
+    targetAudience: [
       'Hospitals and clinics',
       'Healthcare providers',
       'Medical imaging centers',
@@ -922,10 +922,10 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       trialPeriod: '30 days'
     },
     marketPrice: '$3,500 - $25,000/month',
-    competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
+    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
     roi: '300-600% through improved outcomes',
     setupTime: '6-8 weeks',
-    integrations['EHR systems', 'PACS systems', 'Lab systems', 'Medical devices'],
+    integrations: ['EHR systems', 'PACS systems', 'Lab systems', 'Medical devices'],
     technology['AI/ML', 'Computer Vision', 'Natural Language Processing', 'Medical AI'],
     innovationLevel: 'Advanced',
     marketSize: '$18.7 billion by 2027',
@@ -955,7 +955,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
     category: 'Healthcare Technology',
     subcategory: 'Telemedicine',
     description: 'Comprehensive telemedicine platform that provides secure, high-quality virtual healthcare services with AI-powered triage and monitoring',
-    features[
+    features: [
       'High-definition video consultations',
       'AI-powered symptom triage',
       'Remote patient monitoring',
@@ -965,7 +965,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Multi-language support',
       'Mobile and web applications'
     ],
-    benefits[
+    benefits: [
       'Improved access to healthcare',
       'Reduced healthcare costs',
       'Enhanced patient convenience',
@@ -973,7 +973,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Increased provider efficiency',
       'Geographic accessibility'
     ],
-    useCases[
+    useCases: [
       'Virtual consultations',
       'Remote monitoring',
       'Chronic disease management',
@@ -981,7 +981,7 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       'Follow-up care',
       'Emergency triage'
     ],
-    targetAudience[
+    targetAudience: [
       'Healthcare providers',
       'Hospitals and clinics',
       'Insurance companies',
@@ -1003,10 +1003,10 @@ export const advancedHealthcareServices: ExpandedService2027[] = [
       trialPeriod: '30 days'
     },
     marketPrice: '$2,500 - $20,000/month',
-    competitors['Teladoc', 'Amwell', 'MDLive', 'Doxy.me'],
+    competitors: ['Teladoc', 'Amwell', 'MDLive', 'Doxy.me'],
     roi: '250-400% through increased efficiency',
     setupTime: '4-6 weeks',
-    integrations['EHR systems', 'Insurance systems', 'Payment processors', 'Mobile platforms'],
+    integrations: ['EHR systems', 'Insurance systems', 'Payment processors', 'Mobile platforms'],
     technology['Video Conferencing', 'AI/ML', 'Mobile Apps', 'Cloud Computing'],
     innovationLevel: 'Advanced',
     marketSize: '$22.4 billion by 2027',

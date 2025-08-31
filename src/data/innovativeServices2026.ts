@@ -33,7 +33,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'Micro SaaS',
     price: '$299',
     billing: 'month',
-    features[
+    features: [
       'Real-time churn risk scoring',
       'Behavioral pattern analysis',
       'Predictive analytics dashboard',
@@ -42,13 +42,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Custom retention strategies',
       'ROI tracking and reporting'
     ],
-    benefits[
+    benefits: [
       'Reduce churn by up to 40%',
       'Increase customer lifetime value',
       'Optimize retention spend',
       'Proactive customer success'
     ],
-    useCases[
+    useCases: [
       'SaaS subscription businesses',
       'E-commerce platforms',
       'Subscription box services',
@@ -63,7 +63,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '2-4 weeks',
     supportLevel: '24/7',
     compliance['GDPR', 'CCPA', 'SOC 2'],
-    integrations['Salesforce', 'HubSpot', 'Stripe', 'Shopify'],
+    integrations: ['Salesforce', 'HubSpot', 'Stripe', 'Shopify'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -77,7 +77,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'Micro SaaS',
     price: '$199',
     billing: 'month',
-    features[
+    features: [
       'Demand forecasting with 90% accuracy',
       'Real-time inventory tracking',
       'Automated reorder points',
@@ -86,13 +86,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Seasonal trend analysis',
       'Cost optimization recommendations'
     ],
-    benefits[
+    benefits: [
       'Reduce inventory costs by 25%',
       'Eliminate stockouts',
       'Improve cash flow',
       'Optimize warehouse space'
     ],
-    useCases[
+    useCases: [
       'Retail chains',
       'E-commerce warehouses',
       'Manufacturing companies',
@@ -107,7 +107,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '3-5 weeks',
     supportLevel: 'Business hours + emergency',
     compliance['ISO 9001', 'FDA', 'GMP'],
-    integrations['SAP', 'Oracle', 'NetSuite', 'QuickBooks'],
+    integrations: ['SAP', 'Oracle', 'NetSuite', 'QuickBooks'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -121,7 +121,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'Micro SaaS',
     price: '$149',
     billing: 'month',
-    features[
+    features: [
       'Real-time energy consumption tracking',
       'Smart device identification',
       'Anomaly detection alerts',
@@ -130,13 +130,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Cost analysis and forecasting',
       'Mobile app monitoring'
     ],
-    benefits[
+    benefits: [
       'Reduce energy bills by 35%',
       'Improve sustainability score',
       'Comply with green regulations',
       'Enhance corporate social responsibility'
     ],
-    useCases[
+    useCases: [
       'Office buildings',
       'Manufacturing facilities',
       'Retail stores',
@@ -151,7 +151,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '1-2 weeks',
     supportLevel: '24/7 monitoring',
     compliance['LEED', 'ISO 50001', 'Energy Star'],
-    integrations['Building Management Systems', 'Smart Meters', 'Solar Panels'],
+    integrations: ['Building Management Systems', 'Smart Meters', 'Solar Panels'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -165,7 +165,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'Micro SaaS',
     price: '$399',
     billing: 'month',
-    features[
+    features: [
       'Multi-framework compliance monitoring',
       'Automated evidence collection',
       'Real-time compliance scoring',
@@ -174,13 +174,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Employee training tracking',
       'Incident response automation'
     ],
-    benefits[
+    benefits: [
       'Reduce compliance costs by 50%',
       'Eliminate audit surprises',
       'Maintain continuous compliance',
       'Protect against fines and penalties'
     ],
-    useCases[
+    useCases: [
       'Healthcare organizations',
       'Financial services',
       'Technology companies',
@@ -195,7 +195,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '4-6 weeks',
     supportLevel: '24/7 + compliance experts',
     compliance['GDPR', 'HIPAA', 'SOC 2', 'PCI DSS', 'ISO 27001'],
-    integrations['AWS', 'Azure', 'GCP', 'Jira', 'ServiceNow'],
+    integrations: ['AWS', 'Azure', 'GCP', 'Jira', 'ServiceNow'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -210,7 +210,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'AI Solutions',
     price: '$1,299',
     billing: 'month',
-    features[
+    features: [
       'Natural language processing',
       'Multi-language support (50+ languages)',
       'Context-aware conversations',
@@ -219,13 +219,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Knowledge base learning',
       '24/7 availability'
     ],
-    benefits[
+    benefits: [
       'Reduce support costs by 60%',
       'Improve customer satisfaction by 40%',
       'Handle 10x more inquiries',
       'Provide instant responses'
     ],
-    useCases[
+    useCases: [
       'E-commerce customer support',
       'SaaS product support',
       'Banking customer service',
@@ -240,7 +240,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '6-8 weeks',
     supportLevel: '24/7 + AI specialists',
     compliance['GDPR', 'CCPA', 'HIPAA'],
-    integrations['Zendesk', 'Intercom', 'Slack', 'Microsoft Teams'],
+    integrations: ['Zendesk', 'Intercom', 'Slack', 'Microsoft Teams'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -254,7 +254,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'AI Solutions',
     price: '$2,499',
     billing: 'month',
-    features[
+    features: [
       'Real-time equipment monitoring',
       'Machine learning failure prediction',
       'Maintenance scheduling optimization',
@@ -263,13 +263,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Mobile technician app',
       'Integration with CMMS systems'
     ],
-    benefits[
+    benefits: [
       'Reduce unplanned downtime by 70%',
       'Extend equipment life by 30%',
       'Optimize maintenance costs',
       'Improve safety and compliance'
     ],
-    useCases[
+    useCases: [
       'Manufacturing plants',
       'Power plants',
       'Oil and gas facilities',
@@ -284,7 +284,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '8-12 weeks',
     supportLevel: '24/7 + field engineers',
     compliance['ISO 55001', 'OSHA', 'API'],
-    integrations['SAP', 'Maximo', 'Oracle', 'Siemens Mindsphere'],
+    integrations: ['SAP', 'Maximo', 'Oracle', 'Siemens Mindsphere'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -298,7 +298,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'AI Solutions',
     price: '$3,999',
     billing: 'month',
-    features[
+    features: [
       'Real-time transaction monitoring',
       'Behavioral pattern analysis',
       'Multi-channel fraud detection',
@@ -307,13 +307,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Compliance reporting',
       'Machine learning model updates'
     ],
-    benefits[
+    benefits: [
       'Reduce fraud losses by 80%',
       'Improve detection accuracy',
       'Reduce false positives by 60%',
       'Comply with regulatory requirements'
     ],
-    useCases[
+    useCases: [
       'Credit card transactions',
       'Online banking',
       'E-commerce payments',
@@ -328,7 +328,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '10-14 weeks',
     supportLevel: '24/7 + security experts',
     compliance['PCI DSS', 'SOC 2', 'ISO 27001', 'GDPR'],
-    integrations['Stripe', 'PayPal', 'Square', 'Banking APIs'],
+    integrations: ['Stripe', 'PayPal', 'Square', 'Banking APIs'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -343,7 +343,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'IT Services',
     price: '$15,000',
     billing: 'project',
-    features[
+    features: [
       'Cloud readiness assessment',
       'Migration strategy planning',
       'Zero-downtime migration',
@@ -352,13 +352,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Security and compliance setup',
       'Post-migration support'
     ],
-    benefits[
+    benefits: [
       'Reduce migration time by 50%',
       'Ensure zero business disruption',
       'Optimize cloud costs',
       'Improve scalability and performance'
     ],
-    useCases[
+    useCases: [
       'Legacy system modernization',
       'Data center consolidation',
       'Application modernization',
@@ -373,7 +373,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '8-16 weeks',
     supportLevel: '24/7 + migration specialists',
     compliance['SOC 2', 'ISO 27001', 'HIPAA', 'FedRAMP'],
-    integrations['AWS', 'Azure', 'GCP', 'VMware', 'OpenStack'],
+    integrations: ['AWS', 'Azure', 'GCP', 'VMware', 'OpenStack'],
     api: false,
     mobile: false,
     enterprise: true,
@@ -387,7 +387,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'IT Services',
     price: '$8,500',
     billing: 'project',
-    features[
+    features: [
       'Vulnerability assessment',
       'Penetration testing',
       'Security architecture review',
@@ -396,13 +396,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Remediation roadmap',
       'Security training recommendations'
     ],
-    benefits[
+    benefits: [
       'Identify security gaps',
       'Reduce cyber risk',
       'Comply with regulations',
       'Improve security posture'
     ],
-    useCases[
+    useCases: [
       'Security audits',
       'Compliance assessments',
       'Merger and acquisition due diligence',
@@ -417,7 +417,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '4-6 weeks',
     supportLevel: 'Business hours + emergency',
     compliance['ISO 27001', 'NIST', 'SOC 2', 'PCI DSS'],
-    integrations['Security tools', 'SIEM systems', 'Vulnerability scanners'],
+    integrations: ['Security tools', 'SIEM systems', 'Vulnerability scanners'],
     api: false,
     mobile: false,
     enterprise: true,
@@ -431,7 +431,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'IT Services',
     price: '$25,000',
     billing: 'project',
-    features[
+    features: [
       'Digital maturity assessment',
       'Transformation roadmap development',
       'Change management strategy',
@@ -440,13 +440,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Talent development planning',
       'ROI measurement framework'
     ],
-    benefits[
+    benefits: [
       'Accelerate digital transformation',
       'Improve operational efficiency',
       'Enhance customer experience',
       'Increase competitive advantage'
     ],
-    useCases[
+    useCases: [
       'Digital strategy development',
       'Process digitization',
       'Customer experience transformation',
@@ -461,7 +461,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '12-24 weeks',
     supportLevel: 'Business hours + strategic support',
     compliance['Industry standards', 'Best practices'],
-    integrations['Enterprise systems', 'Cloud platforms', 'Digital tools'],
+    integrations: ['Enterprise systems', 'Cloud platforms', 'Digital tools'],
     api: false,
     mobile: false,
     enterprise: true,
@@ -476,7 +476,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'Quantum Computing',
     price: '$5,999',
     billing: 'month',
-    features[
+    features: [
       'Quantum algorithm development',
       'Quantum hardware access',
       'Hybrid classical-quantum computing',
@@ -485,13 +485,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Research collaboration tools',
       'Educational resources'
     ],
-    benefits[
+    benefits: [
       'Solve previously intractable problems',
       'Accelerate research and development',
       'Gain quantum advantage',
       'Future-proof your technology stack'
     ],
-    useCases[
+    useCases: [
       'Drug discovery',
       'Financial modeling',
       'Logistics optimization',
@@ -506,7 +506,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '6-8 weeks',
     supportLevel: 'Business hours + quantum experts',
     compliance['Research standards', 'Data security'],
-    integrations['Classical computing', 'Cloud platforms', 'Research tools'],
+    integrations: ['Classical computing', 'Cloud platforms', 'Research tools'],
     api: true,
     mobile: false,
     enterprise: true,
@@ -520,7 +520,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'Blockchain & Web3',
     price: '$2,999',
     billing: 'month',
-    features[
+    features: [
       'Real-time supply chain tracking',
       'Smart contract automation',
       'Compliance documentation',
@@ -529,13 +529,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Multi-stakeholder access',
       'Mobile app for field workers'
     ],
-    benefits[
+    benefits: [
       'Improve supply chain transparency',
       'Reduce fraud and counterfeiting',
       'Ensure compliance',
       'Build consumer trust'
     ],
-    useCases[
+    useCases: [
       'Food safety tracking',
       'Pharmaceutical supply chain',
       'Luxury goods authentication',
@@ -550,7 +550,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '8-12 weeks',
     supportLevel: '24/7 + blockchain experts',
     compliance['FDA', 'EU regulations', 'Industry standards'],
-    integrations['ERP systems', 'IoT devices', 'Mobile apps'],
+    integrations: ['ERP systems', 'IoT devices', 'Mobile apps'],
     api: true,
     mobile: true,
     enterprise: true,
@@ -564,7 +564,7 @@ export const innovativeServices2026: InnovativeService[] = [
     category: 'Metaverse & AR/VR',
     price: '$4,999',
     billing: 'month',
-    features[
+    features: [
       '3D virtual storefronts',
       'Digital asset marketplace',
       'AR/VR shopping experiences',
@@ -573,13 +573,13 @@ export const innovativeServices2026: InnovativeService[] = [
       'Social commerce features',
       'Analytics and insights'
     ],
-    benefits[
+    benefits: [
       'Create immersive shopping experiences',
       'Reach global audiences',
       'Reduce physical infrastructure costs',
       'Innovate customer engagement'
     ],
-    useCases[
+    useCases: [
       'Fashion retail',
       'Real estate virtual tours',
       'Automotive showrooms',
@@ -594,7 +594,7 @@ export const innovativeServices2026: InnovativeService[] = [
     implementationTime: '12-16 weeks',
     supportLevel: 'Business hours + metaverse experts',
     compliance['Digital rights', 'Privacy regulations'],
-    integrations['E-commerce platforms', 'Payment gateways', 'Social media'],
+    integrations: ['E-commerce platforms', 'Payment gateways', 'Social media'],
     api: true,
     mobile: true,
     enterprise: true,

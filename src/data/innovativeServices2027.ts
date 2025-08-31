@@ -21,7 +21,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     name: 'Quantum AI Platform',
     category: 'Quantum AI',
     description: 'Advanced quantum artificial intelligence platform for complex problem solving',
-    features[
+    features: [
       'Quantum machine learning algorithms',
       'Hybrid classical-quantum processing',
       'Real-time quantum optimization',
@@ -30,8 +30,8 @@ export const innovativeServices2027: InnovativeService2027[] = [
     price: '$2,999/month',
     aiScore: 98,
     technology['Quantum Computing', 'Machine Learning', 'Neural Networks'],
-    useCases['Drug Discovery', 'Financial Modeling', 'Climate Prediction'],
-    benefits[
+    useCases: ['Drug Discovery', 'Financial Modeling', 'Climate Prediction'],
+    benefits: [
       'Exponential speed improvements',
       'Unprecedented accuracy',
       'Scalable quantum solutions'
@@ -48,7 +48,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     name: 'Autonomous AI System',
     category: 'Autonomous AI',
     description: 'Self-learning and self-optimizing artificial intelligence system',
-    features[
+    features: [
       'Continuous learning capabilities',
       'Self-optimization algorithms',
       'Adaptive decision making',
@@ -57,8 +57,8 @@ export const innovativeServices2027: InnovativeService2027[] = [
     price: '$1,599/month',
     aiScore: 96,
     technology['Deep Learning', 'Reinforcement Learning', 'Predictive Analytics'],
-    useCases['Process Automation', 'Quality Control', 'Predictive Maintenance'],
-    benefits[
+    useCases: ['Process Automation', 'Quality Control', 'Predictive Maintenance'],
+    benefits: [
       'Reduced manual intervention',
       'Improved efficiency',
       'Cost optimization'
@@ -75,7 +75,7 @@ export const innovativeServices2027: InnovativeService2027[] = [
     name: 'Quantum Finance Platform',
     category: 'Quantum Finance',
     description: 'Quantum-powered financial modeling and risk assessment platform',
-    features[
+    features: [
       'Quantum risk modeling',
       'Portfolio optimization',
       'Real-time market analysis',
@@ -84,8 +84,8 @@ export const innovativeServices2027: InnovativeService2027[] = [
     price: '$3,499/month',
     aiScore: 97,
     technology['Quantum Computing', 'Financial Modeling', 'Risk Assessment'],
-    useCases['Investment Banking', 'Hedge Funds', 'Insurance'],
-    benefits[
+    useCases: ['Investment Banking', 'Hedge Funds', 'Insurance'],
+    benefits: [
       'Superior risk assessment',
       'Faster portfolio optimization',
       'Enhanced fraud detection'

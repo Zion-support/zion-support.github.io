@@ -37,7 +37,7 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     category: "AI & Autonomous Systems",
     price: 2999,
     currency: "$",
-    tags["Autonomous Operations", "AI Decision Making", "Business Intelligence", "Strategic Planning"],
+    tags: ["Autonomous Operations", "AI Decision Making", "Business Intelligence", "Strategic Planning"],
     author: {
       name: "Zion AI Labs",
       id: "zion-ai-labs",
@@ -48,15 +48,15 @@ export const ENHANCED_SERVICES_2025: EnhancedService2025[] = [
     aiScore: 99,
     rating: 4.9,
     reviewCount: 28,
-    features[
+    features: [
       "Autonomous decision-making engine",
       "Real-time market analysis",
       "Predictive business modeling",
       "Resource optimization algorithms",
       "Strategic planning automation"
     ],
-    useCases["Business automation", "Strategic planning", "Resource optimization", "Risk management"],
-    integrations["ERP Systems", "CRM Platforms", "Financial Software", "HR Systems"],
+    useCases: ["Business automation", "Strategic planning", "Resource optimization", "Risk management"],
+    integrations: ["ERP Systems", "CRM Platforms", "Financial Software", "HR Systems"],
     marketPosition: "First-to-market autonomous business management platform",
     targetAudience: "Enterprise businesses, Fortune 500 companies, tech startups",
     trialDays: 30,
@@ -445,7 +445,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$299 one-time'
     },
-    features[
+    features: [
       'Automated security vulnerability detection',
       'Code quality scoring and metrics',
       'Best practice recommendations',
@@ -457,7 +457,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Performance impact analysis',
       'Multi-language support'
     ],
-    benefits[
+    benefits: [
       'Reduce code review time by 40-60%',
       'Improve code quality by 25%',
       'Catch security issues before deployment',
@@ -465,11 +465,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Reduce technical debt'
     ],
     technology['AI/ML', 'Static Analysis', 'Security Scanning', 'Git Integration'],
-    integrations['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams'],
-    useCases['Code quality improvement', 'Security compliance', 'Team productivity', 'DevOps automation'],
+    integrations: ['GitHub', 'GitLab', 'Bitbucket', 'Jira', 'Slack', 'Teams'],
+    useCases: ['Code quality improvement', 'Security compliance', 'Team productivity', 'DevOps automation'],
     targetAudience: 'Development teams, DevOps engineers, CTOs, Engineering managers',
     marketPosition: 'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus',
-    competitors['SonarQube', 'CodeClimate', 'Snyk', 'DeepCode'],
+    competitors: ['SonarQube', 'CodeClimate', 'Snyk', 'DeepCode'],
     roi: 'Reduce code review time by 40-60% and improve code quality by 25%',
     trialDays: 14,
     setupTime: '2 hours',
@@ -491,7 +491,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$499 one-time'
     },
-    features[
+    features: [
       'AI-powered threat detection',
       'Automated incident response workflows',
       'Real-time alerting and notifications',
@@ -503,8 +503,8 @@ export const enhancedServices2025: EnhancedService[] = [
       'Knowledge base management',
       'Performance metrics dashboard'
     ],
-    useCases["Enterprise security", "Compliance", "Threat prevention", "Incident response"],
-    integrations["Active Directory", "SIEM systems", "Cloud platforms", "Network devices"],
+    useCases: ["Enterprise security", "Compliance", "Threat prevention", "Incident response"],
+    integrations: ["Active Directory", "SIEM systems", "Cloud platforms", "Network devices"],
     marketPosition: "Comprehensive zero-trust security solution for modern enterprises",
     targetAudience: "Large enterprises, government agencies, financial institutions",
     trialDays: 30,
@@ -524,7 +524,7 @@ export const enhancedServices2025: EnhancedService[] = [
     category: "Edge Computing & IoT",
     price: 149,
     currency: "$",
-    tags["Edge Computing", "IoT Integration", "Real-time Processing", "Global Network"],
+    tags: ["Edge Computing", "IoT Integration", "Real-time Processing", "Global Network"],
     author: {
       name: "Zion Edge Computing",
       id: "zion-edge-computing",
@@ -535,7 +535,7 @@ export const enhancedServices2025: EnhancedService[] = [
     aiScore: 94,
     rating: 4.7,
     reviewCount: 73,
-    features[
+    features: [
       "Global edge network deployment",
       "IoT device management",
       "Real-time data processing",
@@ -543,11 +543,11 @@ export const enhancedServices2025: EnhancedService[] = [
       "Scalable infrastructure"
     ],
     technology['AI/ML', 'Automation', 'Security Orchestration', 'Real-time Analytics'],
-    integrations['SIEM', 'EDR', 'Firewall', 'Slack', 'Teams', 'Jira'],
-    useCases['Security incident management', 'IT operations', 'Compliance management', 'Team collaboration'],;
+    integrations: ['SIEM', 'EDR', 'Firewall', 'Slack', 'Teams', 'Jira'],
+    useCases: ['Security incident management', 'IT operations', 'Compliance management', 'Team collaboration'],;
     targetAudience: 'Security teams, IT operations, SOC analysts, Compliance officers',;
     marketPosition: 'Competes with PagerDuty, ServiceNow; adds AI-powered automation and security focus',
-    competitors['PagerDuty', 'ServiceNow', 'VictorOps', 'OpsGenie'],
+    competitors: ['PagerDuty', 'ServiceNow', 'VictorOps', 'OpsGenie'],
     roi: 'Reduce incident response time by 70% and improve resolution quality by 45%',
     trialDays: 14,
     setupTime: '4 hours',
@@ -569,7 +569,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$199 one-time'
     },
-    features[
+    features: [
       'OCR invoice processing',
       'Automated approval workflows',
       'Payment integration',
@@ -581,7 +581,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'API integration',
       'Custom reporting'
     ],
-    benefits[
+    benefits: [
       'Reduce processing time by 90%',
       'Improve accuracy by 95%',
       'Automate approval processes',
@@ -589,11 +589,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Maintain compliance standards'
     ],
     technology['AI/ML', 'OCR', 'Workflow Automation', 'Cloud Computing'],
-    integrations['QuickBooks', 'Xero', 'Sage', 'Stripe', 'PayPal', 'Bank APIs'],
-    useCases['Accounts payable', 'Vendor management', 'Financial compliance', 'Process automation'],
+    integrations: ['QuickBooks', 'Xero', 'Sage', 'Stripe', 'PayPal', 'Bank APIs'],
+    useCases: ['Accounts payable', 'Vendor management', 'Financial compliance', 'Process automation'],
     targetAudience: 'Finance teams, Accounting professionals, Small businesses, Enterprises',
     marketPosition: 'Competes with Bill.com, AvidXchange; adds AI-powered automation and analytics',
-    competitors['Bill.com', 'AvidXchange', 'Coupa', 'SAP Ariba'],
+    competitors: ['Bill.com', 'AvidXchange', 'Coupa', 'SAP Ariba'],
     roi: 'Reduce invoice processing costs by 60% and improve accuracy by 95%',
     trialDays: 30,
     setupTime: '1 hour',
@@ -615,7 +615,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$299 one-time'
     },
-    features[
+    features: [
       'Automated onboarding workflows',
       'Predictive churn analysis',
       'Support ticket routing',
@@ -627,8 +627,8 @@ export const enhancedServices2025: EnhancedService[] = [
       'Custom dashboards',
       'API access'
     ],
-    useCases["Personal finance", "Investment management", "Retirement planning", "Risk management"],
-    integrations["Banking systems", "Investment platforms", "Tax software", "Financial data providers"],
+    useCases: ["Personal finance", "Investment management", "Retirement planning", "Risk management"],
+    integrations: ["Banking systems", "Investment platforms", "Tax software", "Financial data providers"],
     marketPosition: "Intelligent financial advisor for personalized wealth management",
     targetAudience: "Individual investors, financial advisors, wealth management firms",
     trialDays: 30,
@@ -648,7 +648,7 @@ export const enhancedServices2025: EnhancedService[] = [
     category: "Legal AI",
     price: 149,
     currency: "$",
-    tags["Legal Review", "Contract Analysis", "Risk Assessment", "Compliance"],
+    tags: ["Legal Review", "Contract Analysis", "Risk Assessment", "Compliance"],
     author: {
       name: "Zion Legal Tech",
       id: "zion-legal-tech",
@@ -659,7 +659,7 @@ export const enhancedServices2025: EnhancedService[] = [
     aiScore: 93,
     rating: 4.7,
     reviewCount: 87,
-    features[
+    features: [
       "Contract analysis",
       "Risk assessment",
       "Compliance monitoring",
@@ -667,11 +667,11 @@ export const enhancedServices2025: EnhancedService[] = [
       "Document generation"
     ],
     technology['AI/ML', 'Predictive Analytics', 'Automation', 'CRM Integration'],
-    integrations['Salesforce', 'HubSpot', 'Pipedrive', 'Zendesk', 'Intercom', 'Slack'],
-    useCases['Customer success', 'Customer support', 'Retention optimization', 'Onboarding automation'],;
+    integrations: ['Salesforce', 'HubSpot', 'Pipedrive', 'Zendesk', 'Intercom', 'Slack'],
+    useCases: ['Customer success', 'Customer support', 'Retention optimization', 'Onboarding automation'],;
     targetAudience: 'Customer success teams, SaaS companies, Customer support managers, Growth teams',;
     marketPosition: 'Competes with Gainsight, Totango; adds AI-powered automation and predictive analytics',
-    competitors['Gainsight', 'Totango', 'ChurnZero', 'CustomerSuccessBox'],
+    competitors: ['Gainsight', 'Totango', 'ChurnZero', 'CustomerSuccessBox'],
     roi: 'Increase customer retention by 25% and reduce churn by 30%',
     trialDays: 14,
     setupTime: '3 hours',
@@ -693,7 +693,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$399 one-time'
     },
-    features[
+    features: [
       'Real-time data visualization',
       'Custom dashboard builder',
       'Predictive analytics',
@@ -705,7 +705,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Data export capabilities',
       'Team collaboration'
     ],
-    benefits[
+    benefits: [
       'Improve decision making by 40%',
       'Reduce reporting time by 80%',
       'Identify new opportunities',
@@ -713,11 +713,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Enhance team productivity'
     ],
     technology['AI/ML', 'Real-time Analytics', 'Data Visualization', 'Cloud Computing'],
-    integrations['Google Analytics', 'Salesforce', 'HubSpot', 'Stripe', 'Shopify', 'Database APIs'],
-    useCases['Business intelligence', 'Performance monitoring', 'Data analysis', 'Reporting automation'],
+    integrations: ['Google Analytics', 'Salesforce', 'HubSpot', 'Stripe', 'Shopify', 'Database APIs'],
+    useCases: ['Business intelligence', 'Performance monitoring', 'Data analysis', 'Reporting automation'],
     targetAudience: 'Business analysts, Data scientists, Executives, Marketing teams',
     marketPosition: 'Competes with Tableau, Power BI; adds AI-powered insights and real-time capabilities',
-    competitors['Tableau', 'Power BI', 'Looker', 'Metabase'],
+    competitors: ['Tableau', 'Power BI', 'Looker', 'Metabase'],
     roi: 'Improve decision making by 40% and reduce reporting time by 80%',
     trialDays: 14,
     setupTime: '2 hours',
@@ -739,7 +739,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$2,000 one-time'
     },
-    features[
+    features: [
       '24/7 network monitoring',
       'Real-time threat detection',
       'Incident response support',
@@ -751,7 +751,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Incident post-mortem',
       'Continuous improvement'
     ],
-    benefits[
+    benefits: [
       'Proactive threat detection',
       '24/7 security monitoring',
       'Compliance assurance',
@@ -759,11 +759,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Expert security guidance'
     ],
     technology['SIEM', 'EDR', 'Network Monitoring', 'Threat Intelligence'],
-    integrations['Firewall', 'IDS/IPS', 'VPN', 'Email Security', 'Cloud Security'],
-    useCases['Enterprise security', 'Compliance management', 'Threat detection', 'Incident response'],
+    integrations: ['Firewall', 'IDS/IPS', 'VPN', 'Email Security', 'Cloud Security'],
+    useCases: ['Enterprise security', 'Compliance management', 'Threat detection', 'Incident response'],
     targetAudience: 'Enterprise IT teams, Security professionals, Compliance officers, CISOs',
     marketPosition: 'Competes with managed security service providers; adds AI-powered threat detection',
-    competitors['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Managed MSSPs'],
+    competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne', 'Managed MSSPs'],
     roi: 'Reduce security incidents by 60% and improve compliance by 90%',
     trialDays: 0,
     setupTime: '1-2 weeks',
@@ -785,7 +785,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$1,500 one-time'
     },
-    features[
+    features: [
       'Automated backup scheduling',
       'Cloud storage integration',
       'Disaster recovery planning',
@@ -797,7 +797,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Recovery documentation',
       'Business continuity planning'
     ],
-    benefits[
+    benefits: [
       '99.99% recovery success rate',
       'Automated backup processes',
       'Cloud redundancy',
@@ -805,11 +805,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Business continuity'
     ],
     technology['Cloud Storage', 'Backup Software', 'Encryption', 'Disaster Recovery'],
-    integrations['AWS S3', 'Azure Blob', 'Google Cloud', 'On-premise Storage', 'VMware', 'Hyper-V'],
-    useCases['Data protection', 'Disaster recovery', 'Business continuity', 'Compliance management'],
+    integrations: ['AWS S3', 'Azure Blob', 'Google Cloud', 'On-premise Storage', 'VMware', 'Hyper-V'],
+    useCases: ['Data protection', 'Disaster recovery', 'Business continuity', 'Compliance management'],
     targetAudience: 'IT administrators, Data center managers, Compliance officers, Business continuity managers',
     marketPosition: 'Competes with Veeam, Commvault; adds cloud-native and AI-powered optimization',
-    competitors['Veeam', 'Commvault', 'Rubrik', 'Cohesity'],
+    competitors: ['Veeam', 'Commvault', 'Rubrik', 'Cohesity'],
     roi: 'Ensure 99.99% data recovery and reduce downtime by 80%',
     trialDays: 0,
     setupTime: '1-2 weeks',
@@ -830,7 +830,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$1,000 one-time'
     },
-    features[
+    features: [
       'Asset discovery and tracking',
       'License management',
       'Depreciation tracking',
@@ -842,7 +842,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Mobile app access',
       'API integration'
     ],
-    benefits[
+    benefits: [
       'Optimize IT costs by 30%',
       'Improve compliance tracking',
       'Automate maintenance scheduling',
@@ -850,11 +850,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Reduce audit time'
     ],
     technology['Asset Discovery', 'Database Management', 'Reporting Engine', 'Mobile Development'],
-    integrations['Active Directory', 'SCCM', 'ServiceNow', 'Jira', 'Slack', 'Email systems'],
-    useCases['IT asset management', 'License compliance', 'Cost optimization', 'Audit preparation'],
+    integrations: ['Active Directory', 'SCCM', 'ServiceNow', 'Jira', 'Slack', 'Email systems'],
+    useCases: ['IT asset management', 'License compliance', 'Cost optimization', 'Audit preparation'],
     targetAudience: 'IT asset managers, IT administrators, Compliance officers, Finance teams',
     marketPosition: 'Competes with ServiceNow, BMC; adds AI-powered optimization and mobile access',
-    competitors['ServiceNow', 'BMC', 'Ivanti', 'ManageEngine'],
+    competitors: ['ServiceNow', 'BMC', 'Ivanti', 'ManageEngine'],
     roi: 'Optimize IT costs by 30% and improve compliance by 95%',
     trialDays: 14,
     setupTime: '1 week',
@@ -876,7 +876,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$5,000 one-time'
     },
-    features[
+    features: [
       'Natural language processing',
       'Multi-language support',
       'Integration APIs',
@@ -888,7 +888,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Knowledge base integration',
       'Performance monitoring'
     ],
-    benefits[
+    benefits: [
       '24/7 customer support',
       'Instant response times',
       'Reduce support costs by 40%',
@@ -896,11 +896,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Scale support operations'
     ],
     technology['NLP', 'Machine Learning', 'API Development', 'Cloud Computing'],
-    integrations['Website', 'Mobile Apps', 'CRM Systems', 'Help Desk', 'Slack', 'Teams'],
-    useCases['Customer support', 'Sales assistance', 'FAQ handling', 'Appointment booking'],
+    integrations: ['Website', 'Mobile Apps', 'CRM Systems', 'Help Desk', 'Slack', 'Teams'],
+    useCases: ['Customer support', 'Sales assistance', 'FAQ handling', 'Appointment booking'],
     targetAudience: 'Customer support teams, E-commerce businesses, Service companies, Marketing teams',
     marketPosition: 'Competes with Intercom, Drift; adds advanced AI capabilities and custom development',
-    competitors['Intercom', 'Drift', 'Zendesk', 'Freshchat'],
+    competitors: ['Intercom', 'Drift', 'Zendesk', 'Freshchat'],
     roi: 'Reduce support costs by 40% and improve customer satisfaction by 35%',
     trialDays: 7,
     setupTime: '2-4 weeks',
@@ -921,7 +921,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$8,000 one-time'
     },
-    features[
+    features: [
       'Data modeling and analysis',
       'Forecasting algorithms',
       'Visualization tools',
@@ -933,7 +933,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Scenario planning',
       'Risk assessment'
     ],
-    benefits[
+    benefits: [
       'Improve decision making by 50%',
       'Identify new opportunities',
       'Reduce risks',
@@ -941,11 +941,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Increase revenue'
     ],
     technology['Machine Learning', 'Statistical Analysis', 'Data Processing', 'Visualization'],
-    integrations['Database Systems', 'CRM', 'ERP', 'Business Intelligence', 'Cloud Platforms'],
-    useCases['Sales forecasting', 'Demand planning', 'Risk management', 'Performance optimization'],
+    integrations: ['Database Systems', 'CRM', 'ERP', 'Business Intelligence', 'Cloud Platforms'],
+    useCases: ['Sales forecasting', 'Demand planning', 'Risk management', 'Performance optimization'],
     targetAudience: 'Data scientists, Business analysts, Executives, Operations managers',
     marketPosition: 'Competes with SAS, IBM SPSS; adds cloud-native and AI-powered automation',
-    competitors['SAS', 'IBM SPSS', 'RapidMiner', 'Alteryx'],
+    competitors: ['SAS', 'IBM SPSS', 'RapidMiner', 'Alteryx'],
     roi: 'Improve decision making by 50% and increase revenue by 20%',
     trialDays: 14,
     setupTime: '3-4 weeks',
@@ -966,7 +966,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$10,000 one-time'
     },
-    features[
+    features: [
       'Object detection and recognition',
       'Image classification',
       'Video analysis',
@@ -978,7 +978,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'API access',
       'Mobile integration'
     ],
-    benefits[
+    benefits: [
       'Automate quality control by 80%',
       'Improve process efficiency',
       'Reduce human error',
@@ -986,11 +986,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Scalable solutions'
     ],
     technology['Computer Vision', 'Deep Learning', 'Image Processing', 'Real-time Analytics'],
-    integrations['Cameras', 'IoT Devices', 'Manufacturing Systems', 'Quality Control Tools'],
-    useCases['Quality control', 'Process automation', 'Security monitoring', 'Retail analytics'],
+    integrations: ['Cameras', 'IoT Devices', 'Manufacturing Systems', 'Quality Control Tools'],
+    useCases: ['Quality control', 'Process automation', 'Security monitoring', 'Retail analytics'],
     targetAudience: 'Manufacturing companies, Retail businesses, Security firms, Quality control teams',
     marketPosition: 'Competes with Cognex, Keyence; adds AI-powered analysis and cloud integration',
-    competitors['Cognex', 'Keyence', 'Basler', 'Teledyne'],
+    competitors: ['Cognex', 'Keyence', 'Basler', 'Teledyne'],
     roi: 'Automate quality control by 80% and reduce defects by 60%',
     trialDays: 7,
     setupTime: '4-6 weeks',
@@ -1012,7 +1012,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$25,000 one-time'
     },
-    features[
+    features: [
       'Quantum algorithm development',
       'Optimization problem solving',
       'Cryptography services',
@@ -1024,7 +1024,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Custom development',
       'Ongoing support'
     ],
-    benefits[
+    benefits: [
       'Solve previously intractable problems',
       'Exponential performance improvements',
       'Future-proof technology',
@@ -1032,11 +1032,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Research leadership'
     ],
     technology['Quantum Computing', 'Quantum Algorithms', 'Quantum Software', 'Cloud Quantum'],
-    integrations['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Amazon Braket'],
-    useCases['Optimization problems', 'Cryptography', 'Scientific research', 'Financial modeling'],
+    integrations: ['IBM Quantum', 'Google Quantum', 'Microsoft Azure Quantum', 'Amazon Braket'],
+    useCases: ['Optimization problems', 'Cryptography', 'Scientific research', 'Financial modeling'],
     targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Government agencies',
     marketPosition: 'Leading edge quantum computing services with expertise in multiple quantum platforms',
-    competitors['IBM Quantum', 'Google Quantum', 'Microsoft Quantum', 'D-Wave'],
+    competitors: ['IBM Quantum', 'Google Quantum', 'Microsoft Quantum', 'D-Wave'],
     roi: 'Solve complex problems 1000x faster than classical computing',
     trialDays: 0,
     setupTime: '2-3 months',
@@ -1057,7 +1057,7 @@ export const enhancedServices2025: EnhancedService[] = [
       enterprise: 'Custom pricing',
       setup: '$15,000 one-time'
     },
-    features[
+    features: [
       'Smart contract development',
       'DeFi application building',
       'NFT platform development',
@@ -1069,7 +1069,7 @@ export const enhancedServices2025: EnhancedService[] = [
       'Cross-chain solutions',
       'Mobile integration'
     ],
-    benefits[
+    benefits: [
       'Decentralized solutions',
       'Transparent operations',
       'Reduced intermediaries',
@@ -1077,11 +1077,11 @@ export const enhancedServices2025: EnhancedService[] = [
       'Innovation leadership'
     ],
     technology['Blockchain', 'Smart Contracts', 'Web3', 'DeFi', 'NFTs'],
-    integrations['Ethereum', 'Polygon', 'Solana', 'Binance Smart Chain', 'MetaMask', 'WalletConnect'],
-    useCases['DeFi applications', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],
+    integrations: ['Ethereum', 'Polygon', 'Solana', 'Binance Smart Chain', 'MetaMask', 'WalletConnect'],
+    useCases: ['DeFi applications', 'NFT marketplaces', 'Supply chain tracking', 'Digital identity'],
     targetAudience: 'Startups, Financial services, Gaming companies, Supply chain businesses',
     marketPosition: 'Leading blockchain development services with expertise in multiple protocols',
-    competitors['ConsenSys', 'Chainlink Labs', 'Alchemy', 'Infura'],
+    competitors: ['ConsenSys', 'Chainlink Labs', 'Alchemy', 'Infura'],
     roi: 'Reduce transaction costs by 90% and increase transparency by 100%',
     trialDays: 0,
     setupTime: '2-4 months',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SEOOptimizer from '../../components/SEOOptimizer';
+import { SEOOptimizer } from '../../components/SEOOptimizer';
 import { 
   Truck, 
   Route, 

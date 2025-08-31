@@ -101,7 +101,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 4999,
     pricingModel: "monthly",
     userLimit: "Unlimited enterprise users",
-    features[
+    features: [
       "Real-time neural process learning",
       "Adaptive workflow optimization",
       "Predictive process analytics",
@@ -111,7 +111,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Advanced security protocols",
       "Custom AI model training"
     ],
-    benefits[
+    benefits: [
       "40% increase in operational efficiency",
       "Real-time process optimization",
       "Predictive maintenance scheduling",
@@ -119,26 +119,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Automated compliance monitoring",
       "Seamless system integration"
     ],
-    targetAudience["Enterprise corporations", "Manufacturing companies", "Healthcare organizations", "Financial institutions"],
-    tags["AI", "Workflow Automation", "Neural Networks", "Enterprise", "Real-time Learning"],
+    targetAudience: ["Enterprise corporations", "Manufacturing companies", "Healthcare organizations", "Financial institutions"],
+    tags: ["AI", "Workflow Automation", "Neural Networks", "Enterprise", "Real-time Learning"],
     contactInfo: zionContact,
     marketPrice: "$4,500 - $6,000/month",
-    competitors["UiPath", "Automation Anywhere", "Blue Prism"],
+    competitors: ["UiPath", "Automation Anywhere", "Blue Prism"],
     roi: "300% within 12 months",
     setupTime: "2-4 weeks",
-    integrations["SAP", "Salesforce", "Microsoft 365", "Oracle", "AWS", "Azure"],
+    integrations: ["SAP", "Salesforce", "Microsoft 365", "Oracle", "AWS", "Azure"],
     freeTier: false,
     trialPeriod: "30 days",
     innovationLevel: "Revolutionary",
     marketSize: "$15.8 billion",
     growthRate: "23.4% annually",
-    useCases[
+    useCases: [
       "Manufacturing process optimization",
       "Healthcare workflow automation",
       "Financial compliance automation",
       "Supply chain optimization"
     ],
-    technologies["Neural Networks", "Machine Learning", "Quantum Computing", "API Integration"]
+    technologies: ["Neural Networks", "Machine Learning", "Quantum Computing", "API Integration"]
   },
   {
     id: 2,
@@ -149,7 +149,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 2999,
     pricingModel: "monthly",
     userLimit: "Up to 1000 users",
-    features[
+    features: [
       "Hybrid quantum-classical processing",
       "Quantum algorithm optimization",
       "Real-time quantum simulation",
@@ -159,7 +159,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Quantum error correction",
       "Quantum cloud orchestration"
     ],
-    benefits[
+    benefits: [
       "1000x faster computational power",
       "Unbreakable quantum encryption",
       "Revolutionary optimization algorithms",
@@ -167,26 +167,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Competitive advantage in research",
       "Quantum workforce training"
     ],
-    targetAudience["Research institutions", "Pharmaceutical companies", "Financial services", "Government agencies"],
-    tags["Quantum Computing", "AI", "Cryptography", "Research", "Innovation"],
+    targetAudience: ["Research institutions", "Pharmaceutical companies", "Financial services", "Government agencies"],
+    tags: ["Quantum Computing", "AI", "Cryptography", "Research", "Innovation"],
     contactInfo: zionContact,
     marketPrice: "$2,500 - $4,000/month",
-    competitors["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
+    competitors: ["IBM Quantum", "Google Quantum AI", "Microsoft Azure Quantum"],
     roi: "500% within 18 months",
     setupTime: "4-6 weeks",
-    integrations["Python", "Qiskit", "Cirq", "TensorFlow", "PyTorch", "AWS Braket"],
+    integrations: ["Python", "Qiskit", "Cirq", "TensorFlow", "PyTorch", "AWS Braket"],
     freeTier: false,
     trialPeriod: "14 days",
     innovationLevel: "Revolutionary",
     marketSize: "$8.6 billion",
     growthRate: "45.2% annually",
-    useCases[
+    useCases: [
       "Drug discovery optimization",
       "Financial risk modeling",
       "Climate change simulation",
       "Cryptographic security"
     ],
-    technologies["Quantum Computing", "Quantum Algorithms", "Hybrid Systems", "Cloud Integration"]
+    technologies: ["Quantum Computing", "Quantum Algorithms", "Hybrid Systems", "Cloud Integration"]
   },
   {
     id: 3,
@@ -197,7 +197,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 3999,
     pricingModel: "monthly",
     userLimit: "Unlimited research users",
-    features[
+    features: [
       "AI-powered drug discovery",
       "Genetic sequence analysis",
       "Protein structure prediction",
@@ -207,7 +207,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Personalized medicine algorithms",
       "Regulatory compliance automation"
     ],
-    benefits[
+    benefits: [
       "50% faster drug discovery",
       "Improved clinical trial success rates",
       "Personalized treatment plans",
@@ -215,26 +215,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Enhanced patient outcomes",
       "Regulatory compliance automation"
     ],
-    targetAudience["Pharmaceutical companies", "Biotech startups", "Research hospitals", "Universities"],
-    tags["Biotechnology", "AI", "Drug Discovery", "Healthcare", "Research"],
+    targetAudience: ["Pharmaceutical companies", "Biotech startups", "Research hospitals", "Universities"],
+    tags: ["Biotechnology", "AI", "Drug Discovery", "Healthcare", "Research"],
     contactInfo: zionContact,
     marketPrice: "$3,500 - $5,500/month",
-    competitors["Atomwise", "Insitro", "Recursion Pharmaceuticals"],
+    competitors: ["Atomwise", "Insitro", "Recursion Pharmaceuticals"],
     roi: "400% within 24 months",
     setupTime: "6-8 weeks",
-    integrations["Lab management systems", "Clinical databases", "Genomic platforms", "FDA systems"],
+    integrations: ["Lab management systems", "Clinical databases", "Genomic platforms", "FDA systems"],
     freeTier: false,
     trialPeriod: "30 days",
     innovationLevel: "Revolutionary",
     marketSize: "$12.3 billion",
     growthRate: "28.7% annually",
-    useCases[
+    useCases: [
       "Drug discovery and development",
       "Genetic research and analysis",
       "Clinical trial optimization",
       "Personalized medicine"
     ],
-    technologies["Machine Learning", "Deep Learning", "Genomics", "Bioinformatics"]
+    technologies: ["Machine Learning", "Deep Learning", "Genomics", "Bioinformatics"]
   },
   {
     id: 4,
@@ -245,7 +245,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 2499,
     pricingModel: "monthly",
     userLimit: "Up to 500 users",
-    features[
+    features: [
       "Satellite data processing",
       "Mission planning optimization",
       "Space debris tracking",
@@ -255,7 +255,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Satellite constellation management",
       "Interplanetary navigation"
     ],
-    benefits[
+    benefits: [
       "Optimized mission success rates",
       "Reduced launch costs",
       "Enhanced satellite lifespan",
@@ -263,26 +263,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Real-time space monitoring",
       "Advanced space research capabilities"
     ],
-    targetAudience["Space agencies", "Satellite companies", "Aerospace corporations", "Research institutions"],
-    tags["Space Technology", "Analytics", "Satellites", "Aerospace", "Research"],
+    targetAudience: ["Space agencies", "Satellite companies", "Aerospace corporations", "Research institutions"],
+    tags: ["Space Technology", "Analytics", "Satellites", "Aerospace", "Research"],
     contactInfo: zionContact,
     marketPrice: "$2,000 - $3,500/month",
-    competitors["Maxar Technologies", "Planet Labs", "SpaceX"],
+    competitors: ["Maxar Technologies", "Planet Labs", "SpaceX"],
     roi: "350% within 18 months",
     setupTime: "3-5 weeks",
-    integrations["NASA systems", "ESA platforms", "Satellite ground stations", "Aerospace software"],
+    integrations: ["NASA systems", "ESA platforms", "Satellite ground stations", "Aerospace software"],
     freeTier: false,
     trialPeriod: "21 days",
     innovationLevel: "Revolutionary",
     marketSize: "$6.8 billion",
     growthRate: "32.1% annually",
-    useCases[
+    useCases: [
       "Satellite mission planning",
       "Space debris monitoring",
       "Launch optimization",
       "Space research analytics"
     ],
-    technologies["Satellite Data Processing", "Mission Planning", "Space Analytics", "Aerospace Systems"]
+    technologies: ["Satellite Data Processing", "Mission Planning", "Space Analytics", "Aerospace Systems"]
   },
   {
     id: 5,
@@ -293,7 +293,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 1499,
     pricingModel: "monthly",
     userLimit: "Up to 200 users",
-    features[
+    features: [
       "Carbon footprint tracking",
       "Energy consumption optimization",
       "Sustainable supply chain management",
@@ -303,7 +303,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "ESG reporting automation",
       "Sustainability compliance"
     ],
-    benefits[
+    benefits: [
       "30% reduction in carbon emissions",
       "25% decrease in energy costs",
       "Enhanced brand reputation",
@@ -311,26 +311,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Improved stakeholder relations",
       "Long-term cost savings"
     ],
-    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies", "Critical infrastructure operators"],
-    tags["Sustainability", "Green Technology", "ESG", "Energy Optimization", "Compliance"],
+    targetAudience: ["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies", "Critical infrastructure operators"],
+    tags: ["Sustainability", "Green Technology", "ESG", "Energy Optimization", "Compliance"],
     contactInfo: zionContact,
     marketPrice: "$1,200 - $2,000/month",
-    competitors["Watershed", "Persefoni", "Normative"],
+    competitors: ["Watershed", "Persefoni", "Normative"],
     roi: "200% within 12 months",
     setupTime: "2-3 weeks",
-    integrations["ERP systems", "Energy management", "Supply chain platforms", "ESG reporting tools"],
+    integrations: ["ERP systems", "Energy management", "Supply chain platforms", "ESG reporting tools"],
     freeTier: true,
     trialPeriod: "30 days",
     innovationLevel: "Advanced",
     marketSize: "$9.2 billion",
     growthRate: "35.8% annually",
-    useCases[
+    useCases: [
       "Corporate sustainability reporting",
       "Energy efficiency optimization",
       "Supply chain sustainability",
       "ESG compliance management"
     ],
-    technologies["IoT Sensors", "Data Analytics", "Machine Learning", "Sustainability Metrics"]
+    technologies: ["IoT Sensors", "Data Analytics", "Machine Learning", "Sustainability Metrics"]
   },
   {
     id: 6,
@@ -341,7 +341,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 3499,
     pricingModel: "monthly",
     userLimit: "Unlimited enterprise users",
-    features[
+    features: [
       "AI-powered threat detection",
       "Zero-trust network access",
       "Automated incident response",
@@ -351,7 +351,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Security orchestration",
       "Advanced encryption"
     ],
-    benefits[
+    benefits: [
       "99.9% threat detection rate",
       "60% faster incident response",
       "Reduced security costs",
@@ -359,26 +359,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Proactive threat prevention",
       "24/7 security monitoring"
     ],
-    targetAudience["Financial services", "Healthcare organizations", "Government agencies", "Technology companies", "Critical infrastructure"],
-    tags["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"],
+    targetAudience: ["Financial services", "Healthcare organizations", "Government agencies", "Technology companies", "Critical infrastructure"],
+    tags: ["Cybersecurity", "AI", "Zero Trust", "Threat Detection", "Compliance"],
     contactInfo: zionContact,
     marketPrice: "$3,000 - $5,000/month",
-    competitors["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
+    competitors: ["CrowdStrike", "SentinelOne", "Palo Alto Networks"],
     roi: "250% within 12 months",
     setupTime: "3-4 weeks",
-    integrations["SIEM systems", "EDR platforms", "Identity providers", "Security tools"],
+    integrations: ["SIEM systems", "EDR platforms", "Identity providers", "Security tools"],
     freeTier: false,
     trialPeriod: "21 days",
     innovationLevel: "Advanced",
     marketSize: "$18.5 billion",
     growthRate: "22.3% annually",
-    useCases[
+    useCases: [
       "Enterprise security monitoring",
       "Threat detection and response",
       "Compliance management",
       "Security automation"
     ],
-    technologies["AI/ML", "Zero Trust Architecture", "Behavioral Analytics", "Security Orchestration"]
+    technologies: ["AI/ML", "Zero Trust Architecture", "Behavioral Analytics", "Security Orchestration"]
   },
   {
     id: 7,
@@ -389,7 +389,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 2799,
     pricingModel: "monthly",
     userLimit: "Unlimited enterprise users",
-    features[
+    features: [
       "Unified data platform",
       "AI-powered analytics",
       "Real-time data processing",
@@ -399,7 +399,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Enterprise security",
       "Scalable architecture"
     ],
-    benefits[
+    benefits: [
       "40% faster data insights",
       "Improved data quality",
       "Reduced data silos",
@@ -407,26 +407,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Cost optimization",
       "Regulatory compliance"
     ],
-    targetAudience["Large enterprises", "Data-driven companies", "Financial services", "Healthcare", "Retail"],
-    tags["Data Management", "Analytics", "AI", "Big Data", "Cloud"],
+    targetAudience: ["Large enterprises", "Data-driven companies", "Financial services", "Healthcare", "Retail"],
+    tags: ["Data Management", "Analytics", "AI", "Big Data", "Cloud"],
     contactInfo: zionContact,
     marketPrice: "$2,500 - $4,500/month",
-    competitors["Snowflake", "Databricks", "Palantir"],
+    competitors: ["Snowflake", "Databricks", "Palantir"],
     roi: "300% within 18 months",
     setupTime: "4-6 weeks",
-    integrations["Cloud platforms", "BI tools", "Data sources", "Analytics platforms"],
+    integrations: ["Cloud platforms", "BI tools", "Data sources", "Analytics platforms"],
     freeTier: false,
     trialPeriod: "30 days",
     innovationLevel: "Advanced",
     marketSize: "$25.3 billion",
     growthRate: "28.9% annually",
-    useCases[
+    useCases: [
       "Business intelligence",
       "Data warehousing",
       "Real-time analytics",
       "Data governance"
     ],
-    technologies["Cloud Computing", "AI/ML", "Big Data", "Data Governance"]
+    technologies: ["Cloud Computing", "AI/ML", "Big Data", "Data Governance"]
   },
   {
     id: 8,
@@ -437,7 +437,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
     price: 1999,
     pricingModel: "monthly",
     userLimit: "Up to 100 users",
-    features[
+    features: [
       "Multi-cloud management",
       "Automated DevOps pipelines",
       "Cost optimization",
@@ -447,7 +447,7 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Auto-scaling",
       "Resource optimization"
     ],
-    benefits[
+    benefits: [
       "30% reduction in cloud costs",
       "Faster deployment cycles",
       "Improved reliability",
@@ -455,26 +455,26 @@ export const ultimateMicroSaasServices2025: MicroSaasService[] = [
       "Better resource utilization",
       "Automated operations"
     ],
-    targetAudience["Technology companies", "Startups", "Enterprises", "DevOps teams"],
-    tags["Cloud Computing", "DevOps", "Automation", "Monitoring", "Cost Optimization"],
+    targetAudience: ["Technology companies", "Startups", "Enterprises", "DevOps teams"],
+    tags: ["Cloud Computing", "DevOps", "Automation", "Monitoring", "Cost Optimization"],
     contactInfo: zionContact,
     marketPrice: "$1,800 - $3,200/month",
-    competitors["HashiCorp", "Datadog", "New Relic"],
+    competitors: ["HashiCorp", "Datadog", "New Relic"],
     roi: "200% within 12 months",
     setupTime: "2-3 weeks",
-    integrations["AWS", "Azure", "GCP", "Kubernetes", "Docker", "CI/CD tools"],
+    integrations: ["AWS", "Azure", "GCP", "Kubernetes", "Docker", "CI/CD tools"],
     freeTier: true,
     trialPeriod: "30 days",
     innovationLevel: "Advanced",
     marketSize: "$14.7 billion",
     growthRate: "26.4% annually",
-    useCases[
+    useCases: [
       "Cloud infrastructure management",
       "DevOps automation",
       "Cost optimization",
       "Performance monitoring"
     ],
-    technologies["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]
+    technologies: ["Multi-cloud", "Kubernetes", "Terraform", "Monitoring Tools"]
   }
 ];
 // Ultimate IT Infrastructure Services 2025
@@ -486,7 +486,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     description: "Comprehensive enterprise network design, implementation, and optimization services with next-generation technologies",
     hourlyRate: 150,
     projectRate: 25000,
-    features[
+    features: [
       "Network architecture design",
       "SD-WAN implementation",
       "Network security integration",
@@ -496,7 +496,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Compliance certification",
       "Scalability planning"
     ],
-    benefits[
+    benefits: [
       "Enhanced network performance",
       "Improved security posture",
       "Reduced downtime",
@@ -504,8 +504,8 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Future-ready architecture",
       "Compliance assurance"
     ],
-    targetAudience["Large enterprises", "Healthcare organizations", "Financial institutions", "Government agencies"],
-    tags["Network Architecture", "SD-WAN", "Security", "Performance", "Compliance"],
+    targetAudience: ["Large enterprises", "Healthcare organizations", "Financial institutions", "Government agencies"],
+    tags: ["Network Architecture", "SD-WAN", "Security", "Performance", "Compliance"],
     contactInfo: zionContact,
     marketPrice: "$120 - $180/hour",
     responseTime: "2-4 hours",
@@ -516,13 +516,13 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$12.8 billion",
     compliance["HIPAA", "SOX", "PCI-DSS", "GDPR"],
-    useCases[
+    useCases: [
       "Enterprise network transformation",
       "SD-WAN deployment",
       "Network security enhancement",
       "Performance optimization"
     ],
-    technologies["SD-WAN", "Network Security", "Cloud Networking", "5G Integration"]
+    technologies: ["SD-WAN", "Network Security", "Cloud Networking", "5G Integration"]
   },
   {
     id: 2,
@@ -531,7 +531,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     description: "Comprehensive data center modernization services including design, migration, and optimization for hybrid cloud environments",
     hourlyRate: 175,
     projectRate: 50000,
-    features[
+    features: [
       "Data center assessment",
       "Modernization planning",
       "Migration services",
@@ -541,7 +541,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Compliance certification",
       "Performance tuning"
     ],
-    benefits[
+    benefits: [
       "Reduced operational costs",
       "Improved energy efficiency",
       "Enhanced security",
@@ -549,8 +549,8 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Scalability",
       "Compliance assurance"
     ],
-    targetAudience["Large enterprises", "Data center operators", "Cloud providers", "Financial services"],
-    tags["Data Center", "Modernization", "Cloud Migration", "Energy Efficiency", "Security"],
+    targetAudience: ["Large enterprises", "Data center operators", "Cloud providers", "Financial services"],
+    tags: ["Data Center", "Modernization", "Cloud Migration", "Energy Efficiency", "Security"],
     contactInfo: zionContact,
     marketPrice: "$150 - $200/hour",
     responseTime: "4-8 hours",
@@ -561,13 +561,13 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$18.2 billion",
     compliance["ISO 27001", "SOC 2", "PCI-DSS", "HIPAA"],
-    useCases[
+    useCases: [
       "Data center transformation",
       "Cloud migration",
       "Energy optimization",
       "Security enhancement"
     ],
-    technologies["Hyperconverged Infrastructure", "Software-Defined Storage", "AI-Powered Management", "Green Computing"]
+    technologies: ["Hyperconverged Infrastructure", "Software-Defined Storage", "AI-Powered Management", "Green Computing"]
   },
   {
     id: 3,
@@ -576,7 +576,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     description: "Comprehensive cybersecurity infrastructure design, implementation, and management services with advanced threat protection",
     hourlyRate: 200,
     projectRate: 75000,
-    features[
+    features: [
       "Security architecture design",
       "Threat detection systems",
       "Incident response planning",
@@ -586,7 +586,7 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Vulnerability assessment",
       "24/7 monitoring"
     ],
-    benefits[
+    benefits: [
       "Enhanced security posture",
       "Reduced risk exposure",
       "Compliance assurance",
@@ -594,8 +594,8 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
       "Cost optimization",
       "Peace of mind"
     ],
-    targetAudience["Financial services", "Healthcare", "Government", "Critical infrastructure"],
-    tags["Cybersecurity", "Threat Detection", "Compliance", "Incident Response", "Security Architecture"],
+    targetAudience: ["Financial services", "Healthcare", "Government", "Critical infrastructure"],
+    tags: ["Cybersecurity", "Threat Detection", "Compliance", "Incident Response", "Security Architecture"],
     contactInfo: zionContact,
     marketPrice: "$180 - $250/hour",
     responseTime: "1-2 hours",
@@ -606,13 +606,13 @@ export const ultimateITInfrastructureServices2025: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$22.5 billion",
     compliance["NIST", "ISO 27001", "SOC 2", "PCI-DSS"],
-    useCases[
+    useCases: [
       "Security infrastructure design",
       "Compliance implementation",
       "Threat detection deployment",
       "Incident response setup"
     ],
-    technologies["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]
+    technologies: ["AI/ML", "Zero Trust", "Threat Intelligence", "Security Orchestration"]
   }
 ];
 // Ultimate AI Services 2025
@@ -625,7 +625,7 @@ export const ultimateAIServices2025: AIService[] = [
     pricing: "Enterprise",
     price: 5999,
     pricingModel: "monthly",
-    features[
+    features: [
       "Custom AI model development",
       "Model training and optimization",
       "Automated ML pipelines",
@@ -635,7 +635,7 @@ export const ultimateAIServices2025: AIService[] = [
       "Ethical AI compliance",
       "Enterprise integration"
     ],
-    benefits[
+    benefits: [
       "Faster AI implementation",
       "Reduced development costs",
       "Improved model performance",
@@ -643,8 +643,8 @@ export const ultimateAIServices2025: AIService[] = [
       "Competitive advantage",
       "Scalable AI solutions"
     ],
-    targetAudience["Large enterprises", "Technology companies", "Financial services", "Healthcare"],
-    tags["AI Platform", "Machine Learning", "Custom Models", "Enterprise", "Automation"],
+    targetAudience: ["Large enterprises", "Technology companies", "Financial services", "Healthcare"],
+    tags: ["AI Platform", "Machine Learning", "Custom Models", "Enterprise", "Automation"],
     contactInfo: zionContact,
     marketPrice: "$5,000 - $8,000/month",
     aiModels["GPT-4", "Claude", "Custom Models", "Open Source Models"],
@@ -652,7 +652,7 @@ export const ultimateAIServices2025: AIService[] = [
     trainingData: "Enterprise-grade data processing",
     compliance["GDPR", "HIPAA", "SOX", "Ethical AI"],
     aiScore: 95,
-    useCases[
+    useCases: [
       "Predictive analytics",
       "Natural language processing",
       "Computer vision",
@@ -661,7 +661,7 @@ export const ultimateAIServices2025: AIService[] = [
     innovationLevel: "Revolutionary",
     marketSize: "$35.2 billion",
     ethicalAI["Bias detection", "Fairness metrics", "Transparency", "Accountability"],
-    technologies["Deep Learning", "NLP", "Computer Vision", "AutoML"]
+    technologies: ["Deep Learning", "NLP", "Computer Vision", "AutoML"]
   },
   {
     id: 2,
@@ -671,7 +671,7 @@ export const ultimateAIServices2025: AIService[] = [
     pricing: "Premium",
     price: 2499,
     pricingModel: "monthly",
-    features[
+    features: [
       "Real-time data analytics",
       "Predictive modeling",
       "Automated insights",
@@ -681,7 +681,7 @@ export const ultimateAIServices2025: AIService[] = [
       "Automated reporting",
       "Mobile access"
     ],
-    benefits[
+    benefits: [
       "Faster insights delivery",
       "Improved decision making",
       "Reduced manual analysis",
@@ -689,8 +689,8 @@ export const ultimateAIServices2025: AIService[] = [
       "Real-time monitoring",
       "Cost optimization"
     ],
-    targetAudience["Business analysts", "Data scientists", "Executives", "Operations teams"],
-    tags["Analytics", "AI", "Predictive Modeling", "Real-time", "Automation"],
+    targetAudience: ["Business analysts", "Data scientists", "Executives", "Operations teams"],
+    tags: ["Analytics", "AI", "Predictive Modeling", "Real-time", "Automation"],
     contactInfo: zionContact,
     marketPrice: "$2,000 - $3,500/month",
     aiModels["Time series models", "Regression models", "Classification models", "Clustering algorithms"],
@@ -698,7 +698,7 @@ export const ultimateAIServices2025: AIService[] = [
     trainingData: "Real-time data streams",
     compliance["GDPR", "Data Privacy", "Industry Standards"],
     aiScore: 92,
-    useCases[
+    useCases: [
       "Business intelligence",
       "Performance monitoring",
       "Predictive maintenance",
@@ -707,7 +707,7 @@ export const ultimateAIServices2025: AIService[] = [
     innovationLevel: "Advanced",
     marketSize: "$28.7 billion",
     ethicalAI["Data privacy", "Transparency", "Bias mitigation"],
-    technologies["Machine Learning", "Real-time Processing", "Data Visualization", "Natural Language Processing"]
+    technologies: ["Machine Learning", "Real-time Processing", "Data Visualization", "Natural Language Processing"]
   },
   {
     id: 3,
@@ -718,7 +718,7 @@ export const ultimateAIServices2025: AIService[] = [
     price: 999,
     pricingModel: "monthly",
     userLimit: "Up to 50 users",
-    features[
+    features: [
       "Multi-format content generation",
       "Brand voice customization",
       "SEO optimization",
@@ -728,7 +728,7 @@ export const ultimateAIServices2025: AIService[] = [
       "Multi-language support",
       "Content analytics"
     ],
-    benefits[
+    benefits: [
       "10x faster content creation",
       "Consistent brand voice",
       "SEO optimization",
@@ -736,8 +736,8 @@ export const ultimateAIServices2025: AIService[] = [
       "Scalable content production",
       "Quality improvement"
     ],
-    targetAudience["Marketing teams", "Content creators", "Agencies", "Businesses"],
-    tags["Content Generation", "AI", "Marketing", "SEO", "Automation"],
+    targetAudience: ["Marketing teams", "Content creators", "Agencies", "Businesses"],
+    tags: ["Content Generation", "AI", "Marketing", "SEO", "Automation"],
     contactInfo: zionContact,
     marketPrice: "$800 - $1,500/month",
     aiModels["GPT-4", "Claude", "Custom models", "Multimodal AI"],
@@ -745,7 +745,7 @@ export const ultimateAIServices2025: AIService[] = [
     trainingData: "High-quality content datasets",
     compliance["Copyright compliance", "Content guidelines", "Brand safety"],
     aiScore: 88,
-    useCases[
+    useCases: [
       "Marketing content creation",
       "Blog and article writing",
       "Social media content",
@@ -754,7 +754,7 @@ export const ultimateAIServices2025: AIService[] = [
     innovationLevel: "Advanced",
     marketSize: "$15.3 billion",
     ethicalAI["Content safety", "Bias prevention", "Quality standards"],
-    technologies["Natural Language Generation", "Multimodal AI", "Content Optimization", "Brand Voice AI"]
+    technologies: ["Natural Language Generation", "Multimodal AI", "Content Optimization", "Brand Voice AI"]
   }
 ];
 export default {

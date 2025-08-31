@@ -84,7 +84,7 @@ export const revolutionaryMicroSaasServices2026: MicroSaasService[] = [
     price: 2999,
     pricingModel: "monthly",
     userLimit: "Unlimited enterprise users",
-    features[
+    features: [
       "Quantum process optimization",
       "Real-time quantum simulation",
       "Hybrid classical-quantum workflows",
@@ -623,7 +623,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     description: "Enterprise-grade quantum computing infrastructure with hybrid classical-quantum architecture and quantum-safe security",
     hourlyRate: 250,
     projectRate: 50000,
-    features[
+    features: [
       "Hybrid quantum-classical architecture",
       "Quantum-safe encryption",
       "Real-time quantum simulation",
@@ -633,7 +633,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
       "Compliance automation",
       "24/7 support"
     ],
-    benefits[
+    benefits: [
       "Future-proof infrastructure",
       "Quantum advantage access",
       "Enhanced security",
@@ -641,8 +641,8 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
       "Cost optimization",
       "Competitive edge"
     ],
-    targetAudience["Fortune 500", "Government", "Research institutions", "Financial services"],
-    tags["Quantum Computing", "Cloud Infrastructure", "Security", "Hybrid Architecture"],
+    targetAudience: ["Fortune 500", "Government", "Research institutions", "Financial services"],
+    tags: ["Quantum Computing", "Cloud Infrastructure", "Security", "Hybrid Architecture"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -666,7 +666,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
     description: "Distributed edge AI infrastructure for real-time processing and inference at the network edge",
     hourlyRate: 180,
     projectRate: 35000,
-    features[
+    features: [
       "Distributed edge nodes",
       "Real-time AI inference",
       "Low-latency processing",
@@ -676,7 +676,7 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
       "Monitoring & analytics",
       "Auto-scaling"
     ],
-    benefits[
+    benefits: [
       "Sub-10ms latency",
       "Reduced bandwidth costs",
       "Enhanced privacy",
@@ -684,8 +684,8 @@ export const revolutionaryITInfrastructureServices2026: ITService[] = [
       "Real-time processing",
       "Cost optimization"
     ],
-    targetAudience["IoT companies", "Manufacturing", "Healthcare", "Autonomous systems"],
-    tags["Edge Computing", "AI", "IoT", "Real-time", "Distributed Systems"],
+    targetAudience: ["IoT companies", "Manufacturing", "Healthcare", "Autonomous systems"],
+    tags: ["Edge Computing", "AI", "IoT", "Real-time", "Distributed Systems"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -712,7 +712,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     description: "Fully autonomous AI agents that can perform complex business tasks without human intervention",
     price: 3999,
     pricingModel: "monthly",
-    features[
+    features: [
       "Task automation",
       "Decision making",
       "Learning & adaptation",
@@ -722,7 +722,7 @@ export const revolutionaryAIServices2026: AIService[] = [
       "Monitoring & control",
       "Ethical AI framework"
     ],
-    benefits[
+    benefits: [
       "24/7 operation",
       "Reduced human error",
       "Increased efficiency",
@@ -730,8 +730,8 @@ export const revolutionaryAIServices2026: AIService[] = [
       "Scalable operations",
       "Continuous improvement"
     ],
-    targetAudience["Enterprises", "E-commerce", "Customer service", "Operations"],
-    tags["Autonomous AI", "Automation", "Machine Learning", "NLP", "Ethical AI"],
+    targetAudience: ["Enterprises", "E-commerce", "Customer service", "Operations"],
+    tags: ["Autonomous AI", "Automation", "Machine Learning", "NLP", "Ethical AI"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -744,7 +744,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     trainingData: "Multi-domain, ethically sourced",
     compliance["GDPR", "AI Ethics", "Transparency"],
     aiScore: 98,
-    useCases["Customer service", "Process automation", "Decision support", "Content generation"],
+    useCases: ["Customer service", "Process automation", "Decision support", "Content generation"],
     innovationLevel: "Revolutionary",
     marketSize: "$4.2 billion by 2026",
     ethicalAI["Bias detection", "Transparency", "Accountability", "Fairness"]
@@ -756,7 +756,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     description: "Quantum-enhanced AI platform that combines quantum computing with machine learning for unprecedented performance",
     price: 5999,
     pricingModel: "monthly",
-    features[
+    features: [
       "Quantum machine learning",
       "Quantum neural networks",
       "Quantum optimization",
@@ -766,7 +766,7 @@ export const revolutionaryAIServices2026: AIService[] = [
       "Quantum simulation",
       "API access"
     ],
-    benefits[
+    benefits: [
       "1000x faster training",
       "Quantum advantage",
       "Enhanced accuracy",
@@ -774,8 +774,8 @@ export const revolutionaryAIServices2026: AIService[] = [
       "Competitive edge",
       "Innovation leadership"
     ],
-    targetAudience["Research institutions", "Pharmaceutical", "Financial services", "Government"],
-    tags["Quantum AI", "Machine Learning", "Quantum Computing", "Research", "Innovation"],
+    targetAudience: ["Research institutions", "Pharmaceutical", "Financial services", "Government"],
+    tags: ["Quantum AI", "Machine Learning", "Quantum Computing", "Research", "Innovation"],
     contactInfo: {
       phone: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
@@ -788,7 +788,7 @@ export const revolutionaryAIServices2026: AIService[] = [
     trainingData: "Quantum-enhanced datasets",
     compliance["Research ethics", "Quantum standards", "AI safety"],
     aiScore: 99,
-    useCases["Drug discovery", "Financial modeling", "Climate prediction", "Materials science"],
+    useCases: ["Drug discovery", "Financial modeling", "Climate prediction", "Materials science"],
     innovationLevel: "Revolutionary",
     marketSize: "$1.8 billion by 2026",
     ethicalAI["AI safety", "Quantum ethics", "Research integrity", "Beneficial AI"]

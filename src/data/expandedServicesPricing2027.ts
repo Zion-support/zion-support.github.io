@@ -76,7 +76,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         price: 2500,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'Quantum-resistant encryption',
           'Real-time threat detection',
           'Basic incident response',
@@ -103,7 +103,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         price: 5000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Starter features',
           'Advanced threat hunting',
           'Automated incident response',
@@ -131,7 +131,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         price: 10000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Professional features',
           'Unlimited endpoints',
           'Global threat intelligence',
@@ -160,7 +160,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
-        features[
+        features: [
           'All Enterprise features',
           'Custom development',
           'On-premise deployment',
@@ -182,7 +182,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         contractTerm: 'negotiable'
     },
     marketComparison: {
-      competitors['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
+      competitors: ['CrowdStrike', 'SentinelOne', 'Palo Alto Networks'],
       marketPosition: 'leader',
       priceAdvantage: '20-30% more cost-effective than competitors',
       valueProposition: 'Quantum-resistant security with AI-powered threat detection'
@@ -234,7 +234,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         price: 1500,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'Multi-framework compliance monitoring',
           'Basic compliance reporting',
           'Policy enforcement',
@@ -259,7 +259,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         price: 3000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Starter features',
           'Advanced automation',
           'Custom compliance workflows',
@@ -286,7 +286,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         price: 6000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Professional features',
           'Unlimited users',
           'All compliance frameworks',
@@ -311,7 +311,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
-        features[
+        features: [
           'All Enterprise features',
           'Custom development',
           'Industry-specific modules',
@@ -329,7 +329,7 @@ export const cybersecurityPricing: ExpandedServicePricing[] = [
         contractTerm: 'negotiable'
     },
     marketComparison: {
-      competitors['OneTrust', 'TrustArc', 'LogicGate'],
+      competitors: ['OneTrust', 'TrustArc', 'LogicGate'],
       marketPosition: 'challenger',
       priceAdvantage: '15-25% more affordable than competitors',
       valueProposition: 'AI-powered compliance automation with comprehensive framework support'
@@ -383,7 +383,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         price: 1800,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'Basic predictive modeling',
           'Standard dashboards',
           'Data visualization tools',
@@ -408,7 +408,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         price: 3500,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Starter features',
           'Advanced ML models',
           'Custom dashboards',
@@ -434,7 +434,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         price: 7000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Professional features',
           'Unlimited data processing',
           'Custom ML models',
@@ -459,7 +459,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
-        features[
+        features: [
           'All Enterprise features',
           'Custom AI development',
           'Industry-specific models',
@@ -477,7 +477,7 @@ export const dataAnalyticsPricing: ExpandedServicePricing[] = [
         contractTerm: 'negotiable'
     },
     marketComparison: {
-      competitors['Tableau', 'Power BI', 'Qlik', 'Looker'],
+      competitors: ['Tableau', 'Power BI', 'Qlik', 'Looker'],
       marketPosition: 'challenger',
       priceAdvantage: '25-35% more cost-effective than competitors',
       valueProposition: 'AI-powered predictive analytics with advanced machine learning capabilities'
@@ -531,7 +531,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         price: 2000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'Multi-cloud monitoring',
           'Basic cost optimization',
           'Standard dashboards',
@@ -556,7 +556,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         price: 4000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Starter features',
           'Advanced cost optimization',
           'Custom dashboards',
@@ -582,7 +582,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         price: 8000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Professional features',
           'Unlimited cloud providers',
           'Advanced optimization',
@@ -607,7 +607,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
-        features[
+        features: [
           'All Enterprise features',
           'Custom cloud integrations',
           'Industry-specific modules',
@@ -625,7 +625,7 @@ export const cloudDevOpsPricing: ExpandedServicePricing[] = [
         contractTerm: 'negotiable'
     },
     marketComparison: {
-      competitors['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
+      competitors: ['Terraform', 'Ansible', 'HashiCorp', 'AWS Systems Manager'],
       marketPosition: 'challenger',
       priceAdvantage: '30-40% more cost-effective than competitors',
       valueProposition: 'Intelligent multi-cloud orchestration with AI-powered optimization'
@@ -679,7 +679,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         price: 2800,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'Basic equipment monitoring',
           'Standard dashboards',
           'Email alerts',
@@ -704,7 +704,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         price: 5500,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Starter features',
           'Predictive maintenance',
           'Advanced analytics',
@@ -730,7 +730,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         price: 11000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Professional features',
           'Unlimited devices',
           'Advanced AI models',
@@ -755,7 +755,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
-        features[
+        features: [
           'All Enterprise features',
           'Custom IoT development',
           'Industry-specific protocols',
@@ -773,7 +773,7 @@ export const iotEdgePricing: ExpandedServicePricing[] = [
         contractTerm: 'negotiable'
     },
     marketComparison: {
-      competitors['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
+      competitors: ['PTC ThingWorx', 'Siemens Mindsphere', 'GE Predix', 'IBM Watson IoT'],
       marketPosition: 'challenger',
       priceAdvantage: '25-35% more affordable than competitors',
       valueProposition: 'AI-powered industrial IoT with predictive maintenance and optimization'
@@ -827,7 +827,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         price: 8000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'Basic quantum models',
           'Standard financial tools',
           'Email support',
@@ -852,7 +852,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         price: 15000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Starter features',
           'Advanced quantum algorithms',
           'Custom financial models',
@@ -878,7 +878,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         price: 30000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Professional features',
           'Unlimited calculations',
           'Custom quantum models',
@@ -903,7 +903,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
-        features[
+        features: [
           'All Enterprise features',
           'Custom quantum development',
           'Industry-specific models',
@@ -921,7 +921,7 @@ export const finTechPricing: ExpandedServicePricing[] = [
         contractTerm: 'negotiable'
     },
     marketComparison: {
-      competitors['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
+      competitors: ['Bloomberg Terminal', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
       marketPosition: 'emerging',
       priceAdvantage: '40-60% more cost-effective than competitors',
       valueProposition: 'Quantum-powered financial modeling with unprecedented speed and accuracy'
@@ -975,7 +975,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         price: 3500,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'Basic diagnostic tools',
           'Standard medical models',
           'Email support',
@@ -1000,7 +1000,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         price: 7000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Starter features',
           'Advanced diagnostic tools',
           'Custom AI models',
@@ -1026,7 +1026,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         price: 14000,
         currency: 'USD',
         billingCycle: 'monthly',
-        features[
+        features: [
           'All Professional features',
           'Unlimited providers',
           'Custom AI development',
@@ -1051,7 +1051,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         priceRange: 'Contact Sales',
         currency: 'USD',
         billingCycle: 'flexible',
-        features[
+        features: [
           'All Enterprise features',
           'Custom medical AI',
           'Industry-specific modules',
@@ -1069,7 +1069,7 @@ export const healthcarePricing: ExpandedServicePricing[] = [
         contractTerm: 'negotiable'
     },
     marketComparison: {
-      competitors['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
+      competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare', 'Philips Healthcare'],
       marketPosition: 'challenger',
       priceAdvantage: '30-40% more affordable than competitors',
       valueProposition: 'AI-powered diagnostic assistance with advanced medical AI capabilities'

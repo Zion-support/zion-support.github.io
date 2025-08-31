@@ -40,7 +40,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     price: 3999,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Multi-cloud orchestration",
       "AI-powered resource optimization",
       "Serverless computing platform",
@@ -52,28 +52,28 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       "Global edge network",
       "24/7 infrastructure management"
     ],
-    benefits[
+    benefits: [
       "Reduce cloud costs by 40%",
       "Improve performance by 60%",
       "99.99% uptime guarantee",
       "Global scalability",
       "Automated infrastructure management"
     ],
-    useCases[
+    useCases: [
       "Enterprise applications",
       "E-commerce platforms",
       "SaaS applications",
       "Big data processing",
       "IoT platforms"
     ],
-    targetAudience[
+    targetAudience: [
       "CTOs",
       "DevOps engineers",
       "System administrators",
       "Cloud architects",
       "IT directors"
     ],
-    tags["Cloud Computing", "Multi-Cloud", "Serverless", "AI Optimization", "Infrastructure"],
+    tags: ["Cloud Computing", "Multi-Cloud", "Serverless", "AI Optimization", "Infrastructure"],
     estimatedDelivery: "10-12 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,999 - $9,999/month",
@@ -86,12 +86,12 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     technicalSpecs: {
       technology["Kubernetes", "Docker", "Terraform", "Python", "React"],
-      integrations["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"],
+      integrations: ["AWS", "Azure", "Google Cloud", "DigitalOcean", "Vultr"],
       apiEndpoints: 400,
       uptime: "99.99%",
       security["SOC 2", "ISO 27001", "Zero Trust", "End-to-end encryption"]
     },
-    competitors["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"],
+    competitors: ["HashiCorp", "Pulumi", "CloudBees", "CircleCI", "GitLab"],
     marketSize: "$832.1 billion by 2025"
   },
   // Edge Computing & IoT Platform
@@ -104,7 +104,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     price: 2799,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Edge node management",
       "Real-time data processing",
       "IoT device orchestration",
@@ -116,28 +116,28 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       "Performance monitoring",
       "Automated edge optimization"
     ],
-    benefits[
+    benefits: [
       "Reduce latency by 80%",
       "Lower bandwidth costs by 60%",
       "Enhanced data privacy",
       "Real-time decision making",
       "Scalable IoT infrastructure"
     ],
-    useCases[
+    useCases: [
       "Smart cities",
       "Industrial IoT",
       "Autonomous vehicles",
       "Healthcare monitoring",
       "Retail analytics"
     ],
-    targetAudience[
+    targetAudience: [
       "IoT architects",
       "Network engineers",
       "System integrators",
       "Manufacturing companies",
       "Smart city planners"
     ],
-    tags["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Systems"],
+    tags: ["Edge Computing", "IoT", "Real-time Processing", "Low Latency", "Distributed Systems"],
     estimatedDelivery: "8-10 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,799 - $6,799/month",
@@ -150,12 +150,12 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     technicalSpecs: {
       technology["Kubernetes Edge", "Docker Edge", "MQTT", "WebRTC", "Node.js"],
-      integrations["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],
+      integrations: ["IoT platforms", "Cloud services", "Network equipment", "Industrial systems", "Mobile networks"],
       apiEndpoints: 300,
       uptime: "99.9%",
       security["Edge security", "Data encryption", "Device authentication", "Network isolation"]
     },
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "Cisco Edge", "HPE Edge"],
     marketSize: "$43.4 billion by 2025"
   },
   // Quantum-Ready Network Infrastructure
@@ -168,7 +168,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     price: 5499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "Quantum key distribution",
       "Post-quantum cryptography",
       "Quantum-resistant algorithms",
@@ -180,28 +180,28 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       "Quantum network monitoring",
       "Future quantum protocol support"
     ],
-    benefits[
+    benefits: [
       "Quantum-resistant security",
       "Future-proof infrastructure",
       "Ultra-secure communications",
       "Quantum advantage preparation",
       "Long-term investment protection"
     ],
-    useCases[
+    useCases: [
       "Government communications",
       "Financial institutions",
       "Healthcare systems",
       "Defense networks",
       "Research institutions"
     ],
-    targetAudience[
+    targetAudience: [
       "Network architects",
       "Security engineers",
       "Government agencies",
       "Financial institutions",
       "Research organizations"
     ],
-    tags["Quantum Computing", "Network Security", "Cryptography", "Future Tech", "Infrastructure"],
+    tags: ["Quantum Computing", "Network Security", "Cryptography", "Future Tech", "Infrastructure"],
     estimatedDelivery: "16-20 weeks",
     supportLevel: "enterprise",
     marketPrice: "$5,499 - $12,999/month",
@@ -214,12 +214,12 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     technicalSpecs: {
       technology["Quantum protocols", "Post-quantum crypto", "Quantum networks", "Python", "C++"],
-      integrations["Quantum computers", "Classical networks", "Security systems", "Monitoring tools", "Research platforms"],
+      integrations: ["Quantum computers", "Classical networks", "Security systems", "Monitoring tools", "Research platforms"],
       apiEndpoints: 150,
       uptime: "99.9%",
       security["Quantum security", "Post-quantum crypto", "Quantum key distribution", "Advanced encryption"]
     },
-    competitors["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"],
+    competitors: ["IBM Quantum Network", "Microsoft Azure Quantum", "Google Quantum", "Rigetti", "IonQ"],
     marketSize: "$89.2 billion by 2025"
   },
   // AI-Powered Data Center Management
@@ -232,7 +232,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     price: 2299,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "AI-powered cooling optimization",
       "Power consumption management",
       "Server utilization optimization",
@@ -244,28 +244,28 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       "Capacity planning",
       "24/7 AI monitoring"
     ],
-    benefits[
+    benefits: [
       "Reduce energy costs by 35%",
       "Improve server utilization by 45%",
       "Prevent downtime with predictive maintenance",
       "Optimize cooling efficiency",
       "Automated resource management"
     ],
-    useCases[
+    useCases: [
       "Enterprise data centers",
       "Cloud service providers",
       "Colocation facilities",
       "Edge data centers",
       "Hyperscale facilities"
     ],
-    targetAudience[
+    targetAudience: [
       "Data center managers",
       "Facility engineers",
       "IT operations",
       "Sustainability officers",
       "Operations directors"
     ],
-    tags["AI", "Data Center", "Energy Efficiency", "Predictive Maintenance", "Optimization"],
+    tags: ["AI", "Data Center", "Energy Efficiency", "Predictive Maintenance", "Optimization"],
     estimatedDelivery: "6-8 weeks",
     supportLevel: "enterprise",
     marketPrice: "$2,299 - $5,299/month",
@@ -278,12 +278,12 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     technicalSpecs: {
       technology["Python", "TensorFlow", "IoT sensors", "Machine Learning", "React"],
-      integrations["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"],
+      integrations: ["Building management systems", "Power monitoring", "Cooling systems", "Server management", "Environmental sensors"],
       apiEndpoints: 200,
       uptime: "99.9%",
       security["SOC 2", "Data encryption", "Access controls", "Audit logging"]
     },
-    competitors["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"],
+    competitors: ["Schneider Electric", "Eaton", "Vertiv", "Emerson", "HPE"],
     marketSize: "$59.7 billion by 2025"
   },
   // 5G & 6G Network Infrastructure
@@ -296,7 +296,7 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     price: 3499,
     currency: "$",
     pricingModel: "monthly",
-    features[
+    features: [
       "5G network deployment",
       "6G research and development",
       "Network slicing",
@@ -308,28 +308,28 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
       "Performance optimization",
       "Future-proof architecture"
     ],
-    benefits[
+    benefits: [
       "10x faster than 4G",
       "Ultra-low latency (1ms)",
       "Massive IoT device support",
       "Network slicing for different use cases",
       "Future-ready infrastructure"
     ],
-    useCases[
+    useCases: [
       "Smart cities",
       "Autonomous vehicles",
       "Industrial automation",
       "Telemedicine",
       "Virtual reality"
     ],
-    targetAudience[
+    targetAudience: [
       "Telecom operators",
       "Network engineers",
       "Infrastructure providers",
       "Government agencies",
       "Research institutions"
     ],
-    tags["5G", "6G", "Network Infrastructure", "IoT", "Low Latency"],
+    tags: ["5G", "6G", "Network Infrastructure", "IoT", "Low Latency"],
     estimatedDelivery: "12-16 weeks",
     supportLevel: "enterprise",
     marketPrice: "$3,499 - $8,499/month",
@@ -342,11 +342,11 @@ export const INNOVATIVE_IT_INFRASTRUCTURE_2025: InnovativeITInfrastructureServic
     },
     technicalSpecs: {
       technology["5G NR", "Network slicing", "Edge computing", "AI/ML", "Python"],
-      integrations["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"],
+      integrations: ["Core networks", "Radio access networks", "Edge computing", "Cloud services", "IoT platforms"],
       apiEndpoints: 500,
       uptime: "99.99%",
       security["Network security", "Encryption", "Authentication", "Privacy protection"]
     },
-    competitors["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],
+    competitors: ["Ericsson", "Nokia", "Huawei", "Samsung", "Qualcomm"],
     marketSize: "$667.9 billion by 2025"
 ];}}

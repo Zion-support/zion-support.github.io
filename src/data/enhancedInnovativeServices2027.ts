@@ -28,7 +28,7 @@ contactInfo: {
   compliance: string[];
   useCases: string[]}
     compliance['GDPR', 'HIPAA', 'SOC2', 'Data privacy regulations'],
-    useCases['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']
+    useCases: ['Healthcare AI', 'Financial modeling', 'Research collaboration', 'Privacy-preserving analytics']
   }
 ];
 export const enhancedInnovativeServices2027Categories = [

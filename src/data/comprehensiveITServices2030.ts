@@ -51,7 +51,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Comprehensive cloud infrastructure design, implementation, and DevOps automation services. We specialize in AWS, Azure, and Google Cloud with infrastructure-as-code, CI/CD pipelines, and automated deployment strategies.",
     hourlyRate: 150,
     projectRate: 25000,
-    features[
+    features: [
       "Multi-cloud architecture design",
       "Infrastructure as Code (IaC)",
       "CI/CD pipeline automation",
@@ -61,7 +61,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Disaster recovery planning",
       "Performance optimization"
     ],
-    benefits[
+    benefits: [
       "50% reduction in deployment time",
       "99.9% uptime guarantee",
       "Automated scaling and recovery",
@@ -69,8 +69,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Enhanced security and compliance",
       "Faster time to market"
     ],
-    targetAudience["Startups", "Mid-size companies", "Enterprises", "E-commerce platforms"],
-    tags["Cloud Computing", "DevOps", "AWS", "Azure", "Kubernetes", "Automation"],
+    targetAudience: ["Startups", "Mid-size companies", "Enterprises", "E-commerce platforms"],
+    tags: ["Cloud Computing", "DevOps", "AWS", "Azure", "Kubernetes", "Automation"],
     contactInfo: zionContact,
     marketPrice: "$120 - $200/hour, $20,000 - $50,000 per project",
     responseTime: "2-4 hours",
@@ -81,7 +81,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$89.4 billion",
     compliance["SOC 2", "ISO 27001", "GDPR", "HIPAA", "PCI DSS"],
-    technologies[
+    technologies: [
       "AWS/Azure/GCP",
       "Kubernetes",
       "Docker",
@@ -91,7 +91,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "GitLab CI/CD",
       "Prometheus"
     ],
-    useCases[
+    useCases: [
       "Application modernization",
       "Cloud migration",
       "DevOps transformation",
@@ -108,7 +108,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Comprehensive cybersecurity services including zero trust architecture implementation, threat detection, incident response, and compliance management. We provide end-to-end security solutions for modern enterprises.",
     hourlyRate: 175,
     projectRate: 35000,
-    features[
+    features: [
       "Zero trust architecture design",
       "Advanced threat detection",
       "Incident response automation",
@@ -118,7 +118,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Vulnerability assessment",
       "Security monitoring"
     ],
-    benefits[
+    benefits: [
       "99.9% threat detection rate",
       "Reduced security incidents by 80%",
       "Automated compliance reporting",
@@ -126,8 +126,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Proactive threat prevention",
       "Cost-effective security operations"
     ],
-    targetAudience["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies"],
-    tags["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],
+    targetAudience: ["Financial institutions", "Healthcare organizations", "Government agencies", "Technology companies"],
+    tags: ["Cybersecurity", "Zero Trust", "Threat Detection", "Compliance", "Incident Response"],
     contactInfo: zionContact,
     marketPrice: "$140 - $250/hour, $30,000 - $75,000 per project",
     responseTime: "1-2 hours for critical issues",
@@ -138,7 +138,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Cutting-edge",
     marketSize: "$156.5 billion",
     compliance["SOC 2", "ISO 27001", "NIST", "GDPR", "HIPAA", "PCI DSS"],
-    technologies[
+    technologies: [
       "SIEM systems",
       "EDR platforms",
       "Identity management",
@@ -148,7 +148,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Security automation",
       "Compliance tools"
     ],
-    useCases[
+    useCases: [
       "Security architecture design",
       "Compliance implementation",
       "Incident response setup",
@@ -165,7 +165,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Advanced data analytics and business intelligence services that transform raw data into actionable insights. We help organizations make data-driven decisions through modern analytics platforms and AI-powered insights.",
     hourlyRate: 140,
     projectRate: 28000,
-    features[
+    features: [
       "Data warehouse design",
       "ETL pipeline development",
       "Real-time analytics dashboards",
@@ -175,7 +175,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Performance optimization",
       "Self-service analytics"
     ],
-    benefits[
+    benefits: [
       "40% faster decision making",
       "Real-time business insights",
       "Improved operational efficiency",
@@ -183,8 +183,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Predictive capabilities",
       "Data-driven culture"
     ],
-    targetAudience["Retail companies", "Manufacturing firms", "Healthcare organizations", "Financial services"],
-    tags["Data Analytics", "Business Intelligence", "Machine Learning", "Data Warehousing", "Predictive Analytics"],
+    targetAudience: ["Retail companies", "Manufacturing firms", "Healthcare organizations", "Financial services"],
+    tags: ["Data Analytics", "Business Intelligence", "Machine Learning", "Data Warehousing", "Predictive Analytics"],
     contactInfo: zionContact,
     marketPrice: "$110 - $180/hour, $25,000 - $60,000 per project",
     responseTime: "4-8 hours",
@@ -195,7 +195,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$67.8 billion",
     compliance["GDPR", "CCPA", "SOC 2", "ISO 27001"],
-    technologies[
+    technologies: [
       "Snowflake",
       "AWS Redshift",
       "Azure Synapse",
@@ -205,7 +205,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Apache Spark",
       "Kubernetes"
     ],
-    useCases[
+    useCases: [
       "Customer analytics",
       "Operational intelligence",
       "Financial reporting",
@@ -222,7 +222,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "End-to-end digital transformation services that modernize legacy systems, implement new technologies, and transform business processes. We help organizations become digital-first and future-ready.",
     hourlyRate: 160,
     projectRate: 40000,
-    features[
+    features: [
       "Legacy system assessment",
       "Modernization strategy",
       "Process reengineering",
@@ -232,7 +232,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Performance monitoring",
       "Continuous improvement"
     ],
-    benefits[
+    benefits: [
       "60% improvement in operational efficiency",
       "Enhanced customer experience",
       "Reduced operational costs",
@@ -240,8 +240,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Competitive advantage",
       "Future-ready infrastructure"
     ],
-    targetAudience["Manufacturing companies", "Financial institutions", "Healthcare organizations", "Government agencies"],
-    tags["Digital Transformation", "Legacy Modernization", "Process Reengineering", "Change Management", "Technology Implementation"],
+    targetAudience: ["Manufacturing companies", "Financial institutions", "Healthcare organizations", "Government agencies"],
+    tags: ["Digital Transformation", "Legacy Modernization", "Process Reengineering", "Change Management", "Technology Implementation"],
     contactInfo: zionContact,
     marketPrice: "$130 - $220/hour, $35,000 - $100,000 per project",
     responseTime: "4-6 hours",
@@ -252,7 +252,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$469.8 billion",
     compliance["ISO 27001", "SOC 2", "GDPR", "Industry-specific regulations"],
-    technologies[
+    technologies: [
       "Cloud platforms",
       "Microservices",
       "API management",
@@ -262,7 +262,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Robotic process automation",
       "Low-code platforms"
     ],
-    useCases[
+    useCases: [
       "Legacy system replacement",
       "Process automation",
       "Customer experience transformation",
@@ -279,7 +279,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Comprehensive AI and machine learning services that help organizations implement intelligent solutions. From strategy to deployment, we deliver AI solutions that drive business value and competitive advantage.",
     hourlyRate: 180,
     projectRate: 45000,
-    features[
+    features: [
       "AI strategy development",
       "Machine learning model development",
       "Data preparation and engineering",
@@ -289,7 +289,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Model retraining",
       "AI governance"
     ],
-    benefits[
+    benefits: [
       "Automated decision making",
       "Improved accuracy and efficiency",
       "Cost reduction through automation",
@@ -297,8 +297,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Predictive capabilities",
       "Competitive differentiation"
     ],
-    targetAudience["Technology companies", "Financial services", "Healthcare organizations", "Manufacturing firms"],
-    tags["Artificial Intelligence", "Machine Learning", "Deep Learning", "Predictive Analytics", "AI Strategy"],
+    targetAudience: ["Technology companies", "Financial services", "Healthcare organizations", "Manufacturing firms"],
+    tags: ["Artificial Intelligence", "Machine Learning", "Deep Learning", "Predictive Analytics", "AI Strategy"],
     contactInfo: zionContact,
     marketPrice: "$150 - $300/hour, $40,000 - $120,000 per project",
     responseTime: "4-8 hours",
@@ -309,7 +309,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Cutting-edge",
     marketSize: "$190.6 billion",
     compliance["GDPR", "AI ethics guidelines", "Industry-specific regulations", "Data privacy"],
-    technologies[
+    technologies: [
       "TensorFlow",
       "PyTorch",
       "Scikit-learn",
@@ -319,7 +319,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Kubernetes",
       "MLOps tools"
     ],
-    useCases[
+    useCases: [
       "Predictive analytics",
       "Natural language processing",
       "Computer vision",
@@ -336,7 +336,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Advanced networking solutions including SD-WAN implementation, network security, and infrastructure optimization. We design and implement scalable, secure, and high-performance network architectures.",
     hourlyRate: 130,
     projectRate: 30000,
-    features[
+    features: [
       "SD-WAN design and implementation",
       "Network security architecture",
       "Performance optimization",
@@ -346,7 +346,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Bandwidth management",
       "Quality of service"
     ],
-    benefits[
+    benefits: [
       "50% reduction in network costs",
       "Improved application performance",
       "Enhanced security posture",
@@ -354,8 +354,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Better user experience",
       "Scalable infrastructure"
     ],
-    targetAudience["Enterprises", "Educational institutions", "Healthcare organizations", "Financial services"],
-    tags["Networking", "SD-WAN", "Network Security", "Performance Optimization", "Infrastructure"],
+    targetAudience: ["Enterprises", "Educational institutions", "Healthcare organizations", "Financial services"],
+    tags: ["Networking", "SD-WAN", "Network Security", "Performance Optimization", "Infrastructure"],
     contactInfo: zionContact,
     marketPrice: "$100 - $180/hour, $25,000 - $70,000 per project",
     responseTime: "2-4 hours",
@@ -366,7 +366,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$45.2 billion",
     compliance["SOC 2", "ISO 27001", "PCI DSS", "Industry-specific regulations"],
-    technologies[
+    technologies: [
       "Cisco SD-WAN",
       "VMware SD-WAN",
       "Fortinet FortiGate",
@@ -376,7 +376,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Load balancers",
       "VPN solutions"
     ],
-    useCases[
+    useCases: [
       "Branch office connectivity",
       "Cloud connectivity",
       "Network security",
@@ -393,7 +393,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Comprehensive managed IT services that provide 24/7 monitoring, support, and maintenance for your IT infrastructure. We act as your virtual IT department, ensuring optimal performance and security.",
     hourlyRate: 120,
     projectRate: 20000,
-    features[
+    features: [
       "24/7 infrastructure monitoring",
       "Proactive maintenance",
       "Help desk support",
@@ -403,7 +403,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Compliance management",
       "Strategic IT planning"
     ],
-    benefits[
+    benefits: [
       "Reduced IT operational costs",
       "Improved system reliability",
       "Enhanced security posture",
@@ -411,8 +411,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Predictable IT costs",
       "Focus on core business"
     ],
-    targetAudience["Small businesses", "Mid-size companies", "Healthcare organizations", "Professional services"],
-    tags["Managed Services", "IT Support", "Infrastructure Management", "24/7 Monitoring", "Proactive Maintenance"],
+    targetAudience: ["Small businesses", "Mid-size companies", "Healthcare organizations", "Professional services"],
+    tags: ["Managed Services", "IT Support", "Infrastructure Management", "24/7 Monitoring", "Proactive Maintenance"],
     contactInfo: zionContact,
     marketPrice: "$90 - $160/hour, $15,000 - $50,000 per month",
     responseTime: "1-4 hours depending on priority",
@@ -423,7 +423,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Professional",
     marketSize: "$274.2 billion",
     compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
-    technologies[
+    technologies: [
       "Monitoring tools",
       "Help desk systems",
       "Backup solutions",
@@ -433,7 +433,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Network equipment",
       "Mobile device management"
     ],
-    useCases[
+    useCases: [
       "IT infrastructure management",
       "Help desk support",
       "Security monitoring",
@@ -450,7 +450,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Custom enterprise software development services that deliver scalable, secure, and high-performance applications. We specialize in modern development practices and cutting-edge technologies.",
     hourlyRate: 140,
     projectRate: 35000,
-    features[
+    features: [
       "Custom application development",
       "Web and mobile applications",
       "API development and integration",
@@ -460,7 +460,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Deployment and DevOps",
       "Ongoing maintenance"
     ],
-    benefits[
+    benefits: [
       "Custom solutions for unique needs",
       "Improved operational efficiency",
       "Enhanced customer experience",
@@ -468,8 +468,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Scalable architecture",
       "Long-term cost savings"
     ],
-    targetAudience["Enterprises", "Startups", "Healthcare organizations", "Financial services"],
-    tags["Software Development", "Custom Applications", "Web Development", "Mobile Apps", "API Development"],
+    targetAudience: ["Enterprises", "Startups", "Healthcare organizations", "Financial services"],
+    tags: ["Software Development", "Custom Applications", "Web Development", "Mobile Apps", "API Development"],
     contactInfo: zionContact,
     marketPrice: "$110 - $200/hour, $30,000 - $100,000 per project",
     responseTime: "4-8 hours",
@@ -480,7 +480,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Advanced",
     marketSize: "$507.2 billion",
     compliance["SOC 2", "ISO 27001", "GDPR", "Industry-specific regulations"],
-    technologies[
+    technologies: [
       "React",
       "Angular",
       "Vue.js",
@@ -490,7 +490,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "C#",
       "Cloud platforms"
     ],
-    useCases[
+    useCases: [
       "Customer portals",
       "Internal tools",
       "E-commerce platforms",
@@ -507,7 +507,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Enterprise-grade data center services including colocation, cloud connectivity, and disaster recovery solutions. We provide secure, reliable, and scalable infrastructure for mission-critical applications.",
     hourlyRate: 125,
     projectRate: 25000,
-    features[
+    features: [
       "Data center design",
       "Colocation services",
       "Cloud connectivity",
@@ -517,7 +517,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Performance monitoring",
       "Capacity planning"
     ],
-    benefits[
+    benefits: [
       "Enhanced security and compliance",
       "Improved performance and reliability",
       "Reduced infrastructure costs",
@@ -525,8 +525,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Expert management",
       "24/7 support"
     ],
-    targetAudience["Enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"],
-    tags["Data Center", "Colocation", "Infrastructure", "Disaster Recovery", "Cloud Connectivity"],
+    targetAudience: ["Enterprises", "Financial institutions", "Healthcare organizations", "Government agencies"],
+    tags: ["Data Center", "Colocation", "Infrastructure", "Disaster Recovery", "Cloud Connectivity"],
     contactInfo: zionContact,
     marketPrice: "$100 - $180/hour, $20,000 - $80,000 per project",
     responseTime: "2-4 hours",
@@ -537,7 +537,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Professional",
     marketSize: "$59.7 billion",
     compliance["SOC 2", "ISO 27001", "PCI DSS", "HIPAA", "Industry-specific regulations"],
-    technologies[
+    technologies: [
       "Server hardware",
       "Storage systems",
       "Networking equipment",
@@ -547,7 +547,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Power systems",
       "Cooling systems"
     ],
-    useCases[
+    useCases: [
       "Primary data center",
       "Disaster recovery site",
       "Cloud connectivity hub",
@@ -564,7 +564,7 @@ export const comprehensiveITServices2030: ITService[] = [
     description: "Strategic IT consulting services that help organizations align technology with business objectives. We provide roadmaps, assessments, and strategic guidance for digital transformation and technology adoption.",
     hourlyRate: 200,
     projectRate: 50000,
-    features[
+    features: [
       "IT strategy development",
       "Technology assessment",
       "Digital transformation planning",
@@ -574,7 +574,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Risk assessment",
       "Change management"
     ],
-    benefits[
+    benefits: [
       "Aligned technology strategy",
       "Optimized technology investments",
       "Reduced technology risks",
@@ -582,8 +582,8 @@ export const comprehensiveITServices2030: ITService[] = [
       "Competitive advantage",
       "Future-ready technology"
     ],
-    targetAudience["C-level executives", "IT leaders", "Business leaders", "Board members"],
-    tags["IT Strategy", "Digital Consulting", "Technology Assessment", "Digital Transformation", "Strategic Planning"],
+    targetAudience: ["C-level executives", "IT leaders", "Business leaders", "Board members"],
+    tags: ["IT Strategy", "Digital Consulting", "Technology Assessment", "Digital Transformation", "Strategic Planning"],
     contactInfo: zionContact,
     marketPrice: "$150 - $300/hour, $40,000 - $150,000 per project",
     responseTime: "24-48 hours",
@@ -594,7 +594,7 @@ export const comprehensiveITServices2030: ITService[] = [
     innovationLevel: "Strategic",
     marketSize: "$48.9 billion",
     compliance["Industry best practices", "Regulatory guidance", "Standards compliance"],
-    technologies[
+    technologies: [
       "Strategy frameworks",
       "Assessment tools",
       "Planning methodologies",
@@ -604,7 +604,7 @@ export const comprehensiveITServices2030: ITService[] = [
       "Change management",
       "Performance measurement"
     ],
-    useCases[
+    useCases: [
       "Technology strategy",
       "Digital transformation",
       "Technology assessment",

@@ -221,8 +221,8 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       "Pipeline optimization", "Deployment automation", "Testing automation",
       "Infrastructure automation", "Performance monitoring", "Error prediction"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -232,7 +232,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 1 second",
     availability: "Global",
     location: "Global",
-    tags["AI DevOps", "Automation", "CI/CD", "Pipeline Optimization", "Infrastructure"],
+    tags: ["AI DevOps", "Automation", "CI/CD", "Pipeline Optimization", "Infrastructure"],
     image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -252,7 +252,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       pricingModel: "Monthly subscription with edge node pricing",
       marketPrice: "$699-1,399/month"
     },
-    features[
+    features: [
       "Distributed edge management",
       "Real-time data processing",
       "Edge AI deployment",
@@ -264,36 +264,36 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       "5G network integration",
       "Edge-to-cloud synchronization"
     ],
-    benefits[
+    benefits: [
       "Reduce latency by 80%",
       "Improve data processing efficiency",
       "Enable real-time applications",
       "Reduce bandwidth costs",
       "Enhance user experience"
     ],
-    useCases[
+    useCases: [
       "IoT applications",
       "Real-time analytics",
       "Autonomous vehicles",
       "Smart cities",
       "Industrial automation"
     ],
-    targetAudience[
+    targetAudience: [
       "IoT companies",
       "Manufacturing organizations",
       "Telecommunications",
       "Smart city initiatives",
       "Industrial companies"
     ],
-    technologies[
+    technologies: [
       "Edge computing", "Kubernetes", "Docker", "5G networks", "IoT protocols",
       "Real-time processing", "Distributed systems", "Edge AI"
     ],
-    integrations[
+    integrations: [
       "IoT platforms", "Cloud providers", "5G networks", "Industrial systems",
       "Monitoring tools", "Analytics platforms"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Edge computing consultation",
       "Implementation assistance",
@@ -308,13 +308,13 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     reviewCount: 156,
     innovationLevel: "Innovative",
     marketSize: "$15.6B by 2030",
-    competitors["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "FogHorn"],
-    technicalCapabilities[
+    competitors: ["AWS Greengrass", "Azure IoT Edge", "Google Cloud IoT", "FogHorn"],
+    technicalCapabilities: [
       "Edge orchestration", "Real-time processing", "IoT management",
       "5G integration", "Edge AI deployment", "Distributed computing"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
-    deploymentOptions["Edge", "Cloud", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
+    deploymentOptions: ["Edge", "Cloud", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -324,7 +324,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 10 milliseconds",
     availability: "Global",
     location: "Global",
-    tags["Edge Computing", "IoT", "Real-time Processing", "5G", "Distributed Systems"],
+          tags: ["Edge Computing", "IoT", "Real-time Processing", "5G", "Distributed Systems"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -344,9 +344,9 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       pricingModel: "Monthly subscription with usage-based pricing",
       marketPrice: "$299-599/month"
     },
-    features[
-      "Function-as-a-Service (FaaS)",
-      "Event-driven architecture",
+          features: [
+        "Function-as-a-Service (FaaS)",
+        "Event-driven architecture",
       "Auto-scaling capabilities",
       "Pay-per-use pricing",
       "Multi-cloud support",
@@ -356,36 +356,36 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       "Monitoring and logging",
       "Development tools"
     ],
-    benefits[
+    benefits: [
       "Reduce infrastructure costs by 70%",
       "Eliminate server management",
       "Enable rapid scaling",
       "Improve development velocity",
       "Enhance reliability"
     ],
-    useCases[
+    useCases: [
       "Web applications",
       "API development",
       "Data processing",
       "IoT applications",
       "Microservices"
     ],
-    targetAudience[
+    targetAudience: [
       "Startups",
       "Development teams",
       "DevOps engineers",
       "Architects",
       "Product managers"
     ],
-    technologies[
+    technologies: [
       "AWS Lambda", "Azure Functions", "Google Cloud Functions", "Kubernetes",
       "Docker", "Event streaming", "API gateways", "Microservices"
     ],
-    integrations[
+    integrations: [
       "Cloud providers", "Databases", "Message queues", "Storage services",
       "Monitoring tools", "CI/CD pipelines"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "Serverless consultation",
       "Architecture guidance",
@@ -400,13 +400,13 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     reviewCount: 134,
     innovationLevel: "Innovative",
     marketSize: "$21.8B by 2030",
-    competitors["AWS Lambda", "Azure Functions", "Google Cloud Functions", "Vercel"],
-    technicalCapabilities[
+    competitors: ["AWS Lambda", "Azure Functions", "Google Cloud Functions", "Vercel"],
+    technicalCapabilities: [
       "Function execution", "Auto-scaling", "Event processing",
       "API management", "Database integration", "Monitoring"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
-    deploymentOptions["Cloud", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
+    deploymentOptions: ["Cloud", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -416,7 +416,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 100 milliseconds",
     availability: "Global",
     location: "Global",
-    tags["Serverless", "FaaS", "Event-driven", "Auto-scaling", "Microservices"],
+    tags: ["Serverless", "FaaS", "Event-driven", "Auto-scaling", "Microservices"],
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&h=500",
     createdAt: "2030-01-15T10:00:00.000Z",
     featured: true,
@@ -436,7 +436,7 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       pricingModel: "Monthly subscription with repository-based pricing",
       marketPrice: "$399-799/month"
     },
-    features[
+    features: [
       "Git-based deployment automation",
       "Infrastructure as code management",
       "Declarative configuration",
@@ -448,36 +448,36 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
       "Audit trails",
       "Integration capabilities"
     ],
-    benefits[
+    benefits: [
       "Improve deployment reliability by 90%",
       "Reduce human errors by 80%",
       "Enhance security and compliance",
       "Enable faster deployments",
       "Improve collaboration"
     ],
-    useCases[
+    useCases: [
       "Infrastructure automation",
       "Application deployment",
       "Configuration management",
       "Compliance automation",
       "Multi-team collaboration"
     ],
-    targetAudience[
+    targetAudience: [
       "DevOps teams",
       "Platform engineers",
       "Site reliability engineers",
       "Infrastructure teams",
       "Development teams"
     ],
-    technologies[
+    technologies: [
       "Git", "Kubernetes", "Terraform", "ArgoCD", "Flux", "Helm",
       "Infrastructure as code", "Declarative configuration"
     ],
-    integrations[
+    integrations: [
       "Git providers", "Kubernetes clusters", "Cloud platforms", "CI/CD tools",
       "Monitoring systems", "Security tools"
     ],
-    support[
+    support: [
       "24/7 technical support",
       "GitOps consultation",
       "Implementation assistance",
@@ -492,13 +492,13 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     reviewCount: 178,
     innovationLevel: "Innovative",
     marketSize: "$12.3B by 2030",
-    competitors["ArgoCD", "Flux", "Jenkins X", "Tekton"],
-    technicalCapabilities[
+    competitors: ["ArgoCD", "Flux", "Jenkins X", "Tekton"],
+    technicalCapabilities: [
       "Git-based automation", "Infrastructure management", "Deployment automation",
       "Configuration management", "Compliance automation", "Collaboration tools"
     ],
-    complianceStandards["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
-    deploymentOptions["Cloud", "On-premise", "Hybrid"],
+    complianceStandards: ["SOC 2", "ISO 27001", "GDPR", "Industry-specific"],
+    deploymentOptions: ["Cloud", "On-premise", "Hybrid"],
     apiAccess: true,
     customDevelopment: true,
     trainingIncluded: true,
@@ -508,12 +508,12 @@ export const innovativeCloudDevOpsServices2030: CloudDevOpsService[] = [
     responseTime: "< 2 seconds",
     availability: "Global",
     location: "Global",
+    tags: ["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],
+    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",
+    createdAt: "2030-01-15T10:00:00.000Z",
+    featured: true,
+    trending: true
   }
-    tags: ["GitOps", "Workflow Automation", "Infrastructure as Code", "Deployment", "Compliance"],;
-    image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&h=500",;
-    createdAt: "2030-01-15T10:00:00.000Z",;
-    featured: true,;
-    trending: true;
-  };
 ];
-export default innovativeCloudDevOpsServices2030;}}
+
+export default innovativeCloudDevOpsServices2030;
