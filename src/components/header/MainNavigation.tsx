@@ -72,6 +72,9 @@ export function MainNavigation({ className }: MainNavigationProps) {
                     <li><Link to="/services/ai-autonomous-business-operations-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Autonomous Operations</Link></li>
                     <li><Link to="/services/ai-customer-experience-analytics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Customer Analytics</Link></li>
                     <li><Link to="/services/ai-supply-chain-optimization" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Supply Chain AI</Link></li>
+                    <li><Link to="/services/ai-edge-computing-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Edge Computing AI</Link></li>
+                    <li><Link to="/services/ai-quantum-financial-trading-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Quantum Trading</Link></li>
+                    <li><Link to="/services/ai-healthcare-diagnostics-platform" className="text-zion-slate-light hover:text-zion-cyan transition-colors">Healthcare AI</Link></li>
                   </ul>
                 </div>
                 <div>
