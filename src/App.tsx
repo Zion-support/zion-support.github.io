@@ -164,11 +164,7 @@ const EmergingTech = createLazyComponent(() => import('./pages/EmergingTech'));
 const ServicesOverview = createLazyComponent(() => import('./pages/ServicesOverview'));
 
 // Additional missing pages
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
 const Resources = createLazyComponent(() => import('./pages/Resources'));
-const Help = createLazyComponent(() => import('./pages/Help'));
-const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const GetStarted = createLazyComponent(() => import('./pages/GetStarted'));
 
 // About sub-pages
 const Team = createLazyComponent(() => import('./pages/about/Team'));
