@@ -31,9 +31,15 @@ const navigation: NavigationItem[] = [
       { name: 'AI Solutions', href: '/ai-services', description: 'Cutting-edge artificial intelligence services' },
       { name: 'IT Services', href: '/it-services', description: 'Enterprise technology infrastructure' },
       { name: 'Micro SaaS', href: '/micro-saas', description: 'Scalable software solutions' },
+      { name: 'AI-Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform', description: 'Revolutionary quantum AI platform' },
+      { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform', description: 'Advanced AI-powered security' },
+      { name: 'AI Healthcare', href: '/services/ai-healthcare-platform', description: 'Medical AI diagnostics' },
+      { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization', description: 'Intelligent supply chain optimization' },
       { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Advanced security protocols' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops', description: 'Scalable cloud infrastructure' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' }
+      { name: 'Edge & IoT', href: '/services/edge-computing-platform', description: 'Ultra-low latency solutions' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions', description: 'Next-generation quantum solutions' },
+      { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions', description: 'Enterprise blockchain solutions' }
     ]
   },
   {
@@ -41,18 +47,39 @@ const navigation: NavigationItem[] = [
     href: '/solutions',
     description: 'Industry-specific technology solutions',
     children: [
-      { name: 'Enterprise', href: '/solutions/Enterprise', description: 'Large-scale business solutions' },
-      { name: 'Healthcare', href: '/solutions/Healthcare', description: 'Medical technology innovations' },
-      { name: 'Financial', href: '/solutions/FinancialSolutions', description: 'Fintech and banking solutions' },
-      { name: 'Manufacturing', href: '/solutions/ManufacturingSolutions', description: 'Industrial automation' },
-      { name: 'Government', href: '/solutions/GovernmentSolutions', description: 'Public sector technology' },
-      { name: 'Retail', href: '/solutions/RetailSolutions', description: 'E-commerce and retail tech' }
+      { name: 'Enterprise', href: '/enterprise', description: 'Large-scale business solutions' },
+      { name: 'Healthcare', href: '/industry-solutions', description: 'Medical technology innovations' },
+      { name: 'Financial', href: '/financial-solutions', description: 'Fintech and banking solutions' },
+      { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industrial automation' },
+      { name: 'Government', href: '/industry-solutions', description: 'Public sector technology' },
+      { name: 'Retail', href: '/industry-solutions', description: 'E-commerce and retail tech' },
+      { name: 'Digital Transformation', href: '/digital-transformation', description: 'Business transformation services' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions', description: 'Cloud infrastructure and services' },
+      { name: 'Emerging Tech', href: '/emerging-tech', description: 'Cutting-edge technology solutions' }
     ]
   },
   {
-    name: 'About',
+    name: 'Company',
     href: '/about',
-    description: 'Learn about our company and mission'
+    description: 'Learn about our company and mission',
+    children: [
+      { name: 'About Us', href: '/about', description: 'Our story and mission' },
+      { name: 'Leadership', href: '/about', description: 'Meet our leadership team' },
+      { name: 'Careers', href: '/about', description: 'Join our team' },
+      { name: 'News & Events', href: '/about', description: 'Latest updates' }
+    ]
+  },
+  {
+    name: 'Resources',
+    href: '/resources',
+    description: 'Tools, documentation, and support',
+    children: [
+      { name: 'Documentation', href: '/resources', description: 'Technical documentation' },
+      { name: 'API Reference', href: '/resources', description: 'Developer APIs' },
+      { name: 'Support Center', href: '/support', description: 'Get help and support' },
+      { name: 'Training', href: '/training', description: 'Learn and grow' },
+      { name: 'Blog', href: '/resources', description: 'Industry insights' }
+    ]
   },
   {
     name: 'Contact',

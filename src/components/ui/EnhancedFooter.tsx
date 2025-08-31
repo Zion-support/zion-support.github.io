@@ -27,42 +27,51 @@ const footerSections = [
       { name: 'AI Solutions', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: 'AI-Quantum Hybrid', href: '/services/ai-quantum-hybrid-platform' },
+      { name: 'AI Cybersecurity', href: '/services/ai-cybersecurity-platform' },
+      { name: 'AI Healthcare', href: '/services/ai-healthcare-platform' },
+      { name: 'AI Supply Chain', href: '/services/ai-supply-chain-optimization' },
       { name: 'Cybersecurity', href: '/services/cybersecurity' },
       { name: 'Cloud & DevOps', href: '/services/cloud-devops' },
-      { name: 'Edge & IoT', href: '/services/edge-computing-platform' }
+      { name: 'Edge & IoT', href: '/services/edge-computing-platform' },
+      { name: 'Quantum Computing', href: '/services/quantum-computing-solutions' },
+      { name: 'Blockchain', href: '/services/blockchain-enterprise-solutions' }
     ]
   },
   {
     title: 'Solutions',
     links: [
-      { name: 'Enterprise', href: '/solutions/Enterprise' },
-      { name: 'Healthcare', href: '/solutions/Healthcare' },
-      { name: 'Financial', href: '/solutions/FinancialSolutions' },
-      { name: 'Manufacturing', href: '/solutions/ManufacturingSolutions' },
-      { name: 'Government', href: '/solutions/GovernmentSolutions' },
-      { name: 'Retail', href: '/solutions/RetailSolutions' }
+      { name: 'Enterprise', href: '/enterprise' },
+      { name: 'Healthcare', href: '/industry-solutions' },
+      { name: 'Financial', href: '/financial-solutions' },
+      { name: 'Manufacturing', href: '/manufacturing-solutions' },
+      { name: 'Government', href: '/industry-solutions' },
+      { name: 'Retail', href: '/industry-solutions' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Emerging Tech', href: '/emerging-tech' }
     ]
   },
   {
     title: 'Company',
     links: [
       { name: 'About Us', href: '/about' },
-      { name: 'Leadership', href: '/leadership' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'News & Events', href: '/news' },
-      { name: 'Blog', href: '/blog' },
-      { name: 'Press Kit', href: '/press' }
+      { name: 'Leadership', href: '/about' },
+      { name: 'Careers', href: '/about' },
+      { name: 'News & Events', href: '/about' },
+      { name: 'Blog', href: '/resources' },
+      { name: 'Press Kit', href: '/about' }
     ]
   },
   {
     title: 'Resources',
     links: [
-      { name: 'Documentation', href: '/docs' },
-      { name: 'API Reference', href: '/api' },
-      { name: 'Developer Portal', href: '/developer' },
+      { name: 'Documentation', href: '/resources' },
+      { name: 'API Reference', href: '/resources' },
+      { name: 'Developer Portal', href: '/resources' },
       { name: 'Support Center', href: '/support' },
       { name: 'Training', href: '/training' },
-      { name: 'Community', href: '/community' }
+      { name: 'Community', href: '/resources' }
     ]
   }
 ];
