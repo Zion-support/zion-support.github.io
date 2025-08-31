@@ -34,7 +34,8 @@ import {
   FileText,
   HelpCircle,
   ExternalLink,
-  Rocket
+  Rocket,
+  Target
 } from 'lucide-react';
 
 export function AppFooter() {
@@ -99,31 +100,54 @@ export function AppFooter() {
   ];
 
   const companyLinks = [
-    { name: "About Us", href: "/about", icon: Users },
-    { name: "Careers", href: "/careers", icon: Award },
-    { name: "News & Events", href: "/news", icon: Star },
-    { name: "Partners", href: "/partners", icon: Handshake },
-    { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
-    { name: "Contact", href: "/contact", icon: MessageCircle }
+    { name: "About Us", href: "/about" },
+    { name: "Leadership", href: "/leadership" },
+    { name: "Careers", href: "/careers" },
+    { name: "Partners", href: "/partners" },
+    { name: "News & Events", href: "/news" },
+    { name: "Contact Us", href: "/contact" }
   ];
 
   const resourceLinks = [
-    { name: "Blog & Insights", href: "/blog", icon: FileText },
-    { name: "Documentation", href: "/docs", icon: FileText },
-    { name: "White Papers", href: "/white-papers", icon: FileText },
-    { name: "Webinars", href: "/webinars", icon: Monitor },
-    { name: "Training", href: "/training", icon: GraduationCap },
-    { name: "Research & Development", href: "/research-development", icon: Lightbulb },
-    { name: "Pricing Guide", href: "/pricing-guide" }
+    { name: "Blog & Insights", href: "/blog" },
+    { name: "Documentation", href: "/docs" },
+    { name: "White Papers", href: "/white-papers" },
+    { name: "Webinars", href: "/webinars" },
+    { name: "Training", href: "/training" },
+    { name: "Research", href: "/research" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Help Center", href: "/help" }
   ];
 
   const supportLinks = [
-    { name: "Help Center", href: "/help", icon: HelpCircle },
-    { name: "Support", href: "/support", icon: MessageCircle },
-    { name: "FAQ", href: "/faq", icon: HelpCircle },
-    { name: "Status Page", href: "/status", icon: Activity },
-    { name: "API Documentation", href: "/api-docs", icon: Code },
-    { name: "Community Forum", href: "/community", icon: Users }
+    { name: "Support Center", href: "/support" },
+    { name: "Help Documentation", href: "/help" },
+    { name: "Contact Support", href: "/contact" },
+    { name: "System Status", href: "/system-status" },
+    { name: "Community Forum", href: "/community" },
+    { name: "Bug Reports", href: "/bug-reports" }
+  ];
+
+  const innovationLinks = [
+    { name: "Innovation Showcase 2025", href: "/innovative-services-showcase-2025" },
+    { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026" },
+    { name: "Innovation Showcase 2032", href: "/innovative-services-showcase-2032" },
+    { name: "Comprehensive Services 2025", href: "/comprehensive-services-showcase-2025" },
+    { name: "Innovation Hub", href: "/innovative-services-hub" },
+    { name: "Pricing Guide", href: "/pricing-guide" }
+  ];
+
+  const solutionLinks = [
+    { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+    { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+    { name: "Financial Solutions", href: "/solutions/financial" },
+    { name: "Manufacturing Solutions", href: "/solutions/manufacturing" },
+    { name: "Government Solutions", href: "/solutions/government" },
+    { name: "Retail Solutions", href: "/solutions/retail" },
+    { name: "Quantum Edge Computing", href: "/solutions/quantum-edge-computing" },
+    { name: "Blockchain & Web3", href: "/solutions/blockchain-web3" },
+    { name: "IoT Edge Computing", href: "/solutions/iot-edge-computing" },
+    { name: "Space Technology", href: "/solutions/space-tech" }
   ];
 
   const scrollToTop = () => {
@@ -142,63 +166,107 @@ export function AppFooter() {
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-8">
-              <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg">
-                <Zap className="w-7 h-7 text-white" />
+        {/* Company Info Section */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Company Branding */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center mb-8">
+                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                  <Zap className="w-7 h-7 text-white" />
+                </div>
+                <div>
+                  <span className="text-3xl font-bold text-white">Zion Tech Group</span>
+                  <div className="text-zion-cyan font-medium text-sm">Innovation • Technology • Growth</div>
+                </div>
               </div>
-              <div>
-                <span className="text-3xl font-bold text-white">Zion Tech Group</span>
-                <div className="text-zion-cyan font-medium text-sm">Innovation • Technology • Growth</div>
+              <p className="text-zion-slate-light mb-8 max-w-md text-lg leading-relaxed">
+                Leading provider of innovative AI, IT, and Micro SaaS solutions. 
+                Transforming businesses through cutting-edge technology and expert consulting.
+              </p>
+            </div>
+
+            {/* Contact Information */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">Contact Information</h3>
+              <div className="space-y-4">
+                <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
+                    <Phone className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <a href="tel:+13024640950" className="hover:text-zion-cyan">+1 (302) 464-0950</a>
+                </div>
+                <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
+                    <Mail className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan">kleber@ziontechgroup.com</a>
+                </div>
+                <div className="flex items-start text-zion-slate-light">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
+                    <MapPin className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
+                </div>
+                <div className="flex items-center text-zion-slate-light">
+                  <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
+                    <Clock className="w-4 h-4 text-zion-cyan" />
+                  </div>
+                  <span>24/7 Support Available</span>
+                </div>
               </div>
             </div>
-            <p className="text-zion-slate-light mb-8 max-w-md text-lg leading-relaxed">
-              Leading provider of innovative AI, IT, and Micro SaaS solutions. 
-              Transforming businesses through cutting-edge technology and expert consulting.
-            </p>
-            
-            {/* Contact Info */}
-            <div className="space-y-4">
-              <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
-                  <Phone className="w-4 h-4 text-zion-cyan" />
+
+            {/* Quick Links */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <Link to="/ai-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    AI Services
+                  </Link>
+                  <Link to="/it-services" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    IT Services
+                  </Link>
+                  <Link to="/micro-saas" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Micro SaaS
+                  </Link>
+                  <Link to="/pricing" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Pricing
+                  </Link>
                 </div>
-                <a href="tel:+1 302 464 0950" className="hover:text-zion-cyan">+1 302 464 0950</a>
-              </div>
-              <div className="flex items-center text-zion-slate-light hover:text-zion-cyan transition-colors group">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3 group-hover:bg-zion-cyan/30 transition-colors">
-                  <Mail className="w-4 h-4 text-zion-cyan" />
+                <div className="space-y-3">
+                  <Link to="/about" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    About Us
+                  </Link>
+                  <Link to="/contact" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Contact
+                  </Link>
+                  <Link to="/support" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Support
+                  </Link>
+                  <Link to="/blog" className="block text-zion-slate-light hover:text-zion-cyan transition-colors text-sm">
+                    Blog
+                  </Link>
                 </div>
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan">kleber@ziontechgroup.com</a>
-              </div>
-              <div className="flex items-start text-zion-slate-light">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
-                  <MapPin className="w-4 h-4 text-zion-cyan" />
-                </div>
-                <span>364 E Main St STE 1008<br />Middletown DE 19709</span>
-              </div>
-              <div className="flex items-center text-zion-slate-light">
-                <div className="p-2 bg-zion-cyan/20 rounded-lg mr-3">
-                  <Clock className="w-4 h-4 text-zion-cyan" />
-                </div>
-                <span>24/7 Support Available</span>
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Services */}
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-16">
+          {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <div key={index} className="space-y-4">
-              <div className="flex items-center space-x-3 mb-6">
+              <div className="flex items-center space-x-3 pb-3 border-b border-zion-purple/20">
                 <div className={`p-2 ${category.bgColor} rounded-lg`}>
                   <category.icon className={`w-5 h-5 ${category.color}`} />
                 </div>
-                <h3 className={`text-lg font-bold ${category.color}`}>{category.title}</h3>
+                <h3 className={`${category.color} font-bold text-lg`}>{category.title}</h3>
               </div>
               <ul className="space-y-3">
-                {category.services.map((service, serviceIndex) => (
+                {category.services.slice(0, 6).map((service, serviceIndex) => (
                   <li key={serviceIndex}>
                     <Link 
                       to={service.href} 
@@ -258,20 +326,67 @@ export function AppFooter() {
                 ))}
               </ul>
             </div>
+          </div>
+
+          {/* Solutions & Innovation */}
+          <div className="space-y-8">
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-zion-green/20 rounded-lg">
+                  <Target className="w-5 h-5 text-zion-green" />
+                </div>
+                <h3 className="text-lg font-bold text-zion-green">Industry Solutions</h3>
+              </div>
+              <ul className="space-y-3">
+                {solutionLinks.slice(0, 6).map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.href} 
+                      className="text-zion-slate-light hover:text-zion-green transition-all duration-300 text-sm flex items-center group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
             <div>
               <div className="flex items-center space-x-3 mb-6">
                 <div className="p-2 bg-zion-purple/20 rounded-lg">
-                  <HelpCircle className="w-5 h-5 text-zion-purple" />
+                  <Rocket className="w-5 h-5 text-zion-purple" />
                 </div>
-                <h3 className="text-lg font-bold text-zion-purple">Support</h3>
+                <h3 className="text-lg font-bold text-zion-purple">Innovation & Pricing</h3>
+              </div>
+              <ul className="space-y-3">
+                {innovationLinks.map((link, index) => (
+                  <li key={index}>
+                    <Link 
+                      to={link.href} 
+                      className="text-zion-slate-light hover:text-zion-purple transition-all duration-300 text-sm flex items-center group"
+                    >
+                      <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex items-center space-x-3 mb-6">
+                <div className="p-2 bg-zion-blue/20 rounded-lg">
+                  <HelpCircle className="w-5 h-5 text-zion-blue" />
+                </div>
+                <h3 className="text-lg font-bold text-zion-blue">Support</h3>
               </div>
               <ul className="space-y-3">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
                     <Link 
                       to={link.href} 
-                      className="text-zion-slate-light hover:text-zion-purple transition-all duration-300 text-sm flex items-center group"
+                      className="text-zion-slate-light hover:text-zion-blue transition-all duration-300 text-sm flex items-center group"
                     >
                       <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-0 group-hover:translate-x-1" />
                       {link.name}
