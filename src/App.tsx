@@ -49,12 +49,27 @@ const Blog = createLazyComponent(() => import('./pages/Blog'));
 const Services = createLazyComponent(() => import('./pages/Services'));
 const Services2026 = createLazyComponent(() => import('./pages/Services2026'));
 const Services2027 = createLazyComponent(() => import('./pages/InnovativeServices2027'));
-const AIServices = createLazyComponent(() => import('./pages/AIServices'));
+const AIServices = createLazyComponent(() => import('./pages/services/AIServices'));
 const AISolutions = createLazyComponent(() => import('./pages/AISolutions'));
-const ITServices = createLazyComponent(() => import('./pages/ITServices'));
+const ITServices = createLazyComponent(() => import('./pages/services/ITServices'));
 const MicroSaaS = createLazyComponent(() => import('./pages/MicroSaaS'));
 const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/MicroSAASSolutions'));
 const ComprehensiveServices = createLazyComponent(() => import('./pages/ComprehensiveServices'));
+
+// New service pages
+const DataAnalytics = createLazyComponent(() => import('./pages/services/DataAnalytics'));
+const CloudDevOps = createLazyComponent(() => import('./pages/CloudDevOps'));
+const Cybersecurity = createLazyComponent(() => import('./pages/Cybersecurity'));
+
+// Solution pages
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const SolutionsEnterprise = createLazyComponent(() => import('./pages/solutions/Enterprise'));
+const SolutionsSMB = createLazyComponent(() => import('./pages/solutions/SMB'));
+const SolutionsIndustries = createLazyComponent(() => import('./pages/solutions/Industries'));
+const SolutionsCloud = createLazyComponent(() => import('./pages/solutions/Cloud'));
+
+// Resource pages
+const Resources = createLazyComponent(() => import('./pages/Resources'));
 
 // Additional pages
 const Partners = createLazyComponent(() => import('./pages/Partners'));
@@ -282,6 +297,21 @@ function App() {
                   <Route path="/micro-saas" element={<MicroSaaS />} />
                   <Route path="/services/micro-saas-solutions" element={<MicroSAASSolutions />} />
                   <Route path="/comprehensive-services" element={<ComprehensiveServices />} />
+                  
+                  {/* New Service Routes */}
+                  <Route path="/services/data-analytics" element={<DataAnalytics />} />
+                  <Route path="/services/cloud-devops" element={<CloudDevOps />} />
+                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
+                  
+                  {/* Solution Routes */}
+                  <Route path="/solutions" element={<Solutions />} />
+                  <Route path="/solutions/enterprise" element={<SolutionsEnterprise />} />
+                  <Route path="/solutions/smb" element={<SolutionsSMB />} />
+                  <Route path="/solutions/industries" element={<SolutionsIndustries />} />
+                  <Route path="/solutions/cloud" element={<SolutionsCloud />} />
+                  
+                  {/* Resource Routes */}
+                  <Route path="/resources" element={<Resources />} />
                   <Route path="/mobile-launch" element={<MobileLaunch />} />
                   <Route path="/analytics" element={<Analytics />} />
                   <Route path="/match" element={<Match />} />

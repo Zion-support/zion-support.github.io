@@ -2,9 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  BarChart3,
-  Database,
   Brain,
+  Cpu,
   Zap,
   Users,
   TrendingUp,
@@ -12,9 +11,6 @@ import {
   CheckCircle,
   ArrowRight,
   Star,
-  Award,
-  DollarSign,
-  Clock,
   MessageCircle,
   FileText,
   Workflow,
@@ -22,174 +18,181 @@ import {
   Shield,
   Server,
   Network,
-  Cpu,
   Building2,
   Globe,
-  PieChart,
-  LineChart,
   Activity,
-  BarChart,
-  ScatterChart,
-  AreaChart,
-  Gauge,
-  Thermometer,
-  Calendar,
-  Filter,
+  BarChart3,
   Search,
+  Filter,
   Download,
   Upload,
   RefreshCw,
   Play,
   Pause,
-  Stop
+  Stop,
+  Bot,
+  Eye,
+  Lock,
+  Database,
+  Code,
+  Layers,
+  Sparkles,
+  Lightbulb,
+  Rocket,
+  Gauge,
+  PieChart,
+  LineChart,
+  BarChart,
+  ScatterChart,
+  AreaChart
 } from 'lucide-react';
 
-export default function DataAnalytics() {
+export default function AIServices() {
   const services = [
     {
-      title: 'Data Warehousing',
-      description: 'Build scalable data warehouses for comprehensive business intelligence',
-      icon: Database,
-      features: [
-        'Data modeling and design',
-        'ETL/ELT pipeline development',
-        'Data quality management',
-        'Performance optimization',
-        'Scalable architecture'
-      ],
-      benefits: [
-        'Centralized data storage',
-        'Improved data quality',
-        'Faster query performance',
-        'Better decision making'
-      ]
-    },
-    {
-      title: 'Business Intelligence',
-      description: 'Transform data into actionable insights with interactive dashboards',
-      icon: BarChart3,
-      features: [
-        'Interactive dashboards',
-        'Real-time reporting',
-        'KPI monitoring',
-        'Custom visualizations',
-        'Mobile accessibility'
-      ],
-      benefits: [
-        'Data-driven decisions',
-        'Improved visibility',
-        'Faster insights',
-        'Better collaboration'
-      ]
-    },
-    {
-      title: 'Predictive Analytics',
-      description: 'Leverage machine learning to predict future trends and outcomes',
+      title: 'Machine Learning',
+      description: 'Build and deploy custom ML models for predictive analytics and automation',
       icon: Brain,
       features: [
-        'Machine learning models',
-        'Statistical analysis',
-        'Forecasting algorithms',
-        'Risk assessment',
-        'Scenario planning'
+        'Custom model development',
+        'Data preprocessing',
+        'Model training & validation',
+        'Performance optimization',
+        'Model deployment'
       ],
       benefits: [
-        'Proactive decision making',
-        'Risk mitigation',
-        'Opportunity identification',
-        'Competitive advantage'
+        'Predictive insights',
+        'Process automation',
+        'Improved accuracy',
+        'Cost reduction'
       ]
     },
     {
-      title: 'Real-time Analytics',
-      description: 'Monitor and analyze data as it happens for immediate insights',
-      icon: Activity,
+      title: 'Natural Language Processing',
+      description: 'Enable machines to understand and process human language',
+      icon: MessageCircle,
       features: [
-        'Stream processing',
-        'Real-time dashboards',
-        'Instant alerts',
-        'Live monitoring',
-        'Event-driven analytics'
+        'Text analysis',
+        'Sentiment analysis',
+        'Language translation',
+        'Chatbot development',
+        'Document processing'
       ],
       benefits: [
-        'Immediate insights',
-        'Faster response times',
-        'Better customer experience',
-        'Operational efficiency'
+        'Better customer service',
+        'Automated content analysis',
+        'Multilingual support',
+        'Efficiency gains'
       ]
     },
     {
-      title: 'Data Quality Management',
-      description: 'Ensure data accuracy, completeness, and consistency',
-      icon: Shield,
+      title: 'Computer Vision',
+      description: 'Extract insights from images and video using AI',
+      icon: Eye,
       features: [
-        'Data profiling',
-        'Quality assessment',
-        'Cleansing and enrichment',
-        'Validation rules',
-        'Monitoring and reporting'
+        'Image recognition',
+        'Object detection',
+        'Facial recognition',
+        'Video analysis',
+        'Quality inspection'
       ],
       benefits: [
-        'Improved data reliability',
-        'Better decision making',
+        'Automated inspection',
+        'Security enhancement',
+        'Quality control',
+        'Process automation'
+      ]
+    },
+    {
+      title: 'AI Automation',
+      description: 'Streamline business processes with intelligent automation',
+      icon: Workflow,
+      features: [
+        'Process automation',
+        'Intelligent workflows',
+        'Decision automation',
+        'Predictive maintenance',
+        'Resource optimization'
+      ],
+      benefits: [
+        'Increased efficiency',
         'Reduced errors',
-        'Compliance adherence'
+        'Cost savings',
+        '24/7 operation'
       ]
     },
     {
-      title: 'Advanced Analytics',
-      description: 'Deep dive analytics with advanced statistical and ML techniques',
-      icon: TrendingUp,
+      title: 'AI Consulting',
+      description: 'Strategic guidance for AI implementation and transformation',
+      icon: Lightbulb,
       features: [
-        'Statistical analysis',
-        'Machine learning',
-        'Deep learning',
-        'Natural language processing',
-        'Computer vision'
+        'AI strategy development',
+        'Technology assessment',
+        'Implementation planning',
+        'Change management',
+        'ROI optimization'
       ],
       benefits: [
-        'Advanced insights',
-        'Pattern recognition',
-        'Automated analysis',
-        'Innovation opportunities'
+        'Clear roadmap',
+        'Risk mitigation',
+        'Faster implementation',
+        'Better outcomes'
+      ]
+    },
+    {
+      title: 'AI Infrastructure',
+      description: 'Build scalable AI infrastructure and platforms',
+      icon: Server,
+      features: [
+        'GPU clusters',
+        'Distributed computing',
+        'Model serving',
+        'Data pipelines',
+        'Monitoring & scaling'
+      ],
+      benefits: [
+        'Scalable performance',
+        'Cost optimization',
+        'Reliable deployment',
+        'Easy management'
       ]
     }
   ];
 
   const technologies = [
-    'Apache Spark',
-    'Apache Kafka',
-    'Apache Airflow',
-    'Snowflake',
-    'Amazon Redshift',
-    'Google BigQuery',
-    'Tableau',
-    'Power BI',
+    'TensorFlow',
+    'PyTorch',
+    'Scikit-learn',
+    'OpenAI GPT',
+    'Hugging Face',
+    'AWS SageMaker',
+    'Google AI Platform',
+    'Azure ML',
+    'Kubernetes',
+    'Docker',
     'Python',
-    'R',
-    'SQL',
-    'TensorFlow'
+    'R'
   ];
 
   const benefits = [
     {
-      title: 'Insights',
-      description: 'Unlock hidden patterns and insights in your data',
-      icon: Brain
+      title: 'Innovation',
+      description: 'Stay ahead with cutting-edge AI capabilities',
+      icon: Sparkles
     },
     {
       title: 'Efficiency',
-      description: 'Streamline operations and improve productivity',
+      description: 'Automate complex tasks and processes',
       icon: Zap
     },
     {
-      title: 'Growth',
-      description: 'Identify opportunities for business growth',
-      icon: TrendingUp
+      title: 'Insights',
+      description: 'Discover hidden patterns in your data',
+      icon: Brain
     },
     {
       title: 'Competitive Edge',
-      description: 'Stay ahead with data-driven strategies',
+      description: 'Outperform competitors with AI-first approach',
       icon: Target
     }
   ];
@@ -206,21 +209,21 @@ export default function DataAnalytics() {
   ];
 
   const useCases = [
-    'Customer Analytics',
-    'Supply Chain Optimization',
-    'Risk Management',
-    'Marketing Optimization',
-    'Operational Efficiency',
-    'Product Development',
     'Fraud Detection',
-    'Performance Monitoring'
+    'Customer Segmentation',
+    'Predictive Maintenance',
+    'Quality Control',
+    'Demand Forecasting',
+    'Risk Assessment',
+    'Personalization',
+    'Process Optimization'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-600/20 to-teal-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20"></div>
         <div className="relative container mx-auto px-4 text-center">
           <motion.h1 
             className="text-5xl md:text-7xl font-bold text-white mb-6"
@@ -228,8 +231,8 @@ export default function DataAnalytics() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Data
-            <span className="bg-gradient-to-r from-green-400 to-teal-500 bg-clip-text text-transparent"> Analytics</span>
+            AI
+            <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent"> Services</span>
           </motion.h1>
           <motion.p 
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
@@ -237,8 +240,8 @@ export default function DataAnalytics() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Transform your data into actionable insights. From business intelligence to predictive 
-            analytics, we help you unlock the full value of your data assets.
+            Transform your business with cutting-edge artificial intelligence. From machine learning 
+            to computer vision, we help you harness the power of AI for competitive advantage.
           </motion.p>
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
@@ -248,14 +251,14 @@ export default function DataAnalytics() {
           >
             <Link
               to="/contact"
-              className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center space-x-2"
+              className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
             >
               <span>Get Started</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               to="/comprehensive-pricing-guide-2025"
-              className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
+              className="px-8 py-4 border border-purple-500/30 text-purple-400 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
             >
               View Pricing
             </Link>
@@ -274,11 +277,11 @@ export default function DataAnalytics() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive Analytics Services
+              Comprehensive AI Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From data collection to advanced analytics, we provide end-to-end solutions 
-              that turn your data into strategic business advantages.
+              From strategy to implementation, we provide end-to-end AI solutions 
+              that transform your business operations and drive innovation.
             </p>
           </motion.div>
 
@@ -286,17 +289,17 @@ export default function DataAnalytics() {
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-8 hover:border-purple-500/50 transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
                 <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-xl flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-xl flex items-center justify-center">
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-semibold text-white group-hover:text-green-400 transition-colors">
+                  <h3 className="text-2xl font-semibold text-white group-hover:text-purple-400 transition-colors">
                     {service.title}
                   </h3>
                 </div>
@@ -309,7 +312,7 @@ export default function DataAnalytics() {
                     <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -321,7 +324,7 @@ export default function DataAnalytics() {
                     <ul className="space-y-2">
                       {service.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                          <Star className="w-4 h-4 text-teal-400 flex-shrink-0" />
+                          <Star className="w-4 h-4 text-blue-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
                       ))}
@@ -345,10 +348,10 @@ export default function DataAnalytics() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Technologies We Use
+              AI Technologies We Use
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage the latest data analytics technologies to deliver 
+              We leverage the latest AI frameworks and platforms to deliver 
               cutting-edge solutions for your business.
             </p>
           </motion.div>
@@ -357,14 +360,14 @@ export default function DataAnalytics() {
             {technologies.map((technology, index) => (
               <motion.div
                 key={technology}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 text-center hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 text-center hover:border-purple-500/50 transition-all duration-300 group"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Database className="w-8 h-8 text-green-400 mx-auto mb-3 group-hover:text-green-300 transition-colors" />
-                <h3 className="text-white font-medium group-hover:text-green-400 transition-colors text-sm">
+                <Brain className="w-8 h-8 text-purple-400 mx-auto mb-3 group-hover:text-purple-300 transition-colors" />
+                <h3 className="text-white font-medium group-hover:text-purple-400 transition-colors text-sm">
                   {technology}
                 </h3>
               </motion.div>
@@ -384,11 +387,11 @@ export default function DataAnalytics() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Analytics Use Cases
+              AI Use Cases
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how data analytics can transform your business operations 
-              and drive strategic decision making.
+              Discover how artificial intelligence can transform your business operations 
+              and create new opportunities for growth and innovation.
             </p>
           </motion.div>
 
@@ -396,14 +399,14 @@ export default function DataAnalytics() {
             {useCases.map((useCase, index) => (
               <motion.div
                 key={useCase}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 text-center hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 text-center hover:border-purple-500/50 transition-all duration-300 group"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <BarChart3 className="w-8 h-8 text-green-400 mx-auto mb-3 group-hover:text-green-300 transition-colors" />
-                <h3 className="text-white font-medium group-hover:text-green-400 transition-colors text-sm">
+                <Bot className="w-8 h-8 text-purple-400 mx-auto mb-3 group-hover:text-purple-300 transition-colors" />
+                <h3 className="text-white font-medium group-hover:text-purple-400 transition-colors text-sm">
                   {useCase}
                 </h3>
               </motion.div>
@@ -423,11 +426,11 @@ export default function DataAnalytics() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Data Analytics?
+              Why Choose AI Services?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Data analytics provides unprecedented opportunities for businesses to 
-              understand their operations and make informed decisions.
+              Artificial intelligence provides unprecedented opportunities for businesses to 
+              automate, optimize, and innovate across all operations.
             </p>
           </motion.div>
 
@@ -441,7 +444,7 @@ export default function DataAnalytics() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
@@ -466,8 +469,8 @@ export default function DataAnalytics() {
               Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We have experience applying data analytics across various industries 
-              to solve unique business challenges.
+              We have experience applying AI across various industries 
+              to solve unique business challenges and drive innovation.
             </p>
           </motion.div>
 
@@ -475,14 +478,14 @@ export default function DataAnalytics() {
             {industries.map((industry, index) => (
               <motion.div
                 key={industry}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 text-center hover:border-green-500/50 transition-all duration-300 group"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 text-center hover:border-purple-500/50 transition-all duration-300 group"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Building2 className="w-8 h-8 text-green-400 mx-auto mb-3 group-hover:text-green-300 transition-colors" />
-                <h3 className="text-white font-medium group-hover:text-green-400 transition-colors text-sm">
+                <Building2 className="w-8 h-8 text-purple-400 mx-auto mb-3 group-hover:text-purple-300 transition-colors" />
+                <h3 className="text-white font-medium group-hover:text-purple-400 transition-colors text-sm">
                   {industry}
                 </h3>
               </motion.div>
@@ -492,7 +495,7 @@ export default function DataAnalytics() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-600/20 to-teal-600/20">
+      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-blue-600/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -501,23 +504,23 @@ export default function DataAnalytics() {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to Unlock Your Data?
+              Ready to Embrace AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Let's discuss how our data analytics solutions can transform your business, 
-              improve decision making, and drive growth.
+              Let's discuss how our AI services can transform your business, 
+              automate processes, and create new opportunities for growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white rounded-lg font-semibold hover:from-green-600 hover:to-teal-700 transition-all duration-300 flex items-center justify-center space-x-2"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <MessageCircle className="w-5 h-5" />
                 <span>Contact Us</span>
               </Link>
               <Link
                 to="/case-studies"
-                className="px-8 py-4 border border-green-500/30 text-green-400 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
+                className="px-8 py-4 border border-purple-500/30 text-purple-400 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
               >
                 <FileText className="w-5 h-5" />
                 <span>View Case Studies</span>
