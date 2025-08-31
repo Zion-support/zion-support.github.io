@@ -54,7 +54,8 @@ export function AppFooter() {
         { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform" },
         { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform" },
         { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" },
-        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" }
+        { name: "AI Financial Trading Platform", href: "/services/ai-financial-trading-platform" },
+        { name: "AI Autonomous Financial Advisor", href: "/services/ai-autonomous-financial-advisor-platform" }
       ]
     },
     {
@@ -66,6 +67,7 @@ export function AppFooter() {
         { name: "Infrastructure Management", href: "/services/it-infrastructure-management" },
         { name: "Cloud & DevOps", href: "/services/cloud-devops" },
         { name: "Cybersecurity", href: "/services/cybersecurity" },
+        { name: "AI Cybersecurity Intelligence", href: "/services/ai-autonomous-cybersecurity-intelligence" },
         { name: "Blockchain Solutions", href: "/services/blockchain-enterprise-solutions" },
         { name: "IoT Edge Computing", href: "/services/ai-iot-edge-computing-platform" },
         { name: "Digital Transformation", href: "/services/digital-transformation" },
@@ -84,8 +86,13 @@ export function AppFooter() {
         { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced" },
         { name: "AI Sales Copilot", href: "/services/ai-sales-copilot" },
         { name: "AI Compliance Assistant", href: "/services/ai-compliance-assistant" },
-        { name: "AI HR Management Platform", href: "/services/ai-hr-management-platform" },
+        { name: "AI Content Optimizer", href: "/services/ai-content-optimizer-pro" },
+        { name: "AI HR Platform", href: "/services/ai-hr-platform" },
+        { name: "AI HR Management", href: "/services/ai-hr-management-platform" },
+        { name: "AI Content Creation Studio", href: "/services/ai-content-creation-studio" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform" },
         { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced" },
+        { name: "AI Supply Chain Intelligence", href: "/services/ai-autonomous-supply-chain-intelligence" },
         { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator" },
         { name: "AI BI Platform Enterprise", href: "/services/ai-business-intelligence-platform-enterprise" },
         { name: "AI Cybersecurity Enterprise", href: "/services/ai-cybersecurity-threat-detection-enterprise" },
@@ -110,7 +117,8 @@ export function AppFooter() {
     { name: "White Papers", href: "/white-papers", icon: FileText },
     { name: "Webinars", href: "/webinars", icon: Monitor },
     { name: "Training", href: "/training", icon: GraduationCap },
-    { name: "Research & Development", href: "/research-development", icon: Lightbulb }
+    { name: "Research & Development", href: "/research-development", icon: Lightbulb },
+    { name: "Pricing Guide", href: "/pricing-guide" }
   ];
 
   const supportLinks = [

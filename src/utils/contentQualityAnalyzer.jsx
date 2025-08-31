@@ -8,19 +8,17 @@
                 issueCounts[issue] = (issueCounts[issue] || 0) + 1;
             });
         });
-        const topIssues = Object.entries(issueCounts)
-            .sort(([, a], [, b]) => b - a)
-            .slice(0, 5)
-            .map(([issue]) => issue);
-        const summary = this.generateSummary(pageMetrics, topIssues);
+        
+        const commonIssues = Object.entries(issueCounts)
+            .map(([type, count]) => ({ type, count }))
+            .sort((a, b) => b.count - a.count)
+            .slice(0, 5);
+        
         return {
             totalPages,
-            averageWordCount,
-            averageSeoScore,
-            pagesWithIssues,
-            topIssues,
-            pageMetrics,
-            summary
+            averageScore,
+            scoreDistribution,
+            commonIssues
         };
     generateSummary(pageMetrics, topIssues) {
         const totalPages = pageMetrics.length;

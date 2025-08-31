@@ -198,3 +198,102 @@ export const SEO: React.FC<SEOProps> = ({
     </Helmet>
   );
 };
+// Extend Window interface for gtag
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
+// Specialized SEO components for different page types
+export function HomePageSEO() {
+  return (
+    <SEO
+      title="AI-Powered Business Solutions & Quantum Computing | Zion Tech Group"
+      description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative IT services. Leading digital transformation with autonomous business operations and advanced cybersecurity."
+      keywords="AI business solutions, quantum computing, autonomous operations, digital transformation, IT services, cybersecurity, machine learning, neural networks"
+      enableStructuredData={true}
+      enableSocialMedia={true}
+      enableAnalytics={true}
+    />
+  );
+}
+
+export function ServicesPageSEO() {
+  return (
+    <SEO
+      title="Comprehensive AI & IT Services | Zion Tech Group"
+      description="Explore our comprehensive suite of AI services, quantum computing solutions, cybersecurity, and digital transformation services. Expert IT consulting and innovative technology solutions."
+      keywords="AI services, quantum computing, cybersecurity, digital transformation, IT consulting, cloud services, machine learning, enterprise solutions"
+      enableStructuredData={true}
+      enableSocialMedia={true}
+      enableAnalytics={true}
+    />
+  );
+}
+
+export function ContactPageSEO() {
+  return (
+    <SEO
+      title="Contact Zion Tech Group | Get Expert AI & IT Solutions"
+      description="Contact Zion Tech Group for expert AI solutions, quantum computing, and digital transformation services. Get in touch with our technology experts today."
+      keywords="contact Zion Tech Group, AI solutions, IT consulting, technology services, digital transformation, quantum computing"
+      enableStructuredData={true}
+      enableSocialMedia={true}
+      enableAnalytics={true}
+    />
+  );
+}
+
+export function BlogPostSEO({ 
+  title, 
+  description, 
+  author, 
+  publishedDate, 
+  image, 
+  slug 
+}: {
+  title: string;
+  description: string;
+  author: string;
+  publishedDate: string;
+  image: string;
+  slug: string;
+}) {
+  return (
+    <SEO
+      title={title}
+      description={description}
+      author={author}
+      canonical={`https://ziontechgroup.com/blog/${slug}`}
+      ogType="article"
+      ogImage={image}
+      structuredData={{
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": description,
+        "image": image,
+        "author": {
+          "@type": "Person",
+          "name": author
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ziontechgroup.com/images/zion-tech-group-logo.png"
+          }
+        },
+        "datePublished": publishedDate,
+        "dateModified": publishedDate,
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": `https://ziontechgroup.com/blog/${slug}`
+        }
+      }}
+    />
+  );
+}
+

@@ -98,6 +98,18 @@
   
   /* Accessibility */
   --sr-only: 0 0 0 0;
+  
+  /* Responsive breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Enhanced spacing for better responsiveness */
+  --spacing-mobile: 1rem;
+  --spacing-tablet: 1.5rem;
+  --spacing-desktop: 2rem;
   /* Accessibility */
   --high-contrast: 1;
   --reduced-motion: 1;
@@ -1206,3 +1218,87 @@
   outline: 3px solid rgb(var(--zion-cyan));
   outline-offset: 2px;
 }
+
+/* Enhanced Responsive Utilities */
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-mobile);
+}
+  
+  @media (min-width: 768px) {
+    .responsive-container {
+      padding: 0 var(--spacing-tablet);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-container {
+      padding: 0 var(--spacing-desktop);
+    }
+  }
+  
+  .responsive-grid {
+    display: grid;
+    gap: var(--spacing-mobile);
+    grid-template-columns: 1fr;
+  }
+  
+  @media (min-width: 640px) {
+    .responsive-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-tablet);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-desktop);
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .responsive-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .responsive-text {
+    font-size: var(--font-size-base);
+    line-height: 1.6;
+  }
+  
+  @media (min-width: 768px) {
+    .responsive-text {
+      font-size: var(--font-size-lg);
+      line-height: 1.7;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-text {
+      font-size: var(--font-size-xl);
+      line-height: 1.8;
+    }
+  }
+  
+  .responsive-spacing {
+    padding: var(--spacing-mobile);
+    margin: var(--spacing-mobile) 0;
+  }
+  
+  @media (min-width: 768px) {
+    .responsive-spacing {
+      padding: var(--spacing-tablet);
+      margin: var(--spacing-tablet) 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .responsive-spacing {
+      padding: var(--spacing-desktop);
+      margin: var(--spacing-desktop) 0;
+    }
+  }
