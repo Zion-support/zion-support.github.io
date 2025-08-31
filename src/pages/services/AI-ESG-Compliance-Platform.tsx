@@ -1,154 +1,154 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Cpu, 
-  Wifi, 
-  BarChart3, 
-  Zap, 
+  Leaf, 
   Shield, 
+  BarChart3, 
   Globe, 
+  FileText, 
+  Users, 
   CheckCircle, 
   ArrowRight,
-  Eye,
-  Settings,
-  Target,
-  Star,
-  TrendingUp,
+  Zap,
   Database,
-  Monitor,
-  Network,
-  Cloud
+  Settings,
+  Eye,
+  Star,
+  Target,
+  TrendingUp,
+  Award
 } from 'lucide-react';
 
-const AIEdgeComputingPlatform: React.FC = () => {
+const AIESGCompliancePlatform: React.FC = () => {
   const features = [
     {
-      icon: Cpu,
-      title: "Edge AI Processing",
-      description: "Run AI models directly on edge devices for real-time decision making"
+      icon: Leaf,
+      title: "Environmental Impact Monitoring",
+      description: "Track carbon emissions, energy consumption, and environmental metrics in real-time"
     },
     {
-      icon: Wifi,
-      title: "5G & IoT Integration",
-      description: "Seamless connectivity with 5G networks and IoT device ecosystems"
-    },
-    {
-      icon: BarChart3,
-      title: "Real-time Analytics",
-      description: "Process data at the edge for instant insights and responses"
-    },
-    {
-      icon: Zap,
-      title: "Low Latency Processing",
-      description: "Sub-10ms response times for critical applications and automation"
+      icon: Users,
+      title: "Social Responsibility Tracking",
+      description: "Monitor labor practices, diversity metrics, and community impact assessments"
     },
     {
       icon: Shield,
-      title: "Edge Security",
-      description: "Advanced security protocols for edge devices and data protection"
+      title: "Governance Compliance",
+      description: "Ensure board diversity, executive compensation transparency, and ethical practices"
+    },
+    {
+      icon: BarChart3,
+      title: "AI-Powered ESG Scoring",
+      description: "Advanced algorithms calculate comprehensive ESG ratings and identify improvement areas"
+    },
+    {
+      icon: FileText,
+      title: "Automated Reporting",
+      description: "Generate regulatory reports for SEC, EU Taxonomy, and other ESG frameworks"
     },
     {
       icon: Globe,
-      title: "Global Edge Network",
-      description: "Distributed edge nodes across multiple geographic locations"
+      title: "Stakeholder Communication",
+      description: "Transparent ESG disclosure and investor relations management"
     }
   ];
 
   const benefits = [
-    "Reduce latency by 80-90% compared to cloud-only processing",
-    "Cut bandwidth costs by 60% through local data processing",
-    "Improve reliability with offline-capable edge computing",
-    "Enable real-time AI applications in remote locations",
-    "Reduce cloud infrastructure costs by 40-50%",
-    "Enhance privacy with local data processing and storage"
+    "Achieve 40-60% improvement in ESG ratings within 12 months",
+    "Reduce compliance costs by 50% through automation",
+    "Increase investor confidence with transparent ESG reporting",
+    "Meet regulatory requirements across all jurisdictions",
+    "Identify ESG risks before they impact business performance",
+    "Enhance brand reputation and stakeholder trust"
   ];
 
   const pricing = [
     {
       plan: "Professional",
-      price: "$3,800",
+      price: "$3,200",
       period: "/month",
       features: [
-        "Up to 100 edge devices",
-        "Basic AI model deployment",
-        "Real-time monitoring",
-        "Standard analytics",
+        "Up to 100 ESG metrics tracking",
+        "Basic AI scoring models",
+        "Monthly ESG reports",
+        "Standard compliance tools",
         "Email support",
-        "Basic security features"
+        "Basic stakeholder portal"
       ]
     },
     {
       plan: "Enterprise",
-      price: "$8,800",
+      price: "$7,800",
       period: "/month",
       features: [
-        "Up to 1,000 edge devices",
-        "Advanced AI model deployment",
-        "Custom edge applications",
-        "Full analytics suite",
+        "Up to 500 ESG metrics tracking",
+        "Advanced AI scoring models",
+        "Real-time monitoring",
+        "Custom ESG frameworks",
+        "Full compliance suite",
         "Priority support",
         "API access",
-        "Advanced security"
+        "Advanced analytics"
       ]
     },
     {
       plan: "Global",
-      price: "$19,500",
+      price: "$18,500",
       period: "/month",
       features: [
-        "Unlimited edge devices",
+        "Unlimited ESG metrics tracking",
         "Custom AI model training",
-        "Multi-region edge deployment",
+        "Multi-region compliance",
         "24/7 dedicated support",
         "Custom integrations",
         "White-label solutions",
-        "On-premise options"
+        "On-premise deployment"
       ]
     }
   ];
 
-  const useCases = [
+  const frameworks = [
     {
-      title: "Autonomous Vehicles",
-      description: "Real-time AI processing for self-driving cars and drones",
-      icon: Target
+      title: "SEC Climate Disclosure",
+      description: "Comply with new SEC climate risk disclosure requirements",
+      icon: FileText
     },
     {
-      title: "Smart Manufacturing",
-      description: "Edge AI for predictive maintenance and quality control",
-      icon: Cpu
+      title: "EU Taxonomy",
+      description: "Meet European Union sustainable finance classification",
+      icon: Globe
     },
     {
-      title: "Healthcare IoT",
-      description: "Real-time patient monitoring and medical device management",
-      icon: Shield
+      title: "SASB Standards",
+      description: "Industry-specific sustainability accounting standards",
+      icon: Award
     },
     {
-      title: "Retail Analytics",
-      description: "In-store customer behavior analysis and inventory management",
-      icon: BarChart3
+      title: "TCFD Framework",
+      description: "Task Force on Climate-related Financial Disclosures",
+      icon: Leaf
     }
   ];
 
-  const edgeTechnologies = [
+  const industries = [
     {
-      title: "Edge AI Chips",
-      description: "Specialized processors for AI workloads at the edge",
-      icon: Cpu
+      title: "Financial Services",
+      description: "ESG risk assessment and sustainable investment management",
+      icon: TrendingUp
     },
     {
-      title: "5G Networks",
-      description: "Ultra-fast wireless connectivity for edge devices",
-      icon: Wifi
+      title: "Manufacturing",
+      description: "Supply chain sustainability and environmental compliance",
+      icon: Target
     },
     {
-      title: "IoT Protocols",
-      description: "Standard protocols for device communication",
-      icon: Network
+      title: "Energy",
+      description: "Renewable energy transition and carbon footprint reduction",
+      icon: Leaf
     },
     {
-      title: "Edge Security",
-      description: "Advanced security for distributed computing",
+      title: "Technology",
+      description: "Data center efficiency and responsible AI development",
       icon: Shield
     }
   ];
@@ -164,24 +164,24 @@ const AIEdgeComputingPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6">
-              <Cpu className="w-4 h-4 mr-2" />
-              AI-Powered Edge Computing Platform
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
+              <Leaf className="w-4 h-4 mr-2" />
+              AI-Powered ESG Compliance
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI Edge Computing
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-blue-400">
-                {" "}Platform
+              AI ESG
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                {" "}Compliance Platform
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Bring AI to the edge of your network. Process data locally for real-time insights, 
-              reduce latency, and enable intelligent applications anywhere in the world.
+              Transform your ESG compliance with AI-driven automation. Monitor environmental, social, 
+              and governance metrics, ensure regulatory compliance, and enhance stakeholder trust.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-600 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200"
               >
                 Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -207,10 +207,10 @@ const AIEdgeComputingPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Advanced Edge Computing Features
+              Comprehensive ESG Management Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Leverage cutting-edge edge computing technology for maximum performance and efficiency
+              Leverage AI to automate ESG compliance and drive sustainable business practices
             </p>
           </motion.div>
 
@@ -221,10 +221,10 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300"
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-indigo-400" />
+                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
@@ -238,7 +238,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Technologies Section */}
+      {/* Frameworks Section */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -248,15 +248,15 @@ const AIEdgeComputingPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Edge Computing Technologies
+              Regulatory Framework Support
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Built on the latest advancements in edge computing and AI
+              Comply with all major ESG and sustainability reporting standards
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {edgeTechnologies.map((tech, index) => (
+            {frameworks.map((framework, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -264,14 +264,14 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-indigo-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-indigo-400" />
+                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <framework.icon className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  {tech.title}
+                  {framework.title}
                 </h3>
                 <p className="text-gray-400">
-                  {tech.description}
+                  {framework.description}
                 </p>
               </motion.div>
             ))}
@@ -279,7 +279,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
+      {/* Industries Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
@@ -289,15 +289,15 @@ const AIEdgeComputingPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Industry Solutions
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Transform operations across various industries with edge computing
+              Tailored ESG compliance solutions for different industries
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+            {industries.map((industry, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -305,14 +305,14 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 bg-indigo-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <useCase.icon className="w-8 h-8 text-indigo-400" />
+                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <industry.icon className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  {useCase.title}
+                  {industry.title}
                 </h3>
                 <p className="text-gray-400">
-                  {useCase.description}
+                  {industry.description}
                 </p>
               </motion.div>
             ))}
@@ -330,10 +330,10 @@ const AIEdgeComputingPlatform: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your Edge Computing
+              Transform Your ESG Performance
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See measurable improvements in performance, latency, and cost efficiency
+              See measurable improvements in sustainability, compliance, and stakeholder trust
             </p>
           </motion.div>
 
@@ -367,7 +367,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
               Flexible Pricing Plans
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Choose the plan that fits your edge computing needs
+              Choose the plan that fits your organization's ESG compliance needs
             </p>
           </motion.div>
 
@@ -380,12 +380,12 @@ const AIEdgeComputingPlatform: React.FC = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
                   index === 1 
-                    ? 'border-indigo-500/50 bg-indigo-500/5' 
+                    ? 'border-green-500/50 bg-green-500/5' 
                     : 'border-slate-700'
                 }`}
               >
                 {index === 1 && (
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-indigo-500 text-white text-sm font-medium mb-4">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500 text-white text-sm font-medium mb-4">
                     Most Popular
                   </div>
                 )}
@@ -406,7 +406,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
                   href="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
                     index === 1
-                      ? 'bg-gradient-to-r from-indigo-500 to-blue-500 text-white hover:from-indigo-600 hover:to-blue-600'
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                       : 'border border-slate-600 text-gray-300 hover:border-slate-500 hover:text-white'
                   }`}
                 >
@@ -427,15 +427,15 @@ const AIEdgeComputingPlatform: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Move AI to the Edge?
+              Ready to Lead in ESG Compliance?
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Join leading organizations that trust our AI-powered edge computing platform
+              Join leading organizations that trust our AI-powered ESG compliance platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-600 transition-all duration-200"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200"
               >
                 Schedule a Demo
                 <ArrowRight className="ml-2 w-5 h-5" />
@@ -469,7 +469,7 @@ const AIEdgeComputingPlatform: React.FC = () => {
               <h3 className="text-white font-semibold mb-2">Website</h3>
               <a 
                 href="https://ziontechgroup.com" 
-                className="text-indigo-400 hover:text-indigo-300 transition-colors"
+                className="text-green-400 hover:text-green-300 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -483,4 +483,4 @@ const AIEdgeComputingPlatform: React.FC = () => {
   );
 };
 
-export default AIEdgeComputingPlatform;
+export default AIESGCompliancePlatform;
