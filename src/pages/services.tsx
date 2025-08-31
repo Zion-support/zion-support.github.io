@@ -42,14 +42,22 @@ const Services: React.FC = () => {
   const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' },
-    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' },
+    { id: 'AI & Machine Learning', name: 'AI & Machine Learning', count: allServices.filter(s => s.category === 'AI & Machine Learning').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' },
+    { id: 'Cloud & DevOps', name: 'Cloud & DevOps', count: allServices.filter(s => s.category === 'Cloud & DevOps').length, icon: '☁️', color: 'from-zion-blue to-zion-indigo' },
+    { id: 'Data & Analytics', name: 'Data & Analytics', count: allServices.filter(s => s.category === 'Data & Analytics').length, icon: '📊', color: 'from-zion-green to-zion-emerald' },
+    { id: 'Security & Compliance', name: 'Security & Compliance', count: allServices.filter(s => s.category === 'Security & Compliance').length, icon: '🛡️', color: 'from-zion-red to-zion-orange' },
+    { id: 'Industry Solutions', name: 'Industry Solutions', count: allServices.filter(s => s.category === 'Industry Solutions').length, icon: '🏭', color: 'from-zion-purple to-zion-pink' },
+    { id: 'Emerging Technology', name: 'Emerging Technology', count: allServices.filter(s => s.category === 'Emerging Technology').length, icon: '⚡', color: 'from-zion-yellow to-zion-orange' },
+    { id: 'Business Process Automation', name: 'Business Process Automation', count: allServices.filter(s => s.category === 'Business Process Automation').length, icon: '⚙️', color: 'from-zion-gray to-zion-blue' },
+    { id: 'Digital Transformation', name: 'Digital Transformation', count: allServices.filter(s => s.category === 'Digital Transformation').length, icon: '🔄', color: 'from-zion-cyan to-zion-green' },
+    { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🧠', color: 'from-zion-purple to-zion-cyan' },
     { id: 'Quantum Computing', name: 'Quantum Computing', count: allServices.filter(s => s.category === 'Quantum Computing').length, icon: '⚛️', color: 'from-zion-purple to-zion-pink' },
     { id: 'Blockchain', name: 'Blockchain', count: allServices.filter(s => s.category === 'Blockchain').length, icon: '🔗', color: 'from-zion-green to-zion-emerald' },
     { id: 'AI & Healthcare', name: 'AI & Healthcare', count: allServices.filter(s => s.category === 'AI & Healthcare').length, icon: '🏥', color: 'from-zion-red to-zion-pink' },
     { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category === 'Edge Computing').length, icon: '🌐', color: 'from-zion-blue to-zion-cyan' },
     { id: 'Metaverse', name: 'Metaverse', count: allServices.filter(s => s.category === 'Metaverse').length, icon: '🌍', color: 'from-zion-purple to-zion-indigo' },
     { id: 'AI & Content', name: 'AI & Content', count: allServices.filter(s => s.category === 'AI & Content').length, icon: '✍️', color: 'from-zion-orange to-zion-red' },
-    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🛡️', color: 'from-zion-green to-zion-blue' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category === 'Cybersecurity').length, icon: '🔒', color: 'from-zion-green to-zion-blue' },
     { id: 'AI & HR', name: 'AI & HR', count: allServices.filter(s => s.category === 'AI & HR').length, icon: '👥', color: 'from-zion-purple to-zion-cyan' }
   ];
   const filteredServices = allServices.filter(service => {
@@ -342,6 +350,217 @@ export default function Services() {
             >
               Explore Services
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Comprehensive Services Advertising Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-blue-50 to-indigo-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Why Choose Zion Tech Group?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              We deliver cutting-edge technology solutions that drive real business value, 
+              with proven ROI and enterprise-grade reliability.
+            </p>
+          </div>
+
+          {/* Key Benefits Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI-Powered Intelligence</h3>
+              <p className="text-gray-600 mb-4">
+                Leverage advanced machine learning and AI to automate processes, gain insights, 
+                and make data-driven decisions that accelerate your business growth.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>Predictive Analytics & Forecasting</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>Natural Language Processing</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>Computer Vision & Image Recognition</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6">
+                <Shield className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Security</h3>
+              <p className="text-gray-600 mb-4">
+                Protect your business with zero-trust security architecture, AI-powered threat detection, 
+                and comprehensive compliance management solutions.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>Zero Trust Security Framework</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>AI Threat Intelligence</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>GDPR, CCPA, HIPAA Compliance</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6">
+                <Rocket className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Rapid Development</h3>
+              <p className="text-gray-6 mb-4">
+                Accelerate your digital transformation with our micro SAAS platform, 
+                cloud-native solutions, and expert development services.
+              </p>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>Micro SAAS Platform</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>Cloud DevOps Automation</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span>Container Orchestration</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Pricing & ROI Section */}
+          <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-3xl p-8 lg:p-12 text-white">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold mb-6">
+                Competitive Pricing with Proven ROI
+              </h3>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                Our services deliver exceptional value with transparent pricing and measurable business outcomes.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-blue-300 mb-2">$2,999</div>
+                <div className="text-blue-100 mb-2">Starting Price</div>
+                <div className="text-sm text-blue-200">Most popular entry point</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-300 mb-2">400%</div>
+                <div className="text-green-100 mb-2">Average ROI</div>
+                <div className="text-sm text-green-200">Within 6-8 months</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-300 mb-2">2-6</div>
+                <div className="text-purple-100 mb-2">Weeks Setup</div>
+                <div className="text-sm text-purple-200">Rapid deployment</div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                Get Custom Quote
+                <ArrowRight className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-3xl p-8 lg:p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                  Ready to Transform Your Business?
+                </h3>
+                <p className="text-xl text-gray-600 mb-8">
+                  Our team of technology experts is ready to help you implement the right solutions 
+                  for your business needs. Get in touch today for a free consultation.
+                </p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Phone className="w-5 h-5 text-blue-600" />
+                    <span className="text-lg text-gray-700">+1 302 464 0950</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Mail className="w-5 h-5 text-blue-600" />
+                    <span className="text-lg text-gray-700">kleber@ziontechgroup.com</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <MapPin className="w-5 h-5 text-blue-600" />
+                    <span className="text-lg text-gray-700">364 E Main St STE 1008, Middletown DE 19709</span>
+                  </div>
+                </div>
+
+                <div className="mt-8">
+                  <a
+                    href="/contact"
+                    className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  >
+                    Schedule Consultation
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-2xl p-8 shadow-lg">
+                <h4 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Zion Tech Group?</h4>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-900">Proven Track Record</div>
+                      <div className="text-sm text-gray-600">500+ successful enterprise implementations</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-900">24/7 Expert Support</div>
+                      <div className="text-sm text-gray-600">Round-the-clock technical assistance</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-900">99.9% Uptime Guarantee</div>
+                      <div className="text-sm text-gray-600">Enterprise-grade reliability</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-500 mt-1" />
+                    <div>
+                      <div className="font-semibold text-gray-900">Custom Solutions</div>
+                      <div className="text-sm text-gray-600">Tailored to your specific needs</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
