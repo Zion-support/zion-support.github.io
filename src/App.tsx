@@ -102,13 +102,7 @@ const AIHealthcareAnalyticsPlatform = createLazyComponent(() => import('./pages/
 const AIFinancialRiskManagementPlatform = createLazyComponent(() => import('./pages/services/ai-financial-risk-management-platform'));
 const AISupplyChainOptimizationPlatform = createLazyComponent(() => import('./pages/services/ai-supply-chain-optimization-platform'));
 
-// Additional Services
-const CloudDevOps = createLazyComponent(() => import('./pages/services/cloud-devops'));
-const Cybersecurity = createLazyComponent(() => import('./pages/services/cybersecurity'));
-const DigitalTransformation = createLazyComponent(() => import('./pages/services/digital-transformation'));
-const ITInfrastructure = createLazyComponent(() => import('./pages/services/ITInfrastructure'));
-const AIBusinessIntelligence = createLazyComponent(() => import('./pages/services/ai-business-intelligence'));
-const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/ai-healthcare-analytics-platform'));
+
 
 // Innovative Services Showcase 2026
 const InnovativeServicesShowcase2026 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2026'));
