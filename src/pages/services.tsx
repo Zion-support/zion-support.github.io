@@ -34,12 +34,13 @@ import {
   Lightbulb
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
+import { ENHANCED_MICRO_SAAS_SERVICES_2026 } from '../data/enhancedMicroSaasServices2026';
 const Services: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('rating');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const allServices = INNOVATIVE_MICRO_SAAS_SERVICES_2025;
+  const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2025, ...ENHANCED_MICRO_SAAS_SERVICES_2026];
   const categories = [
     { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀', color: 'from-zion-cyan to-zion-blue' },
     { id: 'AI & Automation', name: 'AI & Automation', count: allServices.filter(s => s.category === 'AI & Automation').length, icon: '🤖', color: 'from-zion-purple to-zion-cyan' },
