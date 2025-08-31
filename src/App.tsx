@@ -8,14 +8,10 @@ import { Header } from './components/header/Header';
 import { Footer } from './components/layout/Footer';
 
 // Enhanced Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { EnhancedAccessibilityEnhancer } from './components/EnhancedAccessibilityEnhancer';
-import { AdvancedAnalytics } from './components/AdvancedAnalytics';
-import { SmartNotificationSystem } from './components/SmartNotificationSystem';
-import { AdvancedAnalyticsDashboard } from './components/AdvancedAnalyticsDashboard';
-import { AIContentOptimizer } from './components/AIContentOptimizer';
-import { SecurityMonitoringSystem } from './components/SecurityMonitoringSystem';
-import { UserExperienceOptimizer } from './components/UserExperienceOptimizer';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { SEOOptimizer } from './components/SEOOptimizer';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
@@ -299,32 +295,17 @@ function App() {
             {/* Footer - Using AppFooter for enhanced features */}
             <AppFooter />
 
-            {/* Enhanced Performance Optimizer */}
-            <PerformanceOptimizer enabled={true} />
+            {/* SEO Optimizer */}
+            <SEOOptimizer />
 
-            {/* Enhanced Accessibility Enhancer */}
-            <EnhancedAccessibilityEnhancer enabled={true} />
+            {/* Performance Monitor */}
+            <PerformanceMonitor enabled={true} />
 
-            {/* Advanced Analytics */}
-            <AdvancedAnalytics enabled={true} showMetrics={true} />
+            {/* Accessibility Enhancer */}
+            <AccessibilityEnhancer enabled={true} />
 
-            {/* Smart Notification System */}
-            <SmartNotificationSystem enabled={true} />
-
-            {/* Advanced Analytics Dashboard */}
-            <AdvancedAnalyticsDashboard enabled={true} />
-
-            {/* AI Content Optimizer */}
-            <AIContentOptimizer enabled={true} />
-
-            {/* Security Monitoring System */}
-            <SecurityMonitoringSystem enabled={true} />
-
-            {/* User Experience Optimizer */}
-            <UserExperienceOptimizer enabled={true} />
-
-            {/* Floating Action Button */}
-            <FloatingActionButton enabled={true} />
+            {/* Mobile Experience Enhancer */}
+            <MobileExperienceEnhancer enabled={true} />
           </div>
         </Router>
       </ErrorBoundary>
