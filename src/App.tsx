@@ -98,6 +98,15 @@ const CloudFinOpsOptimizer = createLazyComponent(() => import('./pages/services/
 const AIAutonomousLogisticsPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-logistics-platform'));
 const AIPoweredSEO = createLazyComponent(() => import('./pages/services/ai-powered-seo'));
 const QuantumEdgeComputingSolutions = createLazyComponent(() => import('./pages/services/quantum-edge-computing-solutions'));
+
+// New Enterprise Services 2025
+const AIBusinessIntelligencePlatformEnterprise = createLazyComponent(() => import('./pages/services/ai-business-intelligence-platform-enterprise'));
+const AICybersecurityThreatDetectionEnterprise = createLazyComponent(() => import('./pages/services/ai-cybersecurity-threat-detection-enterprise'));
+const AIQuantumComputingSolutionsEnterprise = createLazyComponent(() => import('./pages/services/ai-quantum-computing-solutions-enterprise'));
+const AIBlockchainWeb3SolutionsEnterprise = createLazyComponent(() => import('./pages/services/ai-blockchain-web3-solutions-enterprise'));
+
+// Enterprise Services Showcase 2025
+const EnterpriseServicesShowcase2025 = createLazyComponent(() => import('./pages/EnterpriseServicesShowcase2025'));
 const AISpaceTechnologyPlatform = createLazyComponent(() => import('./pages/services/ai-space-technology-platform'));
 // New Innovative Micro SAAS Services 2026
 const AILegalDocumentAutomationPlatform = createLazyComponent(() => import('./pages/services/ai-legal-document-automation-platform'));
@@ -279,6 +288,12 @@ function App() {
                     <Route path="/services/ai-hr-platform" element={<ModernLayout><AIHRPlatform /></ModernLayout>} />
                     <Route path="/services/ai-financial-trading-risk-management" element={<ModernLayout><AIFinancialTradingRiskManagement /></ModernLayout>} />
 
+                    {/* New Enterprise Services 2025 */}
+                    <Route path="/services/ai-business-intelligence-platform-enterprise" element={<ModernLayout><AIBusinessIntelligencePlatformEnterprise /></ModernLayout>} />
+                    <Route path="/services/ai-cybersecurity-threat-detection-enterprise" element={<ModernLayout><AICybersecurityThreatDetectionEnterprise /></ModernLayout>} />
+                    <Route path="/services/ai-quantum-computing-solutions-enterprise" element={<ModernLayout><AIQuantumComputingSolutionsEnterprise /></ModernLayout>} />
+                    <Route path="/services/ai-blockchain-web3-solutions-enterprise" element={<ModernLayout><AIBlockchainWeb3SolutionsEnterprise /></ModernLayout>} />
+
                     {/* Enhanced Innovative Micro SAAS Services 2025 */}
                     <Route path="/services/ai-customer-success-automation" element={<ModernLayout><AICustomerSuccessAutomation /></ModernLayout>} />
                     <Route path="/services/ai-supply-chain-optimization-enhanced" element={<ModernLayout><AISupplyChainOptimizationEnhanced /></ModernLayout>} />
@@ -378,6 +393,7 @@ function App() {
 
                     {/* New pages we created */}
                     <Route path="/enterprise" element={<ModernLayout><Enterprise /></ModernLayout>} />
+                    <Route path="/enterprise-services-showcase-2025" element={<ModernLayout><EnterpriseServicesShowcase2025 /></ModernLayout>} />
                     <Route path="/industry-solutions" element={<ModernLayout><IndustrySolutions /></ModernLayout>} />
                     <Route path="/digital-transformation" element={<ModernLayout><DigitalTransformation /></ModernLayout>} />
                     <Route path="/cloud-solutions" element={<ModernLayout><CloudSolutions /></ModernLayout>} />
