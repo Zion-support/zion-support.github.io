@@ -82,7 +82,12 @@ interface SecurityThreat {
   location: string;
   timestamp: Date;
 <<<<<<< HEAD
+<<<<<<< HEAD
   status: 'active' | 'mitigated' | 'resolved'}
+=======
+  status: 'active' | 'mitigated' | 'resolved';
+}
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SecurityMetrics {
 =======
 <<<<<<< HEAD
@@ -128,7 +133,12 @@ interface SecurityMetrics {
   lastScan: Date;
   complianceScore: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
   encryptionStrength: number}
+=======
+  encryptionStrength: number;
+}
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 interface SecurityCheck {
 =======
 <<<<<<< HEAD
@@ -174,6 +184,7 @@ interface SecurityCheck {
   description: string;
   recommendation: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance'}
 =======
 <<<<<<< HEAD
@@ -197,19 +208,24 @@ category: 'authentication' | 'data-protection' | 'network-security' | 'complianc
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
+}
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 const SecurityEnhancer: React.FC = (): JSX.Element => {
-  const [metrics, setMetrics] = useState<any>({;
-    overallScore: 85,;
-    vulnerabilities: 3,;
-    threatsBlocked: 127,;
-    lastScan: new Date(),;
-    complianceScore: 92,;
-    encryptionStrength: 256;
+  const [metrics, setMetrics] = useState<any>({
+    overallScore: 85,
+    vulnerabilities: 3,
+    threatsBlocked: 127,
+    lastScan: new Date(),
+    complianceScore: 92,
+    encryptionStrength: 256
   });
   const [threats, setThreats] = useState<any>([]);
   const [securityChecks, setSecurityChecks] = useState<any>([]);
   const [isScanning, setIsScanning] = useState(false);
   const [showThreats, setShowThreats] = useState(true);
+  
   // Generate sample security threats
   useEffect(() => {
     const sampleThreats: SecurityThreat[] = [
@@ -239,8 +255,11 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
         location: '/src/components/Dashboard.tsx:67',
         timestamp: new Date(Date.now() - 10800000),
         status: 'resolved'
+      }
     ];
-    setThreats(sampleThreats)}, []);
+    setThreats(sampleThreats);
+  }, []);
+  
   // Generate security checks
 <<<<<<< HEAD
   useEffect(() => {
@@ -287,20 +306,24 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
         description: 'Database queries are properly parameterized',
         recommendation: 'Continue using prepared statements',
         category: 'data-protection'
+      }
     ];
-    setSecurityChecks(checks)}, []);
-  const runSecurityScan = useCallback(async () => {;
+    setSecurityChecks(checks);
+  }, []);
+  
+  const runSecurityScan = useCallback(async () => {
     setIsScanning(true);
     // Simulate security scan
     await new Promise(resolve => setTimeout(resolve, 3000));
     // Update metrics with new scan results
-    setMetrics(prev = > ({;
-      ...prev,;
-      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),;
-      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),;
-      threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),;
-      lastScan: new Date();
+    setMetrics(prev => ({
+      ...prev,
+      overallScore: Math.max(0, Math.min(100, prev.overallScore + (Math.random() - 0.5) * 10)),
+      vulnerabilities: Math.max(0, prev.vulnerabilities + Math.floor(Math.random() * 3) - 1),
+      threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
+      lastScan: new Date()
     }));
+<<<<<<< HEAD
     setIsScanning(false)}, []);
 <<<<<<< HEAD
   const mitigateThreat = useCallback((threatId: string) => {;
@@ -366,14 +389,36 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   const getThreatIcon = (type: anyanyanyanyanyanyanyanyanyanyanyanyanyanySecurityThreat['type'])               => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     switch (type) {;
+=======
+    setIsScanning(false);
+  }, []);
+  const mitigateThreat = useCallback((threatId: string) => {
+    setThreats(prev => prev.map(threat => 
+      threat.id === threatId 
+        ? { ...threat, status: 'mitigated' as const }
+        : threat
+    ));
+  }, []);
+  const resolveThreat = useCallback((threatId: string) => {
+    setThreats(prev => prev.map(threat => 
+      threat.id === threatId 
+        ? { ...threat, status: 'resolved' as const }
+        : threat
+    ));
+  }, []);
+  const getThreatIcon = (type: SecurityThreat['type']) => {
+    switch (type) {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       case 'xss': return <Bug className="h-4 w-4" />;
       case 'csrf': return <Network className="h-4 w-4" />;
       case 'injection': return <Database className="h-4 w-4" />;
       case 'authentication': return <Lock className="h-4 w-4" />;
       case 'authorization': return <Shield className="h-4 w-4" />;
       case 'data-leak': return <Eye className="h-4 w-4" />;
-      default: return <AlertTriangle className = "h-4 w-4" />};
+      default: return <AlertTriangle className="h-4 w-4" />;
+    }
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -644,6 +689,171 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
         </Alert>;
       )};
     </div>;
+=======
+  const getStatusColor = (status: SecurityThreat['status']) => {
+    switch (status) {
+      case 'active': return 'bg-red-500';
+      case 'mitigated': return 'bg-yellow-500';
+      case 'resolved': return 'bg-green-500';
+      default: return 'bg-gray-500';
+    }
+  };
+  const getStatusTextColor = (status: SecurityThreat['status']) => {
+    switch (status) {
+      case 'active': return 'bg-gray-100 text-gray-800';
+      case 'mitigated': return 'bg-gray-100 text-gray-800';
+      case 'resolved': return 'bg-gray-100 text-gray-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+  const getCheckIcon = (status: SecurityCheck['status']) => {
+    switch (status) {
+      case 'pass': return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'fail': return <AlertTriangle className="h-4 w-4 text-red-500" />;
+      case 'warning': return <Zap className="h-4 w-4 text-yellow-500" />;
+      default: return <AlertTriangle className="h-4 w-4 text-gray-600" />;
+    }
+  };
+  return (
+    <div className="grid gap-6">
+      <Card>
+        <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+          <div>
+            <CardTitle className="text-2xl font-bold">Security Dashboard</CardTitle>
+            <p className="text-sm text-muted-foreground">
+              Monitor and enhance your application's security posture.
+            </p>
+          </div>
+          <Button onClick={runSecurityScan} disabled={isScanning}>
+            {isScanning ? (
+              <>
+                <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
+                Scanning...
+              </>
+            ) : (
+              <>
+                <Zap className="mr-2 h-4 w-4" />
+                Run Security Scan
+              </>
+            )}
+          </Button>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold">Overall Security Score</h3>
+              <Badge variant="secondary">{metrics.overallScore}%</Badge>
+            </div>
+            <Progress value={metrics.overallScore} className="h-2" />
+
+            <div className="grid gap-4">
+              <h3 className="text-lg font-semibold">Security Threats</h3>
+              <div className="flex items-center justify-between">
+                <Badge variant="danger">Active Threats: {threats.filter(t => t.status === 'active').length}</Badge>
+                <Button variant="outline" onClick={() => setShowThreats(!showThreats)}>
+                  {showThreats ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                </Button>
+              </div>
+              {showThreats && threats.length > 0 && (
+                <div className="grid gap-3">
+                  {threats.map(threat => (
+                    <div key={threat.id} className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                      <div className="flex items-center">
+                        {getThreatIcon(threat.type)}
+                        <div className="ml-3">
+                          <h4 className="text-sm font-medium">{threat.description}</h4>
+                          <p className="text-xs text-muted-foreground">{threat.location}</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Badge variant={getStatusColor(threat.status)}>{threat.status}</Badge>
+                        {threat.status === 'active' && (
+                          <>
+                            <Button variant="outline" size="sm" onClick={() => mitigateThreat(threat.id)}>
+                              Mitigate
+                            </Button>
+                            <Button variant="outline" size="sm" onClick={() => resolveThreat(threat.id)}>
+                              Resolve
+                            </Button>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {threats.length === 0 && (
+                <p>No active security threats detected.</p>
+              )}
+            </div>
+
+            <div className="grid gap-4">
+              <h3 className="text-lg font-semibold">Security Checks</h3>
+              <div className="grid gap-3">
+                {securityChecks.map(check => (
+                  <div key={check.id} className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                    <div className="flex items-center">
+                      {getCheckIcon(check.status)}
+                      <div className="ml-3">
+                        <h4 className="text-sm font-medium">{check.name}</h4>
+                        <p className="text-xs text-muted-foreground">{check.description}</p>
+                      </div>
+                    </div>
+                    <Badge variant={getStatusTextColor(check.status)}>{check.status}</Badge>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid gap-4">
+              <h3 className="text-lg font-semibold">Compliance Status</h3>
+              <div className="grid gap-3">
+                <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                  <div className="flex items-center">
+                    <ShieldCheck className="h-4 w-4 text-green-500" />
+                    <div className="ml-3">
+                      <h4 className="text-sm font-medium">GDPR Compliance</h4>
+                      <p className="text-xs text-muted-foreground">
+                        Your data handling practices comply with GDPR requirements.
+                      </p>
+                    </div>
+                  </div>
+                  <Badge variant="success">Pass</Badge>
+                </div>
+                <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50">
+                  <div className="flex items-center">
+                    <ShieldCheck className="h-4 w-4 text-red-500" />
+                    <div className="ml-3">
+                      <h4 className="text-sm font-medium">Encryption Strength</h4>
+                      <p className="text-xs text-muted-foreground">
+                        Your encryption strength is below the recommended threshold.
+                      </p>
+                    </div>
+                  </div>
+                  <Badge variant="danger">Fail</Badge>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl font-bold">Security Recommendations</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <Alert variant="warning">
+            <ShieldCheck className="h-4 w-4 mr-2" />
+            <AlertDescription>
+              <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
+              Consider running a comprehensive security audit and implementing the suggested improvements.
+            </AlertDescription>
+          </Alert>
+        </CardContent>
+      </Card>
+    </div>
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 };
-export default SecurityEnhancer;}}}}}}}}}}
+export default SecurityEnhancer;

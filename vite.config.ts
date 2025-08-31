@@ -1,13 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
-<<<<<<< HEAD
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
 import cssnano from 'cssnano'
-=======
 
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -45,7 +42,7 @@ export default defineConfig({
           'icons-vendor': ['lucide-react'],
           'utils-vendor': ['clsx', 'class-variance-authority', 'tailwind-merge'],
         },
-        chunkFileNames: (chunkInfo)             => {
+        chunkFileNames: (chunkInfo) => {
           const facadeModuleId = chunkInfo.facadeModuleId ? chunkInfo.facadeModuleId.split('/').pop() : 'chunk';
           return `js/${facadeModuleId}-[hash].js`;
         },
@@ -100,24 +97,21 @@ export default defineConfig({
     host: true,
     open: true,
   },
-  preview: {
-    port: 4173,
-    host: true,
-<<<<<<< HEAD
-    cors: true,
+  css: {
+    postcss: {
+      plugins: [
+        tailwindcss,
+        autoprefixer,
+        cssnano({
+          preset: 'default',
+        }),
+      ],
+    },
   },
   define: {
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
-    __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
-    __BUILD_TIME__: JSON.stringify(new Date().toISOString()),
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
   },
   esbuild: {
-    drop: process.env.NODE_ENV === 'production' ? ['console', 'debugger'] : [],
-  },
-  worker: {
-    format: 'es',
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+    jsxInject: `import React from 'react'`,
   },
 })

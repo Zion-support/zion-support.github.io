@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export function registerServiceWorker() {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
@@ -57,8 +58,32 @@ export function registerServiceWorker(...args: anyanyanyanyanyanyanyanyanyanyany
           // // // // // // // console.error('SW registration failed: anyanyanyanyanyanyanyanyanyanyanyanyany', registrationError);
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+// Service Worker Registration and Management
+export function registerServiceWorker(swUrl: string, isDev: boolean = false) {
+  if ('serviceWorker' in navigator) {
+    console.log(`Registering service worker: ${swUrl} (${isDev ? 'dev' : 'prod'})`);
+    navigator.serviceWorker
+      .register(swUrl)
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+        // Handle updates
+        registration.addEventListener('updatefound', () => {
+          const newWorker = registration.installing;
+          if (newWorker) {
+            newWorker.addEventListener('statechange', () => {
+              if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                // New content is available
+                console.log('New content is available; please refresh.');
+              }
+            });
+          }
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
         });
-    });
+      })
+      .catch((registrationError) => {
+        console.error('SW registration failed: ', registrationError);
+      });
   }
 }
 
@@ -107,6 +132,7 @@ self.addEventListener('install', (event: anyanyanyanyanyanyanyanyanyanyanyanyany
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
+<<<<<<< HEAD
       .then(() => {
         console.log('Service Worker installed successfully');
         return self.skipWaiting();
@@ -114,6 +140,8 @@ self.addEventListener('install', (event: anyanyanyanyanyanyanyanyanyanyanyanyany
       .catch(error => {
         console.error('Service Worker installation failed: anyanyanyanyanyanyanyanyanyanyanyanyany', error);
       })
+=======
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   );
 });
 
@@ -129,9 +157,12 @@ self.addEventListener('activate', (event: ExtendableEvent)              => {
           }
         })
       );
+<<<<<<< HEAD
     }).then(()              => {
       console.log('Service Worker activated successfully');
       return self.clients.claim();
+=======
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     })
   );
 });
@@ -163,6 +194,29 @@ self.addEventListener('fetch', (event: anyanyanyanyanyanyanyanyanyanyanyanyanyFe
   } else {
     event.respondWith(networkFirst(request, CACHE_NAME));
   }
+
+  // Handle API requests
+  if (API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint))) {
+    event.respondWith(
+      fetch(request).then(response => {
+        // Cache successful API responses
+        if (response.ok) {
+          const responseClone = response.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        // Return cached response if available
+        return caches.match(request);
+      })
+    );
+    return;
+  }
+
+  // Default behavior for other requests
+  event.respondWith(fetch(request));
 });
 
 <<<<<<< HEAD
@@ -223,7 +277,8 @@ async function networkFirst(request: Request, cacheName: string): Promise<any> {
 // Helper functions to determine request type
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 function isStaticAsset(request: Request): boolean {
-  return STATIC_ASSETS.some(asset => request.url.includes(asset));
+  const url = new URL(request.url);
+  return STATIC_ASSETS.some(asset => url.pathname === asset);
 }
 
 function isImage(request: Request): boolean {
@@ -236,14 +291,16 @@ function isFont(request: Request): boolean {
 
 <<<<<<< HEAD
 function isAPIRequest(request: Request): boolean {
-  return API_ENDPOINTS.some(endpoint => request.url.includes(endpoint));
+  const url = new URL(request.url);
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
 }
 
 function isDynamicRoute(request: Request): boolean {
-  return DYNAMIC_ROUTES.some(route => request.url.includes(route));
+  const url = new URL(request.url);
+  return DYNAMIC_ROUTES.some(route => url.pathname.startsWith(route));
 }
 
-// Caching strategies
+// Cache strategies
 async function cacheFirst(request: Request, cacheName: string): Promise<Response> {
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(request);
@@ -271,12 +328,11 @@ async function doBackgroundSync(...args: any[]): any {
     }
     return networkResponse;
   } catch (error) {
-    // Return offline page if available
-    const offlineResponse = await cache.match('/offline.html');
-    if (offlineResponse) {
-      return offlineResponse;
-    }
-    throw error;
+    // Return a fallback response if both cache and network fail
+    return new Response('Offline content not available', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
   }
 }
 
@@ -296,6 +352,7 @@ async function networkFirst(request: Request, cacheName: string): Promise<Respon
       return cachedResponse;
     }
     
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Return offline page if available
     const offlineResponse = await cache.match('/offline.html');
@@ -320,10 +377,67 @@ self.addEventListener('push', (event: PushEvent)              => {
     body: anyanyanyanyanyanyanyanyanyanyanyanyanyevent.data?.text() || 'New notification from Zion Tech Group',
     icon: '/icon-192x192.png',
     badge: '/badge-72x72.png',
+=======
+    // Return a fallback response if both network and cache fail
+    return new Response('Content not available offline', {
+      status: 503,
+      statusText: 'Service Unavailable'
+    });
+  }
+}
+// Helper functions to determine request type
+function isStaticAsset(request: Request): boolean {
+  const url = new URL(request.url);
+  return STATIC_ASSETS.some(asset => url.pathname === asset);
+}
+function isDynamicRoute(request: Request): boolean {
+  const url = new URL(request.url);
+  return DYNAMIC_ROUTES.some(route => url.pathname === route);
+}
+function isAPIRequest(request: Request): boolean {
+  const url = new URL(request.url);
+  return API_ENDPOINTS.some(endpoint => url.pathname.startsWith(endpoint));
+}
+function isImage(request: Request): boolean {
+  return request.destination === 'image';
+}
+function isFont(request: Request): boolean {
+  return request.destination === 'font';
+}
+// Background sync for offline actions
+self.addEventListener('sync', (event: SyncEvent) => {
+  console.log('Background sync triggered:', event.tag);
+  if (event.tag === 'background-sync') {
+    event.waitUntil(doBackgroundSync());
+  }
+});
+async function doBackgroundSync() {
+  try {
+    // Perform background sync operations
+    console.log('Performing background sync...');
+    // Example: Sync offline data
+    const offlineData = await getOfflineData();
+    if (offlineData.length > 0) {
+      await syncOfflineData(offlineData);
+    }
+    console.log('Background sync completed successfully');
+  } catch (error) {
+    console.error('Background sync failed:', error);
+  }
+}
+// Handle push notifications
+self.addEventListener('push', (event: PushEvent) => {
+  console.log('Push notification received:', event);
+  const options = {
+    body: event.data ? event.data.text() : 'New notification from Zion Tech Group',
+    icon: '/favicon.ico',
+    badge: '/favicon.ico',
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
       primaryKey: 1
+<<<<<<< HEAD
     },
     actions: [
       {
@@ -339,10 +453,15 @@ self.addEventListener('push', (event: PushEvent)              => {
     ]
   };
   
+=======
+    }
+  };
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   event.waitUntil(
     self.registration.showNotification('Zion Tech Group', options)
   );
 });
+<<<<<<< HEAD
 
 // Handle notification clicks
 self.addEventListener('notificationclick', (event: NotificationEvent)              => {
@@ -350,12 +469,19 @@ self.addEventListener('notificationclick', (event: NotificationEvent)           
   
   event.notification.close();
   
+=======
+// Handle notification clicks
+self.addEventListener('notificationclick', (event: NotificationEvent) => {
+  console.log('Notification clicked:', event);
+  event.notification.close();
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   if (event.action === 'explore') {
     event.waitUntil(
       clients.openWindow('/')
     );
   }
 });
+<<<<<<< HEAD
 
 // Handle message events from main thread
 self.addEventListener('message', (event: anyanyanyanyanyanyanyanyanyanyanyanyanyExtendableMessageEvent)              => {
@@ -365,10 +491,19 @@ self.addEventListener('message', (event: anyanyanyanyanyanyanyanyanyanyanyanyany
     self.skipWaiting();
   }
   
+=======
+// Handle message events from main thread
+self.addEventListener('message', (event: ExtendableMessageEvent) => {
+  console.log('Message received in service worker:', event.data);
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: CACHE_NAME });
   }
 });
+<<<<<<< HEAD
 
 // Utility functions for offline data management
 async function getOfflineData(): Promise<any> {
@@ -385,3 +520,16 @@ async function syncOfflineData(data: any[]): Promise<any> {
 export {};
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+// Utility functions for offline data management
+async function getOfflineData(): Promise<any[]> {
+  // Implementation for retrieving offline data
+  return [];
+}
+async function syncOfflineData(data: any[]): Promise<void> {
+  // Implementation for syncing offline data
+  console.log('Syncing offline data:', data);
+}
+// Export for testing purposes
+export {};
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089

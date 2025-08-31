@@ -134,14 +134,24 @@ export function EnhancedHeader(...args: any[]): any {
   const services = [
     // Featured & New Services
     {
-      name: '2025 Services Overview',
-      href: '/innovative-services-showcase-2025',
+      name: '2025 Comprehensive Services',
+      href: '/comprehensive-services-showcase-2025',
       icon: Star,
-      description: 'Revolutionary AI & Quantum Solutions',
+      description: 'Complete Portfolio of AI, Micro SaaS & IT Solutions',
       category: 'Featured',
       featured: true,
       color: 'from-yellow-500 to-orange-500',
       badge: 'New'
+    },
+    {
+      name: '2025 Pricing Guide',
+      href: '/comprehensive-pricing-guide-2025',
+      icon: DollarSign,
+      description: 'Transparent pricing for all services',
+      category: 'Featured',
+      featured: true,
+      color: 'from-green-500 to-emerald-600',
+      badge: 'Pricing'
     },
     {
       name: '2026 Services Overview',

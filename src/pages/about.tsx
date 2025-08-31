@@ -27,6 +27,7 @@ import { Users,
   CheckCircle,
   ArrowRight
 } from 'lucide-react';
+<<<<<<< HEAD
 export default function About() {
 =======
   TrendingUp,
@@ -40,6 +41,9 @@ export default function About() {
 
 export default function About(...args: any[]): any {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+=======
+function About() {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '50+', label: 'Team Members', icon: Users },

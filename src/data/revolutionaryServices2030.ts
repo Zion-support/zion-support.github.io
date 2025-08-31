@@ -458,10 +458,10 @@ export const revolutionaryMicroSaasServices2030: MicroSaasService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     },
     marketPrice: "$15,000-35,000",
-    competitors["Coursera", "Udemy", "Khan Academy"],
+    competitors: ["Coursera", "Udemy", "Khan Academy"],
     roi: "400% within 8 months",
     setupTime: "4-6 weeks",
-    integrations["LMS Systems", "Video Platforms", "Assessment Tools", "Analytics Dashboards", "Mobile Apps"]
+    integrations: ["LMS Systems", "Video Platforms", "Assessment Tools", "Analytics Dashboards", "Mobile Apps"]
   },
   // AI-Powered Entertainment Technology Platform
   {
@@ -472,9 +472,9 @@ export const revolutionaryMicroSaasServices2030: MicroSaasService[] = [
     subcategory: "Content Platform",
     price: 29999,
     currency: "$",
-    tags["Entertainment Tech", "Content Creation", "AI Generation", "Personalization", "Interactive Storytelling"],
+    tags: ["Entertainment Tech", "Content Creation", "AI Generation", "Personalization", "Interactive Storytelling"],
     author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
-    images["https://ziontechgroup.com/images/ai-entertainment-tech.jpg"],
+    images: ["https://ziontechgroup.com/images/ai-entertainment-tech.jpg"],
     createdAt: "2024-12-07T10:00:00.000Z",
     rating: 4.8,
     reviewCount: 189,
@@ -1554,11 +1554,12 @@ export const searchRevolutionaryServices = (query: string): RevolutionaryService
 export const searchRevolutionaryServices = (query: anyanyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryService2030[]              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const lowercaseQuery = query.toLowerCase();
-  return REVOLUTIONARY_SERVICES_2030.filter(service = >;
-    service.title.toLowerCase().includes(lowercaseQuery) ||;
-    service.description.toLowerCase().includes(lowercaseQuery) ||;
-    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery));
-  );
+  return revolutionaryMicroSaasServices2030.filter(service =>
+    service.name.toLowerCase().includes(lowercaseQuery) ||
+    service.description.toLowerCase().includes(lowercaseQuery) ||
+    service.category.toLowerCase().includes(lowercaseQuery) ||
+    service.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery))
+  ).map(service => service.contactInfo);
 };
 <<<<<<< HEAD
 export const getRevolutionaryServicesByInnovationLevel = (level: string): RevolutionaryService2030[] => {;
@@ -1574,9 +1575,15 @@ export const getRevolutionaryServicesByInnovationLevel = (level: anyanyanyanyany
 export const getRevolutionaryServicesByTechnology = (technology: anyanyanyanyanyanyanyanyanyanyanyanyanystring): RevolutionaryService2030[]              => {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const lowercaseTech = technology.toLowerCase();
-  return REVOLUTIONARY_SERVICES_2030.filter(service = >;
-    service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech));
-  );
+  return revolutionaryMicroSaasServices2030.filter(service =>
+    service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
+  ).map(service => service.contactInfo)
+    .concat(revolutionaryITServices2030.filter(service =>
+      service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
+    ).map(service => service.contactInfo))
+    .concat(revolutionaryAIServices2030.filter(service =>
+      service.technologies.some(tech => tech.toLowerCase().includes(lowercaseTech))
+    ).map(service => service.contactInfo));
 };
 export const getRevolutionaryServicesStats = () => {;
   const totalRevenue = REVOLUTIONARY_SERVICES_2030.reduce((sum, service) => sum + service.pricing.monthly, 0);
@@ -1584,13 +1591,18 @@ export const getRevolutionaryServicesStats = () => {;
   const featuredCount = REVOLUTIONARY_SERVICES_2030.filter(service => service.featured).length;
   const trendingCount = REVOLUTIONARY_SERVICES_2030.filter(service => service.trending).length;
   return {
-    totalServices,
+    totalServices: revolutionaryMicroSaasServices2030.length + revolutionaryITServices2030.length + revolutionaryAIServices2030.length,
     totalRevenue,
     averageRating: Math.round(averageRating * 100) / 100,
     featuredCount,
     trendingCount,
+<<<<<<< HEAD
     categories: [...new Set(REVOLUTIONARY_SERVICES_2030.map(service = > service.category))],;
     subcategories: anyanyanyanyanyanyanyanyanyanyanyanyany[...new Set(REVOLUTIONARY_SERVICES_2030.map(service              => service.subcategory))];
+=======
+    categories: [...new Set(REVOLUTIONARY_SERVICE_CATEGORIES)],
+    subcategories: [...new Set(revolutionaryMicroSaasServices2030.map(service => service.category).concat(revolutionaryITServices2030.map(service => service.category)).concat(revolutionaryAIServices2030.map(service => service.category)))]
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   };
 };
 export const ALL_REVOLUTIONARY_SERVICES_2030 = REVOLUTIONARY_SERVICES_2030;

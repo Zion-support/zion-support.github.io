@@ -8,7 +8,11 @@ import Login from "@/pages/Login";
 import Signup from "@/pages/Signup";
 import ForgotPassword from "@/pages/ForgotPassword";
 import UpdatePassword from "@/pages/UpdatePassword";
+<<<<<<< HEAD
 import { ProtectedRoute               } from '@/components/ProtectedRoute';
+=======
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
 import Onboarding from "@/pages/Onboarding";
 import TalentOnboarding from "@/pages/TalentOnboarding";
 import ServiceOnboarding from "@/pages/ServiceOnboarding";

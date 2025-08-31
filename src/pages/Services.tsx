@@ -179,6 +179,31 @@ export default function Services() {
       features: ["Lead Scoring", "Predictive Analytics", "Automated Follow-ups"],
       href: "/services/ai-sales-copilot",
       color: "from-green-400 to-emerald-500"
+    },
+    {
+      title: "AI Autonomous Logistics Platform",
+      description: "Revolutionary logistics automation with 60% cost reduction and 70% efficiency improvement",
+      price: "From $1,999/month",
+      features: ["Autonomous Routing", "Real-time Tracking", "Predictive Analytics"],
+      href: "/services/ai-autonomous-logistics-platform",
+      color: "from-blue-400 to-cyan-500",
+      popular: true
+    },
+    {
+      title: "AI-Powered SEO",
+      description: "Advanced SEO optimization using artificial intelligence for 300% traffic growth",
+      price: "From $99/month",
+      features: ["AI Content Optimization", "Keyword Research", "Performance Analytics"],
+      href: "/services/ai-powered-seo",
+      color: "from-purple-400 to-pink-500"
+    },
+    {
+      title: "Quantum Edge Computing Solutions",
+      description: "Next-generation edge computing with quantum capabilities for ultra-fast processing",
+      price: "From $2,999/month",
+      features: ["Quantum Processing", "Edge Analytics", "Real-time Optimization"],
+      href: "/services/quantum-edge-computing-solutions",
+      color: "from-indigo-400 to-purple-500"
     }
   ];
 
@@ -1178,13 +1203,13 @@ export default function Services() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/comprehensive-pricing-guide-2033"
+                  to="/comprehensive-pricing-guide-2032"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                 >
-                  View Complete Pricing Guide
+                  View Complete Pricing Guide 2032
                 </Link>
                 <Link
-                  to="/innovative-services-showcase-2033"
+                  to="/innovative-services-showcase-2026"
                   className="bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-full text-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300"
                 >
                   Explore All Services

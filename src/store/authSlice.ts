@@ -39,7 +39,7 @@ interface User {
 interface AuthState {
 <<<<<<< HEAD
   isLoggedIn: boolean;
-  user:  | null;
+  user: User | null;
   token: string | null;
 =======
 
@@ -78,7 +78,9 @@ interface AuthState {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 }
 const initialState: AuthState = {
+  isLoggedIn: false,
   user: null,
+  token: null,
   isAuthenticated: false,
   isLoading: false,
   error: null,;
@@ -117,12 +119,20 @@ const authSlice = createSlice({;
       state.isAuthenticated = true;
       state.error = null;
     },
+<<<<<<< HEAD
     setToken: anyanyanyanyanyanyanyanyanyanyanyanyany(state, action: PayloadAction<string>)               => {
       state.token = action.payload;
     },
     logout: anyanyanyanyanyanyanyanyanyanyanyanyany(state)               => {
+=======
+    setToken: (state, action: PayloadAction<string>) => {
+      state.token = action.payload;
+    },
+    logout: (state) => {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
       state.isLoggedIn = false;
       state.user = null;
+      state.token = null;
       state.isAuthenticated = false;
       state.error = null;
     },

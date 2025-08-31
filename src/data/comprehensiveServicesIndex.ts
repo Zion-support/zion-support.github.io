@@ -10,10 +10,10 @@ export type { EmergingTechService } from "./emergingTechServices2025";
 export { ULTIMATE_MICRO_SAAS_SERVICES_2025 } from "./ultimateMicroSaasServices2025";
 export type { UltimateMicroSaasService } from "./ultimateMicroSaasServices2025";
 // Combined Services Array
-export const ALL_COMPREHENSIVE_SERVICES = [;
-  ...EXPANDED_INNOVATIVE_SERVICES_2025,;
-  ...EMERGING_TECH_SERVICES_2025,;
-  ...ULTIMATE_MICRO_SAAS_SERVICES_2025;
+export const ALL_COMPREHENSIVE_SERVICES = [
+  ...EXPANDED_INNOVATIVE_SERVICES_2025,
+  ...EMERGING_TECH_SERVICES_2025,
+  ...ULTIMATE_MICRO_SAAS_SERVICES_2025
 ];
 // Service Categories
 export const SERVICE_CATEGORIES = [
@@ -31,32 +31,32 @@ export const SERVICE_CATEGORIES = [
   'Quantum Computing',
   'AR/VR & Immersive Tech',
   '5G & Telecommunications',
-  'Space Technology',;
-  'Neuromorphic Computing',;
-  'Digital Twin & Simulation',;
-  'Synthetic Biology',;
-  'Brain-Computer Interface',;
-  'Sustainability & Energy',;
-  'Autonomous Vehicles & Fleet Management';
+  'Space Technology',
+  'Neuromorphic Computing',
+  'Digital Twin & Simulation',
+  'Synthetic Biology',
+  'Brain-Computer Interface',
+  'Sustainability & Energy',
+  'Autonomous Vehicles & Fleet Management'
 ];
 // Innovation Levels
-export const INNOVATION_LEVELS = [;
-  'Cutting-edge',;
-  'Advanced',;
-  'Professional';
+export const INNOVATION_LEVELS = [
+  'Cutting-edge',
+  'Advanced',
+  'Professional'
 ];
 // Support Levels
-export const SUPPORT_LEVELS = [;
-  'enterprise',;
-  'professional',;
-  'basic';
+export const SUPPORT_LEVELS = [
+  'enterprise',
+  'professional',
+  'basic'
 ];
 // Pricing Models
-export const PRICING_MODELS = [;
-  'monthly',;
-  'annual',;
-  'one-time',;
-  'usage-based';
+export const PRICING_MODELS = [
+  'monthly',
+  'annual',
+  'one-time',
+  'usage-based'
 ];
 // Contact Information
 export const CONTACT_INFO = {

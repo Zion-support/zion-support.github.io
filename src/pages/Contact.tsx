@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Phone, 
   Mail, 
@@ -683,6 +684,71 @@ export default function Contact() {
               </div>
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
             </motion.div>
+            {/* Contact Information */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div>
+                <h2 className="text-3xl font-bold text-white mb-8">Contact Information</h2>
+                <div className="space-y-6">
+                  {contactInfo.map((info, index) => (
+                    <motion.div
+                      key={info.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-start space-x-4"
+                    >
+                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                        {info.icon}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-white mb-1">{info.title}</h3>
+                        <p className="text-cyan-400 font-medium">{info.value}</p>
+                        <p className="text-gray-400 text-sm">{info.description}</p>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Support Channels</h3>
+                <div className="space-y-4">
+                  {supportChannels.map((channel, index) => (
+                    <motion.div
+                      key={channel.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      className="flex items-center space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700/50"
+                    >
+                      <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                        {channel.icon}
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="text-white font-semibold">{channel.title}</h4>
+                        <p className="text-gray-400 text-sm">{channel.description}</p>
+                      </div>
+                      <div className={`px-3 py-1 rounded-full text-xs font-medium ${
+                        channel.available 
+                          ? 'bg-green-500/20 text-green-400 border border-green-500/50' 
+                          : 'bg-red-500/20 text-red-400 border border-red-500/50'
+                      }`}>
+                        {channel.available ? 'Available' : 'Unavailable'}
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+>>>>>>> 9f84fd9b5f1b1539495a2de6e5e763336966a2fc
           </div>
         </div>
       </section>

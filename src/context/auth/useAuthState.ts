@@ -98,8 +98,13 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [user, setUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [onboardingStep, setOnboardingStep] = useState(0);
+<<<<<<< HEAD
   const [tokens, setTokens] = useState<any>({
     accessToken: anyanyanyanyanyanyanyanyanyanyanyanyanyanynull,
+=======
+  const [tokens, setTokens] = useState<AuthTokens>({
+    accessToken: null,
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     refreshToken: null
   });
 <<<<<<< HEAD
@@ -110,8 +115,8 @@ export const useAuthState[, React.Dispatch<React.SetStateAction<any>>] = () => {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
     // Check for existing auth state on mount
     const checkAuthState = async () => {
-      try {;
-        if (typeof window !== 'null') {;
+      try {
+        if (typeof window !== 'undefined') {
           const auth = localStorage.getItem('auth') || sessionStorage.getItem('auth');
           if (auth) {
             const parsed = JSON.parse(auth);

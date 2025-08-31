@@ -16,4 +16,6 @@ export function getStripe(...args: any[]): any {
     stripePromise = loadStripe(key);
   }
   return stripePromise;
-}}
+}
+
+export default getStripe;

@@ -47,7 +47,9 @@ export default function Sitemap() {
       { name: 'AI Content Intelligence Platform', path: '/services/ai-content-intelligence-platform' },
       { name: 'AI Enterprise Resource Planning', path: '/services/ai-enterprise-resource-planning' },
       { name: 'AI Customer Success Platform', path: '/services/ai-customer-success-platform' },
-      { name: 'AI Supply Chain Intelligence', path: '/services/ai-supply-chain-intelligence' }
+      { name: 'AI Supply Chain Intelligence', path: '/services/ai-supply-chain-intelligence' },
+      { name: 'AI Autonomous Logistics Platform', path: '/services/ai-autonomous-logistics-platform' },
+      { name: 'AI-Powered SEO', path: '/services/ai-powered-seo' }
     ],
     itServices: [
       { name: 'Infrastructure Management', path: '/services/it-infrastructure-management' },
@@ -55,6 +57,7 @@ export default function Sitemap() {
       { name: 'Cybersecurity', path: '/services/cybersecurity' },
       { name: 'Digital Transformation', path: '/services/digital-transformation' },
       { name: 'Quantum Computing', path: '/services/quantum-computing-solutions' },
+      { name: 'Quantum Edge Computing Solutions', path: '/services/quantum-edge-computing-solutions' },
       { name: 'Edge Computing', path: '/services/edge-computing-solutions' },
       { name: 'Blockchain Solutions', path: '/services/blockchain-enterprise-solutions' },
       { name: 'IoT & Edge Computing', path: '/services/iot-edge' },
@@ -97,7 +100,8 @@ export default function Sitemap() {
       { name: 'Comprehensive Services Showcase 2025', path: '/comprehensive-services-showcase-2025' },
       { name: 'Innovative AI Services Showcase 2025', path: '/innovative-ai-services-showcase-2025' },
       { name: 'Advanced Services Showcase 2025', path: '/advanced-services-showcase-2025' },
-      { name: 'Comprehensive Pricing Guide 2025', path: '/comprehensive-pricing-guide-2025' }
+      { name: 'Comprehensive Pricing Guide 2025', path: '/comprehensive-pricing-guide-2025' },
+      { name: 'Comprehensive Pricing Guide 2032', path: '/comprehensive-pricing-guide-2032' }
     ],
     legal: [
       { name: 'Privacy Policy', path: '/privacy' },

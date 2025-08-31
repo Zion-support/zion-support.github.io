@@ -63,10 +63,10 @@ export const addToCart = (cart: anyanyanyanyanyanyanyanyanyanyanyanyanyCartItem[
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const existingItem = cart.find(cartItem => cartItem.id === item.id);
   if (existingItem) {
-    return cart.map(cartItem = >;
-      cartItem.id === item.id;
-        ? { ...cartItem, quantity: cartItem.quantity + item.quantity };
-        : cartItem;
+    return cart.map(cartItem =>
+      cartItem.id === item.id
+        ? { ...cartItem, quantity: cartItem.quantity + item.quantity }
+        : cartItem
     );
   }
   return [...cart, item];

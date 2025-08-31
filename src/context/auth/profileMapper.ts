@@ -19,6 +19,7 @@ interface SupabaseUser {
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   id: string;
   email?: string;
+<<<<<<< HEAD
 user_metadata?: {;
     full_name?: string;
 avatar_url?: string;
@@ -36,6 +37,12 @@ avatar_url?: string;
 
 
 };
+=======
+  user_metadata?: {
+    full_name?: string;
+    avatar_url?: string;
+  };
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
   created_at?: string;
   updated_at?: string}
 interface Profile {

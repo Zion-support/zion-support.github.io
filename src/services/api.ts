@@ -68,7 +68,7 @@ export async function apiClient(...args: any[]): any {;
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
   const { method = 'GET', body, headers = {} } = options;
   const config: RequestInit = {
-  method,
+    method: options.method || 'GET',
     headers: {
       'Content-Type': 'application/json',
       ...headers,;

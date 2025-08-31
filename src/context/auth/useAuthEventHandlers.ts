@@ -53,10 +53,17 @@ updatedAt?: string;
 
 >>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
 export const useAuthEventHandlers = (
+<<<<<<< HEAD
   setUser: anyanyanyanyanyanyanyanyanyanyanyanyanyany(user: User | null)                => void,
   setOnboardingStep: anyanyanyanyanyanyanyanyanyanyanyanyanyany(step: number)                => void
 ) => {;
   const handleSignedIn = useCallback((user: anyanyanyanyanyanyanyanyanyanyanyanyanyanyUser)                => {;
+=======
+  setUser: (user: User | null) => void,
+  setOnboardingStep: (step: number) => void
+) => {
+  const handleSignedIn = useCallback((user: User) => {
+>>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
     setUser(user);
     setOnboardingStep(1); // Start onboarding process
   }, [setUser, setOnboardingStep]);

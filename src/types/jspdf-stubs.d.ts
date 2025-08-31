@@ -1,6 +1,6 @@
 declare module 'jspdf' {
   export class jsPDF {
-    constructor(options?: );
+    constructor(options?: any);
     text(...args: any[]): void;
     addImage(...args: any[]): void;
     rect(...args: any[]): void;
