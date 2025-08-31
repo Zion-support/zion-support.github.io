@@ -57,7 +57,8 @@ import {
   Leaf,
   ChevronRight,
   ChevronDown,
-  DollarSign
+  DollarSign,
+  Truck
 } from 'lucide-react';
 
 export function EnhancedFooter() {
@@ -67,11 +68,12 @@ export function EnhancedFooter() {
     {
       title: 'Featured Services',
       links: [
+        { name: 'AI Quantum Financial Analytics', href: '/services/ai-quantum-financial-analytics-platform', icon: DollarSign, featured: true },
+        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', icon: Heart, featured: true },
+        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-platform', icon: Truck, featured: true },
         { name: 'AI Content Creation Studio Pro', href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool, featured: true },
         { name: 'Quantum AI Trading Platform', href: '/services/Quantum-AI-Trading-Platform', icon: Atom, featured: true },
-        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true },
-        { name: '2029 Cutting-Edge Services', href: '/zion-cutting-edge-services-2029', icon: Sparkles, featured: true },
-        { name: 'AI-Powered Micro SAAS', href: '/zion-cutting-edge-services-2029', icon: Brain, featured: true }
+        { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Sparkles, featured: true }
       ]
     },
     {

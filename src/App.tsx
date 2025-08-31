@@ -89,6 +89,11 @@ const ZionCuttingEdgeServices2029 = lazy(() => import('./pages/ZionCuttingEdgeSe
 const AIContentCreationStudioPro = lazy(() => import('./pages/services/AI-Content-Creation-Studio-Pro'));
 const QuantumAITradingPlatform = lazy(() => import('./pages/services/Quantum-AI-Trading-Platform'));
 
+// 2025 New Innovative AI Services
+const AIQuantumFinancialAnalyticsPlatform = lazy(() => import('./pages/services/AI-Quantum-Financial-Analytics-Platform'));
+const AIHealthcareAnalyticsPlatform = lazy(() => import('./pages/services/AI-Healthcare-Analytics-Platform'));
+const AISupplyChainOptimizationPlatform = lazy(() => import('./pages/services/AI-Supply-Chain-Optimization-Platform'));
+
 // Sitemap-aligned pages
 const AiSolutions = lazy(() => import('./pages/AiSolutions'));
 const SolutionsEnterprise = lazy(() => import('./pages/solutions/Enterprise'));
@@ -448,6 +453,11 @@ function App() {
                   {/* New Innovative Services */}
                   <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
                   <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
+
+                  {/* 2025 New Innovative AI Services */}
+                  <Route path="/services/ai-quantum-financial-analytics-platform" element={<AIQuantumFinancialAnalyticsPlatform />} />
+                  <Route path="/services/ai-healthcare-analytics-platform" element={<AIHealthcareAnalyticsPlatform />} />
+                  <Route path="/services/ai-supply-chain-optimization-platform" element={<AISupplyChainOptimizationPlatform />} />
 
                   {/* Additional Core Routes */}
                   <Route path="/events" element={<Events />} />

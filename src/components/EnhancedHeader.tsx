@@ -268,6 +268,30 @@ export function EnhancedHeader() {
       icon: SparklesIcon,
       color: 'from-indigo-500 to-purple-500',
       featured: true
+    },
+    {
+      name: 'AI Financial Analytics',
+      description: 'Quantum AI-powered financial analytics platform',
+      href: '/services/ai-quantum-financial-analytics-platform',
+      icon: DollarSign,
+      color: 'from-blue-500 to-cyan-500',
+      featured: true
+    },
+    {
+      name: 'AI Healthcare Platform',
+      description: 'Advanced healthcare analytics and diagnostics',
+      href: '/services/ai-healthcare-analytics-platform',
+      icon: Heart,
+      color: 'from-green-500 to-emerald-500',
+      featured: true
+    },
+    {
+      name: 'Supply Chain AI',
+      description: 'AI-powered supply chain optimization platform',
+      href: '/services/ai-supply-chain-optimization-platform',
+      icon: Truck,
+      color: 'from-orange-500 to-red-500',
+      featured: true
     }
   ];
 
