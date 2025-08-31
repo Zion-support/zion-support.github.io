@@ -2,22 +2,6 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-<<<<<<< HEAD
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    },
-    "typeRoots": ["./src/types"],
-
-    /* Bundler mode */
-=======
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
@@ -26,49 +10,12 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-<<<<<<< HEAD
-    "strict": false,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictNullChecks": false,
-    "exactOptionalPropertyTypes": false,
-    "noImplicitOverride": false,
-    "noPropertyAccessFromIndexSignature": false,
-    "noUncheckedIndexedAccess": false,
-    "allowJs": true,
-    "incremental": true,
-    "plugins": []
-  },
-  "include": [
-    "src/**/*.js",
-    "src/**/*.jsx",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/types/offline-shims.d.ts"
-  ],
-  "exclude": [
-    "src/components.disabled",
-    "src/components.disabled/**/*",
-    "src_disabled/**/*",
-    "temp_components.disabled/**/*",
-    "node_modules"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
-=======
     "incremental": true,
     "declaration": true,
     "declarationMap": true,
@@ -127,5 +74,4 @@
   "references": [
     { "path": "./tsconfig.node.json" }
   ]
->>>>>>> 0db51c83ec2639597974243032be26f90b238361
 }
