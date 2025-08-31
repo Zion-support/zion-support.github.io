@@ -1,126 +1,62 @@
-<<<<<<< HEAD
-const Contact: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-      <div className="container mx-auto px-4 py-24 text-center text-white">
-        <h1 className="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-          Contact Us
-        </h1>
-        <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-300">
-          We'd love to hear about your project. Reach us via any of the channels below.
-        </p>
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-12 max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Contact Information</h3>
-              <div className="space-y-4 text-left">
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">📞</span>
-                  <div>
-                    <p className="font-semibold">Phone</p>
-                    <a href="tel:+13024640950" className="text-blue-400 hover:text-blue-300">
-                      +1 (302) 464-0950
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">✉️</span>
-                  <div>
-                    <p className="font-semibold">Email</p>
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
-                      kleber@ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <span className="text-2xl">📍</span>
-                  <div>
-                    <p className="font-semibold">Address</p>
-                    <p>364 E Main St STE 1008<br />Middletown, DE 19709</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-4">Business Hours</h3>
-              <div className="text-left space-y-2">
-                <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM EST</p>
-                <p><strong>Saturday:</strong> 10:00 AM - 2:00 PM EST</p>
-                <p><strong>Sunday:</strong> Closed</p>
-              </div>
-              <div className="mt-6">
-                <h4 className="text-lg font-semibold text-white mb-2">Website</h4>
-                <a href="https://ziontechgroup.com" className="text-blue-400 hover:text-blue-300">
-                  https://ziontechgroup.com
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:+13024640950"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-            >
-              📞 Call Now
-            </a>
-            <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Phone, 
   Mail, 
   MapPin, 
   Clock, 
-  MessageSquare, 
-  Send,
+  MessageCircle, 
+  Send, 
   CheckCircle,
-  AlertCircle
+  Globe,
+  Brain,
+  Cloud,
+  Shield,
+  Zap
 } from 'lucide-react';
 
-export default function Contact() {
+const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-    message: '',
     service: '',
-    budget: '',
-    timeline: '',
-    preferredContact: 'email'
+    message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     // Simulate form submission
-    try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+    
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setIsSubmitted(false);
       setFormData({
         name: '',
         email: '',
         company: '',
         phone: '',
-        message: '',
         service: '',
-        budget: '',
-        timeline: '',
-        preferredContact: 'email'
+        message: ''
       });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    }, 3000);
   };
 
   const contactInfo = [
@@ -128,370 +64,316 @@ export default function Contact() {
       icon: Phone,
       title: 'Phone',
       value: '+1 302 464 0950',
-      link: 'tel:+13024640950'
+      href: 'tel:+13024640950',
+      description: 'Call us anytime'
     },
     {
       icon: Mail,
       title: 'Email',
       value: 'kleber@ziontechgroup.com',
-      link: 'mailto:kleber@ziontechgroup.com'
+      href: 'mailto:kleber@ziontechgroup.com',
+      description: 'Send us a message'
     },
     {
       icon: MapPin,
       title: 'Address',
-      value: '364 E Main St STE 1008\nMiddletown DE 19709',
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+      value: '364 E Main St STE 1008, Middletown DE 19709',
+      href: '#',
+      description: 'Visit our office'
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      value: 'Mon-Fri: 9AM-6PM EST\nWeekend: By Appointment'
+      value: 'Mon - Fri: 9:00 AM - 6:00 PM EST',
+      href: '#',
+      description: 'Available for you'
     }
   ];
 
   const services = [
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Digital Transformation',
-    'Web Development',
-    'Mobile Development',
-    'Data Analytics',
-    'Consulting'
-  ];
-
-  const budgets = [
-    'Under $10K',
-    '$10K - $25K',
-    '$25K - $50K',
-    '$50K - $100K',
-    '$100K+'
-  ];
-
-  const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Extended (6+ months)'
+    { value: 'ai-solutions', label: 'AI Solutions', icon: Brain },
+    { value: 'cloud-devops', label: 'Cloud & DevOps', icon: Cloud },
+    { value: 'cybersecurity', label: 'Cybersecurity', icon: Shield },
+    { value: 'edge-iot', label: 'Edge & IoT', icon: Zap },
+    { value: 'digital-transformation', label: 'Digital Transformation', icon: Globe },
+    { value: 'consulting', label: 'Technology Consulting', icon: MessageCircle }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for AI solutions, quantum computing, and digital transformation services. Let's discuss how we can help your business."
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16 lg:pt-20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
-        <div className="container mx-auto px-6 relative z-10">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-30"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
           >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Let's <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Connect</span>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Let's Build the <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Future</span> Together
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Ready to transform your business with cutting-edge AI solutions? 
-              Get in touch with our team of experts and let's discuss your project.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
+              Ready to transform your business with cutting-edge technology? 
+              Get in touch with our experts and discover how we can help you succeed.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact Form & Info */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      {/* Contact Information */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {contactInfo.map((info, index) => (
+              <motion.div
+                key={info.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center group"
+              >
+                <a
+                  href={info.href}
+                  className="block p-6 bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-gray-700 hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105"
+                >
+                  <div className="inline-flex p-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 mb-4 group-hover:from-cyan-400/30 group-hover:to-blue-400/30 transition-all duration-300">
+                    <info.icon className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
+                  <p className="text-cyan-300 font-medium mb-1">{info.value}</p>
+                  <p className="text-sm text-gray-400">{info.description}</p>
+                </a>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-2xl p-8 border border-slate-600/50">
+              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
                 
-                {submitStatus === 'success' && (
+                {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="bg-green-500/20 border border-green-500/50 rounded-lg p-4 mb-6"
+                    className="text-center py-12"
                   >
-                    <div className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                    </div>
+                    <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                    <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
+                    <p className="text-gray-300">Thank you for reaching out. We'll get back to you within 24 hours.</p>
                   </motion.div>
-                )}
-
-                {submitStatus === 'error' && (
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 mb-6"
-                  >
-                    <div className="flex items-center">
-                      <AlertCircle className="w-5 h-5 text-red-400 mr-3" />
-                      <span className="text-red-400">Something went wrong. Please try again.</span>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                          Full Name *
+                        </label>
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          required
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/20 transition-colors"
+                          placeholder="Enter your full name"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                          Email Address *
+                        </label>
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          required
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/20 transition-colors"
+                          placeholder="Enter your email"
+                        />
+                      </div>
                     </div>
-                  </motion.div>
-                )}
 
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                          Company
+                        </label>
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/20 transition-colors"
+                          placeholder="Enter company name"
+                        />
+                      </div>
+                      
+                      <div>
+                        <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                          Phone Number
+                        </label>
+                        <input
+                          type="tel"
+                          id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/20 transition-colors"
+                          placeholder="Enter phone number"
+                        />
+                      </div>
+                    </div>
+
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                        Full Name *
+                      <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                        Service of Interest
                       </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      <select
+                        id="service"
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/20 transition-colors"
+                      >
+                        <option value="">Select a service</option>
+                        {services.map((service) => (
+                          <option key={service.value} value={service.value}>
+                            {service.label}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                        Message *
+                      </label>
+                      <textarea
+                        id="message"
+                        name="message"
                         required
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                        placeholder="Your full name"
+                        rows={5}
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/20 transition-colors resize-none"
+                        placeholder="Tell us about your project or inquiry..."
                       />
                     </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                        Email *
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({...formData, email: e.target.value})}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                        placeholder="your.email@company.com"
-                      />
-                    </div>
-                  </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
-                        Company
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={(e) => setFormData({...formData, company: e.target.value})}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                        placeholder="Your company name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                        placeholder="+1 (555) 123-4567"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={(e) => setFormData({...formData, service: e.target.value})}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center space-x-2"
                     >
-                      <option value="">Select a service</option>
-                      {services.map((service) => (
-                        <option key={service} value={service}>{service}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="budget" className="block text-sm font-medium text-gray-300 mb-2">
-                        Budget Range
-                      </label>
-                      <select
-                        id="budget"
-                        name="budget"
-                        value={formData.budget}
-                        onChange={(e) => setFormData({...formData, budget: e.target.value})}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      >
-                        <option value="">Select budget range</option>
-                        {budgets.map((budget) => (
-                          <option key={budget} value={budget}>{budget}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label htmlFor="timeline" className="block text-sm font-medium text-gray-300 mb-2">
-                        Timeline
-                      </label>
-                      <select
-                        id="timeline"
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={(e) => setFormData({...formData, timeline: e.target.value})}
-                        className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      >
-                        <option value="">Select timeline</option>
-                        {timelines.map((timeline) => (
-                          <option key={timeline} value={timeline}>{timeline}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message *
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={(e) => setFormData({...formData, message: e.target.value})}
-                      required
-                      rows={6}
-                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
-                      placeholder="Tell us about your project, goals, and how we can help..."
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-3">
-                      Preferred Contact Method
-                    </label>
-                    <div className="flex space-x-6">
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name="preferredContact"
-                          value="email"
-                          checked={formData.preferredContact === 'email'}
-                          onChange={(e) => setFormData({...formData, preferredContact: e.target.value})}
-                          className="mr-2 text-cyan-400 focus:ring-cyan-400"
-                        />
-                        <span className="text-gray-300">Email</span>
-                      </label>
-                      <label className="flex items-center">
-                        <input
-                          type="radio"
-                          name="preferredContact"
-                          value="phone"
-                          checked={formData.preferredContact === 'phone'}
-                          onChange={(e) => setFormData({...formData, preferredContact: e.target.value})}
-                          className="mr-2 text-cyan-400 focus:ring-cyan-400"
-                        />
-                        <span className="text-gray-300">Phone</span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message
-                        <Send className="w-5 h-5 ml-2" />
-                      </>
-                    )}
-                  </button>
-                </form>
+                      {isSubmitting ? (
+                        <>
+                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                          <span>Sending...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-5 h-5" />
+                          <span>Send Message</span>
+                        </>
+                      )}
+                    </button>
+                  </form>
+                )}
               </div>
             </motion.div>
 
-            {/* Contact Information */}
+            {/* Contact Details & Map */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
               className="space-y-8"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             >
-              <div>
-                <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                <p className="text-lg text-gray-300 leading-relaxed mb-8">
-                  We're here to help you transform your business with cutting-edge technology solutions. 
-                  Reach out to us and let's start a conversation about your project.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                {contactInfo.map((info, index) => (
-                  <motion.div
-                    key={info.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    className="flex items-start space-x-4"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <info.icon className="w-6 h-6 text-white" />
+              {/* Why Choose Us */}
+              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-4 h-4 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
-                      {info.link ? (
-                        <a
-                          href={info.link}
-                          className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
-                        >
-                          {info.value}
-                        </a>
-                      ) : (
-                        <p className="text-gray-300 whitespace-pre-line">{info.value}</p>
-                      )}
+                      <h4 className="text-white font-medium">Expert Team</h4>
+                      <p className="text-gray-400 text-sm">Certified professionals with years of industry experience</p>
                     </div>
-                  </motion.div>
-                ))}
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">Cutting-Edge Solutions</h4>
+                      <p className="text-gray-400 text-sm">Latest AI, cloud, and cybersecurity technologies</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">24/7 Support</h4>
+                      <p className="text-gray-400 text-sm">Round-the-clock technical assistance and monitoring</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div className="w-6 h-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-4 h-4 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">Proven Results</h4>
+                      <p className="text-gray-400 text-sm">500+ successful projects across various industries</p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-400/20">
-                <h3 className="text-2xl font-bold text-white mb-4">Why Choose Zion Tech Group?</h3>
+              {/* Office Location */}
+              <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
+                <h3 className="text-2xl font-bold text-white mb-6">Visit Our Office</h3>
                 <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                    <span className="text-gray-300">Expert AI & ML Specialists</span>
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-6 h-6 text-cyan-400 flex-shrink-0 mt-1" />
+                    <div>
+                      <p className="text-white font-medium">Zion Tech Group</p>
+                      <p className="text-gray-400 text-sm">364 E Main St STE 1008</p>
+                      <p className="text-gray-400 text-sm">Middletown, DE 19709</p>
+                    </div>
                   </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                    <span className="text-gray-300">Proven Track Record</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                    <span className="text-gray-300">24/7 Support Available</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
-                    <span className="text-gray-300">Competitive Pricing</span>
+                  
+                  <div className="bg-gray-800/50 rounded-lg p-4 text-center">
+                    <p className="text-gray-400 text-sm mb-2">Office Hours</p>
+                    <p className="text-white font-medium">Monday - Friday</p>
+                    <p className="text-gray-300">9:00 AM - 6:00 PM EST</p>
                   </div>
                 </div>
               </div>
@@ -501,33 +383,35 @@ export default function Contact() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Don't wait to transform your business. Contact us today and let's discuss 
-              how our AI solutions can drive your success.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Let's discuss how our innovative technology solutions can transform your business 
+              and drive growth in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/services"
-                className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
+                href="tel:+13024640950"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center space-x-2"
               >
-                Explore Our Services
-                <MessageSquare className="w-5 h-5 ml-2" />
+                <Phone className="w-5 h-5" />
+                <span>Call Now</span>
               </a>
               <a
-                href="/about"
-                className="inline-flex items-center px-8 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-200"
+                href="mailto:kleber@ziontechgroup.com"
+                className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-white transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
               >
-                Learn About Us
+                <Mail className="w-5 h-5" />
+                <span>Email Us</span>
               </a>
             </div>
           </motion.div>
@@ -535,4 +419,6 @@ export default function Contact() {
       </section>
     </div>
   );
-}
+};
+
+export default Contact;

@@ -18,6 +18,10 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSpinner } from './components/ui/loading-spinner';
 import { EnhancedLoadingSpinner } from './components/EnhancedLoadingSpinner';
 
+// Layout Components
+import ModernNavigation from './components/navigation/ModernNavigation';
+import ModernFooter from './components/layout/ModernFooter';
+
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
@@ -82,12 +86,15 @@ function App() {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Router>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+            {/* Navigation */}
+            <ModernNavigation />
+            
             {/* Skip Link for Accessibility */}
             <a href="#main-content" className="skip-link">
               Skip to main content
             </a>
             
-            <main id="main-content" className="flex-1">
+            <main id="main-content" className="flex-1 pt-16 lg:pt-20">
               <Suspense fallback={<EnhancedLoadingSpinner />}>
                 <AnimatePresence mode="wait">
                   <Routes>
@@ -159,6 +166,9 @@ function App() {
                 </AnimatePresence>
               </Suspense>
             </main>
+
+            {/* Footer */}
+            <ModernFooter />
 
             {/* Enhanced Performance Optimizer */}
             <PerformanceOptimizer enabled={true} />
